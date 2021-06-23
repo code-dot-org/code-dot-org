@@ -450,15 +450,15 @@
           "MC_HOC_2017_05_Cole_b": "Đưa đặc vụ qua bên kia sông, vừa đi vừa xây một cây cầu."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này _nên_ chạy bao nhiêu lần?",
+          "MC_HOC_2017_06_Cole_a": "Vòng lặp này chạy bao nhiêu lần? Nó _nên_ chạy bao nhiêu lần?",
           "MC_HOC_2017_06_Cole_b": "Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng nước! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này _nên_ chạy bao nhiêu lần?",
+          "MC_HOC_2017_06_Cole_a": "Vòng lặp này chạy bao nhiêu lần? Nó _nên_ chạy bao nhiêu lần?",
           "MC_HOC_2017_06_Cole_b": "Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng nước! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Vòng lặp này đã chạy bao nhiêu lần?  Vòng lặp này _nên_ chạy bao nhiêu lần?",
+          "MC_HOC_2017_06_Cole_a": "Vòng lặp này chạy bao nhiêu lần? Nó _nên_ chạy bao nhiêu lần?",
           "MC_HOC_2017_06_Cole_b": "Giúp đỡ Đặc vụ xây dựng một cây cầu để vượt qua dòng nước! "
         },
         "MC_HOC_2017_07_Cole": {
@@ -735,40 +735,40 @@
           "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -808,7 +808,7 @@
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
           "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
-          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nsẽ giúp đến gần chú lợn hơn."
+          "courseA_maze_seq13_c": "Những khối <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> sẽ giúp bạn đến gần hơn với chú lợn."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -953,11 +953,11 @@
           "courseA_playLab_events6_b": "Đây là khối bạn cần dùng để thay đổi hình nền:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_a": "Đây là khối sẽ giúp Jorge làm gì đó khi được click vào.\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\nĐây là khối sẽ giúp Jorge làm gì đó khi được click vào.\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
           "courseA_playLab_events6_b": "Đây là khối bạn cần dùng để thay đổi hình nền:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_a": "Đây là khối sẽ giúp Jorge làm gì đó khi được click vào.\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\nĐây là khối sẽ giúp Jorge làm gì đó khi được click vào.\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
           "courseA_playLab_events6_b": "Đây là khối bạn cần dùng để thay đổi hình nền:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events6_2020": {
@@ -985,7 +985,7 @@
           "2": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
         },
         "courseB_Scrat_ramp1_2020": {
-          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng các khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
+          "1": "Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai khối đã được ghép vào với nhau rồi ấn \"Chạy\" lần nữa.",
           "2": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
         },
         "courseB_Scrat_ramp2_2018": {
@@ -998,40 +998,40 @@
           "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2018": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
-          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "Chương trình của bạn sẽ như sau:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn có thể thay đổi số ở đầu khối lệnh."
@@ -1376,15 +1376,18 @@
         },
         "courseB_starWars_prog9_2018": {
           "courseB_starWars_prog9_a": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
-          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này."
+          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này.",
+          "courseB_starWars_prog9_c": "Vòng lặp `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> nào có thể giúp ích ở đây không?"
         },
         "courseB_starWars_prog9_2019": {
           "courseB_starWars_prog9_a": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
-          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này."
+          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này.",
+          "courseB_starWars_prog9_c": "Vòng lặp `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> nào có thể giúp ích ở đây không?"
         },
         "courseB_starWars_prog9_2020": {
           "courseB_starWars_prog9_a": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
-          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này."
+          "courseB_starWars_prog9_b": "Có rất nhiều cách để giải câu đố này.",
+          "courseB_starWars_prog9_c": "Vòng lặp `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> nào có thể giúp ích ở đây không?"
         },
         "courseC19_playLab_EOC2": {
           "courseE_playLab_scaffold1_c": "Khi bạn hoàn thành, bạn có thể di chuyển nhân vật anh hùng của bạn bằng các phím mũi tên!"
@@ -1405,43 +1408,69 @@
           "courseC_maze_programming6_a": "Có hai cách để giải câu đố này!"
         },
         "courseC_starWars_loops1": {
-          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops1_a": "Khi BB-8 lăn trên đống phế liệu, anh chàng sẽ tự động nhặt phế liệu lên.",
+          "courseC_starWars_loops1_c": "Bạn sẽ muốn `tiến về phía trước` năm lần để giải bài tập này."
         },
         "courseC_starWars_loops10": {
-          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops10_a": "Chẳng phải mô hình này giống một chuỗi bậc thang khổng lồ sao? Hãy xem liệu bạn có thể sử dụng những kiến thức đã học được trong các bài tập trước để lấy tất cả các lệnh rẽ hay không.",
+          "courseC_starWars_loops10_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
         },
         "courseC_starWars_loops10_2018": {
-          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops10_a": "Chẳng phải mô hình này giống một chuỗi bậc thang khổng lồ sao? Hãy xem liệu bạn có thể sử dụng những kiến thức đã học được trong các bài tập trước để lấy tất cả các lệnh rẽ hay không.",
+          "courseC_starWars_loops10_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
         },
         "courseC_starWars_loops10_2019": {
-          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops10_a": "Chẳng phải mô hình này giống một chuỗi bậc thang khổng lồ sao? Hãy xem liệu bạn có thể sử dụng những kiến thức đã học được trong các bài tập trước để lấy tất cả các lệnh rẽ hay không.",
+          "courseC_starWars_loops10_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
         },
         "courseC_starWars_loops10_2020": {
-          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops10_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops10_a": "Chẳng phải mô hình này giống một chuỗi bậc thang khổng lồ sao? Hãy xem liệu bạn có thể sử dụng những kiến thức đã học được trong các bài tập trước để lấy tất cả các lệnh rẽ hay không.",
+          "courseC_starWars_loops10_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
         },
         "courseC_starWars_loops1_2018": {
-          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops1_a": "Khi BB-8 lăn trên đống phế liệu, anh chàng sẽ tự động nhặt phế liệu lên.",
+          "courseC_starWars_loops1_c": "Bạn sẽ muốn `tiến về phía trước` năm lần để giải bài tập này."
         },
         "courseC_starWars_loops1_2019": {
-          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops1_a": "Khi BB-8 lăn trên đống phế liệu, anh chàng sẽ tự động nhặt phế liệu lên.",
+          "courseC_starWars_loops1_c": "Bạn sẽ muốn `tiến về phía trước` năm lần để giải bài tập này."
         },
         "courseC_starWars_loops1_2020": {
-          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops1_b": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops1_a": "Khi BB-8 lăn trên đống phế liệu, anh chàng sẽ tự động nhặt phế liệu lên.",
+          "courseC_starWars_loops1_c": "Bạn sẽ muốn `tiến về phía trước` năm lần để giải bài tập này."
         },
         "courseC_starWars_loops7": {
-          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops7_a": "Mô hình này trông có vẻ khó đây! Hãy bắt đầu với một bậc cầu thang đơn giản. Cách đó có thu thập được toàn bộ phế liệu không?",
+          "courseC_starWars_loops7_b": "Nếu bạn gặp khó khăn với bài tập này, hãy thử viết tất cả các bước đi trên một tờ giấy và tìm kiếm mô hình."
         },
         "courseC_starWars_loops7_2018": {
-          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops7_a": "Mô hình này trông có vẻ khó đây! Hãy bắt đầu với một bậc cầu thang đơn giản. Cách đó có thu thập được toàn bộ phế liệu không?",
+          "courseC_starWars_loops7_b": "Nếu bạn gặp khó khăn với bài tập này, hãy thử viết tất cả các bước đi trên một tờ giấy và tìm kiếm mô hình."
         },
         "courseC_starWars_loops7_2019": {
-          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops7_a": "Mô hình này trông có vẻ khó đây! Hãy bắt đầu với một bậc cầu thang đơn giản. Cách đó có thu thập được toàn bộ phế liệu không?",
+          "courseC_starWars_loops7_b": "Nếu bạn gặp khó khăn với bài tập này, hãy thử viết tất cả các bước đi trên một tờ giấy và tìm kiếm mô hình."
         },
         "courseC_starWars_loops7_2020": {
-          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops7_a": "Mô hình này trông có vẻ khó đây! Hãy bắt đầu với một bậc cầu thang đơn giản. Cách đó có thu thập được toàn bộ phế liệu không?",
+          "courseC_starWars_loops7_b": "Nếu bạn gặp khó khăn với bài tập này, hãy thử viết tất cả các bước đi trên một tờ giấy và tìm kiếm mô hình."
         },
         "courseC_starWars_loops7_copy": {
-          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố."
+          "courseC_starWars_loops7_c": "Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn chưa giải được câu đố.",
+          "courseC_starWars_loops7_a": "Mô hình này trông có vẻ khó đây! Hãy bắt đầu với một bậc cầu thang đơn giản. Cách đó có thu thập được toàn bộ phế liệu không?",
+          "courseC_starWars_loops7_b": "Nếu bạn gặp khó khăn với bài tập này, hãy thử viết tất cả các bước đi trên một tờ giấy và tìm kiếm mô hình."
         },
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Thử dùng khối `nhảy về phía trước` để đi từ hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao xa?"
@@ -1645,6 +1674,127 @@
         "outbreak7": {
           "whenclicked": "## Vắc xin\n\nBạn có thể mô phỏng việc tiêm vắc xin cho quái vật khi bạn nhấn vào quái vật đó. Để làm vậy, hãy sử dụng khối \"thay đổi trang phục\" với sự kiện này:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Bạn cảm thấy bế tắc? Bạn luôn có thể đặt lại mã bằng cách nhấn vào \"Lịch sử phiên bản\" ở dưới rồi chọn \"Bắt đầu lại\"."
+        },
+        "courseB_starWars_prog2_2018": {
+          "courseB_starWars_prog2_a": "Hãy chia bài tập này thành hai phần. Hãy lấy một đống phế liệu, sau đó tìm cách lấy đống còn lại."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn vào bên trong nó."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn vào bên trong nó."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn vào bên trong nó."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn vào bên trong nó."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn vào bên trong nó."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "Nhấp chuột vào mũi tên nhỏ bên cạnh “trái” trên khối rẽ sẽ giúp bạn thay đổi thành “phải”.",
+          "courseC_starWars_loops4_a": "Hãy sử dụng hai khối `lặp lại`.",
+          "courseC_starWars_loops4_b": "Mỗi vòng lặp `lặp lại` sẽ chỉ có một lệnh bên trong:`tiến về phía trước`."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "Nhấp chuột vào mũi tên nhỏ bên cạnh “trái” trên khối rẽ sẽ giúp bạn thay đổi thành “phải”.",
+          "courseC_starWars_loops4_a": "Hãy sử dụng hai khối `lặp lại`.",
+          "courseC_starWars_loops4_b": "Mỗi vòng lặp `lặp lại` sẽ chỉ có một lệnh bên trong:`tiến về phía trước`."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "Nhấp chuột vào mũi tên nhỏ bên cạnh “trái” trên khối rẽ sẽ giúp bạn thay đổi thành “phải”.",
+          "courseC_starWars_loops4_a": "Hãy sử dụng hai khối `lặp lại`.",
+          "courseC_starWars_loops4_b": "Mỗi vòng lặp `lặp lại` sẽ chỉ có một lệnh bên trong:`tiến về phía trước`."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "Nhấp chuột vào mũi tên nhỏ bên cạnh “trái” trên khối rẽ sẽ giúp bạn thay đổi thành “phải”.",
+          "courseC_starWars_loops4_a": "Hãy sử dụng hai khối `lặp lại`.",
+          "courseC_starWars_loops4_b": "Mỗi vòng lặp `lặp lại` sẽ chỉ có một lệnh bên trong:`tiến về phía trước`."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "Nhấp chuột vào mũi tên nhỏ bên cạnh “trái” trên khối rẽ sẽ giúp bạn thay đổi thành “phải”.",
+          "courseC_starWars_loops4_a": "Hãy sử dụng hai khối `lặp lại`.",
+          "courseC_starWars_loops4_b": "Mỗi vòng lặp `lặp lại` sẽ chỉ có một lệnh bên trong:`tiến về phía trước`."
+        },
+        "courseC_starWars_loops5": {
+          "courseC_starWars_loops5_b": "Để di chuyển xuống, bạn phải rẽ, rồi tiến về phía trước.",
+          "courseC_starWars_loops5_a": "Giải pháp tốt nhất là sử dụng một lệnh rẽ, sau đó là một `tiến về phía trước`, một lệnh rẽ khác, sau đó là một vòng lặp."
+        },
+        "courseC_starWars_loops5_2018": {
+          "courseC_starWars_loops5_a": "Giải pháp tốt nhất là sử dụng một khối `tiến về phía trước` duy nhất, sau đó là một lệnh rẽ, rồi đến một vòng lặp."
+        },
+        "courseC_starWars_loops5_2019": {
+          "courseC_starWars_loops5_a": "Giải pháp tốt nhất là sử dụng một khối `tiến về phía trước` duy nhất, sau đó là một lệnh rẽ, rồi đến một vòng lặp."
+        },
+        "courseC_starWars_loops5_2020": {
+          "courseC_starWars_loops5_a": "Giải pháp tốt nhất là sử dụng một khối `tiến về phía trước` duy nhất, sau đó là một lệnh rẽ, rồi đến một vòng lặp."
+        },
+        "courseC_starWars_loops5_copy": {
+          "courseC_starWars_loops5_b": "Để di chuyển xuống, bạn phải rẽ, rồi tiến về phía trước.",
+          "courseC_starWars_loops5_a": "Giải pháp tốt nhất là sử dụng một lệnh rẽ, sau đó là một `tiến về phía trước`, một lệnh rẽ khác, sau đó là một vòng lặp."
+        },
+        "courseC_starWars_loops6": {
+          "courseC_starWars_loops6_a": "Hãy thử viết tất cả các bước trên một tờ giấy và tìm mô hình.",
+          "courseC_starWars_loops6_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_starWars_loops6_2018": {
+          "courseC_starWars_loops6_a": "Hãy thử viết tất cả các bước trên một tờ giấy và tìm mô hình.",
+          "courseC_starWars_loops6_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_starWars_loops6_2019": {
+          "courseC_starWars_loops6_a": "Hãy thử viết tất cả các bước trên một tờ giấy và tìm mô hình.",
+          "courseC_starWars_loops6_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_starWars_loops6_2020": {
+          "courseC_starWars_loops6_a": "Hãy thử viết tất cả các bước trên một tờ giấy và tìm mô hình.",
+          "courseC_starWars_loops6_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_starWars_loops6_copy": {
+          "courseC_starWars_loops6_a": "Hãy thử viết tất cả các bước trên một tờ giấy và tìm mô hình.",
+          "courseC_starWars_loops6_b": "Nếu bạn muốn sử dụng ít mã lệnh hơn, bạn có thể đặt một vòng lặp `lặp lại` bên trong một vòng lặp khác!\\\nĐây được gọi là **vòng lặp lồng nhau**."
+        },
+        "courseC_starWars_loops8": {
+          "course_starWars_loops8_a": "Hãy thử suy nghĩ về bài tập này theo từng phần nhỏ. Cứ bình tĩnh. Bạn không cần phải giải thành công trong lần thử đầu tiên!",
+          "course_starWars_loops8_b": "Hãy coi nửa đầu của bài tập này là bài tập về bậc cầu thang. Trước đây bạn đã giải bài tập đó như thế nào?",
+          "course_starWars_loops8_c": "Hãy nhìn vào con đường này.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2018": {
+          "course_starWars_loops8_a": "Hãy thử suy nghĩ về bài tập này theo từng phần nhỏ. Cứ bình tĩnh. Bạn không cần phải giải thành công trong lần thử đầu tiên!",
+          "course_starWars_loops8_b": "Hãy coi nửa đầu của bài tập này là bài tập về bậc cầu thang. Trước đây bạn đã giải bài tập đó như thế nào?",
+          "course_starWars_loops8_c": "Hãy nhìn vào con đường này.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2019": {
+          "course_starWars_loops8_a": "Hãy thử suy nghĩ về bài tập này theo từng phần nhỏ. Cứ bình tĩnh. Bạn không cần phải giải thành công trong lần thử đầu tiên!",
+          "course_starWars_loops8_b": "Hãy coi nửa đầu của bài tập này là bài tập về bậc cầu thang. Trước đây bạn đã giải bài tập đó như thế nào?",
+          "course_starWars_loops8_c": "Hãy nhìn vào con đường này.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2020": {
+          "course_starWars_loops8_a": "Hãy thử suy nghĩ về bài tập này theo từng phần nhỏ. Cứ bình tĩnh. Bạn không cần phải giải thành công trong lần thử đầu tiên!",
+          "course_starWars_loops8_b": "Hãy coi nửa đầu của bài tập này là bài tập về bậc cầu thang. Trước đây bạn đã giải bài tập đó như thế nào?",
+          "course_starWars_loops8_c": "Hãy nhìn vào con đường này.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_copy": {
+          "course_starWars_loops8_a": "Hãy thử suy nghĩ về bài tập này theo từng phần nhỏ. Cứ bình tĩnh. Bạn không cần phải giải thành công trong lần thử đầu tiên!",
+          "course_starWars_loops8_b": "Hãy coi nửa đầu của bài tập này là bài tập về bậc cầu thang. Trước đây bạn đã giải bài tập đó như thế nào?",
+          "course_starWars_loops8_c": "Hãy nhìn vào con đường này.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9": {
+          "course_starWars_loops9_b": "Bạn có thể đặt nhiều khối bên trong vòng lặp `lặp lại`.",
+          "course_starWars_loops9_c": "Bạn không cần phải rẽ trái để giải bài tập này. Tất cả các lệnh rẽ của bạn có thể là rẽ phải.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2018": {
+          "course_starWars_loops9_b": "Bạn có thể đặt nhiều khối bên trong vòng lặp `lặp lại`.",
+          "course_starWars_loops9_c": "Bạn không cần phải rẽ trái để giải bài tập này. Tất cả các lệnh rẽ của bạn có thể là rẽ phải.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2019": {
+          "course_starWars_loops9_b": "Bạn có thể đặt nhiều khối bên trong vòng lặp `lặp lại`.",
+          "course_starWars_loops9_c": "Bạn không cần phải rẽ trái để giải bài tập này. Tất cả các lệnh rẽ của bạn có thể là rẽ phải.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2020": {
+          "course_starWars_loops9_b": "Bạn có thể đặt nhiều khối bên trong vòng lặp `lặp lại`.",
+          "course_starWars_loops9_c": "Bạn không cần phải rẽ trái để giải bài tập này. Tất cả các lệnh rẽ của bạn có thể là rẽ phải.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         }
       }
     }

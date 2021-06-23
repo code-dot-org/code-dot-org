@@ -1212,6 +1212,15 @@ ar:
             '"y"': الموقع ص
             '"direction"': اتجاه الحركة
             '"speed"': السرعة
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': الحجم
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setSizes:
         text: عيّن {SPRITE} {PROPERTY} على {N}%
         options:
@@ -1516,6 +1525,13 @@ ar:
             '"x"': الموقع س
             '"y"': الموقع ص
             '"direction"': اتجاه الحركة
+      Mikelab_setupSim:
+        text: |-
+          محاكاة الاعداد مع
+          {SPRITE1N}{SPRITE1COSTUME}سرعه{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}سرعه{SPRITE2SPEED}
+          جمع
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1611,42 +1627,27 @@ ar:
         options:
           PROPERTY:
             "'shapeColor'": لون
-      aalab_addBehaviorForDuration:
-        text: علاب العفريت {SPRITE} يبدا {BEHAVIOR} من أجل {SECONDS} ثانيه
-      aalab_addBehaviorUntilBoolean:
-        text: العفريت {SPRITE} يبدا {BEHAVIOR} حتي {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: شبح جديد اسمه{SPRITE_NAME} مع زي{ANIMATION_NAME} في الموقع{LOCATION}
-      aalab_goToScene:
-        text: الذهاب إلى المشهد {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: نقل {SPRITE} {DISTANCE} العنصورات {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': شرق
-            '"South"': جنوب
-            '"West"': غرب
-      aalab_prompt:
-        text: طرح السؤال {MESSAGE}
-      aalab_scene:
-        text: المشهد {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: قصة الإعداد
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': شبكة
+            '"border"': الحدود
+            '"row"': صف
             '"random"': عشوائي
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': الكل
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': الكل
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: رسم ثنائي {BIN}
       binary_drawBinScreen:

@@ -267,9 +267,7 @@ sq:
             'Unplugged: Songwriting with Parameters':
               name: 'Unplugged: Të Shkruarit Këngë me Parametra'
             'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams
-
-'
+              name: 'Unplugged: Tangrams'
           student_description: Kursi 4 është dizejnuar për studentët të cilët kanë
             marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles
             me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte,
@@ -707,12 +705,6 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -764,12 +756,6 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -779,12 +765,6 @@ sq:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -1061,12 +1041,6 @@ sq:
               name: 'Unplugged: Të Shkruarit Këngë me Parametra'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Mirë se vini!
             Wrap-up:
@@ -2695,6 +2669,12 @@ sq:
           lesson_groups:
             lg_1:
               display_name: Përmbajtja
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Lekcioni 14
+            lesson15:
+              name: Lekcioni 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -2859,6 +2839,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            lessonGroup-9:
+              display_name: Ngjarje
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2884,6 +2866,10 @@ sq:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Përmbajtja
         k5-onlinepd-2021:
           lessons:
@@ -2914,3 +2900,12 @@ sq:
               display_name: Hapat e ardhshme
             Introduction:
               display_name: Hyrja
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lekcioni 15
+        kodea-pd-2021:
+          lessons:
+            Next Steps:
+              key: Hapat e ardhshme
+              name: Hapat e ardhshme

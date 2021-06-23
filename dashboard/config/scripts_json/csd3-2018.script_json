@@ -37,7 +37,6 @@
         "weblab"
       ],
       "version_year": "2018",
-      "is_stable": true,
       "project_sharing": true,
       "script_announcements": [
         {
@@ -65,7 +64,8 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2021-05-03 23:55:16 UTC",
+    "serialized_at": "2021-06-17 22:29:30 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2018"
     }

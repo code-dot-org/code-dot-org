@@ -8,14 +8,14 @@ hr:
       send_paranoid_instructions: Ako tvoja e-mail adresa postoji u našoj bazi, za
         par minuta ćeš primiti e-mail s uputama kako da potvrdiš svoj korisnički račun.
     failure:
-      already_authenticated: Već ste prijavljeni.
+      already_authenticated: Već si prijavljen.
       inactive: Tvoj korisnički račun još nije aktiviran.
-      invalid: Neispavan e-mail ili lozinka.
+      invalid: Neispravan e-mail ili lozinka.
       invalid_token: Neispravan token.
       locked: Tvoj korisnički račun je zaključan.
       not_found_in_database: Neispavan e-mail ili lozinka.
-      timeout: Vrijeme prijave je isteklo. Za nastavak je potrebno ponovno prijavljivanje.
-      unauthenticated: Za nastavak je potrebno da se registrirate ili prijavite.
+      timeout: Vrijeme prijave je isteklo. Za nastavak trebaš se opet prijaviti.
+      unauthenticated: Za nastavak je potrebno da se registriraš ili prijaviš.
       unconfirmed: Za nastavak je potrebno da potvrdiš svoj korisnički račun.
     mailer:
       confirmation_instructions:
@@ -25,58 +25,57 @@ hr:
       unlock_instructions:
         subject: Upute za otključavanje
     omniauth_callbacks:
-      failure: Ne možemo te raspoznati od %{kind} zbog "%{reason}".
-      success: Uspješno raspoznato od %{kind} korisničkog računa.
+      failure: Ne možemo te autentificirati od %{kind} zbog "%{reason}".
+      success: Uspješno autentificiran od %{kind} korisničkog računa.
     passwords:
-      no_token: Ne možete pristupiti ovoj stranici bez da dolazite sa e-maila o ponovnom
-        postavljanju lozinke. Ako dolazite sa tog e-maila molimo provjerite da ste
-        koristili URL u cjelosti.
-      send_instructions: Za koju minutu ćete primiti e-mail sa uputstvima kako pononovo
-        postaviti lozinku.
-      send_paranoid_instructions: Ako vaša adresa elektroničke pošte postoji u našoj
-        bazi podataka, primit ćete  poveznicu za poništavanje lozinke u email poruci
-        za nekoliko minuta.
-      updated: Vaša lozinka je uspješno promijenjena. Sada ste prijavljeni.
-      updated_not_active: Uspješno ste promijenili svoju lozinku.
+      no_token: Ne možete pristupiti ovoj stranici ako ne dobiješ poruku za ponovno
+        postavljanje lozinke. Ako dolaziš s poveznice za poništavanje lozinke, provjeri
+        jesi li naveo cijeli URL.
+      send_instructions: Za koju minutu ćeš primiti e-mail sa uputom kako ponovo postaviti
+        lozinku.
+      send_paranoid_instructions: Ako tvoja mail adresa postoji u našoj bazi podataka,
+        primit ćeš poveznicu za poništavanje lozinke za nekoliko minuta.
+      updated: Tvoja lozinka je uspješno promijenjena. Sada si prijavljen.
+      updated_not_active: Uspješno si promijenio svoju lozinku.
     registrations:
-      destroyed: Doviđenja! Vaš račun je uspješno otkazan. Nadamo se da ćemo vas vidjeti
-        uskoro.
-      signed_up: Dobrodošli! Uspješno ste se registrirali.
-      signed_up_but_inactive: Uspješno ste se registrirali. Međutim, nismo vas mogli
-        prijaviti na stranicu jer vaš račun još nije aktiviran.
-      signed_up_but_locked: Uspješno ste se prijavili, međutim nismo vas mogli prijaviti
-        jer je vaš račun zaključan.
-      signed_up_but_unconfirmed: Poruka sa linkom za potvrdu je poslana na vašu e-mail
-        adresu. Molimo vas otvorite link kako bi aktivirali svoj račun.
-      update_needs_confirmation: Uspješno ste ažurirali vaš račun, ali moramo potvrditi
-        vašu novu e-mail adresu. Molimo vas provjerite svoju poštu i kliknite na link
-        kako bi u potpunosti potvrdili vašu novu e-mail adresu.
-      updated: Uspješno ste ažurirali svoj račun.
+      destroyed: Doviđenja! Tvoj račun je uspješno otkazan. Nadamo se da ćemo te uskoro
+        opet vidjeti.
+      signed_up: Dobrodošao! Uspješno si se registrirao.
+      signed_up_but_inactive: Uspješno si se registrirao. Međutim, nismo te mogli
+        prijaviti na stranicu jer tvoj korisnički račun još nije aktiviran.
+      signed_up_but_locked: Uspješno si se prijavio, međutim tvoj korisnički račun
+        je zaključan.
+      signed_up_but_unconfirmed: Poruka sa poveznicom za potvrdu je poslana na tvoju
+        e-mail adresu. Molimo te da klikneš na poveznicu kako bi aktivirao svoj račun.
+      update_needs_confirmation: Uspješno si ažurirao tvoj korisnički račun, ali moramo
+        potvrditi tvoju novu e-mail adresu. Molimo provjeri svoju poštu i klikni na
+        poveznicu kako bi u potpunosti potvrdili tvoju novu e-mail adresu.
+      updated: Uspješno si ažurirao svoj račun.
     sessions:
-      signed_out: Uspješno ste odjavljeni.
+      signed_out: Uspješno si odjavljen.
     unlocks:
-      send_instructions: Za nekoliko minuta zaprimit ćete email poruku sa uputama
-        kako da otključate svoj korisnički račun.
-      send_paranoid_instructions: Ako vaš račun postoji, za par minuta ćete dobiti
+      send_instructions: Za nekoliko minuta zaprimit ćeš e-mail poruku sa uputama
+        kako da otključaš korisnički račun.
+      send_paranoid_instructions: Ako tvoj račun postoji, za par minuta ćeš dobiti
         e-mail sa uputama kako ga otključati.
-      unlocked: Vaš račun je uspješno otključan. Molimo prijavite se ponovo.
+      unlocked: Tvoj korisnički račun je uspješno otključan. Molimo prijavi se ponovo.
   errors:
     messages:
-      already_confirmed: je već potvrđen, molimo probajte se prijaviti
-      confirmation_period_expired: mora biti potvrđeno unutar %{period}, molimo zatražite
+      already_confirmed: je već potvrđen, molimo probaj se prijaviti
+      confirmation_period_expired: mora biti potvrđen unutar %{period}, molimo zatraži
         novi
-      expired: istekao je, molimo zatražite novi
+      expired: istekao je, molimo zatraži novi
       not_found: nije pronađeno
       not_locked: nije zaključan
       not_saved:
-        one: '1 greška zabranjuje spremanje ovom %{resource} : '
-        other: "%{count} grešaka zabranjuju %{resource} da se spremi:"
+        one: '1 greška onemogućuje spremanje ovom %{resource} : '
+        other: "%{count} grešaka onemogućuju %{resource} spremanje:"
     invitations:
       send_instructions: E-mail pozivnica je poslana na %{email}.
-      invitation_token_invalid: Dan token pozivnice nije valjan!
-      updated: Vaša lozinka je uspješno postavljena. Sada ste prijavljeni.
+      invitation_token_invalid: Token pozivnice nije valjan!
+      updated: Tvoja lozinka je uspješno postavljena. Sada si prijavljen.
       no_invitations_remaining: Nema više preostalih pozivnica
-      invitation_removed: Vaša pozivnica je uklonjena.
+      invitation_removed: Tvoja pozivnica je uklonjena.
       new:
         header: Pošalji pozivnicu
         submit_button: Pošalji pozivnicu
@@ -87,9 +86,9 @@ hr:
       invitation_instructions:
         subject: Upute pozivnice
         hello: Pozdrav %{email}
-        someone_invited_you: Netko vas je pozvao na %{url}, možete prihvatiti pozivnicu
-          kroz poveznicu ispod.
+        someone_invited_you: Netko te je pozvao na %{url}, možeš prihvatiti poziv
+          klikom na niže navedenu poveznicu.
         accept: Prihvati pozivnicu
-        ignore: Ako ne želite prihvatiti pozivnicu, molimo ignorirajte ovaj e-mail.<br
-          />Vaš račun neće biti kreiran sve dok ne prisupite gornjoj poveznici i postavite
-          svoju lozinku.
+        ignore: Ako ne želiš prihvatiti pozivnicu, molimo ignoriraj ovaj e-mail.<br
+          />Tvoj korisnički račun neće biti stvoren sve dok ne klikneš na gornju poveznicu
+          i ne postaviš lozinku.

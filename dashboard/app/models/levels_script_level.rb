@@ -27,7 +27,7 @@ class LevelsScriptLevel < ApplicationRecord
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String] all information needed to uniquely identify this object across environments.
-  def seeding_key(seed_context)
+  def seeding_key(seed_context, use_existing_level_keys = true)
     my_level = seed_context.levels.select {|l| l.id == level_id}.first
     raise "No Level found for #{self.class}: #{inspect}" unless my_level
     # TODO: make this use the SeedContext?
@@ -35,7 +35,7 @@ class LevelsScriptLevel < ApplicationRecord
 
     my_script_level = seed_context.script_levels.select {|sl| sl.id == script_level_id}.first
     raise "No ScriptLevel found for #{self.class}: #{inspect}" unless my_script_level
-    script_level_seeding_key = my_script_level.seeding_key(seed_context)
+    script_level_seeding_key = my_script_level.seeding_key(seed_context, use_existing_level_keys)
 
     my_key.merge!(script_level_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
     my_key = my_key.stringify_keys

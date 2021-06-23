@@ -575,12 +575,6 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -626,12 +620,6 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -641,12 +629,6 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -904,12 +886,6 @@ kk:
               name: 'Kомпьютерсіз: Параметрлермен Ән Жазу'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Қош келдіңіз!
             Wrap-up:
@@ -2668,6 +2644,8 @@ kk:
               display_name: Айнымалылар
             csf_for_loops:
               display_name: For ілмектері
+            lessonGroup-9:
+              display_name: Шаралар
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2685,6 +2663,10 @@ kk:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Контент
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Контент
         k5-onlinepd-2021:
           lessons:

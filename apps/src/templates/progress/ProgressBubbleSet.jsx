@@ -17,7 +17,6 @@ class ProgressBubbleSet extends React.Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    //TODO: (ErinB) probably change to use just number during post launch clean-up.
     selectedSectionId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
@@ -27,9 +26,7 @@ class ProgressBubbleSet extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    pairingIconEnabled: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool,
+    lessonExtrasEnabled: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
     // Redux
@@ -37,10 +34,10 @@ class ProgressBubbleSet extends React.Component {
   };
 
   bubbleDisabled = level => {
-    const {disabled, stageExtrasEnabled} = this.props;
-    // Bonus level (aka stage extras) bubble is disabled if stage extras are disabled
+    const {disabled, lessonExtrasEnabled} = this.props;
+    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
     // for the current section.
-    const disableBubble = disabled || (!stageExtrasEnabled && level.bonus);
+    const disableBubble = disabled || (!lessonExtrasEnabled && level.bonus);
     if (disableBubble) {
       return true;
     }
@@ -48,13 +45,7 @@ class ProgressBubbleSet extends React.Component {
   };
 
   renderBubble = (level, index, isSublevel) => {
-    const {
-      levels,
-      selectedSectionId,
-      selectedStudentId,
-      hideAssessmentIcon,
-      isRtl
-    } = this.props;
+    const {levels, selectedSectionId, selectedStudentId, isRtl} = this.props;
 
     // Adjust background styles if locale is RTL
     const backgroundFirstStyle = isRtl
@@ -93,8 +84,6 @@ class ProgressBubbleSet extends React.Component {
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
-            pairingIconEnabled={this.props.pairingIconEnabled}
-            hideAssessmentIcon={hideAssessmentIcon}
             onClick={this.props.onBubbleClick}
           />
         </div>

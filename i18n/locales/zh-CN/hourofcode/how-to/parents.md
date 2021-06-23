@@ -29,7 +29,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 我们所有的活动都将解决问题和批判性思维与趣味性和创造性结合在一起，而这里是一些学生最喜欢的活动：
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - 给爱学习的孩子：<a href="https://code.org/oceans">保护海洋的人工智能</a>或<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">从零开始做音乐</a>
 
 <h3>  设备有限或者无设备？</h3>

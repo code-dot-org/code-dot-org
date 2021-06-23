@@ -1,0 +1,122 @@
+---
+title: Sprite Lab
+theme: responsive
+video_player: true
+---
+
+%link{href: "/css/tools.css", rel: "stylesheet"}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet"}
+%link{href: "/css/highlights.css", rel: "stylesheet"}
+
+.tools-banner
+  .tools-img-box
+    %img.tools-img.tools-img-gamelab{src: CDO.code_org_url("/shared/images/courses/logo_gamelab_square.png")}
+  .tools-info.green{style: "max-width: 748px;"}
+    .tools-title-bar.green
+      %h1.tools-title Sprite Lab
+    .tools-description
+      %p Sprite Lab is a block-based programming environment where you can make simple animations and games with objects and characters that interact with each other. Create an animation or game then share your app in seconds.
+      .tools-details Ages 10+, all modern browsers, English only
+      %a{href: CDO.studio_url("/projects/spritelab/new")}
+        %button Make an animation or game
+
+.clear
+
+
+#challenges
+  %h1 Sample Projects
+  %h2 Explore these sample projects or change the code to make them your own.
+  .highlights-content
+    - cta = "Remix the project"
+    = view :highlight_item, item: {image: "spritelab/rikki", title: "About Me", desc: "Click the sprites to learn more about me.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/4/levels/1'}
+    = view :highlight_item, item: {image: "spritelab/pet", title: "Virtual Pet", desc: "Drag the food or the toy to the pet and watch the sprites interact.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/4/levels/1'}
+    = view :highlight_item, item: {image: "spritelab/birthday", title: "Greeting Card", desc: "Enter your name and age to get a personalized greeting.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/8/levels/2/sublevel/1'}
+    = view :highlight_item, item: {image: "spritelab/sky", title: "Sky Dancer", desc: "Collect the coins. Avoid the clouds.", cta: cta, url: 'https://studio.code.org/s/coursef-2021/lessons/20/levels/1/sublevel/2'}
+  .clear
+
+#videos
+  %h1 Video library
+  These videos appear in 
+  %a{href: "/curriculum/csf/"}
+    CS Fundamentals
+  and are displayed here as a quick introduction to using Sprite Lab. Check out each video to see how you can add new features to your project.
+
+  - spritelab_videos = []
+  - spritelab_videos << { id: 'CSF_SpriteLabIntro_CDEF', category_title: 'Making Your First Projects', code: 'l0B0gDuHHC8', download_path: 'https://videos.code.org/levelbuilder/introducingspritelab_sm-mp4.mp4', studio_stage: '/s/coursee-2020/lessons/6/levels/1' }
+  - spritelab_videos << { id: 'CSF_Spritelab_MakeSprite_CDEF', code: 'nHq7_-Kpgc8', download_path: 'https://videos.code.org/levelbuilder/howtomakeasprite_sm-mp4.mp4', studio_stage: '/s/coursee-2020/lessons/6/levels/6' }
+  - spritelab_videos << { id: 'CDEF_Video_SpritesInAction', code: 'vsjoWjyQLRU', download_path: 'https://videos.code.org/levelbuilder/spritesinaction_sm-mp4.mp4', studio_stage: '/s/coursee-2020/lessons/7/levels/2' }
+  - spritelab_videos << { id: '	csf21pilot_events', code: '_RxDeRPwJ-g', download_path: 'https://videos.code.org/levelbuilder/video-1-sprites-in-action_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2021/lessons/3/levels/3' }
+  - spritelab_videos << { id: '	csf21pilot_prompts', code: '3TQ6ybjSm6c', download_path: 'https://videos.code.org/levelbuilder/video-2-sprite-lab-text-and-prompts_v2_small_20mb-mp4.mp4', studio_stage: '/s/coursef-2021/lessons/7/levels/3' }
+  - spritelab_videos << { id: 'csf_lots_of_sprites', code: '5yWt5o0zwAM', download_path: 'https://videos.code.org/levelbuilder/video-3-sprite-lab-lots-of-sprites-v2_small_20mb-mp4.mp4', studio_stage: 's/coursef-2021/lessons/20/levels/2/sublevel/1' }
+
+  - spritelab_videos.each do |video|
+    // Show the chapter title at the beginning of each video chapter
+    - unless video[:category_title].nil_or_empty?
+      .clear
+      %h2= video[:category_title]
+    %div{style: "float:left; padding:10px; width: 275px;"}
+      = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'center', download_path: video[:download_path], letterbox: 'false'
+      - unless video[:studio_stage].nil_or_empty?
+        %a{href: CDO.studio_url(video[:studio_stage])} Try it now
+        .clear
+
+
+#resources
+  %h1 Resources
+  %h2 Try the Computer Science Fundamentals courses that introduce Sprite Lab
+
+<div class="col-50" style="padding-right: 20px;">
+<div style="height:50px;padding-left: 20px; background-image: url('/images/458x70/blue.png');border-radius: 5% 5% 0% 0%;">
+<h2 style="color:white;line-height: 50px;"> Course E </h2>
+
+</div>
+
+<div style="border-width:1px;"">
+
+<p><strong>Grade:</strong> 4th</p>
+In the first part of this course, students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety.
+
+<br><br>
+
+<a href="https://studio.code.org/s/coursee"> <button>View course</button> </a>
+
+</div>
+</div>
+
+<div class="col-50" style="padding-right: 20px;">
+<div style="height:50px;padding-left: 20px; background-image: url('/images/458x70/purple.png');border-radius: 5% 5% 0% 0%;">
+<h2 style="color:white;line-height: 50px;"> Course F </h2>
+</div>
+
+<div>
+
+<p><strong>Grade:</strong> 5th</p>
+
+The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user.
+
+<br><br>
+
+<a href="https://studio.code.org/s/coursef"> <button>View course</button> </a>
+
+</div>
+</div>
+
+
+<div style="clear:both"></div>
+
+
+
+:javascript
+  $(function() {
+    // On hovering over projects, a description and challenge will show.
+    // Descriptions are also commented in the projects so they aren't a requirement for mobile.
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });

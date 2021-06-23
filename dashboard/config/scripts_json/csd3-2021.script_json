@@ -2,7 +2,7 @@
   "script": {
     "name": "csd3-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:55 UTC",
+    "serialized_at": "2021-06-17 22:31:10 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -80,7 +81,7 @@
         "overview": "**Question of the Day: How is computer science used in entertainment?**\r\n\r\nStudents are asked to consider the \"problems\" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, students will explore how computer science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.",
         "preparation": "* Review the research resources linked in Code Studio\r\n* Print a copy of the activity guide for each group of three students",
         "purpose": "This lesson is intended to kick off this programming unit in a way that engages students of all backgrounds and interests. Though the end point of this unit asks students to develop a game, you should avoid starting out with a strong emphasis on _video_ games. Instead, we attempt to broaden students' perspective about how programming is relevant to a form of entertainment or self expression that is personally engaging. This will provide an anchor for students to come back to throughout the unit as they consider the potential applications of the various programming skills that they learn.",
-        "student_overview": "student\n**Question of the Day: How is computer science used in entertainment?**\n\nThe class is asked to consider the \"problems\" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, they will explore how Computer Science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression."
+        "student_overview": "student\n**Question of the Day: How is computer science used in entertainment?**\n\nIn this lesson, you will explore how Computer Science and specifically programming, plays a role in entertainment or as a vehicle for self-expression. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
@@ -100,7 +101,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\r\n\r\nStudents explore the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab. The warm up activity quickly demonstrates the challenges of communicating position without some shared reference point. In the main activity, students explore a Game Lab tool that allows students to interactively place shapes on Game Lab's 400 by 400 grid. They then take turns instructing a partner how to draw a hidden image using this tool, accounting for many challenges students will encounter when programming in Game Lab. Students optionally create their own image to communicate before a debrief discussion.\r\n",
         "purpose": "The primary purpose of this lesson is to introduce students to the coordinate system they will use in Game Lab. Students may have limited experience with using a coordinate grid or may struggle with the \"flipped\" y-axis in Game Lab. The drawing tool also forces students to think about other features of Game Lab students will see when they begin programming in the next lesson. These include the need to consider order while drawing, the need to specify color, and the fact that circles are positioned by their center and squares by their top-left corner. By the end of this activity, students should be ready to transfer what they have learned about communicating position to the programming they will do in the next lesson.",
-        "student_overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\r\n\r\nThis lesson explores the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab.The class uses a Game Lab tool to interactively place shapes on Game Lab's 400 by 400 grid. Partners then take turns instructing each other how to draw a hidden image using this tool, which accounts for many of the challenges of programming in Game Lab."
+        "student_overview": "**Question of the Day: How can we clearly communicate how to draw something on a screen?**\n\nIn this lesson, you will explore the challenges of communicating clear instructions using a Game Lab tool to draw shapes on the Game Lab's grid!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
@@ -121,7 +122,7 @@
         "overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nStudents are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.",
         "preparation": "* Read the Forum\n* Prepare projector or other means of showing videos if you wish to watch as a class",
         "purpose": "The main purpose of this lesson is to give students a chance to get used to the programming environment, as well as the basic sequencing and debugging that they will use throughout the unit. Students begin with an introduction to the GameLab interactive development environment (IDE), then learn the three commands ([`rect`(#4dd0e1)](/docs/gamelab/rect/), [`ellipse`(#4dd0e1)](/docs/gamelab/ellipse/), and [`fill`(#4dd0e1)](/docs/gamelab/fill/)) that they will need to code the same types of images that they created on paper in the previous lesson.  Challenge levels provide a chance for students who have more programming experience to further explore Game Lab.",
-        "student_overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nThe class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. The lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson."
+        "student_overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\n\nIn this lesson, you will begin to use Game Lab to position shapes on the screen while working through the concepts of sequencing and debugging. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
@@ -142,7 +143,7 @@
         "overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) that include width and height parameters. They also learn to use the [`background()`(#4dd0e1)](/docs/gamelab/background/) block.",
         "preparation": "* Review the level sequence in Code Studio",
         "purpose": "This lesson gives students a chance to slightly expand their drawing skills while continuing to develop general purpose programming skills. They will need to reason about the x-y coordinate plane, consider the order of their code, and slightly increase their programs' complexity.  This lesson should be focused primarily on skill-building.",
-        "student_overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson, students continue to develop a familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters.\" Finally, the class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block.\r\n"
+        "student_overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\n\nIn this lesson, you will continue working in Game Lab and increasing your familiarity with drawing shapes to the screen by manipulating the \"parameters\" of the shapes you are using to draw. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
@@ -163,7 +164,7 @@
         "overview": "**Question of the Day:  How can we use variables to store information in our programs?**\r\n\r\nIn this lesson students learn how to use variables to label a number. Students begin the lesson with a very basic description of the purpose of a variable within the context of the storage component of the input-output-storage-processing model. Students then complete a level progression that reinforces the model of a variable as a way to label or name a number.",
         "preparation": "* Review the level progression in Code Studio",
         "purpose": "This lesson is the first time students will see variables in the course, and they are not expected to fully understand how variables work by its conclusion. Students should leave this lesson knowing that variables are a way to label a value in their programs so that they can be reused or referenced later. In the following lesson students will be introduced to random numbers, in which they will see a more powerful use for variables.  \r\n\r\nUsing variables to manipulate drawings is a surprisingly challenging skill that requires a great deal of forethought and planning. While students will use or modify many programs in this lesson, they are not expected to compose programs that use variables to modify the features of a drawing. In later lessons, students will expand their understanding of variables and more advanced ways they can be used.",
-        "student_overview": "**Question of the Day:  How can we use variables to store information in our programs?**\r\n\r\nThis lesson introduces variables as a way to label a number in a program or save a randomly generated value. The class begins the lesson with a very basic description of the purpose of a variable and practices using the new blocks, then completes a level progression that reinforces the model of a variable as a way to label or name a number.\r\n"
+        "student_overview": "**Question of the Day:  How can we use variables to store information in our programs?**\n\nIn this lesson, you will be introduced to variables - an important concept in programming used to store values for your programs!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Variables",
@@ -184,7 +185,7 @@
         "overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the [`randomNumber()`(#FFB74D)](/docs/gamelab/randomNumber/) block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.",
         "preparation": "Review the level progression in Code Studio",
         "purpose": "This lesson introduces randomness, which is important both as a way to make programs more interesting, but also to motivate the use of variables. In the middle of the activity, students are exposed to a variable that is updated multiple times in the program, expanding their understanding of how variables can be used.",
-        "student_overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the randomNumber() block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program, and use those skills to draw randomized images."
+        "student_overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\n\nIn this lesson, you will learn how to use the randomNumber() block to create new behaviors in your programs!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Random Numbers",
@@ -205,7 +206,7 @@
         "overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.",
         "preparation": "* (Optional) Print a copy of the activity guide for each student",
         "purpose": "Keeping track of many shapes and the different variables that control aspects of those shapes can get very complex. There will be lots of variables with different variable names. Instead, computer scientists created something called an **object** which allows for one variable name to control both the shape and all its aspects. In Game Lab we use a certain type of object called a **sprite**. A sprite is just a rectangle with **properties** for controlling its look. Properties are the variables that are attached to a sprite. You can access them through **dot notation**. \r\n\r\nUsing the Animation Tab, students can create or import images to be used with their sprites. Later on, these sprites will become a useful tool for creating animations, as their properties can be changed and updated throughout the course of a program.\r\n",
-        "student_overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, the class is introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which greatly increases the complexity of what can be drawn on the screen."
+        "student_overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
       },
       "seeding_key": {
         "lesson.key": "Sprites",
@@ -225,7 +226,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties.  Students start with a review of what a sprite is, then move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.",
         "purpose": "In the last lesson, when students were introduced to sprites, they focused mainly on creating a sprite and assigning it an animation. This lesson starts to dig into what makes sprites such a powerful programming construct--that they have properties that can be modified as a program is running. This lays the foundation for much of what students will be doing in the rest of the unit in terms of accessing and manipulating sprite properties to create interesting behaviors in their programs.",
-        "student_overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties. The lesson starts with a review of what a sprite is, then moves on to Game Lab for more practice with sprites, using their properties to change their appearance. The class then reflects on the connections between properties and variables.\r\n"
+        "student_overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\n\nIn this lesson, you will continue working with sprites, using their properties to change their appearance. \n"
       },
       "seeding_key": {
         "lesson.key": "Sprite Properties",
@@ -245,7 +246,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\r\n\r\nThis lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. At the beginning of the lesson, students are asked to caption a cartoon created in Game Lab. They then move onto Code Studio where they practice placing text on the screen and controlling other text properties, such as size.  Students who complete the assessment early may go on to learn more challenging blocks related to text properties. ",
         "purpose": "This lesson introduces text, which students will need as they begin to build more complex programs (e.g. games with scoreboards). This is the last type of element that students will be placing on the screen. After this, students will focus on how they can control the movement and interactions of these elements.",
-        "student_overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\r\n\r\nThis lesson introduces Game Lab's text commands, giving students more practice using the coordinate plane and parameters. At the beginning of the lesson, they are asked to caption a cartoon created in Game Lab. They then move onto Code Studio where they practice placing text on the screen and controlling other text properties, such as size.\r\n"
+        "student_overview": "**Question of the Day: How can we use text to improve our scenes and animations?**\n\nIn this lesson, you will learn how to use Game Lab's text commands to add captions to your scenes. "
       },
       "seeding_key": {
         "lesson.key": "Text",
@@ -265,7 +266,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\r\n\r\nAfter a quick review of the code they have learned so far, students are introduced to their first creative project of the unit. Using the problem-solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers.",
         "purpose": "This lesson is a chance for students to get more creative with what they have learned. Some students may spend more time in the animation tab drawing than programming. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.\r\n\r\nThe open-ended nature of this lesson also provides flexibility for the teacher to decide how long students should spend on their work, depending on the scheduling demands of the particular course implementation.",
-        "student_overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\r\n\r\nAfter a quick review of the code learned so far, the class is introduced to the first creative project of the unit. Using the problem solving process as a model, students define the scene that they want to create, prepare by thinking of the different code they will need, try their plan in Game Lab, then reflect on what they have created. They also have a chance to share their creations with their peers.\r\n"
+        "student_overview": "**Question of the Day: How can we use Game Lab to express our creativity?**\n\nIn this lesson, you will get the opportunity to be creative by using the problem-solving process to design and program a scene of your choice. \n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Captioned Scenes",
@@ -286,7 +287,7 @@
         "overview": "**Question of the Day: How can we animate our images in Game Lab?**\r\n\r\nIn this lesson students are introduced to the draw loop, one of the core programming paradigms in Game Lab. To begin the lesson students look at some physical flipbooks to see that having many frames with different images creates the impression of motion. Students then watch a video explaining how the draw loop in Game Lab helps to create this same impression in their programs. Students combine the draw loop with random numbers to manipulate some simple animations with dots and then with sprites.",
         "preparation": "* Print and assemble the manipulatives\r\n* Prepare the video",
         "purpose": "The draw loop is a core component of Game Lab. The fact that the Game Lab environment repeatedly calls this function many times a second (by default 30) is what allows the tool to create animations. This lesson has two goals. The first is for students to see how animation in general depends on showing many slightly different images in a sequence. The second goal is for students to understand how the draw loop allows them to create this behavior in Game Lab. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.",
-        "student_overview": "**Question of the Day: How can we animate our images in Game Lab?**\r\n\r\nThis lesson introduces the draw loop, one of the core programming paradigms in Game Lab. Students learn how to combine the draw loop with random numbers to manipulate some simple animations first with dots and then with sprites."
+        "student_overview": "**Question of the Day: How can we animate our images in Game Lab?**\n\nIn this lesson, you will learn how to use the draw loop with random numbers to create your first simple animations. \n"
       },
       "seeding_key": {
         "lesson.key": "The Draw Loop",
@@ -306,7 +307,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\r\n\r\nIn this lesson, students learn how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. Students first brainstorm different ways that they could animate sprites by controlling their properties, then explore the counter pattern in Code Studio. After examining working code, students try using the counter pattern to create various types of sprite movements.",
         "purpose": "This lesson builds on the draw loop that students learned previously to create programs with _purposeful_ motion. By either incrementing or decrementing sprite properties, such as [`sprite.x`(#f78183)](/docs/gamelab/sprite.x/), students can write programs that move sprites in expected patterns, instead of the randomization that they used in the past. The animations that students learn to create in this lesson lay the foundation for all of the animations and games that they will make throughout the rest of the unit.",
-        "student_overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\r\n\r\nIn this lesson, the class learns how to control sprite movement using a construct called the counter pattern, which incrementally changes a sprite's properties. After brainstorming different ways that they could animate sprites by controlling their properties, students explore the counter pattern in Code Studio, using the counter pattern to create various types of sprite movements."
+        "student_overview": "**Question of the Day: How can we control sprite movement in Game Lab?**\n\nIn this lesson, you will learn how to control sprite movement using the counter pattern. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Sprite Movement",
@@ -326,7 +327,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\r\n\r\nIn this lesson, students are asked to combine different methods that they have learned to create an animated scene. Students first review the types of movement and animation that they have learned, and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.",
         "purpose": "This is a chance for students to get more creative with what they have learned. Some students may spend more time in the animation tab drawing than programming. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.",
-        "student_overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\r\n\r\nIn this lesson, the class is asked to combine different methods from previous lessons to create an animated scene. Students first review the types of movement and animation that they have learned, and brainstorm what types of scenes might need that movement. They then begin to plan out their own animated scenes, which they create in Game Lab.\r\n"
+        "student_overview": "**Question of the Day: How can we combine different programming patterns to make a complete animation?**\n\nIn this lesson, you will combine all the concepts you have learned in the previous lessons to create your first animated scene of your own design!\n\n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Animation",
@@ -346,7 +347,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.",
         "purpose": "This lesson follows closely the booleans model that students first experienced in the Booleans Unplugged lesson. As before, we start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as [`keyDown()`(#fff176)](/docs/gamelab/keyDown/), which can be used in place of simple boolean comparisons to write programs that respond to user input.",
-        "student_overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces students to booleans and conditionals, which allow a program to run differently depending on whether a condition is true. The class starts by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates boolean expressions, and how they can be used to structure a program."
+        "student_overview": "**Question of the Day:  How can programs react to changes as they are running?**\n\nIn this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true. \n"
       },
       "seeding_key": {
         "lesson.key": "Conditionals",
@@ -366,7 +367,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can our programs react to user input?**\r\n\r\nFollowing the introduction to booleans and _if_ statements in the previous lesson, students are introduced to a new block called [`keyDown()`(#fff176)](/docs/gamelab/keyDown/) which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson, students will have written programs that take keyboard input from the user to control sprites on the screen.",
         "purpose": "One common way conditionals are used is to check for different types of user input, especially key presses. Having a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.",
-        "student_overview": "**Question of the Day: How can our programs react to user input?**\r\n\r\nFollowing the introduction to booleans and if statements in the previous lesson, students are introduced to a new block called keyDown(), which returns a boolean and can be used in conditionals statements to move sprites around the screen. By the end of this lesson they will have written programs that take keyboard input from the user to control sprites on the screen.\r\n"
+        "student_overview": "**Question of the Day: How can our programs react to user input?**\n\nIn this lesson, you will learn how to use the keyDown() block which will let your programs respond to user input. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Keyboard Input",
@@ -386,7 +387,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What are more ways that the computer can react to user input?**\r\n\r\nIn this lesson students continue to explore ways to use conditional statements to take user input. In addition to the keyboard commands learned yesterday, students will learn about several ways to take mouse input. They will also expand their understanding of conditionals to include `else`, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not.",
         "purpose": "Students have learned how to make simple decisions with conditionals. Sometimes, however, we want to make decisions based on whether the condition we asked about originally was false. That's where else statements come in. Else statements are a second statement which is attached to an if statement. Else statements execute when the conditions they are attached to are false.\r\n\r\nThis concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.",
-        "student_overview": "**Question of the Day: What are more ways that the computer can react to user input?**\r\n\r\nThe class continues to explore ways to use conditional statements to take user input. In addition to the keyboard commands learned yesterday, they learn about several ways to take mouse input. They also expand their understanding of conditionals to include else, which allows for the computer to run a certain section of code when a condition is true, and a different section of code when it is not."
+        "student_overview": "**Question of the Day: What are more ways that the computer can react to user input?**\n\nIn this lesson, you will expand on what you have learned about if statements and explore if-else statements as well as learn about how to use the mouse to get input from your user that you can use in your conditional statements. "
       },
       "seeding_key": {
         "lesson.key": "Mouse Input",
@@ -407,7 +408,7 @@
         "overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\r\n\r\nIn this culminating project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.",
         "preparation": "* Read the Forum\r\n* Print out a copy of the project guide for each student",
         "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (drawing, variables, sprites, images, conditionals, user input) in one place. Students should still be working with code that is easily readable and doesn't involve very many high level abstractions. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.",
-        "student_overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\r\n\r\nIn this culminating project for Chapter 1, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point.\r\n"
+        "student_overview": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\n\nIn this lesson, you will plan and develop an interactive greeting card using all the programming concepts and techniques you have learned so far!\n"
       },
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
@@ -427,7 +428,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\r\n\r\nAfter a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the idea of hiding those patterns in a single block.  Students then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at various ways that they are able to code more complex behaviors in their sprites.  ",
         "purpose": "This lesson launches a major theme of the chapter: that complex behavior can be represented in simpler ways to make it easier to write and reason about code. \r\n\r\nIn this lesson students are taught to use the velocity blocks to simplify the code for moving a sprite across the screen. This marks a shift in how new blocks are introduced. Whereas previously blocks were presented as enabling completely new behaviors, they are now presented as simplifying code students could have written with the blocks previously available. Over the next several lessons, students will see how this method of managing complexity allows them to produce more interesting sprite behaviors.",
-        "student_overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\r\n\r\nAfter a brief review of how the counter pattern is used to move sprites, the class is introduced to the idea of hiding those patterns in a single block, in order to help manage the complexity of programs. They then head to Code Studio to try out new blocks that set a sprite's velocity directly, and look at the various ways that they are able to code more complex behaviors in their sprites.\r\n"
+        "student_overview": "**Question of the Day:  How can programming languages hide complicated patterns so that it is easier to program?**\n\nIn this lesson, you will learn how to set a sprite's velocity which uses the counter pattern to move your sprites. "
       },
       "seeding_key": {
         "lesson.key": "Velocity",
@@ -448,7 +449,7 @@
         "overview": "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nStudents learn about collision detection on the computer. Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching. They then use the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) block to create different effects when sprites collide, and practice using the block to model various interactions.",
         "preparation": "* Print copies of the activity guide such that each pair of students has a part A and a part B",
         "purpose": "This lesson formally introduces the use of abstractions, simple ways of representing underlying complexity. \r\n\r\nIn the last lesson, students were exposed to the idea of using one block to represent complex code. Students further explore this idea in the context of the intentionally complex mathematical challenge of determining whether two sprites are touching. By using a single block to represent this complexity, in this case the isTouching block, it becomes much easier to write and reason about code, and students can appreciate the value of using abstractions. In later lessons, students will continue to build on the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) abstraction to create more complex sprite interactions.\r\n",
-        "student_overview": "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nIn this lesson, the class learns about collision detection on the computer. Working in pairs, they explore how a computer could use math, along with the sprite location and size properties, to detect whether two sprites are touching. They then use the isTouching() block to create different effects when sprites collide, and practice using the block to model various interactions."
+        "student_overview": "**Question of the Day: How can programming help make complicated problems more simple?**\n\nIn this lesson, you will learn about collision detection by exploring how a computer could use math, the sprite location, and size to detect whether sprites are touching. "
       },
       "seeding_key": {
         "lesson.key": "Collision Detection",
@@ -468,7 +469,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\r\n\r\nStudents use what they have learned about collision detection and setting velocity to create a simple side scroller game. After looking at a sample side scroller game, students brainstorm what sort of side scroller they would like to make, then use a structured process to program the game in Code Studio.",
         "purpose": "This lesson is a chance for students to get more creative with what they have learned.  Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment. This lesson can be shortened or lengthened depending on time constraints. ",
-        "student_overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\r\n\r\nStudents use what they have learned about collision detection and setting velocity to create simple side scroller games. After looking at a sample side scroller game, they brainstorm what sort of side scroller they would like to make, then use a structured process to program the game in Code Studio."
+        "student_overview": "**Question of the Day:  How can the new types of sprite movement and collision detection be used to create a game?**\n\nIn this lesson, you will use what you have learned about collision detection and velocity to create a simple side scroller game!"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Side Scroller",
@@ -488,7 +489,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\r\n\r\nStudents learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern, and observe the different types of movement that result. In particular, students learn how to simulate gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.",
         "purpose": "This lesson does not introduce any new blocks and in fact only uses patterns students have seen in Chapter 1. Instead, it demonstrates how combining these tools, in particular the abstractions students learned in the previous two lessons, allows them to build new behaviors for their sprites. This highlights the broader point that abstractions not only simplify code, but also can themselves be used as building blocks of even more complex behavior.  ",
-        "student_overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\r\n\r\nThe class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. After reviewing the two concepts, they explore various scenarios in which velocity is used in the counter pattern, and observe the different types of movement that result. In particular, students learn how to simulate gravity. They then reflect on how they were able to get new behaviors by combining blocks and patterns that they already knew.\r\n"
+        "student_overview": "**Question of the Day: How can previous blocks be combined in new patterns to make interesting movements?**\n\nIn this lesson, you will learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movements. \n"
       },
       "seeding_key": {
         "lesson.key": "Complex Sprite Movement",
@@ -508,7 +509,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)).",
         "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
-        "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lesson, the class programs their sprites to interact in new ways. After a brief review of how they used the isTouching block, students brainstorm other ways that two sprites could interact. They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).\r\n"
+        "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\n\nIn this lesson, you will learn how to use the new collision blocks (collide, displace, bounce, and bounceOff) to make your sprite interact in new ways. "
       },
       "seeding_key": {
         "lesson.key": "Collisions",
@@ -528,7 +529,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, students brainstorm what sort of flyer games they would like, then use a structured process to program the game in Code Studio.",
         "purpose": "This lesson is a chance for students to get more creative with what they have learned. Encourage students to spend time on parts of the activity that interest them, as long as they meet the requirements of the assignment.",
-        "student_overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\r\n\r\nStudents use what they have learned about simulating gravity and the different types of collisions to create simple flyer games. After looking at a sample flyer game, they brainstorm what sort of flyer they would like, then use a structured process to program the game in Code Studio.\r\n"
+        "student_overview": "**Question of the Day:  How can the new types of collisions and modeling movement be used to create a game?**\n\nIn this lesson, you will use what you have learned about simulating gravity and the different types of collisions to create a simple flyer game!"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Flyer Game",
@@ -548,7 +549,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\r\n\r\nStudents learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. Students first think about what sorts of new blocks they would like in Game Lab, and what code those blocks would contain inside. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function.",
         "purpose": "In previous lessons students have learned to use a number of abstractions in their programs, including the velocity properties, isTouching, and collisions. These abstractions have allowed them to build much more complex programs while ignoring the details of how that behavior is created. In this lesson students learn to build abstractions of their own by creating functions.\r\n\r\n\r\nStudents will primarily use functions to break code into logical chunks that are easier to reason about. This foreshadows the chapter's transition from building technical skill to the organizational processes used to develop software.",
-        "student_overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\r\n\r\nThis lesson covers functions as a way for students to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.\r\n"
+        "student_overview": "**Question of the Day: How can programmers use functions to create their own abstractions?**\n\nIn this lesson, you will learn how to better organize your code using functions to make your program code more readable and remove repeated blocks of code. "
       },
       "seeding_key": {
         "lesson.key": "Functions",
@@ -569,7 +570,7 @@
         "overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\r\n\r\nThis lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. At the end of the lesson, students have an opportunity to make improvements to the game to make it their own.",
         "preparation": "* Print copies of the the project guide if you will be giving students physical copies.  Please note that this project guide is intentionally filled out. (See notes in Lesson Plan.)",
         "purpose": "This lesson introduces multi-frame animations, and is the first in a sequence centered around the process of building software.\r\n\r\nWhile previous lessons focused on using abstractions to manage the complexity of the code, this lesson focuses on managing the complexity of the software development process. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
-        "student_overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\r\n\r\n\r\nThis lesson introduces the process that students will use to design games for the remainder of the unit. This process is centered around a project guide that asks students to define their sprites, variables, and functions before they begin programming their game. They walk through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the game to make it their own."
+        "student_overview": "**Question of the Day:  How does having a plan help to make a large project easier?**\n\nIn this lesson, you will explore the process you will use for the remainder of the unit when designing games. "
       },
       "seeding_key": {
         "lesson.key": "The Game Design Process",
@@ -590,7 +591,7 @@
         "overview": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\nIn this multi-day lesson, students use the problem solving process from Unit 1 to create a platform jumper game. They start by looking at an example of a platform jumper, then define what their games will look like. Next, they use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game. After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.",
         "preparation": "* Print one copy of the project guide for each student or pair of students",
         "purpose": "Students have already learned all of the programming constructs that they need to make a game. This lesson reviews many of those concepts while introducing them to a structured process that will help them to manage the work. It builds on the use of the Project Guide in the previous lesson by having students complete more of this project guide independently before using it to build a game. This activity prepares students to write their own game from scratch for the final project.",
-        "student_overview": "**Question of the Day:  How can the problem solving process help programmers to manage large projects?**\r\n\r\n\r\nIn this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game. After looking at a sample game, they define what their games will look like and use a structured process to build them. Finally, the class reflects on how the games could be improved, and implements those changes.\r\n"
+        "student_overview": "**Question of the Day:  How can the problem-solving process help programmers to manage large projects?**\n\nIn this multi-day lesson, you will use the problem-solving process to create a platform jumper game!"
       },
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
@@ -611,7 +612,7 @@
         "overview": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\nStudents will plan and build their own game using the project guide from the previous two lessons. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.",
         "preparation": "* Print copies of the project guide, one for each student / pair of students\r\n* Print copies of the rubric, one for each student / pair of students\r\n* Print copies of the peer review guide, one for each student / pair of students\r\n* Review sample games in Code Studio",
         "purpose": "This lesson is the culmination of Unit 3 and provides students an opportunity to build a Game Lab project of their own from the ground up. The scaffolding provided by the project guide and the practice they have using it are intended to assist students in scoping their projects and seeing their ideas through to completion. This project is an opportunity to showcase technical skills, but they will also need to collaborate with their partner, provide constructive peer feedback, and repeatedly use the problem solving process as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to this unit of CS Discoveries.",
-        "student_overview": "**Question of the Day: How can the five CS practices (problem solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\r\n\r\nStudents plan and build original games using the project guide from the previous two lessons. Working individually or in pairs, they plan, develop, and give feedback on the games. After incorporating the peer feedback, students share out their completed games.\r\n"
+        "student_overview": "**Question of the Day: How can the five CS practices (problem-solving, persistence, communication, collaboration, and creativity) help programmers to complete large projects?**\n\nIn this lesson, you will use the problem-solving process to plan and build an original game!"
       },
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
@@ -680,21 +681,8 @@
       }
     },
     {
-      "key": "67b93e73-7973-4bc4-a653-afcd395d2e87",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "67b93e73-7973-4bc4-a653-afcd395d2e87",
-        "lesson.key": "Programming for Entertainment",
-        "lesson_group.key": "csd3_1",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
       "key": "9df9685e-8a25-4529-a130-ccacacc23186",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1365,21 +1353,8 @@
       }
     },
     {
-      "key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427",
-        "lesson.key": "Project - Interactive Card",
-        "lesson_group.key": "csd3_1",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
       "key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1798,21 +1773,8 @@
       }
     },
     {
-      "key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
       "key": "06f4dccb-71cc-4afb-907e-2ee69be55359",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1826,7 +1788,7 @@
     },
     {
       "key": "163efba3-af62-4989-8fab-c173dfbc4ed6",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Post-Project Test"
       },
@@ -1933,7 +1895,7 @@
       "key": "f348d317-252e-4581-b489-fe1bbe700f67",
       "position": 3,
       "properties": {
-        "description": "On Code Studio, inside the blue teacher box, there are a handful of useful sites to help students kick off their research. Share the links that you feel are most helpful and appropriate for your class.",
+        "description": "Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.\n\n- **Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)**: This site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.\n\n- **Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)**: Videos featuring a range of people working in diverse areas of the game industry, talking about what they do.\n\n- **Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)**: Music Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for \"computer science\" or \"programming\" will reveal some interesting articles.\n\n- **Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)**: While this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.",
         "name": "Researching your Topic\r",
         "tips": [
           {
@@ -1990,31 +1952,14 @@
       }
     },
     {
-      "key": "eaef36ac-f448-40c0-8858-97c22828b009",
-      "position": 1,
-      "properties": {
-        "progression_name": "Exploring CS in Entertainment",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Here are a few sites to get students started. These sites are generally appropriate for school, but the content with them changes frequently, so we strongly suggest that you check each site for inappropriate content before sharing it with students."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "eaef36ac-f448-40c0-8858-97c22828b009",
-        "lesson_activity.key": "67b93e73-7973-4bc4-a653-afcd395d2e87"
-      }
-    },
-    {
-      "key": "0b335006-a7b4-4c2a-88d1-42db79cb7155",
-      "position": 2,
+      "key": "1d9fcb2e-5d45-47f4-b834-65c714a78452",
+      "position": 7,
       "properties": {
         "progression_name": "Sample Programs"
       },
       "seeding_key": {
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155",
-        "lesson_activity.key": "67b93e73-7973-4bc4-a653-afcd395d2e87"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452",
+        "lesson_activity.key": "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309"
       }
     },
     {
@@ -2336,7 +2281,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about how to use Code Studio's pair programming feature [here](http://teacherblog.code.org/post/147349807334/try-pair-programmingtrack-the-progress-of).\r\n\r\n\r\n"
+            "markdown": "Pair programming is a great way to increase student confidence and foster the practices of collaboration and communication. You can read more about how to use Code Studio's pair programming feature [here](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-).\n\n\n"
           }
         ]
       },
@@ -3218,7 +3163,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Recommended Search Engines**\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
+            "markdown": "**Level 11e - Finding an Image Online**: Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)"
           }
         ]
       },
@@ -4355,24 +4300,8 @@
       }
     },
     {
-      "key": "e75e9f3a-9c00-4437-8c5d-9c0ee1073019",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "Though seemingly simple, understanding how a boolean statement will evaluate can be difficult given that different programming languages have differing opinions on 'truthiness' and 'falsiness'. In fact, JavaScript (the language used in this course) has two different operators to test boolean equality `==` and `===`.\r\n\r\nThe double equals operator (`==`) is pretty generous in determining truthiness. For example, each of the following is considered `true` in JavaScript when using the `==` operator, but would be `false` using the `===` operator:\r\n\r\n    1 == true;\r\n    \"1\" == true;\r\n    5 == \"5\";\r\n    null == undefined;\r\n    \"\" == false;\r\n\r\nWe use the `==` operator in this course because it's more forgiving, but it's important to be aware that it can sometimes report back truth when you really didn't intend it to (in which case you might want to use the more strict `===` operator)\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e75e9f3a-9c00-4437-8c5d-9c0ee1073019",
-        "lesson_activity.key": "f664c4cd-edcd-4afe-b5e6-5e2902ae866f"
-      }
-    },
-    {
       "key": "02bcc907-1476-4a48-90ea-a56c5c91e6d4",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
         "name": "Conditionals\r"
@@ -4384,7 +4313,7 @@
     },
     {
       "key": "970064bc-3023-4f10-9359-91868ff9c77d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Prediction"
       },
@@ -4395,7 +4324,7 @@
     },
     {
       "key": "230cf2d8-bf75-4b73-aa29-4e468f203e78",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?",
         "progression_name": "Video: Booleans",
@@ -4413,7 +4342,7 @@
     },
     {
       "key": "6eac26fe-a47a-4dbc-b225-c006efd6c418",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Quick Check"
       },
@@ -4424,7 +4353,7 @@
     },
     {
       "key": "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -4435,7 +4364,7 @@
     },
     {
       "key": "030bb18c-bfaf-4c13-8ca7-9b251c26c162",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?",
         "progression_name": "Video: Conditional Statements",
@@ -4453,7 +4382,7 @@
     },
     {
       "key": "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a",
-      "position": 8,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building",
         "tips": [
@@ -4470,7 +4399,7 @@
     },
     {
       "key": "a9e1809e-78f0-42a5-b9b3-f680e95c5d15",
-      "position": 9,
+      "position": 8,
       "properties": {
         "progression_name": "Practice"
       },
@@ -4481,7 +4410,7 @@
     },
     {
       "key": "461492e7-43b9-4c58-9ee4-b63b716dbded",
-      "position": 10,
+      "position": 9,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -4498,7 +4427,7 @@
     },
     {
       "key": "30bb6b07-5257-4a19-89a0-02be767443b5",
-      "position": 11,
+      "position": 10,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -4751,7 +4680,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Level 4:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n\n**Level 5:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Level 3:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n\n**Level 4:** You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
           }
         ]
       },
@@ -4885,7 +4814,8 @@
       "position": 1,
       "properties": {
         "description": "**Goal:** Students see an example of a final project and discuss the different elements that went into making it.\r\n\r\n**Display:** Show students the sample program.",
-        "name": "Demo Project Exemplars (Level 1)"
+        "name": "Demo Project Exemplars (Level 1)",
+        "progression_name": "Demo App: Interactive Card"
       },
       "seeding_key": {
         "activity_section.key": "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6",
@@ -4907,7 +4837,7 @@
       "key": "49b539a4-1d94-4fa2-9538-dc413331f866",
       "position": 3,
       "properties": {
-        "description": "**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.\r\n\r\n**Distribute:** Hand out the project guide to students. This is the tool students will use to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \r\n\r\n#### Steps\r\n\r\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\r\n\r\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\r\n\r\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
+        "description": "**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.\n\n**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
         "name": "Unplugged: Interactive Card Planning\r"
       },
       "seeding_key": {
@@ -4928,8 +4858,30 @@
       }
     },
     {
-      "key": "187ab288-8997-4b05-90b2-993b1d29c6ba",
+      "key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
       "position": 5,
+      "properties": {
+        "progression_name": "Make an Interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
+        "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e"
+      }
+    },
+    {
+      "key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project Work"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d",
+        "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e"
+      }
+    },
+    {
+      "key": "187ab288-8997-4b05-90b2-993b1d29c6ba",
+      "position": 7,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the peer review guide.\r\n\r\nStudents should spend 15 minutes reviewing the other student's card and filling out the peer review guide.",
         "name": "Peer Review\r"
@@ -4941,10 +4893,16 @@
     },
     {
       "key": "4bfb9e2c-557b-464a-9a07-7190bc4dce87",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.",
-        "name": "Iterate - Update Code\r"
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.\n\nStudents should use the rubric and student checklist to self-assess and make sure their project matches with the rubric.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4bfb9e2c-557b-464a-9a07-7190bc4dce87",
@@ -4953,7 +4911,7 @@
     },
     {
       "key": "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r"
@@ -4964,47 +4922,14 @@
       }
     },
     {
-      "key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
-      "position": 1,
-      "properties": {
-        "progression_name": "interactive Card"
-      },
-      "seeding_key": {
-        "activity_section.key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "f0b22fea-67e0-4630-915c-d56f72746679",
-      "position": 2,
-      "properties": {
-        "progression_name": "Make an Interactive Card"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0b22fea-67e0-4630-915c-d56f72746679",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
-      "position": 3,
-      "properties": {
-        "progression_name": "Project Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
-      }
-    },
-    {
-      "key": "10338eab-6d00-4e10-bf46-713201014f70",
-      "position": 4,
+      "key": "d8f8a198-8cc9-47f1-b6c9-f03f573fe546",
+      "position": 10,
       "properties": {
         "progression_name": "Reflection"
       },
       "seeding_key": {
-        "activity_section.key": "10338eab-6d00-4e10-bf46-713201014f70",
-        "lesson_activity.key": "37cb8d36-7a69-48f3-94ff-91e532fea427"
+        "activity_section.key": "d8f8a198-8cc9-47f1-b6c9-f03f573fe546",
+        "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e"
       }
     },
     {
@@ -5086,7 +5011,7 @@
       "key": "e09946dd-2f75-40a0-ac8f-38a20df49236",
       "position": 2,
       "properties": {
-        "description": "&fa-desktop; **Transition:**  Move students to Code Studio\r\n\r\n**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10."
+        "description": "**Transition:**  Move students to Code Studio\n\n**Circulate:** These levels introduce the velocityX, velocityY, and rotationSpeed properties that you just discussed with students.  Check in with students to see how they are doing and keep track of when everyone has made it to the end of level 10."
       },
       "seeding_key": {
         "activity_section.key": "e09946dd-2f75-40a0-ac8f-38a20df49236",
@@ -5112,7 +5037,7 @@
         "progression_name": "Video: Velocity",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "discussionGoal",
             "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
           }
         ]
@@ -5224,6 +5149,7 @@
       "position": 1,
       "properties": {
         "description": "**Display:** On a projector or a computer screen, demonstrate the game that appears in the first level in Code Studio for this lesson.",
+        "progression_name": "Sample Game",
         "tips": [
           {
             "type": "teachingTip",
@@ -5831,7 +5757,8 @@
       "key": "da390762-bcc9-47c8-ab06-9bac895ebd00",
       "position": 1,
       "properties": {
-        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\r\n\r\n![](https://curriculum.code.org/media/uploads/collision.gif)\r\n\r\n\r\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?"
+        "description": "**Display**: Display the animated image. It is also available as a level in code studio.\r\n\r\n![](https://curriculum.code.org/media/uploads/collision.gif)\r\n\r\n\r\n**Prompt:** Using the blocks we already know how to use, how could we create the sprite interaction we can see in this program?",
+        "progression_name": "Code Prediction"
       },
       "seeding_key": {
         "activity_section.key": "da390762-bcc9-47c8-ab06-9bac895ebd00",
@@ -5924,19 +5851,8 @@
       }
     },
     {
-      "key": "9d27bfd2-9f65-4725-bbbc-3c193ea210c3",
-      "position": 3,
-      "properties": {
-        "progression_name": "Code Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "9d27bfd2-9f65-4725-bbbc-3c193ea210c3",
-        "lesson_activity.key": "ac036a2c-ddfd-4afa-8990-2c0488a6cac5"
-      }
-    },
-    {
       "key": "c6e363e6-23a1-466a-9589-a4b871989618",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -5947,7 +5863,7 @@
     },
     {
       "key": "97db6b61-4e7a-4ce8-8b03-698a3b983f8c",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -5958,7 +5874,7 @@
     },
     {
       "key": "6b47f10d-a466-436e-ad48-25f2404ae07a",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -5975,7 +5891,7 @@
     },
     {
       "key": "e0a4583c-3ca6-4235-a457-774d3696a07d",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -6224,7 +6140,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Introducing Functions**\n\nIn these first several lessons students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code."
+            "markdown": "**Introducing Functions**\n\nIn these first few levels students are just being shown the syntax of functions and are not asked to write or create their own. It can be useful to explain creating a function as basically “creating a new block” just like another programmer created the “isTouching” or “velocity” blocks that they’ve seen actually contain other more complex code."
           }
         ]
       },
@@ -6252,7 +6168,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Why Use Functions**\n\nThis (Level 6b) and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
+            "markdown": "**Why Use Functions**\n\nLevel 5a, 5b, and 5c introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels."
           }
         ]
       },
@@ -6280,7 +6196,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 7: Functions in Context**\n\nIn this and the next two lessons, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
+            "markdown": "**Level 7: Functions in Context**\n\nIn this and the next two levels, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller."
           }
         ]
       },
@@ -6832,7 +6748,7 @@
       "key": "c579d4e4-c215-4c83-9db5-55fb3853a960",
       "position": 1,
       "properties": {
-        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\r\n\r\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the rubric so that they know from the beginning what components of the project you will be looking for.",
+        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\n\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -6845,7 +6761,8 @@
       "position": 2,
       "properties": {
         "description": "**Circulate:** Students should spend the first 15-20 minutes playing the sample games, reviewing past work, and discussing as a group the type of game they'd like to build. If they want they can sketch ideas on scratch paper or in their journals.",
-        "name": "Define - Scope Game\r"
+        "name": "Define - Scope Game\r",
+        "progression_name": "Sample Games"
       },
       "seeding_key": {
         "activity_section.key": "204d6831-54a0-4a74-bd1e-a81cfb74475a",
@@ -6877,8 +6794,30 @@
       }
     },
     {
-      "key": "ae18f0f2-4efe-49c2-9eab-1ff85df07525",
+      "key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d",
       "position": 5,
+      "properties": {
+        "progression_name": "Project - Background and Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d",
+        "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c"
+      }
+    },
+    {
+      "key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project - Sprites and Interactions"
+      },
+      "seeding_key": {
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9",
+        "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c"
+      }
+    },
+    {
+      "key": "ae18f0f2-4efe-49c2-9eab-1ff85df07525",
+      "position": 7,
       "properties": {
         "description": "**Distribute:** Give each student a copy of the peer review guide.  \r\n\r\nStudents should spend 15 minutes reviewing the other group's game and filling out the peer review guide.",
         "name": "Reflect - Peer Review\r"
@@ -6889,11 +6828,28 @@
       }
     },
     {
-      "key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
-      "position": 6,
+      "key": "3cabd5bc-4a69-4067-abda-7200bf0de085",
+      "position": 8,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.",
-        "name": "Iterate - Update Code\r"
+        "progression_name": "Review Your Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cabd5bc-4a69-4067-abda-7200bf0de085",
+        "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c"
+      }
+    },
+    {
+      "key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
@@ -6902,7 +6858,7 @@
     },
     {
       "key": "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "**Share:** Give students a chance to share their games. If you choose to let students do a more formal presentation of their projects, the project guide provides students a set of components to include in their presentations including:\r\n\r\n* The original game they set out to build\r\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\r\n* A description of the most interesting or complex piece of code they wrote\r\n* A live demonstration of the actual game",
         "name": "Share\r"
@@ -6910,61 +6866,6 @@
       "seeding_key": {
         "activity_section.key": "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d",
         "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c"
-      }
-    },
-    {
-      "key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
-      "position": 1,
-      "properties": {
-        "progression_name": "Design Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e332974-cdac-4d0c-92f8-63c1aae898ed",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "42560001-6426-479c-bec1-6fa233955cf4",
-      "position": 2,
-      "properties": {
-        "progression_name": "Project - Background and Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
-      "position": 3,
-      "properties": {
-        "progression_name": "Project - Sprites and Interactions"
-      },
-      "seeding_key": {
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
-      "position": 4,
-      "properties": {
-        "progression_name": "Review Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "e536e2cd-fbc8-4f10-823f-d1a01176b511",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
-      }
-    },
-    {
-      "key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
-      "position": 5,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b",
-        "lesson_activity.key": "0a08372b-1312-44a5-be0c-dbc0b5fbb98a"
       }
     },
     {
@@ -6984,7 +6885,8 @@
       "position": 2,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Reflect\r"
+        "name": "Reflect\r",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "2d58346e-e123-4477-8995-fefc448b3fe3",
@@ -6995,7 +6897,7 @@
       "key": "deb11fcf-de60-4df8-8c44-d2fd3ac33baa",
       "position": 1,
       "properties": {
-        "description": "The post-project test is found at the bottom of the Interactive Animations and Games unit overview page on Code Studio ([studio.code.org/s/csd3-2020](https://studio.code.org/s/csd3-2020)).\r\n\r\nThis test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear."
+        "description": "The post-project test is found at the bottom of the Interactive Animations and Games unit overview page on Code Studio.\n\nThis test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear."
       },
       "seeding_key": {
         "activity_section.key": "deb11fcf-de60-4df8-8c44-d2fd3ac33baa",
@@ -7031,32 +6933,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 Entertainment_2018_2019_pilot_2021"
-        ],
-        "progression": "Exploring CS in Entertainment"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 Entertainment_2018_2019_pilot_2021"
-        ],
-        "lesson.key": "Programming for Entertainment",
-        "lesson_group.key": "csd3_1",
-        "script.name": "csd3-2021",
-        "activity_section.key": "eaef36ac-f448-40c0-8858-97c22828b009"
-      },
-      "level_keys": [
-        "CSD U3 Entertainment_2018_2019_pilot_2021"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CSD U3 Entertainment Sample 4_2021"
         ],
         "progression": "Sample Programs"
@@ -7070,15 +6946,15 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 4_2021"
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 2,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7096,15 +6972,15 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 3_2021"
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7122,15 +6998,15 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 1_2021"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -7148,14 +7024,14 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       },
       "level_keys": [
         "CSD U3 Entertainment Sample 2_2021"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7181,7 +7057,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7207,7 +7083,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7233,7 +7109,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7259,7 +7135,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7285,7 +7161,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7311,7 +7187,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7337,7 +7213,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7363,7 +7239,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7389,7 +7265,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -7415,7 +7291,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7441,7 +7317,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7467,7 +7343,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7493,7 +7369,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7519,7 +7395,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7545,7 +7421,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7571,7 +7447,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7597,7 +7473,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7623,7 +7499,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7649,7 +7525,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7675,7 +7551,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7701,7 +7577,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7727,7 +7603,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7753,7 +7629,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7779,7 +7655,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7805,7 +7681,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7831,7 +7707,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7857,7 +7733,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7883,7 +7759,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7909,7 +7785,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7935,7 +7811,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7961,7 +7837,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7987,7 +7863,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8013,7 +7889,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8039,7 +7915,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8065,7 +7941,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8091,7 +7967,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8117,7 +7993,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8143,7 +8019,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8169,7 +8045,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8195,7 +8071,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8221,7 +8097,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -8247,7 +8123,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8273,7 +8149,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8299,7 +8175,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8325,7 +8201,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8351,7 +8227,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8377,7 +8253,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8403,7 +8279,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8429,7 +8305,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8455,7 +8331,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8481,7 +8357,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8507,7 +8383,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8533,7 +8409,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8559,7 +8435,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8585,7 +8461,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8611,7 +8487,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8637,7 +8513,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8663,7 +8539,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8689,7 +8565,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8715,7 +8591,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8741,7 +8617,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8767,7 +8643,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8793,7 +8669,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8819,7 +8695,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8845,7 +8721,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8871,7 +8747,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8897,7 +8773,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8923,7 +8799,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8949,7 +8825,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -8975,7 +8851,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9001,7 +8877,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9027,7 +8903,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9053,7 +8929,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9079,7 +8955,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9105,7 +8981,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9131,7 +9007,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9157,7 +9033,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9183,7 +9059,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -9209,7 +9085,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 84,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9235,7 +9111,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9261,7 +9137,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9287,7 +9163,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9313,7 +9189,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9339,7 +9215,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9365,7 +9241,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9391,7 +9267,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9417,7 +9293,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9443,7 +9319,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9469,7 +9345,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9495,7 +9371,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9521,7 +9397,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9547,7 +9423,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9573,10 +9449,10 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSD U3 Conditionals Apple 2_2021"
@@ -9599,7 +9475,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9625,7 +9501,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9651,7 +9527,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9677,7 +9553,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9703,7 +9579,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9729,7 +9605,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9755,7 +9631,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9781,7 +9657,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9807,7 +9683,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9833,7 +9709,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9859,7 +9735,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9885,7 +9761,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9911,7 +9787,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9937,7 +9813,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9963,7 +9839,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9989,7 +9865,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10015,7 +9891,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10041,7 +9917,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10067,7 +9943,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10093,7 +9969,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10101,7 +9977,7 @@
         "level_keys": [
           "CSD U3 Interactive Card Exemplar_2021"
         ],
-        "progression": "interactive Card"
+        "progression": "Demo App: Interactive Card"
       },
       "named_level": false,
       "bonus": false,
@@ -10112,14 +9988,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3"
+        "activity_section.key": "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6"
       },
       "level_keys": [
         "CSD U3 Interactive Card Exemplar_2021"
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10138,14 +10014,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "f0b22fea-67e0-4630-915c-d56f72746679"
+        "activity_section.key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a"
       },
       "level_keys": [
         "CSD U3 Card Examples_2018_2019_pilot_2021"
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10164,14 +10040,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       },
       "level_keys": [
         "CSD U3 Interactive Card Background_2021"
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10190,14 +10066,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       },
       "level_keys": [
         "CSD U3 Interactive Card Sprites_2021"
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10216,14 +10092,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       },
       "level_keys": [
         "CSD U3 Interactive Card User Input_2021"
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10242,14 +10118,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       },
       "level_keys": [
         "CSD U3 Interactive Card Other Conditionals_2021"
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10268,14 +10144,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       },
       "level_keys": [
         "CSD U3 Interactive Card Final_2021"
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10294,14 +10170,14 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "10338eab-6d00-4e10-bf46-713201014f70"
+        "activity_section.key": "d8f8a198-8cc9-47f1-b6c9-f03f573fe546"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021"
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10327,7 +10203,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10353,7 +10229,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10379,7 +10255,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10405,7 +10281,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10431,7 +10307,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10457,7 +10333,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10483,7 +10359,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10509,7 +10385,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10535,7 +10411,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10561,7 +10437,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10580,14 +10456,14 @@
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "da7336ee-33fe-4542-970c-9cf2e888859e"
+        "activity_section.key": "28c72532-e347-4f43-81ea-7b83a4e336d1"
       },
       "level_keys": [
         "CSD U3 collisions car intro_2021"
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10613,7 +10489,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10639,7 +10515,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10665,7 +10541,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10691,7 +10567,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10717,7 +10593,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 142,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10743,7 +10619,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 143,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10769,7 +10645,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10795,7 +10671,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10821,7 +10697,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 146,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10847,7 +10723,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 147,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10873,7 +10749,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 148,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10899,7 +10775,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 149,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10925,7 +10801,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 150,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10951,7 +10827,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 151,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10977,7 +10853,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11003,7 +10879,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 153,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11029,7 +10905,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 154,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11055,7 +10931,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 155,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11081,7 +10957,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 156,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11107,7 +10983,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 157,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -11133,7 +11009,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 158,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11159,7 +11035,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 159,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11178,14 +11054,14 @@
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "9d27bfd2-9f65-4725-bbbc-3c193ea210c3"
+        "activity_section.key": "da390762-bcc9-47c8-ab06-9bac895ebd00"
       },
       "level_keys": [
         "CSD U3 collisions predict set velocity code_2021"
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 160,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11211,7 +11087,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 161,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11237,7 +11113,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 162,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11263,7 +11139,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 163,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11289,7 +11165,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 164,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11315,7 +11191,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 165,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11341,7 +11217,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 166,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11367,7 +11243,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 167,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11393,7 +11269,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 168,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11419,7 +11295,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 169,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11445,7 +11321,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 170,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11471,7 +11347,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 171,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11497,7 +11373,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 172,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11523,7 +11399,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 173,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11549,7 +11425,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 174,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11575,7 +11451,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 175,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11601,7 +11477,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 176,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11627,7 +11503,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 177,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11653,7 +11529,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 178,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11679,7 +11555,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 179,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11705,7 +11581,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 180,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -11731,7 +11607,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 181,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11757,7 +11633,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 182,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11783,7 +11659,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 183,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -11809,7 +11685,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 184,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11835,7 +11711,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 185,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11861,7 +11737,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 186,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11887,7 +11763,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 187,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11913,7 +11789,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 188,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11939,7 +11815,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 189,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11965,7 +11841,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 190,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11991,7 +11867,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 191,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -12017,7 +11893,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 192,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -12043,7 +11919,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 193,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -12069,7 +11945,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 194,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -12095,7 +11971,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 195,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -12121,7 +11997,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 196,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -12147,7 +12023,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 197,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12173,7 +12049,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12199,7 +12075,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 199,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12225,7 +12101,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 200,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12251,7 +12127,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 201,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12277,7 +12153,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 202,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12303,7 +12179,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 203,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12329,7 +12205,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 204,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12355,7 +12231,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 205,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12381,7 +12257,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 206,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12407,7 +12283,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 207,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12433,7 +12309,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 208,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12459,7 +12335,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 209,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12485,7 +12361,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 210,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12511,7 +12387,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 211,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12537,7 +12413,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 212,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12563,7 +12439,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 213,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12589,7 +12465,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 214,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12615,7 +12491,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 215,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12641,7 +12517,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 216,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -12667,7 +12543,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 217,
       "position": 20,
       "activity_section_position": 3,
       "assessment": false,
@@ -12693,7 +12569,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 218,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12701,7 +12577,7 @@
         "level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2021"
         ],
-        "progression": "Design Your Game"
+        "progression": "Sample Games"
       },
       "named_level": false,
       "bonus": false,
@@ -12712,14 +12588,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "8e332974-cdac-4d0c-92f8-63c1aae898ed"
+        "activity_section.key": "204d6831-54a0-4a74-bd1e-a81cfb74475a"
       },
       "level_keys": [
         "CSD U3 game intro_2018_2019_pilot_2021"
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 219,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12738,14 +12614,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       },
       "level_keys": [
         "CSD U3 game variables_2021"
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 220,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12764,14 +12640,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       },
       "level_keys": [
         "CSD U3 game backgrounds_2021"
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 221,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12790,14 +12666,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       },
       "level_keys": [
         "CSD U3 game display boards_2021"
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 222,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12816,14 +12692,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       },
       "level_keys": [
         "CSD U3 game choose background_2021"
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 223,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12842,14 +12718,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       },
       "level_keys": [
         "CSD U3 game animations_2021"
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 224,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12868,14 +12744,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       },
       "level_keys": [
         "CSD U3 game create sprites_2021"
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 225,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12894,14 +12770,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       },
       "level_keys": [
         "CSD U3 game sprite movement_2021"
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 226,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12920,14 +12796,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       },
       "level_keys": [
         "CSD U3 game user controls_2021"
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 227,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12946,14 +12822,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       },
       "level_keys": [
         "CSD U3 game interactions_2021"
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 228,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12972,14 +12848,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "e536e2cd-fbc8-4f10-823f-d1a01176b511"
+        "activity_section.key": "3cabd5bc-4a69-4067-abda-7200bf0de085"
       },
       "level_keys": [
         "CSD games project review_2021"
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 229,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12998,14 +12874,14 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b"
+        "activity_section.key": "2d58346e-e123-4477-8995-fefc448b3fe3"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021"
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 230,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13030,7 +12906,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 231,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13055,7 +12931,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 232,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -13083,18 +12959,6 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "CSD U3 Entertainment_2018_2019_pilot_2021",
-        "script_level.level_keys": [
-          "CSD U3 Entertainment_2018_2019_pilot_2021"
-        ],
-        "lesson.key": "Programming for Entertainment",
-        "lesson_group.key": "csd3_1",
-        "script.name": "csd3-2021",
-        "activity_section.key": "eaef36ac-f448-40c0-8858-97c22828b009"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U3 Entertainment Sample 4_2021",
         "script_level.level_keys": [
           "CSD U3 Entertainment Sample 4_2021"
@@ -13102,7 +12966,7 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       }
     },
     {
@@ -13114,7 +12978,7 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       }
     },
     {
@@ -13126,7 +12990,7 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       }
     },
     {
@@ -13138,7 +13002,7 @@
         "lesson.key": "Programming for Entertainment",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "0b335006-a7b4-4c2a-88d1-42db79cb7155"
+        "activity_section.key": "1d9fcb2e-5d45-47f4-b834-65c714a78452"
       }
     },
     {
@@ -14506,7 +14370,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "78a8f9db-8108-4b7a-a96c-4aa44cc4a2a3"
+        "activity_section.key": "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6"
       }
     },
     {
@@ -14518,7 +14382,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "f0b22fea-67e0-4630-915c-d56f72746679"
+        "activity_section.key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a"
       }
     },
     {
@@ -14530,7 +14394,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       }
     },
     {
@@ -14542,7 +14406,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       }
     },
     {
@@ -14554,7 +14418,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       }
     },
     {
@@ -14566,7 +14430,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       }
     },
     {
@@ -14578,7 +14442,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "53adc4cc-8a9a-40e4-91aa-a80b36c94e89"
+        "activity_section.key": "1f6b91fb-f2a1-4585-bb33-4ede2232a20d"
       }
     },
     {
@@ -14590,7 +14454,7 @@
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
         "script.name": "csd3-2021",
-        "activity_section.key": "10338eab-6d00-4e10-bf46-713201014f70"
+        "activity_section.key": "d8f8a198-8cc9-47f1-b6c9-f03f573fe546"
       }
     },
     {
@@ -14722,7 +14586,7 @@
         "lesson.key": "Collision Detection",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "da7336ee-33fe-4542-970c-9cf2e888859e"
+        "activity_section.key": "28c72532-e347-4f43-81ea-7b83a4e336d1"
       }
     },
     {
@@ -14998,7 +14862,7 @@
         "lesson.key": "Collisions",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "9d27bfd2-9f65-4725-bbbc-3c193ea210c3"
+        "activity_section.key": "da390762-bcc9-47c8-ab06-9bac895ebd00"
       }
     },
     {
@@ -15706,7 +15570,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "8e332974-cdac-4d0c-92f8-63c1aae898ed"
+        "activity_section.key": "204d6831-54a0-4a74-bd1e-a81cfb74475a"
       }
     },
     {
@@ -15718,7 +15582,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       }
     },
     {
@@ -15730,7 +15594,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       }
     },
     {
@@ -15742,7 +15606,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       }
     },
     {
@@ -15754,7 +15618,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "42560001-6426-479c-bec1-6fa233955cf4"
+        "activity_section.key": "c06da82f-6be2-49e8-8d8b-6579ef11f06d"
       }
     },
     {
@@ -15766,7 +15630,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       }
     },
     {
@@ -15778,7 +15642,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       }
     },
     {
@@ -15790,7 +15654,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       }
     },
     {
@@ -15802,7 +15666,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       }
     },
     {
@@ -15814,7 +15678,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "422dd67c-ef9c-4d51-b86f-adb688e6fa5d"
+        "activity_section.key": "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9"
       }
     },
     {
@@ -15826,7 +15690,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "e536e2cd-fbc8-4f10-823f-d1a01176b511"
+        "activity_section.key": "3cabd5bc-4a69-4067-abda-7200bf0de085"
       }
     },
     {
@@ -15838,7 +15702,7 @@
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
         "script.name": "csd3-2021",
-        "activity_section.key": "e7efd74c-4607-4efb-baa2-36a19fbbbd6b"
+        "activity_section.key": "2d58346e-e123-4477-8995-fefc448b3fe3"
       }
     },
     {
@@ -15880,6 +15744,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd3-2021/code",
+      "key": "all_code_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_1"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd3-2021/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd3-2021/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd3-2021/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
       "name": "Animated Scene",
       "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
       "key": "animated-scene",
@@ -15918,16 +15826,66 @@
       }
     },
     {
-      "name": "Animating Sprites",
+      "name": "Sprite Movement",
       "url": "https://youtu.be/G666sFzAg5g",
       "key": "animating-sprites",
       "properties": {
         "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/cs-discoveries/gamelab/gamelab_animating_sprites.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "name": "Animation Tab",
+      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+      "key": "animation_tab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "Boolean Expressions",
+      "url": "https://youtu.be/_j9nvYKaOVE",
+      "key": "boolean_expressions",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+      "key": "booleans_and_comparison_operators",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "name": "Functions",
+      "url": "https://youtu.be/3ZfqwCuDZaQ",
+      "key": "calling_and_defining_functions",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "calling_and_defining_functions"
       }
     },
     {
@@ -15945,18 +15903,6 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "collision-detection-1",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collision-detection-1"
-      }
-    },
-    {
-      "name": "Collision Detection",
       "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
       "key": "collision-detection-exemplar-2020",
       "properties": {
@@ -15965,6 +15911,18 @@
       },
       "seeding_key": {
         "resource.key": "collision-detection-exemplar-2020"
+      }
+    },
+    {
+      "name": "Collision Detection",
+      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
+      "key": "collision_detection",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -15994,18 +15952,6 @@
       }
     },
     {
-      "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "collisions",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collisions"
-      }
-    },
-    {
       "name": "Sample Shape Drawing",
       "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
       "key": "colored-shape-drawing",
@@ -16015,18 +15961,6 @@
       },
       "seeding_key": {
         "resource.key": "colored-shape-drawing"
-      }
-    },
-    {
-      "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "complex-sprite-movement",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "complex-sprite-movement"
       }
     },
     {
@@ -16043,15 +15977,16 @@
       }
     },
     {
-      "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "conditionals",
+      "name": "Conditional Statements",
+      "url": "https://youtu.be/TuLIK7DcPWs",
+      "key": "conditional_statements",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "conditionals"
+        "resource.key": "conditional_statements"
       }
     },
     {
@@ -16080,6 +16015,50 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
       "name": "CSD Unit 3 - Interactive Animations and Games",
       "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
       "key": "csd_unit_3_-_interactive_animations_and_games",
@@ -16092,18 +16071,6 @@
       }
     },
     {
-      "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "drawing-in-game-lab",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "drawing-in-game-lab"
-      }
-    },
-    {
       "name": "Drawing Shapes",
       "url": "https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing",
       "key": "drawing-shapes-exemplar-2020",
@@ -16113,6 +16080,44 @@
       },
       "seeding_key": {
         "resource.key": "drawing-shapes-exemplar-2020"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 1",
+      "url": "https://youtu.be/PXn9gKiKKFo",
+      "key": "drawing_in_game_lab_-_part_1",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 2",
+      "url": "https://youtu.be/QLabeWhw_O0",
+      "key": "drawing_in_game_lab_-_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "name": "Drawing Shapes",
+      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+      "key": "drawing_shapes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes"
       }
     },
     {
@@ -16181,19 +16186,19 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "functions",
+      "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
+      "key": "functions_1",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "functions"
+        "resource.key": "functions_1"
       }
     },
     {
-      "name": "If-Else Statements - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view",
+      "name": "If-Else Statements",
+      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
       "key": "if-else_statements_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16201,6 +16206,31 @@
       },
       "seeding_key": {
         "resource.key": "if-else_statements_-_map_level_pdf_"
+      }
+    },
+    {
+      "name": "If/Else Statements",
+      "url": "https://youtu.be/6m6FFUJsOzo",
+      "key": "if_else_statements",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+      "key": "if_statements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16218,18 +16248,6 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "interactive-card-1-2-3-4-5",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-1-2-3-4-5"
-      }
-    },
-    {
-      "name": "Interactive Card",
       "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
       "key": "interactive-card-exemplar-2020",
       "properties": {
@@ -16242,7 +16260,7 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A",
+      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
       "key": "interactive-card-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16267,15 +16285,27 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/18QYy5KmIgtv3Wbsknl7wmRpPzeVzKw6OjQ5dztdb01Y/",
-      "key": "interactive-card-rubric-2019",
+      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "key": "interactive_card",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "interactive-card-rubric-2019"
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "name": "Interactive Card - Student Checklist",
+      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
+      "key": "interactive_card_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_-_student_checklist"
       }
     },
     {
@@ -16292,15 +16322,29 @@
       }
     },
     {
-      "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "keyboard-input",
+      "name": "Introduction to Sprites",
+      "url": "https://youtu.be/aUHzpGt9nso",
+      "key": "introduction_to_sprites",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "keyboard-input"
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "name": "Introduction to the Draw Loop",
+      "url": "https://youtu.be/G6QJeuHhqCM",
+      "key": "introduction_to_the_draw_loop",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_the_draw_loop"
       }
     },
     {
@@ -16342,21 +16386,8 @@
       }
     },
     {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1HB8T-6XyUiGLgeyYuG43zovAKrO2tyJ4l0NRJXzgdvY/",
-      "key": "make-your-own-game-rubric-2019",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-rubric-2019"
-      }
-    },
-    {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/edit",
+      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16367,15 +16398,28 @@
       }
     },
     {
-      "name": "Mini-Project: Animation",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-animated-scenes",
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "key": "make_your_own_game",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "mini-project-animated-scenes"
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "name": "Make Your Own Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "key": "make_your_own_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     },
     {
@@ -16391,18 +16435,6 @@
       }
     },
     {
-      "name": "Mini-Project: Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-flyer-game",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-flyer-game"
-      }
-    },
-    {
       "name": "Mini-Project Guide - Side Scroller",
       "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
       "key": "mini-project-guide-side-scroller-exemplar-2020",
@@ -16415,39 +16447,15 @@
       }
     },
     {
-      "name": "Mini-Project: Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-side-scroller",
+      "name": "Naming Variables",
+      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+      "key": "naming_variables",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "mini-project-side-scroller"
-      }
-    },
-    {
-      "name": "Mini-Project: Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-sprite-scene",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-sprite-scene"
-      }
-    },
-    {
-      "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mouse-input",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mouse-input"
+        "resource.key": "naming_variables"
       }
     },
     {
@@ -16476,30 +16484,6 @@
       }
     },
     {
-      "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "plotting-shapes",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "plotting-shapes"
-      }
-    },
-    {
-      "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "project-design-a-game",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "project-design-a-game"
-      }
-    },
-    {
       "name": "Defender Game",
       "url": "https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/edit?usp=sharing",
       "key": "project-guide-defender-game",
@@ -16525,18 +16509,6 @@
       }
     },
     {
-      "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "random-numbers",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random-numbers"
-      }
-    },
-    {
       "name": "Random Sprite Flipbook",
       "url": "https://docs.google.com/drawings/d/1mVt8SE1N5KYy2TfOlqtvkL_2MmYk6wFpiouMZ-P-kQY/edit?usp=sharing",
       "key": "random-sprite-flipbook",
@@ -16549,15 +16521,27 @@
       }
     },
     {
-      "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "shapes-and-parameters",
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
+      "key": "random_numbers",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "shapes-and-parameters"
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Shapes and Parameters",
+      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+      "key": "shapes_and_parameters",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "shapes_and_parameters"
       }
     },
     {
@@ -16600,30 +16584,6 @@
       }
     },
     {
-      "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprite-movement",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprite-movement"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprite-properties",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprite-properties"
-      }
-    },
-    {
       "name": "Sprite Scene Planning",
       "url": "https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/edit",
       "key": "sprite-scene-planning",
@@ -16637,15 +16597,27 @@
       }
     },
     {
-      "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprites",
+      "name": "Sprite Properties",
+      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
+      "key": "sprite_properties",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "sprites"
+        "resource.key": "sprite_properties"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+      "key": "sprites_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
       }
     },
     {
@@ -16660,80 +16632,82 @@
       }
     },
     {
-      "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "text",
+      "name": "The Animation Tab",
+      "url": "https://youtu.be/DQPruYTJ0Fk",
+      "key": "the_animation_tab",
       "properties": {
-        "type": "Slides",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "name": "The Counter Pattern",
+      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+      "key": "the_counter_pattern",
+      "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "text"
+        "resource.key": "the_counter_pattern"
       }
     },
     {
       "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "the-draw-loop",
+      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+      "key": "the_draw_loop",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "the-draw-loop"
-      }
-    },
-    {
-      "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "the-game-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-game-design-process"
-      }
-    },
-    {
-      "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "using-the-game-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "using-the-game-design-process"
+        "resource.key": "the_draw_loop"
       }
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "variables",
+      "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
+      "key": "variables_1",
       "properties": {
-        "type": "Slides",
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "variables"
+        "resource.key": "variables_1"
       }
     },
     {
       "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "velocity",
+      "url": "https://youtu.be/zcP94yMYqrI",
+      "key": "velocity_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "velocity"
+        "resource.key": "velocity_1"
       }
     },
     {
-      "name": "Velocity and the Counter Pattern - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view",
+      "name": "Velocity",
+      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+      "key": "velocity_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_2"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern",
+      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
       "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16784,12 +16758,6 @@
     {
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
-        "resource.key": "plotting-shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
         "resource.key": "colored-shape-drawing"
       }
     },
@@ -16807,14 +16775,32 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing-in-game-lab"
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes-and-parameters"
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_shapes"
       }
     },
     {
@@ -16825,8 +16811,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables"
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters"
       }
     },
     {
@@ -16837,26 +16829,80 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Random Numbers",
-        "resource.key": "random-numbers"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "resource.key": "random_numbers"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "resource.key": "sprites"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "animation_tab"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprite Properties",
-        "resource.key": "sprite-properties"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text",
-        "resource.key": "text"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16874,19 +16920,13 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "mini-project-sprite-scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
         "resource.key": "sprite-scene-planning"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the-draw-loop"
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16909,14 +16949,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite-movement"
+        "lesson.key": "The Draw Loop",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
       }
     },
     {
@@ -16934,37 +16998,67 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Animation",
-        "resource.key": "mini-project-animated-scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
         "resource.key": "animated-scene"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Animation",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals",
-        "resource.key": "conditionals"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "if_statements"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keyboard Input",
-        "resource.key": "keyboard-input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "mouse-input"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mouse Input",
         "resource.key": "if-else_statements_-_map_level_pdf_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -16988,19 +17082,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-1-2-3-4-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive-card-project-guide-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-rubric-2019"
       }
     },
     {
@@ -17011,20 +17093,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Velocity",
-        "resource.key": "velocity"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "collision-detection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-1"
       }
     },
     {
@@ -17037,6 +17143,18 @@
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "collision_detection_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -17054,19 +17172,13 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "mini-project-side-scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
         "resource.key": "side-scroller"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "complex-sprite-movement"
+        "lesson.key": "Mini-Project: Side Scroller",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17077,8 +17189,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Collisions",
-        "resource.key": "collisions"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17096,31 +17214,43 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "mini-project-flyer-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
         "resource.key": "flyer-game"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions"
+        "lesson.key": "Mini-Project: Flyer Game",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "the-game-design-process"
+        "lesson.key": "Functions",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "calling_and_defining_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "functions_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Game Design Process",
         "resource.key": "project-guide-defender-game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17132,13 +17262,13 @@
     {
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
-        "resource.key": "using-the-game-design-process"
+        "resource.key": "platform-game-project-guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
-        "resource.key": "platform-game-project-guide"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17162,19 +17292,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
-        "resource.key": "project-design-a-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-rubric-2019"
       }
     },
     {
@@ -17182,12 +17300,78 @@
         "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game-1-2-3"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_student_checklist"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
         "script.name": "csd3-2021"
       }
     }

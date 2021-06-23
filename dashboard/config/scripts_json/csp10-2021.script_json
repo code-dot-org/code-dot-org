@@ -2,7 +2,7 @@
   "script": {
     "name": "csp10-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 03:06:03 UTC",
+    "serialized_at": "2021-06-17 22:31:18 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -2828,6 +2829,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -3308,6 +3312,18 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -3550,6 +3566,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp10-2021"
       }
     }

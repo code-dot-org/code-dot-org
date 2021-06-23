@@ -579,6 +579,9 @@ pl:
         poembot-pilot-haiku: Haiku Boty - Pokaż swoje Haiku [PILOT]
         csd_ml_intro_to_ai_lab: Lekcja 6
         csd_ml_import_model: Importowanie modelu AI 
+        csf_lots_of_sprites: 'Sprite Lab: Wiele duszków'
+        playlab_2021: Wprowadzenie do Play Lab
+        playlab_2021_reader: Wprowadzenie do Play Lab
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

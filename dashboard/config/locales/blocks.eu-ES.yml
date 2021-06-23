@@ -651,6 +651,15 @@ eu:
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
             '"speed"': abiadura
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamaina
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': ertaina
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -825,9 +834,9 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': ausazkoa
       binary_move:
         options:

@@ -7,18 +7,21 @@ pl:
       Adding Images: Dodawanie obrazów
       Adding Screens: Dodawanie Ekranów
       Animate Your Scene: Animuj swoją scenę
+      'App Project: Screen Design': 'Projekt aplikacji: Projekt ekranu '
       Artist Intro with JR Hildebrand: Wprowadzenie artysty z JR Hildebrandem
       Artist Intro with JR Hildebrande: Wprowadzenie artysty z JR Hildebrandem
       Artist Project: Projekt Artysty
       'Artist: Variables': 'Artysta: Zmienne'
       Attribution: Atrybucja
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
+      Be a Super Digital Citizen: Bądź Super Cyfrowym Obywatelem
       Binary Numbers: Liczby binarne
       Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
       Boolean Comparison: Porównanie Logiczne
       Build a Screen: Zbuduj ekran
       Building an App: Tworzenie aplikacji
+      Button Circuits: Obwody przycisku
       CS Discoveries Post-Course Survey: Ankieta po kursie Odkrycia Informatyki
       CS Discoveries Post-course Survey: Ankieta po kursie Odkrycia Informatyki
       Cake Defender: Obrońca Ciasta
@@ -42,12 +45,14 @@ pl:
       Create a Story: Utwórz Opowieść
       Create your project: Utwórz swój projekt
       Creating a Simulation: Tworzenie symulacji
+      Customize: Dostosuj
       Data Visualization: Wizualizacja Danych
       De-bugging with the Step Button: Debugowanie za pomocą Przycisku Krok
       Debugging: Debugowanie
       Debugging with the Step Button: Debugowanie za pomocą Przycisku Krok
       Demo Apps: Aplikacje Demonstracyjne
       Design Mode: Tryb projektowania
+      Designing for Accessibility: Projektowanie pod kątem dostępności
       Drawing: Rysowanie
       Events: Zdarzenia
       Events and Linking Screens: Zdarzenia i Ekrany z linkami
@@ -57,6 +62,7 @@ pl:
       Expanding Personal Website: Rozszerzanie Osobistej Witryny Internetowej
       Expanding Your Website: Rozszerzanie Twojej Witryny Internetowej
       Experiment with Web Lab: Eksperymentuj z Web Lab
+      Exploration: Eksploracja
       Exploring more CSS: Odkrywanie CSS
       Finish a Screen: Ukończ Ekran
       Finish the Prototype: Ukończ Prototyp
@@ -96,6 +102,7 @@ pl:
       Linking Screens: Łączenie ekranów
       Lists: Listy
       Loops with the Artist: Pętle z Artystą
+      Make a Prediction: Przewidzieć coś
       Make it Interactive: Uczyń to interaktywnym
       Making Scenes: Tworzenie Scen
       Making Songs: Tworzenie Piosenek
@@ -103,6 +110,7 @@ pl:
       'Maze Intro: Programming with Blocks': 'Labirynt, wprowadzenie: Programowanie
         z blokami'
       Measures: Takty
+      'Mini-Project: About Me': O mnie ze Sprite Lab
       'Mini-Project: Alien Dance Moves': 'Mini-projekt: Taneczne ruchy kosmitów'
       'Mini-Project: Alien Dance Party': 'Mini-projekt: Potańcówka Kosmitów'
       'Mini-Project: Royal Battle': 'Mini-projekt: Królewski pojedynek'
@@ -111,6 +119,7 @@ pl:
       'Mini-Project: Swimming Fish': 'Mini-projekt: Pływająca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-projekt: Pływająca ryba (ciąg
         dalszy)'
+      'Mini-Project: User Input Programs': Utwórz Chat-Bot
       'Mini-Project: Virtual Pet': 'Mini-projekt: Wirtualny zwierzak'
       'Mini-project: Chase Game': 'Mini-projekt: Wyścig'
       'Mini-project: Flappy Game': 'Mini-projekt: Gra z Flappym'
@@ -125,10 +134,13 @@ pl:
       Movement with the Counter Pattern: Poruszanie się ze Wzorcem Licznika
       Multiframe Animations: Animacje wieloramkowe
       Musical Arrays: Muzyczne tablice
+      My Online Neighborhood: Moje internetowe sąsiedztwo
       Nested Loops with the Bee: Zagnieżdżone pętle z Pszczółką
       New Shapes: Nowe kształty
       Orientation: Orientacja
       Pair Programming: Programowanie w parach
+      Picturing Data: Zobrazowanie Danych
+      Planning: Planowanie
       Platform Jumper - Background and Variables: Skoczek - tło i zmienne
       Platform Jumper - Items: Skoczek - elementy
       Platform Jumper - Platforms: Skoczek - platformy
@@ -146,6 +158,7 @@ pl:
       Project - Sprites and Interactions: Projekt - Duszki i Interakcje
       Project Work: Praca Projektowa
       Properties: Właściwości
+      Publishing Your Website: Publikowanie Twojej witryny
       RGB Exploration: Eksploracja RGB
       Reading Sensors: Czytanie Czujników
       Recovery: Odzyskiwanie
@@ -156,6 +169,7 @@ pl:
       Repeat Unit Statements: Instrukcje Powtarzaj jednostkę
       Repeat Until Statements: Instrukcje Powtarzaj aż
       Representing Images: Reprezentowanie obrazów
+      Review: Przejrzyj
       Run a simulation: Uruchom symulację
       Sample Programs: Przykładowe Programy
       Screen Design: Projekt Ekranu
@@ -176,21 +190,42 @@ pl:
       Styling Text: Stylowanie Tekstu
       Styling with Classes: Stylizacja z klasami
       Styling your Website: Stylizacja Twojej strony internetowej
+      Teach A.I. a new word: Ucz A.I. nowego słowa
       The Artist in Code Studio: Artysta w Code Studio
+      The Big Event - Unplugged Activity: Wielkie wydarzenie - Aktywność bez komputera
       The Buzzer: Brzęczyk
       The Collector: Zbieracz
       The Harvester: Kombajn
+      The Internet - Unplugged Activity: Internet - Aktywność bez komputera
+      The Power of Words - Unplugged Activity: Potęga słów - Aktywność bez komputera
+      The Right App - Unplugged Activity: Right App - Aktywność bez komputera
+      Train AI to Clean the Ocean: Trenuj AI, by czyścił ocean
       UI Element Properties: Właściwości elementów interfejsu graficznego
       User Interface: Interfejs użytkownika
       Using Getters and Setters: Używanie pobieraczy i ustawiaczy
       Using HTML Tags: Stosując Tagi HTML
       Using Random Numbers: Stosując Losowe Liczby
+      Using Training Data: Używanie danych treningowych
       Using the LED: Stosując LED
       Using the Repeat Block: Korzystanie z bloku powtarzania
       Using the Switch: Stosując Przełącznik
       Vaccines: Szczepionki
       Velocity: Prędkość
       Video: Wideo
+      'Video - Maze Intro: Programming with Blocks': 'Film - Wprowadzenie do labiryntu:
+        Programowanie za pomocą bloków'
+      'Video:  Debugging with the Step Button': 'Film - Debugowanie za pomocą przycisku
+        K '
+      'Video:  Minecraft - The Agent': Film - Debugowanie za pomocą przycisku Krok
+      'Video:  Text  and Prompts': 'Film:  Tekst i monity'
+      'Video: "If/Else"': 'Film: "if/else"'
+      'Video: AI: What is Machine Learning?': 'Film - AI: Co to jest uczenie maszynowe?'
+      'Video: Artist Intro with JR Hildebrand': 'Film: Artysta wprowadzenie z JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrande': 'Film: Artysta wprowadzenie z JR
+        Hildebrand'
+      'Video: Code Your Own Flappy Game': 'Film: Zakoduj własną grę z Flappym'
+      'Video: Dance Party Events': 'Film: Potańcówki'
+      'Video: Events': 'Film: Zdarzenia'
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
       Welcome to Monster Town: Witamy w mieście potworów

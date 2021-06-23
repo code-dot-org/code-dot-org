@@ -673,12 +673,6 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -728,12 +722,6 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -743,12 +731,6 @@ lt:
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -1013,12 +995,6 @@ lt:
               name: 'Be kompiuterio: dainų rašymas pagal parametrus'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
@@ -2625,6 +2601,12 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
+        ml-playground:
+          lessons:
+            lesson14:
+              name: 14 pamoka
+            lesson15:
+              name: 15 pamoka
         2021drafting:
           lesson_groups:
             introduction:
@@ -2787,6 +2769,8 @@ lt:
               display_name: Kintamieji
             csf_for_loops:
               display_name: Kartojimas
+            lessonGroup-9:
+              display_name: Įvykiai
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2812,6 +2796,10 @@ lt:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Turinys
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Turinys
         k5-onlinepd-2021:
           lessons:
@@ -2842,3 +2830,7 @@ lt:
               display_name: Kiti žingsniai
             Introduction:
               display_name: Įvadas
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: 15 pamoka

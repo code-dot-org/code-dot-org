@@ -508,7 +508,7 @@ sk:
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
         csd_pair_programming: Programovanie v páre
-        csd_gamelab_functions: Názvy a definície funkcií
+        csd_gamelab_functions: Volanie a definovanie funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         csd_problem_solving_process: Proces riešenia problémov
@@ -552,6 +552,8 @@ sk:
         codebreak_e10: 'Code Break 10.0: Umelá inteligencia (Kat Graham & Kate Park)'
         codebreak_e11: 'Code Break 11.0: Abstrakcia (Susan Wojcicki & China Anne McClain)'
         codebreak_e12: 'Code Break 12.0: Hardware (Aloe Blacc, Bret Taylor & Paula Mejia)'
+        playlab_2021: Úvod do Play Lab
+        playlab_2021_reader: Úvod do Play Lab
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

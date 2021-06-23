@@ -1,4 +1,3 @@
----
 ky:
   data:
     blocks:
@@ -315,6 +314,15 @@ ky:
             '"x"': x позиция
             '"y"': у позиция
             '"speed"': ылдамдык
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орто
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -477,10 +485,24 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': туш келди
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

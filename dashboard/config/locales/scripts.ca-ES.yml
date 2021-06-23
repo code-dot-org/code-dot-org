@@ -499,12 +499,6 @@ ca:
               name: Fonaments de la informàtica
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         sciencePD2b:
@@ -521,22 +515,10 @@ ca:
               name: Recapitulació
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         asUnplugged:
@@ -725,12 +707,6 @@ ca:
               name: 'Sense connexió: Composició musical amb paràmetres'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Recapitulació
         grade3:
@@ -2227,6 +2203,10 @@ ca:
               name: Curs A
             Course B:
               name: Curs B
+            Course E:
+              name: Curs E
+            Course F:
+              name: Curs F
         2021drafting:
           lesson_groups:
             introduction:
@@ -2401,6 +2381,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+            lessonGroup-9:
+              display_name: Esdeveniments
         pre-express-2021:
           lesson_groups:
             csf_loops:

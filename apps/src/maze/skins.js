@@ -9,6 +9,7 @@
 
 var skinsBase = require('../skins');
 var randomValue = require('../utils').randomValue;
+import neighborhoodSprites from './neighborhoodSprites.json';
 
 var CONFIGS = {
   letters: {
@@ -183,6 +184,26 @@ var CONFIGS = {
     pegmanXOffset: -12,
     pegmanYOffset: -30,
     turnAfterVictory: true
+  },
+
+  neighborhood: {
+    spriteMap: neighborhoodSprites,
+    sheetRows: {
+      'other.png': 3,
+      'vehicles.png': 6,
+      'buildings.png': 18,
+      'sidewalk.png': 2,
+      'wall.png': 3
+    },
+    pegmanHeight: 32,
+    pegmanWidth: 32,
+    pegmanYOffset: 0,
+    pegmanXOffset: 0,
+    pegmanSheetWidth: 512,
+    squareSize: 32,
+    svgHeight: 400,
+    svgWidth: 400,
+    paintCan: 'paint_can.png'
   }
 };
 

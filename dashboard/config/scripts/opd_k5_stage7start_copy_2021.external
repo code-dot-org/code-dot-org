@@ -1,14 +1,22 @@
 name 'OPD-K5 Stage7Start_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview: Events
+# Introduction to Events
 
-<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
-## Coding concepts: Events
-- Make a program interactive
+## Course Lesson Objective
 
-## Teaching practice: Debugging
-- Find and fix problems in an algorithm or program
+After completing Lesson 10 you will be able to:
+
+* define event,
+* use "event" blocks with Play Lab, 
+* and begin coding a Flappy Bird Game and Virtual Pet using "event" blocks.
+
+## CS Concepts
+
+An **event** is an action that causes something to happen. For example, web pages may include a drop down menu when you roll over the navigation bar with your mouse.  The "mouse rollover" is an action that causes the menu to drop down.
+
+Click "Continue" to watch the video, "The Big Event," introducing students to "events."
 
 MARKDOWN

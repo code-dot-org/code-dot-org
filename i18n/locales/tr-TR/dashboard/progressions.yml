@@ -46,6 +46,7 @@ tr:
       Debugging with the Step Button: Adım Düğmesiyle Hata Ayıklama
       Demo Apps: Demo Uygulamaları
       Design Mode: Tasarım Modu
+      Designing for Accessibility: Erişilebilirlik için Tasarlama
       Drawing: Çizim
       Events: Olaylar
       Events and Linking Screens: Etkinlikler ve Bağlantı Ekranları
@@ -100,6 +101,7 @@ tr:
       Making Sounds: Sesler Yapmak
       'Maze Intro: Programming with Blocks': 'Labirent Giriş: Bloklarla Programlama'
       Measures: Ölçü
+      'Mini-Project: About Me': 'Ben ve Hareketli Nesne Laboratuvarı Hakkında'
       'Mini-Project: Alien Dance Moves': 'Mini Proje: Uzaylı Dansı Hareketleri'
       'Mini-Project: Alien Dance Party': 'Mini Proje: Uzaylı Dans Partisi'
       'Mini-Project: Royal Battle': 'Mini Proje: Kraliyet Savaşı'
@@ -121,10 +123,13 @@ tr:
       Movement with the Counter Pattern: Sayaç Deseni ile Hareket
       Multiframe Animations: Çok Çerçeveli Animasyonlar
       Musical Arrays: Müzikal Diziler
+      My Online Neighborhood: Online Mahallem
       Nested Loops with the Bee: Arı ile İç içe Döngüler
       New Shapes: Yeni Şekiller
       Orientation: Oryantasyon
       Pair Programming: Eşli Programlama
+      Picturing Data: Verilerin Resmedilmesi
+      Planning: Planlama
       Platform Jumper - Background and Variables: Platform Jumper - Arka Plan ve Değişkenler
       Platform Jumper - Items: Platform Jumper - Öğeler
       Platform Jumper - Platforms: Platform Jumper - Platformlar
@@ -152,6 +157,7 @@ tr:
       Repeat Unit Statements: Birim İfadelerini Tekrarla
       Repeat Until Statements: Birim İfadelerini Tekrarla
       Representing Images: Görüntüleri ifade etme
+      Review: İnceleme
       Run a simulation: Simülasyonu başlatın
       Sample Programs: Örnek Oyun
       Screen Design: Site Tasarımı

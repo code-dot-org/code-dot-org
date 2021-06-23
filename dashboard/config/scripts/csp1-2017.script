@@ -7,7 +7,7 @@ has_verified_resources true
 new_name 'csp1-2017'
 family_name 'csp1'
 version_year '2017'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 
@@ -20,8 +20,8 @@ lesson 'Personal Innovations', display_name: 'Personal Innovations', has_lesson_
 level 'U1L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 level 'Computer Science is Changing Everything', progression: 'Computer Science is Changing Everything', named: true
 variants
-  level 'csp_socialBelonging_control', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
   level 'csp_socialBelonging_intervention', experiments: ["rene-belonging-control","rene-belonging-affirmation"], progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_control', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
 endvariants
 
 lesson 'Sending Binary Messages', display_name: 'Sending Binary Messages', has_lesson_plan: true
@@ -130,8 +130,8 @@ level 'v2 U1L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 lesson 'Unit 1 Chapter 2 Assessment', display_name: 'Unit 1 Chapter 2 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 1 Ch2 Cumulative Assessment MC Group', assessment: true
 

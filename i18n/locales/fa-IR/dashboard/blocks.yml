@@ -248,6 +248,15 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"speed"': سرعت
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -370,9 +379,9 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': در هم
       binary_move:
         options:

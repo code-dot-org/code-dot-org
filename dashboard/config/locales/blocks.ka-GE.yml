@@ -481,6 +481,15 @@ ka:
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
             '"speed"': სიჩქარე
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ზომა
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': საშუალო
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -706,17 +715,26 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
-      aalab_moveInDirection:
+      aalab_layoutSprites:
         options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': ბადე
+            '"row"': მწკრივი
             '"random"': შემთხვევითი
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': ყველა
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': ყველა
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

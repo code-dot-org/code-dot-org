@@ -349,11 +349,17 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes @response.body, script2.name
   end
 
-  # only levelbuilders can edit
+  # only levelbuilders can edit with lesson id in url
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit, params: -> {{id: @lesson.id}}, user: :levelbuilder, response: :success
+
+  # only levelbuilders can edit with lesson position in url
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'sign out user cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :student, response: :forbidden, name: 'student cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :teacher, response: :forbidden, name: 'teacher cannot edit lessons using lesson position url'
+  test_user_gets_response_for :edit_with_lesson_position, params: -> {{script_id: @script.name, lesson_position: @lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can edit lessons using lesson position url'
 
   test 'edit lesson' do
     sign_in @levelbuilder
@@ -1262,5 +1268,33 @@ class LessonsControllerTest < ActionController::TestCase
     # sanity check that chapter and position values have been updated
     assert_equal [1, 2], section.script_levels.map(&:chapter)
     assert_equal [1, 2], section.script_levels.map(&:position)
+  end
+
+  test 'lesson clone fails if script cannot be found' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    lesson = create :lesson
+    put :clone, params: {id: lesson.id, 'destinationUnitName': 'fake-script'}
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
+  test 'lesson clone returns script and lesson urls if successful' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    create :course_version, content_root: script, key: '2021'
+    original_script = create :script
+    lesson = create :lesson, script: original_script
+    create :course_version, content_root: original_script, key: '2021'
+    cloned_lesson = create :lesson, script: script
+    Lesson.any_instance.stubs(:copy_to_script).returns(cloned_lesson)
+    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+
+    assert_response 200
+    assert @response.body.include?('editLessonUrl')
+    assert @response.body.include?('editScriptUrl')
   end
 end

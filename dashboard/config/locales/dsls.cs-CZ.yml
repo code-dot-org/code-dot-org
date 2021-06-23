@@ -2765,12 +2765,6 @@ cs-CZ:
           obrázků, uvidíš je všechny pokaždé, když nahraješ soubor a můžeš používat
           *jakýkoliv* soubor, který jsi už nahrál.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
           Klikni na Pokračovat a vyzkoušej si to!"
-      CSD User Centered Design Post-Project Test:
-        title: 'Design zaměřený na uživatele: Test po projektu'
-      CSD U1 Test:
-        title: Počítač a řešení problémů - test po projektu
-      CSD U5 test:
-        title: Data a společnost - test po projektu
       outbreak_freeplay_choice:
         display_name: Volná hra
         description: A to je konec kurzu. Pokračujte ve změnách a vylepšování projektu.
@@ -2934,3 +2928,213 @@ cs-CZ:
           Prozkoumej, proč lidé používají hesla, zjisti výhody používání hesel a najdi způsob, jak vytvářet a uchovávat silná, bezpečná hesla.
 
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Velká událost
+
+          V informatice jsou události akce, které počítač sleduje. V této lekci budeš reagovat různě podle toho, které tlačítko se zmáčkne.
+      CourseF_outbreak_story2:
+        markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
+          jevů, jejichž pozorování může být v reálném světě obtížné. Pomáhají vědcům
+          bezpečně a účinně řešit problémy a testovat nové nápady. Vaše simulace představuje
+          způsob, jak znázornit možný scénář šíření viru ve Městě příšerek.\n\n##
+          Resetujte a spusťte znovu!\nI když jste sami autorem svého kódu, je nemožné
+          vědět přesně, co se stane, až stisknete tlačítko Spustit. Pohyb příšerek
+          je náhodný, takže nemůžete tušit, jestli se virus rozšíří rychle, nebo pomalu.
+          Kdykoli kód upravíte, spusťte simulaci více než jednou. Každé spuštění má
+          unikátní průběh!\n\n## Shromáždění dat\nDoporučujeme zapisovat si během
+          spuštěné simulace svá pozorování. Můžete počítat, kolik příšerek se nakazí,
+          nebo pomocí časovače zjistit, jak rychle se nákaza šíří. Zkusíte třeba zjistit,
+          jak dlouho obvykle trvá, než se nakazí všechny příšerky, pokud žádná z nich
+          nemá roušku? \n\n## Předvídání\nPokud svůj model dobře znáte, může vám pomoct
+          dělat předpovědi. Můžete dokonce měnit průběh simulace a odhadovat, jak
+          se průběh změní. Například:\n* Co by se stalo, kdyby bylo ve městě dvakrát
+          tolik příšerek?\n* Co by se stalo, kdyby se příšerky pohybovaly poloviční
+          rychlostí?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Podobá se Město příšerek reálnému světu?\nKaždý
+          model může být realistický jen do určité míry. \n* Co má simulace šíření
+          společného s šířením viru v reálném světě?\n* Jaké jsou rozdíly?\nAž tuhle
+          aktivitu dokončíte, proberte tyto otázky doma nebo s učitelem ve škole!\n\n##
+          Co dalšího by se dalo modelovat?\nVytvořili jste pracovní model šíření viru
+          ve Městě příšerek. Co vaše simulace nedokáže namodelovat nebo zobrazit,
+          ale vy byste chtěli, aby to uměla? Stiskněte Pokračovat a naučte se vytvářet
+          složitější model, například:\n* zvyšovat počet příšerek v simulaci,\n* pomoct
+          příšerkám, aby se z nákazy vyléčily,\n* řešit pravděpodobnost, imunitu,
+          očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
+          nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
+          zdravé obyvatele našeho města, až k nám virus dorazí. \n"
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí jednu čáru.
+          feedback: Špatně. Umělec nakreslí čtverec.
+        - text: Umělec nakreslí čtverec.
+          correct: true
+          feedback: Správně!
+        - {}
+        questions:
+        - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
+            na "Spustit"?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Správně!
+        - text: '15'
+        - text: '20'
+        questions:
+        - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
+            klikneš na "Spustit"?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: Ptáček skončí jeden krok od prasátka.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček se dostane k prasátku.
+          correct: true
+          feedback: Správně!
+        - text: Ptáček narazí do TNT.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        questions:
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 se nepohne.
+        - text: BB-8 se pohne o jedno políčko.
+        - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
+          correct: true
+          feedback: Správně!
+        - {}
+        questions:
+        - text: Co se stane, když klikneš spustit?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 se v prvním cyklu dokutálí moc daleko.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
+          correct: true
+          feedback: Správně!
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+        questions:
+        - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: Včela se posune k mraku, ať se děje, co se děje.
+        - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
+            květina.
+          correct: true
+          feedback: Správně!
+        - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+        - text: Nevím.
+        questions:
+        - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
+            je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
+            není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
+            že se stane, když klikneš na tlačítko "Spustit"?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+          feedback: Správně!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+          feedback: Správně!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_digital_trails_2021:
+        markdown: |
+          # Sleduj digitální stopu
+
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        - text: Laurel se pokusí posbírat poklad tam, kde není, a to způsobí chybu.
+          correct: true
+          feedback: Správně!
+        - text: Laurel posbírá všechen poklad.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+        questions:
+        - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
+            spustí?

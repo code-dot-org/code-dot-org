@@ -29,7 +29,7 @@ class LessonGroupTest < ActiveSupport::TestCase
     lesson = create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
     create(:script_level, script: script, lesson: lesson)
 
-    summary = lesson_group.summarize_for_script_edit
+    summary = lesson_group.summarize_for_unit_edit
 
     assert_equal 'my-lesson-group', summary[:key]
     assert_equal 1, summary[:position]
@@ -50,5 +50,25 @@ class LessonGroupTest < ActiveSupport::TestCase
       }
       assert_equal expected, lesson_group.seeding_key(seed_context)
     end
+  end
+
+  test 'can copy to script' do
+    Script.any_instance.stubs(:write_script_json)
+    Script.stubs(:merge_and_write_i18n)
+    destination_script = create :script, is_migrated: true
+    create :course_version, content_root: destination_script
+    original_script = create :script, is_migrated: true
+    create :course_version, content_root: original_script
+    lesson_group = create :lesson_group, script: original_script
+    create :lesson, lesson_group: lesson_group, script: original_script
+
+    copied_lesson_group = lesson_group.copy_to_script(destination_script)
+    destination_script.reload
+    original_script.reload
+
+    assert_equal 1, destination_script.lesson_groups.count
+    assert_equal 1, original_script.lesson_groups.count
+    assert_equal destination_script, copied_lesson_group.script
+    assert_equal 1, copied_lesson_group.lessons.count
   end
 end

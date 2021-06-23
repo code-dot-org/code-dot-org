@@ -11,7 +11,7 @@ project_widget_types ["gamelab", "weblab"]
 announcements [{"notice"=>"Check out the new CS Discoveries resources for 2019-2020!", "details"=>"Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!", "link"=>"https://forum.code.org/t/new-resources-for-2019-2020/30676", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csd3'
 version_year '2019'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true

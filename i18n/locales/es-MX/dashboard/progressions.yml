@@ -29,7 +29,7 @@ es-MX:
       Chance: Probabilidad
       Change: Cambiar
       Checking for a Winner: Chequeando un Ganador
-      Code Your Own Flappy Game: Crea Tu Propio Juego Flappy
+      Code Your Own Flappy Game: Crea tu propio juego Flappy
       Collector Game: Juego de Coleccionista
       Collisions: Colisiones
       Collisions in Games: Colisiones en Juegos
@@ -48,6 +48,7 @@ es-MX:
       Debugging with the Step Button: Depuración con el botón Step
       Demo Apps: Aplicaciones de demostración
       Design Mode: Modo de diseño
+      Designing for Accessibility: Diseñar con la accesibilidad en mente
       Drawing: Dibujo
       Events: Eventos
       Events and Linking Screens: Sucesos y pantallas de enlace
@@ -103,6 +104,7 @@ es-MX:
       Making Sounds: Hacer sonidos
       'Maze Intro: Programming with Blocks': 'Introducción al Laberinto: Programación con bloques'
       Measures: Medidas
+      'Mini-Project: About Me': 'Acerca de mí con Sprite Lab'
       'Mini-Project: Alien Dance Moves': 'Miniproyecto: Movimientos de Baile de Extraterrestres'
       'Mini-Project: Alien Dance Party': 'Miniproyecto: Fiesta de Baile de Extraterrestres'
       'Mini-Project: Royal Battle': 'Miniproyecto: Batalla Real'
@@ -110,6 +112,7 @@ es-MX:
       'Mini-Project: Snowflake #2': 'Miniproyecto: Copo de nieve nº 2'
       'Mini-Project: Swimming Fish': 'Miniproyecto: Pez nadador'
       'Mini-Project: Swimming Fish (continued)': 'Miniproyecto: Pez nadador (continuación)'
+      'Mini-Project: User Input Programs': 'Mini-Proyecto: Programas de Entrada de Usuarios'
       'Mini-Project: Virtual Pet': 'Miniproyecto: Mascota virtual'
       'Mini-project: Chase Game': 'Miniproyecto: Juego de persecución'
       'Mini-project: Flappy Game': 'Miniproyecto: Juego de Flappy'
@@ -124,10 +127,13 @@ es-MX:
       Movement with the Counter Pattern: Movimiento con el Patrón de Contador
       Multiframe Animations: Animaciones Multiframe
       Musical Arrays: Matrices musicales
+      My Online Neighborhood: Mi barrio en línea
       Nested Loops with the Bee: Bucles anidados con la Abeja
       New Shapes: Nuevas formas
       Orientation: Orientación
       Pair Programming: Programación en parejas
+      Picturing Data: Gráficos de datos
+      Planning: Planificación
       Platform Jumper - Background and Variables: Plataforma de Salto - Antecedentes y variables
       Platform Jumper - Items: Plataforma de Salto - Elementos
       Platform Jumper - Platforms: Plataforma de Salto - Plataformas
@@ -157,6 +163,7 @@ es-MX:
       Repeat Unit Statements: Declaraciones Repeat Unit
       Repeat Until Statements: Declaraciones Repeat Until 
       Representing Images: Representar imágenes
+      Review: Revisión
       Run a simulation: Ejecutar una simulación
       Sample Programs: Programas de ejemplo
       Screen Design: Diseño de pantalla
@@ -193,6 +200,7 @@ es-MX:
       Velocity: Velocidad
       Velocity and the Counter Pattern: Velocidad y patrón del contador
       Video: Vídeo
+      'Video: For Loops': 'Vídeo: Bucles "for"'
       Warm Up: Calentamiento
       Website Project: Proyecto de Sitio Web
       Welcome to Monster Town: Bienvenido a la Ciudad de Monstruos

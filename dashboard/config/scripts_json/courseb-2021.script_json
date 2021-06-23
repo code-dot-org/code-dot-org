@@ -2,7 +2,7 @@
   "script": {
     "name": "courseb-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-05 18:19:54 UTC",
+    "serialized_at": "2021-06-17 22:31:19 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -1723,7 +1724,7 @@
       "key": "59a20536-707e-4328-88ab-71b1c533cd37",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "59a20536-707e-4328-88ab-71b1c533cd37",
@@ -1959,7 +1960,7 @@
       "key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
       "position": 2,
       "properties": {
-        "name": "Gettinig Loopy"
+        "name": "Getting Loopy"
       },
       "seeding_key": {
         "activity_section.key": "018fc5e4-ba55-4049-8faf-bfd0f596e796",
@@ -2314,7 +2315,7 @@
       "key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
@@ -2476,7 +2477,7 @@
       "key": "6c661991-bf9d-4271-a318-5878b3ef438c",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "6c661991-bf9d-4271-a318-5878b3ef438c",
@@ -2772,7 +2773,7 @@
       "key": "dd9fba95-8daa-47d3-8c05-3429f3f25b77",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "dd9fba95-8daa-47d3-8c05-3429f3f25b77",
@@ -2816,7 +2817,7 @@
       "key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
@@ -3451,7 +3452,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3477,7 +3478,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4598,7 +4599,7 @@
         "level_keys": [
           "courseB_collector_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4624,7 +4625,7 @@
         "level_keys": [
           "courseB_collector_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4963,7 +4964,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4989,7 +4990,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5067,7 +5068,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video: Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
@@ -5301,7 +5302,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5327,7 +5328,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6913,6 +6914,18 @@
       }
     },
     {
+      "name": "Play Lab Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
+      "key": "play_lab_project_planning_guide_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "play_lab_project_planning_guide_1"
+      }
+    },
+    {
       "name": "Stevie and the Big Project",
       "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
       "key": "stevie_and_the_big_project",
@@ -7317,6 +7330,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "play_lab_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "play_lab_project_planning_guide_1"
       }
     }
   ],

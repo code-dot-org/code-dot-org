@@ -61,7 +61,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "false",
-    "long_instructions": "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\" target=\"_blank\">Innovation Project</a>",
+    "long_instructions": "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\" target=\"_blank\" rel=\"noopener noreferrer\">Innovation Project</a>",
     "examples_required": "false",
     "short_instructions": "test",
     "never_autoplay_video": "false",

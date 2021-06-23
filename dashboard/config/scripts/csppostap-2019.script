@@ -7,7 +7,7 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}'
 announcements [{"notice"=>"No Lesson Plans in Chapter 2", "details"=>"Please note there are no lesson plans for Chapter 2 of this unit.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'csppostap'
 version_year '2019'
-is_stable true
+published_state 'stable'
 project_sharing true
 tts true
 

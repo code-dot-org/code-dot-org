@@ -5,37 +5,32 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
 
-## CS is learning about...
+##### The Computer Science Teacher Association (CSTA) defines computer science as, “The study of computers and **algorithmic processes**, including their principles, their **hardware and software designs**, their implementation, and their **impact on society**.”
 
-**“The study of computers and algorithmic processes, including their principles, their hardware and software designs, their implementation, and their impact on society.”** -Computer Science Teacher Association (CSTA) 
+Breaking this definition down means when students learn about computer science they learn about: 
 
-Let’s breakdown this  definition.  
+* **Algorithms** or step-by-step processes to complete a task like brushing your teeth, playing a game, or opening a file on a computer.
 
-* **Algorithms** - step-by-step processes to complete a task 
-	* e.g. brushing your teeth, playing a game, opening a file
-* **Hardware** 
-	* e.g. mouse, keyboard, monitor
-* **Software** 
-	* e.g. Android, Microsoft Windows, internet browsers like Google Chrome
-* **Design and use** of hardware and software and their effect on us and others 
-	* e.g. apps for social change, artificial intelligence, colors displayed on a monitor
+* **Hardware** such as a mouse, keyboard, or monitor.
+   
+* **Software** such as Android, Microsoft Windows, or internet browsers like Google Chrome.
 
-## CS is about... 
+* **Design and use** of hardware and software and their effect on us and others.  
+	* For example apps for social change, artificial intelligence, or colors displayed on a monitor.
 
-* Creativity
-	* CS is not technology, like the cell phone we use.  CS is a process that can create technology.
-    * CS teaches students to create new technology instead of only being consumers of technology.
-* Problem solving
-	* CS helps students think differently about solving problems in any context.
-    * CS uses a problem solving process that can be applied to any field of study and to any problem.
-* Using code
-	* CS is not only coding.  CS uses code like a tool similar to how arithmetic is a tool for math and words are a tool for English.
-	* CS teaches students to break down big, ambiguous problems into smaller chunks. Recognizing what is important and what needs to be solved first are critical thinking skills that are valuable in ANY context.
-    
+## Computer science is also about... 
 
+### **Creativity**
 
+* CS is not technology, like the cell phone we use.  CS is a process that can create technology.
+* CS teaches students to create new technology instead of only being consumers of technology.
 
+### **Problem solving**
+* CS helps students think differently about solving problems in any context.
+* CS uses a problem solving process that can be applied to any field of study and to any problem.
 
-If you are a <a href="https://code.org/educate/csd" target="blank">middle school</a> or <a href="https://code.org/educate/csp" target="blank">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank">in-depth, ongoing professional development opportunities</a>.
+### **Using code**
+* CS is not only coding.  CS uses code like a tool similar to how arithmetic is a tool for math and words are a tool for English.
+* CS teaches students to break down big, ambiguous problems into smaller chunks. Recognizing what is important and what needs to be solved first are critical thinking skills that are valuable in ANY context.
 
 MARKDOWN

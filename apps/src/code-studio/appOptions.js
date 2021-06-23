@@ -112,7 +112,7 @@
  * @property {boolean} beginnerMode
  * @property {string} levelId
  * @property {number} puzzle_number
- * @property {number} stage_total
+ * @property {number} lesson_total
  * @property {boolean} iframeEmbed
  * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
@@ -224,9 +224,9 @@
  * @property {?} level_id
  * @property {?} total_lines
  * @property {AutoplayVideo} video_info
- * @property {string} redirect - path to 'next' level in the stage/script sequence.
- * @property {{previous: {position: number, name: string}}} stage_changing
- * @property {boolean} end_of_stage_experience
+ * @property {string} redirect - path to 'next' level in the lesson/script sequence.
+ * @property {{previous: {position: number, name: string}}} lesson_changing
+ * @property {boolean} end_of_lesson_experience
  * @property {HintViewRequest[]} hint_view_requests
  * @property {string} hint_view_request_url
  * @property {string} message

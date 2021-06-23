@@ -10,17 +10,37 @@
   for the list of URLs currently in use.
 
 = form_with model: @foorm_simple_survey_form, url: foorm_simple_survey_forms_path do |f|
+  %h2 Survey Options
   .field
     = f.label :path, 'Path suffix where survey will appear (studio.code.org/form/your_path_here). Lower case letters, numbers, and underscores only.'
     = f.text_field :path
   .field
+    = f.label :form_key, 'Form to appear on page:'
+    = select_tag :form_key,
+      options_from_collection_for_select(Foorm::Form.where(published: true), 'key', 'key'),
+      style: 'width: 300px'
+  .field
     = f.label :kind, 'Survey identifier (optional, for analysis)'
     = f.text_field :kind
   .field
-    = f.label :form_key, 'Form to appear on page:'
-    = select_tag :form_key,
-      options_from_collection_for_select(Foorm::Form.where(published: true), 'key', 'key')
-  .field
-    = f.label :allow_multiple_submissions, 'Allow multiple submissions by the same user?'
     = f.check_box :allow_multiple_submissions
+    = f.label :allow_multiple_submissions, 'Allow multiple submissions by the same user?'
+  %h2
+    Variables (optional)
+  %p
+    If your survey uses variables to fill placeholder text with a specified value (eg, a course name),
+    include the name of the placeholder (eg, course) and the value
+    you want to appear in the survey (eg, CS Principles).
+  %p
+    Please let an engineer know if your survey uses more than 3 variables.
+  %p
+    If your survey does not use variables, leave these fields blank.
+  .field
+    - (0..2).to_a.each do |id|
+      = f.label "survey_data_key_#{id}", 'Name', style: 'display: inline'
+      = f.text_field "survey_data_key_#{id}", style: 'margin-right: 10px'
+      = f.label "survey_data_value_#{id}", 'Value', style: 'display: inline'
+      = f.text_field "survey_data_value_#{id}"
+      %br
+
   %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Create

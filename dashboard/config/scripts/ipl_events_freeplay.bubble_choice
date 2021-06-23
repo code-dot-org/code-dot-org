@@ -1,0 +1,10 @@
+name 'IPL_events_freeplay'
+editor_experiment ''
+display_name 'Story Board: Mini-Lessons'
+description 'Great job so far! Keep learning by exploring some of the optional levels below. When you are ready to go back to your project, press Continue.'
+
+sublevels
+level 'storyboard_choices_properties'
+level 'storyboard_choices_backgrounds'
+level 'IPL_sprites_behaviors'
+level 'self-expression_positioning'

@@ -206,6 +206,10 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"speed"': արագություն
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': չափ
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -320,9 +324,9 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': կամայական
       binary_move:
         options:

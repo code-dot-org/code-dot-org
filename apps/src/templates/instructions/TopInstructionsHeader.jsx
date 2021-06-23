@@ -82,13 +82,17 @@ function TopInstructionsHeader(props) {
     isCSDorCSP,
     displayHelpTab,
     displayFeedback,
-    displayKeyConcept,
+    levelHasRubric,
+    displayDocumentationTab,
+    displayReviewTab,
     isViewingAsTeacher,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
     handleHelpTabClick,
     handleCommentTabClick,
+    handleDocumentationTabClick,
+    handleReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -175,8 +179,26 @@ function TopInstructionsHeader(props) {
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
-              text={displayKeyConcept ? i18n.keyConcept() : i18n.feedback()}
+              text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {displayDocumentationTab && (
+            <InstructionsTab
+              onClick={handleDocumentationTabClick}
+              selected={tabSelected === TabType.DOCUMENTATION}
+              text={i18n.documentation()}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {displayReviewTab && (
+            <InstructionsTab
+              onClick={handleReviewTabClick}
+              selected={tabSelected === TabType.REVIEW}
+              text={i18n.review()}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -200,6 +222,7 @@ function TopInstructionsHeader(props) {
           (isCSDorCSP || hasContainedLevels) &&
           !dynamicInstructions && (
             <CollapserIcon
+              id="ui-test-collapser"
               isCollapsed={isCollapsed}
               onClick={handleClickCollapser}
               style={collapserIconStyles}
@@ -216,13 +239,17 @@ TopInstructionsHeader.propTypes = {
   isCSDorCSP: PropTypes.bool,
   displayHelpTab: PropTypes.bool,
   displayFeedback: PropTypes.bool,
-  displayKeyConcept: PropTypes.bool,
+  levelHasRubric: PropTypes.bool,
+  displayDocumentationTab: PropTypes.bool,
+  displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
   handleHelpTabClick: PropTypes.func.isRequired,
   handleCommentTabClick: PropTypes.func.isRequired,
+  handleDocumentationTabClick: PropTypes.func.isRequired,
+  handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,

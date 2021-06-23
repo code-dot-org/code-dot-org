@@ -317,8 +317,8 @@ module Services
         # Extract the parts of the ScriptLevel's seeding_key which are used to
         # identify the Lesson by its seeding_key.
         lesson_seed_keys = %w(lesson.key lesson_group.key script.name)
-        stage = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
-        raise 'No stage found' if stage.nil?
+        lesson = lessons_by_seeding_key[sl_data['seeding_key'].select {|k, _| lesson_seed_keys.include?(k)}]
+        raise 'No lesson found' if lesson.nil?
 
         section_key = sl_data['seeding_key']['activity_section.key']
         section_id = section_key && seed_context.activity_sections.find {|section| section.key == section_key}.id
@@ -330,7 +330,7 @@ module Services
         script_level_attrs = sl_data.except('seeding_key')
         script_level_attrs['script_id'] = seed_context.script.id
         script_level_attrs['activity_section_id'] = section_id if section_id
-        script_level_attrs['stage_id'] = stage.id
+        script_level_attrs['stage_id'] = lesson.id
         script_level_to_import.assign_attributes(script_level_attrs)
         script_level_to_import
       end
@@ -518,9 +518,8 @@ module Services
 
     def self.import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
       return [] unless seed_context.script.get_course_version
-      return [] if lessons_vocabularies_data.blank?
 
-      lessons_vocabularies_to_import = lessons_vocabularies_data.map do |lv_data|
+      lessons_vocabularies_to_import = (lessons_vocabularies_data || []).map do |lv_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -545,9 +544,7 @@ module Services
     end
 
     def self.import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
-      return [] if lessons_programming_expressions_data.blank?
-
-      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lpe_data|
+      lessons_programming_expressions_to_import = (lessons_programming_expressions_data || []).map do |lpe_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -661,6 +658,7 @@ module Services
         :new_name,
         :family_name,
         :serialized_at,
+        :published_state,
         :seeding_key
       )
 
@@ -791,7 +789,7 @@ module Services
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
-        object.seeding_key(@scope[:seed_context], use_existing_level_keys: false)
+        object.seeding_key(@scope[:seed_context], false)
       end
 
       def level_keys
@@ -799,7 +797,7 @@ module Services
         # when seeding LevelsScriptLevels.
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
-        object.get_level_keys(@scope[:seed_context], use_existing_level_keys: false)
+        object.get_level_keys(@scope[:seed_context], false)
       end
     end
 
@@ -807,7 +805,7 @@ module Services
       attributes :seeding_key
 
       def seeding_key
-        object.seeding_key(@scope[:seed_context])
+        object.seeding_key(@scope[:seed_context], false)
       end
     end
 

@@ -6,8 +6,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
-import {editAnimation, removePendingFramesAction} from '../animationListModule';
-import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {editAnimation, removePendingFramesAction} from '../redux/animationList';
+import {show, Goal} from '../redux/animationPicker';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -63,7 +63,7 @@ class PiskelEditor extends React.Component {
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
 
-    this.iframe.contentWindow.locale = this.props.localeCode;
+    this.iframe.contentWindow.piskel_locale = this.props.localeCode;
   }
 
   componentWillUnmount() {

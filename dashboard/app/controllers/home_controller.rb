@@ -97,7 +97,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:valid_grades] = Section.valid_grades
-    @homepage_data[:lessonExtrasScriptIds] = Script.lesson_extras_script_ids
+    @homepage_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
@@ -105,6 +105,9 @@ class HomeController < ApplicationController
     @homepage_data[:providers] = current_user.providers
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
+
+    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
+    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
@@ -118,9 +121,7 @@ class HomeController < ApplicationController
     exclude_primary_script = true
     @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
 
-    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.where(
-      student_id: current_user.id
-    ).count > 0
+    @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
     script = Queries::ScriptActivity.primary_script(current_user)
     if script
@@ -153,8 +154,8 @@ class HomeController < ApplicationController
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
-      @homepage_data[:textToSpeechScriptIds] = Script.text_to_speech_script_ids
-      @homepage_data[:preReaderScriptIds] = Script.pre_reader_script_ids
+      @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
+      @homepage_data[:preReaderUnitIds] = Script.pre_reader_unit_ids
 
       if show_census_banner
         teachers_school = current_user.school_info.school

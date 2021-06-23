@@ -18,6 +18,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_CONTENT_TYPES = Set.new(
     %w(
       application/json
+      application/geo+json
       text/javascript
       text/json
       text/plain
@@ -41,6 +42,7 @@ class XhrProxyController < ApplicationController
     api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
+    api.openrouteservice.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
@@ -53,6 +55,7 @@ class XhrProxyController < ApplicationController
     api.thingspeak.com
     api.uclassify.com
     api.waqi.info
+    api.weather.gov
     api.zippopotam.us
     bible-api.com
     code.org
@@ -63,6 +66,7 @@ class XhrProxyController < ApplicationController
     data.gv.at
     data.nasa.gov
     dataservice.accuweather.com
+    distanza.org
     dweet.io
     enclout.com
     herokuapp.com

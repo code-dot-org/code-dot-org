@@ -1,4 +1,5 @@
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
+published_state 'beta'
 
 lesson_group 'introduction', display_name: 'Introduction'
 lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
@@ -71,6 +72,7 @@ level 'CourseF_outbreak_freeplay', progression: 'Mini-Project: Outbreak Simulato
 
 lesson 'Outbreaklab', display_name: 'Outbreak Standalone Lab', has_lesson_plan: false
 level 'outbreak_library'
+level 'outbreak_virus_v2', progression: 'New library'
 
 lesson_group 'AB EOC', display_name: 'Course A and B EOC Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: false
@@ -87,6 +89,8 @@ level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
 level 'avoid_follow', progression: 'A/B Test for Following Behavior'
 level 'avoid_follow_lines', progression: 'Draw Lines'
 level 'drawshape', progression: 'Draw Shape'
+level 'spritelab_speech_prototype_mike', progression: 'Speech Bubbles'
+level 'spritelab_speech_prototype_mike2', progression: 'Speech Bubbles'
 
 lesson_group 'Loom Levels', display_name: 'Loom Levels'
 lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false

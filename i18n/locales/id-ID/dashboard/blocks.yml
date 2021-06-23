@@ -1204,6 +1204,15 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"speed"': kecepatan
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ukuran
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': sedang
+            '100': large
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} ke {N}%
         options:
@@ -1509,6 +1518,13 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      Mikelab_setupSim:
+        text: |-
+          setup simulasi dengan
+          {SPRITE1N}{SPRITE1COSTUME}Kecepatan{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Kecepatan{SPRITE2SPEED}
+          Mengumpulkan
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1605,42 +1621,27 @@ id:
         options:
           PROPERTY:
             "'shapeColor'": warna
-      aalab_addBehaviorForDuration:
-        text: sprite aalab {SPRITE} Dimulai {BEHAVIOR} Untuk {SECONDS} Detik
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} dimulai {BEHAVIOR} sampai {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: sprite baru bernama{SPRITE_NAME} dengan kostum{ANIMATION_NAME} di lokasi{LOCATION}
-      aalab_goToScene:
-        text: pergi ke tempat kejadian {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
-      aalab_prompt:
-        text: ajukan pertanyaan {MESSAGE}
-      aalab_scene:
-        text: adegan {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: cerita penyiapan
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': Kisi
+            '"border"': batas
+            '"row"': baris
             '"random"': acak
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': semua
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': semua
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:

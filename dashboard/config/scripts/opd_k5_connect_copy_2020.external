@@ -8,14 +8,14 @@ markdown <<MARKDOWN
 
 Whether or not you did the whole course in order, we want to hear your feedback. Please submit this short survey to help us improve the course going forward! 
 
-<a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/93176494681166?user_id=<user_id/>" target="blank"> Take the post-survey</a>
+<a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/93176494681166?user_id=<user_id/>" target="blank" rel="noopener noreferrer"> Take the post-survey</a>
 
 
 ## Print a certificate
 
 Congratulations on completing this professional development online course. Provided you have completed all levels in this training, you can download and print a certificate of accomplishment now by completing the following steps:
 
-- Visit <a href="https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals" target="blank">this link</a>.
+- Visit <a href="https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals" target="blank" rel="noopener noreferrer">this link</a>.
 - Enter your name into the input field/box.
 - Click Print Certificates.
 - Right click on the image of the certificate and choose "Save Image As..." so you can download to your computer.
@@ -23,12 +23,12 @@ Congratulations on completing this professional development online course. Provi
 
 
 ## Come to an in-person professional development workshop
-- Check out <a href="http://code.org/professional-development-workshops" target="blank">our professional learning map</a> to see the CS Fundamentals workshops that are being offered in your area! 
+- Check out <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">our professional learning map</a> to see the CS Fundamentals workshops that are being offered in your area!
 
 ## Get connected
-- **Continue participating in the code.org teacher Professional Learning Community:** The forum that you’ve been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: <a href="http://forum.code.org/c/csf" target="blank">http://forum.code.org/c/csf</a>.  
-- **Connect with <a href="http://twitter.com/teachcode" target="blank">@teachcode</a> on Twitter.**  
-- **Join the computer science Teachers Association (CSTA):** <a href="http://csta.acm.org/index.html" target="blank">The CSTA</a> is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
+- **Continue participating in the code.org teacher Professional Learning Community:** The forum that you’ve been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: <a href="http://forum.code.org/c/csf" target="blank" rel="noopener noreferrer">http://forum.code.org/c/csf</a>.
+- **Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.**
+- **Join the computer science Teachers Association (CSTA):** <a href="http://csta.acm.org/index.html" target="blank" rel="noopener noreferrer">The CSTA</a> is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
 
 
 > Thank you for your participation! We can't wait to hear how you implement computer science and Code Studio in your classroom!

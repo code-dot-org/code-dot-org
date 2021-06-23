@@ -358,7 +358,7 @@
           "courseE_playLab_scaffold3_1": "Fai arrivare il personaggio 1 fino a questa bandierina per passare all'esercizio successivo."
         },
         "OPD-K5-spritelab-3": {
-          "spritelab_comment": "Usa questo blocco per lasciare note a te stesso o al tuo insegnante su come funziona il tuo codice."
+          "spritelab_comment": "Usa questo blocco per lasciare a te e al tuo insegnante note su come funziona il tuo codice."
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_1": "Guarda: c'è una nuova modalità per introdurre numeri nei blocchi. Questi blocchi \"matematici\" possono essere presi e spostati da un blocco all'altro!"
@@ -1442,8 +1442,8 @@
           "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
         },
         "outbreak2": {
-          "minitoolbox": "Fai clic qui per espandere il blocco.",
-          "pointerlocation": "Trascina qui un blocco oggetto."
+          "minitoolbox": "Clicca qui per espandere il blocco.",
+          "pointerlocation": "Trascina qui un blocco soggetto."
         },
         "outbreak7": {
           "costumes_callout": "Fai clic per creare un nuovo costume"

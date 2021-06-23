@@ -2981,8 +2981,8 @@ fr-FR:
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
           br / >
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
-            sur "Démarrer" ?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: Le moissonneur ramassera toutes les plantes.
@@ -3002,8 +3002,8 @@ fr-FR:
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
           br / >
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
-            sur "Démarrer" ?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: Le moissonneur ramassera toutes les plantes.
@@ -3023,8 +3023,8 @@ fr-FR:
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
           br / >
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
-            sur "Démarrer" ?
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
+            sur "Démarrer"?
       courseD_multi_farmer_ramp13:
         answers:
         - text: Le fermier marchera jusqu'au bout du chemin et récoltera la citrouille.
@@ -3066,7 +3066,7 @@ fr-FR:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: Rien. Ce code ne laissera qu’un terrain plat.
+        - text: Rien. Ce code ne laissera que le sol du niveau.
           feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -3081,7 +3081,7 @@ fr-FR:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: Rien. Ce code ne laissera qu’un terrain plat.
+        - text: Rien. Ce code ne laissera que le sol du niveau.
           feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -3096,7 +3096,7 @@ fr-FR:
         - text: Regarde bien le code suivant. Que restera-t-il à la fin de ce puzzle?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - text: Rien. Ce code ne laissera qu’un terrain plat.
+        - text: Rien. Ce code ne laissera que le sol du niveau.
           feedback: Incorrect. Il n'y a pas de code pour enlever la saleté du tas.
         - text: Ce code laissera le tas intact.
           correct: true
@@ -3143,7 +3143,7 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas aura disparu.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
@@ -3161,7 +3161,7 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas aura disparu.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
@@ -3179,7 +3179,7 @@ fr-FR:
           feedback: Le fermier enlèvera la saleté tant qu'il y aura un tas, puis s'arrêtera
             dès que le tas aura disparu.
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyé
+        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
             sur "Démarrer"?
       courseD_multi_maze_until10_predict2:
         answers:
@@ -4411,8 +4411,6 @@ fr-FR:
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target= \"_new\">\n <button>\nAller au plan de la leçon\n</button> \n</a>\n\n<br/>
           <br/>\n<a class = \"btn btn-large btn-primary next-stage submitButton\">Continue</a>"
-      CSD U1 Test:
-        title: Ordinateurs et test de résolution de problèmes après le projet
       outbreak_story:
         content1: description ici
         markdown: "# Épidémie : Codez votre propre simulation\n\n## Bienvenue à Monster

@@ -41,6 +41,11 @@ describe('ProgressTableDetailCell', () => {
     firehoseClient.putRecord.restore();
   });
 
+  it('renders nothing if levels array is empty', () => {
+    const wrapper = setUp({levels: []});
+    expect(wrapper).to.be.empty;
+  });
+
   it('displays a progress table level bubble for each level and sublevel', () => {
     const wrapper = setUp();
     const levelBubble1 = wrapper.findWhere(node => node.key() === '123_1');

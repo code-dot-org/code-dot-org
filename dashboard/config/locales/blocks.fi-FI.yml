@@ -1194,6 +1194,15 @@ fi:
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
             '"speed"': nopeus
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': koko
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': keskipitkä
+            '100': large
       gamelab_setSizes:
         text: aseta {SPRITE} {PROPERTY} – {N}%
         options:
@@ -1497,6 +1506,13 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
+      Mikelab_setupSim:
+        text: |-
+          määritä simulointi käyttäen
+          {SPRITE1N}{SPRITE1COSTUME}nopeudella{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}nopeudella{SPRITE2SPEED}
+          keräten
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1592,42 +1608,27 @@ fi:
         options:
           PROPERTY:
             "'shapeColor'": väri
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} alkaa {BEHAVIOR} varten {SECONDS} sekuntia
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} alkaa {BEHAVIOR} asti {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: uusi sprite nimeltään{SPRITE_NAME} puku{ANIMATION_NAME} 123_321{LOCATION}
-      aalab_goToScene:
-        text: Siirry kohtaus {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: siirry {SPRITE} {DISTANCE} kuvapistettä {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Pohjoinen
-            '"East"': Itä
-            '"South"': Etelä
-            '"West"': Länsi
-      aalab_prompt:
-        text: kysyä kysymys {MESSAGE}
-      aalab_scene:
-        text: kohtaus {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup tarina
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': ruudukko
+            '"border"': raja
+            '"row"': rivi
             '"random"': satunnainen
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': kaikki
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': kaikki
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: piirtää binääri {BIN}
       binary_drawBinScreen:

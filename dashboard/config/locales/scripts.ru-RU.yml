@@ -909,12 +909,6 @@ ru:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Добро пожаловать!
             Wrap-up:
@@ -968,12 +962,6 @@ ru:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Добро пожаловать!
             Wrap-up:
@@ -983,12 +971,6 @@ ru:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Добро пожаловать!
             Wrap-up:
@@ -1547,12 +1529,6 @@ ru:
               name: 'Урок без компьютера: Написание песен с параметрами'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Добро пожаловать!
             Wrap-up:
@@ -4698,6 +4674,8 @@ ru:
               display_name: функции
             csp_project:
               display_name: Проект
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -4708,12 +4686,16 @@ ru:
               display_name: Обходов
             csp_project:
               display_name: Проект
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметры и возвращаемые значения
             csp_libraries:
               display_name: Библиотеки
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
         csp9-pilot:
           lessons:
             Big Data, Crowdsourcing, and Machine Learning:
@@ -5141,6 +5123,8 @@ ru:
               display_name: 'Урок 1: Цифровая информация'
             cspSurvey:
               display_name: Опрос
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
           lessons:
             Binary Numbers:
               name: Двоичные числа
@@ -5148,23 +5132,39 @@ ru:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Урок 2: Интернет'
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
           lessons:
             The Need for Addressing:
               name: Необходимость адресации
             Routers and Redundancy:
               name: Маршрутизаторы и резервирование
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
           lessons:
             The Need for Programming Languages:
               name: Необходимость языков программирования
             Debugging:
               name: Отладка
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
         csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
           lessons:
             Big Data, Crowdsourcing, and Machine Learning:
               name: Big Data, краудсорсинг и машинное обучение
             Machine Learning and Bias:
               name: Машинное обучение и предвзятость
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опрос после окончания курса
         csp3-virtual:
           description_short: Программирование
           lesson_groups:
@@ -5344,6 +5344,12 @@ ru:
               name: Курс B
             CS Discoveries:
               name: Открытия в информатике
+            Course E:
+              name: Курс E
+            Course F:
+              name: Курс F
+            csf:
+              name: Основы информатики
         virustest:
           title: Симулятор эпидемии
           description_short: Используйте Sprite Lab для создания симулятора эпидемии
@@ -5354,6 +5360,10 @@ ru:
               name: AI для океанов
             visualizing:
               name: Визуализация данных
+            lesson14:
+              name: Урок 14
+            lesson15:
+              name: Урок 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5383,7 +5393,9 @@ ru:
             lessonGroup-3:
               display_name: Переменные
             outbreak:
-              display_name: Симуляция эпидемии
+              display_name: Симулятор эпидемии
+            debugging:
+              display_name: Отладка
         csd1-2021:
           lessons:
             The Problem Solving Process:
@@ -5559,7 +5571,7 @@ ru:
               name: Big Data, краудсорсинг и машинное обучение
             Machine Learning and Bias:
               key: Машинное обучение и предвзятость
-              name: Машинное обучение и предвзятость
+              name: Машинное обучение
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -5854,6 +5866,8 @@ ru:
               name: Цикл for в Художнике
             lesson-1:
               name: Танцевальная вечеринка
+            lesson-3:
+              name: Спрайты в действии
           lesson_groups:
             csf_sequencing:
               display_name: Последовательность действий
@@ -5869,15 +5883,19 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            lessonGroup-9:
+              display_name: События
         pre-express-2021:
           description_audience: 'Возраст: 4-8'
           lessons:
             Learn to Drag and Drop:
               key: Изучение перетаскивания
               name: Изучение перетаскивания
+              description_student: Щелкните и перетащите, чтобы закончить головоломки.
             Sequencing with Scrat:
               key: Последовательность в "Скрат"
               name: Последовательность в "Скрат"
+              description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
             Programming with Rey and BB-8:
               key: Программирование с Рееем и BB-8
               name: Программирование с Рееем и BB-8
@@ -5973,6 +5991,12 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
+            lessonGroup-4:
+              display_name: Test
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Содержимое
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -6016,3 +6040,11 @@ ru:
               display_name: Следующие шаги
             Introduction:
               display_name: Введение
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опрос
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Урок 15

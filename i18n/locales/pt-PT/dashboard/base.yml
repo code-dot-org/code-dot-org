@@ -261,7 +261,7 @@ pt:
   follower:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como teu professor'
-    registered: "Registaste-te para %{section_name}."
+    registered: "Registou-se para %{section_name}."
     error:
       signed_in: 'Antes de prosseguires, termina sessão'
       username_not_found: 'Nome de utilizador %{username} não encontrado'
@@ -540,7 +540,7 @@ pt:
       oceans_unsupported_browser: "Este browser não é suportado para este tutorial. Por favor tente visitar esta página usando Edge, Chrome, Firefox, ou outro browser mais moderno."
   slow_loading: 'Isto está a demorar mais do que o habitual...'
   try_reloading: 'Tente recarregar a página'
-  next_stage: 'Já está! Continua para a próxima etapa'
+  next_stage: 'Concluído! Continuar para a próxima fase'
   download_pdf: 'Abrir o plano da aula'
   lesson_plan: 'Plano da aula'
   view_lesson_plan: 'Ver plano da aula'

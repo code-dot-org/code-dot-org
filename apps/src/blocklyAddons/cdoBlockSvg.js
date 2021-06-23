@@ -93,7 +93,7 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
   }
 
   isUserVisible() {
-    return false; // TODO
+    return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
   }
 
   onMouseDown_(e) {

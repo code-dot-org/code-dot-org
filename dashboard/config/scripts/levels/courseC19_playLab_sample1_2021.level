@@ -5,7 +5,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return (Studio.background != \"cave\") && (Studio.sprite[0].value != \"hidden\") && (Studio.sprite[0].lastMove != Infinity) && (Studio.sprite[1].value != \"hidden\") && (Studio.sprite[1].lastMove != Infinity) && (Studio.sprite[2].value != \"hidden\") && (Studio.sprite[2].lastMove != Infinity) && (Studio.tickCount > 500) && (Studio.playerScore != 0);\r\n\r\n  //Commenting these out because this is the final presentation for the app. The game should not end automatically.\r\n  // The game still needs to end when the player wins or loses. (Kiki)\r\n//return Studio.trackedBehavior.hasLostGame;\r\n//return Studio.trackedBehavior.hasWonGame;\r\n\r\n}",
     "failure_condition": "function () {\r\n // return (((Studio.sprite[1].value == \"hidden\") || (Studio.sprite[2].value == \"hidden\")) && (Studio.tickCount > 5)) || ((Studio.playerScore == 0) && (Studio.tickCount > 450));\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -47,11 +47,12 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "name_suffix": "_2021",
+    "display_name": "Hungry Squirrel",
+    "thumbnail_url": "https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG",
     "encrypted_examples": [
 
     ],
-    "display_name": "Hungry Squirrel",
-    "thumbnail_url": "https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG",
+    "maze_data": null,
     "preload_asset_list": null
   },
   "game_id": 33,
@@ -60,7 +61,9 @@
   "level_num": "custom",
   "user_id": 285,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-10-15 22:30:38 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"project_template_level_name\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:17:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"embed\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:19:04 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:09:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:16:39 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"hint_prompt_attempts_threshold\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:21:43 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:23:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"edge_collisions\",\"projectile_collisions\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-02 20:35:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"short_instructions\",\"long_instructions\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-04-02 20:57:19 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-10-15 22:30:38 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"project_template_level_name\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:17:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"embed\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:19:04 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:09:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:16:39 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"hint_prompt_attempts_threshold\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:21:43 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:23:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"edge_collisions\",\"projectile_collisions\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-02 20:35:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"short_instructions\",\"long_instructions\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-04-02 20:57:19 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-05-27 19:40:08 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-27 19:44:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-27 19:45:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-27 19:46:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-06-14 15:02:39 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>
@@ -69,50 +72,55 @@
     </initialization_blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="true" movable="true" editable="true" id="when_run">
+        <block type="when_run" id="when_run">
           <next>
-            <block type="studio_setBackground" deletable="true" movable="true" editable="true">
+            <block type="studio_setBackground">
               <title name="VALUE">random</title>
               <next>
-                <block type="studio_setSprite" deletable="true" movable="true" editable="true">
-                  <title name="SPRITE">0</title>
+                <block type="studio_setSprite">
+                  <title name="SPRITE">1</title>
                   <title name="VALUE">"penguin"</title>
                   <next>
-                    <block type="studio_setSprite" deletable="true" movable="true" editable="true">
+                    <block type="studio_setSpritePosition">
                       <title name="SPRITE">1</title>
-                      <title name="VALUE">"octopus"</title>
+                      <title name="VALUE">17</title>
                       <next>
-                        <block type="studio_setSprite" deletable="true" movable="true" editable="true">
-                          <title name="SPRITE">2</title>
+                        <block type="studio_setSprite">
+                          <title name="SPRITE">0</title>
                           <title name="VALUE">"squirrel"</title>
                           <next>
-                            <block type="studio_setSpritePosition" deletable="true" movable="true" editable="true">
+                            <block type="studio_setSpritePosition">
                               <title name="SPRITE">0</title>
-                              <title name="VALUE">17</title>
+                              <title name="VALUE">8</title>
                               <next>
-                                <block type="studio_setSpritePosition" deletable="true" movable="true" editable="true">
+                                <block type="studio_setSpriteSpeed">
                                   <title name="SPRITE">1</title>
-                                  <title name="VALUE">7</title>
+                                  <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
                                   <next>
-                                    <block type="studio_setSpritePosition" deletable="true" movable="true" editable="true">
-                                      <title name="SPRITE">2</title>
-                                      <title name="VALUE">8</title>
+                                    <block type="studio_saySprite">
+                                      <title name="SPRITE">0</title>
+                                      <title name="TEXT">I want pie!</title>
                                       <next>
-                                        <block type="studio_setSpriteSpeed" deletable="true" movable="true" editable="true">
-                                          <title name="SPRITE">0</title>
-                                          <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                                        <block type="studio_wait">
+                                          <title name="VALUE">5000</title>
                                           <next>
-                                            <block type="studio_setSpriteSpeed" deletable="true" movable="true" editable="true">
-                                              <title name="SPRITE">1</title>
-                                              <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                                            <block type="studio_setSprite">
+                                              <title name="SPRITE">2</title>
+                                              <title name="VALUE">"octopus"</title>
                                               <next>
-                                                <block type="studio_saySprite" deletable="true" movable="true" editable="true">
-                                                  <title name="SPRITE">1</title>
-                                                  <title name="TEXT">Avoid the discs!</title>
+                                                <block type="studio_setSpritePosition">
+                                                  <title name="SPRITE">2</title>
+                                                  <title name="VALUE">7</title>
                                                   <next>
-                                                    <block type="studio_saySprite" deletable="true" movable="true" editable="true">
+                                                    <block type="studio_setSpriteSpeed">
                                                       <title name="SPRITE">2</title>
-                                                      <title name="TEXT">I want pie!</title>
+                                                      <title name="VALUE">Studio.SpriteSpeed.SLOW</title>
+                                                      <next>
+                                                        <block type="studio_saySprite">
+                                                          <title name="SPRITE">2</title>
+                                                          <title name="TEXT">Avoid the discs!</title>
+                                                        </block>
+                                                      </next>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -136,13 +144,13 @@
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever" deletable="true" movable="true" editable="true">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_wait" deletable="true" movable="true" editable="true">
-              <title name="VALUE">random</title>
+            <block type="studio_wait">
+              <title name="VALUE">2000</title>
               <next>
-                <block type="studio_throw" deletable="true" movable="true" editable="true">
-                  <title name="SPRITE">1</title>
+                <block type="studio_throw">
+                  <title name="SPRITE">2</title>
                   <title name="VALUE">"disc"</title>
                   <title name="DIR">2</title>
                 </block>
@@ -150,29 +158,29 @@
             </block>
           </statement>
         </block>
-        <block type="studio_repeatForever" deletable="true" movable="true" editable="true">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_throw" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">0</title>
+            <block type="studio_throw">
+              <title name="SPRITE">1</title>
               <title name="VALUE">"pie"</title>
               <title name="DIR">1</title>
               <next>
-                <block type="studio_wait" deletable="true" movable="true" editable="true">
+                <block type="studio_wait">
                   <title name="VALUE">2000</title>
                 </block>
               </next>
             </block>
           </statement>
         </block>
-        <block type="studio_repeatForever" deletable="true" movable="true" editable="true">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">0</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">1</title>
               <title name="DIR">8</title>
               <title name="DISTANCE">400</title>
               <next>
-                <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-                  <title name="SPRITE">0</title>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">1</title>
                   <title name="DIR">2</title>
                   <title name="DISTANCE">400</title>
                 </block>
@@ -180,15 +188,15 @@
             </block>
           </statement>
         </block>
-        <block type="studio_repeatForever" deletable="true" movable="true" editable="true">
+        <block type="studio_repeatForever">
           <statement name="DO">
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">1</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">2</title>
               <title name="DIR">1</title>
               <title name="DISTANCE">400</title>
               <next>
-                <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-                  <title name="SPRITE">1</title>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">2</title>
                   <title name="DIR">4</title>
                   <title name="DISTANCE">400</title>
                 </block>
@@ -196,39 +204,20 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
-          <title name="SPRITE1">2</title>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
           <title name="SPRITE2">pie</title>
           <next>
-            <block type="studio_makeProjectile" deletable="true" movable="true" editable="true">
+            <block type="studio_makeProjectile">
               <title name="VALUE">"pie"</title>
               <title name="ACTION">"disappear"</title>
               <next>
-                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                <block type="studio_changeScore">
                   <title name="VALUE">1</title>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
-          <title name="SPRITE1">2</title>
-          <title name="SPRITE2">disc</title>
-          <next>
-            <block type="studio_endGame" deletable="true" movable="true" editable="true">
-              <title name="VALUE">lose</title>
-              <next>
-                <block type="studio_saySprite" deletable="true" movable="true" editable="true">
-                  <title name="SPRITE">2</title>
-                  <title name="TEXT">Oh no!</title>
                   <next>
-                    <block type="studio_setSpriteEmotionParams" deletable="true" movable="true" editable="true">
-                      <title name="VALUE">3</title>
-                      <value name="SPRITE">
-                        <block type="math_number" deletable="true" movable="true" editable="true">
-                          <title name="NUM">3</title>
-                        </block>
-                      </value>
+                    <block type="studio_setSpriteEmotion">
+                      <title name="SPRITE">0</title>
+                      <title name="VALUE">1</title>
                     </block>
                   </next>
                 </block>
@@ -236,121 +225,66 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">disc</title>
+          <next>
+            <block type="studio_changeScore">
+              <title name="VALUE">-1</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">0</title>
+                  <title name="VALUE">3</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">0</title>
+                      <title name="TEXT">Oh no!</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
           <title name="VALUE">up</title>
           <next>
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">2</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
               <title name="DIR">1</title>
               <title name="DISTANCE">25</title>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+        <block type="studio_whenArrow">
           <title name="VALUE">down</title>
           <next>
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">2</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
               <title name="DIR">4</title>
               <title name="DISTANCE">25</title>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+        <block type="studio_whenArrow">
           <title name="VALUE">right</title>
           <next>
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">2</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
               <title name="DIR">2</title>
               <title name="DISTANCE">25</title>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+        <block type="studio_whenArrow">
           <title name="VALUE">left</title>
           <next>
-            <block type="studio_moveDistance" deletable="true" movable="true" editable="true">
-              <title name="SPRITE">2</title>
+            <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
               <title name="DIR">8</title>
               <title name="DISTANCE">25</title>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true">
-          <mutation>
-            <arg name="height"/>
-            <arg name="actor"/>
-            <description>jump function block with height and actor parameter</description>
-          </mutation>
-          <title name="NAME">jump</title>
-          <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
-              <title name="DIR">1</title>
-              <value name="SPRITE">
-                <block type="parameters_get" deletable="true" movable="true" editable="true">
-                  <title name="VAR">actor</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="parameters_get" deletable="true" movable="true" editable="true">
-                  <title name="VAR">height</title>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
-                  <title name="DIR">4</title>
-                  <value name="SPRITE">
-                    <block type="parameters_get" deletable="true" movable="true" editable="true">
-                      <title name="VAR">actor</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="parameters_get" deletable="true" movable="true" editable="true">
-                      <title name="VAR">height</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true">
-          <mutation>
-            <arg name="actor"/>
-            <arg name="speed"/>
-            <description>a patrol function that has a actor and speed parameter</description>
-          </mutation>
-          <title name="NAME">patrol</title>
-          <statement name="STACK">
-            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
-              <title name="DIR">1</title>
-              <value name="SPRITE">
-                <block type="parameters_get" deletable="true" movable="true" editable="true">
-                  <title name="VAR">actor</title>
-                </block>
-              </value>
-              <value name="DISTANCE">
-                <block type="parameters_get" deletable="true" movable="true" editable="true">
-                  <title name="VAR">speed</title>
-                </block>
-              </value>
-              <next>
-                <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
-                  <title name="DIR">4</title>
-                  <value name="SPRITE">
-                    <block type="parameters_get" deletable="true" movable="true" editable="true">
-                      <title name="VAR">actor</title>
-                    </block>
-                  </value>
-                  <value name="DISTANCE">
-                    <block type="parameters_get" deletable="true" movable="true" editable="true">
-                      <title name="VAR">speed</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
       </xml>
     </start_blocks>

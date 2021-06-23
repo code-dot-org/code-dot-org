@@ -306,19 +306,6 @@ Applab.getCode = function() {
   return studioApp().getCode();
 };
 
-/**
- * Helper function for levelbuilders to get the level html to copy into a widget
- * mode level.
- */
-Applab.getHtmlForWidgetMode = function() {
-  const dom = new DOMParser().parseFromString(Applab.levelHtml, 'text/html');
-  // Make screens the width of widget mode, not regular app mode
-  Array.from(dom.getElementsByClassName('screen')).forEach(
-    screen => (screen.style.width = `${applabConstants.WIDGET_WIDTH}px`)
-  );
-  return dom.getElementById('designModeViz').outerHTML;
-};
-
 Applab.getHtml = function() {
   // This method is called on autosave. If we're about to autosave, let's update
   // levelHtml to include our current state.
@@ -485,6 +472,8 @@ Applab.init = function(config) {
   const hasDataMode = !(
     config.level.hideViewDataButton || config.level.widgetMode
   );
+  const playspacePhoneFrame = !(config.share || config.level.widgetMode);
+  const hideRunResetButtons = playspacePhoneFrame || nonLevelbuilderWidgetMode;
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -669,7 +658,9 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !(config.share || config.level.widgetMode),
+    playspacePhoneFrame,
+    hideRunButton: hideRunResetButtons,
+    hideResetButton: hideRunResetButtons,
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,

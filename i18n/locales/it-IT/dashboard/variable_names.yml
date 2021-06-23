@@ -7,6 +7,7 @@ it:
       actor: personaggio
       armlength: lunghezza braccio
       binary: binario
+      birds: uccelli
       bodylength: lunghezza corpo
       cats: tutti i gatti
       color: colore
@@ -21,6 +22,7 @@ it:
       name: nome
       nectar: nettare
       nectars: nettare
+      planet: pianeta
       points: punti
       random: a caso
       repeat: ripeti

@@ -1,9 +1,8 @@
----
 ms:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} berselang-seli setiap {N} corak berirama \nantara {MOVE1} dan {MOVE2}"
+        text: "[GROUP][0] berselang-seli setiap [N][1] corak berirama \nantara [MOVE1][2] dan [MOVE2][3]"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -43,20 +42,20 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_atTimestamp:
-        text: selepas {TIMESTAMP} {UNIT}
+        text: selepas [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
       Dancelab_changeColorBy:
-        text: tukar {COLOR} {METHOD} dengan {AMOUNT}
+        text: tukar [COLOR][0] [METHOD][1] dengan [AMOUNT][2]
         options:
           METHOD:
             '"hue"': rona
             '"saturation"': ketepuan
             '"brightness"': kecerahan
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
+        text: "[GROUP][0] lakukan [MOVE][1] [DIR][2] selamanya"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -87,7 +86,7 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_changeMoveLR:
-        text: "{SPRITE} lakukan {MOVE} {DIR} selamanya"
+        text: "[SPRITE][0] lakukan [MOVE][1] [DIR][2] selamanya"
         options:
           MOVE:
             '"next"': "(Seterusnya)"
@@ -105,7 +104,7 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_changePropBy:
-        text: tukar {SPRITE} {PROPERTY} dengan {VAL}
+        text: tukar [SPRITE][0] [PROPERTY][1] dengan [VAL][2]
         options:
           PROPERTY:
             '"scale"': saiz
@@ -115,7 +114,7 @@ ms:
             '"x"': kedudukan mendatar
             '"y"': kedudukan menegak
       Dancelab_changePropEachBy:
-        text: tukar {GROUP} {PROPERTY} dengan {VAL}
+        text: tukar [GROUP][0] [PROPERTY][1] dengan [VAL][2]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -138,7 +137,7 @@ ms:
             '"x"': kedudukan mendatar
             '"y"': kedudukan menegak
       Dancelab_doMoveEachLR:
-        text: "{GROUP} lakukan {MOVE} {DIR} sekali"
+        text: "[GROUP][0] lakukan [MOVE][1] [DIR][2] sekali"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -179,7 +178,7 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_doMoveLR:
-        text: "{SPRITE} lakukan {MOVE} {DIR} sekali"
+        text: "[SPRITE][0] lakukan [MOVE][1] [DIR][2] sekali"
         options:
           MOVE:
             '"rand"': "(Rawak)"
@@ -207,34 +206,34 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} corak berirama selepas {START} '
+        text: 'ulangi setiap [N][0] corak berirama selepas [START][1] '
       Dancelab_everySeconds:
-        text: 'ulangi setiap {N} {UNIT} '
+        text: 'ulangi setiap [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
       Dancelab_everySecondsRange:
-        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
+        text: 'setiap [N][0] [UNIT][1] dari [START][2] hingga [STOP][3] '
         options:
           UNIT:
             measures: Corak Berirama
             seconds: Saat
       Dancelab_everyVerseChorus:
-        text: 'setiap {UNIT} '
+        text: 'setiap [UNIT][0] '
         options:
           UNIT:
             '"verse"': ayat
             '"chorus"': korus
       Dancelab_getEnergy:
-        text: dapatkan {RANGE}
+        text: dapatkan [RANGE][0]
         options:
           RANGE:
             '"low"': bes
             '"mid"': julat tengah
             '"high"': trebel
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': saiz
@@ -245,15 +244,15 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_getTime:
-        text: waktu semasa dalam {UNIT}
+        text: waktu semasa dalam [UNIT][0]
         options:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
       Dancelab_ifDanceIs:
         text: |-
-          jika {SPRITE} sedang lakukan {DANCE}
-          {DO1} {DO2}
+          jika [SPRITE][0] sedang lakukan [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Gerakan Tepukan Tinggi
@@ -268,7 +267,8 @@ ms:
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
       Dancelab_ifTime:
-        text: jika {UNIT} ialah {OP} {N}{DO1} {DO2}
+        text: |-
+          jika [UNIT][0] ialah [OP][1] [N][2][DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': corak berirama
@@ -278,7 +278,7 @@ ms:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} lompat ke {LOCATION}"
+        text: "[SPRITE][0] lompat ke [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
@@ -292,7 +292,7 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_jumpToEach:
-        text: lompat {GROUP} ke {LOCATION}
+        text: lompat [GROUP][0] ke [LOCATION][1]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -319,7 +319,7 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": rawak
       Dancelab_layoutSprites:
-        text: susun atur {GROUP} seperti {FORMAT}
+        text: susun atur [GROUP][0] seperti [FORMAT][1]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -349,7 +349,7 @@ ms:
             '"plus"': tambah
             '"random"': rawak
       Dancelab_makeAnonymousDanceSprite:
-        text: buatkan {COSTUME} baharu di {LOCATION}
+        text: buatkan [COSTUME][0] baharu di [LOCATION][1]
         options:
           COSTUME:
             '"ALIEN"': makhluk asing
@@ -372,7 +372,9 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
-        text: "buatkan {COSTUME} \nbaharudipanggil {NAME} di {LOCATION}"
+        text: |-
+          buatkan [COSTUME][0] 
+          baharudipanggil [NAME][1] di [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': makhluk asing
@@ -395,7 +397,9 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSpriteGroup:
-        text: "buat {N} {COSTUME} \nbaharudalam {LAYOUT}"
+        text: |-
+          buat [N][0] [COSTUME][1] 
+          baharudalam [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -445,9 +449,9 @@ ms:
             '"plus"': tambah
             '"random"': rawak
       Dancelab_mixColors:
-        text: campurkan {COLOR1} dan {COLOR2}
+        text: campurkan [COLOR1][0] dan [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} corak berirama"
+        text: "[N][0] corak berirama"
       Dancelab_onPointerDown:
         text: pada penunjuk ke bawah
       Dancelab_onPointerDrag:
@@ -457,14 +461,15 @@ ms:
       Dancelab_randomColor:
         text: warna rawak
       Dancelab_setBackground:
-        text: tetapkan warna {COLOR} latar belakang
+        text: tetapkan warna [COLOR][0] latar belakang
       Dancelab_setBackgroundEffect:
         text: |-
           tetapkan kesan
-          {EFFECT} {PALETTE} latar belakang
+          [EFFECT][0] [PALETTE][1] latar belakang
         options:
           EFFECT:
             '"none"': Tiada
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Rawak)"
             '"circles"': Bulatan
             '"color_cycle"': Warna
             '"diamonds"': Berlian
@@ -495,7 +500,7 @@ ms:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           tetapkan kesan latar belakang
-          {PALETTE} {EFFECT}
+          [PALETTE][0] [EFFECT][1]
         options:
           EFFECT:
             '"none"': Tiada
@@ -535,7 +540,7 @@ ms:
             '"vintage"': Vintaj
             '"warm"': Hangat
       Dancelab_setDanceSpeed:
-        text: tetapkan {SPRITE} kelajuan tarian kepada {SPEED}
+        text: tetapkan [SPRITE][0] kelajuan tarian kepada [SPEED][1]
         options:
           SPEED:
             '1': normal
@@ -544,7 +549,7 @@ ms:
             '0.5': perlahan
             '0.25': sangat perlahan
       Dancelab_setDanceSpeedEach:
-        text: tetapkan {GROUP} kelajuan tarian kepada {SPEED}
+        text: tetapkan [GROUP][0] kelajuan tarian kepada [SPEED][1]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -566,10 +571,11 @@ ms:
             '0.5': perlahan
             '0.25': sangat perlahan
       Dancelab_setForegroundEffect:
-        text: tetapkan kesan {EFFECT} latar depan
+        text: tetapkan kesan [EFFECT][0] latar depan
         options:
           EFFECT:
             '"none"': Tiada
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Rawak)"
             '"bubbles"': Gelembung
             '"confetti"': Konfeti
             '"hearts_red"': Hati
@@ -584,7 +590,7 @@ ms:
             '"color_lights"': Lampu Pentas
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
-        text: tetapkan kesan {EFFECT} latar depan
+        text: tetapkan kesan [EFFECT][0] latar depan
         options:
           EFFECT:
             '"none"': Tiada
@@ -607,7 +613,7 @@ ms:
             '"exploding_stars"': Pecahan Cahaya
             '"raining_tacos"': Tacos
       Dancelab_setProp:
-        text: 'tetapkan {SPRITE} {PROPERTY} kepada {VAL} '
+        text: 'tetapkan [SPRITE][0] [PROPERTY][1] kepada [VAL][2] '
         options:
           PROPERTY:
             '"scale"': saiz
@@ -617,7 +623,7 @@ ms:
             '"x"': kedudukan mendatar
             '"y"': kedudukan menegak
       Dancelab_setPropEach:
-        text: tetapkan {GROUP} {PROPERTY} kepada {VAL}
+        text: tetapkan [GROUP][0] [PROPERTY][1] kepada [VAL][2]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -641,7 +647,7 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_setPropRandom:
-        text: merawak {SPRITE} {PROPERTY}
+        text: merawak [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': saiz
@@ -652,7 +658,7 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_setPropRandomEach:
-        text: merawak{GROUP} {PROPERTY}
+        text: merawak[GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -676,9 +682,9 @@ ms:
             '"y"': kedudukan menegak
             '"tint"': warna
       Dancelab_setTint:
-        text: tetapkan {SPRITE} warna kepada {VAL}
+        text: tetapkan [SPRITE][0] warna kepada [VAL][1]
       Dancelab_setTintEach:
-        text: tetapkan {THIS} warna kepada {VAL}
+        text: tetapkan [THIS][0] warna kepada [VAL][1]
         options:
           THIS:
             '"ALIEN"': semua makhluk asing
@@ -694,7 +700,7 @@ ms:
             '"SLOTH"': sloths
             '"UNICORN"': unikorn
       Dancelab_setTintEachInline:
-        text: tetapkan {THIS} warna kepada {VAL}
+        text: tetapkan [THIS][0] warna kepada [VAL][1]
         options:
           THIS:
             '"ALIEN"': semua makhluk asing
@@ -710,15 +716,15 @@ ms:
             '"SLOTH"': sloths
             '"UNICORN"': unikorn
       Dancelab_setTintInline:
-        text: tetapkan {SPRITE} warna kepada {VAL}
+        text: tetapkan [SPRITE][0] warna kepada [VAL][1]
       Dancelab_setVisible:
-        text: tetapkan {SPRITE} boleh dilihat kepada {VISIBILITY}
+        text: tetapkan [SPRITE][0] boleh dilihat kepada [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': boleh dilihat
             'false': tidak boleh dilihat
       Dancelab_setVisibleEach:
-        text: tetapkan {THIS} tahap penglihatan kepada {VISIBILITY}
+        text: tetapkan [THIS][0] tahap penglihatan kepada [VISIBILITY][1]
         options:
           THIS:
             '"ALIEN"': semua makhluk asing
@@ -737,7 +743,7 @@ ms:
             'true': boleh dilihat
             'false': tidak boleh dilihat
       Dancelab_startMapping:
-        text: "{SPRITE} bermula {PROPERTY} berikutan {RANGE}"
+        text: "[SPRITE][0] bermula [PROPERTY][1] berikutan [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': saiz
@@ -752,7 +758,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_startMappingEach:
-        text: "{GROUP} bermula {PROPERTY} berikutan {RANGE}"
+        text: "[GROUP][0] bermula [PROPERTY][1] berikutan [RANGE][2]"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -780,7 +786,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_stopMapping:
-        text: "{SPRITE} berhenti {PROPERTY} berikutan {RANGE}"
+        text: "[SPRITE][0] berhenti [PROPERTY][1] berikutan [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': saiz
@@ -796,7 +802,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_stopMappingEach:
-        text: "{GROUP} berhenti {PROPERTY} berikutan {RANGE}"
+        text: "[GROUP][0] berhenti [PROPERTY][1] berikutan [RANGE][2]"
         options:
           GROUP:
             '"ALIEN"': semua makhluk asing
@@ -825,7 +831,7 @@ ms:
             '"mid"': julat tengah
             '"treble"': trebel
       Dancelab_translateStrings:
-        text: terjemahkan {STRING}
+        text: terjemahkan [STRING][0]
         options:
           STRING:
             '"music_wave"': Gelombang
@@ -869,7 +875,7 @@ ms:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: ketika {KEY} ditekan
+        text: ketika [KEY][0] ditekan
         options:
           KEY:
             '"up"': atas
@@ -914,7 +920,7 @@ ms:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: apabila kemuncak {RANGE}
+        text: apabila kemuncak [RANGE][0]
         options:
           RANGE:
             '0': bes
@@ -925,15 +931,15 @@ ms:
       Dancelab_whenSetup2:
         text: persediaan
       gamelab_addBehaviorSimple:
-        text: bidadari {SPRITE} bermula {BEHAVIOR}
+        text: bidadari [SPRITE][0] bermula [BEHAVIOR][1]
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': saat
       gamelab_changePropBy:
-        text: tukar {SPRITE} {PROPERTY} dengan {VAL}
+        text: tukar [SPRITE][0] [PROPERTY][1] dengan [VAL][2]
         options:
           PROPERTY:
             '"scale"': saiz
@@ -941,27 +947,27 @@ ms:
             '"direction"': arah pergerakan
             '"speed"': kelajuan
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2} 12321"
+        text: "[CONDITION][0] [SPRITE1][1] menyentuh [SPRITE2][2] 12321"
         options:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
       gamelab_clickedOn:
-        text: ketika {SPRITE} diklik
+        text: ketika [SPRITE][0] diklik
       gamelab_clickedSpritePointer:
-        text: mengklik {SPRITE}
+        text: "mengklik [SPRITE][0]"
       gamelab_comment:
-        text: 'komen: {COMMENT}'
+        text: 'komen: [COMMENT][0]'
       gamelab_createNewSprite:
-        text: "buat sprite baru \n Dipanggil {NAME} \n dengan pakaian {COSTUME} \n Pada {LOCATION}"
+        text: "buat sprite baru \n Dipanggil [NAME][0] \n dengan pakaian [COSTUME][1] \n Pada [LOCATION][2]"
       gamelab_destroy:
-        text: keluarkan {THIS}
+        text: keluarkan [THIS][0]
       gamelab_draggable:
         text: diseret
       gamelab_edgesDisplace:
-        text: tepi blok {SPRITE} dari bergerak
+        text: tepi blok [SPRITE][0] dari bergerak
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': saiz
@@ -970,7 +976,7 @@ ms:
             '"tint"': warna
             '"speed"': kelajuan
       gamelab_getThisSprite:
-        text: "{CHOICE} sprite"
+        text: "[CHOICE][0] sprite"
         options:
           CHOICE:
             '"this"': ini
@@ -1014,11 +1020,11 @@ ms:
             '"x"': x
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} menyentuh tepi"
+        text: "[SPRITE][0] menyentuh tepi"
       gamelab_jumpTo:
-        text: "{SPRITE} lompat ke {LOCATION}"
+        text: "[SPRITE][0] lompat ke [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} ditekan"
+        text: "[CONDITION][0] [KEY][1] ditekan"
         options:
           CONDITION:
             '"when"': apabila
@@ -1055,7 +1061,7 @@ ms:
             '"x"': x
             '"z"': z
       gamelab_locationAt:
-        text: 'lokasi x: {X} y: {Y}'
+        text: 'lokasi x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -1066,13 +1072,13 @@ ms:
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:
-        text: lokasi {SPRITE}
+        text: lokasi [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+        text: membuat baru [ANIMATION_NAME][0] bidadari [LOCATION][1] 123_321
       gamelab_mirrorSprite:
-        text: "{SPRITE} muka {DIRECTION}"
+        text: "[SPRITE][0] muka [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': kanan
@@ -1080,9 +1086,9 @@ ms:
       gamelab_mouseLocation:
         text: lokasi tetikus
       gamelab_moveForward:
-        text: bergerak {SPRITE} {DISTANCE} piksel ke hadapan
+        text: bergerak [SPRITE][0] [DISTANCE][1] piksel ke hadapan
       gamelab_moveInDirection:
-        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
+        text: bergerak [SPRITE][0] [DISTANCE][1] piksel [DIRECTION][2] 12321
         options:
           DIRECTION:
             '"North"': Utara
@@ -1090,15 +1096,15 @@ ms:
             '"South"': Selatan
             '"West"': Barat
       gamelab_moveToward:
-        text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
+        text: bergerak [SPRITE][0] piksel [DISTANCE][1] ke arah [TARGET][2]
       gamelab_newSpritePointer:
-        text: mengklik {SPRITE}
+        text: "mengklik [SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: mengklik {SPRITE}
+        text: "mengklik [SPRITE][0]"
       gamelab_playSound:
-        text: PlaySound {SOUND}
+        text: PlaySound [SOUND][0]
       gamelab_pointInDirection:
-        text: titik {SPRITE} {DIRECTION}
+        text: titik [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': Utara
@@ -1106,7 +1112,7 @@ ms:
             '"South"': Selatan
             '"West"': Barat
       gamelab_printText:
-        text: cetak {TEXT}
+        text: cetak [TEXT][0]
       gamelab_randColor:
         text: warna rawak
       gamelab_randomColor:
@@ -1114,17 +1120,17 @@ ms:
       gamelab_randomLocation:
         text: lokasi rawak
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} menghentikan segala-galanya"
+        text: "[SPRITE][0] menghentikan segala-galanya"
       gamelab_removeBehaviorSimple:
-        text: bidadari {SPRITE} berhenti {BEHAVIOR}
+        text: bidadari [SPRITE][0] berhenti [BEHAVIOR][1]
       gamelab_removeTint:
-        text: keluarkan warna dari {THIS}
+        text: keluarkan warna dari [THIS][0]
       gamelab_setAnimation:
-        text: menukar {THIS} pakaian untuk {ANIMATION}
+        text: menukar [THIS][0] pakaian untuk [ANIMATION][1]
       gamelab_setBackground:
-        text: tetapkan warna {COLOR} latar belakang
+        text: tetapkan warna [COLOR][0] latar belakang
       gamelab_setBackgroundImage:
-        text: tetapkan latar belakang ke {IMG}
+        text: tetapkan latar belakang ke [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': gua
@@ -1140,43 +1146,47 @@ ms:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim sejuk
             undefined: tiada
       gamelab_setBackgroundImageAs:
-        text: tetapkan latar belakang ke {IMG}
+        text: tetapkan latar belakang ke [IMG][0]
       gamelab_setProp:
-        text: Set {SPRITE} {PROPERTY} Untuk {VAL}
+        text: Set [SPRITE][0] [PROPERTY][1] Untuk [VAL][2]
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
             '"speed"': kelajuan
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       gamelab_setSizes:
-        text: Set {SPRITE} {PROPERTY} Untuk {N}%
+        text: Set [SPRITE][0] [PROPERTY][1] Untuk [N][2]%
         options:
           PROPERTY:
             '"scale"': saiz
             '"width"': lebar
             '"height"': ketinggian
       gamelab_setTint:
-        text: menukar warna {THIS} untuk {COLOR}
+        text: menukar warna [THIS][0] untuk [COLOR][1]
       gamelab_setupSim:
         text: |-
           Persediaan simulasi dengan
-          {SPRITE1N}{SPRITE1COSTUME}Kelajuan{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Kelajuan{SPRITE2SPEED}
+          [SPRITE1N][0][SPRITE1COSTUME][1]Kelajuan[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]Kelajuan[SPRITE2SPEED][5]
           Mengumpul
-          {SPRITE3N}{SPRITE3COSTUME}
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: paparkan tajuk skrin {BREAK} tajuk {TITLE} teks {SUBTITLE}
+        text: paparkan tajuk skrin [BREAK][0] tajuk [TITLE][1] teks [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} diklik"
+        text: "[CONDITION][0] [SPRITE][1] diklik"
         options:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
       gamelab_subjectSpritePointer:
-        text: mengklik {SPRITE}
+        text: "mengklik [SPRITE][0]"
       gamelab_turn:
-        text: Menghidupkan {SPRITE} {DIRECTION} {N} Darjah
+        text: Menghidupkan [SPRITE][0] [DIRECTION][1] [N][2] Darjah
         options:
           DIRECTION:
             '"right"': kanan
@@ -1184,7 +1194,7 @@ ms:
       gamelab_whenDownArrow:
         text: apabila anak panah bawah ditekan
       gamelab_whenKey:
-        text: ketika {KEY} ditekan
+        text: ketika [KEY][0] ditekan
         options:
           KEY:
             '"up"': atas
@@ -1201,13 +1211,13 @@ ms:
       gamelab_whenRightArrow:
         text: ketika panah kanan ditekan
       gamelab_whenTouching:
-        text: ketika {SPRITE1} menyentuh {SPRITE2}
+        text: ketika [SPRITE1][0] menyentuh [SPRITE2][1]
       gamelab_whenUpArrow:
         text: apabila anak panah atas ditekan
       gamelab_whileDownArrow:
         text: ketika panah bawah ditekan
       gamelab_whileKey:
-        text: manakala {KEY} ditekan
+        text: manakala [KEY][0] ditekan
         options:
           KEY:
             '"up"': atas
@@ -1224,17 +1234,17 @@ ms:
       gamelab_whileRightArrow:
         text: ketika panah kanan ditekan
       gamelab_whileTouching:
-        text: manakala {SPRITE1} menyentuh {SPRITE2}
+        text: manakala [SPRITE1][0] menyentuh [SPRITE2][1]
       gamelab_whileUpArrow:
         text: semasa anak panah ditekan
       gamelab_xLocationOf:
-        text: koordinat x dari {SPRITE}
+        text: koordinat x dari [SPRITE][0]
       gamelab_yLocationOf:
-        text: y koordinat dari {SPRITE}
+        text: y koordinat dari [SPRITE][0]
       Mikelab_addBehaviorSimple:
-        text: bidadari {SPRITE} bermula {BEHAVIOR}
+        text: bidadari [SPRITE][0] bermula [BEHAVIOR][1]
       Mikelab_addTrainingData:
-        text: 'menambah data latihan: {NAME},{LOCATION}'
+        text: 'menambah data latihan: [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": objek
@@ -1245,7 +1255,7 @@ ms:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": saya-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": bukan saya-label
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1273,12 +1283,12 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupChangeAnim:
-        text: tukar {SELECT} {COSTUME} kepada {COSTUME2}
+        text: tukar [SELECT][0] [COSTUME][1] kepada [COSTUME2][2]
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupChangePropBy:
-        text: Menukar {PROPERTY} daripada {SELECT} {COSTUME} Oleh {VAL}
+        text: Menukar [PROPERTY][0] daripada [SELECT][1] [COSTUME][2] Oleh [VAL][3]
         options:
           SELECT:
             '"this"': ini
@@ -1287,7 +1297,7 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupCreateNewSprite:
-        text: buatkan {COSTUME} baharu di {LOCATION}
+        text: buatkan [COSTUME][0] baharu di [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
@@ -1300,16 +1310,16 @@ ms:
             "{x: 100, y: 300}": bahagian bawah sebelah kiri
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_groupDestroy:
-        text: keluarkan {SELECT} {COSTUME}
+        text: keluarkan [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupDisplace:
-        text: semua {COSTUME} blok {COSTUME2} dari bergerak
+        text: semua [COSTUME][0] blok [COSTUME2][1] dari bergerak
       Mikelab_groupEdgesDisplace:
-        text: tepi blok {COSTUME} dari bergerak
+        text: tepi blok [COSTUME][0] dari bergerak
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} {PROPERTY} 12321 123_321"
+        text: "[SELECT][0] [COSTUME][1] [PROPERTY][2] 12321 123_321"
         options:
           SELECT:
             '"average"': purata
@@ -1319,22 +1329,22 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupRemoveAllBehaviors:
-        text: berhenti {SELECT} {COSTUME} tingkah laku
+        text: berhenti [SELECT][0] [COSTUME][1] tingkah laku
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} berhenti {BEHAVIOR} 12321"
+        text: "[SELECT][0] [COSTUME][1] berhenti [BEHAVIOR][2] 12321"
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupRemoveTint:
-        text: keluarkan warna dari {SELECT} {COSTUME}
+        text: keluarkan warna dari [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupSetProp:
-        text: Set {PROPERTY} daripada {SELECT} {COSTUME} Untuk {VAL}
+        text: Set [PROPERTY][0] daripada [SELECT][1] [COSTUME][2] Untuk [VAL][3]
         options:
           SELECT:
             '"this"': ini
@@ -1343,32 +1353,32 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
       Mikelab_groupSetTint:
-        text: Tukar warna {SELECT} {COSTUME} Untuk {COLOR}
+        text: Tukar warna [SELECT][0] [COSTUME][1] Untuk [COLOR][2]
         options:
           SELECT:
             '"this"': ini
       Mikelab_groupWhenClickedOn:
-        text: ketika {COSTUME} diklik
+        text: ketika [COSTUME][0] diklik
       Mikelab_groupWhenXTouchesY:
-        text: ketika{COSTUME} menyentuh {COSTUME2}
+        text: ketika[COSTUME][0] menyentuh [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: sambil mengklik pada {COSTUME}
+        text: sambil mengklik pada [COSTUME][0]
       Mikelab_groupWhileTouchingAny:
         text: |-
-          Semasa{COSTUME} sedang menyentuh {COSTUME2}
-          {STATEMENT}
+          Semasa[COSTUME][0] sedang menyentuh [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} kini {BEHAVIOR}"
+        text: "[SPRITE][0] kini [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: keluarkan {TRASH}
+        text: keluarkan [TRASH][0]
         options:
           TRASH:
             object: objek
             fish: ikan
       Mikelab_ifDanceIs:
         text: |-
-          jika {SPRITE} sedang lakukan {DANCE}
-          {DO1} {DO2}
+          jika [SPRITE][0] sedang lakukan [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Gerakan Tepukan Tinggi
@@ -1384,36 +1394,36 @@ ms:
             MOVES.Rest: Tiada
       Mikelab_ifLabel:
         text: |-
-          Jika {DANCE}
-          Lakukan {DO1} Lain {DO2}
+          Jika [DANCE][0]
+          Lakukan [DO1][1] Lain [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: ikan
             MOVES.Clown: saya-label
       Mikelab_ifRecognizeLabel:
         text: |-
-          Jika mengenal pasti objek sebagai {DANCE}
-          Lakukan {DO1} Lain {DO2}
+          Jika mengenal pasti objek sebagai [DANCE][0]
+          Lakukan [DO1][1] Lain [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: ikan
             MOVES.Clown: saya-label
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          jika mengenali objek sebagai {DANCE}
-          melakukan {DO1} 12321
+          jika mengenali objek sebagai [DANCE][0]
+          melakukan [DO1][1] 12321
         options:
           DANCE:
             MOVES.ClapHigh: ikan
             MOVES.Clown: bukan saya-label
       Mikelab_locationAt:
-        text: 'lokasi x: {X} y: {Y}'
+        text: 'lokasi x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: warna rawak
       Mikelab_removeBehaviorSimple:
-        text: bidadari {SPRITE} berhenti {BEHAVIOR}
+        text: bidadari [SPRITE][0] berhenti [BEHAVIOR][1]
       Mikelab_sendBad:
         text: alih objek kiri
       Mikelab_sendGood:
@@ -1428,13 +1438,20 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+      Mikelab_setupSim:
+        text: |-
+          Persediaan simulasi dengan
+          [SPRITE1N][0][SPRITE1COSTUME][1]Kelajuan[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]Kelajuan[SPRITE2SPEED][5]
+          Mengumpul
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': kanan
             '"left"': kiri
       Mikelab_sprite:
-        text: "[COSTUME]baru[0] bidadari {LOCATION} baru"
+        text: '[COSTUME]baru[0] bidadari [LOCATION][1] baru'
         options:
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
@@ -1447,9 +1464,9 @@ ms:
             "{x: 100, y: 300}": bahagian bawah sebelah kiri
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_whenClickedOn:
-        text: ketika {SPRITE} diklik
+        text: ketika [SPRITE][0] diklik
       Mikelab_whenKeyPressed:
-        text: ketika {KEY} ditekan
+        text: ketika [KEY][0] ditekan
         options:
           KEY:
             '"w"': W
@@ -1462,15 +1479,15 @@ ms:
       Mikelab_whenMouseClicked:
         text: apabila tetikus diklik
       Mikelab_whenYesNoClicked:
-        text: ketika {KEY} diklik
+        text: ketika [KEY][0] diklik
         options:
           KEY:
-            '"yes"': ya
-            '"no"': tidak
+            '"yes"': 'ya'
+            '"no"': 'tidak'
       Mikelab_xLocationOf:
-        text: koordinat x dari {SPRITE}
+        text: koordinat x dari [SPRITE][0]
       Mikelab_yLocationOf:
-        text: y koordinat dari {SPRITE}
+        text: y koordinat dari [SPRITE][0]
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:
@@ -1478,100 +1495,71 @@ ms:
       RyanLab_turnRight:
         text: belok kanan
       SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} Mengatakan {TEXT} Bagi {SECONDS} Saat
+        text: sprite [SPRITE][0] Mengatakan [TEXT][1] Bagi [SECONDS][2] Saat
       Vector_createSpriteWith:
         text: |-
           membuat bidadari
-          lakukan{STATEMENT}
+          lakukan[STATEMENT][0]
       Vector_log:
-        text: mesej log {MESSAGE}
+        text: mesej log [MESSAGE][0]
       Vector_positionCenter:
         text: pusat
       Vector_push:
-        text: tetapkan halaju {VECTOR}
+        text: tetapkan halaju [VECTOR][0]
       Vector_randomLocation:
         text: lokasi rawak
       Vector_setColor:
-        text: tetapkan warna ke {COLOR}
+        text: tetapkan warna ke [COLOR][0]
       Vector_setSize:
-        text: set lebar {WIDTH} ketinggian {HEIGHT}
+        text: set lebar [WIDTH][0] ketinggian [HEIGHT][1]
       Vector_teleportTo:
-        text: set kedudukan {POSITION}
+        text: set kedudukan [POSITION][0]
       Vector_vectorNorth:
         text: utara
       Vector_where:
-        text: Setiap sprite di mana {PROPERTY} adalah {VALUE} Lakukan{STATEMENT}
+        text: Setiap sprite di mana [PROPERTY][0] adalah [VALUE][1] Lakukan[STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": warna
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} Bermula {BEHAVIOR} Bagi {SECONDS} Saat
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} Bermula {BEHAVIOR} Sehingga {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: bidadari baru bernama{SPRITE_NAME} dengan kostum{ANIMATION_NAME} di lokasi{LOCATION}
-      aalab_goToScene:
-        text: pergi ke tempat kejadian {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
-      aalab_prompt:
-        text: bertanya soalan {MESSAGE}
-      aalab_scene:
-        text: adegan {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: cerita persediaan
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': sempadan
+            '"row"': baris
             '"random"': rawak
       binary_drawBin:
-        text: menarik binari {BIN}
+        text: menarik binari [BIN][0]
       binary_drawBinScreen:
         text: |-
           skrin Lukis
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: lukis perpuluhan {DEC}
+        text: lukis perpuluhan [DEC][0]
       binary_drawPixelHere:
-        text: tetapkan piksel {VAL}
+        text: tetapkan piksel [VAL][0]
         options:
           VAL:
             '0': 'off'
-            '1': pada
+            '1': 'pada'
             '"toggle"': togol
       binary_drawString:
-        text: lukis rentetan {STR}
+        text: lukis rentetan [STR][0]
       binary_goTo:
-        text: melompat ke {LOC}
+        text: melompat ke [LOC][0]
       binary_goToHome:
         text: melompat ke kiri atas
       binary_gridSize:
-        text: menetapkan saiz grid {SIZE}
+        text: menetapkan saiz grid [SIZE][0]
       binary_move:
-        text: bergerak {DIR}
+        text: bergerak [DIR][0]
         options:
           DIR:
             '"up"': atas
@@ -1579,7 +1567,7 @@ ms:
             '"left"': kiri
             '"right"': kanan
       binary_whenKey:
-        text: ketika {KEY} ditekan
+        text: ketika [KEY][0] ditekan
         options:
           KEY:
             '"up"': atas
@@ -1593,8 +1581,8 @@ ms:
             '"d"': d
       craft_ifPath:
         text: |-
-          jika jalan {DIR}
-          {STATEMENT} 123_321
+          jika jalan [DIR][0]
+          [STATEMENT][1] 123_321
         options:
           DIR:
             "'ahead'": di hadapan
@@ -1602,8 +1590,8 @@ ms:
             "'left'": ke kiri
       craft_ifStandingOn:
         text: |-
-          jika berdiri di {TYPE}
-          {STATEMENT} 123_321
+          jika berdiri di [TYPE][0]
+          [STATEMENT][1] 123_321
         options:
           TYPE:
             "'blueCoralBlock'": karang biru
@@ -1614,19 +1602,19 @@ ms:
             "'seaLantern'": tanglung laut
       craft_ifStandingOnLimit:
         text: |-
-          jika berdiri di {TYPE}
-          {STATEMENT} 123_321
+          jika berdiri di [TYPE][0]
+          [STATEMENT][1] 123_321
         options:
           TYPE:
             "'sand'": pasir
             "'darkPrismarine'": prismarin gelap
             "'seaLantern'": tanglung laut
       craft_log:
-        text: mesej log {MESSAGE}
+        text: mesej log [MESSAGE][0]
       craft_moveForward:
         text: bergerak ke hadapan
       craft_placeBlock:
-        text: tempat {blockType}
+        text: tempat [blockType][0]
         options:
           blockType:
             '"strippedOak"': dilucutkan oak
@@ -1660,13 +1648,13 @@ ms:
       craft_repeatUntilConduit:
         text: |-
           ulangi sampai saluran selesai
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           ulangi sehingga matlamat
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: bertelur {ENTITY}
+        text: bertelur [ENTITY][0]
         options:
           ENTITY:
             '"cod"': kod
@@ -1676,7 +1664,7 @@ ms:
             '"squid"': sotong
             '"tropicalFish"': ikan tropika
       craft_turn:
-        text: menghidupkan {DIR}
+        text: menghidupkan [DIR][0]
         options:
           DIR:
             right: kanan?

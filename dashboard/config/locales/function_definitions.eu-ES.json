@@ -1266,6 +1266,84 @@
               "length": "luzera"
             }
           }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "marraztu izar bat",
+            "parameters": {
+              "points": "puntuak",
+              "length": "luzera"
+            }
+          },
+          "draw a circle": {
+            "name": "marraztu zirkulu bat"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "luzera",
+              "repeat": "errepikatu"
+            }
+          },
+          "draw a triangle": {
+            "name": "marraztu triangelu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a house": {
+            "name": "marraztu etxe bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a square": {
+            "name": "marraztu karratu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "marraztu karratu bat"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "marraztu izar bat"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "marraztu izar bat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "marraztu karratu bat"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "bukatu jokoa"
+          }
         }
       }
     }

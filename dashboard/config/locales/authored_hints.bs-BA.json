@@ -136,6 +136,10 @@
         "courseE_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n-   Napraviti da dinosaur nestane.\n-   Zaustaviti vjeverice.\n-   Učiniti vjeverice i viteza sretnim.\n-   Postaviti novu pozadinu.\n-   Napraviti da vitez zahvali igraču na pomoći.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
           "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n-   Napraviti da vitez nestane.\n-   Napraviti da je vjeverica tužna.\n-   Napraviti da dinosaur nešto kaže.\n-   Postaviti novu pozadinu.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
         }
       }
     }

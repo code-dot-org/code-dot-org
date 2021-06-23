@@ -1337,8 +1337,14 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteSay:
+        text: "{SPRITE} say {SPEECH}"
+      gamelab_startAvoiding:
+        text: "{SPRITE} begins avoiding {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} begins following {TARGET}"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} stops avoiding other sprites"
       gamelab_stopCollectingData:
         text: stop collecting data
       gamelab_stopFollowing:
@@ -1710,6 +1716,11 @@ en:
           {A5}{A6}{A7}{A8}
           {B1}{B2}{B3}{B4}
           {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          outbreak setup
+          population:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: |-
           setup simulation with
@@ -1816,14 +1827,14 @@ en:
         text: monsters begin wandering
       Outbreak_beginWearingMasks:
         text: monsters begin wearing masks
-      Outbreak_layoutSprites:
-        text: layout monsters as a {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': grid
-            '"border"': border
-            '"row"': row
-            '"random"': random
+      Outbreak_layoutBorder:
+        text: layout monsters in a border
+      Outbreak_layoutClusters:
+        text: layout monsters in clusters of {NUM}
+      Outbreak_layoutGrid:
+        text: layout monsters as a grid
+      Outbreak_layoutRandom:
+        text: layout monsters randomly
       Outbreak_setSpeed:
         text: set monster speed to {VAL}
       Outbreak_setupOutbreak:

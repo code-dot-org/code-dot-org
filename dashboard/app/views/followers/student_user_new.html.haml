@@ -11,6 +11,9 @@
       = recaptcha_tags callback: "onCaptchaCompletion"
     %br/
     = submit_tag t('join_section.code.submit'), class: 'btn btn-primary', disabled: display_captcha, id: 'join_new_section'
+    - if inline_alert
+      %span.inline-alert{ style: 'color: #b94a48; margin-left: 12px'}= inline_alert
+
 - else
   %h2 Register to join section #{params[:section_code]}
   %p

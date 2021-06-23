@@ -1,2 +1,12 @@
 {
+  "clearConsole": "Wyczyść konsolę",
+  "compilerError": "Nie mogliśmy skompilować Twojego programu. Poszukaj w nim błędów i spróbuj ponownie.",
+  "console": "Konsola",
+  "editor": "Edytor",
+  "illegalMethodAccess": "Próbowałeś uzyskać dostęp do metody, która jest blokowana przez naszą politykę bezpieczeństwa.\n{cause}",
+  "javaExtensionMissing": "Niepoprawna nazwa pliku, musi się kończyć '.java'.",
+  "newFile": "Nowy plik",
+  "noMainMethod": "Błąd: Twój program nie zawiera metody głównej. ",
+  "runtimeError": "Twój kod napotkał wyjątek podczas działania.\n{cause}",
+  "twoMainMethods": "Błąd: Twój kod może zawierać tylko jedną metodę główną. Znaleźliśmy co najmniej dwie klasy z metodami głównymi. "
 }

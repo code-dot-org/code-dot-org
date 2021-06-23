@@ -12,7 +12,11 @@ import {
 } from '@cdo/apps/redux';
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
-import javalab, {setIsDarkMode} from '@cdo/apps/javalab/javalabRedux';
+import javalab, {
+  setIsDarkMode,
+  sourceVisibilityUpdated,
+  sourceValidationUpdated
+} from '@cdo/apps/javalab/javalabRedux';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -160,8 +164,8 @@ describe('Java Lab Editor Test', () => {
       const javalabEditor = editor.find('JavalabEditor').instance();
       store.dispatch(
         setAllSources({
-          'Class1.java': {text: '', visible: true},
-          'Class2.java': {text: '', visible: true}
+          'Class1.java': {text: '', isVisible: true, isValidation: false},
+          'Class2.java': {text: '', isVisible: true, isValidation: false}
         })
       );
 
@@ -210,6 +214,31 @@ describe('Java Lab Editor Test', () => {
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: lightMode}
       });
+    });
+  });
+
+  describe('File type updates', () => {
+    it('updates visibility', () => {
+      const first = 'Class0.java';
+      const second = 'Class1.java';
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+
+      javalabEditor.onCreateFile(first);
+      javalabEditor.onCreateFile(second);
+
+      expect(store.getState().javalab.sources[first].isVisible).to.be.true;
+      expect(store.getState().javalab.sources[first].isValidation).to.be.false;
+      store.dispatch(sourceVisibilityUpdated(first, false));
+      expect(store.getState().javalab.sources[first].isVisible).to.be.false;
+      expect(store.getState().javalab.sources[first].isValidation).to.be.false;
+
+      expect(store.getState().javalab.sources[second].isVisible).to.be.true;
+      expect(store.getState().javalab.sources[second].isValidation).to.be.false;
+      store.dispatch(sourceVisibilityUpdated(second, false));
+      store.dispatch(sourceValidationUpdated(second, true));
+      expect(store.getState().javalab.sources[second].isVisible).to.be.false;
+      expect(store.getState().javalab.sources[second].isValidation).to.be.true;
     });
   });
 
@@ -275,8 +304,8 @@ describe('Java Lab Editor Test', () => {
       const javalabEditor = editor.find('JavalabEditor').instance();
       store.dispatch(
         setAllSources({
-          'Class1.java': {text: '', visible: true},
-          'Class2.java': {text: '', visible: true}
+          'Class1.java': {text: '', isVisible: true, isValidation: false},
+          'Class2.java': {text: '', isVisible: true, isValidation: false}
         })
       );
 

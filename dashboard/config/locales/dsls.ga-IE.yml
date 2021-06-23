@@ -1105,7 +1105,6 @@ ga-IE:
         - text: Cén focal a litreodh na blocanna seo?
         title: Ilroghnach
       New Challenge Introduction:
-        content1: cur síos anseo
         markdown: "### Dúshlán Nua: Sifear Ionadaithe Randamaigh a Bhriseadh... le
           cúnamh ó ghiuirléid nua\n\nCéard a tharlódh dá ndéanfaimis mapáil ó gach
           litir den aibítir go dtí litir randamach, in áit aistriú simplí? Tugtar
@@ -1126,10 +1125,7 @@ ga-IE:
           imirt leis an uirlis, ba chóir duit suí síos le duine nó daoine eile - páirtnéir,
           grúpa beag, rang iomlán - agus cúrsaí a phlé. Bí cinnte go dtuigeann tú
           an uirlis agus na bealaí éagsúla í a úsáid.\n\n\n"
-      'Technique: Frequency Analysis':
-        content1: cur síos anseo
       Terminology Recap:
-        content1: cur síos anseo
         markdown: "# Sos agus Athbhreithniú\n\nTá sé an-éasca an **sifear Chaesair**
           a bhriseadh, go háirithe le cúnamh ríomhaireachta. Anois ó tá taithí agat
           ar shifir aistrithe a bhriseadh (an-éasca, huth?), bainimis triail as rud
@@ -2070,7 +2066,5 @@ ga-IE:
         - {}
         questions:
         - {}
-      CSD U1 Test:
-        title: 'Scrúdú Iarthionscadail: Ríomhairí agus Réiteach Fadhbanna'
       outbreak_freeplay_choice:
         display_name: Saorimirt

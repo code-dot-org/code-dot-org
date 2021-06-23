@@ -14,33 +14,30 @@ social:
 ---
 <link href="/css/tools.css" rel="stylesheet">
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys560.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/><br/>Careers with Computer Science</h1>
-<p>Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Watch the videos below to meet some of the people who are tackling big problems in creative ways. Then use Roadtrip Nation’s Roadmap or the O*NET Interest Profiler to learn more about fields and careers that interest you, and/or connect directly with college students and CS professionals at College Confidential or Career Village.</p>
-
-<br>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
-  <img style="width: 10%; float: left; margin-right: 2%" src="/images/csjourneys/video.png" alt="video camera icon">
-  <div style="width: 87%; float: left">
-    <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
-  </div>
-  <div style="clear: both"></div>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 24px"/><br/>Careers with Computer Science</h1>
+<div class="col-60" style="margin-bottom: 20px">
+  <p>Careers in computer science and technology can be fun and rewarding. But what does a person working in these fields really do? With a vast variety of jobs and companies, there's not just one answer to this question. Watch the videos below to meet some of the people who are tackling big problems in creative ways, then use one of the interactive tools below to learn more about fields and careers that interest you. View opportunities to apply your new CS knowledge outside the classroom, and connect directly with college students and CS professionals at College Confidential or Career Village.</p>
+</div>
+<div class="col-40" style="float: left; padding-left: 40px; padding-right: 0; margin-bottom: 20px;">
+    {{ cs_changing_everything_2 }}
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0">
-  <img style="width: 10%; float: left; margin-right: 2%" src="/images/csjourneys/check.png" alt="checkmark icon">
-  <div style="width: 87%; float: left">
-    <a class="linktag" id="explore-nav" href="#explore" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Find a career that matches your interests</p>
-  </div>
-  <div style="clear: both"></div>
+<div style="clear: both; margin-bottom:25px"></div>
+
+<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+  <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
-  <img style="width: 10%; float: left; margin-right: 2%" src="/images/csjourneys/chat.png" alt="chat icon">
-  <div style="width: 87%; float: left">
-    <a class="linktag" id="connect-nav" href="#connect" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Connect with college students and professionals</p>
-  </div>
-  <div style="clear: both"></div>
+<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0">
+  <a class="linktag" id="explore-nav" href="#explore" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Find a career that matches your interests</p>
+</div>
+
+<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
+  <a class="linktag" id="apply-nav" href="#apply" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Apply your CS skills outside the classroom</p>
+</div>
+
+<div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#b9bf15">
+  <a class="linktag" id="connect-nav" href="#connect" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Connect with college students and professionals</p>
 </div>
 
 <div style="clear: both; margin-bottom:35px"></div>
@@ -164,7 +161,7 @@ social:
 <a id="explore"></a>
 <h2 style="color:#7665a0; margin-top:0; margin-bottom:20px">View careers that match your interests with one of these interactive tools</h2>
 
-<div class="col-50">
+<div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="roadmap" href="https://roadtripnation.com/roadmap" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/roadtrip-nation.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="The Roadmap from Roadtrip Nation">
@@ -176,24 +173,42 @@ social:
         <br>
         <div class="smalltext" style="color: dimgray;">3-question assessment takes just a moment or two. Great for middle school and up.</div>
         <br>
-        <br>
         <a class="linktag" id="roadmap" href="https://roadtripnation.com/roadmap" target="_blank"><button>View the Roadmap</button></a>
     </span>
   </div>
 </div>
 </div>
 
-<div class="col-50">
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
+      <a class="linktag" id="career-girls" href="https://www.careergirls.org/explore-careers/career-quiz/" target="_blank">
+        <img class="tutorial-tile-img" src="/images/beyond/career-girls-quiz.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Career Girls Quiz">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Career Girls: Career Quiz</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CareerGirls.org is a video-based career exploration tool for girls. Contains the largest online collection of career guidance videos focusing on diverse and accomplished women.</div>
+        <br>
+        <div class="smalltext" style="color: dimgray;">1-question assessment takes just a moment or two. Great for middle school and up.</div>
+        <br>
+        <a class="linktag" id="career-girls" href="https://www.careergirls.org/explore-careers/career-quiz/" target="_blank"><button>View the Career Quiz</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a class="linktag" id="o-net" href="https://www.mynextmove.org/explore/ip" target="_blank">
         <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/o-net.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="O*Net logo">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The O*NET Interest Profiler from the U.S. Department of Labor</strong></h3>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The O*NET Interest Profiler</strong></h3>
         <div class="smalltext" style="color: dimgray; ">The O*NET Interest Profiler can help you find out what your interests are and what kinds of careers you might want to explore.</div>
         <br>
         <div class="smalltext" style="color: dimgray; ">60-question assessment takes 15-20 minutes. Great for high school and up.</div>
+        <br>
         <br>
         <a class="linktag" id="o-net" href="https://www.mynextmove.org/explore/ip" target="_blank"><button>View the Interest Profiler</button></a>
     </span>
@@ -208,8 +223,47 @@ social:
 <br>
 <br>
 
+<a id="apply"></a>
+<h2 style="color:#0094ca; margin-top:0; margin-bottom:20px">Apply your new CS knowledge outside the classroom</h2>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="hackathons" href="https://code.org/beyond/extracurricular#hackathons" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Hackathons and competitions</strong></h3></a>
+    <p style="color:#ffffff">Put your CS knowledge to use building apps for good, designing solutions to problems in your local community, or building a really cool project to feature in a global showcase!</p>
+    <a class="linktag" id="hackathons" href="https://code.org/beyond/extracurricular#hackathons" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">View options</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="clubs" href="https://code.org/beyond/extracurricular#clubs" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Clubs and afterschool</strong></h3></a>
+    <p style="color:#ffffff">Join a coding club or afterschool program to build community, meet new friends, and learn more about computer science and technology!</p>
+    <br>
+    <br>
+    <a class="linktag" id="clubs" href="https://code.org/beyond/extracurricular#clubs" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">View options</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
+  <div style="width: 87%; float: left">
+    <a class="linktag" id="camps" href="https://code.org/beyond/extracurricular#camps" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Camps and immersion programs</strong></h3></a>
+    <p style="color:#ffffff">Take the next step with summer immersion programs—connect directly with CS professionals, learn all about careers with computer science, and make an impact with hands-on learning!</p>
+    <a class="linktag" id="camps" href="https://code.org/beyond/extracurricular#camps" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">View options</button></a>
+  </div>
+  <div style="clear: both"></div>
+</div>
+
+<div style="clear: both; margin-bottom:35px"></div>
+
+<a href="#top">[Back to top]</a>
+<br>
+<br>
+<br>
+
 <a id="connect"></a>
-<h2 style="color:#0094ca; margin-top:0; margin-bottom:20px">Connect with college students and professionals in fields and roles that interest you</h2>
+<h2 style="color:#b9bf15; margin-top:0; margin-bottom:20px">Connect with college students and professionals in fields and roles that interest you</h2>
 
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
@@ -245,10 +299,10 @@ social:
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
+<p><a class="linktag" id="support-networks" href="https://code.org/beyond/mentors-and-community" target="_blank">View more</a> mentorship and community options.</p>
+<br>
+<br>
 <a href="#top">[Back to top]</a>
 <br>
 
-<hr>
-
-<p>"Video Camera" icon made by Kiranshastry, "Check" icon made by Becris, "Chat" icon made by Freepik. All icons sourced from www.flaticon.com.
 

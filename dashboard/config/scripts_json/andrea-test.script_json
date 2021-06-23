@@ -5,7 +5,6 @@
     "hidden": true,
     "login_required": true,
     "properties": {
-      "peer_reviews_to_complete": 1,
       "student_detail_progress_view": true,
       "professional_learning_course": "Andrea Test",
       "announcements": [
@@ -16,11 +15,13 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "only_instructor_review_required": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:29 UTC",
+    "serialized_at": "2021-06-17 22:30:03 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "andrea-test"
     }

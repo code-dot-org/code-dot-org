@@ -2,7 +2,7 @@
   "script": {
     "name": "coursea-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-05-05 18:18:18 UTC",
+    "serialized_at": "2021-06-17 22:31:19 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1272,7 +1273,7 @@
       "key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
       "position": 3,
       "properties": {
-        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we walk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
+        "description": "\n**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - *Is running in the computer lab okay?*\n - *How loudly should we talk when we are in the computer lab?*\n - *What should you do if you get stuck on a puzzle?*\n - *If you get frustrated, will it help to hit the computer?*\n - *When we're about to go to the computer lab, how should we get ready?*"
       },
       "seeding_key": {
         "activity_section.key": "3dc37e4e-05d9-463f-a734-f65322cccb1a",
@@ -1721,7 +1722,7 @@
       "key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
       "position": 7,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329",
@@ -2278,7 +2279,7 @@
       "key": "5580045e-132a-4c17-8c3f-522b7f01f442",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "5580045e-132a-4c17-8c3f-522b7f01f442",
@@ -2413,7 +2414,13 @@
       "key": "1e2c8e78-0b20-48a4-aeba-08cad3060e42",
       "position": 9,
       "properties": {
-        "progression_name": "Free Play"
+        "progression_name": "Free Play",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1e2c8e78-0b20-48a4-aeba-08cad3060e42",
@@ -2424,27 +2431,10 @@
       "key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
       "position": 10,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
-        "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
-      }
-    },
-    {
-      "key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
-      "position": 11,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online - Video**"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "90f0cdae-7f33-4b8f-a7da-4346a5913620",
         "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7"
       }
     },
@@ -2656,7 +2646,7 @@
       "key": "c37ca368-ea56-4b4d-a06c-1d2b94516bf8",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "c37ca368-ea56-4b4d-a06c-1d2b94516bf8",
@@ -2700,7 +2690,7 @@
       "key": "40ddc694-3a85-4874-b3ad-71810e6a0474",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "40ddc694-3a85-4874-b3ad-71810e6a0474",
@@ -2790,7 +2780,7 @@
       "key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
       "position": 4,
       "properties": {
-        "description": "When you get the activity on your computer, click on any of the chooses to start. Start with your plan, but you can have the artist draw whatever you like! At the end of class, we will share our projects with the class.",
+        "description": "When you get the activity on your computer, click on any of the choices to start. Start with your plan, but you can have the artist draw whatever you like! At the end of class, we will share our projects with the class.",
         "name": "Project",
         "progression_name": "Project",
         "remarks": true
@@ -3699,7 +3689,7 @@
         "level_keys": [
           "courseB_maze_seq_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3725,7 +3715,7 @@
         "level_keys": [
           "courseB_maze_seq_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4742,7 +4732,7 @@
         "level_keys": [
           "courseA_collector_loops_challenge2kp_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4768,7 +4758,7 @@
         "level_keys": [
           "courseA_collector_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5159,7 +5149,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5185,7 +5175,7 @@
         "level_keys": [
           "courseA_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5237,7 +5227,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video: Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
@@ -5445,7 +5435,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5471,7 +5461,7 @@
         "level_keys": [
           "courseA_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6817,6 +6807,18 @@
       }
     },
     {
+      "name": "Artist Project Planning Guide",
+      "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+      "key": "artist_project_planning_guide_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "artist_project_planning_guide_1"
+      }
+    },
+    {
       "name": "The Big Event",
       "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
@@ -7653,6 +7655,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "artist_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "artist_project_planning_guide_1"
       }
     }
   ],

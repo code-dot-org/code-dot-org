@@ -1201,6 +1201,15 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
             '"speed"': スピード
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': 大きさ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 普通
+            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
@@ -1502,6 +1511,13 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      Mikelab_setupSim:
+        text: |-
+          でシミュレーションを設定する
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          収集
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1597,42 +1613,27 @@ ja:
         options:
           PROPERTY:
             "'shapeColor'": 色
-      aalab_addBehaviorForDuration:
-        text: アラブスプライト {SPRITE} 開始 {BEHAVIOR} 用 {SECONDS} 秒
-      aalab_addBehaviorUntilBoolean:
-        text: スプライト {SPRITE} 開始 {BEHAVIOR} まで {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: 新しいスプライトという名前{SPRITE_NAME} 衣装付き{ANIMATION_NAME} 場所に{LOCATION}
-      aalab_goToScene:
-        text: 現場に行く {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: 移動 {SPRITE} {DISTANCE} ピクセル {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北だ
-            '"East"': 東だ
-            '"South"': 南だ
-            '"West"': 西だ
-      aalab_prompt:
-        text: 質問する {MESSAGE}
-      aalab_scene:
-        text: シーン {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: セットアップストーリー
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': グリッド
+            '"border"': 境界
+            '"row"': 行
             '"random"': ランダム に
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': すべて
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': すべて
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: バイナリを描画する {BIN}
       binary_drawBinScreen:

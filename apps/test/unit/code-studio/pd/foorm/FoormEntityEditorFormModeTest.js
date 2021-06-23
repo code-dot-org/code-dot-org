@@ -38,7 +38,8 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const HeaderTitle = React.createElement('h1', null, 'A title');
     const SaveBar = React.createElement(FoormFormSaveBar, {
       resetCodeMirror: () => {},
-      formCategories: ['surveys/pd', 'surveys/teacher']
+      formCategories: ['surveys/pd', 'surveys/teacher'],
+      isLatestVersion: true
     });
 
     defaultProps = {
@@ -112,7 +113,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
-    const saveButton = saveBar.find('button').at(1);
+    const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
@@ -188,7 +189,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
-    const saveButton = saveBar.find('button').at(1);
+    const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
@@ -224,7 +225,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
@@ -255,8 +256,30 @@ describe('FoormEntityEditor in Form editing mode', () => {
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
   });
 
-  it('hides publish button for published survey', () => {
+  it('shows save as new version button for latest version', () => {
     const wrapper = createWrapper();
+
+    store.dispatch(setFormData(samplePublishedFormData));
+    wrapper.update();
+
+    const saveBarButtons = wrapper
+      .find(UnconnectedFoormFormSaveBar)
+      .find('button');
+    const saveNewVersionButton = saveBarButtons.at(0);
+    const saveButton = saveBarButtons.at(1);
+
+    expect(saveNewVersionButton.contains('Save as New Version')).to.be.true;
+    expect(saveButton.contains('Save')).to.be.true;
+    expect(saveBarButtons.length).to.equal(2);
+  });
+
+  it('hides save as new version button for not latest version', () => {
+    const SaveBarNotLatestVersion = React.createElement(FoormFormSaveBar, {
+      resetCodeMirror: () => {},
+      formCategories: ['surveys/pd', 'surveys/teacher'],
+      isLatestVersion: false
+    });
+    const wrapper = createWrapper({saveBar: SaveBarNotLatestVersion});
 
     store.dispatch(setFormData(samplePublishedFormData));
     wrapper.update();
@@ -266,9 +289,25 @@ describe('FoormEntityEditor in Form editing mode', () => {
       .find('button');
     const saveButton = saveBarButtons.at(0);
 
-    expect(saveButton.contains('Publish')).to.be.false;
     expect(saveButton.contains('Save')).to.be.true;
     expect(saveBarButtons.length).to.equal(1);
+  });
+
+  it('hides publish button for published survey', () => {
+    const wrapper = createWrapper();
+
+    store.dispatch(setFormData(samplePublishedFormData));
+    wrapper.update();
+
+    const saveBarButtons = wrapper
+      .find(UnconnectedFoormFormSaveBar)
+      .find('button');
+    const saveNewVersionButton = saveBarButtons.at(0);
+    const saveButton = saveBarButtons.at(1);
+
+    expect(saveNewVersionButton.contains('Publish')).to.be.false;
+    expect(saveButton.contains('Save')).to.be.true;
+    expect(saveBarButtons.length).to.equal(2);
   });
 
   it('can cancel save published form', () => {
@@ -279,7 +318,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
-    const saveButton = saveBar.find('button').at(0);
+    const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
@@ -363,7 +402,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     // click save button
-    const saveButton = saveBar.find('button').at(1);
+    const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
@@ -413,7 +452,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     // click save button
-    const saveButton = saveBar.find('button').at(1);
+    const saveButton = saveBar.find('button').at(2);
     expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 

@@ -1,1 +1,19 @@
-{}
+{
+  "backpackLabel": "Backpack",
+  "clearConsole": "Clear Console",
+  "commitCode": "Commit Code",
+  "compilerError": "We couldn't compile your program. Look for bugs in your program and try again.",
+  "console": "Console",
+  "duplicateProjectFilenameError": "Filename {filename} is already in use in this project. Please choose a different name",
+  "duplicateSupportFilenameError": "Filename {filename} is already in use in this level's support code. Please choose a different name",
+  "editor": "Editor",
+  "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
+  "internalCompilerException": "Oops. We hit an error on our side while compiling your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
+  "internalException": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
+  "internalRuntimeException": "Oops. We hit an error on our side while running your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
+  "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
+  "newFile": "New File",
+  "noMainMethod": "Error: your program does not contain a main method.",
+  "runtimeError": "Your code hit an exception while it was running.\n{cause}",
+  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
+}

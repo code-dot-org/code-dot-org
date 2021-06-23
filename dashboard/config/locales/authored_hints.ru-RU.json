@@ -328,7 +328,7 @@
           "Course_4_Artist_For_Loops_3_a": "Убедитесь, что используете `counter` в качестве расстояния, чтобы цикл `for` управлял движением."
         },
         "Course 4 Artist For Loops 4": {
-          "Course_4_Artist_For_Loops_4_a": "\\*\\* Какое наименьшее число вам понадобиться?\\\nКакое наибольшее число?\\\nНасколько большим является увеличение каждый раз?\\*\\* \n\nТакие вопросы вам нужно спрашивать чтобы заполнить пробелы цикла «для»."
+          "Course_4_Artist_For_Loops_4_a": "\\*\\* Каково наименьшее число, которое тебе понадобится?\\\nКаково наибольшее число?\\\nНасколько велико увеличение каждый раз?\\*\\*\n\nВот вопросы, которые тебе нужно задать, чтобы заполнить пустые места в цикле for."
         },
         "Course 4 Artist For Loops Challenge": {
           "Course_4_Artist_For_Loops_Challenge_a": "Крупнейшая фигура имеет 19 Сторон. Самая маленькая имеет только две стороны.",
@@ -3271,16 +3271,16 @@
           "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
-          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
-          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "*Если ты воспользуешься блоком <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, то я нарисую линию.*",
-          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
+          "courseC_artist_prog2_a": "Если ты воспользуешься блоком \"двигаться вперёд на 100 пикселей\" на меня, то я нарисую линию автоматически.",
+          "courseC_artist_prog2_b": "Сложности с поворотами на углах? Используй блок \"повернуть направо на 90 градусов\"."
         },
         "courseC_artist_prog3": {
           "courseC_artist_prog3_a": "Чтобы создать это окошко, нарисуй простой квадрат со стороной 100 точек.\n\n-   переместись вперед\n-   поверни\n-   переместись вперед\n-   поверни\n-   переместись вперед\n-   поверни\n-   переместись вперед",

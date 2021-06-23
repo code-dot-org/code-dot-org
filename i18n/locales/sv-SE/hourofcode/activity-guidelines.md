@@ -10,11 +10,11 @@ title: Riktlinjer för övningar
 
 # Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
 Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -32,7 +32,7 @@ A few tips:
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
 - [How to Submit](#submit)
 - [How activities will be evaluated](#inclusion)
-- [Guidelines for submitting for an early qualitative review NEW](#earlyreview)
+- [Guidelines for submitting for an early qualitative review](#earlyreview)
 - [Suggestions for designing your activity](#design)
 - [Trademark Guidelines](#tm)
 - [Tracking Pixel](#pixel)
@@ -46,9 +46,9 @@ A few tips:
 
 These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
 One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
 
@@ -200,7 +200,7 @@ Teachers and students will be able to search through and filter our list of acti
 
 <a id="earlyreview"></a>
 
-## Guidelines for submitting for an early qualitative review (NEW)
+## Guidelines for submitting for an early qualitative review
 
 Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
 

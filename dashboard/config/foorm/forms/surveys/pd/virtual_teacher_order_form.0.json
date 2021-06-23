@@ -43,18 +43,19 @@
         {
           "type": "checkbox",
           "name": "question5",
-          "title": "Course (select both if applicable)",
+          "title": "Course you're enrolled in for 2021-22 PD (Select only one)",
           "isRequired": true,
           "choices": [
             {
               "value": "item1",
-              "text": "CSD"
+              "text": "CS Discoveries"
             },
             {
               "value": "item2",
-              "text": "CSP"
+              "text": "CS Principles"
             }
-          ]
+          ],
+          "maxSelectedChoices": 1
         },
         {
           "type": "multipletext",
@@ -96,9 +97,238 @@
           "choices": [
             {
               "value": "item1",
-              "text": "yes"
+              "text": "Yes"
             }
           ]
+        },
+        {
+          "type": "dropdown",
+          "name": "question8",
+          "title": "Please select your Regional Partner from the dropdown",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "A+ College Ready"
+            },
+            {
+              "value": "item2",
+              "text": "Alaska Staff Development Network"
+            },
+            {
+              "value": "item3",
+              "text": "Allegheny Intermediate Unit 3"
+            },
+            {
+              "value": "item4",
+              "text": "Arizona Science Center"
+            },
+            {
+              "value": "item5",
+              "text": "AVID"
+            },
+            {
+              "value": "item6",
+              "text": "Battelle Education"
+            },
+            {
+              "value": "item7",
+              "text": "Broward County Public Schools"
+            },
+            {
+              "value": "item8",
+              "text": "CodeVA"
+            },
+            {
+              "value": "item9",
+              "text": "Contra Costa County Office of Education"
+            },
+            {
+              "value": "item10",
+              "text": "CSforMA"
+            },
+            {
+              "value": "item11",
+              "text": "Delaware County Intermediate Unit"
+            },
+            {
+              "value": "item12",
+              "text": "Educate Maine and the Maine Mathematics and Science Alliance"
+            },
+            {
+              "value": "item13",
+              "text": "EduTech"
+            },
+            {
+              "value": "item14",
+              "text": "Florida International University"
+            },
+            {
+              "value": "item15",
+              "text": "Fresno County Superintendent of Schools"
+            },
+            {
+              "value": "item16",
+              "text": "Georgia Tech Center for Education Integrating Science, Mathematics, and Computing"
+            },
+            {
+              "value": "item17",
+              "text": "Grand Valley State University"
+            },
+            {
+              "value": "item18",
+              "text": "Idaho Digital Learning Alliance"
+            },
+            {
+              "value": "item19",
+              "text": "Institute for School Parntership Washington University in St. Louis"
+            },
+            {
+              "value": "item20",
+              "text": "Kentucky Science and Technology Corporation"
+            },
+            {
+              "value": "item21",
+              "text": "KIPP"
+            },
+            {
+              "value": "item22",
+              "text": "Learning Technology Center"
+            },
+            {
+              "value": "item23",
+              "text": "Los Angeles Unified School District"
+            },
+            {
+              "value": "item24",
+              "text": "Marquette University"
+            },
+            {
+              "value": "item25",
+              "text": "Maryland Codes"
+            },
+            {
+              "value": "item26",
+              "text": "mindSpark Learning"
+            },
+            {
+              "value": "item27",
+              "text": "Mississippi State University"
+            },
+            {
+              "value": "item28",
+              "text": "Mouse"
+            },
+            {
+              "value": "item29",
+              "text": "New Bohemian Innovation Collaborative"
+            },
+            {
+              "value": "item30",
+              "text": "New Mexico CS Alliance"
+            },
+            {
+              "value": "item31",
+              "text": "Nextech"
+            },
+            {
+              "value": "item32",
+              "text": "Oklahoma Public Resource Center"
+            },
+            {
+              "value": "item33",
+              "text": "Orlando Science Center"
+            },
+            {
+              "value": "item34",
+              "text": "Rice University School Mathematics Project"
+            },
+            {
+              "value": "item35",
+              "text": "Riverside County Office of Education"
+            },
+            {
+              "value": "item36",
+              "text": "Sacramento County Office of Education"
+            },
+            {
+              "value": "item37",
+              "text": "Sacred Heart University"
+            },
+            {
+              "value": "item38",
+              "text": "Science City at Union Station"
+            },
+            {
+              "value": "item39",
+              "text": "Southern Nevada Regional Professional Development Program"
+            },
+            {
+              "value": "item40",
+              "text": "STEMworks"
+            },
+            {
+              "value": "item41",
+              "text": "Tampa Bay STEM Network"
+            },
+            {
+              "value": "item42",
+              "text": "TCNJ Center for Excellence in STEM Education"
+            },
+            {
+              "value": "item43",
+              "text": "Technology & Innovation in Education (SD)"
+            },
+            {
+              "value": "item44",
+              "text": "Tennessee STEM Innovation Network"
+            },
+            {
+              "value": "item45",
+              "text": "The Friday Institute"
+            },
+            {
+              "value": "item46",
+              "text": "The STEM Center for Excellence at the Citadel"
+            },
+            {
+              "value": "item47",
+              "text": "The University of Texas at Austin"
+            },
+            {
+              "value": "item48",
+              "text": "Twin Cities Public Television"
+            },
+            {
+              "value": "item49",
+              "text": "University of California San Diego CREATE"
+            },
+            {
+              "value": "item50",
+              "text": "University of Nebraska"
+            },
+            {
+              "value": "item51",
+              "text": "University of North Florida & STEM2 Hub"
+            },
+            {
+              "value": "item52",
+              "text": "University of Rhode Island"
+            },
+            {
+              "value": "item53",
+              "text": "University of Wyoming"
+            },
+            {
+              "value": "item54",
+              "text": "USC Viterbi School of Engineering"
+            },
+            {
+              "value": "item55",
+              "text": "West Virginia University"
+            }
+          ],
+          "choicesOrder": "asc"
         }
       ]
     }

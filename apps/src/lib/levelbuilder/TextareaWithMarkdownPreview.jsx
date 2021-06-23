@@ -15,7 +15,6 @@ export default class TextareaWithMarkdownPreview extends React.Component {
   static propTypes = {
     markdown: PropTypes.string,
     label: PropTypes.string.isRequired,
-    name: PropTypes.string,
     inputRows: PropTypes.number,
     helpTip: PropTypes.string,
     handleMarkdownChange: PropTypes.func.isRequired,
@@ -36,7 +35,6 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             <div style={{marginBottom: 5}}>Markdown:</div>
             <MarkdownEnabledTextarea
               markdown={this.props.markdown}
-              name={this.props.name}
               inputRows={this.props.inputRows || 5}
               handleMarkdownChange={this.props.handleMarkdownChange}
               features={this.props.features}

@@ -1,0 +1,197 @@
+{
+  "script": {
+    "name": "poster",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-06-17 22:31:36 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "poster"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "about me_ip",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Interactive Poster: Self-Expression",
+        "description": "Version 1 of Interactive Poster: Self-Expression"
+      },
+      "seeding_key": {
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "HoC Tutorial 1",
+      "name": "Self-Expression",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "progression": "Video: How to Make a Sprite"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-expression_make1"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-expression_make1"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      },
+      "level_keys": [
+        "self-expression_make1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-expression_positioning"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-expression_positioning"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      },
+      "level_keys": [
+        "self-expression_positioning"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2020",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-expression_make1",
+        "script_level.level_keys": [
+          "self-expression_make1"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-expression_positioning",
+        "script_level.level_keys": [
+          "self-expression_positioning"
+        ],
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

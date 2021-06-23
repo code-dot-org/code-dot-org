@@ -23,7 +23,7 @@ class UserPermission < ApplicationRecord
     FACILITATOR = 'facilitator'.freeze,
     # Grants access to viewing hidden scripts.
     HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
-    # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
+    # Grants access to managing (e.g., editing) levels, lessons, scripts, etc.
     # Also grants access to viewing extra links related to editing these.
     # Also makes the account satisfy authorized_teacher?.
     LEVELBUILDER = 'levelbuilder'.freeze,

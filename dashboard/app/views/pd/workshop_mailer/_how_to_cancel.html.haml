@@ -1,15 +1,14 @@
 %h3
   - if @workshop.course == Pd::Workshop::COURSE_CSF
-    Did something come up? If you can’t make it, let us know
+    Did something come up? If you can’t make it, let us know by clicking this link to
+    = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
   - else
     If you can't make it, let us know
 
 %p
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     Thanks to Code.org's generous sponsors and Regional Partner support, elementary professional learning workshops are partially, or fully, funded in many regions.
-    If for any reason, you can’t make it, please click this link to
-    = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
-    so we can continue to offer this workshop and open up your spot to other interested educators.
+    If for any reason you can’t make it, please be sure to cancel your registration so we can open up your spot to other interested educators.
   - else
     We know things come up and you may no longer be able to attend. Please click this link to
     = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"

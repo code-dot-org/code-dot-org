@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Programming with BB-8', display_name: 'Programming with BB-8', has_lesson_plan: false
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'

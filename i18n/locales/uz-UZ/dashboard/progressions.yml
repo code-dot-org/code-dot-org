@@ -96,6 +96,7 @@ uz:
       Making Sounds: Tovush yaratish
       'Maze Intro: Programming with Blocks': 'Labirintga kirish: Blocklar bilan dasturlash'
       Measures: O'lchovlar
+      'Mini-Project: About Me': 'Men haqimda Sprite Lab bilan'
       'Mini-Project: Alien Dance Moves': 'Mini-loyiha: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-loyiha: Alien Dance Party'
       'Mini-Project: Royal Battle': 'Mini-loyiha: Royal Battle'
@@ -103,6 +104,7 @@ uz:
       'Mini-Project: Snowflake #2': 'Mini-loyiha: Snowflake #2'
       'Mini-Project: Swimming Fish': 'Mini-loyiha: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-loyiha: Swimming Fish (continued)'
+      'Mini-Project: User Input Programs': 'Chat-Bot yaratish'
       'Mini-Project: Virtual Pet': 'Mini-loyiha: Virtual Pet'
       'Mini-project: Chase Game': 'Mini-loyiha: Chase Game'
       'Mini-project: Flappy Game': 'Mini-loyiha: Flappy Game'
@@ -117,10 +119,13 @@ uz:
       Movement with the Counter Pattern: Hisoblagich patterni bilan harakatlanish
       Multiframe Animations: Ko'p kadrli animatsiyalar
       Musical Arrays: Musiqali massivlar
+      My Online Neighborhood: Mening onlayn qo‘shnilarim
       Nested Loops with the Bee: Asalari bilan ichma-ich sikllar
       New Shapes: Yangi shakllar
       Orientation: Orientatsiya
       Pair Programming: Juftlikda dasturlash
+      Picturing Data: Ma'lumotlarni tasvirlash
+      Planning: Planning
       Platform Jumper - Background and Variables: Platform Jumper - Fon va o'zgaruvchilar
       Platform Jumper - Items: Platform Jumper - Narsalar
       Platform Jumper - Platforms: Platform Jumper - Platformalar
@@ -148,6 +153,7 @@ uz:
       Repeat Unit Statements: Repeat Unit bayonoti
       Repeat Until Statements: Repeat Until bayonoti
       Representing Images: Representing Images
+      Review: Sharh
       Run a simulation: Simulyatorni ishga tushurish
       Sample Programs: Dastur shabloni
       Screen Design: Ekran dizayni

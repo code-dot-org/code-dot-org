@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class EvaluationMulti < Multi
@@ -28,8 +29,8 @@ class EvaluationMulti < Multi
     <<~ruby
       name 'Unique question name here'
       question 'Question'
-      answer 'Answer1', weight: 1, stage_name: 'stage_name'
-      answer 'Answer2', weight: 1, stage_name: 'stage_name'
+      answer 'Answer1', weight: 1, lesson_name: 'lesson_name'
+      answer 'Answer2', weight: 1, lesson_name: 'lesson_name'
     ruby
   end
 

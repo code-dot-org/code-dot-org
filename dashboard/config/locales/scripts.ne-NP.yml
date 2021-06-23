@@ -514,12 +514,6 @@ ne:
               name: Internet Simulator
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         algebraPD2:
@@ -542,22 +536,10 @@ ne:
               name: Wrap-Up
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         asUnplugged:
@@ -756,12 +738,6 @@ ne:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Wrap-up
         grade3:
@@ -2352,6 +2328,10 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
+        curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: CS Fundamentals
         2021drafting:
           lesson_groups:
             introduction:
@@ -2514,6 +2494,8 @@ ne:
               display_name: Variables
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-9:
+              display_name: कार्य
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2531,6 +2513,10 @@ ne:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Content
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Content
         k5-onlinepd-2021:
           lessons:

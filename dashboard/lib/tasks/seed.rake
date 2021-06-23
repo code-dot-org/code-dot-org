@@ -171,7 +171,6 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
       _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
       Script.merge_and_write_i18n(custom_i18n)
     rescue
@@ -389,6 +388,36 @@ namespace :seed do
 
   timed_task secret_pictures: :environment do
     SecretPicture.setup
+  end
+
+  timed_task restricted_section: :environment do
+    name = "Fake Section Cap Teacher"
+    email = "Fake-User-Email-Created-#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = "#{name}password"
+    user = User.create!(
+      {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+    )
+
+    section = Section.create!(name: 'Section Capacity Test', user: user)
+
+    500.times do |i|
+      follower = User.create(
+        {
+          name: "Fake Section Cap Student #{i}",
+          email: "#{i}#{email}",
+          password: password,
+          user_type: "student",
+          age: "14"
+        }
+      )
+      Follower.create!(section_id: section.id, student_user_id: follower.id)
+    end
   end
 
   timed_task :cached_ui_test do

@@ -286,6 +286,7 @@ ms:
   try_reloading: 'Cuba memuat semula halaman'
   next_stage: 'Selesai! Teruskan ke tahap seterusnya'
   download_pdf: 'Bukan Plan Pembelajaran'
+  view_lesson_plan: 'Lihat Rancangan Pelajaran'
   share_code:
     title: "Klik 'Mainkan' untuk lihat program saya berfungsi"
     bounce_og_title: "Semak permainan Lantun saya"
@@ -313,7 +314,12 @@ ms:
       title: 'Kod Flappy'
       body: 'ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!'
     20-hour:
+      title: 'Kursus Dipercepatkan'
       body: 'Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.'
+      body_short: 'Mempelajari asas sains komputer dalam versi kursus 2-4 yang dipercepatkan.'
+    unplugged:
+      title: "Pelajaran Nirplag"
+      body_short: "Jika anda tidak mempunyai komputer, cuba pelajaran nirplag di dalam kelas anda."
     unplugged_conditionals:
       title: "Bersyarat"
   landing:
@@ -368,6 +374,8 @@ ms:
         none: 'Memilih untuk tidak menjawab'
       subjects:
         math: 'Matematik'
+      workshop_course:
+        csf_express: 'Asas CS (Praekspres atau Ekspres)'
       email_opt_in:
         opt_in_yes: 'Ya'
         opt_in_no: 'Tidak'

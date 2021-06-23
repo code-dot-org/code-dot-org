@@ -200,6 +200,33 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
           "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "zde zadej text",
+          "30fcc1693fa8402931d13ac3a5f396fd": "zde napiš název"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "ryba",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ostatní"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Vyhrál jsi!"
         }
       }
     }

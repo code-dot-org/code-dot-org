@@ -1242,6 +1242,15 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"speed"': швидкість
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': розмір
+          SIZE:
+            '25': дуже маленький
+            '50': маленький
+            '75': середньо
+            '100': великий
       gamelab_setSizes:
         text: встановити {SPRITE} властивість {PROPERTY} у {N}%
         options:
@@ -1566,6 +1575,13 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+      Mikelab_setupSim:
+        text: |-
+          моделювання установки з
+          {SPRITE1N}{SPRITE1COSTUME}Швидкість{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Швидкість{SPRITE2SPEED}
+          Збір
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1661,49 +1677,27 @@ uk:
         options:
           PROPERTY:
             "'shapeColor'": колір
-      aalab_addBehaviorForDuration:
-        text: спрайт алаб {SPRITE} починає {BEHAVIOR} на {SECONDS} секунд
-      aalab_addBehaviorUntilBoolean:
-        text: спрайт {SPRITE} починає {BEHAVIOR} поки {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: новий спрайт під назвою{SPRITE_NAME} з костюмом{ANIMATION_NAME} в локації{LOCATION}
-      aalab_goToScene:
-        text: перейти до сцени {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: переміститись на {SPRITE} {DISTANCE} пікселів {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Північ
-            '"East"': Схід
-            '"South"': Південь
-            '"West"': Захід
-      aalab_prompt:
-        text: задати питання {MESSAGE}
-      aalab_scene:
-        text: сцена {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: історія налаштування
-      aalab_starwars_playSound:
-        text: грати звук {OPTION}
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': сітка
+            '"border"': рамка
+            '"row"': ряд
             '"random"': випадковий
-            '"R2-D2 random"': R2-D2 випадковий
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': усі
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': усі
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: малювати двійково {BIN}
       binary_drawBinScreen:

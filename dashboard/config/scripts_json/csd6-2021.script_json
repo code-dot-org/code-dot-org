@@ -2,7 +2,7 @@
   "script": {
     "name": "csd6-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -20,12 +20,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-06 16:58:50 UTC",
+    "serialized_at": "2021-06-17 22:31:13 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -86,7 +87,7 @@
         "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
         "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
-        "student_overview": "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n"
+        "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -106,7 +107,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).",
         "purpose": "This lesson allows students some time to get back into programming with App Lab before introducing the Circuit Playground, but also introduces the useful concept of a _setter_. In Unit 4, students primarily used [`setScreen()`(#fff176)](/docs/applab/setScreen/) to make their apps respond to user interaction. While this is a simple and useful technique, it can lead to a lot of duplication of content across multiple screens. By using _setters_, and later _getters_, students can write apps that actually change the content on a single screen, by showing and hiding or changing the content or look of various elements.\r\n\r\nOnce students have learned about using getters and setters with UI elements, encourage them to think critically about when to use a separate screen in the design phase of an app. If screens are more alike than different, it might be more effective to just change the elements on screen in reaction to input instead of duplicating content across multiple screens. While students are only introduced to [`setProperty()`(#fff176)](/docs/applab/setProperty/) right now, they will later learn the partner command [`getProperty()`(#fff176)](/docs/applab/getProperty/).",
-        "student_overview": "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
+        "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!"
       },
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
@@ -127,7 +128,7 @@
         "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.",
         "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
         "purpose": "As the first introduction to using the Circuit Playground, this lesson leaves time for students to get comfortable with getting the hardware plugged in. By leveraging students' existing knowledge of event handling in App Lab, we can quickly get an app up and running that shows the potential of physical computing with little more than a single red LED.",
-        "student_overview": "In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output."
+        "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
@@ -148,7 +149,7 @@
         "overview": "In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.",
         "preparation": "* Prepare to display example programs for the whole class.\r\n* A half deck of cards for each group of three students or [deck-of-cards.js.org](https://deck-of-cards.js.org).\r\n* Print one copy of the activity guide for each group of four students.",
         "purpose": "This lesson is intended to help students transition from the _draw loop_ and conditional model of input used in Game Lab to the event-driven model used in App Lab. While students have experienced and learned a bit about event-driven programming in Unit 4, a deeper understanding of how the events work will help when it comes to responding to events on the Circuit Playground later in this unit.",
-        "student_overview": "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n"
+        "student_overview": "In this lesson, you will eperience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\n"
       },
       "seeding_key": {
         "lesson.key": "Input Unplugged",
@@ -168,7 +169,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
         "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
-        "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
+        "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -188,7 +189,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.",
         "purpose": "So far, students have only used the button press event to gather information from the App Lab screen.  Using [`getProperty`(#fff176)](/docs/applab/getProperty/) opens the students to gathering a wide range of information from the user.  Getting properties also allows students to create programs that don't rely on knowing an element's properties when the code is written, so their programs can be more dynamic and interactive.  These features will be important as students move toward making an interactive game in the next few lessons. ",
-        "student_overview": "This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code. They first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new screen element, the slider, and a new event trigger, onChange, are also introduced."
+        "student_overview": "In this lesson, you will learn how to access the properties of different elements with code. "
       },
       "seeding_key": {
         "lesson.key": "Getting Properties",
@@ -209,7 +210,7 @@
         "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
         "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
         "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
-        "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n"
+        "student_overview": "In this lesson, you will get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\n"
       },
       "seeding_key": {
         "lesson.key": "Analog Input",
@@ -230,7 +231,7 @@
         "overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.",
         "preparation": "* Provide students with copies of the project guide",
         "purpose": "This lesson gives students to practice developing a larger scale program in order to prepare them to do so independently. While previous lessons have focused on building skills around using specific elements of the Circuit Playground and related programming concepts, this lesson focuses on combining everything learned so far into a more complex program. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
-        "student_overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide that asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming (a process very similar to the Game Design Process that students used in Unit 3). Students begin by playing a tug o' war style game where the code is hidden. They  discuss what they think the board components, events, and variables would need to be to make the program. Then, they are then given a completed project guide that shows one way to implement the project, and are walked through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the program to make it their own.\r\n"
+        "student_overview": "In this lesson, you will learn about the process you will use to design programs of your own throughout this unit. "
       },
       "seeding_key": {
         "lesson.key": "The Program Design Process",
@@ -248,10 +249,10 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.",
+        "overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\n\n\n",
         "preparation": "* Print a copy of the project guide for each group of students\r\n* Print a copy of the rubric for each student",
         "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (event handlers, using the board as output, etc.) in one place. This project is purposefully left very open to allow students to think broadly about how physical output might be useful in an app - this is a great opportunity to encourage students to revisit programs they've written earlier in this unit or in Unit 4 that would benefit from using the board to output information.",
-        "student_overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\r\n"
+        "student_overview": "In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information."
       },
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
@@ -271,7 +272,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.",
         "purpose": "Arrays are a common data structure in computer science, used to make storing and accessing information easier. The lesson prepares students to access items within an array, but doesn't yet cover creating and modifying arrays, which will be addressed in the following lesson. Students are also introduced to the ring of color LEDs, which are exposed as an array called [`colorLeds`(#f78183)](/docs/applab/colorLeds/). Students learn how to access and control each LED in the array individually, preparing them to access multiple LEDs though iteration later in the chapter.",
-        "student_overview": "In this lesson, students are introduced to the ring of color LEDs, which are exposed as an array called colorLeds. Students learn how to access and control each LED in an array individually, preparing them to access multiple LEDs through iteration later in the chapter. \r\n"
+        "student_overview": "In this lesson, you will learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground. "
       },
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
@@ -291,7 +292,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.",
         "purpose": "This lesson allows students to get more creative with the buzzer by introducing the concept of a \"note\" and by using arrays to hold sequential collections of notes.  Using notes rather than frequencies provides a layer of abstraction that makes it easier for students to identify sounds that can be used to make music.  Arrays provide a way to group together sounds in sequence, so that they can be played as music.  Using the `playNotes` block to iterate over an array of notes provides a conceptual foundation for working with `for` loops in the next lesson.",
-        "student_overview": "In this lesson, students will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of musical notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, and compose simple songs.\r\n"
+        "student_overview": "In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. "
       },
       "seeding_key": {
         "lesson.key": "Making Music",
@@ -311,7 +312,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.",
         "purpose": "As students start using arrays more frequently, a common pattern emerges wherein you want to run some code on each element of an array. While _for loops_ are a generally useful structure for repeating code, they are a particularly useful for iterating over an array. In this lesson we build on the understanding of arrays that students have developed in the last two lessons by introducing the _for loop_, which combines a variable, the counter pattern, and a conditional all in a single construct.",
-        "student_overview": "Students learn to combine lists and for-loops in this lesson, which allows them to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, including the list of color LEDs.\r\n"
+        "student_overview": "In this lesson, you will learn to combine lists and for-loops in order to write code that impacts every element of a list, regardless of how long it is. "
       },
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
@@ -331,7 +332,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
         "purpose": "This lesson gives students an opportunity to work with the accelerometer sensor and explore its orientation properties and accelerometer-specific board events. Students will see the purpose and uses of an accelerometer in real world devices and programs and create their own versions of some of these applications. To do this, students will need to refer back to their past knowledge of the counter pattern to create functional accelerometer-based apps. ",
-        "student_overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications."
+        "student_overview": "In this lesson, you will explore the accelerometer and its capabilities. "
       },
       "seeding_key": {
         "lesson.key": "Accelerometer",
@@ -351,7 +352,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.",
         "purpose": "In previous lessons, students have used functions to define blocks of code that can be used in multiple places in a program.  In this lesson, students learn how to use parameters to generalize the purpose of a function.  Parameters allow a program to specify the details of how a function works when it is called, rather than when the program is defined.  Although students have seen functions with parameters earlier in the unit, this is the first time that they are expected to define and call their own.  Students also learn how to use a for loop to iteratively pass in the elements of an array as parameters to a function, allowing them to use the same function on multiple elements on the screen.",
-        "student_overview": "This lesson starts with a quick review of parameters in the context of the App Lab blocks that students have seen recently. Students then look at examples of parameters within user-created functions in App Lab, and create and call functions with parameters to control multiple elements on a screen. Afterward, they use for loops to iterate over an array, passing each element into a function. Last, students use what they have learned to create a star catching game.\r\n"
+        "student_overview": "In this lesson, you will create and call functions with parameters, use for loops to iterate over an array, and finally use what you have learned to create a star catching game.\n"
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -372,7 +373,7 @@
         "overview": "In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.",
         "preparation": "* Gather prototyping materials, such as:\r\n\t* Structural material (cardboard, construction paper, etc)\r\n\t* Connective material (tape, glue, hot glue, etc)\r\n\t* Construction tools (scissors, staplers, etc)\r\n\t* Other materials (cups, binder clips, paper plates, etc)\r\n* Prepare circuit wiring materials, such as:\r\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\r\n\t* LEDs (included in Circuit Playground classroom kit)\r\n\t* Other conductive material (wire, paper clips, foil, etc)\r\n\t* (optional) Buttons or switches\r\n* Print a copy of the project guide for each group of 2-3 students\r\n* Prepare a model button to show the class",
         "purpose": "The goal of this lesson is both to model for students how thinking about the physical design of a product impacts the prototyping process, and to introduce a handful of practical skills that will make creating their final projects easier.",
-        "student_overview": "In this lesson, students wire simple circuits to create a physical prototype using low-cost and easily-found materials.\r\n"
+        "student_overview": "In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.\n"
       },
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
@@ -393,7 +394,7 @@
         "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
         "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
         "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
-        "student_overview": "This final project challenges students to develop and test a prototype for an innovative computing device that interacts with the physical world through various types of input and output, whichallow for interesting and unique user interactions. This project is an opportunity for students to showcase their technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.\r\n"
+        "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
       },
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
@@ -506,7 +507,7 @@
       "key": "2fff60de-5366-470f-ad77-577397a87071",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -758,7 +759,7 @@
       "key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -800,7 +801,7 @@
       "key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
       "position": 2,
       "properties": {
-        "duration": 215,
+        "duration": 125,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1010,7 +1011,7 @@
       "key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1066,7 +1067,7 @@
       "key": "ca01af5b-36a3-461d-b6b0-9802dc211193",
       "position": 3,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity 2"
       },
       "seeding_key": {
@@ -1091,21 +1092,8 @@
       }
     },
     {
-      "key": "b8a3b11c-3a97-4267-86ac-052acfb36531",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531",
-        "lesson.key": "Circuits and Physical Prototypes",
-        "lesson_group.key": "csd6_2",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
       "key": "b3d78956-5557-4142-bd84-3741cc92fb87",
-      "position": 6,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2332,17 +2320,6 @@
       }
     },
     {
-      "key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51",
-      "position": 11,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51",
-        "lesson_activity.key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c"
-      }
-    },
-    {
       "key": "5efa89cb-f262-4f85-afb8-752e1495d920",
       "position": 1,
       "properties": {
@@ -2363,6 +2340,17 @@
       },
       "seeding_key": {
         "activity_section.key": "e478ff63-84b6-4de8-b5c3-83e86860f443",
+        "lesson_activity.key": "594d3531-8212-4241-979a-17ae94cb6d89"
+      }
+    },
+    {
+      "key": "187cdb02-266e-41c6-a35e-8d31c07cfdff",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff",
         "lesson_activity.key": "594d3531-8212-4241-979a-17ae94cb6d89"
       }
     },
@@ -3030,7 +3018,8 @@
       "key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82",
       "position": 4,
       "properties": {
-        "description": "**Display:** Watch the [How Computers Work: Circuits & Logic - Video](https://www.youtube.com/watch?v=ZoqMiFKspAA&feature=youtu.be) (level two in the progression) as a class."
+        "description": "**Display:** Watch [r circuits-logic-video/csd/2021].",
+        "progression_name": "Video: Circuits and Logic"
       },
       "seeding_key": {
         "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82",
@@ -3053,10 +3042,38 @@
       "key": "7daa06e9-87f0-4e03-b2fe-afbf6ae551e9",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Wires, LEDs, and any other hardware you want available for this portion. Let the class know that before digging too far into building our prototypes, we'll need to learn how to add additional hardware to the board.\r\n\r\n**Transition:** Head to Code Studio to work on the Simple Circuits section."
+        "description": "**Distribute:** Wires, LEDs, and any other hardware you want available for this portion. Let the class know that before digging too far into building our prototypes, we'll need to learn how to add additional hardware to the board.\n\n**Transition:** Head to Code Studio to work on the Simple Circuits and Blinkers sections."
       },
       "seeding_key": {
         "activity_section.key": "7daa06e9-87f0-4e03-b2fe-afbf6ae551e9",
+        "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
+      }
+    },
+    {
+      "key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16",
+      "position": 7,
+      "properties": {
+        "progression_name": "Simple Circuits"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16",
+        "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
+      }
+    },
+    {
+      "key": "c814528c-f376-440e-849f-19d8790e7d92",
+      "position": 8,
+      "properties": {
+        "progression_name": "Smart Bike - Blinkers",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 7:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92",
         "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
       }
     },
@@ -3130,58 +3147,19 @@
       }
     },
     {
-      "key": "7e02ad52-172a-48e2-a123-4afb134873f2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Circuits and Logic"
-      },
-      "seeding_key": {
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "a7a4d26a-c501-413b-9461-80af372036c7",
+      "key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d",
       "position": 2,
-      "properties": {
-        "progression_name": "Simple Circuits"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "f93d6752-3b69-4f35-a977-147f8678eafd",
-      "position": 3,
-      "properties": {
-        "progression_name": "Smart Bike - Blinkers",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Level 7:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd",
-      "position": 4,
       "properties": {
         "progression_name": "Button Circuits"
       },
       "seeding_key": {
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d",
+        "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324"
       }
     },
     {
-      "key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997",
-      "position": 5,
+      "key": "672d26f8-cbd5-46ea-8482-d84b0be3e335",
+      "position": 3,
       "properties": {
         "progression_name": "Finish the Prototype",
         "tips": [
@@ -3192,8 +3170,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335",
+        "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324"
       }
     },
     {
@@ -3229,8 +3207,14 @@
       "key": "0516be14-10b2-4124-af7c-3d76c5177d95",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\r\n\r\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the the rubric so that they know from the beginning what components of the project you will be looking for.",
-        "name": "Review Project Guide\r"
+        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\n\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
+        "name": "Review Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0516be14-10b2-4124-af7c-3d76c5177d95",
@@ -5660,7 +5644,7 @@
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2021",
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51"
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U6Ch1_2021"
@@ -7365,7 +7349,7 @@
         "level_keys": [
           "CSD U6 circuit logic video_2021"
         ],
-        "progression": "Circuits and Logic"
+        "progression": "Video: Circuits and Logic"
       },
       "named_level": false,
       "bonus": false,
@@ -7376,7 +7360,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2"
+        "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82"
       },
       "level_keys": [
         "CSD U6 circuit logic video_2021"
@@ -7402,7 +7386,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit predict_2021"
@@ -7428,7 +7412,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit pinMode_2021"
@@ -7454,7 +7438,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit createLed_2021"
@@ -7480,7 +7464,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit multi led_2021"
@@ -7506,7 +7490,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinkers_2021"
@@ -7532,7 +7516,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinker buttons_2021"
@@ -7558,7 +7542,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinker build_2021"
@@ -7584,7 +7568,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d"
       },
       "level_keys": [
         "CSD U6 circuit createButton_2021"
@@ -7610,7 +7594,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike buzzer_2021"
@@ -7636,7 +7620,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike light_2021"
@@ -7662,7 +7646,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike final_2021"
@@ -8970,7 +8954,7 @@
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2021",
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51"
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff"
       }
     },
     {
@@ -9762,7 +9746,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2"
+        "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82"
       }
     },
     {
@@ -9774,7 +9758,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9786,7 +9770,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9798,7 +9782,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9810,7 +9794,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9822,7 +9806,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9834,7 +9818,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9846,7 +9830,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9858,7 +9842,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d"
       }
     },
     {
@@ -9870,7 +9854,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -9882,7 +9866,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -9894,7 +9878,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -10032,6 +10016,62 @@
   ],
   "resources": [
     {
+      "name": "Accelerometer Events",
+      "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
+      "key": "accelerometer_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "accelerometer_events"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/s/csd6-2021/code",
+      "key": "all_code_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_4"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd6-2021/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd6-2021/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd6-2021/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Difference between Analog and Digital Signals",
       "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
       "key": "analog-digital-video",
@@ -10041,6 +10081,78 @@
       },
       "seeding_key": {
         "resource.key": "analog-digital-video"
+      }
+    },
+    {
+      "name": "Analog Sensors",
+      "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
+      "key": "analog_sensors",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "name": "Board Events",
+      "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
+      "key": "board_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1HUDl6xDoxNWJUptqMA1B9DXE0XFTeD3a/view?usp=sharing",
+      "key": "booleans_and_comparison_operators_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "name": "Changing Sensor Scale",
+      "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
+      "key": "changing_sensor_scale",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "name": "Circuit Playground",
+      "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
+      "key": "circuit_playground",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground"
       }
     },
     {
@@ -10054,6 +10166,42 @@
       },
       "seeding_key": {
         "resource.key": "circuits-logic-video"
+      }
+    },
+    {
+      "name": "Circuits and Buttons",
+      "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
+      "key": "circuits_and_buttons",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_buttons"
+      }
+    },
+    {
+      "name": "Circuits and LEDs",
+      "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
+      "key": "circuits_and_leds",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "name": "Color Lights",
+      "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
+      "key": "color_lights",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "color_lights"
       }
     },
     {
@@ -10083,6 +10231,74 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Date and Change Events",
+      "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
+      "key": "date_and_change_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
       "name": "Emoji Race",
       "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
       "key": "emoji-race-guide",
@@ -10093,6 +10309,55 @@
       },
       "seeding_key": {
         "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://drive.google.com/file/d/1m96-bXSMQwkgpJ0MBgagEBRhJ8NYvDcN/view?usp=sharing",
+      "key": "for_loops",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
+      "key": "functions_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "name": "How Computers Word: Hardware & Software",
+      "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
+      "key": "how_computers_word_hardware_software",
+      "properties": {
+        "download_url": "http://videos.code.org/cs-discoveries/concept/06_HardwareSoftware_sm.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
+      "key": "if_statements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements_1"
       }
     },
     {
@@ -10134,6 +10399,32 @@
       }
     },
     {
+      "name": "Introduction to Arrays",
+      "url": "https://youtu.be/seBDTeZmb-k",
+      "key": "introduction_to_arrays",
+      "properties": {
+        "download_url": "http://videos.code.org/cs-discoveries/applab/applab_arrays.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "name": "For Loops",
+      "url": "https://youtu.be/WqmyVZnMWHY",
+      "key": "loops_in_app_lab",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csdloops-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "loops_in_app_lab"
+      }
+    },
+    {
       "name": "Sample Marked Rubrics 1",
       "url": "https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q",
       "key": "make-a-game-exemplars",
@@ -10151,10 +10442,36 @@
       "key": "make-game-guide",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Make a Game",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/edit",
+      "key": "make_a_game",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game"
+      }
+    },
+    {
+      "name": "Modifying Arrays",
+      "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
+      "key": "modifying_arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -10195,6 +10512,30 @@
       }
     },
     {
+      "name": "Physical Input",
+      "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
+      "key": "physical_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "name": "Physical Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "physical_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
       "key": "planning-your-innovation",
@@ -10208,8 +10549,32 @@
       }
     },
     {
+      "name": "Playing Notes",
+      "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
+      "key": "playing_notes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "name": "Producing Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "producing_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "producing_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
       "key": "prototype-an-innovation-1",
       "properties": {
         "type": "Rubric",
@@ -10221,15 +10586,39 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90",
-      "key": "sample_marked_rubrics_1_2",
+      "name": "Prototype an Innovation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "key": "prototype_an_innovation_-_student_checklist",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1_2"
+        "resource.key": "prototype_an_innovation_-_student_checklist"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input_1"
       }
     },
     {
@@ -10245,15 +10634,27 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc",
-      "key": "sample_marked_rubrics_2_3",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
+      "key": "sample_marked_rubrics_4",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_3"
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "name": "Taking Input with getProperty",
+      "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
+      "key": "taking_input_with_getproperty",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "taking_input_with_getproperty"
       }
     },
     {
@@ -10265,6 +10666,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Accelerometer",
+      "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
+      "key": "the_accelerometer",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_accelerometer"
       }
     }
   ],
@@ -10289,8 +10702,62 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Input Unplugged",
         "resource.key": "input-and-events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "taking_input_with_getproperty"
       }
     },
     {
@@ -10301,8 +10768,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Program Design Process",
         "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "if_statements_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "booleans_and_comparison_operators_1"
       }
     },
     {
@@ -10331,6 +10834,78 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "producing_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "loops_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "modifying_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "the_accelerometer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "accelerometer_events"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "circuits-logic-video"
       }
@@ -10339,6 +10914,12 @@
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "circuits_and_buttons"
       }
     },
     {
@@ -10362,19 +10943,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_1_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "peer_review_1_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_2_3"
       }
     },
     {
@@ -10382,12 +10951,72 @@
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "peer_review_2_1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_-_student_checklist"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_4",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
         "script.name": "csd6-2021"
       }
     }

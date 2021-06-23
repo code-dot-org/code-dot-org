@@ -50,6 +50,7 @@
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'test_access_report_import')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
@@ -87,6 +88,7 @@
       cronjob at:'*/3 * * * *', do:dashboard_dir('bin', 'process_pd_workshop_ends')
       cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
+      cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'49 5 * * *', do:deploy_dir('bin', 'cron', 'update_census_mapbox')
       cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')

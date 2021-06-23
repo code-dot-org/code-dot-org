@@ -573,12 +573,6 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -624,12 +618,6 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -639,12 +627,6 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -878,12 +860,6 @@ gl:
               name: 'Desconectado: Composición de cancións con parámetros'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvido!
             Wrap-up:
@@ -2444,6 +2420,8 @@ gl:
               display_name: Variables
             csf_for_loops:
               display_name: Bucles "Para" (For)
+            lessonGroup-9:
+              display_name: Eventos
         pre-express-2021:
           lesson_groups:
             csf_loops:

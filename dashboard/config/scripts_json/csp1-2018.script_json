@@ -32,7 +32,6 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Are you signed up for the AP exam?",
@@ -58,7 +57,8 @@
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2021-05-03 23:55:21 UTC",
+    "serialized_at": "2021-06-17 22:29:45 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2018"
     }

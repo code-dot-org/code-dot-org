@@ -100,7 +100,7 @@ class User < ApplicationRecord
     ops_school
     ops_gender
     using_text_mode
-    using_dark_mode
+    display_theme
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -422,7 +422,7 @@ class User < ApplicationRecord
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
-  has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
+  has_many :scripts, -> {where(published_state: [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview])}, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
@@ -1248,11 +1248,11 @@ class User < ApplicationRecord
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
       script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
@@ -1279,9 +1279,9 @@ class User < ApplicationRecord
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   stage ids for that section.
-  #   For students this will just be a list of stage ids that are hidden for them.
-  def get_hidden_stage_ids(script_name)
+  #   lesson ids for that section.
+  #   For students this will just be a list of lesson ids that are hidden for them.
+  def get_hidden_lesson_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
@@ -1558,15 +1558,15 @@ class User < ApplicationRecord
     scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
     user_scripts.where("assigned_at").
-      map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
+      map {|user_script| Script.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
 
-  # Checks if there are any non-hidden scripts assigned to the user.
+  # Checks if there are any launched scripts assigned to the user.
   # @return [Boolean]
   def any_visible_assigned_scripts?
     visible_assigned_scripts.any?
@@ -1609,7 +1609,7 @@ class User < ApplicationRecord
     user_script_with_most_recent_progress[:last_progress_at]
   end
 
-  # Checks if there are any non-hidden scripts or courses assigned to the user.
+  # Checks if there are any launched scripts or courses assigned to the user.
   # @return [Boolean]
   def assigned_course_or_script?
     assigned_courses.any? || any_visible_assigned_scripts?
@@ -2321,7 +2321,7 @@ class User < ApplicationRecord
 
   private
 
-  def hidden_stage_ids(sections)
+  def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
@@ -2330,45 +2330,45 @@ class User < ApplicationRecord
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_stages is true, id is expected to be a script id and
-  # we look for stages that are hidden. If hidden_stages is false, id is expected
+  # on the input. If hidden_lessons is true, id is expected to be a script id and
+  # we look for lessons that are hidden. If hidden_lessons is false, id is expected
   # to be a course_id, and we look for hidden scripts.
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
   # @return {Hash<string,number[]>
-  def get_teacher_hidden_ids(hidden_stages)
+  def get_teacher_hidden_ids(hidden_lessons)
     # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden stages/scripts in that section
+    # a mapping from section id to hidden lessons/scripts in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_script_ids([section])
     end
     hidden_by_section
   end
 
   # This method method will go through each of the sections in which we're a member
-  # and determine which stages/scripts should be hidden
-  # @param {boolean} hidden_stages - True if we're looking for hidden stages, false
+  # and determine which lessons/scripts should be hidden
+  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
   #   if we're looking for hidden scripts.
-  # @return {number[]} Set of stage/script ids that should be hidden
-  def get_student_hidden_ids(assign_id, hidden_stages)
+  # @return {number[]} Set of lesson/script ids that should be hidden
+  def get_student_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
 
     sections = sections.reject(&:hidden)
     assigned_sections = sections.select do |section|
-      hidden_stages ? section.script_id == assign_id : section.course_id == assign_id
+      hidden_lessons ? section.script_id == assign_id : section.course_id == assign_id
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a stage/script
+      # if we have no sections matching this assignment, we consider a lesson/script
       # hidden if any of our sections hides it
-      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a stage/script
+      # if we do have sections matching this assignment, we consider a lesson/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

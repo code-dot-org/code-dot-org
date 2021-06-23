@@ -579,6 +579,9 @@ es-MX:
         poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
         csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
         csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
+        csf_lots_of_sprites: 'Laboratorio de sprites: muchos sprites'
+        playlab_2021: Introducción al Laboratorio de juegos
+        playlab_2021_reader: Introducción al Laboratorio de juegos
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

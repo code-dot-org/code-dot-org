@@ -65,15 +65,15 @@ class LevelDslTest < ActiveSupport::TestCase
 
   test 'test Evaluation Question' do
     script = create :script
-    stage1 = create(:lesson, name: 'Stage1', script: script)
-    stage2 = create(:lesson, name: 'Stage2', script: script)
+    lesson1 = create(:lesson, name: 'Lesson1', script: script)
+    lesson2 = create(:lesson, name: 'Lesson2', script: script)
     input_dsl = <<~DSL
       name 'Test question'
       display_name 'Test override question'
       question 'Question text'
       answer 'answer 1'
-      answer 'answer 2', weight: 2, stage_name: '#{stage1.name}'
-      answer 'answer 3', stage_name: '#{stage2.name}'
+      answer 'answer 2', weight: 2, lesson_name: '#{lesson1.name}'
+      answer 'answer 3', lesson_name: '#{lesson2.name}'
     DSL
 
     output, _ = EvaluationMulti.parse(input_dsl, 'test')
@@ -85,9 +85,9 @@ class LevelDslTest < ActiveSupport::TestCase
         options: {},
         questions: [{text: 'Question text'}],
         answers: [
-          {text: 'answer 1', weight: 1, stage: nil},
-          {text: 'answer 2', weight: 2, stage: stage1.name},
-          {text: 'answer 3', weight: 1, stage: stage2.name},
+          {text: 'answer 1', weight: 1, lesson: nil},
+          {text: 'answer 2', weight: 2, lesson: lesson1.name},
+          {text: 'answer 3', weight: 1, lesson: lesson2.name},
         ]
       }
     }

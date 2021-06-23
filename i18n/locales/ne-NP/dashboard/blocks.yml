@@ -1,4 +1,3 @@
----
 ne:
   data:
     blocks:
@@ -207,6 +206,15 @@ ne:
           PROPERTY:
             '"scale"': size
             '"speed"': speed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -298,9 +306,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -309,9 +317,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whileKeyPressed:
         options:
           KEY:

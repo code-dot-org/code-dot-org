@@ -109,14 +109,15 @@ class SummaryProgressRow extends React.Component {
     const showAsLocked = isLockedForUser || isLockedForSection;
 
     let lessonTitle = lesson.name;
-    if (lesson.stageNumber) {
-      lessonTitle = lesson.stageNumber + '. ' + lessonTitle;
+    if (lesson.lessonNumber) {
+      lessonTitle = lesson.lessonNumber + '. ' + lessonTitle;
     }
 
     const titleTooltipId = _.uniqueId();
     const lockedTooltipId = _.uniqueId();
     return (
       <tr
+        className="uitest-summary-progress-row"
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),

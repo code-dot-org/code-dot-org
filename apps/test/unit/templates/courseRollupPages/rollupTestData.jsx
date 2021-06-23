@@ -22,6 +22,7 @@ export const courseData = {
           programmingExpressions: [
             {
               name: 'playSound',
+              syntax: 'playSound',
               link: 'studio.code.org/docs/applab/playSound'
             }
           ],
@@ -73,6 +74,7 @@ export const courseData = {
           programmingExpressions: [
             {
               name: 'playSound',
+              syntax: 'playSound',
               link: 'studio.code.org/docs/applab/playSound'
             }
           ],
@@ -142,6 +144,7 @@ export const courseData = {
           programmingExpressions: [
             {
               name: 'playSound',
+              syntax: 'playSound',
               link: 'studio.code.org/docs/applab/playSound'
             }
           ],

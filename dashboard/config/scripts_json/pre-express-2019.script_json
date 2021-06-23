@@ -14,7 +14,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "pre-express",
       "tts": true,
       "supported_locales": [
@@ -52,7 +51,8 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-03 23:55:30 UTC",
+    "serialized_at": "2021-06-17 22:30:08 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2019"
     }

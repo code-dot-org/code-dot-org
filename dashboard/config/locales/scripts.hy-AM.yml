@@ -572,12 +572,6 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -625,12 +619,6 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -640,12 +628,6 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -903,12 +885,6 @@ hy:
               name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welcome!
             Wrap-up:
@@ -2522,6 +2498,12 @@ hy:
               name: Կուրս A
             Course B:
               name: Կուրս B
+            Course E:
+              name: Կուրս E
+            Course F:
+              name: Կուրս F
+            csf:
+              name: CS Fundamentals
         2021drafting:
           lesson_groups:
             introduction:
@@ -2687,6 +2669,8 @@ hy:
               display_name: փոփոխականների
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-9:
+              display_name: Իրադարձություններ
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2704,6 +2688,10 @@ hy:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: պարունակություն
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: պարունակություն
         k5-onlinepd-2021:
           lessons:

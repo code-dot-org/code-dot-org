@@ -757,6 +757,15 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"speed"': скорост
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': размер
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средно
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -965,10 +974,27 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
+            '"grid"': мрежа
+            '"border"': рамка
+            '"row"': ред
             '"random"': случаен
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': всички
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': всички
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

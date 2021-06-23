@@ -24,18 +24,18 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the using_dark_mode user preference
-   * @param {boolean} darkMode - Whether or not the user should be in dark mode.
+   * Save the display_theme user preference
+   * @param {string} displayTheme - display mode string.
    */
-  setUsingDarkMode(darkMode) {
-    return $.post(`/api/v1/users/${this.userId}/using_dark_mode`, {
-      using_dark_mode: darkMode
+  setDisplayTheme(displayTheme) {
+    return $.post(`/api/v1/users/${this.userId}/display_theme`, {
+      display_theme: displayTheme
     });
   }
 
-  getUsingDarkMode() {
-    return $.getJSON(`/api/v1/users/${this.userId}/using_dark_mode`).then(
-      response => response.using_dark_mode
+  getDisplayTheme() {
+    return $.getJSON(`/api/v1/users/${this.userId}/display_theme`).then(
+      response => response.display_theme
     );
   }
 }

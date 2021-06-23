@@ -329,7 +329,7 @@
           "Course_4_Artist_For_Loops_3_a": "如果要使用`計數`迴圈來作為移動的依據，請檢查你是不是使用了`counter`當作距離。"
         },
         "Course 4 Artist For Loops 4": {
-          "Course_4_Artist_For_Loops_4_a": "**需要的數字至少要是多少？\n最大的數字又是多少？\n每循環一次要增加多少？**\n\n這些問題是你每次在使用`計數`迴圈要思考的。"
+          "Course_4_Artist_For_Loops_4_a": "**需要的數字至少要是多少？\\\n最大的數字又是多少？\\\n每迴圈一次要增加多少？**\n\n這些問題是您每次在使用「for」迴圈要思考的。"
         },
         "Course 4 Artist For Loops Challenge": {
           "Course_4_Artist_For_Loops_Challenge_a": "最大的形狀有 19 個邊，最小的則只有 2 個邊。",
@@ -1199,12 +1199,12 @@
           "harvey_tictactoe": "你可以利用 `跳躍` 積木移動到其它的空格。"
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "像這樣的程式積木：<xml>  <block type=\"simple_move_up_left\"/></xml> 可以讓小藝術家斜著移動！",
+          "courseA_artist_loops_challenge2_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
           "courseA_artist_loops_challenge2_b": "當你完成了一個鳥屋時，`跳躍`到下一個！",
           "courseA_artist_loops_challenge2_c": "這一關的迴圈裡用到了「很多」的程式積木喔。"
         },
         "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓小藝術家斜向移動！",
+          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
           "courseB_artist_loops_challenge1_b": "當您完成一個骰子時，「jump」（跳躍）到下一個！",
           "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
         },
@@ -1220,8 +1220,8 @@
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_b": "開始的時候請重複 `向南移動` 和 `採集寶藏` 兩個指令。\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
           "courseB_collector_loops_challenge1_a": "向北的圖案與向南的圖案有一點點不同。\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>",
-          "courseB_collector_loops_challenge1_c": "在每條路之間向東移動2次。\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\n只要14個積木就可以搞定！點擊以取得更多提示。",
-          "courseB_collector_loops_challenge1_d": "試試這個！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n\n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>",
+          "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
@@ -1450,7 +1450,7 @@
           "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試著將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
         "courseA_artist_loops5_2018": {
-          "courseA_artist_loops5_a": "試著用你學到的 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 來完成這個關卡！",
+          "courseA_artist_loops5_a": "試著用你學到的重複積木來完成這個關卡！",
           "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
           "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試著將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
         },
@@ -1488,12 +1488,12 @@
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
           "courseA_artist_loops7_b": "首先為一個波浪編寫程式，然後重複繪製另外兩個波浪。",
-          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>迴圈裡。"
+          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。"
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
           "courseA_artist_loops7_b": "首先為一個波浪編寫程式，然後重複繪製另外兩個波浪。",
-          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>迴圈裡。"
+          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。"
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
@@ -2570,17 +2570,17 @@
           "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
         },
         "courseB_artist_loops_challenge1_2018": {
-          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓小藝術家斜向移動！",
+          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
           "courseB_artist_loops_challenge1_b": "當您完成一個骰子時，「jump」（跳躍）到下一個！",
           "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
         },
         "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓小藝術家斜向移動！",
+          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
           "courseB_artist_loops_challenge1_b": "當您完成一個骰子時，「jump」（跳躍）到下一個！",
           "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
         },
         "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓小藝術家斜向移動！",
+          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
           "courseB_artist_loops_challenge1_b": "當您完成一個骰子時，「jump」（跳躍）到下一個！",
           "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
         },
@@ -2634,15 +2634,15 @@
         },
         "courseB_collector_loops2_2018": {
           "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
-          "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>積木來撿起它。"
+          "courseB_collector_loops2_b": "當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。"
         },
         "courseB_collector_loops2_2019": {
           "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
-          "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>積木來撿起它。"
+          "courseB_collector_loops2_b": "當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。"
         },
         "courseB_collector_loops2_2020": {
           "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
-          "courseB_collector_loops2_b": "當您到達一個寶藏地點，使用<xml><block type=\"collector_collect\"/></xml>積木來撿起它。"
+          "courseB_collector_loops2_b": "當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。"
         },
         "courseB_collector_loops3": {
           "courseB_collector_prog3_a": "嘗試使用 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>積木來收集您的寶藏。",
@@ -2770,19 +2770,19 @@
           "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2018": {
-          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "在每條路之間向東移動2次。\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n只要14個積木就可以搞定！點擊以取得更多提示。",
-          "courseB_collector_loops_challenge1_d": "試試這個！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n\n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>",
+          "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2019": {
-          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "在每條路之間向東移動2次。\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n只要14個積木就可以搞定！點擊以取得更多提示。",
-          "courseB_collector_loops_challenge1_d": "試試這個！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n\n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>",
+          "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2020": {
-          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "在每條路之間向東移動2次。\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\n只要14個積木就可以搞定！點擊以取得更多提示。",
-          "courseB_collector_loops_challenge1_d": "試試這個！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n\n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>",
+          "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
@@ -2975,15 +2975,15 @@
         },
         "courseB_maze_seq4_2018": {
           "courseB_maze_seq4_a": "試著每次新增一條指令，直到你獲得橡果為止。",
-          "courseB_maze_seq4_b": "您將需要使用<xml><block type=\"maze_moveEast\"/></xml>積木來通過本關。"
+          "courseB_maze_seq4_b": "你會向東移動來過這一關。"
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "試著每次新增一條指令，直到你獲得橡果為止。",
-          "courseB_maze_seq4_b": "您將需要使用<xml><block type=\"maze_moveEast\"/></xml>積木來通過本關。"
+          "courseB_maze_seq4_b": "你會向東移動來過這一關。"
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "試著每次新增一條指令，直到你獲得橡果為止。",
-          "courseB_maze_seq4_b": "您將需要使用<xml><block type=\"maze_moveEast\"/></xml>積木來通過本關。"
+          "courseB_maze_seq4_b": "你會向東移動來過這一關。"
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "如果你卡關了，試試在紙上寫出路徑。",
@@ -3231,19 +3231,19 @@
           "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們說些話吧：\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2018": {
-          "courseB_playlab_events_challenge1_a": "當您按「▼」時，讓其他的動物往下移動。\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "利用這個積木來改變動物的速度：\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們談談對這次比賽的感受吧：\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_a": "使用`▼`讓其他的動物往下移動\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "利用這個程式積木改變動物的速度\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們說些話吧：\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2019": {
-          "courseB_playlab_events_challenge1_a": "當您按「▼」時，讓其他的動物往下移動。\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "利用這個積木來改變動物的速度：\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們談談對這次比賽的感受吧：\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_a": "使用`▼`讓其他的動物往下移動\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "利用這個程式積木改變動物的速度\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們說些話吧：\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2020": {
-          "courseB_playlab_events_challenge1_a": "當您按「▼」時，讓其他的動物往下移動。\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "利用這個積木來改變動物的速度：\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們談談對這次比賽的感受吧：\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_a": "使用`▼`讓其他的動物往下移動\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "利用這個程式積木改變動物的速度\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們說些話吧：\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
           "courseB_playlab_events_challenge2_a": "遊戲中的每隻動物在被點擊時都要消失，一兩秒後又再次出現！",
@@ -3253,20 +3253,20 @@
         },
         "courseB_playlab_events_challenge2_2018": {
           "courseB_playlab_events_challenge2_a": "遊戲中的每隻動物在被點擊時都要消失，一兩秒後又再次出現！",
-          "courseB_playlab_events_challenge2_b": "使用其他的事件積木來讓其他動物消失！\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "當您點擊動物時，使用額外的指令來播放音效或獲取積分！\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "使用其他的事件類型積木來讓其他的動物消失！\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "改編一下！\n\n讓某些動物得到的分數比其他的動物還高。\n使用不同的音效。\n改變動物的表情！"
         },
         "courseB_playlab_events_challenge2_2019": {
           "courseB_playlab_events_challenge2_a": "遊戲中的每隻動物在被點擊時都要消失，一兩秒後又再次出現！",
-          "courseB_playlab_events_challenge2_b": "使用其他的事件積木來讓其他動物消失！\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "當您點擊動物時，使用額外的指令來播放音效或獲取積分！\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "使用其他的事件類型積木來讓其他的動物消失！\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "改編一下！\n\n讓某些動物得到的分數比其他的動物還高。\n使用不同的音效。\n改變動物的表情！"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "遊戲中的每隻動物在被點擊時都要消失，一兩秒後又再次出現！",
-          "courseB_playlab_events_challenge2_b": "使用其他的事件積木來讓其他動物消失！\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "當您點擊動物時，使用額外的指令來播放音效或獲取積分！\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "使用其他的事件類型積木來讓其他的動物消失！\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "改編一下！\n\n讓某些動物得到的分數比其他的動物還高。\n使用不同的音效。\n改變動物的表情！"
         },
         "courseB_starWars_prog1": {
@@ -3395,15 +3395,15 @@
         },
         "courseB_starWars_prog8_2018": {
           "courseB_starWars_prog8_a": "沒關係，走過的路可以再走。",
-          "courseB_starWars_prog8_b": "嘗試使用「repeat」積木，看看在裡頭放些程式，會發生什麼。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "試試使用`重複`積木，看看在裡頭放些程式，會發生什麼事。\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "沒關係，走過的路可以再走。",
-          "courseB_starWars_prog8_b": "嘗試使用「repeat」積木，看看在裡頭放些程式，會發生什麼。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "試試使用`重複`積木，看看在裡頭放些程式，會發生什麼事。\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "沒關係，走過的路可以再走。",
-          "courseB_starWars_prog8_b": "嘗試使用「repeat」積木，看看在裡頭放些程式，會發生什麼。\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "試試使用`重複`積木，看看在裡頭放些程式，會發生什麼事。\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
@@ -4492,19 +4492,19 @@
           "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2018": {
-          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2019": {
-          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2020": {
-          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging4": {
@@ -4525,22 +4525,22 @@
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
           "courseC_maze_debugging5_c": "你可以按一下下拉式功能表來改變轉向積木的方向。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
           "courseC_maze_debugging5_c": "你可以按一下下拉式功能表來改變轉向積木的方向。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
           "courseC_maze_debugging5_c": "你可以按一下下拉式功能表來改變轉向積木的方向。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging6": {
           "courseC_maze_debugging6_a": "-   鼠奎特應該做什麼？\n-   鼠奎特做了什麼？\n-   這告訴你什麼？",
@@ -7910,7 +7910,7 @@
           "courseF_artist_for_challenge1_a": "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了 50 像素。",
           "courseF_artist_for_challenge1_b": "畫筆的透明度固定都是 `counter`/2。",
           "courseF_artist_for_challenge1_c": "在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！",
-          "courseF_artist_for_challenge1_d": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)"
+          "courseF_artist_for_challenge1_d": "**解答！**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for_challenge1_2018": {
           "courseF_artist_for_challenge1_a": "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了 50 像素。",
@@ -7940,7 +7940,7 @@
           "courseF_artist_for_challenge2_c": "這個`計數迴圈`是從 5 算到 250，間隔數是 2。 ",
           "courseF_artist_for_challenge2_a": "使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為 255、G（Green，綠）的值為 `counter`、B（Blue，藍）的值為 `255 - counter`。",
           "courseF_artist_for_challenge2_b": "這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。",
-          "courseF_artist_for_challenge2_d": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)"
+          "courseF_artist_for_challenge2_d": "**解答！**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_artist_for_challenge2_2019": {
           "courseF_artist_for_challenge2_c": "這個`計數迴圈`是從 5 算到 250，間隔數是 2。 ",
@@ -8474,7 +8474,7 @@
           "courseF_bee_for_challenge2_a": "看看此移動選項：\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "試著使用 2 個`計數`迴圈：一個用來往上爬然後採集花蜜，另一個則是往下爬然後釀造蜂蜜。",
           "courseF_bee_for_challenge2_c": "注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。\n\n其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。",
-          "courseF_bee_for_challenge2_d": "**解決方案：**\n\n![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)"
+          "courseF_bee_for_challenge2_d": "**解答！**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_bee_for_challenge2_2018": {
           "courseF_bee_for_challenge2_a": "看看此移動選項：\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
@@ -8770,6 +8770,1175 @@
         "outbreak7": {
           "whenclicked": "## 疫苗\n\n當你點擊怪物時，你可以模擬給它們接種疫苗。要做到這一點，使用帶這個事件的“更改服裝”塊：\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "感覺被難住了？你總是可以通過點擊下面的“版本歷史”重置你的代碼，然後選擇“重新開始”。"
+        },
+        "CourseF_outbreak1": {
+          "step1": "使用這些塊來創建你的精靈圖：\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\n這個塊位於工具箱的**精靈圖**類別中。",
+          "step2": "用這個塊改變精靈圖的大小：<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>。\n\n它可以在工具箱的**操作**類別中找到。",
+          "step3": "用這個使所有精靈圖開始漫步：<xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>。\n\n這個塊可以在工具箱的**操作**類別中找到。"
+        },
+        "CourseF_outbreak2": {
+          "hint1": "點擊事件塊上的“+”按鈕。用裡面找到的“主題”塊填充“更改服裝”塊中的空位。\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "要給怪物戴口罩，請使用帶“被點擊時”事件的“更改服裝”塊：\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n確保還要拖入小型的紅色“被點擊”塊！",
+          "hint2": "這一級別的新代碼看起來應該像這樣：\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## 尋找額外的挑戰？\n\n你還可以讓怪物移動得更快或更慢。\n\n1.  在此塊<xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>點擊“編輯” \n2.  增大或減小此塊中的數字： \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\n為了讓怪物移動得更慢，選擇一個十進位數字字，比如“0.5”或“0.25”。為了讓它們移動得更快，請選擇任何大於1的數字。"
+        },
+        "CourseF_outbreak6": {
+          "hint2": "確保將其他“操作”塊移動到“如果有機會”塊的內部：\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "你需要再添加3個“接觸時”事件來檢查健康精靈圖和受感染精靈圖之間所有可能的“接觸”組合。\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## 疫苗\n\n當你點擊怪物時，你可以模擬給它們接種疫苗。要做到這一點，使用帶這個事件的“更改服裝”塊：\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "感覺被難住了？你總是可以通過點擊下面的“版本歷史”重置你的代碼，然後選擇“重新開始”。"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "不知道怎麼畫嗎？先將程式積木添加到 <xml><block type=\"when_run\"/></xml> 積木中，看看會發生什麼事。",
+          "courseA_artist_loops2_b": "使用這個積木 <xml><block type=\"simple_move_right\"/></xml> 來過關。"
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "在程式中，用手指慢慢追蹤程式碼運行的過程，來查看錯誤的地方。",
+          "courseA_artist_loops3_b": "你會想要用一個像這樣的程式積木，來通過這個關卡。\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
+          "courseA_artist_loops4_b": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml>\n\n程式積木，所以試試將它放在 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> 迴圈裡。"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "試著用你學到的重複積木來完成這個關卡！",
+          "courseA_artist_loops5_b": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
+          "courseA_artist_loops5_c": "因為你只能用一個 <xml><block type=\"simple_move_right\"/></xml> 程式積木，所以試著將它放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n迴圈裡。"
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "不清楚如何創造出一座山？嘗試使用不同的積木，看看每個積木有什麼樣的作用。",
+          "courseA_artist_loops6_b": "你將會需要兩個不同方向的程式積木，來通過這一關。"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。",
+          "courseA_artist_loops7_b": "首先為一個波浪編寫程式，然後重複繪製另外兩個波浪。",
+          "courseA_artist_loops7_c": "記得你可以放多於一塊程式積木在 <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> 迴圈裡。"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "嘗試「運行」代碼來查看已經組合的積木有什麼效果。",
+          "courseA_artist_loops8_b": "你會如何運用已經寫好給你的代碼，來編寫迴圈呢？",
+          "courseA_artist_loops8_c": "它做了什麼？\\\n它應該做什麼？\\\n這告訴你什麼？\\\\"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "在已經寫好的代碼中，添加另一個積木來繪製剩下的樓梯。",
+          "courseA_artist_loops9_b": "你應該把程式積木放在 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n迴圈裡。",
+          "courseA_artist_loops9_c": "如果你不知道要把迴圈放在哪個位置，試試看一步一步地編寫你的程式，並且留意它的規律。"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "像這樣的程式積木：<xml>  <block type=\"simple_move_up_left\"/></xml> 可以讓小藝術家斜著移動！",
+          "courseA_artist_loops_challenge2_b": "當你完成一個帳篷時，向上`跳躍`兩次可以到下一個！",
+          "courseA_artist_loops_challenge2_c": "你的所有積木都必須位於迴圈內才能通過此關。"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "向東移動兩次來得到寶物，會是一個簡單的解決方法。"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseA_collector_loops2_b": "當你已經到達寶石的位置，記得用這個積木來將它撿起來。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "試著使用一個 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 迴圈!",
+          "courseA_collector_loops3_b": "記得在一個  <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>  迴圈裡，你可以加入多個程式積木。"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
+          "courseA_collector_loops4_b": "不要忘了 Laurel 完成 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 個迴圈後，需要再向下走，來收集寶藏！"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "如果你不能馬上找到答案，可以試著透過白紙找到你需要哪些箭頭，並且找出規律。",
+          "courseA_collector_loops5_b": "嘗試將問題分為兩部分，先往旁邊移動然後再向下移動。",
+          "courseA_collector_loops5_c": "你需要從 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈開始，讓 Laurel 向西移動並收集寶石。"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。",
+          "courseA_collector_loops6_b": "最短的解決方案會使用 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，一個接在另一個下面。"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "如果你不知道接下來會發生什麼，請試著執行程式來看看 Laurel 最後會到哪兒。"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "如果你在關卡遇到困難，請試著將動作寫在紙上並且尋找規律。",
+          "courseA_collector_loops8_b": "試著將這關分解成 3 個獨立的問題，並且為每個問題來編寫迴圈。",
+          "courseA_collector_loops8_c": "記住，你可以一次編寫一段代碼，然後按「運行」，觀察結果來找出還需要哪些積木。"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "如果你不知道把迴圈放在哪裡，試著一步一步地編寫程式並且留意重複出現的規律。",
+          "courseA_collector_loops9_b": "嘗試將 2 個 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 迴圈，放入放入另一個更大的迴圈中，來縮短代碼！"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "如果出錯了，可以試試修改每個迴圈裡的數值。",
+          "courseA_collector_loops_challenge1_b": "如果你的指令只需要執行一次，就不需要使用到迴圈。",
+          "courseA_collector_loops_challenge1_c": "右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？",
+          "courseA_collector_loops_challenge1_d": "一開始的程式不會收集到最後 2 個寶石。嘗試在最後增加以下程式積木：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "試試用這條路徑來解決問題。",
+          "courseA_collector_loops_challenge2kp_a": "你能用迴圈過關嗎？"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "\"當你到達玉米地之後，就用這個積木來摘玉米！\n\n<xml><block type=\"harvester_corn\"/></xml>\""
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "你的程式碼將會有 **四個** `往西移動`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n程式積木和 **四個** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> 程式積木. ",
+          "courseA_harvester_loops2_b": "如果還是有困難，可以試著把步驟說出來。"
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "\"用這樣的`重複`積木來幫助你！\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>\"",
+          "courseA_harvester_loops3_b": "要讓程式碼重複, 把一個`repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "儘管按`執行`看看會發生什麼事！",
+          "courseA_harvester_loops4_b": "那裡有幾顆玉米？你的程式碼重複了多少次?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。",
+          "courseA_harvester_loops5_b": "你最終的程式碼將有**一個**`重複`<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> 迴圈，**一個**`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> 積木，以及**一個**`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> 積木。",
+          "courseA_harvester_loops5_c": "從這條路來摘取所有玉米！"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "你需要一個`重複`<xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> 迴圈接著另一個迴圈。",
+          "courseA_harvester_loops5a_b": "一個迴圈將重複`移動 - 南`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>，另一個迴圈將重複`移動 - 東`<xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "沿著這條路徑移動一個方向，然後再移動另一個方向。"
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "點擊`運行`然後看結果如何！",
+          "courseA_harvester_loops5b_b": "你的迴圈是否重複了正確的次數？",
+          "courseA_harvester_loops5b_c": "移動一步，然後就照這個路徑走。"
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "如果被卡住，請嘗試在紙上寫下步驟並尋找重複的規律。",
+          "courseA_harvester_loops6_b": "這是你應該走的路徑，這樣能所有的玉米都摘下來。"
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "你需要兩個`重複`<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> 積木接在一起！",
+          "courseA_harvester_loops7_b": "使用 2 個迴圈照著這個路徑通過。"
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "把這個關卡分成三個不同的部分。一個部分到第一個拐角，一個部分到第二個拐角，再有一個部分是到最後。",
+          "courseA_harvester_loops9_b": "儘管在每個部分之後執行你的程式碼，看看會發生什麼事情！",
+          "courseA_harvester_loops9_c": "從這條路來摘取所有玉米！"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "你卡住了嗎？試著先把步驟寫在一張紙上。",
+          "courseA_harvester_seq10_b": "你需要`移動 - 東`，然後`移動 - 北`。這樣做兩遍。不要忘了把所有的玉米都收集起來！",
+          "courseA_harvester_seq10_c": "試試照著這個路徑來摘取所有玉米。"
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "\"收割機到了玉米地之後，就用這個積木來摘玉米。\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>\""
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "\"當收割機發現玉米時，用這個積木來摘取玉米！\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>\"",
+          "courseA_harvester_seq1_b": "\"收割機需要向東移動三次才能到達玉米。使用此積木：\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>\""
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "不要忘了用 <xml><block type=\"harvester_corn\"/></xml> 去摘玉米！",
+          "courseA_harvester_seq2_b": "嘗試在紙上寫下步驟來過關！"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "\"你記得使用這個積木嗎？\n\n<xml><block type=\"harvester_corn\"/></xml>\"",
+          "courseA_harvester_seq3_b": "大聲的唸出每個步驟，看看這樣能不能幫你找到答案。"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "收割機和玉米之間有多少個空格？你的工作空間裡已經有多少積木了？",
+          "courseA_harvester_seq4_b": "\"你需要 5 個`移動 - 東`積木和一個`收集玉米`積木：\n\n<xml><block type=\"harvester_corn\"/></xml>\""
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "是哪個積木害農夫走錯路？",
+          "courseA_harvester_seq5_b": "你必須移除一個積木。",
+          "courseA_harvester_seq5_c": "\"把這個積木扔進垃圾桶！\n\n<xml><block type=\"maze_moveNorth\"/></xml>\""
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "如果你卡住了，試著把步驟說出來。它可以幫助你找出正確的道路。"
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "嘗試分 2 部分來解決關卡，一個在拐角前，一個在拐角後。",
+          "courseA_harvester_seq7_b": "遇到困難了嗎？這是收割機應該走的路。"
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "最後的程式碼應該有**4**個移動積木和**2**個收集積木。"
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "執行幾次程式碼，看看會有什麼結果。收割機停在哪裡？",
+          "courseA_harvester_seq9_b": "不要忘了把玉米都摘下來！你需要**3**個收集玉米積木。",
+          "courseA_harvester_seq9_c": "你應該按照這個路徑才能拿到所有玉米。"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "如果遇到麻煩，請嘗試將步驟記在紙上。",
+          "courseA_maze_seq10_b": "你需要向 3 個不同方向移動才能過關。"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "如果遇到麻煩，請嘗試將步驟記在紙上。",
+          "courseA_maze_seq10_b": "你需要往 3 種方向移動，才能過關。"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "如果你不太清楚程式積木執行的過程，請用手指畫出小鳥移動到豬豬的路徑。",
+          "courseA_maze_seq13_b": "不要害怕犯錯！嘗試添加積木並執行程式來看看會發生什麼事。",
+          "courseA_maze_seq13_c": "這些 <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n 程式積木將會幫助移動更靠近豬，"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "如果你不知道怎麼讓小鳥移動，可以確認積木是不是被放在 <xml>\n  <block type=\"when_run\"/>\n</xml> 的底下",
+          "courseA_maze_seq1_b": "這隻小鳥需要往西移動三次才能到小豬的位置。用這個積木：\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "嘗試在紙上寫下步驟來過關！",
+          "2": "\"你需要用這個積木來完成：\n\n<xml><block type=\"maze_moveSouth\"/></xml>\""
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "嘗試在紙上寫下步驟來過關！",
+          "courseA_maze_seq5_b": "你會需要使用到 2 個不同方向的積木。"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "大聲的唸出每個步驟，看看這樣能不能幫你找到答案。"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "最後的程式應該要有 3 個移動積木。",
+          "courseA_maze_seq6_b": "如果卡住了，請試試看分成兩個部分來解決關卡，一個在轉角前，一個在轉角後。"
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "你需要添加 1 個積木才能讓小鳥移動到豬豬的位置。",
+          "courseA_maze_seq7_b": "如果你不知道該怎麼辦，請嘗試在紙上畫出關卡，然後用手指找出移動的方式。"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "如果卡住了，請嘗試在紙上繪製圖像，以確定小鳥應該如何移動。"
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "有 2 個方法可以完成這個關卡！"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "試著用你的手指頭點出要移動的空格數（你站的那一格不要算！）"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "尋找能讓狗狗說話的積木。",
+          "courseA_playLab_events2_b": "這是完成這關所需要的程式積木：\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "將此積木 <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> 拖曳出來，並且放到 <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> 的底部",
+          "courseA_playLab_events3_b": "記住，編寫好程式之後，就使用左方向鍵讓小狗移到該標誌。當標誌變為綠色時，你就過關了！"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "這是讓小狗向右移動所需要使用的事件積木：\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "這是完成此關所需要的程式：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "以下是你需要用來上下移動小狗的事件積木：\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\n和\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "你知道嗎？點擊積木，你就可以修改方向鍵囉！\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "這個事件積木 <xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>：當你用滑鼠點擊一下小狗 (Jorge)，他就會開始做些什麼。",
+          "courseA_playLab_events6_b": "這是用來更改背景的積木：\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "這是用來播放隨機聲音的積木：\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "使用此積木來控制角色碰撞時發生的情況。\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "當你點擊Robin的時候，你就可以看到企鵝的樣子了！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "當你點擊企鵝 (Waddles) ，讓幽靈 (Boo) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "當你點擊幽靈 (Boo) 時，讓毛茸茸的怪獸 (Jayden) 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "當你點擊怪物時，讓 Spiff 機器人表演！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "最後，當你點擊 Spiff 時，讓巫師 Wendel 出現！\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "你可以讓一隻鳥唱歌。\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "你可以讓機器人發出嗶嗶聲.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "你可以製造一個正在咆哮的憤怒怪物。\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "如果 Scrat 沒有按你的想法去做，請務必將兩個積木都完全按一下，然後再次按一下「執行」。",
+          "2": "不要害怕犯錯！嘗試一下，如果不成功，再試試其他的東西！"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "你的程式看起來要像這樣：\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "如果你想要重複程式 4 次以上，你可以修改積木上的數字。",
+          "courseB_artist_loops2_b": "先嘗試運行程式，看看小藝術家畫的結果如何。"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "記住要用`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，這樣程式碼會更精簡！",
+          "courseB_artist_loops3_b": "小藝術家將向南移動來畫這條線。"
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "跳過積木允許您向前移動，但不畫線。",
+          "courseB_artist_loops4_b": "您將需要添加一個積木到重複迴圈中來通過本關。",
+          "courseB_artist_loops4_c": "別忘記更改迴圈重複次數。"
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "拖出一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈，然後把其他的積木放在裡面。你需要重複幾次？"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "嘗試將動作寫在一張紙上，尋找模型。"
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "這個挑戰用了 4 個迴圈，一個接著一個！",
+          "courseB_artist_loops7_b": "請注意每個迴圈都將形成一個不同方向的樓梯模型。\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "迴圈應該是這樣做的：\n\n-   迴圈1\n\n-   右\n\n-   下\n\n-   迴圈2\n\n-   右\n\n-   上\n\n-   迴圈3\n\n-   左\n\n-   上\n\n-   迴圈4\n\n-   左\n\n-   下"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "您需要重複這個模型幾次來製作梯子？",
+          "courseB_artist_loops8_b": "嘗試運行所給的程式，看看結果如何。"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "記住跳躍積木可以移動但不畫線。",
+          "courseB_artist_loops9_b": "您將需要使用W積木來通過本關。",
+          "courseB_artist_loops9_c": "不知道該把這個迴圈放在哪裡？嘗試一步一步地編寫程式，並且尋找規律。"
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "像這樣的積木：<xml>  <block type=\"simple_move_up_right\"/></xml> 能讓你的角色斜向移動！",
+          "courseB_artist_loops_challenge1_b": "當您完成一個骰子時，「jump」（跳躍）到下一個！",
+          "courseB_artist_loops_challenge1_c": "您需要「move」或「jump」過某些相同的線條兩次。"
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "您已經知道畫一個X的程式。您所要做的只是重複畫X並「jump」到下一地點。",
+          "courseB_artist_loops_challenge2_b": "你可以利用 `跳躍` 積木移動到其它的空格。"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "如果您不知道該把「repeat」迴圈放在哪裡，就逐步寫出程式，尋找模型。",
+          "courseB_collector_loops10_b": "嘗試將動作寫在一張紙上，尋找模型。"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "當您站在上面的時候，<xml><block type=\"collector_collect_simplified\"/></xml>積木可用於撿起寶藏。"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "在你可以蒐集寶物之前，你必須要移動",
+          "courseB_collector_loops2_b": "當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "嘗試使用 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml>積木來收集您的寶藏。",
+          "courseB_collector_prog3_b": "不要忘記在一個重複迴圈裡您可以放置多個積木。"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "嘗試使用步驟鍵，想一想是哪裡出錯了。",
+          "courseB_collector_loops4_b": "要更改 Laurel 的移動距離，請更改迴圈執行的次數。",
+          "courseB_collector_loops4_c": "Laurel 需要在完成`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈後走下去並收集寶藏！"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "用一個以上的迴圈來完成。",
+          "courseB_collector_loops5_b": "嘗試運行幾次程式，看看會發生什麼。"
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "不知道哪裡開始出錯？使用「步驟」鍵，逐個積木運行您的整個程式。",
+          "courseB_collector_loops6_b": "您可以透過點擊「3」選擇不同的數字來改變重複迴圈運行的次數。",
+          "courseB_collector_loops6_c": "你將要使用 3 個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> 迴圈來解決這個關卡。",
+          "courseB_collector_loops6_d": "如果您感到困惑，嘗試將這個難題分成3塊來解決。"
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "如果您在本關遇到困難，嘗試將它畫在紙上幫助思考。",
+          "courseB_collector_loops7_b": "您將需要3個重複迴圈來通過本關，別忘了最後的額外寶藏！"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "如果您不知道該把重複迴圈放在哪裡，就逐步寫出程式，尋找模型。"
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "看起來太難嗎？把它分成3個小問題，會讓它看起來更簡單。",
+          "courseB_collector_loops9_b": "您將需要3個重複迴圈，一個接一個地來解決這個問題。"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "從重複以下指令開始：\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n        <statement name=\"DO\">\n\n              <block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n                <title name=\"TIMES\">?</title>\n                <statement name=\"DO\">\n                </statement></block></next></statement></block></xml>",
+          "courseB_collector_loops_challenge1_d": "試試這個！\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveWest\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "如果出現問題，試著把錯誤找出來，不要輕言放棄！",
+          "courseB_collector_loops_challenge2a_b": "查看此選項來解決迷宮問題。你發現重複的規律了嗎？",
+          "courseB_collector_loops_challenge2a_c": "要收集所有寶藏，你要麼需要在迴圈中添加兩個 <xml> <block type=\"collector_collect\"/></xml> 積木，要麼將其放在它自身的`重複`積木中。"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "小心碎冰！Scrat 會掉進水裡！",
+          "courseB_iceage_loops10_b": "試著把步驟大聲說出來或寫在紙上。你看出什麼規律了嗎？",
+          "courseB_iceage_loops10_c": "這是個蠻長的關卡！照著這個路徑走。"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "小心碎冰！Scrat 會掉進去的！",
+          "courseB_iceage_loops1_b": "\"你必須使用這個積木：\n\n<xml><block type=\"maze_moveEast\"/></xml>\""
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "把這個關卡分成兩部分，一個在拐角前，一個在拐角後。",
+          "courseB_iceage_loops2_b": "如果你卡關了，試試邊觀察邊念出每個步驟。",
+          "courseB_iceage_loops2_c": "按著這個路徑讓鼠奎特拿到橡樹果實。"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "使用這個新的程式積木！\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "要讓程式碼重複運行, 把一個`重複` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "試著寫下 Scrat 取得橡果的步驟。看出規律了嗎?",
+          "courseB_iceage_loops4_b": "儘管執行你的程式碼，看看會發生什麼情況！",
+          "courseB_iceage_loops4_c": "這是鼠奎特應該走的路徑。"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "你的最終程式碼將有**三個**移動積木。",
+          "courseB_iceage_loops6_b": "你只需要添加 **1 個**迴圈！",
+          "courseB_iceage_loops6_c": "你的最後一條路徑應該會像這樣。"
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "如果卡住了，請嘗試在紙上寫下步驟。看出規律了嗎?",
+          "courseB_iceage_loops7_b": "這是 Scrat 去拿到橡果的路徑。"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "這些移動積木對嗎？你還能改變什麼？",
+          "courseB_iceage_loops8_b": "第一個迴圈應該重複**3**次，第二個要重複**5**次，第三個迴圈應該重複**4**次，最後一個迴圈重複**4**次。",
+          "courseB_iceage_loops8_c": "用迴圈的方式讓鼠奎特按照路徑移動。"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "遇到困難了嗎？請試著把這個關卡分拆成小塊。儘管在編寫程式碼的過程中一邊執行你的關卡！",
+          "courseB_iceage_loops9_b": "最後的程式應該要有 **4個**迴圈。",
+          "courseB_iceage_loops9_c": "鼠奎特應該按照這個路徑才能拿到所有橡樹果實。"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "拖曳三個往 <xml><block type=\"when_run\"/></xml> 移動的積木到 `當執行時` 積木的下面，讓鼠奎特可以拿到橡樹果實！",
+          "courseB_maze_seq1_b": "將其中的三個 <xml><block type=\"maze_moveSouth\"/></xml> 箭頭拖出，並將其連到 <xml><block type=\"when_run\"/></xml> 積木上，讓 Scrat 得到橡果。"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "試著每次新增一條指令，直到你獲得橡果為止。",
+          "courseB_maze_seq4_b": "你會向東移動來過這一關。"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "如果你卡關了，試試在紙上寫出路徑。",
+          "courseB_maze_seq5_b": "有 2 個方法可以完成這個關卡！",
+          "courseB_maze_seq5_c": "不確定要怎麼拿到橡樹果實？試試這個路徑！"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "您的最終程式應該擁有3個移動積木。",
+          "courseB_maze_seq6_b": "若您被卡在某一步，嘗試分兩部分來通關，一部分是左右，另一部分是上下。",
+          "courseB_maze_seq5_c": "有 2 個方法可以完成這個關卡。",
+          "courseB_maze_seq5_d": "不確定要怎麼拿到橡樹果實？試試這個路徑！"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "添加 1 個積木讓鼠奎特拿到橡樹果實。",
+          "courseB_maze_seq7_b": "嘗試運行給出的程式，看看最終結果。",
+          "courseB_maze_seq7_c": "拿不到橡樹果實？試試這個路徑！"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "嘗試一次添加一個積木，直至您通過本關。",
+          "courseB_maze_seq8_b": "有 2 個方法可以完成這個關卡！",
+          "courseB_maze_seq8_c": "不知道要怎麼走？試試這個路徑！"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "嘗試先將所有步驟寫在一張紙上。",
+          "courseB_maze_seq9_b": "一次一個積木來創建您的程式，並在創建過程中進行測試。",
+          "courseB_maze_seq9_c": "有 2 個方法可以完成這個關卡。",
+          "courseB_maze_seq9_d": "卡住了？試試這條路吧！"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "這次最短的路徑不管用囉！",
+          "courseB_maze_seq_challenge1_b": "試試先向西邊移動。"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "這個關卡不需要添加或是移除任何的積木。",
+          "courseB_maze_seq_challenge2_b": "重新排列積木，走樓梯狀路線。"
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "這是能讓黛西說話的積木：\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "這是您用於添加事件的積木：\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "這是您用於切換黛西情緒的積木：\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "這是控制左邊箭頭的事件：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "這是讓騎士向左移動的積木。\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "這是控制右邊箭頭的事件積木：\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "這是讓騎士跑開的積木。\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "您將需要這些事件積木：\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "使用綠色的「when **\\_ arrow pressed」（當 \\_** 箭頭被按下時）事件積木上的下拉箭頭來選擇不同的方向。\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "碰到所有的旗幟以過關！"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "這是您將需要的事件積木：\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "這是您播放音效所需要的積木。\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "這是您讓騎士隱身所需要的積木：\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "使用`▼`讓其他的動物往下移動\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "利用這個程式積木改變動物的速度\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "當比賽結束時，大家會說些什麼？讓牠們說些話吧：\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "遊戲中的每隻動物在被點擊時都要消失，一兩秒後又再次出現！",
+          "courseB_playlab_events_challenge2_b": "使用其他的事件類型積木來讓其他的動物消失！\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "改編一下！\n\n讓某些動物得到的分數比其他的動物還高。\n使用不同的音效。\n改變動物的表情！"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "嘗試一次添加一個積木，然後點擊「運行」看看發生什麼。",
+          "courseB_starWars_prog1_b": "您需要向東移動來通過本關。您需要移動多遠呢？\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "將這個問題分成兩部分。收集一堆廢金屬，然後想辦法收集另一堆廢金屬。"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "你需要移動三步才能過關。",
+          "courseB_starWars_prog3_b": "一次創建一塊程式。運行程式， 想想接下來要去哪裡。"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "一次創建一塊程式。運行程式， 想想接下來要去哪裡。",
+          "courseB_starWars_prog4_b": "嘗試使用「repeat」（重複）積木建立較短程式。\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "這個模式是不是有點像上一關？",
+          "courseB_starWars_prog5_b": "當BB-8從廢金屬上滾過去時，他會將其收集起來。",
+          "courseB_starWars_prog5_c": "用您的手指追蹤這個模型。在您移動的時候，數一數有多少塊金屬。",
+          "courseB_starWars_prog5_da": "如果您使用與階梯關卡相同的解決方案，看看會發生什麼：\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "這個模型只是一個階梯，每個方向有2次移動！",
+          "courseB_starWars_prog6_b": "嘗試使用「repeat」（重複）積木建立較短程式。\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "這個模式是不是有點像上一關？",
+          "courseB_starWars_prog7_b": "當BB-8從廢金屬上滾過去時，他會將其收集起來。",
+          "courseB_starWars_prog7_c": "嘗試在這一關畫出巨大的階梯模型。它是否覆蓋了所有的廢金屬？"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "沒關係，走過的路可以再走。",
+          "courseB_starWars_prog8_b": "試試使用`重複`積木，看看在裡頭放些程式，會發生什麼事。\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
+          "courseB_starWars_prog9_b": "有很多方法可以完成這個關卡。",
+          "courseB_starWars_prog9_c": "用一個`重複`<xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> 迴圈在這裡有幫助嗎？"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "可用`設定角色 1 為 ??? image`積木將角色添加到舞臺。",
+          "courseE_playLab_scaffold1_b": "將`設定角色`積木放在`當運行時`的下方，讓你的角色出現在程式的開頭。",
+          "courseE_playLab_scaffold1_c": "使用`設定 ??? 背景`來為你的場景選擇背景。"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_a": "點擊`當按__鍵時`事件的下拉選單，來更改積木控制的方向。",
+          "courseE_playLab_scaffold1_b": "你應該有四個`按方向鍵時`的事件積木，每個積木都會有一個方向。",
+          "courseE_playLab_scaffold1_c": "完成後，你應該要能夠使用方向鍵移動主角！"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "使用`得分`增加一分，用`減分`減去一分。"
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "將這個積木連接到`運行時`積木：\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "將這兩個積木連接到`當運行時`積木：\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "使用第二個`角色__說出`積木的下拉選單，可以更改說話的角色。"
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "你只需將小狗向右移動約 25 個像素即可解決此關卡。",
+          "courseC_PlayLab_events3_b": "工具箱中是不是有一個看起來可以移動角色的積木？",
+          "courseC_PlayLab_events3_c": "將這個積木連接到`運行時`積木：\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "點擊「運行」按鈕時，小狗需要向右移動 **100** 像素才能移動到小貓那裡。",
+          "courseC_PlayLab_events4_a": "你需要在`當角色碰到`事件中添加一個`角色__說出`積木，來解決此關卡。"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "你需要點擊`角色說`積木中的下拉式功能表，來找到「有什麼新鮮事？」",
+          "courseC_PlayLab_events5_b": "在運行程式時點擊章魚，來檢查其是否有效！"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "每個綠色的`當按鍵被按下時`積木下面都應該有一個動作。",
+          "courseC_PlayLab_events6_b": "使用`角色 1移動`積木上的下拉選單可以更改企鵝移動的方向。",
+          "courseC_PlayLab_events6_c": "完成後，你應該能夠使用電腦上的方向鍵來移動企鵝！"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "在`重複無限次`迴圈中使用「將角色 2 向上移動 400 像素」積木和「將角色 2 向下移動 400 像素」積木來解決此關卡。",
+          "courseC_PlayLab_events7_b": "`重複無限次`迴圈不需要連接到任何其他事件積木；它會自行運行。"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "你需要將積木連接到`當角色碰到`積木上，來確保正確執行此動作。",
+          "courseC_PlayLab_events8_b": "工具箱中的`角色說出`和`播放音效`積木可以為你提供幫助！"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "`得分`積木將幫助你通過這個關卡。",
+          "courseC_PlayLab_events9_b": "確保新的`當角色碰到`積木顯示角色 **1** 和角色 **3**。",
+          "courseC_PlayLab_events9_c": "在工作區中可以同時有多個`當角色碰到`事件，因此你不必移除第一個事件！"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "使用`設定背景`積木和`設定角色速度為____`積木來通過這個關卡。",
+          "courseC_PlayLab_eventsA_b": "你需要專門將`當運行時`事件積木拖到工作區中才能完成此關卡。"
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "使用方向鍵移動企鵝。你不需要寫任何程式碼就可以完成這個關卡。"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "\"_需要點子嗎？_\n\n**誰在那裡？\\*\\***誰在那裡？\\*\\* 令角色和隨機圖像一起出現，這樣就沒人知道接下來要出現的是誰。\n\n\\<img src= \"\"<https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\">\" style=\"\"width: 200px\"\">\"",
+          "idea2": "\"_需要點子嗎？_\n\n**進行冒險** - 更改背景，然後讓角色談論他們現在的位置。\n\n\\<img src= \"\"<https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\">\" style=\"\"width: 200px\"\">\"",
+          "idea3": "_需要點子嗎？_**彈珠** - 使用方向鍵來移動一個角色（使用`當按向上鍵時`、`當按向下鍵時`積木），然後在他跟畫面上的其他角色碰撞時播放隨機聲音。"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。",
+          "courseC_PlayLab_events_challenge_b": "試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。",
+          "courseC_PlayLab_events_challenge_c": "你可能還想嘗試更改不同角色的速度，來使遊戲更輕鬆或更具有挑戰性！\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "這是您將需要的第一個積木：\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "使用這個積木畫貼紙！\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "\"這是你需要的第一個積木：\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\n你可以選擇左邊或右邊，可以選擇任意的度數。\""
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "在你的迴圈裡面，你要跳到中間，然後轉身，然後畫一個貼紙。",
+          "courseC_artist_loops2a_b": "點擊重複迴圈頂端的數字，來改變它重複的次數。"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "你只需要在你的迴圈中新增一個積木，放在第一個貼紙之後。",
+          "courseC_artist_loops3a_b": "\"你的程式應該是這樣的！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\n你可以使用你喜歡的任何貼紙！\""
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "使用這個積木向前跳：\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\n別忘了改變跳的距離！",
+          "courseC_artist_loops4a_b": "\"你的程式應該是這樣的！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\""
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "使用這個積木設定您的線條模式：\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "如要製作像上面一樣的設計，您需要讓向後移動與向前移動的距離相同。",
+          "courseC_artist_loops5b_c": "\"你的程式應該是這樣的！\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\""
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "要做出類似上面的設計，請在每個貼紙之間向前跳躍不超過 75 個像素的距離。"
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "一個圓是 360 度。將轉彎次數乘以重複次數。是不是等於 360 ？檢查給出的旋轉，看看能不能得出正確的結果！"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。",
+          "courseC_artist_prog2_b": "要如何才能轉彎？試試`轉向-右方 90 度`積木。"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "要畫出這個窗戶，只需繪製一個邊長為 100 像素的正方形即可。\n\n-   移動 - 向前\n-   轉向\n-   移動 - 向前\n-   轉向\n-   移動 - 向前\n-   轉向\n-   移動 - 向前",
+          "courseC_artist_prog3_b": "想要簡化程式嗎？嘗試在這關使用重複積木。"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "要完成火箭，只需在頂部繪製一個三角形即可！",
+          "courseC_artist_prog4_b": "你可以點擊`轉向`積木的下拉選單，並且查看需要的角度！",
+          "courseC_artist_prog4_c": "要繪製三角形，你需要：\n\n-   移動 - 向前\n-   轉向 - 左邊 120 度\n-   移動 - 向前\n-   轉向 - 左邊 120 度\n-   移動 - 向前"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "將滑塊的速度拖到底，直到可以逐行運行代碼來查看問題出在哪裡。",
+          "courseC_artist_prog5_b": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。",
+          "courseC_artist_prog5_c": "你可以使用積木的下拉式功能表來改變它們的作用！",
+          "courseC_artist_prog5_d": "每次的轉向應該是向右轉 90 度。"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "小藝術家已經朝向正確的方向，準備可以繪製第一條線了。",
+          "courseC_artist_prog6_b": "菱形實際上只是向旁邊微微傾倒的正方形。",
+          "courseC_artist_prog6_c": "因為這個鑽石形也是一個正方形， 請確定每次的轉彎為 90 度。"
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "每個角度會是 45 度或 90 度。",
+          "courseC_artist_prog7_b": "第一步有順利執行嗎？\\\n那麼第二步呢？\\\n哪裡出錯了？",
+          "courseC_artist_prog7_c": "你可以點擊轉向積木中的下拉選單，並且選擇你需要的角度數值！",
+          "courseC_artist_prog7_d": "你將要：\n\n-   移動 - 向前\n-   轉向 - 右邊 45 度\n-   移動 - 向前\n-   轉向 - 右邊 90 度\n-   移動 - 向前\n-   轉向 - 右邊 45 度",
+          "courseC_artist_prog7_e": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "這個矩形的寬是 200 像素，高是 100 像素。"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "繪製第一條線後，在繪製第二條線之前向左轉。",
+          "courseC_artist_prog_challenge2_b": "繪製第二條線後，在繪製第三條線之前向右轉。"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "使用迴圈，這樣你就不會`使用過多`的積木！"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "當你已經到達寶物的地點時，記得用 <xml><block type=\"collector_collect\"/></xml> 積木來取得它。",
+          "courseC_collector_prog1_b": "最簡單的解決辦法是向前走一步，然後收集寶藏。"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "你可以使用四個 <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> 積木，也可以使用 <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> 積木來縮短程式。",
+          "courseC_collector_prog2_b": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "該程式將僅運行連接到 <xml><block type=\"when_run\"/></xml> 積木的積木。",
+          "courseC_collector_prog3_b": "嘗試使用「分步」按鈕逐步運行你的程式碼。你發現程式碼哪裡出問題了嗎？",
+          "courseC_collector_prog3_c": "如果你在解決這個關卡時遇到困難，請嘗試將動作寫在紙上。"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "如果卡住了，請嘗試在紙上寫下步驟。",
+          "courseC_collector_prog4_b": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。",
+          "courseC_collector_prog4_c": "試試用這個路徑。"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "「第一步有用嗎？\n第二步有用嗎？\n哪裡出問題了？」",
+          "courseC_collector_prog5_b": "如果你修復了一個錯誤，但程式仍然無法運行，請按上述步驟來找到更多錯誤。",
+          "courseC_collector_prog5_c": "如果卡住了，請嘗試在紙上寫下步驟。",
+          "courseC_collector_prog5_d": "照著這個路徑就能得到寶藏。"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "你能找到問題出在哪裡嗎？\n\n請嘗試使用「分步」按鈕逐行運行程式碼來查找錯誤。",
+          "courseC_collector_prog6_b": "卡關？試試用這個路徑收集寶藏。"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "工作區中已經有很多很棒的程式碼。要通過此關卡，無需移除任何一個積木。",
+          "courseC_collector_prog7_b": "沒看到讓冒險家朝正確方向前進的積木嗎？從工具箱中拖一個出來吧。",
+          "courseC_collector_prog7_c": "不知道哪條路線可以收集所有寶藏嗎？試試這條路！"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "你可以多次使用`收集`積木來收集額外的寶藏。"
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "你可以在每個空格使用多個`收集`積木。",
+          "courseC_collector_prog_challenge1_b": "找不到路？試試用這個路徑過關！"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "你需要添加的積木稱為`速度設為`。",
+          "courseC_flappy_events2_b": "將`速度設為`積木連接到`當運行時`積木來解決此關卡。"
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "如果某些部分不能正常運作，請確保你的積木已連接到工作區中的正確事件上。"
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "將`結束遊戲`積木連接到`當撞到障礙物時`上即可解決此關卡。"
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "你將需要使用`得分`積木來過關。"
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "嘗試將`翅膀拍速設為____`積木連接到`當點擊時`事件上。"
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "你可以使用`場景設為`積木來更改背景。"
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "嘗試在`穿過障礙`事件下連接第二個`設定場景`積木。"
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "將`得分設為 0`積木連接到`當碰到障礙物時`事件來過關。"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "移動到南瓜上時，請使用 <xml><block type=\"harvester_pumpkin\"/></xml> 來收集。",
+          "courseC_harvester_loops1_b": "你可以將迴圈配合 <xml><block type=\"harvester_pumpkin\"/></xml> 積木使用，從一個正方形中拾取多個南瓜。"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "如果被卡住，請嘗試在紙上寫下步驟並尋找重複的規律。",
+          "courseC_harvester_loops2_b": "你必須在後面加上`重複`積木。",
+          "courseC_harvester_loops2_c": "一個迴圈將重複執行`移動-向前`命令，而另一個迴圈將重複`收集南瓜`命令。"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。",
+          "courseC_harvester_loops3_b": "對於第一個南瓜，你可以使用與上一個關卡非常相似的程式碼。之後你需要轉向哪個方向？",
+          "courseC_harvester_loops3_c": "如果你想簡化程式碼，實際上可以將一個迴圈放在另一個迴圈中！這叫做「巢狀迴圈」。"
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "使用新的`收集玉米`積木收集玉米。",
+          "courseC_harvester_loops4_b": "你可以在程式碼中使用多個重複迴圈，有的迴圈負責摘玉米，有的迴圈負責摘南瓜。",
+          "courseC_harvester_loops4_c": "如果你想簡化程式碼，實際上可以將一個迴圈放在另一個迴圈中！這叫做「巢狀迴圈」。"
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "如果遇到困難，請嘗試畫出整個程式，然後尋找重複的規律。",
+          "courseC_harvester_loops5_b": "這個階梯看起來是不是與其他關卡相似？移動方式應該是類似的，不過要記得沿途收集農作物。"
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "請記住，你可以將多個積木放在一個重複迴圈中。",
+          "courseC_harvester_loops6_b": "別忘了在一排玉米的盡頭轉彎。"
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "你可以用兩種方法通過這個關卡，要麼先拿玉米，要麼先拿南瓜。",
+          "courseC_harvester_loops7_b": "你將需要多個`重複`迴圈來通過此關。"
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "這個階梯看起來是不是與上一個關卡相似？移動方式應該是類似的，不過要記得沿途收集農作物。",
+          "courseC_harvester_loops8_b": "如果你想進一步簡化程式碼，則實際上可以將一個`重複`迴圈放入另一個迴圈中！這叫做「巢狀迴圈」。"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "不用迴圈是不可能達成目標的！",
+          "courseC_harvester_loops_challenge1_b": "你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。",
+          "courseC_harvester_loops_challenge1_c": "要收集一開始的四個玉米，最好的方式是在一個`重複`積木裡頭使用另一個`重複`積木。你可以用這個模式來解決後面的關卡！\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "解決此關的一種方法看起來像鋸齒形。另一種方式看起來像螺旋形！對於這樣的關卡，有很多不同的解決方案。繼續思考！",
+          "courseC_harvester_loops_challenge2_b": "你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。",
+          "courseC_harvester_loops_challenge2_c": "這種鋸齒形規律可以重複兩次，僅用 20 個積木就能通過關卡！\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "只需 18 個積木就可以編出這個螺旋圖案！\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   執行第一步之後，所有指令都正確嗎？\n-   那麼第二步之後呢？\n-   哪裡出問題了？",
+          "courseC_maze_debugging1_b": "你需要添加 1 個積木來完成此關卡。"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "工作區中有許多有用的程式積木。不要一口氣全部移除它們，或者是重新開始喔！",
+          "courseC_maze_debugging2_b": "-   執行第一步之後，所有指令都正確嗎？\n-   那麼第二步之後呢？\n-   哪裡出問題了？",
+          "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "使用「步進」按鈕一次執行一個指令。這可能會讓你更容易找到哪裡有錯！",
+          "courseC_maze_debugging4_b": "有個轉向積木害鼠奎特走錯方向了，你能找到是哪一個嗎？"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
+          "courseC_maze_debugging5_c": "你可以按一下下拉式功能表來改變轉向積木的方向。",
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   鼠奎特應該做什麼？\n-   鼠奎特做了什麼？\n-   這告訴你什麼？",
+          "courseC_maze_debugging6_b": "找到並修復了第一個錯誤之後，請再次執行調試過程來查找第二個錯誤。\n\n重複該過程，直到程式成功運行！"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   執行第一步之後，是否都順利？\n-   那麼第二步呢？\n-   哪裡出問題了？",
+          "courseC_maze_debugging7_b": "別忘了使用「步進」按鈕，一次執行一個指令喔！",
+          "courseC_maze_debugging7_c": "找到並修復了第一個錯誤之後，請務必再次使用調試過程來查找下一個錯誤。\n\n重複調試過程，直到程式成功運行！"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "左邊還是右邊？你決定就好！",
+          "courseC_maze_debugging_challenge1_b": "鼠奎特走的路線是個四邊形！所以它每次都要以同樣的方式轉彎。",
+          "courseC_maze_debugging_challenge1_c": "如果您被卡在某一步，可隨時重新開始，找到新的路！"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "如果你卡關了，試著調整一下程式，看看是哪裡出錯了！",
+          "courseC_maze_debugging_challenge2_c": "您可以透過前進和轉彎4次來沿著兩條不同的路走。如果您找到一個方法來使用迴圈，您也許能找到更多的路！\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "將此路徑看作兩個不同的部分。每個人都有可以重複的規律。",
+          "courseC_maze_loops_challenge1_b": "你還記得如何使用迴圈重複階梯式規律嗎？"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "請檢查這些積木是不是連接在一起，確定好後再點擊「運行」。"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "要使用 <xml><block type=\"maze_moveForward\"/></xml> 積木，請將其拖出工具箱，然後將其放到 <xml><block type=\"when_run\"/></xml> 積木上。",
+          "courseC_maze_programming2_b": "請檢查這些積木是不是連接在一起，確定好後再點擊「運行」。"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "先嘗試運行程式，來查看錯誤地方。",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們原本的位置。"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "請記住，當你轉彎時，你是從像素鳥的角度轉彎的。如果你向右轉，那像素鳥將指向下方。",
+          "courseC_maze_programming4_b": "要沿著這條路徑走：\n\n-   前進\n-   轉到一個方向\n-   前進\n-   轉到另一個方向\n-   前進"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "嘗試使用「步驟」鍵逐行運行您的程式。您能想出接下來您需要做什麼嗎？",
+          "courseC_maze_programming5_b": "像素鳥需要轉一圈才能完成這個關卡。你能想出來怎麼辦嗎？",
+          "courseC_maze_programming5_c": "解決方法是用兩個`移動-向前`積木，轉一次彎，然後再用兩個`移動-向前`積木。"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "有 2 個方法可以完成這個關卡！",
+          "courseC_maze_programming6_b": "用手指畫出從小鳥到豬的路徑，你採取了哪些步驟？",
+          "courseC_maze_programming6_c": "請記住，由於小鳥一開始面向牆壁，因此必須先轉彎。",
+          "courseC_maze_programming6_d": "卡關了？試試走這條路！"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "別忘了使用「步進」按鈕一步一步地查找錯誤。",
+          "courseC_maze_programming7_b": "如果你在解決這個關卡時遇到困難，請嘗試將動作寫在紙上。"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "記住，如果卡住了，可以使用「分步」按鈕逐行檢查程式碼。",
+          "courseC_maze_programming8_b": "不要害怕犯錯！即使您覺得還不能通關，嘗試添加積木並運行程式看看會發生什麼。"
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "找到這隻豬有很多方法。先用手指找出路徑，然後編寫程式！"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "\\_「如果你要讓我後退，請格外小心，務必讓我轉到正確的方向！」",
+          "courseC_maze_programming_challenge2_b": "最短的解決方案僅使用了 5 個積木，但用了下面這個積木：\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "這種規律看起來像不像是一大堆階梯式步驟嗎？你試試看能不能用之前關卡中學到的知識來完成所有的任務。",
+          "courseC_starWars_loops10_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。",
+          "courseC_starWars_loops10_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "當 BB-8 滾過廢金屬時，他會自動將其撿起。",
+          "courseC_starWars_loops1_b": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。",
+          "courseC_starWars_loops1_c": "你將需要`移動-向前`五次來通過這個關卡。"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "要重複程式碼，請拖出一個`重複`迴圈，然後將所需的積木放入其中。"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "要重複程式碼，請拖出一個`重複`迴圈，然後將所需的積木放入其中。"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "點擊轉彎積木上「左」旁邊的小箭頭，即可將其更改為「右」。",
+          "courseC_starWars_loops4_a": "用 2 個`重複`積木。",
+          "courseC_starWars_loops4_b": "每個`重複`迴圈內部都只有一個命令：`移動-向前`。"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "點擊轉彎積木上「左」旁邊的小箭頭，即可將其更改為「右」。",
+          "courseC_starWars_loops4_a": "用 2 個`重複`積木。",
+          "courseC_starWars_loops4_b": "每個`重複`迴圈內部都只有一個命令：`移動-向前`。"
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "最好的解決方案是使用一個`移動 - 向前`，然後是一個轉彎，然後是一個迴圈。"
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "要向下移動，必須先轉彎然後再向前移動。",
+          "courseC_starWars_loops5_a": "最好的解決方案是先轉彎，再往前移動一次，再轉彎，然後重複。"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "嘗試將所有移動記錄到紙上，然後尋找規律。",
+          "courseC_starWars_loops6_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。"
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "嘗試將所有移動記錄到紙上，然後尋找規律。",
+          "courseC_starWars_loops6_b": "如果要使用更少的程式碼，可以將一個`重複`迴圈放在另一個迴圈中！\\\n這叫做**巢狀迴圈**。"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
+          "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "這種規律看起來比實際更難！從簡單的階梯式步驟開始吧。能覆蓋到所有廢金屬嗎？",
+          "courseC_starWars_loops7_b": "如果你在通過這個關卡時有疑問，請嘗試將所有動作寫在紙上並尋找規律。",
+          "courseC_starWars_loops7_c": "不要害怕犯錯！運行程式碼看看會發生什麼，即使您還沒有解決這個難題。"
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
+          "course_starWars_loops8_b": "將此問題的前半部分視為階梯問題。你之前是如何解決的？",
+          "course_starWars_loops8_c": "看一下這條路徑。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "嘗試把問題分成幾個小部分來解決。慢慢來。多嘗試幾次也沒問題！",
+          "course_starWars_loops8_b": "將此問題的前半部分視為階梯問題。你之前是如何解決的？",
+          "course_starWars_loops8_c": "看一下這條路徑。\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "記得在一個重複迴圈裡你可以用多塊程式積木。",
+          "course_starWars_loops9_c": "你無需左轉即可解決此關卡。你所有的轉彎都可以向右轉。\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "在嘗試獲取花蜜之前，你將需要使用`如果`積木來檢查雲朵下方是否有一朵花。"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "不知道怎麼開始？看看這個影片！",
+          "courseD_bee_conditionals2_a": "有時會有花，有時沒有。如果您希望您的程式碼在兩種情況下都運行，請確保使用「if」語句。",
+          "courseD_bee_conditionals2_b": "你可以使用`重複`迴圈或`重複 判斷 有沒有路`來穿越這個迷宮。",
+          "courseD_bee_conditionals2_c": "你不必檢查蜂窩，在雲的底下，要嘛就是花，要嘛就是空的。",
+          "courseD_bee_conditionals2_hintVid2": "觀看影片以幫你完成關卡。"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "不知道怎麼開始？看看這個影片！",
+          "courseD_bee_conditionals3_a": "確保使用「if」語句檢查每個空間是否有花。",
+          "courseD_bee_conditionals3_b": "你可以使用`重複`迴圈或`重複 判斷`迴圈來讓蜜蜂一直向前移動。使用你喜歡的方式就可以！",
+          "courseD_bee_conditionals3_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。",
+          "courseD_bee_conditionals3_hintVid2": "觀看影片以幫你完成關卡。"
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "不知道怎麼開始？看看這個影片！",
+          "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
+          "courseD_bee_conditionals4_b": "在迴圈中使用「if」語句檢查每個空間的花蜜。",
+          "courseD_bee_conditionals4_c": "使用 <xml><block type=\"maze_untilBlocked\"/></xml> 積木，你應該向前移動並檢查花朵。如果有花朵，蜜蜂應該怎麼做？",
+          "courseD_bee_conditionals4_hintVid2": "觀看影片以幫你完成關卡。"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "不知道怎麼開始？看看這個影片！",
+          "courseD_bee_conditionals5_a": "將矩形路徑的每一邊都看作一條路徑。設定一個巢狀迴圈，外部用一個`重複`積木，內部有一個`重複 判斷 有沒有路`迴圈。如果蜜蜂在每一條有花的邊上都要停下來，那麼蜜蜂需要停留多少條路徑？",
+          "courseD_bee_conditionals5_c": "矩形的三個邊上都有花，因此程式需要`重複 3 次`。在每次重複中，只要`重複 判斷 有沒有路`說前面有路，蜜蜂就會沿著這條路徑繼續前進。要繼續沿著這條道路前進，蜜蜂會需要使用`移動-向前`。在路上，蜜蜂需要檢查花朵。`如果有花朵`，蜜蜂就應該`獲取花蜜`。",
+          "courseD_bee_conditionals5_b": "在`重複 判斷 有沒有路`積木內，你需要向前移動並檢查花朵。如何檢查有沒有花？如果有一朵花要怎麼辦呢？",
+          "courseD_bee_conditionals5_hintVid2": "觀看影片以幫你完成關卡。"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "無法操作？嘗試使用「分步」鍵，逐行看看會發生什麼。",
+          "courseD_bee_nestedLoops1_b": "嘗試先為正方形的一邊編寫程式。您可以在這個程式中使用迴圈，採集到所有的花蜜嗎？",
+          "courseD_bee_nestedLoops1_c": "記住，當移動到一個帶花的方格上時，使用採集花蜜積木。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "無法操作？嘗試使用「分步」鍵，逐行看看會發生什麼。",
+          "courseD_bee_nestedLoops1_c": "記住，當移動到一個帶花的方格上時，使用採集花蜜積木。"
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "若想通過本關，您需要將一個重複迴圈放進另一個迴圈裡。",
+          "courseD_bee_nestedLoops2_b": "不知道該把迴圈放在哪裡？嘗試將程式逐步寫在紙上，並尋找規律。",
+          "courseD_bee_nestedLoops2_c": "記住在一個迴圈裡您可以放置多個積木。"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "您需要在另一個其中也有`移動-向前`積木的重複積木裡裡重複`採集花蜜`。",
+          "courseD_bee_nestedLoops7_b": "您需要使用三個可用的重複積木來通過本關。"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。",
+          "courseE_artist_functions1_b": "畫出眼鏡時可以讓你的兩條線重疊沒關係。",
+          "courseE_artist_functions1_c": "要簡化程式，請嘗試使用`重複`積木來繪製眼鏡的方形鏡框。"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "編寫的函式不應包含整個程式，而是只要包含繪製邊長為 100 像素正方形的動作。",
+          "courseD_artist_functions2_c": "在`當運行時`積木下使用綠色的`繪製正方形`積木來「呼叫」你的函式。不這麼做的話，在函式中的程式積木將無法執行。\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "你的程式應該如下：\n\n-   使用函式\n-   向前移動 100 + 75 像素\n-   使用函式"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "要通過這個關卡，你只需要添加一個重複積木，就可以重複執行以下的積木 8 次。\n\n如果你不記得一開始已經有的積木是什麼，請點擊工作區右上角的「重新開始」。",
+          "courseD_artist_functions3_b": "你的迴圈中應包含所有 3 個一開始的積木。"
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "試著使用函式！",
+          "courseD_artist_functions4_b": "從工具箱中拖出`繪製星星`函式積木來開始製作函式。它應該與上一個關卡的程式相同，因為你現在畫得是一樣的星形圖案。",
+          "courseD_artist_functions4_c": "使用綠色的`畫顆星星`積木在主程式中呼叫了這個函式。別忘了在每顆星星之間要向前跳躍！"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "別放棄！記住你一直在學的東西。",
+          "courseD_artist_functions5_b": "利用函式可以很容易在任何使用呼叫先前儲存的程式，不要只是在裡頭用迴圈！",
+          "courseD_artist_functions5_c": "首先將星星的程式拖曳到`畫顆星星`函式中，然後使用這個函式繪製三顆星星！"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "圖中的圖像是對「set alpha」和「counter」使用計數器繪製的/ 畫筆大小為10 。",
+          "courseF_artist_for10_b": "這個圖形用了一次 61 度轉彎。",
+          "courseF_artist_for10_c": "想知道樣本圖像是如何繪製的嗎？\n\n[blockly block] [0]"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "您能繪製這樣的圖嗎：\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "你的`計數`迴圈會從 15 數到 300，間隔是 15。",
+          "courseF_artist_for6_b": "在此「for」迴圈中放置「move forward」迴圈和「turn」積木。",
+          "courseF_artist_for6_c": "你要修改的是`轉彎`的度數。"
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "在這個關卡中，筆更細。開始之前，您需要將其設定為「1」。",
+          "courseF_artist_for7_b": "請注意，此螺旋圖是右轉而不是左轉！",
+          "courseF_artist_for7_c": "這個關卡的`計數迴圈`是從 15 到 300，間隔數為 2。",
+          "courseF_artist_for7_d": "這個圖案是用轉向 89 度做出來的。"
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "在程式碼中保持其他所有內容不變，只需要改變轉動角度。",
+          "courseF_artist_for8_b": "如果您願意的話，可以為螺旋圖選擇其他顏色！"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "如果將「set alpha」積木放在「for」迴圈中，並使用「counter」變數進行更改，則可以創建這樣的設計。",
+          "courseF_artist_for9_b": "「set alpha」積木可更改顏色的不透明度。數值越小，顏色越透明。"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了 50 像素。",
+          "courseF_artist_for_challenge1_b": "畫筆的透明度固定都是 `counter`/2。",
+          "courseF_artist_for_challenge1_c": "在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！",
+          "courseF_artist_for_challenge1_d": "**解答！**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "這個`計數迴圈`是從 5 算到 250，間隔數是 2。 ",
+          "courseF_artist_for_challenge2_a": "使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為 255、G（Green，綠）的值為 `counter`、B（Blue，藍）的值為 `255 - counter`。",
+          "courseF_artist_for_challenge2_b": "這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。",
+          "courseF_artist_for_challenge2_d": "\\*\\*解決方案：\n\n\\*\\*<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "享受這一關吧！看看可以對您的程式碼做出哪些小變動。",
+          "courseF_artist_variables10_b": "您可以嘗試多種方法，並且可以多次運行您的程式碼。"
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "使用「set length」（設定長度）積木開始編碼。將長度變數設定為 150。",
+          "courseF_artist_variables7_b": "您可以使用「repeat」迴圈來簡化三角形程式碼。",
+          "courseF_artist_variables7_c": "要左轉 120 度才能做出三角形的角。"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "請記住以「set length」積木開始編寫三角形程式碼，並將其設定為150畫素。",
+          "courseF_artist_variables8_c": "確保使用「repeat」迴圈繪製三角形。"
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "對於這個關卡，您只需要更改迴圈重複的次數。"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "您能在需要採取的步驟和需收集的花蜜數量之間找到規律嗎？",
+          "courseF_bee_for10_b": "第一組花共有**14朵花**。要進入第一組，蜜蜂必須嗡嗡作響**7個正方形**（或14個正方形除以2 ）。在下一組中，有幾朵花，蜜蜂要到達那裡必須移動多少個正方形？",
+          "courseF_bee_for10_d": "您需要重複2次，其中1次使用數學積木。"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "在「repeat」迴圈中，您需要使用兩個積木來收集所有的花蜜。"
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "如果您感到困惑，請一次採一朵花的蜜，並經常進行測試。",
+          "courseF_bee_for2_b": "請記住要在每個迴圈之間向前移動，以到達每朵花。"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "使用從1到7以1遞增的「 for」迴圈來解決這個關卡。",
+          "courseF_bee_for4_b": "在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。",
+          "courseF_bee_for4_c": "確保在嵌套的「repeat」迴圈中使用「counter」（計數器）變數以獲得足夠的花蜜！"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "這次，您的「move forward」積木和「get nectar」（採集花蜜）積木將需要位於單獨的「repeat」迴圈中，兩者都在同一個「for」迴圈中。",
+          "courseF_bee_for5_b": "在每個迴圈中使用「counter」變數，從而讓蜜蜂在每朵花之間移動不同的距離。",
+          "courseF_bee_for5_c": "不要害怕犯錯！嘗試添加積木並運行程式，看看會發生什麼，即使您還沒有解決這個關卡。"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "不要忘記在「repeat」迴圈中使用「counter」變數。",
+          "courseF_bee_for6_b": "在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。",
+          "courseF_bee_for6_c": "你的迴圈應該要**從 5 到 1** 計數。"
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "您的「for」迴圈會從 1 數到 7，間隔是 2。",
+          "courseF_bee_for7_b": "在「for」迴圈中，您將需要一個「move forward」命令和一個收集花蜜的迴圈。",
+          "courseF_bee_for7_c": "請記住在「repeat」迴圈中使用「counter」變數。"
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "如果在往上計數，則每次迴圈都會將其增量添加到計數器變數中。\n\n您需要在每個數字上加多少才能得到下一個花蜜？",
+          "courseF_bee_for8_b": "在這個關卡中，您將需要按階梯模式移動才能到達花朵。"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "嘗試使用計數器變數進行一些數學運算。您需要對每朵花的計數器做些什麼，才能使其等於需要採集的花蜜量？",
+          "courseF_bee_for9_c": "如果您想解決關卡，那麼似乎需要在每次迴圈反復開始時轉動蜜蜂。",
+          "courseF_bee_for9_b": "**記住：**如果迴圈在增加，每次重複都會將增量添加到「counter」變數中。"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "看看此移動選項：\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "試著使用 2 個`計數`迴圈：一個用來往上爬然後採集花蜜，另一個則是往下爬然後釀造蜂蜜。",
+          "courseF_bee_for_challenge2_c": "注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。\n\n其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。",
+          "courseF_bee_for_challenge2_d": "**解答！**  \n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "如果小鳥沒有抓到小豬，請務必將兩個積木都完全按一下，然後再次按一下「執行」。",
+          "courseC_maze_programming1_b": "不要害怕犯錯！嘗試一下，如果不成功，再試試其他的東西！"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "每個`當按__鍵時`事件都需要連接一個不同的`移動角色 1`積木來解決此關卡。"
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "你需要在`當角色 1 碰到角色 2`事件下方添加兩個積木。",
+          "iceage_sound_and_points_b": "你需要同時使用`得分`積木和`播放\\_\\_\\_\\_ 聲音\\` 積木來過關。"
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "你只需要添加兩個積木，就可以順利過關。",
+          "iceage_warn_ice_age_b": "將兩個新積木添加到`當運行時`事件下，來讓它們在程式運行時立即執行。"
         }
       }
     }

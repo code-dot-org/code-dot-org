@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class BubbleChoice < DSLDefined
@@ -35,7 +36,7 @@ class BubbleChoice < DSLDefined
 
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       display_name 'level display_name here'
       description 'level description here'
 
@@ -55,7 +56,7 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns a sublevel's position in the parent level. Can be used for generating
-  # a sublevel URL (/s/:script_name/lessons/:stage_pos/levels/:puzzle_pos/sublevel/:sublevel_pos).
+  # a sublevel URL (/s/:script_name/lessons/:lesson_pos/levels/:puzzle_pos/sublevel/:sublevel_pos).
   # @param [Level] sublevel
   # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
   def sublevel_position(sublevel)

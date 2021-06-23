@@ -19,32 +19,62 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class Javalab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
+    validation
     hide_share_and_remix
     is_project_level
     submittable
     encrypted_examples
     csa_view_mode
+    serialized_maze
+    start_direction
   )
 
-  before_save :fix_examples
+  before_save :fix_examples, :parse_maze
+
+  def self.start_directions
+    [['None', nil], ['North', 0], ['East', 1], ['South', 2], ['West', 3]]
+  end
+
+  def self.csa_view_modes
+    [['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
+  end
 
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
         user: params[:user],
         game: Game.javalab,
-        level_num: 'custom',
-        properties: {}
+        level_num: 'custom'
       )
     )
+  end
+
+  def parse_maze
+    if serialized_maze.nil? && csa_view_mode == 'neighborhood'
+      raise ArgumentError.new('neighborhood must have a serialized_maze')
+    end
+    return if serialized_maze.nil?
+    # convert maze into json object and validate each cell has a tileType
+    maze_json = serialized_maze.is_a?(Array) ? serialized_maze.to_json : serialized_maze
+    maze = JSON.parse(maze_json)
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        unless cell.is_a?(Hash) && cell.key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+      end
+    end
+
+    self.serialized_maze = maze
   end
 
   def fix_examples

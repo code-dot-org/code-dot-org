@@ -2,7 +2,7 @@
   "script": {
     "name": "coursec-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,8 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-05-03 23:56:05 UTC",
+    "serialized_at": "2021-06-17 22:31:20 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -1814,8 +1815,7 @@
       "key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
       "position": 8,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
@@ -1961,7 +1961,7 @@
       "key": "12488a0c-dc91-4ea4-bdc7-28e27145f721",
       "position": 7,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "12488a0c-dc91-4ea4-bdc7-28e27145f721",
@@ -2108,7 +2108,7 @@
       "key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
@@ -2216,7 +2216,7 @@
       "key": "8d556f84-689c-4046-bd40-a955e56ef116",
       "position": 7,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "8d556f84-689c-4046-bd40-a955e56ef116",
@@ -2505,7 +2505,7 @@
       "key": "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6",
@@ -2619,7 +2619,7 @@
       "key": "f5cc9272-be27-471b-9cdd-f56920c56a34",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "f5cc9272-be27-471b-9cdd-f56920c56a34",
@@ -2717,7 +2717,7 @@
       "key": "ba2a825d-3cae-456c-bb17-91711afe364a",
       "position": 4,
       "properties": {
-        "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
+        "description": "Some students may discover where to add repeat loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
       },
       "seeding_key": {
         "activity_section.key": "ba2a825d-3cae-456c-bb17-91711afe364a",
@@ -3036,7 +3036,7 @@
       "position": 2,
       "properties": {
         "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
-        "progression_name": "Video: Play Lab"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -3080,7 +3080,7 @@
       "key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "9f2441ae-b524-455b-b43b-8c01d9458d0d",
@@ -3808,7 +3808,7 @@
         "level_keys": [
           "courseC_maze_programming_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3834,7 +3834,7 @@
         "level_keys": [
           "courseC_maze_programming_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4121,7 +4121,7 @@
         "level_keys": [
           "courseC_maze_debugging_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4147,7 +4147,7 @@
         "level_keys": [
           "courseC_maze_debugging_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4512,7 +4512,7 @@
         "level_keys": [
           "courseC_collector_prog_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4538,7 +4538,7 @@
         "level_keys": [
           "courseC_collector_prog_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4825,7 +4825,7 @@
         "level_keys": [
           "courseC_artist_prog_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4851,7 +4851,7 @@
         "level_keys": [
           "courseC_artist_prog_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5268,7 +5268,7 @@
         "level_keys": [
           "courseC_maze_loops_challenge1a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5294,7 +5294,7 @@
         "level_keys": [
           "courseC_collector_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5659,7 +5659,7 @@
         "level_keys": [
           "courseC_harvester_loops_challenge1a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5685,7 +5685,7 @@
         "level_keys": [
           "courseC_harvester_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -6255,15 +6255,15 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
-        "progression": "Video: Play Lab"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
@@ -6271,7 +6271,7 @@
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
       },
       "level_keys": [
-        "courseA_video_events_2021"
+        "courseC_video_events_2021"
       ]
     },
     {
@@ -6595,7 +6595,7 @@
         "level_keys": [
           "courseC_PlayLab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -8134,9 +8134,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseA_video_events_2021",
+        "level.key": "courseC_video_events_2021",
         "script_level.level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
@@ -8757,6 +8757,30 @@
       }
     },
     {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+      "key": "open-ended_programming_levels_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
@@ -9103,6 +9127,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9111,6 +9141,12 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "open-ended_programming_levels_1"
       }
     },
     {

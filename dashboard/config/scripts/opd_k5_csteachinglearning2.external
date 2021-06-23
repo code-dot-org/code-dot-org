@@ -2,9 +2,10 @@ name 'OPD-K5 CSTeachingLearning2'
 skip_dialog true
 markdown <<MARKDOWN
 # Student Practices
-**Total Suggested Time:**
 
-Now let's focus on student practices that help students work in a wide array of contexts.  The following student practices are a core set of practices and skills students develop throughout each course.  These student practices serve as reminders of the high-level skills and mind set we want students to develop.
+Student practices are a core set of practices and skills students develop throughout each course.  These student practices serve as reminders of the high-level skills and mindset we want students to develop in computer science.
+
+<img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" class="level-image" style="display: block; width:50%">
 
 ## Problem Solving
 * Use a structured problem solving-process to help solve new problems.
@@ -35,7 +36,9 @@ Now let's focus on student practices that help students work in a wide array of 
 
 
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+
 
 
     
