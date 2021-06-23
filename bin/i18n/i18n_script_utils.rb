@@ -44,16 +44,18 @@ class I18nScriptUtils
   #      is only managed programmatically, we avoid wrapping to make the git
   #      diffs smaller and change detection easier.
   #
-  #   2. Make every line uses the Double-quote format so it is consistent between
+  #   2. Make every line uses the single-quote format so it is consistent between
   #      syncs and also the values will be on one line. If we don't tell Psych to
-  #      use Double-quotes, then it might use the Block format which is multi-line.
+  #      use single-quotes, then it might use the Block format which is multi-line.
+  #      Additionally, Crowdin misinterprets escaped double quotes, so we must use
+  #      single quotes.
   def self.to_crowdin_yaml(data)
     ast = Psych.parse_stream(Psych.dump(data))
 
     ast.grep(Psych::Nodes::Scalar).each do |node|
       node.plain = false
       node.quoted = true
-      node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED
+      node.style = Psych::Nodes::Scalar::SINGLE_QUOTED
     end
 
     return ast.yaml(nil, {line_width: -1})

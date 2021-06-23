@@ -260,6 +260,7 @@ module AWS
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
         behavior[:PathPattern] = path if path
+        behavior[:RealtimeLogConfigArn] = {'Fn::ImportValue': 'AccessLogs-Config'}
       end
     end
 

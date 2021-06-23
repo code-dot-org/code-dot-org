@@ -10,8 +10,9 @@ module Services
     module Resources
       extend ActiveSupport::Concern
       class_methods do
-        def get_script_resources_pathname(script)
+        def get_script_resources_pathname(script, as_url = false)
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          filename = CGI.escape(filename) if as_url
           script_overview_pathname = get_script_overview_pathname(script)
           return nil unless script_overview_pathname
           subdirectory = File.dirname(script_overview_pathname)
@@ -19,7 +20,7 @@ module Services
         end
 
         def get_script_resources_url(script)
-          pathname = get_script_resources_pathname(script)
+          pathname = get_script_resources_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
         end
