@@ -5,7 +5,7 @@ import ProjectUpdatedAt from './ProjectUpdatedAt';
 import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
-class UnitName extends React.Component {
+class ScriptName extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
@@ -44,7 +44,7 @@ class UnitName extends React.Component {
     );
   }
 
-  renderUnitLink() {
+  renderScriptLink() {
     let className = 'header_text';
     if (this.props.smallText) {
       className += ' small_font_on_tablet';
@@ -55,7 +55,7 @@ class UnitName extends React.Component {
         className={className}
         style={
           this.props.showProjectUpdatedAt
-            ? {...styles.unitLinkWithUpdatedAt}
+            ? {...styles.scriptLinkWithUpdatedAt}
             : {}
         }
         title={this.props.name}
@@ -84,7 +84,7 @@ class UnitName extends React.Component {
             ref="scriptName"
             style={styles.headerInner}
           >
-            {this.renderUnitLink()}
+            {this.renderScriptLink()}
           </div>
           <div className="vignette" style={vignetteStyle} />
         </div>
@@ -100,7 +100,7 @@ class UnitName extends React.Component {
         >
           <div style={styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
-              {this.renderUnitLink()}
+              {this.renderScriptLink()}
               <ProjectUpdatedAt />
             </div>
           </div>
@@ -120,7 +120,7 @@ const styles = {
   headerInner: {
     position: 'absolute'
   },
-  unitLinkWithUpdatedAt: {
+  scriptLinkWithUpdatedAt: {
     display: 'block'
   },
   outerContainer: {
@@ -134,4 +134,4 @@ const styles = {
 
 export default connect(state => ({
   showProjectUpdatedAt: state.header.showProjectUpdatedAt
-}))(UnitName);
+}))(ScriptName);

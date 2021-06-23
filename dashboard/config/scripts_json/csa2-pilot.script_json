@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 18:52:21 UTC",
+    "serialized_at": "2021-06-23 15:48:03 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -3011,7 +3011,8 @@
       "key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students write mutator methods for each instance variable in the `Dessert` class, then call the mutator to update `quantity`. Have students proceed to Level 2 to complete the Check for Understanding."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students write mutator methods for each instance variable in the `Dessert` class, then call the mutator to update `quantity` on Level 2. Have students proceed to Level 3 to complete the Check for Understanding.",
+        "progression_name": "Dessert Class Mutator Methods"
       },
       "seeding_key": {
         "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7",
@@ -3092,7 +3093,8 @@
       "key": "449677f0-ce86-4691-a799-d6b74d88a8f3",
       "position": 13,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 3 on Code Studio. Students translate the pseudocode to solve the previous problem, then call the mutator method to test their code.\n* When students run into bugs accessing the `private` instance variables of the superclass, move onto the discussion."
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 4 on Code Studio. Students translate the pseudocode to solve the previous problem, then call the mutator method on Level 5 to test their code.\n* When students run into bugs accessing the `private` instance variables of the superclass, move onto the discussion.",
+        "progression_name": "Mutator Methods for the Subclass"
       },
       "seeding_key": {
         "activity_section.key": "449677f0-ce86-4691-a799-d6b74d88a8f3",
@@ -3114,7 +3116,8 @@
       "key": "c2960b76-e154-4724-8827-05389e6659b2",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students resume Level 3 on Code Studio. Students translate the pseudocode to solve the previous problem, then call the mutator method to test their code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students resume Level 4 on Code Studio. Students translate the pseudocode to solve the previous problem, then call the mutator method on Level 5 to test their code.",
+        "progression_name": "Mutator Methods for the Subclass"
       },
       "seeding_key": {
         "activity_section.key": "c2960b76-e154-4724-8827-05389e6659b2",
@@ -3136,7 +3139,8 @@
       "key": "1ff9e2c6-8dad-4e69-a0d6-15b6466369af",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students add mutators for the subclasses that they implemented (`Cookie`, `Pie`, `Donut`, or `Cupcake`) as necessary. For each private instance variable that they do not add a mutator, they leave a comment next to the variable explaining why. One of the mutators must call a superclass’s accessor and call a superclass’s mutator."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students add mutators for the subclasses that they implemented (`Cookie`, `Pie`, `Donut`, or `Cupcake`) as necessary. For each private instance variable that they do not add a mutator, they leave a comment next to the variable explaining why. One of the mutators must call a superclass’s accessor and call a superclass’s mutator.",
+        "progression_name": "Mutator Methods for the Subclass"
       },
       "seeding_key": {
         "activity_section.key": "1ff9e2c6-8dad-4e69-a0d6-15b6466369af",
@@ -3201,7 +3205,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9e5c7a63-bf9d-409c-86fe-7d386953534c",
@@ -3288,6 +3293,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run code printing a `Dessert` object to check their prediction.",
+        "progression_name": "Printing an Object",
         "tips": [
           {
             "type": "teachingTip",
@@ -3335,7 +3341,8 @@
       "key": "b61f62fe-047e-41aa-9e3e-4c55b6cb1c60",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students write a `toString()` method to override the `Object`’s `toString()` and refactor `printInfo()` to call the `toString()` using this."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students write a `toString()` method to override the `Object`’s `toString()` and refactor `printInfo()` to call the `toString()` using this.",
+        "progression_name": "Overriding toString()"
       },
       "seeding_key": {
         "activity_section.key": "b61f62fe-047e-41aa-9e3e-4c55b6cb1c60",
@@ -3368,7 +3375,8 @@
       "key": "56b8d466-e565-4294-b5c8-f7a27d194c10",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students refactor `toString()` and `printInfo()` to include formatting. Have students proceed to Level 4 to complete the Check for Understanding."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students refactor `toString()` and `printInfo()` to include formatting. Have students proceed to Level 4 to complete the Check for Understanding.",
+        "progression_name": "Formatting toString()"
       },
       "seeding_key": {
         "activity_section.key": "56b8d466-e565-4294-b5c8-f7a27d194c10",
@@ -3391,7 +3399,8 @@
       "key": "24dcb6af-022e-48d0-837b-f8400598aaa9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write a `toString()` method for `FoodTruck`, which calls the `toString()` of the `Dessert`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write a `toString()` method for `FoodTruck`, which calls the `toString()` of the `Dessert`.",
+        "progression_name": "FoodTruck toString()"
       },
       "seeding_key": {
         "activity_section.key": "24dcb6af-022e-48d0-837b-f8400598aaa9",
@@ -3444,7 +3453,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a269e78f-f90e-4ede-b954-2bc75b240ac2",
@@ -3583,6 +3593,7 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to edit the template to be specific to the class they planned with their UML diagram. ",
+        "progression_name": "Store Management Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -3667,6 +3678,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their program for their Neighborhood Store Management Project. Remind students to commit their code as they write their subclass regularly.",
+        "progression_name": "Store Management Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -3814,6 +3826,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 4 of their Project Planning Guide to review their list. Direct them to Code Studio to finish developing both their superclass and subclasses. If students finish early, direct them to work on their `main` method.",
+        "progression_name": "Store Management Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -4814,6 +4827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1"
+        ],
         "progression": "Writing a FoodTruck Constructor"
       },
       "named_level": false,
@@ -4837,6 +4853,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2"
+        ],
         "progression": "Extending the Dessert Class"
       },
       "named_level": false,
@@ -4860,6 +4879,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3"
+        ],
         "progression": "Extending the Dessert Class"
       },
       "named_level": false,
@@ -4883,6 +4905,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4"
+        ],
         "progression": "Extending the Dessert Class"
       },
       "named_level": false,
@@ -4906,6 +4931,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5"
+        ],
         "progression": "Creating Dessert Subclasses"
       },
       "named_level": false,
@@ -4929,6 +4957,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6"
+        ],
         "progression": "Creating Dessert Subclasses"
       },
       "named_level": false,
@@ -4952,6 +4983,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4975,6 +5009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1"
+        ],
         "progression": "Dessert Class Accessor Methods"
       },
       "named_level": false,
@@ -4998,6 +5035,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2"
+        ],
         "progression": "Printing Dessert Information"
       },
       "named_level": false,
@@ -5021,6 +5061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3"
+        ],
         "progression": "Printing Dessert Information"
       },
       "named_level": false,
@@ -5044,6 +5087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4"
+        ],
         "progression": "Accessor Methods for the Subclasses"
       },
       "named_level": false,
@@ -5067,6 +5113,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5"
+        ],
         "progression": "The Owner's Inventory"
       },
       "named_level": false,
@@ -5090,6 +5139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5105,6 +5157,397 @@
       },
       "level_keys": [
         "CSA U2L8-L6"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Dessert Class Mutator Methods"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      },
+      "level_keys": [
+        "CSA U2L9-L1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Dessert Class Mutator Methods"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      },
+      "level_keys": [
+        "CSA U2L9-L2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Dessert Class Mutator Methods"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      },
+      "level_keys": [
+        "CSA U2L9-L3"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mutator Methods for the Subclass"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "449677f0-ce86-4691-a799-d6b74d88a8f3"
+      },
+      "level_keys": [
+        "CSA U2L9-L4"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mutator Methods for the Subclass"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "449677f0-ce86-4691-a799-d6b74d88a8f3"
+      },
+      "level_keys": [
+        "CSA U2L9-L5"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mutator Methods for the Subclass"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "1ff9e2c6-8dad-4e69-a0d6-15b6466369af"
+      },
+      "level_keys": [
+        "CSA U2L9-L6"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L9-L7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9e5c7a63-bf9d-409c-86fe-7d386953534c"
+      },
+      "level_keys": [
+        "CSA U2L9-L7"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing an Object"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "dbae7474-45ea-45e5-81cf-993643b49786"
+      },
+      "level_keys": [
+        "CSA U2L10-L1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overriding toString()"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "b61f62fe-047e-41aa-9e3e-4c55b6cb1c60"
+      },
+      "level_keys": [
+        "CSA U2L10-L2"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Formatting toString()"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "56b8d466-e565-4294-b5c8-f7a27d194c10"
+      },
+      "level_keys": [
+        "CSA U2L10-L3"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Formatting toString()"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "56b8d466-e565-4294-b5c8-f7a27d194c10"
+      },
+      "level_keys": [
+        "CSA U2L10-L4"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "FoodTruck toString()"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "24dcb6af-022e-48d0-837b-f8400598aaa9"
+      },
+      "level_keys": [
+        "CSA U2L10-L5"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "a269e78f-f90e-4ede-b954-2bc75b240ac2"
+      },
+      "level_keys": [
+        "CSA U2L10-L6"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L10-L7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "a269e78f-f90e-4ede-b954-2bc75b240ac2"
+      },
+      "level_keys": [
+        "CSA U2L10-L7"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Store Management Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L11-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3eb34c63-bf11-4bea-8c43-183c490b0ae4"
+      },
+      "level_keys": [
+        "CSA U2L11-L1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Store Management Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "d9d92cd1-58aa-487b-9e83-d3bf235b1ba5"
+      },
+      "level_keys": [
+        "CSA U2L12-L1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Store Management Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4d42d735-613f-4246-a70e-6f48dfe3b108"
+      },
+      "level_keys": [
+        "CSA U2L13-L1"
       ]
     }
   ],
@@ -5587,6 +6030,210 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot",
         "activity_section.key": "480e77de-3805-4c17-bb1b-68507eff5a95"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L1",
+        "script_level.level_keys": [
+          "CSA U2L9-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L2",
+        "script_level.level_keys": [
+          "CSA U2L9-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L3",
+        "script_level.level_keys": [
+          "CSA U2L9-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9f671ba7-6dbd-48af-a310-3eee5d5cdec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L4",
+        "script_level.level_keys": [
+          "CSA U2L9-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "449677f0-ce86-4691-a799-d6b74d88a8f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L5",
+        "script_level.level_keys": [
+          "CSA U2L9-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "449677f0-ce86-4691-a799-d6b74d88a8f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L6",
+        "script_level.level_keys": [
+          "CSA U2L9-L6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "1ff9e2c6-8dad-4e69-a0d6-15b6466369af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L9-L7",
+        "script_level.level_keys": [
+          "CSA U2L9-L7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "9e5c7a63-bf9d-409c-86fe-7d386953534c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L1",
+        "script_level.level_keys": [
+          "CSA U2L10-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "dbae7474-45ea-45e5-81cf-993643b49786"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L2",
+        "script_level.level_keys": [
+          "CSA U2L10-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "b61f62fe-047e-41aa-9e3e-4c55b6cb1c60"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L3",
+        "script_level.level_keys": [
+          "CSA U2L10-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "56b8d466-e565-4294-b5c8-f7a27d194c10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L4",
+        "script_level.level_keys": [
+          "CSA U2L10-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "56b8d466-e565-4294-b5c8-f7a27d194c10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L5",
+        "script_level.level_keys": [
+          "CSA U2L10-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "24dcb6af-022e-48d0-837b-f8400598aaa9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L6",
+        "script_level.level_keys": [
+          "CSA U2L10-L6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "a269e78f-f90e-4ede-b954-2bc75b240ac2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L10-L7",
+        "script_level.level_keys": [
+          "CSA U2L10-L7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "a269e78f-f90e-4ede-b954-2bc75b240ac2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L11-L1",
+        "script_level.level_keys": [
+          "CSA U2L11-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3eb34c63-bf11-4bea-8c43-183c490b0ae4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L12-L1",
+        "script_level.level_keys": [
+          "CSA U2L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "d9d92cd1-58aa-487b-9e83-d3bf235b1ba5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L13-L1",
+        "script_level.level_keys": [
+          "CSA U2L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "4d42d735-613f-4246-a70e-6f48dfe3b108"
       }
     }
   ],
