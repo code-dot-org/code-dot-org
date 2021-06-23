@@ -422,7 +422,8 @@ coursea-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: coursea-2017
   family_name: coursea
 courseb-2017:
@@ -440,7 +441,8 @@ courseb-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: courseb-2017
   family_name: courseb
 coursec-2017:
@@ -458,7 +460,8 @@ coursec-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: coursec-2017
   family_name: coursec
 coursed-2017:
@@ -476,7 +479,8 @@ coursed-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: coursed-2017
   family_name: coursed
 coursee-2017:
@@ -494,7 +498,8 @@ coursee-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: coursee-2017
   family_name: coursee
 coursef-2017:
@@ -512,7 +517,8 @@ coursef-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/coursef/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: coursef-2017
   family_name: coursef
 express-2017:
@@ -530,7 +536,8 @@ express-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab","artist"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: express-2017
   family_name: express
 pre-express-2017:
@@ -548,6 +555,7 @@ pre-express-2017:
   hidden: false
   user_id: 
   login_required: false
-  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}","version_year":"2017","is_stable":true,"supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","ja-JP","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
+  published_state: stable
+  properties: '{"hideable_stages":true,"project_widget_visible":true,"project_widget_types":["playlab_k1","artist_k1"],"curriculum_path":"https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}","version_year":"2017","supported_locales":["es-ES","es-MX","fr-FR","hi-IN","it-IT","ja-JP","pt-BR","sk-SK","zh-CN"],"curriculum_umbrella":"CSF","tts":true,"hideable_lessons":true,"lesson_extras_available":true}'
   new_name: pre-express-2017
   family_name: pre-express

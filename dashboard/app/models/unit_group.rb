@@ -54,7 +54,6 @@ class UnitGroup < ApplicationRecord
     has_numbered_units
     family_name
     version_year
-    is_stable
     visible
     pilot_experiment
     announcements
@@ -332,21 +331,6 @@ class UnitGroup < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  # No longer used except in migration. Should be removed July 2021 after people have had time to migrate
-  def get_published_state
-    if pilot?
-      SharedConstants::PUBLISHED_STATE.pilot
-    elsif visible
-      if is_stable
-        SharedConstants::PUBLISHED_STATE.stable
-      else
-        SharedConstants::PUBLISHED_STATE.preview
-      end
-    else
-      SharedConstants::PUBLISHED_STATE.beta
-    end
-  end
-
   def summarize(user = nil)
     {
       name: name,
@@ -535,7 +519,7 @@ class UnitGroup < ApplicationRecord
       # select only courses in the same course family.
       where("properties -> '$.family_name' = ?", family_name).
       # select only stable courses.
-      where("properties -> '$.is_stable'").
+      where(published_state: SharedConstants::PUBLISHED_STATE.stable).
       # order by version year.
       order("properties -> '$.version_year' DESC")&.
       first
