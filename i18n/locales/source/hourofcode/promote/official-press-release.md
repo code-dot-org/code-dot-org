@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+'title': 'Hour of Code Press Release for Elected Officials'
 ---
 
 {{ signup_button }}

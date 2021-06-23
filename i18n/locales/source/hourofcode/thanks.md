@@ -1,5 +1,5 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
+'title': 'Thanks for signing up to host an Hour of Code!'
 ---
 
 # Thanks for signing up to host an Hour of Code!

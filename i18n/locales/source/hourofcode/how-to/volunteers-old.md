@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+'title': 'How-to guide for Hour of Code volunteers'
 ---
 
 {{ signup_button }}

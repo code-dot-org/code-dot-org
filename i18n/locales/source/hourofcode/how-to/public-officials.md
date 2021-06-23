@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+'title': 'How-to guide for public officials'
 ---
 
 {{ signup_button }}

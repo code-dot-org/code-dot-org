@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+'title': 'Hour of Code How-to Guide for After-school'
 ---
 
 {{ signup_button }}

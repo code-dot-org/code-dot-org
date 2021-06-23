@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+'title': 'Hour of Code How-To Guide for Volunteers'
 ---
 
 # How to volunteer with a school or classroom

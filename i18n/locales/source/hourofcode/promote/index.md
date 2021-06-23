@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+'title': 'Spread the word'
 ---
 
 {{ signup_button }}
