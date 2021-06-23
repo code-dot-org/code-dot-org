@@ -89,7 +89,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   test "enforces key format" do
     course_version = build :course_version, key: 'invalid key'
     refute course_version.valid?
-    course_version.key = '0123456789'
+    course_version.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
     assert course_version.valid?
   end
 end

@@ -144,7 +144,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test "enforces key format" do
     course_offering = build :course_offering, key: 'invalid key'
     refute course_offering.valid?
-    course_offering.key = 'abcdefghijklmnopqrstuvwxyz-'
+    course_offering.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
     assert course_offering.valid?
   end
 
