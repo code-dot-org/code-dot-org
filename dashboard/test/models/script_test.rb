@@ -212,7 +212,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit_names, _ = Script.setup([unit_file_all_fields])
     unit = Script.find_by!(name: unit_names.first)
 
-    # Not testing new_name since it causes a new script to be created.
+    # Not testing new_name since it causes a new unit to be created.
     assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.published_state
     assert unit.login_required?
     assert_equal 'csd1', unit.family_name
@@ -1974,21 +1974,21 @@ class ScriptTest < ActiveSupport::TestCase
     student = create(:student)
 
     units = Script.valid_scripts(student)
-    refute has_unlaunched_script?(units)
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: does not return unlaunched units when user is a teacher" do
     teacher = create(:teacher)
 
     units = Script.valid_scripts(teacher)
-    refute has_unlaunched_script?(units)
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: returns unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_script?(units)
+    assert has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
@@ -1996,7 +1996,7 @@ class ScriptTest < ActiveSupport::TestCase
     teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
 
     units = Script.valid_scripts(teacher)
-    assert has_unlaunched_script?(units)
+    assert has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
@@ -3130,7 +3130,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   private
 
-  def has_hidden_unit?(units)
+  def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
 end
