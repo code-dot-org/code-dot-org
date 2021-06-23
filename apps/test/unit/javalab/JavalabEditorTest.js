@@ -201,18 +201,20 @@ describe('Java Lab Editor Test', () => {
   describe('componentDidUpdate', () => {
     it('toggles between light and dark modes', () => {
       const editor = createWrapper();
-      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-        .editors;
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      const javalabCodeMirrors = javalabEditor.editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
       store.dispatch(setIsDarkMode(true));
       expect(dispatchSpy).to.have.been.calledWith({
-        reconfigure: {style: oneDark}
+        effects: javalabEditor.editorModeConfigCompartment.reconfigure(oneDark)
       });
       store.dispatch(setIsDarkMode(false));
       expect(dispatchSpy).to.have.been.calledWith({
-        reconfigure: {style: lightMode}
+        effects: javalabEditor.editorModeConfigCompartment.reconfigure(
+          lightMode
+        )
       });
     });
   });
