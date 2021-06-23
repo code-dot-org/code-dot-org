@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 19:28:04 UTC",
+    "serialized_at": "2021-06-23 21:54:28 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -21,7 +21,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Part I:  Teaching and Implementing CS"
+        "display_name": "Part I:  Teaching and Implementing Computer Science"
       },
       "seeding_key": {
         "lesson_group.key": "Implementing and Teaching CS",
@@ -33,7 +33,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Part II:  CS Concepts in Courses A - F"
+        "display_name": "Part II:  Computer Science Concepts in Courses A - F"
       },
       "seeding_key": {
         "lesson_group.key": "k5_basic_concepts_1",

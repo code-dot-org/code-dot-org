@@ -22675,7 +22675,7 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Teaching Computer Science Fundamentals '21-'22
+          title: Teaching Computer Science Fundamentals ('21-'22)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -22770,7 +22770,7 @@ en:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: 'Part II:  CS Concepts in Courses A - F'
+              display_name: 'Part II:  Computer Science Concepts in Courses A - F'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
@@ -22778,7 +22778,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: 'Part I:  Teaching and Implementing CS'
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:

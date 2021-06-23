@@ -2,7 +2,7 @@ login_required true
 version_year '2021'
 published_state 'beta'
 
-lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Teaching and Implementing CS'
+lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Teaching and Implementing Computer Science'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome and Introduction', has_lesson_plan: false
 level 'OPD-K5 Participation_copy_2021', progression: 'Introduction'
 level 'OPD-K5 Outline_copy_2021', progression: 'Introduction'
@@ -37,7 +37,7 @@ level 'OPD-K5 ImplementationBarriers2_Reflection', progression: 'Addressing Barr
 level 'OPD-K5 AddressingImplementation1', progression: 'Addressing Barriers'
 level 'OPD-K5 ImplementationApproach_Reflection', progression: 'Addressing Barriers'
 
-lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  CS Concepts in Courses A - F'
+lesson_group 'k5_basic_concepts_1', display_name: 'Part II:  Computer Science Concepts in Courses A - F'
 lesson 'Part II Overview', display_name: 'Part II Overview', has_lesson_plan: false
 level 'OPD-K5 IntroToConcepts_2021'
 level 'OPD-K5-PartIIOutline-2021'
