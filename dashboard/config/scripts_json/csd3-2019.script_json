@@ -38,7 +38,6 @@
       "has_lesson_plan": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
       "family_name": "csd3",
       "script_announcements": [
@@ -66,7 +65,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2021-06-16 23:00:08 UTC",
+    "serialized_at": "2021-06-17 22:30:11 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2019"

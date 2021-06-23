@@ -314,7 +314,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:usingDarkModePref] = !!current_user.using_dark_mode
+      @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -342,6 +342,7 @@ module LevelsHelper
         use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
+        use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,

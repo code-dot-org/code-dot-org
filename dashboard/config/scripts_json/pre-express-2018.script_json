@@ -21,7 +21,6 @@
       ],
       "version_year": "2018",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
-      "is_stable": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"
@@ -43,7 +42,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-06-16 22:59:51 UTC",
+    "serialized_at": "2021-06-17 22:29:53 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2018"

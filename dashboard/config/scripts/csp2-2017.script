@@ -7,7 +7,6 @@ has_verified_resources true
 new_name 'csp2-2017'
 family_name 'csp2'
 version_year '2017'
-is_stable true
 published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'

@@ -13,7 +13,7 @@
         "isVisible": true
       },
       "Dessert.java": {
-        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  // Level 1\n  public Dessert() {\n    flavor = \"red velvet\";\n    quantity = 6;\n    price = newPrice;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  // Level 1\n  public Dessert() {\n    flavor = \"red velvet\";\n    quantity = 6;\n    price = 6.50;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
         "isVisible": true
       }
     }
@@ -23,6 +23,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 21:34:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:35:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 21:34:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:35:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:01:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:02:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

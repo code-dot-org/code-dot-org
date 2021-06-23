@@ -31,13 +31,12 @@
       "curriculum_path": "https://curriculum.code.org/csd-19/unit1/{LESSON}",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "family_name": "csd1",
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2021-06-16 23:00:02 UTC",
+    "serialized_at": "2021-06-17 22:30:03 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd1-2019"

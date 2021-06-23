@@ -12,7 +12,6 @@
       ],
       "has_lesson_plan": true,
       "version_year": "2017",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}",
       "supported_locales": [
         "ar-SA",
@@ -52,7 +51,7 @@
     },
     "new_name": "coursee-2017",
     "family_name": "coursee",
-    "serialized_at": "2021-06-16 22:58:53 UTC",
+    "serialized_at": "2021-06-17 22:28:56 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursee-2017"

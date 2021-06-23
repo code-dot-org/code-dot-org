@@ -8,7 +8,6 @@
       "version_year": "2018",
       "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}",
-      "is_stable": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -40,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-06-16 22:59:35 UTC",
+    "serialized_at": "2021-06-17 22:29:36 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2018"

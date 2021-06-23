@@ -34,12 +34,11 @@
           "https://curriculum.code.org/csd-20/unit4/code/"
         ]
       ],
-      "hideable_lessons": true,
-      "is_stable": true
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-16 23:00:32 UTC",
+    "serialized_at": "2021-06-17 22:30:34 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd4-2020"

@@ -940,7 +940,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script
+    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -992,7 +992,7 @@ FactoryGirl.define do
 
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
-    name 'name'
+    sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
     transient do
       sublevels []

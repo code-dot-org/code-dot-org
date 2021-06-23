@@ -36,7 +36,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}",
       "version_year": "2019",
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "coursea",
       "tts": true,
       "supported_locales": [
@@ -49,7 +48,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-06-16 23:00:04 UTC",
+    "serialized_at": "2021-06-17 22:30:06 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2019"
