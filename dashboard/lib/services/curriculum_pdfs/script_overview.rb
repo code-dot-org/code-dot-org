@@ -8,15 +8,16 @@ module Services
     module ScriptOverview
       extend ActiveSupport::Concern
       class_methods do
-        def get_script_overview_pathname(script)
+        def get_script_overview_pathname(script, as_url = false)
           return nil unless script&.seeded_from
           version_number = Time.parse(script.seeded_from).to_s(:number)
           filename = ActiveStorage::Filename.new(script.localized_title + ".pdf").sanitized
+          filename = CGI.escape(filename) if as_url
           return Pathname.new(File.join(script.name, version_number, filename))
         end
 
         def get_script_overview_url(script)
-          pathname = get_script_overview_pathname(script)
+          pathname = get_script_overview_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
         end
