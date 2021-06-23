@@ -51,7 +51,8 @@
         "New Minecraft Hero Project": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
         "Overworld Move to Sheep": "Add a second \"move forward\" command to reach the sheep.",
         "Overworld Move to Sheep_2019": "Add a second \"move forward\" command to reach the sheep.",
-        "Overworld Move to Sheep_2020": "Add a second \"move forward\" command to reach the sheep."
+        "Overworld Move to Sheep_2020": "Add a second \"move forward\" command to reach the sheep.",
+        "courseF_bee2": "Use a `repeat` loop to collect all of the nectar."
       }
     }
   }

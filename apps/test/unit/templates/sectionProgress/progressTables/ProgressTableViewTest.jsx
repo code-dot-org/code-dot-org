@@ -19,7 +19,7 @@ import {createStore, combineReducers} from 'redux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -34,11 +34,11 @@ import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progr
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
-const STAGES = [LESSON_1, LESSON_2];
-const SCRIPT_DATA = fakeScriptData({stages: STAGES});
+const LESSONS = [LESSON_1, LESSON_2];
+const SCRIPT_DATA = fakeScriptData({lessons: LESSONS});
 
 const initialState = fakeProgressTableReduxInitialState(
-  STAGES,
+  LESSONS,
   SCRIPT_DATA,
   STUDENTS
 );
@@ -49,7 +49,7 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       progress,
       sectionData,
       sectionProgress,
-      scriptSelection,
+      unitSelection,
       locales
     }),
     _.merge({}, initialState, overrideState)
@@ -79,7 +79,7 @@ describe('ProgressTableView', () => {
       .map((x, i) => ({id: i, name: `student-${i}`}));
 
     const overrideState = fakeProgressTableReduxInitialState(
-      STAGES,
+      LESSONS,
       SCRIPT_DATA,
       students
     );
@@ -113,7 +113,7 @@ describe('ProgressTableView', () => {
 
     it('SummaryViewLegend prop showCSFProgressBox is true if scriptData.csf is true', () => {
       const overrideState = fakeProgressTableReduxInitialState(
-        STAGES,
+        LESSONS,
         {...SCRIPT_DATA, csf: true},
         STUDENTS
       );
@@ -125,7 +125,7 @@ describe('ProgressTableView', () => {
 
     it('renders a ProgressTableSummaryCell for each lesson for each student', () => {
       const wrapper = setUp(ViewType.SUMMARY);
-      const expectedSummaryCellCount = STUDENTS.length * STAGES.length;
+      const expectedSummaryCellCount = STUDENTS.length * LESSONS.length;
       expect(wrapper.find(ProgressTableSummaryCell)).to.have.length(
         expectedSummaryCellCount
       );

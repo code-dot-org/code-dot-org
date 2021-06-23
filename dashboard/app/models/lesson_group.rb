@@ -96,7 +96,7 @@ class LessonGroup < ApplicationRecord
   end
 
   def self.prevent_changing_stable_i18n_key(script, raw_lesson_group)
-    if script.is_stable && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
+    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lesson_groups.#{raw_lesson_group[:key]}").include?('translation missing:')
       raise "Adding new keys or update existing keys for lesson groups in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Group Key: #{raw_lesson_group[:key]}"
     end
   end
@@ -144,11 +144,11 @@ class LessonGroup < ApplicationRecord
     }
   end
 
-  def summarize_for_script_edit
+  def summarize_for_unit_edit
     summary = summarize
     summary[:description] = description
     summary[:big_questions] = big_questions
-    summary[:lessons] = lessons.map(&:summarize_for_script_edit)
+    summary[:lessons] = lessons.map(&:summarize_for_unit_edit)
     summary
   end
 
@@ -210,5 +210,40 @@ class LessonGroup < ApplicationRecord
     changed = changed?
     save! if changed?
     changed
+  end
+
+  def i18n_hash
+    if display_name
+      {
+        script.name => {
+          'lesson_groups' => {
+            key => {
+              'display_name' => display_name
+            }
+          }
+        }
+      }
+    else
+      {}
+    end
+  end
+
+  def copy_to_script(destination_script, new_level_suffix = nil)
+    return if script == destination_script
+    raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
+
+    copied_lesson_group = dup
+    copied_lesson_group.script = destination_script
+    copied_lesson_group.lessons = []
+    copied_lesson_group.position = destination_script.lesson_groups.count + 1
+    copied_lesson_group.save!
+
+    lessons.each do |original_lesson|
+      copied_lesson = original_lesson.copy_to_script(destination_script, new_level_suffix)
+      raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
+    end
+    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    copied_lesson_group
   end
 end

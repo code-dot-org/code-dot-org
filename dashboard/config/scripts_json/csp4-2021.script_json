@@ -2,7 +2,7 @@
   "script": {
     "name": "csp4-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:00 UTC",
+    "serialized_at": "2021-06-17 22:31:15 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -1312,8 +1313,9 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
-        "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
-        "progression_name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "duration": "10",
+        "name": "Investigation #1: Thermostat App v.1",
+        "progression_name": "Investigation #1: Thermostat App v.1 "
       },
       "seeding_key": {
         "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df",
@@ -1324,7 +1326,7 @@
       "key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
       "position": 3,
       "properties": {
-        "description": "*  Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
+        "description": "**Discuss:** Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
       },
       "seeding_key": {
         "activity_section.key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
@@ -1347,8 +1349,9 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
-        "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
-        "progression_name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
+        "duration": "10",
+        "name": "Investigation #2: Thermostat App v.2",
+        "progression_name": "Investigation #2: Thermostat App v.2"
       },
       "seeding_key": {
         "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
@@ -1371,8 +1374,9 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
-        "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
-        "progression_name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "duration": "8",
+        "name": "Investigation #3: Thermostat App v.3",
+        "progression_name": "Investigation #3: Thermostat App v.3"
       },
       "seeding_key": {
         "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
@@ -1380,19 +1384,8 @@
       }
     },
     {
-      "key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
-      "position": 8,
-      "properties": {
-        "name": "Thermostat App v3"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
-        "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
-      }
-    },
-    {
       "key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "*  Class Discussion: Look at line 40. How does [`getText()`(#fff176)](/docs/applab/getText/) work? What is it doing?\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.\n\n**Discussion Goal:**[`getText`(#fff176)](/docs/applab/getText/) gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \n"
       },
@@ -1403,10 +1396,11 @@
     },
     {
       "key": "cc54e7e2-9570-4288-984f-531927ddd29b",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "We are learning two patterns here:\r\n\r\n* Counter Pattern with Event\r\n* Variables with String Concatenation Pattern\r\n\r\nThe Counter Pattern with Event is a common pattern for updating variables that you will use in making many different apps. We call it the **Counter Pattern with Event**.",
-        "name": "Patterns - 7 mins\r",
+        "duration": "7",
+        "name": "Patterns",
         "remarks": true
       },
       "seeding_key": {
@@ -1416,7 +1410,7 @@
     },
     {
       "key": "cef2237e-cdb6-4432-b9a0-8561ff2257a4",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
       },
@@ -1427,7 +1421,7 @@
     },
     {
       "key": "283921b8-736a-4710-a00d-f8dca0f42cca",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "**Discuss:** *With a partner, discuss the following:*\n\n**Discussion Goal:** Students should step through each line of the pattern, explaining what's happening. \n\nCounter Pattern with Event:\n\n* myVar gets the value 0\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\n\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\n"
       },
@@ -1438,7 +1432,7 @@
     },
     {
       "key": "d416764e-ce8f-4e9a-856c-76357300ee93",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "* The \"Counter Pattern with Event\" should look familiar! How would you explain this pattern to another person? \r\n* When might you want to use the \"Counter Pattern with Event\"?"
       },
@@ -1449,7 +1443,7 @@
     },
     {
       "key": "71b90d08-9788-4c3c-8904-b5c030620ccc",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "Variables can store many different types of information including numbers and Strings. Anything placed inside of the quotation marks becomes a String. \r\n\r\nGuess what! There's a pattern for working with Strings. When we want to combine Strings with other Strings, numbers, or even with another variable we call that concatenation.",
         "remarks": true
@@ -1461,7 +1455,7 @@
     },
     {
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
       },
@@ -1486,7 +1480,7 @@
       "key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Goal Answers:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Discussion Goal:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
       },
       "seeding_key": {
         "activity_section.key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
@@ -2102,9 +2096,51 @@
       }
     },
     {
-      "key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
+      "key": "cdad4926-56d3-49dc-9372-cecff2908009",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
+        "name": "Investigation 2: If-Else Statements and MOD",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students need to know how the MOD operator works for the AP CSP exam. The explanations here are enough to help them answer those questions. \n\nThere are many wonderful and interesting uses of MOD in apps, but students are not expected or required to use the operator themselves when programming apps for this course. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cdad4926-56d3-49dc-9372-cecff2908009",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "9a09833b-841f-4fa3-884c-356dd716abbc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "9a09833b-841f-4fa3-884c-356dd716abbc",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "5dbc1c3e-7f32-4d94-aa08-f1461f674f72",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\n\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\n\nNow let's get back to another app investigation with functions with parameters and return values.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5dbc1c3e-7f32-4d94-aa08-f1461f674f72",
+        "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61"
+      }
+    },
+    {
+      "key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
+      "position": 10,
+      "properties": {
+        "progression_name": "If-Else Statements"
       },
       "seeding_key": {
         "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1",
@@ -2113,11 +2149,11 @@
     },
     {
       "key": "e344df9b-29ac-4652-ad59-3729140048c0",
-      "position": 8,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
+        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 6 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "duration": "10",
-        "name": "Investigation 2: If-Else Statements",
+        "name": "Investigation 3: If-Else-If Statements",
         "tips": [
           {
             "type": "teachingTip",
@@ -2132,7 +2168,7 @@
     },
     {
       "key": "e83e4d07-ebb9-43c3-b3bf-015145b74669",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the command\n* Draw a flowchart: Students should draw a flow chart for the if-else-if command in their journals\n* **Modify**: Modify the program to make the lemon even smaller when the player has more than 15 points."
       },
@@ -2143,9 +2179,9 @@
     },
     {
       "key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2",
-      "position": 10,
+      "position": 13,
       "properties": {
-        "progression_name": "If-Else Statements"
+        "progression_name": "If-Else-If Statements"
       },
       "seeding_key": {
         "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2",
@@ -2154,9 +2190,9 @@
     },
     {
       "key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
-      "position": 11,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 7 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
         "duration": "10",
         "name": "Investigation 3: Logical Operators AND OR"
       },
@@ -2167,9 +2203,9 @@
     },
     {
       "key": "1ef6e1bb-0e0b-4bd5-ab5e-fab53c0531dc",
-      "position": 12,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 7 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 8 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2184,7 +2220,7 @@
     },
     {
       "key": "a6736a90-d098-4845-8208-3e224564035b",
-      "position": 13,
+      "position": 16,
       "properties": {
         "description": "* Play the Game: Have students play the game\n* Discuss Changes: Talk through how the game plays differently now\n* Find the `if-else-if` command: Have students find the if-else-if command that was added\n* Draw a Flowchart: Students should draw a flowchart of this new if-else-if command\n* **Modify**: Modify the program to add a new username and password. Students will have to modify the code as well as the user interface."
       },
@@ -2195,7 +2231,7 @@
     },
     {
       "key": "6305f30a-5de4-4e81-8aec-82bbb3cbe124",
-      "position": 14,
+      "position": 17,
       "properties": {
         "progression_name": "Logical Operators: AND OR"
       },
@@ -2377,8 +2413,20 @@
       }
     },
     {
-      "key": "762801f0-e7bb-4f82-8dc0-62212048a567",
+      "key": "5c092414-da93-4408-856d-956c98f82bde",
       "position": 9,
+      "properties": {
+        "description": "* Level 11 Students do a quick practice with the MOD operator.",
+        "progression_name": "MOD Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde",
+        "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033"
+      }
+    },
+    {
+      "key": "762801f0-e7bb-4f82-8dc0-62212048a567",
+      "position": 10,
       "properties": {
         "description": "**Extension Opportunities:**\n\n* Level 3: Students can add more variables and create complex Boolean expressions. One challenge might be to assign a String to a variable and compare that string to another. \n* Level 9: There are multiple solutions. If students build their if-statement using only `&&` encourage them to figure out how to build it using only `||`. They may need to switch the content of the if and else branches. \n* Level 10: Create another input (i.e. How many cats do you already own?). Students use this information to craft more complex if-statements."
       },
@@ -3573,7 +3621,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
         ],
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "progression": "Investigation #1: Thermostat App v.1 "
       },
       "named_level": false,
       "bonus": false,
@@ -3599,7 +3647,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
         ],
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "progression": "Investigation #1: Thermostat App v.1 "
       },
       "named_level": false,
       "bonus": false,
@@ -3625,7 +3673,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
         ],
-        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
+        "progression": "Investigation #2: Thermostat App v.2"
       },
       "named_level": false,
       "bonus": false,
@@ -3651,7 +3699,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
         ],
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "progression": "Investigation #3: Thermostat App v.3"
       },
       "named_level": false,
       "bonus": false,
@@ -3677,7 +3725,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
         ],
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "progression": "Investigation #3: Thermostat App v.3"
       },
       "named_level": false,
       "bonus": false,
@@ -4138,34 +4186,34 @@
     },
     {
       "chapter": 27,
-      "position": 1,
-      "activity_section_position": 1,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
+          "U4L5 CSP CFU terms_2021"
         ],
-        "progression": "If-Statements"
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
+          "U4L5 CSP CFU terms_2021"
         ],
-        "lesson.key": "Conditionals Investigate",
+        "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
       },
       "level_keys": [
-        "U4 L06 Lemon Hunter App v1 Code_2021"
+        "U4L5 CSP CFU terms_2021"
       ]
     },
     {
       "chapter": 28,
-      "position": 2,
-      "activity_section_position": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4190,6 +4238,32 @@
     },
     {
       "chapter": 29,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ],
+        "progression": "If-Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
+      },
+      "level_keys": [
+        "U4 L06 Lemon Hunter App v1 Code_2021"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4208,22 +4282,48 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
+        "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1"
       },
       "level_keys": [
         "U4L06 Introduction to Conditionals: if-else Statements_2021"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+          "U4 L06 Lemon Hunter App v1.5 Code_2021"
         ],
         "progression": "If-Else Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1.5 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1"
+      },
+      "level_keys": [
+        "U4 L06 Lemon Hunter App v1.5 Code_2021"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
+        ],
+        "progression": "If-Else-If Statements"
       },
       "named_level": false,
       "bonus": false,
@@ -4241,15 +4341,15 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 5,
-      "activity_section_position": 3,
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
         ],
-        "progression": "If-Else Statements"
+        "progression": "If-Else-If Statements"
       },
       "named_level": false,
       "bonus": false,
@@ -4267,8 +4367,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 6,
+      "chapter": 34,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4293,8 +4393,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 7,
+      "chapter": 35,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4319,8 +4419,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 8,
+      "chapter": 36,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4345,8 +4445,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 9,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4371,7 +4471,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4397,7 +4497,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4423,7 +4523,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4449,7 +4549,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4475,7 +4575,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4501,7 +4601,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4527,7 +4627,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4553,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4579,7 +4679,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4605,7 +4705,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4631,8 +4731,34 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "progression": "MOD Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde"
+      },
+      "level_keys": [
+        "U7 Param Return Practice MOD_2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4657,8 +4783,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 12,
+      "chapter": 50,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4683,7 +4809,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4709,7 +4835,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4735,7 +4861,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4761,7 +4887,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4787,9 +4913,35 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
+        ],
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021",
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
+      },
+      "level_keys": [
+        "U4L09 Defining and Calling Functions Video_2021"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4813,9 +4965,9 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4839,8 +4991,8 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 5,
+      "chapter": 58,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4865,8 +5017,8 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 6,
+      "chapter": 59,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4891,7 +5043,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4917,7 +5069,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4943,7 +5095,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4969,7 +5121,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4995,7 +5147,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5021,7 +5173,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5047,7 +5199,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5073,7 +5225,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5099,7 +5251,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5125,7 +5277,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 69,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5151,7 +5303,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5177,7 +5329,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5203,7 +5355,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5229,7 +5381,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5255,7 +5407,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5281,7 +5433,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5307,7 +5459,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5333,7 +5485,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5359,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5385,7 +5537,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5411,7 +5563,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5752,14 +5904,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L06 Lemon Hunter App v1 Code_2021",
+        "level.key": "U4L5 CSP CFU terms_2021",
         "script_level.level_keys": [
-          "U4 L06 Lemon Hunter App v1 Code_2021"
+          "U4L5 CSP CFU terms_2021"
         ],
-        "lesson.key": "Conditionals Investigate",
+        "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
+        "activity_section.key": "e5fed8da-b44f-4082-8162-d59762fced56"
       }
     },
     {
@@ -5776,6 +5928,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U4 L06 Lemon Hunter App v1 Code_2021",
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "9683be4c-483d-4af5-b6c7-b7d7ed0895b7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U4L06 Introduction to Conditionals: if-else Statements_2021",
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
@@ -5783,7 +5947,19 @@
         "lesson.key": "Conditionals Investigate",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2021",
-        "activity_section.key": "8367ad15-2c44-4b8a-bc16-64c889c0a4d2"
+        "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Lemon Hunter App v1.5 Code_2021",
+        "script_level.level_keys": [
+          "U4 L06 Lemon Hunter App v1.5 Code_2021"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "9415d212-f84e-4244-b3ff-040ec66aeaa1"
       }
     },
     {
@@ -5980,6 +6156,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "U7 Param Return Practice MOD_2021",
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2021",
+        "activity_section.key": "5c092414-da93-4408-856d-956c98f82bde"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U4L10 CFU Conditionals Psuedocode_2021",
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
@@ -6043,6 +6231,18 @@
         "level.key": "U4L09 Intro to Functions Video_2021",
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video_2021"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2021",
+        "activity_section.key": "1aabdef6-1131-4f25-9984-d8bb4aef796d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L09 Defining and Calling Functions Video_2021",
+        "script_level.level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
         ],
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
@@ -6586,6 +6786,18 @@
       "seeding_key": {
         "resource.key": "variables-make-activity-guide"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -6912,6 +7124,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp4-2021"
       }
     }

@@ -1,0 +1,16 @@
+name 'OPD-K5-Conditionals-2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Introduction to Conditionals
+
+<img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
+Students engage with Maze Puzzles as they learn about conditionals in Courses D and E.
+
+## Concepts reiterated across Courses D and E
+
+Click "Continue" to go engage with the following student lesson levels to learn about conditionals.
+
+* **Course D** - Lesson 14, Levels 1, 3, 8 and 9:  If/Else with Bee
+* **Course E** - Lesson 14, Levels 9 and 10:  Conditionals in Minecraft:  Voyage Aquatic
+MARKDOWN

@@ -29,10 +29,12 @@ az:
         Jigsaw: Mozaika
         Webapp: Proqram Labı
         ArtistEC: Rəssam
+        TextMatch: Mətn uyğunluğu
         StudioEC: Oyun labı
         Applab: Proqram Labı
         Custom: Rəssam
         CustomStudio: Oyun labı
+        Gamelab: Oyun labaratoriyası
     trophy:
       name:
         Bronze: Bürünc
@@ -152,7 +154,21 @@ az:
         maze_3_3: Bu donuzun yanına necə getməliyəm? Elə edin ki, partladıcı TNT qutusunun üstünə çıxmayım!
         maze_3_4: Ax! Mənim üçün elə proqram yazın ki, məni partladıcı TNT qutusundan yan keçirərək donuza çatdırsın.
         jigsaw_1: Bloka çıqqıldat
+        jigsaw_13: Tapmacanı düzəldin!
+        studio_c2_1: Bu köpəyi "salam dünya" deməsinə səbəb ola bilərsənmi?
+        studio_c2_2: İtin bir şey söyləməsinə və sonra pişiyin bir şey söyləməsinə səbəb ola bilərsənmi?
+        studio_c2_3: bu itin pişiyə keçməsi üçün bir proqram yaza bilərsən?
+        studio_c2_4: İtin pişiyə doğru hərəkət etməsini təmin edən bir proqram yaza bilərsənmi? it ona çatanda pişik "salam" desin.
+        studio_c2_5: Ahtapot vurulduqda "salam" deyəcək bir proqram yaza bilərsinizmi?
+        studio_c2_6: Bütün hədəfləri vurmaq üçün yuxarı / aşağı / sol / sağ düymələrindən istifadə edərək Kürəklilərin hərəkət etməsi üçün bir proqram yaza bilərsinizmi?
         studio_c2_10: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
+        studio_c3_story_1: Bu köpəyi "salam dünya" deməsinə səbəb ola bilərsənmi?
+        studio_c3_story_2: İtin bir şey söyləməsinə və sonra pişiyin bir şey söyləməsinə səbəb ola bilərsənmi?
+        studio_c3_story_3: bu itin pişiyə keçməsi üçün bir proqram yaza bilərsən?
+        studio_c3_story_4: İtin pişiyə doğru hərəkət etməsini təmin edən bir proqram yaza bilərsənmi? it ona çatanda pişik "salam" desin.
+        studio_c3_story_5: Ahtapotu xoşbəxt etmək üçün bir blok əlavə edə bilərsinizmi?
+        studio_c3_game_1: Ahtapot vurulduqda "salam" deyəcək bir proqram yaza bilərsinizmi?
+        studio_c3_game_2: Bütün hədəfləri vurmaq üçün yuxarı / aşağı / sol / sağ düymələrindən istifadə edərək Kürəklilərin hərəkət etməsi üçün bir proqram yaza bilərsinizmi?
         studio_c3_game_6: Arxa fonu və pinqvinin sürətini dəyişmək üçün bloklar əlavə edib, sonra onu oxların köməyi ilə xal qazanana qədər hərəkər etdirə bilərsiniz?
         studio_playlab_1: Pinqvin "salam" demək istəyir - ona kömək edə bilərsiniz?
         studio_playlab_2: Dəyənək Oğlan (personaj 1) və Dəyənək Qız (personaj 2) bir-birinə "salam" demək istəyirlər. "Söylə" blokunu iki dəfə işlədərək onlara kömək edə bilərsiniz?
@@ -160,6 +176,34 @@ az:
         studio_playlab_4: Tennisçi Oğlana (personaj 1) kömək edə bilərsinizmi ki, Tennisçi Qızın (personaj 2) yanına getsin və oraya çatanda bir səs çalınsın?
         studio_playlab_5: Kosmobota kömək edə bilərsinizmi ki, kliklənəndə "Yer sakinlərinə salam" desin? "İcra et"i kliklədikdən sonra onu klikləməyi unutmayın
         studio_iceage_move_to_flag: Cırmaq öz palıd qozasını axtarır! "Get" bloku vasitəsi ilə ona son 200 pikseli keçməkdə kömək edin.
+        studio_iceage_warn_ice_age: Hər kəs daha sürətli hərəkət etməlidir, çünki buz dövrü gəlir! Arxa planı buzlu bir fonla dəyişdirin və Sidin sürətini sürətli göstərin, sonra Run düyməsini basın və onu xəbərdar etmək üçün Dieqoya aparın.
+        studio_iceage_throw_hearts: Sid nənəsi Granniyə onu sevdiyini bildirmək istəyir. Sidin (aktyor 1) nənəyə (aktyor 2) ürək atması üçün "aktyor atma" əmrini istifadə edin! Nənənin ürəklərinə dəyəndə xoşbəxt olsun
+        studio_iceage_free_play: Öz oyun və ya hekayənizi yaratmağın vaxtı! İşinizi bitirdikdən sonra dostlarınızın oyunlarını telefonlarında, planşetlərində və ya kompüterlərində sınamalarına icazə vermək üçün Bitir düyməsini vurun!
+        studio_gumball_move_to_actor: "Gumball (aktyor 1) və Darvin (aktyor 2) tarla gününə gecikdilər! Gumball-a \"hərəkət aktyoru\" blokunu istifadə edərək Darvinə 200 piksel aşağı hərəkət etməyə kömək edin. Sonra, bir-birini tapdıqda bir səs çıxarmaq üçün \"aktyor toxunduqda\" hadisəsinə bir blok bağlayın. \nBu mənbə mətn haqqında ətraflıƏlavə tərcümə məlumatı üçün mənbə mətn tələf edilir"
+        studio_gumball_repeat: '"Sonsuza qədər təkrar et" bloku, kodu davamlı işlədə bilmək imkanı verir. Gumballın sola və sağa dəfələrlə hərəkət edərək irqi üçün istiləşməsinə kömək etmək üçün blokları əlavə edə bilərsinizmi?'
+        studio_gumball_click_hello: Antona "Hazır, hazır ol, get!" Deyərək bir yarışın başladığını elan etməyə kömək edə bilərsənmi? Proqramınızı sınamaq üçün Çalıştır düyməsini vurduqdan sonra Anton düyməsini vurmağı unutmayın!
+        studio_gumball_move_events: Darvin bayraq toplama yarışmasında! Hadisələrin hər birinə "hərəkət" blokunu əlavə edərək ətrafda qaçmasına kömək edin. İşiniz bitdikdən sonra Çalıştır düyməsini vurun və bütün bayraqları toplamağa çalışın.
+        studio_gumball_sound_and_points: Antonun (aktyor 2) solda və sağda hərəkət etməsini təmin edən və Banana Joe-nu (aktyor 1) ekran ətrafında gəzdirən kodun çox hissəsini təqdim etdik. Kodu bitirib "aktyor toxunduqda" tədbirinə bloklar əlavə edərək Banana Joe və Antonun toqquşduğu zaman hər ikinizdə bir səs çalmağı və bir bal toplamağınızı təmin edə bilərsinizmi? Oyunu oynamaq üçün Çalıştır düyməsini basın
+        studio_gumball_warn_food_fight: Darvin yalnız bir yemək davasından qaçdı! Arxa planı "simvol" olaraq dəyişdirin və Darwinin sürətini sürətli göstərin, sonra Run düyməsini basaraq onu xəbərdar etmək üçün Penny-yə aparın.
+        studio_gumball_join_food_fight: Yemək mübarizəsinə qoşulun! Banana Joe (aktyor 1) Antona (aktyor 2) yemək atması üçün "aktyor maddəsini sağa at" əmrini istifadə edin! Vurulduqda Antonun əhvalını əsəbiləşdirin.
+        studio_gumball_free_play: Öz oyun və ya hekayənizi yaradın. İşinizi bitirdikdən sonra dostlarınızın oyunlarını telefonlarında, planşetlərində və ya kompüterlərində sınamalarına icazə vermək üçün Bitir düyməsini vurun!
+        studio_k1_1: Bu köpəyi "salam dünya" deməsinə səbəb ola bilərsənmi?
+        studio_k1_2: İtin bir şey söyləməsinə və sonra pişiyin bir şey söyləməsinə səbəb ola bilərsənmi?
+        studio_k1_3: bu itin pişiyə keçməsi üçün bir proqram yaza bilərsən?
+        studio_k1_4: İtin pişik tərəfə keçməsini təmin edin və pişik ora çatdıqda "salam" deyin.
+        studio_k1_5: Ahtapotu xoşbəxt etmək üçün bir blok əlavə edə bilərsinizmi?
+        studio_k1_6: Öz hekayənizi yaradın! Pişik və itin ətrafında hərəkət edin və onlara bir şey söyləməyə məcbur edin.
+        maze_wordsearch_k_1: Məni ŞƏRQ sözünün sehrinə yönəldin
+        maze_wordsearch_k_2: CƏNUB sözünü yazmaq üçün məni hərəkətə gətirin
+        maze_wordsearch_k_3: QƏRB sözünü yazmaq üçün məni hərəkətə gətirin
+        maze_wordsearch_k_4: Şimal sözünü yazmaq üçün məni hərəkətə gətirin
+        maze_wordsearch_k_6: TULLANMAQ sözünü yazmaq üçün məni şərqə, sonra cənuba aparın
+        maze_wordsearch_k_9: KOD sözünü yazmaq üçün məni bir tərəfə, sonra başqa bir tərəfə sürün
+        maze_wordsearch_k_13: DEBUG sözünü yazmaq üçün məni bir tərəfə, daha sonra başqa bir yerə sürün
+        maze_wordsearch_k_15: Yuxarıdakı sözləri yazmaq üçün məni bir tərəfə, sonra başqa bir tərəfə sürün
+        maze_wordsearch_k_16: Məni bir tərəfə aparın, sonra başqa bir sözlə AŞAĞIDA yazım
+        maze_wordsearch_k_20: Bu testdir! HEKAYƏ sözünü oxumaq üçün məni bir tərəfə, sonra başqa bir yerə keçir
+        applab_ec_simple: Alətlər qutusundakı blokları istifadə edərək tətbiqinizi yaradın.
         turtle_ec_1_2: 'İndi bir kvadrat çəkin. QEYD: yeni "rəng seç" blokundan götürməklə öz sevimli rənginizdən istifadə edin.'
         turtle_ec_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini təyin et" blokunu sınaqdan keçirin. Əylənin!'
     video:
@@ -190,10 +234,13 @@ az:
         Unplug10: İnternet
         Unplug11: Yekun
         C1_happy_maps_unplugged: Şən xəritələr
+        C1_moveitmoveit_unplugged: Hərəkət et
+        C1_pair_programming: Estafet proqramlaşdırması
         C1_artist_intro: Rəssam oyununa giriş
         C1_zuck_repeat_loop: Labirint Dövrlər
         C1_bee_loops: Arı Dövrlər
         C1_maze_loops: Labirint Dövrlər
+        C1_building_foundation: Təməl qurmaq
         C2_maze_intro: Labirint oyununa giriş
         C2_artist_intro: Rəssam oyununa giriş
         C2_zuck_repeat_loop: Labirint Dövrlər
@@ -222,7 +269,10 @@ az:
         C4_function_parameters: Parametrli funksiyalar
         C4_conditionals: Şərti ifadələr
         C4_unplugged_binary: İkilik
+        CSF_Power_of_Words: Sözlərin gücü
         CSF_Super_Digital_Citizen: Super rəqəmsal vətəndaş
+        CSF_stevie_big_project: Stevie və Böyük Layihə
+        CSF_zuck_loops_short: Döngüləri təkrarlayın
         frozen_intro: Kod Saatına giriş
         frozen_loops: Dövrlərə giriş
         frozen_functions: Funksiyalara giriş
@@ -245,9 +295,12 @@ az:
         CSF_loops_AB: dövrlər
         hoc_dance_events: Rəqs Şənliyi - Hadisələr
         hoc_dance_properties: Rəqs Şənliyi - Xüsusiyyətlər
+        csd_pair_programming: Estafet proqramlaşdırması
         csd_applab_parameters: Parametrli funksiyalar
         hoc_dance_events_2019: Rəqs Şənliyi - Hadisələr
         hoc_dance_properties_2019: Rəqs Şənliyi - Xüsusiyyətlər
+        playlab_2021: Oyun Labına giriş
+        playlab_2021_reader: Oyun Labına giriş
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

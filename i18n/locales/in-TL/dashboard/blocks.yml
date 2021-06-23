@@ -1,9 +1,8 @@
----
 in:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: crwdns2071154:0[GROUP]crwdnd2071154:0[0]crwdnd2071154:0[N]crwdnd2071154:0[1]crwdnd2071154:0[MOVE1]crwdnd2071154:0[2]crwdnd2071154:0[MOVE2]crwdnd2071154:0[3]crwdne2071154:0
+        text: "crwdns2071154:0[GROUP]crwdnd2071154:0[0]crwdnd2071154:0[N]crwdnd2071154:0[1]crwdnd2071154:0[MOVE1]crwdnd2071154:0[2]crwdnd2071154:0[MOVE2]crwdnd2071154:0[3]crwdne2071154:0"
         options:
           GROUP:
             sprites: crwdns2071156:0crwdne2071156:0
@@ -59,7 +58,7 @@ in:
             '"saturation"': crwdns168792:0crwdne168792:0
             '"brightness"': crwdns168793:0crwdne168793:0
       Dancelab_changeMoveEachLR:
-        text: crwdns194620:0[GROUP]crwdnd194620:0[0]crwdnd194620:0[MOVE]crwdnd194620:0[1]crwdnd194620:0[DIR]crwdnd194620:0[2]crwdne194620:0
+        text: "crwdns194620:0[GROUP]crwdnd194620:0[0]crwdnd194620:0[MOVE]crwdnd194620:0[1]crwdnd194620:0[DIR]crwdnd194620:0[2]crwdne194620:0"
         options:
           GROUP:
             sprites: crwdns194621:0crwdne194621:0
@@ -76,9 +75,9 @@ in:
             '"SLOTH"': crwdns2071230:0crwdne2071230:0
             '"UNICORN"': crwdns305128:0crwdne305128:0
           MOVE:
-            '"next"': crwdns194639:0crwdne194639:0
-            '"prev"': crwdns194640:0crwdne194640:0
-            '"rand"': crwdns194641:0crwdne194641:0
+            '"next"': "crwdns194639:0crwdne194639:0"
+            '"prev"': "crwdns194640:0crwdne194640:0"
+            '"rand"': "crwdns194641:0crwdne194641:0"
             MOVES.Roll: crwdns194901:0crwdne194901:0
             MOVES.ClapHigh: crwdns194885:0crwdne194885:0
             MOVES.Dab: crwdns194889:0crwdne194889:0
@@ -92,15 +91,15 @@ in:
             MOVES.Thriller: crwdns194905:0crwdne194905:0
             MOVES.Rest: crwdns194907:0crwdne194907:0
           DIR:
-            '1': crwdns194642:0crwdne194642:0
-            "-1": crwdns194643:0crwdne194643:0
+            '1': "crwdns194642:0crwdne194642:0"
+            "-1": "crwdns194643:0crwdne194643:0"
       Dancelab_changeMoveLR:
-        text: crwdns194644:0[SPRITE]crwdnd194644:0[0]crwdnd194644:0[MOVE]crwdnd194644:0[1]crwdnd194644:0[DIR]crwdnd194644:0[2]crwdne194644:0
+        text: "crwdns194644:0[SPRITE]crwdnd194644:0[0]crwdnd194644:0[MOVE]crwdnd194644:0[1]crwdnd194644:0[DIR]crwdnd194644:0[2]crwdne194644:0"
         options:
           MOVE:
-            '"next"': crwdns194657:0crwdne194657:0
-            '"prev"': crwdns194658:0crwdne194658:0
-            '"rand"': crwdns194659:0crwdne194659:0
+            '"next"': "crwdns194657:0crwdne194657:0"
+            '"prev"': "crwdns194658:0crwdne194658:0"
+            '"rand"': "crwdns194659:0crwdne194659:0"
             MOVES.Roll: crwdns194925:0crwdne194925:0
             MOVES.ClapHigh: crwdns194909:0crwdne194909:0
             MOVES.Dab: crwdns194913:0crwdne194913:0
@@ -114,8 +113,8 @@ in:
             MOVES.Thriller: crwdns194929:0crwdne194929:0
             MOVES.Rest: crwdns194931:0crwdne194931:0
           DIR:
-            '1': crwdns194660:0crwdne194660:0
-            "-1": crwdns194661:0crwdne194661:0
+            '1': "crwdns194660:0crwdne194660:0"
+            "-1": "crwdns194661:0crwdne194661:0"
       Dancelab_changePropBy:
         text: crwdns168820:0[SPRITE]crwdnd168820:0[0]crwdnd168820:0[PROPERTY]crwdnd168820:0[1]crwdnd168820:0[VAL]crwdnd168820:0[2]crwdne168820:0
         options:
@@ -151,7 +150,7 @@ in:
             '"x"': crwdns2066152:0crwdne2066152:0
             '"y"': crwdns2066154:0crwdne2066154:0
       Dancelab_doMoveEachLR:
-        text: crwdns194679:0[GROUP]crwdnd194679:0[0]crwdnd194679:0[MOVE]crwdnd194679:0[1]crwdnd194679:0[DIR]crwdnd194679:0[2]crwdne194679:0
+        text: "crwdns194679:0[GROUP]crwdnd194679:0[0]crwdnd194679:0[MOVE]crwdnd194679:0[1]crwdnd194679:0[DIR]crwdnd194679:0[2]crwdne194679:0"
         options:
           GROUP:
             sprites: crwdns194680:0crwdne194680:0
@@ -168,7 +167,7 @@ in:
             '"SLOTH"': crwdns2071234:0crwdne2071234:0
             '"UNICORN"': crwdns305130:0crwdne305130:0
           MOVE:
-            '"rand"': crwdns333294:0crwdne333294:0
+            '"rand"': "crwdns333294:0crwdne333294:0"
             MOVES.XBend: crwdns333296:0crwdne333296:0
             MOVES.Roll: crwdns194973:0crwdne194973:0
             MOVES.XClapSide: crwdns333298:0crwdne333298:0
@@ -194,13 +193,13 @@ in:
             MOVES.Thriller: crwdns194977:0crwdne194977:0
             MOVES.Rest: crwdns194979:0crwdne194979:0
           DIR:
-            '1': crwdns194701:0crwdne194701:0
-            "-1": crwdns194702:0crwdne194702:0
+            '1': "crwdns194701:0crwdne194701:0"
+            "-1": "crwdns194702:0crwdne194702:0"
       Dancelab_doMoveLR:
-        text: crwdns194719:0[SPRITE]crwdnd194719:0[0]crwdnd194719:0[MOVE]crwdnd194719:0[1]crwdnd194719:0[DIR]crwdnd194719:0[2]crwdne194719:0
+        text: "crwdns194719:0[SPRITE]crwdnd194719:0[0]crwdnd194719:0[MOVE]crwdnd194719:0[1]crwdnd194719:0[DIR]crwdnd194719:0[2]crwdne194719:0"
         options:
           MOVE:
-            '"rand"': crwdns333320:0crwdne333320:0
+            '"rand"': "crwdns333320:0crwdne333320:0"
             MOVES.XBend: crwdns333322:0crwdne333322:0
             MOVES.Roll: crwdns194997:0crwdne194997:0
             MOVES.XClapSide: crwdns333324:0crwdne333324:0
@@ -226,26 +225,26 @@ in:
             MOVES.Thriller: crwdns195001:0crwdne195001:0
             MOVES.Rest: crwdns195003:0crwdne195003:0
           DIR:
-            '1': crwdns194735:0crwdne194735:0
-            "-1": crwdns194736:0crwdne194736:0
+            '1': "crwdns194735:0crwdne194735:0"
+            "-1": "crwdns194736:0crwdne194736:0"
       Dancelab_eval:
         text: crwdns168840:0[CODE]crwdnd168840:0[0]crwdne168840:0
       Dancelab_everyMeasuresRange:
-        text: crwdns2067356:0[N]crwdnd2067356:0[0]crwdnd2067356:0[START]crwdnd2067356:0[1]crwdne2067356:0
+        text: 'crwdns2067356:0[N]crwdnd2067356:0[0]crwdnd2067356:0[START]crwdnd2067356:0[1]crwdne2067356:0'
       Dancelab_everySeconds:
-        text: crwdns168841:0[N]crwdnd168841:0[0]crwdnd168841:0[UNIT]crwdnd168841:0[1]crwdne168841:0
+        text: 'crwdns168841:0[N]crwdnd168841:0[0]crwdnd168841:0[UNIT]crwdnd168841:0[1]crwdne168841:0'
         options:
           UNIT:
             '"measures"': crwdns168842:0crwdne168842:0
             '"seconds"': crwdns168843:0crwdne168843:0
       Dancelab_everySecondsRange:
-        text: crwdns168844:0[N]crwdnd168844:0[0]crwdnd168844:0[UNIT]crwdnd168844:0[1]crwdnd168844:0[START]crwdnd168844:0[2]crwdnd168844:0[STOP]crwdnd168844:0[3]crwdne168844:0
+        text: 'crwdns168844:0[N]crwdnd168844:0[0]crwdnd168844:0[UNIT]crwdnd168844:0[1]crwdnd168844:0[START]crwdnd168844:0[2]crwdnd168844:0[STOP]crwdnd168844:0[3]crwdne168844:0'
         options:
           UNIT:
             measures: crwdns168845:0crwdne168845:0
             seconds: crwdns168846:0crwdne168846:0
       Dancelab_everyVerseChorus:
-        text: crwdns169258:0[UNIT]crwdnd169258:0[0]crwdne169258:0
+        text: 'crwdns169258:0[UNIT]crwdnd169258:0[0]crwdne169258:0'
         options:
           UNIT:
             '"verse"': crwdns169259:0crwdne169259:0
@@ -258,7 +257,7 @@ in:
             '"mid"': crwdns168850:0crwdne168850:0
             '"high"': crwdns168851:0crwdne168851:0
       Dancelab_getProp:
-        text: crwdns168852:0[SPRITE]crwdnd168852:0[0]crwdnd168852:0[PROPERTY]crwdnd168852:0[1]crwdne168852:0
+        text: "crwdns168852:0[SPRITE]crwdnd168852:0[0]crwdnd168852:0[PROPERTY]crwdnd168852:0[1]crwdne168852:0"
         options:
           PROPERTY:
             '"scale"': crwdns168853:0crwdne168853:0
@@ -275,7 +274,8 @@ in:
             '"measures"': crwdns168860:0crwdne168860:0
             '"seconds"': crwdns168861:0crwdne168861:0
       Dancelab_ifDanceIs:
-        text: crwdns195009:0[SPRITE]crwdnd195009:0[0]crwdnd195009:0[DANCE]crwdnd195009:0[1]crwdnd195009:0[DO1]crwdnd195009:0[2]crwdnd195009:0[DO2]crwdnd195009:0[3]crwdne195009:0
+        text: |-
+          crwdns195009:0[SPRITE]crwdnd195009:0[0]crwdnd195009:0[DANCE]crwdnd195009:0[1]crwdnd195009:0[DO1]crwdnd195009:0[2]crwdnd195009:0[DO2]crwdnd195009:0[3]crwdne195009:0
         options:
           DANCE:
             MOVES.ClapHigh: crwdns330976:0crwdne330976:0
@@ -291,17 +291,18 @@ in:
             MOVES.Thriller: crwdns330996:0crwdne330996:0
             MOVES.Rest: crwdns330998:0crwdne330998:0
       Dancelab_ifTime:
-        text: crwdns330860:0[UNIT]crwdnd330860:0[0]crwdnd330860:0[OP]crwdnd330860:0[1]crwdnd330860:0[N]crwdnd330860:0[2]crwdnd330860:0[DO1]crwdnd330860:0[3]crwdnd330860:0[DO2]crwdnd330860:0[4]crwdne330860:0
+        text: |-
+          crwdns330860:0[UNIT]crwdnd330860:0[0]crwdnd330860:0[OP]crwdnd330860:0[1]crwdnd330860:0[N]crwdnd330860:0[2]crwdnd330860:0[DO1]crwdnd330860:0[3]crwdnd330860:0[DO2]crwdnd330860:0[4]crwdne330860:0
         options:
           UNIT:
             '"measures"': crwdns330862:0crwdne330862:0
             '"seconds"': crwdns330864:0crwdne330864:0
           OP:
-            '">"': crwdns330866:0crwdne330866:0
-            '"<"': crwdns330868:0crwdne330868:0
-            '"="': crwdns330870:0crwdne330870:0
+            '">"': "crwdns330866:0crwdne330866:0"
+            '"<"': "crwdns330868:0crwdne330868:0"
+            '"="': "crwdns330870:0crwdne330870:0"
       Dancelab_jumpTo:
-        text: crwdns168864:0[SPRITE]crwdnd168864:0[0]crwdnd168864:0[LOCATION]crwdnd168864:0[1]crwdne168864:0
+        text: "crwdns168864:0[SPRITE]crwdnd168864:0[0]crwdnd168864:0[LOCATION]crwdnd168864:0[1]crwdne168864:0"
         options:
           LOCATION:
             "{x: 200, y: 100}": crwdns195035:0crwdne195035:0
@@ -402,7 +403,8 @@ in:
             "{x: 300, y: 300}": crwdns2063174:0crwdne2063174:0
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns2063176:0crwdne2063176:0
       Dancelab_makeNewDanceSprite:
-        text: crwdns168877:0[COSTUME]crwdnd168877:0[0]crwdnd168877:0[NAME]crwdnd168877:0[1]crwdnd168877:0[LOCATION]crwdnd168877:0[2]crwdne168877:0
+        text: |-
+          crwdns168877:0[COSTUME]crwdnd168877:0[0]crwdnd168877:0[NAME]crwdnd168877:0[1]crwdnd168877:0[LOCATION]crwdnd168877:0[2]crwdne168877:0
         options:
           COSTUME:
             '"ALIEN"': crwdns195075:0crwdne195075:0
@@ -429,28 +431,29 @@ in:
             "{x: 300, y: 300}": crwdns195113:0crwdne195113:0
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns195115:0crwdne195115:0
       Dancelab_makeNewDanceSpriteGroup:
-        text: crwdns245472:0[N]crwdnd245472:0[0]crwdnd245472:0[COSTUME]crwdnd245472:0[1]crwdnd245472:0[LAYOUT]crwdnd245472:0[2]crwdne245472:0
+        text: |-
+          crwdns245472:0[N]crwdnd245472:0[0]crwdnd245472:0[COSTUME]crwdnd245472:0[1]crwdnd245472:0[LAYOUT]crwdnd245472:0[2]crwdne245472:0
         options:
           'N':
-            '2': crwdns245474:0crwdne245474:0
-            '3': crwdns245476:0crwdne245476:0
-            '4': crwdns245478:0crwdne245478:0
-            '5': crwdns245480:0crwdne245480:0
-            '6': crwdns245482:0crwdne245482:0
-            '7': crwdns245484:0crwdne245484:0
-            '8': crwdns245486:0crwdne245486:0
-            '9': crwdns245488:0crwdne245488:0
-            '10': crwdns245490:0crwdne245490:0
-            '11': crwdns331002:0crwdne331002:0
-            '12': crwdns331004:0crwdne331004:0
-            '13': crwdns331006:0crwdne331006:0
-            '14': crwdns331008:0crwdne331008:0
-            '15': crwdns331010:0crwdne331010:0
-            '16': crwdns331012:0crwdne331012:0
-            '17': crwdns331014:0crwdne331014:0
-            '18': crwdns331016:0crwdne331016:0
-            '19': crwdns331018:0crwdne331018:0
-            '20': crwdns331020:0crwdne331020:0
+            '2': 'crwdns245474:0crwdne245474:0'
+            '3': 'crwdns245476:0crwdne245476:0'
+            '4': 'crwdns245478:0crwdne245478:0'
+            '5': 'crwdns245480:0crwdne245480:0'
+            '6': 'crwdns245482:0crwdne245482:0'
+            '7': 'crwdns245484:0crwdne245484:0'
+            '8': 'crwdns245486:0crwdne245486:0'
+            '9': 'crwdns245488:0crwdne245488:0'
+            '10': 'crwdns245490:0crwdne245490:0'
+            '11': 'crwdns331002:0crwdne331002:0'
+            '12': 'crwdns331004:0crwdne331004:0'
+            '13': 'crwdns331006:0crwdne331006:0'
+            '14': 'crwdns331008:0crwdne331008:0'
+            '15': 'crwdns331010:0crwdne331010:0'
+            '16': 'crwdns331012:0crwdne331012:0'
+            '17': 'crwdns331014:0crwdne331014:0'
+            '18': 'crwdns331016:0crwdne331016:0'
+            '19': 'crwdns331018:0crwdne331018:0'
+            '20': 'crwdns331020:0crwdne331020:0'
           COSTUME:
             '"ALIEN"': crwdns245492:0crwdne245492:0
             '"BEAR"': crwdns245494:0crwdne245494:0
@@ -482,7 +485,7 @@ in:
       Dancelab_mixColors:
         text: crwdns168900:0[COLOR1]crwdnd168900:0[0]crwdnd168900:0[COLOR2]crwdnd168900:0[1]crwdne168900:0
       Dancelab_nMeasures:
-        text: crwdns168906:0[N]crwdnd168906:0[0]crwdne168906:0
+        text: "crwdns168906:0[N]crwdnd168906:0[0]crwdne168906:0"
       Dancelab_onPointerDown:
         text: crwdns168907:0crwdne168907:0
       Dancelab_onPointerDrag:
@@ -494,10 +497,12 @@ in:
       Dancelab_setBackground:
         text: crwdns168922:0[COLOR]crwdnd168922:0[0]crwdne168922:0
       Dancelab_setBackgroundEffect:
-        text: crwdns168923:0[EFFECT]crwdnd168923:0[0]crwdnd168923:0[PALETTE]crwdnd168923:0[1]crwdne168923:0
+        text: |-
+          crwdns168923:0[EFFECT]crwdnd168923:0[0]crwdnd168923:0[PALETTE]crwdnd168923:0[1]crwdne168923:0
         options:
           EFFECT:
             '"none"': crwdns168924:0crwdne168924:0
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "crwdns391568:0crwdne391568:0"
             '"circles"': crwdns391106:0crwdne391106:0
             '"color_cycle"': crwdns331030:0crwdne331030:0
             '"diamonds"': crwdns168927:0crwdne168927:0
@@ -526,11 +531,12 @@ in:
             '"vintage"': crwdns391138:0crwdne391138:0
             '"warm"': crwdns391140:0crwdne391140:0
       Dancelab_setBackgroundEffectWithPalette:
-        text: crwdns390430:0[PALETTE]crwdnd390430:0[0]crwdnd390430:0[EFFECT]crwdnd390430:0[1]crwdne390430:0
+        text: |-
+          crwdns390430:0[PALETTE]crwdnd390430:0[0]crwdnd390430:0[EFFECT]crwdnd390430:0[1]crwdne390430:0
         options:
           EFFECT:
             '"none"': crwdns390432:0crwdne390432:0
-            '"rand"': crwdns390434:0crwdne390434:0
+            '"rand"': "crwdns390434:0crwdne390434:0"
             '"circles"': crwdns390436:0crwdne390436:0
             '"quads"': crwdns2289484:0crwdne2289484:0
             '"color_cycle"': crwdns390438:0crwdne390438:0
@@ -602,6 +608,7 @@ in:
         options:
           EFFECT:
             '"none"': crwdns169243:0crwdne169243:0
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "crwdns391570:0crwdne391570:0"
             '"bubbles"': crwdns391142:0crwdne391142:0
             '"confetti"': crwdns391144:0crwdne391144:0
             '"hearts_red"': crwdns391146:0crwdne391146:0
@@ -620,7 +627,7 @@ in:
         options:
           EFFECT:
             '"none"': crwdns390490:0crwdne390490:0
-            '"rand"': crwdns390492:0crwdne390492:0
+            '"rand"': "crwdns390492:0crwdne390492:0"
             '"bubbles"': crwdns390494:0crwdne390494:0
             '"hearts_colorful"': crwdns2071252:0crwdne2071252:0
             '"confetti"': crwdns390496:0crwdne390496:0
@@ -639,7 +646,7 @@ in:
             '"exploding_stars"': crwdns2071258:0crwdne2071258:0
             '"raining_tacos"': crwdns390518:0crwdne390518:0
       Dancelab_setProp:
-        text: crwdns168933:0[SPRITE]crwdnd168933:0[0]crwdnd168933:0[PROPERTY]crwdnd168933:0[1]crwdnd168933:0[VAL]crwdnd168933:0[2]crwdne168933:0
+        text: 'crwdns168933:0[SPRITE]crwdnd168933:0[0]crwdnd168933:0[PROPERTY]crwdnd168933:0[1]crwdnd168933:0[VAL]crwdnd168933:0[2]crwdne168933:0'
         options:
           PROPERTY:
             '"scale"': crwdns168934:0crwdne168934:0
@@ -774,7 +781,7 @@ in:
             'true': crwdns168946:0crwdne168946:0
             'false': crwdns168947:0crwdne168947:0
       Dancelab_startMapping:
-        text: crwdns168960:0[SPRITE]crwdnd168960:0[0]crwdnd168960:0[PROPERTY]crwdnd168960:0[1]crwdnd168960:0[RANGE]crwdnd168960:0[2]crwdne168960:0
+        text: "crwdns168960:0[SPRITE]crwdnd168960:0[0]crwdnd168960:0[PROPERTY]crwdnd168960:0[1]crwdnd168960:0[RANGE]crwdnd168960:0[2]crwdne168960:0"
         options:
           PROPERTY:
             '"scale"': crwdns168961:0crwdne168961:0
@@ -789,7 +796,7 @@ in:
             '"mid"': crwdns168968:0crwdne168968:0
             '"treble"': crwdns168969:0crwdne168969:0
       Dancelab_startMappingEach:
-        text: crwdns2066246:0[GROUP]crwdnd2066246:0[0]crwdnd2066246:0[PROPERTY]crwdnd2066246:0[1]crwdnd2066246:0[RANGE]crwdnd2066246:0[2]crwdne2066246:0
+        text: "crwdns2066246:0[GROUP]crwdnd2066246:0[0]crwdnd2066246:0[PROPERTY]crwdnd2066246:0[1]crwdnd2066246:0[RANGE]crwdnd2066246:0[2]crwdne2066246:0"
         options:
           GROUP:
             sprites: crwdns2066248:0crwdne2066248:0
@@ -818,7 +825,7 @@ in:
             '"mid"': crwdns2066288:0crwdne2066288:0
             '"treble"': crwdns2066290:0crwdne2066290:0
       Dancelab_stopMapping:
-        text: crwdns168973:0[SPRITE]crwdnd168973:0[0]crwdnd168973:0[PROPERTY]crwdnd168973:0[1]crwdnd168973:0[RANGE]crwdnd168973:0[2]crwdne168973:0
+        text: "crwdns168973:0[SPRITE]crwdnd168973:0[0]crwdnd168973:0[PROPERTY]crwdnd168973:0[1]crwdnd168973:0[RANGE]crwdnd168973:0[2]crwdne168973:0"
         options:
           PROPERTY:
             '"scale"': crwdns168974:0crwdne168974:0
@@ -834,7 +841,7 @@ in:
             '"mid"': crwdns168982:0crwdne168982:0
             '"treble"': crwdns168983:0crwdne168983:0
       Dancelab_stopMappingEach:
-        text: crwdns2066292:0[GROUP]crwdnd2066292:0[0]crwdnd2066292:0[PROPERTY]crwdnd2066292:0[1]crwdnd2066292:0[RANGE]crwdnd2066292:0[2]crwdne2066292:0
+        text: "crwdns2066292:0[GROUP]crwdnd2066292:0[0]crwdnd2066292:0[PROPERTY]crwdnd2066292:0[1]crwdnd2066292:0[RANGE]crwdnd2066292:0[2]crwdne2066292:0"
         options:
           GROUP:
             sprites: crwdns2066294:0crwdne2066294:0
@@ -897,18 +904,18 @@ in:
             '"v"': crwdns2069200:0crwdne2069200:0
             '"w"': crwdns2069202:0crwdne2069202:0
             '"x"': crwdns2069204:0crwdne2069204:0
-            '"y"': crwdns2069206:0crwdne2069206:0
+            '"y"': 'crwdns2069206:0crwdne2069206:0'
             '"z"': crwdns2069208:0crwdne2069208:0
-            '"0"': crwdns2069210:0crwdne2069210:0
-            '"1"': crwdns2069212:0crwdne2069212:0
-            '"2"': crwdns2069214:0crwdne2069214:0
-            '"3"': crwdns2069216:0crwdne2069216:0
-            '"4"': crwdns2069218:0crwdne2069218:0
-            '"5"': crwdns2069220:0crwdne2069220:0
-            '"6"': crwdns2069222:0crwdne2069222:0
-            '"7"': crwdns2069224:0crwdne2069224:0
-            '"8"': crwdns2069226:0crwdne2069226:0
-            '"9"': crwdns2069228:0crwdne2069228:0
+            '"0"': 'crwdns2069210:0crwdne2069210:0'
+            '"1"': 'crwdns2069212:0crwdne2069212:0'
+            '"2"': 'crwdns2069214:0crwdne2069214:0'
+            '"3"': 'crwdns2069216:0crwdne2069216:0'
+            '"4"': 'crwdns2069218:0crwdne2069218:0'
+            '"5"': 'crwdns2069220:0crwdne2069220:0'
+            '"6"': 'crwdns2069222:0crwdne2069222:0'
+            '"7"': 'crwdns2069224:0crwdne2069224:0'
+            '"8"': 'crwdns2069226:0crwdne2069226:0'
+            '"9"': 'crwdns2069228:0crwdne2069228:0'
       Dancelab_whenKey:
         text: crwdns168985:0[KEY]crwdnd168985:0[0]crwdne168985:0
         options:
@@ -932,7 +939,7 @@ in:
             '"k"': crwdns305212:0crwdne305212:0
             '"l"': crwdns305214:0crwdne305214:0
             '"m"': crwdns305216:0crwdne305216:0
-            '"n"': crwdns334786:0crwdne334786:0
+            '"n"': 'crwdns334786:0crwdne334786:0'
             '"o"': crwdns305218:0crwdne305218:0
             '"p"': crwdns305220:0crwdne305220:0
             '"q"': crwdns305222:0crwdne305222:0
@@ -943,18 +950,18 @@ in:
             '"v"': crwdns305230:0crwdne305230:0
             '"w"': crwdns168992:0crwdne168992:0
             '"x"': crwdns305232:0crwdne305232:0
-            '"y"': crwdns334788:0crwdne334788:0
+            '"y"': 'crwdns334788:0crwdne334788:0'
             '"z"': crwdns305234:0crwdne305234:0
-            '"0"': crwdns305236:0crwdne305236:0
-            '"1"': crwdns305238:0crwdne305238:0
-            '"2"': crwdns305240:0crwdne305240:0
-            '"3"': crwdns305242:0crwdne305242:0
-            '"4"': crwdns305244:0crwdne305244:0
-            '"5"': crwdns305246:0crwdne305246:0
-            '"6"': crwdns305248:0crwdne305248:0
-            '"7"': crwdns305250:0crwdne305250:0
-            '"8"': crwdns305252:0crwdne305252:0
-            '"9"': crwdns305254:0crwdne305254:0
+            '"0"': 'crwdns305236:0crwdne305236:0'
+            '"1"': 'crwdns305238:0crwdne305238:0'
+            '"2"': 'crwdns305240:0crwdne305240:0'
+            '"3"': 'crwdns305242:0crwdne305242:0'
+            '"4"': 'crwdns305244:0crwdne305244:0'
+            '"5"': 'crwdns305246:0crwdne305246:0'
+            '"6"': 'crwdns305248:0crwdne305248:0'
+            '"7"': 'crwdns305250:0crwdne305250:0'
+            '"8"': 'crwdns305252:0crwdne305252:0'
+            '"9"': 'crwdns305254:0crwdne305254:0'
       Dancelab_whenPeak:
         text: crwdns168995:0[RANGE]crwdnd168995:0[0]crwdne168995:0
         options:
@@ -967,7 +974,7 @@ in:
       Dancelab_whenSetup2:
         text: crwdns2068876:0crwdne2068876:0
       Dancelab_whenSetupSong:
-        text: crwdns182419:0[SONG]crwdnd182419:0[0]crwdne182419:0
+        text: 'crwdns182419:0[SONG]crwdnd182419:0[0]crwdne182419:0'
         options:
           SONG:
             '"macklemore90"': crwdns194802:0crwdne194802:0
@@ -976,19 +983,25 @@ in:
       gamelab_addBehaviorSimple:
         text: crwdns169012:0[SPRITE]crwdnd169012:0[0]crwdnd169012:0[BEHAVIOR]crwdnd169012:0[1]crwdne169012:0
       gamelab_addTarget:
-        text: crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdne2478908:0
+        text: "crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdnd2478908:0[OPT]crwdnd2478908:0[2]crwdne2478908:0"
+        options:
+          OPT:
+            '"follow"': crwdns2486172:0crwdne2486172:0
+            '"avoid"': crwdns2486174:0crwdne2486174:0
       gamelab_allSpritesWithAnimation:
-        text: crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0
+        text: "crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0"
       gamelab_atTime:
         text: crwdns2463896:0[N]crwdnd2463896:0[0]crwdnd2463896:0[UNIT]crwdnd2463896:0[1]crwdne2463896:0
         options:
           UNIT:
             '"seconds"': crwdns2463898:0crwdne2463898:0
             '"frames"': crwdns2463900:0crwdne2463900:0
+      gamelab_avoidingTargets:
+        text: crwdns2486176:0crwdne2486176:0
       gamelab_beginCollectingData:
         text: crwdns2478910:0[BREAK]crwdnd2478910:0[0]crwdnd2478910:0[VALUE]crwdnd2478910:0[1]crwdnd2478910:0[LABEL]crwdnd2478910:0[2]crwdne2478910:0
       gamelab_bounceOff:
-        text: crwdns2371356:0[SPRITE]crwdnd2371356:0[0]crwdnd2371356:0[TARGET]crwdnd2371356:0[1]crwdne2371356:0
+        text: "crwdns2371356:0[SPRITE]crwdnd2371356:0[0]crwdnd2371356:0[TARGET]crwdnd2371356:0[1]crwdne2371356:0"
       gamelab_changePropBy:
         text: crwdns169023:0[SPRITE]crwdnd169023:0[0]crwdnd169023:0[PROPERTY]crwdnd169023:0[1]crwdnd169023:0[VAL]crwdnd169023:0[2]crwdne169023:0
         options:
@@ -1000,7 +1013,7 @@ in:
             '"direction"': crwdns169028:0crwdne169028:0
             '"speed"': crwdns2484866:0crwdne2484866:0
       gamelab_checkTouching:
-        text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
+        text: "crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0"
         options:
           CONDITION:
             '"when"': crwdns400996:0crwdne400996:0
@@ -1008,19 +1021,21 @@ in:
       gamelab_clickedOn:
         text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
       gamelab_clickedSpritePointer:
-        text: crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0
+        text: "crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0"
       gamelab_comment:
-        text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
+        text: 'crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0'
       gamelab_costumeImage:
-        text: crwdns2471986:0[COSTUME]crwdnd2471986:0[0]crwdne2471986:0
+        text: "crwdns2471986:0[COSTUME]crwdnd2471986:0[0]crwdne2471986:0"
       gamelab_countByAnimation:
         text: crwdns2462246:0[SPRITE]crwdnd2462246:0[0]crwdne2462246:0
       gamelab_createNewSprite:
-        text: crwdns169032:0[NAME]crwdnd169032:0[0]crwdnd169032:0[COSTUME]crwdnd169032:0[1]crwdnd169032:0[LOCATION]crwdnd169032:0[2]crwdne169032:0
+        text: "crwdns169032:0[NAME]crwdnd169032:0[0]crwdnd169032:0[COSTUME]crwdnd169032:0[1]crwdnd169032:0[LOCATION]crwdnd169032:0[2]crwdne169032:0"
       gamelab_destroy:
         text: crwdns169036:0[THIS]crwdnd169036:0[0]crwdne169036:0
       gamelab_draggable:
         text: crwdns241354:0crwdne241354:0
+      gamelab_drawLine:
+        text: crwdns2486178:0[COLOR]crwdnd2486178:0[0]crwdnd2486178:0[LOC1]crwdnd2486178:0[1]crwdnd2486178:0[LOC2]crwdnd2486178:0[2]crwdne2486178:0
       gamelab_edgesDisplace:
         text: crwdns169039:0[SPRITE]crwdnd169039:0[0]crwdne169039:0
       gamelab_followingTargets:
@@ -1028,7 +1043,7 @@ in:
       gamelab_getAllSprites:
         text: crwdns2462248:0crwdne2462248:0
       gamelab_getProp:
-        text: crwdns169044:0[SPRITE]crwdnd169044:0[0]crwdnd169044:0[PROPERTY]crwdnd169044:0[1]crwdne169044:0
+        text: "crwdns169044:0[SPRITE]crwdnd169044:0[0]crwdnd169044:0[PROPERTY]crwdnd169044:0[1]crwdne169044:0"
         options:
           PROPERTY:
             '"scale"': crwdns169045:0crwdne169045:0
@@ -1039,7 +1054,7 @@ in:
             '"tint"': crwdns169050:0crwdne169050:0
             '"speed"': crwdns2478914:0crwdne2478914:0
       gamelab_getThisSprite:
-        text: crwdns401002:0[CHOICE]crwdnd401002:0[0]crwdne401002:0
+        text: "crwdns401002:0[CHOICE]crwdnd401002:0[0]crwdne401002:0"
         options:
           CHOICE:
             '"this"': crwdns401004:0crwdne401004:0
@@ -1055,11 +1070,12 @@ in:
       gamelab_hideTitleScreen:
         text: crwdns169053:0crwdne169053:0
       gamelab_ifVarEquals:
-        text: crwdns2471710:0[NUM]crwdnd2471710:0[0]crwdnd2471710:0[VAL]crwdnd2471710:0[1]crwdnd2471710:0[STATEMENT]crwdnd2471710:0[2]crwdne2471710:0
+        text: |-
+          crwdns2471710:0[NUM]crwdnd2471710:0[0]crwdnd2471710:0[VAL]crwdnd2471710:0[1]crwdnd2471710:0[STATEMENT]crwdnd2471710:0[2]crwdne2471710:0
       gamelab_isCostumeEqual:
-        text: crwdns2471712:0[SPRITE]crwdnd2471712:0[0]crwdnd2471712:0[COSTUME]crwdnd2471712:0[1]crwdne2471712:0
+        text: "crwdns2471712:0[SPRITE]crwdnd2471712:0[0]crwdnd2471712:0[COSTUME]crwdnd2471712:0[1]crwdne2471712:0"
       gamelab_isKeyPressed:
-        text: crwdns2463902:0[KEY]crwdnd2463902:0[0]crwdne2463902:0
+        text: "crwdns2463902:0[KEY]crwdnd2463902:0[0]crwdne2463902:0"
         options:
           KEY:
             '"up"': crwdns2463904:0crwdne2463904:0
@@ -1080,7 +1096,7 @@ in:
             '"k"': crwdns2463934:0crwdne2463934:0
             '"l"': crwdns2463936:0crwdne2463936:0
             '"m"': crwdns2463938:0crwdne2463938:0
-            '"n"': crwdns2463940:0crwdne2463940:0
+            '"n"': 'crwdns2463940:0crwdne2463940:0'
             '"o"': crwdns2463942:0crwdne2463942:0
             '"p"': crwdns2463944:0crwdne2463944:0
             '"q"': crwdns2463946:0crwdne2463946:0
@@ -1091,16 +1107,16 @@ in:
             '"v"': crwdns2463956:0crwdne2463956:0
             '"w"': crwdns2463958:0crwdne2463958:0
             '"x"': crwdns2463960:0crwdne2463960:0
-            '"y"': crwdns2463962:0crwdne2463962:0
+            '"y"': 'crwdns2463962:0crwdne2463962:0'
             '"z"': crwdns2463964:0crwdne2463964:0
       gamelab_isTouchingEdges:
-        text: crwdns169056:0[SPRITE]crwdnd169056:0[0]crwdne169056:0
+        text: "crwdns169056:0[SPRITE]crwdnd169056:0[0]crwdne169056:0"
       gamelab_isTouchingSprite:
-        text: crwdns2371358:0[SPRITE]crwdnd2371358:0[0]crwdnd2371358:0[TARGET]crwdnd2371358:0[1]crwdne2371358:0
+        text: "crwdns2371358:0[SPRITE]crwdnd2371358:0[0]crwdnd2371358:0[TARGET]crwdnd2371358:0[1]crwdne2371358:0"
       gamelab_jumpTo:
-        text: crwdns169058:0[SPRITE]crwdnd169058:0[0]crwdnd169058:0[LOCATION]crwdnd169058:0[1]crwdne169058:0
+        text: "crwdns169058:0[SPRITE]crwdnd169058:0[0]crwdnd169058:0[LOCATION]crwdnd169058:0[1]crwdne169058:0"
       gamelab_keyPressed:
-        text: crwdns401008:0[CONDITION]crwdnd401008:0[0]crwdnd401008:0[KEY]crwdnd401008:0[1]crwdne401008:0
+        text: "crwdns401008:0[CONDITION]crwdnd401008:0[0]crwdnd401008:0[KEY]crwdnd401008:0[1]crwdne401008:0"
         options:
           CONDITION:
             '"when"': crwdns401010:0crwdne401010:0
@@ -1124,7 +1140,7 @@ in:
             '"k"': crwdns401044:0crwdne401044:0
             '"l"': crwdns401046:0crwdne401046:0
             '"m"': crwdns401048:0crwdne401048:0
-            '"n"': crwdns401050:0crwdne401050:0
+            '"n"': 'crwdns401050:0crwdne401050:0'
             '"o"': crwdns401052:0crwdne401052:0
             '"p"': crwdns401054:0crwdne401054:0
             '"q"': crwdns401056:0crwdne401056:0
@@ -1135,12 +1151,12 @@ in:
             '"v"': crwdns401066:0crwdne401066:0
             '"w"': crwdns401068:0crwdne401068:0
             '"x"': crwdns401070:0crwdne401070:0
-            '"y"': crwdns401072:0crwdne401072:0
+            '"y"': 'crwdns401072:0crwdne401072:0'
             '"z"': crwdns401074:0crwdne401074:0
       gamelab_locationAt:
-        text: crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0
+        text: 'crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0'
       gamelab_locationModifier:
-        text: crwdns2466710:0[DISTANCE]crwdnd2466710:0[0]crwdnd2466710:0[DIRECTION]crwdnd2466710:0[1]crwdnd2466710:0[LOCATION]crwdnd2466710:0[2]crwdne2466710:0
+        text: "crwdns2466710:0[DISTANCE]crwdnd2466710:0[0]crwdnd2466710:0[DIRECTION]crwdnd2466710:0[1]crwdnd2466710:0[LOCATION]crwdnd2466710:0[2]crwdne2466710:0"
         options:
           DIRECTION:
             '"North"': crwdns2466712:0crwdne2466712:0
@@ -1152,13 +1168,13 @@ in:
       gamelab_locationOf:
         text: crwdns169078:0[SPRITE]crwdnd169078:0[0]crwdne169078:0
       gamelab_location_picker:
-        text: crwdns169081:0[LOCATION]crwdnd169081:0[0]crwdne169081:0
+        text: "crwdns169081:0[LOCATION]crwdnd169081:0[0]crwdne169081:0"
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
         text: crwdns2463966:0[NUM]crwdnd2463966:0[0]crwdnd2463966:0[ANIMATION_NAME]crwdnd2463966:0[1]crwdne2463966:0
       gamelab_mirrorSprite:
-        text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
+        text: "crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0"
         options:
           DIRECTION:
             '"right"': crwdns169086:0crwdne169086:0
@@ -1180,9 +1196,9 @@ in:
       gamelab_moveToward:
         text: crwdns169100:0[SPRITE]crwdnd169100:0[0]crwdnd169100:0[DISTANCE]crwdnd169100:0[1]crwdnd169100:0[TARGET]crwdnd169100:0[2]crwdne169100:0
       gamelab_newSpritePointer:
-        text: crwdns2478916:0[SPRITE]crwdnd2478916:0[0]crwdne2478916:0
+        text: "crwdns2478916:0[SPRITE]crwdnd2478916:0[0]crwdne2478916:0"
       gamelab_objectSpritePointer:
-        text: crwdns2375478:0[SPRITE]crwdnd2375478:0[0]crwdne2375478:0
+        text: "crwdns2375478:0[SPRITE]crwdnd2375478:0[0]crwdne2375478:0"
       gamelab_patrollingUpDown:
         text: crwdns2370034:0crwdne2370034:0
       gamelab_playSound:
@@ -1206,7 +1222,7 @@ in:
       gamelab_randomLocation:
         text: crwdns169110:0crwdne169110:0
       gamelab_removeAllBehaviors:
-        text: crwdns169111:0[SPRITE]crwdnd169111:0[0]crwdne169111:0
+        text: "crwdns169111:0[SPRITE]crwdnd169111:0[0]crwdne169111:0"
       gamelab_removeBehaviorSimple:
         text: crwdns169112:0[SPRITE]crwdnd169112:0[0]crwdnd169112:0[BEHAVIOR]crwdnd169112:0[1]crwdne169112:0
       gamelab_removeTint:
@@ -1232,7 +1248,7 @@ in:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns401094:0crwdne401094:0
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': crwdns774678:0crwdne774678:0
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': crwdns774680:0crwdne774680:0
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns401096:0crwdne401096:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'crwdns401096:0crwdne401096:0'
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns401098:0crwdne401098:0
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns401100:0crwdne401100:0
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns401102:0crwdne401102:0
@@ -1275,6 +1291,16 @@ in:
             '"y"': crwdns169134:0crwdne169134:0
             '"direction"': crwdns169135:0crwdne169135:0
             '"speed"': crwdns2478928:0crwdne2478928:0
+      gamelab_setProp_dropdown:
+        text: crwdns2486180:0[SPRITE]crwdnd2486180:0[0]crwdnd2486180:0[PROPERTY]crwdnd2486180:0[1]crwdnd2486180:0[SIZE]crwdnd2486180:0[2]crwdne2486180:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns2486182:0crwdne2486182:0
+          SIZE:
+            '25': crwdns2486184:0crwdne2486184:0
+            '50': crwdns2486186:0crwdne2486186:0
+            '75': crwdns2486188:0crwdne2486188:0
+            '100': crwdns2486190:0crwdne2486190:0
       gamelab_setSizes:
         text: crwdns169137:0[SPRITE]crwdnd169137:0[0]crwdnd169137:0[PROPERTY]crwdnd169137:0[1]crwdnd169137:0[N]crwdnd169137:0[2]crwdne169137:0
         options:
@@ -1285,25 +1311,36 @@ in:
       gamelab_setTint:
         text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
       gamelab_setupScoreboard:
-        text: crwdns2485636:0[SPRITE1COSTUME]crwdnd2485636:0[0]crwdnd2485636:0[VAR1]crwdnd2485636:0[1]crwdnd2485636:0[SPRITE2COSTUME]crwdnd2485636:0[2]crwdnd2485636:0[VAR2]crwdnd2485636:0[3]crwdnd2485636:0[SPRITE3COSTUME]crwdnd2485636:0[4]crwdne2485636:0
+        text: "crwdns2485636:0[SPRITE1COSTUME]crwdnd2485636:0[0]crwdnd2485636:0[VAR1]crwdnd2485636:0[1]crwdnd2485636:0[SPRITE2COSTUME]crwdnd2485636:0[2]crwdnd2485636:0[VAR2]crwdnd2485636:0[3]crwdnd2485636:0[SPRITE3COSTUME]crwdnd2485636:0[4]crwdne2485636:0"
       gamelab_setupSim:
-        text: crwdns401124:0[SPRITE1N]crwdnd401124:0[0]crwdnd401124:0[SPRITE1COSTUME]crwdnd401124:0[1]crwdnd401124:0[SPRITE1SPEED]crwdnd401124:0[2]crwdnd401124:0[SPRITE2N]crwdnd401124:0[3]crwdnd401124:0[SPRITE2COSTUME]crwdnd401124:0[4]crwdnd401124:0[SPRITE2SPEED]crwdnd401124:0[5]crwdnd401124:0[SPRITE3N]crwdnd401124:0[6]crwdnd401124:0[SPRITE3COSTUME]crwdnd401124:0[7]crwdne401124:0
+        text: |-
+          crwdns401124:0[SPRITE1N]crwdnd401124:0[0]crwdnd401124:0[SPRITE1COSTUME]crwdnd401124:0[1]crwdnd401124:0[SPRITE1SPEED]crwdnd401124:0[2]crwdnd401124:0[SPRITE2N]crwdnd401124:0[3]crwdnd401124:0[SPRITE2COSTUME]crwdnd401124:0[4]crwdnd401124:0[SPRITE2SPEED]crwdnd401124:0[5]crwdnd401124:0[SPRITE3N]crwdnd401124:0[6]crwdnd401124:0[SPRITE3COSTUME]crwdnd401124:0[7]crwdne401124:0
       gamelab_showTitleScreen:
         text: crwdns169143:0[BREAK]crwdnd169143:0[0]crwdnd169143:0[TITLE]crwdnd169143:0[1]crwdnd169143:0[SUBTITLE]crwdnd169143:0[2]crwdne169143:0
       gamelab_spriteClicked:
-        text: crwdns401126:0[CONDITION]crwdnd401126:0[0]crwdnd401126:0[SPRITE]crwdnd401126:0[1]crwdne401126:0
+        text: "crwdns401126:0[CONDITION]crwdnd401126:0[0]crwdnd401126:0[SPRITE]crwdnd401126:0[1]crwdne401126:0"
         options:
           CONDITION:
             '"when"': crwdns401128:0crwdne401128:0
             '"while"': crwdns401130:0crwdne401130:0
+      gamelab_spriteSay:
+        text: "crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0"
+      gamelab_startAvoiding:
+        text: "crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0"
+      gamelab_startFollowing:
+        text: "crwdns2486192:0[SPRITE]crwdnd2486192:0[0]crwdnd2486192:0[TARGET]crwdnd2486192:0[1]crwdne2486192:0"
+      gamelab_stopAvoiding:
+        text: "crwdns2547468:0[SPRITE]crwdnd2547468:0[0]crwdne2547468:0"
       gamelab_stopCollectingData:
         text: crwdns2478930:0crwdne2478930:0
+      gamelab_stopFollowing:
+        text: "crwdns2486194:0[SPRITE]crwdnd2486194:0[0]crwdne2486194:0"
       gamelab_subjectSpritePointer:
-        text: crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0
+        text: "crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0"
       gamelab_textJoin:
-        text: crwdns2478932:0[LEFT_QUOTE]crwdnd2478932:0[0]crwdnd2478932:0[TEXT1]crwdnd2478932:0[1]crwdnd2478932:0[RIGHT_QUOTE]crwdnd2478932:0[2]crwdnd2478932:0[TEXT2]crwdnd2478932:0[3]crwdne2478932:0
+        text: "crwdns2478932:0[LEFT_QUOTE]crwdnd2478932:0[0]crwdnd2478932:0[TEXT1]crwdnd2478932:0[1]crwdnd2478932:0[RIGHT_QUOTE]crwdnd2478932:0[2]crwdnd2478932:0[TEXT2]crwdnd2478932:0[3]crwdne2478932:0"
       gamelab_textVariableJoin:
-        text: crwdns2478934:0[VAR]crwdnd2478934:0[0]crwdnd2478934:0[TEXT2]crwdnd2478934:0[1]crwdne2478934:0
+        text: "crwdns2478934:0[VAR]crwdnd2478934:0[0]crwdnd2478934:0[TEXT2]crwdnd2478934:0[1]crwdne2478934:0"
       gamelab_tumbling:
         text: crwdns2370036:0crwdne2370036:0
       gamelab_turn:
@@ -1314,6 +1351,8 @@ in:
             '"left"': crwdns169174:0crwdne169174:0
       gamelab_updateTitleWithColor:
         text: crwdns2335481:0[BREAK]crwdnd2335481:0[0]crwdnd2335481:0[TITLE]crwdnd2335481:0[1]crwdnd2335481:0[COLOR]crwdnd2335481:0[2]crwdne2335481:0
+      gamelab_whenAllPromptsAnswered:
+        text: crwdns2486196:0crwdne2486196:0
       gamelab_whenDownArrow:
         text: crwdns169175:0crwdne169175:0
       gamelab_whenKey:
@@ -1365,7 +1404,18 @@ in:
       gamelab_whileUpArrow:
         text: crwdns169215:0crwdne169215:0
       gamelab_withPercentChance:
-        text: crwdns2471716:0[NUM]crwdnd2471716:0[0]crwdnd2471716:0[STATEMENT]crwdnd2471716:0[1]crwdne2471716:0
+        text: |-
+          crwdns2471716:0[NUM]crwdnd2471716:0[0]crwdnd2471716:0[STATEMENT]crwdnd2471716:0[1]crwdne2471716:0
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+          crwdns2486198:0[NUM]crwdnd2486198:0[0]crwdnd2486198:0[STATEMENT]crwdnd2486198:0[1]crwdne2486198:0
+        options:
+          NUM:
+            '10': crwdns2486200:0crwdne2486200:0
+            '25': crwdns2486202:0crwdne2486202:0
+            '50': crwdns2486204:0crwdne2486204:0
+            '75': crwdns2486206:0crwdne2486206:0
+            '90': crwdns2486208:0crwdne2486208:0
       gamelab_xLocationOf:
         text: crwdns169216:0[SPRITE]crwdnd169216:0[0]crwdne169216:0
       gamelab_yLocationOf:
@@ -1373,7 +1423,7 @@ in:
       Mikelab_addBehaviorSimple:
         text: crwdns170126:0[SPRITE]crwdnd170126:0[0]crwdnd170126:0[BEHAVIOR]crwdnd170126:0[1]crwdne170126:0
       Mikelab_addTrainingData:
-        text: crwdns2066398:0[NAME]crwdnd2066398:0[0]crwdnd2066398:0[LOCATION]crwdnd2066398:0[1]crwdne2066398:0
+        text: 'crwdns2066398:0[NAME]crwdnd2066398:0[0]crwdnd2066398:0[LOCATION]crwdnd2066398:0[1]crwdne2066398:0'
         options:
           NAME:
             "{x: 201, y: 100}": crwdns2066400:0crwdne2066400:0
@@ -1384,7 +1434,7 @@ in:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns2066408:0crwdne2066408:0
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": crwdns2066410:0crwdne2066410:0
       Mikelab_allSpritesWithAnimation:
-        text: crwdns2477260:0[ANIMATION]crwdnd2477260:0[0]crwdne2477260:0
+        text: "crwdns2477260:0[ANIMATION]crwdnd2477260:0[0]crwdne2477260:0"
       Mikelab_beginDataCollection:
         text: crwdns2477262:0[QUESTION]crwdnd2477262:0[0]crwdnd2477262:0[VAR]crwdnd2477262:0[1]crwdnd2477262:0[A]crwdnd2477262:0[2]crwdnd2477262:0[B]crwdnd2477262:0[3]crwdnd2477262:0[C]crwdnd2477262:0[4]crwdne2477262:0
       Mikelab_changeAnim:
@@ -1399,9 +1449,9 @@ in:
             '"y"': crwdns170131:0crwdne170131:0
             '"direction"': crwdns170132:0crwdne170132:0
       Mikelab_checkAnim:
-        text: crwdns182424:0[SPRITE]crwdnd182424:0[0]crwdnd182424:0[COSTUME]crwdnd182424:0[1]crwdne182424:0
+        text: "crwdns182424:0[SPRITE]crwdnd182424:0[0]crwdnd182424:0[COSTUME]crwdnd182424:0[1]crwdne182424:0"
       Mikelab_createNewSprite:
-        text: crwdns170133:0[COSTUME]crwdnd170133:0[0]crwdnd170133:0[NAME]crwdnd170133:0[1]crwdnd170133:0[LOCATION]crwdnd170133:0[2]crwdne170133:0
+        text: "crwdns170133:0[COSTUME]crwdnd170133:0[0]crwdnd170133:0[NAME]crwdnd170133:0[1]crwdnd170133:0[LOCATION]crwdnd170133:0[2]crwdne170133:0"
         options:
           LOCATION:
             "{x: 200, y: 100}": crwdns195434:0crwdne195434:0
@@ -1417,15 +1467,15 @@ in:
       Mikelab_destroy:
         text: crwdns195454:0[SPRITE]crwdnd195454:0[0]crwdne195454:0
       Mikelab_displace:
-        text: crwdns195456:0[TARGET]crwdnd195456:0[0]crwdnd195456:0[SPRITE]crwdnd195456:0[1]crwdne195456:0
+        text: "crwdns195456:0[TARGET]crwdnd195456:0[0]crwdnd195456:0[SPRITE]crwdnd195456:0[1]crwdne195456:0"
       Mikelab_eval:
         text: crwdns195460:0[CODE]crwdnd195460:0[0]crwdne195460:0
       Mikelab_getAnim:
-        text: crwdns170134:0[SPRITE]crwdnd170134:0[0]crwdne170134:0
+        text: "crwdns170134:0[SPRITE]crwdnd170134:0[0]crwdne170134:0"
       Mikelab_getNext:
         text: crwdns2066412:0crwdne2066412:0
       Mikelab_getProp:
-        text: crwdns170136:0[SPRITE]crwdnd170136:0[0]crwdnd170136:0[PROPERTY]crwdnd170136:0[1]crwdne170136:0
+        text: "crwdns170136:0[SPRITE]crwdnd170136:0[0]crwdnd170136:0[PROPERTY]crwdnd170136:0[1]crwdne170136:0"
         options:
           PROPERTY:
             '"scale"': crwdns170137:0crwdne170137:0
@@ -1476,7 +1526,7 @@ in:
       Mikelab_groupEdgesDisplace:
         text: crwdns391216:0[COSTUME]crwdnd391216:0[0]crwdne391216:0
       Mikelab_groupGetProp:
-        text: crwdns391218:0[SELECT]crwdnd391218:0[0]crwdnd391218:0[COSTUME]crwdnd391218:0[1]crwdnd391218:0[PROPERTY]crwdnd391218:0[2]crwdne391218:0
+        text: "crwdns391218:0[SELECT]crwdnd391218:0[0]crwdnd391218:0[COSTUME]crwdnd391218:0[1]crwdnd391218:0[PROPERTY]crwdnd391218:0[2]crwdne391218:0"
         options:
           SELECT:
             '"average"': crwdns391220:0crwdne391220:0
@@ -1494,7 +1544,7 @@ in:
             '"all"': crwdns391236:0crwdne391236:0
             '"this"': crwdns391238:0crwdne391238:0
       Mikelab_groupRemoveBehaviorSimple:
-        text: crwdns391240:0[SELECT]crwdnd391240:0[0]crwdnd391240:0[COSTUME]crwdnd391240:0[1]crwdnd391240:0[BEHAVIOR]crwdnd391240:0[2]crwdne391240:0
+        text: "crwdns391240:0[SELECT]crwdnd391240:0[0]crwdnd391240:0[COSTUME]crwdnd391240:0[1]crwdnd391240:0[BEHAVIOR]crwdnd391240:0[2]crwdne391240:0"
         options:
           SELECT:
             '"all"': crwdns391242:0crwdne391242:0
@@ -1530,9 +1580,10 @@ in:
       Mikelab_groupWhileClicked:
         text: crwdns391278:0[COSTUME]crwdnd391278:0[0]crwdne391278:0
       Mikelab_groupWhileTouchingAny:
-        text: crwdns391280:0[COSTUME]crwdnd391280:0[0]crwdnd391280:0[COSTUME2]crwdnd391280:0[1]crwdnd391280:0[STATEMENT]crwdnd391280:0[2]crwdne391280:0
+        text: |-
+          crwdns391280:0[COSTUME]crwdnd391280:0[0]crwdnd391280:0[COSTUME2]crwdnd391280:0[1]crwdnd391280:0[STATEMENT]crwdnd391280:0[2]crwdne391280:0
       Mikelab_hasBehavior:
-        text: crwdns170143:0[SPRITE]crwdnd170143:0[0]crwdnd170143:0[BEHAVIOR]crwdnd170143:0[1]crwdne170143:0
+        text: "crwdns170143:0[SPRITE]crwdnd170143:0[0]crwdnd170143:0[BEHAVIOR]crwdnd170143:0[1]crwdne170143:0"
       Mikelab_hideFish:
         text: crwdns2066414:0[TRASH]crwdnd2066414:0[0]crwdne2066414:0
         options:
@@ -1540,7 +1591,8 @@ in:
             object: crwdns2066416:0crwdne2066416:0
             fish: crwdns2066418:0crwdne2066418:0
       Mikelab_ifDanceIs:
-        text: crwdns391282:0[SPRITE]crwdnd391282:0[0]crwdnd391282:0[DANCE]crwdnd391282:0[1]crwdnd391282:0[DO1]crwdnd391282:0[2]crwdnd391282:0[DO2]crwdnd391282:0[3]crwdne391282:0
+        text: |-
+          crwdns391282:0[SPRITE]crwdnd391282:0[0]crwdnd391282:0[DANCE]crwdnd391282:0[1]crwdnd391282:0[DO1]crwdnd391282:0[2]crwdnd391282:0[DO2]crwdnd391282:0[3]crwdne391282:0
         options:
           DANCE:
             MOVES.ClapHigh: crwdns391284:0crwdne391284:0
@@ -1556,31 +1608,34 @@ in:
             MOVES.Thriller: crwdns391304:0crwdne391304:0
             MOVES.Rest: crwdns391306:0crwdne391306:0
       Mikelab_ifLabel:
-        text: crwdns2066420:0[DANCE]crwdnd2066420:0[0]crwdnd2066420:0[DO1]crwdnd2066420:0[1]crwdnd2066420:0[DO2]crwdnd2066420:0[2]crwdne2066420:0
+        text: |-
+          crwdns2066420:0[DANCE]crwdnd2066420:0[0]crwdnd2066420:0[DO1]crwdnd2066420:0[1]crwdnd2066420:0[DO2]crwdnd2066420:0[2]crwdne2066420:0
         options:
           DANCE:
             MOVES.ClapHigh: crwdns2066422:0crwdne2066422:0
             MOVES.Clown: crwdns2066424:0crwdne2066424:0
       Mikelab_ifRecognizeLabel:
-        text: crwdns2066426:0[DANCE]crwdnd2066426:0[0]crwdnd2066426:0[DO1]crwdnd2066426:0[1]crwdnd2066426:0[DO2]crwdnd2066426:0[2]crwdne2066426:0
+        text: |-
+          crwdns2066426:0[DANCE]crwdnd2066426:0[0]crwdnd2066426:0[DO1]crwdnd2066426:0[1]crwdnd2066426:0[DO2]crwdnd2066426:0[2]crwdne2066426:0
         options:
           DANCE:
             MOVES.ClapHigh: crwdns2066428:0crwdne2066428:0
             MOVES.Clown: crwdns2066430:0crwdne2066430:0
       Mikelab_ifRecognizeLabelOnly:
-        text: crwdns2066432:0[DANCE]crwdnd2066432:0[0]crwdnd2066432:0[DO1]crwdnd2066432:0[1]crwdne2066432:0
+        text: |-
+          crwdns2066432:0[DANCE]crwdnd2066432:0[0]crwdnd2066432:0[DO1]crwdnd2066432:0[1]crwdne2066432:0
         options:
           DANCE:
             MOVES.ClapHigh: crwdns2066434:0crwdne2066434:0
             MOVES.Clown: crwdns2066436:0crwdne2066436:0
       Mikelab_isAnim:
-        text: crwdns182426:0[SPRITE]crwdnd182426:0[0]crwdnd182426:0[COSTUME]crwdnd182426:0[1]crwdne182426:0
+        text: "crwdns182426:0[SPRITE]crwdnd182426:0[0]crwdnd182426:0[COSTUME]crwdnd182426:0[1]crwdne182426:0"
       Mikelab_joinText:
-        text: crwdns2474794:0[TEXT]crwdnd2474794:0[0]crwdnd2474794:0[NEXT]crwdnd2474794:0[1]crwdne2474794:0
+        text: "crwdns2474794:0[TEXT]crwdnd2474794:0[0]crwdnd2474794:0[NEXT]crwdnd2474794:0[1]crwdne2474794:0"
       Mikelab_locationAt:
-        text: crwdns195131:0[X]crwdnd195131:0[0]crwdnd195131:0[Y]crwdnd195131:0[1]crwdne195131:0
+        text: 'crwdns195131:0[X]crwdnd195131:0[0]crwdnd195131:0[Y]crwdnd195131:0[1]crwdne195131:0'
       Mikelab_location_picker:
-        text: crwdns170144:0[LOCATION]crwdnd170144:0[0]crwdne170144:0
+        text: "crwdns170144:0[LOCATION]crwdnd170144:0[0]crwdne170144:0"
       Mikelab_randomColor:
         text: crwdns195133:0crwdne195133:0
       Mikelab_removeAllBehaviors:
@@ -1605,7 +1660,7 @@ in:
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns195145:0crwdne195145:0
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns195147:0crwdne195147:0
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns195149:0crwdne195149:0
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns195151:0crwdne195151:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'crwdns195151:0crwdne195151:0'
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns195153:0crwdne195153:0
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns195155:0crwdne195155:0
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns195157:0crwdne195157:0
@@ -1629,6 +1684,15 @@ in:
             '"direction"': crwdns182433:0crwdne182433:0
       Mikelab_setTint:
         text: crwdns195177:0[SPRITE]crwdnd195177:0[0]crwdnd195177:0[COLOR]crwdnd195177:0[1]crwdne195177:0
+      Mikelab_setupLevel:
+        text: |-
+          crwdns2546874:0[A1]crwdnd2546874:0[0]crwdnd2546874:0[A2]crwdnd2546874:0[1]crwdnd2546874:0[A3]crwdnd2546874:0[2]crwdnd2546874:0[A4]crwdnd2546874:0[3]crwdnd2546874:0[A5]crwdnd2546874:0[4]crwdnd2546874:0[A6]crwdnd2546874:0[5]crwdnd2546874:0[A7]crwdnd2546874:0[6]crwdnd2546874:0[A8]crwdnd2546874:0[7]crwdnd2546874:0[B1]crwdnd2546874:0[8]crwdnd2546874:0[B2]crwdnd2546874:0[9]crwdnd2546874:0[B3]crwdnd2546874:0[10]crwdnd2546874:0[B4]crwdnd2546874:0[11]crwdnd2546874:0[B5]crwdnd2546874:0[12]crwdnd2546874:0[B6]crwdnd2546874:0[13]crwdnd2546874:0[B7]crwdnd2546874:0[14]crwdnd2546874:0[B8]crwdnd2546874:0[15]crwdne2546874:0
+      Mikelab_setupOutbreak:
+        text: |-
+          crwdns2547470:0[SPRITE2N]crwdnd2547470:0[0]crwdnd2547470:0[TOGGLE]crwdnd2547470:0[1]crwdne2547470:0
+      Mikelab_setupSim:
+        text: |-
+          crwdns2486210:0[SPRITE1N]crwdnd2486210:0[0]crwdnd2486210:0[SPRITE1COSTUME]crwdnd2486210:0[1]crwdnd2486210:0[SPRITE1SPEED]crwdnd2486210:0[2]crwdnd2486210:0[SPRITE2N]crwdnd2486210:0[3]crwdnd2486210:0[SPRITE2COSTUME]crwdnd2486210:0[4]crwdnd2486210:0[SPRITE2SPEED]crwdnd2486210:0[5]crwdnd2486210:0[SPRITE3N]crwdnd2486210:0[6]crwdnd2486210:0[SPRITE3COSTUME]crwdnd2486210:0[7]crwdne2486210:0
       Mikelab_showScoreboard:
         text: crwdns195179:0[LABEL]crwdnd195179:0[0]crwdnd195179:0[TEXTCOLOR]crwdnd195179:0[1]crwdnd195179:0[COLOR]crwdnd195179:0[2]crwdnd195179:0[VALUE]crwdnd195179:0[3]crwdnd195179:0[CORNER]crwdnd195179:0[4]crwdne195179:0
         options:
@@ -1693,8 +1757,8 @@ in:
         text: crwdns2066444:0[KEY]crwdnd2066444:0[0]crwdne2066444:0
         options:
           KEY:
-            '"yes"': crwdns2066446:0crwdne2066446:0
-            '"no"': crwdns2066448:0crwdne2066448:0
+            '"yes"': 'crwdns2066446:0crwdne2066446:0'
+            '"no"': 'crwdns2066448:0crwdne2066448:0'
       Mikelab_whileClicked:
         text: crwdns195237:0[SPRITE]crwdnd195237:0[0]crwdne195237:0
       Mikelab_whileKeyPressed:
@@ -1707,13 +1771,38 @@ in:
             '"right"': crwdns195247:0crwdne195247:0
             '"space"': crwdns195249:0crwdne195249:0
       Mikelab_whileTouchingAny:
-        text: crwdns182437:0[SPRITE]crwdnd182437:0[0]crwdnd182437:0[STATEMENT]crwdnd182437:0[1]crwdne182437:0
+        text: |-
+          crwdns182437:0[SPRITE]crwdnd182437:0[0]crwdnd182437:0[STATEMENT]crwdnd182437:0[1]crwdne182437:0
       Mikelab_worldSeconds:
         text: crwdns195251:0crwdne195251:0
       Mikelab_xLocationOf:
         text: crwdns195253:0[SPRITE]crwdnd195253:0[0]crwdne195253:0
       Mikelab_yLocationOf:
         text: crwdns195255:0[SPRITE]crwdnd195255:0[0]crwdne195255:0
+      Outbreak_beginCongregating:
+        text: crwdns2546956:0crwdne2546956:0
+      Outbreak_beginQuarantining:
+        text: crwdns2546958:0crwdne2546958:0
+      Outbreak_beginSocialDistancing:
+        text: crwdns2546960:0crwdne2546960:0
+      Outbreak_beginWandering:
+        text: crwdns2546962:0crwdne2546962:0
+      Outbreak_beginWearingMasks:
+        text: crwdns2546964:0crwdne2546964:0
+      Outbreak_layoutBorder:
+        text: crwdns2547472:0crwdne2547472:0
+      Outbreak_layoutClusters:
+        text: crwdns2547474:0[NUM]crwdnd2547474:0[0]crwdne2547474:0
+      Outbreak_layoutGrid:
+        text: crwdns2547476:0crwdne2547476:0
+      Outbreak_layoutRandom:
+        text: crwdns2547478:0crwdne2547478:0
+      Outbreak_setSpeed:
+        text: crwdns2546976:0[VAL]crwdnd2546976:0[0]crwdne2546976:0
+      Outbreak_setupOutbreak:
+        text: crwdns2546978:0[COUNT]crwdnd2546978:0[0]crwdne2546978:0
+      Outbreak_stopMoving:
+        text: crwdns2546980:0crwdne2546980:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:
@@ -1727,7 +1816,8 @@ in:
       SpriteLab2Beta_spriteSay:
         text: crwdns395642:0[SPRITE]crwdnd395642:0[0]crwdnd395642:0[TEXT]crwdnd395642:0[1]crwdnd395642:0[SECONDS]crwdnd395642:0[2]crwdne395642:0
       Vector_createSpriteWith:
-        text: crwdns169219:0[STATEMENT]crwdnd169219:0[0]crwdne169219:0
+        text: |-
+          crwdns169219:0[STATEMENT]crwdnd169219:0[0]crwdne169219:0
       Vector_log:
         text: crwdns169220:0[MESSAGE]crwdnd169220:0[0]crwdne169220:0
       Vector_positionCenter:
@@ -1749,61 +1839,73 @@ in:
         options:
           PROPERTY:
             "'shapeColor'": crwdns169257:0crwdne169257:0
-      aalab_addBehaviorForDuration:
-        text: crwdns391574:0[SPRITE]crwdnd391574:0[0]crwdnd391574:0[BEHAVIOR]crwdnd391574:0[1]crwdnd391574:0[SECONDS]crwdnd391574:0[2]crwdne391574:0
-      aalab_addBehaviorUntilBoolean:
-        text: crwdns391576:0[SPRITE]crwdnd391576:0[0]crwdnd391576:0[BEHAVIOR]crwdnd391576:0[1]crwdnd391576:0[CONDITION]crwdnd391576:0[2]crwdne391576:0
-      aalab_createNewSpriteAnonReturn2:
-        text: crwdns2059996:0[SPRITE_NAME]crwdnd2059996:0[0]crwdnd2059996:0[ANIMATION_NAME]crwdnd2059996:0[1]crwdnd2059996:0[LOCATION]crwdnd2059996:0[2]crwdne2059996:0
-      aalab_goToScene:
-        text: crwdns2059998:0[SCENE]crwdnd2059998:0[0]crwdne2059998:0
+      aalab_layoutSprites:
+        text: crwdns2486212:0[FORMAT]crwdnd2486212:0[0]crwdne2486212:0
         options:
-          SCENE:
-            '1': crwdns2060000:0crwdne2060000:0
-            '2': crwdns2060002:0crwdne2060002:0
-            '3': crwdns2060004:0crwdne2060004:0
-      aalab_moveInDirection:
-        text: crwdns2367518:0[SPRITE]crwdnd2367518:0[0]crwdnd2367518:0[DISTANCE]crwdnd2367518:0[1]crwdnd2367518:0[DIRECTION]crwdnd2367518:0[2]crwdne2367518:0
+          FORMAT:
+            '"grid"': crwdns2486214:0crwdne2486214:0
+            '"border"': crwdns2486216:0crwdne2486216:0
+            '"row"': crwdns2486218:0crwdne2486218:0
+            '"random"': crwdns2486220:0crwdne2486220:0
+      aalab_setSpeed:
+        text: crwdns2486222:0[VAL]crwdnd2486222:0[0]crwdne2486222:0
+      aalab_setupSim:
+        text: crwdns2486224:0[COUNT]crwdnd2486224:0[0]crwdne2486224:0
+      aalab_someGraduallyStartIntervention:
+        text: "crwdns2486226:0[PORTION]crwdnd2486226:0[0]crwdnd2486226:0[RATE]crwdnd2486226:0[1]crwdnd2486226:0[BEHAVIOR]crwdnd2486226:0[2]crwdne2486226:0"
         options:
-          DIRECTION:
-            '"North"': crwdns2367520:0crwdne2367520:0
-            '"East"': crwdns2367522:0crwdne2367522:0
-            '"South"': crwdns2367524:0crwdne2367524:0
-            '"West"': crwdns2367526:0crwdne2367526:0
-      aalab_prompt:
-        text: crwdns391600:0[MESSAGE]crwdnd391600:0[0]crwdne391600:0
-      aalab_scene:
-        text: crwdns2060006:0[SCENE]crwdnd2060006:0[0]crwdne2060006:0
+          PORTION:
+            '1': crwdns2486228:0crwdne2486228:0
+            '0.75': crwdns2486230:0crwdne2486230:0
+            '0.5': crwdns2486232:0crwdne2486232:0
+            '0.25': crwdns2486234:0crwdne2486234:0
+          RATE:
+            '"immediately"': crwdns2486236:0crwdne2486236:0
+            '"quickly"': crwdns2486238:0crwdne2486238:0
+            '"gradually"': crwdns2486240:0crwdne2486240:0
+            '"slowly"': crwdns2486242:0crwdne2486242:0
+          BEHAVIOR:
+            '"wandering"': crwdns2486244:0crwdne2486244:0
+            '"congregating"': crwdns2486246:0crwdne2486246:0
+            '"quarantining"': crwdns2486248:0crwdne2486248:0
+            '"avoiding"': crwdns2486250:0crwdne2486250:0
+            '"none"': crwdns2486252:0crwdne2486252:0
+      aalab_someStartIntervention:
+        text: "crwdns2486254:0[PORTION]crwdnd2486254:0[0]crwdnd2486254:0[BEHAVIOR]crwdnd2486254:0[1]crwdne2486254:0"
         options:
-          SCENE:
-            '1': crwdns2060008:0crwdne2060008:0
-            '2': crwdns2060010:0crwdne2060010:0
-            '3': crwdns2060012:0crwdne2060012:0
-      aalab_setupStory:
-        text: crwdns2060014:0crwdne2060014:0
-      aalab_starwars_playSound:
-        text: crwdns2367528:0[OPTION]crwdnd2367528:0[0]crwdne2367528:0
+          PORTION:
+            '1': crwdns2486256:0crwdne2486256:0
+            '0.75': crwdns2486258:0crwdne2486258:0
+            '0.5': crwdns2486260:0crwdne2486260:0
+            '0.25': crwdns2486262:0crwdne2486262:0
+          BEHAVIOR:
+            '"wandering"': crwdns2486264:0crwdne2486264:0
+            '"congregating"': crwdns2486266:0crwdne2486266:0
+            '"quarantining"': crwdns2486268:0crwdne2486268:0
+            '"avoiding"': crwdns2486270:0crwdne2486270:0
+            '"none"': crwdns2486272:0crwdne2486272:0
+      aalab_startIntervention:
+        text: crwdns2486274:0[BEHAVIOR]crwdnd2486274:0[0]crwdne2486274:0
         options:
-          OPTION:
-            '"random"': crwdns2367530:0crwdne2367530:0
-            '"R2-D2 random"': crwdns2367532:0crwdne2367532:0
-            '"R2-D2 1"': crwdns2367534:0crwdne2367534:0
-            '"R2-D2 2"': crwdns2367536:0crwdne2367536:0
-            '"R2-D2 3"': crwdns2367538:0crwdne2367538:0
-            '"R2-D2 4"': crwdns2367540:0crwdne2367540:0
-            '"R2-D2 5"': crwdns2367542:0crwdne2367542:0
+          BEHAVIOR:
+            wandering: crwdns2486276:0crwdne2486276:0
+            '"congregating"': crwdns2486278:0crwdne2486278:0
+            '"quarantining"': crwdns2486280:0crwdne2486280:0
+            '"avoiding"': crwdns2486282:0crwdne2486282:0
+            '"none"': crwdns2486284:0crwdne2486284:0
       binary_drawBin:
         text: crwdns391332:0[BIN]crwdnd391332:0[0]crwdne391332:0
       binary_drawBinScreen:
-        text: crwdns391334:0[B1]crwdnd391334:0[0]crwdnd391334:0[B2]crwdnd391334:0[1]crwdnd391334:0[B3]crwdnd391334:0[2]crwdnd391334:0[B4]crwdnd391334:0[3]crwdnd391334:0[B5]crwdnd391334:0[4]crwdnd391334:0[B6]crwdnd391334:0[5]crwdnd391334:0[B7]crwdnd391334:0[6]crwdnd391334:0[B8]crwdnd391334:0[7]crwdne391334:0
+        text: |-
+          crwdns391334:0[B1]crwdnd391334:0[0]crwdnd391334:0[B2]crwdnd391334:0[1]crwdnd391334:0[B3]crwdnd391334:0[2]crwdnd391334:0[B4]crwdnd391334:0[3]crwdnd391334:0[B5]crwdnd391334:0[4]crwdnd391334:0[B6]crwdnd391334:0[5]crwdnd391334:0[B7]crwdnd391334:0[6]crwdnd391334:0[B8]crwdnd391334:0[7]crwdne391334:0
       binary_drawDec:
         text: crwdns391336:0[DEC]crwdnd391336:0[0]crwdne391336:0
       binary_drawPixelHere:
         text: crwdns391338:0[VAL]crwdnd391338:0[0]crwdne391338:0
         options:
           VAL:
-            '0': crwdns391340:0crwdne391340:0
-            '1': crwdns391342:0crwdne391342:0
+            '0': 'crwdns391340:0crwdne391340:0'
+            '1': 'crwdns391342:0crwdne391342:0'
             '"toggle"': crwdns391344:0crwdne391344:0
       binary_drawString:
         text: crwdns391346:0[STR]crwdnd391346:0[0]crwdne391346:0
@@ -1835,14 +1937,16 @@ in:
             '"s"': crwdns391380:0crwdne391380:0
             '"d"': crwdns391382:0crwdne391382:0
       craft_ifPath:
-        text: crwdns194807:0[DIR]crwdnd194807:0[0]crwdnd194807:0[STATEMENT]crwdnd194807:0[1]crwdne194807:0
+        text: |-
+          crwdns194807:0[DIR]crwdnd194807:0[0]crwdnd194807:0[STATEMENT]crwdnd194807:0[1]crwdne194807:0
         options:
           DIR:
             "'ahead'": crwdns194808:0crwdne194808:0
             "'right'": crwdns194809:0crwdne194809:0
             "'left'": crwdns194810:0crwdne194810:0
       craft_ifStandingOn:
-        text: crwdns194811:0[TYPE]crwdnd194811:0[0]crwdnd194811:0[STATEMENT]crwdnd194811:0[1]crwdne194811:0
+        text: |-
+          crwdns194811:0[TYPE]crwdnd194811:0[0]crwdnd194811:0[STATEMENT]crwdnd194811:0[1]crwdne194811:0
         options:
           TYPE:
             "'blueCoralBlock'": crwdns194812:0crwdne194812:0
@@ -1852,7 +1956,8 @@ in:
             "'planksOak'": crwdns194816:0crwdne194816:0
             "'seaLantern'": crwdns194817:0crwdne194817:0
       craft_ifStandingOnLimit:
-        text: crwdns271572:0[TYPE]crwdnd271572:0[0]crwdnd271572:0[STATEMENT]crwdnd271572:0[1]crwdne271572:0
+        text: |-
+          crwdns271572:0[TYPE]crwdnd271572:0[0]crwdnd271572:0[STATEMENT]crwdnd271572:0[1]crwdne271572:0
         options:
           TYPE:
             "'sand'": crwdns271574:0crwdne271574:0
@@ -1896,9 +2001,11 @@ in:
       craft_placeTorch:
         text: crwdns194818:0crwdne194818:0
       craft_repeatUntilConduit:
-        text: crwdns241468:0[STATEMENT]crwdnd241468:0[0]crwdne241468:0
+        text: |-
+          crwdns241468:0[STATEMENT]crwdnd241468:0[0]crwdne241468:0
       craft_repeatUntilGoal:
-        text: crwdns194819:0[STATEMENT]crwdnd194819:0[0]crwdne194819:0
+        text: |-
+          crwdns194819:0[STATEMENT]crwdnd194819:0[0]crwdne194819:0
       craft_spawnEntity:
         text: crwdns245562:0[ENTITY]crwdnd245562:0[0]crwdne245562:0
         options:

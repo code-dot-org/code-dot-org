@@ -1203,6 +1203,15 @@ nl:
             '"y"': y positie
             '"direction"': bewegingsrichting
             '"speed"': snelheid
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middellang
+            '100': large
       gamelab_setSizes:
         text: stel {SPRITE} {PROPERTY} in op {N}%
         options:
@@ -1506,6 +1515,13 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+      Mikelab_setupSim:
+        text: |-
+          Setup-simulatie met
+          {SPRITE1N}{SPRITE1COSTUME}Snelheid{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Snelheid{SPRITE2SPEED}
+          Verzamelen
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1601,42 +1617,27 @@ nl:
         options:
           PROPERTY:
             "'shapeColor'": kleur
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} begint {BEHAVIOR} voor {SECONDS} seconden
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} begint {BEHAVIOR} tot {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nieuwe sprite genaamd{SPRITE_NAME} met kostuum{ANIMATION_NAME} op locatie{LOCATION}
-      aalab_goToScene:
-        text: ga naar scène {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Naar het noorden
-            '"East"': Oost
-            '"South"': Zuid
-            '"West"': West
-      aalab_prompt:
-        text: stel vraag {MESSAGE}
-      aalab_scene:
-        text: scène {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup-verhaal
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': raster
+            '"border"': grens
+            '"row"': rij
             '"random"': willekeurig
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:

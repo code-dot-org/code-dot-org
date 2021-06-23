@@ -957,6 +957,10 @@ es:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE}consigue el objetivo{TARGET}"
+        options:
+          OPT:
+            '"follow"': seguir
+            '"avoid"': evitar
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -965,6 +969,8 @@ es:
           UNIT:
             '"seconds"': segundos
             '"frames"': fotogramas
+      gamelab_avoidingTargets:
+        text: evitando objetivos
       gamelab_beginCollectingData:
         text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
       gamelab_bounceOff:
@@ -1001,6 +1007,8 @@ es:
         text: eliminar {THIS}
       gamelab_draggable:
         text: poder arrastrastrarlos
+      gamelab_drawLine:
+        text: dibuja línea {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
       gamelab_followingTargets:
@@ -1239,6 +1247,16 @@ es:
             '"y"': posición y
             '"direction"': dirección de movimiento
             '"speed"': velocidad
+      gamelab_setProp_dropdown:
+        text: fijar {SPRITE} {PROPERTY} a {SIZE}
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+          SIZE:
+            '25': extra pequeño
+            '50': pequeño
+            '75': medio
+            '100': grande
       gamelab_setSizes:
         text: definir {SPRITE} {PROPERTY} a {N}%
         options:
@@ -1265,8 +1283,18 @@ es:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_spriteSay:
+        text: "{SPRITE} dice {SPEECH}"
+      gamelab_startAvoiding:
+        text: "{SPRITE} empieza a evitar {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} empieza seguimiento {TARGET}"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} deja de evitar a otros sprites"
       gamelab_stopCollectingData:
         text: parar recopilación de datos
+      gamelab_stopFollowing:
+        text: "{SPRITE} deja de seguir a otros sprites"
       gamelab_subjectSpritePointer:
         text: clic en sprite {SPRITE}
       gamelab_textJoin:
@@ -1283,6 +1311,8 @@ es:
             '"left"': izquierda
       gamelab_updateTitleWithColor:
         text: mostrar pantalla de título {BREAK} título {TITLE} color {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: cuando se responda a todas las preguntas
       gamelab_whenDownArrow:
         text: cuando se presiona la flecha abajo
       gamelab_whenKey:
@@ -1337,6 +1367,17 @@ es:
         text: |-
           si {NUM}% oportunidad
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} posibilidad
+           {STATEMENT}
+        options:
+          NUM:
+            '10': muy baja
+            '25': baja
+            '50': 50/50
+            '75': alta
+            '90': muy alta
       gamelab_xLocationOf:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
@@ -1564,6 +1605,25 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
+      Mikelab_setupLevel:
+        text: |-
+          ajustar nivel con
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          configuración del brote
+          de la población:{SPRITE2N}
+          {TOGGLE}virus
+      Mikelab_setupSim:
+        text: |-
+          simulación de la configuración con
+          {SPRITE1N}{SPRITE1COSTUME}velocidad{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocidad{SPRITE2SPEED}
+          recogiendo
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1626,6 +1686,30 @@ es:
         text: coordenada x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y de {SPRITE}
+      Outbreak_beginCongregating:
+        text: los monstruos empiezan a congregarse
+      Outbreak_beginQuarantining:
+        text: los monstruos empiezan la cuarentena cuando enferman
+      Outbreak_beginSocialDistancing:
+        text: los monstruos empiezan el distanciamiento social
+      Outbreak_beginWandering:
+        text: los monstruos empiezan a deambular
+      Outbreak_beginWearingMasks:
+        text: los monstruos empiezan a llevar mascarilla
+      Outbreak_layoutBorder:
+        text: ordenar monstruos en un borde
+      Outbreak_layoutClusters:
+        text: ordenar los monstruos en grupos de {NUM}
+      Outbreak_layoutGrid:
+        text: ordenar monstruos como una cuadrícula
+      Outbreak_layoutRandom:
+        text: ordenar los monstruos al azar
+      Outbreak_setSpeed:
+        text: ajustar velocidad monstruo a {VAL}
+      Outbreak_setupOutbreak:
+        text: Configurar Monster Town con{COUNT}monstruos
+      Outbreak_stopMoving:
+        text: los monstruos dejan de moverse
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:
@@ -1659,49 +1743,60 @@ es:
         options:
           PROPERTY:
             "'shapeColor'": color
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} inicia {BEHAVIOR} durante {SECONDS} segundos
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} inicia {BEHAVIOR} hasta {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nuevo sprite llamado{SPRITE_NAME} con disfraz{ANIMATION_NAME} en ubicación{LOCATION}
-      aalab_goToScene:
-        text: ir a escena {SCENE}
+      aalab_layoutSprites:
+        text: diseñar monstruos como un {FORMAT}
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: mover {SPRITE} {DISTANCE} pixeles {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Este
-            '"South"': Sur
-            '"West"': Oeste
-      aalab_prompt:
-        text: preguntar {MESSAGE}
-      aalab_scene:
-        text: escena {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: configurar historia
-      aalab_starwars_playSound:
-        text: reproducir{OPTION}sonido
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': cuadrícula
+            '"border"': frontera
+            '"row"': fila
             '"random"': aleatorio
-            '"R2-D2 random"': R2-D2 aleatorio
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_setSpeed:
+        text: ajustar velocidad monstruo a {VAL}
+      aalab_setupSim:
+        text: Configurar Monster Town con{COUNT}monstruos
+      aalab_someGraduallyStartIntervention:
+        text: "{PORTION} monstruos {RATE} comenzar {BEHAVIOR}"
+        options:
+          PORTION:
+            '1': todo
+            '0.75': la mayoría
+            '0.5': la mitad
+            '0.25': algunos
+          RATE:
+            '"immediately"': inmediatamente
+            '"quickly"': rápidamente
+            '"gradually"': gradualmente
+            '"slowly"': lentamente
+          BEHAVIOR:
+            '"wandering"': vagando al azar
+            '"congregating"': concentrados
+            '"quarantining"': cuarentena cuando enferma
+            '"avoiding"': distanciamiento social
+            '"none"': quedarse quieto
+      aalab_someStartIntervention:
+        text: "{PORTION} comienzan monstruos {BEHAVIOR}"
+        options:
+          PORTION:
+            '1': todo
+            '0.75': la mayoría
+            '0.5': la mitad
+            '0.25': algunos
+          BEHAVIOR:
+            '"wandering"': vagando al azar
+            '"congregating"': concentrados
+            '"quarantining"': cuarentena cuando enferma
+            '"avoiding"': distanciamiento social
+            '"none"': quedarse quieto
+      aalab_startIntervention:
+        text: comienzan monstruos {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            wandering: vagando al azar
+            '"congregating"': concentrados
+            '"quarantining"': cuarentena cuando enferma
+            '"avoiding"': distanciamiento social
+            '"none"': quedarse quieto
       binary_drawBin:
         text: dibujar binario {BIN}
       binary_drawBinScreen:

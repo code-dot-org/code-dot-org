@@ -2,7 +2,7 @@
   "script": {
     "name": "csp5-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:01 UTC",
+    "serialized_at": "2021-06-17 22:31:16 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -2576,13 +2577,7 @@
       "key": "544c0f0b-39cc-4a70-b7df-fdfc0918fc3a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Let's review the Traversal Machine. How did it work?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The Traversal Machine let us visualize how a for loop is used to traverse a list and interact with each element in the list one by one. \r\n\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Let's review the Traversal Machine. How did it work?*\n\n**Discussion Goal:** The Traversal Machine let us visualize how a for loop is used to traverse a list and interact with each element in the list one by one. \n"
       },
       "seeding_key": {
         "activity_section.key": "544c0f0b-39cc-4a70-b7df-fdfc0918fc3a",
@@ -2889,6 +2884,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to level three where they complete the Random Forecaster app. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "progression_name": "Make the Random Forecaster App",
         "tips": [
           {
             "type": "teachingTip",
@@ -4654,6 +4650,32 @@
     {
       "chapter": 48,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Tab in App Lab_2021"
+        ],
+        "progression": "Data Tab Investigation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Tab in App Lab_2021"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983"
+      },
+      "level_keys": [
+        "Data Tab in App Lab_2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4678,8 +4700,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 4,
+      "chapter": 50,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4704,8 +4726,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 5,
+      "chapter": 51,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4730,8 +4752,8 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 6,
+      "chapter": 52,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4756,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4782,7 +4804,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4808,7 +4830,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4834,7 +4856,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4860,7 +4882,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4886,7 +4908,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4912,7 +4934,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4938,8 +4960,34 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 8_2021"
+        ],
+        "progression": "App Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 8_2021"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694"
+      },
+      "level_keys": [
+        "U5 Traversals Practice Part 8_2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4964,7 +5012,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4990,14 +5038,15 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "U5 Traversals Make Project 2020_2021"
-        ]
+        ],
+        "progression": "Make the Random Forecaster App"
       },
       "named_level": false,
       "bonus": false,
@@ -5015,7 +5064,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5041,7 +5090,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5067,7 +5116,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5093,7 +5142,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5119,7 +5168,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5712,6 +5761,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Data Tab in App Lab_2021",
+        "script_level.level_keys": [
+          "Data Tab in App Lab_2021"
+        ],
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "127a1baa-2374-416e-b6b2-30666e542983"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U5 Traversals Investigate Dog Finder Modify_2021",
         "script_level.level_keys": [
           "U5 Traversals Investigate Dog Finder Modify_2021"
@@ -5835,6 +5896,18 @@
         "level.key": "U5 Traversals Practice Part 7_2021",
         "script_level.level_keys": [
           "U5 Traversals Practice Part 7_2021"
+        ],
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021",
+        "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U5 Traversals Practice Part 8_2021",
+        "script_level.level_keys": [
+          "U5 Traversals Practice Part 8_2021"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
@@ -6102,6 +6175,18 @@
       "seeding_key": {
         "resource.key": "traversal_machine"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -6314,6 +6399,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp5-2021"
       }
     }

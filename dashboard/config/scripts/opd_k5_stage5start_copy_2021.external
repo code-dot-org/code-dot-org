@@ -1,16 +1,27 @@
 name 'OPD-K5 Stage5Start_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Overview: Conditionals
+# Introduction to Conditionals
 
-<img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+<img src="https://images.code.org/054d81744bd44195c5a0320141470ac2-image-1622741859913.png" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
 
-So far, you've written a few programs, added loops to increase efficiency, and added events to make your programs interactive. In this stage, we'll explore **conditionals** (if-statements), which begin to add logic to your program.
+## Course Lesson Objectives
 
-## Coding concept
-- Practice coding simple conditionals (if-statements)
+After completing Lesson 11 you will be able to:
 
-## Teaching practice: Journaling
-- Using journal prompts to help students process and reflect on what they have learned, as well as work through problems
+* define conditionals,
+* use "if" and "if/else" blocks with Maze Puzzles, 
+* and use loops and conditionals with Minecraft.
+
+## CS Concept
+
+**Conditionals** are statements that only run under certain conditions.
+
+#### Lesson in Action
+
+* Watch this video, <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU" target="blank">Conditional with Cards</a> demonstration of a teacher introducing conditionals to students with the **context-setting** lesson in Course D - Lesson 12: Conditional with Cards.
+
+**Note:** The video opens in a new window.  Be sure to return to this online course to continue with lessons.
+
 
 MARKDOWN

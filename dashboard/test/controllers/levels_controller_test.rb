@@ -493,7 +493,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = Script.twenty_hour_script.levels.first
+    level = Script.twenty_hour_unit.levels.first
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -590,18 +590,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_includes @response.body, 'level cannot be renamed'
   end
 
-  test "should prevent rename of level in visible or pilot script" do
+  test "should prevent rename of level in launched or pilot script" do
     script_level = create :script_level
     script = script_level.script
+    script.published_state = 'stable'
+    script.save!
     level = script_level.level
-    assert_equal script.hidden, false
 
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
 
-    script.hidden = true
+    script.published_state = 'beta'
     script.save!
     get :edit, params: {id: level.id}
     assert_response :success
@@ -609,6 +610,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_includes @response.body, 'level cannot be renamed'
 
     script.pilot_experiment = 'platformization-partners'
+    script.published_state = 'pilot'
     script.save!
     get :edit, params: {id: level.id}
     assert_response :success
@@ -849,7 +851,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -862,7 +864,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone without redirect" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
     end
@@ -894,7 +896,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
 
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -1029,6 +1031,34 @@ DSL
     level = Level.last
     assert_equal 'partner artist level', level.name
     assert_equal 'platformization-partners', level.editor_experiment
+  end
+
+  test "should get serialized_maze" do
+    level = create_level_with_serialized_maze
+    get :get_serialized_maze, params: {id: level.id}
+    expected_maze = [[{"tileType" => 1, "value" => 0}], [{"tileType" => 0, "assetId" => 5, "value" => 0}]]
+    assert_equal expected_maze, JSON.parse(@response.body)
+  end
+
+  test "anonymous user can get_serialized_maze" do
+    sign_out @levelbuilder
+    level = create_level_with_serialized_maze
+    get :get_serialized_maze, params: {id: level.id}
+    expected_maze = [[{"tileType" => 1, "value" => 0}], [{"tileType" => 0, "assetId" => 5, "value" => 0}]]
+    assert_equal expected_maze, JSON.parse(@response.body)
+  end
+
+  test "empty success response for get_serialized_maze on level without maze" do
+    level = create :level
+    get :get_serialized_maze, params: {id: level.id}
+    assert_response :no_content
+    assert_equal '', @response.body
+  end
+
+  def create_level_with_serialized_maze
+    create(:javalab,
+      serialized_maze: [[{tileType: 1, value: 0}], [{tileType: 0, assetId: 5, value: 0}]]
+    )
   end
 
   test_user_gets_response_for(

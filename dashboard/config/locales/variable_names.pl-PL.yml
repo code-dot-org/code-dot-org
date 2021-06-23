@@ -61,11 +61,13 @@ pl:
       level: poziom
       marginX: margines X
       marginY: margines Y
+      meal: posiłek
       myName: moje imię
       name: nazwa
       nectar: nektar
       nectars: nektary
       padYOffset: padYOffset
+      planet: planeta
       player_score: wynik gracza
       points: punkty
       punchLine: linia ciosów
@@ -76,6 +78,8 @@ pl:
       repetitions: powtórzenia
       right: w prawo
       score: wynik
+      score1: wynik1
+      score2: wynik2
       screenHeight: wysokość ekranu
       screenWidth: szerokość ekranu
       set sides: ustaw boki

@@ -1,97 +1,56 @@
 name 'OPD-K5 Outline_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Course outline
+# Part I: Teaching Computer Science
+**Suggested Total Time:  90 minutes**
 
-The course is divided into four concept chunks, which each have lessons in them. Lessons consists of different "levels", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:
+Below is an outline of the lessons included in Part I of this course, along with what you will be able to do after completing a lesson.  Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your learning needs.
 
-## Getting Started
+Part I focuses on teacher tools, teaching strategies, and resources built into the curriculum to help you start to create your Computer Science Fundamentals classroom.
 
-### Lesson 1: Welcome to 'Teaching Computer Science Fundamentals' (15 minutes)
-- Review the course details
-- Understand what computer science is and differentiate between "coding" and computer science"
-- Identify the benefits of teaching and learning computer science
-- Plan your participation in this course
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/1/levels/3" target="blank"> **Lesson 1: Introduction**</a> (15 minutes)
 
-### Lesson 2: Getting to know the Computer Science Fundamentals Courses (15-20 minutes)
-- Become familiar with the content and organization of the Computer Science Fundamentals courses
-- Identify which course is most appropriate for your students
-- Understand the importance of the teacher in the Computer Science Fundamentals curriculum
-- Understand different types of Computer Science Fundamentals lessons
+You are currently in Lesson 1!  This lesson provides a brief overview of Code.org, computer science, and Computer Science Fundamentals courses.
 
-## Basic Coding Concepts and Teaching Practices
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/1" target="blank" > **Lesson 2: Getting Started**</a> (20 minutes)
 
-### Lesson 3: Sequencing (15-45 minutes)
-- Define "program" and "algorithm"
-- Identify where sequencing is introduced in the Computer Science Fundamentals courses
-- Use the Code.org visual programming engine to write simple programs
-- Explore an unplugged lesson on sequencing and reflect on classroom application
-- Think about how to use lesson plans
+Lesson 2 focuses on the teacher dashboard, setting up your own class section, and learning about the help and support that is available to you beyond this online course.
 
-### Lesson 4: Loops (15-45 minutes)
-- Define "loops" and explain their importance
-- Identify where loops are introduced in the Computer Science Fundamentals courses
-- Explore an unplugged lesson on loops and reflect on classroom application
-- Practice coding simple loops
-- Understand the benefits of pair programming
+After completing Lesson 2 you will be able to:
 
-### Lesson 5: Events (15-45 minutes)
-- Define "events" and explain their importance
-- Identify where events are introduced in the Computer Science Fundamentals courses
-- Explore an unplugged lesson on events and reflect on classroom application
-- Practice coding simple events
-- Understand the debugging process
+* use Code.org provided teacher tools and resources. 
+* know where to find help and support after completing this online course. 
+* navigate the organization and content of Computer Science Fundamentals courses.
 
-### Lesson 6: Conditionals (15-45 minutes)
-- Define "conditionals" and explain their importance
-- Identify where conditionals are introduced in the Computer Science Fundamentals courses
-- Explore an unplugged lesson on conditionals and reflect on classroom application
-- Practice coding simple conditionals
-- Understand the teaching practice of journaling
 
-### Lesson 7: End of Course Projects (15-45 minutes)
-- Understand the benefit of end of course projects
-- Identify where end of course projects are introduced in the Computer Science Fundamentals courses
-- Practice coding a project
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/3/levels/1" target="blank" >**Lesson 3: CS Teaching and Student Practices**</a> (15 minutes) 
 
-## [Optional] Diving Deeper: Courses E and F 
-You will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.
+Lesson 3 focuses on CS teaching and student practices that may be applied to any Computer Science Fundamentals lesson.
 
-### Lesson 8: Functions (30-45 minutes)
-- Identify if you will be teaching Courses E or F to students
-- Define "functions" and explain their importance
-- Identify where functions are introduced in the Computer Science Fundamentals courses
-- Explore the unplugged lesson on functions and reflect on classroom application
-- Practice coding simple functions
+After completing Lesson 3 you will be able to:
 
-### Lesson 9: Variables (30-45 minutes)
-- Define "variable" and explain its importance
-- Identify where variables are introduced in the Computer Science Fundamentals courses
-- Explore the unplugged lesson on variables and reflect on classroom application
-- Practice coding with variables
+* identify three CS teaching practices to use with Computer Science Fundamentals lessons.
+* identify two CS teaching strategies built into the curriculum to use with your students during Computer Science Fundamentals lessons.
+* identify five student practices to support your students with learning computer science.
 
-### Lesson 10: For Loops (30-45 minutes)
-- Define "for loops" and explain its importance
-- Identify where for loops are introduced in the Computer Science Fundamentals courses
-- Explore the unplugged lesson on for loops and reflect on classroom application
-- Practice coding with for loops
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/4/levels/1" target="blank" > **Lesson 4:  Teaching a Lesson**</a> (25 minutes)
 
-### Lesson 11: Sprite Lab (15-45 minutes)
-- Define "sprite" and "behavior"
-- Identify where sprites and behaviors are introduced in the Computer Science Fundamentals courses
-- Explore the coding environment Sprite Lab
+After completing Lesson 4 you will be able to prepare a Computer Science Fundamentals lesson focused on:
 
-## Next Steps
+* incorporating CS teaching practices.
+* identifying how to best introduce the lesson to your students.
+* inclusion.
 
-### Lesson 12: Reviewing your Reflections (15 minutes)
-- Review the reflections you have made throughout the course so far
 
-### Lesson 13: Next Steps (15 minutes)
-- Explore teacher resources
-- Plan for next steps you can take to continue your learning
-- Connect with a global community of fellow educators interested in computer science education
-- Share your takeaways and feedback on this course
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/5/levels/1" target="blank" >**Lesson 5:  Addressing Barriers** </a> (15 minutes) 
 
-> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time. 
+Lesson 5 focuses on proactively addressing common barriers and challenges when implementing Computer Science Fundamentals courses.
+
+After completing Lesson 5 you will be able to:
+
+* identify and prepare for the most common implementation barriers.
+* identify equity related language and guidance to support you in implementing Computer Science Fundamentals equitably.
+### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/6/levels/1" target="blank" > Click here to go to Part II:  CS Concepts in Courses A - F.</a>
+
 
 MARKDOWN

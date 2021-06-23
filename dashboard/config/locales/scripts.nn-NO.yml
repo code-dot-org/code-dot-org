@@ -887,12 +887,6 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -946,12 +940,6 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -961,12 +949,6 @@ nn:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -1389,12 +1371,6 @@ nn:
               name: 'Trådlaust: Låtskriving med parameter'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkomen!
             Wrap-up:
@@ -3774,6 +3750,8 @@ nn:
               display_name: Funksjonar
             csp_project:
               display_name: Prosjekt
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -3784,12 +3762,16 @@ nn:
               display_name: Traversaler
             csp_project:
               display_name: Prosjekt
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter og returverdiar
             csp_libraries:
               display_name: Bibliotek
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
         csd2-2020:
           lesson_groups:
             csd2_1:
@@ -4028,9 +4010,31 @@ nn:
               display_name: "(gammel) Eining 1: Digital informasjon"
             cspSurvey:
               display_name: Undersøking
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
           lessons:
             Binary Numbers:
               name: Binære tal
+        csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
+        csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking etter kurs
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
@@ -4162,6 +4166,18 @@ nn:
               name: Kurs B
             CS Discoveries:
               name: Oppdagingar i informatikk
+            Course E:
+              name: Kurs E
+            Course F:
+              name: Kurs F
+            csf:
+              name: Grunnleggande informatikk
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Leksjon 14
+            lesson15:
+              name: Leksjon 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -4439,6 +4455,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            lessonGroup-9:
+              display_name: Hendingar
         pre-express-2021:
           lessons:
             On the Move with Events:
@@ -4494,6 +4512,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Innhald
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -4530,3 +4552,11 @@ nn:
               display_name: Neste steg
             Introduction:
               display_name: Introduksjon
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Undersøking
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Leksjon 15

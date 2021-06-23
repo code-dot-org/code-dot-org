@@ -156,7 +156,7 @@
   "spinBeforeClick": "Your sprite was spinning before you clicked on it. Make sure that your spin behavior is connected to this event. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>",
   "createAtLeastTwoSprites": "You need to have two sprites. Make two sprites under the `when run` block.",
   "createAtLeastThreeSprites": "You need to have three sprites. Make three sprites under the `when run` block.",
-  "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace.",
+  "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace. <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title></block></xml>",
   "startBehaviorWhenClicked": "Your new sprite needs to start a behavior when it is clicked.",
   "clickNewSprite": "Make sure you click on your new sprite and that it also has a `when clicked` event in your workspace.",
   "colorChangedBeforeKeyPress": "Your sprite changed color at the wrong time. Move the `change color` block under a `when key pressed` block.",
@@ -172,5 +172,14 @@
   "moveSpriteLocation": "Your sprites are in the same location. Move one of your sprites using the `location` block. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
   "createDraggableSprite": "Your pet's food sprite needs to begin the `being draggable` behavior. <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
   "createNotDraggableSPrite": "Only the food sprite should be draggable. Remove the behavior from your pet.",
-  "moveSpriteByDrag": "Your code looks great! To drag your sprite, click on it while the program runs."
+  "moveSpriteByDrag": "Your code looks great! To drag your sprite, click on it while the program runs.",
+  "foodNotTouchPet": "Drag your food sprite so it touches your pet sprite.",
+  "addWhenTouchesEventToMakePetGrow": "Add a `when touching` event block and make your pet grow when it eats.",
+  "petNotGrowOnTouch": "Your food and pet touched, but your pet did not grow. Add the `change size` block to the `when touching` event block for your food and pet.",
+  "spritesNeedUniqueCostumes": "Make sure all sprites have different costumes.",
+  "createTwoDraggableSprites": "Your pet's food and friend sprite need to begin the `being draggable` behavior.",
+  "startingSpritesShouldNotTouch": "To start, make sure none of your sprites are touching. Use the pin on the location block to give them different locations.",
+  "clickButNoPrint": "You clicked your sprite but no text was printed. Add the `print` block to your `when clicked` event.",
+  "secondClickButNoPrint": "You clicked on a second sprite but no text was printed. Add a `print` block under each `when clicked` event.",
+  "thirdClickButNoPrint": "You clicked on a third sprite but no text was printed. Add a `print` block under each `when clicked` event."
 }

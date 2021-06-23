@@ -791,12 +791,6 @@ uk:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ласкаво просимо!
             Wrap-up:
@@ -850,12 +844,6 @@ uk:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ласкаво просимо!
             Wrap-up:
@@ -865,12 +853,6 @@ uk:
           description: 'Етап 2 онлайн: Змішане літнє навчання'
           description_short: 'Етап 2 онлайн: Змішане літнє навчання'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ласкаво просимо!
             Wrap-up:
@@ -1328,12 +1310,6 @@ uk:
               name: 'Безмашинні вправи: написання пісень з параметрами'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ласкаво просимо!
             Wrap-up:
@@ -1485,7 +1461,7 @@ uk:
             ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати та обробляти
             інформацію, щоб допомогти людям вирішити проблеми.  Пристрій завершується
             проектом, в якому ви розробляєте програму, яка допомагає вирішити проблему
-            за вашим вибором.\r\n"
+            за вашим вибором.\r"
           lesson_groups:
             cspSurvey:
               display_name: Опитування
@@ -1513,7 +1489,7 @@ uk:
             світу. Далі ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати
             та обробляти інформацію, щоб допомогти людям вирішити проблеми.  Пристрій
             завершується проектом, в якому ви розробляєте програму, яка допомагає
-            вирішити проблему за вашим вибором.\r\n"
+            вирішити проблему за вашим вибором.\r"
         csp-online-test:
           lesson_groups:
             required:
@@ -2948,7 +2924,7 @@ uk:
             ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати та обробляти
             інформацію, щоб допомогти людям вирішити проблеми.  Пристрій завершується
             проектом, в якому ви розробляєте програму, яка допомагає вирішити проблему
-            за вашим вибором.\r\n"
+            за вашим вибором.\r"
           description_short: "  Дізнайтеся, як люди працюють з комп'ютерами для вирішення
             проблем."
           lesson_groups:
@@ -2976,7 +2952,7 @@ uk:
             світу. Далі ви дізнаєтеся, як комп'ютери вводити, виводити, зберігати
             та обробляти інформацію, щоб допомогти людям вирішити проблеми.  Пристрій
             завершується проектом, в якому ви розробляєте програму, яка допомагає
-            вирішити проблему за вашим вибором.\r\n"
+            вирішити проблему за вашим вибором.\r"
         csd4-2018:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає
             потребам користувачів."
@@ -4521,6 +4497,8 @@ uk:
               display_name: Функції
             csp_project:
               display_name: Проект
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -4531,12 +4509,16 @@ uk:
               display_name: Переходи
             csp_project:
               display_name: Проект
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
         csd2-2020:
           description: " У блоці 2 ви дізнаєтеся, як створювати вміст і ділитися його
             на власних веб-сторінках. Вирішивши, яким вмістом ви хочете поділитися
@@ -4877,6 +4859,8 @@ uk:
               display_name: 'Розділ 1: Цифрова інформація'
             cspSurvey:
               display_name: Опитування
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
           lessons:
             Binary Numbers:
               name: Двійкові Числа
@@ -4887,13 +4871,31 @@ uk:
             Intellectual Property:
               name: Інтелектуальна власність
         csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
           lessons:
             Packets:
               name: Пакет
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
           lessons:
             Debugging:
               name: Налагодження
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування після закінчення курсу
         csp-march-virtual:
           lessons:
             Changes:
@@ -5098,11 +5100,23 @@ uk:
               name: Курс E/F
             CS Discoveries:
               name: Відкриття інформатики
+            Course E:
+              name: Курс Ґ
+            Course F:
+              name: Курс Д
+            csf:
+              name: Основи інформатики
           description_audience: Внутрішній
         virustest:
           title: Симулювання Спалаху
           description_short: Створіть симуляцію спалаху вірусу за допомогою Sprite
             Lab.
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Урок 14
+            lesson15:
+              name: Урок 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5132,7 +5146,9 @@ uk:
             lessonGroup-3:
               display_name: Змінні
             outbreak:
-              display_name: Симуляція спалаху
+              display_name: Симулятор спалаху
+            debugging:
+              display_name: Налагодження
           description_audience: Внутрішній
           description_short: Внутрішній
         csd1-2021:
@@ -5350,6 +5366,10 @@ uk:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Машинне навчання
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -5537,6 +5557,8 @@ uk:
               name: Танцювальна вечірка
             lesson-1:
               name: Танцювальна вечірка
+            lesson-3:
+              name: Спрайт в Дії
           lesson_groups:
             csf_warmup:
               display_name: Розминка
@@ -5555,7 +5577,7 @@ uk:
             csf_sprites:
               display_name: Спрайти
             lessonGroup-9:
-              display_name: Розминка
+              display_name: Події
         pre-express-2021:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -5649,6 +5671,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Зміст
         k5-onlinepd-2021:
           title: Викладання основ інформатики
           lessons:
@@ -5689,3 +5715,11 @@ uk:
               display_name: Наступні Кроки
             Introduction:
               display_name: Вступ
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Опитування
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Урок 15

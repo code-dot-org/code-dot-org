@@ -1236,6 +1236,15 @@ ko:
             '"y"': y 좌표
             '"direction"': 움직임 방향
             '"speed"': 스피드
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': 크기
+          SIZE:
+            '25': 매우 작음
+            '50': 작음
+            '75': 보통
+            '100': 큰
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}을(를) {N}%로 설정"
         options:
@@ -1559,6 +1568,13 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+      Mikelab_setupSim:
+        text: |-
+          설정 시뮬레이션
+          {SPRITE1N}{SPRITE1COSTUME}속도{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}속도{SPRITE2SPEED}
+          수집
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1654,49 +1670,27 @@ ko:
         options:
           PROPERTY:
             "'shapeColor'": 색깔
-      aalab_addBehaviorForDuration:
-        text: 알라랩 스프라이트 {SPRITE} 시작 {BEHAVIOR} 에 대 한 {SECONDS} 초
-      aalab_addBehaviorUntilBoolean:
-        text: 스프라이트 {SPRITE}는 {BEHAVIOR}을 {CONDITION}때까지 시작합니다.
-      aalab_createNewSpriteAnonReturn2:
-        text: 새 스프라이트 라는{SPRITE_NAME} 의상{ANIMATION_NAME} 현장에서{LOCATION}
-      aalab_goToScene:
-        text: 장면으로 이동 {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: 이동 {SPRITE} {DISTANCE} 픽셀 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 북쪽
-            '"East"': 동쪽
-            '"South"': 남쪽
-            '"West"': 서쪽
-      aalab_prompt:
-        text: 질문하기 {MESSAGE}
-      aalab_scene:
-        text: 장면 {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: 설정 스토리
-      aalab_starwars_playSound:
-        text: 플레이{OPTION}사운드
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': 그리드
+            '"border"': 테두리
+            '"row"': 행
             '"random"': random(랜덤)
-            '"R2-D2 random"': R2-D2 랜덤
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': 모두
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': 모두
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: 바이너리 그리기 {BIN}
       binary_drawBinScreen:

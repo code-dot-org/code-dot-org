@@ -14,25 +14,25 @@ import {
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {authorizeLockable} from './stageLockRedux';
+import {authorizeLockable} from './lessonLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
-const SET_SCRIPT_PROGRESS = 'progress/SET_SCRIPT_PROGRESS';
+const SET_UNIT_PROGRESS = 'progress/SET_UNIT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
-const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
   'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
-const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
-const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
-const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
+const SET_CURRENT_LESSON_ID = 'progress/SET_CURRENT_LESSON_ID';
+const SET_UNIT_COMPLETED = 'progress/SET_UNIT_COMPLETED';
+const SET_LESSON_EXTRAS_ENABLED = 'progress/SET_LESSON_EXTRAS_ENABLED';
 const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
 const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
 
@@ -41,26 +41,26 @@ const PEER_REVIEW_ID = -1;
 const initialState = {
   // These first fields never change after initialization
   currentLevelId: null,
-  currentStageId: null,
+  currentLessonId: null,
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
-  stages: null,
+  lessons: null,
   lessonGroups: null,
   scriptId: null,
   scriptName: null,
-  scriptTitle: null,
+  unitTitle: null,
   courseId: null,
   isLessonExtras: false,
 
   // The remaining fields do change after initialization
-  // scriptProgress is of type scriptProgressType (a map of levelId ->
+  // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
-  scriptProgress: {},
+  unitProgress: {},
   // levelResults is a map of levelId -> TestResult
-  // note: eventually, we expect usage of this field to be replaced with scriptProgress
+  // note: eventually, we expect usage of this field to be replaced with unitProgress
   levelResults: {},
-  focusAreaStageIds: [],
+  focusAreaLessonIds: [],
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
@@ -71,7 +71,7 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false,
+  lessonExtrasEnabled: false,
   // Note: usingDbProgress === "user is logged in". However, it is
   // possible that we can get the user progress back from the DB
   // prior to having information about the user login state.
@@ -85,37 +85,38 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
-    let stages = action.stages;
-    // Re-initializing with full set of stages shouldn't blow away currentStageId
-    const currentStageId =
-      state.currentStageId || (stages.length === 1 ? stages[0].id : undefined);
+    let lessons = action.lessons;
+    // Re-initializing with full set of lessons shouldn't blow away currentLessonId
+    const currentLessonId =
+      state.currentLessonId ||
+      (lessons.length === 1 ? lessons[0].id : undefined);
     // extract fields we care about from action
     return {
       ...state,
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: processedStages(stages, action.professionalLearningCourse),
+      lessons: processedLessons(lessons, action.professionalLearningCourse),
       lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
-      scriptTitle: action.scriptTitle,
-      scriptDescription: action.scriptDescription,
-      scriptStudentDescription: action.scriptStudentDescription,
+      unitTitle: action.unitTitle,
+      unitDescription: action.unitDescription,
+      unitStudentDescription: action.unitStudentDescription,
       betaTitle: action.betaTitle,
       courseId: action.courseId,
-      currentStageId,
+      currentLessonId: currentLessonId,
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
       currentPageNumber: action.currentPageNumber
     };
   }
 
-  if (action.type === SET_SCRIPT_PROGRESS) {
+  if (action.type === SET_UNIT_PROGRESS) {
     return {
       ...state,
-      scriptProgress: processServerStudentProgress(action.scriptProgress)
+      unitProgress: processServerStudentProgress(action.unitProgress)
     };
   }
 
@@ -176,7 +177,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
-      focusAreaStageIds: action.focusAreaStageIds
+      focusAreaLessonIds: action.focusAreaLessonIds
     };
   }
 
@@ -194,7 +195,7 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_IS_HOC_SCRIPT) {
+  if (action.type === SET_IS_HOC_UNIT) {
     return {
       ...state,
       isHocScript: action.isHocScript
@@ -231,31 +232,31 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_CURRENT_STAGE_ID) {
-    // if we already have a currentStageId, that means we're on a puzzle page,
-    // and we want currentStageId to remain the same (rather than reflecting
-    // the last stage the user has made progress on).
-    if (state.currentStageId) {
+  if (action.type === SET_CURRENT_LESSON_ID) {
+    // if we already have a currentLessonId, that means we're on a puzzle page,
+    // and we want currentLessonId to remain the same (rather than reflecting
+    // the last lesson the user has made progress on).
+    if (state.currentLessonId) {
       return state;
     }
 
     return {
       ...state,
-      currentStageId: action.stageId
+      currentLessonId: action.lessonId
     };
   }
 
-  if (action.type === SET_SCRIPT_COMPLETED) {
+  if (action.type === SET_UNIT_COMPLETED) {
     return {
       ...state,
-      scriptCompleted: true
+      unitCompleted: true
     };
   }
 
-  if (action.type === SET_STAGE_EXTRAS_ENABLED) {
+  if (action.type === SET_LESSON_EXTRAS_ENABLED) {
     return {
       ...state,
-      stageExtrasEnabled: action.stageExtrasEnabled
+      lessonExtrasEnabled: action.lessonExtrasEnabled
     };
   }
 
@@ -297,21 +298,21 @@ function bestResultLevelId(levelIds, progressData) {
 /**
  * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-PLC lessons which
+ * - Adds 'lessonNumber' field for non-PLC lessons which
  * are not lockable or have a lesson plan
  */
-export function processedStages(lessons, isPlc) {
+export function processedLessons(lessons, isPlc) {
   let numLessonsWithLessonPlan = 0;
 
   return lessons.map(lesson => {
-    let stageNumber;
+    let lessonNumber;
     if (!isPlc && lesson.numberedLesson) {
       numLessonsWithLessonPlan++;
-      stageNumber = numLessonsWithLessonPlan;
+      lessonNumber = numLessonsWithLessonPlan;
     }
     return {
       ..._.omit(lesson, 'hidden'),
-      stageNumber
+      lessonNumber
     };
   });
 }
@@ -356,9 +357,9 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       dispatch(showTeacherInfo());
     }
 
-    if (data.focusAreaStageIds) {
+    if (data.focusAreaLessonIds) {
       dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds)
       );
     }
 
@@ -376,7 +377,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
       // Note that we set the full progress object above in redux but also set
       // a map containing just level results. This is the legacy code path and
-      // the goal is to eventually update all code paths to use scriptProgress
+      // the goal is to eventually update all code paths to use unitProgress
       // instead of levelResults.
       const levelResults = _.mapValues(data.progress, getLevelResult);
       dispatch(mergeResults(levelResults));
@@ -385,8 +386,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
       }
 
-      if (data.current_stage) {
-        dispatch(setCurrentStageId(data.current_stage));
+      if (data.current_lesson) {
+        dispatch(setCurrentLessonId(data.current_lesson));
       }
     }
   });
@@ -397,14 +398,14 @@ export const initProgress = ({
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
-  stages,
+  lessons,
   lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
-  scriptTitle,
-  scriptDescription,
-  scriptStudentDescription,
+  unitTitle,
+  unitDescription,
+  unitStudentDescription,
   betaTitle,
   courseId,
   isFullProgress,
@@ -415,14 +416,14 @@ export const initProgress = ({
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
-  stages,
+  lessons,
   lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
-  scriptTitle,
-  scriptDescription,
-  scriptStudentDescription,
+  unitTitle,
+  unitDescription,
+  unitStudentDescription,
   betaTitle,
   courseId,
   isFullProgress,
@@ -431,14 +432,14 @@ export const initProgress = ({
 });
 
 /**
- * Returns action that sets (overwrites) scriptProgress in the redux store.
+ * Returns action that sets (overwrites) unitProgress in the redux store.
  *
- * @param {scriptProgressType} scriptProgress
+ * @param {unitProgressType} unitProgress
  * @returns action
  */
-export const setScriptProgress = scriptProgress => ({
-  type: SET_SCRIPT_PROGRESS,
-  scriptProgress: scriptProgress
+export const setScriptProgress = unitProgress => ({
+  type: SET_UNIT_PROGRESS,
+  unitProgress: unitProgress
 });
 
 export const clearResults = () => ({
@@ -464,17 +465,17 @@ export const mergePeerReviewProgress = peerReviewsPerformed => ({
   peerReviewsPerformed
 });
 
-export const updateFocusArea = (changeFocusAreaPath, focusAreaStageIds) => ({
+export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
   type: UPDATE_FOCUS_AREAS,
   changeFocusAreaPath,
-  focusAreaStageIds
+  focusAreaLessonIds
 });
 
 export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
 
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
 export const setIsHocScript = isHocScript => ({
-  type: SET_IS_HOC_SCRIPT,
+  type: SET_IS_HOC_UNIT,
   isHocScript
 });
 export const setIsAge13Required = isAge13Required => ({
@@ -489,14 +490,14 @@ export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => ({
   type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW,
   studentDefaultsSummaryView
 });
-export const setCurrentStageId = stageId => ({
-  type: SET_CURRENT_STAGE_ID,
-  stageId
+export const setCurrentLessonId = lessonId => ({
+  type: SET_CURRENT_LESSON_ID,
+  lessonId
 });
-export const setScriptCompleted = () => ({type: SET_SCRIPT_COMPLETED});
-export const setStageExtrasEnabled = stageExtrasEnabled => ({
-  type: SET_STAGE_EXTRAS_ENABLED,
-  stageExtrasEnabled
+export const setScriptCompleted = () => ({type: SET_UNIT_COMPLETED});
+export const setLessonExtrasEnabled = lessonExtrasEnabled => ({
+  type: SET_LESSON_EXTRAS_ENABLED,
+  lessonExtrasEnabled
 });
 
 export const queryUserProgress = userId => (dispatch, getState) => {
@@ -506,44 +507,44 @@ export const queryUserProgress = userId => (dispatch, getState) => {
 
 // Selectors
 
-// Do we have one or more lockable stages
-export const hasLockableStages = state =>
-  state.stages.some(stage => stage.lockable);
+// Do we have one or more lockable lessons
+export const hasLockableLessons = state =>
+  state.lessons.some(lesson => lesson.lockable);
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
- * Extract the relevant portions of a particular lesson/stage from the store.
+ * Extract the relevant portions of a particular lesson from the store.
  * Note, that this does not include levels
  * @param {object} state - The progress state in our redux store
- * @param {number} stageIndex - The index into our stages we care about
+ * @param {number} lessonIndex - The index into our lessons we care about
  * @returns {Lesson}
  */
-const lessonFromStageAtIndex = (state, stageIndex) => ({
-  ...lessonFromStage(state.stages[stageIndex]),
-  isFocusArea: state.focusAreaStageIds.includes(state.stages[stageIndex].id)
+const lessonFromLessonAtIndex = (state, lessonIndex) => ({
+  ...lessonFromLesson(state.lessons[lessonIndex]),
+  isFocusArea: state.focusAreaLessonIds.includes(state.lessons[lessonIndex].id)
 });
-const lessonFromStage = stage =>
-  _.pick(stage, [
+const lessonFromLesson = lesson =>
+  _.pick(lesson, [
     'name',
     'id',
     'lockable',
-    'stageNumber',
+    'lessonNumber',
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'
   ]);
 export const lessons = state =>
-  state.stages.map((_, index) => lessonFromStageAtIndex(state, index));
+  state.lessons.map((_, index) => lessonFromLessonAtIndex(state, index));
 
 /**
  * Extract lesson from our peerReviewLessonInfo if we have one. We want this to end up
- * having the same fields as our non-peer review stages.
+ * having the same fields as our non-peer review lessons.
  */
 const peerReviewLesson = state => ({
-  ...lessonFromStage(state.peerReviewLessonInfo),
-  // add some fields that are missing for this stage but required for lessonType
+  ...lessonFromLesson(state.peerReviewLessonInfo),
+  // add some fields that are missing for this lesson but required for lessonType
   id: PEER_REVIEW_ID,
   lockable: false,
   isFocusArea: false
@@ -565,14 +566,15 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * The level object passed down to use via the server (and stored in lesson.lessons.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
 const levelWithProgress = (
-  {levelResults, scriptProgress, levelPairing = {}, currentLevelId},
-  level
+  {levelResults, unitProgress, levelPairing = {}, currentLevelId},
+  level,
+  isLockable
 ) => {
   const normalizedLevel = processedLevel(level);
   if (level.ids) {
@@ -582,9 +584,9 @@ const levelWithProgress = (
 
   // default values
   let status = LevelStatus.not_tried;
-  let locked = false;
+  let locked = isLockable;
 
-  let levelProgress = scriptProgress[normalizedLevel.id];
+  let levelProgress = unitProgress[normalizedLevel.id];
   if (levelProgress?.pages) {
     levelProgress = levelProgress.pages[normalizedLevel.pageNumber - 1];
   }
@@ -614,26 +616,28 @@ const levelWithProgress = (
 };
 
 /**
- * Get level data for all lessons/stages
+ * Get level data for all lessons
  */
 export const levelsByLesson = ({
-  stages,
+  lessons,
   levelResults,
-  scriptProgress,
+  unitProgress,
   levelPairing,
   currentLevelId
 }) =>
-  stages.map(stage =>
-    stage.levels.map(level => {
+  lessons.map(lesson =>
+    lesson.levels.map(level => {
       let statusLevel = levelWithProgress(
-        {levelResults, scriptProgress, levelPairing, currentLevelId},
-        level
+        {levelResults, unitProgress, levelPairing, currentLevelId},
+        level,
+        lesson.lockable
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithProgress(
-            {levelResults, scriptProgress, levelPairing, currentLevelId},
-            sublevel
+            {levelResults, unitProgress, levelPairing, currentLevelId},
+            sublevel,
+            lesson.lockable
           )
         );
       }
@@ -642,16 +646,19 @@ export const levelsByLesson = ({
   );
 
 /**
- * Get data for a particular lesson/stage
+ * Get data for a particular lesson
  */
-export const levelsForLessonId = (state, lessonId) =>
-  state.stages
-    .find(stage => stage.id === lessonId)
-    .levels.map(level => levelWithProgress(state, level));
+export const levelsForLessonId = (state, lessonId) => {
+  const lesson = state.lessons.find(lesson => lesson.id === lessonId);
+  return lesson.levels.map(level =>
+    levelWithProgress(state, level, lesson.lockable)
+  );
+};
 
-export const lessonExtrasUrl = (state, stageId) =>
-  state.stageExtrasEnabled
-    ? state.stages.find(stage => stage.id === stageId).lesson_extras_level_url
+export const lessonExtrasUrl = (state, lessonId) =>
+  state.lessonExtrasEnabled
+    ? state.lessons.find(lesson => lesson.id === lessonId)
+        .lesson_extras_level_url
     : '';
 
 export const isPerfect = (state, levelId) =>
@@ -663,7 +670,7 @@ export const isPerfect = (state, levelId) =>
  * @returns {Object[]}
  * {string} Object.name
  * {string[]} Object.lessonNames
- * {Object[]} Object.stageLevels
+ * {Object[]} Object.lessonLevels
  */
 export const groupedLessons = (state, includeBonusLevels = false) => {
   let byGroup = {};
@@ -684,9 +691,9 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     };
   });
 
-  state.stages.forEach((lesson, index) => {
+  state.lessons.forEach((lesson, index) => {
     const group = lesson.lesson_group_display_name;
-    const lessonAtIndex = lessonFromStageAtIndex(state, index);
+    const lessonAtIndex = lessonFromLessonAtIndex(state, index);
     let lessonLevels = allLevels[index];
     if (!includeBonusLevels) {
       lessonLevels = lessonLevels.filter(level => !level.bonus);

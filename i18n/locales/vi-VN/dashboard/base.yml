@@ -363,7 +363,9 @@ vi:
       playlab_k1: 'Kho trò chơi (dành cho trẻ chưa biết đọc)'
       scratch: 'Scratch'
       sports: 'Thể thao'
-      starwars: 'Cuộc Chiến Giữa Các Vì Sao'
+      starwars: 'Chiến tranh giữa các vì sao'
+      starwarsblocks: 'Chiến tranh giữa các vì sao (Khối)'
+      starwarsblocks_hour: 'Chiến tranh giữa các vì sao (Khối)'
       weblab: 'Kho Web'
       view_all: 'Xem tất cả các dự án ...'
     popup:
@@ -546,7 +548,7 @@ vi:
   next_stage: 'Hoàn thành! Tiếp tục màn tiếp theo'
   download_pdf: 'Mở giáo án'
   lesson_plan: 'Giáo Án'
-  view_lesson_plan: 'Xem Giáo Án'
+  view_lesson_plan: 'Xem giáo án'
   pdf_download: 'Tải phiên bản PDF'
   download_coming_soon: 'Tải về các hoạt động sắp diễn ra.'
   video_coming_soon: 'Video sắp tới!'
@@ -592,7 +594,7 @@ vi:
     20-hour:
       title: 'Khóa học cấp tốc'
       body: 'Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8, tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.'
-      body_short: 'Học những căn bản về khoa học máy tính với phiên bản cấp tốc của các lớp 2-4.'
+      body_short: 'Học môn khoa học máy tính cơ bản trong phiên bản cấp tốc của các khóa học 2-4.'
     hoc2014:
       try_new_tutorial: 'Hãy thử lớp học Giờ Lập trình phiên bản beta của chúng tôi'
       try_frozen: 'Họa sĩ vẽ Anna và Elsa, từ bộ phim Frozen'
@@ -615,7 +617,7 @@ vi:
     frozen:
       title: "Frozen"
     starwars:
-      title: "Cuộc Chiến Giữa Các Vì Sao"
+      title: "Chiến tranh giữa các vì sao"
     infinity:
       title: "Phòng thí nghiệm Vui Chơi Bất Tận"
       body: "Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng."
@@ -637,10 +639,10 @@ vi:
       title: "Nén văn bản"
       body: "Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản bằng cách thay thế các mẫu với các ký hiệu."
     unplugged:
-      title: "Bài học không cần máy tính"
+      title: "Bài học không sử dụng thiết bị điện tử"
       audience: "4 tuổi trở lên"
       body: "Chúng tôi đã biên soạn một danh sách các bài học không cắm phí cho bạn để sử dụng trong lớp học của bạn. Bây giờ bạn có thể dạy các nguyên tắc cơ bản của khoa học máy tính, cho dù bạn có máy tính trong lớp học hay không! Hãy thử sử dụng những bài học này như là một khóa học độc lập hoặc làm những bài học bổ sung cho bất kỳ khóa học về khoa học máy tính nào."
-      body_short: "Nếu bạn không có máy tính, hãy thử các bài học không cần máy tính này trong lớp học của bạn."
+      body_short: "Nếu bạn không có máy tính, hãy thử các bài học không sử dụng thiết bị điện tử này trong lớp học của bạn."
     unplugged_conditionals:
       title: "Điều kiện"
       body: "Tìm hiểu về các thuật toán và tuyên bố có điều kiện trong hoạt động \"không cắm phín\" này bằng cách sử dụng một bộ bài."
@@ -910,6 +912,8 @@ vi:
         scratch: 'Scratch'
       robotics:
         grok: 'Tìm hiểu Grok'
+      workshop_course:
+        csf_express: 'Nguyên tắc cơ bản của KHMT (Cấp tốc hoặc Cấp tốc cho trẻ chưa biết đọc)'
       email_opt_in:
         opt_in_yes: 'Đồng ý'
         opt_in_no: 'Không'

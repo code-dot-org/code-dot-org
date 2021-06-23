@@ -10,7 +10,7 @@ title: Activity Guidelines
 
 # Bài học hướng dẫn về "Giờ Lập Trình" và Tuần Giáo Dục Khoa học Máy tính
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
 Code.org là trang chủ nơi tập trung rất nhiều những hoạt động, bài học và video của Giờ Lập Trình trên (các) trang web Code.org, Hour of Code, và CSEdWeek. Bạn có thể vào xem tất cả hoạt động đang diễn ra ở [hourofcode.com/learn]({{ urls/learn }}).
 
@@ -46,9 +46,9 @@ A few tips:
 
 These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/stage/2/puzzle/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that tens of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
 
 Hiện nay có hàng nghìn nhà giáo dục đang thử nghiệm với Giờ học mã, nhiều lớp học đã sẵn sàng cho các hoạt động sáng tạo dạy về khoa học máy tính cơ bản. Để giúp cho những giáo viên tiên tiến tìm thấy động lực, chúng tôi đã thu thập và chọn ra những bài giảng do giáo viên giảng dạy và những kế hoach hoạt động cho các cựu chiến binh của Giờ học mã. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
 
@@ -200,7 +200,7 @@ Teachers and students will be able to search through and filter our list of acti
 
 <a id="earlyreview"></a>
 
-## Guidelines for submitting for an early qualitative review (NEW)
+## Những đề xuất để thiết kế hoạt động của bạn
 
 Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
 

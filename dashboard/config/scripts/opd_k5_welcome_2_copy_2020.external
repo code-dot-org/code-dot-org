@@ -10,27 +10,27 @@ The goal of Code.org's professional development is to prepare teachers like you 
 <table style="width:100%; border-style:none;">
   <tr>
     <th style="background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;""">
-      <b><a href="https://curriculum.code.org/csf-20/coursea/" target="blank" style="color: white">Course A</a></b><br/>
+      <b><a href="https://curriculum.code.org/csf-20/coursea/" target="blank" rel="noopener noreferrer" style="color: white">Course A</a></b><br/>
       <i>Kindergarten</i>
     </th>
     <th style="background-color:#f1c232; text-align:center; border-style:none;""">
-        <a href="https://curriculum.code.org/csf-20/courseb/" target="blank" style="color: white">Course B</a><br/>
+        <a href="https://curriculum.code.org/csf-20/courseb/" target="blank" rel="noopener noreferrer" style="color: white">Course B</a><br/>
         <i>1st Grade</i>
     </th>
     <th style="background-color:#b8bf0d; text-align:center; border-style:none;""">
-        <a href="https://curriculum.code.org/csf-20/coursec/" target="blank" style="color: white">Course C</a><br/>
+        <a href="https://curriculum.code.org/csf-20/coursec/" target="blank" rel="noopener noreferrer" style="color: white">Course C</a><br/>
         <i>2nd Grade</i>
     </th>
     <th style="background-color:#53bac2; text-align:center; border-style:none;""">
-        <a href="https://curriculum.code.org/csf-20/coursed/" target="blank" style="color: white">Course D</a><br/>
+        <a href="https://curriculum.code.org/csf-20/coursed/" target="blank" rel="noopener noreferrer" style="color: white">Course D</a><br/>
         <i>3rd Grade</i>
     </th>
     <th style="background-color:#0094ca; text-align:center; border-style:none;""">
-        <a href="https://curriculum.code.org/csf-20/coursee/" target="blank" style="color: white">Course E</a><br/>
+        <a href="https://curriculum.code.org/csf-20/coursee/" target="blank" rel="noopener noreferrer" style="color: white">Course E</a><br/>
         <i>4th Grade</i>
     </th>
     <th style="background-color:#7664a0; text-align:center; border-style:none;""">
-        <a href="https://curriculum.code.org/csf-20/coursef/" target="blank" style="color: white">Course F</a><br/>
+        <a href="https://curriculum.code.org/csf-20/coursef/" target="blank" rel="noopener noreferrer" style="color: white">Course F</a><br/>
         <i>5th Grade</i>
     </th>
   </tr>
@@ -105,7 +105,7 @@ The goal of Code.org's professional development is to prepare teachers like you 
 </table>
 <br/>
 
-**Later on, if you want to see even more details about what is in each course, you can check out our very thorough <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview" target="blank">Computer Science Fundamentals Curriculum Guide</a>.**
+**Later on, if you want to see even more details about what is in each course, you can check out our very thorough <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a>.**
 
 
 

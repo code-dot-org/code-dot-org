@@ -19,7 +19,7 @@ title: 아워오브코드 하우 투 가이드
 - [아워오브코드를 강력하게 시작하는 방법](#how-to-start)
 - [코딩 하기](#code)
 - [학생들의 성공을 축하하기](#celebrate)
-- [교육자들을 위한 추가적인 Hour of Code 리소스들](#other-resources)
+- [교육자를 위한 기타 아워오브 리소스](#other-resources)
 
 ### 아워오브코드는 멀리에 있어도 개최할 수 있습니다! 시작하기 위해 가상 아워오브코드 이벤트 개최를 위한 [팀을 확인하세요](https://hourofcode.com/us/how-to/virtual).
 
@@ -35,7 +35,7 @@ title: 아워오브코드 하우 투 가이드
 
 ## 2. 활동과 튜토리얼 탐구.
 
-전 연령 그룹과 경험 수준을 위한 다양하고 재미 있는[학생 자기주도 튜토리얼]({{ urls/learn }}) 을 제공합니다. 비록 많은 활동에 교사가 토론을 지도하거나 또는 활동을 확장하는 강의 플랜이 포함되어 있지만 학생이 스스로 자기 주도로 튜토리얼을 시도하는 것이 인기 있습니다. 
+전 연령 그룹과 경험 수준을 위한 다양하고 재미 있는[학생 자기주도 튜토리얼]({{ urls/learn }}) 을 제공합니다. 비록 많은 활동에 교사가 토론을 지도하거나 또는 활동을 확장하는 레슨 플랜이 포함되어 있지만 학생이 스스로 자기 주도로 튜토리얼을 시도하는 것이 인기 있습니다. 
 
 모든 학생을 위해 한 개의 튜토리얼을 선택하거나 또는 각자에게 선택하도록 맡기길 원하면 미리 활동을 검토하여 결정하십시오.
 
@@ -96,7 +96,7 @@ title: 아워오브코드 하우 투 가이드
 
 영감을 주는 동영상을 보여주세요:
 
-- 오리지널 Code.org가 Bill Gates, Mark Zuckerberg 그리고 NBA 스타 Chris Bosh가 출연하는 동영상을 공개합니다. ([1분](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5분](https://www.youtube.com/watch?v=nKIu9yen5nc) 그리고 [9분](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전을 이용하실 수 있습니다)
+- 오리지널 Code.org가 빌 게이츠와 마크 저커버그, NBA 스타 크리스 보쉬가 출연하는 동영상을 공개합니다. ([1분](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5분](https://www.youtube.com/watch?v=nKIu9yen5nc) 그리고 [9분](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전을 이용하실 수 있습니다)
 - 영감을 주는 [리소스]({{ urls/inspire }})와 [동영상](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)을 더 찾아보십시오.
 
 여러분과 여러분의 학생들이 컴퓨터 과학에 완전한 초보자라도 괜찮습니다. 여기 아워오브코드 활동을 소개해 줄 몇가지 아이디어가 있습니다.

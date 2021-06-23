@@ -21,7 +21,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import Announcements from '../../code-studio/components/progress/Announcements';
-import LessonStandards, {ExpandMode} from './LessonStandards';
+import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
@@ -198,10 +198,7 @@ class LessonOverview extends Component {
                     />
                   )}
                 </div>
-                <LessonStandards
-                  standards={lesson.standards}
-                  expandMode={ExpandMode.FIRST}
-                />
+                <LessonStandards standards={lesson.standards} />
               </div>
             )}
             {lesson.opportunityStandards.length > 0 && (

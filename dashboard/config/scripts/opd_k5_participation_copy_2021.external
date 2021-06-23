@@ -1,27 +1,51 @@
 name 'OPD-K5 Participation_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Planning your participation
+# Welcome!
 
-Before you begin, take a moment to consider your learning needs, goals and the unique experience of learning in an online, self-paced environment -- especially if this is your first online course!
+Welcome to Code.org's self-paced online course Teaching Computer Science Fundamentals!
+
+This course is designed for educators who want to get started teaching K-5 Computer Science Fundamentals courses.  After completing this online course, you'll be ready to teach one or more of Code.org’s Computer Science Fundamentals courses in your classroom.
+
+Please watch <a href="https://youtu.be/mqmt2Zk7CFU" target="blank"> this video </a> featuring Code.org's founder and CEO, Hadi Partovi, in welcoming you to Code.org's Professional Learning. 
 
 ## Take the pre-survey
-We want you to get as much as possible out of this professional development. For that reason, we ask you to fill out <a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">this short pre-survey</a>. The survey will ask you to reflect on your goals for this course and will tell us a little bit about who you are and how we can support you.
 
-<a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">Take the pre-survey</a>
+Code.org values and is responsive to feedback. Please fill out <a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank" rel="noopener noreferrer">this short pre-survey</a> to reflect on your goals for this online course and to tell us about who you are and how we can best support you.
 
+<a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 
 ## Go at your own pace
 
-This self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. **Please take your time and work through this course at your own pace. Suggested times are given for each stage.** If you find yourself spending more or less time on a given stage, don't worry! Our main goal is for you to have fun, learn the basics, and apply what you learn in your classroom practice in whatever way works best for you.
+This self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each part and lesson.  **However, we encourage you to engage with the content at your own pace.** 
 
 ## Find help when you need it
 
-If you get stuck at any time during the course, head over to <a href="http://support.code.org" target="blank">support.code.org</a> and check out <a href="https://forum.code.org/" target="blank">our community forums</a>. You'll likely find the answer to your question there. If you don't or are still stuck, you can email <a href="mailto:support@code.org" target="blank">support@code.org</a> and a Code.org staff member will get back to you as soon as they can.
+If you need help with this online course, visit <a href="http://support.code.org" target="blank" rel="noopener noreferrer">support.code.org</a> and <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">our community forums</a>. You'll likely find the answer to your question there. If you still need additional support, email <a href="mailto:support@code.org" target="blank" rel="noopener noreferrer">support@code.org</a> and a Code.org staff member will get back to you as soon as they can.
 
-Another way to get support, which we highly recommend, is to work through this online course with a partner or group of colleagues!
+Another great way to get support is to work through this online course with a partner or group of colleagues!
 
 ## Find the learning experience that works for you
 
-Finally, online learning is not for everyone. This course has no instructor or built-in mechanism for communicating in real-time with your peers. If you find yourself needing more one-on-one attention or know you learn better in a real-world classroom where there is more opportunity for collaboration and engagement, we recommend you pursue one of our <a href="http://code.org/professional-development-workshops" target="blank">in-person professional development opportunities</a>.
+We recognize online learning is not for everyone.  This online course does not include an instructor or way to communicate in real-time with peers. If you find yourself needing more one-on-one attention or know you learn better in a facilitator-led workshop where there is opportunity for collaboration and engagement with others, consider participating in one of our <a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">in-person professional development opportunities</a>.
+
+## Begin this online course
+
+This online course is made up of three parts:
+
+* **Part I:  Teaching and Implementing CS**, gets you started in using teacher tools and resources.  In addition, Part I introduces you to computer science teaching practices and strategies focused on inclusion.
+
+	* Note:  If you have participated in a Code.org in-person professional development workshop, use Part I as a refresher or go on to Part II to dive deeper into Computer Science Fundamentals concepts. 
+
+	* Click "Continue" to begin Part I.
+
+* **Part II:  Concepts in Courses A - F**, takes you through videos, puzzles, and curriculum resources students will use to learn about the computer science concepts and skills included throughout Computer Science Fundamentals courses. 
+
+	* <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/6/levels/1" target="blank" >Click here to begin Part II.</a>
+
+* **Part III:  Next Steps**, guides you in identifying next steps after this course to learn more about computer science and bring Computer Science Fundamentals courses to all of your students.
+
+	* Note:  If you have participated in a Code.org in-person professional development workshop, use Part III as a refresher on how you plan on implementing and teaching Computer Science Fundamentals courses.
+
+	* <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >Click here to begin Part III.</a>
 MARKDOWN

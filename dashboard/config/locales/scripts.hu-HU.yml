@@ -687,12 +687,6 @@ hu:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
@@ -746,12 +740,6 @@ hu:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
@@ -761,12 +749,6 @@ hu:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
@@ -1155,12 +1137,6 @@ hu:
               name: 'Gép nélküli feladatok: Dalszerzés paraméterekkel'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Üdvözlünk!
             Wrap-up:
@@ -3625,6 +3601,16 @@ hu:
           lesson_groups:
             lg_1:
               display_name: Tartalom
+        curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: A számítógép-tudomány alapjai
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Lecke 14
+            lesson15:
+              name: Lecke 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -3905,6 +3891,8 @@ hu:
               display_name: Számláló ciklusok
             csf_sprites:
               display_name: manók
+            lessonGroup-9:
+              display_name: Események
         pre-express-2021:
           lessons:
             Programming with Rey and BB-8:
@@ -3950,6 +3938,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Tartalom
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -3982,3 +3974,11 @@ hu:
               display_name: Bevezető
             Introduction:
               display_name: Bevezető
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Kérdőív
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lecke 15

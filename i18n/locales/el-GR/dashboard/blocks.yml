@@ -1195,6 +1195,15 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
             '"speed"': ταχύτητα
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': μεσαία
+            '100': large
       gamelab_setSizes:
         text: όρισε* {SPRITE} {PROPERTY} στο {N}%
         options:
@@ -1496,6 +1505,13 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+      Mikelab_setupSim:
+        text: |-
+          προσομοίωση ρύθμισης με
+          {SPRITE1N}{SPRITE1COSTUME}Ταχύτητα{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Ταχύτητα{SPRITE2SPEED}
+          Συλλογή
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1591,42 +1607,27 @@ el:
         options:
           PROPERTY:
             "'shapeColor'": χρώμα
-      aalab_addBehaviorForDuration:
-        text: aalab χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} για {SECONDS} δευτερόλεπτα
-      aalab_addBehaviorUntilBoolean:
-        text: aalab χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} μέχρι {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: νέα Σπράιτ με όνομα{SPRITE_NAME} με κουστούμι{ANIMATION_NAME} στην τοποθεσία{LOCATION}
-      aalab_goToScene:
-        text: πηγαίνετε στη σκηνή {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: κινήσου {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Βοράς
-            '"East"': Ανατολή
-            '"South"': Νότος
-            '"West"': Δυτικά
-      aalab_prompt:
-        text: κάνε ερώτηση {MESSAGE}
-      aalab_scene:
-        text: σκηνή {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: ιστορία εγκατάστασης
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': πλέγμα
+            '"border"': όριο
+            '"row"': γραμμή
             '"random"': τυχαίο
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': όλα
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': όλα
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:

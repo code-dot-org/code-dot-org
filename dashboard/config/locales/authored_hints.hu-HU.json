@@ -212,10 +212,6 @@
         "4-5 Nested Loops 7": {
           "4-5_Nested_Loops_7_a": "A minta tízszer ismétlődik, és összesen 360 fokot fordul. **360/10=?**"
         },
-        "Course 4 Artist 11": {
-          "Course_4_Artist_11_a": "A fél-hatszög **oldalai 30 pixelesek** és mindig jobbra kell fordulni **60 fokkal**.  ",
-          "Course_4_Artist_11_b": "A 2/3 háromszög **oldalai 80 pixelesek** és mindig jobbra kell fordulni **120 fokkal**. "
-        },
         "Course 4 Artist 12": {
           "Course_4_Artist_12_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "Course_4_Artist_12_a": "Az ismételt alakzato két részből állnak: egy **fél nyolcszög**, majd egy **háromszög 2/3-a** alkotja őket.",
@@ -252,7 +248,7 @@
           "challenges": "**Választható feladat**\n\n-   Érd el, hogy valamely táncos reagáljon a bal és jobb nyílgomb megnyomására."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint 8 ütem után ér véget._"
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint a 7. ütem után ér véget._"
         },
         "CourseD_Dance_2020_05": {
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.\n\n_A szint 12 ütem után ér véget._",
@@ -276,7 +272,7 @@
           "next_previous": "**Választható feladat**\n\n-   Ezt az új eseményblokkot arra is felhasználhatod, hogy végighaladj a táncmozdulatok egy listáján, ha a mozgást úgy állítod be, hogy `(Véletlenszerű)`, `(Következő)`, vagy `(Előző)` legyen.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
-          "alternate": "A Váltakoztatás blokk a \"Táncosok\" kategóriában található."
+          "alternate": "A \"váltakozik\" blokk a \"Táncosok\" kategóriában található."
         },
         "CourseD_Dance_Party_01": {
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.\n\n_Ez a szint 4 ütem után ér véget._",
@@ -404,7 +400,7 @@
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.\n\n_Ez a szint 8 ütem után ér véget._"
         },
         "Dance_Party_extras_alternate_2019": {
-          "alternate": "A Váltakoztatás blokk a \"Táncosok\" kategóriában található."
+          "alternate": "A \"váltakozik\" blokk a \"Táncosok\" kategóriában található."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni."
@@ -577,8 +573,7 @@
           "courseC_artist_prog_challenge2_a": "Tegyél blokkokat a ciklusba, hogy többször végrehajtsa. Próbáld ki! \n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
         },
         "course2_collector_loops_challenge2": {
-          "courseC_maze_loops_challenge2_a": "Az eredeti kód remekül működne - ha csak egy kincs lenne mindenhol!",
-          "courseC_maze_loops_challenge2_b": "Használj ciklusokat, hogy ne fogyjanak el el a `begyűjtés` blokkjaid!"
+          "courseC_maze_loops_challenge2_a": "Az eredeti kód remekül működne - ha csak egy kincs lenne mindenhol!"
         },
         "course2_collector_prog_challenge1": {
           "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
@@ -590,12 +585,6 @@
           "courseC_harvester_loops_challenge1_a": "Ne is gondolj arra, hogy ciklus nélkül ezt meg tudod csinálni!",
           "courseC_harvester_loops_challenge1_b": "Ismételd az `előrelépés` és a `felszed kukorica` blokkokat, ahányszor csak kell, aztán `fordulj jobbra` minden saroknál.",
           "courseC_harvester_loops_challenge1_c": "A legjobb megoldás, hogy összegyűjtsd az első négy kukoricát, ha `ismételd` blokkot használsz egy másik `ismételd` blokkon belül. A feladat többi részénél is érdemes felhasználni ezt a néhány sort!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
-        },
-        "course2_harvester_loops_challenge2": {
-          "courseC_harvester_loops_challenge2_a": "Az egyik megoldás cikkcakkban halad, a másik pedig csigavonalszerűen. Több megoldása is van az ilyen feladványoknak. Légy kitartó!",
-          "courseC_harvester_loops_challenge2_b": "Ismételd az `előrelépés` és a `felszed saláta` blokkokat, ahányszor csak kell, aztán fordulj el minden saroknál.",
-          "courseC_harvester_loops_challenge2_c": "Kétszer kell ismételni ezt a cikkcakk mintát, hogy 20 blokk használatával teljesítsd ezt a feladványt!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
-          "courseC_harvester_loops_challenge2_d": "Ez a csigavonal 18 blokkal megoldja a feladatot!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Gondolj arra, hogy az út három különböző részből áll. Mindegyik egy-egy mintát ismétel.",
@@ -612,7 +601,7 @@
           "courseD_bee_debugging_challenge1_c": "Miután a méh elért az oszlop aljára, ismételje ezeket a parancsokat: \n\n-   Ismételd 2 alkalommal:\n    -   Menj előre\n    -   Készíts 3 mézet \n-   Menj hátra"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1488,28 +1477,40 @@
           "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!"
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog2_a": "Négy <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokkot használhatsz, vagy beleteheted egy <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkba, így a programod rövidebb lesz."
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog2_a": "Négy <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokkot használhatsz, vagy beleteheted egy <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkba, így a programod rövidebb lesz."
         },
         "courseC_collector_prog2_2019": {
-          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog2_a": "Négy <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokkot használhatsz, vagy beleteheted egy <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkba, így a programod rövidebb lesz."
         },
         "courseC_collector_prog2_2020": {
-          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog2_a": "Négy <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokkot használhatsz, vagy beleteheted egy <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkba, így a programod rövidebb lesz."
         },
         "courseC_collector_prog4": {
-          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog4_a": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog4_c": "Próbáld követni ezt az útvonalat."
         },
         "courseC_collector_prog4_2018": {
-          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog4_a": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog4_c": "Próbáld követni ezt az útvonalat."
         },
         "courseC_collector_prog4_2019": {
-          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog4_a": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog4_c": "Próbáld követni ezt az útvonalat."
         },
         "courseC_collector_prog4_2020": {
-          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog4_a": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog4_c": "Próbáld követni ezt az útvonalat."
         },
         "courseC_maze_debugging2": {
           "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
@@ -1584,28 +1585,40 @@
           "courseC_maze_debugging_challenge2_c": "Két különböző utat követhetsz csak előrefelé haladva és elfordulva négyszer. Ha megtalálod az egyik utat a ciklushoz, meg fogod találni a másikat is!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?"
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "A madárnak el kell fordulnia, hogy a feladványt teljesítsd. Kitalálod, hogy merre?",
+          "courseC_maze_programming5_c": "A megoldásnak két `előrelépni` blokkot kell tartalmaznia, egy elfordulást és még két `előrelépni` blokkot."
         },
         "courseC_maze_programming5_2018": {
-          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?"
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "A madárnak el kell fordulnia, hogy a feladványt teljesítsd. Kitalálod, hogy merre?",
+          "courseC_maze_programming5_c": "A megoldásnak két `előrelépni` blokkot kell tartalmaznia, egy elfordulást és még két `előrelépni` blokkot."
         },
         "courseC_maze_programming5_2019": {
-          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?"
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "A madárnak el kell fordulnia, hogy a feladványt teljesítsd. Kitalálod, hogy merre?",
+          "courseC_maze_programming5_c": "A megoldásnak két `előrelépni` blokkot kell tartalmaznia, egy elfordulást és még két `előrelépni` blokkot."
         },
         "courseC_maze_programming5_2020": {
-          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?"
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "A madárnak el kell fordulnia, hogy a feladványt teljesítsd. Kitalálod, hogy merre?",
+          "courseC_maze_programming5_c": "A megoldásnak két `előrelépni` blokkot kell tartalmaznia, egy elfordulást és még két `előrelépni` blokkot."
         },
         "courseC_maze_programming8": {
-          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming8_a": "Ne felejtsd el, hogy használhatod a \"lépés\" gombot, hogy a kódot soronként átvizsgálva megtaláld a hibát."
         },
         "courseC_maze_programming8_2018": {
-          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming8_a": "Ne felejtsd el, hogy használhatod a \"lépés\" gombot, hogy a kódot soronként átvizsgálva megtaláld a hibát."
         },
         "courseC_maze_programming8_2019": {
-          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming8_a": "Ne felejtsd el, hogy használhatod a \"lépés\" gombot, hogy a kódot soronként átvizsgálva megtaláld a hibát."
         },
         "courseC_maze_programming8_2020": {
-          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming8_a": "Ne felejtsd el, hogy használhatod a \"lépés\" gombot, hogy a kódot soronként átvizsgálva megtaláld a hibát."
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
@@ -1648,8 +1661,8 @@
           "courseD_bee_debugging_challenge1_a": "Ennek a programnak miért csak az első fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia. Mennyi nektárt gyűjt a méh, amikor a virághoz ér?"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Kezdjük csak **két** gyémánt összegyűjtésével, az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "És most gyűjtd össze a maradék gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Végül gyűjtd össze a maradék gyémántokat is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "Itt a teljes megoldása ennek rejtvénynek.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1788,10 +1801,12 @@
         },
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_b": "Figyelj oda, hogy először fordulj a megfelelő irányba.",
-          "courseD_scrat_programming6_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseD_scrat_programming6_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseD_scrat_programming6_a": "Két úton is megoldhatod ezt a feladványt!"
         },
         "courseD_scrat_ramp8": {
-          "courseD_maze_ramp7_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseD_maze_ramp7_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseD_maze_ramp7_b": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva."
         },
         "courseE_artist_functions1": {
           "courseE_artist_functions1_a": "A négyzetek oldali 100 pixelesek, ez azt jelenti, hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.",
@@ -1824,7 +1839,8 @@
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_b": "Figyelj oda, hogy először fordulj a megfelelő irányba.",
-          "courseD_scrat_programming6_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseD_scrat_programming6_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseD_scrat_programming6_a": "Két úton is megoldhatod ezt a feladványt!"
         },
         "Course 4 Artist Binary Free Play 2b": {
           "Course_4_Artist_Binary_Free_Play_2b_d": "**Megoldás:**\n\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>"
@@ -2391,22 +2407,26 @@
         "courseC_collector_prog5": {
           "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
           "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
-          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket.",
+          "courseC_collector_prog5_c": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket."
         },
         "courseC_collector_prog5_2018": {
           "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
           "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
-          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket.",
+          "courseC_collector_prog5_c": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket."
         },
         "courseC_collector_prog5_2019": {
           "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
           "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
-          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket.",
+          "courseC_collector_prog5_c": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket."
         },
         "courseC_collector_prog5_2020": {
           "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
           "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
-          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket.",
+          "courseC_collector_prog5_c": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket."
         },
         "courseC_collector_prog6": {
           "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
@@ -2830,7 +2850,180 @@
           "courseD_bee_conditionals_challenge1_a": "Találj egy utat, ami minden virágot és méhsejtet érint és nem megy neki se fának, se világos színű blokknak. A legjobb út egy spirál lehet.\n\n**Megoldhatod anélkül a feladatot, hogy akár egyszer is balra fordulnál.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Ahogy a `ha a virágnál` blokk esetén, úgy az `amíg nektár > 0` blokkon belüli parancsokat is csak akkor hajtjuk végre, ha a méh épp egy virágnál van. A fő különbség az, hogy az `amíg`-cikluson belüli kódot addig ismételjük, amíg elfogy a nektár. Próbáld ki ezt a megoldást:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Ahogy a `ha a virágnál` blokk esetén, úgy az `amíg nektár > 0` blokkon belüli parancsokat is csak akkor hajtjuk végre, ha a méh épp egy virágnál van. A fő különbség az, hogy az `amíg`-cikluson belüli kódot addig ismételjük, amíg elfogy a nektár. Próbáld ki ezt a megoldást:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_a": "Ha olyan helyen állsz, ahol kincs van, használd a <xml><block type=\"collector_collect\"/></xml> blokkot, hogy felszedd.",
+          "courseC_collector_prog1_b": "A legegyszerább megoldáshoz lépj egyet előre, és gyűjtsd be a kincset."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_a": "Ha olyan helyen állsz, ahol kincs van, használd a <xml><block type=\"collector_collect\"/></xml> blokkot, hogy felszedd.",
+          "courseC_collector_prog1_b": "A legegyszerább megoldáshoz lépj egyet előre, és gyűjtsd be a kincset."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_a": "Ha olyan helyen állsz, ahol kincs van, használd a <xml><block type=\"collector_collect\"/></xml> blokkot, hogy felszedd.",
+          "courseC_collector_prog1_b": "A legegyszerább megoldáshoz lépj egyet előre, és gyűjtsd be a kincset."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_a": "Ha olyan helyen állsz, ahol kincs van, használd a <xml><block type=\"collector_collect\"/></xml> blokkot, hogy felszedd.",
+          "courseC_collector_prog1_b": "A legegyszerább megoldáshoz lépj egyet előre, és gyűjtsd be a kincset."
+        },
+        "courseC_collector_prog3": {
+          "courseC_collector_prog3_a": "A program csak azokat a blokkokat hajtja végre, amiket a <xml><block type=\"when_run\"/></xml> blokkhoz csatoltál.",
+          "courseC_collector_prog3_b": "Próbáld a \"Lépés\" gombbal soronként lefuttatni a kódot. Látod már, hogy hol megy félre a dolog?",
+          "courseC_collector_prog3_c": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_collector_prog3_2018": {
+          "courseC_collector_prog3_a": "A program csak azokat a blokkokat hajtja végre, amiket a <xml><block type=\"when_run\"/></xml> blokkhoz csatoltál.",
+          "courseC_collector_prog3_b": "Próbáld a \"Lépés\" gombbal soronként lefuttatni a kódot. Látod már, hogy hol megy félre a dolog?",
+          "courseC_collector_prog3_c": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_collector_prog3_2019": {
+          "courseC_collector_prog3_a": "A program csak azokat a blokkokat hajtja végre, amiket a <xml><block type=\"when_run\"/></xml> blokkhoz csatoltál.",
+          "courseC_collector_prog3_b": "Próbáld a \"Lépés\" gombbal soronként lefuttatni a kódot. Látod már, hogy hol megy félre a dolog?",
+          "courseC_collector_prog3_c": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_collector_prog3_2020": {
+          "courseC_collector_prog3_a": "A program csak azokat a blokkokat hajtja végre, amiket a <xml><block type=\"when_run\"/></xml> blokkhoz csatoltál.",
+          "courseC_collector_prog3_b": "Próbáld a \"Lépés\" gombbal soronként lefuttatni a kódot. Látod már, hogy hol megy félre a dolog?",
+          "courseC_collector_prog3_c": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming1": {
+          "courseC_maze_programming1_0": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming1_2018": {
+          "courseC_maze_programming1_0": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming1_2019": {
+          "courseC_maze_programming1_0": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming1_2020": {
+          "courseC_maze_programming1_0": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_a": "Hogy használni tudd az <xml><block type=\"maze_moveForward\"/></xml> blokkot, húzd az eszköztárból a <xml><block type=\"when_run\"/></xml> után, és csatold össze őket.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_a": "Hogy használni tudd az <xml><block type=\"maze_moveForward\"/></xml> blokkot, húzd az eszköztárból a <xml><block type=\"when_run\"/></xml> után, és csatold össze őket.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_a": "Hogy használni tudd az <xml><block type=\"maze_moveForward\"/></xml> blokkot, húzd az eszköztárból a <xml><block type=\"when_run\"/></xml> után, és csatold össze őket.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_a": "Hogy használni tudd az <xml><block type=\"maze_moveForward\"/></xml> blokkot, húzd az eszköztárból a <xml><block type=\"when_run\"/></xml> után, és csatold össze őket.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_a": "Először próbáld futtatni a kódot, hogy lásd, hol romlik el a dolog.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_a": "Először próbáld futtatni a kódot, hogy lásd, hol romlik el a dolog.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_a": "Először próbáld futtatni a kódot, hogy lásd, hol romlik el a dolog.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_a": "Először próbáld futtatni a kódot, hogy lásd, hol romlik el a dolog.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_a": "Ne felejtsd el, hogy amikor elfordulsz, akkor a _madár szemszögéből_ nézd az elfordulást. Ha jobbra fordulsz, a madár lefelé indul el.",
+          "courseC_maze_programming4_b": "Kövesd az utat:\n\n-   lépj előre\n-   fordulj el a megfelelő irányba\n-   lépj előre\n-   fordulj a másik irányba, hogy újra a megfelelő irányba nézz\n-   lépj előre"
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_a": "Ne felejtsd el, hogy amikor elfordulsz, akkor a _madár szemszögéből_ nézd az elfordulást. Ha jobbra fordulsz, a madár lefelé indul el.",
+          "courseC_maze_programming4_b": "Kövesd az utat:\n\n-   lépj előre\n-   fordulj el a megfelelő irányba\n-   lépj előre\n-   fordulj a másik irányba, hogy újra a megfelelő irányba nézz\n-   lépj előre"
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_a": "Ne felejtsd el, hogy amikor elfordulsz, akkor a _madár szemszögéből_ nézd az elfordulást. Ha jobbra fordulsz, a madár lefelé indul el.",
+          "courseC_maze_programming4_b": "Kövesd az utat:\n\n-   lépj előre\n-   fordulj el a megfelelő irányba\n-   lépj előre\n-   fordulj a másik irányba, hogy újra a megfelelő irányba nézz\n-   lépj előre"
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_a": "Ne felejtsd el, hogy amikor elfordulsz, akkor a _madár szemszögéből_ nézd az elfordulást. Ha jobbra fordulsz, a madár lefelé indul el.",
+          "courseC_maze_programming4_b": "Kövesd az utat:\n\n-   lépj előre\n-   fordulj el a megfelelő irányba\n-   lépj előre\n-   fordulj a másik irányba, hogy újra a megfelelő irányba nézz\n-   lépj előre"
+        },
+        "courseC_maze_programming6": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!",
+          "courseC_maze_programming6_b": "Az ujjaddal lépkedj az utat a madártól a malacig. Merre lépkedtél, merre fordultál?",
+          "courseC_maze_programming6_c": "Vedd figyelembe, hogy először el kell fordulnod, különben a madár nekimegy a falnak.",
+          "courseC_maze_programming6_d": "Elakadtál? Nézd meg ezt az utat!"
+        },
+        "courseC_maze_programming6_2018": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!",
+          "courseC_maze_programming6_b": "Az ujjaddal lépkedj az utat a madártól a malacig. Merre lépkedtél, merre fordultál?",
+          "courseC_maze_programming6_c": "Vedd figyelembe, hogy először el kell fordulnod, különben a madár nekimegy a falnak.",
+          "courseC_maze_programming6_d": "Elakadtál? Nézd meg ezt az utat!"
+        },
+        "courseC_maze_programming6_2019": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!",
+          "courseC_maze_programming6_b": "Az ujjaddal lépkedj az utat a madártól a malacig. Merre lépkedtél, merre fordultál?",
+          "courseC_maze_programming6_c": "Vedd figyelembe, hogy először el kell fordulnod, különben a madár nekimegy a falnak.",
+          "courseC_maze_programming6_d": "Elakadtál? Nézd meg ezt az utat!"
+        },
+        "courseC_maze_programming6_2020": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!",
+          "courseC_maze_programming6_b": "Az ujjaddal lépkedj az utat a madártól a malacig. Merre lépkedtél, merre fordultál?",
+          "courseC_maze_programming6_c": "Vedd figyelembe, hogy először el kell fordulnod, különben a madár nekimegy a falnak.",
+          "courseC_maze_programming6_d": "Elakadtál? Nézd meg ezt az utat!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_a": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva.",
+          "courseC_maze_programming7_b": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_a": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva.",
+          "courseC_maze_programming7_b": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_a": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva.",
+          "courseC_maze_programming7_b": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_a": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva.",
+          "courseC_maze_programming7_b": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming_challenge1": {
+          "courseC_maze_programming_challenge1_a": "Több út is van, hogy eljussunk a malacig. Használd az ujjadat, hogy megtaláld az utat, és írj hozzá programot!"
+        },
+        "courseC_maze_programming_challenge1_2018": {
+          "courseC_maze_programming_challenge1_a": "Több út is van, hogy eljussunk a malacig. Használd az ujjadat, hogy megtaláld az utat, és írj hozzá programot!"
+        },
+        "courseC_maze_programming_challenge1_2019": {
+          "courseC_maze_programming_challenge1_a": "Több út is van, hogy eljussunk a malacig. Használd az ujjadat, hogy megtaláld az utat, és írj hozzá programot!"
+        },
+        "courseC_maze_programming_challenge1_2020": {
+          "courseC_maze_programming_challenge1_a": "Több út is van, hogy eljussunk a malacig. Használd az ujjadat, hogy megtaláld az utat, és írj hozzá programot!"
+        },
+        "courseC_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
+          "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_maze_programming_challenge2_2018": {
+          "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
+          "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_maze_programming_challenge2_2019": {
+          "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
+          "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_maze_programming_challenge2_2020": {
+          "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
+          "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseB_maze_seq8": {
+          "courseB_maze_seq8_b": "Két úton is megoldhatod ezt a feladványt!"
+        },
+        "courseD_maze_ramp6": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!"
+        },
+        "courseD_maze_ramp7": {
+          "courseD_maze_ramp7_b": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva."
         }
       }
     }

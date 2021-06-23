@@ -33,6 +33,9 @@ $content-view-width: $content-width - $student-list-width;
       border-right: 0px;
     }
   }
+  .cell-content {
+    padding: 0px 4px;
+  }
   .primary-row {
     td {
       height: $row-height;
@@ -70,6 +73,15 @@ $content-view-width: $content-width - $student-list-width;
         width: 100%;
       }
     }
+    .content {
+      height: $row-height;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
     .expanded-row {
       td {
         border-width: 0px 0px 1px 0px;
@@ -88,6 +100,9 @@ $content-view-width: $content-width - $student-list-width;
     thead,
     tbody {
       max-width: $content-view-width;
+      td {
+        text-align: center;
+      }
     }
   }
 }
@@ -98,4 +113,5 @@ $content-view-width: $content-width - $student-list-width;
   CONTENT_VIEW_WIDTH: $content-view-width / 1px;
   ROW_HEIGHT: $row-height / 1px;
   MAX_ROWS: $max-rows;
+  MIN_COLUMN_WIDTH: 40;
 }

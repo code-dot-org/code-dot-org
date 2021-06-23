@@ -264,7 +264,8 @@ es-MX:
     invite_sent: 'Se envió la invitación'
     added_teacher: '%{name} añadido como tu docente'
     registered: "Te has registrado en %{section_name}."
-    captcha_required: 'Por favor, rellene el CAPTCHA para entrar en esta sección.'
+    captcha_required: 'Por favor, rellena el CAPTCHA para entrar en esta sección.'
+    already_exists: 'Ya te has unido a la sección %{section_name}.'
     error:
       signed_in: 'Cierra la sesión antes de proceder'
       username_not_found: 'No se encontró el usuario %{username}'
@@ -274,6 +275,8 @@ es-MX:
       blank_code: "Ingresa un código de sección"
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
       provider_managed_section: "No puedes unirte a esta sección, porque está a cargo de otro proveedor. Consulta con tu docente para que te agregue a través de %{provider} y vuelve a sincronizar la sección."
+      restricted_section: "No hemos podido añadirte a la sección %{section_code}, porque está bloqueada. Por favor, ponte en contacto con tu docente para obtener ayuda."
+      full_section: "No hemos podido añadirte a la sección %{section_code}, porque ya existen %{section_capacity} estudiantes en ella. Ponte en contacto con tu docente para que te ayude."
     mail:
       student_disassociated:
         subject: "Aviso de Code.org: %{student_name} ya no está asociado como tu estudiante."
@@ -321,7 +324,7 @@ es-MX:
       game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
       sprite_lab_documentation: "Documentación del Laboratorio de sprites"
       sprite_lab_tutorials: "Tutoriales del Laboratorio de sprites"
-      web_lab_documentation: "Documentación del Laboratorio Web"
+      web_lab_documentation: "Documentación del Laboratorio de web"
       educate_overview: "Descripción del educador"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
@@ -476,7 +479,7 @@ es-MX:
     for_parents_and_guardians: "Para padres y tutores"
     link_a_parent_email: "Conecta tu correo electrónico como padre o tutor a esta cuenta para mantenerte al tanto del progreso y proyectos de tu hijo/hija"
     parent_guardian_email_label: "Correo electrónico del padre o tutor"
-    remove_parent_email_label: "Quitar"
+    remove_parent_email_label: "Eliminar"
     none: "Ninguna"
     only_one_parent_email_supported_warning: "Nota: en este momento sólo podemos incluir el correo electrónico de un padre o tutor por cada cuenta de estudiante. "
     encrypted: "encriptado"
@@ -796,11 +799,11 @@ es-MX:
     reminder_desc_markdown: Hemos actualizado nuestros [términos de servicio](%{tos_url}) y la [política de privacidad](%{privacy_url}). Por favor, lee con atención antes de aceptarlos. Ten en cuenta que nuestras herramientas para aprender JavaScript podrían no estar disponibles para tus estudiantes si no aceptas explícitamente los términos actualizados.
     review_terms: "Revisa los términos actualizados"
   donor_interstitial:
-    title: "Tus cursos gratis de Ciencia de Computación son posible por..."
-    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Cometemos a hacer Code.org gratis para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
-    local_supporters: "Simpatizantes Locales"
-    global_supporters: "Simpatizantes Globales"
-    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidad a más estudiantes."
+    title: "Tus cursos gratis de Ciencias de Computación son posibles gracias a..."
+    subtitle: "Agradecemos los donantes generosos cuyos apoyos hizo posible el éxito de Code.org. Nos comprometemos a  hacer que Code.org sea gratuito para todas las escuelas y los estudiantes, globalmente, ¡gracias a la generosidad de nuestros [donors](%{donors_url})!"
+    local_supporters: "Promotores locales"
+    global_supporters: "Promotores locales"
+    support_codeorg_1: "Cada dólar dado a Code.org trae oportunidades a más estudiantes."
     support_codeorg_2: "[Dona ahora](%{donate_url}) para apoyar Code.org."
     get_started: "Empieza en Code.org"
   school_info_interstitial:
@@ -1006,6 +1009,7 @@ es-MX:
         malaysia: 'Malasia'
         mexico: 'México'
         thailand: 'Tailandia'
+        uzbekistan: 'Uzbekistán'
       ages:
         ages_under_6: 'Hasta 6 años'
         ages_7_8: '7-8 años'

@@ -541,6 +541,8 @@ fr:
         csd_teamwork_and_disagreement: Travail d'équipe - Gérer le Désaccord
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
         csd_ml_import_model: Importer un modèle IA
+        playlab_2021: Introduction au Labo de jeux
+        playlab_2021_reader: Introduction au Labo de jeux
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

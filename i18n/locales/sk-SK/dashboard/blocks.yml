@@ -1,11 +1,8 @@
----
 sk:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} striedať každé {N} merania
-          medzi {MOVE1} a {MOVE2}
+        text: "[GROUP][0] striedať každé [N][1] merania\nmedzi [MOVE1][2] a [MOVE2][3]"
         options:
           GROUP:
             sprites: všetky
@@ -46,20 +43,20 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_atTimestamp:
-        text: po {TIMESTAMP} {UNIT}
+        text: po [TIMESTAMP][0] [UNIT][1]
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
       Dancelab_changeColorBy:
-        text: zmeň {COLOR} {METHOD} o {AMOUNT}
+        text: zmeň [COLOR][0] [METHOD][1] o [AMOUNT][2]
         options:
           METHOD:
             '"hue"': odtieň
             '"saturation"': sýtosť
             '"brightness"': jas
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} urobte {MOVE} \n{DIR} nekonečne krát"
+        text: "[GROUP][0] urobte [MOVE][1] \n[DIR][2] nekonečne krát"
         options:
           GROUP:
             sprites: všetky
@@ -91,7 +88,7 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_changeMoveLR:
-        text: "{SPRITE} urob {MOVE} \n{DIR} nekonečne krát"
+        text: "[SPRITE][0] urob [MOVE][1] \n[DIR][2] nekonečne krát"
         options:
           MOVE:
             '"next"': "(Ďalší)"
@@ -109,7 +106,7 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_changePropBy:
-        text: zmeň {PROPERTY} {SPRITE} o {VAL}
+        text: zmeň [PROPERTY][1] [SPRITE][0] o [VAL][2]
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -119,7 +116,7 @@ sk:
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
       Dancelab_changePropEachBy:
-        text: zmeň {PROPERTY} pre {GROUP} o {VAL}
+        text: zmeň [PROPERTY][1] pre [GROUP][0] o [VAL][2]
         options:
           GROUP:
             sprites: všetky
@@ -143,7 +140,7 @@ sk:
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
       Dancelab_doMoveEachLR:
-        text: "{GROUP} urobte {MOVE} \n{DIR} jeden krát"
+        text: "[GROUP][0] urobte [MOVE][1] \n[DIR][2] jeden krát"
         options:
           GROUP:
             sprites: všetky
@@ -185,7 +182,7 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_doMoveLR:
-        text: "{SPRITE} urob {MOVE} \n{DIR} jeden krát"
+        text: "[SPRITE][0] urob [MOVE][1] \n[DIR][2] jeden krát"
         options:
           MOVE:
             '"rand"': "(Náhodné)"
@@ -213,34 +210,34 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_everyMeasuresRange:
-        text: 'opakuj každé {N} merania po {START} '
+        text: 'opakuj každé [N][0] merania po [START][1] '
       Dancelab_everySeconds:
-        text: 'opakuj každé {N} {UNIT} '
+        text: 'opakuj každé [N][0] [UNIT][1] '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
       Dancelab_everySecondsRange:
-        text: 'každé {N} {UNIT} od {START} do {STOP} '
+        text: 'každé [N][0] [UNIT][1] od [START][2] do [STOP][3] '
         options:
           UNIT:
             measures: Takty
             seconds: Sekundy
       Dancelab_everyVerseChorus:
-        text: 'každý {UNIT} '
+        text: 'každý [UNIT][0] '
         options:
           UNIT:
             '"verse"': verš
             '"chorus"': refrén
       Dancelab_getEnergy:
-        text: získaj {RANGE}
+        text: získaj [RANGE][0]
         options:
           RANGE:
             '"low"': basy
             '"mid"': stredy
             '"high"': výšky
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -251,15 +248,15 @@ sk:
             '"y"': vertikálna pozícia
             '"tint"': sfarbenie
       Dancelab_getTime:
-        text: aktuálny čas v {UNIT}
+        text: aktuálny čas v [UNIT][0]
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
       Dancelab_ifDanceIs:
         text: |-
-          ak {SPRITE} robí {DANCE}
-          {DO1} {DO2}
+          ak [SPRITE][0] robí [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Vysoký Tlesk
@@ -275,8 +272,8 @@ sk:
             MOVES.Rest: Žiadne
       Dancelab_ifTime:
         text: |-
-          ak {UNIT} je {OP} {N}
-          {DO1} {DO2}
+          ak [UNIT][0] je [OP][1] [N][2]
+          [DO1][3] [DO2][4]
         options:
           UNIT:
             '"measures"': takty
@@ -286,7 +283,7 @@ sk:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "{SPRITE} skoč {LOCATION}"
+        text: "[SPRITE][0] skoč [LOCATION][1]"
         options:
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -300,7 +297,7 @@ sk:
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_jumpToEach:
-        text: skočiť {GROUP} na {LOCATION}
+        text: skočiť [GROUP][0] na [LOCATION][1]
         options:
           GROUP:
             sprites: všetky
@@ -328,7 +325,7 @@ sk:
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": náhodný
       Dancelab_layoutSprites:
-        text: rozmiestni {GROUP} ako {FORMAT}
+        text: rozmiestni [GROUP][0] ako [FORMAT][1]
         options:
           GROUP:
             sprites: všetky
@@ -360,7 +357,7 @@ sk:
             '"plus"': plus
             '"random"': náhodný
       Dancelab_makeAnonymousDanceSprite:
-        text: vytvoriť nový {COSTUME} na {LOCATION}
+        text: vytvoriť nový [COSTUME][0] na [LOCATION][1]
         options:
           COSTUME:
             '"ALIEN"': mimozemšťan
@@ -387,7 +384,8 @@ sk:
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_makeNewDanceSprite:
-        text: vytvor {COSTUME} s menom {NAME} s umiestnením {LOCATION}
+        text: |-
+          vytvor [COSTUME][0] s menom [NAME][1] s umiestnením [LOCATION][2]
         options:
           COSTUME:
             '"ALIEN"': Mimozemšťan
@@ -414,7 +412,9 @@ sk:
             "{x: 300, y: 300}": vpravo dole
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": náhodný
       Dancelab_makeNewDanceSpriteGroup:
-        text: "vytvor {N} nových {COSTUME} \ns usporiadaním {LAYOUT}"
+        text: |-
+          vytvor [N][0] nových [COSTUME][1] 
+          s usporiadaním [LAYOUT][2]
         options:
           'N':
             '2': '2'
@@ -465,9 +465,9 @@ sk:
             '"plus"': plus
             '"random"': náhodný
       Dancelab_mixColors:
-        text: zmiešaj {COLOR1} a {COLOR2}
+        text: zmiešaj [COLOR1][0] a [COLOR2][1]
       Dancelab_nMeasures:
-        text: "{N} takty"
+        text: "[N][0] takty"
       Dancelab_onPointerDown:
         text: na stlačenie myši
       Dancelab_onPointerDrag:
@@ -477,12 +477,14 @@ sk:
       Dancelab_randomColor:
         text: náhodná farba
       Dancelab_setBackground:
-        text: nastav farbu pozadia {COLOR}
+        text: nastav farbu pozadia [COLOR][0]
       Dancelab_setBackgroundEffect:
-        text: nastav efekt pozadia {EFFECT}
+        text: |-
+          nastav efekt pozadia [EFFECT][0]
         options:
           EFFECT:
             '"none"': Žiadne
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Náhodné)"
             '"circles"': Kruhy
             '"color_cycle"': Farby
             '"diamonds"': Diamanty
@@ -513,7 +515,7 @@ sk:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           nastav efekt pozadia
-          {PALETTE} {EFFECT}
+          [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
             '"none"': Žiadne
@@ -553,7 +555,7 @@ sk:
             '"vintage"': Vintage
             '"warm"': Teplý
       Dancelab_setDanceSpeed:
-        text: nastav {SPRITE} rýchlosť tanca na {SPEED}
+        text: nastav [SPRITE][0] rýchlosť tanca na [SPEED][1]
         options:
           SPEED:
             '1': normálny
@@ -562,7 +564,7 @@ sk:
             '0.5': pomaly
             '0.25': veľmi pomaly
       Dancelab_setDanceSpeedEach:
-        text: nastav {GROUP} rýchlosť tanca na {SPEED}
+        text: nastav [GROUP][0] rýchlosť tanca na [SPEED][1]
         options:
           GROUP:
             sprites: všetky
@@ -585,10 +587,11 @@ sk:
             '0.5': pomaly
             '0.25': veľmi pomaly
       Dancelab_setForegroundEffect:
-        text: nastav efekt popredia {EFFECT}
+        text: nastav efekt popredia [EFFECT][0]
         options:
           EFFECT:
             '"none"': Žiadne
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Náhodné)"
             '"bubbles"': Bubliny
             '"confetti"': Konfety
             '"hearts_red"': Srdiečka
@@ -603,7 +606,7 @@ sk:
             '"color_lights"': Javiskové svetlá
             '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
-        text: nastav efekt popredia {EFFECT}
+        text: nastav efekt popredia [EFFECT][0]
         options:
           EFFECT:
             '"none"': Žiadne
@@ -626,7 +629,7 @@ sk:
             '"exploding_stars"': Žiara
             '"raining_tacos"': Tacos
       Dancelab_setProp:
-        text: 'nastav {SPRITE} {PROPERTY} na {VAL} '
+        text: 'nastav [SPRITE][0] [PROPERTY][1] na [VAL][2] '
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -636,7 +639,7 @@ sk:
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
       Dancelab_setPropEach:
-        text: nastav {GROUP} {PROPERTY} na {VAL}
+        text: nastav [GROUP][0] [PROPERTY][1] na [VAL][2]
         options:
           GROUP:
             sprites: všetky
@@ -661,7 +664,7 @@ sk:
             '"y"': vertikálna pozícia
             '"tint"': sfarbenie
       Dancelab_setPropRandom:
-        text: nastav náhodne {SPRITE} {PROPERTY}
+        text: nastav náhodne [SPRITE][0] [PROPERTY][1]
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -672,7 +675,7 @@ sk:
             '"y"': vertikálna pozícia
             '"tint"': sfarbenie
       Dancelab_setPropRandomEach:
-        text: nastaviť náhodne {GROUP} {PROPERTY}
+        text: nastaviť náhodne [GROUP][0] [PROPERTY][1]
         options:
           GROUP:
             sprites: všetky
@@ -697,9 +700,9 @@ sk:
             '"y"': vertikálna pozícia
             '"tint"': sfarbenie
       Dancelab_setTint:
-        text: nastav {SPRITE} sfarbenie na {VAL}
+        text: nastav [SPRITE][0] sfarbenie na [VAL][1]
       Dancelab_setTintEach:
-        text: nastav {THIS} sfarbenie na {VAL}
+        text: nastav [THIS][0] sfarbenie na [VAL][1]
         options:
           THIS:
             sprites: všetky
@@ -716,7 +719,7 @@ sk:
             '"SLOTH"': leňosi
             '"UNICORN"': Jednorožcov
       Dancelab_setTintEachInline:
-        text: nastav {THIS} sfarbenie na {VAL}
+        text: nastav [THIS][0] sfarbenie na [VAL][1]
         options:
           THIS:
             sprites: všetky
@@ -733,15 +736,15 @@ sk:
             '"SLOTH"': leňosi
             '"UNICORN"': Jednorožcov
       Dancelab_setTintInline:
-        text: nastav {SPRITE} sfarbenie na {VAL}
+        text: nastav [SPRITE][0] sfarbenie na [VAL][1]
       Dancelab_setVisible:
-        text: nastav {SPRITE} viditeľnosť na {VISIBILITY}
+        text: nastav [SPRITE][0] viditeľnosť na [VISIBILITY][1]
         options:
           VISIBILITY:
             'true': viditeľný
             'false': neviditeľný
       Dancelab_setVisibleEach:
-        text: nastav {THIS} viditeľnosť na {VISIBILITY}
+        text: nastav [THIS][0] viditeľnosť na [VISIBILITY][1]
         options:
           THIS:
             sprites: všetky
@@ -761,7 +764,7 @@ sk:
             'true': viditeľný
             'false': neviditeľný
       Dancelab_startMapping:
-        text: "{SPRITE} začne {PROPERTY} nasledovať {RANGE}"
+        text: "[SPRITE][0] začne [PROPERTY][1] nasledovať [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -776,7 +779,7 @@ sk:
             '"mid"': stredy
             '"treble"': výšky
       Dancelab_startMappingEach:
-        text: "{GROUP} začať {PROPERTY} nasledovať {RANGE}"
+        text: "[GROUP][0] začať [PROPERTY][1] nasledovať [RANGE][2]"
         options:
           GROUP:
             sprites: všetky
@@ -805,7 +808,7 @@ sk:
             '"mid"': stredy
             '"treble"': výšky
       Dancelab_stopMapping:
-        text: "{SPRITE} prestane {PROPERTY} nasledovať {RANGE}"
+        text: "[SPRITE][0] prestane [PROPERTY][1] nasledovať [RANGE][2]"
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -821,7 +824,7 @@ sk:
             '"mid"': stredy
             '"treble"': výšky
       Dancelab_stopMappingEach:
-        text: "{GROUP} prestať {PROPERTY} nasledovať {RANGE}"
+        text: "[GROUP][0] prestať [PROPERTY][1] nasledovať [RANGE][2]"
         options:
           GROUP:
             sprites: všetky
@@ -851,7 +854,7 @@ sk:
             '"mid"': stredy
             '"treble"': výšky
       Dancelab_translateStrings:
-        text: preložiť {STRING}
+        text: preložiť [STRING][0]
         options:
           STRING:
             '"music_wave"': Vlny
@@ -897,7 +900,7 @@ sk:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: pri stlačení {KEY}
+        text: pri stlačení [KEY][0]
         options:
           KEY:
             '"up"': hore
@@ -943,7 +946,7 @@ sk:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: keď {RANGE} vrcholia
+        text: keď [RANGE][0] vrcholia
         options:
           RANGE:
             '0': basy
@@ -954,23 +957,23 @@ sk:
       Dancelab_whenSetup2:
         text: nastavenie
       gamelab_addBehaviorSimple:
-        text: postava {SPRITE} začni {BEHAVIOR}
+        text: postava [SPRITE][0] začni [BEHAVIOR][1]
       gamelab_addTarget:
-        text: "{SPRITE} dosiahne cieľ {TARGET}"
+        text: "[SPRITE][0] dosiahne cieľ [TARGET][1]"
       gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       gamelab_atTime:
-        text: na {N} {UNIT}
+        text: na [N][0] [UNIT][1]
         options:
           UNIT:
             '"seconds"': sekundy
             '"frames"': rámce
       gamelab_beginCollectingData:
-        text: pozbieraj {BREAK} hodnotu údajov {VALUE} so štítkom {LABEL}
+        text: pozbieraj [BREAK][0] hodnotu údajov [VALUE][1] so štítkom [LABEL][2]
       gamelab_bounceOff:
-        text: "{SPRITE} odrazí sa {TARGET}"
+        text: "[SPRITE][0] sa odrazí od [TARGET][1]"
       gamelab_changePropBy:
-        text: zmeň {PROPERTY} {SPRITE} o {VAL}
+        text: zmeň [PROPERTY][1] [SPRITE][0] o [VAL][2]
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -980,39 +983,35 @@ sk:
             '"direction"': smeru pohybu
             '"speed"': rýchlosť
       gamelab_checkTouching:
-        text: "{CONDITION} sa {SPRITE1} dotýka {SPRITE2}"
+        text: "[CONDITION][0] sa [SPRITE1][1] dotýka [SPRITE2][2]"
         options:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
       gamelab_clickedOn:
-        text: po kliknutí na {SPRITE}
+        text: po kliknutí na [SPRITE][0]
       gamelab_clickedSpritePointer:
-        text: klikla {SPRITE}
+        text: "klikla [SPRITE][0]"
       gamelab_comment:
-        text: 'poznámka: {COMMENT}'
+        text: 'poznámka: [COMMENT][0]'
       gamelab_costumeImage:
-        text: "{COSTUME}"
+        text: "[COSTUME][0]"
       gamelab_countByAnimation:
-        text: počet {SPRITE}
+        text: počet [SPRITE][0]
       gamelab_createNewSprite:
-        text: |-
-          vytvor novú postavu
-          s menom {NAME}
-          s kostýmom {COSTUME}
-          na {LOCATION}
+        text: "vytvor novú postavu\ns menom [NAME][0]\ns kostýmom [COSTUME][1]\nna [LOCATION][2]"
       gamelab_destroy:
-        text: odstráň {THIS}
+        text: odstráň [THIS][0]
       gamelab_draggable:
         text: je posúvateľný
       gamelab_edgesDisplace:
-        text: okraje blokujú pohyb {SPRITE}
+        text: okraje blokujú pohyb [SPRITE][0]
       gamelab_followingTargets:
         text: nasledujúce ciele
       gamelab_getAllSprites:
         text: všetky postavy
       gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+        text: "[SPRITE][0] [PROPERTY][1]"
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1023,13 +1022,13 @@ sk:
             '"tint"': sfarbenie
             '"speed"': rýchlosť
       gamelab_getThisSprite:
-        text: "{CHOICE} postava"
+        text: "[CHOICE][0] postava"
         options:
           CHOICE:
             '"this"': toto
             '"other"': iné
       gamelab_getTime:
-        text: čas v {UNIT}
+        text: čas v [UNIT][0]
         options:
           UNIT:
             '"seconds"': sekundy
@@ -1040,12 +1039,12 @@ sk:
         text: schovať úvodnú obrazovku
       gamelab_ifVarEquals:
         text: |-
-          ak {NUM} ={VAL}
-          {STATEMENT}
+          ak [NUM][0] =[VAL][1]
+          [STATEMENT][2]
       gamelab_isCostumeEqual:
-        text: "{SPRITE} má kostým {COSTUME}"
+        text: "[SPRITE][0] má kostým [COSTUME][1]"
       gamelab_isKeyPressed:
-        text: "{KEY} stlačíš "
+        text: "[KEY][0] stlačíš "
         options:
           KEY:
             '"up"': hore
@@ -1080,13 +1079,13 @@ sk:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "{SPRITE} sa dotýka okrajov"
+        text: "[SPRITE][0] sa dotýka okrajov"
       gamelab_isTouchingSprite:
-        text: "{SPRITE}sa dotýka{TARGET}"
+        text: "[SPRITE][0]sa dotýka[TARGET][1]"
       gamelab_jumpTo:
-        text: "{SPRITE} skoč {LOCATION}"
+        text: "[SPRITE][0] skoč [LOCATION][1]"
       gamelab_keyPressed:
-        text: "{CONDITION} stlačíš {KEY}"
+        text: "[CONDITION][0] stlačíš [KEY][1]"
         options:
           CONDITION:
             '"when"': keď
@@ -1124,9 +1123,9 @@ sk:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'poloha x: {X} y: {Y}'
+        text: 'poloha x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
-        text: "{DISTANCE} pixelov {DIRECTION} od {LOCATION}"
+        text: "[DISTANCE][0] pixelov [DIRECTION][1] od [LOCATION][2]"
         options:
           DIRECTION:
             '"North"': Sever
@@ -1136,15 +1135,15 @@ sk:
       gamelab_locationMouse:
         text: poloha myši
       gamelab_locationOf:
-        text: poloha {SPRITE}
+        text: poloha [SPRITE][0]
       gamelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+        text: vytvor novú postavu [ANIMATION_NAME][0] na [LOCATION][1]
       gamelab_makeNumSprites:
-        text: vytvor {NUM} nových {ANIMATION_NAME} postáv
+        text: vytvor [NUM][0] nových [ANIMATION_NAME][1] postáv
       gamelab_mirrorSprite:
-        text: "{SPRITE} smeruje {DIRECTION}"
+        text: "[SPRITE][0] smeruje [DIRECTION][1]"
         options:
           DIRECTION:
             '"right"': vpravo
@@ -1152,11 +1151,11 @@ sk:
       gamelab_mouseLocation:
         text: poloha myši
       gamelab_moveBackward:
-        text: pohni {SPRITE} o {DISTANCE} pixelov dozadu
+        text: pohni [SPRITE][0] o [DISTANCE][1] pixelov dozadu
       gamelab_moveForward:
-        text: pohni {SPRITE} o {DISTANCE} pixelov dopredu
+        text: pohni [SPRITE][0] o [DISTANCE][1] pixelov dopredu
       gamelab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelov na {DIRECTION}
+        text: pohni [SPRITE][0] o [DISTANCE][1] pixelov na [DIRECTION][2]
         options:
           DIRECTION:
             '"North"': Sever
@@ -1164,17 +1163,17 @@ sk:
             '"South"': Juh
             '"West"': Západ
       gamelab_moveToward:
-        text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
+        text: pohni [SPRITE][0] o [DISTANCE][1] pixelov smerom k [TARGET][2]
       gamelab_newSpritePointer:
-        text: klikla {SPRITE}
+        text: "klikla [SPRITE][0]"
       gamelab_objectSpritePointer:
-        text: klikla {SPRITE}
+        text: "klikla [SPRITE][0]"
       gamelab_patrollingUpDown:
         text: hliadkovať hore-dole
       gamelab_playSound:
-        text: playSound {SOUND}
+        text: playSound [SOUND][0]
       gamelab_pointInDirection:
-        text: bod {SPRITE} {DIRECTION}
+        text: bod [SPRITE][0] [DIRECTION][1]
         options:
           DIRECTION:
             '"North"': Sever
@@ -1182,9 +1181,9 @@ sk:
             '"South"': Juh
             '"West"': Západ
       gamelab_printHaiku:
-        text: ukáž haiku {BREAK} názov básne{TITLE} autor básne {AUTHOR} riadok1 {LINE1} riadok2 {LINE2} riadok3 {LINE3}
+        text: ukáž haiku [BREAK][0] názov básne[TITLE][1] autor básne [AUTHOR][2] riadok1 [LINE1][3] riadok2 [LINE2][4] riadok3 [LINE3][5]
       gamelab_printText:
-        text: tlačiť {TEXT}
+        text: tlačiť [TEXT][0]
       gamelab_randColor:
         text: náhodná farba
       gamelab_randomColor:
@@ -1192,19 +1191,19 @@ sk:
       gamelab_randomLocation:
         text: náhodná poloha
       gamelab_removeAllBehaviors:
-        text: "{SPRITE} zastaví všetko"
+        text: "[SPRITE][0] zastaví všetko"
       gamelab_removeBehaviorSimple:
-        text: postava {SPRITE} zastav {BEHAVIOR}
+        text: postava [SPRITE][0] zastav [BEHAVIOR][1]
       gamelab_removeTint:
-        text: odstráň farbu z {THIS}
+        text: odstráň farbu z [THIS][0]
       gamelab_repeatForever:
         text: opakuj donekonečna
       gamelab_setAnimation:
-        text: zmeň kostým {THIS} na {ANIMATION}
+        text: zmeň kostým [THIS][0] na [ANIMATION][1]
       gamelab_setBackground:
-        text: nastav farbu pozadia {COLOR}
+        text: nastav farbu pozadia [COLOR][0]
       gamelab_setBackgroundImage:
-        text: nastav pozadie na {IMG}
+        text: nastav pozadie na [IMG][0]
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': jaskyňa
@@ -1220,9 +1219,9 @@ sk:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: žiadne
       gamelab_setBackgroundImageAs:
-        text: nastav pozadie na {IMG}
+        text: nastav pozadie na [IMG][0]
       gamelab_setDefaultSpriteSize:
-        text: nastav veľkost novej postavy na {SIZE}
+        text: nastav veľkost novej postavy na [SIZE][0]
         options:
           SIZE:
             '25': veľmi malé
@@ -1230,11 +1229,11 @@ sk:
             '75': stredný
             '100': Veľké
       gamelab_setPrompt:
-        text: vyzvať používateľa {QUESTION} pre premennú {VAR}
+        text: vyzvať používateľa [QUESTION][0] pre premennú [VAR][1]
       gamelab_setPromptWithChoices:
-        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
+        text: vyzvi užívateľa [QUESTION][0] pre premennú [VAR][1] s možnosťami [A][2][B][3][C][4]
       gamelab_setProp:
-        text: nastav {SPRITE} {PROPERTY} na {VAL}
+        text: nastav [SPRITE][0] [PROPERTY][1] na [VAL][2]
         options:
           PROPERTY:
             '"scale"': veľkosť
@@ -1243,21 +1242,35 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
             '"speed"': rýchlosť
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+          SIZE:
+            '25': veľmi malé
+            '50': Malé
+            '75': stredný
+            '100': Veľké
       gamelab_setSizes:
-        text: nastav {SPRITE} {PROPERTY} na {N}%
+        text: nastav [SPRITE][0] [PROPERTY][1] na [N][2]%
         options:
           PROPERTY:
             '"scale"': veľkosť
             '"width"': šírka
             '"height"': výška
       gamelab_setTint:
-        text: zmeň farbu {THIS} na {COLOR}
+        text: zmeň farbu [THIS][0] na [COLOR][1]
       gamelab_setupSim:
-        text: "nastav simuláciu s \n{SPRITE1N}{SPRITE1COSTUME}rýchlosť{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}rýchlosť{SPRITE2SPEED}\nzbieranie\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: |-
+          nastav simuláciu s 
+          [SPRITE1N][0][SPRITE1COSTUME][1]rýchlosť[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]rýchlosť[SPRITE2SPEED][5]
+          zbieranie
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       gamelab_showTitleScreen:
-        text: zobraz titulnú obrazovku {BREAK} názov {TITLE} text {SUBTITLE}
+        text: zobraz titulnú obrazovku [BREAK][0] názov [TITLE][1] text [SUBTITLE][2]
       gamelab_spriteClicked:
-        text: "{CONDITION} klikneš na {SPRITE} "
+        text: "[CONDITION][0] klikneš na [SPRITE][1] "
         options:
           CONDITION:
             '"when"': keď
@@ -1265,25 +1278,25 @@ sk:
       gamelab_stopCollectingData:
         text: prestaň zbierať údaje
       gamelab_subjectSpritePointer:
-        text: klikla {SPRITE}
+        text: "klikla [SPRITE][0]"
       gamelab_textJoin:
-        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
       gamelab_textVariableJoin:
-        text: "{VAR}{TEXT2}"
+        text: "[VAR][0][TEXT2][1]"
       gamelab_tumbling:
         text: omieľanie
       gamelab_turn:
-        text: otočiť {SPRITE} {DIRECTION} {N} stupňov
+        text: otočiť [SPRITE][0] [DIRECTION][1] [N][2] stupňov
         options:
           DIRECTION:
             '"right"': vpravo
             '"left"': vľavo
       gamelab_updateTitleWithColor:
-        text: zobraz titulnú obrazovku {BREAK} názov {TITLE} farba {COLOR}
+        text: zobraz titulnú obrazovku [BREAK][0] názov [TITLE][1] farba [COLOR][2]
       gamelab_whenDownArrow:
         text: pri stlačení šípky dole
       gamelab_whenKey:
-        text: pri stlačení {KEY}
+        text: pri stlačení [KEY][0]
         options:
           KEY:
             '"up"': hore
@@ -1298,19 +1311,19 @@ sk:
       gamelab_whenLeftArrow:
         text: pri stlačení šípky vľavo
       gamelab_whenPromptAnswered:
-        text: keď {VAR} zodpovedaná
+        text: keď [VAR][0] zodpovedaná
       gamelab_whenRightArrow:
         text: pri stlačení šípky vpravo
       gamelab_whenSpriteCreated:
-        text: keď {SPRITE} vytvorená
+        text: keď [SPRITE][0] vytvorená
       gamelab_whenTouching:
-        text: keď sa {SPRITE1} dotkne {SPRITE2}
+        text: keď sa [SPRITE1][0] dotkne [SPRITE2][1]
       gamelab_whenUpArrow:
         text: pri stlačení šípky hore
       gamelab_whileDownArrow:
         text: pri stlačení šípky dole
       gamelab_whileKey:
-        text: pri stlačení {KEY}
+        text: pri stlačení [KEY][0]
         options:
           KEY:
             '"up"': hore
@@ -1327,21 +1340,21 @@ sk:
       gamelab_whileRightArrow:
         text: pri stlačení šípky vpravo
       gamelab_whileTouching:
-        text: keď sa {SPRITE1} dotkne {SPRITE2}
+        text: keď sa [SPRITE1][0] dotkne [SPRITE2][1]
       gamelab_whileUpArrow:
         text: pri stlačení šípky hore
       gamelab_withPercentChance:
         text: |-
-          ak {NUM}% šanca
-          {STATEMENT}
+          ak [NUM][0]% šanca
+          [STATEMENT][1]
       gamelab_xLocationOf:
-        text: x súradnica {SPRITE}
+        text: x súradnica [SPRITE][0]
       gamelab_yLocationOf:
-        text: y súradnica {SPRITE}
+        text: y súradnica [SPRITE][0]
       Mikelab_addBehaviorSimple:
-        text: postava {SPRITE} začni {BEHAVIOR}
+        text: postava [SPRITE][0] začni [BEHAVIOR][1]
       Mikelab_addTrainingData:
-        text: pridať školiace údaje {NAME},{LOCATION}
+        text: 'pridať školiace údaje [NAME][0],[LOCATION][1]'
         options:
           NAME:
             "{x: 201, y: 100}": predmet
@@ -1352,9 +1365,9 @@ sk:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": môj-štítok
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nie je môj-štítok
       Mikelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
+        text: "[ANIMATION][0]"
       Mikelab_beginDataCollection:
-        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
+        text: vyzvi užívateľa [QUESTION][0] pre premennú [VAR][1] s možnosťami [A][2][B][3][C][4]
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1386,13 +1399,13 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupChangeAnim:
-        text: zmeň {SELECT} {COSTUME} na {COSTUME2}
+        text: zmeň [SELECT][0] [COSTUME][1] na [COSTUME2][2]
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupChangePropBy:
-        text: zmeňiť {PROPERTY} {SELECT} {COSTUME} cez {VAL}
+        text: zmeňiť [PROPERTY][0] [SELECT][1] [COSTUME][2] cez [VAL][3]
         options:
           SELECT:
             '"all"': všetky
@@ -1404,7 +1417,7 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupCreateNewSprite:
-        text: vytvoriť nový {COSTUME} na {LOCATION}
+        text: vytvoriť nový [COSTUME][0] na [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -1417,17 +1430,17 @@ sk:
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_groupDestroy:
-        text: odstráň {SELECT} {COSTUME}
+        text: odstráň [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupDisplace:
-        text: všetky {COSTUME} blokujú pohyb {COSTUME2}
+        text: všetky [COSTUME][0] blokujú pohyb [COSTUME2][1]
       Mikelab_groupEdgesDisplace:
-        text: okraje blokujú pohyb {COSTUME}
+        text: okraje blokujú pohyb [COSTUME][0]
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} {PROPERTY}"
+        text: "[SELECT][0] [COSTUME][1] [PROPERTY][2]"
         options:
           SELECT:
             '"average"': priemer
@@ -1439,25 +1452,25 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupRemoveAllBehaviors:
-        text: zastav {SELECT} {COSTUME} správanie
+        text: zastav [SELECT][0] [COSTUME][1] správanie
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupRemoveBehaviorSimple:
-        text: "{SELECT} {COSTUME} zastaví {BEHAVIOR}"
+        text: "[SELECT][0] [COSTUME][1] zastaví [BEHAVIOR][2]"
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupRemoveTint:
-        text: odstráň farbu z {SELECT} {COSTUME}
+        text: odstráň farbu z [SELECT][0] [COSTUME][1]
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupSetProp:
-        text: nastav {PROPERTY} {SELECT} {COSTUME} na {VAL}
+        text: nastav [PROPERTY][0] [SELECT][1] [COSTUME][2] na [VAL][3]
         options:
           SELECT:
             '"all"': všetky
@@ -1469,33 +1482,33 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
       Mikelab_groupSetTint:
-        text: zmeň farbu {SELECT} {COSTUME} na {COLOR}
+        text: zmeň farbu [SELECT][0] [COSTUME][1] na [COLOR][2]
         options:
           SELECT:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupWhenClickedOn:
-        text: po kliknutí {COSTUME}
+        text: po kliknutí [COSTUME][0]
       Mikelab_groupWhenXTouchesY:
-        text: keď sa {COSTUME} dotkne {COSTUME2}
+        text: keď sa [COSTUME][0] dotkne [COSTUME2][1]
       Mikelab_groupWhileClicked:
-        text: počas klikania na {COSTUME}
+        text: počas klikania na [COSTUME][0]
       Mikelab_groupWhileTouchingAny:
         text: |-
-          kým sa{COSTUME} dotýka {COSTUME2}
-          {STATEMENT}
+          kým sa[COSTUME][0] dotýka [COSTUME2][1]
+          [STATEMENT][2]
       Mikelab_hasBehavior:
-        text: "{SPRITE} práve {BEHAVIOR}"
+        text: "[SPRITE][0] práve [BEHAVIOR][1]"
       Mikelab_hideFish:
-        text: odstráň {TRASH}
+        text: odstráň [TRASH][0]
         options:
           TRASH:
             object: predmet
             fish: ryba
       Mikelab_ifDanceIs:
         text: |-
-          ak {SPRITE} robí {DANCE}
-          {DO1} {DO2}
+          ak [SPRITE][0] robí [DANCE][1]
+          [DO1][2] [DO2][3]
         options:
           DANCE:
             MOVES.ClapHigh: Vysoký Tlesk
@@ -1510,37 +1523,38 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Mikelab_ifLabel:
-        text: ak {DANCE} robí {DO1} inak {DO2}
+        text: |-
+          ak [DANCE][0] robí [DO1][1] inak [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: môj-štítok
       Mikelab_ifRecognizeLabel:
         text: |-
-          ak rozozná objekt ako {DANCE}
-          robí {DO1} inak {DO2}
+          ak rozozná objekt ako [DANCE][0]
+          robí [DO1][1] inak [DO2][2]
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: môj-štítok
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          ak rozozná objekt ako {DANCE}
-          robí {DO1}
+          ak rozozná objekt ako [DANCE][0]
+          robí [DO1][1]
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie je môj-štítok
       Mikelab_joinText:
-        text: "{TEXT} {NEXT}"
+        text: "[TEXT][0] [NEXT][1]"
       Mikelab_locationAt:
-        text: 'poloha x: {X} y: {Y}'
+        text: 'poloha x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
-        text: "{LOCATION}"
+        text: "[LOCATION][0]"
       Mikelab_randomColor:
         text: náhodná farba
       Mikelab_removeBehaviorSimple:
-        text: postava {SPRITE} zastav {BEHAVIOR}
+        text: postava [SPRITE][0] zastav [BEHAVIOR][1]
       Mikelab_repeatUntilComplete:
         text: opakuj donekonečna
       Mikelab_sendBad:
@@ -1559,13 +1573,20 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      Mikelab_setupSim:
+        text: |-
+          nastav simuláciu s 
+          [SPRITE1N][0][SPRITE1COSTUME][1]rýchlosť[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]rýchlosť[SPRITE2SPEED][5]
+          zbieranie
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': vpravo
             '"left"': vľavo
       Mikelab_sprite:
-        text: nová {COSTUME} postava na {LOCATION}
+        text: nová [COSTUME][0] postava na [LOCATION][1]
         options:
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -1578,9 +1599,9 @@ sk:
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_whenClickedOn:
-        text: po kliknutí na {SPRITE}
+        text: po kliknutí na [SPRITE][0]
       Mikelab_whenKeyPressed:
-        text: pri stlačení {KEY}
+        text: pri stlačení [KEY][0]
         options:
           KEY:
             '"up"': šípka hore
@@ -1605,11 +1626,11 @@ sk:
       Mikelab_whenMouseClicked:
         text: po kliknutí myšou
       Mikelab_whenYesNoClicked:
-        text: po kliknutí {KEY}
+        text: po kliknutí [KEY][0]
         options:
           KEY:
-            '"yes"': áno
-            '"no"': nie
+            '"yes"': 'áno'
+            '"no"': 'nie'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1618,9 +1639,9 @@ sk:
             '"left"': šípka vľavo
             '"right"': šípka vpravo
       Mikelab_xLocationOf:
-        text: x súradnica {SPRITE}
+        text: x súradnica [SPRITE][0]
       Mikelab_yLocationOf:
-        text: y súradnica {SPRITE}
+        text: y súradnica [SPRITE][0]
       RyanLab_moveForward:
         text: posuň sa dopredu
       RyanLab_turnLeft:
@@ -1628,107 +1649,85 @@ sk:
       RyanLab_turnRight:
         text: otoč sa vpravo
       SpriteLab2Beta_spriteSay:
-        text: postava {SPRITE} hovorí {TEXT} po dobu {SECONDS} sekúnd
+        text: postava [SPRITE][0] hovorí [TEXT][1] po dobu [SECONDS][2] sekúnd
       Vector_createSpriteWith:
         text: |-
           vytvoriť postavu
-          robiť{STATEMENT}
+          robiť[STATEMENT][0]
       Vector_log:
-        text: zaznamenať správu {MESSAGE}
+        text: zaznamenať správu [MESSAGE][0]
       Vector_positionCenter:
         text: v strede
       Vector_push:
-        text: nastaviť rýchlosť {VECTOR}
+        text: nastaviť rýchlosť [VECTOR][0]
       Vector_randomLocation:
         text: náhodná poloha
       Vector_setColor:
-        text: nastaviť farbu na {COLOR}
+        text: nastaviť farbu na [COLOR][0]
       Vector_setSize:
-        text: nastaviť šírku {WIDTH} výšku {HEIGHT}
+        text: nastaviť šírku [WIDTH][0] výšku [HEIGHT][1]
       Vector_teleportTo:
-        text: nastaviť pozíciu {POSITION}
+        text: nastaviť pozíciu [POSITION][0]
       Vector_vectorNorth:
         text: sever
       Vector_where:
-        text: každá postava kde {PROPERTY} je {VALUE} robí {STATEMENT}
+        text: každá postava kde [PROPERTY][0] je [VALUE][1] robí [STATEMENT][2]
         options:
           PROPERTY:
             "'shapeColor'": farba
-      aalab_addBehaviorForDuration:
-        text: aalab postava {SPRITE} začne {BEHAVIOR} po dobu {SECONDS} sekúnd
-      aalab_addBehaviorUntilBoolean:
-        text: postava {SPRITE} začni {BEHAVIOR} až kým {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nova postava s menom{SPRITE_NAME} s kostýmom[ANIMATION_NAME] na mieste{LOCATION}
-      aalab_goToScene:
-        text: choď na miesto deja {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelov na {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Sever
-            '"East"': Východ
-            '"South"': Juh
-            '"West"': Západ
-      aalab_prompt:
-        text: položiť otázku {MESSAGE}
-      aalab_scene:
-        text: miesto deja {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: nastav príbeh
-      aalab_starwars_playSound:
-        text: prehraj zvuk {OPTION}
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': mriežka
+            '"border"': okraj
+            '"row"': riadok
             '"random"': náhodný
-            '"R2-D2 random"': R2-D2 náhodný
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': všetky
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': všetky
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
-        text: kresliť dvojmo {BIN}
+        text: kresliť dvojmo [BIN][0]
       binary_drawBinScreen:
         text: |-
           kresliť obrazovku
-          {B1}
-          {B2}
-          {B3}
-          {B4}
-          {B5}
-          {B6}
-          {B7}
-          {B8}
+          [B1][0]
+          [B2][1]
+          [B3][2]
+          [B4][3]
+          [B5][4]
+          [B6][5]
+          [B7][6]
+          [B8][7]
       binary_drawDec:
-        text: kresliť desatinné {DEC}
+        text: kresliť desatinné [DEC][0]
       binary_drawPixelHere:
-        text: nastaviť pixely {VAL}
+        text: nastaviť pixely [VAL][0]
         options:
           VAL:
-            '0': vypnuté
-            '1': zapnuté
+            '0': 'vypnuté'
+            '1': 'zapnuté'
             '"toggle"': prepnúť
       binary_drawString:
-        text: kresliť reťazec {STR}
+        text: kresliť reťazec [STR][0]
       binary_goTo:
-        text: skočiť na {LOC}
+        text: skočiť na [LOC][0]
       binary_goToHome:
         text: skočiť vľavo hore
       binary_gridSize:
-        text: nastaviť veľkosť mriežky {SIZE}
+        text: nastaviť veľkosť mriežky [SIZE][0]
       binary_move:
-        text: pohnúť {DIR}
+        text: pohnúť [DIR][0]
         options:
           DIR:
             '"up"': hore
@@ -1736,7 +1735,7 @@ sk:
             '"left"': vľavo
             '"right"': vpravo
       binary_whenKey:
-        text: pri stlačení {KEY}
+        text: pri stlačení [KEY][0]
         options:
           KEY:
             '"up"': hore
@@ -1750,8 +1749,8 @@ sk:
             '"d"': d
       craft_ifPath:
         text: |-
-          ak cesta {DIR}
-          {STATEMENT}
+          ak cesta [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": vpredu
@@ -1759,8 +1758,8 @@ sk:
             "'left'": doľava
       craft_ifStandingOn:
         text: |-
-          ak stojíš na {TYPE}
-          {STATEMENT}
+          ak stojíš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": modrý koral
@@ -1771,19 +1770,19 @@ sk:
             "'seaLantern'": morský lampáš
       craft_ifStandingOnLimit:
         text: |-
-          ak stojíš na {TYPE}
-          {STATEMENT}
+          ak stojíš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": piesok
             "'darkPrismarine'": tmavý prismarín
             "'seaLantern'": morský lampáš
       craft_log:
-        text: zaznamenať správu {MESSAGE}
+        text: zaznamenať správu [MESSAGE][0]
       craft_moveForward:
         text: posuň sa dopredu
       craft_placeBlock:
-        text: polož {blockType}
+        text: polož [blockType][0]
         options:
           blockType:
             '"strippedOak"': pruhovaný dub
@@ -1818,13 +1817,13 @@ sk:
       craft_repeatUntilConduit:
         text: |-
           opakuj až kým nedokončíš kanál
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           opakuj až do cieľa
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: vytvor {ENTITY}
+        text: vytvor [ENTITY][0]
         options:
           ENTITY:
             '"cod"': treska
@@ -1834,7 +1833,7 @@ sk:
             '"squid"': kalamár
             '"tropicalFish"': tropická ryba
       craft_turn:
-        text: otoč sa {DIR}
+        text: otoč sa [DIR][0]
         options:
           DIR:
             right: vpravo ↻

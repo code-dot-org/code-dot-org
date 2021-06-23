@@ -3,16 +3,20 @@
     "name": "csa1-pilot",
     "wrapup_video_id": null,
     "hidden": true,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "is_migrated": true,
       "curriculum_umbrella": "CSA",
       "weekly_instructional_minutes": 225,
-      "show_calendar": true
+      "show_calendar": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "pilot_experiment": "csa-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-06 20:12:16 UTC",
+    "serialized_at": "2021-06-17 22:31:29 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -23,8 +27,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Content",
-        "description": "Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity."
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -323,6 +326,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "assessment": true,
         "overview": "For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.",
         "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Asphalt Art Project Planning Guide\n",
         "student_overview": "For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.\n"
@@ -341,6 +345,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "assessment": true,
         "overview": "Students planned uses for existing classes in the previous lesson and designed a new class to provide a needed behavior for creating their asphalt art. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their design. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program. \n",
         "student_overview": "You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your asphalt art. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.\n"
       },
@@ -358,6 +363,7 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "assessment": true,
         "overview": "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n",
         "preparation": "* Print copies of the Asphalt Art Project Peer Interview Cards - one set of cards per pair of students - and cut out cards\n",
         "student_overview": "Using the feedback you received in the previous lesson, you finalize and submit your Asphalt Art Project. You share your final projects with your peers and celebrate your success!"
@@ -376,6 +382,7 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
+        "assessment": true,
         "overview": "Students complete their first Free Response Question (FRQ) style problem in this lesson. They annotate the question as a class, then implement a full `SpiralPainter` class in pairs through an \"Around the World\" style activity.\n\nThe goals of this lesson are threefold: \n* Create a sense of excitement and accomplishment around completing FRQs\n* Practice an FRQ style question (written by hand)\n* Serve as a summative assessment of the content from Unit 1\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it is a building block to help students prepare to tackle these types of questions. As students progress through the course, the FRQ questions they encounter slowly become closer to the real thing.\n",
         "preparation": "* Read through the Print Outs document, which contains setup instructions for the \"Around the World\" activity.\n* Print out the station instructions and the manipulatives in the Print Outs document.\n* Cut out the manipulatives.\n* Optional: For each student, provide a blue, orange, and pink colored pencil or marker.\n",
         "student_overview": "Today you complete your first Free Response Question (FRQ)! This means that you write code by hand to complete a large task. You do this with a partner by moving around the room and completing parts of the task at each location, checking your work as you go."
@@ -394,6 +401,7 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
+        "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
         "preparation": "* Preview the assessment questions\n* Unlock the assessment questions\n",
         "student_overview": "You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning."
@@ -1571,6 +1579,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
+        "progression_name": "TEST ",
         "remarks": true,
         "tips": [
           {
@@ -1621,7 +1630,8 @@
       "key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to show students where they will explore the Java IDE. Point out the five main sections: instructions, editor, preview, console, and controls. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students look at the starter code in the editor and run the code."
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to show students where they will explore the Java IDE. Point out the five main sections: instructions, editor, preview, console, and controls. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students look at the starter code in the editor and run the code.",
+        "progression_name": "Exploring The Neighborhood"
       },
       "seeding_key": {
         "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
@@ -1632,7 +1642,7 @@
       "key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you run the starter code?*\n\n**Discussion Goal:** This is the first opportunity for students to trace code - a skill that they use throughout the course. Students should talk through the code out loud to demonstrate the tracing process. After running the code, students see the `Painter` move across the screen and paint one square.  \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you run the starter code?*\n\n**Discussion Goal:** This is the first opportunity for students to trace code - a skill that they use throughout the course. Students should talk through the code out loud to demonstrate the tracing process. After running the code, students see the `Painter` move across the screen and paint some squares.  \n"
       },
       "seeding_key": {
         "activity_section.key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
@@ -1714,7 +1724,8 @@
       "key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class. Have students run the code without the object.\n\nStudents create a `Painter` object and run the program again. Make sure students can identify:\n* The class name\n* The object name \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. \n\n* Walk students through the starter code to identify the class. Have students run the code without the object.\n* Have students create a `Painter` object and run the program again. Make sure students can identify:\n    * The class name\n    * The object name \n",
+        "progression_name": "Investigate the Painter"
       },
       "seeding_key": {
         "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
@@ -1812,8 +1823,9 @@
       "key": "78af1614-1425-4640-a087-1c3aa1abaab8",
       "position": 6,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n\n**Question:** Look at the underlined code snippet below. Which of the following correctly identifies the code? \n* class  \n* object\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8",
@@ -1898,6 +1910,7 @@
       "key": "9945a427-d169-4622-8d5c-37d28e5eba77",
       "position": 4,
       "properties": {
+        "progression_name": "Movement Commands",
         "tips": [
           {
             "type": "teachingTip",
@@ -1927,6 +1940,7 @@
       "key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
       "position": 6,
       "properties": {
+        "progression_name": "Painting Commands",
         "tips": [
           {
             "type": "teachingTip",
@@ -1967,8 +1981,9 @@
       "key": "aed67282-2415-4401-9c3e-c62c39d534b1",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The `Painter` started with five units of paint on their paint tray. How many units of paint will the `Painter` have left on their paint tray after painting a straight line that connects the origin, (0, 0) to (3, 3)?\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1",
@@ -2228,8 +2243,9 @@
       "key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Look at the code snippet below. Would the code inside the `if`-statement run? Why or why not?\n\n```\n    Painter jes = new Painter();\n    if(canMove()){\n        jes.Move();\n    }\n```\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
@@ -4841,16 +4857,1612 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L1"
+        ],
+        "progression": "Exploring The Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b"
+      },
+      "level_keys": [
+        "CSA U1L2-L1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "progression": "Investigate the Painter"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+      },
+      "level_keys": [
+        "CSA U1L2-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      },
+      "level_keys": [
+        "CSA U1L2 CFU1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "progression": "Movement Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      },
+      "level_keys": [
+        "CSA U1L3-L3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "progression": "Painting Commands"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      },
+      "level_keys": [
+        "CSA U1L3-L6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L7 CFU"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L7 CFU"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      },
+      "level_keys": [
+        "CSA U1L3-L7 CFU"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
+      },
+      "level_keys": [
+        "CSA U1L4 CFU1"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L1",
+        "script_level.level_keys": [
+          "CSA U1L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L2",
+        "script_level.level_keys": [
+          "CSA U1L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L1",
+        "script_level.level_keys": [
+          "CSA U1L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L2",
+        "script_level.level_keys": [
+          "CSA U1L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L3",
+        "script_level.level_keys": [
+          "CSA U1L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L4",
+        "script_level.level_keys": [
+          "CSA U1L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L5",
+        "script_level.level_keys": [
+          "CSA U1L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L6",
+        "script_level.level_keys": [
+          "CSA U1L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L7 CFU",
+        "script_level.level_keys": [
+          "CSA U1L3-L7 CFU"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Design The Neighborhood",
+      "url": "https://docs.google.com/document/d/1ciZ9uffyBgqn4IUV2GwxJy5UyN0r8FeEPiOq7duCn9Y/edit",
+      "key": "_key_design_the_neighborhood",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_design_the_neighborhood"
+      }
+    },
+    {
+      "name": "[KEY] Implementing PainterPlus Methods",
+      "url": "https://docs.google.com/document/d/1Qwp12d-FEQ1xppHtynTilk9BCLroLq1hulLK-GtImFM/edit?usp=sharing",
+      "key": "_key_implementing_painterplus_methods",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_implementing_painterplus_methods"
+      }
+    },
+    {
+      "name": "[KEY] Open Source Code",
+      "url": "https://docs.google.com/document/d/15dvps9I2lTuJwCi_llYXphtMx4Yj1_qxrz3h2On87Nk/edit?usp=sharing",
+      "key": "_key_open_source_code",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_open_source_code"
+      }
+    },
+    {
+      "name": "[KEY] Parameterized Constructors Guided Notes (Optional)",
+      "url": "https://docs.google.com/presentation/d/1gS9pcxoWkrTALiqdtYFt9kX5c0r5BgQ3Gd8-eC5fOTQ/edit#slide=id.p",
+      "key": "_key_parameterized_constructors_guided_notes_optional_",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "name": "[KEY] Pixel Picture Puzzle",
+      "url": "https://docs.google.com/document/d/13LscTyaFhxWJo8Py9z3V0YDHGksH4eftaDiEWqWFj-c/edit?usp=sharing",
+      "key": "_key_pixel_picture_puzzle",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_pixel_picture_puzzle"
+      }
+    },
+    {
+      "name": "[KEY] Pseudocode Warm Up",
+      "url": "https://docs.google.com/document/d/1HzEcKpwl-M352HDS7UGvKsIX_Hc2Wn_mePDZ0GvsADo/edit?usp=sharing",
+      "key": "_key_pseudocode_warm_up",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_pseudocode_warm_up"
+      }
+    },
+    {
+      "name": "[KEY] SprayPainter",
+      "url": "https://docs.google.com/document/d/16pwSFkypoUhXlXj7yWLgfXDiMUxGV7jaUJ5HIA70UA4/edit?usp=sharing",
+      "key": "_key_spraypainter",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_spraypainter"
+      }
+    },
+    {
+      "name": "[KEY] U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1D0STv6oMsd2PTqnn_XF4PNUlQ9qaZPYFuquef_fOMCA/edit?usp=sharing",
+      "key": "_key_u1l10_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1wM7jgON5S9vxuMByVcQw1CUvHh2I_Td1qWV2qf1bXV4/edit?usp=sharing",
+      "key": "_key_u1l11_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YTDck-gFpNQ8ocnddeZAD2LVBQOkRvuSwAMgDNvHfsw/edit?usp=sharing",
+      "key": "_key_u1l12_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1JRSk3qfE5dp-fyeBMgOiTWI8392ov5KKi8M4SQuTRbI/edit?usp=sharing",
+      "key": "_key_u1l13_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YbslGCWRAah-nYBzhhCkdIZ7V8axG-CK-pr60_Zeq3I/edit?usp=sharing",
+      "key": "_key_u1l14_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/1yq6RKtSlJb8h0QA17t_Mgxz3GSbqxeKAQb6jfQRGTBw/edit?usp=sharing",
+      "key": "_key_u1l15_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L19 FRQ Day",
+      "url": "https://docs.google.com/document/d/1ylcTjDVeQwpazU1lZr2KW4Ys-PRChO8u7EqBEwGuG1E/edit",
+      "key": "_key_u1l19_frq_day",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
+      "name": "[KEY] U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1pqowVJKdE8w5cNinhTOsVBv_Z6YyFMlDhJ8TlfK4cRg/edit?usp=sharing",
+      "key": "_key_u1l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/16iMBKZFWWPpfbAKf8Z3J2AFfONHQpzq1LA_ov1o3NZk/edit?usp=sharing",
+      "key": "_key_u1l3_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/180Q56BdGtZI9BsPEfBdVHnNLvJe3g1OEl2CgrQWdMww/edit?usp=sharing",
+      "key": "_key_u1l4_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Gm5fTDuFOZx7KQkNxZRj7lHNQGhuO-56YzbxveXvTJM/edit?usp=sharing",
+      "key": "_key_u1l5_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1iAIcgu-yojsbNQuHee3m7dyP2V9FBjt4Wpkrx-VRm6Y/edit?usp=sharing",
+      "key": "_key_u1l6_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1XgJ4oksmTf-yyVaXnxLaIvrlHJ0iPeZ7deA67-vDJeI/edit?usp=sharing",
+      "key": "_key_u1l7_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Cg4l2mxENKZs72oGi05cd-RRw3AuI84bARORUEipq7s/edit?usp=sharing",
+      "key": "_key_u1l8_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1CCuKrAW5JFuwN-J4Ink-8CbhPdv3Ave-fbzhgRXsn04/edit?usp=sharing",
+      "key": "_key_u1l9_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Peer Interview Cards",
+      "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
+      "key": "asphalt_art_project_peer_interview_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_peer_interview_cards"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1oBMegm8198TYGgKOF9uWy7sMXyOZ3Myam2fp-AR-AXI/edit?usp=sharing",
+      "key": "asphalt_art_project_planning_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "name": "Code Review Practice",
+      "url": "https://docs.google.com/document/d/1SgyD1rkzI9nPdudVXyem2qjlRwLlmKvfgTOBxXNbHWw/edit#heading=h.q0rmwxki59ku",
+      "key": "code_review_practice",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "code_review_practice"
+      }
+    },
+    {
+      "name": "Create Your Stamp",
+      "url": "https://docs.google.com/document/d/14Dfvbwje3LDMkc83wSBElT-VK3zVu1ImH7RzJab0k9s/edit?usp=sharing",
+      "key": "create_your_stamp",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "create_your_stamp"
+      }
+    },
+    {
+      "name": "Design The Neighborhood",
+      "url": "https://docs.google.com/document/d/1t2sGra6awWO0CxODVPqg_5Ba36qq-tLAq8l1YaqT6d8/edit",
+      "key": "design_the_neighborhood",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Verified Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "design_the_neighborhood"
+      }
+    },
+    {
+      "name": "Harmonica App Open Source Code",
+      "url": "https://docs.google.com/document/d/1lO5FvjoaFtPR8ptXv9vG3-Jl-ZHz1ELvUcn6A-EUvzA/edit?usp=sharing",
+      "key": "harmonica_app_open_source_code",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "harmonica_app_open_source_code"
+      }
+    },
+    {
+      "name": "Java 2D API Open Source Code",
+      "url": "https://docs.google.com/document/d/1Y7KaOXNk05eXeGilUvmIQckFTMlC71kOxq0B6eZW-JM/edit?usp=sharing",
+      "key": "java_2d_api_open_source_code",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "java_2d_api_open_source_code"
+      }
+    },
+    {
+      "name": "Java Syntax and PainterPlus Methods Cards",
+      "url": "https://docs.google.com/document/d/112VkBhuoRef70ULN08zTwvmMcn3TYQ_A-UZMhzgrHGc/edit?usp=sharing",
+      "key": "java_syntax_and_painterplus_methods_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "java_syntax_and_painterplus_methods_cards"
+      }
+    },
+    {
+      "name": "Minecraft Brigadier Open Source Code",
+      "url": "https://docs.google.com/document/d/10EjoilNMIxIjS3uiD3F0aOVecwpW3EvFz10gR1YT3_w/edit?usp=sharing",
+      "key": "minecraft_brigadier_open_source_code",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "minecraft_brigadier_open_source_code"
+      }
+    },
+    {
+      "name": "Notes App Open Source Code",
+      "url": "https://docs.google.com/document/d/14j5xdXAnmi8rK8WCgp1LHDaRdd6KdX5UsbuF8QW1zpY/edit?usp=sharing",
+      "key": "notes_app_open_source_code",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "notes_app_open_source_code"
+      }
+    },
+    {
+      "name": "Painter Says",
+      "url": "https://docs.google.com/document/d/19MrjfFXD4yZ-euo0OrP-D-08JVUZT6vavyCGNbFb22U/edit?usp=sharing",
+      "key": "painter_says",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "painter_says"
+      }
+    },
+    {
+      "name": "Parameterized Constructors Guided Notes (Optional)",
+      "url": "https://docs.google.com/presentation/d/11TVgOGWgTNxTWhCvrdQnhH1ulCKpGwEiAyN3mVXBaOU/edit#slide=id.p",
+      "key": "parameterized_constructors_guided_notes_optional_",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "name": "Pixel Picture Puzzle",
+      "url": "https://docs.google.com/document/d/1iq-gm3WWYWftIi639w1iTY41DSC8r2w6PTkisFzJLfg/edit?usp=sharing",
+      "key": "pixel_picture_puzzle",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "pixel_picture_puzzle"
+      }
+    },
+    {
+      "name": "Pseudocode Warm Up",
+      "url": "https://docs.google.com/document/d/1jrC6HhW3t9DDUdzSFs2RmwrNPy7j6XgGEGzzd0_HF7I/edit?usp=sharing",
+      "key": "pseudocode_warm_up",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "pseudocode_warm_up"
+      }
+    },
+    {
+      "name": "SprayPainter",
+      "url": "https://docs.google.com/document/d/1R-UisBPjYu7kZI0CvYNke5cJbXpVZkWPtml_QxyNjj0/edit?usp=sharing",
+      "key": "spraypainter",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "spraypainter"
+      }
+    },
+    {
+      "name": "U1L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ztKTD5uMmYvMUsqZI04LOJSMDaD7xoyl2jlesDrgRt4/edit?usp=sharing",
+      "key": "u1l10_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xko30iUZ2CN-Q32OUom3InkQeVwoZ7NYVHnKdlvRhvw/edit?usp=sharing",
+      "key": "u1l11_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1wA2-SbDxSCJizGezysDQPR3JubZENLC6xAz8U9QVoQ8/edit?usp=sharing",
+      "key": "u1l12_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1rkZe3eW0A7M4yJC8yTKZi8UMcr7uBQcKGRPyQ8YeH08/edit?usp=sharing",
+      "key": "u1l13_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "U1L14 Extra Practice",
+      "url": "https://docs.google.com/document/d/1buHP6wxXR3Hhi-jQz7lM28pecSyarr0weEJRtUj35oY/edit?usp=sharing",
+      "key": "u1l14_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "name": "U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BPOxhF-_SFmNkv0DEHogOas47KqqQ-QlE0_QGkTLKhw/edit?usp=sharing",
+      "key": "u1l15_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
+      "name": "U1L19 FRQ Day",
+      "url": "https://docs.google.com/document/d/1PFdjUsVR1s7HYnZ7-d2OELm-kc-yDEmI33erPmSRk1E/edit?usp=sharing",
+      "key": "u1l19_frq_day",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l19_frq_day"
+      }
+    },
+    {
+      "name": "U1L19 Print Outs",
+      "url": "https://docs.google.com/document/d/1Kt72Vuy3AjsiY5zlQ_4ckpqIuPLJnrOjgCA-4eymnMM/edit?usp=sharing",
+      "key": "u1l19_print_outs",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1l19_print_outs"
+      }
+    },
+    {
+      "name": "U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1hwWUDiz17B67eERZm5XpPLVObx5_zOvx5taqGxtL3rE/edit?usp=sharing",
+      "key": "u1l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1iFOx9ilwOHsR646kOJZx8Q5DpislZO2Qlxk9kM0Ieq0/edit?usp=sharing",
+      "key": "u1l3_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1G4fezONbXkPET7IeGvX_AwVew-PLE04RFzUJ8zTQnCA/edit?usp=sharing",
+      "key": "u1l4_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1JGPUp0nIReSPzxso50OrUL6lwC1IPuobHUKOyinCurs/edit?usp=sharing",
+      "key": "u1l5_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "U1L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1RFVT9qKxrwDba4-BZ-7BGE1k81Oj0Sff-iIeSoWF1S0/edit?usp=sharing",
+      "key": "u1l6_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "name": "U1L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1S2L3Zu49PONzW9gP_MbVNPThDIw_OQi0igz3Wn7Ij5A/edit?usp=sharing",
+      "key": "u1l7_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l7_extra_practice"
+      }
+    },
+    {
+      "name": "U1L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1i4IBjKCoVGNfKulEJSuDbfYs0SoauYDJhkA9SBZ_9cc/edit?usp=sharing",
+      "key": "u1l8_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l8_extra_practice"
+      }
+    },
+    {
+      "name": "U1L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1-unf7gL0ZfzIuUUf_wfcfqaxBPdkHp5ZjoCyiAVRGEk/edit?usp=sharing",
+      "key": "u1l9_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 1 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1MxBjEyODfvHtkHvFiTo2rk1doX6UMqbNn102L77rAiw/edit?usp=sharing",
+      "key": "unit_1_presentation_slides",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "name": "Unit 1 Guide",
+      "url": "https://docs.google.com/document/d/1mxzrZ4TroKVkRfjXWgMO1DethqLFrwzku8tb30Ir1sU/edit?usp=sharing",
+      "key": "unit_1_unit_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide"
+      }
+    },
+    {
+      "name": "Unity and Safety Through Street Art in Norfolk, VA",
+      "url": "https://youtu.be/-gnXVMcg0yk",
+      "key": "unity_and_safety_through_street_art_in_norfolk_va",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
+      "name": "Vocabulary Draw",
+      "url": "https://docs.google.com/document/d/1yN3BgqWDCxdbWFY0mHOkDQQCr4kRTdiwNjnZtuOioZg/edit?usp=sharing",
+      "key": "vocabulary_draw",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_draw"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "vocabulary_draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "painter_says"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "code_review_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "java_syntax_and_painterplus_methods_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_implementing_painterplus_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "pseudocode_warm_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_pseudocode_warm_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "spraypainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_spraypainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "pixel_picture_puzzle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_pixel_picture_puzzle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "create_your_stamp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "design_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_design_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_1_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "harmonica_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "notes_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "minecraft_brigadier_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "java_2d_api_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "asphalt_art_project_peer_interview_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "u1l19_print_outs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -4859,10 +6471,344 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "object",
+      "word": "Object",
+      "definition": "Created from a class; can know things and do things",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "class",
+      "word": "Class",
+      "definition": "A user-defined blueprint from which objects are created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "compile",
+      "word": "Compile",
+      "definition": "A program that translates human-readable source code into computer-executable machine code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "key": "syntax",
+      "word": "Syntax",
+      "definition": "Rules for how code must be entered in order for our computer to understand",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "key": "syntax_error",
+      "word": "Syntax Error",
+      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of a given programming language",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax_error"
+      }
+    },
+    {
+      "key": "command",
+      "word": "Command",
+      "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "Conditional Statement",
+      "definition": "A statement that only runs under certain conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "logic_error",
+      "word": "Logic Error",
+      "definition": "When code runs, but does not do what we expect it to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the characteristics in the constructor signature",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "key": "actual_parameter",
+      "word": "Actual Parameter",
+      "definition": "The value given to a characteristic when initializing an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "The amount of time or resources needed to execute an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "code_review",
+      "word": "Code Review",
+      "definition": "A feedback cycle in which programmers help improve one another’s code by leaving questions and comments",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code_review"
+      }
+    },
+    {
+      "key": "inheritance",
+      "word": "Inheritance",
+      "definition": "A object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "key": "method",
+      "word": "Method",
+      "definition": "Has a name and organizes calls to other commands; another word for command",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "edge_case",
+      "word": "Edge Case",
+      "definition": "Situations in a program that produce a different outcome and require special error handling",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "Pixel",
+      "definition": "The smallest unit of a digital image. Digital images are made up of a grid of pixels.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "syntax_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "code_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "pixel"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

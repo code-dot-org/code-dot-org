@@ -5,7 +5,7 @@ title: Si të organizojmë një Orë Kodimi - Kompanitë
 {{ signup_button }}
 
 # Si ta sjellësh Orën e Kodimit në kompaninë tuaj
-### Find out how you and your employees can inspire students to try computer science!
+### Gjeni se si ju dhe punonjësit tuaj mund t'i frymëzoni studentët të provojnë shkencën kompjuterike!
 
 ***
 

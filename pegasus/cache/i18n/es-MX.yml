@@ -1379,7 +1379,7 @@ es-MX:
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
-  express-2020_name: Curso Express (2019)
+  express-2020_name: Curso Express (2020)
   pre-express-2020_name: Curso Express para prelectores (2020)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
@@ -2628,7 +2628,7 @@ es-MX:
     y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la
     inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
     clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
-    igualdad y formación para profesores.'
+    igualdad y formación para docentes.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
   footer_built_on_github: Creado en GitHub de Microsoft
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
@@ -2649,3 +2649,80 @@ es-MX:
   footer_store: Tienda
   footer_support: Soporte
   footer_terms: Términos
+  ai_for_oceans: Inteligencia Artificial para océanos
+  ai_for_oceans_lesson_plan: plan de estudio
+  ai_for_oceans_tile_description: "¡Ayuda a la Inteligencia Artificial a limpiar los
+    océanos entrenándola para que detecte la basura! Aprende sobre los datos de entrenamiento,
+    los sesgos y cómo la Inteligencia Artificial puede abordar los problemas del mundo.
+    Ver"
+  how_ai_works: Cómo funciona la Inteligencia Artificial
+  how_ai_works_tile_description: Aprende, con esta serie de vídeos cortos, cómo funciona
+    la Inteligencia Artificial y por qué es importante. Con el CEO de Microsoft, Satya
+    Nadella, y un variado elenco de expertos.
+  watch_the_videos: Ver los vídeos
+  ai_and_ethics: Inteligencia Artificial y Ética
+  ai_and_ethics_tile_description: Los alumnos reflexionan sobre las implicaciones
+    éticas de la Inteligencia Artificial y a continuación, colaboran en la creación
+    de un "Código Ético de la Inteligencia Artificial" para los creadores y legisladores
+    de la Inteligencia Artificial de todo el mundo.
+  view_lesson_plan: Ver el plan de estudio
+  ai_in_partnership_with: En colaboración con
+  ai_microsoft_thanks: Agradecemos a Microsoft por el apoyo a nuestra visión y misión
+    centradas en asegurar que cada niño tenga la oportunidad de aprender ciencias
+    de la computación y las habilidades para tener éxito en el siglo XXI.
+  ai_ethics_panel_header: Explorando la Ética de la Inteligencia Artificial en una
+    mesa redonda
+  ai_ethics_panel_description_1: "¡Profundice con algunos de nuestros expertos favoritos
+    en Inteligencia Artificial! Esta mesa redonda aborda temas importantes como el
+    sesgo algorítmico y el futuro del trabajo. Acompáñalo de nuestro"
+  ai_ethics_lesson_plan: Plan de estudios de Inteligencia Artificial y Ética
+  ai_ethics_panel_description_2: "¡para una gran introducción a la ética de la inteligencia
+    artificial!"
+  cs_for_good: Informática para el Bienestar
+  cs_for_good_tile_description: Recursos para inspirar a los alumnos a pensar profundamente
+    en el papel que la informática puede desempeñar en la creación de un mundo más
+    equitativo y sostenible.
+  view_resources: Ver recursos
+  imagine_cup_junior: Imagine Cup Junior
+  imagine_cup_junior_tile_description: Este desafío global de Inteligencia Artificial
+    para el Bienestar presenta a los alumnos las iniciativas de Inteligencia Artificial
+    para el Bienestar de Microsoft, permitiéndoles resolver un problema en el mundo
+    con el poder de la Inteligencia Artificial.
+  ai_activity: Actividad
+  ai_description: Descripción
+  ai_seeing_ai: Viendo la Inteligencia Artificial
+  ai_seeing_ai_description: Una aplicación gratuita que narra el mundo que te rodea
+    en varios idiomas.
+  ai_quick_draw: Rápido, ¡a dibujar!
+  ai_quick_draw_description: "¿Puede una red neuronal aprender a reconocer garabatos?"
+  ai_teachable_machine: Enseñar a una máquina
+  ai_teachable_machine_description: Entrena a un ordenador para que reconozca tus
+    propias imágenes, sonidos y poses.
+  ai_google: Experimentos de Inteligencia Artificial con Google
+  ai_google_description: Empieza a explorar el aprendizaje automático a través de
+    imágenes, dibujos, lenguaje, música y mucho más.
+  ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_zooniverse_description: Ayuda a proteger a la Cebra de Montaña de El Cabo en
+    peligro de extinción identificando los diferentes animales en las imágenes.
+  ai_audience: Audiencia
+  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de clases,
+    vídeos, un plan de estudios de informática y formación para profesores. (Requiere
+    Minecraft: Education Edition)'
+  ai_k_12_audience: K-12 (se requiere saber leer)
+  ai_microsoft_workshop: Talleres virtuales gratuitos de Microsoft
+  ai_microsoft_workshop_description: Despierta la curiosidad con talleres gratuitos
+    de STEM y codificación.
+  ai_machine_learning_for_kids: Aprendizaje automático para niños
+  ai_machine_learning_for_kids_description: Entrena un modelo de aprendizaje automático
+    con texto, números o imágenes y úsalo para crear juegos en Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
+  ai_ecs: 'ECS: Inteligencia Artificial (IA)'
+  ai_ecs_description: Una nueva unidad de plan de estudios alternativo para el plan
+    de estudios de Exploración de Ciencias de la Computación (ECS).
+  ai_elements: Elementos de Inteligencia Artificial
+  ai_elements_description: Una serie de cursos gratuitos en línea creados por Reaktor
+    y la Universidad de Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Una plataforma educativa de IA para crear juegos, programar
+    robots y entrenar.
+  ai_try_activity: Prueba la actividad

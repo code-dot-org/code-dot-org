@@ -1198,6 +1198,15 @@ hi:
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
             '"speed"': गति
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': आकार
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': मध्यम
+            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} को {N}% पर सेट करें"
         options:
@@ -1498,6 +1507,13 @@ hi:
             '"x"': x पोजीशन
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
+      Mikelab_setupSim:
+        text: |-
+          अनुरूपता को
+          {SPRITE1N}{SPRITE1COSTUME}गति{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}गति{SPRITE2SPEED}
+          के साथ
+          {SPRITE3N}{SPRITE3COSTUME} एकत्र करते हुए सेट करें
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1595,42 +1611,27 @@ hi:
         options:
           PROPERTY:
             "'shapeColor'": रंग
-      aalab_addBehaviorForDuration:
-        text: आलाब स्प्राइट {SPRITE} {SECONDS} सेकंड के लिए {BEHAVIOR} शुरू करता है
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: नए प्रेत का नाम{SPRITE_NAME} पोशाक के साथ{ANIMATION_NAME} स्थान पर{LOCATION}
-      aalab_goToScene:
-        text: दृश्य {SCENE} पर जाएं
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} {DISTANCE} पिक्सल्स को {DIRECTION} की ओर घुमाएं"
-        options:
-          DIRECTION:
-            '"North"': उत्तर
-            '"East"': पूर्व
-            '"South"': दक्षिण
-            '"West"': पश्चिम
-      aalab_prompt:
-        text: सवाल पूछें {MESSAGE}
-      aalab_scene:
-        text: दृश्य {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: सेटअप कहानी
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': ग्रिड
+            '"border"': बॉर्डर
+            '"row"': पंक्ति
             '"random"': यादृच्छिक
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': सभी
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': सभी
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: युग्मक चित्रित करें {BIN}
       binary_drawBinScreen:

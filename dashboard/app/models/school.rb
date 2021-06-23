@@ -154,8 +154,8 @@ class School < ApplicationRecord
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      # else
-      # School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 
@@ -322,7 +322,7 @@ class School < ApplicationRecord
       # Download link found here: https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
       # Actual download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_029_1819_w_1a_091019.zip
       AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
-        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, is_dry_run: false, new_attributes: ['last_known_school_year_open', 'school_category']) do |row|
+        merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open', 'school_category']) do |row|
           {
             id:                           row['NCESSCH'].to_i.to_s,
             name:                         row['SCH_NAME'].upcase,
@@ -361,7 +361,7 @@ class School < ApplicationRecord
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2019-2020 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/schools.csv") do |filename|
-        merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false) do |row|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
@@ -406,10 +406,10 @@ class School < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @param update_existing [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
   # @param is_dry_run [Boolean] Allows testing of importing a CSV by rolling back any changes
-  # @param new_attributes [Array] List of attributes that are being imported for the first time. Allows us to determine which schools have changes to existing data, and which are just adding new attributes
+  # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param insert_new [Boolean] Determines whether to insert (or if false, skip) importing new schools in this import
   # @param limit [Integer] Limits the number of rows parsed from the csv file (for testing). Default to nil for no limit.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, new_attributes: [], insert_new: true, limit: nil)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, ignore_attributes: [], insert_new: true, limit: nil)
     schools = nil
     new_schools = []
     updated_schools = 0
@@ -450,8 +450,9 @@ class School < ApplicationRecord
 
           if db_entry.changed?
             # Not counting schools as "updated" if the only change
-            # is adding a new column. Otherwise, all found rows will be updated.
-            db_entry.changed.sort == new_attributes.sort ?
+            # is adding a new column or making a change to all rows (eg, updating the most recent year a school is active).
+            # Otherwise, all found rows will be updated.
+            db_entry.changed.sort == ignore_attributes.sort ?
               unchanged_schools += 1 :
               updated_schools += 1
 
@@ -500,7 +501,7 @@ class School < ApplicationRecord
         "School seeding: done processing #{filename}.\n"\
         "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
         "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
-        "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered unchanged if only update was adding new columns included in this import).\n"\
+        "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (apart from specified ignored attributes).\n"\
         "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
         "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
 
@@ -533,14 +534,14 @@ class School < ApplicationRecord
     schools
   end
 
-  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, new_attributes: [], &parse_row)
+  def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
     AWS::S3.seed_from_file(bucket, filepath) do |filename|
       merge_from_csv(
         filename,
         import_options,
         true,
         is_dry_run: is_dry_run,
-        new_attributes: new_attributes,
+        ignore_attributes: ignore_attributes,
         &parse_row
       )
     ensure

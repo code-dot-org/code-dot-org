@@ -4,7 +4,8 @@
     "encrypted": "false",
     "instructions_important": "false",
     "short_instructions": "Here are some short instructions for this test AI Lab level.",
-    "dynamic_instructions": "{\"dataDisplayFeatures\": \"So, choose one or more columns that will do the predicting.\", \"selectTrainer\": \"So, set up the training.\"}"
+    "dynamic_instructions": "{\"dataDisplayFeatures\": \"So, **choose one or more columns**.\\n\\nThey will do the predicting.\", \"selectTrainer\": \"So, set up the training.\"}",
+    "mode": "{\"hideSpecifyColumns\":true,\"hideChooseReserve\":true}"
   },
   "game_id": 67,
   "published": true,

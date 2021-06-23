@@ -783,6 +783,51 @@
         },
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klik hier om het blok uit te breiden.",
+          "pointerlocation": "Sleep hier een subjectblok naartoe."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klikken om een nieuw kostuum te maken"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Dit is een toelichting"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan.",
+          "4_5_Bee_Conditionals_2_2": "Hulp nodig? Klik hier om een VIDEO hint te bekijken."
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Laten we om te beginnen dit blok gebruiken om het eerste vierkant te tekenen."
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
         }
       }
     }

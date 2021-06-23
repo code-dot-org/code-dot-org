@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {
   setScriptId,
   validScriptPropType
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -17,8 +17,9 @@ import {
 import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
+import firehoseClient from '../../lib/util/firehose';
 import i18n from '@cdo/locale';
-import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import MultipleChoiceAssessmentsOverviewContainer from './MultipleChoiceAssessmentsOverviewContainer';
 import MultipleChoiceByStudentContainer from './MultipleChoiceByStudentContainer';
 import SubmissionStatusAssessmentsContainer from './SubmissionStatusAssessmentsContainer';
@@ -39,7 +40,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
-  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.timeStamp, key: 'timestamp'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'},
@@ -47,7 +48,7 @@ const CSV_ASSESSMENT_HEADERS = [
 ];
 
 const CSV_SURVEY_HEADERS = [
-  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.question(), key: 'questionNumber'},
   {label: i18n.questionText(), key: 'questionText'},
   {label: i18n.response(), key: 'answer'},
@@ -87,11 +88,61 @@ class SectionAssessments extends Component {
     asyncLoadAssessments(sectionId, scriptId);
   }
 
-  onChangeScript = scriptId => {
-    const {setScriptId, asyncLoadAssessments, sectionId} = this.props;
-    asyncLoadAssessments(sectionId, scriptId);
-    setScriptId(scriptId);
+  onSelectScript = newScriptId => {
+    const {setScriptId, asyncLoadAssessments, scriptId, sectionId} = this.props;
+    asyncLoadAssessments(sectionId, newScriptId);
+    setScriptId(newScriptId);
+
+    this.logEvent('select_script', {
+      old_script_id: scriptId,
+      new_script_id: newScriptId
+    });
   };
+
+  onSelectAssessment = newAssessmentId => {
+    const {setAssessmentId, assessmentId, scriptId} = this.props;
+    setAssessmentId(newAssessmentId);
+
+    this.logEvent('select_assessment', {
+      script_id: scriptId,
+      old_level_group_id: assessmentId,
+      new_level_group_id: newAssessmentId
+    });
+  };
+
+  onSelectStudent = studentId => {
+    const {setStudentId, assessmentId, scriptId} = this.props;
+    setStudentId(studentId);
+
+    this.logEvent('select_student', {
+      student_id: studentId,
+      script_id: scriptId,
+      level_group_id: assessmentId
+    });
+  };
+
+  onClickDownload(dataType) {
+    const {assessmentId, scriptId} = this.props;
+    this.logEvent(`download_${dataType}`, {
+      script_id: scriptId,
+      level_group_id: assessmentId
+    });
+  }
+
+  logEvent(event, data) {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'assessments_surveys',
+        event: event,
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          ...data
+        })
+      },
+      {includeUserId: true}
+    );
+  }
 
   showFreeResponseDetailDialog = () => {
     this.setState({
@@ -150,14 +201,14 @@ class SectionAssessments extends Component {
     return (
       <div>
         <div style={styles.selectors}>
-          <div style={styles.scriptSelection}>
+          <div style={styles.unitSelection}>
             <div style={{...h3Style, ...styles.header}}>
               {i18n.selectACourse()}
             </div>
-            <ScriptSelector
+            <UnitSelector
               validScripts={validScripts}
               scriptId={scriptId}
-              onChange={this.onChangeScript}
+              onChange={this.onSelectScript}
             />
           </div>
           {!isLoading && assessmentList.length > 0 && (
@@ -168,7 +219,7 @@ class SectionAssessments extends Component {
               <AssessmentSelector
                 assessmentList={assessmentList}
                 assessmentId={assessmentId}
-                onChange={this.props.setAssessmentId}
+                onChange={this.onSelectAssessment}
               />
             </div>
           )}
@@ -184,7 +235,7 @@ class SectionAssessments extends Component {
                 <StudentSelector
                   studentList={studentList}
                   studentId={studentId}
-                  onChange={this.props.setStudentId}
+                  onChange={this.onSelectStudent}
                 />
                 {totalStudentSubmissions > 0 && (
                   <div style={styles.download}>
@@ -192,6 +243,7 @@ class SectionAssessments extends Component {
                       filename="assessments.csv"
                       data={exportableData}
                       headers={CSV_ASSESSMENT_HEADERS}
+                      onClick={() => this.onClickDownload('assessments')}
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
@@ -200,7 +252,11 @@ class SectionAssessments extends Component {
                 {totalStudentSubmissions <= 0 && (
                   <div>{i18n.emptyAssessmentSubmissions()}</div>
                 )}
-                <SubmissionStatusAssessmentsContainer />
+                <SubmissionStatusAssessmentsContainer
+                  onClickDownload={() =>
+                    this.onClickDownload('submission_stats')
+                  }
+                />
                 {totalStudentSubmissions > 0 && (
                   <div>
                     <MultipleChoiceAssessmentsOverviewContainer
@@ -222,7 +278,10 @@ class SectionAssessments extends Component {
             )}
             {/* Feedback Download */}
             {isCurrentAssessmentFeedbackOption && (
-              <FeedbackDownload sectionName={sectionName} />
+              <FeedbackDownload
+                sectionName={sectionName}
+                onClickDownload={() => this.onClickDownload('feedback')}
+              />
             )}
             {/* Surveys */}
             {isCurrentAssessmentSurvey && (
@@ -233,6 +292,7 @@ class SectionAssessments extends Component {
                       filename="surveys.csv"
                       data={exportableData}
                       headers={CSV_SURVEY_HEADERS}
+                      onClick={() => this.onClickDownload('surveys')}
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
@@ -285,7 +345,7 @@ const styles = {
   selectors: {
     clear: 'both'
   },
-  scriptSelection: {
+  unitSelection: {
     float: 'left',
     marginRight: 20
   },
@@ -310,9 +370,9 @@ export default connect(
   state => ({
     sectionId: state.sectionData.section.id,
     isLoading: !!state.sectionAssessments.isLoading,
-    validScripts: state.scriptSelection.validScripts,
+    validScripts: state.unitSelection.validScripts,
     assessmentList: getCurrentScriptAssessmentList(state),
-    scriptId: state.scriptSelection.scriptId,
+    scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),

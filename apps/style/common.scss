@@ -413,6 +413,11 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
+.karel-counter-text.paint {
+  font-size: 13px;
+  stroke-width: 0.8;
+}
+
 /* Shrink the visualization area on small displays. */
 
 #visualization.responsive > * {
@@ -1114,6 +1119,14 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
   tr:nth-child(even){
     background-color: $lightest_purple;
+  }
+
+  .template-level-warning {
+    font-family: 'Gotham 7r', sans-serif;
+    color: $red;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 16px;
   }
 }
 

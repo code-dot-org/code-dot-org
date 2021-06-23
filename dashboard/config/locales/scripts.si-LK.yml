@@ -13,9 +13,7 @@ si:
       name:
         course1:
           title: පාඨමාලා අංක 1
-          description: |2-
-
-            මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
+          description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
           description_short: මුල් පාඨකයන් පාඨමාලා අංක 1 ආරම්භ කරන්න.
           description_audience: වයස් 4-6
           lessons:
@@ -55,9 +53,7 @@ si:
               name: 'ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න'
             The Big Event:
               name: විශාල සිදුවීම
-          student_description: |2-
-
-            මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
+          student_description: මුල් පාඨකයන් සඳහා පාඨමාලා 1 ආරම්භ කරන්න
         course2:
           title: පාඨමාලාව 2
           description: කියවීමට හැකි ක්‍රමලේඛනය පිලිබඳ පෙර දැනුමක් නැති සිසුන් සඳහා
@@ -617,12 +613,6 @@ si:
               name: ඉදිරි පියවර
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-up:
@@ -659,24 +649,12 @@ si:
               name: වෙළනවා
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-up:
               name: වෙළනවා
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-up:
@@ -914,12 +892,6 @@ si:
               name: 'පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: ආයුබෝවන්!
             Wrap-up:
@@ -2537,6 +2509,10 @@ si:
           lesson_groups:
             lg_1:
               display_name: අන්තර්ගතය
+        curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: පරිගණක විද්‍යාවේ මූලිකාංග
         2021drafting:
           lesson_groups:
             introduction:
@@ -2706,6 +2682,8 @@ si:
               display_name: විචල්‍යන්
             csf_for_loops:
               display_name: ලූපයන් සඳහා
+            lessonGroup-9:
+              display_name: වැඩසටහන්
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2723,6 +2701,12 @@ si:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: අන්තර්ගතය
+            lessonGroup-4:
+              display_name: පරීක්ෂාව
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: අන්තර්ගතය
         k5-onlinepd-2021:
           lessons:

@@ -12,7 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderScriptIds,
+  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -73,7 +73,8 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   },
   {
     id: 12,
@@ -93,7 +94,8 @@ const sections = [
     course_id: null,
     createdAt: createdAt,
     studentCount: 1,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   },
   {
     id: 307,
@@ -113,7 +115,8 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 0,
-    hidden: false
+    hidden: false,
+    restrict_section: false
   }
 ];
 
@@ -553,7 +556,7 @@ describe('teacherSectionsRedux', () => {
         loginType: undefined,
         grade: '',
         providerManaged: false,
-        stageExtras: true,
+        lessonExtras: true,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -562,7 +565,8 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         scriptId: null,
         hidden: false,
-        isAssigned: undefined
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });
@@ -579,7 +583,7 @@ describe('teacherSectionsRedux', () => {
         grade: '11',
         providerManaged: false,
         code: 'DWGMFX',
-        stageExtras: false,
+        lessonExtras: false,
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
@@ -588,7 +592,8 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined
+        isAssigned: undefined,
+        restrictSection: false
       });
     });
   });
@@ -656,25 +661,25 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('switching script assignment updates stage extras value from script', () => {
+    it('switching script assignment updates lesson extras value from script', () => {
       let state = reducer(
         editingNewSectionState,
         setValidAssignments(validCourses, validScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 1}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(false);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
       state = reducer(state, editSectionProperties({scriptId: 36}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
 
       state = reducer(state, editSectionProperties({scriptId: 37}));
-      expect(state.sectionBeingEdited.stageExtras).to.equal(true);
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -687,7 +692,7 @@ describe('teacherSectionsRedux', () => {
     it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -727,7 +732,8 @@ describe('teacherSectionsRedux', () => {
       courseId: null,
       scriptId: null,
       createdAt: createdAt,
-      hidden: false
+      hidden: false,
+      restrict_section: false
     };
 
     function successResponse(customProps = {}) {
@@ -867,7 +873,7 @@ describe('teacherSectionsRedux', () => {
           loginType: 'picture',
           grade: '3',
           providerManaged: false,
-          stageExtras: false,
+          lessonExtras: false,
           ttsAutoplayEnabled: false,
           pairingAllowed: true,
           sharingDisabled: undefined,
@@ -877,7 +883,8 @@ describe('teacherSectionsRedux', () => {
           scriptId: null,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined
+          isAssigned: undefined,
+          restrictSection: false
         }
       });
     });
@@ -931,7 +938,8 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false
+      hidden: false,
+      restrict_section: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1162,7 +1170,8 @@ describe('teacherSectionsRedux', () => {
       course_id: 29,
       createdAt: createdAt,
       studentCount: 10,
-      hidden: false
+      hidden: false,
+      restrict_section: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1172,7 +1181,7 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(section.login_type, serverSection.loginType);
       assert.strictEqual(section.grade, serverSection.grade);
       assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.lesson_extras, serverSection.stageExtras);
+      assert.strictEqual(section.lesson_extras, serverSection.lessonExtras);
       assert.strictEqual(
         section.tts_autoplay_enabled,
         serverSection.ttsAutoplayEnabled
@@ -1184,6 +1193,10 @@ describe('teacherSectionsRedux', () => {
       );
       assert.strictEqual(section.course_id, serverSection.courseId);
       assert.strictEqual(section.hidden, serverSection.hidden);
+      assert.strictEqual(
+        section.restrict_section,
+        serverSection.restrictSection
+      );
     });
 
     it('maps from a script object to a script_id', () => {

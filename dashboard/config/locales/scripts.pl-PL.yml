@@ -7982,6 +7982,7 @@ pl:
             realizującego materiał działu 1 programu CSP Code.org. W dolnej części
             tej strony dostępne są pozycje do weryfikacji przez rówieśników po przedłożeniu
             przez Ciebie Twoich własnych przemyśleń dotyczących tego działu. '
+          name: csp1-dlp
         csp2-dlp:
           title: CSP Jednostka 2 Pogłębiona nauka
           description_audience: Zasady informatyki Prowadzcy na szkoleniu
@@ -12458,6 +12459,7 @@ pl:
               name: Ankieta w trakcie roku
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
+          name: csp3-2018
         csp-explore-2018:
           title: Eksploruj - Przygotowanie zadania wydajnościowego AP ('18-'19)
           description: 'Te lekcje mają Ci pomóc zrozumieć, przygotować się oraz wykonać
@@ -20322,6 +20324,8 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Variables Explore:
               name: Exploruj zmienne
@@ -20353,6 +20357,8 @@ pl:
               name: Projekt - Aplikacja dla decydenta - Część 3
             'Lesson 15: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp4-2020
         csp5-2020:
           title: CSP Jednostka 5 - Listy, pętle i połączenia ('20-'21)
@@ -20365,6 +20371,8 @@ pl:
               display_name: Przejścia
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Lists Explore:
               name: Eksploruj listy
@@ -20406,6 +20414,8 @@ pl:
               name: Jednostka  5 Ankieta dla UCZNIA
             Unit 5 TEACHER Survey:
               name: Jednostka  5 Ankieta dla NAUCZYCIELA
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp5-2020
         csp7-2020:
           lesson_groups:
@@ -20413,6 +20423,8 @@ pl:
               display_name: Parametry i wartości zwracane
             csp_libraries:
               display_name: Biblioteki
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Parameters and Return Explore:
               name: Odkrywaj parametry i zwracanie wartości
@@ -20444,6 +20456,8 @@ pl:
               name: Pokaz tworzenia zmiennych
             'Lesson 11: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp7-2020
         csd2-projects-temp:
           title: CSD Projekty internetowe - TYMCZASOWE
@@ -20937,6 +20951,7 @@ pl:
             swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
             w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
             i praca zespołowa.
+          name: csd2-2020
         csd1-2020:
           title: Część 1 CSD - Rozwiązywanie problemów i informatyka ('20- '21)
           description: "\"Rozwiązywanie problemów i informatyka\" stanowi niezwykle
@@ -24088,6 +24103,8 @@ pl:
               display_name: 'Jednostka 1: Informacje cyfrowe'
             cspSurvey:
               display_name: Ankieta
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24121,12 +24138,16 @@ pl:
               name: 'Lekcja 15: Dzień sprawdzianu'
             CS Principles Pre-survey:
               name: Ankieta wstępna dotyczące zasad informatyki
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp1-2020
         csp2-2020:
           title: CSP Jednostka 2 - Internet ('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24148,12 +24169,16 @@ pl:
               name: Projekt - Dylematy z Internetem Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp2-2020
         csp3-2020:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24177,12 +24202,16 @@ pl:
               name: Projekt - Projektowanie aplikacji Część 5
             'Lesson 11: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp3-2020
         csp6-2020:
           title: CSP Jednostka 6 - Algorytmy ('20-'21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Jednistka 6: Algorytmy'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24198,6 +24227,8 @@ pl:
               name: Algorytmy równoległe i rozproszone
             'Lesson 6: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp6-2020
         csp8-2020:
           title: CSP Jednostka 8 - Utwórz przygotowanie PT ('20-'21)
@@ -24216,6 +24247,8 @@ pl:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24237,12 +24270,16 @@ pl:
               name: Projekt - Opowiedz historię o danych - Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp9-2020
         csp10-2020:
           title: CSP Jednostka 10 - Cyberbezpieczeństwo i oddziaływanie globalne ('20-'21)
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24280,6 +24317,8 @@ pl:
               name: 'Projekt: Symulacja innowacji Część 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lekcja 14: Dzień sprawdzianu Jednostki'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp10-2020
         csp-march-virtual:
           title: Zasady informatyki 20-21 Szkolenie dotyczące programu nauczania dla
@@ -25540,9 +25579,14 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+            'CS Principles: Functions':
+              name: 'Zasady informatyki: funkcje'
+            'CS Principles: Variables Practice - Choice Test':
+              name: Zmienne, praktyka - test wyboru
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+          name: kaitie-test-script
         vpl-csd-2020:
           lessons:
             Module 1:
@@ -25603,9 +25647,36 @@ pl:
               name: Odkrycia informatyki
             contagions:
               name: 'Integracja treści: Zarażenia '
+            Course E:
+              name: Kurs E
+            Course F:
+              name: Kurs F
+            csf:
+              name: Podstawy Informatyki
+            sprites_in_action_2021:
+              name: 'Sprite Lab: Duszki w akcji'
+            text_and_prompts_2021:
+              name: 'Sprite Lab: Tekst i monity'
+            csp_functions_2021:
+              name: 'Zasady informatyki: funkcje'
+            minitoolbox_2021:
+              name: 'Sprite Lab: Wiele duszków'
+            csf_slides:
+              name: Slajdy Podstaw informatyki
+            playlab_2021:
+              name: Wprowadzenie do Play Lab
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+              description: Są to poziomy nauczana, które są powiązane z planami lekcji.
+                Poziomy nie pojawiają się w innych skryptach.
+            slides:
+              display_name: Poziomy translatora
+              description: Te poziomy zawierają edytowalny kod początkowy, który jest
+                dopasowany do prezentacji slajdów z programem nauczania.
+            video:
+              display_name: Poziomy przechwytywania wideo
+              description: Te poziomy są przeznaczone dla twórców filmów.
           title: Poziomy nauczania w piaskownicy
           description_audience: Wewnętrzne
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
@@ -25710,6 +25781,42 @@ pl:
               name: Wzory przypadkowo wykonane w LB
             temp:
               name: Lekcja 20
+            lesson1:
+              name: Wprowadzenie do uczenia maszynowego
+            lesson2:
+              name: Lekcja 2
+            lesson3:
+              name: Lekcja 3
+            lesson4:
+              name: Lekcja 4
+            lesson5:
+              name: Lekcja 5
+            lesson6:
+              name: Lekcja 6
+            lesson7:
+              name: Lekcja 7
+            lesson8:
+              name: Lekcja 8
+            lesson9:
+              name: Lekcja 9
+            lesson10:
+              name: Lekcja 10
+            lesson11:
+              name: Lekcja 11
+            lesson12:
+              name: Lekcja 12
+            lesson13:
+              name: Lekcja 13
+            lesson14:
+              name: Lekcja 14
+            lesson15:
+              name: Lekcja 15
+            lesson16:
+              name: Lekcja 16
+            ailab-explore:
+              name: Poznaj AI Lab
+            videoLevels:
+              name: Poziomy nagrywania filmu
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25793,6 +25900,8 @@ pl:
               name: Bot Haiku
             End of Course Project:
               name: Koniec projektu kursu
+            Outbreaklab:
+              name: Samodzielne laboratorium pandemii
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -25806,7 +25915,7 @@ pl:
                 programie. Modyfikuj wartości przechowywane w zmiennych, aby tworzyć
                 ekscytujące interaktywne projekty!
             outbreak:
-              display_name: Symulowanie przerwania
+              display_name: Symulator pandemii
             Loom Levels:
               display_name: Poziomy krosna
             contagion:
@@ -25817,6 +25926,8 @@ pl:
               display_name: Bot Haiku
             AB EOC:
               display_name: Kurs A i B Projekt EOC
+            debugging:
+              display_name: Debugowanie
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -25901,7 +26012,7 @@ pl:
                 oraz planowania wycieczki. Te problemy stają się coraz bardziej złożone
                 i zbyt słabo zdefiniowane, aby przedstawić dlaczego proces rozwiązywania
                 problemów jest szczególnie pomocny w zmaganiach z problemami tego
-                typu."
+                typu.\n"
             What is a Computer?:
               key: Czym jest komputer?
               name: Czym jest komputer?
@@ -26895,9 +27006,11 @@ pl:
             'Project: Make a Game':
               key: 'Projekt: Stwórz grę'
               name: 'Projekt: Stwórz grę'
-              description_teacher: Uczniowie korzystają z ego, co poznali w rozdziale
+              description_teacher: 'Uczniowie korzystają z ego, co poznali w rozdziale
                 pierwszy oraz opracowują aplikację według własnej koncepcji, w której
                 korzysta się z tablicy do tworzenia informacji wynikowych.
+
+'
             Arrays and Color LEDs:
               key: Tablice i kolorowe LEDy
               name: Tablice i kolorowe LEDy
@@ -27081,6 +27194,48 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+              description: "### Jednostka Filozofia i Pedagogika\n\n\n* **Budowanie
+                silnej kultury klasowej:** Ta jednostka została zaprojektowana tak,
+                aby była praktyczna, oparta na współpracy i odkrywcza. Głównym celem
+                jednostki jest budowanie pozytywnej kultury w klasie, w której uczniowie
+                pracują razem, badają problemy i komunikują się o swoim myśleniu.
+                Większość lekcji dotyczy fizycznych manipulacji lub widżetów cyfrowych,
+                a większość czasu zajęć należy poświęcić uczniom na wspólne badanie
+                tych narzędzi, aby zrozumieć pojęcia, które odzwierciedlają. Kurs
+                celowo nie rozpoczyna się od programowania, ponieważ w niektórych
+                salach niektórzy uczniowie mają doświadczenie w programowaniu, a inni
+                nie. Decydując się na rozpoczęcie od informacji cyfrowych i Internetu,
+                możesz budować społeczność w sali, zajmując się tematem, który może
+                być przystępny dla wszystkich uczniów. Wspierające i integrujące środowisko
+                klasowe budowane w tej jednostce powinno pomóc w nadaniu pozytywnego
+                nastawienia, które będzie można utrzymywać przez cały rok szkolny.\n\n\n*
+                **Wzmocnienie „Decydentów”:** Ważnym celem kursu jest nie tylko przekazanie
+                uczniom wiedzy technicznej, ale także wykorzystanie tych umiejętności
+                w znaczący sposób. Jednostka ta jest ukierunkowana na projekt, który
+                daje uczniom możliwość „decydowania” o wpływie informatyki na współczesne
+                życie. Inne jednostki będą podkreślać wzmacnianie osób jako „twórców”.\n\n###
+                Główne oceny i projekty\n\nProjekt jednostki zwraca się do uczniów
+                o rozważenie i przedyskutowanie problemów, które pojawiają się we
+                współczesnym społeczeństwie w związku z digitalizacją informacji.
+                Uczniowie przeanalizują artykuł, który dotyczy powiązań digitalizacji
+                informacji z bieżącymi wydarzeniami. Ocenią, jakie dane są digitalizowane
+                oraz korzyści i szkody spowodowane przetwarzaniem tych informacji
+                na postać cyfrową. Wykonają również ocenę końcową jednostki zgodną
+                z celami ramowymi Zasad Informatyki, którym jest poświęcona ta jednostka.\n\n###
+                Powiązania z AP\n\nTa jednostka i związany z nią projekt pomagają
+                budować trwałe zrozumienie wymienione poniżej. Aby uzyskać szczegółowe
+                odniesienie jednostek do celów nauczania i EK, zobacz stronę „Standardy”
+                dla tej jednostki.\n\n* DAT-1: Sposób, w jaki komputer reprezentuje
+                dane wewnętrznie, różni się od sposobu, w jaki dane są interpretowane
+                i wyświetlane użytkownikowi. Programy służą do tłumaczenia danych
+                na reprezentacje łatwiejsze do zrozumienia dla ludzi.\n* IOC-1: podczas
+                gdy innowacje komputerowe są zwykle zaprojektowane do osiągnięcia
+                określonego celu, mogą mieć niezamierzone konsekwencje\n\nTa jednostka
+                zawiera treści z następujących zagadnień ram AP w Zasadach Informatyki.
+                Bardziej szczegółowe informacje na temat zakresu tematycznego można
+                znaleźć w przeglądzie kursu [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n*
+                2.1 Liczby binarne\n* 2.2 Kompresja danych\n* 5.5 Kwestie prawne i
+                etyczne. "
           name: csp1-2021
         csp2-2021:
           title: CSP Jednostka 2 - Internet ('20-'21)
@@ -27112,9 +27267,15 @@ pl:
             'Lesson 9: Assessment Day':
               key: 'Lekcja 9: Dzień sprawdzianu'
               name: 'Lekcja 15: Dzień sprawdzianu'
+            lesson-1:
+              name: test tessa
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
+            lessonGroup-2:
+              display_name: Test tessa
+              big_questions: Wielkie pytanie
+              description: halllo
           name: csp2-2021
         csp3-2021:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
@@ -27381,7 +27542,7 @@ pl:
               name: Giga dane, crowdsourcing i uczenie maszynowe
             Machine Learning and Bias:
               key: Uczenie maszynowe i uprzedzenia
-              name: Uczenie maszynowe i uprzedzenia
+              name: Uczenie maszynowe
             Project - Tell a Data Story - Part 1:
               key: Projekt - Opowiedz historię o danych - Część 1
               name: Projekt - Opowiedz historię o danych - Część 1
@@ -27395,6 +27556,8 @@ pl:
                 który obejmuje zagadnienia jednostki. '
               description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
                 który obejmuje zagadnienia jednostki. '
+            lesson-10:
+              name: Błąd algorytmiczny
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
@@ -28222,11 +28385,11 @@ pl:
               name: Wydarzenia z Sprite Lab
               description_student: Twórz projekt interaktywny, który możesz udostępnić
                 kolegom z klasy.
-              description_teacher: 'Na tej lekcji wykorzystuje się interfejs Sprite
+              description_teacher: Na tej lekcji wykorzystuje się interfejs Sprite
                 Lab, platformy, na której uczniowie mogą tworzyć swoje własne interaktywne
                 animacje i gry. W uzupełnieniu do zachowań, obecni uczniowie mogą
                 wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
-                ufoludków". '
+                ufoludków".
             Private and Personal Information:
               key: Informacje prywatne i osobowe
               name: Informacje prywatne i osobowe
@@ -28350,6 +28513,14 @@ pl:
               name: Lekcja kontekstowa
               description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy
                 jesteś świadkiem cybernękania.
+            lesson-1:
+              name: Projektowanie pod kątem dostępności
+              description_student: 'Dowiedz się o dostępności i wartości empatii dzięki
+                burzy mózgów i projektowaniu dostępnych rozwiązań dla hipotetycznych
+                aplikacji. '
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28367,6 +28538,8 @@ pl:
               display_name: Koniec projektu kursu
             lessonGroup-8:
               display_name: Usunięto
+            lessonGroup-7:
+              display_name: Wplywy informatyki
           name: coursee-2021
           student_description: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń
             warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej
@@ -28618,11 +28791,11 @@ pl:
               description_student: Omówisz rolę komputerów i technologii w Twoim życiu,
                 koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom
                 możliwość wyboru sposobu ich używania.
-              description_teacher: Uczniowie omówią rolę komputerów i technologii
+              description_teacher: 'Uczniowie omówią rolę komputerów i technologii
                 w ich życiu, koncentrując się na tym, jak aplikacje i narzędzia dają
                 użytkownikom możliwość wyboru sposobu ich używania. Uczniowie będą
                 logować się na swoje konta Code.org i przeglądać przykładowe projekty
-                podobne do tych, które będą tworzyć samodzielnie podczas kursu.
+                podobne do tych, które będą tworzyć samodzielnie podczas kursu. '
             lesson-7:
               name: Tworzenie duszków
               description_student: 'Na tej lekcji będziesz pisał programy i dowiesz
@@ -28656,9 +28829,9 @@ pl:
               name: Przechowywanie i przetwarzanie tekstu
               description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
                 Lab.
-              description_teacher: Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+              description_teacher: 'Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
                 pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
-                wartości, a następnie wydrukują te wartości wraz z innym tekstem.
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem. '
             lesson-5:
               name: Epidemia
               description_student: W Mieście Potworów pojawił się wirus! Naucz się
@@ -28672,6 +28845,14 @@ pl:
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
                 Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy,
                 które mówi się w Internecie.
+            lesson-11:
+              name: Utwórz Chat-Bot
+              description_student: Zastosuj swoje nowe umiejętności ze zmiennymi do
+                jednego z trzech otwartych projektów.
+              description_teacher: Uczniowie zastosują swoje nowe umiejętności ze
+                zmiennymi w jednym z trzech otwartych **mini-projektów**. Zapoznają
+                się z przykładowymi programami, utworzą plan własnego projektu i zaprogramują
+                go od podstaw.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28727,7 +28908,7 @@ pl:
                 bloki kodu w porządku liniowym.
             Debugging with Scrat:
               key: Debugwanie ze Scratem
-              name: Debugwanie ze Scratem
+              name: Debugowanie w labiryncie
               description_student: Znajdź problemy w łamigłówkach i ćwicz umiejętność
                 debugowania.
               description_teacher: Debugowanie jest  podstawowym elementem nauki programowania.
@@ -28816,7 +28997,7 @@ pl:
                 inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops with the Farmer:
               key: Pętle "dopóki" przy pomocy interfejsu Farmer
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Rolnikiem
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji
                 nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -28877,13 +29058,14 @@ pl:
             Variables with Artist:
               key: Zmienne z Artystą
               name: Zmienne z Artystą
-              description_student: Nie zapomnij o wnoszeniu kreatywności do zajęć!
-                W ramach tych łamigłówek będziesz tworzyć fantastyczne rysunki używając
-                zmiennych.
+              description_student: Na tej lekcji będziesz wykonywać rysunki z użyciem
+                zmiennych, które zmieniają się w trakcie uruchomienia kodu.
               description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
                 powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
                 dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
-                i czytanie, nawet, gdy wartości nie zmieniają się w czasie uruchomienia.
+                i czytanie. Po przejściu łamigłówek w trybie "z przewodnikiem" uczniowie
+                zakończą na poziomie czasu na zabawę, aby wykazać się tym, czego się
+                nauczyli i tworzyć własne wzory.
             Changing Variables with Bee:
               key: Zmienianie zmiennych z Pszczółką
               name: Zmienianie zmiennych z Pszczółką
@@ -28978,6 +29160,32 @@ pl:
               description_teacher: Na tej lekcji uczniowie będą programować swoją
                 własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
                 gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
+            lesson-2:
+              name: Tworzenie duszków
+              description_student: Na tej lekcji będziesz pisał programy i dowiesz
+                się o duszkach i zachowaniach.
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie
+                napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite
+                Lab: **duszki** i **zachowania**. '
+            lesson-3:
+              name: Duszki w akcji
+              description_student: Będziesz pracować przez poziomy programowania i
+                zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować,
+                co tylko zechcesz.
+              description_teacher: "Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą
+                pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika.
+                \n"
+            lesson-4:
+              name: Przechowywanie i przetwarzanie tekstu
+              description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
+                Lab.
+              description_teacher: 'Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+                pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem. '
           lesson_groups:
             csf_warmup:
               display_name: Rozgrzewka
@@ -28998,7 +29206,7 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
             lessonGroup-9:
-              display_name: Rozgrzewka
+              display_name: Zdarzenia
           name: express-2021
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w
             swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
@@ -29018,6 +29226,7 @@ pl:
             Learn to Drag and Drop:
               key: Nauka metody przeciągać i upuszczać
               name: Nauka metody przeciągać i upuszczać
+              description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
                 dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
@@ -29026,6 +29235,7 @@ pl:
             Sequencing with Scrat:
               key: Tworzenie sekwencji ze Scratem
               name: Tworzenie sekwencji ze Scratem
+              description_student: Zaprogramuj Scrata tak, aby doszedł do żołędzia.
               description_teacher: Przy pomocy Scrata z franszyzy "Epoka lodowcowa"
                 [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić
                 wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie.
@@ -29033,10 +29243,11 @@ pl:
             Programming in with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
-              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
-                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
-                strony labiryntu do świnki po drugiej stronie. W tym celu układają
-                bloki kodu w porządku liniowym.
+              description_teacher: Przy pomocy postaci z gry "Epoki lodowcotej" [Ice
+                Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka
+                z jednej strony labiryntu do świnki po drugiej stronie. W tym celu
+                układają bloki kodu w porządku liniowym, przez co postaci poruszają
+                się prosto, skręcają w lewo lub w prawo.
             Programming with Rey and BB-8:
               key: Programowanie z Reyem i BB-8
               name: Programowanie z Reyem i BB-8
@@ -29046,6 +29257,7 @@ pl:
             Programming in Harvester:
               key: Programowanie ze żniwiarką
               name: Programowanie przy pomocy interfejsu Harvester
+              description_student: Pomóż żniwiarce zebrać po drodze warzywa.
               description_teacher: Uczniowie będą stosować poznane koncepcje programowania
                 do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci
                 do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie
@@ -29054,6 +29266,7 @@ pl:
             Loops with Scrat:
               key: Pętle ze Scratem
               name: Pętle ze Scratem
+              description_student: Pomóż Scratowi objąć więcej terenu używając pętli.
             Loops with Laurel:
               key: Pętle z Laurel
               name: Pętle z Laurel
@@ -29064,6 +29277,7 @@ pl:
             Ocean Scene with Loops:
               key: Scena oceanu z pętlami
               name: Scena oceanu z pętlami
+              description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
                 powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
                 pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
@@ -29072,6 +29286,7 @@ pl:
             Drawing Gardens with Loops:
               key: Rysowanie ogrodów z pętlami
               name: Rysowanie ogrodów z pętlami
+              description_student: Używaj wzorców i pętli, aby ukończyć obrazki.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
                 powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
                 pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
@@ -29081,6 +29296,7 @@ pl:
             On the Move with Events:
               key: W drodze ze zdarzeniami
               name: W drodze ze zdarzeniami
+              description_student: Twórz swoją własną grę lub historyjkę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
@@ -29088,6 +29304,8 @@ pl:
             A Royal Battle with Events:
               key: Królewska bitwa ze zdarzeniami
               name: Królewska bitwa ze zdarzeniami
+              description_student: Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną
+                grę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną
@@ -29854,6 +30072,13 @@ pl:
             w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
             jak proces rozwiązywania problemu z danym może być stosowany w wybranym
             przez siebie obszarze.
+        testtess:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
         contagion-pilot:
           lessons:
             new lesson:
@@ -30069,10 +30294,35 @@ pl:
                 w trakcie kursu.
             lesson-9:
               name: Dziedziczenie i metody
+              description_student: Do tej pory zauważyłeś, że twój „Malarz” ma ograniczone
+                polecenia poruszania się po Sąsiedztwie. Na tej lekcji utworzysz nowy
+                typ „Malarza”, który może zrobić wszystko, co „Malarz”, a także coś,
+                czego „Malarz” nie może!
+              description_teacher: Uczniowie są wprowadzani do dziedziczenia poprzez
+                wyprowadzenie podklasy „Painter” z większą liczbą poleceń. Używają
+                słowa kluczowego `super` w konstruktorach i uczą się, jak pisać własne
+                metody w klasie `PainterPlus`. Odkrywają, że wywoływane metody muszą
+                być zdefiniowane w ich własnej klasie lub nadklasie. Na przyszłych
+                lekcjach uczniowie dodają dodatkowe metody i podklasy „Paiter”.
             lesson-10:
               name: Więcej metod, więcej właściwości
+              description_student: Na tej lekcji dasz swojej klasie `PainterPlus`
+                nowe sposoby poruszania się i interakcji z Sąsiedztwem, Podczas implementacji
+                nowych metod bierzesz pod uwagę przypadki skrajne.
+              description_teacher: 'Na tej lekcji uczniowie nadal stosują zasadę dziedziczenia
+                w swoim kodzie, rozszerzając klasę `PainterPlus` o trzy dodatkowe
+                metody: `turnAround()`, `takeAllPaint()` i `moveFast()`. Aby przećwiczyć
+                składnię języka Java i myślenie algorytmiczne, uczniowie konstruują
+                krok po kroku proces ręcznego wdrażania każdej z metod przed zakodowaniem
+                jej w języku Java. Kontynuując pisanie i używanie nowych metod, uczniowie
+                doświadczają korzyści wynikających z ponownego wykorzystania. '
             lesson-11:
               name: Metody malowania
+              description_student: "Na tej lekcji kontynuujesz rozwijanie swojej klasy
+                'PainterPlus', tym razem dodając metody do przesuwania się i malowania
+                linii poziomych, pionowych i ukośnych. Przeglądasz również kod, aby
+                przekazywać i otrzymywać informacje zwrotne dotyczące jego ulepszania.
+                \n"
             lesson-12:
               name: Malarz natryskowy
             lesson-13:
@@ -30089,6 +30339,21 @@ pl:
               name: 'Projekt: Osobisty Symbol - Dzień 3'
             lesson-19:
               name: Dzień FRQ
+              description_student: Dzisiaj wypełnij swoje pierwsze pytanie z wolną
+                odpowiedzią (FRQ)! Oznacza to, że ręcznie piszesz kod, aby wykonać
+                duże zadanie. Robisz to z partnerem, poruszając się po pokoju i wykonując
+                części zadania w każdej lokalizacji, sprawdzając swoją pracę w trakcie.
+              description_teacher: "Na tej lekcji uczniowie rozwiązują swoje pierwsze
+                zadanie w stylu pytania o wolną odpowiedź (FRQ). Zaznaczają pytanie
+                jako klasę, a następnie implementują pełną klasę `SpiralPainter` w
+                parach poprzez działanie w stylu „Dookoła świata”.\n\nCele tej lekcji
+                są trojakie:\n* Stworzenie poczucia ekscytacji i spełnienia podczas
+                wypełniania FRQ\n* Przećwiczenie pytania w stylu FRQ (napisane odręcznie)\n*
+                Podsumowujące ocenienie treści z Jednostki 1\n\nChociaż format tej
+                FRQ nie jest taki sam jak FRQ na egzaminie AP, jest to element składowy
+                pomagający uczniom przygotować się do rozwiązywania tego typu pytań.
+                W miarę postępów uczniów podczas kursu, napotykane przez nich pytania
+                FRQ powoli zbliżają się do rzeczywistych rzeczy. "
             lesson-20:
               name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
@@ -30096,14 +30361,80 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Test
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
             new lesson:
               name: wyświetlana nazwa lekcji
+              description_student: Dzięki naszym doświadczeniom w The Neighborhood
+                wiemy, że klasy i obiekty są kluczowymi komponentami języka programowania
+                Java. Ale jak dokładnie klasy tworzą obiekty? Na tej lekcji poznasz
+                sposób tworzenia obiektu i poznasz proces zwany hermetyzacją danych.
+              description_teacher: Podczas tej lekcji bez komputerów uczniowie tworzą
+                obiekty i reprezentują odpowiednie atrybuty za pomocą zmiennych instancji.
+                Poznają różnicę między „publicznym” i „prywatnym” oraz cel hermetyzacji,
+                aby ukryć wewnętrzną implementację obiektu.
+            lesson-2:
+              name: Stosowanie zmiennych
+              description_student: Jednym ze sposobów, w jaki inżynierowie oprogramowania
+                mogą przechowywać informacje w pamięci komputera, jest użycie zmiennych.
+                Na tej lekcji będziesz używać zmiennych do przechowywania informacji
+                używanych do tworzenia obiektów `Malarz`, a także do przechowywania
+                informacji wprowadzonych przez użytkownika.
+              description_teacher: Na tej lekcji uczniowie definiują zmienne reprezentujące
+                atrybuty obiektu i używają tych zmiennych do przechowywania wartości.
+                Uczniowie używają klasy `Skaner` do uzyskiwania danych wejściowych
+                od użytkownika i definiowania zmiennych do przechowywania wartości
+                podawanych przez użytkownika. Te wartości są używane do konstruowania
+                obiektów 'Malarz' w Sąsiedztwie.
+            lesson-3:
+              name: Pisząc konstruktory
+              description_student: Projekt Mercury Pastries food truck potrzebuje
+                Twojej pomocy! Właściciel chce sprzedawać desery w w Sąsiedztwie,
+                ale musi mieć możliwość wprowadzania i przechowywania deserów w programie.
+                Poproszono Cię o wykorzystanie umiejętności inżynierii oprogramowania
+                do stworzenia programu, który może tworzyć obiekty deserowe, aby właściciel
+                mógł śledzić swoje zapasy. Zaczynasz od utworzenia klasy „Deser”,
+                aby właściciel mógł wprowadzić smak, dostępną ilość i cenę każdego
+                sprzedawanego przez siebie deseru.
+              description_teacher: Uczniowie zapoznają się z projektem Mercury Pastries
+                food truckem i potrzebą właściciela programu do wprowadzania i przechowywania
+                deserów. Jako inżynierowie oprogramowania uczniowie  wykorzystują
+                strategie projektowania zorientowanego obiektowo, aby zidentyfikować
+                niezbędne atrybuty i odpowiednie typy danych dla klasy „Deser”. Uczniowie
+                piszą konstruktor i używają obiektu `Skaner` w celu uzyskania wartości
+                zmiennych instancji w celu zainicjowania obiektu` Deser`.
+            lesson-4:
+              name: Dodawanie wielu konstruktorów
+            lesson-5:
+              name: Manipulowanie zmiennymi i danymi obiektów
+            lesson-6:
+              name: Minimalizowanie błędów w inicjalizacji
+            lesson-7:
+              name: Pisanie konstruktorów dla hierarchii
+            lesson-8:
+              name: Udostępnianie danych obiektu
+            lesson-9:
+              name: Modyfikowanie danych obiektu
+            lesson-10:
+              name: Wyświetlanie informacji o obiekcie
+            lesson-11:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+            lesson-12:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+            lesson-13:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             lesson group:
-              display_name: wyświetlana nazwa grupy lekcji
+              display_name: Treści
+            lessonGroup-2:
+              display_name: Pokaż, co wiesz
           name: csa2-pilotaż
         csa3-pilot:
           name: csa3-pilotaż
@@ -30249,6 +30580,7 @@ pl:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku
+          description_audience: Klasa 4, klasa 5
           description_short: 'W tym module uczniowie utworzą generator haiku w stylu
             Mad Libs, wykorzystując to, co wiedzą o poezji, dykcji i kodowaniu ze
             zmiennymi. '
@@ -30319,3 +30651,246 @@ pl:
           description_short: Przetestujmy narzędzia AI!
           description: Przetestujmy narzędzia AI!
           student_description: Przetestujmy narzędzia AI!
+        poembot-springforum21:
+          lessons:
+            Programming Poem Bot:
+              name: Bot Haiku
+          lesson_groups:
+            lesson group:
+              display_name: Bot poematu - Wiosenne Forum 2021
+          name: poembot-springforum21
+          title: Bot poematu dla  Wiosennego Forum 2021
+        pl-playground:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+            Module 1:
+              name: Moduł 1
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
+          name: pl-playground
+          title: PL Plac zabaw
+        outbreakmodule:
+          lessons:
+            how things spread:
+              name: Jak się rozprzestrzeniają
+            contagion simulator setup:
+              name: Konfiguracja symulatora zakażeń
+            sometimes but not always:
+              name: Czasem, ale nie zawsze
+            modifying your model:
+              name: Modyfikujc Twój model
+            telling a data story:
+              name: Opowiadanie historii o danych
+            intro monster town:
+              name: Epidemia w Mieście Potworów
+          lesson_groups:
+            Outbreak Module:
+              display_name: Moduł epidemii
+          name: outbreakmodule
+          title: Moduł_V2 epidemii
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP Ankieta po zakończeniu kursu
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Ankieta
+          title: Ankieta dla uczniów po odbyciu kursu CSP ('20-'21)
+          description_audience: Uczniowie CSP
+          description_short: Ankieta dla uczniów po odbyciu kursu CSP
+          description: Witamy w ankiecie po ukończeniu kursu poświęconego "Zasadom
+            informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
+            mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki
+            w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie
+            kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie
+            kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          student_description: Witamy w ankiecie po ukończeniu kursu poświęconego
+            "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut.
+            Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel
+            zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie
+            wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
+            umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
+            zaangażowanie.
+        aiml-2021:
+          lessons:
+            lesson1:
+              name: Wprowadzenie do uczenia maszynowego
+            lesson2:
+              name: Lekcja 2
+            lesson3:
+              name: Lekcja 3
+            lesson4:
+              name: Lekcja 4
+              description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować
+                dane?"
+            lesson5:
+              name: Lekcja 5
+            lesson6:
+              name: Lekcja 6
+            lesson7:
+              name: Lekcja 7
+            lesson8:
+              name: Lekcja 8
+            lesson9:
+              name: Regresja z uczeniem maszynowym
+            lesson10:
+              name: Lekcja 10
+            lesson11:
+              name: Lekcja 11
+            lesson12:
+              name: Lekcja 12
+            lesson13:
+              name: AI dla społecznego dobra
+            lesson14:
+              name: Kodeks etyczny AI
+            lesson15:
+              name: Lekcja 15
+            lesson16:
+              name: Utwórz aplikację „AI dla dobra społecznego”
+          name: aiml-2021
+          title: Moduł AI i uczenia maszynowego
+        csd7-2021:
+          name: csd7-2021
+          title: AI i uczenie maszynowe
+          description: Już wkrótce!
+          student_description: Już wkrótce!
+        kodea-pd-2021:
+          lessons:
+            Getting Started:
+              key: Pierwsze kroki
+              name: Pierwsze kroki
+            Computer Science Fundamentals:
+              key: Podstawy Informatyki
+              name: Podstawy Informatyki
+            Looking Ahead:
+              key: Patrząc w przyszłość
+              name: Patrząc w przyszłość
+            'Mastering the Basics: Sequencing':
+              key: 'Doskonalenie podstaw: Sekwencje'
+              name: 'Doskonalenie podstaw: Sekwencje'
+            'Mastering the Basics: Loops':
+              key: 'Doskonalenie podstaw: Pętle'
+              name: 'Doskonalenie podstaw: Pętle'
+            'Mastering the Basics: Conditionals':
+              key: 'Doskonalenie podstaw: Warunki'
+              name: 'Doskonalenie podstaw: Warunki'
+            'Mastering the Basics: Functions':
+              key: 'Doskonalenie podstaw: Funkcje'
+              name: 'Doskonalenie podstaw: Funkcje'
+            'Mastering the Basics: Events':
+              key: 'Doskonalenie podstaw: Zdarzenia'
+              name: 'Doskonalenie podstaw: Zdarzenia'
+            Best Practices for Teaching Computer Science:
+              key: Najlepsze praktyki w nauczaniu informatyki
+              name: Najlepsze praktyki w nauczaniu informatyki
+            Planning:
+              key: Planowanie
+              name: Planowanie
+            Next Steps:
+              key: Następne Kroki
+              name: Następne Kroki
+          name: kodea-pd-2021
+        vpl-csd-2021:
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Odkrywania Informatyki
+            w latach 2020-2021
+          lessons:
+            Module 1:
+              key: Moduł 1
+              name: Moduł 1
+            Module 2:
+              key: Moduł 2
+              name: Moduł 2
+            Module 3:
+              key: Moduł 3
+              name: Moduł 3
+            Module 4:
+              key: Moduł 4
+              name: Moduł 4
+            Module 5:
+              key: Moduł 5
+              name: Moduł 5
+            Module 6:
+              key: Moduł 6
+              name: Moduł 6
+            Module 7:
+              key: Moduł 7
+              name: Moduł 7
+            Module 8:
+              key: Moduł 8
+              name: Moduł 8
+        vpl-csp-2021:
+          title: Wirtualne Profesjonalne Kształcenie w zakresie Zasad Informatyki
+          lessons:
+            Module 1:
+              key: Moduł 1
+              name: 'Moduł 1: Przedstawiamy Jenostkę 4 i nową pedagogikę nauczania
+                programowania
+
+'
+            Module 2:
+              key: Moduł 2
+              name: 'Moduł 2: Zmienne w Jednostce 4 i rola współpracy'
+            Module 3:
+              key: Moduł 3
+              name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie
+                umiejętności CS w klasie'
+            Module 4:
+              key: Moduł 4
+              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach
+
+'
+            Module 5:
+              key: Moduł 5
+              name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem
+                wartości'
+            Module 6:
+              key: Moduł 6
+              name: 'Moduł 6: Wprowadzenie do Zadania Create Performance'
+            Module 7:
+              key: Moduł 7
+              name: Moduł 7
+            Module 8:
+              key: Moduł 8
+              name: Moduł 8
+        self-paced-pl-csd1-2021:
+          name: self-paced-pl-csd1-2021
+        self-paced-pl-csd2-2021:
+          name: self-paced-pl-csd2-2021
+        self-paced-pl-csd3-2021:
+          name: self-paced-pl-csd3-2021
+        self-paced-pl-csd4-2021:
+          name: self-paced-pl-csd4-2021
+        self-paced-pl-csd5-2021:
+          name: self-paced-pl-csd5-2021
+        self-paced-pl-csd6-2021:
+          name: self-paced-pl-csd6-2021
+        self-paced-pl-csd7-2021:
+          name: self-paced-pl-csd7-2021
+        self-paced-pl-csd8-2021:
+          name: self-paced-pl-csd8-2021
+        self-paced-pl-csp1-2021:
+          name: self-paced-pl-csp1-2021
+        self-paced-pl-csp2-2021:
+          name: self-paced-pl-csp2-2021
+        self-paced-pl-csp3-2021:
+          name: self-paced-pl-csp3-2021
+        self-paced-pl-csp4-2021:
+          name: self-paced-pl-csp4-2021
+        self-paced-pl-csp5-2021:
+          name: self-paced-pl-csp5-2021
+        self-paced-pl-csp6-2021:
+          name: self-paced-pl-csp6-2021
+        self-paced-pl-csp7-2021:
+          name: self-paced-pl-csp7-2021
+        self-paced-pl-csp8-2021:
+          name: self-paced-pl-csp8-2021
+        self-paced-pl-csp9-2021:
+          name: self-paced-pl-csp9-2021
+        self-paced-pl-csp10-2021:
+          name: self-paced-pl-csp10-2021
+        self-paced-pl-csp11-2021:
+          name: self-paced-pl-csp11-2021
+        poster:
+          name: plakat

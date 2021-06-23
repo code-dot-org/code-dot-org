@@ -5,19 +5,23 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
 import javalab, {
   getSources,
+  getValidation,
   setAllSources,
+  setAllValidation,
   setIsDarkMode,
   appendOutputLog
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './javabuilderConnection';
+import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
-import DefaultVisualization from './DefaultVisualization';
+import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
+import TheaterVisualizationColumn from './TheaterVisualizationColumn';
+import Theater from './Theater';
 import {CsaViewMode} from './constants';
+import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -36,6 +40,8 @@ const Javalab = function() {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+  this.miniApp = null;
+  this.visualization = null;
 };
 
 /**
@@ -56,8 +62,9 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
-  // Pulls dark mode from user preferences
-  this.isDarkMode = !!config.usingDarkModePref;
+  // Sets dark mode based on displayTheme user preference
+  this.isDarkMode =
+    getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -82,14 +89,14 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
-  let visualization;
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    const miniApp = new Neighborhood();
+    this.miniApp = new Neighborhood();
     config.afterInject = () =>
-      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    visualization = <MazeVisualization />;
-  } else {
-    visualization = <DefaultVisualization />;
+      this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    this.visualization = <NeighborhoodVisualizationColumn />;
+  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
+    this.miniApp = new Theater();
+    this.visualization = <TheaterVisualizationColumn />;
   }
 
   const onMount = () => {
@@ -134,22 +141,56 @@ Javalab.prototype.init = function(config) {
   if (config.level.editBlocks) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
-      start_sources: getSources(getStore().getState())
+      start_sources: getSources(getStore().getState()),
+      validation: getValidation(getStore().getState())
     }));
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
+  const validation = config.level.validation || {};
   // if startSources exists and contains at least one key, use startSources
   if (
     startSources &&
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
-    getStore().dispatch(setAllSources(startSources));
+    if (config.level.editBlocks) {
+      Object.keys(startSources).forEach(key => {
+        startSources[key].isValidation = false;
+      });
+      Object.keys(validation).forEach(key => {
+        validation[key].isValidation = true;
+        validation[key].isVisible = false;
+      });
+      getStore().dispatch(
+        setAllSources({
+          ...startSources,
+          // If we're editing start sources, validation is part of the source
+          ...(config.level.editBlocks && validation)
+        })
+      );
+    } else {
+      getStore().dispatch(setAllSources(startSources));
+    }
+  }
+
+  // If we aren't editing start sources but we have validation code, we need to
+  // store it in redux to check for naming conflicts
+  if (
+    !config.level.editBlocks &&
+    validation &&
+    typeof validation === 'object' &&
+    Object.keys(validation).length > 0
+  ) {
+    getStore().dispatch(setAllValidation(validation));
   }
 
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
+
+  // ensure autosave is executed on first run by manually setting
+  // projectChanged to true.
+  project.projectChanged();
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -160,7 +201,7 @@ Javalab.prototype.init = function(config) {
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
-        visualization={visualization}
+        visualization={this.visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -184,12 +225,22 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  this.miniApp?.reset?.();
+  const options = {};
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    options.useNeighborhood = true;
+  }
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,
-    message => getStore().dispatch(appendOutputLog(message))
+    message => getStore().dispatch(appendOutputLog(message)),
+    this.miniApp,
+    getStore().getState().pageConstants.serverLevelId,
+    options
   );
-  this.javabuilderConnection.connectJavabuilder();
+  project.autosave(() => {
+    this.javabuilderConnection.connectJavabuilder();
+  });
 };
 
 // Called by Javalab console to send a message to Javabuilder.

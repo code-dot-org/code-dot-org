@@ -2402,7 +2402,14 @@
         "courseA_collector_preLoops4": "Vieš, ako vyriešiť tútu úlohu? ",
         "courseA_collector_preLoops5": "Na vyriešenie úlohy musíš získať aspoň jeden z drahokamov.",
         "courseA_collector_preLoops6": "Na vyriešenie úlohy musíš získať obidva.",
-        "CSDU4 - Design Mode - 18": "Oprav rozloženie hry s terčom. (Kliknutím zobrazíš úplné pokyny)"
+        "CSDU4 - Design Mode - 18": "Oprav rozloženie hry s terčom. (Kliknutím zobrazíš úplné pokyny)",
+        "courseE_farmer_functions2ba_2020": "Pomôž farmárovi pozbierať kukurice a tekvice pomocou funkcií `kukurica` a `získaj všetky tekvice`.",
+        "K-1 Bee 1": "Posuň sa ku kvetu, získaj nektár, posuň sa potom k plástu a vyrob med.",
+        "K-1 Bee 2": "Posuň sa ku kvetu, získaj nektár, posuň sa potom k plástu a vyrob med.",
+        "K-1 Bee 3": "Posuň sa ku kvetu, získaj nektár, posuň sa potom k plástu a vyrob med.",
+        "K-1 Bee Loops 4": "Použi cyklus `opakuj` na získanie nektáru, vyrobenie medu a posunu!",
+        "courseE_farmer_functions2ba": "Pomôž farmárovi pozbierať kukurice a tekvice pomocou funkcií `kukurica` a `získaj všetky tekvice`.",
+        "courseE_farmer_functions2ba_2019": "Pomôž farmárovi pozbierať kukurice a tekvice pomocou funkcií `kukurica` a `získaj všetky tekvice`."
       }
     }
   }

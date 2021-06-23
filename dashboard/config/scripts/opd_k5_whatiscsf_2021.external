@@ -1,0 +1,20 @@
+name 'OPD-K5 WhatIsCSF_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# What is Computer Science Fundamentals?
+
+Computer Science Fundamentals are courses for elementary students in grades K-5. Are you familiar with Code.org's <a href="https://code.org/learn" > Hour of Code </a>?
+
+Computer Science Fundamentals courses and Hour of Code are not the same thing. Hour of Code *introduces* students to computer science while Computer Science Fundamentals courses *build and strengthen* computer science knowledge and skills.
+
+## Why teach Computer Science Fundamentals?
+
+* Supports both pre-readers and readers.
+* Designed with K12 Computer Science Framework practices and CSTA K-12 standards.
+* Includes cross-curricular activities mapped to ELA/Math Common Core State Standards and Next Generation Science Standards.
+* **Does not require you or your students to have any prior knowledge or skills in computer science.**
+
+Watch this video to hear from others sharing why <a href= "https://www.youtube.com/watch?v=_IiPLtP-jm8" target="blank" >Computer Science Matters</a>.
+
+![](https://images.code.org/5f7b3635a4f9853c61ec7a861d5fb717-image-1623335620976.png)
+MARKDOWN

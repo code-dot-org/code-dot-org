@@ -1,5 +1,6 @@
 professional_learning_course 'ECS Support'
 login_required true
+published_state 'beta'
 
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'ECSPD3- unit 5- welcome'

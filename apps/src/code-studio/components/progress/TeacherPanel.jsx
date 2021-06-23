@@ -5,9 +5,9 @@ import TeacherPanelContainer from '../TeacherPanelContainer';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedStageMapping} from '../../stageLockRedux';
+import {fullyLockedLessonMapping} from '../../lessonLockRedux';
 import {ViewType} from '../../viewAsRedux';
-import {hasLockableStages} from '../../progressRedux';
+import {hasLockableLessons} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -21,12 +21,12 @@ class TeacherPanel extends React.Component {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
-    scriptName: PropTypes.string,
+    unitName: PropTypes.string,
     // pageType describes the current route the user is on. Used only for logging.
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
-      pageTypes.stageExtras
+      pageTypes.lessonExtras
     ]),
 
     // Provided by redux.
@@ -37,8 +37,8 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    scriptHasLockableStages: PropTypes.bool.isRequired,
-    unlockedStageNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitHasLockableLessons: PropTypes.bool.isRequired,
+    unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
   };
 
@@ -70,10 +70,10 @@ class TeacherPanel extends React.Component {
       hasSections,
       sectionsAreLoaded,
       selectedSection,
-      scriptHasLockableStages,
-      unlockedStageNames,
+      unitHasLockableLessons,
+      unlockedLessonNames,
       students,
-      scriptName
+      unitName
     } = this.props;
 
     let currentSectionScriptLevels = null;
@@ -163,13 +163,13 @@ class TeacherPanel extends React.Component {
             </div>
           )}
           {hasSections &&
-            scriptHasLockableStages &&
+            unitHasLockableLessons &&
             viewAs === ViewType.Teacher && (
               <div>
                 <div style={styles.text}>
                   {i18n.selectSectionInstructions()}
                 </div>
-                {unlockedStageNames.length > 0 && (
+                {unlockedLessonNames.length > 0 && (
                   <div>
                     <div style={styles.text}>
                       <FontAwesome
@@ -181,7 +181,7 @@ class TeacherPanel extends React.Component {
                     <div style={styles.text}>
                       {i18n.lockFollowing()}
                       <ul>
-                        {unlockedStageNames.map((name, index) => (
+                        {unlockedLessonNames.map((name, index) => (
                           <li key={index}>{name}</li>
                         ))}
                       </ul>
@@ -197,7 +197,7 @@ class TeacherPanel extends React.Component {
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
               sectionId={sectionId}
-              scriptName={scriptName}
+              unitName={unitName}
             />
           )}
         </div>
@@ -245,37 +245,37 @@ const styles = {
 
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
-  const {stagesBySectionId, lockableAuthorized} = state.stageLock;
+  const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
   const {
     selectedSectionId,
     sectionsAreLoaded,
     sectionIds
   } = state.teacherSections;
-  const currentSection = stagesBySectionId[selectedSectionId];
+  const currentSection = lessonsBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(
-    state.stageLock.stagesBySectionId[selectedSectionId]
+  const fullyLocked = fullyLockedLessonMapping(
+    state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
-  const unlockedStageIds = Object.keys(currentSection || {}).filter(
-    stageId => !fullyLocked[stageId]
+  const unlockedLessonIds = Object.keys(currentSection || {}).filter(
+    lessonId => !fullyLocked[lessonId]
   );
 
-  let stageNames = {};
-  state.progress.stages.forEach(stage => {
-    stageNames[stage.id] = stage.name;
+  let lessonNames = {};
+  state.progress.lessons.forEach(lesson => {
+    lessonNames[lesson.id] = lesson.name;
   });
 
-  // Pretend we don't have lockable stages if we're not authorized to see them
-  const scriptHasLockableStages =
-    lockableAuthorized && hasLockableStages(state.progress);
+  // Pretend we don't have lockable lessons if we're not authorized to see them
+  const unitHasLockableLessons =
+    lockableAuthorized && hasLockableLessons(state.progress);
 
   return {
     viewAs: state.viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
-    scriptHasLockableStages,
+    unitHasLockableLessons,
     selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedStageNames: unlockedStageIds.map(id => stageNames[id]),
+    unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
     students: state.teacherSections.selectedStudents
   };
 })(TeacherPanel);

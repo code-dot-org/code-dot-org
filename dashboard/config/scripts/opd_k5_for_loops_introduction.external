@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 # For Loops: Where are they introduced?
 
-## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank">Course F</a>
+## <a href="https://curriculum.code.org/csf-19/coursef/" target="blank" rel="noopener noreferrer">Course F</a>
 - Lesson 11 (Unplugged): For Loop Fun
 - Lesson 12: For Loops with Bee
 - Lesson 13: For Loops with Artist

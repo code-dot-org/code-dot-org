@@ -2,7 +2,7 @@
   "script": {
     "name": "csd4-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:56 UTC",
+    "serialized_at": "2021-06-17 22:31:12 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -54,21 +55,9 @@
       }
     },
     {
-      "key": "csd5_2",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Chapter 2: Solving Data Problems"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "cspSurvey",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Survey"
       },
@@ -92,7 +81,7 @@
         "overview": "**Question of the Day:** How can we choose products based on the needs of a user?\n\nTo kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.",
         "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\r\n",
         "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\n\nThe problem solving process used throughout CS Discoveries is:\n\n* Define\n* Prepare\n* Try\n* Reflect\n\nIn this lesson, students look at real-world objects to understand how the problem-solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\n\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end-user of a product before honing in on how it specifically applies to software design",
-        "student_overview": "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
+        "student_overview": "**Question of the Day: How can we choose products based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of objects they use. "
       },
       "seeding_key": {
         "lesson.key": "Analysis of Design",
@@ -113,7 +102,7 @@
         "overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\r\n\r\nDesigners need to understand their users' needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n",
         "preparation": "* Print out enough user profiles for all students, ensuring as much variety as possible\r\n* Print an activity guide for each user\r\n* Prepare prompt questions for warm up exercise\r\n* Label four corners of the room as A, B, C, and D\r\n* Arrange room in table groups of 4, and place a number on each table group (1, 2, 3,...)\r\n",
         "purpose": "This lesson builds on the previous by asking students to not only consider that there _is_ a user that products are designed for, but also empathize with those potential users. Throughout this unit, students will work to apply the problem solving process from Unit 1 to problems for other people. Empathy is a key element of this kind of user-centered design and a difficult skill for students at this age to master.\r\n",
-        "student_overview": "Using user profiles, students explore how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.\r\n"
+        "student_overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\n\nIn this lesson, you will explore how different users might react to a variety of products. "
       },
       "seeding_key": {
         "lesson.key": "Understanding Your User",
@@ -134,7 +123,7 @@
         "overview": "**Question of the Day: How can we design for people other than ourselves?**\r\n\r\nThis is the first part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. This lesson focuses on the Define and Prepare steps of the process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. In the next lesson, students will complete the Try and Reflect steps of the design process.\r\n",
         "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\r\n* Set up groups with preferably 3 students each",
         "purpose": "This micro activity is the first of three design projects in this unit. It is a fast-paced introduction to the user-centered design process, intended to give students an experience with user-centered design that they can build on in later projects. In this lesson the primary goal is to establish that design decisions will be made with the user's needs in mind. The practice of categorizing lots of disparate ideas to help make decisions will also reappear later in the unit.\r\n\r\nThe activity in this lesson is an adaptation of the [Design Charrette from the University of Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
-        "student_overview": "In small groups, students use the design process to come up with ideas for smart clothing. From brainstorming, to identifying users, to finally proposing a design, this activity serves as the first of several opportunities in this unit for students to practice designing a solution for the needs of others.\r\n"
+        "student_overview": "**Question of the Day: How can we design for people other than ourselves?**\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
       },
       "seeding_key": {
         "lesson.key": "User-Centered Design 1",
@@ -155,7 +144,7 @@
         "overview": "**Question of the Day: How can we design a product to meet a user's needs?**\r\n \r\nThis is the second part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. Yesterday students completed the Define and Prepare steps of the design process. Today, they complete the Try and Reflect portions. Students continue their work from yesterday by designing a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. Students have a chance to share their decision-making process and get feedback on how well their product addresses the user needs they selected.\r\n",
         "preparation": "* Return the activity guide from yesterday to students\r\n* Make copies of the Try & Reflect activity guide - one for each group\r\n",
         "purpose": "This micro activity is the first of three design projects in this unit. It is a fast-paced introduction to the user-centered design process, intended to give students an experience with user-centered design that they can build on in later projects. In this lesson the primary goal is to align the design of a product to the needs of the user, sometimes setting aside personal beliefs or preferences. The act of basing decisions around a user rather than yourself is a key mindset that appears throughout the unit.\r\n\r\nThe activity in this lesson is an adaptation of the [Design Charrette from the University of Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
-        "student_overview": "Question of the Day: How can we design a product to meet a user's needs?"
+        "student_overview": "**Question of the Day: How can we design a product to meet a user's needs?**\n\nIn this lesson, you will continue to work on designing a piece of smart clothing, using the specific needs and concerns you brainstormed. "
       },
       "seeding_key": {
         "lesson.key": "User-Centered Design 2",
@@ -176,7 +165,7 @@
         "overview": "**Question of the Day:** How can we test an app to make sure it meets a user's needs?\r\n \r\nFollowing the mini design project, students look towards the next phase of design - prototyping a product that attempts to address user needs. In teams, students examine a paper prototype for a chat app called \"Txt Ur Grndkdz\". Through using this paper prototype, students get a chance to see how a simple paper prototype can be used to quickly test ideas and assumptions before we ever get to the computer. After \"using\" the provided prototype students begin to identify ways to improve the next iteration.\r\n",
         "preparation": "* Print one copy of the User Interface Screens activity guide for each pair of students\r\n* Print one copy of the User Experience (computer) activity guide for each pair of students\r\n* Print one copy of the User Experience (user) activity guide for each pair of students\r\n* Cut out the UI Screens or provide scissors for students to do so themselves",
         "purpose": "This lesson introduces students to the concept of a paper prototype as a quick and dirty tool to kick off the development of an app. Paper prototypes will return in both the next few lessons and the chapter two project as well. This prototype will also serve as the context around which students will start to parse and organize feedback from a wide variety of users. While this lesson asks students to work with an existing prototype, they will soon be developing prototypes of their own design.",
-        "student_overview": "In this lesson, students get to see how a paper prototype can be used to test and get feedback on software before writing any code. To help out a developer with their idea, the class tests and provides an app prototype made of paper.\r\n"
+        "student_overview": "**Question of the Day: How can we test an app to make sure it meets a user's needs?**\n\nIn this lesson, you will examine a paper prototype for a chat app and start identifying ways that it could be improved. "
       },
       "seeding_key": {
         "lesson.key": "User Interfaces",
@@ -194,10 +183,10 @@
       "properties": {
         "assessment_opportunities": "1. **Categorize and prioritize user feedback for an app**\r\n\r\n\t\r\n\r\n2. **Use feedback to create a plan for further development of an app**\r\n\r\n\tActivity Guide, page 1: The table should have several suggestions for improvement to the app that clearly relate to the feedback categories the students have identified.\r\n\r\n3. **Create a paper prototype for the screens of an app**\r\n\r\n\tActivity Guide: The screen sketches should reflect the app improvements identified on the first page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can we use feedback to improve an app?\r\n\r\nIn this lesson students use feedback from \"users\" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.",
+        "overview": "**Question of the Day: How can we use feedback to improve an app?**\n\nIn this lesson, students use feedback from \"users\" of the paper-prototyped app from the previous lesson in order to develop improvements to the user interface of that paper prototype. The lesson begins with a reflection on the fact that designers need to translate human needs with technology into changes to the user interface or experience. Students are then given a collection of feedback and requests from users of the app from the previous lesson. In groups students categorize the feedback and identify ways the needs expressed in the feedback could be met by changes to the interface of the app. Then in groups students will implement some of these changes to meet one of the needs they identified.",
         "preparation": "* Either print one copy of the User Interface Screens resource for each group, or be prepared to display the screens at the front of the classroom\r\n* Print one copy of the Prototype Feedback resource for each group. If possible, cut into strips ahead of time\r\n* Print one copy of Improve a Screen for each group. If possible, print single-sided so students can divy up the activity guide.\r\n* Colored pencils or markers for the paper prototypes\r\n",
         "purpose": "This lesson introduces several skills that students will need to use later in the unit. They will learn to categorize feedback in order to organize and prioritize their response. They learn to interpret human needs with a piece of technology in terms of the changes to the user interface. They have their first opportunity to create a paper prototype of their own by designing a new screen of an app. As students move towards designing apps of their own from scratch these will be important skills that students use repeatedly.",
-        "student_overview": "Users have been testing an app, and they have lots of feedback for the developer. The class needs to sort through all of this feedback, identify the common themes and needs, and start revising the prototype to make it better meet the users' needs."
+        "student_overview": "**Question of the Day: How can we use feedback to improve an app?**\n\nIn this lesson, you will start revising the paper prototype using feedback and requests from users. "
       },
       "seeding_key": {
         "lesson.key": "Feedback and Testing",
@@ -215,10 +204,10 @@
       "properties": {
         "assessment_opportunities": "1. **Analyze interview notes to identify specific user needs**\r\n\r\n\tActivity Guide: There should be multiple barriers identified on the bottom of the last page of the activity guide, which connect to the notes from the interview.\r\n\r\n\t",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can user interviews help us create apps to meet the needs of a user?\r\n\r\nIn this lesson students interpret user interviews to determine the needs & interests of a user. They then speculate on the barriers these users are facing or the opportunities that are available for each user. In a group, they share these barriers & opportunities and brainstorm different apps that could be used to address these issues. By the end of the lesson, students will have decided on an app idea that addresses a barrier or opportunity for a user.",
+        "overview": "**Question of the Day: How can user interviews help us create apps to meet the needs of a user?**\n\nIn this lesson, students interpret user interviews to determine the needs & interests of a user. They then speculate on the barriers these users are facing or the opportunities that are available for each user. In a group, they share these barriers & opportunities and brainstorm different apps that could be used to address these issues. By the end of the lesson, students will have decided on an app idea that addresses a barrier or opportunity for a user.",
         "preparation": "* Print one copy of User Interview activity guide for each student\r\n* Print a copy of the Example User Interviews for each group\r\n* Gather poster paper and brainstorming materials (pens, sticky notes, etc)\r\n",
         "purpose": "In previous lessons, needs & interests have been presented more explicitly to students. In this lesson, they have the task of extracting that information from a user interview, which motivates the app they will create. Even though example user interviews are provided, this lesson can be more impactful if real user interviews are used from people in the community. This lesson also bridges to the project in the next lesson, which uses the app brainstorm as the starting point for creating a paper prototype.",
-        "student_overview": "Up to this point, the users that the class has considered have all been remote, and the only information from users has come through text or role playing. Now students get to rely on each other as potential users, as pairs interview each other to identify needs that could be addressed by developing an app."
+        "student_overview": "**Question of the Day: How can user interviews help us create apps to meet the needs of a user?**\n\nIn this lesson, you will interview classmates in order to identify user needs that could be addressed by developing an app. "
       },
       "seeding_key": {
         "lesson.key": "Identifying User Needs",
@@ -236,10 +225,10 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I develop an app prototype for a user?\r\n\r\nBased on user interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing \"screens\" on individual notecards. A project guide directs students through the process including building the paper prototype and testing it with their user to see if their assumptions about the user interfaces they created are accurate.\r\n\r\nThis is a two-day lesson, with specific timings outlined in the lesson plan below",
+        "overview": "**Question of the Day: How can I develop an app prototype for a user?**\n\nBased on user interview from the previous lesson, each student comes up with an idea for an app that will address their user's problem. Students then get to create their own paper prototype of their app ideas by drawing \"screens\" on individual notecards. A project guide directs students through the process including building the paper prototype and testing it with their user to see if their assumptions about the user interfaces they created are accurate.\n\nThis is a two-day lesson, with specific timings outlined in the lesson plan below",
         "preparation": "* Print one copy of the project guide for each student\r\n* Print one copy of the rubric for each student\r\n* 6 notecards for each student\r\n* Drawing supplies (colored pencils, markers, rulers, etc.)\r\n* Poster paper for each student",
         "purpose": "This lesson concludes the first chapter of Unit 4 and is another opportunity to practice the problem solving process for designing an app. The focus in this project is on the design process, especially empathizing with their user and the testing & feedback steps of the app design process. In the next chapter students will continue using this process to design apps and learn how to program their prototypes in App Lab.",
-        "student_overview": "Using the interview information from the previous lesson, students come up with app ideas to address the needs of their users. To express those ideas, and test out their effectiveness, each student creates and tests paper prototypes of their own.\r\n"
+        "student_overview": "**Question of the Day: How can I develop an app prototype for a user?**\n\nIn this lesson, you will use the classmate interview from the previous lesson to come up with app ideas that would address the needs of your users. "
       },
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
@@ -257,10 +246,10 @@
       "properties": {
         "assessment_opportunities": "1. **Develop a plan for collaborating with others to design a computational artifact**\r\n\r\n\tActivity Guide, page 1: There should be a reasonable plan for managing disagreement under \"Decision Making\".\r\n\r\n2. **Describe the target users for a computational artifact**\r\n\r\n\tAs students share their user groups at the end of the main activity, the descriptions should include enough specificity and detail to later identity a common set of needs among the group members.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** What is an App for Good we want to create?\r\n \r\nThis lesson starts an app design project that lasts through the end of the unit. Students first explore a number of apps designed for social impact that have been created by other students. Students form project teams and lay out a contract for how the team will function throughout the development of their app. Finally, they brainstorm a team name, a topic for their app, and potential users.\r\n",
+        "overview": "**Question of the Day: What is an App for Good we want to create?**\n \nThis lesson starts an app design project that lasts through the end of the unit. Students first explore a number of apps designed for social impact that have been created by other students. Students form project teams and lay out a contract for how the team will function throughout the development of their app. Finally, they brainstorm a team name, a topic for their app, and potential users.\n",
         "preparation": "* Assign teams of 3-4, ideally based on similar interest in an app topic\r\n* Print one copy per team of the activity guide\r\n* Choose 1-3 of the apps from the example apps to share with the class\r\n* Arrange classroom seating for pre-selected teams of 3-4 students\r\n* Put out sticky notes for each team\r\n",
         "purpose": "This lesson lays the foundation for the project that will last the remainder of the unit. Students are introduced to apps where people their age have used technology to address issues they care about. The resources provided are a great starting place, but you can make this lesson pack a bigger punch if you find examples (even those from your own previous classes) that demonstrate local examples of students designing apps for social good. Students also complete a teamwork contract, which will anchor how they collaborate for the remainder of the unit.",
-        "student_overview": "To kick off the app design project, the class organizes into teams and starts exploring app topics. Several examples of socially impactful apps serve as inspiration for the project."
+        "student_overview": "**Question of the Day: What is an App for Good we want to create?**\n\nIn this lesson, you will begin the process of designing an app that will last through the end of this unit and starts with making a plan for how your team will function together while creating this app, a topic for your app and potential users. "
       },
       "seeding_key": {
         "lesson.key": "Designing Apps for Good",
@@ -278,10 +267,10 @@
       "properties": {
         "assessment_opportunities": "1. **Evaluate a design based its ability to meet target user's needs**\r\n\r\n\tActivity Guide: The \"liked\" and \"didn't like\" columns of the chart should clearly relate back to the user needs as described in the \"Who is the target user\" column.\r\n\r\n2. **Evaluate the purpose and impact of a computational artifact**\r\n\r\n\tActivity Guide: The apps and descriptions identified in the first column of the chart should show a relationship to the team's original app topic from the previous lesson, and the second column should identify how the apps meet the target group's needs.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students research apps similar to the one they intend on creating to better understand the needs of their users. Students work within their teams to search the Internet for other apps, then evaluate the ones they find interesting. By the end of the lesson, each team will have a clearer idea about the type of app they want to create and further refine who their target users are. Each team will maintain a list of citations for all the apps they examined for use in their final presentation.",
+        "overview": "**Question of the Day: How can we use existing apps as inspiration for our own apps?**\n\nIn this lesson students research apps similar to the one they intend on creating to better understand the needs of their users. Students work within their teams to search the Internet for other apps, then evaluate the ones they find interesting. By the end of the lesson, each team will have a clearer idea about the type of app they want to create and further refine who their target users are. Each team will maintain a list of citations for all the apps they examined for use in their final presentation.",
         "preparation": "* Arrange classroom seating for teams of 4-5 students\r\n* Print one copy per team of the activity guide",
         "purpose": "This lesson is the primary opportunity students have to get user input into the original conception of their app. By looking at apps similar to the ones they have proposed needing they may be inspired to change the structure of their app or may even identify an aspect of their problem they had previously ignored. In later lessons students will test out prototypes of their app to perform further refinements.",
-        "student_overview": "In this lesson, students dive into app development by exploring existing apps that may serve similar users. In groups, they identify a handful of apps that address the same topic they are working on, and use those apps to help refine the app idea they will pursue."
+        "student_overview": "**Question of the Day: How can we use existing apps as inspiration for our own apps?**\n\nIn this lesson, you will dive into app development by exploring existing apps that may serve similar users as the app you are working on. "
       },
       "seeding_key": {
         "lesson.key": "Market Research",
@@ -299,10 +288,10 @@
       "properties": {
         "assessment_opportunities": "1. **Explain the purpose of individual UI elements when developing an app**\r\n\r\n\tActivity Guide: Students will list the intended use of each UI element, and brainstorm how these elements connect to the features they’re planning for their apps.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Before starting to design apps, we need to help students scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that can be made using AppLab’s tools. Today focuses on having teams look at several example apps made in AppLab and identifying the components of the user interface. They then make a plan for which features could use which components in their app.",
+        "overview": "**Question of the Day: What user interface elements will be useful for our app?**\n\nBefore starting to design apps, we need to help students scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that can be made using AppLab’s tools. Today focuses on having teams look at several example apps made in AppLab and identifying the components of the user interface. They then make a plan for which features could use which components in their app.",
         "preparation": "* Print a copy of the activity guide for each team\r\n* (Optional) Preview Lesson 14 - Design Mode in AppLab to help answer questions from students about UI elements in AppLab.\r\n\r\n",
         "purpose": "This lesson helps narrow the scope of the types of design elements students can include in their apps. Up until now, students have explored and brainstormed apps with a variety of functionality - they may have discovered apps that use maps, or connect to social media, or access data on your phone. In this lesson, they explore only apps built with AppLab tools so they have more realistic expectations for the apps they can create by the end of the unit.",
-        "student_overview": "Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson, teams explore some example apps created in App Lab and use these examples to help inform the first paper prototypes of their apps."
+        "student_overview": "**Question of the Day: What user interface elements will be useful for our app?**\n\nIn this lesson, you will explore some example apps created in App Lab and use these examples to help inform your first paper prototype of your app. "
       },
       "seeding_key": {
         "lesson.key": "Exploring UI Elements",
@@ -320,10 +309,10 @@
       "properties": {
         "assessment_opportunities": "1. **Explain the role of paper prototypes in app development.**\r\n\r\n\tActivity discussion: Students should identify several key ways that paper prototypes contribute to app development, and these reasons should highlight the advantages over both a full product and digital prototypes.\r\n\r\n2. **Create a paper prototype that incorporates the user flow for a computational artifact.**\r\n\r\n\tStudents' prototypes are collected at the end of the lesson, but there are also opportunities in the second activity to circulate, assess, and give feedback to students as they work.  Each notecard should be drawn with enough detail to identify the functionality of each element on the screen.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students work in their teams to create paper prototypes for the apps they’ve been developing. They begin by making a plan for each screen, then assigning different team members to work on each screen so the task can be completed in time. They can use 3x5 index cards to develop their paper prototypes, or the Paper Prototype template.",
+        "overview": "**Question of the Day: How can we build a paper prototype for our app?**\n\nStudents work in their teams to create paper prototypes for the apps they’ve been developing. They begin by making a plan for each screen, then assigning different team members to work on each screen so the task can be completed in time. They can use 3x5 index cards to develop their paper prototypes, or the Paper Prototype template.",
         "preparation": "* Prepare 3x5 index cards (or copies of the prototype template), sticky notes, colored pens and pencils, scissors for each team\r\n* Print a copy of the activity guide for each team\r\n",
         "purpose": "This lesson kicks off the actual design phase of this project. Students last created paper prototypes in Lesson 7, but at that point very few constraints were placed on the prototype user interface. Because these prototypes will eventually be converted into App Lab apps, it's important to better scope the types of apps teams design and the interface elements they use. Teams will use their paper prototypes tomorrow to test their apps and get feedback.",
-        "student_overview": "Paper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson, teams explore some example apps created in App Lab and use these examples to help inform the first paper prototypes of their apps."
+        "student_overview": "**Question of the Day: How can we build a paper prototype for our app?**\n\nIn this lesson, you will work with your team to create a paper prototype for your app. \n"
       },
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
@@ -341,10 +330,10 @@
       "properties": {
         "assessment_opportunities": "1. **Design and run test that use paper prototypes to gather feedback on a design**\r\n\r\n\tActivity Guide: Several relevant tasks should be identified in the chart, along with notes describing the user testing around those tasks.\r\n\r\n2. **Analyze user tests to identify features that should be removed, added, or improved**\r\n\r\n\tActivity Guide: The left side of the T-chart should include at least four descriptions of things that happened in the test, and the right side should list respective proposed improvements to the app.\r\n   ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How does our prototype work when tested by real users?\r\n\r\nThe primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.",
+        "overview": "**Question of the Day: How does our prototype work when tested by real users?**\n\nThe primary purpose of developing paper prototypes is that they allow for quick testing and iteration before any code is written. This lesson is focused on giving teams a chance to test their prototypes before moving to App Lab. Teams develop a plan to test with users before running prototype tests with multiple other students in the class (and potentially outside the class). In order to test the prototype with the users, the students will have to assign roles in the testing (the “narrator”, the “computer” and the “observers”) as well as have some questions prepared for the user to answer after the test is complete.",
         "preparation": "* Either have other people lined up to test each team’s paper prototypes, or schedule enough time for teams to test each other's prototypes\r\n* Print a copy of the Paper Prototype User Testing activity guide for each team\r\n* Print a copy of the User Test Cases activity guide for each team",
         "purpose": "The goal of this lesson is to give students a clear format for testing and iteration of their apps. This will be the first of multiple opportunities teams have to test various stages of their prototypes, and each stage will serve a different purpose. At this point the primary purpose is to gut check assumptions about how the app should be laid out and navigated - this is _not_ the time for students to be overly concerned about fine details.",
-        "student_overview": "In this lesson, teams test out their paper prototypes with other members of the class. As one student role plays as the computer, one narrates, and the rest observe, teams will get immediate feedback on their app designs, which will inform the next version of their app prototypes.\r\n"
+        "student_overview": "**Question of the Day: How does our prototype work when tested by real users?**\n\nIn this lesson, you will work with your team to test your paper prototype with other members of the class. "
       },
       "seeding_key": {
         "lesson.key": "Prototype Testing",
@@ -362,10 +351,10 @@
       "properties": {
         "assessment_opportunities": "1. **Assign roles and responsibilities to each team member when collaborating to create a digital artifact**\n\n\tActivity Guide \"Screen Ownership\": Check that all screens have been assigned an owner and that the division of labor seems reasonable.\n\n2. **Select the appropriate input element for a given type of information**\n\n\tCode Studio, level 8: See rubric",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can we use App Lab and Design Mode to create apps?\r\n \r\nStudents are introduced to the App Lab programming environment that they will use to build their apps. Students work through a progression of skill-building levels to learn how to use the drag-and-drop design mode of App Lab. They end the lesson by making a plan to adapt one of their Paper Prototype screens into App Lab, focusing on having unique IDs for each element.\r\n",
+        "overview": "**Question of the Day: How can we use App Lab and Design Mode to create apps?**\n \nStudents are introduced to the App Lab programming environment that they will use to build their apps. Students work through a progression of skill-building levels to learn how to use the drag-and-drop design mode of App Lab. They end the lesson by making a plan to adapt one of their Paper Prototype screens into App Lab, focusing on having unique IDs for each element.\n",
         "preparation": "* Print one copy of the Screen Ownership activity guide for each group\r\n* Print one copy of the Screen Design activity guide for each student\r\n* (Optional) Print one copy of the Model Screen Design activity guide for each group",
         "purpose": "This lesson introduces students to the design mode interface of App Lab, and to the process of translating a paper prototype to digital. They'll use this as a tool to iterate on their paper prototypes. In today’s lesson, they build up an exemplar app screen. In tomorrow’s lesson, they will build a screen from their paper prototype, incorporating the feedback from yesterday’s lesson.",
-        "student_overview": "Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to the feedback they received in the previous round of testing.\r\n"
+        "student_overview": "**Question of the Day: How can we use App Lab and Design Mode to create apps?**\n\nIn this lesson, you will work with your team to start building the next iteration of your app in App Lab. "
       },
       "seeding_key": {
         "lesson.key": "Digital Design",
@@ -383,10 +372,10 @@
       "properties": {
         "assessment_opportunities": "1. **Create a digital prototype of an application screen**\r\n\r\n\tCode Studio, level 2: See rubric. You may need students to turn in their paper prototypes, or circulate while students are working on the project, to ensure that the digital and paper prototypes are consistent.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I design a digital prototype from a paper prototype?\r\n\r\nHaving collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.",
+        "overview": "**Question of the Day: How can I design a digital prototype from a paper prototype?**\n\nHaving collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.",
         "preparation": "* Have extra copies of the Screen Design Activity Guide available for students",
         "purpose": "This lesson introduces students to the design mode interface of App Lab, and to the process of translating a paper prototype to digital. They'll use this as a tool to iterate on their paper prototypes, first by building up an exemplar app screen, and eventually building up to an interactive app prototype by the end of the lesson.",
-        "student_overview": "Having developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to the feedback they received in the previous round of testing.\r\n"
+        "student_overview": "**Question of the Day: How can I design a digital prototype from a paper prototype?**\n\nIn this lesson, you will work with your team to build the next iteration of your app with each team member building out at least one page of your app. "
       },
       "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
@@ -404,9 +393,9 @@
       "properties": {
         "assessment_opportunities": "1. **Create an event that detects and responds to user input**\n\n\tCode Studio: See rubric on bubble 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I use events to create an app?\r\n \r\nIn this lesson students learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens. Students learn basic event driven programming by building up the model app that they started in the previous lesson. At the end of the lesson, students make a plan for how they will stay organized when importing each other’s screens in tomorrow’s lesson.\r\n",
+        "overview": "**Question of the Day: How can I use events to create an app?**\n \nIn this lesson, students learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens. Students learn basic event-driven programming by building up the model app that they started in the previous lesson. At the end of the lesson, students make a plan for how they will stay organized when importing each other’s screens in tomorrow’s lesson.\n",
         "purpose": "This lesson gives enough programming context for students to be successful creating their digital prototypes. The goal of this lesson is not to teach programming in App Lab (there will be time for that in Unit 6), but rather to teach the minimum amount of programming skills to allow students to make their apps interactive.",
-        "student_overview": "Building on the screens that they designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\r\n"
+        "student_overview": "**Question of the Day: How can I use events to create an app?**\n\nIn this lesson, you will combine the screens each team member built into a single app and learn how to program events so that you can navigate between your screens. "
       },
       "seeding_key": {
         "lesson.key": "Events In AppLab",
@@ -424,9 +413,9 @@
       "properties": {
         "assessment_opportunities": "1. **Integrate all components from collaborative work into a final computational artifact.**\n\n\tCode Studio: See rubric on bubble 9.\n\n2. **Create a digital prototype that incorporates the user flow for a computational artifact**\n\n\tWrap up: Student solutions should allow the user to click through several of the proposed tasks for the apps.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I combine screens to create a complete digital prototype?\r\n \r\nIn this lesson teams combine their digital prototype screens into a single app, which they can then link together using code. They share their project’s import URLs with each other, then import each teammate’s screen into their own app. Each student works independently to add events to their code to link the screens together, completing their digital prototype.\r\n",
+        "overview": "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n \nIn this lesson, teams combine their digital prototype screens into a single app, which they can then link together using code. They share their project’s import URLs with each other, then import each teammate’s screen into their own app. Each student works independently to add events to their code to link the screens together, completing their digital prototype.\n",
         "purpose": "This lesson is the final step in creating their digital prototypes, which they will then test and adjust in the next few lessons. Team Working skills are emphasized in deciding how to communicate their project URLs with each other, and design skills are emphasized when each student has imported their screens and is continuing to build their app.",
-        "student_overview": "Building on the screens that they designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\r\n"
+        "student_overview": "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n\nIn this lesson, you will import each teammate's screen into your own app and work independently to add events to your code to link the screens together. "
       },
       "seeding_key": {
         "lesson.key": "Linking Screens",
@@ -444,10 +433,10 @@
       "properties": {
         "assessment_opportunities": "1. **Design and run tests that use digital prototypes to gather feedback on a design**\r\n\r\n\tActivity Guide: Several relevant tasks should be identified in the chart on the second page, along with notes describing the user testing around those tasks.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How does our digital prototype work when tested by real users?\r\n \r\nBy the end of the previous lesson each team should have a working prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests.\r\n",
+        "overview": "**Question of the Day: How does our digital prototype work when tested by real users?**\n \nBy the end of the previous lesson, each team should have a working prototype of their app. The primary purpose of this lesson is to have the team actually test the app with other people, preferably from the target audience the app is intended for, or from different teams in the class while observers from the team will record the results. As with testing the paper prototypes, teams will start by planning for the specific scenarios before running and observing tests.\n",
         "preparation": "* Print one copy of the activity guide for each student\r\n* If possible, have outside users available to test the teams’ apps prior to this testing day",
         "purpose": "By now students should be fairly practiced at testing with users. This time around, the role of the computer is actually done by the computer! This means that the team running the test needs to focus their energy on getting carefully watching what the user does, and encourage the user to say aloud what they are experiencing. While it may seem at first that testing with an interactive prototype is easier (since no one has to manually change screens), it can actually be significantly more difficult to observe the user's experience.",
-        "student_overview": "In this lesson, teams run another round of user testing with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.\r\n"
+        "student_overview": "**Question of the Day: How does our digital prototype work when tested by real users?**\n\nIn this lesson, you will run another round of user testing with your digital prototype and gather feedback that will be used to inform the final iteration of your app. "
       },
       "seeding_key": {
         "lesson.key": "Testing the App",
@@ -465,10 +454,10 @@
       "properties": {
         "assessment_opportunities": "1. **Analyze user feedback and test results on a computational artifact**\r\n\r\n\tActivity Guide: The left side of the T-chart on the first page should include at least four descriptions of things that happened in the test, and the right side should list a reasonable interpretation of the descriptions.  \r\n\r\n2. **Categorize and prioritize the issues according to impact and ease of implementation**\r\n\r\n\tStudent poster: The chart should include several improvements to the app, categorized according to urgency and ease of implementation.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can we create a plan to address bugs and features in our prototype?\r\n \r\nTeams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.\r\n",
+        "overview": "**Question of the Day: How can we create a plan to address bugs and features in our prototype?**\n \nTeams have at this point developed an app prototype that has gone through multiple iterations and rounds of user testing. With the information and guidance gained from the last round of user testing, each student has the opportunity to plan for and implement improvements to the team app. Depending on the time you have available, and student interest, you can run the cycle of testing and iteration as many times as you see fit.\n",
         "preparation": "* Print one copy of the activity guide for each team\r\n* Set out sticky notes for each team\r\n* (Optional) Have poster paper or a large whiteboard area prepared for each team\r\n",
         "purpose": "While improvement can mean adding programmatic functionality, it can also mean a more eye-catching design, more informative text copy, better uniformity of iconography, or any number of other non-programming related features. Encourage each student to find the elements of app design that interest them and focus on that for their personal improvements.\r\n\r\nAt this point in the development process, you can choose to spend as much time as you like iterating and testing. There is no further time budgeted for testing after this iteration, but feel free to use the previous two lessons as a guideline for cycling through further iterations.\r\n",
-        "student_overview": "Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix."
+        "student_overview": "**Question of the Day: How can we create a plan to address bugs and features in our prototype?**\n\nIn this lesson, you will use feedback from the previous lesson to address the needs of users as well as any bugs that you need to fix. "
       },
       "seeding_key": {
         "lesson.key": "Bugs and Features",
@@ -486,10 +475,10 @@
       "properties": {
         "assessment_opportunities": "**1. Track progress while making changes to their app**\n\nActivity Guide: Monitor students as they move post-its across the “To Do / Doing / Done” chart, ensuring that their current work is reflected on the chart.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I track my work while we make updates to our app?\r\n \r\nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\r\n",
+        "overview": "**Question of the Day: How can I track my work while we make updates to our app?**\n \nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\n",
         "preparation": "* Print one copy of the activity guide for each team\r\n* (Optional) Prepare poster paper or a large whiteboard space for each team\r\n",
         "purpose": "Students should focus the majority of their time on updating their apps based on user feedback, but they should also use the “To Do / Doing / Done” chart to stay organized and track their work. Moving a task across the board to the “Done” stage is a major accomplishment and, by the end of class, teams can celebrate how many tasks they completed in a single period.",
-        "student_overview": "Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix."
+        "student_overview": "**Question of the Day: How can I track my work while we make updates to our app?**\n\nIn this lesson, you will work with your team to implement changes that address the needs of your users. "
       },
       "seeding_key": {
         "lesson.key": "Updating Your Prototype",
@@ -507,10 +496,10 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.  You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:** How can I present the steps in our design process to people outside of our team?\r\n \r\nAt this point teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.\r\n",
+        "overview": "**Question of the Day: How can I present the steps in our design process to people outside of our team?**\n \nAt this point, teams have researched a topic of personal and social importance, developed and tested both a paper prototype and a digital prototype, and iterated on the initial app to incorporate new features and bug fixes. Now is the time for them to review what they have done and pull together a coherent presentation to demonstrate their process of creation. Using the provided presentation template, teams prepare to present about their process of app development, including the problem they set out to solve, the ways in which they've incorporated feedback from testing, and their plans for the future.\n",
         "preparation": "* Determine how much time each group has to present. Typically this is 8-10 minutes per team, but remember to leave time for transitioning between teams\r\n* Create a copy of the presentation template slide deck for each team\r\n* Print one copy of the rubric for each team. ",
         "purpose": "This lesson is the culmination of the last several weeks of project work. In preparing to present their work, it's important that students see this as more than just the programming element of their app - the goal of the presentation is to acknowledge the research, design, testing, and iteration that teams have gone through.",
-        "student_overview": "Each team prepares a presentation to \"pitch\" the app they've developed. This is the time students can share the struggles, triumphs, and plans for the future.\r\n"
+        "student_overview": "**Question of the Day: How can I present the steps in our design process to people outside of our team?**\n\nIn this lesson, you will work with your team to prepare a presentation to \"pitch\" the app you've developed. "
       },
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
@@ -529,7 +518,7 @@
       },
       "seeding_key": {
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
     },
@@ -901,21 +890,21 @@
       }
     },
     {
-      "key": "0f848bfe-6e9f-410b-b58a-bb15397fab22",
-      "position": 5,
+      "key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b",
+      "position": 1,
       "properties": {
-        "name": "Levels"
+        "name": "Project Preparation"
       },
       "seeding_key": {
-        "lesson_activity.key": "0f848bfe-6e9f-410b-b58a-bb15397fab22",
-        "lesson.key": "Project - Paper Prototype",
-        "lesson_group.key": "csd4_1",
+        "lesson_activity.key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b",
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
     },
     {
       "key": "5aa1b4d5-0d87-4e15-87db-51011f0a8751",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -929,7 +918,7 @@
     },
     {
       "key": "c50c799f-b401-406a-b4c2-6a01e8f1c548",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -943,7 +932,7 @@
     },
     {
       "key": "ce07a190-9e9b-4c4d-9e46-07f59f07449b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1082,19 +1071,6 @@
       }
     },
     {
-      "key": "8e015197-5c31-4bd5-907f-cd0e1dcb0d97",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8e015197-5c31-4bd5-907f-cd0e1dcb0d97",
-        "lesson.key": "Paper Prototypes",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "a1617d40-6785-49e4-b561-204d00047c02",
       "position": 1,
       "properties": {
@@ -1165,21 +1141,8 @@
       }
     },
     {
-      "key": "d55eeb8a-6a68-47f9-8088-52e2b8d8ab88",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d55eeb8a-6a68-47f9-8088-52e2b8d8ab88",
-        "lesson.key": "Digital Design",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "d98004e8-af51-4190-8527-347d4a5efa53",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1304,21 +1267,8 @@
       }
     },
     {
-      "key": "ae834f11-bcaf-46cd-ae5d-e84d7ca7cbba",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ae834f11-bcaf-46cd-ae5d-e84d7ca7cbba",
-        "lesson.key": "Linking Screens",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "67d735b5-592b-48f4-a289-130bc5167962",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1401,21 +1351,8 @@
       }
     },
     {
-      "key": "0cb47564-de63-455c-a3be-1c543b3170dc",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0cb47564-de63-455c-a3be-1c543b3170dc",
-        "lesson.key": "Bugs and Features",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "bfed8f71-9ea6-4a1b-9f89-bb8c0403f766",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1526,21 +1463,8 @@
       }
     },
     {
-      "key": "b4f5b228-edb0-454e-8353-8f4f1b683a31",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b4f5b228-edb0-454e-8353-8f4f1b683a31",
-        "lesson.key": "Project - App Presentation",
-        "lesson_group.key": "csd4_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "e0cc8a92-52b9-421d-a2fd-d5d63296212e",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Extension Activities"
       },
@@ -1560,7 +1484,7 @@
       "seeding_key": {
         "lesson_activity.key": "d9ce0330-5c0e-41e2-837c-d4eba9da6310",
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
     },
@@ -3076,7 +3000,7 @@
       "key": "c337ed3b-d951-4d8e-a4ee-d0568f19fa8d",
       "position": 3,
       "properties": {
-        "description": "Yesterday we used user interviews to identify a user's needs and interests, and brainstormed different apps that can address these items. That was just the first part of the design process - empathizing with a user. Today we'll continue that process and begin making a paper prototype for the app we brainstormed yesterday!\n\n**Question of the Day:** How can I develop an app prototype for a user?",
+        "description": "Yesterday we used user interviews to identify a user's needs and interests, and brainstormed different apps that can address these items. That was just the first part of the design process - empathizing with a user. Today we'll continue that process and begin making a paper prototype for the app we brainstormed yesterday!",
         "remarks": true
       },
       "seeding_key": {
@@ -3085,10 +3009,21 @@
       }
     },
     {
+      "key": "a2df333b-f807-4fab-895b-64460163b5fb",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:** How can I develop an app prototype for a user?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2df333b-f807-4fab-895b-64460163b5fb",
+        "lesson_activity.key": "6be6c7d6-44c4-4fc2-96a0-a45805228aa8"
+      }
+    },
+    {
       "key": "0b2efd87-9305-4f69-b54f-ad720a636f39",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed.",
+        "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\nAlso distribute a copy of the rubric or the student checklist.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed. Students can use the rubric or student checklist to self-assess and reflect as they progress through the project.",
         "name": "Getting Started\r"
       },
       "seeding_key": {
@@ -3269,7 +3204,13 @@
       "key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
       "position": 8,
       "properties": {
-        "description": "**Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\n\n**Display:** Show students a copy of the rubric for this project, which will be distributed to students in a moment. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished."
+        "description": "**Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\n\n**Display:** Show students a copy of the rubric for this project. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished. Students can also use the student checklist to self-assess how well they are meeting the criteria for this project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
@@ -3280,7 +3221,7 @@
       "key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
       "position": 9,
       "properties": {
-        "description": "**Distribute:** Each student needs a piece of poster paper and a copy of the rubric. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
+        "description": "**Distribute:** Each student needs a piece of poster paper. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
       },
       "seeding_key": {
         "activity_section.key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
@@ -3337,7 +3278,8 @@
       "key": "3c6018f8-0048-4c97-9970-72884de4c736",
       "position": 3,
       "properties": {
-        "description": "**Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "**Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736",
@@ -3345,14 +3287,15 @@
       }
     },
     {
-      "key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
+      "key": "b13161da-36da-4c66-a533-ee18c77cc807",
       "position": 1,
       "properties": {
-        "progression_name": "Reflection"
+        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2021/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
+        "name": "Looking Ahead"
       },
       "seeding_key": {
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
-        "lesson_activity.key": "0f848bfe-6e9f-410b-b58a-bb15397fab22"
+        "activity_section.key": "b13161da-36da-4c66-a533-ee18c77cc807",
+        "lesson_activity.key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b"
       }
     },
     {
@@ -3412,6 +3355,7 @@
       "position": 1,
       "properties": {
         "description": "**Display:** Have 2-3 example apps prepared to display to students. Several are provided in the slides, but you can also use apps from the Example Apps For Good resource or other student apps from your school or community. For each app:\n\n**Discuss:** What do you think is the social issue that this app was designed to address? How does it accomplish this?",
+        "progression_name": "Sample Apps for Good",
         "tips": [
           {
             "type": "teachingTip",
@@ -3888,8 +3832,9 @@
       "key": "761b498b-6ec2-4956-bd8f-b23e497644a5",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Have students go to Code Studio. Each code studio level is a different app that addresses a need in a community. Have students spend 5-10 minutes on the next task.\n\n**Do This:**  Explore each of the apps in whatever order you would like. Keep a list of the different components you see in these apps. Make note of any interesting features in these apps that you can share with your team\n\n**Circulate:** Monitor students as they explore the apps. You may want to ask follow-up questions to help teams see the connections between their ideas and the apps they’re exploring, especially if you know some apps will be relevant to the topics some of your teams have chosen.",
-        "name": "Explore AppLab Apps\r"
+        "description": "**Transition:** Have students go to Code Studio. Each code studio level is a different app that addresses a need in a community. Have students spend 5-10 minutes on the next task.\n\n**Do This:**  Explore each of the apps in whatever order you would like. Keep a list of the different components you see in these apps. Make note of any interesting features in these apps that you can share with your team\n\n",
+        "name": "Explore AppLab Apps\r",
+        "progression_name": "Example Apps"
       },
       "seeding_key": {
         "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5",
@@ -3900,7 +3845,7 @@
       "key": "7fd85c65-ad1b-4f7d-a93d-eed09e89386c",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** the Explore UI Elements Activity Guide.",
+        "description": "**Circulate:** Monitor students as they explore the apps. You may want to ask follow-up questions to help teams see the connections between their ideas and the apps they’re exploring, especially if you know some apps will be relevant to the topics some of your teams have chosen.\n\n**Distribute:** the Explore UI Elements Activity Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4184,17 +4129,6 @@
       }
     },
     {
-      "key": "f40e6e67-338b-4084-b162-260aea98eb53",
-      "position": 1,
-      "properties": {
-        "progression_name": "Demo Apps"
-      },
-      "seeding_key": {
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53",
-        "lesson_activity.key": "8e015197-5c31-4bd5-907f-cd0e1dcb0d97"
-      }
-    },
-    {
       "key": "ad1b4888-fb25-4eaf-8114-6881fbe3093b",
       "position": 1,
       "properties": {
@@ -4453,7 +4387,8 @@
       "key": "5d7ed2d7-0498-45a5-8969-679ad3abcad6",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the AppLab - Design Mode video as a class. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n\n**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels.\n\n**Circulate:** Monitor students as they complete the levels in Code Studio. As they progress through the bubbles, they should be recreating the Recycle Finder app. The last level of this lesson has students check in with you for next steps.\n\n\n\n#### Screen Ownership"
+        "description": "**Video:** Watch the AppLab - Design Mode video as a class. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements",
+        "progression_name": "Video: Intro to Design Mode"
       },
       "seeding_key": {
         "activity_section.key": "5d7ed2d7-0498-45a5-8969-679ad3abcad6",
@@ -4461,10 +4396,54 @@
       }
     },
     {
-      "key": "648adba7-4a69-4bce-9109-9d50e9d71087",
+      "key": "815415b5-5175-481d-bebe-c1652824fc55",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Give each team a copy of the Screen Ownership activity guide",
+        "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels."
+      },
+      "seeding_key": {
+        "activity_section.key": "815415b5-5175-481d-bebe-c1652824fc55",
+        "lesson_activity.key": "2f24c116-10b3-4af8-bdc5-a51bcf1774da"
+      }
+    },
+    {
+      "key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Build a Screen"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8",
+        "lesson_activity.key": "2f24c116-10b3-4af8-bdc5-a51bcf1774da"
+      }
+    },
+    {
+      "key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6",
+      "position": 6,
+      "properties": {
+        "progression_name": "Finish a Screen"
+      },
+      "seeding_key": {
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6",
+        "lesson_activity.key": "2f24c116-10b3-4af8-bdc5-a51bcf1774da"
+      }
+    },
+    {
+      "key": "d5918fdd-3c2c-411b-86f3-9027a8dfe558",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they complete the levels in Code Studio. As they progress through the bubbles, they should be recreating the Recycle Finder app. The last level of this lesson has students check in with you for next steps."
+      },
+      "seeding_key": {
+        "activity_section.key": "d5918fdd-3c2c-411b-86f3-9027a8dfe558",
+        "lesson_activity.key": "2f24c116-10b3-4af8-bdc5-a51bcf1774da"
+      }
+    },
+    {
+      "key": "648adba7-4a69-4bce-9109-9d50e9d71087",
+      "position": 8,
+      "properties": {
+        "description": "#### Screen Ownership\n\n**Distribute:** Give each team a copy of the Screen Ownership activity guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -4479,7 +4458,7 @@
     },
     {
       "key": "3ae6c2fa-0e47-40a3-894b-b1995fe98c91",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "**Do This:** Have groups look through their paper prototypes to identify all of the unique screens they will need to create. From there, they can divvy up screens evenly among the group members and document it on the chart. If there are more screens than students, have groups consider the following factors when dividing up content:",
         "tips": [
@@ -4496,7 +4475,7 @@
     },
     {
       "key": "22f4f3a2-aeb6-4267-b72e-886708908998",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "* Is every page _actually_ unique, or do some represent the same page with slightly changed content?\r\n* Are there similar pages that could be easily created by the same person?\r\n* Are there multiple simple pages that could be grouped together?"
       },
@@ -4507,7 +4486,7 @@
     },
     {
       "key": "e7c5ed15-9702-4e9d-8cbf-dc0568e68f27",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "Now that we’ve practiced using App Lab and divided up our screens, it’s time to plan what our screens will look like in App Lab. We will start this process today and finish it tomorrow. One of the most important steps is planning your IDs for each element. Just like in the Recycle Finder app, each ID will also have a prefix that helps identify which screen it’s on.",
         "remarks": true
@@ -4519,7 +4498,7 @@
     },
     {
       "key": "ad846391-85a4-4723-9591-5977baba19df",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "**Distribute:** After students have divided up their screens, distribute a Screen Design activity guide for each screen in the app. If a student is completing multiple screens, they will have multiple activity guides. Students can use this activity guide to sketch out their design and document the IDs for each design element.\n\n"
       },
@@ -4530,46 +4509,13 @@
     },
     {
       "key": "0a5a57e7-63bb-4040-9590-3b7937091b74",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "#### Screen Design\n\n**Do This:** Have students complete the Screen Design activity guide, listing the feedback they plan to incorporate from yesterday’s tests and generating the IDs they plan to use once in App Lab. Students should work on this up until the end of the class period. Depending on the number of screens each student has, they may not finish this before class ends and will continue tomorrow.\n\n**Circulate:** Monitor students as they plan their screens, checking that they are giving meaningful IDs to each of their elements. Make sure they are also including the screen name as a prefix for each ID. This step is important for the Linking Prototype Screens lesson, where students will be importing elements from each other’s apps - if two elements have the same ID, the import will fail. Being vigilant about this requirement now will save time and frustration later."
       },
       "seeding_key": {
         "activity_section.key": "0a5a57e7-63bb-4040-9590-3b7937091b74",
         "lesson_activity.key": "2f24c116-10b3-4af8-bdc5-a51bcf1774da"
-      }
-    },
-    {
-      "key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Build a Screen"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0",
-        "lesson_activity.key": "d55eeb8a-6a68-47f9-8088-52e2b8d8ab88"
-      }
-    },
-    {
-      "key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
-      "position": 2,
-      "properties": {
-        "progression_name": "Finish a Screen"
-      },
-      "seeding_key": {
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785",
-        "lesson_activity.key": "d55eeb8a-6a68-47f9-8088-52e2b8d8ab88"
-      }
-    },
-    {
-      "key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
-      "position": 3,
-      "properties": {
-        "progression_name": "App Project: Screen Design"
-      },
-      "seeding_key": {
-        "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b",
-        "lesson_activity.key": "d55eeb8a-6a68-47f9-8088-52e2b8d8ab88"
       }
     },
     {
@@ -4665,12 +4611,7 @@
       "properties": {
         "description": "**Code Studio:** When students have finished their Screen Designs, have them log into Code Studio. There is a single level for students to design the screen for their app.",
         "name": "Building Screens in App Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Multiple Screens:** At this point, students haven’t learned how to add multiple screens to their apps - this happens in the next lesson. However, if a student is in charge of designing multiple screens for their team, you can show them how to add a new screen from Design Mode so they can complete all of their screens on this single level.\r\n"
-          }
-        ]
+        "progression_name": "Design a Screen for your App"
       },
       "seeding_key": {
         "activity_section.key": "0988f86b-260b-4279-a8c4-59b98cdbf5f1",
@@ -4678,8 +4619,25 @@
       }
     },
     {
-      "key": "661aa918-d3cb-4548-820c-c74d3b71bfaf",
+      "key": "cc78f5f7-002f-44ed-9f5f-2518a19953e7",
       "position": 3,
+      "properties": {
+        "progression_name": "App Project: Screen Design",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Multiple Screens:** At this point, students haven’t learned how to add multiple screens to their apps - this happens in the next lesson. However, if a student is in charge of designing multiple screens for their team, you can show them how to add a new screen from Design Mode so they can complete all of their screens on this single level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cc78f5f7-002f-44ed-9f5f-2518a19953e7",
+        "lesson_activity.key": "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d"
+      }
+    },
+    {
+      "key": "661aa918-d3cb-4548-820c-c74d3b71bfaf",
+      "position": 4,
       "properties": {
         "description": "**Circulate:** Monitor students as they build their screens in App Lab, answering questions and providing feedback to students on their design. Encourage students to use their teammates as resources, getting quick feedback or asking questions. Most of the class will be spent with students designing their screens."
       },
@@ -4690,7 +4648,7 @@
     },
     {
       "key": "3d943751-6c67-41bd-94be-09454ab62f67",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Share:** If there is time, have students share their screens with the class, focusing on the different designs that teams created for their apps.",
         "name": "Sharing Designs\r"
@@ -4823,8 +4781,30 @@
       }
     },
     {
-      "key": "526b036f-d13f-4770-9b0f-f3b2c2eae72a",
+      "key": "ed8ac962-30bc-457d-aee3-6965176fd6e4",
       "position": 2,
+      "properties": {
+        "progression_name": "Adding Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4",
+        "lesson_activity.key": "7d2b43ce-ec07-43c9-bd67-39a4b85102c5"
+      }
+    },
+    {
+      "key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events and Linking Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6",
+        "lesson_activity.key": "7d2b43ce-ec07-43c9-bd67-39a4b85102c5"
+      }
+    },
+    {
+      "key": "526b036f-d13f-4770-9b0f-f3b2c2eae72a",
+      "position": 4,
       "properties": {
         "description": "**Circulate:** Monitor students as they complete the levels in Code Studio. As they progress through the bubbles, they should be adding to the Recycle Finder app from previous lessons. Students will spend most of the class completing these levels. As teams start to finish up, begin to transition to the next stage of this activity"
       },
@@ -4835,7 +4815,7 @@
     },
     {
       "key": "b51d63a2-4757-4cfa-ab85-35799fcc1cfd",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "A key part of adding events to your app was having different screens to link to. Today we learned one way to do that is by importing other screens. We will be doing this same process with your teammates - importing their screens into your app. To prepare for this, we need to plan how we will share our projects with each other.",
         "remarks": true
@@ -4847,7 +4827,7 @@
     },
     {
       "key": "aec4a036-761c-4015-bdd0-e138372c1847",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "**Do This:** Have students discuss as a group how they will share their screen’s import URLs with each other. They should decide on a plan that they will implement tomorrow.",
         "name": "Preparing for Screen Import\r",
@@ -4980,8 +4960,19 @@
       }
     },
     {
-      "key": "cda83683-b629-4ed3-a3ee-944691693739",
+      "key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e",
       "position": 2,
+      "properties": {
+        "progression_name": "Combining Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e",
+        "lesson_activity.key": "85dc0809-df8e-4c21-b33c-6525dcc0c747"
+      }
+    },
+    {
+      "key": "cda83683-b629-4ed3-a3ee-944691693739",
+      "position": 3,
       "properties": {
         "description": "**Circuate:** Monitor students as they complete the tasks above. Teams may be in different stages of development - some teams may still need support finishing their screens, some teams may need help sharing their screens with each other, and some teams may need help adding the events to their code. Regardless of each team’s progress, provide support and encouragement to help teams progress and move to the next steps of their prototype development.",
         "tips": [
@@ -4998,46 +4989,13 @@
     },
     {
       "key": "e6f5dd6d-6b16-4429-b61c-276b8ba920e7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Share:** Give students a chance to share their prototypes with each other and do some initial testing. Because every student is now working on a separate version of the team app, each app will likely be slightly different. \n\n(Optional) **Share Via Phone:** Depending on the norms and rules of your classroom, you may decide to make a temporary exception and allow students to test their apps on their own devices. App Lab is modeled after the apps we use on our phones, so it can be incredibly exciting for a student to load the app they made on their own device. To do this, students press the “Share” button in the upper-left corner of their project and then press “Send to Phone”. This opens a menu where students can send the app to their device via a text message, or scan a QR code. These instructions are also in the slides for this unit - if you decide to skip this step, make sure to also delete this slide from the presentation."
       },
       "seeding_key": {
         "activity_section.key": "e6f5dd6d-6b16-4429-b61c-276b8ba920e7",
         "lesson_activity.key": "85dc0809-df8e-4c21-b33c-6525dcc0c747"
-      }
-    },
-    {
-      "key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
-      "position": 1,
-      "properties": {
-        "progression_name": "Adding Screens"
-      },
-      "seeding_key": {
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639",
-        "lesson_activity.key": "ae834f11-bcaf-46cd-ae5d-e84d7ca7cbba"
-      }
-    },
-    {
-      "key": "632a936d-e43d-4328-b48e-779578389742",
-      "position": 2,
-      "properties": {
-        "progression_name": "Events and Linking Screens"
-      },
-      "seeding_key": {
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742",
-        "lesson_activity.key": "ae834f11-bcaf-46cd-ae5d-e84d7ca7cbba"
-      }
-    },
-    {
-      "key": "35f7c415-8e4d-4019-8aa4-c64690424212",
-      "position": 3,
-      "properties": {
-        "progression_name": "Combining Projects"
-      },
-      "seeding_key": {
-        "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212",
-        "lesson_activity.key": "ae834f11-bcaf-46cd-ae5d-e84d7ca7cbba"
       }
     },
     {
@@ -5316,7 +5274,7 @@
       "key": "4ad304fd-0105-4e3b-99b8-841e0dfdb223",
       "position": 1,
       "properties": {
-        "description": "**Vocab:** introduce the following vocabulary terms:\n\n- Bug - Part of a program that does not work correctly.\n- Feature - Part of a program that adds functionality for the user"
+        "description": "**Vocab:** introduce the following vocabulary terms:\n\n- **Bug** - Part of a program that does not work correctly.\n- **Feature** - Part of a program that adds functionality for the user"
       },
       "seeding_key": {
         "activity_section.key": "4ad304fd-0105-4e3b-99b8-841e0dfdb223",
@@ -5353,19 +5311,8 @@
       }
     },
     {
-      "key": "c59dcdb0-872e-488f-8c01-61abae5f1222",
-      "position": 4,
-      "properties": {
-        "description": "#### Bugs & Features"
-      },
-      "seeding_key": {
-        "activity_section.key": "c59dcdb0-872e-488f-8c01-61abae5f1222",
-        "lesson_activity.key": "6696a89e-fd41-4622-9305-71a6590ec797"
-      }
-    },
-    {
       "key": "e4c15ff3-00e4-45d9-b9ad-78e5b332b058",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Do This:** Teams start by completing a T chart that will help connect specific user testing observations to the potential bugs or missing features they reveal. They should rely on their notes from yesterday’s lesson when testing with another user. This information will be the basis of a brainstorming session to create a list of bugs and features the team would like to focus on in the next activity.",
         "name": "Interpreting User Feedback\r",
@@ -5383,7 +5330,7 @@
     },
     {
       "key": "c34b94ac-c585-47ed-8976-703a6e907d99",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "**Circulate:** Monitor students as they create their list, ensuring all voices within the team are heard and acknowledged. Look for clear connections between the observations students made as their users tested their apps, and the changes they want to make to their apps based on those observations."
       },
@@ -5394,7 +5341,7 @@
     },
     {
       "key": "9ab8fce2-b661-425e-a015-a671e382a411",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Do This:** Once teams have organized all of their feedback into the T chart, they can move into the brainstorming phase. Directions for this stage are in the activity guide and on the slide:",
         "name": "Brainstorming Session\r",
@@ -5412,7 +5359,7 @@
     },
     {
       "key": "b6c0367c-8ca9-4e4d-b2ee-eb1de5bb7977",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "* The top of the sticky note should say **BUG** or **FEATURE**. \r\n* The middle of the sticky note should be a description of what the bug or features is. \r\n* The bottom of the sticky should have a quick estimate of how long (in minutes) it will take to fix this bug or implement this feature. \r\n\r\n**Circulate:** Monitor students as they create their sticky notes. Help answer questions students may have on whether a task is a bug or a feature. It’s okay if this distinction isn’t always clear, as long as teams can make a best guess. Also help teams determine time estimates for each task - small changes to design elements may not take very long, but entirely new features requiring new screens could take a significant amount of class time."
       },
@@ -5423,7 +5370,7 @@
     },
     {
       "key": "9ab79ebf-032a-40ef-b642-2814f7cedd2a",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "**Do This:** On the second page of the activity guide, students will categorize the post-its they generated in their brainstorm. For each sticky note, discuss whether it is urgent or not and whether it seems to be easy or difficult to implement. Based on that discussion, place the sticky in the appropriate quadrant. Optionally, you can have teams re-create this chart on poster paper or a large whiteboard and organize their sticky notes there.\n\n**Circulate:** Monitor students as they categorize their post-its. The goal is to think intentionally about both urgency and complexity, which will further help them prioritize their work when they begin implementing these changes.\n\n**Prompt:** Now that you have your bugs and features categorized, which of the four categories should be the first that you tackle? Which should be the last?",
         "name": "Bug and Feature Analysis\r"
@@ -5435,7 +5382,7 @@
     },
     {
       "key": "8c475adc-0786-43a2-9f57-fde314fd24ad",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "**Discuss:** Have students share in their teams first, then facilitate a class discussion by asking each group to share their thoughts with the class.",
         "tips": [
@@ -5452,7 +5399,7 @@
     },
     {
       "key": "378c2b1a-6f65-4360-b87b-0a35ae0a3090",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "You all have come up with a really organized plan to start making your changes tomorrow. This is a similar process to what real software developers do when updating their apps - they collect feedback and categorize it so they know what changes they will make and how long each change will take. Tomorrow we’ll pick which post-its we want to focus on and update our apps",
         "remarks": true
@@ -5460,16 +5407,6 @@
       "seeding_key": {
         "activity_section.key": "378c2b1a-6f65-4360-b87b-0a35ae0a3090",
         "lesson_activity.key": "6696a89e-fd41-4622-9305-71a6590ec797"
-      }
-    },
-    {
-      "key": "e741ff13-6b0f-4b88-bdcc-0185993eaf91",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e741ff13-6b0f-4b88-bdcc-0185993eaf91",
-        "lesson_activity.key": "0cb47564-de63-455c-a3be-1c543b3170dc"
       }
     },
     {
@@ -5591,7 +5528,7 @@
       "key": "4fbe1856-8e34-46ac-98d0-2522edac01a1",
       "position": 2,
       "properties": {
-        "description": "**Update Your App:** Teams will need to decide how they would like to continue working on their app since every team member has their own copy of their app after they imported each other’s screens. There are three suggested options below. You can have teams decide which of these three they would like to consider, or you can choose one for the entire class:\n\n* **Stay Together on One App:** Each team chooses one of their team’s apps to focus on and add updates to - for example, the app they used for testing. During class, the entire team works together to implement one feature at a time using Pair Programming - one team member is the driver while the rest of the team helps navigate\n\t* **Pros:** Everyone is working on the same app, and there is one completed app at the end\n\t* **Cons:** Won’t be able to implement as many features since everyone is working together, and can be less engaging for navigators when there are large teams.\n* **Split Off For Some Updates, Then Recombine to One App:** Half of the team works together on one app to implement any bug fixes or feature updates on existing screens, and the other half of the team works on new features and new code that requires whole new screens. Before class ends, both teams re-share their project share URL so they can re-import the screens into their projects. They will also have to find a way to share code with each other - this usually involves converting to text mode and sharing with another student, such as via a shared Google Doc.\n\t* **Pros:** Easier to implement more features and, after the sharing, there is one completed app at the end\n\t* **Cons:** Re-importing screens and sharing code can get messy and takes time away from implementing new features\n* **Everyone Works on Separate Apps:** Each team member works on their own version of the app, implementing their bug fixes and new features just in their app.\n\t* **Pros:** Easiest way to implement features and most of the class time is spent updating the app\n\t* **Cons:** There is no “unified” app with all of the features in one place, and there's less opportunity for collaboration and teamwork\n\n**Code Studio:** Have students log into Code Studio and begin working on the updates to their apps."
+        "description": "**Update Your App:** Teams will need to decide how they would like to continue working on their app since every team member has their own copy of their app after they imported each other’s screens. There are three suggested options below. You can have teams decide which of these three they would like to consider, or you can choose one for the entire class:\n\n* **Stay Together on One App:** Each team chooses one of their team’s apps to focus on and add updates to - for example, the app they used for testing. During class, the entire team works together to implement one feature at a time using Pair Programming - one team member is the driver while the rest of the team helps navigate\n\t* **Pros:** Everyone is working on the same app, and there is one completed app at the end\n\t* **Cons:** Won’t be able to implement as many features since everyone is working together, and can be less engaging for navigators when there are large teams.\n* **Split Off For Some Updates, Then Recombine to One App:** Half of the team works together on one app to implement any bug fixes or feature updates on existing screens, and the other half of the team works on new features and new code that requires whole new screens. Before class ends, both teams re-share their project share URL so they can re-import the screens into their projects. They will also have to find a way to share code with each other - this usually involves converting to text mode and sharing with another student, such as via a shared Google Doc.\n\t* **Pros:** Easier to implement more features and, after the sharing, there is one completed app at the end\n\t* **Cons:** Re-importing screens and sharing code can get messy and takes time away from implementing new features\n* **Everyone Works on Separate Apps:** Each team member works on their own version of the app, implementing their bug fixes and new features just in their app.\n\t* **Pros:** Easiest way to implement features and most of the class time is spent updating the app\n\t* **Cons:** There is no “unified” app with all of the features in one place, and there's less opportunity for collaboration and teamwork"
       },
       "seeding_key": {
         "activity_section.key": "4fbe1856-8e34-46ac-98d0-2522edac01a1",
@@ -5599,8 +5536,20 @@
       }
     },
     {
-      "key": "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7",
+      "key": "98d47c66-d1b6-4d05-bada-bd58b317813b",
       "position": 3,
+      "properties": {
+        "description": "**Code Studio:** Have students log into Code Studio and begin working on the updates to their apps.",
+        "progression_name": "Updating Your Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "98d47c66-d1b6-4d05-bada-bd58b317813b",
+        "lesson_activity.key": "9bbaadd9-354f-4ff6-b019-700d851293fa"
+      }
+    },
+    {
+      "key": "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7",
+      "position": 4,
       "properties": {
         "description": "**Circulate:** Monitor students as they update their apps, focusing on their use of the “To Do / Doing / Done” chart. Each time a student tackles a new task they should first move the sticky from **To Do** to **Doing**, and then finally to **Done** when they have finished implementation. You can use this chart for an at-a-glance view of how each team is progressing. Make a big deal and encourage celebration when students move a post-it to the “Done” column.",
         "tips": [
@@ -5856,7 +5805,8 @@
       "key": "cbd1e24c-3232-42ff-bd52-2725517f8697",
       "position": 1,
       "properties": {
-        "description": "**Code Studio:** Have students log into Code Studio and complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n**(Optional) Extension Activities:** Depending on how long presentations take, you may have extra time with students during class. Consider if you would like to offer any enrichment or extension opportunities for students during this time."
+        "description": "**Code Studio:** Have students log into Code Studio and complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "cbd1e24c-3232-42ff-bd52-2725517f8697",
@@ -5864,14 +5814,14 @@
       }
     },
     {
-      "key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
-      "position": 1,
+      "key": "b7aae19b-7a0e-43cb-b10c-c29dcfdcdccb",
+      "position": 2,
       "properties": {
-        "progression_name": "Reflection"
+        "description": "**(Optional) Extension Activities:** Depending on how long presentations take, you may have extra time with students during class. Consider if you would like to offer any enrichment or extension opportunities for students during this time."
       },
       "seeding_key": {
-        "activity_section.key": "60f6d7d9-cd59-466e-a56c-a4312c29812f",
-        "lesson_activity.key": "b4f5b228-edb0-454e-8353-8f4f1b683a31"
+        "activity_section.key": "b7aae19b-7a0e-43cb-b10c-c29dcfdcdccb",
+        "lesson_activity.key": "f2cb20fc-4b5e-419f-9e06-45952d3e883a"
       }
     },
     {
@@ -5940,7 +5890,7 @@
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021",
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575"
+        "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
@@ -5953,23 +5903,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Example App Types_2021"
+          "csd-apps for good-1"
         ],
-        "progression": "Demo Apps"
+        "progression": "Sample Apps for Good"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Example App Types_2021"
+          "csd-apps for good-1"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       },
       "level_keys": [
-        "Example App Types_2021"
+        "csd-apps for good-1"
       ]
     },
     {
@@ -5979,23 +5929,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSDU4 Quiz App Demo_2021"
+          "csd-apps for good-2"
         ],
-        "progression": "Demo Apps"
+        "progression": "Sample Apps for Good"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Quiz App Demo_2021"
+          "csd-apps for good-2"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       },
       "level_keys": [
-        "CSDU4 Quiz App Demo_2021"
+        "csd-apps for good-2"
       ]
     },
     {
@@ -6005,79 +5955,183 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSDU4 Decision App Demo_2021"
+          "csd-apps for good-3"
         ],
-        "progression": "Demo Apps"
+        "progression": "Sample Apps for Good"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Decision App Demo_2021"
+          "csd-apps for good-3"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       },
       "level_keys": [
-        "CSDU4 Decision App Demo_2021"
+        "csd-apps for good-3"
       ]
     },
     {
       "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-explore ui-1"
+        ],
+        "progression": "Example Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-explore ui-1"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      },
+      "level_keys": [
+        "csd-explore ui-1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-explore ui-2"
+        ],
+        "progression": "Example Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-explore ui-2"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      },
+      "level_keys": [
+        "csd-explore ui-2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-explore ui-3"
+        ],
+        "progression": "Example Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-explore ui-3"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      },
+      "level_keys": [
+        "csd-explore ui-3"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSDU4 List App Demo_2021"
+          "csd-explore ui-4"
         ],
-        "progression": "Demo Apps"
+        "progression": "Example Apps"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 List App Demo_2021"
+          "csd-explore ui-4"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Exploring UI Elements",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
       },
       "level_keys": [
-        "CSDU4 List App Demo_2021"
+        "csd-explore ui-4"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSDU4 Crowdsource App Demo_2021"
+          "csd-explore ui-5"
         ],
-        "progression": "Demo Apps"
+        "progression": "Example Apps"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Crowdsource App Demo_2021"
+          "csd-explore ui-5"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Exploring UI Elements",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
       },
       "level_keys": [
-        "CSDU4 Crowdsource App Demo_2021"
+        "csd-explore ui-5"
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd-explore ui-6"
+        ],
+        "progression": "Example Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-explore ui-6"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      },
+      "level_keys": [
+        "csd-explore ui-6"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6085,7 +6139,7 @@
         "level_keys": [
           "CSDU4 Design Mode Video_2021"
         ],
-        "progression": "Build a Screen"
+        "progression": "Video: Intro to Design Mode"
       },
       "named_level": false,
       "bonus": false,
@@ -6096,16 +6150,16 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "5d7ed2d7-0498-45a5-8969-679ad3abcad6"
       },
       "level_keys": [
         "CSDU4 Design Mode Video_2021"
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6122,16 +6176,16 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       },
       "level_keys": [
         "U4 Model Design 1_2021"
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6148,16 +6202,16 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       },
       "level_keys": [
         "U4 Model Design 2_2021"
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 14,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6174,16 +6228,16 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       },
       "level_keys": [
         "U4 Model Design 3_2021"
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6200,14 +6254,14 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       },
       "level_keys": [
         "U4 Model Design 4_2021"
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6226,14 +6280,14 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       },
       "level_keys": [
         "U4 Model Design 5_2021"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6252,14 +6306,14 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       },
       "level_keys": [
         "U4 Model Design 6_2021"
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
@@ -6278,22 +6332,22 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       },
       "level_keys": [
         "U4 Model Design 7_2021"
       ]
     },
     {
-      "chapter": 15,
-      "position": 9,
+      "chapter": 19,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Design a Screen for your App_2021"
         ],
-        "progression": "App Project: Screen Design"
+        "progression": "Design a Screen for your App"
       },
       "named_level": false,
       "bonus": false,
@@ -6301,20 +6355,20 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2021"
         ],
-        "lesson.key": "Digital Design",
+        "lesson.key": "Build a Digital Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b"
+        "activity_section.key": "0988f86b-260b-4279-a8c4-59b98cdbf5f1"
       },
       "level_keys": [
         "Design a Screen for your App_2021"
       ]
     },
     {
-      "chapter": 16,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": true,
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U4 - Design Mode Project_2021"
@@ -6327,17 +6381,17 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2021"
         ],
-        "lesson.key": "Digital Design",
+        "lesson.key": "Build a Digital Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b"
+        "activity_section.key": "cc78f5f7-002f-44ed-9f5f-2518a19953e7"
       },
       "level_keys": [
         "CSD U4 - Design Mode Project_2021"
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6353,17 +6407,17 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       },
       "level_keys": [
         "U4 Model Program 1_2021"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6379,17 +6433,17 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       },
       "level_keys": [
         "U4 Model Program 1.5_2021"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6405,17 +6459,17 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       },
       "level_keys": [
         "U4 Model Program 2_2021"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6431,17 +6485,17 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       },
       "level_keys": [
         "U4 Model Program 2.5_2021"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6457,17 +6511,17 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       },
       "level_keys": [
         "U4 Model Program 3_2021"
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6483,17 +6537,17 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       },
       "level_keys": [
         "U4 Model Program 4_2021"
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -6509,18 +6563,18 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       },
       "level_keys": [
         "U4 Model Program 5_2021"
       ]
     },
     {
-      "chapter": 24,
-      "position": 8,
+      "chapter": 28,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6538,15 +6592,15 @@
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212"
+        "activity_section.key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e"
       },
       "level_keys": [
         "CSDU4 Project Import_2021"
       ]
     },
     {
-      "chapter": 25,
-      "position": 9,
+      "chapter": 29,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -6564,39 +6618,40 @@
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212"
+        "activity_section.key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e"
       },
       "level_keys": [
         "CSDU4 Project Events_2021"
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSDU4 Project Bug Feature_2021"
-        ]
+          "CSDU4 Project Bug Feature_preview-2021"
+        ],
+        "progression": "Updating Your Prototype"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Project Bug Feature_2021"
+          "CSDU4 Project Bug Feature_preview-2021"
         ],
-        "lesson.key": "Bugs and Features",
+        "lesson.key": "Updating Your Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "e741ff13-6b0f-4b88-bdcc-0185993eaf91"
+        "activity_section.key": "98d47c66-d1b6-4d05-bada-bd58b317813b"
       },
       "level_keys": [
-        "CSDU4 Project Bug Feature_2021"
+        "CSDU4 Project Bug Feature_preview-2021"
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6615,14 +6670,14 @@
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "60f6d7d9-cd59-466e-a56c-a4312c29812f"
+        "activity_section.key": "cbd1e24c-3232-42ff-bd52-2725517f8697"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6638,7 +6693,7 @@
           "CSD User Centered Design Post-Project Test_2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
         "activity_section.key": "417a52a3-713c-4f76-bb1f-b119d24d0293"
       },
@@ -6647,7 +6702,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6672,7 +6727,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6707,67 +6762,115 @@
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021",
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575"
+        "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Example App Types_2021",
+        "level.key": "csd-apps for good-1",
         "script_level.level_keys": [
-          "Example App Types_2021"
+          "csd-apps for good-1"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Quiz App Demo_2021",
+        "level.key": "csd-apps for good-2",
         "script_level.level_keys": [
-          "CSDU4 Quiz App Demo_2021"
+          "csd-apps for good-2"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Decision App Demo_2021",
+        "level.key": "csd-apps for good-3",
         "script_level.level_keys": [
-          "CSDU4 Decision App Demo_2021"
+          "csd-apps for good-3"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "233defe7-9977-4539-8a42-7e146979db0e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 List App Demo_2021",
+        "level.key": "csd-explore ui-1",
         "script_level.level_keys": [
-          "CSDU4 List App Demo_2021"
+          "csd-explore ui-1"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Exploring UI Elements",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Crowdsource App Demo_2021",
+        "level.key": "csd-explore ui-2",
         "script_level.level_keys": [
-          "CSDU4 Crowdsource App Demo_2021"
+          "csd-explore ui-2"
         ],
-        "lesson.key": "Paper Prototypes",
+        "lesson.key": "Exploring UI Elements",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f40e6e67-338b-4084-b162-260aea98eb53"
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-explore ui-3",
+        "script_level.level_keys": [
+          "csd-explore ui-3"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-explore ui-4",
+        "script_level.level_keys": [
+          "csd-explore ui-4"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-explore ui-5",
+        "script_level.level_keys": [
+          "csd-explore ui-5"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-explore ui-6",
+        "script_level.level_keys": [
+          "csd-explore ui-6"
+        ],
+        "lesson.key": "Exploring UI Elements",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021",
+        "activity_section.key": "761b498b-6ec2-4956-bd8f-b23e497644a5"
       }
     },
     {
@@ -6779,7 +6882,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "5d7ed2d7-0498-45a5-8969-679ad3abcad6"
       }
     },
     {
@@ -6791,7 +6894,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       }
     },
     {
@@ -6803,7 +6906,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       }
     },
     {
@@ -6815,7 +6918,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       }
     },
     {
@@ -6827,7 +6930,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "c2cdafc0-8020-44f9-b76c-486536fc72e0"
+        "activity_section.key": "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8"
       }
     },
     {
@@ -6839,7 +6942,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       }
     },
     {
@@ -6851,7 +6954,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       }
     },
     {
@@ -6863,7 +6966,7 @@
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "f9300844-54d9-462e-8c91-e6d48d8b8785"
+        "activity_section.key": "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6"
       }
     },
     {
@@ -6872,10 +6975,10 @@
         "script_level.level_keys": [
           "Design a Screen for your App_2021"
         ],
-        "lesson.key": "Digital Design",
+        "lesson.key": "Build a Digital Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b"
+        "activity_section.key": "0988f86b-260b-4279-a8c4-59b98cdbf5f1"
       }
     },
     {
@@ -6884,10 +6987,10 @@
         "script_level.level_keys": [
           "CSD U4 - Design Mode Project_2021"
         ],
-        "lesson.key": "Digital Design",
+        "lesson.key": "Build a Digital Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "b69c41ba-48c0-41e2-86d9-91affd004f5b"
+        "activity_section.key": "cc78f5f7-002f-44ed-9f5f-2518a19953e7"
       }
     },
     {
@@ -6896,10 +6999,10 @@
         "script_level.level_keys": [
           "U4 Model Program 1_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       }
     },
     {
@@ -6908,10 +7011,10 @@
         "script_level.level_keys": [
           "U4 Model Program 1.5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       }
     },
     {
@@ -6920,10 +7023,10 @@
         "script_level.level_keys": [
           "U4 Model Program 2_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       }
     },
     {
@@ -6932,10 +7035,10 @@
         "script_level.level_keys": [
           "U4 Model Program 2.5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "7165d89d-fc5e-4e5f-8348-6db470c00639"
+        "activity_section.key": "ed8ac962-30bc-457d-aee3-6965176fd6e4"
       }
     },
     {
@@ -6944,10 +7047,10 @@
         "script_level.level_keys": [
           "U4 Model Program 3_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       }
     },
     {
@@ -6956,10 +7059,10 @@
         "script_level.level_keys": [
           "U4 Model Program 4_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       }
     },
     {
@@ -6968,10 +7071,10 @@
         "script_level.level_keys": [
           "U4 Model Program 5_2021"
         ],
-        "lesson.key": "Linking Screens",
+        "lesson.key": "Events In AppLab",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "632a936d-e43d-4328-b48e-779578389742"
+        "activity_section.key": "af502a23-0afa-4a37-b4e2-8ca110bd9ef6"
       }
     },
     {
@@ -6983,7 +7086,7 @@
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212"
+        "activity_section.key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e"
       }
     },
     {
@@ -6995,19 +7098,19 @@
         "lesson.key": "Linking Screens",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "35f7c415-8e4d-4019-8aa4-c64690424212"
+        "activity_section.key": "ab7b313f-01ee-47bc-a177-0bd27a77f88e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Project Bug Feature_2021",
+        "level.key": "CSDU4 Project Bug Feature_preview-2021",
         "script_level.level_keys": [
-          "CSDU4 Project Bug Feature_2021"
+          "CSDU4 Project Bug Feature_preview-2021"
         ],
-        "lesson.key": "Bugs and Features",
+        "lesson.key": "Updating Your Prototype",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "e741ff13-6b0f-4b88-bdcc-0185993eaf91"
+        "activity_section.key": "98d47c66-d1b6-4d05-bada-bd58b317813b"
       }
     },
     {
@@ -7019,7 +7122,7 @@
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
-        "activity_section.key": "60f6d7d9-cd59-466e-a56c-a4312c29812f"
+        "activity_section.key": "cbd1e24c-3232-42ff-bd52-2725517f8697"
       }
     },
     {
@@ -7029,7 +7132,7 @@
           "CSD User Centered Design Post-Project Test_2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
         "activity_section.key": "417a52a3-713c-4f76-bb1f-b119d24d0293"
       }
@@ -7061,6 +7164,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd4-2021/code",
+      "key": "all_code_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_3"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd4-2021/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd4-2021/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd4-2021/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "App Design Kickoff",
       "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
       "key": "app-design-kickoff-2019",
@@ -7075,7 +7222,7 @@
     },
     {
       "name": "App Presentation",
-      "url": "https://docs.google.com/document/d/1j3L47nIHsN3D4qCfuXgz3i9E-rAcf9flvnodiGMYSnQ/edit",
+      "url": "https://docs.google.com/document/d/1-2z9HtHPEMui9aavjRkYs4vlp5l0ujgXI8XW8KFCcf4/edit",
       "key": "app-presentation",
       "properties": {
         "type": "Rubric",
@@ -7111,6 +7258,30 @@
       }
     },
     {
+      "name": "App Design Kickoff",
+      "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
+      "key": "app_design_kickoff",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "name": "App Presentation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1d1Dq6t-90ZbseWX5JW7JrZLP3CSHzR1rXk8rzZKzFOo/edit",
+      "key": "app_presentation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "app_presentation_-_student_checklist"
+      }
+    },
+    {
       "name": "Bugs and Features",
       "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
       "key": "bugs-and-features-planning",
@@ -7121,6 +7292,18 @@
       },
       "seeding_key": {
         "resource.key": "bugs-and-features-planning"
+      }
+    },
+    {
+      "name": "Changing Screens",
+      "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
+      "key": "changing_screens",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_screens"
       }
     },
     {
@@ -7137,15 +7320,110 @@
       }
     },
     {
-      "name": "Determine the User",
-      "url": "https://docs.google.com/a/code.org/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/edit?usp=sharing",
-      "key": "determine-user-exemplar-2019",
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements_1"
+      }
+    },
+    {
+      "name": "Designing with Empathy",
+      "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
+      "key": "designing_with_empathy",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "designing_with_empathy"
+      }
+    },
+    {
+      "name": "Designing with Empathy",
+      "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
+      "key": "designing_with_empathy_1",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "determine-user-exemplar-2019"
+        "resource.key": "designing_with_empathy_1"
       }
     },
     {
@@ -7188,16 +7466,15 @@
       }
     },
     {
-      "name": "Determine the User",
-      "url": "https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/edit",
-      "key": "exploring-design",
+      "name": "Importing Screens",
+      "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
+      "key": "importing_screens",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "exploring-design"
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -7226,6 +7503,19 @@
       }
     },
     {
+      "name": "Intro to Design Mode",
+      "url": "https://youtu.be/tAtvWkYBUoU",
+      "key": "intro_to_design_mode",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/design.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
       "key": "market-research",
@@ -7236,6 +7526,18 @@
       },
       "seeding_key": {
         "resource.key": "market-research"
+      }
+    },
+    {
+      "name": "Market Research",
+      "url": "https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/edit",
+      "key": "market_research",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "market_research"
       }
     },
     {
@@ -7252,11 +7554,22 @@
       }
     },
     {
-      "name": "Paper Prototype 2021",
+      "name": "Multi-Screen Apps",
+      "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
+      "key": "multi-screen_apps",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "name": "Paper Prototype Project Guide",
       "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view",
       "key": "paper-prototype-2021",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -7305,7 +7618,7 @@
     },
     {
       "name": "Paper Prototypes",
-      "url": "https://docs.google.com/document/d/1-ncbYhgkXHXs4aRBxzJu9ue4r8CLZyGsIpFTIYBADt4/edit",
+      "url": "https://docs.google.com/document/d/1azVKaOq9wrtcbROSjrBr10xsuiBQA_rvODOO7RYbrbU/edit",
       "key": "paper-prototypes",
       "properties": {
         "type": "Rubric",
@@ -7314,6 +7627,18 @@
       },
       "seeding_key": {
         "resource.key": "paper-prototypes"
+      }
+    },
+    {
+      "name": "Paper Prototype - Student Checklist",
+      "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit",
+      "key": "paper_prototype_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "paper_prototype_-_student_checklist"
       }
     },
     {
@@ -7478,32 +7803,32 @@
       }
     },
     {
-      "name": "Sample Marked Rubric 1",
-      "url": "https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s",
-      "key": "sample_marked_rubric_1",
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1TK80IOPnC3Z3Oz5BnGu4JELZ9ewnOzWshu9dZH90iX8/view",
+      "key": "sample_marked_rubrics",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubric_1"
+        "resource.key": "sample_marked_rubrics"
       }
     },
     {
-      "name": "Sample Marked Rubric 2",
-      "url": "https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6",
-      "key": "sample_marked_rubric_2_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubric_2_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1jpcg90ImVQKQoWMCsHQwFcnNCFwbx_kTxxVwuYjR3bQ/edit",
       "key": "sample_marked_rubrics_1_1",
       "properties": {
         "type": "Exemplar",
@@ -7511,18 +7836,6 @@
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubrics_1_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A",
-      "key": "sample_marked_rubrics_2_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_1"
       }
     },
     {
@@ -7738,19 +8051,19 @@
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "resource.key": "determine-user-exemplar-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analysis of Design",
-        "resource.key": "exploring-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analysis of Design",
         "resource.key": "pspe-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "resource.key": "designing_with_empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "resource.key": "designing_with_empathy_1"
       }
     },
     {
@@ -7954,13 +8267,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubric_1"
+        "resource.key": "sample_marked_rubrics"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubric_2_1"
+        "resource.key": "paper_prototype_-_student_checklist"
       }
     },
     {
@@ -7983,6 +8296,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "unit-4-the-design-process"
       }
@@ -7991,6 +8310,12 @@
       "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "market-research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research"
       }
     },
     {
@@ -8021,6 +8346,18 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "resource.key": "phone-paper-prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode_elements"
       }
     },
     {
@@ -8073,6 +8410,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_elements_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
         "resource.key": "unit-4-the-design-process"
       }
@@ -8093,6 +8448,30 @@
       "seeding_key": {
         "lesson.key": "Linking Screens",
         "resource.key": "unit-4-the-design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "changing_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -8182,13 +8561,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "sample_marked_rubrics_2_1"
+        "resource.key": "peer_review_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "peer_review_2"
+        "resource.key": "app_presentation_-_student_checklist"
       }
     }
   ],
@@ -8196,6 +8575,48 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_3",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
         "script.name": "csd4-2021"
       }
     }
@@ -8263,6 +8684,26 @@
       "seeding_key": {
         "vocabulary.key": "prototype"
       }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "feature",
+      "word": "Feature",
+      "definition": "Part of a program that adds functionality for the user",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -8300,6 +8741,18 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "vocabulary.key": "prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "vocabulary.key": "feature"
       }
     }
   ],

@@ -386,13 +386,13 @@ it:
             'Unplugged: Collision Detection and the Distance Formula':
               name: 'Scollegato: Rilevamento Collisioni e Teorema di Pitagora'
             'Unplugged: Conditionals and Piecewise Functions':
-              name: Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti
+              name: Tradizionale – Istruzioni Condizionali e Funzioni a Tratti
             'Unplugged: Contracts':
               name: 'Scollegato: Contratti, Dominio e Portata'
             'Unplugged: The Design Recipe':
-              name: Tradizionale &ndash; La Ricetta della Progettazione
+              name: Tradizionale – La Ricetta della Progettazione
             'Unplugged: Video Games and Coordinate Planes':
-              name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
+              name: Tradizionale – Videogiochi e Piani Cartesiani
           student_description: Impara la Programmazione Funzionale mediante l'Algebra
         infinity:
           title: Disney Infinity
@@ -1207,12 +1207,6 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvenuto!
             Wrap-up:
@@ -1282,12 +1276,6 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvenuto!
             Wrap-up:
@@ -1299,12 +1287,6 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvenuto!
             Wrap-up:
@@ -1662,9 +1644,9 @@ it:
             'Play Lab: Defining Functions':
               name: 'Laboratorio: Definizione di Funzioni'
             'Unplugged: Contracts':
-              name: Tradizionale &ndash; Contratti
+              name: Tradizionale – Contratti
             'Unplugged: The Design Recipe':
-              name: Tradizionale &ndash; La Ricetta della Progettazione
+              name: Tradizionale – La Ricetta della Progettazione
           student_description: Impara la Programmazione Funzionale mediante l'Algebra
         AlgebraB:
           title: Informatica in Algebra
@@ -1686,14 +1668,13 @@ it:
             'Play Lab: Defining Variables (Big Game)':
               name: 'Laboratorio: Definizione di Variabili (Big Game)'
             'Unplugged: Booleans':
-              name: Tradizionale &ndash; Valori Booleani
+              name: Tradizionale – Valori Booleani
             'Unplugged: Collision Detection and the Distance Formula':
-              name: Tradizionale &ndash; Rilevamento delle Collisioni e Formula per
-                la Distanza
+              name: Tradizionale – Rilevamento delle Collisioni e Formula per la Distanza
             'Unplugged: Conditionals and Piecewise Functions':
-              name: Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti
+              name: Tradizionale – Istruzioni Condizionali e Funzioni a Tratti
             'Unplugged: Video Games and Coordinate Planes':
-              name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
+              name: Tradizionale – Videogiochi e Piani Cartesiani
           student_description: Impara la Programmazione Funzionale mediante l'Algebra
         algebraPD1:
           title: Informatica nell'algebra Parte 1
@@ -2101,12 +2082,6 @@ it:
               name: Composizione di Canzoni con Parametri
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Benvenuto!
             Wrap-up:
@@ -8022,6 +7997,8 @@ it:
               display_name: Funzioni
             csp_project:
               display_name: Progetto
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -8032,12 +8009,16 @@ it:
               display_name: Traversali
             csp_project:
               display_name: Progetto
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametri e Valori di Ritorno
             csp_libraries:
               display_name: Librerie
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
         csd2-2020:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -8988,6 +8969,8 @@ it:
               display_name: Princìpi dell'Informatica - Unità 1
             cspSurvey:
               display_name: Sondaggio
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
           lessons:
             Binary Numbers:
               name: Numeri Binari
@@ -8995,15 +8978,32 @@ it:
           lesson_groups:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
           lessons:
             The Need for Addressing:
               name: La Necessità dell'Indirizzamento
             Routers and Redundancy:
               name: Router e Ridondanza
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
           lessons:
             Debugging:
               name: Correzione errori (debugging)
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Sondaggio Post-corso
         csp3-virtual:
           description_short: Programmazione
           lesson_groups:
@@ -9219,6 +9219,12 @@ it:
               name: Corso B
             CS Discoveries:
               name: Alla scoperta dell'informatica
+            Course E:
+              name: Corso E
+            Course F:
+              name: Corso F
+            csf:
+              name: Corsi base
         virustest:
           title: Simulare un'epidemia
           description_short: Usa Sprite Lab per creare una simulazione di un'epidemia
@@ -9231,6 +9237,36 @@ it:
               name: Lezione 6
             temp:
               name: Lezione 20
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson9:
+              name: Lezione 9
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson13:
+              name: Lezione 13
+            lesson14:
+              name: Lezione 14
+            lesson15:
+              name: Lezione 15
+            lesson16:
+              name: Lezione 16
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9263,6 +9299,8 @@ it:
               display_name: Variabili
             outbreak:
               display_name: Simulazione dell'epidemia
+            debugging:
+              display_name: Correzione errori (debugging)
         csd1-2021:
           lessons:
             The Problem Solving Process:
@@ -9428,6 +9466,10 @@ it:
               display_name: Parametri e Valori di Ritorno
             csp_libraries:
               display_name: Librerie
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Cos'è l'Apprendimento Automatico (Machine Learning)
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -10029,10 +10071,10 @@ it:
               name: Divertiti usando i cicli con contatore
               description_student: Ti divertirai moltissimo imparando i cicli con
                 contatore!
-              description_teacher: 'Sappiamo che i cicli ci permettono di ripetere
+              description_teacher: Sappiamo che i cicli ci permettono di ripetere
                 più e più volte le stesse azioni, ma ora impareremo come usare i cicli
                 con strutture aggiuntive. Queste nuove strutture permetteranno agli
-                studenti di creare un codice più potente e dinamico. '
+                studenti di creare un codice più potente e dinamico.
             For Loops in Bee:
               key: Cicli con contatore con l'ape
               name: Cicli con contatore con l'ape
@@ -10109,7 +10151,7 @@ it:
               name: Programmare con Angry Bird
             Debugging with Scrat:
               key: Debugging con Scrat
-              name: Debugging con Scrat
+              name: Correzione di errori nel labirinto
             Collecting Treasure with Laurel:
               key: Programmare con la collezionista
               name: Programmare con la collezionista
@@ -10225,6 +10267,8 @@ it:
               name: Progetto di fine corso
             lesson-1:
               name: Ballando col codice
+            lesson-3:
+              name: Personaggi in azione
           lesson_groups:
             csf_warmup:
               display_name: Riscaldamento
@@ -10245,7 +10289,7 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
             lessonGroup-9:
-              display_name: Riscaldamento
+              display_name: Eventi
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -10444,6 +10488,12 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-4:
+              display_name: Test
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Contenuto
         k5-onlinepd-2021:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -10519,3 +10569,31 @@ it:
           lesson_groups:
             Lesson 1:
               display_name: Lezione 1
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Sondaggio
+        aiml-2021:
+          lessons:
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson15:
+              name: Lezione 15

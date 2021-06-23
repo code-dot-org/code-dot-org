@@ -4,7 +4,12 @@ import {
   levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {
+  BubbleSize,
+  getBubbleUrl
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
+import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -44,11 +49,7 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   buildBubbleUrl(level) {
-    if (!level.url) {
-      return null;
-    }
-    const {studentId, sectionId} = this.props;
-    return `${level.url}?section_id=${sectionId}&user_id=${studentId}`;
+    return getBubbleUrl(level.url, this.props.studentId, this.props.sectionId);
   }
 
   renderSublevels(level) {
@@ -64,7 +65,7 @@ export default class ProgressTableDetailCell extends React.Component {
             >
               <ProgressTableLevelBubble
                 levelStatus={subStatus}
-                bubbleSize={progressStyles.BubbleSize.letter}
+                bubbleSize={BubbleSize.letter}
                 isBonus={sublevel.bonus}
                 isConcept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}
@@ -102,11 +103,11 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   render() {
+    if (!lessonHasLevels({levels: this.props.levels})) {
+      return null;
+    }
     return (
-      <div
-        style={{...styles.container, ...progressStyles.cellContent}}
-        className="uitest-detail-cell"
-      >
+      <div style={styles.container} className="uitest-detail-cell cell-content">
         <div style={styles.background} />
         {this.props.levels.map(level => this.renderBubble(level))}
       </div>

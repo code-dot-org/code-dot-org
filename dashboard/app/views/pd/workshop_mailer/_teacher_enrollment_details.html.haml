@@ -10,10 +10,10 @@
 
 = render partial: 'workshop_logistics'
 
-- unless @workshop.virtual?
+- unless @workshop.virtual? || !@is_reminder
   = render partial: 'supply_list'
 
-- if @workshop.virtual?
+- if @workshop.virtual? && (@workshop.course == Pd::Workshop::COURSE_CSD || @workshop.course == Pd::Workshop::COURSE_CSP)
   = render partial: 'pre_order_materials'
 
 - if @workshop.virtual?
@@ -23,7 +23,7 @@
 
 = render partial: 'workshop_details'
 
-- unless @workshop.virtual?
+- unless @workshop.virtual? || !@is_reminder
   = render partial: 'covid_19'
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
@@ -68,6 +68,7 @@
 %p
   P.S. Connect with other computer science teachers on Twitter
   = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank", rel: "noopener noreferrer"
-  for inspiration and great tips on bringing computer science to every school. We encourage you and other workshop attendees to post photos from the workshop to social media, and help
+  for inspiration and great tips on bringing computer science to every school. We encourage you and other workshop attendees to post about your workshop experience on social media, and help
   = link_to 'spread awareness about computer science.', 'http://bit.ly/38Ivp20', target: "_blank", rel: "noopener noreferrer"
-  However, if you don't want your photo taken, just make sure the facilitator knows before the workshop begins.
+  - unless @workshop.virtual?
+    However, if you don't want your photo taken, just make sure the facilitator knows before the workshop begins.

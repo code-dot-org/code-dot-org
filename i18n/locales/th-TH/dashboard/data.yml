@@ -279,6 +279,7 @@ th:
         mc_2018_closing: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องขอแสดงความยินดี'
         hoc_dance_warmup: Dance Party - แนะนำ
         hoc_dance_congrats: Dance Party - ปาร์ตี้กัน!
+        lesson_planning: การวางแผนการเรียนการสอน
         csd_pair_programming: การจับคู่เพื่อเขียนโปรแกรม
         csd_applab_parameters: ฟังก์ชันกับพารามิเตอร์
         csd_debugging: การแก้ไขจุดบกพร่อง
@@ -287,6 +288,8 @@ th:
         hoc_dance_events_2019: Dance Party 2019 - กิจกรรม
         hoc_dance_measures_2019: Dance Party 2019 - ประเมิน
         hoc_dance_properties_2019: Dance Party 2019 - คุณสมบัติ
+        playlab_2021: เพลย์แลปเบื้องต้น
+        playlab_2021_reader: เพลย์แลปเบื้องต้น
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

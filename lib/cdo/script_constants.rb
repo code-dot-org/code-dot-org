@@ -136,6 +136,7 @@ module ScriptConstants
       CSD4_2021_NAME = 'csd4-2021'.freeze,
       CSD5_2021_NAME = 'csd5-2021'.freeze,
       CSD6_2021_NAME = 'csd6-2021'.freeze,
+      CSD7_2021_NAME = 'csd7-2021'.freeze,
     ],
     csd_2020: [
       CSD1_2020_NAME = 'csd1-2020'.freeze,
@@ -271,7 +272,8 @@ module ScriptConstants
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -311,6 +313,10 @@ module ScriptConstants
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
 
+    # AIML
+    AIML = "aiml".freeze,
+
+    # Testing
     TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
@@ -433,6 +439,7 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:csf_2018, script) ||
       ScriptConstants.script_in_category?(:csf_2019, script) ||
       ScriptConstants.script_in_category?(:csf_2020, script) ||
+      ScriptConstants.script_in_category?(:csf_2021, script) ||
       ScriptConstants.script_in_category?(:csd, script) ||
       ScriptConstants.script_in_category?(:csd_2018, script) ||
       ScriptConstants.script_in_category?(:csd_2019, script) ||

@@ -1221,8 +1221,6 @@ zh-TW:
               name: 單元 1：第 15-16 日 - 電腦程式和遵循方向
             Unit 1, Day 17-19 What Is Intelligence?:
               name: 單元 1：第 17-19 日 - 什麼是智慧
-            0: 單元 1：第 1-2 日 - 什麼是電腦？
-            1: 單元 1：第 1-2 日 - 什麼是電腦？
             Unit 1, Days 3-4 Buying a Computer:
               name: 單元 1：第 3-4 日 - 買一台電腦
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1347,8 +1345,6 @@ zh-TW:
               name: 單元 1：第 15-16 日 - 電腦程式和遵循方向
             Unit 1, Day 17-19 What Is Intelligence?:
               name: 單元 1：第 17-19 日 - 什麼是智慧
-            0: 單元 1：第 1-2 日 - 什麼是電腦？
-            1: 單元 1：第 1-2 日 - 什麼是電腦？
             Unit 1, Days 3-4 Buying a Computer:
               name: 單元 1：第 3-4 日 - 買一台電腦
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1374,8 +1370,6 @@ zh-TW:
               name: 單元 1：第 15-16 日 - 電腦程式和遵循方向
             Unit 1, Day 17-19 What Is Intelligence?:
               name: 單元 1：第 17-19 日 - 什麼是智慧
-            0: 單元 1：第 1-2 日 - 什麼是電腦？
-            1: 單元 1：第 1-2 日 - 什麼是電腦？
             Unit 1, Days 3-4 Buying a Computer:
               name: 單元 1：第 3-4 日 - 買一台電腦
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2988,8 +2982,6 @@ zh-TW:
               name: 單元 1：第 15-16 日 - 電腦程式和遵循方向
             Unit 1, Day 17-19 What Is Intelligence?:
               name: 單元 1：第 17-19 日 - 什麼是智慧
-            0: 單元 1：第 1-2 日 - 什麼是電腦？
-            1: 單元 1：第 1-2 日 - 什麼是電腦？
             Unit 1, Days 3-4 Buying a Computer:
               name: 單元 1：第 3-4 日 - 買一台電腦
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3428,7 +3420,7 @@ zh-TW:
         csd1-2017:
           title: CSD 單元 1 - 問題解決 ('17-'18)
           description_short: 瞭解人類與何與電腦一起解決問題。
-          description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
+          description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
           lesson_groups:
             cspSurvey:
               display_name: 問卷
@@ -3502,7 +3494,7 @@ zh-TW:
               name: 電腦科學探索課前問卷調查
             CS Discoveries Rapid Survey:
               name: 電腦科學探索快速問卷調查
-          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
+          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         csp-online-test:
           lesson_groups:
             required:
@@ -3699,7 +3691,7 @@ zh-TW:
               description_student: 本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。班級學生會學習 CSS 規則集的基本語法，然後瞭解會影響
                 HTML 文字元素的屬性。最後，所有學生都會把文字樣式套用至自己的個人網站。
               description_teacher: "本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。學生會學習 CSS 規則集的基本語法，然後瞭解會影響
-                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r\n"
+                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r"
             Styling Elements with CSS:
               name: 透過 CSS 修改元素樣式
               description_student: 本課堂會繼續介紹 CSS 樣式屬性，這次會更集中說明文字以外的元素。班級學生首先會研究並修改「世界各地的甜品」頁面上的新
@@ -3728,23 +3720,23 @@ zh-TW:
               description_teacher: 在本課堂中，學生會繼續使用 HTML 構築網頁上的文字，這次則會製作標題（header）。學生會學習不同的標題元素在預設下如何顯示，並練習使用這些元素建立頁面與區域標題。然後，學生會開始決定如何在自己的網頁中組織內容。在最後一個關卡中，學生會開始製作專案，並會在整個單元中繼續製作。
             Lists:
               name: 清單
-              description_student: 本課堂介紹有序與無序清單，以及相關的 &lt;ul&gt;、&lt;ol&gt; 與 &lt;li&gt;
-                HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的 HTML 頁面，頁面內包含這些新標籤。
-              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 &lt;ul&gt;、&lt;ol&gt;
-                與 &lt;li&gt; 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
+              description_student: 本課堂介紹有序與無序清單，以及相關的 <ul>、<ol> 與 <li> HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的
+                HTML 頁面，頁面內包含這些新標籤。
+              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 <ul>、<ol>
+                與 <li> 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
             Intellectual Property and Images:
               name: 知慧財產權與圖像
               description_student: 本課堂會說明怎樣在網站內，使用其他人製作的媒體（例如圖像、影片或音樂），同時尊重相關媒體創作者的權利。學習創用
                 CC（Creative Commons）授權後，班級同學便會學習怎樣把圖像加入網頁上，以及在加入圖像時如何給予適當的姓名標示。
               description_teacher: "班級首先會討論自己的個人意見，說明其他人應怎樣獲得自己的同意使用自己的作品，然後探索著作權（Copyright）之目的，以及其對創意內容創作者和使用者的作用。之後，學生便會開始一項活動，瞭解不同的
                 Creative Commons 授權，做為難以處理著作權問題的解決方案。\r\n\r\n最後，學生在一致瞭解不同 Creative
-                Commons 授權的限制後，便會學習怎樣使用 &lt;img&gt; 標籤，把影像加入自己的網頁中。"
+                Commons 授權的限制後，便會學習怎樣使用 <img> 標籤，把影像加入自己的網頁中。"
             Project - Multi-Page Websites:
               name: 專案 - 多頁式網站
               description_student: 本課堂會說明超連結（hyperlink），這項功能可讓網頁開發人員將不同的頁面連結至一個網站。班級同學會把所有先前建立的頁面連結至一個專案，並為每頁建立導覽列，然後再把整個網站發佈到
                 Web 上。
               description_teacher: "學習怎樣互相連結網頁後，學生最終將能夠發佈一直以來製作的網站。在本課堂中，學生會把所有先前建立的頁面連結至一個專案、建立新頁面，並為不同頁面建立導覽列，然後再把整個網站發佈到
-                Web 上。\r\n\r\n"
+                Web 上。\r\n\r"
             RGB Colors and Classes:
               name: RGB 色彩與類別
               description_student: 本課堂會說明類別（Classe）與自訂色彩。班級同學首先會學習如何使用 RGB（紅、綠、藍）值指定自訂色彩，然後將這些色彩套用於使用
@@ -3754,9 +3746,7 @@ zh-TW:
             Project - Personal Portfolio Website:
               name: 專案 - 個人作品網站
               description_student: 在單元的最後幾天，班級裡的同學會為自己的網站做最終修改、與同伴每兩人一組取得回饋意見、檢閱評估指標，並將最終修改放在網站上。單元結束時，所有學生都會分享自己的專案，及分享開發的方式。
-              description_teacher: '學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
-
-'
+              description_teacher: 學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
             Headings:
               name: 標題
               description_student: 本課堂會繼續介紹 HTML 標籤，這次會介紹 header。班級會練習使用 header 標籤建立頁面與區域標題，並學習不同的
@@ -3817,7 +3807,7 @@ zh-TW:
             Understanding Your User:
               name: 瞭解您的使用者
               description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
-              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r"
             Discovering Users:
               name: 發現用戶
             User-Centered Design Micro Activity:
@@ -3849,7 +3839,7 @@ zh-TW:
               description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
                 App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
                 App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
-                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r"
             Prototype Testing:
               name: 原型測試
               description_student: 在本課堂中，團隊會與其他同學測試自己的紙上原型。1 位學生扮演電腦、1 位學生說出內容，餘下的學生則會觀察。此時團隊會立即就自己的應用程式獲得回饋意見，為下一個版本的應用程式原型提供實用資訊。
@@ -4416,7 +4406,7 @@ zh-TW:
         csp5-support:
           title: 單元 5 線上專業學習課程
           description_short: 教師專業學習課程 - CSP 單元 5
-          description: '即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。 '
+          description: 即將推出：在 2 月中旬，這個頁面會辦理 CSP 單元 5 專業訓練課程。
           lesson_groups:
             required:
               display_name: 概覽
@@ -5432,7 +5422,7 @@ zh-TW:
                 1 到 2 個課節完成。若你有更多時間，可隨意在彈珠跑跑活動中描繪出建立與修改階段。"
             'Real-life Algorithms: Plant a Seed':
               name: 生活中的演算法 - 植物種植
-              description_teacher: "在本課中，學生將通過實際種植，將演算法的概念與現實生活的活動關聯。這裡的目標是開始培養技能，將現實世界的情況轉化為線上場景，或是相反。\r\n"
+              description_teacher: "在本課中，學生將通過實際種植，將演算法的概念與現實生活的活動關聯。這裡的目標是開始培養技能，將現實世界的情況轉化為線上場景，或是相反。\r"
             Learn to Drag and Drop:
               name: 用拖曳的方式循序寫出程式
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
@@ -5582,9 +5572,7 @@ zh-TW:
             Conditionals with Cards:
               name: If/Else（如果/否則）：使用卡牌學習條件式（Conditional）
               description_student: 是時候玩一款遊戲，讓你僅在某些條件下賺到點數！
-              description_teacher: '本課堂會展示條件式（conditional）可怎樣用來量身制定程式處理特定資訊。我們設計程式時，並不總是能得到全部需要的資訊。有時候在不同的情況下，你需要做一些不同的事情，即便你不知道在執行程式時哪種情況為真。這時候，條件式就派得上用場了。條件式可讓電腦在每次執行你的程式碼時，依據真（true）的資訊做出決定。
-
-'
+              description_teacher: 本課堂會展示條件式（conditional）可怎樣用來量身制定程式處理特定資訊。我們設計程式時，並不總是能得到全部需要的資訊。有時候在不同的情況下，你需要做一些不同的事情，即便你不知道在執行程式時哪種情況為真。這時候，條件式就派得上用場了。條件式可讓電腦在每次執行你的程式碼時，依據真（true）的資訊做出決定。
             Conditionals in Bee:
               name: 在蜜蜂遊戲中的條件式（Conditional）
               description_student: 你已明白甚麼是條件式（conditional）。現在是時候為蜜蜂設計程式，讓蜜蜂在採集蜂蜜與花蜜時使用。
@@ -6399,8 +6387,6 @@ zh-TW:
               name: 其它
             Thanks:
               name: 謝謝
-            " ":
-              name: " "
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -7008,7 +6994,7 @@ zh-TW:
         csp3-staging:
           title: CSP 3 提議變更臨時集結地
           description_short: 10 月 csp3 變更的臨時集結地
-          description: "這是 /s/csp3 中的上線關卡複本，已加入全新與修訂版本的舞台。請勿編輯上線關卡。\r\n"
+          description: "這是 /s/csp3 中的上線關卡複本，已加入全新與修訂版本的舞台。請勿編輯上線關卡。\r"
           lesson_groups:
             csp3_1:
               display_name: 第 1 章：程式語言及演算法
@@ -7037,7 +7023,7 @@ zh-TW:
               name: PT 練習 - 設計數位場景
             Unit 3 Chapter 1 Assessment:
               name: 單元 3 第 1 章 評估
-          student_description: "這是 /s/csp3 中的上線關卡複本，已加入全新與修訂版本的舞台。請勿編輯上線關卡。\r\n"
+          student_description: "這是 /s/csp3 中的上線關卡複本，已加入全新與修訂版本的舞台。請勿編輯上線關卡。\r"
         pwc:
           title: PwC「存取你的潛能」課程
           description: PwC 相信，所有學生都有潛質成為科技主導勞動力量的明日領袖。「存取你的潛能」是我們的承諾，協助拉近機會缺口，方法是讓年青人（尤其是弱勢社群人士）獲得所需的財務、科技與事業選擇技能，以改變他們的生活軌跡。做為我們承諾的一部分，我們很高興推出「存取你的潛能」國中科技與事業課程。
@@ -7674,10 +7660,10 @@ zh-TW:
               description_teacher: "學生最近已花了一些時間，思考有哪些實際內容會放在個人網站上。現在本課堂會暫停製作橫跨整個單元的專案（發佈個人網站），以協助學生說明自己會選擇以數位形式分享哪些個人資訊，以及向哪些人分享。課堂也會強調，他們選擇以數位形式分享的很多資訊，很大程度在發佈後已無法受自己控制。\r\n\r\n學生首先會各自找出合適的受眾，意指學生向這些受眾分享定特的個人資訊時會感到自在。然後，他們會瀏覽一些社交媒體頁面，以判斷大眾會分享關於自己或別人的哪些類型資訊。最後學生會反思一下，認為在線上張貼資訊時應遵守哪些指引。\r\n\r\n本課堂的最終要點不是要嚇怕學生，而是以實驗的性質讓學生準確瞭解，他們在線上發佈資訊後無法控制資訊的程度。"
             Lists:
               name: 清單
-              description_student: 本課堂介紹有序與無序清單，以及相關的 &lt;ul&gt;、&lt;ol&gt; 與 &lt;li&gt;
-                HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的 HTML 頁面，頁面內包含這些新標籤。
-              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 &lt;ul&gt;、&lt;ol&gt;
-                與 &lt;li&gt; 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
+              description_student: 本課堂介紹有序與無序清單，以及相關的 <ul>、<ol> 與 <li> HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的
+                HTML 頁面，頁面內包含這些新標籤。
+              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 <ul>、<ol>
+                與 <li> 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
             Intellectual Property and Images:
               name: 知慧財產權與圖像
               description_student: 本課堂會說明怎樣在網站內，使用其他人製作的媒體（例如圖像、影片或音樂），同時尊重相關媒體創作者的權利。學習創用
@@ -7685,7 +7671,7 @@ zh-TW:
               description_teacher: |-
                 班級首先會討論自己的個人意見，說明其他人應怎樣獲得自己的同意使用自己的作品，然後探索著作權（Copyright）之目的，以及其對創意內容創作者和使用者的作用。之後，學生便會開始一項活動，瞭解不同的 Creative Commons 授權，做為難以處理著作權問題的解決方案。
 
-                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 &lt;img&gt; 標籤，把影像加入自己的網頁中。
+                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 <img> 標籤，把影像加入自己的網頁中。
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
               description_student: 本課堂教導在設計 HTML 網頁時出現的常見問題。班級學生會在一系列越來越複雜的網頁（在 Code
@@ -7696,13 +7682,13 @@ zh-TW:
               description_student: 本課堂會說明超連結（hyperlink），這項功能可讓網頁開發人員將不同的頁面連結至一個網站。班級同學會把所有先前建立的頁面連結至一個專案，並為每頁建立導覽列，然後再把整個網站發佈到
                 Web 上。
               description_teacher: "學習怎樣互相連結網頁後，學生最終將能夠發佈一直以來製作的網站。在本課堂中，學生會把所有先前建立的頁面連結至一個專案、建立新頁面，並為不同頁面建立導覽列，然後再把整個網站發佈到
-                Web 上。\r\n\r\n"
+                Web 上。\r\n\r"
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
               description_student: 本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。班級學生會學習 CSS 規則集的基本語法，然後瞭解會影響
                 HTML 文字元素的屬性。最後，所有學生都會把文字樣式套用至自己的個人網站。
               description_teacher: "本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。學生會學習 CSS 規則集的基本語法，然後瞭解會影響
-                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r\n"
+                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r"
             Styling Elements with CSS:
               name: 透過 CSS 修改元素樣式
               description_student: 本課堂會繼續介紹 CSS 樣式屬性，這次會更集中說明文字以外的元素。班級學生首先會研究並修改「世界各地的甜品」頁面上的新
@@ -7722,9 +7708,7 @@ zh-TW:
             Project - Personal Portfolio Website:
               name: 專案 - 個人作品網站
               description_student: 在單元的最後幾天，班級裡的同學會為自己的網站做最終修改、與同伴每兩人一組取得回饋意見、檢閱評估指標，並將最終修改放在網站上。單元結束時，所有學生都會分享自己的專案，及分享開發的方式。
-              description_teacher: '學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
-
-'
+              description_teacher: 學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
             CS Discoveries Post-Course Survey:
               name: 電腦科學探索課後問卷調查
           student_description: 在單元 2 中，你會學習如何在自己的網頁中製作並分享內容。決定你想與全世界分享哪些內容後，便會學習怎樣使用
@@ -7745,7 +7729,7 @@ zh-TW:
                 1 到 2 個課節完成。若你有更多時間，可隨意在彈珠跑跑活動中描繪出建立與修改階段。"
             'Real-life Algorithms: Plant a Seed':
               name: 植物種植
-              description_teacher: "在本課中，學生將通過實際種植，將演算法的概念與現實生活的活動關聯。這裡的目標是開始培養技能，將現實世界的情況轉化為線上場景，或是相反。\r\n"
+              description_teacher: "在本課中，學生將通過實際種植，將演算法的概念與現實生活的活動關聯。這裡的目標是開始培養技能，將現實世界的情況轉化為線上場景，或是相反。\r"
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
@@ -8591,7 +8575,7 @@ zh-TW:
           student_description: 本單元本旨在探索各項技術挑戰與問題，原因是我們有需要在電腦中表示數位資訊，並把資訊在人和運算裝置間來回傳輸。然後，本單元會探索網際網路的結構與設計，以及相關設定決定的意義所在。
         csd1-2018:
           title: CSD 單元 1 - 問題解決 ('18-'19)
-          description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
+          description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
           description_short: 瞭解人類與何與電腦一起解決問題。
           lesson_groups:
             cspSurvey:
@@ -8655,7 +8639,7 @@ zh-TW:
               description_student: 本課堂會講解電腦在輸入與輸出方面的內容，並會以與學生相關的熟悉方式：應用程式來說明。班級學生會評估一些網頁應用程式，從而分析這些程式設計用於解決的特定問題、程式需要處理的輸入內容，以及程式會向使用者提供的輸出內容。課堂結束時，學生會觀察這些應用程式，教師也會帶領討論應用程式對社會的影響。
               description_teacher: 本課堂會檢閱電腦在輸入、輸出、儲存與處理方面內容，並會以與學生相關的熟悉方式：應用程式來說明。學生會分為
                 2 人一組，評估一些智慧手機應用程式，從而分析這些程式設計用於解決的特定問題、程式需要處理的輸入內容、程式把輸入處理為所需輸出的處理程序，以及程式希望儲存留待日後使用的資訊。班級課堂結束時，學生會展開討論，把課堂和學生更熟悉的應用程式互相聯繫。
-          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r\n"
+          student_description: "\r\n單元 1 是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
         csd4-2018:
           title: CSD 單元 4 - 設計流程 ('18-'19)
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
@@ -8676,7 +8660,7 @@ zh-TW:
             Understanding Your User:
               name: 瞭解您的使用者
               description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
-              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r"
             User-Centered Design Micro Activity:
               name: 以使用者為中心的微型活動
               description_student: 班級學生會分為各小組，然後使用設計流程獲得智慧衣著的構思。此活動是單元中提供的第一個練習機會，首先會集合思考，然後確定使用者，最後提出設計建議。本單元提供不同機會，讓學生練習設計解決方案，以解決其他人的需要。
@@ -8715,7 +8699,7 @@ zh-TW:
               description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
                 App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
                 App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
-                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r"
             Prototype Testing:
               name: 原型測試
               description_student: 在本課堂中，團隊會與其他同學測試自己的紙上原型。1 位學生扮演電腦、1 位學生說出內容，餘下的學生則會觀察。此時團隊會立即就自己的應用程式獲得回饋意見，為下一個版本的應用程式原型提供實用資訊。
@@ -10247,7 +10231,7 @@ zh-TW:
             About Me:
               name: 關於我
               description_student: 學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。
-              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r\n"
+              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r"
             Aquatic Conditionals in Minecraft:
               name: Minecraft 水上巡航的條件式
             Access Ability:
@@ -10572,7 +10556,7 @@ zh-TW:
             Loops in Harvester:
               name: 使用迴圈（Loop）收割農作物
               description_student: 我們來使用迴圈（loop），幫助收割者收割蔬菜！
-              description_teacher: "在前一個舞台中，學生曾經使用（loop）畫出優美的圖畫。現在，他們會開始讓新的動作迴圈，協助收割者收集許多大簇蔬菜！\r\n"
+              description_teacher: "在前一個舞台中，學生曾經使用（loop）畫出優美的圖畫。現在，他們會開始讓新的動作迴圈，協助收割者收集許多大簇蔬菜！\r"
             'Events: The Big Event':
               name: 大事件
               description_student: 玩一款有趣的遊戲，學習使用事件。
@@ -10584,7 +10568,7 @@ zh-TW:
             Screen Out the Mean:
               name: 防止壞蛋騷擾
               description_student: 在本課堂中，你會學習：假如在線上有些事情讓你感到憤怒、傷心或害怕，你應該怎麼辦。
-              description_teacher: "本課堂會協助孩童瞭解，若線上某些事情令他們憤怒、傷心或害怕，就必須告訴可以信賴的成人。 \r\n\r\n學生會明白在上線時，其他人有時候可能會做出霸凌者的行為。他們會探索甚麼是網路霸凌，以及在遇到這些情況時可以做些甚麼。觀看一個卑劣的線上行為情景後，學生會討論甚麼是網路霸凌、這種行為會讓別人有甚麼感覺，以及應該怎樣應對。最後，學生會運用自己的知識，在日誌上製作簡單的網路霸凌提示表。\r\n"
+              description_teacher: "本課堂會協助孩童瞭解，若線上某些事情令他們憤怒、傷心或害怕，就必須告訴可以信賴的成人。 \r\n\r\n學生會明白在上線時，其他人有時候可能會做出霸凌者的行為。他們會探索甚麼是網路霸凌，以及在遇到這些情況時可以做些甚麼。觀看一個卑劣的線上行為情景後，學生會討論甚麼是網路霸凌、這種行為會讓別人有甚麼感覺，以及應該怎樣應對。最後，學生會運用自己的知識，在日誌上製作簡單的網路霸凌提示表。\r"
             Events in Play Lab:
               name: 使用事件（Event）玩追逐遊戲
               description_student: 是時候發揮創意，在 Play Lab 中製作遊戲！
@@ -10618,7 +10602,7 @@ zh-TW:
             Powerful Passwords:
               name: 強大的密碼
               description_student: 在本課堂中，你會瞭解密碼可怎樣保護你的資訊，以及怎樣才算是好的密碼。
-              description_teacher: "學生會瞭解大家為甚麼要使用密碼、瞭解使用密碼的優點，並發掘各種策略，從而建立並保管強效、安全的密碼。\r\n\r\n學生會學習密碼要訣、以互動遊戲測試現有的密碼，並依據強效密碼指引來建立新密碼。\r\n"
+              description_teacher: "學生會瞭解大家為甚麼要使用密碼、瞭解使用密碼的優點，並發掘各種策略，從而建立並保管強效、安全的密碼。\r\n\r\n學生會學習密碼要訣、以互動遊戲測試現有的密碼，並依據強效密碼指引來建立新密碼。\r"
             Sticker Art with Loops:
               name: 使用迴圈（Loop）繪畫貼紙藝術
               description_student: 在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！
@@ -10921,10 +10905,10 @@ zh-TW:
               description_teacher: "學生最近已花了一些時間，思考有哪些實際內容會放在個人網站上。現在本課堂會暫停製作橫跨整個單元的專案（發佈個人網站），以協助學生說明自己會選擇以數位形式分享哪些個人資訊，以及向哪些人分享。課堂也會強調，他們選擇以數位形式分享的很多資訊，很大程度在發佈後已無法受自己控制。\r\n\r\n學生首先會各自找出合適的受眾，意指學生向這些受眾分享定特的個人資訊時會感到自在。然後，他們會瀏覽一些社交媒體頁面，以判斷大眾會分享關於自己或別人的哪些類型資訊。最後學生會反思一下，認為在線上張貼資訊時應遵守哪些指引。\r\n\r\n本課堂的最終要點不是要嚇怕學生，而是以實驗的性質讓學生準確瞭解，他們在線上發佈資訊後無法控制資訊的程度。"
             Lists:
               name: 清單
-              description_student: 本課堂介紹有序與無序清單，以及相關的 &lt;ul&gt;、&lt;ol&gt; 與 &lt;li&gt;
-                HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的 HTML 頁面，頁面內包含這些新標籤。
-              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 &lt;ul&gt;、&lt;ol&gt;
-                與 &lt;li&gt; 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
+              description_student: 本課堂介紹有序與無序清單，以及相關的 <ul>、<ol> 與 <li> HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的
+                HTML 頁面，頁面內包含這些新標籤。
+              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 <ul>、<ol>
+                與 <li> 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
             Intellectual Property and Images:
               name: 知慧財產權與圖像
               description_student: 本課堂會說明怎樣在網站內，使用其他人製作的媒體（例如圖像、影片或音樂），同時尊重相關媒體創作者的權利。學習創用
@@ -10932,7 +10916,7 @@ zh-TW:
               description_teacher: |-
                 班級首先會討論自己的個人意見，說明其他人應怎樣獲得自己的同意使用自己的作品，然後探索著作權（Copyright）之目的，以及其對創意內容創作者和使用者的作用。之後，學生便會開始一項活動，瞭解不同的 Creative Commons 授權，做為難以處理著作權問題的解決方案。
 
-                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 &lt;img&gt; 標籤，把影像加入自己的網頁中。
+                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 <img> 標籤，把影像加入自己的網頁中。
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
               description_student: 本課堂教導在設計 HTML 網頁時出現的常見問題。班級學生會在一系列越來越複雜的網頁（在 Code
@@ -10943,13 +10927,13 @@ zh-TW:
               description_student: 本課堂會說明超連結（hyperlink），這項功能可讓網頁開發人員將不同的頁面連結至一個網站。班級同學會把所有先前建立的頁面連結至一個專案，並為每頁建立導覽列，然後再把整個網站發佈到
                 Web 上。
               description_teacher: "學習怎樣互相連結網頁後，學生最終將能夠發佈一直以來製作的網站。在本課堂中，學生會把所有先前建立的頁面連結至一個專案、建立新頁面，並為不同頁面建立導覽列，然後再把整個網站發佈到
-                Web 上。\r\n\r\n"
+                Web 上。\r\n\r"
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
               description_student: 本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。班級學生會學習 CSS 規則集的基本語法，然後瞭解會影響
                 HTML 文字元素的屬性。最後，所有學生都會把文字樣式套用至自己的個人網站。
               description_teacher: "本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。學生會學習 CSS 規則集的基本語法，然後瞭解會影響
-                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r\n"
+                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r"
             Styling Elements with CSS:
               name: 透過 CSS 修改元素樣式
               description_student: 本課堂會繼續介紹 CSS 樣式屬性，這次會更集中說明文字以外的元素。班級學生首先會研究並修改「世界各地的甜品」頁面上的新
@@ -10969,9 +10953,7 @@ zh-TW:
             Project - Personal Portfolio Website:
               name: 專案 - 個人作品網站
               description_student: 在單元的最後幾天，班級裡的同學會為自己的網站做最終修改、與同伴每兩人一組取得回饋意見、檢閱評估指標，並將最終修改放在網站上。單元結束時，所有學生都會分享自己的專案，及分享開發的方式。
-              description_teacher: '學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
-
-'
+              description_teacher: 學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
             Post-Project Test:
               name: 專案後測驗
             CS Discoveries Post Course survey:
@@ -11134,7 +11116,7 @@ zh-TW:
             Understanding Your User:
               name: 瞭解您的使用者
               description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
-              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r"
             User-Centered Design Micro Activity:
               name: 以使用者為中心的微型活動
               description_student: 班級學生會分為各小組，然後使用設計流程獲得智慧衣著的構思。此活動是單元中提供的第一個練習機會，首先會集合思考，然後確定使用者，最後提出設計建議。本單元提供不同機會，讓學生練習設計解決方案，以解決其他人的需要。
@@ -11173,7 +11155,7 @@ zh-TW:
               description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
                 App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
                 App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
-                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r"
             Prototype Testing:
               name: 原型測試
               description_student: 在本課堂中，團隊會與其他同學測試自己的紙上原型。1 位學生扮演電腦、1 位學生說出內容，餘下的學生則會觀察。此時團隊會立即就自己的應用程式獲得回饋意見，為下一個版本的應用程式原型提供實用資訊。
@@ -12572,7 +12554,7 @@ zh-TW:
             Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa
             Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng
             trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô động
-            cho phù hợp với học sinh Việt Nam.\r\n"
+            cho phù hợp với học sinh Việt Nam.\r"
           lessons:
             Graph Paper Programming:
               name: 方格紙編程
@@ -12884,10 +12866,10 @@ zh-TW:
               description_teacher: "學生最近已花了一些時間，思考有哪些實際內容會放在個人網站上。現在本課堂會暫停製作橫跨整個單元的專案（發佈個人網站），以協助學生說明自己會選擇以數位形式分享哪些個人資訊，以及向哪些人分享。課堂也會強調，他們選擇以數位形式分享的很多資訊，很大程度在發佈後已無法受自己控制。\r\n\r\n學生首先會各自找出合適的受眾，意指學生向這些受眾分享定特的個人資訊時會感到自在。然後，他們會瀏覽一些社交媒體頁面，以判斷大眾會分享關於自己或別人的哪些類型資訊。最後學生會反思一下，認為在線上張貼資訊時應遵守哪些指引。\r\n\r\n本課堂的最終要點不是要嚇怕學生，而是以實驗的性質讓學生準確瞭解，他們在線上發佈資訊後無法控制資訊的程度。"
             Lists:
               name: 清單
-              description_student: 本課堂介紹有序與無序清單，以及相關的 &lt;ul&gt;、&lt;ol&gt; 與 &lt;li&gt;
-                HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的 HTML 頁面，頁面內包含這些新標籤。
-              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 &lt;ul&gt;、&lt;ol&gt;
-                與 &lt;li&gt; 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
+              description_student: 本課堂介紹有序與無序清單，以及相關的 <ul>、<ol> 與 <li> HTML 標籤。班級裡的學生會練習使用標籤，然後回到個人網頁專案中加入新的
+                HTML 頁面，頁面內包含這些新標籤。
+              description_teacher: 學生會學習 HTML 中的有序與無序清單，並完成數個關卡，他們會在關卡裡使用 <ul>、<ol>
+                與 <li> 標籤。然後他們會返回自己的專案，並加入新的 HTML 頁面。在新頁面中，學生會編寫 HTML，以顯示食譜、「十大」名單，或是使用剛學到的標籤顯示任何其他內容。
             Intellectual Property and Images:
               name: 知慧財產權與圖像
               description_student: 本課堂會說明怎樣在網站內，使用其他人製作的媒體（例如圖像、影片或音樂），同時尊重相關媒體創作者的權利。學習創用
@@ -12895,7 +12877,7 @@ zh-TW:
               description_teacher: |-
                 班級首先會討論自己的個人意見，說明其他人應怎樣獲得自己的同意使用自己的作品，然後探索著作權（Copyright）之目的，以及其對創意內容創作者和使用者的作用。之後，學生便會開始一項活動，瞭解不同的 Creative Commons 授權，做為難以處理著作權問題的解決方案。
 
-                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 &lt;img&gt; 標籤，把影像加入自己的網頁中。
+                最後，學生在一致瞭解不同 Creative Commons 授權的限制後，便會學習怎樣使用 <img> 標籤，把影像加入自己的網頁中。
             Clean Code and Debugging:
               name: 乾淨代碼和偵錯調試
               description_student: 本課堂教導在設計 HTML 網頁時出現的常見問題。班級學生會在一系列越來越複雜的網頁（在 Code
@@ -12906,13 +12888,13 @@ zh-TW:
               description_student: 本課堂會說明超連結（hyperlink），這項功能可讓網頁開發人員將不同的頁面連結至一個網站。班級同學會把所有先前建立的頁面連結至一個專案，並為每頁建立導覽列，然後再把整個網站發佈到
                 Web 上。
               description_teacher: "學習怎樣互相連結網頁後，學生最終將能夠發佈一直以來製作的網站。在本課堂中，學生會把所有先前建立的頁面連結至一個專案、建立新頁面，並為不同頁面建立導覽列，然後再把整個網站發佈到
-                Web 上。\r\n\r\n"
+                Web 上。\r\n\r"
             Styling Text with CSS:
               name: 透過 CSS 修改文字樣式
               description_student: 本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。班級學生會學習 CSS 規則集的基本語法，然後瞭解會影響
                 HTML 文字元素的屬性。最後，所有學生都會把文字樣式套用至自己的個人網站。
               description_teacher: "本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。學生會學習 CSS 規則集的基本語法，然後瞭解會影響
-                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r\n"
+                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r"
             Styling Elements with CSS:
               name: 透過 CSS 修改元素樣式
               description_student: 本課堂會繼續介紹 CSS 樣式屬性，這次會更集中說明文字以外的元素。班級學生首先會研究並修改「世界各地的甜品」頁面上的新
@@ -12932,9 +12914,7 @@ zh-TW:
             Project - Personal Portfolio Website:
               name: 專案 - 個人作品網站
               description_student: 在單元的最後幾天，班級裡的同學會為自己的網站做最終修改、與同伴每兩人一組取得回饋意見、檢閱評估指標，並將最終修改放在網站上。單元結束時，所有學生都會分享自己的專案，及分享開發的方式。
-              description_teacher: '學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
-
-'
+              description_teacher: 學生已在單元中花上大量時間製作自己的個人網站。在最後兩天，學生會為自己的網站做最終修改。他們會與同伴每兩人一組取得回饋意見、將最終修改放在網站上、檢閱評估指標並反思工作流程。單元結束時，學生會分享自己的專案，及概述他們獲得最終設計的流程。
             Post-Project Test:
               name: 專案後測驗
             CS Discoveries Post Course survey:
@@ -14070,6 +14050,8 @@ zh-TW:
               display_name: 函式
             csp_project:
               display_name: 專案
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             Variables Explore:
               name: 變數探索
@@ -14101,6 +14083,8 @@ zh-TW:
               name: 專案 - 決策者應用程式 第 3 部分
             'Lesson 15: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp5-2020:
           title: CSP 單元 5 - 清單（List）、迴圈（Loop）與尋訪（Traversal）('20-'21)
           lesson_groups:
@@ -14112,6 +14096,8 @@ zh-TW:
               display_name: 尋訪
             csp_project:
               display_name: 專案
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             Lists Explore:
               name: 清單探索
@@ -14153,12 +14139,16 @@ zh-TW:
               name: 單元 5 學生問卷調查
             Unit 5 TEACHER Survey:
               name: 單元 5 教師問卷調查
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: 參數及函數回傳值
             csp_libraries:
               display_name: 程式庫
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             Parameters and Return Explore:
               name: 參數與回傳探索
@@ -14190,6 +14180,8 @@ zh-TW:
               name: 變數製作範例
             'Lesson 11: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csd2-projects-temp:
           title: CSD Web 專案 - 暫存
           description: 暫存位置，以放置新的 CSD Web 開發迷你專案
@@ -14322,15 +14314,15 @@ zh-TW:
                 on a HTML page about Guinness World Record holders, adding their own
                 style to the provided page. In the last level, students apply what
                 they have learned about styles for text elements to their personal
-                web page.\r\n\r\n"
+                web page.\r\n\r"
             Intellectual Property:
               name: 知識產權
             Images:
               name: 圖像
               description_student: "**每日問題: 我們如何將圖片加到我們的網站，並同時遵守授權規定?**\r\n\r\n本課程一開始將探討使用圖片的論理議題，特別是其智慧財產權。接著學習如何使用
-                &lt;img&gt; 標籤以及如何正確地引用圖片的來源。"
+                <img> 標籤以及如何正確地引用圖片的來源。"
               description_teacher: "**每日問題: 我們如何將圖片加到我們的網站，並同時遵守授權規定?**\r\n\r\n本課程一開始將探討使用圖片的論理議題，特別是其智慧財產權。接著學習如何使用
-                &lt;img&gt; 標籤以及如何正確地引用圖片的來源。"
+                <img> 標籤以及如何正確地引用圖片的來源。"
             'Websites for Expression ':
               name: 建立網站，表達內容
               description_student: 'This lesson introduces websites as a means of
@@ -14501,7 +14493,7 @@ zh-TW:
                 Groups will place their posters around the room and briefly explain
                 their motivations for choosing some of their most difficult categorizations.
                 \ The teacher will then introduce a definition of the computer and
-                allow students to revise their posters according to the new definition.\r\n"
+                allow students to revise their posters according to the new definition.\r"
             Input and Output:
               name: 輸入與輸出
               description_student: In this the class students consider a number of
@@ -14624,7 +14616,7 @@ zh-TW:
             Understanding Your User:
               name: 瞭解您的使用者
               description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
-              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r"
             User-Centered Design Micro Activity:
               name: 以使用者為中心的微型活動
               description_student: 班級學生會分為各小組，然後使用設計流程獲得智慧衣著的構思。此活動是單元中提供的第一個練習機會，首先會集合思考，然後確定使用者，最後提出設計建議。本單元提供不同機會，讓學生練習設計解決方案，以解決其他人的需要。
@@ -14663,7 +14655,7 @@ zh-TW:
               description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
                 App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
                 App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
-                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r"
             Prototype Testing:
               name: 原型測試
               description_student: 在本課堂中，團隊會與其他同學測試自己的紙上原型。1 位學生扮演電腦、1 位學生說出內容，餘下的學生則會觀察。此時團隊會立即就自己的應用程式獲得回饋意見，為下一個版本的應用程式原型提供實用資訊。
@@ -15303,11 +15295,11 @@ zh-TW:
             Screen Out the Mean:
               name: 防止壞蛋騷擾
               description_student: 在本課堂中，你會學習：假如在線上有些事情讓你感到憤怒、傷心或害怕，你應該怎麼辦。
-              description_teacher: "本課堂會協助孩童瞭解，若線上某些事情令他們憤怒、傷心或害怕，就必須告訴可以信賴的成人。 \r\n\r\n學生會明白在上線時，其他人有時候可能會做出霸凌者的行為。他們會探索甚麼是網路霸凌，以及在遇到這些情況時可以做些甚麼。觀看一個卑劣的線上行為情景後，學生會討論甚麼是網路霸凌、這種行為會讓別人有甚麼感覺，以及應該怎樣應對。最後，學生會運用自己的知識，在日誌上製作簡單的網路霸凌提示表。\r\n"
+              description_teacher: "本課堂會協助孩童瞭解，若線上某些事情令他們憤怒、傷心或害怕，就必須告訴可以信賴的成人。 \r\n\r\n學生會明白在上線時，其他人有時候可能會做出霸凌者的行為。他們會探索甚麼是網路霸凌，以及在遇到這些情況時可以做些甚麼。觀看一個卑劣的線上行為情景後，學生會討論甚麼是網路霸凌、這種行為會讓別人有甚麼感覺，以及應該怎樣應對。最後，學生會運用自己的知識，在日誌上製作簡單的網路霸凌提示表。\r"
             Powerful Passwords:
               name: 強大的密碼
               description_student: 在本課堂中，你會瞭解密碼可怎樣保護你的資訊，以及怎樣才算是好的密碼。
-              description_teacher: "學生會瞭解大家為甚麼要使用密碼、瞭解使用密碼的優點，並發掘各種策略，從而建立並保管強效、安全的密碼。\r\n\r\n學生會學習密碼要訣、以互動遊戲測試現有的密碼，並依據強效密碼指引來建立新密碼。\r\n"
+              description_teacher: "學生會瞭解大家為甚麼要使用密碼、瞭解使用密碼的優點，並發掘各種策略，從而建立並保管強效、安全的密碼。\r\n\r\n學生會學習密碼要訣、以互動遊戲測試現有的密碼，並依據強效密碼指引來建立新密碼。\r"
             'Programming: My Robotic Friends':
               name: 我的小機器人朋友
               description_student: 在本課堂中，你會假設同學是機器人，然後為他們設計程式，建立杯子堆疊的模式。
@@ -15346,7 +15338,7 @@ zh-TW:
             Loops in Harvester:
               name: 使用迴圈（Loop）收割農作物
               description_student: 我們來使用迴圈（loop），幫助收割者收割蔬菜！
-              description_teacher: "在前一個舞台中，學生曾經使用（loop）畫出優美的圖畫。現在，他們會開始讓新的動作迴圈，協助收割者收集許多大簇蔬菜！\r\n"
+              description_teacher: "在前一個舞台中，學生曾經使用（loop）畫出優美的圖畫。現在，他們會開始讓新的動作迴圈，協助收割者收集許多大簇蔬菜！\r"
             Looking Ahead:
               name: 與 Minecraft 一起展望未來
               description_student: 躲開岩漿！你會在 Minecraft 的世界裡開始學習條件式。
@@ -15545,7 +15537,7 @@ zh-TW:
             About Me:
               name: 關於我
               description_student: 學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。
-              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r\n"
+              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r"
             Access Ability:
               name: 以無障礙為目的設計程式
               description_student: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
@@ -15901,6 +15893,8 @@ zh-TW:
               display_name: "（舊）單元 1：數位資訊"
             cspSurvey:
               display_name: 問卷
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -15934,11 +15928,15 @@ zh-TW:
               name: 課堂 15：評估日
             CS Principles Pre-survey:
               name: 計算機科學原理課前問卷調查
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp2-2020:
           title: CSP 單元 2 - 網際網路 ('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: "（舊）單元 2：網際網路"
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -15960,11 +15958,15 @@ zh-TW:
               name: 專案 - 網際網路困境 第 2 部分
             'Lesson 9: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp3-2020:
           title: CSP 單元 3 - 應用程式設計簡介 ('20-'21)
           lesson_groups:
             csp_unit3_2020:
               display_name: 單元 3：應用程式設計簡介
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -15988,11 +15990,15 @@ zh-TW:
               name: 專案 - 設計應用程式 第 5 部分
             'Lesson 11: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp6-2020:
           title: CSP 單元 6 - 演算法 ('20-'21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 單元 6：演算法
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -16008,6 +16014,8 @@ zh-TW:
               name: 平行與分散式演算法
             'Lesson 6: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp8-2020:
           title: CSP 單元 8 - 建立 PT 準備 ('20-'21)
           lessons:
@@ -16024,6 +16032,8 @@ zh-TW:
           lesson_groups:
             csp_unit9_2020:
               display_name: 單元 9：資料
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -16045,11 +16055,15 @@ zh-TW:
               name: 專案 - 訴說關於資料的故事 - 第 2 部分
             'Lesson 9: Assessment Day':
               name: 課堂 15：評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp10-2020:
           title: CSP 單元 10 - 網路安全與全球影響 ('20-'21)
           lesson_groups:
             csp_unit10_2020:
               display_name: 單元 10：網路安全與全球影響
+            cspSurvey2020:
+              display_name: 課後調查
           lessons:
             new stage:
               name: 新舞台
@@ -16087,6 +16101,8 @@ zh-TW:
               name: 專案：創新模擬 第 7 部分
             'Lesson 14: Unit Assessment Day':
               name: 課堂 14：單元評估日
+            CS Principles Post-Course Survey:
+              name: 電腦科學原理課後問卷調查
         csp-march-virtual:
           title: 電腦科學原理輔導員課程培訓
           lessons:
@@ -16178,7 +16194,7 @@ zh-TW:
               description_student: 本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。班級學生會學習 CSS 規則集的基本語法，然後瞭解會影響
                 HTML 文字元素的屬性。最後，所有學生都會把文字樣式套用至自己的個人網站。
               description_teacher: "本課堂會介紹以 CSS 做為修改頁面元素樣式的方法。學生會學習 CSS 規則集的基本語法，然後瞭解會影響
-                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r\n"
+                HTML 文字元素的屬性。他們會製作關於金氏世界紀錄保持者的 HTML 頁面，並在提供的頁面中加入自己的樣式。在最後一個關卡中，學生會把學到的文字元素樣式，套用至自己的個人網站。\r\n\r"
             Intellectual Property:
               name: 知識產權
             Images:
@@ -16713,6 +16729,16 @@ zh-TW:
               name: 課程 B
             CS Discoveries:
               name: 計算機科學探索
+            Course E:
+              name: 課程 E
+            Course F:
+              name: 課程 F
+            csf:
+              name: CS 基本原理
+            sprites_in_action_2021:
+              name: Sprite Lab：會動的精靈圖（CSF 2021 先導）
+            text_and_prompts_2021:
+              name: Sprite Lab：文字與提示（CSF 2021 先導）
         virustest:
           title: 模擬疫情爆發
           description_short: '使用精靈圖實驗室創建一個病毒爆發模擬。 '
@@ -16722,6 +16748,10 @@ zh-TW:
               name: 在海洋中使用的 AI
             visualizing:
               name: 資料視覺化
+            lesson14:
+              name: 第 14 課
+            lesson15:
+              name: 第 15 課
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -16751,6 +16781,8 @@ zh-TW:
               display_name: 變數
             outbreak:
               display_name: 疫情爆發模擬
+            debugging:
+              display_name: 除錯
         csd1-2021:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           description: "問題解決與運算是充滿互動與合作的內容，用於介紹電腦科學範疇，並把這個範疇放在「致力解決問題」這個更宏觀的框架中。你會練習使用問題解決流程解決一系列的謎題、挑戰與現實世界的情景。接著，你會瞭解電腦怎樣輸入、輸出、儲存並處理資訊，以協助人類解決問題。本單元會以一個專案做總結，你會設計一款應用程式，幫助解決所選的問題。\r"
@@ -16779,7 +16811,7 @@ zh-TW:
                 Groups will place their posters around the room and briefly explain
                 their motivations for choosing some of their most difficult categorizations.
                 \ The teacher will then introduce a definition of the computer and
-                allow students to revise their posters according to the new definition.\r\n"
+                allow students to revise their posters according to the new definition.\r"
             Input and Output:
               key: 輸入與輸出
               name: 輸入與輸出
@@ -16857,7 +16889,7 @@ zh-TW:
                 on a HTML page about Guinness World Record holders, adding their own
                 style to the provided page. In the last level, students apply what
                 they have learned about styles for text elements to their personal
-                web page.\r\n\r\n"
+                web page.\r\n\r"
             'Mini-Project: Your Personal Style':
               key: '迷你專案: 你的個人風格'
               name: '迷你專案: 你的個人風格'
@@ -17636,7 +17668,7 @@ zh-TW:
               name: 大數據、群眾外包與機器學習
             Machine Learning and Bias:
               key: 機器學習與偏見
-              name: 機器學習與偏見
+              name: 機器學習
             Project - Tell a Data Story - Part 1:
               key: 專案 - 訴說關於資料的故事 - 第 1 部分
               name: 專案 - 訴說關於資料的故事 - 第 1 部分
@@ -18138,7 +18170,7 @@ zh-TW:
               key: 關於我
               name: 關於我
               description_student: 學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。
-              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r\n"
+              description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\r"
             Digital Sharing:
               key: 數位分享
               name: 數位分享
@@ -18190,6 +18222,9 @@ zh-TW:
               description_teacher: "接下來的 4 個課堂讓學生有機會把自己的程寫編寫技巧，用於製作一份總結專案。這個專案可幫助學生累積程式編寫經驗，並製作範例專案與同伴和摯愛分享。這是多個課堂或多個星期的體驗，學生會花時間一起思考、學習設計流程、製作並展示自己的最終作品。\r\n\r\n在探索階段中，學生將會試玩預先製作完成的藝術家與
                 Sprite Lab 專案範例，從而獲取靈感。然後，學生將會學習設計流程，以及怎樣將設計加入自己的專案中。之後，學生會有自由創作空間，在藝術家、Sprite
                 Lab 或其他他們熟悉的介面中製作自己的專案（這可能是專案中最長的階段）。最後，學生將能夠向同伴展示自己的成品。"
+            lesson-1:
+              name: 以無障礙為目的設計程式
+              description_teacher: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
           lesson_groups:
             ramp_up:
               display_name: 提升
@@ -18205,6 +18240,8 @@ zh-TW:
               display_name: 運算的影響
             end_of_course_project:
               display_name: 課程結束專案
+            lessonGroup-7:
+              display_name: 運算的影響
           student_description: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第
             2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
         coursef-2021:
@@ -18362,7 +18399,7 @@ zh-TW:
               description_teacher: 學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。
             Debugging with Scrat:
               key: 與鼠奎特一起除錯
-              name: 與鼠奎特一起除錯
+              name: 在迷宮中除錯
               description_student: 在謎題中尋找問題，並練習你的除錯技巧。
               description_teacher: 除錯是學習設計程式的重要元素。在本課堂中，學生會遇到各種謎題，這些謎題曾經以不正確的方式解決。學生需要觀察現有的程式碼找出錯誤，包括不正確的迴圈、遺漏的積木、多餘的積木，以及次序錯誤的積木。
             Collecting Treasure with Laurel:
@@ -18410,7 +18447,7 @@ zh-TW:
               description_teacher: 到了這個階段，學生已設計了程式，讓程式每次都使用相同的方法執行。這種做法十分可靠，不過欠缺點彈性。在本課堂中，班級同學將會開始使用條件式（conditional）編寫程式，讓他們編寫出來的程式，可依據程式遇到的特定條件，以不同方式運作。
             While Loops with the Farmer:
               key: 與農夫一起嘗試 while（當）迴圈
-              name: 與農夫一起嘗試 while（當）迴圈
+              name: 農夫遊戲中的 while（當）迴圈
               description_student: 迴圈（loop）在程式編寫中非用實用。本課堂會教你其中一種：while（當）迴圈！
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft 中的條件式：水上巡航 '
@@ -18445,8 +18482,8 @@ zh-TW:
             Variables with Artist:
               key: 在藝術家遊戲中學習變數
               name: 在藝術家遊戲中學習變數
-              description_student: 別忘了把創意帶到課室！在這些謎題中，你會使用變數繪畫漂亮的圖畫。
-              description_teacher: 在本課堂中，學生會在藝術家環境中，學習怎樣使用變數製作重複的設計。學生會學習變數可怎樣使程式碼更容易編寫和閱讀，即使在執行時各個值都沒有變更。
+              description_student: 在本課堂中，你會使用變數來繪畫。在程式執行期間，這些變數都可變更。
+              description_teacher: 在本課堂中，學生會在藝術家環境中，學習怎樣使用變數製作重複的設計。學生會學習變數可怎樣使程式碼更容易編寫和閱讀。在引導式謎題後，學生會在自由探索關卡中結束課堂，然後展示他們學到的內容，以及製作自己的設計。
             Changing Variables with Bee:
               key: 在蜜蜂遊戲中變更變數
               name: 在蜜蜂遊戲中變更變數
@@ -18498,6 +18535,8 @@ zh-TW:
               name: 舞蹈派對
               description_student: 現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。
               description_teacher: 在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。
+            lesson-3:
+              name: 運行中的角色
           lesson_groups:
             csf_warmup:
               display_name: 熱身
@@ -18518,7 +18557,7 @@ zh-TW:
             end_of_course_project:
               display_name: 課程結束專案
             lessonGroup-9:
-              display_name: 熱身
+              display_name: 事件
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2021:
           title: 學前兒童的速學課程（2020）
@@ -18529,14 +18568,16 @@ zh-TW:
             Learn to Drag and Drop:
               key: 學習滑鼠的拖放
               name: 學習滑鼠的拖放
+              description_student: 以點擊與拖放的方式完成謎題。
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Sequencing with Scrat:
               key: 和鼠奎特一起學序列
               name: 和鼠奎特一起學序列
+              description_student: 為鼠奎特設計程式，讓他能夠拿到橡樹果實。
               description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
             Programming in with Angry Birds:
               name: 與憤怒鳥一起編程
-              description_teacher: 學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。
+              description_teacher: 學生會使用冰原歷險記中的角色開發序列演算法，讓鼠奎特能夠從迷宮的一側移動到另一側的橡樹果實那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓鼠奎特向前、向左或是向右移動。
             Programming with Rey and BB-8:
               key: 和 BB-8 與 Rey 一起寫程式
               name: 和 BB-8 與 Rey 一起寫程式
@@ -18544,10 +18585,12 @@ zh-TW:
             Programming in Harvester:
               key: 和農夫一起學程式
               name: 和農夫一起學程式
+              description_student: 幫助收割者在路上收集蔬菜。
               description_teacher: 學生會把所學到的程式設計概念，應用到收割者遊戲的環境中。現在不僅是讓角色到達終點 - 學生必須使用新的積木收集玉米。他們會繼續建立順序演算法的技巧，並開始運用除錯流程。
             Loops with Scrat:
               key: 和鼠奎特一起學迴圈（Loop）
               name: 和鼠奎特一起學迴圈（Loop）
+              description_student: 使用迴圈，幫助鼠奎特更快完成任務。
             Loops with Laurel:
               key: 與 Laurel 一起學習迴圈
               name: 與 Laurel 一起學習迴圈
@@ -18556,19 +18599,23 @@ zh-TW:
             Ocean Scene with Loops:
               key: 海洋場景與迴圈（Loop）
               name: 海洋場景與迴圈（Loop）
+              description_student: 使用迴圈與模式完成圖像。
               description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             Drawing Gardens with Loops:
               key: 使用迴圈（Loop）在花園中繪畫
               name: 使用迴圈（Loop）在花園中繪畫
+              description_student: 使用模式與迴圈完成圖像。
               description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個線上課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，學生會使用迴圈建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
             On the Move with Events:
               key: 讓事件活動起來
               name: 讓事件活動起來
+              description_student: 創作自己的遊戲或故事。
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的故事！
             A Royal Battle with Events:
               key: 以事件（Event）展開皇家大戰
               name: 以事件（Event）展開皇家大戰
+              description_student: 使用事件製作故事或互動遊戲。
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的遊戲！
           lesson_groups:
@@ -18616,7 +18663,7 @@ zh-TW:
               key: 瞭解您的使用者
               name: 瞭解您的使用者
               description_student: 班級學生會以使用者設定檔，瞭解不同的使用者如何可能對各種產品做出反應。每位學生都會扮演不同人物，從而以其他人的角度體驗各種設計。
-              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r\n"
+              description_teacher: "設計師需要瞭解使用者的需要，才可製作出實用的產品。本課堂鼓勵學生思考怎樣為其他人設計產品，方法是以使用者設定檔扮演其他人，並以扮演的角色對一系列產品做出反應。每位學生都會獲分配一個使用者設定檔，用於說明該角色，然後學生便會以該角色選擇恰當的產品、以批判方式評論產品設計，並建議設計上的改良。\r"
             User-Centered Design Micro Activity:
               key: 以使用者為中心的微型活動
               name: 以使用者為中心的微型活動
@@ -18663,7 +18710,7 @@ zh-TW:
               description_teacher: "開始設計應用程式前，我們需要幫助學生仔細瞭解自己的期望。因為學生最終會在 App Lab 中製作這些應用程式的原型，若他們的構思和
                 App Lab 中容易製作原型的應用程式類型相近，就能夠有更充足的準備。團隊在開始這項研究時，首先會觀察一些範例應用程式，這些程式用於展示可使用
                 App Lab 製作的應用程式。然後，團隊可選擇 1 款（或更多）應用程式，做為自己的應用程式之基礎，之後會有一些時間討論自己的應用程式有哪些基本功能，並使用
-                3 英吋 x 5 英吋的索引卡開發紙上原型。\r\n"
+                3 英吋 x 5 英吋的索引卡開發紙上原型。\r"
             Prototype Testing:
               key: 原型測試
               name: 原型測試
@@ -18704,6 +18751,8 @@ zh-TW:
             CS Discoveries Post Course survey:
               key: 電腦科學探索課後問卷調查
               name: 電腦科學探索課後問卷調查
+            Designing With Empathy:
+              name: 設計分析
             Build a Paper Prototype:
               name: 紙上原型
             Digital Mode in App Lab:
@@ -18841,6 +18890,15 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+            lessonGroup-4:
+              display_name: 測試
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: 課堂 15：評估日
+          lesson_groups:
+            lesson group:
+              display_name: 內容
         k5-onlinepd-2021:
           title: 計算機科學基礎的教授
           description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！
@@ -18906,3 +18964,24 @@ zh-TW:
               display_name: 下一步
             Introduction:
               display_name: 介紹
+        pl-playground:
+          lessons:
+            Module 1:
+              name: 模組 1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP 課後問卷調查
+          lesson_groups:
+            cspSurvey2020:
+              display_name: 問卷
+          description_audience: CSP 學生
+          description_short: CSP 學生課後問卷調查
+          description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
+          student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名
+            -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: 第 15 課

@@ -1,3 +1,5 @@
+published_state 'beta'
+
 lesson 'Episode 1 - Algorithms with Hill Harper', display_name: 'Episode 1 - Algorithms with Hill Harper', has_lesson_plan: false
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'
 level 'Episode 1 Instructions', progression: 'Practice'

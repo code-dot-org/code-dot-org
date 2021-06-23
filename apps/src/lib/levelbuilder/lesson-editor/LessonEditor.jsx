@@ -72,6 +72,12 @@ class LessonEditor extends Component {
     };
   }
 
+  handleView = () => {
+    navigateToHref(
+      linkWithQueryParams(this.state.originalLessonData.lessonPath)
+    );
+  };
+
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
@@ -190,12 +196,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
-              disabled={this.props.initialLessonData.scriptIsVisible}
+              disabled={this.props.initialLessonData.unitIsLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              {this.props.initialLessonData.scriptIsVisible ? (
+              {this.props.initialLessonData.unitIsLaunched ? (
                 <p>Can't update lockable for visible script.</p>
               ) : (
                 <p>
@@ -211,12 +217,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
-              disabled={this.props.initialLessonData.scriptIsVisible}
+              disabled={this.props.initialLessonData.unitIsLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              {this.props.initialLessonData.scriptIsVisible ? (
+              {this.props.initialLessonData.unitIsLaunched ? (
                 <p>Can't update has lesson plan for visible script.</p>
               ) : (
                 <p>
@@ -456,6 +462,7 @@ class LessonEditor extends Component {
 
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}

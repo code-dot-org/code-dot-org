@@ -2,35 +2,43 @@ name 'OPD-K5 CSTeachingLearning1'
 skip_dialog true
 markdown <<MARKDOWN
 # CS Teaching Practices
-**Total Suggested Time:**
 
-This lesson highlights both CS teaching practices *and* student practices that support students in learning CS. Let's begin with first learning about CS teaching practices.
+The curriculum is designed to help you incrporate the following CS teaching practices focused on inclusion during any Computer Science Fundamentals lessons.
 
-The following Pedagogical Approaches to Curriculum values inform teaching CS practices that support learning CS in equitable and inclusive ways.
+<img src="https://images.code.org/44e2eb0f1b35d6922bb0fbc98fecbabc-image-1622756073372.png" class="level-image">
+
+The CS teaching practices stem from Code.org's <a href="https://code.org/educate/curriculum/values" target="blank" rel="noopener noreferrer">Curriculum values</a>. 
 
 ## Role of the Teacher (Lead Learner)
-* The teacher will act as the lead learner, “I may not know the answer, but I know that together we can figure it out.”
-* Let the lesson activity expose the concept to students instead of lecturing or first offering an explanation.
-	* This can look like a teacher sharing they don't know everything about a CS concept during a lesson.
+#### You can practice acting as the lead learner with this motto, “I may not know the answer, but I know that together we can figure it out.”
 
+The **Role of the Teacher** in a Computer Science Fundamentals classroom is vital in bringing discovery and inquiry into lessons and establising an inclusive learning environment.
 
-## Discovery and Inquity
-* The curriculum is designed for students to explore concepts and build their own understanding through lesson activities.  
-* Students (and teachers) do not need prior experience to learn CS concepts and engage with the course content.
-	* This can look like a teacher engaging students with guiding questions during the warm up of the lesson instead of an  a direct explanation.
-    * This can also look like a teacher encouraging students to engage with the main activity of the lesson before asking questions about CS concepts.
+Here are some ways you can bring discovery, inquiry, and inclusion into your lessons:
+
+* Let the lesson activity expose the concept to your students instead of lecturing or first offering an explanation.
+* Actively teaching lessons to support active learning for **all** of your students, instead of allowing your students to go through the course on their own.
+
+## Discovery and Inquiry
+#### The curriculum is designed for students to explore concepts and build their own understanding through lesson activities. 
+
+Here are some ways you can generate **Discovery and Inquiry** throughout lessons:
+
+* Suport your students in asking questions to help them make sense of their own learning.
+* Encourage **all** of your students to take the lead in learning computer science by working on levels first and then asking for help.
+   
 
 ## The Classroom Community
-* Lessons allow for building a classroom community where students are almost always communicating, solving problems, and creating things as a classroom.
-* Building this type of learning community leads to active learning and an inclusive classroom culture with opportunities for all students to share and listen to ideas.
-	* This can look like a teacher providing all students with multiple opportunities to communicate their ideas throughout the lesson with other students.
+#### Lessons encourage creating a learning environment where different approaches, solutions, and perspectives are welcomed.
+
+Here are some ways you can cultivate an inclusive **Classroom Community** during lessons:
+
+*  Encourage **all** of your students to communication in a variety of ways throughout the lesson to make their thinking visible.
+*  Establish a classroom culture in which mistakes are accepted and part of the learning process.
 
 
 
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
 
-
-    
 
 MARKDOWN

@@ -831,12 +831,6 @@ sv:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -888,12 +882,6 @@ sv:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -903,12 +891,6 @@ sv:
           description: Lär ut funktionell programmering genom algebra
           description_short: Lär ut funktionell programmering genom algebra
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -1225,12 +1207,6 @@ sv:
               name: 'Ouppkopplad: Skriva låtar med parametrar'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Välkommen!
             Wrap-up:
@@ -3154,10 +3130,20 @@ sv:
               name: Kurs A
             Course B:
               name: Kurs B
+            Course E:
+              name: Kurs E
+            Course F:
+              name: Kurs F
         virustest:
           title: Simulera ett utbrott
           description_short: Använd Sprite Lab för att skapa en simulering av ett
             virusutbrott.
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Lektion 14
+            lesson15:
+              name: Lektion 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3183,7 +3169,7 @@ sv:
             lessonGroup-3:
               display_name: variabler
             outbreak:
-              display_name: Utbrottssimulering
+              display_name: Utbrottssimulator
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -3382,6 +3368,8 @@ sv:
               display_name: variabler
             csf_for_loops:
               display_name: "'För' loopar"
+            lessonGroup-9:
+              display_name: Händelser
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -3431,6 +3419,10 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -3460,3 +3452,7 @@ sv:
               display_name: Nästa steg
             Introduction:
               display_name: Introduktion
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lektion 15

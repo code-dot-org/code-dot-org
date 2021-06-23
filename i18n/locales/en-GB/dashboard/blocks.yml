@@ -159,9 +159,9 @@ en-GB:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': random
       binary_whenKey:
         options:

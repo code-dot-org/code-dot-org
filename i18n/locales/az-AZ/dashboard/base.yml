@@ -27,6 +27,9 @@ az:
         name: 'Göstərilən adınız'
         name_example: 'Görünən Adınız (məs. Super Koder və ya Filankəs F.)'
         email: 'E-poçt'
+        parent_email: 'Valideyn/Qəyyum e-poçtu'
+        personal_email: "Şəxsi e-poçtunuz <a href=\"%{url}\">(əgər e-poçtunuz yoxdursa bura sıxın)</a>"
+        personal_email_markdown: "Şəxsi e-poçtunuz [(əgər e-poçtunuz yoxdursa bura sıxın)](%{url})\n"
         username: 'istifadəçi adı'
         password: 'Parol'
         password_confirmation: 'Parolun təsdiqi'
@@ -35,6 +38,7 @@ az:
         age: 'Yaşınız'
         gender: 'Cins'
         edit_header: 'Hesab Detallarına düzəliş edin'
+        finish_sign_up_header: 'Hesabınızı yaratmağı tamamlayın'
         error:
           future: gələcəkdə ola bilməz
   beta: "beta versiya"
@@ -63,7 +67,7 @@ az:
   trophies: "kuboklar"
   courses: 'marşrutlar'
   courses_page:
-    title_student: "İnformatikanı öyrənin"
+    title_student: "Kompyuter elmini öyrənin"
     title_teacher: "İnformatikanı öyrədin"
   unplugged_activity: 'Sərbəst fəaliyyət'
   of: "/"
@@ -78,6 +82,7 @@ az:
   prize: 'mükafat'
   more_info: 'Daha ətraflı'
   auth:
+    continue_with: '%{provider} ilə davam edin'
     sign_in_with: '%{provider} ilə daxil olun'
     signed_in: 'Daxil oldunuz!'
     already_signedup: 'Artıq qeydiyyatdan keçmisiniz?'
@@ -87,6 +92,7 @@ az:
     facebook: 'Facebook'
     windowslive: 'Microsoft Hesabı'
     microsoft_v2_auth: 'Microsoft Hesabı'
+    clever: 'Ağıllı'
     forgot_password: 'Parolunuzu unutmusunuz?'
     need_confirmation: "Təsdiq göstərişlərini almamisiniz?"
     need_unlock: "Kilidaçma göstərişlərini almamisiniz?"
@@ -115,10 +121,17 @@ az:
     user_type_teacher: "Müəllim"
     user_type_student: "şagird"
     field_is_required: "zəruridir"
+    accept_terms: "Hesabı yaratmaq üçün razılaşmalısınız."
+    email_preference_privacy: "(Daha ətraflı)"
     email_preference_yes: "Bəli"
     email_preference_no: "Xeyr"
   school_info:
+    select_school_type: 'Məktəbin Tipi'
+    private: 'Gizli'
+    public: 'İctimai'
     other: 'Digər'
+    state: 'Ştat'
+    district: 'Bölgə'
     school: 'Məktəb'
     school_name: 'Məktəbin adı'
     school_zip: 'Məktəbin poçt indeksi'
@@ -128,6 +141,7 @@ az:
   signin_form:
     title: 'Artıq hesabınız var? Daxil olun'
     login: 'E-poçt'
+    login_username: 'Email və ya İstifadəçi adı'
     password: 'Parol'
     remember: 'Məni yadda saxla'
     submit: 'Daxil olun'
@@ -162,14 +176,20 @@ az:
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
 
       %{name}
+  parent_mailer:
+    parent_email_added_subject: 'Code.org-a xoş gəlmisiniz!'
+  teacher_mailer:
+    new_teacher_subject: 'Code.org-a xoş gəlmisiniz!'
+    delete_teacher_subject: 'Code.org bildirişi: Sizin hesabınız silinib'
   section:
     type:
       word: 'Məxfi söz'
       email: 'E-poçt'
+      clever: 'Ağıllı'
   follower:
     invite_sent: 'Dəvətnamə göndərildi'
     added_teacher: '%{name} müəlliminiz kimi əlavə olundu'
-    registered: "Siz %{section_name} üçün qeydiyyatdan keçdiniz."
+    registered: "Siz uğurla %{section_name} qoşuldunuz."
     error:
       signed_in: 'Zəhmət olmasa, davam etməzdən öncə sistemdən çıxın'
       username_not_found: '%{username} istifadəçi adı tapılmadı'
@@ -199,6 +219,7 @@ az:
       course_catalog: "Kurs kataloqu"
       project_gallery: "Layihə qalereyası"
       sections: "Bölmələr"
+      report_bug: "Problemi bildirin"
       teacher_community: "Müəllim icması"
       professional_learning: "Peşəkar təhsil"
       documentation: "Təlimat və sənədlər"
@@ -240,21 +261,25 @@ az:
       already_registered: 'Artıq qeydiyyatdan keçmisiniz?'
       team: 'Komanda'
       driver: 'Sürücü'
+      navigator: 'Tərəfdaş'
       create: 'Düzəlt'
       algebra_game: 'Cəbr'
       applab: 'Proqram Labı'
       artist: 'Rəssam'
       artist_k1: 'Rəssam (məktəbəqədər)'
+      basketball: 'Basketbol'
       bounce: 'Tullan'
       calc: 'Hesablama'
       dance: 'Rəqs şənliyi'
       eval: 'Qiymət'
       flappy: 'Flappy'
       frozen: 'Buzlu ürək'
+      gamelab: 'Oyun labaratoriyası'
       iceage: 'Buz dövrü'
       infinity: 'Sonsuz sayda'
       minecraft_designer: 'Minecraft'
       playlab: 'Oyun labı'
+      sports: 'İdman'
       starwars: 'Star Wars'
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
@@ -279,6 +304,8 @@ az:
       student: 'şagird'
       try_it_yourself: 'özünüz edin'
       section: 'Bölmə'
+      example: 'Nümunə Həll'
+      last_updated: 'Son yenilənmə:'
       unsubmit: 'Abunə olmamaq'
       worked_with: 'Ilə işlədi'
       update_lock_settings: 'Kilid parametrlərini buradan yeniləyin.'
@@ -287,8 +314,12 @@ az:
     email_resend_confirm: 'Təsdiqləmə təlimatlarını yenidən göndər'
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: '(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)'
+    delete: 'Hesabı Sil'
+    deleted_user: 'istifadəçini sil'
     update_email: "Yenilə"
+    parent_guardian_email_label: "Valideyn/Qəyyum e-poçtu"
     none: "Heç biri"
+    encrypted: "şifrələnmişdir"
   user_level:
     completed: 'Tamamlandı'
     tried: 'Yoxlanıldı'
@@ -347,12 +378,13 @@ az:
     notes: 'Video yoxdur? Qeydləri göstər.'
     autoplay_option: 'Videoların avtoifası'
     download: 'Videonu endir'
+    label: 'Video'
   compatibility:
     upgrade:
       link: "Daha ətraflı"
   slow_loading: 'Bu, adi halda olduğundan daha çox vaxt aparır...'
   try_reloading: 'Səhifəni yenidən yükləməyə cəhd edin'
-  next_stage: 'Qurtardı! Növbəti mərhələyə keçin'
+  next_stage: 'Bitdi! Növbəti dərsə keçin'
   download_pdf: 'Dərs planını aç'
   lesson_plan: 'Dərs Planı'
   view_lesson_plan: 'Dərs palnına baxın'
@@ -386,6 +418,7 @@ az:
       title: "Qalereya"
       body: "İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın"
     gamelab:
+      title: "Oyun labaratoriyası"
       audience: "13+ yaş"
     weblab:
       audience: "13+ yaş"
@@ -402,6 +435,8 @@ az:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+    sports:
+      title: "İdman"
     unplugged:
       title: "Sərbəst dərslər"
       audience: "4+ yaş"
@@ -523,7 +558,7 @@ az:
         chile: 'Çili'
         israel: 'İtrail'
       subjects:
-        cs: 'İnformatika'
+        cs: 'Kompüter Elmləri'
         ict: 'IKT'
         math: 'Riyaziyyat'
         science: 'Elm'
@@ -539,4 +574,8 @@ az:
       title: 'Məşğələdə iştirak'
   cookie_banner:
     accept: 'Razıyam'
+  page_not_found_title: "Səhifə tapılmadı"
+  page_not_found_header: '404: Səhifə tapılmadı'
+  page_not_found_description: "Sizin müraciət etdiyiniz səhifə bu ünvanda mövcud deyil. Veb ünvanı dəqiqləşdirib yenidən cəhd edin. və ya geri, ilk səhifəyə qayıdın."
+  page_not_found_button: "İlk səhifəyə qayıt"
   copy: 'Köçür'

@@ -2,7 +2,7 @@
   "script": {
     "name": "csp1-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -18,7 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-06-17 22:31:14 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -139,7 +140,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -202,7 +203,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2021/stage/7/puzzle/1)",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
         "student_overview": "Learn how computers represent black and white images using bits."
       },
@@ -1853,7 +1854,7 @@
       "position": 7,
       "properties": {
         "description": "Now let's look at the limits of our Flippy Do when it comes to overflow.",
-        "duration": "5",
+        "duration": "10",
         "name": "More Flippy Do Practice",
         "remarks": true
       },
@@ -1866,7 +1867,13 @@
       "key": "889eb94f-c896-4455-b616-c21511dd120d",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Use this conversation to show that we can always add bits to represent more numbers but when working with a set number of bits, at some point we will run into overflow if we try to represent large enough values.\n* Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s. \n* With the Flippy Do, trying to represent the number 256 will cause an overflow. One common adaptation students will come up with is adding an additional column/bit to the Flippy Do to be able to represent that number. For a 9-bit Flippy Do, the first number that will cause overflow is 512. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Use this conversation to show that we can always add bits to represent more numbers but when working with a set number of bits, at some point we will run into overflow if we try to represent large enough values.\n* Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s. \n* With the Flippy Do, trying to represent the number 256 will cause an overflow. One common adaptation students will come up with is adding an additional column/bit to the Flippy Do to be able to represent that number. For a 9-bit Flippy Do, the first number that will cause overflow is 512. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This would be a good time in the lesson to address any areas you noticed your students struggling with in the previous lesson when using their Flippy Dos. You may choose to review certain questions from the activity guide based on the responses students gave or develop your own practice questions."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "889eb94f-c896-4455-b616-c21511dd120d",
@@ -1908,7 +1915,7 @@
       "key": "3fae957c-3e12-4c5c-8ffa-f51b62bf6f4c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is it a problem to have these two types of scales in your store?* \n\n**Discussion Goal:** Use this discussion to highlight the importance of precision. The customers and shop owners are depending on a given amount of candy always having the same price. Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.   "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What problems could come from having both of these two types of scales in single one of your stores?* \n\n**Discussion Goal:** Use this discussion to highlight the importance of precision. The customers and shop owners are depending on a given amount of candy always having the same price. Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.   "
       },
       "seeding_key": {
         "activity_section.key": "3fae957c-3e12-4c5c-8ffa-f51b62bf6f4c",
@@ -1916,10 +1923,10 @@
       }
     },
     {
-      "key": "2ae35bc7-9480-465a-81a2-5e5cfc6c85bc",
-      "position": 12,
+      "key": "c9aab5c1-3546-4896-bb84-16c7781f677d",
+      "position": 1,
       "properties": {
-        "description": "**Prompt:** Why is it a problem for a computer if your answers are different than others?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the information on the first wrapup slide showing how binary can be used to precisely represent some fractional values from the decimal number system. Students do not need to understand how to convert fractional amounts from decimal to binary.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1928,13 +1935,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2ae35bc7-9480-465a-81a2-5e5cfc6c85bc",
-        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
+        "activity_section.key": "c9aab5c1-3546-4896-bb84-16c7781f677d",
+        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
       }
     },
     {
       "key": "22b76b87-96ea-4081-866c-5c7e7f88f8db",
-      "position": 1,
+      "position": 2,
       "properties": {
         "description": "The most important takeaway from this lesson is to understand that bits can represent a limited amount of information.",
         "remarks": true
@@ -1946,7 +1953,7 @@
     },
     {
       "key": "7af435e3-5798-4ca6-940b-e70afe0257e8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does the binary odometer show about representing large numbers?*\n* *If we had a big enough odometer or Flippy Do, could we represent every possible number?*\n\n**Discussion Goal:** As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \n\n---"
       },
@@ -1957,7 +1964,7 @@
     },
     {
       "key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Modern car odometers record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\n\n**Question:** When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?",
         "name": "Assessment",
@@ -2667,7 +2674,8 @@
       "key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
+        "progression_name": "How Computers Work: Binary and Data"
       },
       "seeding_key": {
         "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
@@ -2675,8 +2683,19 @@
       }
     },
     {
-      "key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
+      "key": "5074ae18-1a20-46a1-bde3-433baa9dea03",
       "position": 6,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "5074ae18-1a20-46a1-bde3-433baa9dea03",
+        "lesson_activity.key": "544f13a4-73fc-40e4-a1b2-410ca0568674"
+      }
+    },
+    {
+      "key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
+      "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which statement about analog and digital images is true?\r\n\r\n**Question:** Describe how the process of sampling, RGB pixels, and binary sequences work together to display a digital color image.",
         "name": "Assessment: Check For Understanding\r",
@@ -4552,6 +4571,32 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "progression": "How Computers Work: Binary and Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e"
+      },
+      "level_keys": [
+        "U1 L8 Video: Binary and Data"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4575,8 +4620,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4601,7 +4646,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4627,7 +4672,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4698,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4679,7 +4724,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4705,7 +4750,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4731,7 +4776,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4757,7 +4802,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4783,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4808,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4833,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4859,7 +4904,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4885,7 +4930,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5246,6 +5291,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
         "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L8 Video: Binary and Data",
+        "script_level.level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e"
       }
     },
     {
@@ -5750,6 +5807,18 @@
       "seeding_key": {
         "resource.key": "u1l7_black_and_white_images"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -5992,6 +6061,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp1-2021"
       }
     }

@@ -104,6 +104,10 @@ const styles = {
     paddingRight: 0,
     paddingLeft: 8
   },
+  headerButtonIconHidden: {
+    paddingRight: 0,
+    paddingLeft: 0
+  },
   headerButtonNoLabel: {
     paddingRight: 0,
     paddingLeft: 0
@@ -148,7 +152,8 @@ export const PaneButton = Radium(function(props) {
 
   let iconStyle = {
     ...styles.headerButtonIcon,
-    ...(props.isRtl && styles.headerButtonIconRtl)
+    ...(props.isRtl && styles.headerButtonIconRtl),
+    ...(!props.iconClass && !props.hiddenImage && styles.headerButtonIconHidden)
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
@@ -157,11 +162,28 @@ export const PaneButton = Radium(function(props) {
     iconStyle = {...iconStyle, ...styles.headerButtonNoLabel};
   }
 
+  function renderIcon() {
+    const {iconClass, icon} = props;
+
+    if (iconClass) {
+      return <i className={iconClass} style={iconStyle} />;
+    }
+
+    if (icon) {
+      const Icon = icon.type;
+      return (
+        <Icon {...icon.props} style={{...iconStyle, ...icon.props.style}}>
+          {icon.children}
+        </Icon>
+      );
+    }
+  }
+
   return (
     <div id={props.id} style={divStyle} onClick={props.onClick}>
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
-        <i className={props.iconClass} style={iconStyle} />
+        {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
     </div>
@@ -169,7 +191,8 @@ export const PaneButton = Radium(function(props) {
 });
 PaneButton.propTypes = {
   headerHasFocus: PropTypes.bool.isRequired,
-  iconClass: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
+  icon: PropTypes.element,
   label: PropTypes.string.isRequired,
   isRtl: PropTypes.bool.isRequired,
   leftJustified: PropTypes.bool,

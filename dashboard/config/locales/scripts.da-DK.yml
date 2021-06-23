@@ -594,12 +594,6 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -645,12 +639,6 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -660,12 +648,6 @@ da:
           description: 'Fase 2 Online: Blandet Sommerkursus'
           description_short: 'Fase 2 Online: Blandet Sommerkursus'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -921,12 +903,6 @@ da:
               name: 'Unplugged: Sangskrivning med parametre'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Velkommen!
             Wrap-up:
@@ -2501,7 +2477,7 @@ da:
             lessonGroup-3:
               display_name: Variabler
             outbreak:
-              display_name: Udbrud Simulering
+              display_name: Udbrud Simulator
         csd3-2021:
           description_short: Programmering
           lessons:
@@ -2678,7 +2654,7 @@ da:
             csf_sprites:
               display_name: figure
             lessonGroup-9:
-              display_name: Opvarmning
+              display_name: Hændelser
         pre-express-2021:
           lesson_groups:
             csf_loops:

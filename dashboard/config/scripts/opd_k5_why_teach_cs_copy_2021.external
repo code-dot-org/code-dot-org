@@ -5,24 +5,18 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG" class="level-image">
 
-## Vision
-Code.org’s vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
+## Code.org's Vision
 
-## Approach to diversity and equity in CS
-* CS is a foundational subject for all 21st century careers.
-* CS in K-12 is an equity issue that must be addressed because discrepancies in access often fall along lines of race, gender, and income level.
-* Code.org’s goal is to reach a balanced representation in grades K-12.  
-	* A student’s opportunity should not be determined by the color of their skin, their family income, or the neighborhood they grow up in.  
-* Visit this page to learn more about your what is happening in your state. [link]
+#### **"Every student in every school has the opportunity to learn computer science as part of their core K-12 education."**
 
-## Part of a larger CS community working towards equity in CS
-* Code.org collaborates with other equity-minded computer science organizations such as
-	* Microsoft, NCWIT, CSforAll and the Computer Science Teachers Association (CSTA) which has incorporated equity focused elements into its Standards for CS Teachers
-* Regional Partners that host workshops in support of K-12 CS education.  
-	* Click here to learn more about workshops happening in your area. [link]
+## Code.org's Approach to Equity in CS
+* Computer science is a foundational subject for all 21st century careers.
+* Computer science in K-12 education is an equity issue that must be addressed because discrepancies in access often fall along lines of race, gender, and income level.
 
+## Code.org is part of a larger computer science community working towards equity in CS
+* Code.org collaborates with other equity-minded computer science organizations such as Microsoft, National Center for Women & Information Technology (NCWIT), CSforAll and the Computer Science Teachers Association (CSTA) which has incorporated equity focused elements into its Standards for CS Teachers.
 
-**“Computing and technology hold the promise of solving problems big and small and shaping the world around us. But if the people who work in computing related jobs don’t represent our communities and our populations, the solutions they develop won’t be representative either.”** - Microsoft’s guide to inclusive CS education
+**“Computing and technology hold the promise of solving problems big and small and shaping the world around us. But if the people who work in computing related jobs don’t represent our communities and our populations, the solutions they develop won’t be representative either.”** - <a href="https://drive.google.com/file/d/1NNS1M4aY4WpfJ8glZBUqIDPvhAimZRtr/view">Guide to inclusive CS education, 2019 </a>
 
 
 MARKDOWN

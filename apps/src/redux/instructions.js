@@ -26,6 +26,8 @@ const SET_DYNAMIC_INSTRUCTIONS_DEFAULTS =
 const SET_DYNAMIC_INSTRUCTIONS_KEY =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_KEY';
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
+const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
 
 /**
  * Some scenarios:
@@ -164,6 +166,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   }
 
   if (action.type === HIDE_OVERLAY) {
+    if (state.dynamicInstructionsDismissCallback) {
+      state.dynamicInstructionsDismissCallback();
+    }
+
     return Object.assign({}, state, {
       overlayVisible: false
     });
@@ -177,7 +183,15 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
     return Object.assign({}, state, {
-      dynamicInstructionsKey: action.dynamicInstructionsKey
+      dynamicInstructionsKey: action.dynamicInstructionsKey,
+      overlayVisible: action.options && action.options.showOverlay
+    });
+  }
+
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK) {
+    return Object.assign({}, state, {
+      dynamicInstructionsDismissCallback:
+        action.dynamicInstructionsDismissCallback
     });
   }
 
@@ -263,12 +277,18 @@ export const hideOverlay = () => ({
 
 export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
   type: SET_DYNAMIC_INSTRUCTIONS_DEFAULTS,
-  dynamicInstructionsDefaults: dynamicInstructionsDefaults
+  dynamicInstructionsDefaults
 });
 
-export const setDynamicInstructionsKey = dynamicInstructionsKey => ({
+export const setDynamicInstructionsKey = (dynamicInstructionsKey, options) => ({
   type: SET_DYNAMIC_INSTRUCTIONS_KEY,
-  dynamicInstructionsKey: dynamicInstructionsKey
+  dynamicInstructionsKey,
+  options
+});
+
+export const setDynamicInstructionsOverlayDismissCallback = dynamicInstructionsDismissCallback => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
+  dynamicInstructionsDismissCallback
 });
 
 // HELPERS
@@ -390,7 +410,7 @@ export const determineInstructionsConstants = config => {
   // want to show an overlay.
   let hasInstructionsToShow = shortInstructions || longInstructions;
   // If the level is specifically flagged as having important
-  // instructions or if it is the first level in the stage, always show
+  // instructions or if it is the first level in the lesson, always show
   // the overlay. Otherwise, show it exactly once on the very first
   // level a user looks at.
   let overlaySeen = tryGetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, false);

@@ -1361,8 +1361,6 @@ pt:
               name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
-            0: Unidade 1, Dias 1-2 O Que é um Computador?
-            1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1482,8 +1480,6 @@ pt:
               name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
-            0: Unidade 1, Dias 1-2 O Que é um Computador?
-            1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1507,8 +1503,6 @@ pt:
               name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
-            0: Unidade 1, Dias 1-2 O Que é um Computador?
-            1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1701,9 +1695,7 @@ pt:
             Permanent Data Storage and Clicker Completion:
               name: Armazenamento permanente de dados e conclusão do Clicker
             'Practice Create PT: Data App':
-              name: |2-
-
-                Prática de Criar PT: Aplicativo de Dados
+              name: 'Prática de Criar PT: Aplicativo de Dados'
             Privacy in a Digital World:
               name: Privacidade em um Mundo Digital
             Privacy vs Utility:
@@ -1946,13 +1938,11 @@ pt:
           description_short: Programação
           lessons:
             Create PT:
-              name: |2-
-
-                Criar PT
+              name: Criar PT
             Create PT Prep:
               name: 'AP: Criar a preparação da tarefa de desempenho'
             Explore PT:
-              name: "\nExplorar "
+              name: 'Explorar '
             Explore PT Prep:
               name: 'AP: Explorar a preparação da tarefa de desempenho'
         cspunit4:
@@ -1979,9 +1969,7 @@ pt:
             Practice PT - Propose an Innovation:
               name: Pratica PT - Propor uma Inovação
             Practice PT - Tell a Data Story:
-              name: |2-
-
-                Prática - Conte uma história de dados
+              name: Prática - Conte uma história de dados
             Rapid Research - Data Innovations:
               name: Pesquisa rápida - inovações de dados
             The Cost of Free:
@@ -2199,9 +2187,7 @@ pt:
             Unit 1 Chapter 2 Assessment:
               name: Unidade 1 Capítulo 2 Avaliação
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2260,9 +2246,7 @@ pt:
             Making Data Visualizations:
               name: Desenvolvendo Visualização de Dados
             Practice PT - Tell a Data Story:
-              name: |2-
-
-                Prática - Conte uma história de dados
+              name: Prática - Conte uma história de dados
             Text Compression:
               name: Compressão de texto
             Unit 2 Chapter 1 Assessment:
@@ -2270,9 +2254,7 @@ pt:
             Unit 2 Chapter 2 Assessment:
               name: Unidade 2 Capítulo 2 Avaliação
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2333,9 +2315,7 @@ pt:
             'Anonymous student survey: Taking the AP exam':
               name: 'Pesquisa anônima com estudantes: Fazer o exame AP'
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2407,9 +2387,7 @@ pt:
             Unit 4 Chapter 1 Assessment:
               name: Unidade 4 Capítulo 1 Avaliação
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2536,9 +2514,7 @@ pt:
             Unit 5 Assessment 5 - AP Pseudocode Practice Questions:
               name: Unidade 5 Avaliação 5 - Questões práticas sobre pseudocódigo AP
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2560,13 +2536,11 @@ pt:
         csp6:
           lessons:
             Create PT:
-              name: |2-
-
-                Criar PT
+              name: Criar PT
             Create PT Prep:
               name: 'AP: Criar a preparação da tarefa de desempenho'
             Explore PT:
-              name: "\nExplorar "
+              name: 'Explorar '
             Explore PT Prep:
               name: 'AP: Explorar a preparação da tarefa de desempenho'
             Create PT Prep - Reviewing the Task:
@@ -2584,9 +2558,7 @@ pt:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2827,9 +2799,7 @@ pt:
             CS Principles Culminating Assessment:
               name: Avaliação Culminante dos Princípios da CS
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             CSP Longitudinal Contact Request:
               name: Solicitação de contato longitudinal do CSP
             Participate in a longitudinal study!:
@@ -2838,13 +2808,11 @@ pt:
               name: "[Preterido - o professor não pode ver resultados] CSP Avaliação
                 Culminante"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
-              name: |2-
-
-                NOTA: Descontinuado - o professor não pode ver os resultados. CSP Culminating Assessment
+              name: 'NOTA: Descontinuado - o professor não pode ver os resultados.
+                CSP Culminating Assessment'
             'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
-              name: |2-
-
-                NOTA: Descontinuado - o professor não pode ver os resultados. CSP Culminating Assessment
+              name: 'NOTA: Descontinuado - o professor não pode ver os resultados.
+                CSP Culminating Assessment'
             RQB Questions test:
               name: Teste de perguntas RQB
         cspexam1-mWU7ilDYM9:
@@ -3172,8 +3140,6 @@ pt:
               name: Unidade 1, Dia 15-16 Programas de computador e seguindo coordenadas
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unidade 1, Dia 17-19 O Que é Inteligência?
-            0: Unidade 1, Dias 1-2 O Que é um Computador?
-            1: Unidade 1, Dias 1-2 O Que é um Computador?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unidade 1, Dias 3-4 Comprando um Computador
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3829,7 +3795,7 @@ pt:
             do mundo real. Em seguida, você aprenderá como os computadores inserem,
             produzem, armazenam e processam informações para ajudar os humanos a resolver
             problemas. A unidade conclui com um projeto no qual você cria um aplicativo
-            que ajuda a resolver um problema de sua escolha.\r\n"
+            que ajuda a resolver um problema de sua escolha.\r"
           lesson_groups:
             cspSurvey:
               display_name: Questionário
@@ -4031,7 +3997,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar os humanos a resolver problemas. A unidade conclui com um projeto
             no qual você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
         csp-online-test:
           lesson_groups:
             required:
@@ -4282,7 +4248,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Styling Elements with CSS:
               name: Estilizando elementos com CSS
               description_student: Esta lição continua a introdução às propriedades
@@ -4366,16 +4332,15 @@ pt:
             Lists:
               name: Listas
               description_student: Esta lição apresenta listas ordenadas e não ordenadas
-                e os associados &lt;ul&gt;, &lt;ol&gt;, e &lt;li&gt; Tags HTML. A
-                classe pratica o uso das tags e volta ao projeto de página da web
-                pessoal para adicionar uma nova página HTML que inclui as novas tags.
+                e os associados <ul>, <ol>, e <li> Tags HTML. A classe pratica o uso
+                das tags e volta ao projeto de página da web pessoal para adicionar
+                uma nova página HTML que inclui as novas tags.
               description_teacher: Os alunos são apresentados a listas ordenadas e
                 não-ordenadas em HTML e trabalham em alguns níveis nos quais usam
-                o &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags. Em seguida, eles retornam
-                ao seu projeto, onde adicionam uma nova página HTML. Dentro da nova
-                página, eles escrevem o HTML para exibir uma receita, a lista dos
-                dez melhores ou qualquer outro conteúdo que use as novas tags que
-                eles aprenderam.
+                o <ul>, <ol>, and <li> tags. Em seguida, eles retornam ao seu projeto,
+                onde adicionam uma nova página HTML. Dentro da nova página, eles escrevem
+                o HTML para exibir uma receita, a lista dos dez melhores ou qualquer
+                outro conteúdo que use as novas tags que eles aprenderam.
             Intellectual Property and Images:
               name: Propriedade intelectual e imagens
               description_student: Esta lição aborda como usar mídia, como imagens,
@@ -4391,7 +4356,7 @@ pt:
                 como uma solução para a dificuldade em se lidar com direitos de reprodução.
                 \r\n\r\nFinalmente, com um entendimento comum sobre as restrições
                 das várias licenças Creative Commons, os alunos aprendem como adicionar
-                imagens às suas páginas web usando a declação &lt;img&gt;."
+                imagens às suas páginas web usando a declação <img>."
             Project - Multi-Page Websites:
               name: Projeto - Sites com várias páginas
               description_student: 'Esta lição aborda hiperlinks, que permitem que
@@ -4402,7 +4367,7 @@ pt:
                 os alunos finalmente podem publicar o site em que estão trabalhando.
                 Nesta lição, eles vinculam todas as páginas anteriores que criaram
                 em um projeto, criam uma nova página e adicionam navegação entre as
-                páginas antes de publicar o site inteiro na Web. \r\n\r\n"
+                páginas antes de publicar o site inteiro na Web. \r\n\r"
             RGB Colors and Classes:
               name: Cores e classes RGB
               description_student: Esta lição aborda aulas e cores personalizadas.
@@ -4431,7 +4396,7 @@ pt:
                 retoques finais nos sites, revisar a rubrica e refletir sobre seu
                 processo. Para fechar a unidade, eles compartilharão seus projetos
                 e também uma visão geral do processo que levaram para chegar ao design
-                final.\r\n"
+                final.\r"
             Headings:
               name: Cabeçalhos
               description_student: Esta lição continua a introdução às tags HTML,
@@ -4539,7 +4504,7 @@ pt:
                 outra pessoa usando um perfil de usuário e reagindo como esse usuário
                 a uma série de produtos. Cada aluno recebe um perfil de usuário que
                 descreve uma pessoa, que eles usam para escolher produtos apropriados,
-                criticar o design do produto e sugerir melhorias no design.\r\n"
+                criticar o design do produto e sugerir melhorias no design.\r"
             Discovering Users:
               name: Descobrindo Usuários
             User-Centered Design Micro Activity:
@@ -4617,7 +4582,7 @@ pt:
                 escolher um (ou mais) dos aplicativos como base para seus próprios.
                 A partir daí, as equipes têm tempo para discutir a funcionalidade
                 básica do aplicativo antes de usar os cartões de índice 3x5 para desenvolver
-                protótipos em papel.\r\n"
+                protótipos em papel.\r"
             Prototype Testing:
               name: Protótipo de Teste
               description_student: Nesta lição, as equipes testam seus protótipos
@@ -6880,14 +6845,10 @@ pt:
               name: Condicionais e funções na abelha
         csppostsurvey-staging:
           title: "[Descontinuado] CSP post staging area"
-          description: |2-
-
-            Movido para / s / csp-pós-pesquisa. Destino após 05.05.17
+          description: Movido para / s / csp-pós-pesquisa. Destino após 05.05.17
           lessons:
             CSP Student Post Survey Staging:
-              name: |2-
-
-                Questionário CSP Pós-Estágio
+              name: Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         fmscsd3preview:
@@ -7043,7 +7004,7 @@ pt:
               description_teacher: "Nesta lição, os alunos relacionarão o conceito
                 de algoritmos às atividades cotidianas da vida real, plantando uma
                 semente real. O objetivo aqui é começar a construir as habilidades
-                para traduzir situações do mundo real para cenários on-line e vice-versa.\r\n"
+                para traduzir situações do mundo real para cenários on-line e vice-versa.\r"
             Learn to Drag and Drop:
               name: Sequenciando com arrastar e soltar
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que
@@ -7283,14 +7244,14 @@ pt:
               name: 'Se / Se-não: Condicionais com Cartões'
               description_student: É hora de jogar um jogo em que você ganha pontos
                 apenas sob certas condições!
-              description_teacher: "Esta lição demonstra como os condicionais podem
+              description_teacher: Esta lição demonstra como os condicionais podem
                 ser usados para adaptar um programa a informações específicas. Nem
                 sempre temos todas as informações necessárias ao escrever um programa.
                 Às vezes, você desejará fazer algo diferente em uma situação do que
                 em outra, mesmo que você não saiba qual situação será verdadeira quando
                 seu código for executado. É aí que entram os condicionais. Os condicionais
                 permitem que um computador tome uma decisão, com base nas informações
-                verdadeiras sempre que seu código for executado.\n\n"
+                verdadeiras sempre que seu código for executado.
             Conditionals in Bee:
               name: Estruturas condicionais em abelhas
               description_student: 'Agora que você entende os condicionais, é hora
@@ -7646,26 +7607,23 @@ pt:
                 brincam com tangramas.
             Introduction:
               name: Introdução a quebra-cabeças online
-              description_student: |2-
-
-                Esta lição fornecerá uma breve introdução a algumas das coisas incríveis que você aprenderá neste curso!
-              description_teacher: |2-
-
-                Nesta lição, os alunos serão apresentados a seqüências, loops e loops aninhados para prepará-los para conceitos mais complicados na parte posterior do curso. Esta lição de "aceleração" iguala o campo de jogo entre os especialistas e os iniciantes da sua classe.
+              description_student: Esta lição fornecerá uma breve introdução a algumas
+                das coisas incríveis que você aprenderá neste curso!
+              description_teacher: Nesta lição, os alunos serão apresentados a seqüências,
+                loops e loops aninhados para prepará-los para conceitos mais complicados
+                na parte posterior do curso. Esta lição de "aceleração" iguala o campo
+                de jogo entre os especialistas e os iniciantes da sua classe.
             The Power of Words:
               name: 'Cidadania digital: o poder das palavras'
               description_student: Bullying nunca é bom. Esta lição ensinará sobre
                 o que é e o que não é bom dizer on-line.
-              description_teacher: "Os alunos consideram que, enquanto desfrutam de
-                seus sites favoritos, podem encontrar mensagens de outras crianças
-                que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram
-                maneiras de lidar com o cyberbullying e como responder em face da
-                perturbadora linguagem online.\n\nOs alunos discutem todas as maneiras
-                pelas quais usam a tecnologia para comunicação e exploram as semelhanças
-                e diferenças entre a comunicação pessoal e online. Os alunos então
-                discutem maneiras de responder ao cyberbullying.\n \nraiz -> dados
-                -> script -> nome -> coursef-2018 -> estágios -> O poder das palavras
-                -> professor de descrição\nhttps://studio.code.org/s/coursef INTRO"
+              description_teacher: |-
+                Os alunos consideram que, enquanto desfrutam de seus sites favoritos, podem encontrar mensagens de outras crianças que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram maneiras de lidar com o cyberbullying e como responder em face da perturbadora linguagem online.
+
+                Os alunos discutem todas as maneiras pelas quais usam a tecnologia para comunicação e exploram as semelhanças e diferenças entre a comunicação pessoal e online. Os alunos então discutem maneiras de responder ao cyberbullying.
+
+                raiz -> dados -> script -> nome -> coursef-2018 -> estágios -> O poder das palavras -> professor de descrição
+                https://studio.code.org/s/coursef INTRO
             Ice Age Play Lab:
               name: Eventos na Era do Gelo
               description_student: Pense no seu videogame favorito. Já se perguntou
@@ -7827,9 +7785,8 @@ pt:
                 do projeto, [here](https://curriculum.code.org/csf/coursef/15/).
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
-              description_student: |2-
-
-                Evite a lava! Aqui você aprenderá sobre condicionais no mundo do Minecraft.
+              description_student: Evite a lava! Aqui você aprenderá sobre condicionais
+                no mundo do Minecraft.
               description_teacher: Esta lição oferece aos alunos a chance de aprender
                 e praticar condicionais. Possui caracteres e configurações do Minecraft,
                 e os alunos concluirão tarefas como minerar e construir estruturas
@@ -9106,7 +9063,7 @@ pt:
           description_short: Campo temporário de preparação para alterações de outubro
             no csp3
           description: "Esta é uma réplica de níveis ao vivo em / s/ csp3 com estágios
-            novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r\n"
+            novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r"
           lesson_groups:
             csp3_1:
               display_name: 'Capítulo 1: Programando Linguagens e Algoritmos'
@@ -9136,7 +9093,7 @@ pt:
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
           student_description: "Esta é uma réplica de níveis ao vivo em / s/ csp3
-            com estágios novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r\n"
+            com estágios novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r"
         pwc:
           title: Currículo da PwC Acesse seu potencial
           description: Na PwC, acreditamos que todos os alunos têm o potencial de
@@ -10112,16 +10069,15 @@ pt:
             Lists:
               name: Listas
               description_student: Esta lição apresenta listas ordenadas e não ordenadas
-                e os associados &lt;ul&gt;, &lt;ol&gt;, e &lt;li&gt; Tags HTML. A
-                classe pratica o uso das tags e volta ao projeto de página da web
-                pessoal para adicionar uma nova página HTML que inclui as novas tags.
+                e os associados <ul>, <ol>, e <li> Tags HTML. A classe pratica o uso
+                das tags e volta ao projeto de página da web pessoal para adicionar
+                uma nova página HTML que inclui as novas tags.
               description_teacher: Os alunos são apresentados a listas ordenadas e
                 não-ordenadas em HTML e trabalham em alguns níveis nos quais usam
-                o &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags. Em seguida, eles retornam
-                ao seu projeto, onde adicionam uma nova página HTML. Dentro da nova
-                página, eles escrevem o HTML para exibir uma receita, a lista dos
-                dez melhores ou qualquer outro conteúdo que use as novas tags que
-                eles aprenderam.
+                o <ul>, <ol>, and <li> tags. Em seguida, eles retornam ao seu projeto,
+                onde adicionam uma nova página HTML. Dentro da nova página, eles escrevem
+                o HTML para exibir uma receita, a lista dos dez melhores ou qualquer
+                outro conteúdo que use as novas tags que eles aprenderam.
             Intellectual Property and Images:
               name: Propriedade intelectual e imagens
               description_student: Esta lição aborda como usar mídia, como imagens,
@@ -10137,7 +10093,7 @@ pt:
                 a dificuldade de lidar com direitos autorais. \n\nPor fim, com um
                 entendimento comum das restrições de várias licenças Creative Commons,
                 os alunos aprendem como adicionar imagens às suas páginas da Web usando
-                o &lt;img&gt; tag."
+                o <img> tag."
             Clean Code and Debugging:
               name: Código limpo e depuração
               description_student: Nesta lição, abordamos problemas comuns que surgem
@@ -10162,7 +10118,7 @@ pt:
                 os alunos finalmente podem publicar o site em que estão trabalhando.
                 Nesta lição, eles vinculam todas as páginas anteriores que criaram
                 em um projeto, criam uma nova página e adicionam navegação entre as
-                páginas antes de publicar o site inteiro na Web. \r\n\r\n"
+                páginas antes de publicar o site inteiro na Web. \r\n\r"
             Styling Text with CSS:
               name: Estilo de texto com CSS
               description_student: Esta lição apresenta o CSS como uma maneira de
@@ -10177,7 +10133,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Styling Elements with CSS:
               name: Estilizando elementos com CSS
               description_student: Esta lição continua a introdução às propriedades
@@ -10233,7 +10189,7 @@ pt:
                 retoques finais nos sites, revisar a rubrica e refletir sobre seu
                 processo. Para fechar a unidade, eles compartilharão seus projetos
                 e também uma visão geral do processo que levaram para chegar ao design
-                final.\r\n"
+                final.\r"
             CS Discoveries Post-Course Survey:
               name: Pesquisa pós-curso da CS Discoveries
           student_description: " Na Unidade 2, você aprenderá a criar e compartilhar
@@ -10271,7 +10227,7 @@ pt:
               description_teacher: "Nesta lição, os alunos relacionarão o conceito
                 de algoritmos às atividades cotidianas da vida real, plantando uma
                 semente real. O objetivo aqui é começar a construir as habilidades
-                para traduzir situações do mundo real para cenários on-line e vice-versa.\r\n"
+                para traduzir situações do mundo real para cenários on-line e vice-versa.\r"
             Learn to Drag and Drop:
               name: Aprenda a arrastar e soltar
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que
@@ -11131,26 +11087,23 @@ pt:
                 brincam com tangramas.
             Introduction:
               name: Introdução
-              description_student: |2-
-
-                Esta lição fornecerá uma breve introdução a algumas das coisas incríveis que você aprenderá neste curso!
-              description_teacher: |2-
-
-                Nesta lição, os alunos serão apresentados a seqüências, loops e loops aninhados para prepará-los para conceitos mais complicados na parte posterior do curso. Esta lição de "aceleração" iguala o campo de jogo entre os especialistas e os iniciantes da sua classe.
+              description_student: Esta lição fornecerá uma breve introdução a algumas
+                das coisas incríveis que você aprenderá neste curso!
+              description_teacher: Nesta lição, os alunos serão apresentados a seqüências,
+                loops e loops aninhados para prepará-los para conceitos mais complicados
+                na parte posterior do curso. Esta lição de "aceleração" iguala o campo
+                de jogo entre os especialistas e os iniciantes da sua classe.
             The Power of Words:
               name: O poder das palavras
               description_student: Bullying nunca é bom. Esta lição ensinará sobre
                 o que é e o que não é bom dizer on-line.
-              description_teacher: "Os alunos consideram que, enquanto desfrutam de
-                seus sites favoritos, podem encontrar mensagens de outras crianças
-                que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram
-                maneiras de lidar com o cyberbullying e como responder em face da
-                perturbadora linguagem online.\n\nOs alunos discutem todas as maneiras
-                pelas quais usam a tecnologia para comunicação e exploram as semelhanças
-                e diferenças entre a comunicação pessoal e online. Os alunos então
-                discutem maneiras de responder ao cyberbullying.\n \nraiz -> dados
-                -> script -> nome -> coursef-2018 -> estágios -> O poder das palavras
-                -> professor de descrição\nhttps://studio.code.org/s/coursef INTRO"
+              description_teacher: |-
+                Os alunos consideram que, enquanto desfrutam de seus sites favoritos, podem encontrar mensagens de outras crianças que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram maneiras de lidar com o cyberbullying e como responder em face da perturbadora linguagem online.
+
+                Os alunos discutem todas as maneiras pelas quais usam a tecnologia para comunicação e exploram as semelhanças e diferenças entre a comunicação pessoal e online. Os alunos então discutem maneiras de responder ao cyberbullying.
+
+                raiz -> dados -> script -> nome -> coursef-2018 -> estágios -> O poder das palavras -> professor de descrição
+                https://studio.code.org/s/coursef INTRO
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
               description_student: Pense no seu videogame favorito. Já se perguntou
@@ -11162,9 +11115,8 @@ pt:
                 a chance de criar seu próprio jogo ou história após os níveis guiados.
             Conditionals in Minecraft:
               name: Condicionais no Minecraft
-              description_student: |2-
-
-                Evite a lava! Aqui você aprenderá sobre condicionais no mundo do Minecraft.
+              description_student: Evite a lava! Aqui você aprenderá sobre condicionais
+                no mundo do Minecraft.
               description_teacher: Esta lição oferece aos alunos a chance de aprender
                 e praticar condicionais. Possui caracteres e configurações do Minecraft,
                 e os alunos concluirão tarefas como minerar e construir estruturas
@@ -11403,7 +11355,7 @@ pt:
             do mundo real. Em seguida, você aprenderá como os computadores inserem,
             produzem, armazenam e processam informações para ajudar os humanos a resolver
             problemas. A unidade conclui com um projeto no qual você cria um aplicativo
-            que ajuda a resolver um problema de sua escolha.\r\n"
+            que ajuda a resolver um problema de sua escolha.\r"
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -11496,7 +11448,7 @@ pt:
                 pela sala e explicam brevemente suas motivações para escolher algumas
                 de suas categorizações mais difíceis. O professor apresentará uma
                 definição do computador e permitirá que os alunos revisem seus pôsteres
-                de acordo com a nova definição.\r\n"
+                de acordo com a nova definição.\r"
             Input and Output:
               name: Entrada e saída
               description_student: Na classe os alunos consideram vários dispositivos
@@ -11623,7 +11575,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar os humanos a resolver problemas. A unidade conclui com um projeto
             no qual você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
         csd4-2018:
           title: CSD Unidade 4 - O processo de design ('18 -'19)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -11675,7 +11627,7 @@ pt:
                 outra pessoa usando um perfil de usuário e reagindo como esse usuário
                 a uma série de produtos. Cada aluno recebe um perfil de usuário que
                 descreve uma pessoa, que eles usam para escolher produtos apropriados,
-                criticar o design do produto e sugerir melhorias no design.\r\n"
+                criticar o design do produto e sugerir melhorias no design.\r"
             User-Centered Design Micro Activity:
               name: Micro atividade de design centrado no usuário
               description_student: Em pequenos grupos, a turma usa o processo de design
@@ -11808,7 +11760,7 @@ pt:
                 escolher um (ou mais) dos aplicativos como base para seus próprios.
                 A partir daí, as equipes têm tempo para discutir a funcionalidade
                 básica do aplicativo antes de usar os cartões de índice 3x5 para desenvolver
-                protótipos em papel.\r\n"
+                protótipos em papel.\r"
             Prototype Testing:
               name: Protótipo de Teste
               description_student: Nesta lição, as equipes testam seus protótipos
@@ -12287,9 +12239,7 @@ pt:
             Creating Summary Tables:
               name: Criando tabelas de resumo
             Practice PT - Tell a Data Story:
-              name: |2-
-
-                Prática - Conte uma história de dados
+              name: Prática - Conte uma história de dados
             Unit 2 Chapter 2 Assessment:
               name: Unidade 2 Capítulo 2 Avaliação
             Lossy vs. Lossless Compression:
@@ -13930,7 +13880,7 @@ pt:
                 em outra, mesmo que você não saiba qual situação será verdadeira quando
                 o código for executado. É aí que entram os condicionais. Os condicionais
                 permitem que um computador tome uma decisão, com base nas informações
-                verdadeiras sempre que seu código for executado.\r\n \r\n"
+                verdadeiras sempre que seu código for executado.\r\n \r"
             Conditionals in Bee:
               name: If/Else com Abelha
               description_student: 'Agora que você entende os condicionais, é hora
@@ -14283,7 +14233,7 @@ pt:
                 pessoais e privadas na web.
               description_teacher: "Ao criar um pôster interativo com o SpriteLab,
                 os alunos aplicarão seu entendimento sobre o compartilhamento de informações
-                pessoais e privadas na web.\r\n"
+                pessoais e privadas na web.\r"
             Aquatic Conditionals in Minecraft:
               name: Condicionais Aquáticas no Minecraft
             Access Ability:
@@ -14465,7 +14415,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto
             em que você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -14558,7 +14508,7 @@ pt:
                 pela sala e explicam brevemente suas motivações para escolher algumas
                 de suas categorizações mais difíceis. O professor apresentará uma
                 definição do computador e permitirá que os alunos revisem seus pôsteres
-                de acordo com a nova definição.\r\n"
+                de acordo com a nova definição.\r"
             Input and Output:
               name: Entrada e saída
               description_student: Na classe os alunos consideram vários dispositivos
@@ -14648,7 +14598,7 @@ pt:
             como os computadores inserem, produzem, armazenam e processam informações
             para ajudar as pessoas a resolver problemas. A unidade é concluída com
             um projeto em que você cria um aplicativo que ajuda a resolver um problema
-            de sua escolha.\r\n"
+            de sua escolha.\r"
         andrea-test:
           title: andrea-teste
           description_audience: 6-12 Facilitadores em treinamento
@@ -14782,7 +14732,7 @@ pt:
               description_teacher: "Na etapa anterior, os alunos usavam loops para
                 criar desenhos fantásticos. Agora eles vão executar novas ações para
                 ajudar a colheitadeira a coletar vários vegetais que crescem em grandes
-                grupos.\r\n"
+                grupos.\r"
             'Events: The Big Event':
               name: O grande evento
               description_student: 'Jogue um jogo divertido para aprender sobre os
@@ -14813,7 +14763,7 @@ pt:
                 on-line, os alunos discutem o que é o cyberbullying, como ele pode
                 fazer as pessoas se sentirem e como responder. Finalmente, eles usam
                 seus conhecimentos para criar uma folha de dicas simples sobre cyberbullying
-                em seus diários.\r\n"
+                em seus diários.\r"
             Events in Play Lab:
               name: Jogo de perseguição com eventos
               description_student: É hora de ser criativo e criar um jogo no Play
@@ -14879,7 +14829,7 @@ pt:
                 aprendem os benefícios do uso de senhas e descobrem estratégias para
                 criar e manter senhas fortes e seguras.\r\n\r\nOs alunos aprendem
                 dicas de senha, testam suas senhas existentes com um jogo interativo
-                e criam novas senhas usando diretrizes para senhas poderosas.\r\n"
+                e criam novas senhas usando diretrizes para senhas poderosas.\r"
             Sticker Art with Loops:
               name: Adesivo de arte com loops
               description_student: Nesta lição, os loops facilitam a criação de imagens
@@ -15401,16 +15351,15 @@ pt:
             Lists:
               name: Listas
               description_student: Esta lição apresenta listas ordenadas e não ordenadas
-                e os associados &lt;ul&gt;, &lt;ol&gt;, e &lt;li&gt; Tags HTML. A
-                classe pratica o uso das tags e volta ao projeto de página da web
-                pessoal para adicionar uma nova página HTML que inclui as novas tags.
+                e os associados <ul>, <ol>, e <li> Tags HTML. A classe pratica o uso
+                das tags e volta ao projeto de página da web pessoal para adicionar
+                uma nova página HTML que inclui as novas tags.
               description_teacher: Os alunos são apresentados a listas ordenadas e
                 não-ordenadas em HTML e trabalham em alguns níveis nos quais usam
-                o &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags. Em seguida, eles retornam
-                ao seu projeto, onde adicionam uma nova página HTML. Dentro da nova
-                página, eles escrevem o HTML para exibir uma receita, a lista dos
-                dez melhores ou qualquer outro conteúdo que use as novas tags que
-                eles aprenderam.
+                o <ul>, <ol>, and <li> tags. Em seguida, eles retornam ao seu projeto,
+                onde adicionam uma nova página HTML. Dentro da nova página, eles escrevem
+                o HTML para exibir uma receita, a lista dos dez melhores ou qualquer
+                outro conteúdo que use as novas tags que eles aprenderam.
             Intellectual Property and Images:
               name: Propriedade intelectual e imagens
               description_student: Esta lição aborda como usar mídia, como imagens,
@@ -15426,7 +15375,7 @@ pt:
                 a dificuldade de lidar com direitos autorais. \n\nPor fim, com um
                 entendimento comum das restrições de várias licenças Creative Commons,
                 os alunos aprendem como adicionar imagens às suas páginas da Web usando
-                o &lt;img&gt; tag."
+                o <img> tag."
             Clean Code and Debugging:
               name: Código limpo e depuração
               description_student: Nesta lição, abordamos problemas comuns que surgem
@@ -15451,7 +15400,7 @@ pt:
                 os alunos finalmente podem publicar o site em que estão trabalhando.
                 Nesta lição, eles vinculam todas as páginas anteriores que criaram
                 em um projeto, criam uma nova página e adicionam navegação entre as
-                páginas antes de publicar o site inteiro na Web. \r\n\r\n"
+                páginas antes de publicar o site inteiro na Web. \r\n\r"
             Styling Text with CSS:
               name: Estilo de texto com CSS
               description_student: Esta lição apresenta o CSS como uma maneira de
@@ -15466,7 +15415,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Styling Elements with CSS:
               name: Estilizando elementos com CSS
               description_student: Esta lição continua a introdução às propriedades
@@ -15522,7 +15471,7 @@ pt:
                 retoques finais nos sites, revisar a rubrica e refletir sobre seu
                 processo. Para fechar a unidade, eles compartilharão seus projetos
                 e também uma visão geral do processo que levaram para chegar ao design
-                final.\r\n"
+                final.\r"
             Post-Project Test:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
@@ -15935,7 +15884,7 @@ pt:
                 outra pessoa usando um perfil de usuário e reagindo como esse usuário
                 a uma série de produtos. Cada aluno recebe um perfil de usuário que
                 descreve uma pessoa, que eles usam para escolher produtos apropriados,
-                criticar o design do produto e sugerir melhorias no design.\r\n"
+                criticar o design do produto e sugerir melhorias no design.\r"
             User-Centered Design Micro Activity:
               name: Micro atividade de design centrado no usuário
               description_student: Em pequenos grupos, a turma usa o processo de design
@@ -16068,7 +16017,7 @@ pt:
                 escolher um (ou mais) dos aplicativos como base para seus próprios.
                 A partir daí, as equipes têm tempo para discutir a funcionalidade
                 básica do aplicativo antes de usar os cartões de índice 3x5 para desenvolver
-                protótipos em papel.\r\n"
+                protótipos em papel.\r"
             Prototype Testing:
               name: Protótipo de Teste
               description_student: Nesta lição, as equipes testam seus protótipos
@@ -17883,7 +17832,7 @@ pt:
             desenvolvidos. Este curso apresenta Ciência da Computação básica para
             estudantes vietnamitas. O programa é construído diretamente a partir do
             programa atual para estudantes do ensino fundamental nos EUA e é adequado
-            para estudantes vietnamitas.\r\n"
+            para estudantes vietnamitas.\r"
           lessons:
             Graph Paper Programming:
               name: Programação em papel quadriculado
@@ -18137,7 +18086,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto
             em que você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -18230,7 +18179,7 @@ pt:
                 pela sala e explicam brevemente suas motivações para escolher algumas
                 de suas categorizações mais difíceis. O professor apresentará uma
                 definição do computador e permitirá que os alunos revisem seus pôsteres
-                de acordo com a nova definição.\r\n"
+                de acordo com a nova definição.\r"
             Input and Output:
               name: Entrada e saída
               description_student: Na classe os alunos consideram vários dispositivos
@@ -18320,7 +18269,7 @@ pt:
             como os computadores inserem, produzem, armazenam e processam informações
             para ajudar as pessoas a resolver problemas. A unidade é concluída com
             um projeto em que você cria um aplicativo que ajuda a resolver um problema
-            de sua escolha.\r\n"
+            de sua escolha.\r"
         csd2-pilot:
           title: CDS Unidade 2 - Desenvolvimento Web (Versão Piloto)
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo
@@ -18433,16 +18382,15 @@ pt:
             Lists:
               name: Listas
               description_student: Esta lição apresenta listas ordenadas e não ordenadas
-                e os associados &lt;ul&gt;, &lt;ol&gt;, e &lt;li&gt; Tags HTML. A
-                classe pratica o uso das tags e volta ao projeto de página da web
-                pessoal para adicionar uma nova página HTML que inclui as novas tags.
+                e os associados <ul>, <ol>, e <li> Tags HTML. A classe pratica o uso
+                das tags e volta ao projeto de página da web pessoal para adicionar
+                uma nova página HTML que inclui as novas tags.
               description_teacher: Os alunos são apresentados a listas ordenadas e
                 não-ordenadas em HTML e trabalham em alguns níveis nos quais usam
-                o &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags. Em seguida, eles retornam
-                ao seu projeto, onde adicionam uma nova página HTML. Dentro da nova
-                página, eles escrevem o HTML para exibir uma receita, a lista dos
-                dez melhores ou qualquer outro conteúdo que use as novas tags que
-                eles aprenderam.
+                o <ul>, <ol>, and <li> tags. Em seguida, eles retornam ao seu projeto,
+                onde adicionam uma nova página HTML. Dentro da nova página, eles escrevem
+                o HTML para exibir uma receita, a lista dos dez melhores ou qualquer
+                outro conteúdo que use as novas tags que eles aprenderam.
             Intellectual Property and Images:
               name: Propriedade intelectual e imagens
               description_student: Esta lição aborda como usar mídia, como imagens,
@@ -18458,7 +18406,7 @@ pt:
                 a dificuldade de lidar com direitos autorais. \n\nPor fim, com um
                 entendimento comum das restrições de várias licenças Creative Commons,
                 os alunos aprendem como adicionar imagens às suas páginas da Web usando
-                o &lt;img&gt; tag."
+                o <img> tag."
             Clean Code and Debugging:
               name: Código limpo e depuração
               description_student: Nesta lição, abordamos problemas comuns que surgem
@@ -18483,7 +18431,7 @@ pt:
                 os alunos finalmente podem publicar o site em que estão trabalhando.
                 Nesta lição, eles vinculam todas as páginas anteriores que criaram
                 em um projeto, criam uma nova página e adicionam navegação entre as
-                páginas antes de publicar o site inteiro na Web. \r\n\r\n"
+                páginas antes de publicar o site inteiro na Web. \r\n\r"
             Styling Text with CSS:
               name: Estilo de texto com CSS
               description_student: Esta lição apresenta o CSS como uma maneira de
@@ -18498,7 +18446,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Styling Elements with CSS:
               name: Estilizando elementos com CSS
               description_student: Esta lição continua a introdução às propriedades
@@ -18554,7 +18502,7 @@ pt:
                 retoques finais nos sites, revisar a rubrica e refletir sobre seu
                 processo. Para fechar a unidade, eles compartilharão seus projetos
                 e também uma visão geral do processo que levaram para chegar ao design
-                final.\r\n"
+                final.\r"
             Post-Project Test:
               name: Teste pós-projeto
             CS Discoveries Post Course survey:
@@ -19925,6 +19873,8 @@ pt:
               display_name: funções
             csp_project:
               display_name: Projeto
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             Variables Explore:
               name: Explorar Variáveis
@@ -19956,6 +19906,8 @@ pt:
               name: Projeto - Aplicativo para tomada de decisão Parte 3
             'Lesson 15: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp5-2020:
           title: CSP Unidade 5 – Listas, laços e travessias (2020–2021)
           lesson_groups:
@@ -19967,6 +19919,8 @@ pt:
               display_name: Traversais
             csp_project:
               display_name: Projeto
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             Lists Explore:
               name: Lista Explorar
@@ -20008,12 +19962,16 @@ pt:
               name: Pesquisa de Alunos da Unidade 5
             Unit 5 TEACHER Survey:
               name: Pesquisa do Professor da Unidade 5
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parâmetros e valores de retorno
             csp_libraries:
               display_name: Bibliotecas
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             Parameters and Return Explore:
               name: 'Explorar: Parâmetros e valores de retorno'
@@ -20045,6 +20003,8 @@ pt:
               name: Variáveis ​​fazem demonstração
             'Lesson 11: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csd2-projects-temp:
           title: CSD Projetos Web - Temporário
           description: Local temporário para a realização dos novos miniprojetos de
@@ -20178,7 +20138,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Intellectual Property:
               name: Propriedade intelectual
             Images:
@@ -20258,7 +20218,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto
             em que você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -20351,7 +20311,7 @@ pt:
                 pela sala e explicam brevemente suas motivações para escolher algumas
                 de suas categorizações mais difíceis. O professor apresentará uma
                 definição do computador e permitirá que os alunos revisem seus pôsteres
-                de acordo com a nova definição.\r\n"
+                de acordo com a nova definição.\r"
             Input and Output:
               name: Entrada e saída
               description_student: Na classe os alunos consideram vários dispositivos
@@ -20457,7 +20417,7 @@ pt:
             como os computadores inserem, produzem, armazenam e processam informações
             para ajudar as pessoas a resolver problemas. A unidade é concluída com
             um projeto em que você cria um aplicativo que ajuda a resolver um problema
-            de sua escolha.\r\n"
+            de sua escolha.\r"
         csd4-2020:
           title: CDS Unidade 4 - O Processo de Design ('19 -'20)
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -20511,7 +20471,7 @@ pt:
                 outra pessoa usando um perfil de usuário e reagindo como esse usuário
                 a uma série de produtos. Cada aluno recebe um perfil de usuário que
                 descreve uma pessoa, que eles usam para escolher produtos apropriados,
-                criticar o design do produto e sugerir melhorias no design.\r\n"
+                criticar o design do produto e sugerir melhorias no design.\r"
             User-Centered Design Micro Activity:
               name: Micro atividade de design centrado no usuário
               description_student: Em pequenos grupos, a turma usa o processo de design
@@ -20644,7 +20604,7 @@ pt:
                 escolher um (ou mais) dos aplicativos como base para seus próprios.
                 A partir daí, as equipes têm tempo para discutir a funcionalidade
                 básica do aplicativo antes de usar os cartões de índice 3x5 para desenvolver
-                protótipos em papel.\r\n"
+                protótipos em papel.\r"
             Prototype Testing:
               name: Protótipo de Teste
               description_student: Nesta lição, as equipes testam seus protótipos
@@ -21767,7 +21727,7 @@ pt:
                 on-line, os alunos discutem o que é o cyberbullying, como ele pode
                 fazer as pessoas se sentirem e como responder. Finalmente, eles usam
                 seus conhecimentos para criar uma folha de dicas simples sobre cyberbullying
-                em seus diários.\r\n"
+                em seus diários.\r"
             Powerful Passwords:
               name: Senhas fortes
               description_student: Nesta lição, você aprenderá sobre como as senhas
@@ -21776,7 +21736,7 @@ pt:
                 aprendem os benefícios do uso de senhas e descobrem estratégias para
                 criar e manter senhas fortes e seguras.\r\n\r\nOs alunos aprendem
                 dicas de senha, testam suas senhas existentes com um jogo interativo
-                e criam novas senhas usando diretrizes para senhas poderosas.\r\n"
+                e criam novas senhas usando diretrizes para senhas poderosas.\r"
             'Programming: My Robotic Friends':
               name: Meus Amigos Robôs Jr.
               description_student: Nesta lição, você fingirá que seus colegas de classe
@@ -21851,7 +21811,7 @@ pt:
               description_teacher: "Na etapa anterior, os alunos usavam loops para
                 criar desenhos fantásticos. Agora eles vão executar novas ações para
                 ajudar a colheitadeira a coletar vários vegetais que crescem em grandes
-                grupos.\r\n"
+                grupos.\r"
             Looking Ahead:
               name: Prevendo com o Minecraft
               description_student: Evite a lava! Aqui você começará a aprender sobre
@@ -22040,7 +22000,7 @@ pt:
                 em outra, mesmo que você não saiba qual situação será verdadeira quando
                 o código for executado. É aí que entram os condicionais. Os condicionais
                 permitem que um computador tome uma decisão, com base nas informações
-                verdadeiras sempre que seu código for executado.\r\n \r\n"
+                verdadeiras sempre que seu código for executado.\r\n \r"
             Conditionals in Bee:
               name: If/Else com Abelha
               description_student: 'Agora que você entende os condicionais, é hora
@@ -22239,7 +22199,7 @@ pt:
                 pessoais e privadas na web.
               description_teacher: "Ao criar um pôster interativo com o SpriteLab,
                 os alunos aplicarão seu entendimento sobre o compartilhamento de informações
-                pessoais e privadas na web.\r\n"
+                pessoais e privadas na web.\r"
             Access Ability:
               name: Projetando para Acessibilidade
               description_student: 'Nesta lição, os alunos aprenderão sobre acessibilidade
@@ -22814,6 +22774,8 @@ pt:
               display_name: 'Unidade 1: Informação digital'
             cspSurvey:
               display_name: Questionário
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -22847,11 +22809,15 @@ pt:
               name: 'Lição 15: Dia da Avaliação'
             CS Principles Pre-survey:
               name: Princípios CS Pré-pesquisa
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp2-2020:
           title: CSP Unidade 2 – A Internet (2020-2021)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -22873,11 +22839,15 @@ pt:
               name: Projeto - Dilemas da Internet - Parte 2
             'Lesson 9: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp3-2020:
           title: CSP Unidade 3 – Introdução ao design de aplicativos (2020-2021)
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -22901,11 +22871,15 @@ pt:
               name: Projeto - Criando um Aplicativo - Parte 5
             'Lesson 11: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp6-2020:
           title: CSP Unidade 6 – Algoritmos (2020-2021)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unidade 6: Algoritmos'
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -22921,6 +22895,8 @@ pt:
               name: Algoritmos Paralelos e Distribuídos
             'Lesson 6: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp8-2020:
           title: CSP Unidade 8 – Preparação para o Create PT (2020-2021)
           lessons:
@@ -22937,6 +22913,8 @@ pt:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -22958,11 +22936,15 @@ pt:
               name: Projeto - Conte uma História de Dados - Parte 2
             'Lesson 9: Assessment Day':
               name: 'Lição 15: Dia da Avaliação'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp10-2020:
           title: CSP Unidade 10 – Segurança cibernética e impactos globais (2020-2021)
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Segurança cibernética e impactos globais'
+            cspSurvey2020:
+              display_name: Pesquisa Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -23000,6 +22982,8 @@ pt:
               name: 'Projeto: Simulação da Inovação - Parte 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lição 14: Dia da Avaliação da Unidade'
+            CS Principles Post-Course Survey:
+              name: Pesquisa pós-curso de princípios do CS
         csp-march-virtual:
           title: Formação curricular em princípios de ciência da computação para facilitadores
             2020-2021
@@ -23157,7 +23141,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Intellectual Property:
               name: Propriedade intelectual
             Images:
@@ -23730,6 +23714,12 @@ pt:
               name: Curso B
             CS Discoveries:
               name: Descobertas da Ciência da Computação
+            Course E:
+              name: Curso E
+            Course F:
+              name: Curso F
+            csf:
+              name: Conceitos básicos da CC
         virustest:
           title: Simulação de uma epidemia
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
@@ -23740,6 +23730,10 @@ pt:
               name: IA para oceanos
             visualizing:
               name: Visualizando dados
+            lesson14:
+              name: Lição 14
+            lesson15:
+              name: Lição 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -23769,7 +23763,9 @@ pt:
             lessonGroup-3:
               display_name: variáveis
             outbreak:
-              display_name: Simulação de Epidemia
+              display_name: Simulador de Epidemia
+            debugging:
+              display_name: Analisando
         csd1-2021:
           title: Unidade 1 de CSD - Solução de problemas e computação ('19 -'20)
           description: "Resolução de Problemas e Computação é uma introdução altamente
@@ -23780,7 +23776,7 @@ pt:
             computadores inserem, produzem, armazenam e processam informações para
             ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto
             em que você cria um aplicativo que ajuda a resolver um problema de sua
-            escolha.\r\n"
+            escolha.\r"
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lessons:
@@ -23808,7 +23804,7 @@ pt:
                 pela sala e explicam brevemente suas motivações para escolher algumas
                 de suas categorizações mais difíceis. O professor apresentará uma
                 definição do computador e permitirá que os alunos revisem seus pôsteres
-                de acordo com a nova definição.\r\n"
+                de acordo com a nova definição.\r"
             Input and Output:
               key: Entrada e saída
               name: Entrada e saída
@@ -23859,7 +23855,7 @@ pt:
             como os computadores inserem, produzem, armazenam e processam informações
             para ajudar as pessoas a resolver problemas. A unidade é concluída com
             um projeto em que você cria um aplicativo que ajuda a resolver um problema
-            de sua escolha.\r\n"
+            de sua escolha.\r"
         csd2-2021:
           title: CSD Unidade 2 - Desenvolvimento Web
           description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo
@@ -23892,7 +23888,7 @@ pt:
                 sobre os detentores do Guinness World Record, adicionando seu próprio
                 estilo à página fornecida. No último nível, os alunos aplicam o que
                 aprenderam sobre estilos para elementos de texto em sua página pessoal
-                da web.\r\n\r\n"
+                da web.\r\n\r"
             Intellectual Property:
               key: Propriedade intelectual
               name: Propriedade intelectual
@@ -24875,7 +24871,7 @@ pt:
               name: Big Data, Crowdsourcing, e aprendizado de máquina
             Machine Learning and Bias:
               key: Aprendizado de máquina e tendencia
-              name: Aprendizado de máquina e tendencia
+              name: Máquina de aprendizado
             Project - Tell a Data Story - Part 1:
               key: Projeto - Conte uma História de Dados - Parte 1
               name: Projeto - Conte uma História de Dados - Parte 1
@@ -25100,11 +25096,11 @@ pt:
               name: Programação com Colheitadeira
               description_student: Ajude a colheitadeira a coletar vegetais ao longo
                 de um caminho.
-              description_teacher: 'Os alunos aplicarão os conceitos de programação
+              description_teacher: Os alunos aplicarão os conceitos de programação
                 que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir
                 o objetivo, os alunos precisam coletar milho usando um novo bloco.
                 Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial
-                e começarão a usar o processo de depuração. '
+                e começarão a usar o processo de depuração.
             'Loops: Getting Loopy':
               key: 'Laços: Ficando Zonzo'
               name: Repetindo
@@ -25146,13 +25142,13 @@ pt:
               key: O aplicativo correto
               name: O aplicativo correto
               description_student: Esboce seu próprio aplicativo para smartphone.
-              description_teacher: 'Esta lição faz com que os alunos reconheçam que
+              description_teacher: Esta lição faz com que os alunos reconheçam que
                 a ciência da computação pode ajudar as pessoas na vida real. Primeiro,
                 os alunos simpatizam com vários usuários fictícios de smartphones,
                 a fim de ajudá-los a encontrar o "aplicativo certo" que atenda às
                 suas necessidades. Em seguida, os alunos exercitam empatia e criatividade
                 para desenhar seu próprio aplicativo para smartphone que atenda às
-                necessidades de um usuário adicional. '
+                necessidades de um usuário adicional.
             'Events: The Big Event':
               key: 'Eventos: O Grande Evento'
               name: O Grande Evento Jr.
@@ -25336,12 +25332,12 @@ pt:
             'End of Course Project: Create a Play Lab Game':
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
-              description_teacher: 'Esta lição fundamental leva os alunos ao processo
+              description_teacher: Esta lição fundamental leva os alunos ao processo
                 de criar, desenvolver e apresentar seus próprios projetos do Play
                 Lab! Para garantir que esse processo ocorra sem problemas, fornecemos
                 uma estrutura passo a passo para os alunos seguirem, desde o planejamento
                 em papel até a codificação em nosso site. Além disso, oferecemos idéias
-                para ajudar os professores a facilitar um final de demonstração! '
+                para ajudar os professores a facilitar um final de demonstração!
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -25477,7 +25473,7 @@ pt:
                 em outra, mesmo que você não saiba qual situação será verdadeira quando
                 o código for executado. É aí que entram os condicionais. Os condicionais
                 permitem que um computador tome uma decisão, com base nas informações
-                verdadeiras sempre que seu código for executado.\r\n \r\n"
+                verdadeiras sempre que seu código for executado.\r\n \r"
             Conditionals in Bee:
               key: Estruturas condicionais em abelhas
               name: If/Else com Abelha
@@ -25628,10 +25624,10 @@ pt:
               key: Simon diz
               description_student: Jogue um jogo e pense em quais comandos são necessários
                 para obter o resultado certo.
-              description_teacher: 'Nesta lição, os alunos jogarão um jogo destinado
+              description_teacher: Nesta lição, os alunos jogarão um jogo destinado
                 a fazê-los pensar sobre a maneira como os comandos devem ser dados
                 para produzir o resultado certo. Isso os ajudará a transportar o Sprite
-                Lab com mais facilidade nas próximas lições. '
+                Lab com mais facilidade nas próximas lições.
             Learning Sprites with Sprite Lab:
               key: Aprendendo Sprites com o Sprite Lab
               name: Peixe nadando com o Sprite Lab
@@ -25646,10 +25642,10 @@ pt:
               name: Festa de dança alienígena com o Sprite Lab
               description_student: Crie um projeto interativo que possa ser compartilhado
                 com os colegas de classe.
-              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma
+              description_teacher: Esta lição apresenta o Sprite Lab, uma plataforma
                 na qual os alunos podem criar suas próprias animações e jogos interativos.
                 Além dos comportamentos, hoje os alunos incorporam a entrada do usuário
-                como eventos para criar uma "festa de dança alienígena".  '
+                como eventos para criar uma "festa de dança alienígena".
             Private and Personal Information:
               key: Informações Privadas e Pessoais
               name: Informações Privadas e Pessoais
@@ -25664,7 +25660,7 @@ pt:
                 pessoais e privadas na web.
               description_teacher: "Ao criar um pôster interativo com o SpriteLab,
                 os alunos aplicarão seu entendimento sobre o compartilhamento de informações
-                pessoais e privadas na web.\r\n"
+                pessoais e privadas na web.\r"
             Digital Sharing:
               key: Compartilhamento Digital
               name: Compartilhamento Digital
@@ -25762,6 +25758,11 @@ pt:
                 em outra interface com a qual se familiarizarem (esse é provavelmente
                 o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar
                 seus trabalhos concluídos aos colegas."
+            lesson-1:
+              name: Projetando para Acessibilidade
+              description_teacher: 'Nesta lição, os alunos aprenderão sobre acessibilidade
+                e o valor da empatia por meio de brainstorming e design de soluções
+                acessíveis para aplicativos hipotéticos. '
           lesson_groups:
             ramp_up:
               display_name: Treinamento
@@ -25774,6 +25775,8 @@ pt:
             csf_functions:
               display_name: funções
             csf_impacts:
+              display_name: Impacto da computação
+            lessonGroup-7:
               display_name: Impacto da computação
           student_description: Comece a codificar com algoritmos, loops, condicionais
             e eventos e, em seguida, você passará às funções. Na segunda parte deste
@@ -25873,9 +25876,9 @@ pt:
               key: Variáveis que mudam na abelha
               name: Alterando variáveis ​​com abelha
               description_student: Esta abelha adora variáveis!
-              description_teacher: 'Esta lição ajudará a ilustrar como as variáveis
+              description_teacher: Esta lição ajudará a ilustrar como as variáveis
                 ​​podem tornar os programas mais poderosos, permitindo que os valores
-                mudem enquanto o código está em execução. '
+                mudem enquanto o código está em execução.
             Variables that Change in Artist:
               key: Variáveis que mudam no Artist
               name: Alterando variáveis ​​com Artist
@@ -25916,10 +25919,10 @@ pt:
               name: Diversão com laços for
               description_student: Você vai se divertir aprendendo muito sobre os
                 loops `for`!
-              description_teacher: 'Sabemos que os loops nos permitem fazer as coisas
+              description_teacher: Sabemos que os loops nos permitem fazer as coisas
                 repetidas vezes, mas agora vamos aprender a usar loops com estruturas
                 extras integradas. Essas novas estruturas permitirão que os alunos
-                criem código mais poderoso e dinâmico. '
+                criem código mais poderoso e dinâmico.
             For Loops in Bee:
               key: Laços Para na abelha
               name: Para Loops com Abelha
@@ -26046,7 +26049,7 @@ pt:
                 que eles se movam reto, vire à esquerda ou vire à direita.
             Debugging with Scrat:
               key: Depurando com Scrat
-              name: Depurando com Scrat
+              name: Depurando no Labirinto
               description_student: Encontre problemas em quebra-cabeças e pratique
                 suas habilidades de depuração.
               description_teacher: A depuração é um elemento essencial para aprender
@@ -26133,7 +26136,7 @@ pt:
                 que o programa encontra.
             While Loops with the Farmer:
               key: While Loops com o agricultor
-              name: While Loops com o agricultor
+              name: Laços Enquanto no Fazendeiro
               description_student: 'Laços são muito úteis na codificação. Esta lição
                 ensinará sobre um novo tipo de laço: laços enquanto!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -26189,20 +26192,21 @@ pt:
             Variables with Artist:
               key: Variáveis com Artist
               name: Variáveis com Artist
-              description_student: Não se esqueça de trazer criatividade para a aula!
-                Nestes quebra-cabeças, você fará desenhos fantásticos usando variáveis.
+              description_student: Nesta lição, você fará desenhos usando variáveis
+                ​​que mudam à medida que o programa é executado.
               description_teacher: Nesta lição, os alunos explorarão a criação de
                 designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos
                 aprenderão como as variáveis ​​podem ser usadas para tornar o código
-                mais fácil de escrever e mais fácil de ler, mesmo quando os valores
-                não mudam no tempo de execução.
+                mais fácil de escrever e mais fácil de ler. Após quebra-cabeças guiados,
+                os alunos terminam em um nível de freeplay para mostrar o que aprenderam
+                e criar seus próprios designs.
             Changing Variables with Bee:
               key: Alterando variáveis ​​com abelha
               name: Alterando variáveis ​​com abelha
               description_student: Esta abelha adora variáveis!
-              description_teacher: 'Esta lição ajudará a ilustrar como as variáveis
+              description_teacher: Esta lição ajudará a ilustrar como as variáveis
                 ​​podem tornar os programas mais poderosos, permitindo que os valores
-                mudem enquanto o código está em execução. '
+                mudem enquanto o código está em execução.
             Changing Variables with Artist:
               key: Alterando variáveis ​​com Artist
               name: Alterando variáveis ​​com Artist
@@ -26248,10 +26252,10 @@ pt:
               name: Festa dançante alienígena
               description_student: Crie um projeto interativo que possa ser compartilhado
                 com os colegas de classe.
-              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma
+              description_teacher: Esta lição apresenta o Sprite Lab, uma plataforma
                 na qual os alunos podem criar suas próprias animações e jogos interativos.
                 Além dos comportamentos, hoje os alunos incorporam a entrada do usuário
-                como eventos para criar uma "festa de dança alienígena".  '
+                como eventos para criar uma "festa de dança alienígena".
             Behaviors in Sprite Lab:
               key: Comportamentos no Lab Sprite
               name: Comportamentos no Lab Sprite
@@ -26282,6 +26286,8 @@ pt:
               description_teacher: Nesta lição, os alunos irão programar sua própria
                 festa de dança interativa. Esta atividade requer som, pois a ferramenta
                 foi criada para responder à música.
+            lesson-3:
+              name: Sprites em Ação
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -26300,7 +26306,7 @@ pt:
             csf_sprites:
               display_name: Sprite
             lessonGroup-9:
-              display_name: Aquecimento
+              display_name: Eventos
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -26316,6 +26322,7 @@ pt:
             Learn to Drag and Drop:
               key: Aprenda a arrastar e soltar
               name: Aprenda a arrastar e soltar
+              description_student: Clique e arraste para finalizar os quebra-cabeças.
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que
                 esperar quando eles vão para o laboratório de informática. A lição
                 começa com uma breve discussão introduzindo à eles as condutas do
@@ -26324,6 +26331,7 @@ pt:
             Sequencing with Scrat:
               key: Sequenciando com Scrat
               name: Sequenciando com Scrat
+              description_student: Programe Scrat para alcançar a bolota.
               description_teacher: Esta lição dará aos alunos uma ideia sobre o que
                 esperar quando eles vão para o laboratório de informática. A lição
                 começa com uma breve discussão introduzindo à eles as condutas do
@@ -26331,11 +26339,11 @@ pt:
                 para completar quebra-cabeças online.
             Programming in with Angry Birds:
               name: Programando com Angry Birds
-              description_teacher: Usando os personagens do jogo Angry Birds, os alunos
-                desenvolverão algoritmos sequenciais para mover um pássaro de um lado
-                de um labirinto para o porco do outro lado. Para fazer isso, eles
-                empilharão os blocos de código em uma sequência linear, fazendo com
-                que eles se movam reto, vire à esquerda ou vire à direita.
+              description_teacher: Usando personagens da Era do Gelo, os alunos desenvolverão
+                algoritmos seqüenciais para mover o Scrat de um lado de um labirinto
+                para a bolota do outro lado. Para fazer isso, eles empilharão os blocos
+                de código em uma sequência linear, fazendo com que eles se movam reto,
+                vire à esquerda ou vire à direita.
             Programming with Rey and BB-8:
               key: Programação com Rey e BB-8
               name: Programação com Rey e BB-8
@@ -26345,6 +26353,8 @@ pt:
             Programming in Harvester:
               key: Programação em Harvester
               name: Programação com Colheitadeira
+              description_student: Ajude a colheitadeira a coletar vegetais ao longo
+                de um caminho.
               description_teacher: 'Os alunos aplicarão os conceitos de programação
                 que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir
                 o objetivo, os alunos precisam coletar milho usando um novo bloco.
@@ -26353,6 +26363,7 @@ pt:
             Loops with Scrat:
               key: Repetições com Scrat
               name: Repetições com Scrat
+              description_student: Ajude Scrat a cobrir mais terreno usando loops.
             Loops with Laurel:
               key: Repetições com Laurel
               name: Repetições com Laurel
@@ -26363,6 +26374,7 @@ pt:
             Ocean Scene with Loops:
               key: Cena do Oceano com Repetições
               name: Cena do Oceano com Repetições
+              description_student: Use loops e padrões para finalizar as imagens.
               description_teacher: Retornando às repetições, os alunos aprendem a
                 desenhar imagens repetindo sequências simples de instruções. Na última
                 lição online, repetições foram utilizadas para atravessar um labirinto
@@ -26372,6 +26384,7 @@ pt:
             Drawing Gardens with Loops:
               key: Desenho jardins com repetições
               name: Desenho jardins com repetições
+              description_student: Use padrões e loops para finalizar as imagens.
               description_teacher: Voltando aos loops, os alunos aprendem a desenhar
                 imagens repetindo sequências simples de instruções. Na lição on-line
                 anterior, loops foram usados ​​para atravessar um labirinto e coletar
@@ -26381,6 +26394,7 @@ pt:
             On the Move with Events:
               key: Em Movimento com os Eventos
               name: Em Movimento com os Eventos
+              description_student: Crie seu próprio jogo ou história.
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade
                 de aprender a como utilizar eventos no Laboratório de Jogos e aplicar
                 todas as habilidades de programação que eles aprenderam para criar
@@ -26389,6 +26403,8 @@ pt:
             A Royal Battle with Events:
               key: Um Battle Royal com eventos
               name: Um Battle Royal com eventos
+              description_student: Use eventos para criar uma história ou criar um
+                jogo interativo.
               description_teacher: Nesta atividade online, os alunos terão a oportunidade
                 de aprender a usar eventos no Play Lab e aplicar todas as habilidades
                 de codificação que aprenderam para criar um jogo animado. É hora de
@@ -26471,7 +26487,7 @@ pt:
                 outra pessoa usando um perfil de usuário e reagindo como esse usuário
                 a uma série de produtos. Cada aluno recebe um perfil de usuário que
                 descreve uma pessoa, que eles usam para escolher produtos apropriados,
-                criticar o design do produto e sugerir melhorias no design.\r\n"
+                criticar o design do produto e sugerir melhorias no design.\r"
             User-Centered Design Micro Activity:
               key: Micro atividade de design centrado no usuário
               name: Micro atividade de design centrado no usuário
@@ -26612,7 +26628,7 @@ pt:
                 escolher um (ou mais) dos aplicativos como base para seus próprios.
                 A partir daí, as equipes têm tempo para discutir a funcionalidade
                 básica do aplicativo antes de usar os cartões de índice 3x5 para desenvolver
-                protótipos em papel.\r\n"
+                protótipos em papel.\r"
             Prototype Testing:
               key: Protótipo de Teste
               name: Protótipo de Teste
@@ -26713,6 +26729,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            Designing With Empathy:
+              name: Análise de Design
             Build a Paper Prototype:
               name: Protótipos de papel
             Digital Mode in App Lab:
@@ -27086,6 +27104,15 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Teste
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: 'Lição 15: Dia da Avaliação'
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
@@ -27158,3 +27185,32 @@ pt:
               display_name: Próximas etapas
             Introduction:
               display_name: Introdução
+        pl-playground:
+          lessons:
+            Module 1:
+              name: Módulo 1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: Pesquisa Pós-Curso PCC
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Questionário
+          description_audience: Alunos de PCC
+          description_short: Pesquisa pós-curso do estudante
+          description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org.
+            Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas
+            são privadas e anônimas - seu professor pode ver resultados agregados
+            anônimos para toda a turma. Os resultados são vitais para o seu professor
+            e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo
+            e consideração.
+          student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da
+            CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída.
+            Suas respostas são privadas e anônimas - seu professor pode ver resultados
+            agregados anônimos para toda a turma. Os resultados são vitais para o
+            seu professor e para o Code.org sustentar e melhorar o curso. Obrigado
+            pelo seu tempo e consideração.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lição 15

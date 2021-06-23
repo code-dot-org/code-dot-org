@@ -506,7 +506,7 @@
           "courseF_bee_fwp_challenge2_callout1": "Ta funkcja dobrze sobie poradzi z kukurydzą, ale co z innymi warzywami?"
         },
         "courseA_artist_loops4": {
-          "courseA_artist_loops4_1": "Ta liczba mówi Ci, ilu takich bloków możesz użyć w tej łamigłówce."
+          "courseA_artist_loops4_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
         },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
@@ -1489,6 +1489,245 @@
         },
         "CSDU4 - Design Mode - 3": {
           "": "Wykorzystaj blok ustawTekst, aby zmienić tekst elementu titleLabel (opis tytułu)"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Wybierz tutaj rodzaj tancerza."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Dodaj ten blok do swojego programu.",
+          "arrow_buttons": "Naciskaj strzałki, by sterować swoim tancerzem."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Dodaj ten blok do swojego programu!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Dodaj nowe zdarzenie do swojego programu."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nowy blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nowy blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nowy blok!",
+          "new_block_4": "Nowy blok!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Kliknij tutaj, aby rozwinąć blok.",
+          "pointerlocation": "Przeciągnij tutaj blok tematu."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Kliknij, aby utworzyć nowy kostium"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Użyj tego bloku, aby pozostawić sobie lub swojemu nauczycielowi zrobienie notatek z tego, jak działa Twój kod."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Ta niewielka instrukcja każe komputerowi wykonać ten WIELKI kawałek kodu z tak taką nazwą w obszarze roboczym."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Oto pętla \"powtórz\"!  Kliknij, by umieścić ją w obszarze roboczym i dodaj kod, który chcesz wykonać wielokrotnie."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent może poruszać się nad powierzchnią wody, w odróżnieniu od gracza!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Nie możesz pozbyć się tych bloków, ale możesz je wyedytować!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent może poruszać się nad powierzchnią lawy, w odróżnieniu od Steva i Alexa!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Ułożyliśmy już kilka bloków na dobry początek"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ten kod rozpocznie budowę Twojego domu. Czy potrafisz go dokończyć?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Kliknij na \"Uruchom\", aby uruchomić program",
+          "craft_drag_block_callout": "Przeciągnij blok \"idź do przodu\" i podczep go pod inny blok"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Powtarzaj działania, umieszczając tu bloki"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ten kod sprawdza czy jest lawa, a czy mógłbyś dodać polecenie, aby przejść dalej?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Wydobądź to żelazo!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ta liczba znaczy, że tylko jeden spośród bloków tego typu może być użyty w ostatecznej odpowiedzi."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Czy wiedziałeś, że można rysować z powrotem po linii, jeśli tego potrzebujesz?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Ta liczba mówi ci, ile takich bloków możesz użyć w tej łamigłówce."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Kliknij żarówkę, gdy potrzebujesz wskazówki!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "To jest wywołanie"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Kliknij tutaj, aby zmienić kierunek strzałki zdarzenia."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "To pozwala Ci wybrać \"losowy\" dźwięk, co oznacza, że nie wiesz, co otrzymasz, zanim tego nie usłyszysz!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "W przyborniku znajduje się tylko jeden z tych bloków. Jak go użyjesz?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Kliknij żarówkę, gdy potrzebujesz wskazówki!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Użyj zielonej strzałki w dół, by zmieniać kierunki."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Przesuń postać do tej flagi, aby przejść do następnego poziomu."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Użyj tego bloku, gdy Waddles i Chomp się dotkną!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ten blok umożliwia przesuwanie postaci do innych części przestrzeni gry."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Ten blok jest bardzo ważny dla tego projektu. Dopilnuj, abyś go użył!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Dodaj to do środka Twojego programu."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Czy zauważyłeś nowe bloki w przyborniku?  Nie martw się, dalej na tym etapie dowiesz się, jak je wykorzystać."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Możesz pobrać więcej bloków z przybornika, gdy ich potrzebujesz!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Liczba cztery na dyni oznacza, że dostępne są cztery dynie do zebrania."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Te bloki są zablokowane i nie mogą być usunięte!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
+          "courseC_maze_programming3_3": "Te bloki są z kamienia i nie mogą być wyrzucone."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "To Twoja pierwsza trudniejsza łamigłówka! Mogą być trudne i wymagać kilku prób.\n",
+          "courseC_maze_programming7_2": "Te bloki są z kamienia i nie mogą być wyrzucone."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Nie musisz używać kolorów, by poprawnie rozwiązać tę łamigłówkę. Jeśli chcesz, blok \"losowy kolor\" ułatwia sprawę!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Użyj tej pętli, aby zebrać cały nektar (lub miód) z jednego kwiatka (lub plastra)."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "W celu rozwiązania tej łamigłówki będziesz musiał użyć bloku \"dopóki jest ścieżka z przodu\"."
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Kliknij tutaj!"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Twoje bloki służące do tworzenia funkcji zostały przeniesione pod tą etykietą do przybornika."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Przedłuż działanie programu dodając więcej kodu na dole.",
+          "courseE_artist_functions_challenge1_callout2": "Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Przedłuż działanie programu dodając więcej kodu na dole.",
+          "courseE_artist_functions_challenge2_callout2": "Jeśli nie podoba ci się ten projekt, zmień go tak, jak chcesz!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Tym razem Twój przybornik jest zorganizowany nieco inaczej! Klikaj na różne kategorie, aby zobaczyć, jakie masz bloki."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "To warzywko jest nieznane. Zmienia się przy każdym uruchomieniu programu."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Przybornik jest w trybie \"kategoria\", aby uczynić więcej miejsca dla Twojego kodu. Tutaj mieszkają pętle \"dla\"."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Tutaj znajdziesz tutaj pętlę `for`!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić swój program."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
         }
       }
     }

@@ -610,14 +610,18 @@ en:
         codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
         codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware with Aloe Blacc, Bret Taylor, & Paula Mejia'
-        csf21pilot_events: 'Sprite Lab: Sprites in Action (CSF 2021 Pilot)'
-        csf21pilot_prompts: 'Sprite Lab: Text and Prompts (CSF 2021 Pilot)'
+        csf21pilot_events: 'Sprite Lab: Sprites in Action'
+        csf21pilot_prompts: 'Sprite Lab: Text and Prompts'
         outbreak_mike: CodeBytes Episode 3 with Mike - Outbreak Simulator
         poembot-pilot-prompts: Haiku Bots - Prompt with Choices [PILOT]
         poembot-pilot-text: Haiku Bots - Storing Text [PILOT]
         poembot-pilot-haiku: Haiku Bots - Show Your Haiku [PILOT]
         csd_ml_intro_to_ai_lab: Introduction to AI Lab
         csd_ml_import_model: Importing an AI Model
+        csf_lots_of_sprites: 'Sprite Lab: Lots of Sprites'
+        playlab_2021: Introduction to Play Lab
+        playlab_2021_reader: Introduction to Play Lab
+        csp_defining_calling_functions: Defining and Calling Functions
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

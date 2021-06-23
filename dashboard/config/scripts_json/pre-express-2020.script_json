@@ -35,12 +35,12 @@
       "tts": true,
       "lesson_extras_available": true,
       "hideable_lessons": true,
-      "is_stable": true,
       "is_course": true
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-03 23:55:46 UTC",
+    "serialized_at": "2021-06-17 22:30:49 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2020"
     }

@@ -347,6 +347,8 @@ lv:
         CSF_loops_AB: Cikli
         csd_pair_programming: Pāru Programmēšana
         csd_applab_parameters: Funkcijas ar parametriem
+        playlab_2021: Ievads spēļu laboratorijā
+        playlab_2021_reader: Ievads spēļu laboratorijā
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka

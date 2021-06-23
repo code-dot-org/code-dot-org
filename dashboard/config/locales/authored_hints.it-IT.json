@@ -329,7 +329,7 @@
           "Course_4_Artist_For_Loops_3_a": "Per risolvere l'esercizio con il ciclo `ripeti con counter`, devi rappresentare la distanza con la variabile `counter` (<i>contatore</i>)."
         },
         "Course 4 Artist For Loops 4": {
-          "Course_4_Artist_For_Loops_4_a": "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:<br>\nQual è il valore più piccolo che serve? <br>\nQual è il più grande?<br>\nQual è l'incremento necessario ad ogni ripetizione?<br>\n<b>Nota</b>: ora ci sono così tanti blocchi nella cassetta degli attrezzi che li abbiamo organizzati in diverse categorie. Prenditi un po' di tempo per esplorarle."
+          "Course_4_Artist_For_Loops_4_a": "Ecco le domande cui rispondere per trovare i valori da inserire al posto dei `???`:\\\n**Qual è il valore più piccolo che serve?\\\nQual è il più grande?\\\nQual è l'incremento necessario ad ogni ripetizione?**"
         },
         "Course 4 Artist For Loops Challenge": {
           "Course_4_Artist_For_Loops_Challenge_a": "Il poligono più grande ha 19 lati.",
@@ -1713,13 +1713,13 @@
           "courseA_collector_loops2_b": "Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops1": {
-          "courseA_harvester_loops1_a": "Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2019": {
           "courseA_harvester_loops1_a": "Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2020": {
-          "courseA_harvester_loops1_a": "Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2": {
           "courseA_harvester_loops2_a": "Il tuo codice avrà **quattro** blocchi <xml><block type=\"maze_moveWest\"/></xml>\n\ne **quattro** blocchi <xml><block type=\"harvester_corn\"/></xml>",
@@ -1735,7 +1735,7 @@
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">4</title></block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops3_2019": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1743,7 +1743,7 @@
         },
         "courseA_harvester_loops3_2020": {
           "courseA_harvester_loops3_a": "Usa un blocco `ripeti` come questo per aiutarti!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
+          "courseA_harvester_loops3_b": "Per ripetere una sequenza di istruzioni, trascina nell'area di lavoro un blocco\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-10\">4</title></block></xml> quindi inserisci al suo interno i blocchi che vuoi ripetere. "
         },
         "courseA_harvester_loops4": {
           "courseA_harvester_loops4_a": "Non aver paura di premere \"Esegui\" per vedere cosa succede!",
@@ -3641,7 +3641,7 @@
           "courseC_artist_loops1a_b": "Usa questo blocco per disegnare l'adesivo!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "Questo è il primo blocco di cui hai bisogno:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_a": "Questo è il primo blocco di cui hai bisogno:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
           "courseC_artist_loops1a_b": "Usa questo blocco per disegnare l'adesivo!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
@@ -3687,7 +3687,7 @@
           "courseC_artist_loops4a_a": "Usa questo blocco per saltare in avanti:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nNon dimenticare di cambiare la distanza!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "Usa questo blocco per saltare in avanti:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nNon dimenticare di cambiare la distanza!",
+          "courseC_artist_loops4a_a": "Usa questo blocco per saltare in avanti:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNon dimenticare di cambiare la distanza!",
           "courseC_artist_loops4a_b": "Il tuo programma dovrebbe somigliare a questo!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
@@ -7036,7 +7036,7 @@
         },
         "courseE_artist_functions2_2018": {
           "courseD_artist_functions2_b": "La funzione non deve contenere l'intero programma, ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.",
-          "courseD_artist_functions2_c": "Per \"richiamare\" la funzione `disegna un quadrato` usa questo blocco verde:\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
+          "courseD_artist_functions2_c": "Per \"richiamare\" la funzione `disegna un quadrato` usa questo blocco verde:\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"disegna un quadrato\"/></block></xml>\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
           "courseD_artist_functions2_a": "Il programma deve:\n\n-   usare la funzione\n-   andare avanti di 100 + 75 pixel\n-   usare la funzione"
         },
         "courseE_artist_functions2_2019": {
@@ -7046,7 +7046,7 @@
         },
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_b": "La funzione non deve contenere l'intero programma, ma solo la parte che disegna un singolo quadrato con i lati di 100 pixel.",
-          "courseD_artist_functions2_c": "Per \"richiamare\" la funzione `disegna un quadrato` usa questo blocco verde:\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
+          "courseD_artist_functions2_c": "Per \"richiamare\" la funzione `disegna un quadrato` usa questo blocco verde:\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"disegna un quadrato\"/></block></xml>\n\nIn caso contrario, il codice contenuto nella funzione non verrà mai eseguito.",
           "courseD_artist_functions2_a": "Il programma deve:\n\n-   usare la funzione\n-   andare avanti di 100 + 75 pixel\n-   usare la funzione"
         },
         "courseE_artist_functions2_copy": {
@@ -8722,18 +8722,18 @@
         },
         "outbreak1": {
           "step1": "Usa questi blocchi per creare i tuoi personaggi:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nQuesto blocco si trova nella categoria **Personaggi** della casetta degli attrezzi.",
-          "step2": "Cambia la dimensione dei personaggi tramite questo blocco: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nSi trova nella categoria **Azioni** della casetta degli attrezzi.",
-          "step3": "Fai in modo che tutti i personaggi inizino a muoversi in modo casuale usando questo blocco: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nQuesto blocco si trova nella categoria **Azioni** della casetta degli attrezzi."
+          "step2": "Cambia la dimensione dei personaggi tramite questo blocco: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nSi trova nella categoria **Azioni** della casetta degli attrezzi.",
+          "step3": "Fai in modo che tutti i personaggi inizino a muoversi in modo casuale usando questo blocco: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>\n\nQuesto blocco si trova nella categoria **Azioni** della casetta degli attrezzi."
         },
         "outbreak2": {
-          "hint1": "Clicca il tasto `+` sul blocco evento. Riempi lo spazio vuoto nel blocco `cambia costume` con il blocco `oggetto` che si trova all'interno.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Clicca il tasto `+` sul blocco evento. Riempi lo spazio vuoto nel blocco `cambia costume` con il blocco `soggetto` che si trova all'interno.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Per dare le maschere ai mostri, usa il blocco `cambia costume` con un evento `quando cliccato`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nAssicurati di trascinare anche il piccolo blocco rosso `cliccato`!",
+          "hint1": "Per mettere le maschere ai mostri, usa il blocco `cambia costume` con un evento `quando cliccato`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nAssicurati di trascinare nello spazio vuoto il blocco rosso `cliccato`!",
           "hint2": "Il nuovo codice per questo livello dovrebbe essere simile a questo:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
-          "challenge": "## Cerchi una sfida in più?\n\nPuoi anche far muovere i mostri più velocemente o più lentamente.\n\n1.  Fai clic su `Modifica` in questo blocco <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Aumenta o diminuisci il numero in questo blocco: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPer far muovere i mostri più lentamente, scegli un numero decimale come `0.5` o `0.25`. Per farli muovere più velocemente, scegli un numero qualsiasi maggiore di 1."
+          "challenge": "## Vuoi qualcosa di più sfidante?\n\nPuoi anche far muovere i mostri più velocemente o più lentamente.\n\n1.  Clicca su `Modifica` in questo blocco <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Aumenta o diminuisci il numero in questo blocco: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPer far muovere i mostri più lentamente, scegli un numero decimale come `0.5` o `0.25`. Per farli muovere più velocemente, scegli un numero qualsiasi maggiore di 1."
         },
         "outbreak5": {
           "solution2": "Il tuo nuovo codice dovrebbe esser simile a questo:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"

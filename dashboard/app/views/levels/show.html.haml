@@ -16,17 +16,18 @@
 
 - if @script_level
   - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled}
+  %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
   %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
 
 -#
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,
-  in some cases we want to give them an entirely different rendering (i.e. hidden/locked stages). We do
+  in some cases we want to give them an entirely different rendering (i.e. hidden/locked lessons). We do
   this by hiding level-body and unhiding the other content.
 #level-body{style: params[:viewAs] ? 'visibility: hidden' : nil}
-  -# Render the hidden stage partial, but make it hidden so that client can unhide if needed
-  = render partial: 'levels/hidden_stage', locals: {hidden: true}
+  -# Render the hidden lesson partial, but make it hidden so that client can unhide if needed
+  = render partial: 'levels/hidden_lesson', locals: {hidden: true}
 
   -#
     If the viewer can't view last_attempt, which would happen when it's a teacher
@@ -36,12 +37,12 @@
   - if @script_level && @script_level.should_hide_survey(current_user, @user)
     = I18n.t('level_group.hide_survey_last_answer')
   - elsif @script_level && @script_level.lesson.lockable? && (!current_user || @script_level.locked?(current_user))
-    -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
-    = render 'levels/locked_stage'
+    -# anonymous users shouldn't ever see lockable lesson, but give them the locked_lesson message if they do
+    = render 'levels/locked_lesson'
   - else
-    -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
+    -# If we're a teacher, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
     - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
-      = render 'levels/locked_stage', hidden: true
+      = render 'levels/locked_lesson', hidden: true
 
     - if @game.unplugged?
       :javascript

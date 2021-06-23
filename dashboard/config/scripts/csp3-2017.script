@@ -7,7 +7,7 @@ has_verified_resources true
 new_name 'csp3-2017'
 family_name 'csp3'
 version_year '2017'
-is_stable true
+published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSP'
 tts true
@@ -130,8 +130,8 @@ level 'U3L08 - digitalScene', progression: 'Challenge: Design Your Digital Scene
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_3', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control_3', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group', assessment: true
 

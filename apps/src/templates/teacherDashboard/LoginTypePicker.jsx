@@ -178,4 +178,3 @@
    />
  );
  CleverCard.propTypes = PictureLoginCard.propTypes;
- 

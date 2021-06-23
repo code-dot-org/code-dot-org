@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class External < DSLDefined
@@ -33,7 +34,7 @@ class External < DSLDefined
 
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
-    properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
+    (properties['markdown'].try(:include?, 'next-stage') || properties['markdown'].try(:include?, 'next-lesson')) && properties['markdown'].try(:include?, 'submitButton')
   end
 
   def supports_markdown?
@@ -42,7 +43,7 @@ class External < DSLDefined
 
   def dsl_default
     <<~TEXT
-      name '#{name || 'unique level name here'}'
+      name '#{name || DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
     TEXT

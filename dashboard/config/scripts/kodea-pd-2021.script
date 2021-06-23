@@ -1,0 +1,109 @@
+professional_learning_course 'K5 Support'
+login_required true
+published_state 'pilot'
+pilot_experiment 'csf-online-pd-kodea'
+
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
+level 'OPD-K5 Intro_dani'
+level 'OPD-K5 PreSurvey_dani'
+level 'OPD-K5 Welcome 2_dani'
+level 'OPD-K5 About_dani'
+level 'OPD-K5 Outline_dani'
+level 'OPD-K5 Participation_dani'
+level 'OPD-K5 CS Video_dani'
+level 'OPD-K5 CS Tips_dani'
+level 'OPD-K5 Stage1Go_dani'
+
+lesson 'Computer Science Fundamentals', display_name: 'Computer Science Fundamentals', has_lesson_plan: false
+level 'OPD-K5 Stage2Overview_dani'
+level 'OPD-K5 WhatIsCS_dani'
+level 'OPD-K5 Why teach CS_dani'
+level 'OPD-K5 Younger Grades_dani'
+level 'OPD-K5 Vocabulary_dani'
+level 'OPD-K5 Stage2Go_dani'
+
+lesson 'Looking Ahead', display_name: 'Looking Ahead', has_lesson_plan: false
+level 'OPD-Stage3Start_dani'
+level 'OPD-K5 Puzzles_dani'
+level 'OPD-K5 Unplugged Video_dani'
+level 'OPD-K5 What is Mastery_dani'
+
+lesson 'Mastering the Basics: Sequencing', display_name: 'Mastering the Basics: Sequencing', has_lesson_plan: false
+level 'OPD-K5 Stage3Start_dani'
+level 'OPD-K5 Stage3aGo_dani'
+level 'OPD-K5 FirstProgram_dani'
+level 'courseA_maze_seq5_dani'
+level 'courseA_maze_seq6_dani'
+level 'courseA_maze_seq7_dani'
+level 'courseA_maze_seq8_dani'
+level 'courseA_maze_seq10_dani', challenge: true
+level 'OPD-K5 Stage3Go_dani'
+
+lesson 'Mastering the Basics: Loops', display_name: 'Mastering the Basics: Loops', has_lesson_plan: false
+level 'OPD-K5 Stage4Start_dani'
+level 'OPD-K5 Stage4Go_dani'
+level 'OPD-K5 RepeatBlock_dani'
+level 'courseC_starWars_loops2_dani'
+level 'courseC_starWars_loops4_dani'
+level 'courseC_starWars_loops5_dani'
+level 'courseC_starWars_loops6_dani'
+level 'courseC_starWars_loops7_dani'
+level 'courseC_starWars_loops8_dani'
+level 'OPD-K5 Stage4Review_dani'
+
+lesson 'Mastering the Basics: Conditionals', display_name: 'Mastering the Basics: Conditionals', has_lesson_plan: false
+level 'OPD-K5 Stage5Start_dani'
+level 'OPD-K5 Stage5Go_dani'
+level 'courseD_bee_conditionalsVid1_dani'
+level 'courseD_bee_conditionals1_predict1_dani'
+level 'courseD_bee_conditionals2_dani'
+level 'courseD_bee_conditionals3_dani'
+level 'courseD_bee_conditionals4_dani'
+level 'courseD_bee_conditionals5_dani'
+level 'OPD-K5 Stage5Review_dani'
+
+lesson 'Mastering the Basics: Functions', display_name: 'Mastering the Basics: Functions', has_lesson_plan: false
+level 'OPD-K5 Stage6Start_dani'
+level 'OPD-K5 Stage6Go_dani'
+level 'courseE_video_functionsArtist_dani'
+level 'courseE_artist_functions1_dani'
+level 'courseE_artist_functions_predict1_dani'
+level 'courseE_artist_functions2_dani'
+level 'courseE_artist_functions3_dani'
+level 'courseE_artist_functions4_dani'
+level 'courseE_artist_functions5_dani'
+level 'OPD-K5 Stage6Review_dani'
+
+lesson 'Mastering the Basics: Events', display_name: 'Mastering the Basics: Events', has_lesson_plan: false
+level 'OPD-K5 Stage7Start_dani'
+level 'OPD-K5 Stage7Go_dani'
+level 'OPD-K5 EventsVid_dani'
+level 'iceage_move_events_dani'
+level 'iceage_sound_and_points_dani'
+level 'iceage_warn_ice_age_dani'
+level 'OPD-K5 Congrats_dani'
+level 'OPD-K5 CongratsFinal_dani'
+
+lesson 'Best Practices for Teaching Computer Science', display_name: 'Best Practices for Teaching Computer Science', has_lesson_plan: false
+level 'OPD-K5 Stage8Start_dani'
+level 'OPD-K5 Culture_dani'
+level 'OPD-K5 LessonPlanning_dani'
+level 'OPD-K5 Pair_dani'
+level 'OPD-K5 Problem Solving_dani'
+level 'OPD-K5 Stage8Go_dani'
+
+lesson 'Planning', display_name: 'Planning', has_lesson_plan: false
+level 'OPD-K5 Stage9Start_dani'
+level 'OPD-K5 CS Courses_dani'
+level 'OPD-K5 Using CS_dani'
+level 'OPD-K5 Assessment_dani'
+level 'OPD-K5 Your Plan_dani'
+level 'OPD-K5 Stage9Go_dani'
+
+lesson 'Next Steps', display_name: 'Next Steps', has_lesson_plan: false
+level 'OPD-K5 Stage10Start_dani'
+level 'OPD-K5 PostSurvey_dani'
+level 'OPD-K5 Closing_dani'
+level 'OPD-K5 Connect_dani'
+level 'OPD-K5 Celebrate_dani'
+

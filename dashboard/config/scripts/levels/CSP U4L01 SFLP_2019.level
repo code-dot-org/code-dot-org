@@ -9,7 +9,7 @@
     "display_name": "Lesson Overview",
     "reference": "/curriculum/csp-19/unit4/1/overview/index.html",
     "parent_level_id": 13961,
-    "long_instructions": "<div style=\"width: 250px; text-align: center; float: right; margin-left: 50px\">\r\n  <a href=\"https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png\" target=\"_blank\">\r\n    <img src=\"https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png\" style=\"width: 250px; float: right\">\r\n  </a>\r\n  <i>Click to enlarge.</i>\r\n</div>",
+    "long_instructions": "<div style=\"width: 250px; text-align: center; float: right; margin-left: 50px\">\r\n  <a href=\"https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n    <img src=\"https://images.code.org/8abc8eedb4975d2c55ac5848cac0d0ed-image-1454087887353.png\" style=\"width: 250px; float: right\">\r\n  </a>\r\n  <i>Click to enlarge.</i>\r\n</div>",
     "name_suffix": "_2019"
   },
   "published": true,

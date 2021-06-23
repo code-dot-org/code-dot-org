@@ -255,6 +255,7 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
@@ -295,7 +296,11 @@ Dashboard::Application.routes.draw do
   get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-  resources :lessons, only: [:edit, :update]
+  resources :lessons, only: [:edit, :update] do
+    member do
+      post :clone
+    end
+  end
 
   resources :resources, only: [:create, :update] do
     collection do
@@ -334,7 +339,8 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
+    get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
+    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids' #TODO: Remove once launched
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -349,8 +355,9 @@ Dashboard::Application.routes.draw do
     # /s/xxx/lessons/yyy
     resources :lessons, only: [:show], param: 'position', format: false do
       get 'student', to: 'lessons#student_lesson_plan'
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#lesson_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+      get 'edit', to: 'lessons#edit_with_lesson_position'
 
       # /s/xxx/lessons/yyy/levels/zzz
       resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -364,7 +371,7 @@ Dashboard::Application.routes.draw do
     end
 
     # /s/xxx/lockable/yyy/levels/zzz
-    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+    resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
@@ -707,8 +714,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -732,9 +739,9 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
-      post 'users/:user_id/using_dark_mode', to: 'users#update_using_dark_mode'
+      post 'users/:user_id/display_theme', to: 'users#update_display_theme'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
-      get 'users/:user_id/using_dark_mode', to: 'users#get_using_dark_mode'
+      get 'users/:user_id/display_theme', to: 'users#get_display_theme'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -776,9 +783,6 @@ Dashboard::Application.routes.draw do
           get 'names'
           post 'save'
         end
-        member do
-          get 'metadata'
-        end
       end
 
       resources :teacher_feedbacks, only: [:index, :create] do
@@ -815,7 +819,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
   # Routes used by teacher scores
-  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stages_for_section'
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
   get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify

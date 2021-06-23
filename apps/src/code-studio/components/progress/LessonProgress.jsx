@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
 /**
@@ -22,7 +22,8 @@ class LessonProgress extends Component {
     isLessonExtras: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    currentPageNumber: PropTypes.number
+    currentPageNumber: PropTypes.number,
+    currentLevelId: PropTypes.string
   };
 
   getFullWidth() {
@@ -100,8 +101,29 @@ class LessonProgress extends Component {
     return {headerFullProgressOffset: 0, vignetteStyle: null};
   }
 
+  isBonusComplete() {
+    return this.props.levels.some(
+      level => level.bonus && level.status === LevelStatus.perfect
+    );
+  }
+
+  /**
+   * Determines if we're on a bonus level page, in which case we want to pass
+   * `isSelected=true` into our `LessonExtrasProgressBubble` component.
+   * `isLessonExtras` indicates whether we're on the bonus level selection
+   * page, and `currentLevel.bonus` indicates whether we're on an actual
+   * bonus level page.
+   */
+  isOnBonusLevel() {
+    const {isLessonExtras, levels, currentLevelId} = this.props;
+    return (
+      isLessonExtras ||
+      levels.some(level => level.id === currentLevelId && level.bonus)
+    );
+  }
+
   render() {
-    const {currentPageNumber, lessonExtrasUrl, isLessonExtras} = this.props;
+    const {currentPageNumber, lessonExtrasUrl} = this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -111,6 +133,8 @@ class LessonProgress extends Component {
       headerFullProgressOffset,
       vignetteStyle
     } = this.getFullProgressOffset();
+
+    const onBonusLevel = this.isOnBonusLevel();
 
     return (
       <div className="react_stage" style={styles.container}>
@@ -133,6 +157,7 @@ class LessonProgress extends Component {
                   key={index}
                   ref={isCurrent ? 'currentLevel' : null}
                   style={{
+                    ...styles.inner,
                     ...(level.isUnplugged && isCurrent && styles.pillContainer)
                   }}
                 >
@@ -145,10 +170,11 @@ class LessonProgress extends Component {
               );
             })}
             {lessonExtrasUrl && (
-              <div ref={isLessonExtras ? 'currentLevel' : null}>
+              <div ref={onBonusLevel ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
                   lessonExtrasUrl={lessonExtrasUrl}
-                  perfect={isLessonExtras}
+                  isPerfect={this.isBonusComplete()}
+                  isSelected={onBonusLevel}
                 />
               </div>
             )}
@@ -221,11 +247,12 @@ const styles = {
 export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentStageId),
+  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
   lessonExtrasUrl: lessonExtrasUrl(
     state.progress,
-    state.progress.currentStageId
+    state.progress.currentLessonId
   ),
   isLessonExtras: state.progress.isLessonExtras,
-  currentPageNumber: state.progress.currentPageNumber
+  currentPageNumber: state.progress.currentPageNumber,
+  currentLevelId: state.progress.currentLevelId
 }))(LessonProgress);

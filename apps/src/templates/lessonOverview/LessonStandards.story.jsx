@@ -22,15 +22,6 @@ export default storybook => {
       )
     },
     {
-      name: 'expand first of many standards',
-      story: () => (
-        <LessonStandards
-          standards={cspStandards.concat(cstaStandards)}
-          expandMode={ExpandMode.FIRST}
-        />
-      )
-    },
-    {
       name: 'expand all of many standards',
       story: () => (
         <LessonStandards

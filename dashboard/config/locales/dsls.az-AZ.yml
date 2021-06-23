@@ -10,198 +10,225 @@ az-AZ:
         - {}
         questions:
         - {}
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
+        title: Çoxlu seçim
       2-3 Algorithms Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         questions:
         - {}
+        title: Çoxlu seçim
       2-3 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: Rəqs hərəkətləri üçün düymə kombinasiyalarını cütləşdir.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Cütləşdirmə
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         title: Cütləşdirmə
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        title: Çoxlu seçim
       2-3 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        title: Çoxlu seçim
       2-3 Graph Paper Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Cütləşdirmə
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         questions:
-        - {}
+        - text: Bu şəkili hansı proqram hazırlayır?
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        title: Çoxlu seçim
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
       2-3 Maze Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        title: Çoxlu seçim
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         questions:
         - {}
+        title: Çoxlu seçim
       2-3 artist debug multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
       2-3 artist functions multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - text: Bu dövrlə hansı fiqur alınır?
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Fiqurla onu tamamlayan blokları birləşdirin.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - {}
       2-3 bee conditionals multi 3:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
       2-3 bee loops multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
       2-3 maze multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
       4-5 Algorithms Match 1:
         answers:
         - {}
@@ -222,12 +249,13 @@ az-AZ:
         - text: Banan
         questions:
         - {}
+        title: Çoxlu seçim
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         questions:
         - text: |-
             Təkərlər/tərəf: 2
@@ -253,12 +281,14 @@ az-AZ:
         questions:
         - text: Bakı böyük şəhərdir.<br/>Sumqayıt orta şəhərdir.<br/>Horadiz kiçik
             şəhərdir.
+        title: Çoxlu seçim
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
         questions:
         - {}
+        title: Çoxlu seçim
       4-5 Crowdsourcing Multi 2:
         answers:
         - {}
@@ -267,6 +297,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Çoxlu seçim
       4-5 Digital Footprint Multi 1:
         answers:
         - {}
@@ -275,6 +306,7 @@ az-AZ:
         - {}
         questions:
         - {}
+        title: Çoxlu seçim
       4-5 Internet Multi 1:
         answers:
         - {}
@@ -283,6 +315,8 @@ az-AZ:
         - {}
         questions:
         - {}
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        title: Çoxlu seçim
       4-5 Internet Multi 2:
         answers:
         - {}
@@ -291,6 +325,8 @@ az-AZ:
         - {}
         questions:
         - {}
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        title: Çoxlu seçim
       4-5 Songwriting Multi 1:
         answers:
         - {}
@@ -299,6 +335,8 @@ az-AZ:
         - {}
         questions:
         - {}
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        title: Çoxlu seçim
       4-5 Suncatchers Match 1:
         answers:
         - {}
@@ -306,91 +344,103 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Cütləşdirmə
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         questions:
         - {}
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
+        title: Çoxlu seçim
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - {}
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Hansı rəsm simmetrikdir?
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
       4-5 bee loops multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - {}
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Hansı bloklar tapmacanı həll edir?
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
       4-5 maze multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Hansı bloklar tapmacanı həll edir?
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       CSD Header Size MC:
         answers:
         - {}
@@ -421,7 +471,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: 'Faylın adında boşluq (space) var '
       CSD U2 lists match:
         answers:
         - {}
@@ -692,172 +742,205 @@ az-AZ:
         - {}
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
         questions:
-        - {}
+        - text: Hansı bloklar bu pazlı həll edir?
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
+        title: Çoxlu seçim
       K-1 Artist 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         questions:
-        - {}
+        - text: Hansı bloklar kvadrat çəkir?
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
+        title: Çoxlu seçim
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Cütləşdirmə
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - {}
+        - text: Burda nə qədər nektar var?
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        title: Çoxlu seçim
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - {}
+        - text: Burda nə qədər nektar var?
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        title: Çoxlu seçim
       K-1 Bee Loops Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Cütləşdirmə
+        content2: Blokları uyğunlaşdırın
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         content2: Rəqs hərəkətləri üçün düymə kombinasiyalarını cütləşdir.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Cütləşdirmə
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
+        title: Çoxlu seçim
       K-1 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
+        title: Çoxlu seçim
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        title: Çoxlu seçim
       K-1 Keep it Private Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
         - {}
+        title: Çoxlu seçim
       K-1 Maze Debugging Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
+        title: Çoxlu seçim
       K-1 Maze Loops Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
+        title: Çoxlu seçim
       K-1 Maze Loops Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
         questions:
-        - {}
+        - text: Düzgün təkrarlanma bloku seçin.
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
+        title: Çoxlu seçim
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Cütləşdirmə
+        content2: Pazl və Blokları uyğunlaşdırın
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
         questions:
-        - {}
+        - text: Bu səviyyəni hansı cavab həll edir?
         title: Labirint
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
+        title: Çoxlu seçim
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        title: Çoxlu seçim
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        title: Çoxlu seçim
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
         - {}
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
+        title: Çoxlu seçim
       K-1 Word Search Multi 3:
         answers:
         - {}
@@ -865,124 +948,126 @@ az-AZ:
         - {}
         questions:
         - {}
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
+        title: Çoxlu seçim
       behaviors 1 predict:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 1 predict_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - feedback: Yalnış
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
@@ -990,103 +1075,103 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1095,6 +1180,7 @@ az-AZ:
         - text: B
         - text: C
         - text: D
+          feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1103,6 +1189,7 @@ az-AZ:
         - text: B
         - text: C
         - text: D
+          feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1111,6 +1198,7 @@ az-AZ:
         - text: B
         - text: C
         - text: D
+          feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
@@ -1119,358 +1207,367 @@ az-AZ:
         - text: B
         - text: C
         - text: D
+          feedback: Düzgün!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
+          feedback: Düzgün!
         - text: B
         - text: C
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
+          feedback: Düzgün!
         - text: B
         - text: C
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
+          feedback: Düzgün!
         - text: B
         - text: C
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
+          feedback: Düzgün!
         - text: B
         - text: C
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
         - text: '8'
+          feedback: Düzgün!
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
         - text: '8'
+          feedback: Düzgün!
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
         - text: '8'
+          feedback: Düzgün!
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
         - text: '8'
+          feedback: Düzgün!
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1478,7 +1575,7 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1486,14 +1583,14 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - feedback: Düzgün!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -1501,7 +1598,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -1509,7 +1606,7 @@ az-AZ:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -1556,119 +1653,119 @@ az-AZ:
       courseF_bee_variables_8a_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: Düzgün!
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
+        - feedback: Düzgün!
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1676,7 +1773,7 @@ az-AZ:
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1684,7 +1781,7 @@ az-AZ:
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1692,7 +1789,7 @@ az-AZ:
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1702,21 +1799,21 @@ az-AZ:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
+        - feedback: 'Düzgün. '
         - {}
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1724,7 +1821,7 @@ az-AZ:
       coursee_prediction_artistfunction2_2018:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1732,7 +1829,7 @@ az-AZ:
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1740,7 +1837,7 @@ az-AZ:
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - {}
-        - {}
+        - feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -1748,33 +1845,34 @@ az-AZ:
       grade2_multi_collector_A_predict1:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
+            məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
+        - feedback: Düzgün!
         - {}
-        - {}
-        - {}
+        - text: Bilmirəm.
         questions:
         - {}
       Unit 1 Lesson 1 Overview:
@@ -1795,3 +1893,182 @@ az-AZ:
           seçin.
       courseF_EOC_2020:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      CSD U1 Lesson 5 Overview:
+        teacher_markdown: "[Giriş və Çıxış - Nümunəvi](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))\n\n"
+      CSD U1 Lesson 6 Overview:
+        teacher_markdown: "* [Kart Sıralaması Alqoritmi](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Nümunəvi ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
+      CSD U1 Lesson 7 Overview:
+        teacher_markdown: "* [Saxlanma və Proses - Nümunəvi](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
+      CSD U1 Lesson 8 Overview:
+        teacher_markdown: "* [Tətbiqin Tədqiqatı açarı](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
+      CSD U1 Lesson 9 Overview:
+        teacher_markdown: |+
+          * [Tətbiqlər və Problemlərin Həll olunması](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Layihə Bələdçisi Nümunəsi ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Tətbiqlər və Problemlərin Həll olunması](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Qiymətləndirmə Nümunəsi ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
+      Unit 1 Lesson 2 Overview:
+        teacher_markdown: |+
+          * [Problemin həll olunması prosesi](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+
+
+      Unit 1 Lesson 3 Overview:
+        teacher_markdown: "[Problemlərin Həll olunması Açarı](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
+      Unit 1 Lesson 4 Overview:
+        teacher_markdown: |+
+          [Kompüter nədir - Nümunəvi](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Aktivlik Bələdçisi ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
+
+
+      CSD U4L02 SFLP:
+        markdown: 'Dizaynerlər istifadəçilərin ehtiyaclarını başa düşməlidirlər. Bu
+          dərsdə istifadəçi profilini oynayıb başqa bir insan üçün necə dizayn etməli
+          olduğunuzu düşünəcək və bir sıra produktlara reaksiya verəcəksiniz.
+
+'
+      CSD U4L03 SFLP:
+        markdown: Bu dərsdə istifadəçinin ehtiyaclarını qarşılayacaq şəkildə sıfırdan
+          bir produkt dizayn edəcəksiniz. Bunu edərkən seçimlər çox olduğu üçün düşünüb
+          ideyaları kateqorizə etməyin nə qədər kullanışlı bir yetenek olduğunu öyrənəcəksiniz.
+      CSD U4L04 SFLP:
+        markdown: Bu dərsdə uygulamanın nə olduğunu və necə istifadəçinin ehtiyaclarını
+          ödəmək üçün dizayn edildiyini öyrənəcəksiniz. Həmçinin programıb ümumi çertyojunu
+          çıxarmaq üçün prototiplərdən necə istifadə edildiyini öyrənəcəksiniz.
+      CSD U4L05 SFLP:
+        markdown: Bu dərsdə produkt barədə olan geri bildirişləri oxuyub ifadə olunan
+          ehtiyacları ayırd edə bilməyi öyrənəcəksiniz. Sonra bu ehtiyacları daha
+          yaxşı şəkildə qarşılayacaq kağız prototipi yeniləşdirəcəksiniz.
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - text: Bilmirəm.
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_EOC_2021:
+        description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseF_EOC_examples_2021:
+        description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}

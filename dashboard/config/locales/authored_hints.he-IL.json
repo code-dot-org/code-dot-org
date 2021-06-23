@@ -313,8 +313,7 @@
         "Course 4 Artist Binary Free Play 2b": {
           "Course_4_Artist_Binary_Free_Play_2b_a": "הקוד משתמש בלולאות \"עבור\". אחד סופר מעלה מ-1 עד 8, השני סופר מטה מ-8 עד 1.",
           "Course_4_Artist_Binary_Free_Play_2b_b": "כל לולאת 'עבור' צריכה לבצע שלושה דברים. בהתחלה היא מציירת את החלק השמאלי עם 1, אז היא מייצרת את החלק האמצעי עם 0 ובחלק האחרון מציירת שוב 1 בחלק הימני.",
-          "Course_4_Artist_Binary_Free_Play_2b_c": "בכל חזרה תזדקק ל\"סופר\" (counter) עבור אחדות ו16 פחות (2 כפול \"סופר\") עבור אפסים.",
-          "Course_4_Artist_Binary_Free_Play_2b_d": "**פתרון:**\n\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>"
+          "Course_4_Artist_Binary_Free_Play_2b_c": "בכל חזרה תזדקק ל\"סופר\" (counter) עבור אחדות ו16 פחות (2 כפול \"סופר\") עבור אפסים."
         },
         "Course 4 Artist For Loops 11": {
           "Course_4_Artist_For_Loops_11_a": "זווית הפניה משתנה עבור כל צורה! \n\nהשתמש בבלוק המתמטי להכניס 360 בחלוקה למספר הפאות שיש לצורה כדי לקבל את הזווית המתאימה. "
@@ -900,7 +899,7 @@
           "courseD_bee_conditionals_challenge1_a": "התוכלו למצוא את הדרך אשר מגיעה לכל פרח וחלת דבש בלי להתקע בעצים? הדרך הטובה ביותר היא ספירלה.\n\n**אתם יכולים לפתור את השלב בלי לפנות שמאלה כלל.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר אחד בלבד בכל ערימה!"
@@ -1027,18 +1026,6 @@
         "courseA_harvester_seq5_2020": {
           "courseA_harvester_seq5_b": "אתם צריכים למחוק בלוק אחד."
         },
-        "courseA_maze_ramp3b_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp3b_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp5a_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp5a_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
           "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
@@ -1084,15 +1071,6 @@
         },
         "courseB_Scrat_ramp1_2020": {
           "2": "אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!"
-        },
-        "courseB_Scrat_ramp3b_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseB_Scrat_ramp3b_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseB_Scrat_ramp5a_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
@@ -1887,7 +1865,7 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
@@ -1900,7 +1878,7 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
@@ -2285,8 +2263,8 @@
           "hint1": "לחצו על כפתור `+` בבלוק האירוע. מלאו את האזור הריק בגוש `החלף תחפושת` עם בלוק ה`נושא` שנמצא בתוכו.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם אירוע `כאשר נלחץ`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nהקפידו לגרור גם את בלוק ה`דמות שנחלצה` האדום הקטן!",
-          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם אירוע `כאשר נלחץ`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nהקפידו לגרור גם את בלוק ה`דמות שנחלצה` האדום הקטן!",
+          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
           "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני כמו למשל '0.5' או '0.25'. כדי לגרום להן לנוע מהר יותר, בחרו בכל מספר גדול מ-1."
@@ -2297,9 +2275,6 @@
         "outbreak6": {
           "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של בלוק `אם אחוז סיכוי`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של `נגיעות` בין דמויות בריאות לבין דמויות נגועות."
-        },
-        "courseB_Scrat_ramp5a_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         }
       }
     }

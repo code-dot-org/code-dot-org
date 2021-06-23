@@ -193,6 +193,10 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"speed"': গতি
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -307,9 +311,9 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': এলোমেলো
       binary_move:
         options:

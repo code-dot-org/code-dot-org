@@ -67,11 +67,18 @@ export default class Foorm extends React.Component {
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
 
-    // Prevents focus from moving from codemirror in Foorm Editor
-    // (where survey editors can edit survey configuration and see changes live)
-    // to the first question of the rendered SurveyJS Survey.
+    // Settings to avoid jumping around the page
+    // when SurveyJS produces changes in focus/scrolling
+    // while editing a Foorm configuration.
     if (this.props.inEditorMode) {
+      // Prevents focus from moving from codemirror in Foorm Editor
+      // to the first question of the rendered SurveyJS Survey.
       this.surveyModel.focusFirstQuestionAutomatic = false;
+
+      // Prevents automatic scrolling to top of rendered SurveyJS Survey while editing a long configuration file.
+      this.surveyModel.onScrollingElementToTop.add((unused, options) => {
+        options.cancel = true;
+      });
     }
   }
 

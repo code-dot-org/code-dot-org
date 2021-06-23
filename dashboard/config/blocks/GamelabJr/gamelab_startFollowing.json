@@ -2,9 +2,9 @@
   "category": "Experimental",
   "config": {
     "color": [
-      136,
-      ".84",
-      ".80"
+      184,
+      1,
+      0.74
     ],
     "func": "startFollowing",
     "blockText": "{SPRITE} begins following {TARGET}",

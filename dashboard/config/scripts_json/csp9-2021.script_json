@@ -2,7 +2,7 @@
   "script": {
     "name": "csp9-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:02 UTC",
+    "serialized_at": "2021-06-17 22:31:18 UTC",
+    "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -143,7 +144,7 @@
     },
     {
       "key": "Machine Learning and Bias",
-      "name": "Machine Learning and Bias",
+      "name": "Machine Learning",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -162,12 +163,29 @@
       }
     },
     {
-      "key": "Project - Tell a Data Story - Part 1",
-      "name": "Project   Tell a Data Story Part 1",
+      "key": "lesson-10",
+      "name": "Algorithmic Bias",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
+      "properties": {
+        "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "Project - Tell a Data Story - Part 1",
+      "name": "Project   Tell a Data Story Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -185,10 +203,10 @@
     {
       "key": "Project - Tell a Data Story - Part 2",
       "name": "Project   Tell a Data Story Part 2",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -206,10 +224,10 @@
     {
       "key": "Lesson 9: Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -526,13 +544,43 @@
       }
     },
     {
-      "key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
-      "position": 4,
+      "key": "e6f736cd-954c-422a-83a5-310441497fc2",
+      "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
-        "lesson.key": "Machine Learning and Bias",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
       }
@@ -1495,7 +1543,8 @@
       "key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7",
@@ -1506,7 +1555,7 @@
       "key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Stear the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Steer the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "f2e93754-964e-4305-bc2c-85fa0acb1253",
@@ -1692,7 +1741,7 @@
       "key": "973186fb-7622-4f93-8823-9ee1fd5899d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process to you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process do you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1731,7 +1780,8 @@
       "key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
       "position": 4,
       "properties": {
-        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed."
+        "description": "---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4",
@@ -1739,14 +1789,36 @@
       }
     },
     {
-      "key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
+      "key": "200309df-e5c8-410f-8eb4-9732bf012fde",
       "position": 1,
       "properties": {
-        "progression_name": "Check for Understanding"
+        "description": "This lesson is In-Development"
       },
       "seeding_key": {
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7",
-        "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41"
+        "activity_section.key": "200309df-e5c8-410f-8eb4-9732bf012fde",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2"
+      }
+    },
+    {
+      "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Cropping Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471"
       }
     },
     {
@@ -1924,6 +1996,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "progression": "Making Bar Charts and Histograms"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 1_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
         ],
         "progression": "Making Bar Charts and Histograms"
@@ -1944,8 +2042,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 2,
+      "chapter": 5,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -1970,7 +2068,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1996,7 +2094,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2022,7 +2120,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2048,9 +2146,35 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "progression": "Crosstab and Scatter Charts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 2_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2074,8 +2198,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 2,
+      "chapter": 11,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2100,8 +2224,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 3,
+      "chapter": 12,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2126,7 +2250,33 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
+      },
+      "level_keys": [
+        "U9L5 CSP CFU Terms_2021"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2152,7 +2302,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2178,7 +2328,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2204,7 +2354,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2230,7 +2380,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2256,7 +2406,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2282,7 +2432,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2308,7 +2458,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2327,14 +2477,66 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
       },
       "level_keys": [
         "U9L6 CFU ML Bias_2021"
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "progression": "Cropping Widget"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      },
+      "level_keys": [
+        "U9L5 Cropping Widget"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U9L7 Free Response"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      },
+      "level_keys": [
+        "U9L7 Free Response"
+      ]
+    },
+    {
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2360,7 +2562,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2386,7 +2588,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2434,6 +2636,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 1_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
       }
     },
     {
@@ -2498,6 +2712,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 2_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP U9L4 Making Crosstabs and Scatter Plots_2021",
         "script_level.level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
@@ -2530,6 +2756,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "7d22238f-29c6-4c55-b16e-ca2f296de0fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 CSP CFU Terms_2021",
+        "script_level.level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "3ef60449-e15c-48c7-aa7c-c591e03c2de7"
       }
     },
     {
@@ -2625,7 +2863,31 @@
         "lesson.key": "Machine Learning and Bias",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4eea75f3-caf6-4c71-ad1b-fdce0793cdc7"
+        "activity_section.key": "aac56f17-a865-49d1-b23b-68e766ef2de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L5 Cropping Widget",
+        "script_level.level_keys": [
+          "U9L5 Cropping Widget"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L7 Free Response",
+        "script_level.level_keys": [
+          "U9L7 Free Response"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
       }
     },
     {
@@ -2666,6 +2928,18 @@
     }
   ],
   "resources": [
+    {
+      "name": "Are We Automating Racism",
+      "url": "https://www.youtube.com/watch?v=Ok5sKLXqynQ",
+      "key": "are_we_automating_racism",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "are_we_automating_racism"
+      }
+    },
     {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
@@ -2768,6 +3042,18 @@
       }
     },
     {
+      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
+      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -2777,6 +3063,31 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
+      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
+      },
+      "seeding_key": {
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -2849,6 +3160,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "resource.key": "csp-u9-presentation"
       }
@@ -2888,6 +3217,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp9-2021"
       }
     }
@@ -3058,7 +3393,7 @@
     {
       "key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b",
       "properties": {
-        "description": "Train and test a machine learning model."
+        "description": "Explain ways that designers and developers can consider the potential effects of their programs"
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -3073,6 +3408,16 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "objective.key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68"
+      }
+    },
+    {
+      "key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a",
+      "properties": {
+        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a"
       }
     },
     {
@@ -3502,6 +3847,55 @@
         "lesson.key": "Machine Learning and Bias",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.11"
       }
     },
     {

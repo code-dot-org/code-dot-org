@@ -1,0 +1,22 @@
+name 'OPD-K5-Sequencing-2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Introduction to Sequencing 
+
+## Learning Platform Features
+
+Students engage with Maze Puzzles and The Artist as they learn about sequencing using Blockly code blocks.
+
+## Concepts reiterated across Courses A through D
+
+<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+Click "Continue" to go through the following student lesson levels to learn about sequencing.  
+
+* **Course A** - Lesson 4, Levels 1 and 4:  Sequencing with Scrat
+* **Course B** - Lesson 5, Levels 5 and 6:  Programming with Harvester
+* **Course C** - Lesson 4, Level 2:  Debugging in Maze
+* **Course C** - Lesson 6, Level 2:  Creating Art with Code
+* **Course D** - Lesson 5, Level 1:  Debugging with Laurel
+
+MARKDOWN

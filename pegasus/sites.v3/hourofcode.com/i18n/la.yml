@@ -34,15 +34,15 @@ la:
     Aprende hoy y
 
     construye un mejor futuro.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  social_hoc2020_cs_important: 'Las Ciencias de la Computación son más importantes
+    que nunca. Construyamos el futuro que queremos. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: "#HourOfCode tiene que ver con #CSforGood.
+    Aprende hoy y construye un mañana más brillante."
   social_hoc2020_global_movement: La Hora del Código es un movimiento global en el
     que participan decenas de millones de estudiantes. Los tutoriales de una hora
     están disponibles en más de 45 idiomas para todas las edades.
-  social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
-    science is foundational for every student to learn.
+  social_hoc2020_coming_dates: La Hora del Código tendrá lugar del 7 al 13 de diciembre
+    de 2020. Es fundamental que cada estudiante aprenda ciencias de la computación.
   hoc2020_ai_subheader: "¡La Hora del Código 2020 está llegando!"
   hoc2020_ai_header: Explora la Inteligencia Artificial
   hoc2020_ai_description: IA y el aprendizaje automático están afectando a nuestro
@@ -977,8 +977,8 @@ la:
   highlights_header: Destacados de la Hora del Código
   highlights_description: Algunos de nuestros momentos favoritos de la campaña de
     la Hora del Código.
-  highlights_previous: Highlights from previous years
-  highlights_see_more: See more highlights
+  highlights_previous: Aspectos destacados de años anteriores
+  highlights_see_more: Ver más destacados
   highlights_readmore: Leer más
   highlights_watchvideo: Mira el video
   highlights_facebook: Compartir en Facebook
@@ -1007,7 +1007,7 @@ la:
   footer_copyright_message: Copyright %{current_year} Code.org. Todos los derechos
     reservados.
   footer_trademark_message: Hora del código ™ es una marca registrada de Code.org.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: Cómo crear en GitHub de Microsoft
   footer_menu_partners: Socios y asesores
   footer_menu_contact: Contáctanos
   footer_menu_support: Soporte
@@ -1619,60 +1619,63 @@ la:
   tutorial_allcancodeapps_name: 'Plataforma Allcancode: crea aplicaciones web y móviles
     en Blockly'
   tutorial_n2y_name: Bitt Bott explora la Tierra
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Juega, diseña y codifica juegos de arcade retro
   tutorial_csfirstunplugged_name: Actividades de CS First Unplugged
   tutorial_toxicodepython_name: Descubra Python con Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Comienza tu viaje'
-  tutorial_vidcodedate_name: Climate Clock
-  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
-  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
-  tutorial_grokimage_name: Image Magic with Python
-  tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: Support My Cause
+  tutorial_vidcodedate_name: Reloj climático
+  tutorial_codemonkeyspace_name: 'Aventura espacial: ¡Escribe código y atrapa plátanos!'
+  tutorial_codespeakhappy_name: Codifique una aplicación de meditación de lugar feliz
+  tutorial_grokimage_name: Magia de imágenes con Python
+  tutorial_icomputelearn_name: Aprende a codificar con iCompute
+  tutorial_rpstress_name: Pelota antiestrés
+  tutorial_bsdcause_name: Apoya mi causa
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
-  tutorial_bsdinspire_name: People who Inspire Me
-  tutorial_tttractor_name: Tractor Traversal
-  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
+  tutorial_bsdinspire_name: Personas que me inspiran
+  tutorial_tttractor_name: Travesía del tractor
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure con
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
-  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
-  tutorial_educodemaze_name: Design Your Own Maze!
-  tutorial_educoderace_name: Code your own racing game!
-  tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
-  tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
-  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
-  tutorial_educodekingdom_name: Defend the Kingdom!
-  tutorial_codehsdata_name: Coding with Data Visualizations
-  tutorial_educodecake_name: Bake a Cake With HTML!
-  tutorial_ttsecond_name: Second Team
-  tutorial_bsdtrivia_name: Trivia Game Maker
+  tutorial_codespeakbreathe_name: Codifica una aplicación de respiración de meditación
+  tutorial_vidcodeface_name: Detección de rostro
+  tutorial_educodemaze_name: Diseña tu propio laberinto
+  tutorial_educoderace_name: Programa tu propio juego de carreras
+  tutorial_codespeakchatbot_name: Codifica un chatbot con las pioneras de las Ciencias
+    de la Computación
+  tutorial_gamefrootgames_name: 'Actividad de la industria de juegos: codifica un
+    juego de plataformas'
+  tutorial_codespeakgrandparent_name: Codificar una tarjeta de abuelos en Scratch
+  tutorial_educodekingdom_name: "¡Defiende el Reino!"
+  tutorial_codehsdata_name: Codificación con visualizaciones de datos
+  tutorial_educodecake_name: "¡Hornea un pastel con HTML!"
+  tutorial_ttsecond_name: Segundo equipo
+  tutorial_bsdtrivia_name: Creador de juegos de preguntas y respuestas
   tutorial_csfirstdialogue_name: Diálogo
-  tutorial_codemonkeybeaver_name: Beaver Achiever
-  tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
+  tutorial_codemonkeybeaver_name: Castor triunfador
+  tutorial_codestersdistance_name: 'Codificadores: Sprites de distanciamiento social'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
-  tutorial_vidcodemagic_name: SFX Magia
-  tutorial_vidcodemagices_name: SFX Magia
-  tutorial_codespeakmeal_name: Code a Healthy Meal App
-  tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: My Favorites Website
-  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
-  tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
-  tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
-  tutorial_ttrace_name: Race Condition
+  tutorial_vidcodemagic_name: SFX Magic
+  tutorial_vidcodemagices_name: SFX Magic
+  tutorial_codespeakmeal_name: Codifica una aplicación de comidas saludables
+  tutorial_itchfish_name: 'iTCHcode: Juego scratch de peces'
+  tutorial_bsdwebsite_name: Mi sitio web favorito
+  tutorial_codespeaktime_name: Codificar una cápsula del tiempo en Scratch
+  tutorial_itchwebcam_name: 'iTCHcode: Realidad aumentada de cámara web'
+  tutorial_itchball_name: 'iTCHcode: Bola que rebota'
+  tutorial_ttrace_name: Condicional de carrera
   tutorial_plethora_name: 'Plethora: Causa y efecto'
-  tutorial_educodesecret_name: Uncover the Agency's Secrets!
-  tutorial_itchshapes_name: 'iTCHcode: Shapes & Angles'
-  tutorial_codeguppytext_name: Introduction to text based coding
+  tutorial_educodesecret_name: "¡Descubre los secretos de la agencia!"
+  tutorial_itchshapes_name: 'iTCHcode: formas y ángulos'
+  tutorial_codeguppytext_name: Introducción a la codificación basada en texto
   tutorial_vidcodeplastiche_name: Polución de plásticos PSA
-  tutorial_educativechatbot_name: Build your own chatbot in Python
-  tutorial_educodebasics_name: Learn the Basics!
-  tutorial_codehsdesign_name: Supporting Artists with Code
-  tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
-  tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
-    through computer science.'
+  tutorial_educativechatbot_name: Construye tu propio chatbot en Python
+  tutorial_educodebasics_name: Aprende los conceptos básicos
+  tutorial_codehsdesign_name: Apoyando a los artistas con código
+  tutorial_htmlacademyphp_name: 'Introducción a PHP: Crea una tienda en línea desde
+    cero'
+  tutorial_gamefrootdistance_name: 'Simulador COVID-19: Aprende sobre el distanciamiento
+    social a través de las ciencias de la computación.'
   tutorial_codesterscovid_name: 'Codesters: We Can Stop COVID PSA'
   tutorial_ttbunker_name: The Bunker
   tutorial_cuttle_name: Computational Thinking and Programming Challenge
@@ -1723,19 +1726,19 @@ la:
   tutorial_irobotsimulator_name: Simulator Code Break
   tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
   tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
-  tutorial_irobotguesscode_name: Guess the Code
-  tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
-  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
-  tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
+  tutorial_irobotguesscode_name: Adivina el código
+  tutorial_ozobotnouns_name: Seleccionar sustantivos plurales irregulares
+  tutorial_nasa3d_name: 'Universo en 3D: modelado e impresión de objetos cósmicos'
+  tutorial_blupants_name: 'BluPants: Aprenda a codificar con robots reales'
   tutorial_legodance_name: Break Dance
-  tutorial_nearpodcoding_name: 'Topic Spark: Coding '
-  tutorial_kcjplastic_name: "#kids2030 Plastics Challenge"
-  tutorial_legojourney_name: Create a Journey with LEGO Education
-  tutorial_legohopper_name: Hopper Race
+  tutorial_nearpodcoding_name: 'Tema Spark: Codificación'
+  tutorial_kcjplastic_name: 'Desafíos plásticos de #niños2030 '
+  tutorial_legojourney_name: Crea un viaje con LEGO Education
+  tutorial_legohopper_name: Carrera de tolva
   tutorial_catrobatembroidery_name: Bordado codificado
-  tutorial_irobotphone_name: Telephone Drawing
-  tutorial_codeguppydraw_name: Draw with code
-  tutorial_codejumper_name: 'Networks: Messages of Kindness'
+  tutorial_irobotphone_name: Dibujo de telefono
+  tutorial_codeguppydraw_name: Dibuja con código
+  tutorial_codejumper_name: 'Redes: mensajes de bondad'
   tutorial_meeempathy_name: Historia de dos aldeas de Minecraft
   tutorial_danceparty_shortdescription: Programa una Fiesta de baile y compártela
     con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y
@@ -5778,8 +5781,9 @@ la:
     actividades incluye instrucciones simples compatibles con símbolos de la colección
     n2y® SymbolStix PRIME®. Los símbolos ayudan a los no lectores y a los lectores
     principiantes a comprender y seguir las instrucciones.
-  tutorial_microsoftarcade_longdescription: Play fun arcade games, design your own
-    sprites, and learn the basics of coding your own game with MakeCode Arcade.
+  tutorial_microsoftarcade_longdescription: Juega divertidos juegos de arcade, diseña
+    tus propios sprites y aprende los conceptos básicos para programar tu propio juego
+    con MakeCode Arcade.
   tutorial_csfirstunplugged_longdescription: Haz estas actividades sin conexión y
     conoce cómo la tecnología y la informática pueden ayudar a las personas a mantenerse
     conectadas.
@@ -5793,19 +5797,19 @@ la:
     a personajes interesantes y practicarás muchos conceptos de programación, como
     bucles y depuración. Al final, diseñarás un juego completamente funcional que
     podrás compartir con tus amigos.
-  tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
-    relevant intersection of math, environmental science, and computer science. In
-    this Hour of Code activity, students will be guided through the construction of
-    their own climate clock. They will engage with objects, properties, variables,
-    functions, and loops, and customize their message to convey their message for
-    the world and their hopes for the future. '
-  tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
-    catch bananas in space! '
-  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
-    transports you to your 'happy place.'
-  tutorial_grokimage_longdescription: Use the programming language Python to make
-    speedy changes to images. Make fun image editing programs and make your own image
-    filter!
+  tutorial_vidcodedate_longdescription: El proyecto Reloj Climático es una intersección
+    culturalmente relevante de matemáticas, ciencias ambientales y ciencias de la
+    computación. En esta actividad de la Hora del Código, los estudiantes serán guiados
+    a través de la construcción de su propio reloj climático. Se relacionarán con
+    objetos, propiedades, variables, funciones y bucles, y personalizarán su mensaje
+    para transmitir su mensaje al mundo y sus esperanzas para el futuro.
+  tutorial_codemonkeyspace_longdescription: "¡Escribe código real para ayudar al astronauta
+    mono a atrapar plátanos en el espacio!"
+  tutorial_codespeakhappy_longdescription: Aprende a programar una aplicación de meditación
+    que te transporte a tu "lugar feliz".
+  tutorial_grokimage_longdescription: Utiliza el lenguaje de programación Python para
+    realizar cambios rápidos en las imágenes. ¡Crea programas divertidos de edición
+    de imágenes y crea tu propio filtro de imagen!
   tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
@@ -6048,11 +6052,12 @@ la:
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
-    the students will become engineers, learning the steps of the Engineering Design
-    Process. They will create models out of craft and recycled materials, then they
-    will test the sturdiness of their models by dropping them from ankle height. This
-    is an unplugged activity; KIBO robots are optional.
+  tutorial_kibodrop_longdescription: La ingeniería tiene que ver con la perseverancia
+    y la determinación. Hoy los estudiantes se convertirán en ingenieros, aprendiendo
+    los pasos del proceso de diseño de ingeniería. Crearán modelos con materiales
+    artesanales y reciclados, luego probarán la solidez de sus modelos dejándolos
+    caer desde la altura del tobillo. Esta es una actividad sin conexión; Los robots
+    KIBO son opcionales.
   tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
     of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
     for the bot to follow.

@@ -3238,3 +3238,306 @@ nl-NL:
           # Volg het digitale pad
 
           ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
+      CourseF_outbreak_story:
+        content1: beschrijving hier
+      CourseF_outbreak_story2:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
+          dingen te leren die moeilijk waar te nemen zijn in de echte wereld. Ze helpen
+          wetenschapers bij het oplossen van problemen en het veilig en efficient
+          testen van nieuwe ideeën. Uw simulatie is een manier om te demonstreren
+          hoe een virusuitbraak in Monster Town eruit kan zien.\n\n## Resetten en
+          opnieuw spelen!\nZelfs als u het programma zelf schrijft, is het onmogelijk
+          om precies te weten wat er gaat gebeuren als u op uitvoeren drukt. De monster
+          zwerven willekeurig rond, en dus weet u niet of het virus snel of langzaam
+          zal verspreiden. Als u wijzigingen aanbrengt in uw programma, voer dan uw
+          simulatie meerdere keren uit. Niets zal twee keer precies hetzelfde gebeuren.\n\n##
+          Data verzamelen\nMaak notities tijdens het uitvoeren van uw simulatie. U
+          kunt het aantal monster dat ziek wordt tellen of een timer gebruiken om
+          te zien hoe snel de dingen veranderen. Hoe lang duurt het bijvoorbeeld dat
+          alle monsters ziek worden als geen van hen een mondkapje draagt? \n\n##
+          Voorspellingen doen\nAls u uw model goed begrijpt, dan kunt u het gebruiken
+          om voorspellingen te doen. U kunt zelfs het uitvoeren van uw simulatie veranderenen
+          en raden welke gebeurtenissen anders zullen verlopen. Bijvoorbeeld:\n* Wat
+          gebeurt er als er twee keer zoveel monsters zijn?\n* Wat gebeurt er als
+          de monster op slechts halve snelheid liepen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Is Monster Town net als de echte wereld?\nElk
+          model heeft een grens wat betreft het realisme. \n* Wat heeft uw uitbraaksimulatie
+          gemeen met virusuitbraken in de echte wereld?\n* Wat zijn de verschillen?\nWanneer
+          u deze activiteit hebt afgerond, den kunt u deze vragen bespreken met uw
+          leraren of uw gezin.\n\n## Waar kunnen we nog meer een model van maken?\nU
+          hebt reeds een werkend model gemaakt van de uitbraak in Monster Town. Wat
+          kan uw simulatie niet doen of laten zien dat u wenste dat het kon? Druk
+          op Doorgaan om verder te gaan en maak beter kennis met het model:\n* Het
+          aantal monsters in de simulatie te laten toenemen\n* Monsters helpen met
+          genezen van het virus\n* Waarschijnlijkheid, immuniteit, vaccins en meer.\n\nTevens
+          kunt u uw simulatiemodel delen met anderen, of een boodschap delen over
+          wat u denkt dat wij kunnen doen om anderen in goede gezondheid te houden
+          als een virus het stadje bezoekt. \n"
+      OPD-K5 Participation_dani:
+        markdown: |-
+          # Aan de slag > Je deelname plannen
+
+          Denk, voordat je begint, even na over je leerbehoeften, doelen en de unieke ervaring van leren in een online omgeving in je eigen tempo - vooral als dit je eerste online cursus is!
+
+          ## Jij bent de baas
+
+          Deze online cursus op eigen tempo is ontworpen om jou achter het stuur te plaatsen en jou controle te geven over je eigen leerproces. *** Neem de tijd en werk deze cursus in je eigen tempo door. Voor elke fase worden voorgestelde tijden gegeven. *** Als je merkt dat je meer of minder tijd nodig hebt, hoef je je geen zorgen te maken! Ons belangrijkste doel is om plezier te hebben, de basis te leren en wat je leert toe te passen in je lessen op de manier die het beste bij je past.
+
+          ## Wordt verbonden
+
+          Een manier om gemotiveerd en gefocust te blijven tijdens het leren, is door actief te worden in ons <a href="http://forum.code.org/c/plc" target="_new">Professional Learning Community (PLC) forum </a>.
+          Begin met jezelf daar voor te stellen in onze <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">"Introductions" thread</a>. Tijdens de cursus gebruik je het forum om je gedachten, leermomenten en vragen te delen met anderen die hier ook aan werken.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank"> <button class = "plc">Introduceer jezelf nu >></button></a><br>
+
+          ## Hulp vinden wanneer je het nodig hebt
+
+          Als je tijdens de cursus vastloopt, ga dan naar [support.code.org] (http://support.code.org) en bekijk [onze forums](https://support.code.org/hc/communities/public/topics). Daar vind je waarschijnlijk het antwoord op je vraag. Als je nog steeds vastzit, kun je een e-mail sturen naar [teacher@code.org](mailto: teacher@code.org) en een medewerker van Code.org neemt zo snel mogelijk contact met je op.
+
+          ## Maatje!
+
+          Houd er rekening mee dat we een klein team zijn en vanwege de omvang van onze inspanningen, kunnen we niet op alle verzoeken om ondersteuning reageren op dezelfde manier als een instructeur voor een persoonlijke cursus. Daarom raden we je aan om aan deze online cursus ***te werken met een partner of een groep collega's***.
+
+          Code.org erkent de kracht van samen leren en samenwerking. In feite is "Pair Programming" een geweldige praktijk die we in Stage 8 zullen onderzoeken als een best practice in de klas. Als je denkt dat je beter zult leren met een partner of in een groep, waarom zou je de cursus dan niet voltooien met een maatje of een collega? Als je in het echt niemand kent die interesse heeft om met je samen te werken, ga dan naar [het PLC-forum](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411), [Twitter](https://twitter.com/teachcode) of [Facebook](https://www.facebook.com/groups/1457214714576953/) en zoek iemand van de Code.org community die wil samenwerken.
+
+          ## Zoek de leerervaring die voor jou werkt
+
+          Tenslotte is online leren niet voor iedereen. Deze cursus heeft geen instructeur of een ingebouwd mechanisme om direct met je collega's te communiceren. Als je merkt dat je meer één-op-één-aandacht nodig hebt of als je weet dat je beter leert in een klaslokaal in de echte wereld waar er meer gelegenheid is voor samenwerking en betrokkenheid, raden we je aan een van onze persoonlijke ontwikkelingstrajecten te proberen.
+
+          <a href="http://code.org/professional-development-workshops" target="blank"><button> Zoek een persoonlijke workshop bij jou in de buurt >></button></a>
+
+          * * *
+
+          ## Wat is jouw plan?
+
+          Neem even de tijd om na te denken over hoe en wanneer je deze online cursus voltooit, zodat je het meeste uit de ervaring haalt. Als je een goed plan hebt uitgetekend, duik dan in fase 1.
+      OPD-K5 Puzzles_dani:
+        markdown: "# Vooruitblik > Over puzzels\n\nIn de volgende stappen gebruik
+          je Code.org om de basis van programmeren te leren. Je krijgt een aantal
+          puzzels om op te lossen. Om dat te doen moet je programma's schrijven met
+          verschillende karakters om veschillende doelen te bereiken. We oefenen met
+          de eerste puzzel in stap 3. Maar eerst hebben we een overzicht van de soorten
+          puzzels die jij en je studenten tegen zullen komen:\n\n## Voorbeeld doolhof
+          puzzels\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nJe
+          moet de Angry Bird bij het varken krijgen en je moet de zombie bij de zonnebloem
+          krijgen.\n\n## Voorbeeld kunstenaar puzzel\n\n![](//code.org/images/artist.png)\n\nJe
+          moet de kunstenaar over de grijze lijnen laten teken door hem over het canvas
+          te laten bewegen. Hij tekent een lijn waar hij loopt.\n\n## Voorbeeld bij
+          puzzel\n\n![](//code.org/images/bee.png)\n\nJe moet de bij zo bewegen dat
+          hij al het nectar ophaalt en alle honing maakt. Hoeveel honing en nectar
+          nodig is voor een puzzel staat rechtsonder de bloem of honingraat.\n\n##
+          Play Lab\n\n![](//code.org/images/playlab.png)\n\nIn Play Lab maak je spellen
+          en verhalen, gebaseerd op verschillende doelen.\n\n## Flappy\n\n![](//code.org/images/flappy.png)\n\nIn
+          Flappy maak je je eigen Flappy bird spel.\nDe puzzels die toewerken naar
+          het maken van het spel helpen je de verschillende stukken code te begrijpen,
+          die je nodig hebt voor het spel.\n\n## Bounce\n\n![](//code.org/images/bounce.png)\n\nIn
+          Bounce maak je je eigen spel. \nNet als bij Flappy  helpen de puzzels je
+          de stukken code te begrijpen die nodig zijn voor het spel.\n\n* * *\n\nIn
+          deze serie introduceren we je de puzzels van [CS Fundamentals] (http://code.org/educate/k5).
+          Deze puzzels zijn online tutorials en helpen studenten concepten zoals lussen,
+          gebeurtenissen, condities en functies te leren.\n\nTijdens deze les zullen
+          we verschillende soorten puzzels afwisselen, waardoor je vertrouwd kunt
+          raken met de programmeerconcepten in CS Fundamentals en de personages waar
+          je studenten verliefd op zullen worden. Tijdens deze cursus merk je dat
+          je snel tussen verschillende omgevingen beweegt; of het nu de boze vogel
+          naar het varken brengt, een tekening maakt of een bij nectar laat verzamelen.
+          Deze overgangen gaan vrij snel in deze cursus om u zo te laten zien welke
+          puzzels worden aangeboden in CS Fundamentals. Uw studenten zullen meer tijd
+          krijgen.\n\nAls je meer wilt weten over de studentenervaring, kun je altijd
+          op elk gewenst moment de cursussen [CS Fundamentals] (http://studio.code.org/)
+          volgen. Maar deze cursus geeft je een goed beeld van wat je kunt verwachten
+          door in korte tijd een aantal van de meest fundamentele puzzels en lessen
+          te tonen.\n"
+      OPD-K5 Stage3aGo_dani:
+        content1: beschrijving hier
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: '12'
+          correct: true
+          feedback: Juist!
+        - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: '20'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De vogel zal tegen de TNT aan lopen.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
+          feedback: Juist!
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
+          feedback: Juist!
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: beschrijving hier
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: beschrijving hier
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
+          feedback: Juist!
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        questions:
+        - {}

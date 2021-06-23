@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {uniq, map, filter} from 'lodash';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
-import ScriptSelector from '@cdo/apps/templates/sectionProgress/ScriptSelector';
+import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
 import {asyncLoadTextResponses} from './textResponsesRedux';
@@ -14,11 +14,11 @@ import {
   setScriptId,
   validScriptPropType,
   getSelectedScriptName
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
-  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.lesson(), key: 'lesson'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'}
@@ -40,7 +40,7 @@ class TextResponses extends Component {
   };
 
   state = {
-    filterByStageName: null
+    filterByLessonName: null
   };
 
   componentDidMount() {
@@ -59,15 +59,15 @@ class TextResponses extends Component {
     const {setScriptId, asyncLoadTextResponses, sectionId} = this.props;
     asyncLoadTextResponses(sectionId, scriptId, () => {
       setScriptId(scriptId);
-      this.setState({filterByStageName: null});
+      this.setState({filterByLessonName: null});
     });
   };
 
-  renderFilterByStageDropdown = () => {
-    const stages = this.getStages();
+  renderFilterByLessonDropdown = () => {
+    const lessons = this.getLessons();
 
-    // only render filter dropdown if there are 2+ stages
-    if (stages.length <= 1) {
+    // only render filter dropdown if there are 2+ lessons
+    if (lessons.length <= 1) {
       return null;
     }
 
@@ -75,38 +75,38 @@ class TextResponses extends Component {
       <div style={styles.dropdownContainer}>
         <div style={styles.dropdownLabel}>{i18n.filterByStage()}</div>
         <select
-          id="uitest-stage-filter"
+          id="uitest-lesson-filter"
           style={styles.dropdown}
           onChange={this.onChangeFilter}
         >
           <option key={DEFAULT_FILTER_KEY}>{DEFAULT_FILTER_KEY}</option>
-          {stages.map(stage => (
-            <option key={stage}>{stage}</option>
+          {lessons.map(lesson => (
+            <option key={lesson}>{lesson}</option>
           ))}
         </select>
       </div>
     );
   };
 
-  getStages = () => {
-    const stages = uniq(map(this.getResponsesByScript(), 'stage'));
-    return stages;
+  getLessons = () => {
+    const lessons = uniq(map(this.getResponsesByScript(), 'lesson'));
+    return lessons;
   };
 
   onChangeFilter = event => {
-    const filterByStageName =
+    const filterByLessonName =
       event.target.value === DEFAULT_FILTER_KEY ? null : event.target.value;
-    this.setState({filterByStageName});
+    this.setState({filterByLessonName});
   };
 
   getFilteredResponses = () => {
-    const {filterByStageName} = this.state;
+    const {filterByLessonName} = this.state;
     let filteredResponses = [...this.getResponsesByScript()];
 
-    if (filterByStageName) {
+    if (filterByLessonName) {
       filteredResponses = filter(filteredResponses, [
-        'stage',
-        filterByStageName
+        'lesson',
+        filterByLessonName
       ]);
     }
 
@@ -125,11 +125,11 @@ class TextResponses extends Component {
 
     return (
       <div>
-        <div style={styles.scriptSelection}>
+        <div style={styles.unitSelection}>
           <div style={{...h3Style, ...styles.header}}>
             {i18n.selectACourse()}
           </div>
-          <ScriptSelector
+          <UnitSelector
             validScripts={validScripts}
             scriptId={scriptId}
             onChange={this.onChangeScript}
@@ -137,7 +137,7 @@ class TextResponses extends Component {
         </div>
         {filteredResponses.length > 0 && (
           <div id="uitest-response-actions" style={styles.actionRow}>
-            <div>{this.renderFilterByStageDropdown()}</div>
+            <div>{this.renderFilterByLessonDropdown()}</div>
             <CSVLink
               style={styles.buttonContainer}
               filename="responses.csv"
@@ -171,7 +171,7 @@ const styles = {
   header: {
     marginBottom: 0
   },
-  scriptSelection: {
+  unitSelection: {
     marginTop: 30
   },
   actionRow: {
@@ -214,8 +214,8 @@ export default connect(
     sectionId: state.sectionData.section.id,
     responses: state.textResponses.responseDataByScript,
     isLoadingResponses: state.textResponses.isLoadingResponses,
-    validScripts: state.scriptSelection.validScripts,
-    scriptId: state.scriptSelection.scriptId,
+    validScripts: state.unitSelection.validScripts,
+    scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({

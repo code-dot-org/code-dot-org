@@ -1184,6 +1184,15 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
             '"speed"': hastighed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mellem
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1458,43 +1467,27 @@ da:
         options:
           PROPERTY:
             "'shapeColor'": farve
-      aalab_addBehaviorForDuration:
-        text: aalab figur {SPRITE} begynder {BEHAVIOR} i {SECONDS} sekunder
-      aalab_addBehaviorUntilBoolean:
-        text: figur {SPRITE} begynder {BEHAVIOR} indtil {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ny figur der hedder{SPRITE_NAME} med udseendet {ANIMATION_NAME} placeret
-          på {LOCATION}
-      aalab_goToScene:
-        text: skift til scene {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: flyt {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Syd
-            '"West"': Vest
-      aalab_prompt:
-        text: spørg om {MESSAGE}
-      aalab_scene:
-        text: scene {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: opret spil
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': gitter
+            '"border"': grænse
+            '"row"': række
             '"random"': tilfældig
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:

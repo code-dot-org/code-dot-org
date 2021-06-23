@@ -60,6 +60,7 @@ tr:
       name: adı
       nectar: nektar
       padYOffset: padYOffset
+      planet: gezegen
       player_score: player_score
       points: Puanlar
       punchLine: punchLine
@@ -73,6 +74,7 @@ tr:
       screenHeight: screenHeight
       screenWidth: screenWidth
       set sides: genişliği ayarla
+      shout: haykırmak
       sides: kenarlar
       size: boyut
       speed: hız

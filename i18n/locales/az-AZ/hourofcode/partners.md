@@ -16,7 +16,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# International Partners
+# Beynəlxalq Tərəfdaşlar
 
 {{ partners/international_partners }}
 
@@ -34,7 +34,7 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 * * *
 
-# Additional Partners
+# Digər Tərəfdaşlar
 
 {{ partners/additional_partners }}
 

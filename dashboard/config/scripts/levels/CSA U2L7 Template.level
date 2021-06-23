@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    \n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "public class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // To Do: Write the constructor.\n  \n  \n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.print(\"The food truck has \");\n    newDessert.printInfo();\n  }\n}",
+        "isVisible": true
+      },
+      "Cake.java": {
+        "text": "public class Cake {\n  private String flavor;\n  private int quantity;\n  private double price;\n  private int layers;\n  private String topping;\n\n  public Cake(String flavor, int quantity, double price, int layers, String topping) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n    this.layers = layers;\n    this.topping = topping;\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-16T19:32:46.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-16 19:33:03 +0000\",\"changed\":[\"name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:38:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:40:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:45:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:47:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

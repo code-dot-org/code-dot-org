@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require 'cdo/shared_constants'
@@ -53,6 +54,8 @@ class Level < ApplicationRecord
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
+  validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
@@ -390,7 +393,7 @@ class Level < ApplicationRecord
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
-  # stage extras page
+  # lesson extras page
   def summarize_as_bonus
     {}
   end
@@ -733,6 +736,12 @@ class Level < ApplicationRecord
     end
 
     level.update!(update_params)
+
+    # Copy the level_concept_difficulty of the parent level to the new level
+    new_lcd = level_concept_difficulty.dup
+    level.level_concept_difficulty = new_lcd
+    level.save! if level.changed?
+
     level
   end
 
@@ -834,10 +843,10 @@ class Level < ApplicationRecord
     base_name
   end
 
-  # repeatedly strip any version year suffix of the form _NNNN ()e.g. _2017)
+  # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
   def strip_version_year_suffixes(str)
-    year_suffix_regex = /^(.*)_[0-9]{4}$/
+    year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
       break unless matchdata

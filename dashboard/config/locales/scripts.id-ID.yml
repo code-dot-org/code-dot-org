@@ -1303,8 +1303,6 @@ id:
               name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
-            0: Unit 1, Hari 1-2 Apa itu Komputer?
-            1: Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1424,8 +1422,6 @@ id:
               name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
-            0: Unit 1, Hari 1-2 Apa itu Komputer?
-            1: Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1449,8 +1445,6 @@ id:
               name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
-            0: Unit 1, Hari 1-2 Apa itu Komputer?
-            1: Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3088,8 +3082,6 @@ id:
               name: Unit 1, Hari 15-16 Program Komputer dan Mengikuti Petunjuk
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Hari 17-19 Apa itu Kecerdasan?
-            0: Unit 1, Hari 1-2 Apa itu Komputer?
-            1: Unit 1, Hari 1-2 Apa itu Komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, hari ke 3-4 membeli sebuah komputer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3768,7 +3760,7 @@ id:
             nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input,
             output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan
             masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang
-            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r\n"
+            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r"
           lesson_groups:
             cspSurvey:
               display_name: Survei
@@ -3972,7 +3964,7 @@ id:
             nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input,
             output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan
             masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang
-            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r\n"
+            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r"
         csp-online-test:
           lesson_groups:
             required:
@@ -4314,17 +4306,17 @@ id:
             Lists:
               name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
-                tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
-                kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
-                ke proyek halaman web pribadi untuk menambahkan halaman HTML baru
-                yang mencantumkan tag baru.
+                tidak tersusun beserta tag HTML <ul>, <ol>, and <li> kaitannya.  Murid
+                di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman
+                web pribadi untuk menambahkan halaman HTML baru yang mencantumkan
+                tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan
                 tidak tersusun dalam HTML dan menempuh beberapa level menggunakan
-                tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali
-                ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman
-                yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar
-                sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru
-                yang sudah mereka pelajari ini.
+                tag <ul>, <ol>, and <li>.  Mereka kemudian kembali ke proyek untuk
+                menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini,
+                mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas,
+                atau sembarang konten lain yang menggunakan tag baru yang sudah mereka
+                pelajari ini.
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
               description_student: Pelajaran ini membahas cara menggunakan media seperti
@@ -4341,7 +4333,7 @@ id:
                 mengatasi sulitnya mengurus dan menangani hak cipta. \r\n\r\nTerakhir,
                 berbekal pemahaman umum tentang batasan berbagai lisensi Creative
                 Commons, murid mempelajari cara menambahkan gambar ke halaman web
-                mereka menggunakan tag &lt;img&gt;."
+                mereka menggunakan tag <img>."
             Project - Multi-Page Websites:
               name: Proyek - Situs Web Multigambar
               description_student: 'Pelajaran ini membahas hyperlink, yang memudahkan
@@ -4354,7 +4346,7 @@ id:
                 ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua
                 halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat
                 halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum
-                dalam proses penerbitan seluruh situs ke Web.    \r\n\r\n"
+                dalam proses penerbitan seluruh situs ke Web.    \r\n\r"
             RGB Colors and Classes:
               name: Warna dan Kelas RGB
               description_student: Pelajaran ini membahas kelas dan warna kustom.
@@ -4387,7 +4379,7 @@ id:
                 ke situs web, meninjau kembali rubrik, dan merenungi proses yang sudah
                 dijalani. Untuk menyelesaikan unit ini, mereka akan berbagi proyek
                 dan juga gambaran umum tentang proses yang sudah mereka tempuh untuk
-                sampai ke desain terakhir ini.\r\n"
+                sampai ke desain terakhir ini.\r"
             Headings:
               name: Tajuk
               description_student: Pelajaran ini melanjutkan pengenalan tag HTML,
@@ -4497,7 +4489,7 @@ id:
                 sebagai pengguna tersebut terhadap serangkaian produk.  Setiap murid
                 diberi sebuah profil pengguna yang mendeskripsikan seseorang, yang
                 lantas mereka gunakan untuk memilih produk yang tepat, mengkritisi
-                desain produk, dan mengusulkan perbaikan desain.\r\n"
+                desain produk, dan mengusulkan perbaikan desain.\r"
             Discovering Users:
               name: Menemukan pengguna
             User-Centered Design Micro Activity:
@@ -4581,7 +4573,7 @@ id:
                 lebih) sebagai basis aplikasi mereka sendiri. Dari situ, tim-tim murid
                 meluangkan waktu mendiskusikan fungsionalitas dasar aplikasi mereka
                 sebelum menggunakan kartu indeks 3x5 untuk mengembangkan prototipe
-                kertas.\r\n"
+                kertas.\r"
             Prototype Testing:
               name: Pengujian Prototipe
               description_student: Dalam pelajaran ini, tim-tim murid mengujikan prototipe
@@ -7040,7 +7032,7 @@ id:
                 konsep algorithm dengan aktivitas kehidupan nyata sehari-hari dengan
                 menanam benih aktual. Di sini tujuannya adalah memulai pembangunan
                 keterampilan dalam menerjemahkan situasi dunia nyata ke dalam skenario
-                online dan begitu sebaliknya.\r\n"
+                online dan begitu sebaliknya.\r"
             Learn to Drag and Drop:
               name: Pengurutan dengan Drag dan Drop
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
@@ -7286,7 +7278,7 @@ id:
               name: 'If/Else: Conditional dengan Kartu'
               description_student: Saatnya memainkan permainan untuk mendapatkan poin
                 hanya dalam kondisi tertentu!
-              description_teacher: 'Pelajaran ini menunjukkan bagaimana conditional
+              description_teacher: Pelajaran ini menunjukkan bagaimana conditional
                 dapat digunakan untuk menyesuaikan program dengan informasi spesifik.
                 Kita tidak selalu memiliki semua informasi yang kita butuhkan ketika
                 menulis program. Kadang-kadang Anda ingin melakukan sesuatu yang berbeda
@@ -7295,8 +7287,6 @@ id:
                 Di sinilah letak peran conditional. Conditional memungkinkan komputer
                 mengambil keputusan berdasarkan informasi yang benar setiap kali code
                 dijalankan.
-
-'
             Conditionals in Bee:
               name: Kondisional dengan Lebah
               description_student: 'Setelah Anda memahami conditional, kini saatnya
@@ -7953,9 +7943,7 @@ id:
               name: Mempersiapkan teknologi - AP Portofolio Digital dan alat-Alat
                 Lain
         csp-ap:
-          title: |2-
-
-            Ujian dan Tugas Kinerja AP CSP
+          title: Ujian dan Tugas Kinerja AP CSP
           description_short: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan
             ujian AP dan Kinerja Tugas.
           description: Pelajaran membimbing siswa untuk mempersiapkan dan menyelesaikan
@@ -9133,7 +9121,7 @@ id:
           title: CSP 3 Mengusulkan Perubahan Sementara Sarana Persiapan
           description_short: Sarana persiapan sementara untuk perubahan Okt bagi csp3
           description: "Ini adalah replika level live di /s/csp3 dengan tambahan tahapan
-            baru dan dimodifikasi.  JANGAN MENGEDIT LEVEL LIVE.\r\n"
+            baru dan dimodifikasi.  JANGAN MENGEDIT LEVEL LIVE.\r"
           lesson_groups:
             csp3_1:
               display_name: 'Bab 1: Bahasa Pemrograman dan Algoritma'
@@ -9163,7 +9151,7 @@ id:
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Penilaian bab 3
           student_description: "Ini adalah replika level live di /s/csp3 dengan tambahan
-            tahapan baru dan dimodifikasi.  JANGAN MENGEDIT LEVEL LIVE.\r\n"
+            tahapan baru dan dimodifikasi.  JANGAN MENGEDIT LEVEL LIVE.\r"
         pwc:
           title: Akses kurikum Potensial Anda dari PwC
           description: Di PwC, kami percaya bahwa semua murid berpotensi menjadi pemimpin
@@ -10173,17 +10161,17 @@ id:
             Lists:
               name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
-                tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
-                kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
-                ke proyek halaman web pribadi untuk menambahkan halaman HTML baru
-                yang mencantumkan tag baru.
+                tidak tersusun beserta tag HTML <ul>, <ol>, and <li> kaitannya.  Murid
+                di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman
+                web pribadi untuk menambahkan halaman HTML baru yang mencantumkan
+                tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan
                 tidak tersusun dalam HTML dan menempuh beberapa level menggunakan
-                tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali
-                ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman
-                yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar
-                sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru
-                yang sudah mereka pelajari ini.
+                tag <ul>, <ol>, and <li>.  Mereka kemudian kembali ke proyek untuk
+                menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini,
+                mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas,
+                atau sembarang konten lain yang menggunakan tag baru yang sudah mereka
+                pelajari ini.
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
               description_student: Pelajaran ini membahas cara menggunakan media seperti
@@ -10200,7 +10188,7 @@ id:
                 mengatasi sulitnya mengurus dan menangani hak cipta. \n\nTerakhir,
                 berbekal pemahaman umum tentang batasan berbagai lisensi Creative
                 Commons, murid mempelajari cara menambahkan gambar ke halaman web
-                mereka menggunakan tag &lt;img&gt;."
+                mereka menggunakan tag <img>."
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
               description_student: Dalam pelajaran ini dibahas persoalan umum yang
@@ -10227,7 +10215,7 @@ id:
                 ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua
                 halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat
                 halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum
-                dalam proses penerbitan seluruh situs ke Web.    \r\n\r\n"
+                dalam proses penerbitan seluruh situs ke Web.    \r\n\r"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk
@@ -10301,7 +10289,7 @@ id:
                 ke situs web, meninjau kembali rubrik, dan merenungi proses yang sudah
                 dijalani. Untuk menyelesaikan unit ini, mereka akan berbagi proyek
                 dan juga gambaran umum tentang proses yang sudah mereka tempuh untuk
-                sampai ke desain terakhir ini.\r\n"
+                sampai ke desain terakhir ini.\r"
             CS Discoveries Post-Course Survey:
               name: Survei Pascakursus CS Discoveries
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
@@ -10342,7 +10330,7 @@ id:
                 konsep algorithm dengan aktivitas kehidupan nyata sehari-hari dengan
                 menanam benih aktual. Di sini tujuannya adalah memulai pembangunan
                 keterampilan dalam menerjemahkan situasi dunia nyata ke dalam skenario
-                online dan begitu sebaliknya.\r\n"
+                online dan begitu sebaliknya.\r"
             Learn to Drag and Drop:
               name: Belajar Menarik dan Melepaskan
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
@@ -11493,7 +11481,7 @@ id:
             nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input,
             output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan
             masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang
-            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r\n"
+            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r"
           description_short: "  Pelajari cara kerja manusia dengan komputer untuk
             memecahkan masalah."
           lesson_groups:
@@ -11714,7 +11702,7 @@ id:
             nyata. Berikutnya,  Anda akan mempelajari cara komputer melakukan input,
             output, menyimpan, dan memproses informasi untuk membantu manusia memecahkan
             masalah.  Unit ini diakhiri dengan sebuah proyek yang menugasi Anda merancang
-            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r\n"
+            sebuah aplikasi yang membantu memecahkan masalah pilihan Anda.\r"
         csd4-2018:
           title: CSD Unit 4 - Proses Desain ('18-'19)
           description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui
@@ -11767,7 +11755,7 @@ id:
                 sebagai pengguna tersebut terhadap serangkaian produk.  Setiap murid
                 diberi sebuah profil pengguna yang mendeskripsikan seseorang, yang
                 lantas mereka gunakan untuk memilih produk yang tepat, mengkritisi
-                desain produk, dan mengusulkan perbaikan desain.\r\n"
+                desain produk, dan mengusulkan perbaikan desain.\r"
             User-Centered Design Micro Activity:
               name: Aktivitas Mikro Desain Berpusat-Pengguna
               description_student: Dalam grup-grup kecil, murid di kelas menggunakan
@@ -11909,7 +11897,7 @@ id:
                 lebih) sebagai basis aplikasi mereka sendiri. Dari situ, tim-tim murid
                 meluangkan waktu mendiskusikan fungsionalitas dasar aplikasi mereka
                 sebelum menggunakan kartu indeks 3x5 untuk mengembangkan prototipe
-                kertas.\r\n"
+                kertas.\r"
             Prototype Testing:
               name: Pengujian Prototipe
               description_student: Dalam pelajaran ini, tim-tim murid mengujikan prototipe
@@ -14627,7 +14615,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
           description_short: "  Pelajari cara kerja manusia dengan komputer untuk
             memecahkan masalah."
           lesson_groups:
@@ -14813,7 +14801,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
         andrea-test:
           title: pengujian-andrea
           description_audience: Fasilitator Pelatihan 6-12
@@ -14955,7 +14943,7 @@ id:
               description_teacher: "Pada tahap sebelumnya, murid menggunakan loop
                 untuk membuat gambar yang fantastis. Sekarang mereka akan mengulang
                 kegiatan baru agar dapat membantu si pemanen mengumpulkan bermacam-macam
-                sayuran yang tumbuh ranum dan bergerombol.\r\n"
+                sayuran yang tumbuh ranum dan bergerombol.\r"
             'Events: The Big Event':
               name: Acara besar
               description_student: 'Mainkan permainan seru untuk belajar tentang event. '
@@ -14986,7 +14974,7 @@ id:
                 skenario tentang perilaku online yang kasar, murid mendiskusikan makna
                 perundungan maya, caranya dalam mengganggu perasaan orang, dan cara
                 menanggapinya. Terakhir, mereka menggunakan pengetahuan untuk membuat
-                lembar kiat sederhana tentang perundungan maya dalam jurnal.\r\n"
+                lembar kiat sederhana tentang perundungan maya dalam jurnal.\r"
             Events in Play Lab:
               name: Permainan Kejar-kejaran dengan Event
               description_student: Saatnya menjadi kreatif dan membuat permainan di
@@ -15059,7 +15047,7 @@ id:
                 dalam membuat dan menjaga kata sandi yang kuat serta aman.\r\n\r\nMurid
                 mempelajari kiat kata sandi, menguji kata sandi mereka saat ini dengan
                 permainan interaktif, dan membuat kata sandi baru menggunakan pedoman
-                pembuatan kata sandi yang kuat.\r\n"
+                pembuatan kata sandi yang kuat.\r"
             Sticker Art with Loops:
               name: Seni Stiker dengan Loop
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan
@@ -15595,17 +15583,17 @@ id:
             Lists:
               name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
-                tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
-                kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
-                ke proyek halaman web pribadi untuk menambahkan halaman HTML baru
-                yang mencantumkan tag baru.
+                tidak tersusun beserta tag HTML <ul>, <ol>, and <li> kaitannya.  Murid
+                di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman
+                web pribadi untuk menambahkan halaman HTML baru yang mencantumkan
+                tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan
                 tidak tersusun dalam HTML dan menempuh beberapa level menggunakan
-                tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali
-                ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman
-                yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar
-                sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru
-                yang sudah mereka pelajari ini.
+                tag <ul>, <ol>, and <li>.  Mereka kemudian kembali ke proyek untuk
+                menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini,
+                mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas,
+                atau sembarang konten lain yang menggunakan tag baru yang sudah mereka
+                pelajari ini.
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
               description_student: Pelajaran ini membahas cara menggunakan media seperti
@@ -15622,7 +15610,7 @@ id:
                 mengatasi sulitnya mengurus dan menangani hak cipta. \n\nTerakhir,
                 berbekal pemahaman umum tentang batasan berbagai lisensi Creative
                 Commons, murid mempelajari cara menambahkan gambar ke halaman web
-                mereka menggunakan tag &lt;img&gt;."
+                mereka menggunakan tag <img>."
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
               description_student: Dalam pelajaran ini dibahas persoalan umum yang
@@ -15649,7 +15637,7 @@ id:
                 ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua
                 halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat
                 halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum
-                dalam proses penerbitan seluruh situs ke Web.    \r\n\r\n"
+                dalam proses penerbitan seluruh situs ke Web.    \r\n\r"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk
@@ -15723,7 +15711,7 @@ id:
                 ke situs web, meninjau kembali rubrik, dan merenungi proses yang sudah
                 dijalani. Untuk menyelesaikan unit ini, mereka akan berbagi proyek
                 dan juga gambaran umum tentang proses yang sudah mereka tempuh untuk
-                sampai ke desain terakhir ini.\r\n"
+                sampai ke desain terakhir ini.\r"
             Post-Project Test:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
@@ -16160,7 +16148,7 @@ id:
                 sebagai pengguna tersebut terhadap serangkaian produk.  Setiap murid
                 diberi sebuah profil pengguna yang mendeskripsikan seseorang, yang
                 lantas mereka gunakan untuk memilih produk yang tepat, mengkritisi
-                desain produk, dan mengusulkan perbaikan desain.\r\n"
+                desain produk, dan mengusulkan perbaikan desain.\r"
             User-Centered Design Micro Activity:
               name: Aktivitas Mikro Desain Berpusat-Pengguna
               description_student: Dalam grup-grup kecil, murid di kelas menggunakan
@@ -16302,7 +16290,7 @@ id:
                 lebih) sebagai basis aplikasi mereka sendiri. Dari situ, tim-tim murid
                 meluangkan waktu mendiskusikan fungsionalitas dasar aplikasi mereka
                 sebelum menggunakan kartu indeks 3x5 untuk mengembangkan prototipe
-                kertas.\r\n"
+                kertas.\r"
             Prototype Testing:
               name: Pengujian Prototipe
               description_student: Dalam pelajaran ini, tim-tim murid mengujikan prototipe
@@ -18404,7 +18392,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
           description_short: "  Pelajari cara kerja manusia dengan komputer untuk
             memecahkan masalah."
           lesson_groups:
@@ -18590,7 +18578,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
         csd2-pilot:
           title: CSD Unit 2 - Pengembangan Web (Versi Percontohan)
           description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan
@@ -18711,17 +18699,17 @@ id:
             Lists:
               name: List
               description_student: Pelajaran ini memperkenalkan daftar tersusun dan
-                tidak tersusun beserta tag HTML &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;
-                kaitannya.  Murid di kelas berlatih menggunakan tags, lalu kembali
-                ke proyek halaman web pribadi untuk menambahkan halaman HTML baru
-                yang mencantumkan tag baru.
+                tidak tersusun beserta tag HTML <ul>, <ol>, and <li> kaitannya.  Murid
+                di kelas berlatih menggunakan tags, lalu kembali ke proyek halaman
+                web pribadi untuk menambahkan halaman HTML baru yang mencantumkan
+                tag baru.
               description_teacher: Murid diperkenalkan dengan daftar tersusun dan
                 tidak tersusun dalam HTML dan menempuh beberapa level menggunakan
-                tag &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;.  Mereka kemudian kembali
-                ke proyek untuk menambahkan halaman HTML yang baru.  Di dalam halaman
-                yang baru ini, mereka menulis HTML untuk menampilkan resep, daftar
-                sepuluh teratas, atau sembarang konten lain yang menggunakan tag baru
-                yang sudah mereka pelajari ini.
+                tag <ul>, <ol>, and <li>.  Mereka kemudian kembali ke proyek untuk
+                menambahkan halaman HTML yang baru.  Di dalam halaman yang baru ini,
+                mereka menulis HTML untuk menampilkan resep, daftar sepuluh teratas,
+                atau sembarang konten lain yang menggunakan tag baru yang sudah mereka
+                pelajari ini.
             Intellectual Property and Images:
               name: Hak Kekayaan Intelektual dan Gambar
               description_student: Pelajaran ini membahas cara menggunakan media seperti
@@ -18738,7 +18726,7 @@ id:
                 mengatasi sulitnya mengurus dan menangani hak cipta. \n\nTerakhir,
                 berbekal pemahaman umum tentang batasan berbagai lisensi Creative
                 Commons, murid mempelajari cara menambahkan gambar ke halaman web
-                mereka menggunakan tag &lt;img&gt;."
+                mereka menggunakan tag <img>."
             Clean Code and Debugging:
               name: Kode yang bersih dan Debugging
               description_student: Dalam pelajaran ini dibahas persoalan umum yang
@@ -18765,7 +18753,7 @@ id:
                 ini sudah dikerjakan.  Dalam pelajaran ini, mereka menautkan semua
                 halaman yang sudah mereka buat sebelumnya menjadi satu proyek, membuat
                 halaman baru, dan menambahkan navigasi di antara halaman sebelum sebelum
-                dalam proses penerbitan seluruh situs ke Web.    \r\n\r\n"
+                dalam proses penerbitan seluruh situs ke Web.    \r\n\r"
             Styling Text with CSS:
               name: Membuat Gaya Teks dengan CSS
               description_student: Pelajaran ini memperkenalkan CSS sebagai cara untuk
@@ -18839,7 +18827,7 @@ id:
                 ke situs web, meninjau kembali rubrik, dan merenungi proses yang sudah
                 dijalani. Untuk menyelesaikan unit ini, mereka akan berbagi proyek
                 dan juga gambaran umum tentang proses yang sudah mereka tempuh untuk
-                sampai ke desain terakhir ini.\r\n"
+                sampai ke desain terakhir ini.\r"
             Post-Project Test:
               name: Pengujian Pascaproyek
             CS Discoveries Post Course survey:
@@ -20221,6 +20209,8 @@ id:
               display_name: fungsi
             csp_project:
               display_name: Proyek
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             Variables Explore:
               name: Eksplorasi Variable
@@ -20252,6 +20242,8 @@ id:
               name: Proyek - Aplikasi Pembuat Keputusan Bagian 3
             'Lesson 15: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp5-2020:
           title: CSP Unit 5 - Daftar, Loop, dan Traversal ('20-'21)
           lesson_groups:
@@ -20263,6 +20255,8 @@ id:
               display_name: Melintang
             csp_project:
               display_name: Proyek
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             Lists Explore:
               name: Eksplorasi Daftar
@@ -20304,12 +20298,16 @@ id:
               name: Unit 5 Survei MURID
             Unit 5 TEACHER Survey:
               name: Unit 5 Survei GURU
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter dan Nilai Balik
             csp_libraries:
               display_name: Perpustakaan
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             Parameters and Return Explore:
               name: Parameter dan Return Explore
@@ -20341,6 +20339,8 @@ id:
               name: Demo Membuat Variable
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csd2-projects-temp:
           title: Proyek Web CSD - TEMP
           description: Tempat sementara untuk menyimpan proyek-proyek mini baru bagi
@@ -20641,7 +20641,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
           description_short: "  Pelajari cara kerja manusia dengan komputer untuk
             memecahkan masalah."
           lesson_groups:
@@ -20677,8 +20677,8 @@ id:
                 menceritakan pengalaman mereka dengan aktivitas tersebut dan membangun
                 pemahaman tentang jenis-jenis pemecahan masalah yang akan mereka lakukan
                 untuk kursus selebihnya.\r\n\r\n**Versi alternatif pelajaran ini juga
-                tersedia.** \r\n\r\n* [Newspaper Table](../4/)\r\n* [Spaghetti Bridge](../5/)\r\n*
-                [Paper Tower](../6/)"
+                tersedia.** \r\n\r\n\n* [Newspaper Table](../4/)\r\n\n* [Spaghetti
+                Bridge](../5/)\r\n\n* [Paper Tower](../6/)"
             The Problem Solving Process:
               name: Proses Pemecahan Masalah
               description_student: "**Pertanyaan Hari Ini: Apa saja langkah-langkah
@@ -20861,9 +20861,6 @@ id:
               name: 'Pelajaran 3: Mengeksplorasi Pemecahan Masalah - Tema Permainan'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Pelajaran 3: Mengeksplorasi Pemecahan Masalah - Tema Binatang'
-            0:
-              name: \"Alt Pelajaran 1:\" Pengenalan Pemecahan Masalah - Meja Surat
-                Kabar
             'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
               name: 'Pelajaran Alternatif 1: Pengenalan Pemecahan Masalah - Jembatan
                 Spageti'
@@ -21046,7 +21043,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
         csd4-2020:
           title: CSD Unit 4 - Proses Desain
           description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui
@@ -21101,7 +21098,7 @@ id:
                 sebagai pengguna tersebut terhadap serangkaian produk.  Setiap murid
                 diberi sebuah profil pengguna yang mendeskripsikan seseorang, yang
                 lantas mereka gunakan untuk memilih produk yang tepat, mengkritisi
-                desain produk, dan mengusulkan perbaikan desain.\r\n"
+                desain produk, dan mengusulkan perbaikan desain.\r"
             User-Centered Design Micro Activity:
               name: Aktivitas Mikro Desain Berpusat-Pengguna
               description_student: Dalam grup-grup kecil, murid di kelas menggunakan
@@ -21243,7 +21240,7 @@ id:
                 lebih) sebagai basis aplikasi mereka sendiri. Dari situ, tim-tim murid
                 meluangkan waktu mendiskusikan fungsionalitas dasar aplikasi mereka
                 sebelum menggunakan kartu indeks 3x5 untuk mengembangkan prototipe
-                kertas.\r\n"
+                kertas.\r"
             Prototype Testing:
               name: Pengujian Prototipe
               description_student: Dalam pelajaran ini, tim-tim murid mengujikan prototipe
@@ -22546,7 +22543,7 @@ id:
                 skenario tentang perilaku online yang kasar, murid mendiskusikan makna
                 perundungan maya, caranya dalam mengganggu perasaan orang, dan cara
                 menanggapinya. Terakhir, mereka menggunakan pengetahuan untuk membuat
-                lembar kiat sederhana tentang perundungan maya dalam jurnal.\r\n"
+                lembar kiat sederhana tentang perundungan maya dalam jurnal.\r"
             Powerful Passwords:
               name: Kata Sandi yang Kuat
               description_student: Dalam pelajaran ini, Anda akan mempelajari cara
@@ -22557,7 +22554,7 @@ id:
                 dalam membuat dan menjaga kata sandi yang kuat serta aman.\r\n\r\nMurid
                 mempelajari kiat kata sandi, menguji kata sandi mereka saat ini dengan
                 permainan interaktif, dan membuat kata sandi baru menggunakan pedoman
-                pembuatan kata sandi yang kuat.\r\n"
+                pembuatan kata sandi yang kuat.\r"
             'Programming: My Robotic Friends':
               name: Teman Robot Saya Jr.
               description_student: Dalam pelajaran ini, Anda menganggap seolah-olah
@@ -22638,7 +22635,7 @@ id:
               description_teacher: "Pada tahap sebelumnya, murid menggunakan loop
                 untuk membuat gambar yang fantastis. Sekarang mereka akan mengulang
                 kegiatan baru agar dapat membantu si pemanen mengumpulkan bermacam-macam
-                sayuran yang tumbuh ranum dan bergerombol.\r\n"
+                sayuran yang tumbuh ranum dan bergerombol.\r"
             Looking Ahead:
               name: Melihat ke depan
               description_student: Hindari lava! Di sini Anda mulai belajar tentang
@@ -23649,6 +23646,8 @@ id:
               display_name: "(Lama) Unit 1: Informasi Digital"
             cspSurvey:
               display_name: Survei
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23682,11 +23681,15 @@ id:
               name: 'Pelajaran 15: Hari Penilaian'
             CS Principles Pre-survey:
               name: Prasurvei CS Principles
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp2-2020:
           title: CSP Unit 2 - Internet ('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: Internet'
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23708,11 +23711,15 @@ id:
               name: Proyek - Dilema Internet Bagian 2
             'Lesson 9: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp3-2020:
           title: CSP Unit 3 - Pengenalan Desain Aplikasi ('20-'21)
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Pengenalan Desain Aplikasi'
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23736,11 +23743,15 @@ id:
               name: Proyek - Mendesain Aplikasi Bag 5
             'Lesson 11: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp6-2020:
           title: CSP Unit 6 - Algorithm ('20-'21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithm'
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23756,6 +23767,8 @@ id:
               name: Algorithm Paralel dan Terdistribusi
             'Lesson 6: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp8-2020:
           title: CSP Unit 8 - Buat PT Prep ('20-'21)
           lessons:
@@ -23772,6 +23785,8 @@ id:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23793,11 +23808,15 @@ id:
               name: Proyek - Menuturkan Cerita Data - Bagian 2
             'Lesson 9: Assessment Day':
               name: 'Pelajaran 15: Hari Penilaian'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp10-2020:
           title: CSP Unit 10 - Cybersecurity dan Dampak Global ('20-'21)
           lesson_groups:
             csp_unit10_2020:
               display_name: Unit 10 - Cybersecurity dan Dampak Global
+            cspSurvey2020:
+              display_name: Survei Pasca Kursus
           lessons:
             new stage:
               name: tahapan baru
@@ -23835,6 +23854,8 @@ id:
               name: 'Proyek: Simulasi Inovasi Bagian 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Pelajaran 14: Hari Penilaian Unit'
+            CS Principles Post-Course Survey:
+              name: Survei Pascakursus CS Principles
         csp-march-virtual:
           title: CS Principles 20-21 Pelatihan Kurikulum bagi Fasilitator
           lessons:
@@ -24992,6 +25013,12 @@ id:
               name: Kursus B
             CS Discoveries:
               name: CS Discoveries
+            Course E:
+              name: Kursus E
+            Course F:
+              name: Kursus F
+            csf:
+              name: Dasar dasar CS
         virustest:
           title: Mensimulasikan Wabah
           description_short: Gunakan Sprite Lab untuk membuat simulasi wabah virus.
@@ -25001,6 +25028,10 @@ id:
               name: AI for Oceans
             visualizing:
               name: Membayangkan data
+            lesson14:
+              name: Pelajaran ke- 14
+            lesson15:
+              name: Pelajaran ke- 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -25030,7 +25061,9 @@ id:
             lessonGroup-3:
               display_name: variabel
             outbreak:
-              display_name: Simulasi Wabah
+              display_name: Simulator Wabah
+            debugging:
+              display_name: Debugging
         csd1-2021:
           title: CSD Unit 1 - Pemecahan Masalah dan Komputasi
           description: " Pemecahan Masalah dan Komputasi merupakan pengenalan bidang
@@ -25041,7 +25074,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
           description_short: "  Pelajari cara kerja manusia dengan komputer untuk
             memecahkan masalah."
           lessons:
@@ -25229,7 +25262,7 @@ id:
             melakukan input, output, menyimpan, dan memproses informasi untuk membantu
             manusia memecahkan masalah.  Unit ini diakhiri dengan sebuah proyek yang
             menugasi Anda merancang sebuah aplikasi yang membantu memecahkan masalah
-            pilihan Anda.\r\n"
+            pilihan Anda.\r"
         csd2-2021:
           title: CSD Unit 2 - Pengembangan Web
           description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan
@@ -26282,7 +26315,7 @@ id:
               name: Mahadata, Crowdsourcing, dan Pembelajaran Mesin
             Machine Learning and Bias:
               key: Pembelajaran Mesin dan Bias
-              name: Pembelajaran Mesin dan Bias
+              name: Pembelajaran Mesin
             Project - Tell a Data Story - Part 1:
               key: Proyek - Menuturkan Cerita Data - Bagian 1
               name: Proyek - Menuturkan Cerita Data - Bagian 1
@@ -26517,11 +26550,11 @@ id:
               name: Pemrograman dengan Pemanen
               description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang
                 jalur.
-              description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman
+              description_teacher: Murid akan menerapkan konsep-konsep pemrograman
                 yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu
                 membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan
                 blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial
-                dan mulai menggunakan proses debugging. '
+                dan mulai menggunakan proses debugging.
             'Loops: Getting Loopy':
               key: 'Loop: Menjadi Berbelit'
               name: Dapat berulang-ulang
@@ -26563,12 +26596,12 @@ id:
               key: Aplikasi yang Tepat
               name: Aplikasi yang Tepat
               description_student: Buat sketsa aplikasi ponsel pintar Anda sendiri.
-              description_teacher: 'Pelajaran ini membuat murid sadar bahwa ilmu komputer
+              description_teacher: Pelajaran ini membuat murid sadar bahwa ilmu komputer
                 dapat membantu manusia dalam kehidupan nyata. Pertama, murid berempati
                 dengan beberapa pengguna telepon pintar fiktif agar dapat membantu
                 mereka menemukan "aplikasi yang tepat" yang memenuhi kebutuhan mereka.
                 Lalu murid melatih empati dan kreativitas untuk membuat sketsa aplikasi
-                telepon pintar sendiri yang memenuhi kebutuhan seorang pengguna lagi. '
+                telepon pintar sendiri yang memenuhi kebutuhan seorang pengguna lagi.
             'Events: The Big Event':
               key: 'Event: Event Besar'
               name: The Big Event Jr.
@@ -27080,11 +27113,11 @@ id:
               key: Simon Mengatakan
               description_student: Mainkan permainan dan pikirkan tentang perintah
                 yang diperlukan untuk mendapat hasil yang tepat.
-              description_teacher: 'Dalam pelajaran ini, murid akan memainkan permainan
+              description_teacher: Dalam pelajaran ini, murid akan memainkan permainan
                 yang dimaksudkan untuk memancing mereka berpikir tentang cara yang
                 mengharuskan pemberian perintah untuk membuahkan hasil yang benar.
                 Cara ini akan membantu mereka (murid) dengan mudah membawa pelajaran
-                ini ke Sprite Lab dalam pelajaran yang akan datang. '
+                ini ke Sprite Lab dalam pelajaran yang akan datang.
             Learning Sprites with Sprite Lab:
               key: Mempelajari Sprite dengan Sprite Lab
               name: Iklan Berenang dengan Sprite Lab
@@ -27099,10 +27132,10 @@ id:
               name: Event dengan Sprite Lab
               description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman
                 sekelas.
-              description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform
+              description_teacher: Pelajaran ini menampilkan Sprite Lab, sebuah platform
                 bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri.
                 Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai
-                event untuk membuat "pesta dansa alien".  '
+                event untuk membuat "pesta dansa alien".
             Private and Personal Information:
               key: Informasi Privat dan Pribadi
               name: Informasi Privat dan Pribadi
@@ -27225,6 +27258,11 @@ id:
                 mereka yang sudah jadi kepada rekan sejawat."
             lesson-4:
               name: Menjadi Warga Digital Super
+            lesson-1:
+              name: Mendesain untuk Aksesibilitas
+              description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang
+                aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
+                dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
@@ -27240,6 +27278,8 @@ id:
               display_name: Dampak dari Komputasi
             end_of_course_project:
               display_name: Proyek Akhir Kursus
+            lessonGroup-7:
+              display_name: Dampak dari Komputasi
           student_description: Mulai coding dengan algorithm, loop, conditional, event,
             dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang
             dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
@@ -27337,9 +27377,9 @@ id:
               key: Variable yang Berubah dalam Lebah
               name: Mengubah Variable dengan Lebah
               description_student: Lebah ini menyukai variable!
-              description_teacher: 'Pelajaran ini akan membantu menjelaskan cara variable
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable
                 dapat membuat program lebih kuat dengan memudahkan nilai berubah pada
-                saat code dijalankan. '
+                saat code dijalankan.
             Variables that Change in Artist:
               key: Variable yang Berubah dalam Artis
               name: Mengubah Variable dengan Artis
@@ -27381,10 +27421,10 @@ id:
               name: Untuk Loop Fun
               description_student: Anda akan merasakan banyak kegembiraan belajar
                 tentang loop `for`!
-              description_teacher: 'Kita tahu bahwa loop memungkinkan kita melakukan
+              description_teacher: Kita tahu bahwa loop memungkinkan kita melakukan
                 banyak hal berkali-kali, tetapi sekarang kita akan mempelajari cara
                 menggunakan loop yang memiliki struktur ekstra bawaan. Struktur baru
-                ini akan memudahkan murid membuat code yang lebih hebat dan dinamis. '
+                ini akan memudahkan murid membuat code yang lebih hebat dan dinamis.
             For Loops in Bee:
               key: For Loop dalam Lebah
               name: For Loop dengan Lebah
@@ -27523,7 +27563,7 @@ id:
                 belok kanan.
             Debugging with Scrat:
               key: Debugging dengan Scrat
-              name: Debugging dengan Scrat
+              name: Debugging dalam Labirin
               description_student: Carilah masalah dalam puzzle dan latih kemampuan
                 debugging Anda.
               description_teacher: Debugging merupakan elemen penting belajar memprogram.
@@ -27614,7 +27654,7 @@ id:
                 yang dijumpai oleh program.
             While Loops with the Farmer:
               key: While Loop dengan Petani
-              name: While Loop dengan Petani
+              name: While Loop dalam Petani
               description_student: 'Loop sangat membantu dalam coding. Pelajaran ini
                 akan mengajari Anda tentang jenis loop baru: while loop!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -27675,21 +27715,22 @@ id:
             Variables with Artist:
               key: Variabel dengan Artis
               name: Variabel dengan Artis
-              description_student: Jangan lupa memancing kreativitas di ruang kelas!
-                Dalam puzzle ini, Anda akan membuat gambar-gambar yang fantastis menggunakan
-                variable.
+              description_student: Dalam pelajaran ini, Anda akan membuat gambar menggunakan
+                variable yang berubah pada saat program berjalan.
               description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi
                 pembuatan desain berulang menggunakan variable di lingkungan Artis.
                 Murid akan mempelajari cara menggunakan variable untuk membuat code
-                lebih mudah ditulis dan lebih mudah dibaca bahkan ketika nilainya
-                tidak berubah saat runtime.
+                lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle
+                terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain
+                bebas untuk memperagakan materi yang sudah dipelajari dan membuat
+                desain mereka sendiri.
             Changing Variables with Bee:
               key: Mengubah Variable dengan Lebah
               name: Mengubah Variable dengan Lebah
               description_student: Lebah ini menyukai variable!
-              description_teacher: 'Pelajaran ini akan membantu menjelaskan cara variable
+              description_teacher: Pelajaran ini akan membantu menjelaskan cara variable
                 dapat membuat program lebih kuat dengan memudahkan nilai berubah pada
-                saat code dijalankan. '
+                saat code dijalankan.
             Changing Variables with Artist:
               key: Mengubah Variable dengan Artis
               name: Mengubah Variable dengan Artis
@@ -27738,10 +27779,10 @@ id:
               name: Pesta Dansa Alien
               description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman
                 sekelas.
-              description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform
+              description_teacher: Pelajaran ini menampilkan Sprite Lab, sebuah platform
                 bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri.
                 Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai
-                event untuk membuat "pesta dansa alien".  '
+                event untuk membuat "pesta dansa alien".
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab
@@ -27775,6 +27816,8 @@ id:
               description_teacher: Dalam pelajaran ini, murid akan memprogram pesta
                 dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena
                 alatnya dibuat untuk menanggapi musik.
+            lesson-3:
+              name: Sprite tengah Beraksi
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -27792,6 +27835,8 @@ id:
               display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
+            lessonGroup-9:
+              display_name: kegiatan
           student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
             di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
             keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
@@ -27811,6 +27856,7 @@ id:
             Learn to Drag and Drop:
               key: Belajar Menarik dan Melepaskan
               name: Belajar Menarik dan Melepaskan
+              description_student: Klik dan drag untuk menyelesaikan puzzle.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
                 apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer.
                 Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka
@@ -27819,6 +27865,7 @@ id:
             Sequencing with Scrat:
               key: Pengurutan dengan Scrat
               name: Pengurutan dengan Scrat
+              description_student: Program Scrat untuk mencapai biji akorn.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang
                 apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer.
                 Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka
@@ -27826,9 +27873,9 @@ id:
                 untuk menyelesaikan puzzle online.
             Programming in with Angry Birds:
               name: Pemrograman dengan Angry Birds
-              description_teacher: Dengan menggunakan karakter dari permainan Angry
-                Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan
-                burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk
+              description_teacher: Dengan menggunakan karakter dari permainan Zaman
+                Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan
+                Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk
                 melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan
                 linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau
                 belok kanan.
@@ -27841,6 +27888,8 @@ id:
             Programming in Harvester:
               key: Pemrograman dalam Pemanen
               name: Pemrograman dengan Pemanen
+              description_student: Bantu Pemanen mengumpulkan sayuran di sepanjang
+                jalur.
               description_teacher: 'Murid akan menerapkan konsep-konsep pemrograman
                 yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu
                 membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan
@@ -27849,6 +27898,8 @@ id:
             Loops with Scrat:
               key: Loop dengan Scrat
               name: Loop dengan Scrat
+              description_student: Bantu Scrat menutupi tanah lebih banyak menggunakan
+                loop.
             Loops with Laurel:
               key: Loop dengan Laurel
               name: Loop dengan Laurel
@@ -27859,6 +27910,7 @@ id:
             Ocean Scene with Loops:
               key: Adegan Laut dengan Loop
               name: Adegan Laut dengan Loop
+              description_student: Gunakan loop dan pola untuk menyelesaikan gambar.
               description_teacher: Kembali ke loop, murid belajar menggambar dengan
                 mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer
                 sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
@@ -27868,6 +27920,7 @@ id:
             Drawing Gardens with Loops:
               key: Menggambar Taman dengan Loop
               name: Menggambar Taman dengan Loop
+              description_student: Gunakan pola dan loop untuk menyelesaikan gambar.
               description_teacher: Kembali ke loop, murid belajar menggambar dengan
                 mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online
                 sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan
@@ -27877,6 +27930,7 @@ id:
             On the Move with Events:
               key: Aktif bergerak dengan Event
               name: Aktif bergerak dengan Event
+              description_student: Buat permainan atau cerita Anda sendiri.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan
                 mempelajari cara menggunakan event di Play Lab dan menerapkan semua
                 keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
@@ -27884,6 +27938,8 @@ id:
             A Royal Battle with Events:
               key: Pertempuran Besar dengan Event
               name: Pertempuran Besar dengan Event
+              description_student: Gunakan event untuk membuat cerita atau permainan
+                interaktif.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan
                 mempelajari cara menggunakan event di Play Lab dan menerapkan semua
                 keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
@@ -27969,7 +28025,7 @@ id:
                 sebagai pengguna tersebut terhadap serangkaian produk.  Setiap murid
                 diberi sebuah profil pengguna yang mendeskripsikan seseorang, yang
                 lantas mereka gunakan untuk memilih produk yang tepat, mengkritisi
-                desain produk, dan mengusulkan perbaikan desain.\r\n"
+                desain produk, dan mengusulkan perbaikan desain.\r"
             User-Centered Design Micro Activity:
               key: Aktivitas Mikro Desain Berpusat-Pengguna
               name: Aktivitas Mikro Desain Berpusat-Pengguna
@@ -28119,7 +28175,7 @@ id:
                 lebih) sebagai basis aplikasi mereka sendiri. Dari situ, tim-tim murid
                 meluangkan waktu mendiskusikan fungsionalitas dasar aplikasi mereka
                 sebelum menggunakan kartu indeks 3x5 untuk mengembangkan prototipe
-                kertas.\r\n"
+                kertas.\r"
             Prototype Testing:
               key: Pengujian Prototipe
               name: Pengujian Prototipe
@@ -28224,6 +28280,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            Designing With Empathy:
+              name: Analisis desain
             Build a Paper Prototype:
               name: Prototipe Kertas
             Digital Mode in App Lab:
@@ -28612,6 +28670,13 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: 'Pelajaran 15: Hari Penilaian'
+          lesson_groups:
+            lesson group:
+              display_name: Konten
         k5-onlinepd-2021:
           description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar
             Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan
@@ -28684,3 +28749,32 @@ id:
               display_name: Langkah berikutnya
             Introduction:
               display_name: Pendahuluan
+        pl-playground:
+          lessons:
+            Module 1:
+              name: Modul 1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: Survei Pascakursus CSP
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Survei
+          description_audience: Murid CSP
+          description_short: Survei Pascakursus Murid CSP
+          description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei
+            ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat
+            privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk
+            seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org
+            demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan
+            pertimbangan Anda.
+          student_description: Selamat Datang di Survei Pascakursus CS Principles
+            Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan
+            Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat
+            anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda
+            dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas
+            waktu dan pertimbangan Anda.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Pelajaran ke- 15

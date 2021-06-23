@@ -1,6 +1,6 @@
 name 'U3 evaluation q4'
 question 'Do you have any experience using App Lab?'
-answer 'Yes - I feel super comfortable with App Lab!', weight: 1, stage_name: ‘Lessons 1 - 3: Algorithms'
-answer 'I have used it before, but not extensively.', weight: 1, stage_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
-answer 'Nope - the last time I used it was at TeacherCon!', weight: 1, stage_name: 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+answer 'Yes - I feel super comfortable with App Lab!', weight: 1, lesson_name: ‘Lessons 1 - 3: Algorithms'
+answer 'I have used it before, but not extensively.', weight: 1, lesson_name: 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+answer 'Nope - the last time I used it was at TeacherCon!', weight: 1, lesson_name: 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
 

@@ -13,7 +13,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   isScriptHiddenForSection,
   toggleHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -30,7 +30,7 @@ class CourseScript extends Component {
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
-    hiddenStageState: PropTypes.object.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
@@ -62,7 +62,7 @@ class CourseScript extends Component {
       description,
       viewAs,
       selectedSectionId,
-      hiddenStageState,
+      hiddenLessonState,
       hasNoSections,
       assignedSectionId,
       courseId,
@@ -71,7 +71,7 @@ class CourseScript extends Component {
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
-      hiddenStageState,
+      hiddenLessonState,
       selectedSectionId,
       id
     );
@@ -175,7 +175,8 @@ const styles = {
     marginRight: 0
   },
   flex: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 export const UnconnectedCourseScript = CourseScript;
@@ -190,7 +191,7 @@ export default connect(
       ownProps.courseId,
       true
     ),
-    hiddenStageState: state.hiddenStage,
+    hiddenLessonState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
