@@ -53,7 +53,21 @@ class CoursesController < ApplicationController
       return
     end
 
-    return render :no_access unless can?(:read, unit_group)
+    if unit_group.pilot?
+      authenticate_user!
+      unless unit_group.has_pilot_access?(current_user)
+        render :no_access
+        return
+      end
+    end
+
+    if unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        render :no_access
+        return
+      end
+    end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
