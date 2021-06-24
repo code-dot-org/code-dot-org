@@ -6,6 +6,8 @@ import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types'; // Maureen move this type into templates/feedback
+import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const getElementHeight = element => {
   return ReactDOM.findDOMNode(element).offsetHeight;
