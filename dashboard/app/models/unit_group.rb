@@ -7,7 +7,7 @@
 #  properties      :text(65535)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  published_state :string(255)      default("beta"), not null
+#  published_state :string(255)      default("in_development"), not null
 #
 # Indexes
 #
