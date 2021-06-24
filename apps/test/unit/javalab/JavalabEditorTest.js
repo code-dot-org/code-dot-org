@@ -419,7 +419,7 @@ describe('Java Lab Editor Test', () => {
     });
 
     describe('Read Only Mode', () => {
-      it('is editable by default', () => {
+      it('is editable', () => {
         const editor = createWrapper();
         const javalabCodeMirrors = editor.find('JavalabEditor').instance()
           .editors;
@@ -428,13 +428,13 @@ describe('Java Lab Editor Test', () => {
         expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
       });
 
-      it('buttons enabled for backpack, new file, commit code, version history by default', () => {
+      it('header buttons are enabled', () => {
         const editor = createWrapper();
         editorHeaderButtonIdentifiers.forEach(headerButtonId => {
           const isButtonDisabled = editor
             .find(headerButtonId)
             .first()
-            .props().disabled;
+            .props().isDisabled;
 
           expect(isButtonDisabled).to.be.false;
         });
@@ -451,7 +451,7 @@ describe('Java Lab Editor Test', () => {
       );
     });
 
-    it('is not editable in read only mode', () => {
+    it('is not editable', () => {
       const editor = createWrapper();
       const javalabCodeMirrors = editor.find('JavalabEditor').instance()
         .editors;
@@ -460,13 +460,13 @@ describe('Java Lab Editor Test', () => {
       expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
     });
 
-    it('buttons disabled for backpack, new file, commit code, version history', () => {
+    it('header buttons are disabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().disabled;
+          .props().isDisabled;
 
         expect(isButtonDisabled).to.be.true;
       });

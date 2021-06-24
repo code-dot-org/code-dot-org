@@ -28,8 +28,8 @@ function JavalabButton({
       className={className}
       style={{
         ...styles.button,
-        ...(isHorizontal && styles.horizontal),
         ...style,
+        ...(isHorizontal && styles.horizontal),
         ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
