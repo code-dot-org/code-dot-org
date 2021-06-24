@@ -751,7 +751,7 @@ P5Lab.prototype.afterInject_ = function(config) {
     Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+    Blockly.clearInfiniteLoopTrap();
   }
 
   // Update p5Wrapper's scale and keep it updated with future resizes:

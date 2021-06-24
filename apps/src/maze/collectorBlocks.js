@@ -1,5 +1,4 @@
 var msg = require('./locale');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
 var blockUtils = require('../block_utils');
 
 exports.install = function(blockly, blockInstallOptions) {
@@ -72,7 +71,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.collector_whileCollectible = function() {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     return `while (${argument}) {\n${branch}}\n`;
   };
 };
