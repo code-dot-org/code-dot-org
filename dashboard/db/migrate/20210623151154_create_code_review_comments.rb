@@ -2,7 +2,7 @@ class CreateCodeReviewComments < ActiveRecord::Migration[5.2]
   def change
     create_table :code_review_comments do |t|
       t.integer :channel_token_id, null: false
-      t.string :project_version
+      t.string :project_version, null: false
       t.integer :commenter_id, null: false
       t.text :comment
       t.integer :project_owner_id
