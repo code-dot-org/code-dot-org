@@ -33,6 +33,7 @@ class ScriptDSL < BaseDSL
     @is_course = false
     @background = nil
     @is_migrated = false
+    @is_maker_unit = false
   end
 
   integer :id
@@ -53,6 +54,7 @@ class ScriptDSL < BaseDSL
   boolean :deprecated
   boolean :is_course
   boolean :is_migrated
+  boolean :is_maker_unit
 
   string :wrapup_video
   string :announcements
@@ -172,7 +174,8 @@ class ScriptDSL < BaseDSL
       lesson_groups: @lesson_groups,
       is_course: @is_course,
       background: @background,
-      is_migrated: @is_migrated
+      is_migrated: @is_migrated,
+      is_maker_unit: @is_maker_unit
     }
   end
 
@@ -364,6 +367,7 @@ class ScriptDSL < BaseDSL
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
+    s << "is_maker_unit true" if script.is_maker_unit
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
