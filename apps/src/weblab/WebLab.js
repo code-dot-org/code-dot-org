@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
+import {resetFailedMessage} from './constants';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import StylizedBaseDialog, {
@@ -460,35 +461,47 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   });
 };
 
-WebLab.prototype.openGenericErrorDialog = function(body, withButtons = true) {
-  let renderFooter = () => {};
-  if (withButtons) {
-    renderFooter = () => [
+WebLab.prototype.openErrorDialog = function(body) {
+  const onResetProject = () => {
+    this.closeDialog();
+    this.brambleHost?.resetFilesystem(err => {
+      if (err) {
+        this.openErrorDialog(resetFailedMessage(err.message));
+      } else {
+        this.openDialog({
+          title: 'Web Lab Reset Complete',
+          body: 'Reloading...',
+          renderFooter: () => null // No footer
+        });
+        reload();
+      }
+    });
+  };
+
+  this.openDialog({
+    title: 'An Error Occurred',
+    // TODO: MAKE THIS HTML-FRIENDLY
+    body,
+    renderFooter: () => [
       <FooterButton
         text="Try Again"
-        onClick={() => {}}
+        onClick={reload}
         key="cancel"
         type="cancel"
       />,
       <FooterButton
         text="Reset Web Lab"
-        onClick={() => {}}
+        onClick={onResetProject}
         key="reset"
         color="red"
       />,
       <FooterButton
         text="Dismiss"
-        onClick={() => {}}
+        onClick={this.closeDialog}
         key="confirm"
         type="confirm"
       />
-    ];
-  }
-
-  this.openDialog({
-    title: 'An Error Occurred',
-    body,
-    renderFooter
+    ]
   });
 };
 
@@ -497,7 +510,7 @@ WebLab.prototype.openUploadErrorDialog = function() {
     title: weblabMsg.uploadError(),
     body: weblabMsg.errorSavingProject(),
     cancellationButtonText: msg.reloadPage(),
-    handleCancellation: () => window.location.reload()
+    handleCancellation: reload
   });
 };
 
@@ -505,12 +518,16 @@ WebLab.prototype.openDialog = function(props) {
   const dialog = (
     <StylizedBaseDialog
       isOpen
-      handleConfirmation={actions.closeDialog}
-      handleClose={actions.closeDialog}
+      handleConfirmation={this.closeDialog}
+      handleClose={this.closeDialog}
       {...props}
     />
   );
   actions.openDialog(dialog);
+};
+
+WebLab.prototype.closeDialog = function() {
+  actions.closeDialog();
 };
 
 // Called by Bramble when project has changed
@@ -672,7 +689,7 @@ WebLab.prototype.brambleApi = function() {
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
     openDialog: this.openDialog.bind(this),
-    openGenericErrorDialog: this.openGenericErrorDialog.bind(this),
+    openErrorDialog: this.openErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this)
