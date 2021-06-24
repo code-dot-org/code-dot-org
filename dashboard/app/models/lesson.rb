@@ -171,16 +171,28 @@ class Lesson < ApplicationRecord
     relative_position.to_s
   end
 
+  def get_script_level_by_id
+    # if Scripts are cached, then we do in-memory filtering to avoid a database
+    # hit. If Scripts are NOT cached, then we want to find by a query in order
+    # to _minimize_ the database hit.
+    if Script.should_cache?
+      script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+      return script_levels.first
+    else
+      return script.script_levels.find_by(stage_id: id)
+    end
+  end
+
   def unplugged_lesson?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.unplugged?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.unplugged?
   end
 
   def spelling_bee?
-    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
-    return false unless script_levels.first
-    script_levels.first.oldest_active_level.spelling_bee?
+    script_level = get_script_level_by_id
+    return false unless script_level.present?
+    script_level.oldest_active_level.spelling_bee?
   end
 
   # We number lessons that either have lesson plans or are not lockable
@@ -192,6 +204,22 @@ class Lesson < ApplicationRecord
     return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
 
     !!has_lesson_plan
+  end
+
+  # Returns a version of the named property which is fully ready for
+  # user-facing rendering. Currently does localization and markdown
+  # preprocessing, could in the future be expanded to do more.
+  def render_property(property_name)
+    result = get_localized_property(property_name)
+    result = Services::MarkdownPreprocessor.process(result || '')
+    return result
+  end
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_lesson_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def localized_title
@@ -389,7 +417,7 @@ class Lesson < ApplicationRecord
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
       lessonPath: script_lesson_path(script, self),
-      lessonExtrasAvailableForScript: script.lesson_extras_available
+      lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
 
@@ -401,10 +429,10 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       key: key,
       displayName: localized_name,
-      overview: Services::MarkdownPreprocessor.process(overview || ''),
+      overview: render_property(:overview),
       announcements: announcements,
-      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      purpose: render_property(:purpose),
+      preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
@@ -427,7 +455,7 @@ class Lesson < ApplicationRecord
       key: key,
       position: relative_position,
       displayName: localized_name,
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
@@ -445,7 +473,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       key: key,
       displayName: localized_name,
-      overview: student_overview || '',
+      overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),

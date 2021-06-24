@@ -418,15 +418,33 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
       id: create(:applab).id,
-    }, body: {
-      start_html: '<h1>foo</h1>',
-      start_blocks: 'console.log("hello world");',
-    }.to_json
+    }, body: URI.escape(
+      {
+        start_html: '<h1>foo</h1>',
+        start_blocks: 'console.log("hello world");',
+      }.to_json
+    )
 
     assert_response :success
     level = assigns(:level)
     assert_equal '<h1>foo</h1>', level.properties['start_html']
     assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
+  test "should update App Lab starter code and starter HTML with special characters" do
+    post :update_properties, params: {
+      id: create(:applab).id,
+    }, body: URI.escape(
+      {
+        start_html: '<h1>Final Grade: 90%</h1><h2>student@code.org</h2>',
+        start_blocks: 'console.log(4 % 2 == 0);',
+      }.to_json
+    )
+
+    assert_response :success
+    level = assigns(:level)
+    assert_equal '<h1>Final Grade: 90%</h1><h2>student@code.org</h2>', level.properties['start_html']
+    assert_equal 'console.log(4 % 2 == 0);', level.properties['start_blocks']
   end
 
   test "non-levelbuilder cannot update_properties" do
@@ -590,7 +608,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_includes @response.body, 'level cannot be renamed'
   end
 
-  test "should prevent rename of level in visible or pilot script" do
+  test "should prevent rename of level in launched or pilot script" do
     script_level = create :script_level
     script = script_level.script
     script.published_state = 'stable'

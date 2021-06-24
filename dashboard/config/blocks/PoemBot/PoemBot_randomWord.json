@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "randomWord",
+    "blockText": "random word",
+    "returnType": "String",
+    "color": [
+      160,
+      0.45,
+      0.65
+    ]
+  }
+}
