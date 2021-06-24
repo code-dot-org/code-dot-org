@@ -7,7 +7,7 @@
     "context": {
       "createdBy": "Miroslav Szabo",
       "potentialUses": "For example, determine if someone might like a certain type of music based on their other tastes.",
-      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, aking predictions about which genders are more likely to have which fears."
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
     }
   },
   "defaultLabelColumn": "",
