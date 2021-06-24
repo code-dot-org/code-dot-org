@@ -8,10 +8,14 @@ class ScriptsControllerTest < ActionController::TestCase
     @not_admin = create(:user)
     @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
+
+    @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
+
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
+
     @no_progress_or_assignment_student = create :student
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
@@ -450,6 +454,27 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     script.reload
     assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+  end
+
+  test "update published state to in_development" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+    end
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      published_state: SharedConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    script.reload
+    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
@@ -936,10 +961,10 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_empty script.lessons
 
-    script_text = <<~SCRIPT_TEXT
+    script_text = <<~UNIT_TEXT
       lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
-    SCRIPT_TEXT
+    UNIT_TEXT
 
     post :update, params: {
       id: script.id,
@@ -988,6 +1013,29 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
     params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{id: @in_development_unit.name}},
+                              name: 'signed out user cannot view in-development unit'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{id: @in_development_unit.name}},
+                              name: 'teacher cannot view in-development unit'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
   ) do
     refute response.body.include? no_access_msg
   end

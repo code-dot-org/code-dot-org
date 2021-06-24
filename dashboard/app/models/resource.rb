@@ -80,11 +80,18 @@ class Resource < ApplicationRecord
     return !!include_in_pdf
   end
 
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_resource_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
+  end
+
   def summarize_for_lesson_plan
     {
       id: id,
       key: key,
-      name: I18n.t("data.resource.#{key}.name", default: name),
+      name: get_localized_property(:name),
       url: url,
       download_url: download_url,
       audience: audience || 'All',
@@ -113,7 +120,7 @@ class Resource < ApplicationRecord
       id: id,
       key: key,
       markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
-      name: name,
+      name: get_localized_property(:name),
       url: url
     }
   end

@@ -6,5 +6,7 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # The Big Event
 
+**Watch this video from Course A - Lesson 11, Level 1:  The Big Event Jr.**
+
 In computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.
 MARKDOWN

@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "setTitle",
+    "blockText": "set poem title {TITLE}",
+    "args": [
+      {
+        "name": "TITLE",
+        "type": "String"
+      }
+    ]
+  }
+}

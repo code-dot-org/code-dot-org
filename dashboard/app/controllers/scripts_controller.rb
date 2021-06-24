@@ -219,6 +219,10 @@ class ScriptsController < ApplicationController
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
     end
+
+    if current_user && @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
+      render :no_access
+    end
   end
 
   def script_params
@@ -263,9 +267,6 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
-
-    # Temporary transition code used to update hidden since it needs a value until we remove it
-    h[:hidden] = true
 
     h
   end
