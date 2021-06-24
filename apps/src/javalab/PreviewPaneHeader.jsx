@@ -11,6 +11,7 @@ import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 export default function PreviewPaneHeader({
   isCollapsed,
   isFullscreen,
+  disableAssetManagerButton = false,
   showAssetManagerButton = false,
   showPreviewTitle = true
 }) {
@@ -45,6 +46,7 @@ export default function PreviewPaneHeader({
           iconClass="fa fa-upload"
           label={i18n.manageAssets()}
           isRtl={false}
+          disabled={disableAssetManagerButton}
         />
       )}
     </PaneHeader>
@@ -55,6 +57,7 @@ PreviewPaneHeader.propTypes = {
   isCollapsed: PropTypes.bool.isRequired,
   isFullscreen: PropTypes.bool.isRequired,
   showAssetManagerButton: PropTypes.bool,
+  disableAssetManagerButton: PropTypes.bool,
   showPreviewTitle: PropTypes.bool
 };
 

@@ -493,7 +493,8 @@ class JavalabEditor extends React.Component {
       onCommitCode,
       isDarkMode,
       sources,
-      isEditingStartSources
+      isEditingStartSources,
+      isReadOnlyWorkspace
     } = this.props;
 
     let menuStyle = {
@@ -514,9 +515,13 @@ class JavalabEditor extends React.Component {
             isRtl={false}
             label={javalabMsg.newFile()}
             leftJustified
+            disabled={isReadOnlyWorkspace}
           />
           <PaneSection style={styles.backpackSection}>
-            <Backpack isDarkMode={isDarkMode} />
+            <Backpack
+              isDarkMode={isDarkMode}
+              isReadOnlyWorkspace={isReadOnlyWorkspace}
+            />
           </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
@@ -525,6 +530,7 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             onClick={this.props.handleVersionHistory}
+            disabled={isReadOnlyWorkspace}
           />
           <PaneButton
             id="javalab-editor-save"
@@ -533,6 +539,7 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             label={javalabMsg.commitCode()}
+            disabled={isReadOnlyWorkspace}
           />
           <PaneSection>{this.editorHeaderText()}</PaneSection>
         </PaneHeader>
