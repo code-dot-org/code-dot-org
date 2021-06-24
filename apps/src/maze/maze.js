@@ -6,7 +6,6 @@ const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
 const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
   .default;
-const codegen = require('../lib/tools/jsinterpreter/codegen');
 const dom = require('../dom');
 const utils = require('../utils');
 import {TestResults, ResultType} from '../constants';
@@ -146,7 +145,7 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
-        Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopTrap();
+        Blockly.setInfiniteLoopTrap();
       }
 
       const svg = document.getElementById('svgMaze');
