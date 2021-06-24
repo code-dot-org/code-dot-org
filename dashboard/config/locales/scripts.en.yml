@@ -20278,7 +20278,7 @@ en:
               key: Conditionals Investigate
               name: Conditionals Investigate
               description_student: Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals.
-              description_teacher: In this lesson students work with partners to investigate three versions of the "Thermostat App" to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.
+              description_teacher: In this lesson students work with partners to investigate three versions of the "Lemon Squeeze" app to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.
             Conditionals Practice:
               key: Conditionals Practice
               name: Conditionals Practice
@@ -22534,15 +22534,15 @@ en:
               description_student: You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem.
               description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.
             lesson-11:
-              name: Concert in the Theater Project - Day 1
+              name: Concert in The Theater Project - Day 1
               description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio.
               description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.
             lesson-12:
-              name: Concert in the Theater Project - Day 2
+              name: Concert in The Theater Project - Day 2
               description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
               description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
             lesson-13:
-              name: Concert in the Theater Project - Day 3
+              name: Concert in The Theater Project - Day 3
               description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
               description_teacher: In the previous lesson, students created a prioritized list of work to complete. In this lesson, students self-assess their work against the project rubric then review their prioritized list to inform their revisions to their concert. Students then share their final projects with their peers to celebrate their successes.
             lesson-14:
@@ -22577,7 +22577,9 @@ en:
               description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
               description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
             lesson-2:
-              name: Concert in the Theater Project - Day 1
+              name: Neighborhood Block Party Project - Day 1
+              description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
+              description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
             lesson-3:
               name: Solving Problems with the Math Class
               description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
@@ -22608,8 +22610,12 @@ en:
               description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             lesson-12:
               name: Neighborhood Block Party Project - Day 2
+              description_student: Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine.
+              description_teacher: In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.
             lesson-13:
               name: Neighborhood Block Party Project - Day 3
+              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your game engine and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
+              description_teacher: Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.
             lesson-14:
               name: FRQ Day
               description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
@@ -22675,7 +22681,7 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Teaching Computer Science Fundamentals '21-'22
+          title: Teaching Computer Science Fundamentals ('21-'22)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -22759,7 +22765,7 @@ en:
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching Practices and Strategies
+              name: Teaching Practices and Strategies
             Implementation Approaches and Barriers:
               name: Addressing Barriers
             Part II Overview:
@@ -22770,7 +22776,7 @@ en:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: 'Part II:  CS Concepts in Courses A - F'
+              display_name: 'Part II:  Concepts in Courses A - F'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
@@ -22778,7 +22784,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: 'Part I:  Teaching and Implementing CS'
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -24026,6 +24032,78 @@ en:
               display_name: Unit 5
           name: csa-videos
           title: CSA Videos
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa3-exemplars:
+          lessons:
+            lesson-1:
+              name: Creating Arrays
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Accessing and Modifying Elements
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Traversing Arrays with for Loops
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Traversing Arrays with while Loops
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Storing Objects into Arrays
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Traversing Arrays with Enhanced for Loops
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Using Static Variables and Constants
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Answering Questions with Arrays
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Solving Problems with Arrays
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Manipulating Elements in an Array
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Concert in The Theater Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Concert in The Theater Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Concert in The Theater Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa3-exemplars
+          title: Unit 3 - Expanding Program Data [Exemplars]
           description_audience: ''
           description_short: ''
           description: ''
