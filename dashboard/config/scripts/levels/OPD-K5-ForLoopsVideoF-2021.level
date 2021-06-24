@@ -8,7 +8,7 @@
     "parent_level_id": 27075,
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "**Student lesson level shown here:  Course F - Lesson , Level : .**"
+    "long_instructions": "**Watch this video from Course F - Lesson 15, Level 3:  For Loops with Artist.**"
   },
   "game_id": 54,
   "published": true,
@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-14 14:54:03 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 13:26:32 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-14 14:54:03 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 13:26:32 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 21:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
