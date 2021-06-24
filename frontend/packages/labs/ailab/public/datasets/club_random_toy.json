@@ -6,8 +6,8 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Isaac (with help from Code.org)",
-      "potentialUses": "The questions can help recommend a club to join based on your interests and personality",
-      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools"
+      "potentialUses": "The questions can help recommend a club to join based on your interests and personality.",
+      "potentialMisuses": "The data only came from people in our school and community - be careful about using it in different schools."
     }
   },
   "fields": [
