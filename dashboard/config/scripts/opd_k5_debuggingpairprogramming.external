@@ -1,15 +1,15 @@
 name 'OPD-K5 DebuggingPairProgramming'
 skip_dialog true
 markdown <<MARKDOWN
-# CS Teaching Strategies
+# Teaching Strategies
 
-<img src="https://images.code.org/44649c6250481342db2731ec05b3c7f5-image-1622813256255.png" class="level-image">
+<img src="https://images.code.org/44649c6250481342db2731ec05b3c7f5-image-1622813256255.png" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 **Debugging** is an essential skill and process in computer science.  
 
 **Pair programming** is a technique used in the real-world in which two programmers work together on one computer.  
 
-Both debugging and pair programming are CS teaching strategies built into the student learning platform. 
+Both debugging and pair programming are computer science teaching strategies built into the website as features. 
 
 ## Debugging 
 
@@ -34,7 +34,7 @@ Pair programming is a technique in which two programmers work together at one co
 
 ### Pair Programming - Teacher Side
 
-Follow the instructions below to turn on pair programming for your students using the teacher dashboard.  Refer to <a hrer="https://levelbuilder-studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a> of this online course for help with using the teacher dashboard.
+Follow the instructions below to turn on pair programming for your students using the teacher dashboard.  Refer to <a hrer="https://levelbuilder-studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a>, of this online course for help with using the teacher dashboard.
 
 <a href="https://studio.code.org/home" target="blank" > **1. Sign-in to your Code.org account.**</a>
 
