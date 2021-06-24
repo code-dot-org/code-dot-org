@@ -63,7 +63,7 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired
+    isReadOnlyWorkspace: PropTypes.bool
   };
 
   static defaultProps = {
