@@ -10,12 +10,7 @@ import {
   getCurrentColumnData,
   addSelectedFeature
 } from "../redux";
-import {
-  ColumnTypes,
-  styles,
-  colors,
-  UNIQUE_OPTIONS_MAX
-} from "../constants.js";
+import { styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
 import ScrollableContent from "./ScrollableContent";
