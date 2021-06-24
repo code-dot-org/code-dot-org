@@ -62,10 +62,10 @@ const sampleModes = {
       "loneliness_music",
       "loneliness_phobias",
       "loneliness_personality",
-      "club_biasedBand_toy",
+      "club_biased_toy",
       "club_random_toy",
       "club_specific_toy",
-      "club_lowRows_toy"
+      "club_sparse_toy"
     ],
     hideSelectLabel: true
   }
