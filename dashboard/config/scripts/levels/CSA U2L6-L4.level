@@ -16,13 +16,13 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": "odxZFtmQQmdJ6Aji2exHTjxNwx3u1kaqZDU22r3/PxNaDSo5+oAqTx/jtUBa\ncMYjHv9UjwLBq95pZZUyG9J8fQ==\n"
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNAq6u+PZhaG4dM2kgG\n5+86UY+rZZJ6/IrD6Pc/KeF2Ja83hZKefc00tV7x+JCzUy0=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-16T18:56:51.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:13:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:13:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:46:00 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

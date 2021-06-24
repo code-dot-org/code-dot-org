@@ -7,13 +7,13 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "project_template_level_name": "CSA U2 Project Template",
-    "encrypted_examples": "Tc+WITRcXg0xnAovMN0m1R5peJsJXBvvExmnTJdkKamF4JsGw22DdJbBFBiX\nFOOzqO6+56AzQwN8M/17GO8Fb1ploZSK0z231hrT7yPZrpo=\n"
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/iWYAJxSOBxeeM4dtMVRM8Hx5ByaGHt1f7wLk+NLTpnk=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-23T15:43:58.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-23 16:37:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:23:33 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:37:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:23:33 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:51:08 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>
