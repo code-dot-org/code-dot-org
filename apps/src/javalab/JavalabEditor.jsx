@@ -63,7 +63,7 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -515,13 +515,13 @@ class JavalabEditor extends React.Component {
             isRtl={false}
             label={javalabMsg.newFile()}
             leftJustified
-            disabled={isReadOnlyWorkspace}
+            isDisabled={isReadOnlyWorkspace}
           />
           <PaneSection style={styles.backpackSection}>
             <Backpack
               id={'javalab-editor-backpack'}
               isDarkMode={isDarkMode}
-              disabled={isReadOnlyWorkspace}
+              isDisabled={isReadOnlyWorkspace}
             />
           </PaneSection>
           <PaneButton
@@ -531,7 +531,7 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             onClick={this.props.handleVersionHistory}
-            disabled={isReadOnlyWorkspace}
+            isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
             id="javalab-editor-save"
@@ -540,7 +540,7 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             label={javalabMsg.commitCode()}
-            disabled={isReadOnlyWorkspace}
+            isDisabled={isReadOnlyWorkspace}
           />
           <PaneSection>{this.editorHeaderText()}</PaneSection>
         </PaneHeader>

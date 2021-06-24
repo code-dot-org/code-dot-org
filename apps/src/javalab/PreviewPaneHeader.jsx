@@ -46,7 +46,7 @@ export default function PreviewPaneHeader({
           iconClass="fa fa-upload"
           label={i18n.manageAssets()}
           isRtl={false}
-          disabled={disableAssetManagerButton}
+          isDisabled={disableAssetManagerButton}
         />
       )}
     </PaneHeader>
