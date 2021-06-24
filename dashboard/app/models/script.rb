@@ -13,7 +13,6 @@
 #  new_name        :string(255)
 #  family_name     :string(255)
 #  published_state :string(255)      default("beta"), not null
-#  hidden          :boolean
 #
 # Indexes
 #
