@@ -9320,7 +9320,7 @@ columns:
     name: hidden
     table_name: scripts
     sql_type_metadata: *24
-    'null': false
+    'null': true
     default: '0'
     default_function: 
     collation: 
@@ -14644,4 +14644,4 @@ data_sources:
   users_view: true
   videos: true
   vocabularies: true
-version: 20210617011456
+version: 20210623221412

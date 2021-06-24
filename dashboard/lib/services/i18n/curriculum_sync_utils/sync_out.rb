@@ -54,7 +54,7 @@ module Services
               end
               [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
             end
-            result[:lessons] = rekeyed_lessons.to_h
+            result[:lessons] = rekeyed_lessons.compact.to_h
 
             # Finally, write each resulting collection of strings out to a rails i18n
             # config file.

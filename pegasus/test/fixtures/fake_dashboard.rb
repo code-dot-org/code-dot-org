@@ -73,59 +73,59 @@ module FakeDashboard
     UNIT_FOO = {
       id: 1,
       name: 'Foo',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_BAR = {
       id: 3,
       name: 'Bar',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_MC = {
       id: 4,
       name: 'mc',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_HOUROFCODE = {
       id: 5,
       name: 'hourofcode',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_MINECRAFT = {
       id: 6,
       name: 'minecraft',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_FLAPPY = {
       id: 10,
       name: 'flappy',
-      hidden: 0
+      published_state: 'preview'
     },
     UNIT_CSP1 = {
       id: 31,
       name: 'csp1-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
     UNIT_CSP2 = {
       id: 32,
       name: 'csp2-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
     UNIT_CSP3 = {
       id: 34,
       name: 'csp3-2017',
-      hidden: 0,
+      published_state: 'preview'
     },
-    # put the hidden units at the end and give them higher ids, to make
+    # put the unlaunched units at the end and give them higher ids, to make
     # unit testing slightly easier.
     UNIT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
-      hidden: 1
+      published_state: 'beta'
     },
     UNIT_CSP2_ALT = {
       id: 53,
       name: 'csp2-alt',
-      hidden: 1
+      published_state: 'beta'
     },
   ]
 
