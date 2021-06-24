@@ -560,7 +560,9 @@ export default function rootReducer(state = initialState, action) {
       return state;
     } else if (state.currentColumn === action.currentColumn) {
       // If column is selected, then deselect.
-      state.instructionsKeyCallback("dataDisplayFeatures", null);
+      if (state.currentPanel === "dataDisplayFeatures") {
+        state.instructionsKeyCallback("dataDisplayFeatures", null);
+      }
       return {
         ...state,
         currentColumn: undefined
@@ -720,7 +722,7 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-/* Functions for retriving aggregate details about a currently selected column. */
+/* Functions for retrieving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
