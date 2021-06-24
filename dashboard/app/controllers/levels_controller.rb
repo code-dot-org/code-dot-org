@@ -229,7 +229,7 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    changes = JSON.parse(request.body.read)
+    changes = JSON.parse(URI.unescape(request.body.read))
     changes.each do |key, value|
       @level.properties[key] = value
     end
