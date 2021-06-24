@@ -257,7 +257,7 @@ export const allDatasets = [
     id: "loneliness_personality",
     name: "Student Survey - Personality",
     path: "datasets/loneliness_personality.csv",
-    metadataPath: "datasets/loneliness_pesonality.json",
+    metadataPath: "datasets/loneliness_personality.json",
     imagePath: "datasets/loneliness_personality.jpg",
     isToy: true
   },
