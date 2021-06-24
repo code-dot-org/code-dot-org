@@ -9,6 +9,8 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    @in_development_unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development
+
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
@@ -190,6 +192,29 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
                               params: -> {{course_name: @pilot_unit_group.name}}, name: 'levelbuilder can view pilot course'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @in_development_unit_group.name}},
+                              name: 'signed out user cannot view in-development unit group'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @in_development_unit_group.name}}, name: 'student cannot view in-development unit group'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @in_development_unit_group.name}},
+                              name: 'teacher access cannot view in-development unit group'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{course_name: @in_development_unit_group.name}}, name: 'levelbuilder can view in-development unit group'
   ) do
     refute response.body.include? no_access_msg
   end
