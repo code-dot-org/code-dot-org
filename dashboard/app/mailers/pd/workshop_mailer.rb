@@ -237,6 +237,21 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
+  def teacher_virtual_order_form_reminder(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    course = @workshop.course
+
+    return unless @workshop.virtual? && (course == Pd::Workshop::COURSE_CSP || course == Pd::Workshop::COURSE_CSD)
+
+    # Pre-workshop virtual order form reminder
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Tell Code.org where to send materials for your upcoming workshop!',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
   # Exit survey email
   # @param enrollment [Pd::Enrollment]
   def exit_survey(enrollment)
