@@ -6,7 +6,15 @@ import color from '@cdo/apps/util/color';
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
 // text to be vertically stacked.
-function JavalabButton({icon, text, className, style, onClick, isHorizontal}) {
+function JavalabButton({
+  icon,
+  text,
+  className,
+  style,
+  onClick,
+  isHorizontal,
+  isDisabled = false
+}) {
   let textStyle = {};
   if (icon) {
     textStyle = isHorizontal
@@ -21,7 +29,8 @@ function JavalabButton({icon, text, className, style, onClick, isHorizontal}) {
       style={{
         ...styles.button,
         ...(isHorizontal && styles.horizontal),
-        ...style
+        ...style,
+        ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
     >
@@ -39,7 +48,8 @@ JavalabButton.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   onClick: PropTypes.func.isRequired,
-  isHorizontal: PropTypes.bool
+  isHorizontal: PropTypes.bool,
+  isDisabled: PropTypes.bool
 };
 
 JavalabButton.defaultProps = {
@@ -55,6 +65,12 @@ const styles = {
   },
   horizontal: {
     flexDirection: 'row'
+  },
+  disabled: {
+    backgroundColor: color.light_gray,
+    borderColor: color.light_gray,
+    ':hover': null,
+    cursor: 'default'
   },
   verticalPadding: {
     paddingTop: 5
