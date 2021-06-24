@@ -1,0 +1,25 @@
+name 'CSA U2L4-L5 Placeholder'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+Which of the following code segments will correctly create an instance of a `Dessert` object?
+
+```
+public Dessert() {
+    flavor = “vanilla”;
+    quantity = 3;
+    price = 1.99;
+}
+
+public Dessert(String newFlavor, int newQty, double newPrice) {
+    flavor = newFlavor;
+    quantity = newQty;
+    price = newPrice;
+}
+```
+MARKDOWN
+
+wrong 'Dessert cake = new Dessert("vanilla");'
+right 'Dessert cake = new Dessert(“vanilla”, 3, 1.99);'
+wrong 'Dessert cake = new Dessert(3, 1.99);'
+wrong 'Dessert cake = new Dessert(1.99);'
