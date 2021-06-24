@@ -4,6 +4,7 @@ class LessonTest < ActiveSupport::TestCase
   setup do
     @student = create :student
   end
+
   test "lockable_state with swapped level without user_level" do
     _, level1, _, lesson, _ = create_swapped_lockable_lesson
 
@@ -361,6 +362,23 @@ class LessonTest < ActiveSupport::TestCase
       with(lesson.preparation)
     Services::MarkdownPreprocessor.expects(:process).
       with(lesson.assessment_opportunities)
+
+    lesson.summarize_for_lesson_show(create(:user), false)
+  end
+
+  test 'lesson show summary retrieves translations' do
+    lesson = create(
+      :lesson,
+      assessment_opportunities: 'example assessment opportunities',
+      lesson_group: create(:lesson_group),
+      overview: 'example overview',
+      preparation: 'example preparation',
+      purpose: 'example purpose'
+    )
+
+    lesson.expects(:get_localized_property).with(:overview)
+    lesson.expects(:get_localized_property).with(:purpose)
+    lesson.expects(:get_localized_property).with(:preparation)
 
     lesson.summarize_for_lesson_show(create(:user), false)
   end
@@ -824,7 +842,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -836,7 +854,7 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
   end
 
@@ -846,7 +864,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
 
     assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
       lesson.script_resource_pdf_url
     )
   end
@@ -1155,6 +1173,33 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count
       assert_equal @destination_script.lesson_groups.first, copied_lesson.lesson_group
+    end
+
+    test "render_property localizes and processes" do
+      lesson = create(:lesson)
+      lesson.expects(:get_localized_property)
+      Services::MarkdownPreprocessor.expects(:process)
+      lesson.render_property(:overview)
+    end
+
+    test "get_localized_property can retrieve translations" do
+      lesson = create(:lesson, overview: "This is the english overview")
+      test_locale = :"te-ST"
+      custom_i18n = {
+        "data" => {
+          "lessons" => {
+            "#{lesson.script.name}/#{lesson.key}" => {
+              "overview" => "This is the translated overview"
+            }
+          }
+        }
+      }
+      I18n.backend.store_translations(test_locale, custom_i18n)
+
+      assert_equal("This is the english overview", lesson.get_localized_property(:overview))
+      I18n.locale = test_locale
+      assert_equal("This is the translated overview", lesson.get_localized_property(:overview))
+      I18n.locale = I18n.default_locale
     end
   end
 end

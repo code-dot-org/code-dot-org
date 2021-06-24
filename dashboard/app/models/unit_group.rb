@@ -54,7 +54,6 @@ class UnitGroup < ApplicationRecord
     has_numbered_units
     family_name
     version_year
-    visible
     pilot_experiment
     announcements
   )
@@ -79,6 +78,10 @@ class UnitGroup < ApplicationRecord
   # All other courses must specify a published_state.
   def stable?
     plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
+  end
+
+  def in_development?
+    published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def self.file_path(name)
@@ -288,6 +291,10 @@ class UnitGroup < ApplicationRecord
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
       courses += pilot_courses
+    end
+
+    if user && user.permission?(UserPermission::LEVELBUILDER)
+      courses += all_courses.select(&:in_development?)
     end
 
     courses
