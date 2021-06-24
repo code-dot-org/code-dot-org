@@ -10,6 +10,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import {EditorView} from '@codemirror/view';
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {
@@ -31,8 +32,7 @@ describe('Java Lab Editor Test', () => {
     store = getStore();
     defaultProps = {
       onCommitCode: () => {},
-      handleVersionHistory: () => {},
-      isReadOnlyWorkspace: false
+      handleVersionHistory: () => {}
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
@@ -398,7 +398,23 @@ describe('Java Lab Editor Test', () => {
       const javalabCodeMirrors = editor.find('JavalabEditor').instance()
         .editors;
       const firstEditor = Object.values(javalabCodeMirrors)[0];
-      console.log(firstEditor);
+
+      expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
+    });
+
+    it('is not editable in read only mode', () => {
+      store.dispatch(
+        setPageConstants({
+          isReadOnlyWorkspace: true
+        })
+      );
+
+      const editor = createWrapper();
+      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
+        .editors;
+      const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+      expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
     });
   });
 });
