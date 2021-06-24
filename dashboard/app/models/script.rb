@@ -1494,6 +1494,7 @@ class Script < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
+      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
