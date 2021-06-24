@@ -988,7 +988,6 @@ class Script < ApplicationRecord
       units_to_add << [{
         id: unit_data[:id],
         name: name,
-        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
         login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
@@ -1271,7 +1270,6 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: true, # no longer using hidden but needs value until we can remove
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
