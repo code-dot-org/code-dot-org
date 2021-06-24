@@ -509,7 +509,7 @@ class Script < ApplicationRecord
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
   def self.get_from_cache(id_or_name)
-    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
+    if CourseVersion.course_offering_keys('Script').include?(id_or_name)
       raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
