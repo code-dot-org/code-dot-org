@@ -21,11 +21,12 @@
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225
+      "weekly_instructional_minutes": 225,
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-17 22:31:13 UTC",
+    "serialized_at": "2021-06-23 23:39:47 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csd6-2021"
