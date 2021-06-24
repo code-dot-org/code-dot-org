@@ -55,7 +55,11 @@ class Vocabulary < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {key: key, word: display_word, definition: display_definition}
+    {
+      key: key,
+      word: get_localized_property(:word),
+      definition: get_localized_property(:definition),
+    }
   end
 
   def summarize_for_lesson_edit
@@ -124,12 +128,11 @@ class Vocabulary < ApplicationRecord
 
   private
 
-  def display_word
-    word
-  end
-
-  def display_definition
-    definition
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_vocab_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
   def check_readonly_fields
