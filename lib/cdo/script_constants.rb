@@ -278,48 +278,6 @@ module ScriptConstants
 
   DEFAULT_VERSION_YEAR = '2017'
 
-  # An allowlist of all family names for scripts.
-  FAMILY_NAMES = [
-    # CSF
-    COURSEA = 'coursea'.freeze,
-    COURSEB = 'courseb'.freeze,
-    COURSEC = 'coursec'.freeze,
-    COURSED = 'coursed'.freeze,
-    COURSEE = 'coursee'.freeze,
-    COURSEF = 'coursef'.freeze,
-    EXPRESS = 'express'.freeze,
-    PREEXPRESS = 'pre-express'.freeze,
-
-    # CSP
-    CSP1 = 'csp1'.freeze,
-    CSP2 = 'csp2'.freeze,
-    CSP3 = 'csp3'.freeze,
-    CSP4 = 'csp4'.freeze,
-    CSP5 = 'csp5'.freeze,
-    CSP6 = 'csp6'.freeze,
-    CSP7 = 'csp7'.freeze,
-    CSP8 = 'csp8'.freeze,
-    CSP9 = 'csp9'.freeze,
-    CSP10 = 'csp10'.freeze,
-    CSP_POSTAP = 'csppostap'.freeze,
-    CSP_CREATE = 'csp-create'.freeze,
-    CSP_EXPLORE = 'csp-explore'.freeze,
-
-    # CSD
-    CSD1 = "csd1".freeze,
-    CSD2 = "csd2".freeze,
-    CSD3 = "csd3".freeze,
-    CSD4 = "csd4".freeze,
-    CSD5 = "csd5".freeze,
-    CSD6 = "csd6".freeze,
-
-    # AIML
-    AIML = "aiml".freeze,
-
-    # Testing
-    TEST = 'ui-test-versioned-script'.freeze
-  ].freeze
-
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end

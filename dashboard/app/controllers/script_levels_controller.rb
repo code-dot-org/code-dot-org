@@ -94,7 +94,7 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      if CourseVersion.course_offering_keys('Script').include?(params[:script_id])
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -228,7 +228,7 @@ class ScriptLevelsController < ApplicationController
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
     # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+    return head :not_found if CourseVersion.course_offering_keys('Script').include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
@@ -306,7 +306,7 @@ class ScriptLevelsController < ApplicationController
     # to Script.get_unit_family_redirect_for_user . Since end users may be
     # depending on this incorrect behavior, and we are trying to deprecate this
     # codepath anyway, the current plan is to not fix this bug.
-    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+    script = CourseVersion.course_offering_keys('Script').include?(script_id) ?
       Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
       Script.get_from_cache(script_id)
 
