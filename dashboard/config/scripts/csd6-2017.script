@@ -12,6 +12,7 @@ published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 tts true
+is_maker_unit true
 
 lesson_group 'csd6_1', display_name: 'Chapter 1: Programming with Hardware'
 lesson 'Innovations in Computing_', display_name: 'Innovations in Computing', has_lesson_plan: true

@@ -42,11 +42,12 @@
         ]
       ],
       "lesson_extras_available": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-17 22:30:35 UTC",
+    "serialized_at": "2021-06-23 23:39:44 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2020"

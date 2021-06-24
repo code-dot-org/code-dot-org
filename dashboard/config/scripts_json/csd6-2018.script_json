@@ -61,11 +61,12 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-17 22:29:41 UTC",
+    "serialized_at": "2021-06-23 23:39:37 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2018"
