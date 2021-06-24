@@ -258,7 +258,7 @@ module ScriptConstants
     ],
   }.freeze
 
-  ADDITIONAL_I18N_SCRIPTS = [
+  ADDITIONAL_I18N_UNITS = [
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
@@ -446,6 +446,6 @@ module ScriptConstants
       ScriptConstants.script_in_category?(:twenty_hour, script) ||
       ScriptConstants.script_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||
-      ADDITIONAL_I18N_SCRIPTS.include?(script)
+      ADDITIONAL_I18N_UNITS.include?(script)
   end
 end
