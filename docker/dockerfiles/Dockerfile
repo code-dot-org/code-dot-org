@@ -1,5 +1,5 @@
 # Based on Code.org CircleCI-dependencies Dockerfile in .circle directory
-# Pushed to Docker Hub at wjordan/code-dot-org:2020-09-10
+# Pushed to Docker Hub at cdodeploy/drone:latest
 FROM ubuntu:18.04
 
 USER root
@@ -30,7 +30,7 @@ RUN apt-get update && \
 		apt-get install -y \
 		  git \
 		  xvfb \
-		  yarn=1.22.10 \
+		  yarn \
 		  sudo \
 		  openssh-client \
 		  ca-certificates \

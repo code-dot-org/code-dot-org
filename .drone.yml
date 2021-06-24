@@ -26,7 +26,7 @@ steps:
     filename: unit-tests-cache.tar
 
 - name: unit-tests
-  image: wjordan/code-dot-org:2020-09-10
+  image: cdodeploy/drone:latest
   pull: always
   volumes:
   - name: rbenv
@@ -120,7 +120,7 @@ steps:
     restore: true
 
 - name: ui-tests
-  image: wjordan/code-dot-org:2020-09-10
+  image: cdodeploy/drone:latest
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -186,7 +186,5 @@ trigger:
   event:
   - pull_request
 ---
-kind: signature
-hmac: dc4e945db625740ff05bf17df74f5e97a40b0e336db058bf3ea7c5543e9ce9e5
 
 ...
