@@ -457,7 +457,6 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   });
 };
 
-// TODO: comment
 WebLab.prototype.openUploadErrorDialog = function() {
   actions.openDialog({
     title: weblabMsg.uploadError(),
