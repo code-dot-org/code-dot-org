@@ -14,7 +14,10 @@ const shapes = {
       PropTypes.instanceOf(Date)
     ]).isRequired,
     comment: PropTypes.string,
-    performance: PropTypes.string
+    performance: PropTypes.string,
+    is_latest_for_level: PropTypes.bool,
+    review_state: PropTypes.string,
+    student_updated_since_feedback: PropTypes.bool
   })
 };
 

@@ -115,7 +115,7 @@ describe('TeacherPanelProgressBubbleTest', () => {
     assert.equal(div.props().style.transform, 'rotate(45deg)');
   });
 
-  it('hides keep working badge if teacherFeedbackReivewState is keepWorking', () => {
+  it('hides keep working badge if teacherFeedbackReivewState is completed', () => {
     const wrapper = setUp({
       teacherFeedbackReivewState: ReviewStates.completed
     });
