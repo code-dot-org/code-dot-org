@@ -1,13 +1,14 @@
-/* React component to handle setting datatype for selected columns. */
+/*
+  React component to handle displaying details, including data visualizations,
+  for selected columns.
+*/
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   setLabelColumn,
-  setColumnsByDataType,
   getCurrentColumnData,
-  addSelectedFeature,
-  removeSelectedFeature
+  addSelectedFeature
 } from "../redux";
 import {
   ColumnTypes,
@@ -15,54 +16,19 @@ import {
   colors,
   UNIQUE_OPTIONS_MAX
 } from "../constants.js";
-import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
 import ScrollableContent from "./ScrollableContent";
-
-const barData = {
-  labels: [],
-  datasets: [
-    {
-      label: "",
-      backgroundColor: colors.tealTransparent,
-      borderColor: colors.teal,
-      borderWidth: 1,
-      hoverBackgroundColor: "#59cad3",
-      hoverBorderColor: "white",
-      data: []
-    }
-  ]
-};
-
-const chartOptions = {
-  scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true
-        }
-      }
-    ]
-  },
-  legend: { display: false },
-  maintainAspectRatio: false
-};
+import ColumnDetailsNumerical from "./ColumnDetailsNumerical";
+import ColumnDetailsCategorical from "./ColumnDetailsCategorical";
+import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    setColumnsByDataType: PropTypes.func.isRequired,
     currentColumnData: PropTypes.object,
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
-    removeSelectedFeature: PropTypes.func.isRequired,
-    setCurrentColumn: PropTypes.func,
     currentPanel: PropTypes.string
-  };
-
-  handleChangeDataType = (event, feature) => {
-    event.preventDefault();
-    this.props.setColumnsByDataType(feature, event.target.value);
   };
 
   setPredictColumn = e => {
@@ -75,33 +41,8 @@ class ColumnInspector extends Component {
     e.preventDefault();
   };
 
-  removeLabel = () => {
-    this.props.setLabelColumn(null);
-  };
-
-  removeFeature = () => {
-    this.props.removeSelectedFeature(this.props.currentColumnData.id);
-  };
-
   render() {
     const { currentColumnData, currentPanel } = this.props;
-
-    const isCategorical =
-      currentColumnData &&
-      currentColumnData.dataType === ColumnTypes.CATEGORICAL;
-
-    const isNumerical =
-      currentColumnData && currentColumnData.dataType === ColumnTypes.NUMERICAL;
-
-    if (isCategorical) {
-      barData.labels = Object.values(currentColumnData.uniqueOptions);
-      barData.datasets[0].data = barData.labels.map(option => {
-        return currentColumnData.frequencies[option];
-      });
-      barData.datasets[0].label = currentColumnData.id;
-    }
-
-    const maxLabelsInHistogram = 5;
 
     return (
       currentColumnData && (
@@ -118,20 +59,10 @@ class ColumnInspector extends Component {
             &nbsp;
             {currentColumnData.readOnly && currentColumnData.dataType}
             {!currentColumnData.readOnly && (
-              <select
-                onChange={event =>
-                  this.handleChangeDataType(event, currentColumnData.id)
-                }
-                value={currentColumnData.dataType}
-              >
-                {Object.values(ColumnTypes).map((option, index) => {
-                  return (
-                    <option key={index} value={option}>
-                      {option}
-                    </option>
-                  );
-                })}
-              </select>
+              <ColumnDataTypeDropdown
+                columnId={currentColumnData.id}
+                currentDataType={currentColumnData.dataType}
+              />
             )}
             {currentColumnData.description && (
               <div>
@@ -148,47 +79,18 @@ class ColumnInspector extends Component {
                 <CrossTab />
               </div>
             )}
-            {isCategorical && (
-              <div>
-                <div style={styles.bold}>Column information:</div>
-
-                <div style={styles.barChart}>
-                  {barData.labels.length <= maxLabelsInHistogram && (
-                    <Bar
-                      data={barData}
-                      width={100}
-                      height={150}
-                      options={chartOptions}
-                    />
-                  )}
-                  {barData.labels.length > maxLabelsInHistogram && (
-                    <div>
-                      {barData.labels.length} values were found in this
-                      column. A graph is only shown when there are{" "}
-                      {maxLabelsInHistogram} or fewer.
-                    </div>
-                  )}
-                </div>
-              </div>
+            {currentColumnData.uniqueOptions && (
+              <ColumnDetailsCategorical
+                id={currentColumnData.id}
+                uniqueOptions={currentColumnData.uniqueOptions}
+                optionFrequencies={currentColumnData.frequencies}
+              />
             )}
-            {isNumerical && currentColumnData.extrema && (
-              <div>
-                <div style={styles.bold}>Column information:</div>
-                {!currentColumnData.isColumnDataValid && (
-                  <p style={styles.error}>
-                    Numerical columns cannot contain strings.
-                  </p>
-                )}
-                {currentColumnData.isColumnDataValid && (
-                  <div style={styles.contents}>
-                    min: {currentColumnData.extrema.min}
-                    <br />
-                    max: {currentColumnData.extrema.max}
-                    <br />
-                    range: {currentColumnData.extrema.range}
-                  </div>
-                )}
-              </div>
+            {currentColumnData.extrema && (
+              <ColumnDetailsNumerical
+                isColumnDataValid={currentColumnData.isColumnDataValid}
+                extrema={currentColumnData.extrema}
+              />
             )}
           </ScrollableContent>
 
@@ -235,17 +137,11 @@ export default connect(
     currentPanel: state.currentPanel
   }),
   dispatch => ({
-    setColumnsByDataType(column, dataType) {
-      dispatch(setColumnsByDataType(column, dataType));
-    },
     setLabelColumn(labelColumn) {
       dispatch(setLabelColumn(labelColumn));
     },
     addSelectedFeature(labelColumn) {
       dispatch(addSelectedFeature(labelColumn));
-    },
-    removeSelectedFeature(labelColumn) {
-      dispatch(removeSelectedFeature(labelColumn));
     }
   })
 )(ColumnInspector);
