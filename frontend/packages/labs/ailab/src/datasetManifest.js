@@ -270,19 +270,19 @@ export const allDatasets = [
     isToy: true
   },
   {
-    id: "club_biasedBand_toy",
+    id: "club_biased_toy",
     name: "Nico's Club Survey",
-    path: "datasets/club_biasedBand_toy.csv",
-    metadataPath: "datasets/club_biasedBand_toy.json",
-    imagePath: "datasets/club_biasedBand_toy.jpg",
+    path: "datasets/club_biased_toy.csv",
+    metadataPath: "datasets/club_biased_toy.json",
+    imagePath: "datasets/club_biased_toy.jpg",
     isToy: true
   },
   {
-    id: "club_lowRows_toy",
+    id: "club_sparse_toy",
     name: "Zoey's Club Survey",
-    path: "datasets/club_lowRows_toy.csv",
-    metadataPath: "datasets/club_lowRows_toy.json",
-    imagePath: "datasets/club_lowRows_toy.jpg",
+    path: "datasets/club_sparse_toy.csv",
+    metadataPath: "datasets/club_sparse_toy.json",
+    imagePath: "datasets/club_sparse_toy.jpg",
     isToy: true
   },
   {
