@@ -1,5 +1,5 @@
 ---
-'title': 'Sample Op-ed Supportive of Computer Science Education Week and Hour of Code'
+title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
 ---
 
 {{ signup_button }}

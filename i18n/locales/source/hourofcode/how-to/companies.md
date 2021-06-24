@@ -1,5 +1,5 @@
 ---
-'title': 'Hour of Code How-To Guide for Companies'
+title: Hour of Code How-To Guide for Companies
 ---
 
 {{ signup_button }}

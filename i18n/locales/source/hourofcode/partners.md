@@ -1,5 +1,5 @@
 ---
-'title': 'Partners'
+title: Partners
 ---
 
 The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.

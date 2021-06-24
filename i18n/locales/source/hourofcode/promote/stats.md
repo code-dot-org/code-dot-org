@@ -1,5 +1,5 @@
 ---
-'title': 'Blurbs and useful stats'
+title: Blurbs and useful stats
 ---
 
 <a id="blurb"></a>

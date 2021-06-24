@@ -1,5 +1,5 @@
 ---
-'title': 'Past Hour of Code Posters'
+title: Past Hour of Code Posters
 ---
 
 {{ signup_button }}

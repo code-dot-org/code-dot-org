@@ -1,5 +1,5 @@
 ---
-'title': 'Contact International Partners'
+title: Contact International Partners
 ---
 
 {{ signup_button }}

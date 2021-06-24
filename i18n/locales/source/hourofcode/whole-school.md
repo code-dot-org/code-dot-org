@@ -1,5 +1,5 @@
 ---
-'title': 'Whole School Participation'
+title: Whole School Participation
 ---
 
 {{ signup_button }}
