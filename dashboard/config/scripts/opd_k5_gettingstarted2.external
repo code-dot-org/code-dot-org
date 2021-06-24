@@ -3,12 +3,13 @@ skip_dialog true
 markdown <<MARKDOWN
 # Curriculum Overview
 
-<img src="https://images.code.org/835eab960f43b5a947d41450fcb488cf-image-1622754945281.png" class="level-image">
 The Computer Science Fundamentals curriculum incorporates a variety of teaching and learning strategies to support engaging and inclusive learning environments.
 
 ## Course Structure
 
 Each course is designed to stand alone and does not require a student to take a course in sequence. This means students can begin learning computer science with any age appropriate course.
+
+<img src="https://images.code.org/835eab960f43b5a947d41450fcb488cf-image-1622754945281.png" width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 ## Lesson Types
 
@@ -39,53 +40,6 @@ Lessons each have a:
 * **Warm Up**
 * **Main Activity**
 * **Wrap Up**
-
-## Lesson Levels
-
-Lesson levels were introduced in <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/2/levels/2" target="blank" >Lesson 2: Getting Started</a> of this online course and appear in the Course Overview page as shown in the image below.
-
-![](https://images.code.org/dd6de323e77b680f871da6dd40c50d5c-image-1623340618982.png)
-
-Lesson levels also appear at the top of the page in the student learning platform as shown in the image below.  Notice lesson levels turn green after completing the level and remain white when not complete.
-
-![](https://images.code.org/9c0c4f7a1203a1cd35bf3a73487e42a9-image-1623340914764.png)
-
-
-### Level Types
-
-Levels within lessons have different types and purposes to best support students learning a particular concept.  
-
-* **Video** levels introduce new tools or explain new CS Concepts.
-* **Online** levels include Code.org tools - Artist, Play Lab, and Sprite Lab.
-* **Extras** levels are at the end of each lesson and optional for students to revisit concepts.
-* **Choice** levels are in Course F and provide a menu of additional online levels for students to complete.
-
-
-### Examples of Level Types
-
-* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/1?section_id=2860383" target="blank" >example of video level</a> 
-* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/2?section_id=2860383" target="blank" >example of online level featuring the Code.org tool, Artist</a> 
-* Course E: <a href="https://studio.code.org/s/coursee-2021/lessons/14/extras?section_id=2860383" target="blank" >example of extras level</a> 
-* Course F: <a href="https://studio.code.org/s/coursef-2021/lessons/2/levels/8?section_id=2860383" target="blank" >example of choice level</a> Note:  Choice levels only available in Course F.
-
-
-### Level Labels
-
-Lessons are labeled to indicate the purpose of the lesson. Refer to the image above in "Lesson Levels."  Notice the example in the image for Course A, Lesson 2: Learn to Drag and Drop is labeled as skill-building to indicate students are practicing building skills by completing that level. 
-
-Each level has a specific purpose such as:
-
-* engaging students to make predictions.
-* challenging students to test their persistence.
-* free play to help students get creative.
-
-### Examples of level purposes
-
-* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/10?section_id=2860383" target="blank" >example of a level for making predictions</a>.
-* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/6/levels/8?section_id=2860383" target="blank" >example of level for getting challenged</a>.
-* Course C: <a href="https://studio.code.org/s/coursec-2021/lessons/10/levels/9?section_id=2860383" target="blank" >example of a level for free play</a>.
-
-
 
 
 MARKDOWN
