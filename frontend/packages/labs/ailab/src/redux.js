@@ -720,7 +720,7 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-/* Functions for retriving aggregate details about a currently selected column. */
+/* Functions for retrieving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
