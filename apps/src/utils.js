@@ -821,10 +821,6 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
   };
 }
 
-export function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 /**
  * Detects profanity in a string.
  * @param {string} text
