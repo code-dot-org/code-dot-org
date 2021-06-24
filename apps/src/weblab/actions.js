@@ -38,7 +38,12 @@ export function changeInspectorOn(inspectorOn) {
   };
 }
 
-// TODO: comment
+/**
+ * Set a dialog to be rendered from <WebLabView/>.
+ * @param {Node|null} dialog A dialog (React/HTML element, node, etc) that will
+ * be rendered in <WebLabView/>, or null, which will clear the dialog.
+ * @returns {{type: ActionType, dialog: Node}}
+ */
 export function changeDialog(dialog = null) {
   return {
     type: ActionType.CHANGE_DIALOG,
@@ -73,7 +78,7 @@ export function changeProjectSize(bytes) {
  * Helpers
  */
 
-// TODO: comment
+// Open a configurable <StylizedBaseDialog/>, to be rendered within <WebLabView/>.
 export function openDialog(props) {
   const dialog = (
     <StylizedBaseDialog
