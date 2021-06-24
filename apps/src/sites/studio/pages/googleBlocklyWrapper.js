@@ -245,9 +245,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     const generator = blocklyWrapper.getGenerator();
-    if (!generator.isInitialized) {
-      generator.init(blocklyWrapper.mainBlockSpace);
-    }
+    generator.init(blocklyWrapper.mainBlockSpace);
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
@@ -263,7 +261,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
-    return code.join('\n');
+    code = code.join('\n');
+    code = generator.finish(code);
+    return code;
   };
 
   blocklyWrapper.Generator.prefixLines = function(text, prefix) {
