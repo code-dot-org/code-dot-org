@@ -46,10 +46,10 @@ class ActivitySection < ApplicationRecord
     {
       id: id,
       position: position,
-      name: name,
+      name: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name),
       duration: duration,
       remarks: remarks,
-      description: description,
+      description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
       tips: tips,
       progressionName: progression_name
     }
