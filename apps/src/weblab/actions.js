@@ -86,6 +86,6 @@ export function openDialog(props) {
   getStore().dispatch(changeDialog(dialog));
 }
 
-function closeDialog() {
+export function closeDialog() {
   getStore().dispatch(changeDialog(null));
 }
