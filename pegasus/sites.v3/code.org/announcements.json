@@ -1,8 +1,6 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "teacher-apps-closing-2021",
-    "/courses": "teacher-apps-closing-2021"
+    "/projects": "home-learning-2020"
   },
 
   "banners": {
