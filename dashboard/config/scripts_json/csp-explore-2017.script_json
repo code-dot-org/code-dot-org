@@ -2,7 +2,6 @@
   "script": {
     "name": "csp-explore-2017",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,

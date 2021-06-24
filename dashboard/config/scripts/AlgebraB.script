@@ -1,4 +1,3 @@
-hidden false
 login_required true
 hideable_lessons true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}'
