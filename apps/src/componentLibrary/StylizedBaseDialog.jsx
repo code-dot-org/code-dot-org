@@ -76,16 +76,20 @@ export default function StylizedBaseDialog(props) {
       </div>
       <hr style={styles.hr} />
       <div style={{...styles.container, ...styles.body}}>{props.body}</div>
-      <hr style={styles.hr} />
-      <div
-        style={{
-          ...styles.container,
-          ...styles.footer,
-          justifyContent: props.footerJustification
-        }}
-      >
-        {props.renderFooter(defaultButtons)}
-      </div>
+      {footer && (
+        <div>
+          <hr style={styles.hr} />
+          <div
+            style={{
+              ...styles.container,
+              ...styles.footer,
+              justifyContent: props.footerJustification
+            }}
+          >
+            {footer}
+          </div>
+        </div>
+      )}
     </BaseDialog>
   );
 }
