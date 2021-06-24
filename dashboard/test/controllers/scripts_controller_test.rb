@@ -809,7 +809,8 @@ class ScriptsControllerTest < ActionController::TestCase
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
-      version_year: '2017'
+      version_year: '2017',
+      is_maker_unit: 'on'
     }
     script.reload
 
@@ -817,6 +818,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'CSF', script.curriculum_umbrella
     assert_equal 'my-fam', script.family_name
     assert_equal '2017', script.version_year
+    assert script.is_maker_unit
   end
 
   test 'set_and_unset_teacher_resources' do

@@ -111,8 +111,8 @@ describe('UnitEditor', () => {
     it('uses old unit editor for non migrated unit', () => {
       const wrapper = createWrapper({});
 
-      expect(wrapper.find('input').length).to.equal(21);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
+      expect(wrapper.find('input').length).to.equal(22);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
@@ -128,8 +128,8 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(25);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(26);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
