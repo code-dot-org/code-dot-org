@@ -23,6 +23,7 @@ export default class TheaterVisualizationColumn extends React.Component {
         <ProtectedVisualizationDiv>
           <div style={styles.theater}>
             <img id="theater" style={styles.theaterImage} />
+            <audio id="theater-audio" autoPlay="true" />
           </div>
         </ProtectedVisualizationDiv>
       </div>
