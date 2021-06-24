@@ -688,7 +688,6 @@ WebLab.prototype.brambleApi = function() {
     onBrambleMountable: this.onBrambleMountable.bind(this),
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
-    openDialog: this.openDialog.bind(this),
     openErrorDialog: this.openErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
