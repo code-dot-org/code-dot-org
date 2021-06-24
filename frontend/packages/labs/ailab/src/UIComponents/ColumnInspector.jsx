@@ -5,11 +5,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  setLabelColumn,
-  getCurrentColumnData,
-  addSelectedFeature
-} from "../redux";
+import { getCurrentColumnData } from "../redux";
 import { styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -17,27 +13,19 @@ import ScrollableContent from "./ScrollableContent";
 import ColumnDetailsNumerical from "./ColumnDetailsNumerical";
 import ColumnDetailsCategorical from "./ColumnDetailsCategorical";
 import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
+import AddFeatureButton from "./AddFeatureButton";
 
 class ColumnInspector extends Component {
   static propTypes = {
     currentColumnData: PropTypes.object,
-    setLabelColumn: PropTypes.func.isRequired,
-    addSelectedFeature: PropTypes.func.isRequired,
     currentPanel: PropTypes.string
-  };
-
-  setPredictColumn = e => {
-    this.props.setLabelColumn(this.props.currentColumnData.id);
-    e.preventDefault();
-  };
-
-  addFeature = e => {
-    this.props.addSelectedFeature(this.props.currentColumnData.id);
-    e.preventDefault();
   };
 
   render() {
     const { currentColumnData, currentPanel } = this.props;
+
+    const selectingFeatures = currentPanel === "dataDisplayFeatures";
+    const selectingLabel = currentPanel === "dataDisplayLabel";
 
     return (
       currentColumnData && (
@@ -68,7 +56,7 @@ class ColumnInspector extends Component {
                 <br />
               </div>
             )}
-            {currentPanel === "dataDisplayFeatures" && (
+            {selectingFeatures && (
               <div>
                 <ScatterPlot />
                 <CrossTab />
@@ -89,27 +77,13 @@ class ColumnInspector extends Component {
             )}
           </ScrollableContent>
 
-          {currentPanel === "dataDisplayLabel" &&
-            currentColumnData.isSelectable && (
-              <button
-                type="button"
-                onClick={e => this.setPredictColumn(e, currentColumnData.id)}
-                style={styles.selectLabelButton}
-              >
-                Select label
-              </button>
-            )}
+          {selectingLabel && currentColumnData.isSelectable && (
+            <SelectLabelButton column={currentColumnData.id} />
+          )}
 
-          {currentPanel === "dataDisplayFeatures" &&
-            currentColumnData.isSelectable && (
-              <button
-                type="button"
-                onClick={e => this.addFeature(e, currentColumnData.id)}
-                style={styles.selectFeaturesButton}
-              >
-                Add feature
-              </button>
-            )}
+          {selectingFeatures && currentColumnData.isSelectable && (
+            <AddFeatureButton column={currentColumnData.id} />
+          )}
 
           {currentColumnData.hasTooManyUniqueOptions && (
             <div>
@@ -130,13 +104,5 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     currentPanel: state.currentPanel
-  }),
-  dispatch => ({
-    setLabelColumn(labelColumn) {
-      dispatch(setLabelColumn(labelColumn));
-    },
-    addSelectedFeature(labelColumn) {
-      dispatch(addSelectedFeature(labelColumn));
-    }
   })
 )(ColumnInspector);
