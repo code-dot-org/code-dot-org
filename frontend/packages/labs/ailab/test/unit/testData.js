@@ -78,6 +78,7 @@ export const classificationState = {
       play: 'no'
     }
   ],
+  currentColumn: 'temp',
   labelColumn: 'play',
   selectedFeatures: ['temp', 'weather'],
   columnsByDataType: {
@@ -102,5 +103,40 @@ export const classificationState = {
       'overcast' : 1,
       'rainy': 2
     }
+  }
+};
+
+export const allNumericalState = {
+  data: [
+    {
+      batCount: 100,
+      mosquitoCount: 1
+    },
+    {
+      batCount: 90,
+      mosquitoCount: 2
+    },{
+      batCount: 80,
+      mosquitoCount: 3
+    },{
+      batCount: 70,
+      mosquitoCount: 4
+    },{
+      batCount: 60,
+      mosquitoCount: 5
+    },{
+      batCount: 50,
+      mosquitoCount: 6
+    },{
+      batCount: 40,
+      mosquitoCount: 10
+    }
+  ],
+  currentColumn: 'batCount',
+  labelColumn: 'mosquitoCount',
+  selectedFeatures: ['batCount'],
+  columnsByDataType: {
+    batCount: 'numerical',
+    mosquitoCount: 'numerical'
   }
 };

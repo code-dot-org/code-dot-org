@@ -12,15 +12,18 @@ import {
   isColumnNumerical,
   isColumnCategorical,
   isColumnReadOnly,
-  getExtrema,
   getColumnDescription,
-  getOptionFrequencies,
   hasTooManyUniqueOptions,
   getColumnDataToSave,
   isSelectable,
-  getUniqueOptions,
   isColumnDataValid
 } from "./helpers/columnDetails.js";
+import {
+  getUniqueOptionsCurrentColumn,
+  getUniqueOptionsLabelColumn,
+  getExtremaCurrentColumn,
+  getOptionFrequenciesCurrentColumn
+} from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
@@ -682,43 +685,18 @@ export function readyToTrain(state) {
 
 /* Functions for filtering and selecting columns by type.  */
 
-function filterColumnsByType(state, columnType) {
-  return Object.keys(state.columnsByDataType).filter(
-    column => state.columnsByDataType[column] === columnType
+export function filterColumnsByType(columnsByDataType, columnType) {
+  return Object.keys(columnsByDataType).filter(
+    column => columnsByDataType[column] === columnType
   );
 }
 
 function getCategoricalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.CATEGORICAL);
-}
-
-function getNumericalColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
+  return filterColumnsByType(state.columnsByDataType, ColumnTypes.CATEGORICAL);
 }
 
 export function getSelectedCategoricalColumns(state) {
   let intersection = getCategoricalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
-export function getSelectedCategoricalFeatures(state) {
-  let intersection = getCategoricalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
-
-export function getSelectedNumericalFeatures(state) {
-  let intersection = getNumericalColumns(state).filter(x =>
-    state.selectedFeatures.includes(x)
-  );
-  return intersection;
-}
-
-export function getSelectedNumericalColumns(state) {
-  let intersection = getNumericalColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
@@ -744,31 +722,7 @@ export function getSelectedColumnDescriptions(state) {
   });
 }
 
-export function getUniqueOptionsByColumn(state) {
-  let uniqueOptionsByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
-  );
-  return uniqueOptionsByColumn;
-}
-
-export function getExtremaByColumn(state) {
-  let extremaByColumn = {};
-  getSelectedNumericalColumns(state).map(
-    column => (extremaByColumn[column] = getExtrema(state, column))
-  );
-  return extremaByColumn;
-}
-
-export function getTableData(state, useResultsData) {
-  if (useResultsData) {
-    return getResultsDataInDataTableForm(state);
-  } else {
-    return state.data;
-  }
-}
-
-/* Function for retriving aggreate details about a currently selected column. */
+/* Functions for retrieving aggregate details about a currently selected column. */
 
 export function getCurrentColumnData(state) {
   if (!state.currentColumn) {
@@ -779,9 +733,9 @@ export function getCurrentColumnData(state) {
     id: state.currentColumn,
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
-    uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    extrema: getExtrema(state, state.currentColumn),
-    frequencies: getOptionFrequencies(state, state.currentColumn),
+    uniqueOptions: getUniqueOptionsCurrentColumn(state),
+    extrema: getExtremaCurrentColumn(state),
+    frequencies: getOptionFrequenciesCurrentColumn(state),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(
       state,
@@ -889,7 +843,7 @@ export function getCrossTabData(state) {
   // Take inventory of all unique label values we have seen, which allows us to
   // generate the header at the top of the CrossTab UI.
 
-  const uniqueLabelValues = getUniqueOptions(state, state.labelColumn);
+  const uniqueLabelValues =  getUniqueOptionsLabelColumn(state);
 
   return {
     results,
@@ -932,6 +886,14 @@ export function getScatterPlotData(state) {
 }
 
 /* Functions for processing data to display for results. */
+
+export function getTableData(state, useResultsData) {
+  if (useResultsData) {
+    return getResultsDataInDataTableForm(state);
+  } else {
+    return state.data;
+  }
+}
 
 export function getConvertedAccuracyCheckExamples(state) {
   const convertedAccuracyCheckExamples = [];

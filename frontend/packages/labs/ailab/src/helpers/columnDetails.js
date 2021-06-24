@@ -18,14 +18,14 @@ export function isColumnNumerical(state, column) {
 export function hasTooManyUniqueOptions(state, column) {
   if (isColumnCategorical(state, column)) {
     const uniqueOptionsCount =
-      getUniqueOptions(state, state.currentColumn).length;
+      getUniqueOptions(state.data, state.currentColumn).length;
     return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
   }
   return false;
 }
 
-export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
+export function getUniqueOptions(data, column) {
+  return Array.from(new Set(data.map(row => row[column]))).filter(
     option => option !== undefined && option !== ""
   );
 }
@@ -75,12 +75,12 @@ export function isColumnReadOnly(state, column) {
   return !!metadataColumnType;
 }
 
-function getColumnData(state, column) {
-  return state.data.map(row => row[column]);
+function getColumnData(data, column) {
+  return data.map(row => row[column]);
 }
 
-export function getExtrema(state, column) {
-  const columnData = getColumnData(state, column);
+export function getExtrema(data, column) {
+  const columnData = getColumnData(data, column);
   let extrema = {};
   extrema.max = Math.max(...columnData);
   extrema.min = Math.min(...columnData);
@@ -117,18 +117,6 @@ export function getColumnDescription(state, columnId) {
   return null;
 }
 
-export function getOptionFrequencies(state, column) {
-  let optionFrequencies = {};
-  for (let row of state.data) {
-    if (optionFrequencies[row[column]]) {
-      optionFrequencies[row[column]]++;
-    } else {
-      optionFrequencies[row[column]] = 1;
-    }
-  }
-  return optionFrequencies;
-}
-
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
   @param {string} - feature name
@@ -141,7 +129,7 @@ export function getOptionFrequencies(state, column) {
   */
 export function buildOptionNumberKey(state, feature) {
   let optionsMappedToNumbers = {};
-  const uniqueOptions = getUniqueOptions(state, feature);
+  const uniqueOptions = getUniqueOptions(state.data, feature);
   uniqueOptions.forEach(
     option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
   );
@@ -153,9 +141,9 @@ export function getColumnDataToSave(state, column) {
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state, column);
+    columnData.values = getUniqueOptions(state.data, column);
   } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state, column);
+    const {max, min} = getExtrema(state.data, column);
     columnData.max = max;
     columnData.min = min;
   }
