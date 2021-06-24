@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Make a Flappy Game'
+title: Teacher Resources - Make a Flappy Game
 ---
 
 # Make a Flappy Game: An Hour of Code Tutorial

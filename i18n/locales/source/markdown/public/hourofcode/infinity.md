@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Infinity Play Lab'
+title: Teacher Resources - Infinity Play Lab
 ---
 
 # Infinity Play Lab: An Hour of Code Tutorial

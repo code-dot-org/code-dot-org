@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Play Lab'
+title: Teacher Resources - Play Lab
 ---
 
 # Play Lab: An Hour of Code Tutorial

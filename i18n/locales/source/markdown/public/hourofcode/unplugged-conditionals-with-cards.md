@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Conditionals with Cards'
+title: Teacher Resources - Conditionals with Cards
 ---
 
 # Conditionals With Cards: An Hour of Code Tutorial

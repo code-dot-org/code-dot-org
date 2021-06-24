@@ -1,5 +1,5 @@
 ---
-'title': '#CSforGood in your class'
+title: "#CSforGood in your class"
 ---
 
 <h1>#CSforGood in your class</h1>

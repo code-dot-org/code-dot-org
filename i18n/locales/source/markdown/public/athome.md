@@ -1,5 +1,5 @@
 ---
-'title': 'Computer Science at Home'
+title: Computer Science at Home
 ---
 
 <link href="/css/tools.css" rel="stylesheet">

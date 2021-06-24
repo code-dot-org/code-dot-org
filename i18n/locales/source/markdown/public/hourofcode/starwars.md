@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Star Wars'
+title: Teacher Resources - Star Wars
 ---
 
 # Star Wars: Building a Galaxy with Code

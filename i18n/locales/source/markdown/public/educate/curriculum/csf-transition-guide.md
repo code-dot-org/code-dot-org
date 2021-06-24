@@ -1,5 +1,5 @@
 ---
-'title': 'Computer Science Fundamentals Transition Guide'
+title: Computer Science Fundamentals Transition Guide
 ---
 
 # Teaching Courses A-F

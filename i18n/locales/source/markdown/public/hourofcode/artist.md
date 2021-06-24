@@ -1,5 +1,5 @@
 ---
-'title': 'Teacher Resources - Artist'
+title: Teacher Resources - Artist
 ---
 
 # Artist: An Hour of Code Tutorial
