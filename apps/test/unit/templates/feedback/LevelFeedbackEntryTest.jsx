@@ -3,6 +3,8 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
+import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types'; // Maureen move this type into templates/feedback
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import ReactDOM from 'react-dom';
@@ -18,7 +20,10 @@ const DEFAULT_FEEDBACK = {
   unitName: 'A Unit',
   created_at: new Date(),
   comment: 'Great Work',
-  performance: 'performanceLevel1'
+  performance: 'performanceLevel1',
+  review_state: null,
+  is_latest_for_level: true,
+  student_updated_since_feedback: false
 };
 
 const setUp = (overrideFeedback, useMount = false) => {
@@ -62,6 +67,28 @@ describe('LevelFeedbackEntry', () => {
     expect(wrapper.first().props().style.backgroundColor).to.equal(
       color.background_gray
     );
+  });
+
+  it('displays review state badge if review state is keep working (not awaiting review)', () => {
+    const wrapper = setUp({review_state: ReviewStates.keepWorking});
+    expect(wrapper.find(KeepWorkingBadge)).to.have.length(1);
+    expect(wrapper.contains(i18n.keepWorking())).to.be.true;
+  });
+
+  it('displays awaiting review if review_state is keepWorking and feedback is awaiting review', () => {
+    const wrapper = setUp({
+      review_state: ReviewStates.keepWorking,
+      is_latest_for_level: true,
+      student_updated_since_feedback: true
+    });
+    expect(wrapper.contains(i18n.waitingForTeacherReview())).to.be.true;
+  });
+
+  it('displays completed if review_state is keepWorking and feedback is awaiting review', () => {
+    const wrapper = setUp({
+      review_state: ReviewStates.completed
+    });
+    expect(wrapper.contains(i18n.reviewedComplete())).to.be.true;
   });
 
   it('displays performance copy if performance value exists', () => {
