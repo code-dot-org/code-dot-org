@@ -1,34 +1,34 @@
 ---
-'en':
-  'data':
-    'block_categories':
-      'Actions': 'Actions'
-      'Advanced': 'Advanced'
-      'Behaviors': 'Behaviors'
-      'Brushes': 'Brushes'
-      'Color': 'Color'
-      'Comment': 'Comment'
-      'Comments': 'Comments'
-      'Conditionals': 'Conditionals'
-      'Dancers': 'Dancers'
-      'Default': 'Default'
-      'Events': 'Events'
-      'Functions': 'Functions'
+en:
+  data:
+    block_categories:
+      Actions: Actions
+      Advanced: Advanced
+      Behaviors: Behaviors
+      Brushes: Brushes
+      Color: Color
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
+      Dancers: Dancers
+      Default: Default
+      Events: Events
+      Functions: Functions
       'Functions ': 'Functions '
-      'Game/Score': 'Game/Score'
-      'Games/Score': 'Games/Score'
-      'Groups': 'Groups'
-      'Input': 'Input'
-      'Location': 'Location'
-      'Locations': 'Locations'
-      'Logic': 'Logic'
-      'Loops': 'Loops'
-      'Math': 'Math'
-      'Numbers': 'Numbers'
-      'Properties': 'Properties'
-      'Sprites': 'Sprites'
-      'Text': 'Text'
-      'Variables': 'Variables'
+      Game/Score: Game/Score
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Location: Location
+      Locations: Locations
+      Logic: Logic
+      Loops: Loops
+      Math: Math
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
+      Text: Text
+      Variables: Variables
       'Variables ': 'Variables '
       'Variables  ': 'Variables  '
-      'World': 'World'
+      World: World

@@ -1,50 +1,50 @@
 ---
-'en':
-  'data':
-    'course':
-      'name':
-        'csp-2017':
-          'assignment_family_title': 'Computer Science Principles'
-          'title': 'Computer Science Principles (''17-''18)'
-          'version_title': '''17-''18'
-          'description_student': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-          'description_teacher': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-          'description_short': 'Learn foundational computer science concepts.'
-        'csd-2017':
-          'assignment_family_title': 'Computer Science Discoveries'
-          'title': 'Computer Science Discoveries (''17-''18)'
-          'version_title': '''17-''18'
-          'description_student': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
-          'description_teacher': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
-          'description_short': 'An introductory computer science course that empowers students to create authentic artifacts.'
-        'allthethingscourse':
-          'title': 'allthethingscourse'
-          'description_short': 'This is a course for allthethings'
-          'description_student': 'This is a course for allthethings and has a longer description for students'
-          'description_teacher': 'This is a course for allthethings and has a longer description for teachers'
-        'csd-2018':
-          'assignment_family_title': 'Computer Science Discoveries'
-          'title': 'Computer Science Discoveries (''18-''19)'
-          'version_title': '''18-''19'
-          'description_short': 'An introductory computer science course that empowers students to create authentic artifacts.'
-          'description_student': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
-          'description_teacher': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
-        'csp-2018':
-          'assignment_family_title': 'Computer Science Principles'
-          'title': 'Computer Science Principles (''18-''19)'
-          'version_title': '''18-''19'
-          'description_short': 'Learn foundational computer science concepts.'
-          'description_student': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-          'description_teacher': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-        'csp-2019':
-          'title': 'Computer Science Principles (''19-''20)'
-          'version_title': '''19-''20'
-          'description_short': 'Learn foundational computer science concepts.'
-          'description_student': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-          'description_teacher': 'In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.'
-        'csd-2019':
-          'title': 'Computer Science Discoveries (''19-''20)'
-          'version_title': '''19-''20'
-          'description_short': 'An introductory computer science course that empowers students to create authentic artifacts.'
-          'description_student': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
-          'description_teacher': 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'
+en:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('17-'18)
+          version_title: "'17-'18"
+          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_short: Learn foundational computer science concepts.
+        csd-2017:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('17-'18)
+          version_title: "'17-'18"
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+        allthethingscourse:
+          title: allthethingscourse
+          description_short: This is a course for allthethings
+          description_student: This is a course for allthethings and has a longer description for students
+          description_teacher: This is a course for allthethings and has a longer description for teachers
+        csd-2018:
+          assignment_family_title: Computer Science Discoveries
+          title: Computer Science Discoveries ('18-'19)
+          version_title: "'18-'19"
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+        csp-2018:
+          assignment_family_title: Computer Science Principles
+          title: Computer Science Principles ('18-'19)
+          version_title: "'18-'19"
+          description_short: Learn foundational computer science concepts.
+          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+        csp-2019:
+          title: Computer Science Principles ('19-'20)
+          version_title: "'19-'20"
+          description_short: Learn foundational computer science concepts.
+          description_student: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: In fall 2016, the College Board launched its newest AP® course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+        csd-2019:
+          title: Computer Science Discoveries ('19-'20)
+          version_title: "'19-'20"
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
