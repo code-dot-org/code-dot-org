@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Reflection:  Variables\r\n\r\n**Prompts:**\r\n\r\n* How would you explain the concept of variables to your students? \r\n* What challenges, if any, do you anticipate as your students learn about variables?\r\n\t* How will you move past this challenge?",
+    "long_instructions": "# Reflection:  Variables\r\n\r\n## Prompt\r\n\r\n* How would you explain variables to your students?\r\n    \r\n***\r\n\r\n## Definitions\r\n\r\n**Variables** are placeholders for pieces of information that can change.\r\n\r\n## Blockly Code Blocks\r\n\r\nHere are examples of variable blocks students will use.\r\n\r\n![](https://images.code.org/65124ab9f9efbb0138830b2fb8f88eb4-image-1624493189027.png)\r\n\r\n![](https://images.code.org/a78d47c6e05b02f91a859059f39fdd9f-image-1624493361942.png)",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,7 +19,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-16 14:53:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:37:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-16 14:53:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:37:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 00:08:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 00:09:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 00:10:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 18:00:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
