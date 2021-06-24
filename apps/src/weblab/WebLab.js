@@ -6,6 +6,9 @@ import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
+import StylizedBaseDialog, {
+  FooterButton
+} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {Provider} from 'react-redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
@@ -457,13 +460,57 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   });
 };
 
+WebLab.prototype.openGenericErrorDialog = function(body, withButtons = true) {
+  let renderFooter = () => {};
+  if (withButtons) {
+    renderFooter = () => [
+      <FooterButton
+        text="Try Again"
+        onClick={() => {}}
+        key="cancel"
+        type="cancel"
+      />,
+      <FooterButton
+        text="Reset Web Lab"
+        onClick={() => {}}
+        key="reset"
+        color="red"
+      />,
+      <FooterButton
+        text="Dismiss"
+        onClick={() => {}}
+        key="confirm"
+        type="confirm"
+      />
+    ];
+  }
+
+  this.openDialog({
+    title: 'An Error Occurred',
+    body,
+    renderFooter
+  });
+};
+
 WebLab.prototype.openUploadErrorDialog = function() {
-  actions.openDialog({
+  this.openDialog({
     title: weblabMsg.uploadError(),
     body: weblabMsg.errorSavingProject(),
     cancellationButtonText: msg.reloadPage(),
     handleCancellation: () => window.location.reload()
   });
+};
+
+WebLab.prototype.openDialog = function(props) {
+  const dialog = (
+    <StylizedBaseDialog
+      isOpen
+      handleConfirmation={actions.closeDialog}
+      handleClose={actions.closeDialog}
+      {...props}
+    />
+  );
+  actions.openDialog(dialog);
 };
 
 // Called by Bramble when project has changed
@@ -624,6 +671,8 @@ WebLab.prototype.brambleApi = function() {
     onBrambleMountable: this.onBrambleMountable.bind(this),
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
+    openDialog: this.openDialog.bind(this),
+    openGenericErrorDialog: this.openGenericErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this)

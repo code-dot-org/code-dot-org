@@ -2,8 +2,6 @@
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
-import React from 'react';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(
@@ -78,16 +76,7 @@ export function changeProjectSize(bytes) {
  * Helpers
  */
 
-// Open a configurable <StylizedBaseDialog/>, to be rendered within <WebLabView/>.
-export function openDialog(props) {
-  const dialog = (
-    <StylizedBaseDialog
-      isOpen
-      handleConfirmation={closeDialog}
-      handleClose={closeDialog}
-      {...props}
-    />
-  );
+export function openDialog(dialog) {
   getStore().dispatch(changeDialog(dialog));
 }
 
