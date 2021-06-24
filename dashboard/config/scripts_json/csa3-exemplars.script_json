@@ -1,7 +1,7 @@
 {
   "script": {
     "name": "csa3-exemplars",
-    "wrapup_video_id": null,:
+    "wrapup_video_id": null,
     "login_required": true,
     "properties": {
       "is_migrated": true
