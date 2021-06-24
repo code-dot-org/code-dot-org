@@ -418,26 +418,24 @@ describe('Java Lab Editor Test', () => {
       });
     });
 
-    describe('Read Only Mode', () => {
-      it('is editable', () => {
-        const editor = createWrapper();
-        const javalabCodeMirrors = editor.find('JavalabEditor').instance()
-          .editors;
-        const firstEditor = Object.values(javalabCodeMirrors)[0];
+    it('is editable', () => {
+      const editor = createWrapper();
+      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
+        .editors;
+      const firstEditor = Object.values(javalabCodeMirrors)[0];
 
-        expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
-      });
+      expect(firstEditor.state.facet(EditorView.editable)).to.be.true;
+    });
 
-      it('header buttons are enabled', () => {
-        const editor = createWrapper();
-        editorHeaderButtonIdentifiers.forEach(headerButtonId => {
-          const isButtonDisabled = editor
-            .find(headerButtonId)
-            .first()
-            .props().isDisabled;
+    it('header buttons are enabled', () => {
+      const editor = createWrapper();
+      editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const isButtonDisabled = editor
+          .find(headerButtonId)
+          .first()
+          .props().isDisabled;
 
-          expect(isButtonDisabled).to.be.false;
-        });
+        expect(isButtonDisabled).to.be.false;
       });
     });
   });

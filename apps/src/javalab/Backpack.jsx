@@ -19,7 +19,7 @@ const placeholderFiles = [
 export class Backpack extends Component {
   static propTypes = {
     isDarkMode: PropTypes.bool.isRequired,
-    isDisabled: PropTypes.bool
+    isDisabled: PropTypes.bool.isRequired
   };
 
   state = {
