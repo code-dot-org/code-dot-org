@@ -21,4 +21,6 @@
 #
 class CodeReviewComment < ApplicationRecord
   acts_as_paranoid
+
+  belongs_to :commenter, class_name: 'User'
 end
