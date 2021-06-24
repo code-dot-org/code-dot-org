@@ -21,10 +21,6 @@ class CreateCodeReviewComments < ActiveRecord::Migration[5.2]
       dir.up do
         execute "ALTER TABLE code_review_comments CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin"
       end
-
-      dir.down do
-        execute "ALTER TABLE code_review_comments CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci"
-      end
     end
   end
 end
