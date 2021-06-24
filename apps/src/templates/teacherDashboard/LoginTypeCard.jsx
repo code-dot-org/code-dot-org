@@ -66,7 +66,6 @@ const styles = {
     minHeight: 150,
     padding: 16,
     marginBottom: 5,
-    marginLeft: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,

@@ -2,7 +2,6 @@
   "script": {
     "name": "hourofcode",
     "wrapup_video_id": 13,
-    "hidden": false,
     "login_required": false,
     "properties": {
     },

@@ -373,7 +373,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    script = create :script, hidden: true, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
@@ -389,7 +389,7 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
-    script = create :script, hidden: true, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
