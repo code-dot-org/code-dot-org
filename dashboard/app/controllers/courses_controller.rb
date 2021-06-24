@@ -61,6 +61,14 @@ class CoursesController < ApplicationController
       end
     end
 
+    if unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        render :no_access
+        return
+      end
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
@@ -102,8 +110,7 @@ class CoursesController < ApplicationController
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      # We are no longer using hidden but until its removed it needs a value because it can't be null
-      script.assign_attributes(published_state: course_params[:published_state], hidden: true, properties: {pilot_experiment: course_params[:pilot_experiment]})
+      script.assign_attributes(published_state: course_params[:published_state], properties: {pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl

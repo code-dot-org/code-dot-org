@@ -2,7 +2,6 @@
   "script": {
     "name": "csp4-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:15 UTC",
+    "serialized_at": "2021-06-24 16:39:59 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp4-2021"
@@ -188,7 +187,7 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students work with partners to investigate three versions of the \"Thermostat App\" to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
+        "overview": "In this lesson students work with partners to investigate three versions of the \"Lemon Squeeze\" app to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides",
         "purpose": "After building a conceptual model for boolean expressions and conditional statements in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with conditional statements and boolean expressions will come in the following lesson.",
         "student_overview": "Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals."
