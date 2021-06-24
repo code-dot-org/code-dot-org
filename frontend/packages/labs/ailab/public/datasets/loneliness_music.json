@@ -1,7 +1,7 @@
 {
   "name": "loneliness_music",
   "card": {
-    "description": "A dataset of survey responses gathered by Slovakian students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on music.",
+    "description": "A dataset of survey responses gathered by Slovak students aged 18-21 at FSEV UK. Most responses are rankings on a scale from 1 to 5. For example, 'Rank from 1 (strongly disagree) to 5 (strongly agree): I often study or work even in my spare time'. This is a subset of the larger dataset that just focuses on music.",
     "source": "Kaggle (https://www.kaggle.com/miroslavsabo/young-people-survey)",
     "lastUpdated": "2017",
     "context": {
