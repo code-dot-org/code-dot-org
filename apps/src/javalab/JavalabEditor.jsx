@@ -16,7 +16,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
-import {EditorState, tagExtension} from '@codemirror/state';
+import {EditorState, Compartment} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
@@ -88,6 +88,9 @@ class JavalabEditor extends React.Component {
     this.updateFileType = this.updateFileType.bind(this);
     this._codeMirrors = {};
 
+    // Used to manage dark and light mode configuration.
+    this.editorModeConfigCompartment = new Compartment();
+
     // fileMetadata is a dictionary of file key -> filename.
     let fileMetadata = {};
     // tab order is an ordered list of file keys.
@@ -131,9 +134,10 @@ class JavalabEditor extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
       const newStyle = this.props.isDarkMode ? oneDark : lightMode;
+
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          reconfigure: {style: newStyle}
+          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
         });
       });
     }
@@ -158,10 +162,13 @@ class JavalabEditor extends React.Component {
     const extensions = [...editorSetup];
 
     if (isDarkMode) {
-      extensions.push(tagExtension('style', oneDark));
+      const darkModeExtension = this.editorModeConfigCompartment.of(oneDark);
+      extensions.push(darkModeExtension);
     } else {
-      extensions.push(tagExtension('style', lightMode));
+      const lightModeExtension = this.editorModeConfigCompartment.of(lightMode);
+      extensions.push(lightModeExtension);
     }
+
     this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
