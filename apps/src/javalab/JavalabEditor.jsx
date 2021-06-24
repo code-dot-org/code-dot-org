@@ -519,8 +519,9 @@ class JavalabEditor extends React.Component {
           />
           <PaneSection style={styles.backpackSection}>
             <Backpack
+              id={'javalab-editor-backpack'}
               isDarkMode={isDarkMode}
-              isReadOnlyWorkspace={isReadOnlyWorkspace}
+              disabled={isReadOnlyWorkspace}
             />
           </PaneSection>
           <PaneButton
