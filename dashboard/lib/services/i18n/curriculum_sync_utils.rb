@@ -1,3 +1,4 @@
+require_relative 'curriculum_sync_utils/render_translations'
 require_relative 'curriculum_sync_utils/serializers'
 require_relative 'curriculum_sync_utils/sync_in'
 require_relative 'curriculum_sync_utils/sync_out'
@@ -8,6 +9,7 @@ module Services
     # imported into Code Studio from CurriculumBuilder; Lessons, Activities,
     # Resources, Vocabularies, Objectives, etc.
     module CurriculumSyncUtils
+      include RenderTranslations
       REDACT_RESTORE_PLUGINS = %w(resourceLink vocabularyDefinition)
 
       def self.sync_in
