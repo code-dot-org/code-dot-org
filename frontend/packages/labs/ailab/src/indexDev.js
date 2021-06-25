@@ -90,7 +90,7 @@ const sampleModes = {
 
   "shoe-survey": {
     datasets: [
-      "shoe-survey-toy",
+      "shoe_survey_toy"
     ],
     hideSelectLabel: true,
     requireAccuracy: 75
