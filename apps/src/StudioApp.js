@@ -678,7 +678,8 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi,
-        viewingVersion: queryParams('version')
+        viewingVersion: queryParams('version'),
+        isProjectOwned: project.isOwner()
       }),
       contentDiv
     );
