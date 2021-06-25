@@ -8,17 +8,10 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           MOVE1:
             MOVES.Roll: Tonn Choirp
             MOVES.ClapHigh: Bualadh Bos Ard
@@ -47,36 +40,20 @@ ga:
         text: tar éis {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_changeColorBy:
         text: 'méadaigh {METHOD} de gach {COLOR}: {AMOUNT}'
-        options:
-          METHOD:
-            '"hue"': lí
-            '"saturation"': sáithiú
-            '"brightness"': gile
       Dancelab_changeMoveEachLR:
         text: déanadh gach {GROUP} {MOVE} {DIR} go brách
         options:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           MOVE:
-            '"next"': "(Ar Aghaidh)"
-            '"prev"': "(Siar)"
-            '"rand"': "(Randamach)"
             MOVES.Roll: Tonn Choirp
             MOVES.ClapHigh: Bualadh Bos Ard
             MOVES.Dab: Daba
@@ -92,9 +69,6 @@ ga:
         text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
           MOVE:
-            '"next"': "(Ar Aghaidh)"
-            '"prev"': "(Siar)"
-            '"rand"': "(Randamach)"
             MOVES.Roll: Tonn Choirp
             MOVES.ClapHigh: Bualadh Bos Ard
             MOVES.Dab: Daba
@@ -113,52 +87,31 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
       Dancelab_changePropEachBy:
         text: 'méadaigh {PROPERTY} de gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
       Dancelab_doMoveEachLR:
         text: déanadh gach {GROUP} {MOVE} {DIR} uair amháin
         options:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           MOVE:
-            '"rand"': "(Randamach)"
             MOVES.XBend: Cromadh
             MOVES.Roll: Tonn Choirp
             MOVES.XClapSide: Bualadh Bos
@@ -186,7 +139,6 @@ ga:
         text: déanadh {SPRITE} {MOVE} {DIR} uair amháin
         options:
           MOVE:
-            '"rand"': "(Randamach)"
             MOVES.XBend: Cromadh
             MOVES.Roll: Tonn Choirp
             MOVES.XClapSide: Bualadh Bos
@@ -216,7 +168,6 @@ ga:
         text: 'athdhéan gach {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_everySecondsRange:
         text: 'gach {N} {UNIT} ó {START} go {STOP} '
@@ -226,10 +177,6 @@ ga:
             seconds: Soicind
       Dancelab_everyVerseChorus:
         text: 'gach {UNIT} '
-        options:
-          UNIT:
-            '"verse"': véarsa
-            '"chorus"': curfá
       Dancelab_getEnergy:
         text: faigh {RANGE}
         options:
@@ -244,15 +191,10 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
       Dancelab_getTime:
         text: an t-am reatha i {UNIT}
         options:
           UNIT:
-            '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_ifDanceIs:
         text: |-
@@ -277,12 +219,7 @@ ga:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': tomhas
             '"seconds"': soicind
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: cuir {SPRITE} {LOCATION}
         options:
@@ -303,17 +240,10 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
             "{x: 200, y: 300}": ag an mbun
@@ -331,31 +261,13 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           FORMAT:
-            '"border"': ar an imeall
-            '"inner"': i gcearnóg
             '"diamond"': ar chruth diamaint
-            '"circle"': i gciorcal
             '"grid"': i ngreille
-            '"top"': ina líne ag an mbarr
-            '"row"': ina ró
-            '"bottom"': ina líne ag an mbun
-            '"left"': i gcolún ar chlé
-            '"column"': ina gcolún
-            '"right"': i gcolún ar dheis
-            '"x"': i bpatrún cliathach
-            '"plus"': ar chruth an phlus
             '"random"': randamach
       Dancelab_makeAnonymousDanceSprite:
         text: déan {COSTUME} nua {LOCATION}
@@ -371,7 +283,6 @@ ga:
             '"PINEAPPLE"': anann
             '"ROBOT"': róbat
             '"SHARK"': siorc
-            '"SLOTH"': spadán
             '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
@@ -400,7 +311,6 @@ ga:
             '"PINEAPPLE"': anann
             '"ROBOT"': róbat
             '"SHARK"': siorc
-            '"SLOTH"': spadán
             '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
@@ -438,31 +348,13 @@ ga:
             '20': '20'
           COSTUME:
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           LAYOUT:
-            '"border"': ar an imeall
-            '"inner"': i gcearnóg
             '"diamond"': ar chruth diamaint
-            '"circle"': i gciorcal
             '"grid"': i ngreille
-            '"top"': ina líne ag an mbarr
-            '"row"': ina ró
-            '"bottom"': ina líne ag an mbun
-            '"left"': i gcolún ar chlé
-            '"column"': ina gcolún
-            '"right"': i gcolún ar dheis
-            '"x"': i bpatrún cliathach
-            '"plus"': ar chruth an phlus
             '"random"': randamach
       Dancelab_mixColors:
         text: measc {COLOR1} agus {COLOR2}
@@ -479,33 +371,6 @@ ga:
         options:
           EFFECT:
             '"none"': Dada
-            '"circles"': Ciorcail
-            '"color_cycle"': Dathanna
-            '"diamonds"': Diamaint
-            '"disco_ball"': Liathróid Dioscó
-            '"fireworks"': Tinte ealaíne
-            '"swirl"': Hiopnó
-            '"kaleidoscope"': Cailéideascóp
-            '"lasers"': Urlár Damhsa Léasair
-            '"splatter"': Steall Péinte
-            '"rainbow"': Tuar ceatha
-            '"snowflakes"': Sneachta
-            '"text"': Ainmneacha Amhráin
-            '"galaxy"': An Spás
-            '"sparkles"': Drithlí
-            '"spiral"': Bís
-            '"disco"': Cearnóga
-            '"stars"': Réaltaí
-          PALETTE:
-            '"rave"': Dubh is Bán
-            '"cool"': Fionnuar
-            '"electronic"': Leictreonach
-            '"iceCream"': Uachtair Reoite
-            '"default"': Sorcha
-            '"neon"': Gléineach
-            '"tropical"': Trópaiceach
-            '"vintage"': Sean-Nóis
-            '"warm"': Teolaí
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           socraigh éifeacht an chúlra:
@@ -513,41 +378,6 @@ ga:
         options:
           EFFECT:
             '"none"': Dada
-            '"rand"': "(Randamach)"
-            '"circles"': Ciorcail
-            '"quads"': Uillinneacha
-            '"color_cycle"': Dathanna
-            '"diamonds"': Diamaint
-            '"disco_ball"': Liathróid Dioscó
-            '"fireworks"': Tinte ealaíne
-            '"flowers"': Bláthanna
-            '"growing_stars"': Réaltaí ag fás
-            '"swirl"': Hiopnó
-            '"kaleidoscope"': Cailéideascóp
-            '"lasers"': Urlár Damhsa Léasair
-            '"splatter"': Steall Péinte
-            '"rainbow"': Tuar ceatha
-            '"ripples_random"': Tonnáin Randamacha
-            '"ripples"': Tonnáin
-            '"snowflakes"': Sneachta
-            '"text"': Ainmneacha Amhráin
-            '"squiggles"': Caisirníní
-            '"galaxy"': An Spás
-            '"sparkles"': Drithlí
-            '"spiral"': Bís
-            '"disco"': Cearnóga
-            '"stars"': Réaltaí
-            '"music_wave"': Tonnta
-          PALETTE:
-            '"rave"': Dubh is Bán
-            '"cool"': Fionnuar
-            '"electronic"': Leictreonach
-            '"iceCream"': Uachtair Reoite
-            '"default"': Sorcha
-            '"neon"': Gléineach
-            '"tropical"': Trópaiceach
-            '"vintage"': Sean-Nóis
-            '"warm"': Teolaí
       Dancelab_setDanceSpeed:
         text: 'socraigh luas an damhsa do {SPRITE}: {SPEED}'
         options:
@@ -563,17 +393,10 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           SPEED:
             '1': gnáthmhód
             '2': sciobtha
@@ -585,42 +408,11 @@ ga:
         options:
           EFFECT:
             '"none"': Dada
-            '"bubbles"': Boilgeoga
-            '"confetti"': Coinfití
-            '"hearts_red"': Croíthe
-            '"music_notes"': Nótaí Ceoil
-            '"pineapples"': Anainn
-            '"pizzas"': Píotsaí
-            '"smiling_poop"': Cac
-            '"rain"': Báisteach
-            '"floating_rainbows"': Tuartha Ceatha
-            '"smile_face"': Gáirí
-            '"spotlight"': Spotsolas
-            '"color_lights"': Soilse Stáitse
-            '"raining_tacos"': Tacónna
       Dancelab_setForegroundEffectExtended:
         text: 'socraigh éifeacht an tulra: {EFFECT}'
         options:
           EFFECT:
             '"none"': Dada
-            '"rand"': "(Randamach)"
-            '"bubbles"': Boilgeoga
-            '"hearts_colorful"': Croíthe Daite
-            '"confetti"': Coinfití
-            '"emojis"': Emoji
-            '"hearts_red"': Croíthe
-            '"music_notes"': Nótaí Ceoil
-            '"paint_drip"': Sileadh Péinte
-            '"pineapples"': Anainn
-            '"pizzas"': Píotsaí
-            '"smiling_poop"': Cac
-            '"rain"': Báisteach
-            '"floating_rainbows"': Tuartha Ceatha
-            '"smile_face"': Gáirí
-            '"spotlight"': Spotsolas
-            '"color_lights"': Soilse Stáitse
-            '"exploding_stars"': Pléascadh Réaltaí
-            '"raining_tacos"': Tacónna
       Dancelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL} '
         options:
@@ -628,34 +420,20 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
       Dancelab_setPropEach:
         text: 'socraigh {PROPERTY} do gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
       Dancelab_setPropRandom:
         text: socraigh {PROPERTY} {SPRITE} go randamach
         options:
@@ -663,35 +441,20 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
       Dancelab_setPropRandomEach:
         text: socraigh {PROPERTY} do gach {GROUP} go randamach
         options:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
       Dancelab_setTint:
         text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setTintEach:
@@ -700,34 +463,20 @@ ga:
           THIS:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
       Dancelab_setTintEachInline:
         text: 'socraigh imir ar gach {THIS}: {VAL}'
         options:
           THIS:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
       Dancelab_setTintInline:
         text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setVisible:
@@ -742,17 +491,10 @@ ga:
           THIS:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           VISIBILITY:
             'true': infheicthe
             'false': dofheicthe
@@ -763,10 +505,6 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
           RANGE:
             '"bass"': dord
             '"mid"': meán-raon
@@ -777,25 +515,14 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"tint"': imir
           RANGE:
             '"bass"': dord
             '"mid"': meán-raon
@@ -807,11 +534,6 @@ ga:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"direction"': treo gluaiseachta
-            '"tint"': imir
           RANGE:
             '"bass"': dord
             '"mid"': meán-raon
@@ -822,26 +544,14 @@ ga:
           GROUP:
             sprites: uile
             '"ALIEN"': eachtrán
-            '"BEAR"': béar
             '"CAT"': cat
             '"DOG"': madra
-            '"DUCK"': lacha
-            '"FROG"': frog
             '"MOOSE"': mús
-            '"PINEAPPLE"': anann
             '"ROBOT"': róbat
-            '"SHARK"': siorc
-            '"SLOTH"': spadán
-            '"UNICORN"': aonbheannach
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
-            '"rotation"': rothlú
-            '"x"': ionad cothrománach
-            '"y"': ionad ingearach
-            '"direction"': treo gluaiseachta
-            '"tint"': imir
           RANGE:
             '"bass"': dord
             '"mid"': meán-raon
@@ -850,39 +560,9 @@ ga:
         text: aistrigh {STRING}
         options:
           STRING:
-            '"music_wave"': Tonnta
-            '"ripples"': Tonnáin
-            '"ripples_random"': Tonnáin Randamacha
-            '"quads"': Uillinneacha
-            '"flowers"': Bláthanna
-            '"popsicles"': Líreacáin reoite
-            '"squiggles"': Caisirníní
-            '"growing_stars"': Réaltaí ag fás
-            '"emojis"': Emoji
-            '"hearts_colorful"': Croíthe
-            '"paint_drio"': Sileadh Péinte
-            '"exploding_stars"': Pléascadh Réaltaí
-            '"row_top"': ina líne ag an mbarr
-            '"row_bottom"': ina líne ag an mbun
-            '"column_left"': i gcolún ar chlé
-            '"column_right"': i gcolún ar dheis
             '"diamond"': ar chruth diamaint
-            '"mural"': Múrphictiúr
-            '"safari"': Safáraí
-            '"network"': Líonra
-            '"highway"': Mórbhealach
-            '"stream"': Sruthán
-            '"tile"': Tíl
-            '"shadow"': Scáth
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -900,35 +580,10 @@ ga:
             '"left"': ar chlé
             '"down"': síos
             '"right"': ar dheis
-            '"space"': an spásbharra
-            '"enter"': enter
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
+            '"space"': spás
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -964,10 +619,8 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
             '"speed"': luas
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} i dteagmháil le {SPRITE2}"
@@ -990,16 +643,9 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
-            '"tint"': imir
             '"speed"': luas
-      gamelab_getThisSprite:
-        options:
-          CHOICE:
-            '"this"': é seo
       gamelab_getTime:
         options:
           UNIT:
@@ -1014,32 +660,9 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} ar imeall an scáileáin"
       gamelab_jumpTo:
@@ -1056,32 +679,9 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       gamelab_locationAt:
         text: 'ionad x: {X} y: {Y}'
       gamelab_locationMouse:
@@ -1135,7 +735,6 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': réaltra
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': i ngreille
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tuar ceatha
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficsean eolaíochta
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': réaltaí
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
@@ -1154,10 +753,8 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
             '"speed"': luas
       gamelab_setProp_dropdown:
         options:
@@ -1206,10 +803,6 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: nuair a bhrúitear an tsaighead chlé
       gamelab_whenRightArrow:
@@ -1229,10 +822,6 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: agus an tsaighead chlé brúite
       gamelab_whileRightArrow:
@@ -1262,10 +851,8 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1285,26 +872,20 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_groupChangeAnim:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupChangePropBy:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_groupCreateNewSprite:
         text: déan {COSTUME} nua {LOCATION}
         options:
@@ -1323,51 +904,38 @@ ga:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupEdgesDisplace:
         text: cuir cosc ar {COSTUME} bogadh ar an imeall
       Mikelab_groupGetProp:
         options:
-          SELECT:
-            '"average"': meánluach
-            '"this"': é seo
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupRemoveTint:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupSetProp:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_groupSetTint:
         options:
           SELECT:
             '"all"': uile
-            '"this"': é seo
       Mikelab_groupWhenClickedOn:
         text: nuair a chliceáiltear {COSTUME}
       Mikelab_groupWhenXTouchesY:
@@ -1430,10 +998,8 @@ ga:
         options:
           PROPERTY:
             '"scale"': méid
-            '"rotation"': rothlú
             '"x"': ionad x
             '"y"': ionad y
-            '"direction"': treo gluaiseachta
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1480,10 +1046,6 @@ ga:
             '"d"': D
       Mikelab_whenYesNoClicked:
         text: nuair a chliceáiltear {KEY}
-        options:
-          KEY:
-            '"yes"': tá
-            '"no"': níl
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1519,8 +1081,6 @@ ga:
         options:
           FORMAT:
             '"grid"': i ngreille
-            '"border"': ar an imeall
-            '"row"': ina ró
             '"random"': randamach
       aalab_someGraduallyStartIntervention:
         options:
@@ -1541,7 +1101,6 @@ ga:
           VAL:
             '0': as
             '1': ann
-            '"toggle"': scoránaigh
       binary_goToHome:
         text: léim go dtí an barr ar chlé
       binary_move:
@@ -1560,10 +1119,6 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
           má tá cosán {DIR}
@@ -1571,20 +1126,14 @@ ga:
         options:
           DIR:
             "'ahead'": ar aghaidh
-            "'right'": ar dheis
-            "'left'": ar chlé
       craft_ifStandingOn:
         text: |-
           má tá tú ar {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": coiréal gorm
-            "'redCoralBlock'": coiréal dearg
             "'sand'": gaineamh
-            "'wool_blue'": uisce domhain
             "'planksOak'": plainc dharach
-            "'seaLantern'": laindéar farraige
       craft_ifStandingOnLimit:
         text: |-
           má tá tú ar {TYPE}
@@ -1592,38 +1141,10 @@ ga:
         options:
           TYPE:
             "'sand'": gaineamh
-            "'darkPrismarine'": priosmuiríneach dubh
-            "'seaLantern'": laindéar farraige
       craft_moveForward:
         text: téigh ar aghaidh
       craft_placeBlock:
         text: cuir {blockType}
-        options:
-          blockType:
-            '"strippedOak"': dair scafa
-            '"strippedDarkOak"': dair scafa dhorcha
-            '"stoneBricks"': brící cloiche
-            '"mossyStoneBricks"': brící cloiche caonaigh
-            '"crackedStoneBricks"': brící cloiche gágacha
-            '"blueCoralBlock"': bloc coiréil ghoirm
-            '"pinkCoralBlock"': bloc coiréil bhándeirg
-            '"magentaCoralBlock"': bloc coiréil mhaigeanta
-            '"redCoralBlock"': bloc coiréil dheirg
-            '"yellowCoralBlock"': bloc coiréil bhuí
-            '"blueDeadCoralBlock"': bloc coiréil ghoirm mhairbh
-            '"pinkDeadCoralBlock"': bloc coiréil bhándeirg mhairbh
-            '"magentaDeadCoralBlock"': bloc coiréil mhaigeanta mhairbh
-            '"readDeadCoralBlock"': bloc coiréil dheirg mhairbh
-            '"yellowDeadCoralBlock"': bloc coiréil bhuí mhairbh
-            '"prismarine"': priosmuiríneach
-            '"darkPrismarine"': priosmuiríneach dubh
-            '"seaLantern"': laindéar farraige
-            '"packedIce"': oighear cruaite
-            '"blueIce"': oighear gorm
-            '"blackConcrete"': coincréit dhubh
-            '"seaGrass"': féar mara
-            '"kelp"': ceilp
-            '"polishedGranite"': eibhear snasta
       craft_placePrismarine:
         text: cuir priosmuiríneach
       craft_placeTorch:
@@ -1640,12 +1161,8 @@ ga:
         text: cruthaigh {ENTITY} nua
         options:
           ENTITY:
-            '"cod"': trosc
             '"dolphin"': deilf
-            '"salmon"': bradán
-            '"seaTurtle"': turtar mara
             '"squid"': máthair shúigh
-            '"tropicalFish"': iasc trópaiceach
       craft_turn:
         text: cas {DIR}
         options:
