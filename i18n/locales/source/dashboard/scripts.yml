@@ -1174,6 +1174,8 @@ en:
               name: Strings and Images
             The Design Recipe:
               name: The Design Recipe
+            Big GAme - Collision Detection:
+              name: Big Game - Collision Detection
           student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           title: All the Things!
@@ -22526,23 +22528,143 @@ en:
           description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
         csa3-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Creating Arrays
+              description_student: The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
+              description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
+            lesson-2:
+              name: Accessing and Modifying Elements
+              description_student: You create arrays to store values using the keyword `new`. You explore The Theater, which allows you to manipulate sounds and shapes. You use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
+              description_teacher: In this lesson, students create arrays to store values using the keyword `new`. They explore The Theater, which allows them to manipulate sounds and shapes. They use The Neighborhood and The Theater to practice accessing and modifying elements in arrays using index values.
+            lesson-3:
+              name: Traversing Arrays with for Loops
+              description_student: In this lesson, you learn about `for` loops and how to use them to traverse arrays. You revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. You use `for` loops to solve problems in The Neighborhood and get feedback on your work through a code review.
+              description_teacher: Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.
+            lesson-4:
+              name: Traversing Arrays with while Loops
+              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You create visuals for your music using the `Rectangle` class.
+              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
+            lesson-5:
+              name: Storing Objects into Arrays
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, you discover how subclasses implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
+              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
+            lesson-6:
+              name: Traversing Arrays with Enhanced for Loops
+              description_student: 'To access each element stored in an array, we traverse the array using a loop. You previously learned how to use `while` and `for` loops to access all or just some parts of an array. Today, you implement an enhanced `for` loop, which is a simplified `for` loop used to access each element of an array one by one. '
+              description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
+            lesson-7:
+              name: Using Static Variables and Constants
+              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants.
+              description_teacher: Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.
+            lesson-8:
+              name: Answering Questions with Arrays
+              description_student: Today you develop algorithms to solve problems. These algorithms can be applied to finding the cheapest item on a menu, finding the highest or lowest note in a sound, or identifying the location of shapes on the stage. Each of these problems use similar structures in their solutions. You identify these patterns so you can apply the algorithms you develop today to problems you encounter in the future.
+              description_teacher: Students develop algorithms using one-dimensional arrays to find the minimum and maximum values, calculate sums and averages, and find elements that meet specific criteria. They look for patterns in the structure of the problems, and outline generic algorithms that can be used when answering questions about information contained in arrays.
+            lesson-9:
+              name: Solving Problems with Arrays
+              description_student: Standard algorithms can be applied to solving problems involving arrays. You implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, you plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem.
+              description_teacher: Standard algorithms can be applied to solving problems involving arrays. Students implement standard algorithms to manipulate one-dimensional arrays and discover the effect of the algorithms on sounds. Before writing Java code, students plan each algorithm using manipulatives and pseudocode to identify the process needed to solve each problem.
+            lesson-10:
+              name: Manipulating Elements in an Array
+              description_student: You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem.
+              description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.
+            lesson-11:
+              name: Concert in the Theater Project - Day 1
+              description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio.
+              description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.
+            lesson-12:
+              name: Concert in the Theater Project - Day 2
+              description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
+              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
+            lesson-13:
+              name: Concert in the Theater Project - Day 3
+              description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
+              description_teacher: In the previous lesson, students created a prioritized list of work to complete. In this lesson, students self-assess their work against the project rubric then review their prioritized list to inform their revisions to their concert. Students then share their final projects with their peers to celebrate their successes.
+            lesson-14:
+              name: FRQ Day
+              description_student: Today you complete a Free Response Question (FRQ). You do this by first annotating the FRQ, then working with a group to plan how to solve the FRQ. You individually write your solution to the FRQ using your planning. Finally, you score your attempt against a scoring rubric and reflect on your experience.
+              description_teacher: |-
+                Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through both annotating and completing an FRQ on their own. Students also work in small groups to identify inputs, processes, and outputs before answering the FRQ.
+
+                The goals of this lesson are:
+                * Practice reading an FRQ
+                * Practice writing a solution for an FRQ
+                * Practice scoring an FRQ against a scoring rubric
+            lesson-15:
+              name: Assessment Day
+              description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa3-pilot
-          title: ''
+          title: Expanding Program Data
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students create one-dimensional arrays to store primitive values and object references. Students represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
+          student_description: In this unit, you create one-dimensional arrays to store primitive values and object references. You represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
         csa4-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Using Existing Libraries to Add Capabilities
+              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
+              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
+            lesson-2:
+              name: Concert in the Theater Project - Day 1
+            lesson-3:
+              name: Solving Problems with the Math Class
+              description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
+              description_teacher: Students revisit the `Math` class, going more in-depth to explore its methods. They learn about `final` classes and static methods and identify their purposes and uses. They use `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` to solve problems.
+            lesson-4:
+              name: Treating Data as a Different Types
+              description_student: The Food Truck has run out of coins! Because the owner can’t give change with coins, she can only charge whole dollar amounts and no cents. You learn how to use casting, rounding, and random numbers to help the owner through her coin shortage.
+              description_teacher: Students revisit the Project Mercury Pastries Food Truck to learn about casting, rounding, and random numbers. The students solve scenarios for the food truck owner using their knowledge of Java and the `Math` class.
+            lesson-5:
+              name: Comparing Values to Make Decisions
+              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
+              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+            lesson-6:
+              name: Adding Randomness to a Program
+              description_student: One of the most common use cases for generating random numbers are games of chance like rolling dice, shuffling playing cards, and flipping a coin. Games often use random numbers to generate different outcomes. Today, you add randomization to the Pop the Balloon game by adding a dice rolling feature.
+              description_teacher: In this lesson, students develop the dice rolling feature of the Pop the Balloon game. Each subtask of the development process requires students to add different randomization features, including generating numbers between ranges, computing probabilities, and using conditional statements that are executed based on varying results.
+            lesson-7:
+              name: Comparing Object References and Data
+            lesson-8:
+              name: Providing an Alternate Path of Execution
+            lesson-9:
+              name: Testing Multiple Conditions
+            lesson-10:
+              name: Using Logical Operators
+            lesson-11:
+              name: Applying De Morgan's Laws to Boolean Expressions
+              description_student: You learn about truth tables, a tool we can use to evaluate compound Boolean expressions. You learn about De Morgan's Laws and prove them with a partner using truth tables.
+              description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
+            lesson-12:
+              name: Neighborhood Block Party Project - Day 2
+            lesson-13:
+              name: Neighborhood Block Party Project - Day 3
+            lesson-14:
+              name: FRQ Day
+              description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
+              description_teacher: "Students complete a Free Response Question (FRQ) in this lesson. Building on prior FRQ work, they begin to work more independently, working through annotating, pseudocoding, and completing an FRQ on their own. After annotating and writing their solutions, students still discuss their results with their peers and receive support.  \n\nThe goals of this lesson are:\n* Practice annotating an FRQ\n* Practice writing pseudocode for an FRQ\n* Practice writing a solution for an FRQ\n* Practice scoring an FRQ against a scoring rubric"
+            lesson-15:
+              name: Assessment Day
+              description_student: In this unit, you expanded the expressions used in conditionals and iteration to use relational and logical operators. You used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. You developed an understanding of De Morgan's Laws and writing truth tables. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa4-pilot
-          title: ''
+          title: Expanding Program Logic
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
+          student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
         csa5-pilot:
           lessons: {}
           lesson_groups: {}
@@ -22589,15 +22711,15 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Implementing and Teaching CS Fundamentals
-          description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          title: Teaching Computer Science Fundamentals '21-'22
+          description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          description_short: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          description_audience: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
+          description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               key: Welcome to "Teaching Computer Science Fundamentals"
-              name: Introduction
+              name: Welcome and Introduction
               description_student: ''
               description_teacher: ''
             Understanding the Computer Science Fundamentals Courses:
@@ -22647,7 +22769,7 @@ en:
               description_teacher: ''
             Sprite Lab:
               key: Sprite Lab
-              name: Sprite Lab
+              name: Sequencing with Sprites
               description_student: ''
               description_teacher: ''
             Reviewing your reflections:
@@ -22657,7 +22779,7 @@ en:
               description_teacher: ''
             Next steps:
               key: Next steps
-              name: Next steps
+              name: Taking next steps
               description_student: ''
               description_teacher: ''
             Module 1:
@@ -22669,26 +22791,30 @@ en:
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
             Lesson Planning:
-              name: Lesson Planning
+              name: Teaching a Lesson
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching and Student Practices
+              name: CS Teaching Practices and Strategies
             Implementation Approaches and Barriers:
-              name: Implementation Approaches and Barriers
+              name: Addressing Barriers
+            Part II Overview:
+              name: Part II Overview
+            Sequencing with Sprites:
+              name: Sequencing with Sprites
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: CS Fundamentals Concepts
+              display_name: 'Part II:  CS Concepts in Courses A - F'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
-              display_name: Next Steps
+              display_name: 'Part III:  Next Steps'
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: Implementing and Teaching CS
+              display_name: 'Part I:  Teaching and Implementing CS'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -22758,9 +22884,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Printable
+              name: Printable Lesson Plans
               description_student: 
               description_teacher: This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.
+            lesson-5:
+              name: Level Details Dialog Examples
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Lesson Group 1
@@ -22824,7 +22954,21 @@ en:
             new lesson:
               name: lesson display name
             Module 1:
-              name: Module 1
+              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
+            Module 2:
+              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
+            Module 3:
+              name: 'Module 3: Unit 5, using lists in apps, and recognizing CS skills in the classroom'
+            Module 4:
+              name: 'Module 4: Unit 5 and using datasets in apps'
+            Module 5:
+              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
+            Module 6:
+              name: 'Module 6: Introduction to the Create Performance Task'
+            Module 7:
+              name: 'Module 7: Tools and structure in Unit 9 - Data'
+            Module 8:
+              name: 'Module 8: Building community and preparing students for the AP Exam'
           lesson_groups:
             lesson group:
               display_name: lesson group display name
@@ -22880,59 +23024,59 @@ en:
 
                 **Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
             lesson2:
-              name: How Computers Learn
+              name: Supervised / Unsupervised
               description_student: Students first consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, similar to a young child, as a type of unsupervised learning. Next, they play a game called "Green Glass Door" as an example of supervised learning, where they learn which words follow a certain pattern to go through a door in the game. Throughout the lesson, students are also introduced to the terms feature, label, and training which appear throughout the unit. Finally, students sort several scenarios into “supervised” or “unsupervised” learning, then watch a video about how neural networks can further simulate human learning.
               description_teacher: "Students first consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, similar to a young child, as a type of unsupervised learning. Next, they play a game called \"Green Glass Door\" as an example of supervised learning, where they learn which words follow a certain pattern to go through a door in the game. Throughout the lesson, students are also introduced to the terms feature, label, and training which appear throughout the unit. Finally, students sort several scenarios into “supervised” or “unsupervised” learning, then watch a video about how neural networks can further simulate human learning.\r\n\r\n**Question of the Day:** How is machine learning similar to human learning?"
             lesson3:
-              name: Patterns in Data
+              name: Decision Apps and Cross Tabs
               description_student: Students examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. The first app makes decisions randomly, which is a poor model for helping someone decide what shoes to wear. The second app makes decisions in a set pattern called a decision tree, which is better but is not responsive to its users. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns. The lesson concludes by motivating the need for a computer to do this analysis and look for patterns in large amounts of data, which is the subject of the next lesson.
               description_teacher: "Students examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. The first app makes decisions randomly, which is a poor model for helping someone decide what shoes to wear. The second app makes decisions in a set pattern called a decision tree, which is better but is not responsive to its users. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns. The lesson concludes by motivating the need for a computer to do this analysis and look for patterns in large amounts of data, which is the subject of the next lesson.\r\n\r\n**Question of the Day:** What strategies do computer models use to make decisions?"
             lesson4:
-              name: Classification with Machine Learning
+              name: Unplugged SVM
               description_student: "**Question of the Day:** How do computers learn to classify data?"
               description_teacher: "Students participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students are tasked with helping a computer learn to classify food as fruits or vegetables. They begin by graphing 20 different fruits on two axes comparing “sweetness” to “easy to eat”. After they finish, they then try to separate the data into groups - a fruit area, and a veggie area. We then test their division by offering new fruits and veggies to classify, purposefully offering examples that will challenge their classification. At the end of the lesson, students reflect on how this process helped them make decisions and how much more difficult this process becomes when there is more data involved.\r\n\r\n**Question of the Day:** How do computers learn to classify data?"
             lesson5:
-              name: Training a Model with Features
+              name: AI Lab - Categorical Intro
               description_student: Students dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. Students pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’ve collected. Students go through each dataset, identifying the features of the data that they would like to use for their recommendations. Students also use data visualization tools to identify features with high relationships in the data, since not every feature may be useful or predictive for training a model. At the end of the lesson, students create a new model for a restaurant of their choosing and write a letter to the owner explaining how they can use their model to increase their restaurant business.
               description_teacher: |-
                 Students dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. Students pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’ve collected. Students go through each dataset, identifying the features of the data that they would like to use for their recommendations. Students also use data visualization tools to identify features with high relationships in the data, since not every feature may be useful or predictive for training a model. At the end of the lesson, students create a new model for a restaurant of their choosing and write a letter to the owner explaining how they can use their model to increase their restaurant business.
 
                 **Question of the Day:** How can we use machine learning to make recommendations?
             lesson6:
-              name: Importing a Model in App Lab
+              name: App Lab - Importing a Model
               description_student: 'Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.'
               description_teacher: "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?"
             lesson7:
-              name: The Need for Model Cards
+              name: Medical Model Cards
               description_student: In this lesson, students investigate a model for bias and are introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. The lesson starts with students investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. Students are guided through an activity to help them realize that the app is biased based on personal information such as age, race, and gender. Students examine how this could happen based on the initial data used to train the model, then they explore how a Model Card is a tool that can help uncover potential bias. They explore several example model cards, making recommendations on whether or not the model could be biased based on the data.
               description_teacher: "In this lesson, students investigate a model for bias and are introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. The lesson starts with students investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. Students are guided through an activity to help them realize that the app is biased based on personal information such as age, race, and gender. Students examine how this could happen based on the initial data used to train the model, then they explore how a Model Card is a tool that can help uncover potential bias. They explore several example model cards, making recommendations on whether or not the model could be biased based on the data.\r\n\r\n**Question of the Day:** How does human bias appear in machine learning?"
             lesson8:
-              name: Numerical Data in AI Lab
+              name: AI Lab - Numerical Data
               description_student: So far, students have only been creating machine learning models from categorical data - in this lesson, students are introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
               description_teacher: |-
                 So far, students have only been creating machine learning models from categorical data - in this lesson, students are introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
 
                 **Question of the Day:** How can we use AI Lab to predict numerical data?
             lesson9:
-              name: Regression with Machine Learning
+              name: Unplugged KNN
               description_student: In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.
               description_teacher: "In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.\r\n\r\n**Question of the Day:** How do computers learn to make predictions with numerical data?"
             lesson10:
-              name: Using Model Cards in App Lab
+              name: App Lab - If Statements and Screens
               description_student: Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
               description_teacher: |-
                 Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
 
                 **Question of the Day:** How can I improve how a user interacts with a machine learning app?
             lesson11:
-              name: Customizing Your App
+              name: App Lab - Custom Design Elts
               description_student: Students explore how to customize the code of their app to make additional changes to the design of their app. Students start by exploring a single-screen app that is crowded with too many features. They practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
               description_teacher: |-
                 Students explore how to customize the code of their app to make additional changes to the design of their app. Students start by exploring a single-screen app that is crowded with too many features. They practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
 
                 **Question of the Day:** How can I customize the code for a machine learning app?
             lesson12:
-              name: Making Data Decisions
+              name: AI Lab - Choose Label and Save
               description_student: Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also save their model for the first time and import it into App Lab, then customize the app based on their model.
               description_teacher: "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also save their model for the first time and import it into App Lab, then customize the app based on their model.\r\n\r\n**Question of the Day:** How can I choose a label that creates an accurate machine learning model?"
             lesson13:
@@ -22952,13 +23096,51 @@ en:
               description_student: To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
               description_teacher: "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.\r\n\r\n**Question of the Day:** How can I use the Problem Solving Process to build an \"AI for Social Good\" App?"
             lesson_groups: {}
+            lesson-17:
+              name: Innovations in AI
+              description_student: 
+              description_teacher: 
+            lesson-18:
+              name: 'Mini-Project: Make an App with ML'
+              description_student: 
+              description_teacher: 
+            lesson-19:
+              name: Train Model from Bad Data
+              description_student: 
+              description_teacher: 
+            lesson-20:
+              name: Create App
+              description_student: 
+              description_teacher: 
+            lesson-21:
+              name: Planning an ML Project
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: Designing Data Collection
+              description_student: 
+              description_teacher: 
+            lesson-23:
+              name: Train Model from Good Data
+              description_student: 
+              description_teacher: 
           name: aiml-2021
           title: AI and Machine Learning Module
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1 - Machine Learning
+              description: |-
+                Introduction to Machine Learning
+
+                Ends with Mini Project
+            lessonGroup-3:
+              display_name: Chapter 2 - Design an ML App
+            lessonGroup-4:
+              display_name: Extra Lessons - Delete Later
         csd7-2021:
           lessons: {}
           lesson_groups: {}
@@ -23091,7 +23273,24 @@ en:
               name: Module 8
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+          lesson_groups:
+            CSD_Module 1:
+              display_name: Module 1
+            CSD_Module 2:
+              display_name: Module 2
+            CSD_Module 3:
+              display_name: Module 3
+            CSD_Module 4:
+              display_name: Module 4
+            CSD_Module 5:
+              display_name: Module 5
+            CSD_Module 6:
+              display_name: Module 6
+            CSD_Module 7:
+              display_name: Module 7
+            CSD_Module 8:
+              display_name: Module 8
+          name: vpl-csd-2021
         vpl-csp-2021:
           title: CS Principles Virtual Professional Learning
           description: ''
@@ -23141,53 +23340,270 @@ en:
               description_teacher: ''
           lesson_groups: {}
         self-paced-pl-csd1-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Navigating this Professional Learning Course
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Accessing and Using Lesson Plans
+            lesson-4:
+              name: Welcome
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Navigating Code.org
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Overview of CS Discoveries
+            lesson-7:
+              name: Guidance for Teaching CS Discoveries
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+            lessonGroup-3:
+              display_name: Navigating Code.org
+            lessonGroup-5:
+              display_name: Preparing to Teach CS Discoveries
           name: self-paced-pl-csd1-2021
-          title: ''
+          title: 'Module 1: Welcome '
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This unit is a short introduction to both Code.org and this professional learning course. \n\n**You will learn:**\n\n-   What Code.org is\n-   How to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-4:
+              name: Code.org Learning Platform
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Setting Up Class Sections
+            lesson-7:
+              name: 'Exploring the Student Experience '
+            lesson-6:
+              name: Tracking Student Progress and Providing Feedback
+            lesson-3:
+              name: Lesson Plans and Resources
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Lesson Plan Structure
+            lesson-8:
+              name: Support for Teachers
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Teacher Community
+            lesson-10:
+              name: Report a Problem
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating the Code.org Learning Platform
+            lessonGroup-3:
+              display_name: Navigating Lesson Plans and Resources
+            lessonGroup-4:
+              display_name: Navigating Support
           name: self-paced-pl-csd2-2021
-          title: ''
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n-   Navigate the Code.org website and teacher tools \n-   Locate and use course lesson plans and teacher resources \n-   Access support while teaching the course \n\n**Suggested Time:** 1 hour"
         self-paced-pl-csd3-2021:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd3-2021
-          title: ''
+          title: 'Module 3: Overview of CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This unit will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this content will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum \n-   Become familiar with the programming environments used within CS Discoveries \n-   Consider how to best implement CS Discoveries based on your context \n\n**Suggested Time:** 30 minutes"
         self-paced-pl-csd4-2021:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-csd4-2021
-          title: ''
+          title: 'Module 4: Guidance for Teaching CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            Short module description
+
+            **You will:**
+
+            -   Objective 1
+            -   Objective 2
+            -   Objective 3
+
+            **Suggested Time:** 1 hour
         self-paced-pl-csd5-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: 'Lesson 1: Problem Solving and Computing'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Web Development
+              description_student: 
+              description_teacher: 'Students learn to create websites using HTML and CSS inside Code.org''s Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the Internet as they develop their own personal websites.  '
+            lesson-3:
+              name: Interactive Animations and Games
+              description_student: 
+              description_teacher: 'Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org''s Game Lab environment. Students end the unit by designing their own animations and games. '
+            lesson-4:
+              name: The Design Process
+              description_student: 
+              description_teacher: 'Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper, and eventually in Code.org''s App Lab environment. '
+            lesson-5:
+              name: Data and Society
+              description_student: 
+              description_teacher: Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process.
+            lesson-6:
+              name: Physical Computing
+              description_student: 
+              description_teacher: 'Students use Code.org''s App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. '
+            lesson-7:
+              name: AI and Machine Learning
+              description_student: 
+              description_teacher: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Preparing to Teach Unit 1 '
+              description: Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem.
+            lessonGroup-3:
+              display_name: 'Preparing to Teach Unit 2 '
+              description: 'Students learn to create websites using HTML and CSS inside Code.org''s Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the Internet as they develop their own personal websites.  '
+            lessonGroup-4:
+              display_name: Preparing to Teach Unit 3
+              description: 'Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org''s Game Lab environment. Students end the unit by designing their own animations and games. '
+            lessonGroup-5:
+              display_name: Preparing to Teach Unit 4
+              description: 'Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper, and eventually in Code.org''s App Lab environment. '
+            lessonGroup-6:
+              display_name: Preparing to Teach Unit 5
+              description: Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process.
+            lessonGroup-7:
+              display_name: Preparing to Teach Unit 6
+              description: 'Students use Code.org''s App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own. '
+            lessonGroup-8:
+              display_name: 'Preparing to Teach Unit 7 '
+              description: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
+            lessonGroup-9:
+              display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: ''
+          title: 'Module 5: Preparing to Teach CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide][0].\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n\n-   Prepare to teach the first week of unit content \n-   Practice key concepts included in the unit \n-   Engage with sample student work \n-   Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit "
         self-paced-pl-csd6-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Preparing to Teach Problem Solving and Computing
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: 'Unit 2: Web Development'
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Preparing to Teach Unit 3
+              description_student: 
+              description_teacher: |-
+                ##Ineractive Animations and Games
+
+                In Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program.
+            lesson-5:
+              name: 'Preparing to Teach The Design Process '
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Data and Society
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Unit 6
+            lesson-8:
+              name: Preparing to Teach Unit 7
+            lesson-9:
+              name: Sample Student Work
+            lesson-10:
+              name: Unit 1 Projects
+            lesson-11:
+              name: Introduction to Unit 3
+            lesson-12:
+              name: Preparing to teach week 1 of Unit 3
+            lesson-13:
+              name: Uni 3 Key Concepts
+            lesson-14:
+              name: Sample Student Work
+            lesson-15:
+              name: Unit 3 Projects
+            lesson-16:
+              name: 'Introduction to Unit 4: The Design Process'
+            lesson-17:
+              name: Preparing to teach week 1 of Unit 4
+            lesson-18:
+              name: Unit 4 Key Concepts
+            lesson-19:
+              name: Sample Student Work
+            lesson-20:
+              name: Unit 4 Projects
+            lesson-21:
+              name: 'Introduction to Unit 5: Data and Society'
+            lesson-22:
+              name: Preparing to Teach Week 1
+            lesson-23:
+              name: Unit 5 Key Concepts
+            lesson-24:
+              name: Sample Student Work
+            lesson-25:
+              name: Unit 5 Projects
+            lesson-26:
+              name: Introduction to Unit 6
+            lesson-27:
+              name: Preparing to Teach Unit 6
+            lesson-28:
+              name: Unit 6 Key Concepts
+            lesson-29:
+              name: Sample Student Work
+            lesson-30:
+              name: Unit 6 Projects
+            lesson-31:
+              name: Introduction to Unit 7
+            lesson-32:
+              name: Preparing to teach week 1
+            lesson-33:
+              name: Unit 7 key concepts
+            lesson-34:
+              name: Sample student work
+            lesson-35:
+              name: Unit 1 Projects
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach CS Discoveries
+            lessonGroup-3:
+              display_name: 'Preparing to Teach Unit 2: Web Development'
+            lessonGroup-4:
+              display_name: 'Preparing to Teach Unit 3: Interactive Animations and Games'
+            lessonGroup-5:
+              display_name: 'Preparing to Teach Unit 4: The Design Process'
+            lessonGroup-6:
+              display_name: 'Preparing to Teach Unit 5: Data and Society'
+            lessonGroup-7:
+              display_name: 'Preparing to Teach Unit 6: Physical Computing'
+            lessonGroup-8:
+              display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
-          title: ''
+          title: 'Module 6: Next Steps'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Short module description \n\n**You will:**\n\n-   Objective 1\n-   Objective 2\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}
@@ -23304,4 +23720,349 @@ en:
           title: 'V1_Interactive Poster: Self-Expression'
           description_audience: ''
           description_short: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+          description: ''
+        poster-draft:
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poster-draft
+          title: Story Board (V1)
+          description_audience: ''
+          description_short: Story Board (V1)
+          description: ''
+          student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
+        poembot:
+          lessons: {}
+          lesson_groups: {}
+          name: poembot
+          title: Poembot
+          description_audience: ''
+          description_short: ''
+          description: ''
+        outbreak-module:
+          lessons: {}
+          lesson_groups: {}
+          name: outbreak-module
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa1-exemplars:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Classes and Objects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Using Commands
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Conditionals and Debugging
+            lesson-5:
+              name: More with Objects
+            lesson-6:
+              name: While Loops and Practice
+            lesson-7:
+              name: More with Conditionals
+            lesson-8:
+              name: Introduction to Code Reviews
+            lesson-9:
+              name: Inheritance and Methods
+            lesson-10:
+              name: More Methods, More Features
+            lesson-11:
+              name: Painting Methods
+            lesson-12:
+              name: Spray Painter
+            lesson-13:
+              name: StampPainter
+            lesson-14:
+              name: Edge Cases
+            lesson-15:
+              name: Software Engineering Wrap Up
+            lesson-16:
+              name: 'Project: Personal Symbol - Day 1'
+            lesson-17:
+              name: 'Project: Personal Symbol - Day 2'
+            lesson-18:
+              name: 'Project: Personal Symbol - Day 3'
+            lesson-19:
+              name: FRQ Day
+            lesson-20:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-exemplars
+          title: Unit 1 - Object Oriented Programming [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa2-exemplars:
+          lessons:
+            lesson-1:
+              name: Defining Attributes
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Using Variables
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Writing Constructors
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Adding Multiple Constructors
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Manipulating Variables and Object Data
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Minimizing Errors in Initialization
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Writing Constructors for Hierarchies
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Accessing Object Data
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Modifying Object Data
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Displaying Object Information
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: 'Project: The Neighborhood Store Management - Day 1'
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: 'Project: The Neighborhood Store Management - Day 2'
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: 'Project: The Neighborhood Store Management - Day 3'
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa2-exemplars
+          title: Unit 2 - Giving Objects State [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa-videos:
+          lessons:
+            lesson-21:
+              name: Empty Levels to Clone
+            lesson-22:
+              name: Neighborhood Setup Widget
+            lesson-1:
+              name: 'U1L1: Welcome to CSA'
+            lesson-2:
+              name: 'U1L2: Classes and Objects'
+            lesson-3:
+              name: 'U1L3: Using Commands'
+            lesson-4:
+              name: 'U1L4: Conditionals and Debugging'
+            lesson-5:
+              name: 'U1L5: More with Objects'
+            lesson-6:
+              name: 'U1L6: While Loops and Practice'
+            lesson-7:
+              name: 'U1L7: More with Conditionals'
+            lesson-8:
+              name: 'U1L8: Introduction to Code Reviews'
+            lesson-9:
+              name: 'U1L9: Inheritance and Methods'
+            lesson-10:
+              name: 'U1L10: More Methods, More Features'
+            lesson-11:
+              name: 'U1L11: Painting Methods'
+            lesson-12:
+              name: 'U1L12: SprayPainter'
+            lesson-13:
+              name: 'U1L13: StampPainter'
+            lesson-14:
+              name: 'U1L14: Edge Cases'
+            lesson-15:
+              name: 'U1L15: Software Engineering Wrap Up'
+            lesson-16:
+              name: 'U1L16: Asphalt Art Project Day 1'
+            lesson-17:
+              name: 'U1L17: Asphalt Art Project Day 2'
+            lesson-18:
+              name: 'U1L18: Asphalt Art Project Day 3'
+            lesson-19:
+              name: 'U1L19: FRQ Day'
+            lesson-20:
+              name: 'U1L20: Assessment Day'
+            lesson-23:
+              name: 'U2L1: Defining Attributes'
+            lesson-24:
+              name: 'U2L2: Using Variables'
+              description_student: 
+              description_teacher: 
+            lesson-25:
+              name: 'U2L3: Writing Constructors'
+            lesson-26:
+              name: 'U2L4: Adding Multiple Constructors'
+            lesson-27:
+              name: 'U2L5: Manipulating Variables and Object Data'
+            lesson-28:
+              name: 'U2L6: Minimizing Errors in Intialization'
+            lesson-29:
+              name: 'U2L7: Writing Constructors for Hierarchies'
+            lesson-30:
+              name: 'U2L8: Accessing Object Data'
+            lesson-31:
+              name: 'U2L9: Modifying Object Data'
+            lesson-32:
+              name: 'U2L10: Displaying Object Information'
+            lesson-33:
+              name: 'U2L11: Neighborhood Store Management Project Day 1'
+            lesson-34:
+              name: 'U2L12: Neighborhood Store Management Project Day 2'
+            lesson-35:
+              name: 'U2L13: Neighborhood Store Management Project Day 3'
+            lesson-36:
+              name: 'U2L14: FRQ Day'
+            lesson-37:
+              name: 'U2L15: Assessment Day'
+            lesson-38:
+              name: 'U3L1: Creating Arrays'
+            lesson-39:
+              name: 'U3L2: Accessing and Modifying Elements'
+            lesson-40:
+              name: 'U3L3: Traversing Arrays with for Loops'
+            lesson-41:
+              name: 'U3L4: Traversing Arrays with while Loops'
+            lesson-42:
+              name: 'U3L5: Storing Objects into Arrays'
+            lesson-43:
+              name: 'U3L6: Traversing Arrays with Enhanced for Loops'
+            lesson-44:
+              name: 'U3L7: Using Static Variables and Constants'
+            lesson-45:
+              name: 'U3L8: Answering Questions with Arrays'
+            lesson-46:
+              name: 'U3L9: Solving Problems with Arrays'
+            lesson-47:
+              name: 'U3L10: Manipulating Elements in an Array'
+            lesson-48:
+              name: 'U3L11: Concert in the Theater Project Day 1'
+            lesson-49:
+              name: 'U3L12: Concert in the Theater Project Day 2'
+            lesson-50:
+              name: 'U3L13: Concert in the Theater Project Day 3'
+            lesson-51:
+              name: 'U3L14: FRQ Day'
+            lesson-52:
+              name: 'U3L15: Assessment Day'
+            lesson-53:
+              name: 'U4L1: Using Existing Libraries to Add Capabilities'
+            lesson-54:
+              name: 'U4L2: Solving Problems with the Math Class'
+            lesson-55:
+              name: 'U4L3: Treating Data as a Different Type'
+            lesson-56:
+              name: 'U4L4: Comparing Values to Make Decisions'
+            lesson-57:
+              name: 'U4L5: Adding Randomness to a Program'
+            lesson-58:
+              name: 'U4L6: Comparing Object References and Data'
+            lesson-59:
+              name: 'U4L7: Providing an Alternate Path of Execution'
+            lesson-60:
+              name: 'U4L8: Testing Multiple Conditions'
+            lesson-61:
+              name: 'U4L9: Using Logical Operators'
+            lesson-62:
+              name: 'U4L10: Applying De Morgan''s Laws to Boolean Expressioins'
+            lesson-63:
+              name: 'U4L11: Neighborhood Block Party Project Day 1'
+            lesson-64:
+              name: 'U4L12: Neighborhood Block Party Project Day 2'
+            lesson-65:
+              name: 'U4L13: Neighborhood Block Party Project Day 3'
+            lesson-66:
+              name: 'U4L14: FRQ Day'
+            lesson-67:
+              name: 'U4L15: Assessment Day'
+            lesson-68:
+              name: 'U5L1: Creating Tables of Data'
+            lesson-69:
+              name: 'U5L2: Traversing a 2D Array by Rows'
+            lesson-70:
+              name: 'U5L3: Traversing a 2D Array by Columns'
+            lesson-71:
+              name: 'U5L4: Using Enhanced for Loops'
+            lesson-72:
+              name: 'U5L5: Evaluating 2D Arrays'
+            lesson-73:
+              name: 'U5L6: Applying Standard Algorithms'
+            lesson-74:
+              name: 'U5L7: Reversing Elements'
+            lesson-75:
+              name: 'U5L8: Shifting Elements'
+            lesson-76:
+              name: 'U5L9: Finding Duplicates'
+            lesson-77:
+              name: 'U5L10: Searching for Elements'
+            lesson-78:
+              name: 'U5L11: A Sustainable Neighborhood Project Day 1'
+            lesson-79:
+              name: 'U5L12: A Sustainable Neighborhood Project Day 2'
+            lesson-80:
+              name: 'U5L13: A Sustainable Neighborhood Project Day 3'
+            lesson-81:
+              name: 'U5L14: FRQ Day'
+            lesson-82:
+              name: 'U5L15: Assessment Day'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Resources
+            lessonGroup-2:
+              display_name: Unit 1
+            lessonGroup-4:
+              display_name: Unit 2
+            lessonGroup-5:
+              display_name: Unit 3
+            lessonGroup-6:
+              display_name: Unit 4
+            lessonGroup-7:
+              display_name: Unit 5
+          name: csa-videos
+          title: CSA Videos
+          description_audience: ''
+          description_short: ''
           description: ''
