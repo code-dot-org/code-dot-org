@@ -1044,6 +1044,8 @@ cs:
     international_opt_in:
       title: 'Účast na dílnách'
       intro: "Děkujeme Vám, že jste si udělali čas nechat se školit na téma osnov výuky u Code.org. Naše poslání přinášet příležitosti k vzdělávání v oboru počítačových věd všem dětem ve všech školách na celém světě by nebylo možné bez Vás."
+      instructions: "Vyplňte prosím níže uvedený formulář a uveďte 1) že jste se zúčastnili cvičných dílen pořádaných jedním z mezinárodních partnerů Code.org, a 2) že souhlasíte se sdělením informací o Vaší osobě našemu zahraniční partnerovi ve Vaší zemi, aby Vás mohli podporovat na Vaší cestě učitele počítačové vědy."
+      thanks_markdown: "Děkujeme Vám za toto podání! Těšíme se, že Vás budeme moci podporovat, jak se budete postupně seznamovat s osnovami výuky a nástroji Code.org. Nadále nám prosím zasílejte své otázky a zpětnou vazbu, pište nám na adresu [support@code.org](%{support_email_url}) nebo zveřejňujte na [teacher forum](%{teacher_forum_url})!"
       facilitator_not_listed: "Můj zprovozňovatel není uveden"
       facilitator_not_applicable: "Nemá význam"
       organizer_not_listed: "Můj organizátor není uveden"

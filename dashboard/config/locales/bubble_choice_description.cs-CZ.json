@@ -4,7 +4,29 @@
       "bubble_choice_description": {
         "courseD_bee_nestedLoops8_2021": "Sesbírej všechen nektar z každého květu a udělej med na plástvi. Použij vnořené cykly.",
         "courseD_bee_nestedLoops9_2021": "Vyrob med na každé plástvi.",
-        "ramp_artist_loops8_2021": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus."
+        "ramp_artist_loops8_2021": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
+        "CourseF_app_computer": "Propojte všechny součásti a zjistěte, jak zapnout počítač!",
+        "courseF_apps_aquarium": "Zaplňte své vlastní akvárium různými předměty.",
+        "courseF_apps_card": "Tento program se Vás zeptá na několik otázek a poté pro Vás vytvoří osobní narozeninové sdělení!",
+        "courseF_apps_chatbot": "Tento robot Vám bude pokládat otázky a pamatovat si, co napíšete! Pište své odpovědi a bavte se s X-9!",
+        "courseF_apps_collector": "Posbírej předměty co nejrychleji!",
+        "courseF_apps_madlib": "Tento program Vás požádá, abyste zadali nějaká slova, a pak tato slova použije k tomu, aby Vám vyprávěl nějaký rozverný příběh!",
+        "courseF_apps_pet": "Přetáhněte objekty na psa a podívejte se, jak zareaguje!",
+        "courseF_editable_madlib": "Tento program Vás požádá, abyste zadali nějaká slova, a pak tato slova použije k tomu, aby Vám vyprávěl nějaký rozverný příběh!",
+        "courseF_events_freeplay_air": "Vytvořte vzdušnou scenérii s ptáky a jinými věcmi, které bývají vidět na obloze.",
+        "courseF_events_freeplay_aquatic": "Vytvořte podvodní scenérii s rybami a jinými tvory.",
+        "courseF_events_freeplay_food": "Vytvořte rozvernou scenérii s usmívajícími se jídelními sprajty.",
+        "courseF_place_fruit": "Jahody jsou příliš velké! Procvičujte změny velikostí sprajtů.",
+        "courseF_sprites_behaviors": "Dejte sprajtu chování.",
+        "courseF_sprites_clouds": "Procvičujte užívání chování.",
+        "courseF_sprites_desert": "Vytvořte scenérii. Procvičujte dělání sprajtů a vybírání jejich poloh.",
+        "courseF_sprites_freeplay_air": "Vytvořte vzdušnou scenérii s ptáky a jinými věcmi, které bývají vidět na obloze.",
+        "courseF_sprites_freeplay_aquatic": "Vytvořte podvodní scenérii s rybami a jinými tvory.",
+        "courseF_sprites_freeplay_food": "Vytvořte rozvernou scenérii s usmívajícími se jídelními sprajty.",
+        "courseF_sprites_make": "Procvičte se v dělání sprajtů.\n",
+        "courseF_sprites_moreSprites": "Procvičte se v dělání sprajtů a ve vybírání jejich poloh.",
+        "courseF_sprites_positioning": "Procvičte se v dělání sprajtů a ve vybírání jejich poloh.",
+        "courseF_sprites_properties": "Naučte se měnit velikost sprajtů."
       }
     }
   }

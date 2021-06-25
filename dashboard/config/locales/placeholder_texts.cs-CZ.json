@@ -223,10 +223,136 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "ryba",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ostatní"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "ostatní",
+          "f655df68ec33643278de7e69794e8d76": "Virtuální akvárium",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co přidáte?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Kterou rybu?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Kterého tvora?",
+          "78574118d153534fd0925a2f5ca25e79": "Kterou věc?"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Vyhrál jsi!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Vyhrál jsi!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekundy",
+          "490082498449bd20ff0199737dfa4916": "Vyberte typ hry:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Velká sběratelská hra!"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "Toto je Neila.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila se snaží ochránit svůj dům před vesmírným robotem.",
+          "df8312187449c70820d7c58229a6b17e": "Vesmírný robot odstrašuje ostatní tvory.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila chce vesmírnému robotovi pomoci naučit se být hodný.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Zabralo to! Neila ukázala vesmírnému robotovi moc vlídnosti.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Ostatní tvorové už se nebojí!"
+        },
+        "courseE_aboutme_1_2021": {
+          "8e985f60f328934accd78e7649584840": "Zmrzlina je můj oblíbený pamlsek!",
+          "31ba97bb501bb1f5b448221be09bad32": "To je moje korgi jménem Lízátko! Měla bych ji naučit programovat!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Ahoj světe!"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kdo má narozeniny?",
+          "d1210f945885351b13feb9bbb868aeef": "Kolik mu/jí/jim bude?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Ahoj, já jsem X-9! Jak se jmenujete Vy?",
+          "f0e5da70d264f312a1658d51c130b101": "Zadejte své jméno:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Zadejte svůj věk:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " roků, také!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaká je Vaše oblíbená barva?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Zadejte svou oblíbenou barvu:",
+          "1f258d88a70309efc1435ef5daa277a0": "Děkuji Vám, že jste si se mnou dnes povídali!"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Večírkové hry",
+          "bf08dd3d1961874f13e77c936aad27e5": "Příběh prázdného prostoru",
+          "514b8d5320196898a9ced3efe0d4c802": "Zadejte přídavné jméno:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Zadejte předmět:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Zadejte část těla:",
+          "e522ee28f39133b45497637539ff429b": "Zadejte číslo:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " hry.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-nohý závod!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kdo má narozeniny?",
+          "d1210f945885351b13feb9bbb868aeef": "Kolik mu/jí/jim bude?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Ahoj, já jsem X-9! Jak se jmenujete Vy?",
+          "f0e5da70d264f312a1658d51c130b101": "Zadejte své jméno:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Zadejte svůj věk:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " roků, také!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaká je Vaše oblíbená barva?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Zadejte svou oblíbenou barvu:",
+          "1f258d88a70309efc1435ef5daa277a0": "Děkuji Vám, že jste si se mnou dnes povídali!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Večírkové hry",
+          "bf08dd3d1961874f13e77c936aad27e5": "Příběh prázdného prostoru",
+          "514b8d5320196898a9ced3efe0d4c802": "Zadejte přídavné jméno:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Zadejte předmět:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Zadejte část těla:",
+          "e522ee28f39133b45497637539ff429b": "Zadejte číslo:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " hry.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-nohý závod!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kdo má narozeniny?",
+          "d1210f945885351b13feb9bbb868aeef": "Kolik mu/jí/jim bude?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje otázka"
         }
       }
     }
