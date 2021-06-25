@@ -397,6 +397,75 @@
         },
         "outbreak7": {
           "costumes_callout": "Klicka för att skapa en ny dräkt"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Välj din dansare här."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Lägg till det här blocket i ditt program.",
+          "arrow_buttons": "Tryck på piltangenterna för att kontrollera din dansare."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lägg till detta block till ditt program!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Lägg till en ny händelse i ditt program."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nytt Block!",
+          "new_block_4": "Nytt Block!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klicka här för att utöka blocket.",
+          "pointerlocation": "Dra ett subject-block hit."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klicka för att skapa en ny dräkt"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Det här är en \"upprepa\"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Du kan inte kasta bort de här blocken, men du kan redigera dem!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Vi har lagt ut några block för att hjälpa dig komma igång"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Bryt järnet!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
         }
       }
     }
