@@ -511,6 +511,129 @@
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Há duas formas de resolver este puzzle!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "challenges": "**Desafios Opcionais**\n\n-   Escolhe uma canção diferente para tocar.\n-   Move o teu dançarino para uma nova localização.\n-   Cria mais que um dançarino."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   O dançarino tem que realizar um movimento.\n-   Precisas de premir uma tecla direcional.\n\n_Este nível termina após 4 compassos._",
+          "challenges": "**Desafio Opcional**\n\nUsa mais que um bloco <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   Ambos os dançarinos têm que desempenhar um movimento.\n-   Precisas de premir as teclas direcionais.\n\n_Este nível termina após 6 compassos._",
+          "challenges": "**Desafio Opcional**\n\n-   Faz com que um dançarino responda às teclas direcionais esquerda e direita."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "challenges": "**Desafio Opcional**\n\n-   Altera o fundo sempre que os dançarinos troquem de movimento."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   Cria um dançarino principal e um grupo de dançarinos secundários dentro dos primeiros 4 compassos da canção.\n\n_Este nível termina após 7 compassos._",
+          "challenges": "**Desafio Opcional**\n\n-   Cria vários grupos de dançarinos secundários."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   Altera o tamanho de pelo menos um dançarino.\n\n_Este nível termina após 6 compassos._",
+          "challenges": "**Desafio Opcional**\n\n-   Faz experiências ao alterar outras propriedades tais como a largura e a rotação."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   Troca o tom da cor de pelo menos um dançarino.\n\n_Este nível termina após 6 compassos._",
+          "tint_hint": "Reparaste que os teus dançarinos não trocam para a cor exata que escolheste? Isto é porque as **tonalidades** misturaram a tua cor com as cores do dançarino."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Como é que eu passo este nível?**\n\n-   Só tens de premir o botão \"Terminar\"!",
+          "repeat_every_ideas": "\\*\\* Precisas de ideias? \\*\\*\n\n-   Muda repetidamente o tamanho dum dançarino para fazê-lo crescer.\n-   Muda repetidamente a rotação dum dançarino para fazê-lo girar.\n\n_Também podes usar números negativos para criar um efeito oposto!_",
+          "next_previous": "**Desafio Opcional**\n\n-   Também podes usar este novo bloco de evento para percorrer uma lista de movimentos de dança ao definir o movimento para `(Aleatório)`, `(Avançar)` ou `(Anterior)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "O bloco alternativo está na categoria \"Dançarinos\"."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Confere as **Lanternas Aquáticas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Como podes usar um condicional com estes para atravessar o Monumento do Oceano?"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Que bonito recife de coral! O coral azul é a maneira **direita** e certifica-te de que o coral vermelho não seja **esquerda**!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Podes chamar uma função várias vezes no teu programa!  Experimenta chamá-la duas vezes para resolver este quebra-cabeças."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Arrasta um bloco \"avançar\" da caixa de ferramentas para o espaço de trabalho e encaixa-o no bloco \"quando executado\".",
+          "MC_HOC_2017_01_RETRY_b": "Não te esqueças de clicar em \"Executar\" para executar o código do Agent.",
+          "MC_HOC_2017_01_RETRY_c": "Quando o código do Agent tiver sido todo executado, podes mover o jogador com as teclas de seta!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Faz o Agent avançar dois espaços até ficar em cima da placa de pressão.  Desta forma, a porta abre-se para o jogador.",
+          "MC_HOC_2017_02_Cole_b": "Prime \"Executar\"! \nPodes executar o teu código mesmo que não esteja correto.  Executa e repõe o código as vezes que forem necessárias até perceberes o que está mal.",
+          "MC_HOC_2017_02_Cole_c": "Depois de o Agent abrir a porta, utiliza as teclas de seta para mover o jogador até ao mapa!",
+          "MC_HOC_2017_02_Cole_d": "Assegura-te que o agente está a seguir o caminho delimitado no mapa!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Depois de o Agent chegar à placa de pressão, podes utilizar as teclas de seta para fazer o jogador caminhar até à bússola!",
+          "MC_HOC_2017_03_Cole_b": "O código parece-te comprido?  Experimenta utilizar uma ação circular \"repetir\" para descobrir uma forma de o encurtar!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utiliza o bloco \"virar à direita\" para mudar a direção do Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Basta o Agent chegar à primeira placa de pressão para que Alex ou Steve faça o percurso até ao machado."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "O Agent tem de \"avançar\" 7 vezes.  De que forma podes utilizar uma ação circular \"repetir\" para que isso aconteça?",
+          "MC_HOC_2017_04_Cole_c": "Prime \"Executar\"! \nPodes executar o teu código mesmo que não esteja correto.  Executa e repõe o código as vezes que forem necessárias até perceberes o que está mal.",
+          "MC_HOC_2017_04_Cole_b": "Depois de o Agent chegar à placa de pressão, a porta abre-se para o jogador."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Sabias que podes colocar mais do que um bloco de código numa ação circular?  Experimenta colocar \"tábuas\" **e** \"avançar\" em \"repetir\" para resolver este quebra-cabeças.",
+          "MC_HOC_2017_05_Cole_b": "Faz o agente atravessar o rio construindo uma ponte."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Quantas vezes se repete esta ação circular?  Quantas vezes _deveria_ repetir-se?",
+          "MC_HOC_2017_06_Cole_b": "Ajuda o Agente a construir uma ponte em toda a extensão da água. "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "Para resolver este quebra-cabeças, descobre o que faz a função \"abrir caminho\" e chama-a as vezes que forem necessárias utilizando o pequeno bloco verde \"abrir caminho\" na caixa de ferramentas.",
+          "MC_HOC_2017_07_Cole_b": "Experimenta misturar os blocos de função com outros blocos da caixa de ferramentas para resolver este quebra-cabeças."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Utiliza funções para facilitar a resolução deste quebra-cabeças!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Prime \"Executar\"! \nPodes executar o teu código mesmo que não esteja correto.  Executa e repõe o código as vezes que forem necessárias até perceberes o que está mal.",
+          "MC_HOC_2017_08_RY_b": "Há MUITAS formas de resolver este quebra-cabeças.  Experimenta algumas!",
+          "MC_HOC_2017_08_RY_c": "Tenta seguir a linha com pontos para um caminho simples através da lava. "
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Faz com que o Agent construa algumas pontes para que Alex ou Steve se possa deslocar para além da orla do mapa."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_d": "Tenta isto!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Se algo correr mal, tenta resolver o problema. Não desistas! ",
+          "courseB_collector_loops_challenge2a_b": "Vê esta opção para conseguires sair do labirinto. Vês algum padrão que possas repetir?",
+          "courseB_collector_loops_challenge2a_c": "Para conseguires todo o tesouro, precisas ou de adicionar dois <xml> <block type=\"collector_collect\"/></xml> blocos dentro de um ciclo, ou colocar um bloco dentro do seu próprio bloco de 'repetir'."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Usa este novo bloco!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_b": "Há 2 formas de resolver este puzzle!"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq5_c": "Há duas formas de resolver este puzzle."
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_c": "Há duas formas de resolver este puzzle.",
+          "courseB_maze_seq9_d": "Encravado? Tenta este caminho!"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_b": "Constrói um pedaço de código de cada vez. Corre-o para perceberes como proceder a partir daí."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Constrói um pedaço de código de cada vez. Corre-o para perceberes como proceder a partir daí."
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Esquerda ou Direita? Tu é que decides!"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Há duas formas de resolver este puzzle!"
         }
       }
     }

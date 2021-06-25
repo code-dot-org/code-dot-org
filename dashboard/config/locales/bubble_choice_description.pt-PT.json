@@ -1,2 +1,9 @@
 {
+  "pt-PT": {
+    "data": {
+      "bubble_choice_description": {
+        "courseD_bee_nestedLoops8_2021": "Colete todo o néctar de cada flor\ne produza mel em cada colmeia. Use um laço aninhado."
+      }
+    }
+  }
 }

@@ -1638,6 +1638,354 @@
               "length": "comprimento"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "minha função"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhar uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhar uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhar uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhar uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "construir ponte"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "caminho livre"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "arranjar caminho longo"
+          },
+          "fix short path": {
+            "name": "arranjar caminho curto"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "construir ponte curta"
+          },
+          "build long bridge": {
+            "name": "construir ponte longa"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "função 1"
+          },
+          "function 2": {
+            "name": "função 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "possível solução"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "desenhar um quadrado"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "desenhar um quadrado"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "desenhar uma estrela"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "desenhar uma estrela"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "desenhar uma estrela"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "desenhar um quadrado"
+          },
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "desenhar um quadrado"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "desenhar um quadrado"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "faz algo"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "verificar se o quadrado tem milho"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "terminar jogo"
+          }
         }
       }
     }
