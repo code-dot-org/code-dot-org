@@ -68,7 +68,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-20/",
+      replace_key_prefix_with: "plcsf-21/",
       http_redirect_code: "302"
     }
   },
@@ -78,7 +78,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-20/",
+      replace_key_prefix_with: "plcsf-21/",
       http_redirect_code: "302"
     }
   },
