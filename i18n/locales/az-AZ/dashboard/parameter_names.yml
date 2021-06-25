@@ -2,16 +2,17 @@ az:
   data:
     parameter_names:
       "???": "???"
-      actor: personaj
+      actor: personaj  
       counter: sayğac
       dir: istiqamət
       direction: istiqamət
       height: hündürlük
-      honey: bal
+      honey: bal 
       left: sola
       length: uzunluq
       min: min
       nectar units: nektar vahidləri
+      nectars: nektar
       numOctagons: numSəkkizguşəli
       points: xallar
       radius: radius

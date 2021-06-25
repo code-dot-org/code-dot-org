@@ -1,0 +1,1553 @@
+{
+  "az-AZ": {
+    "data": {
+      "activity_sections": {
+        "1c9607e7-ed92-4303-bfef-550b7c561cce": {
+          "name": "Giriş"
+        },
+        "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "tips": [
+            null
+          ]
+        },
+        "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "tips": [
+            null
+          ]
+        },
+        "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "tips": [
+            null
+          ]
+        },
+        "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
+          "name": "Giriş"
+        },
+        "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "tips": [
+            null
+          ]
+        },
+        "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
+          "tips": [
+            null
+          ]
+        },
+        "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
+          "tips": [
+            null
+          ]
+        },
+        "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
+          "tips": [
+            null
+          ]
+        },
+        "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
+          "tips": [
+            null
+          ]
+        },
+        "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
+          "name": "Giriş"
+        },
+        "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "tips": [
+            null
+          ]
+        },
+        "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
+          "progression_name": "Kəşf"
+        },
+        "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
+          "progression_name": "Azad Oyna"
+        },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Əsas Lüğət"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Parti Oyunları"
+        },
+        "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
+          "tips": [
+            null
+          ]
+        },
+        "964a07f1-99da-434f-ae2c-26a3aa6b8d7a": {
+          "tips": [
+            null
+          ]
+        },
+        "d2b97c32-0187-432e-9fa2-979e9f34280a": {
+          "name": "Gözdən keçirmə"
+        },
+        "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
+          "tips": [
+            null
+          ]
+        },
+        "e64a2440-c243-4f49-8181-171a72e38c5c": {
+          "tips": [
+            null
+          ]
+        },
+        "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
+          "name": "Gözdən keçirmə"
+        },
+        "20919642-5201-4796-9e45-ee76e368614d": {
+          "name": "Gözdən keçirmə",
+          "tips": [
+            null
+          ]
+        },
+        "10bfa1b7-62ca-4bb1-93e8-05d661819ca2": {
+          "tips": [
+            null
+          ]
+        },
+        "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Planlama"
+        },
+        "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
+          "tips": [
+            null
+          ]
+        },
+        "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
+          "name": "Giriş"
+        },
+        "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
+          "name": "Gözdən keçirmə"
+        },
+        "d6137926-640f-4180-a257-20c5f32317f5": {
+          "progression_name": "Azad Oyna"
+        },
+        "92794e43-3dbb-4bf1-8326-f9ed17ef86b7": {
+          "name": "Giriş"
+        },
+        "6cef858a-437c-47a3-9c8a-1229f634948a": {
+          "tips": [
+            null
+          ]
+        },
+        "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
+          "name": "Giriş"
+        },
+        "404887ef-1401-41a7-b88d-c07ab2d119cf": {
+          "tips": [
+            null
+          ]
+        },
+        "ee31c01d-2e03-4267-bbd4-6179df138e90": {
+          "tips": [
+            null
+          ]
+        },
+        "2b2aff9f-1682-4071-a395-c38394654e47": {
+          "tips": [
+            null
+          ]
+        },
+        "2e172722-51c4-49c9-8a05-4447b2627ab3": {
+          "name": "Giriş"
+        },
+        "1668a313-16da-49db-9713-13d7ad33889e": {
+          "progression_name": "Gözdən keçirmə"
+        },
+        "671c8e13-e78c-49f3-867b-45e7643d0026": {
+          "progression_name": "Video: For dövrləri"
+        },
+        "7a256684-5f37-4780-b2d7-a75a079dfc95": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "f44ed624-dfda-4f07-9f36-3c6e1ea15639": {
+          "name": "Giriş"
+        },
+        "b838a926-533f-414b-86f6-17f8ea078fad": {
+          "progression_name": "Video: For dövrləri"
+        },
+        "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
+          "progression_name": "Kəşf"
+        },
+        "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
+          "progression_name": "Azad Oyna"
+        },
+        "6ea6e198-fa99-46cb-a234-0f2b60eaff4d": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "936c3852-feab-48df-824d-8b67ae8e9f90": {
+          "tips": [
+            null
+          ]
+        },
+        "6555bc01-7d35-4c5f-8934-eb8015426997": {
+          "name": "Giriş"
+        },
+        "b69c8e63-7778-4a44-b127-e4c083af98c9": {
+          "progression_name": "Özəlləşdir"
+        },
+        "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
+          "name": "Giriş"
+        },
+        "76fe757f-0aa5-4dc0-9864-861f6023828e": {
+          "tips": [
+            null
+          ]
+        },
+        "708bfaf4-4547-4c24-87d4-3822f97185b5": {
+          "tips": [
+            null
+          ]
+        },
+        "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
+          "tips": [
+            null
+          ]
+        },
+        "86495854-e877-4aea-b9d6-2669b1d2d43b": {
+          "tips": [
+            null
+          ]
+        },
+        "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
+          "tips": [
+            null
+          ]
+        },
+        "fda34361-ffaa-4440-98c7-a5ab57d1cf17": {
+          "name": "Giriş"
+        },
+        "a3fc031f-0ae3-48ac-9081-aa9fd71db16c": {
+          "tips": [
+            null
+          ]
+        },
+        "54e2d9de-79f7-4355-8bdd-2fba0285d77d": {
+          "tips": [
+            null
+          ]
+        },
+        "6c8f3de7-c644-4696-af1c-2e8a7c43e5bc": {
+          "tips": [
+            null
+          ]
+        },
+        "3c0ece8c-eca6-4340-9023-7a89cfad4090": {
+          "name": "İnternet"
+        },
+        "493a8e83-fba0-45f9-ba46-246524ec3712": {
+          "tips": [
+            null
+          ]
+        },
+        "77fd3087-e475-4e92-937b-775e410c6585": {
+          "tips": [
+            null
+          ]
+        },
+        "db7f26e9-547b-4801-8328-a93aefc4ce9e": {
+          "progression_name": " nümunə layihələr"
+        },
+        "211604af-3347-4da2-ae2b-e5a81fd6d49d": {
+          "progression_name": "Layihə yarat"
+        },
+        "e1f77c6c-fd3c-4f0d-b13b-d6846b5625c0": {
+          "tips": [
+            null
+          ]
+        },
+        "7b532b31-5253-47dd-b38a-f1d862451edc": {
+          "tips": [
+            null
+          ]
+        },
+        "65182889-0109-4c77-bcdc-5fffb9016ca1": {
+          "tips": [
+            null
+          ]
+        },
+        "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "tips": [
+            null
+          ]
+        },
+        "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
+          "name": "Hərəkət et"
+        },
+        "93f8de74-6246-4227-8418-08d5c736633b": {
+          "tips": [
+            null
+          ]
+        },
+        "af269d6d-e57d-4331-bc8d-daae801d1db0": {
+          "tips": [
+            null
+          ]
+        },
+        "07f0915c-fd00-4787-8a53-251613824cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "tips": [
+            null
+          ]
+        },
+        "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
+          "progression_name": "meydan oxumaq"
+        },
+        "59a20536-707e-4328-88ab-71b1c533cd37": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "6a3d0163-b925-4e7a-933a-93f7d6432233": {
+          "tips": [
+            null
+          ]
+        },
+        "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
+          "name": "Giriş"
+        },
+        "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
+          "tips": [
+            null
+          ]
+        },
+        "fcc74691-719d-415b-87ae-8bc40b436318": {
+          "progression_name": "meydan oxumaq"
+        },
+        "0d345591-6747-4a5e-aeb9-196c42f905cd": {
+          "tips": [
+            null
+          ]
+        },
+        "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
+          "name": "Giriş"
+        },
+        "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
+          "progression_name": "meydan oxumaq"
+        },
+        "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
+          "name": "Giriş"
+        },
+        "9b293bbc-d3e3-494d-892e-f90e56347451": {
+          "progression_name": "meydan oxumaq"
+        },
+        "eedc7420-83ed-420a-8bfe-db3e70719c14": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
+          "name": "Giriş"
+        },
+        "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "tips": [
+            null
+          ]
+        },
+        "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
+          "progression_name": "meydan oxumaq"
+        },
+        "22891986-f61f-4e37-aae4-177019581071": {
+          "progression_name": "Azad Oyna"
+        },
+        "6c661991-bf9d-4271-a318-5878b3ef438c": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
+          "name": "Giriş"
+        },
+        "27dbb342-eff9-45e6-b918-88663a10f8a6": {
+          "tips": [
+            null
+          ]
+        },
+        "3506957f-7430-4cc9-8e53-36f1d67496a7": {
+          "name": "Giriş"
+        },
+        "505b9963-28e4-43cc-81b2-51cd954beb7f": {
+          "tips": [
+            null
+          ]
+        },
+        "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
+          "progression_name": "Azad Oyna"
+        },
+        "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
+          "progression_name": "Azad Oyna"
+        },
+        "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
+          "name": "Gözdən keçirmə"
+        },
+        "3ee111dc-4361-4c19-a350-9690c819f49a": {
+          "name": "Planlama",
+          "tips": [
+            null
+          ]
+        },
+        "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
+          "tips": [
+            null
+          ]
+        },
+        "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
+          "name": "Giriş"
+        },
+        "23d5a35a-6de5-4a3e-92cc-0c1336f61470": {
+          "tips": [
+            null
+          ]
+        },
+        "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
+          "tips": [
+            null
+          ]
+        },
+        "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "tips": [
+            null
+          ]
+        },
+        "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
+          "tips": [
+            null
+          ]
+        },
+        "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
+          "name": "Giriş"
+        },
+        "d62f31be-e1c0-4384-a410-e8a8f1b84d7b": {
+          "tips": [
+            null
+          ]
+        },
+        "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
+          "tips": [
+            null
+          ]
+        },
+        "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
+          "tips": [
+            null
+          ]
+        },
+        "7119f518-386e-44e7-893d-eff0fbc5a87d": {
+          "tips": [
+            null
+          ]
+        },
+        "82d24278-d63c-4e22-921d-b92f4f1f8cd8": {
+          "name": "Skrat ilə Proqramlaşdırma"
+        },
+        "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
+          "progression_name": "meydan oxumaq"
+        },
+        "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
+          "tips": [
+            null
+          ]
+        },
+        "2ded9602-0160-439c-8830-204047d30796": {
+          "name": "Giriş"
+        },
+        "3c2f387d-dde7-4c31-befe-3bf45387d813": {
+          "progression_name": "meydan oxumaq"
+        },
+        "6c3b7137-b86e-4fc9-9fce-6e346df584dd": {
+          "name": "Giriş"
+        },
+        "cb522975-96ad-44b4-942c-601fc373771c": {
+          "tips": [
+            null
+          ]
+        },
+        "4a7df998-47d9-40b3-9461-0e72e300effd": {
+          "tips": [
+            null
+          ]
+        },
+        "277f1b5f-abbe-4158-9507-d91cce301994": {
+          "progression_name": "meydan oxumaq"
+        },
+        "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
+          "tips": [
+            null
+          ]
+        },
+        "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
+          "name": "Giriş"
+        },
+        "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
+          "tips": [
+            null
+          ]
+        },
+        "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
+          "progression_name": "meydan oxumaq"
+        },
+        "5580045e-132a-4c17-8c3f-522b7f01f442": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
+          "name": "Giriş"
+        },
+        "879f345b-620d-4541-8467-84f00e515229": {
+          "progression_name": "meydan oxumaq"
+        },
+        "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Azad Oyna"
+        },
+        "cfcb405b-99fc-4686-bd02-4e37b3f5c337": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "ac847e89-ccab-4f15-8585-b06d61723c4c": {
+          "name": "Giriş"
+        },
+        "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
+          "tips": [
+            null
+          ]
+        },
+        "40978575-9e16-4760-a200-0678f187ff4c": {
+          "tips": [
+            null
+          ]
+        },
+        "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
+          "name": "Yoxlama"
+        },
+        "cb6735d8-d986-408b-adef-61e9a52ad30f": {
+          "name": "Giriş"
+        },
+        "4282b236-dd48-4702-81fd-452fb86a8288": {
+          "tips": [
+            null
+          ]
+        },
+        "4221ebcd-383b-44bf-a876-41e658bd8460": {
+          "progression_name": "Azad Oyna"
+        },
+        "40ddc694-3a85-4874-b3ad-71810e6a0474": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
+          "name": "Gözdən keçirmə"
+        },
+        "76119a2d-a3f8-4c17-b38a-c0194431de25": {
+          "name": "Planlama",
+          "tips": [
+            null
+          ]
+        },
+        "16e34527-4efe-46f1-970b-f365858958a9": {
+          "tips": [
+            null
+          ]
+        },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Əsas Lüğət"
+        },
+        "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
+          "tips": [
+            null
+          ]
+        },
+        "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
+          "name": "Giriş"
+        },
+        "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
+          "tips": [
+            null
+          ]
+        },
+        "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "tips": [
+            null
+          ]
+        },
+        "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
+          "progression_name": "meydan oxumaq"
+        },
+        "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
+          "name": "Giriş"
+        },
+        "a7458755-70c4-4b60-b6ad-729468af507f": {
+          "progression_name": "meydan oxumaq"
+        },
+        "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "c1c33567-d81d-49d9-a399-e0ba461f0165": {
+          "name": "Giriş"
+        },
+        "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
+          "progression_name": "meydan oxumaq"
+        },
+        "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
+          "name": "Giriş"
+        },
+        "16e320f6-0c67-4992-87a4-0ae6396a1080": {
+          "tips": [
+            null
+          ],
+          "progression_name": "meydan oxumaq"
+        },
+        "8d556f84-689c-4046-bd40-a955e56ef116": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
+          "tips": [
+            null
+          ]
+        },
+        "ff476c40-142d-458c-8c84-04f775b46de3": {
+          "name": "Giriş"
+        },
+        "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
+          "progression_name": "meydan oxumaq"
+        },
+        "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
+          "name": "Giriş"
+        },
+        "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
+          "progression_name": "meydan oxumaq"
+        },
+        "f5cc9272-be27-471b-9cdd-f56920c56a34": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
+          "name": "Giriş"
+        },
+        "8966320f-572a-4c6c-afc5-6b3e8240e250": {
+          "tips": [
+            null
+          ]
+        },
+        "9af30f82-82cd-4807-9609-900519e17c43": {
+          "progression_name": "Azad Oyna"
+        },
+        "082fb58c-df8c-4ac2-a314-22ecf1c4d14a": {
+          "name": "Lüğət"
+        },
+        "67fb7588-f699-4cf5-9a67-065456c6baee": {
+          "tips": [
+            null
+          ]
+        },
+        "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
+          "tips": [
+            null
+          ]
+        },
+        "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "Yoxlama"
+        },
+        "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
+          "tips": [
+            null
+          ]
+        },
+        "6cc5d299-00fd-477a-a654-60dc83031733": {
+          "name": "Giriş"
+        },
+        "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
+          "tips": [
+            null
+          ]
+        },
+        "782d1991-785a-406b-963c-687abb77e247": {
+          "name": "Giriş"
+        },
+        "4b0c023d-7e3f-4186-83ea-e8136c32de1a": {
+          "tips": [
+            null
+          ]
+        },
+        "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
+          "progression_name": "Azad Oyna"
+        },
+        "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
+          "tips": [
+            null
+          ]
+        },
+        "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
+          "name": "Giriş"
+        },
+        "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
+          "tips": [
+            null
+          ]
+        },
+        "1432f5df-3984-49d1-a829-436765d5cbc0": {
+          "tips": [
+            null
+          ]
+        },
+        "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
+          "name": "Planlama"
+        },
+        "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
+          "tips": [
+            null
+          ]
+        },
+        "43edf2e1-94e2-4ea0-866c-83bd18bfc87f": {
+          "tips": [
+            null
+          ]
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Əsas Lüğət"
+        },
+        "2a466981-732c-4b6b-82da-7a5552e04294": {
+          "name": "Giriş"
+        },
+        "0cafd30f-53e4-45fb-96c0-767858add851": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "60f32afa-e8e8-44c3-87d0-2aff20a74a1c": {
+          "tips": [
+            null
+          ]
+        },
+        "47c800d4-0c46-42ae-bc19-d837d28fd912": {
+          "tips": [
+            null
+          ]
+        },
+        "1ac03584-29b5-4a3d-8420-44259c0b1064": {
+          "name": "Giriş"
+        },
+        "d9efb3c8-51e0-4036-9f50-31012c76a905": {
+          "tips": [
+            null
+          ]
+        },
+        "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
+          "progression_name": "meydan oxumaq"
+        },
+        "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "tips": [
+            null
+          ]
+        },
+        "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "57f59aa8-2f36-4383-9997-f4a4aed29aea": {
+          "tips": [
+            null
+          ]
+        },
+        "d2a287ee-e85d-4ced-a525-517d98f9258b": {
+          "name": "Giriş"
+        },
+        "1921c52c-25f6-457a-8dba-57926c95bfae": {
+          "progression_name": "meydan oxumaq"
+        },
+        "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
+          "name": "Giriş"
+        },
+        "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
+          "progression_name": "Azad Oyna"
+        },
+        "4003564b-1d22-445e-9ef4-02c1c2d64eac": {
+          "tips": [
+            null
+          ]
+        },
+        "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d": {
+          "tips": [
+            null
+          ]
+        },
+        "a13f7ef9-20f5-4865-9117-3515b8cf7414": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "3f3c741a-dfe0-4288-80b7-338162743216": {
+          "name": "Ulduz Müharibələri oyunu düzəldin"
+        },
+        "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Azad Oyna"
+        },
+        "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
+          "tips": [
+            null
+          ]
+        },
+        "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
+          "progression_name": "Hadisələr"
+        },
+        "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
+          "progression_name": "Ölçülər"
+        },
+        "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "progression_name": "Xüsusiyyətlər"
+        },
+        "c7bb438d-7dd6-483a-954a-0431f8ece258": {
+          "tips": [
+            null
+          ]
+        },
+        "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "progression_name": "Azad Oyna"
+        },
+        "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "Yoxlama"
+        },
+        "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
+          "name": "Dövrlərə giriş"
+        },
+        "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
+          "progression_name": "meydan oxumaq"
+        },
+        "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
+          "tips": [
+            null
+          ]
+        },
+        "f34cb485-1f89-4670-bb09-f170b83be646": {
+          "name": "Giriş"
+        },
+        "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
+          "progression_name": "meydan oxumaq"
+        },
+        "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
+          "name": "Giriş"
+        },
+        "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
+          "progression_name": "meydan oxumaq"
+        },
+        "725a7d9a-35a3-483e-a83b-f88bf0033095": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
+          "name": "Giriş"
+        },
+        "4a483f91-af16-44dc-982f-c62424c8d5ec": {
+          "tips": [
+            null
+          ]
+        },
+        "6b12a150-fd35-4498-821d-938ad47883e4": {
+          "name": "Giriş"
+        },
+        "16432484-49b1-47dc-bbd9-60f67bacc790": {
+          "progression_name": "meydan oxumaq"
+        },
+        "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
+          "progression_name": "Azad Oyna"
+        },
+        "0e7cf944-a328-4388-afa7-8712fed768e0": {
+          "name": "Giriş"
+        },
+        "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
+          "progression_name": "meydan oxumaq"
+        },
+        "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "9edcc1a3-dce9-45bc-86af-546b41287b53": {
+          "name": "Giriş"
+        },
+        "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
+          "progression_name": "meydan oxumaq"
+        },
+        "738e5c3b-30c5-4b5c-8c50-295bd44328b7": {
+          "progression_name": "meydan oxumaq"
+        },
+        "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
+          "name": "Giriş"
+        },
+        "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
+          "progression_name": "meydan oxumaq"
+        },
+        "b4068598-c442-4526-9086-a22c466fa578": {
+          "name": "Planlama"
+        },
+        "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
+          "tips": [
+            null
+          ]
+        },
+        "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "tips": [
+            null
+          ]
+        },
+        "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
+          "progression_name": " nümunə layihələr"
+        },
+        "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
+          "progression_name": "Layihə yarat"
+        },
+        "2765363f-4649-4b42-b4ae-245c6f5347ad": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
+          "tips": [
+            null
+          ]
+        },
+        "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
+          "progression_name": "meydan oxumaq"
+        },
+        "19367182-a8f0-442e-9a7d-e7852546f961": {
+          "progression_name": "meydan oxumaq"
+        },
+        "defc5a97-b60a-4a6b-8617-e05be08dab35": {
+          "name": "Giriş"
+        },
+        "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
+          "name": "Lüğət"
+        },
+        "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
+          "progression_name": "meydan oxumaq"
+        },
+        "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
+          "name": "Giriş"
+        },
+        "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
+          "progression_name": "meydan oxumaq"
+        },
+        "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "493408f8-a48b-457f-924d-0c99519b55e2": {
+          "name": "Giriş"
+        },
+        "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "meydan oxumaq"
+        },
+        "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "0d4256d9-a4f5-4fed-9958-f515dd431f6e": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
+          "tips": [
+            null
+          ]
+        },
+        "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
+          "progression_name": "Azad Oyna"
+        },
+        "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
+          "name": "Giriş"
+        },
+        "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "tips": [
+            null
+          ]
+        },
+        "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
+          "name": "Giriş"
+        },
+        "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
+          "tips": [
+            null
+          ]
+        },
+        "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
+          "progression_name": "Kəşf"
+        },
+        "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
+          "progression_name": "Azad Oyna"
+        },
+        "0200789e-428c-4393-84ee-6c7a48948c36": {
+          "progression_name": "Hadisələr"
+        },
+        "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
+          "progression_name": "Ölçülər"
+        },
+        "7e0f9f67-19cb-455a-bd75-d771183b8773": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Xüsusiyyətlər"
+        },
+        "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
+          "progression_name": "Azad Oyna"
+        },
+        "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
+          "name": "Giriş"
+        },
+        "736ef92b-b635-4477-abbb-7d98d171b960": {
+          "progression_name": "meydan oxumaq"
+        },
+        "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
+          "name": "Giriş"
+        },
+        "049d42a9-4582-4ba6-8083-2605a7584613": {
+          "tips": [
+            null
+          ]
+        },
+        "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
+          "progression_name": "Azad Oyna"
+        },
+        "05c7c3a3-3378-4904-9136-be16d24330a3": {
+          "name": "Giriş"
+        },
+        "59a2568e-bd18-4790-9dd4-e6df4db826ca": {
+          "progression_name": "meydan oxumaq"
+        },
+        "20282149-72fa-4e24-aa15-5182f21bcf95": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "219bed13-d21f-4886-ac11-47ae6eb56005": {
+          "name": "Giriş"
+        },
+        "a608e3c1-c749-4463-b478-51d339fab447": {
+          "name": "Giriş"
+        },
+        "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
+          "progression_name": "meydan oxumaq"
+        },
+        "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
+          "progression_name": "Azad Oyna"
+        },
+        "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
+          "name": "Giriş"
+        },
+        "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
+          "progression_name": "meydan oxumaq"
+        },
+        "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
+          "name": "Giriş"
+        },
+        "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
+          "progression_name": "meydan oxumaq"
+        },
+        "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "dc1332e9-8b48-4325-a310-3de22c787e7d": {
+          "name": "Giriş"
+        },
+        "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
+          "progression_name": "Azad Oyna"
+        },
+        "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
+          "name": "Giriş"
+        },
+        "db38efa3-e075-41c0-ba59-0e9426393b52": {
+          "progression_name": "meydan oxumaq"
+        },
+        "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
+          "name": "Giriş"
+        },
+        "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
+          "progression_name": "meydan oxumaq"
+        },
+        "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "b7677a87-c560-4886-98e4-716353785af2": {
+          "tips": [
+            null
+          ]
+        },
+        "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
+          "progression_name": "Azad Oyna"
+        },
+        "99fdf72d-5290-448c-a15d-5da9d2cac486": {
+          "name": "Giriş"
+        },
+        "074980cb-1e9f-4fa3-b97d-1467b036062d": {
+          "progression_name": "meydan oxumaq"
+        },
+        "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
+          "progression_name": "Azad Oyna"
+        },
+        "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
+          "name": "Giriş"
+        },
+        "0ee69e3c-cf57-4652-8b39-55a7ff57430f": {
+          "progression_name": "meydan oxumaq"
+        },
+        "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
+          "name": "Gözdən keçirmə"
+        },
+        "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
+          "tips": [
+            null
+          ]
+        },
+        "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
+          "tips": [
+            null
+          ]
+        },
+        "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
+          "name": "Gözdən keçirmə"
+        },
+        "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
+          "name": "Gözdən keçirmə"
+        },
+        "47be5db0-347f-4617-a652-e0b01325b180": {
+          "progression_name": "Azad Oyna"
+        },
+        "6ab692c9-eee1-4966-91fa-3bda39450263": {
+          "name": "Giriş"
+        },
+        "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
+          "name": "Giriş"
+        },
+        "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
+          "progression_name": "Gözdən keçirmə"
+        },
+        "387d8104-557d-4700-bdef-2c8ea2855b07": {
+          "progression_name": "Video: For dövrləri"
+        },
+        "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "48c60679-9f25-4ade-9a34-7a52627fc8f2": {
+          "name": "Giriş"
+        },
+        "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: For dövrləri"
+        },
+        "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
+          "progression_name": "Kəşf"
+        },
+        "1582774d-bc37-4642-8f63-dccb08adea1c": {
+          "progression_name": "Azad Oyna"
+        },
+        "ad447053-20d4-49cb-a771-7fd893973f54": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "780b5ade-e2d3-40e2-bdb2-570770641187": {
+          "name": "Planlama"
+        },
+        "83a07440-69f4-47bc-9a0a-4281dd6b5b7b": {
+          "tips": [
+            null
+          ]
+        },
+        "38fe6f18-ce88-45d9-912c-64fc0addd0b7": {
+          "tips": [
+            null
+          ]
+        },
+        "3d53701a-e90f-4938-977a-ca8ee2584163": {
+          "name": "Layihə yarat",
+          "progression_name": "Layihə yarat"
+        },
+        "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "03c8c7bd-1824-4ac2-b70b-a627df1abcb5": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
+          "tips": [
+            null
+          ]
+        },
+        "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "tips": [
+            null
+          ]
+        },
+        "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "tips": [
+            null
+          ]
+        },
+        "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
+          "tips": [
+            null
+          ]
+        },
+        "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "tips": [
+            null
+          ]
+        },
+        "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
+          "progression_name": "meydan oxumaq"
+        },
+        "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "179a6d3a-af19-4c62-85c7-82844964d06a": {
+          "tips": [
+            null
+          ]
+        },
+        "5990c610-f353-48fd-9d5f-a813486a237f": {
+          "name": "Giriş"
+        },
+        "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
+          "progression_name": "meydan oxumaq"
+        },
+        "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
+          "name": "Giriş"
+        },
+        "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
+          "tips": [
+            null
+          ]
+        },
+        "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
+          "progression_name": "meydan oxumaq"
+        },
+        "f6ac49ff-86ee-444b-9e56-62de0b794363": {
+          "name": "Giriş"
+        },
+        "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
+          "tips": [
+            null
+          ]
+        },
+        "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
+          "tips": [
+            null
+          ]
+        },
+        "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
+          "progression_name": "meydan oxumaq"
+        },
+        "3948532c-fefc-466f-a7ff-7d95e6692b96": {
+          "name": "Giriş"
+        },
+        "46172f79-e306-4a8f-9ecd-640b05733fb6": {
+          "progression_name": "meydan oxumaq"
+        },
+        "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "6361a98f-3232-4060-8758-b1f8064507a8": {
+          "name": "Giriş"
+        },
+        "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
+          "tips": [
+            null
+          ]
+        },
+        "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
+          "progression_name": "meydan oxumaq"
+        },
+        "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
+          "progression_name": "Azad Oyna"
+        },
+        "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
+          "name": "Giriş"
+        },
+        "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
+          "progression_name": "meydan oxumaq"
+        },
+        "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
+          "progression_name": "Azad Oyna"
+        },
+        "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "e54a7c2e-64b2-4b83-a007-845a622ca484": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "708df6be-8599-4a1a-993b-13ca6e874d5c": {
+          "progression_name": "Azad Oyna"
+        },
+        "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
+          "name": "Giriş"
+        },
+        "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
+          "progression_name": "Azad Oyna"
+        },
+        "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "716d5ed4-f198-4133-806e-dddeba48f571": {
+          "name": "Giriş"
+        },
+        "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
+          "tips": [
+            null
+          ]
+        },
+        "b75bc492-bca4-410c-8c94-8d1c919597c3": {
+          "name": "Giriş"
+        },
+        "28c00081-75fd-4379-8855-6546c064c4a6": {
+          "tips": [
+            null
+          ]
+        },
+        "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
+          "tips": [
+            null
+          ]
+        },
+        "83778d93-2959-4776-94d0-e82985346914": {
+          "progression_name": "Azad Oyna"
+        },
+        "aad9aa38-56b3-42ef-b751-03065c308d0e": {
+          "name": "Giriş"
+        },
+        "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
+          "tips": [
+            null
+          ]
+        },
+        "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
+          "progression_name": "Azad Oyna"
+        },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Əsas Lüğət"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Əsas Lüğət"
+        },
+        "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
+          "name": "Giriş"
+        },
+        "5e38bf1e-5af2-48b6-bfc1-42da7ce1b926": {
+          "tips": [
+            null
+          ]
+        },
+        "98d15c5f-c63b-4cf0-8466-e0e349892320": {
+          "tips": [
+            null
+          ]
+        },
+        "7d8c55c5-c431-4f24-8823-f9c8e13bc085": {
+          "tips": [
+            null
+          ]
+        },
+        "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
+          "name": "Giriş"
+        },
+        "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
+          "progression_name": "meydan oxumaq"
+        },
+        "9a64a3f8-16de-4001-82e3-01d9184a0650": {
+          "progression_name": "meydan oxumaq"
+        },
+        "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "6d3af202-fd47-493f-93fa-081fec637b53": {
+          "name": "Giriş"
+        },
+        "20367f69-608a-45ad-b6fc-7a17613a071f": {
+          "tips": [
+            null
+          ]
+        },
+        "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
+          "progression_name": "meydan oxumaq"
+        },
+        "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
+          "progression_name": "Azad Oyna"
+        },
+        "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "3fd1ff7f-942a-4316-9559-3d910ab63fc4": {
+          "name": "Giriş"
+        },
+        "372220f1-abea-4376-a0a2-d5a7c389adec": {
+          "name": "Giriş"
+        },
+        "4c6d3147-e36c-42f0-9fa6-929ca790207c": {
+          "tips": [
+            null
+          ]
+        },
+        "d3965c60-0e53-440b-812d-a912648161be": {
+          "tips": [
+            null
+          ]
+        },
+        "567a28bf-ed4a-4d8d-8be2-2e196d37cb6d": {
+          "name": "Mahnı yazma"
+        },
+        "dfc4f2ab-d9c6-454e-b3a6-8696815b4fdc": {
+          "tips": [
+            null
+          ]
+        },
+        "06b4ee77-0a27-48bc-9dca-d55b530d1ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
+          "name": "Giriş"
+        },
+        "1df9bd87-1d7e-4073-8ba6-e098abe93672": {
+          "tips": [
+            null
+          ]
+        },
+        "ad677781-a22b-4166-b8f8-6dad3630f9e3": {
+          "tips": [
+            null
+          ]
+        },
+        "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
+          "progression_name": "Azad Oyna"
+        },
+        "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
+          "name": "Giriş"
+        },
+        "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
+          "progression_name": "meydan oxumaq"
+        },
+        "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
+          "progression_name": "Dərsə əlavələr"
+        },
+        "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
+          "name": "Giriş"
+        },
+        "dc8187ff-3bc9-4079-adda-93abea4abd16": {
+          "progression_name": "Azad Oyna"
+        },
+        "2a7befee-2eac-4af5-bf1c-6192b24cbad2": {
+          "name": "Giriş"
+        },
+        "47ed862d-1562-4505-a98c-8c852ba6d936": {
+          "tips": [
+            null
+          ]
+        },
+        "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
+          "progression_name": "meydan oxumaq"
+        },
+        "990891b6-d051-4117-8dd5-fc3346d69dc5": {
+          "name": "Giriş"
+        },
+        "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
+          "progression_name": "meydan oxumaq"
+        },
+        "f8b211c2-4c26-4946-ab95-74efdb7ca40a": {
+          "progression_name": "Layihə yarat"
+        },
+        "076a8517-ba6d-4f59-804d-d40a49d9f184": {
+          "tips": [
+            null
+          ]
+        },
+        "ea6885b7-d893-417c-b8c9-d1bf3bfae12c": {
+          "tips": [
+            null
+          ]
+        },
+        "91a938ed-5c11-4efb-be88-9d4875f227c6": {
+          "tips": [
+            null
+          ]
+        },
+        "a277a288-e8d5-4788-aef0-cb7851045427": {
+          "name": "Digər"
+        }
+      }
+    }
+  }
+}

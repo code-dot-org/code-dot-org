@@ -447,18 +447,21 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Başlıqları sürətli yoxlayın
       CSD Header Size MC_2018:
         answers:
         - {}
         - {}
         - {}
         - {}
+        title: Başlıqları sürətli yoxlayın
       CSD Header Size MC_2018_2019:
         answers:
         - {}
         - {}
         - {}
         - {}
+        title: Başlıqları sürətli yoxlayın
       CSD U2 image debug match:
         answers:
         - {}
@@ -485,6 +488,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sürətli Yoxlama siyahıları
       CSD U2 lists match_2018:
         answers:
         - {}
@@ -498,6 +502,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sürətli Yoxlama siyahıları
       CSD U2 lists match_2018_2019:
         answers:
         - {}
@@ -511,6 +516,7 @@ az-AZ:
         - {}
         - {}
         - {}
+        title: Sürətli Yoxlama siyahıları
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -648,10 +654,10 @@ az-AZ:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "! [] (https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
+        - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
+        - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -952,36 +958,44 @@ az-AZ:
         title: Çoxlu seçim
       behaviors 1 predict:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - feedback: Yalnış
+        - text: Sprite fırlanacaq
+        - text: Sprite büzüləcək
+          feedback: Düzgün!
+        - text: Sprite hərəkət edəcək.
+        - text: Sprite rəngləri dəyişəcək.
+          feedback: Yalnış
         questions:
         - {}
       behaviors 1 predict_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
-        - feedback: Yalnış
+        - text: Sprite fırlanacaq
+        - text: Sprite büzüləcək
+          feedback: Düzgün!
+        - text: Sprite hərəkət edəcək.
+        - text: Sprite rəngləri dəyişəcək.
+          feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
-        - feedback: Yalnış
+        - feedback: Yanlış.
+        - text: Aşağı, sonra sola
+          feedback: Yalnış
         questions:
-        - {}
+        - text: Bir proqnoz verin. Peyk qalaktikaya tərəf hansı istiqamətdə hərəkət
+            edəcək?
       behaviors 4 predict_2020:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
-        - feedback: Yalnış
+        - feedback: Yanlış.
+        - text: Aşağı, sonra sola
+          feedback: Yalnış
         questions:
-        - {}
+        - text: Bir proqnoz verin. Peyk qalaktikaya tərəf hansı istiqamətdə hərəkət
+            edəcək?
       courseC_multi_artist_prog6_predict1:
         answers:
         - {}
@@ -1017,35 +1031,55 @@ az-AZ:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - feedback: Düzgün!
-        - {}
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - text: Bilmirəm.
+          feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - feedback: Düzgün!
-        - {}
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - text: Bilmirəm.
+          feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - feedback: Düzgün!
-        - {}
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - text: Bilmirəm.
+          feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - feedback: Düzgün!
-        - {}
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - text: Bilmirəm.
+          feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1388,18 +1422,37 @@ az-AZ:
         - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - text: Dəfnə bir kvadrat düzəldərkən səhv yola dönəcəkdir.
+          feedback: Yanlış. Bu qismən doğru idi, lakin döngü də bütün xəzinəni əldə
+            edəcək qədər uzun müddət işləmir.
+        - text: Döngü Laurelin bütün xəzinəyə çatması üçün kifayət qədər uzun müddət
+            işləmir.
+          feedback: Yanlış. Bu qismən doğru idi, ancaq arı bir kvadrat düzəltməyə
+            çalışarkən də səhv yola dönər.
+        - text: Laurel səhv yola dönür * və * loop Laurelin bütün xəzinəsini əldə
+            etməsi üçün kifayət qədər uzun müddət işləmir.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Laurel səhv yola dönür * və * loop Laurelin bütün xəzinəsini əldə
+            etməsi üçün kifayət qədər uzun müddət işləmir.
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçirin. Niyə "Çalıştır" düyməsini
+            basdığınız zaman Laurel xəzinənin hamısını toplamayacaq? Xəbərdarlıq:
+            Bu çətin bir sualdır, cavab vermədən əvvəl bütün seçimləri oxuduğunuzdan
+            əmin olun!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - feedback: Yanlış. Burada balqabağı toplamaq üçün heç bir kod yoxdur.
+        - text: Biçerdöver etdiyi yolla məhsulun heç birini toplamaz.
+          feedback: Yanlış. Kod, biçinçidən dəfələrlə pilləkən naxışı düzəltməsini
+            və qarşına çıxdığı qədər qarğıdalı və ya kahı yığmasını təmin edəcəkdir.
+            Balqabağı götürməyəcək.
+        - text: Biçerdöver balqabaq istisna olmaqla, bütün məhsulu toplayacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Kod, biçinçidən dəfələrlə bir pilləkən pilləsi düzəltməsini və
+            rast gəldiyi qədər qarğıdalı və ya kahı yığmasını təmin edəcəkdir. Balqabağı
+            götürməyəcək.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1428,12 +1481,24 @@ az-AZ:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Fermer yolun sonuna qədər gedəcək və balqabağı yığacaq.
+          feedback: Yanlış. "Balqabaq topla" bloku döngənin içərisindədir, buna görə
+            cütçü balqabağı yalnız sonunda deyil, hər addımda götürməyə çalışacaq.
+        - text: |-
+            Fermer hər meydanda balqabaq yığmağa çalışacaq, amma heç balqabağa çatmayacaq.
+            MÜTLƏQ TƏLƏB
+          feedback: Düzgün!
+        - text: Fermer dörd boşluq gəzəcək, sonra bir balqabaq toplamağa çalışacaq.
+          feedback: Yanlış. "Balqabaq topla" bloku döngənin içərisindədir, buna görə
+            cütçü balqabağı yalnız sonunda deyil, hər addımda götürməyə çalışacaq.
         - text: Bilmirəm.
+          feedback: Yanlış. "Balqabaq topla" bloku döngənin içərisindədir, buna görə
+            cütçü balqabağı yalnız sonunda deyil, hər addımda götürməyə çalışacaq.
         questions:
         - {}
+        markdown: Budur, gördüklərinizə bənzər bloklardan istifadə edən yeni bir tapmaca
+          növü. Aşağıdakı kodu işə saldığınız zaman nə olacağı barədə bir proqnoz
+          verə bilərsinizmi?
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
@@ -1500,10 +1565,15 @@ az-AZ:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Zombi dərhal sağa dönəcək və ilişib qalacaq.
+          feedback: Düzgün!
+        - feedback: Yanlış. Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa
+            dönmə axtarır. Bu səbəbdən tapmaca uğursuz olur.
+        - feedback: Yanlış. Zombi yalnız sağa dönmə və ya düz yol axtarır. Heç vaxt
+            sola dönməyə baxmır, ona görə də dərhal ilişib qalır.
         - text: Bilmirəm.
+          feedback: Bu kodda, düz gedə biləcəyini görmək üçün * əvvəl * sağa dönmə
+            axtarır. Bu səbəbdən tapmaca uğursuz olur.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
@@ -1564,25 +1634,43 @@ az-AZ:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Meşe palamudu almak için köşeden sola dönmeniz.
+          feedback: Meşe palamudu almak içinden sola dönmeniz.
+        - text: Scrat üç kez ileri gidecek, dönecek, sonra üç kez daha ileri giderek
+            meşe palamuduna ulaşacak!
+          feedback: Düzgün!
+        - text: Scrat ileri hareket edecek, sonra dönecek ve çarpacak.
+          feedback: Meşe palamudu almak içinden sola dönmeniz.
         - text: Bilmirəm.
+          feedback: "'İleri' bloğunu 'tekrar' bloğunun içine koymak, Scrat'ın üç kez
+            ileri hareket etmesine neden olur. Daha sonra döner ve üç kez daha ileri
+            giderek meşe palamuduna ulaşır!"
         questions:
-        - {}
+        - text: "'İleri' geliştiricinu 'tekrar'ın çizimi için üç kez ileri hareket
+            neden olur. Daha fazla döner ve üç kez daha ileriye doğru bana sonraşe
+            palamuduna ulaşır!"
       courseE_multi_bee_functions_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Eyni proqram bu tapmacanı həll etmək üçün də işləyəcək.
+          feedback: Düzdür! Fərqli miqdarda bal olması vacib deyil. Funksiya bunu
+            idarə etmək üçün proqramlaşdırılmışdır.
+        - text: Arı kifayət qədər bal düzəldə bilməz.
+          feedback: Yanlış. Funksiya istənilən bal miqdarını 0-dan çox idarə etmək
+            üçün proqramlaşdırılmışdır.
+        - text: Arı çox bal hazırlamağa çalışacaq.
+          feedback: Yanlış. Funksiya istənilən bal miqdarını 0-dan çox idarə etmək
+            üçün proqramlaşdırılmışdır.
         - text: Bilmirəm.
+          feedback: Proqram bu tapmacanı da həll etmək üçün çalışacaq. İstənilən miqdarda
+            balın 0-dan yuxarı olması üçün proqramlaşdırılmışdır.
         questions:
-        - {}
+        - text: Budur son tapmacadan eyni proqram, ancaq bu tapmacada toplanacaq bal
+            miqdarı dəyişdi. "Çalıştır" düyməsini basdıqda nə olacaq?
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
+        - feedback: Yanlış. Biçerdöver qarğıdalıya çatana qədər "yoxla və götür" demir.
+        - feedback: Yanlış. Biçerdöver yalnız bir dönüş edir və qarğıdalıda bitir.
         - feedback: Düzgün!
         questions:
         - {}
@@ -1708,12 +1796,24 @@ az-AZ:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Rəssam iki fərqli ölçülü qutu çəkmək üçün eyni funksiyadan istifadə
+            edəcəkdir.
+          feedback: Düzgün!
+        - text: Rəssam iki fərqli ölçülü qutu çəkmək üçün iki fərqli funksiyadan istifadə
+            edəcəkdir.
+          feedback: Yanlış. Parametrlərdən istifadə edərək fərqli nəticələr yaratmaq
+            üçün tək bir funksiyadan istifadə etməyə imkan verir.
+        - text: Rəssam eyni ölçülü qutunu iki dəfə çəkmək üçün iki fərqli funksiyadan
+            istifadə edəcəkdir.
+          feedback: Yanlış. Parametrlərdən istifadə edərək fərqli nəticələr yaratmaq
+            üçün tək bir funksiyadan istifadə etməyə imkan verir.
         - text: Bilmirəm.
+          feedback: Proqram, bir funksiyanın iki fərqli ölçülü qutu yaratmasına imkan
+            vermək üçün parametrlərdən istifadə edir.
         questions:
-        - {}
+        - text: Bu proqramı işə saldığınız zaman nə olacaq?
+        markdown: '''Bir kvadrat çək'' funksiyasına parametrlər əlavə etdik. Bütün
+          funksiya tərifini görmək üçün mavi "düzəliş" düyməsini vurun.'
       courseF_multi_artist_variables3a_predict1:
         answers:
         - feedback: Düzgün!
@@ -1753,21 +1853,34 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Bir çiçək yoxdursa, arı heç bir şey etməməlidir. Aşağıdakı kodu yaxşı
+            nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan sonra nə olacağını düşünürsən?
+        markdown: Bulud mənzərəni bloklayır. Bu buludun altında bir çiçək ola bilər.
+          Bir çiçək varsa, arının nektar ** bir dəfə ** yığması lazımdır.
       courseF_multi_bee_conditionals7_predict2:
         answers:
-        - feedback: Düzgün!
-        - {}
-        - {}
+        - text: Arı hər çiçəkdə nektar alacaq, əks halda bal düzəldəcəkdir.
+          feedback: Düzgün!
+        - feedback: Yanlış. "İf at flower" bloku, arının hər çiçəyə nektar almasına
+            və çiçək olmadığı təqdirdə bal düzəltməsinə imkan verir (buna görə də
+            petek).
+        - feedback: Yanlış. Yanlış. "Əgər çiçək varsa" bloku, arının hər çiçəkdə nektar,
+            hər pətəkdə bal olmasına imkan verir.
         - text: Bilmirəm.
+          feedback: "`Əgər çiçəkdədirsə 'bloku arının hər çiçəkdə nektar almasına
+            imkan verir, əks halda bal verir."
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra nə olacağını düşünürsən?
+        markdown: Bəzən bir bulud çiçəyi, bəzən bir pətəyi örtür! Hər iki halda da
+          hər buludun altında yalnız bir ** çiçək və ya ** bir ** pətək olacaqdır.
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - text: Arı irəliləyəcək və çiçəklərdə olduğundan daha çox nektar toplamağa
+            çalışacaq.
         questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1796,20 +1909,45 @@ az-AZ:
         - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Arı nektar və ya bal toplamaz.
+          feedback: Yanlış. Fonksiyon, bir parametrdən keçdiyi qədər nektar və ya
+            bal toplamaq üçün qurulur.
+        - text: Arı üç nektar və ya bal, sonra iki nektar və ya bal pilləkən pilləsi
+            şəklində toplayacaq.
+          feedback: Yanlış. Fonksiyon, bir parametrdən keçdiyi qədər nektar və ya
+            bal toplamaq üçün qurulur.
+        - text: Arı, ilməyin hər təkrarlanmasında yalnız bir nektar və ya bal toplayacaqdır.
+          feedback: Yanlış. Fonksiyon, bir parametrdən keçdiyi qədər nektar və ya
+            bal toplamaq üçün qurulur.
         - text: Bilmirəm.
+          feedback: Yanlış. Fonksiyon, bir parametrdən keçdiyi qədər nektar və ya
+            bal toplamaq üçün qurulur.
         questions:
         - {}
+        markdown: Bu buludların altında ya tam 1 nektarı olan bir çiçək, ya da tam
+          1 bal olan bir pətək var. Aşağıdakı suala cavab verməzdən əvvəl içəridə
+          nə olduğunu görmək üçün funksiyadakı mavi "düzəliş" düyməsini vurun.
       courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - feedback: 'Düzgün. '
-        - {}
-        - {}
+        - text: Korsan "Səninlə görüşməkdən zövq al Əli" deyərdi. və hamısı budur.
+          feedback: 'Düzgün. '
+        - text: Korsan "Səninlə görüşməkdən zövq al Əli" deyərdi. və hamısı budur.
+          feedback: Yanlış. Diqqət yetirin ki, "qoşulma" bloku göstərilən adı pirat
+            cümləsinə əlavə edir.
+        - text: Korsan, "Əli" deyərdi və hər şey budur.
+          feedback: Yanlış. Diqqət yetirin ki, "qoşulma" bloku göstərilən adı pirat
+            cümləsinə əlavə edir.
         - text: Bilmirəm.
+          feedback: 'Yanlış. Diqqət yetirin ki, "qoşulma" bloku göstərilən adı pirat
+            cümləsinə əlavə edir. '
         questions:
-        - {}
+        - text: İstifadəçi istəyə "Əli" adını yazsaydı nə olardı?
+        markdown: |-
+          ** Bu tapmaca `ask` bloku adlı yeni bir blokdan istifadə edir. **
+
+          `Ask` bloku proqramı dayandırır və istifadəçidən bir neçə mətn daxil etməsini tələb edir.
+
+          İstifadəçi hansı mətni daxil etsə, sonra soruş blokunun sonunda göstərilən dəyişənə qeyd olunur. Bu vəziyyətdə, "ad" dəyişənidir.
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -1958,11 +2096,16 @@ az-AZ:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         - feedback: Düzgün!
-        - {}
-        - {}
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
         questions:
-        - {}
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - {}
@@ -1976,7 +2119,7 @@ az-AZ:
         - {}
         - feedback: Düzgün!
         - {}
-        - {}
+        - text: 'Quş divarın içində qaçacaq. '
         questions:
         - {}
       courseC_multi_starWars_predict1_2021:
@@ -2017,10 +2160,16 @@ az-AZ:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sprite yalnız düzgün dönüşümlü olacaq.
+          feedback: Səhv. Sprite də şərqə doğru hərəkət edəcək.
+        - text: Sprite yalnız şərqə gedəcək.
+          feedback: Səhv. Sprite fırlanmağı dayandırmadı, belə ki, həm də eyni zamanda
+            bunu edəcək.
+        - text: Sprite dönüşümlü və eyni zamanda hərəkət edəcək.
+          feedback: Doğru! Hər iki davranış eyni zamanda baş verəcək.
+        - text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
+          feedback: Səhv. Sprite Lab-də əlaqəli bloklar hər sonuncudan dərhal sonra
+            baş verir, buna görə də hər iki davranış eyni vaxtda baş verəcəkdir.
         questions:
         - {}
       courseF_labels_predict_multi:
@@ -2037,7 +2186,7 @@ az-AZ:
         - feedback: Düzgün!
         - {}
         - {}
-        - {}
+        - text: Kompüter istifadəçidən nömrəni tələb edəcək.
         questions:
         - {}
       courseF_multi_bee_for3_predict1_2021:
@@ -2050,10 +2199,15 @@ az-AZ:
         - {}
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Hər iki təyyarə grid boyunca bir yerə hərəkət edəcək və sonra dayandırılacaq.
+          feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
+            edən bir "davranış" var.
+        - text: Hər iki təyyarə hərəkət etməyə başlayacaq və dayanmayacaq.
+          feedback: Doğru! Bu davranış təyyarələr hərəkət başlamaq və hərəkət davam
+            deyir.
+        - text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
+          feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
+        - text: Təyyarələr qırılacaq.
         questions:
         - {}
       courseF_variables_predict_multi:
@@ -2072,3 +2226,1150 @@ az-AZ:
         - {}
         questions:
         - {}
+      CSD U1 Test:
+        title: Kompüterlər və Problemin Həlli Layihə Sonrası Test
+      CSD U2 Expression Exemplars:
+        markdown: |-
+          # Şəxsi Veb Nümunələr
+
+          Digər tələbələrin hazırladığı şəxsi veb saytlarına baxmaq üçün aşağıdakı veb saytları vurun.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3b97.5609.579.597.596.5797.56 = "width: 200px; float: left"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed.3im39.93" 399.339.jpg width: 200px; float: left "> </a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |-
+          # Şəxsi Veb Nümunələr
+
+          Digər tələbələrin hazırladığı şəxsi veb saytlarına baxmaq üçün aşağıdakı veb saytları vurun.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3b97.5609.579.597.596.5797.56 = "width: 200px; float: left"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed.3im39.93" 399.339.jpg width: 200px; float: left "> </a>
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: |-
+          # Şəxsi Veb Nümunələr
+
+          Digər tələbələrin hazırladığı şəxsi veb saytlarına baxmaq üçün aşağıdakı veb saytları vurun.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"> <img src = "https://images.code.org/25b7284a4cd3d26f9b989a5c3b97.5609.579.597.596.5797.56 = "width: 200px; float: left"> </a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"> <img src = "https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed.3im39.93" 399.339.jpg width: 200px; float: left "> </a>
+      CSD U2 L1 Overview:
+        markdown: |-
+          Bu dərs bir veb saytın həm istifadəçilər, həm də yaradıcılar üçün xidmət edə biləcəyi məqsədləri əhatə edir. Sinif ABŞ-da ən çox istifadə olunan bir neçə veb saytını araşdırır və bu saytların hər birinin istifadəçilər üçün necə faydalı olduğunu və yaradıcılarına necə xidmət edə biləcəyini müzakirə edir.
+          ## Lüğət
+
+          * ** Veb səhifə ** - Ümumdünya Şəbəkəsində bir və ya daha çox səhifə saxlayan İnternetə qoşulmuş yer.
+
+
+          ## Resurslar
+
+          * [Veb saytların məqsədi - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Veb saytların məqsədi - Nümunə] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)
+          ([PDF] (https://docs.google.com/document/d / 1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A
+          / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pc6vbbvvbbvvbbvvbbvvbbvvbbvvb)"
+      CSD U2 L12 Overview:
+        markdown: |-
+          # Baxış
+
+          Əvvəlcə veb axtarış zibilçi ovunu başa vurduqdan sonra sinif axtarış motorlarının daxili işlərini öyrənir və analitik bacarıqlarını qəribə və ehtimal olunmayan heyvanları axtarmağa yönəltmək imkanı əldə edir.
+          ## Lüğət
+
+          * ** Alqoritm ** - Bir kompüter tərəfindən icra edilə bilən proseslər üçün dəqiq bir təlimat ardıcıllığı
+          * ** Müvafiq ** - ələ alınan məsələ ilə sıx əlaqəli və ya uyğun.
+          * ** Axtarış Mühərriki ** - Xüsusi olaraq World Wide Web-də müəyyən saytları tapmaq üçün istifadə olunan istifadəçi tərəfindən göstərilən açar sözlərə və ya simvollara uyğun gələn məlumat bazasında maddələri axtaran və müəyyən edən bir proqram.
+          * ** Etibarlı ** - dürüst və ya doğruluğuna etibar edilə bilər.
+
+
+          ## Resurslar
+
+          * [İnternet Çöpçü Ovu - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
+          * [Qəribə Gerçək Heyvanlar - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
+        teacher_markdown: "[Qəribə Gerçək Heyvanlar - Açar] (https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit)
+          ([PDF] (https://docs.google.com/document/d/1PbQLLLLLLLLLLLdd91/04/9/9/9/1/1/1/EE/91/91/91/91/56EE9F1/1/El/46H3c6d3c6/3/96/96/96/1/56c6c3c6c6c6c6c6c6c6c9c1c6c1c9c1c1c1c1c1c1c1c1c1c1c1c1c1c
+          ... format = pdf) | [DOCX] (https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))"
+      CSD U2 L2 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs veb saytları şəxsi ifadə vasitəsi kimi təqdim edir. Sinif əvvəlcə insanların maraqlarını və fikirlərini ifadə etmələrinin və bölüşmələrinin fərqli yollarını müzakirə edir, daha sonra əvvəlki kursdan tələbələr tərəfindən hazırlanan bir neçə nümunəvi veb saytına baxır. Nəhayət, hamı beyin fırtınası edir və bölmənin qalan hissəsində şəxsi veb sayt inkişaf etdirmək üçün bir qaynaq yaradaraq mövzu və maraqların siyahısını paylaşır.
+          ## Lüğət
+
+          * ** Veb səhifə məzmunu ** - Veb səhifəyə daxil olan xam mətn, şəkillər və digər elementlər
+
+
+          ## Resurslar
+
+          * [Şəxsi Veb səhifə Eskiz - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: |-
+          # Baxış
+
+          Bu dərs veb saytları şəxsi ifadə vasitəsi kimi təqdim edir. Sinif əvvəlcədən insanların maraqlarını və fikirlərini ifadə etdiklərini və bölüşmələrinin fərqli yollarını müzakirə edir, daha sonra əvvəlki kursdan davam etdirilən bir neçə nümunəvi veb saytına baxır. Nəhayət, hamı beyin fırtınası edir və bölmənin qalan hissəsində şəxsi veb sayt inkişaf etdirmək üçün bir qaynaq yaradaraq mövzu və maraqların siyahısını paylaşır.
+          ## Lüğət
+
+          * ** Veb səhifə məzmunu ** - Veb səhifəyə daxil olan xam mətn, şəkillər və digər elementlər
+
+
+          ## Resurslar
+
+          * [Şəxsi Veb səhifə Eskiz - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+      CSD U2 L3 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs HTML-yə bir veb saytın həm məzmunu, həm də quruluşunu bir kompüterə necə çatdırmaq probleminin həlli kimi təqdim edir. Dərs bir veb səhifənin quruluşunu təsirli bir şəkildə çatdırmaqda çətinliklərini nümayiş etdirən qısa bir əlaqələndirilməmiş fəaliyyətlə başlayır. Sinif Web Laboratoriyasında bir HTML səhifəsinə baxır və HTML etiketlərinin bu problemi necə həll etdiyini müzakirə edir, sonra bölmənin ilk veb səhifələrini yazmaq üçün HTML istifadə edir.
+          ## Lüğət
+
+          * ** HTML ** - veb səhifələr yaratmaq üçün istifadə olunan bir dil olan Hipermətn Markup Dili
+          * ** HTML Element ** - Başlanğıc işarəsi ilə işarələnmiş və bəzən son etiketi ilə bağlanmış bir veb sayt parçası
+          * ** HTML Tag ** - HTML elementinin başlanğıcını və sonunu və həmin elementin növünü göstərən xüsusi simvol dəsti
+          * ** Veb səhifə məzmunu ** - Veb səhifəyə daxil olan ham mətn, şəkillər və digər elementlər
+          * ** Veb səhifə quruluşu ** - Bu məzmunun necə göstərilməli olduğunu kompüterə müəyyənləşdirməyə kömək etmək üçün istifadə olunan bir veb səhifədəki fərqli məzmunun məqsədi.
+
+          ## Təqdim olunan Kod
+
+          * ** [HTML] (// studio.code.org/docs/weblab/html/)** - "<html> </html>"
+          * ** [Doctype] (// studio.code.org/docs/weblab/doctype/)** - `<! DOCTYPE>`
+          * ** [Paraqraf] (// studio.code.org/docs/weblab/P/)** - `<p> </p>`
+          * ** [Body] (// studio.code.org/docs/weblab/body/)** - "<body> </body>"
+          * ** [Head] (// studio.code.org/docs/weblab/head/)** - "<head> </head>"
+      CSD U2 L4 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs HTML etiketi girişini bu dəfə başlıqlarla davam etdirir. Sinif, səhifə və bölmə başlıqları yaratmaq üçün başlıq etiketlərindən istifadə edir və müxtəlif başlıq elementlərinin standart olaraq necə göstərildiyini öyrənir. Sonra sinif bölmədə qurulacaq şəxsi veb səhifələrdəki məzmunu necə təşkil edəcəyini planlaşdırır və layihənin ilk səhifəsinə başlayır.
+          ## Lüğət
+
+          * ** Başlıq ** - Sənəd və ya sənəd hissəsi üçün başlıq və ya xülasə.
+
+          ## Təqdim olunan Kod
+
+          * ** [Başlıq] (// studio.code.org/docs/weblab/h/)** - "<h1> </h1>"
+      CSD U2 L5 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, insanların rəqəmsal olaraq paylaşmağı seçdikləri fərdi məlumatlar haqqında danışmaq üçün şəxsi veb sayt yaratmağı geri götürür. Dərs hansı növ məlumatları digər insanlarla bölüşmək üçün yaxşı olduğunu müzakirə etməklə başlayır, sonra bəzi şəxsi məlumatların qəsdən və ya bilmədən paylaşıla biləcəyini öyrənmək üçün bir neçə nümunə sosial media səhifəsinə baxır. Nəhayət, sinif məlumatları onlayn qoyarkən riayət etmək üçün bir sıra təlimatlar hazırlayır.
+          ## Lüğət
+
+          * ** Rəqəmsal Ayaq İzi ** - İnternetdə birdən çox veb saytında bir şəxs haqqında toplanan məlumatlar.
+
+
+          ## Resurslar
+
+          * [Məxfiliyiniz nə vaxt vacibdir? - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Sosial Sleuth - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |-
+          * [Məxfiliyiniz nə vaxt vacibdir?] (Https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Fəaliyyət Bələdçisi Nümunə ([PDF] (https://docs.google.com / 1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD47xx))
+          * [Sosial Sleuth] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Fəaliyyət Bələdçisi ([PDF] (https://docs.google.com/document/d/1wbCYX6 -R0xSSOVU-DNA / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+      CSD U2 L6 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs sifarişli və sıralanmamış siyahıları və əlaqəli & lt; ul & gt ;, & lt; ol & gt ;, və & lt; li & gt; HTML etiketləri. Etiketlərdən istifadə edən sinif tətbiqləri, daha sonra yeni etiketləri ehtiva edən yeni bir HTML səhifəsi əlavə etmək üçün şəxsi veb səhifə layihəsinə qayıdır.
+
+          ## Təqdim olunan Kod
+
+
+          * ** [Sıralanmamış Siyahı] (// studio.code.org/docs/weblab/ul/)** - "<ul> </ul>"
+          * ** [Siyahı Maddəsi] (// studio.code.org/docs/weblab/li/)** - `<li> </li>`
+          * ** [Sifariş Siyahısı] (// studio.code.org/docs/weblab/ol/)** - "<ol> </ol>"
+      CSD U2 L7 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, veb saytında başqaları tərəfindən yaradılan məzmundan bu məzmunun orijinal yaradıcısının hüquqlarına hörmət edilərək necə istifadə ediləcəyini əhatə edir. İlk dəfə Creative Commons lisenziyasını oxuduqdan sonra sinif veb səhifələrə şəkillər əlavə etməyi və bunu edərkən müvafiq atributları verməyi öyrənir.
+
+          ## Lüğət
+
+          * ** Sitat ** - Xüsusilə elmi bir işdə bir kitab, kağız və ya müəllifdən bir sitat və ya istinad.
+          * ** Müəlliflik hüququ ** - müəllifə və ya mirasçıya ədəbi, bədii və ya musiqi materialını çap etmək, dərc etmək, ifa etmək, filmə çəkmək və ya qeyd etmək və başqalarına da bunu etmək üçün icazə vermək üçün verilən müstəsna qanuni hüquq.
+          * ** Creative Commons ** - Müəllif hüququ ilə qorunan bir əsərin pulsuz yayılmasına imkan verən ictimai müəllif hüquqları lisenziyaları. CC lisenziyası, müəllif insanlara yaratdıqları bir işi bölüşmək, istifadə etmək və qurmaq hüququ vermək istədikdə istifadə olunur.
+          * ** Fikri Mülkiyyət ** - Hüquqlarının olduğu və patent, müəllif hüququ, ticarət nişanı və s. Üçün müraciət edə biləcəyi bir əlyazma və ya dizayn kimi yaradıcılığın nəticəsi olan bir əsər və ya ixtira.
+
+          ## Təqdim olunan Kod
+
+          * ** [Image] (// studio.code.org/docs/weblab/img/)** - `<img />`
+
+          ## Resurslar
+
+          * [Creative Commons Baxışı] (https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
+          * [İşlərinizi Lisenziyalaşdırma - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licensing Your Work - Activity Guide Exemplar](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
+      CSD U2 Lesson 6 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərsdə HTML-də veb səhifələr tərtib edərkən ortaya çıxan ümumi məsələləri əhatə edir. Sinif, Code Studio'da getdikcə daha da mürəkkəbləşən veb səhifələr sırasındakı səhvləri düzəldəcək və veb səhifələrin oxunmasını asanlaşdıran vasitələr kimi şərhlərin, boşluq və girintinin əhəmiyyətini öyrənəcəkdir.
+          ## Lüğət
+
+          * ** Hata ** - Düzgün işləməyən bir proqramın bir hissəsi.
+          * ** Şərh ** - Şərh bir kompüter proqramının mənbə kodundakı bir proqramçı tərəfindən oxunaqlı qeyddir.
+          * ** Hata Ayıklama ** - Alqoritm və ya proqramınızdakı problemləri tapmaq və həll etmək.
+          * ** Girinti ** - Mətnin ətrafdakı mətndən ayrılması üçün daha sağa və ya sola yerləşdirilməsi, proqramın quruluşunu çatdırmağa kömək edir.
+          * ** Boşluq ** - Boşluq, ekranda boşluq, nişan və ya yeni sətir kimi boşluq kimi görünən hər hansı bir xarakteri ifadə edir. Boşluq, oxunmasını asanlaşdırmaq üçün sənədin müxtəlif hissələrini ayırmağa kömək edir.
+
+          ## Təqdim olunan Kod
+
+          * ** [Şərh] (// studio.code.org/docs/weblab/comment/)** - `<! - ->`
+      CSD U2 Lesson 9 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs veb inkişaf etdiricilərin səhifələri bir veb səhifəyə birləşdirməsinə imkan verən hiper bağlantıları əhatə edir. Sinif, əvvəlki bütün səhifələri bir layihəyə bağlayacaq və saytın hamısını Vebdə yayımlamadan əvvəl hər səhifə üçün naviqasiya çubuqları yaradacaqdır.
+          ## Lüğət
+
+          * ** Hiperlink ** - HTML sənədindən başqa bir yerə və ya fayla bir keçid, ümumiyyətlə ekranda vurğulanan bir söz və ya şəklə basaraq aktivləşdirilir.
+
+          ## Təqdim olunan Kod
+
+          * ** [Hyperlink] (// studio.code.org/docs/weblab/A/)** - `<a> </a>`
+
+          ## Resurslar
+
+          * [Şəxsi Veb səhifə - Layihə Bələdçisi] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
+          * [Şəxsi Veb Saytı - İcmal İnceleme] (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+          * [Şəxsi Veb Saytı - Rubrik] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
+        teacher_markdown: |-
+          * [Şəxsi Veb səhifə] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Layihə Bələdçisi Nümunə ([PDF] (https://docs.google.com/document/d / 1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-CT )/f5)
+          * [Şəxsi Veb səhifə] (https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF] (https://docs.google.com/docJJVVO/Vo/Vo/Vo/Vs/V1/1/1) ? format = pdf) | [DOCX] (https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+      CSD U2 Top Websites:
+        markdown: |-
+          # ABŞ-da ən yaxşı veb saytlar
+
+          Aşağıdakılar ABŞ-da ən çox ziyarət edilən veb saytlardır. Hər birinə veb saytın əsas funksiyasının qısa təsviri daxildir.
+
+
+          1. Google.com - Veb saytlar, şəkillər, videolar və digər media vasitələri
+          2. Youtube.com - İstifadəçi tərəfindən təqdim edilmiş video sayt, qiymətləndirmə və şərhlərlə
+          3. Facebook.com - İstifadəçilərin dostları ilə məlumat paylaşmasına imkan verən sosial media icması
+          4. Amazon.com - Hər növ mal üçün onlayn alış-veriş saytları
+          4. Yahoo.com - Bir axtarış motoru, e-poçt təminatçısı və xəbər mənbəyi
+          5. Wikipedia.org - İstifadəçilər tərəfindən yaradılan məzmunu olan pulsuz ensiklopediya
+      CSD U2 Top Websites_2018:
+        markdown: |-
+          # ABŞ-da ən yaxşı veb saytlar
+
+          Aşağıdakılar ABŞ-da ən çox ziyarət edilən veb saytlardan bəziləridir. Hər birinə veb saytın əsas funksiyasının qısa təsviri daxildir.
+
+
+          * Google.com - Veb saytlar, şəkillər, videolar və digər media üçün axtarış motoru
+          * Youtube.com - İstifadəçi tərəfindən təqdim edilmiş video sayt, qiymətləndirmə və şərhlərlə
+          * Facebook.com - İstifadəçilərin dostları ilə məlumat paylaşmasına imkan verən sosial media icması
+          * Amazon.com - Hər növ mal üçün onlayn alış-veriş saytları
+          * Yahoo.com - Bir axtarış motoru, e-poçt təminatçısı və xəbər mənbəyi
+          * Wikipedia.org - İstifadəçilər tərəfindən yaradılan məzmunu olan pulsuz bir ensiklopediya
+      CSD U2 Top Websites_2018_2019:
+        markdown: |-
+          # ABŞ-da ən yaxşı veb saytlar
+
+          Aşağıdakılar ABŞ-da ən çox ziyarət edilən veb saytlardan bəziləridir. Hər birinə veb saytın əsas funksiyasının qısa təsviri daxildir.
+
+
+          * Google.com - Veb saytlar, şəkillər, videolar və digər media üçün axtarış motoru
+          * Youtube.com - İstifadəçi tərəfindən təqdim edilmiş video sayt, qiymətləndirmə və şərhlərlə
+          * Facebook.com - İstifadəçilərin dostları ilə məlumat paylaşmasına imkan verən sosial media icması
+          * Amazon.com - Hər növ mal üçün onlayn alış-veriş saytları
+          * Yahoo.com - Bir axtarış motoru, e-poçt təminatçısı və xəbər mənbəyi
+          * Wikipedia.org - İstifadəçilər tərəfindən yaradılan məzmunu olan pulsuz bir ensiklopediya
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Baxış
+
+          Sinif spritlərini yeni yollarla qarşılıqlı əlaqədə olmaq üçün proqramlaşdırır. İsTouching blokundan necə istifadə etdikləri barədə qısa bir nəzərdən keçirildikdən sonra sinif iki spritin qarşılıqlı təsir göstərə biləcəyi başqa yollarla beyin fırtınası keçirir. Daha sonra dörd toqquşma bloku (toqquşma, yerindən çıxma, sıçrama və sıçrayış) ilə məşq etmədən əvvəl bir sprite-nin digərini ekranda itələməsi üçün isTouching istifadə edirlər.
+          ## Lüğət
+
+          * ** Abstraksiya ** - Bir problemi birdən çox problem üçün həll etmək üçün spesifik fərqləri çəkmək.
+
+          ## Təqdim olunan Kod
+
+          * [sprite.bounceOff ()] (// studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide ()] (// studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace ()] (// studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider ()] (// studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce ()] (// studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness] (// studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Defender SFLP:
+        markdown: |-
+          # Baxış
+
+          Bu dərs sinifin vahidin qalan hissəsi üçün oyunlar dizayn etmək üçün istifadə edəcəyi prosesi təqdim edir. Sinif bu prosesi bir sıra səviyyələrdə keçir. Bu dərsin bir hissəsi olaraq sinif də qısa müddət ərzində Game Lab-da çox kadrlı animasiyalardan istifadə etməyi öyrənir. Dərsin sonunda oyunu özlərinə aid etmək üçün oyunda irəliləyişlər etmək imkanı var.
+
+
+          ## Resurslar
+
+          * [Layihə Kılavuzu - Defender Oyunu - Layihə Kılavuzu] (https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
+      CSD U3 Entertainment:
+        markdown: |-
+          # Axtarışa Başlama
+
+          Kompüter elmləri və proqramlaşdırmanın əyləncədə necə rol oynadığını öyrənmək üçün bir az araşdırma aparmalısınız. "Kompüter elmləri və & # 95; & # 95; & # 95; & # 95; & # 95; & # 95;" axtarmağa çalışın. film, televiziya, musiqi, oyunlar, animasiya, moda və s. kimi müxtəlif əyləncə növlərini sınamaq.
+        teacher_markdown: |-
+          Tələbələri işə başlamaq üçün bir neçə sayt. Bu saytlar ümumiyyətlə məktəb üçün uyğundur, lakin məzmunu tez-tez dəyişir, bu səbəbdən ** tələbələrlə bölüşmədən əvvəl hər bir saytın uyğunsuz məzmunu olub olmadığını yoxlamağınızı tövsiyə edirik **.
+
+          ## Magic Inside - [insidethemagic.net] (http://www.insidethemagic.net)
+
+          ### Baxış
+
+          Bu sayt Disneylə əlaqəli xəbərlərə yönəldilmişdir, ancaq CS-nin fərqli əyləncə formalarında oynadığı böyük rol sizi təəccübləndirə bilər. Bu CS mərkəzli bir sayt olmadığı üçün, müvafiq məqalələri tapmaq üçün axtarış funksiyasından istifadə etməlisiniz.
+
+          ### Müvafiq sahələr
+
+          * Film / TV
+          * Animasiya
+          * Robotika / Animatronika
+          * Oyunlar
+
+          ## Kritik Yol Videoları - [critppproject.com/explore/playlists/ ：(http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Baxış
+
+          Oyun sənayesinin müxtəlif sahələrində işləyən, etdikləri işlərdən bəhs edən bir sıra insanları əks etdirən videolar.
+
+          ### Müvafiq Sahələr
+
+          * Oyunlar
+          * Animasiya
+          * İncəsənət
+
+          ## Music Think Tank - [musicthinktank.com] (http://www.musicthinktank.com/)
+
+          ### Baxış
+
+          Music Think Tank, musiqi sənayesində çalışan insanları hədəf alan bir blogdur. CS-yə məxsus bir sayt deyil, ancaq "kompüter elmi" və ya "proqramlaşdırma" axtaranda bəzi maraqlı məqalələr ortaya çıxacaq.
+
+          ### Müvafiq Sahələr
+
+          * Musiqi
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com] (http://creativecodingpodcast.com/)
+
+          ### Baxış
+
+          Bu podkast rəsmi peşəkar proqramlaşdırma yolunda o qədər də çox şey göstərməsə də (hədiyyə etmək üçün bunu edən insanlar kimi), həvəskarların kodla əyləncə etmələrinin müxtəlif yollarını görmək əla bir qaynaqdır.
+
+          ### Müvafiq Sahələr
+
+          * Hamısı
+      CSD U3 Entertainment_2018_2019:
+        markdown: |-
+          # Axtarışa Başlama
+
+          Kompüter elmləri və proqramlaşdırmanın əyləncədə necə rol oynadığını öyrənmək üçün bir az araşdırma aparmalısınız. "Kompüter elmləri və & # 95; & # 95; & # 95; & # 95; & # 95; & # 95;" axtarmağa çalışın. film, televiziya, musiqi, oyunlar, animasiya, moda və s. kimi müxtəlif əyləncə növlərini sınamaq.
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, kodlarını təşkil etmək, daha oxunaqlı etmək və təkrarlanan kod bloklarını silmək üçün bir sıra funksiyaları əhatə edir. Sinif, daha yüksək səviyyəli və ya daha çox mücərrəd addımların addımları başa düşməyi və səbəbləri izah etməyi asanlaşdırdığını öyrənir, sonra Game Lab-da funksiyalar yaratmağa başlayır. Dərsin sonunda sinif bu bacarıqlardan istifadə edərək, yan kaydırıcı oyunlarının son versiyasına funksionallıq təşkil edir və əlavə edir.
+          ## Lüğət
+
+          * ** Function ** - Asanlıqla dəfələrlə zəng edə biləcəyiniz bir kod parçası.
+
+          ## Təqdim olunan Kod
+
+          * [Bir funksiyanı təyin edin] (// studio.code.org/docs/gamelab/functionParams_none/)
+          * [Bir funksiyanı çağırın] (// studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 1:
+        markdown: |-
+          # Baxış
+
+          Sinifdən cansıxıcılıq və özünü ifadə etmə “problemləri” ni nəzərdən keçirmələri və bu problemlərə öz həyatlarında necə yanaşdıqları barədə düşünmələri istənir. Oradan ümumiyyətlə Kompüter Elmləri və xüsusi olaraq proqramlaşdırmanın ya müəyyən bir əyləncə formasında və ya özünü ifadə etmək üçün bir vasitə kimi necə rol oynadığını araşdıracaqlar.
+
+
+          ## Resurslar
+
+          * [Əyləncədə CS - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: "* [Əyləncədə CS] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit)
+          - Nümunə ([PDF] (https://docs.google.com/document/d/ 1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww
+          / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIjW
+          )/V/VV)"
+      CSD U3 Lesson Overview 10:
+        markdown: |-
+          # Baxış
+
+          Bu dərsdə məntiqi dəyərlər və məntiq və şərti ifadələr təqdim olunur. Dərs sadə bir Stand Up, Sit Down oyununu başlatmaqla başlayır, burada boolean (doğru / yalan) ifadələrin şəxsi xüsusiyyətlərini (saç və ya göz rəngi, geyim növü, yaş və s.) Təsvir edir. Daha sonra sinif getdikcə daha da mürəkkəb olan boole ifadələrinə əsaslanan obyektləri qruplaşdırır, sonra şərtlərin bir proqramın axınına necə təsir göstərə biləcəyinə baxır.
+          ## Lüğət
+
+          * ** Boolean ** - DOĞRU və ya YALAN olan tək bir dəyər
+          * ** Koşullu ** - Yalnız müəyyən şərtlər altında işləyən ifadələr.
+          * ** İfadə ** - Dəyəri həll edən hər hansı bir etibarlı kod vahidi.
+
+
+          ## Resurslar
+
+          * [Boolean Properties - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
+      CSD U3 Lesson Overview 11:
+        markdown: |-
+          # Baxış
+
+          Sinif sprite mülkiyyətinin cari dəyərini hədəf dəyəri ilə müqayisə etmək üçün booleanslardan istifadə edərək, sprite-nin ekranda bir nöqtəyə çatdığını, müəyyən bir ölçüyə çatdığını və ya sayğacdan istifadə edərək başqa bir dəyərə çatdığını təyin etmək üçün bu müqayisədən istifadə etməklə başlayır. naxış Dəyərləri və ya sprite xüsusiyyətlərini araşdırmaq üçün birbaşa booleanslardan istifadə etdikdən sonra sinif, bu boolean müqayisələrə cavab verən kod yazmaq üçün şərti ifadələr əlavə edir.
+          ## Lüğət
+
+          * ** Boolean Expression ** - proqramlaşdırmada, True və False kimi qiymətləndirən bir ifadə.
+          * ** If-Statement ** - "şərti ifadələri" həyata keçirən ümumi proqram quruluşu.
+
+          ## Təqdim olunan Kod
+
+          * [If If]] (// studio.code.org/docs/gamelab/ifBlock/)
+          * [Operatordan az] (// studio.code.org/docs/gamelab/lessThanOperator/)
+          * [Eşitsizlik operatoru] (// studio.code.org/docs/gamelab/inequalityOperator/)
+          * [Az və ya bərabər operator] (// studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
+          * [Operatordan daha böyük] (// studio.code.org/docs/gamelab/greaterThanOperator/)
+          * [Bərabərlik operatoru] (// studio.code.org/docs/gamelab/equalityOperator/)
+          * [Böyük və ya bərabər operator] (// studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)
+      CSD U3 Lesson Overview 12:
+        markdown: |-
+          # Baxış
+
+          Mantiqedicilərlə tanışlıqdan və əvvəlki dərsdəki ifadələrdən sonra şagirdlər bir mantıksı qaytaran və şərti ifadələrdə ekrana spritləri köçürmək üçün istifadə edilə bilən keyDown () adlı yeni bir blokla tanış olurlar. Bu dərsin sonunda şagirdlər ekrandakı spritləri idarə etmək üçün istifadəçidən klaviatura girişini qəbul edən yazılı proqramlar əldə edəcəklər.
+
+          ## Təqdim olunan Kod
+
+          * [keyDown ()] (// studio.code.org/docs/gamelab/keyDown/)
+
+          ## Resurslar
+
+          * [Boolean ifadələri] (https://youtu.be/y3rCKJNOwpA) - Video ([yüklə] (https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
+      CSD U3 Lesson Overview 13:
+        markdown: |-
+          # Baxış
+
+          Sınıf, istifadəçi məlumatlarını almaq üçün şərti ifadələrdən istifadə yollarını araşdırmağa davam edir. Dünən öyrənilən sadə keyDown () əmrinə əlavə olaraq sinif bir neçə digər klaviatura giriş əmrlərini və siçan girişini alma yollarını da öyrənir.
+          ## Lüğət
+
+          * ** Koşullu ** - Yalnız müəyyən şərtlər altında işləyən ifadələr.
+
+          ## Təqdim olunan Kod
+
+          * [keyWentUp ()] (// studio.code.org/docs/gamelab/keyWentUp/)
+          * [mouseWentDown ()] (// studio.code.org/docs/gamelab/mouseWentDown/)
+          * [mouseWentUp ()] (// studio.code.org/docs/gamelab/mouseWentUp/)
+          * [keyWentDown ()] (// studio.code.org/docs/gamelab/keyWentDown/)
+          * [mouseDown ()] (// studio.code.org/docs/gamelab/mouseDown/)
+          * [mouseDidMove ()] (// studio.code.org/docs/gamelab/mouseDidMove/)
+          * [sprite.visible] (// studio.code.org/docs/gamelab/visible/)
+          * [If / else bəyanatı] (// studio.code.org/docs/gamelab/ifElseBlock/)
+      CSD U3 Lesson Overview 14:
+        markdown: |-
+          # Baxış
+
+          Fəsil 1 üçün bu məcmu layihədə sinif, bu ana qədər öyrəndikləri bütün proqramlaşdırma üsullarından istifadə edərək interaktiv bir təbrik kartı hazırlayır və inkişaf etdirir.
+
+
+          ## Resurslar
+
+          * [İnteraktiv Kart - Layihə Bələdçisi] (https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
+          * [İnteraktiv Kart - Rubrik] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
+          * [İnteraktiv Kart - Peer Review] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |-
+          * [İnteraktiv Kart] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Layihə Kılavuzu Nümunəvi ([PDF] (https://docs.google.com/document/d/1Ar qMPUYlZ3Yf8DRjumH90LF5wtL4Vs / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtLport)
+          * [İnteraktiv Kart] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Misal = pdf) | [DOCX] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
+      CSD U3 Lesson Overview 2:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, Şekiller ilə necə çəkiləcəyinizi və bu problemin Game Lab-da necə yanaşıldığını təqdim edən bir vasitə istifadə etməyinizi izah edir. Sinif, Game Lab'ın 400 ilə 400 ızgarasına interaktiv şəkildə yerləşdirmək üçün bir Game Lab alətindən istifadə edir. Bundan sonra tərəfdaşlar növbə ilə bir-birlərinə bu alətdən istifadə edərək gizli bir şəkil necə çəkiləcəyini öyrədirlər və Game Lab-da proqramlaşdırmanın bir çox çətinliklərini hesaba gətirirlər.
+
+
+          ## Resurslar
+
+          * [Şekiller Çizim - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+        teacher_markdown: |-
+          [açar]
+
+          * [Şekiller Çizim] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Misal / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+          [/ açar]
+      CSD U3 Lesson Overview 3:
+        markdown: |-
+          # Baxış
+
+          Sinif bu bölmənin proqramlaşdırma mühiti olan Game Lab ilə tanış olur və ondan ekranda şekiller yerləşdirmək üçün istifadə etməyə başlayır. Dərs ardıcıllıqla və ayıklamanın əsaslarını və bir neçə sadə əmri əhatə edir. Dərsin sonunda sinif əvvəlki dərsdə dizayn etdikləri görüntünün onlayn versiyasını yaradır.
+          ## Lüğət
+
+          * ** Hata ** - Düzgün işləməyən bir proqramın bir hissəsi.
+          * ** Hata Ayıklama ** - Alqoritm və ya proqramınızdakı problemləri tapmaq və həll etmək.
+          * ** Proqram ** - Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlanmış bir alqoritm.
+
+          ## Təqdim olunan Kod
+
+          * [ellips ()] (// studio.code.org/docs/gamelab/ellipse/)
+          * [rect ()] (// studio.code.org/docs/gamelab/rect/)
+          * [fill ()] (// studio.code.org/docs/gamelab/fill/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, rəsm bacarıqlarını genişlik və hündürlüyü əhatə edəcək şəkildə genişləndirir və təsadüfi ədədin yaradılması konsepsiyasını təqdim edir. Sinif genişlik və hündürlük parametrlərini əhatə edən ellips () və rect () versiyaları ilə rəsm çəkməyi və ekranı rənglə doldurmaq üçün fon () blokundan istifadə etməyi öyrənir. Proqressiyanın sonunda sinif randomNumber () bloku ilə tanış olur və yeni blokları təsadüfi göy qurşağı ilanını çəkmək üçün istifadə edir.
+          ## Lüğət
+
+          * ** Parametr ** - Xüsusi bir ehtiyac üçün özelleştirmek üçün funksiyanı ötürdüyünüz əlavə bir məlumat.
+
+          ## Təqdim olunan Kod
+
+          * [background ()] (// studio.code.org/docs/gamelab/background/)
+          * [ellips ()] (// studio.code.org/docs/gamelab/ellipse/)
+          * [rect ()] (// studio.code.org/docs/gamelab/rect/)
+          * [randomNumber ()] (// studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Baxış
+
+          Bu dərs dəyişənləri bir proqramdakı ədədi etiketləmək və ya təsadüfi olaraq yaradılmış dəyəri saxlamaq yolu kimi təqdim edir. Sinif dərsi dəyişkənliyin məqsədi və yeni bloklardan istifadə praktikası ilə çox sadə bir təsvirlə başlayır. Daha sonra sinif təsadüfi ədədi saxlamaq üçün dəyişənlərdən istifadə edir və proqramların eyni təsadüfi saydan dəfələrlə istifadə etməsinə imkan verir.
+          ## Lüğət
+
+          * ** Dəyişən ** - Dəyişə bilən bir məlumat üçün yer tutucu.
+
+          ## Təqdim olunan Kod
+
+          * [Dəyişən bir elan et] (// studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Dəyişənə elan edin və dəyər verin] (// studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Resurslar
+
+          * [Dəyişənlərə giriş] (https://youtu.be/G41G_PEWFjE) - Video ([yüklə] (https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 Lesson Overview 6:
+        markdown: |-
+          # Baxış
+
+          Daha maraqlı və detallı şəkillər yaratmaq üçün sinif sprite obyektinə təqdim olunur. Hər sprite-yə göstərmək üçün bir şəkil verilə bilər və spritslər özləri haqqında çoxlu dəyərləri izləyirlər, bu da animasiyalar çəkərkən yolda faydalı olacağını göstərir. Dərsin sonunda hər kəs spritlərdən istifadə edərək bir səhnə yaradır.
+          ## Lüğət
+
+          * ** Mülkiyyət ** - Bir obyektin xüsusiyyətlərini təsvir edən xüsusiyyətlər
+          * ** Sprite ** - Məkanını, hərəkətini və görünüşünü təsvir edən xüsusiyyətləri olan ekrandakı qrafik xarakter.
+
+          ## Təqdim olunan Kod
+
+          * [drawSprites ()] (// studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale] (// studio.code.org/docs/gamelab/scale/)
+          * [var sprite = createSprite ()] (// studio.code.org/docs/gamelab/createSprite/)
+
+          ## Resurslar
+
+          * [Sprite Scene Planning - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+        teacher_markdown: "* [Sprite Scene Planning] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit)
+          - Fəaliyyət Bələdçisi Nümunə ([PDF] (https://docs.google.com/document/ 1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q
+          / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVIFOVIQoX))))"
+      CSD U3 Lesson Overview 7:
+        markdown: |-
+          # Baxış
+
+          Bu dərs Game Lab-da əsas proqramlaşdırma paradiqmalarından biri olan çəkmə halqasını təqdim edir. Sinif bəzi sadə animasiyaları nöqtələrlə, daha sonra isə spritlərlə idarə etmək üçün çəkmə döngüsünü təsadüfi rəqəmlərlə birləşdirir. Sonra hər kəs əvvəlki dərsdəki sprite səhnəsini yeniləmək üçün öyrəndiklərindən istifadə edir.
+          ## Lüğət
+
+          * ** Animasiya ** - bir-birinin ardınca sürətlə göstərilərək hərəkət illüziyası yaradan bir sıra görüntülər
+          * ** Çerçeve ** - bir animasiya içərisində tək bir şəkil
+          * ** Frame Rate ** - bir animasiyada kadrların göstərildiyi sürət, ümumiyyətlə saniyədə kadrlarla ölçülür
+
+          ## Təqdim olunan Kod
+
+          * [World.frameRate] (// studio.code.org/docs/gamelab/World.frameRate/)
+          * [function draw () {}] (// studio.code.org/docs/gamelab/draw/)
+      CSD U3 Lesson Overview 8:
+        markdown: |-
+          # Baxış
+
+          Bu açılmamış dərs dəyişənlərin əsas davranışını araşdırır. Bir proqram daxilində dəyişənləri simulyasiya etmək üçün not kartları və simli istifadə edərək sinif bir neçə qısa proqram həyata keçirir. Bu sintaksis ilə rahat olduqda, sinif sprite xüsusiyyətləri ilə eyni prosesi istifadə edir və bir sprite-nin ekran boyunca irəliləməsini izləyir.
+          ## Lüğət
+
+          * ** İfadə ** - Dəyəri həll edən hər hansı bir etibarlı kod vahidi.
+          * ** Dəyişən ** - Dəyişə bilən bir məlumat üçün yer tutucu.
+
+
+          ## Resurslar
+
+          * [Dəyişənlər Unplugged - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
+          * [Dəyişənlər Unplugged Board - Manipulyativ] (https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+        teacher_markdown: "* [Dəyişənlər Unplugged] (https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
+          - Fəaliyyət Kılavuzu Açarı ([PDF] (https://docs.google.com/document/d/ -uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY
+          / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9ByY))"
+      CSD U3 Lesson Overview 9:
+        markdown: |-
+          # Baxış
+
+          Draw Loop və Counter Pattern-i birləşdirərək sinif spritləri ekrana keçirən və digər sprite xüsusiyyətlərini canlandıran proqramlar yazır.
+      CSD U3 Movement Challenges:
+        markdown: |-
+          # Çağırışlar
+
+          _Bu problemlərdən birini həyata keçirmədən əvvəl müəlliminizdən soruşun._
+
+          * Öz animasiya üzərində işləməyə davam etmək üçün [səviyyə 15] (15) -ə qayıdın. Əvvəlcə layihənizi Göndərməli və işi bitirdikdən sonra yenidən təqdim etməlisiniz.
+          * Balıq animasiyası üzərində işə davam etmək üçün [səviyyə 12] (12) -ə qayıdın. Balıqların üzdükləri kimi görünməsi üçün onların fırlanmasını təsadüfi dəyişdirməyə çalışın.
+          * Dişli animasiyasında işləməyə davam etmək üçün [səviyyə 13] (13) -ə qayıdın. Dişlilərin düzgün bir şəkildə mesh olmasını təmin etmək üçün fərqli ölçülərdə daha çox dişli əlavə etməyə və hər bir fırlanma sürətini dəyişdirməyə çalışın
+          * Sıfırdan yeni bir animasiya yaratmaq üçün [tam Game Lab] (/ projeler / gamelab / yeni) bölməsinə gedin.
+      CSD U3 Project Build a Game SFLP:
+        markdown: |-
+          # Baxış
+
+          Sinif əvvəlki iki dərsdəki layihə bələdçisini istifadə edərək orijinal oyunlar planlaşdırır və qurur. Fərdi və ya cütlükdə işləyən sinif, oyunlar planlaşdırır, inkişaf etdirir və geribildirim verir. Həmkarlar rəyini təqdim etdikdən sonra sinif başa çatmış oyunları bölüşür.
+
+
+          ## Resurslar
+
+          * [Öz oyununu hazırla - Layihə Kılavuzu] (https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
+          * [Öz oyununu hazırla - Rubrik] (https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
+          * [Öz oyununu hazırla - Həmsaylı icmal] (https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |-
+          * [Öz oyununu hazırla] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Layihə Rəhbərləri Nümunəvi ([PDF] (https://docs. / document / d / 1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1T4Br-iQAhFnuOxCxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii »"
+          * [Öz Oyununuzu Yapın] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Birlikdən İcmal Nümunəsi ([PDF] (https://docs.google.com/doc/ / 1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xxxxxxxxxxxxggxxxxggxxxxgg)
+      CSD U3 SFLP Velocity:
+        markdown: |-
+          # Baxış
+
+          Tezgah modelinin spritləri hərəkət etdirmək üçün necə istifadə edildiyi barədə qısa bir araşdırmadan sonra sinif sürət və fırlanma sürətini birbaşa təyin edən xüsusiyyətlərlə tanış olur. Bu yeni xassələri müxtəlif yollarla istifadə etdikləri üçün əsas bir yan kaydırıcı oyunu yaratmaq üçün lazımi bacarıqları inkişaf etdirirlər.
+
+          ## Təqdim olunan Kod
+
+          * [sprite.velocityY] (// studio.code.org/docs/gamelab/velocityY/)
+          * [sprite.velocityX] (// studio.code.org/docs/gamelab/velocityX/)
+          * [sprite.rotationSpeed] (// studio.code.org/docs/gamelab/rotationSpeed/)
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |-
+          # Baxış
+
+          Bu çox günlük dərsdə sinif bir platforma tullanan oyunu yaratmaq üçün Bölmə 1-dən problem həll etmə prosesindən istifadə edir. Nümunə oyuna baxdıqdan sonra sinif oyunlarının necə olacağını təyin edir və bunları qurmaq üçün strukturlaşdırılmış bir prosesdən istifadə edir. Nəhayət, sinif oyunların necə inkişaf etdirilə biləcəyini əks etdirir və bu dəyişiklikləri həyata keçirir.
+
+
+          ## Resurslar
+
+          * [Platform Oyununuzun Planlaşdırılması - Layihə Bələdçisi] (https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Platform Oyununuzun Planlaşdırılması] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Layihə Kılavuzu ([PDF] (https://docs.google.com/document/DW9WW/WW/WW/WW/WW/WW/WW/WW/WW/WW/WW/WW/WW/WW/WW)
+          export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))"
+      CSD U3 combining rep:
+        markdown: |-
+          ### Bu ikili simli deşifrə edə bilərsinizmi?
+
+
+
+          # 1000011
+
+
+
+          ### Kodunu açmağa kömək etmək üçün hansı məlumatlara ehtiyacınız var?
+      CSD U4L01 SFLP:
+        markdown: Bu dərsdə istifadəçinin ehtiyaclarına qarşı empatinin,  necə dizayn
+          prosesinin kritik bir komponenti olduğunu öyrənəcəksiniz. Sonra bir neçə
+          produktu araşdırıb onların müxtəlif növ ehtiyacları necə qarşıladığını müzakirə
+          edəcəksiniz.
+      CSD U5 L13 SFLP Interpreting Data:
+        markdown: |-
+          # Baxış
+
+          İki fərqli məlumat növü arasındakı əlaqələrə baxaraq məlumatların təfsirinə daha çox gedin. Münasibətlərin tapılmasının problemləri həll etməyə necə kömək edə biləcəyinə baxın.
+
+          ## Resurslar
+
+          * [Verilən Təfsir] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Fəaliyyət Kılavuzu
+          * [Verilənləri şərh etmək] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Mənbə
+        teacher_markdown: "* Verilənlərin təfsiri - Nümunə ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: |-
+          # Baxış
+
+          ASCII sisteminin əlifbanı təmsil etmək üçün On-Off nümunələrindən necə istifadə etdiyini öyrənin, sonra əlifbanı təmsil etmək üçün öz ikili sisteminizi yaratmaq üçün istifadə edin.
+
+          ## Lüğət
+
+          * ** ASCII ** - ASCII - Məlumat mübadiləsi üçün Amerika Standart Kodu. ASCII, hər hansı bir kompüterin anlaya biləcəyi, hamı tərəfindən tanınmış xam mətn formatındadır.
+          * ** İkili ** - Yalnız iki variantdan istifadə edərək məlumatları təmsil etməyin bir yolu.
+          * ** Bit ** - "İkili Rəqəm" in bir daralması. Bir az, kompüterdəki bir məlumat vahididir, ümumiyyətlə 0 və ya 1 kimi təmsil olunur.
+
+
+          ## Resurslar
+
+          * [ASCII - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+        teacher_markdown: "* [ASCII] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Misal export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: |-
+          # Baxış
+
+          Məlumat problemini həll etmə prosesinin mahiyyətcə hər addımını tamamlamaq üçün bir kompüterdən necə istifadə edilə biləcəyinə dair bir nümunə görəcəksiniz. Bir kompüterin avtomatik qərar vermək üçün istifadə edə biləcəyi qaydaları və ya bir alqoritm yaradacaqsınız.
+
+          ## Resurslar
+
+          * [Məlumat Qərarlarının Avtomatlaşdırılması] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resurs (kopyalayın [MS Word] (https://docs.google) / d / 1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs / export? format = doc), [Google Doc] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8Rb4Vc7)
+          * [Veri Qərarlarının Avtomatlaşdırılması] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Fəaliyyət Kılavuzu ([MS Word] kimi kopyalayın (https://d) document / d / 1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI / export? format = doc), [Google Doc] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LZzz)
+        teacher_markdown: "* Məlumat Qərarlarının Avtomatlaşdırılması - Nümunə ([PDF]
+          (https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
+      CSD-U5-SFLP Combining Representations:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, daha mürəkkəb tip məlumatların bir qeyddə kodlaşdırılmasına imkan vermək üçün hər üç növ ikili təmsil sistemini (ASCII simvolları, ikili say və şəkillər) birləşdirir. Bir sıra bitləri gördükdən və onları deşifr etmələrini istəndikdən sonra sinif ikili məlumatları başa düşməyin həm istifadə olunan sistemi, həm də şifrələnmiş məlumatların mənasını anlamasını tələb etdiyi fikri ilə tanış olur.
+
+
+          ## Resurslar
+
+          * [Pet Records - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+          * [ASCII to Binary Table - Reference] (https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Pet Records](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))"
+      CSD-U5-SFLP Create a Representation:
+        markdown: |-
+          # Baxış
+
+          Bu fəsildə öyrəndikləri ikili nümayəndəlik sistemlərindən istifadə edərək mükəmməl gününüzü təmsil edəcək bir quruluş dizayn edin. Yumruk kartı formatı tərtib edərkən ASCII, ikili rəqəmlər və şəkillərdən istifadə etməlisiniz.
+
+          ## Resurslar
+
+          * [Nümayəndəlik yaradın - Layihə Kılavuzu] (https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: |+
+          * Nümayəndəlik yaradın - Layihə Kılavuzu ([Google Doc]
+          (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit) | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))
+
+      CSD-U5-SFLP Interpreting Data:
+        markdown: |-
+          # Baxış
+
+          Xam məlumat dəstlərini təmizləmək və görselləşdirməklə məlumatların strukturlaşdırılmasına daha çox gedin. Vizualizasiyaların məlumatları necə başa düşdüyünüzü və bu barədə qərar qəbul etdiyinizi görün.
+
+          ## Resurslar
+
+          * [Structuring Data] (https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Fəaliyyət Kılavuzu
+        teacher_markdown: "* Structuring Data - Nümunəvi ([PDF] (https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: |-
+          # Baxış
+
+          Bu dərsdə tanış hiss edə biləcəyi bəzi problemlər olan məlumatlarla qərarlar qəbul edən bəzi təcrübələr əldə edəcəksiniz.
+
+          ## Resurslar
+
+          * [Verilərlə Qərarlar Verilməsi] (https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Fəaliyyət Bələdçisi
+        teacher_markdown: "* [Verilərlə Qərarlar Vermə] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Nümunə ([PDF] \n(https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))\n"
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: |-
+          # Baxış
+
+          Bu dərs bir nümayəndəlik sistemi yaratmaq üçün lazım olanlara daha yaxından baxır. Qruplar yalnız bir kart yığını istifadə edərək əlifbadakı hər hansı bir məktubu təmsil edə bilən sistemlər yaradır, sonra sistemləri ilə mesajlar yaradır və sistemin təyin olunduğu kimi işləməsini təmin etmək üçün digər qruplarla mübadilə edir. Sinif, işləyən sistemlər arasındakı ortaq cəhətləri müzakirə edərkən bir çox mümkün həll yollarının olduğunu qəbul etdi.
+          ## Lüğət
+
+          * ** Deşifrə ** - bir insanın oxuya bilməsi üçün məlumatların necə təmsil olunduğunu dəyişdirmək
+          * ** Encode ** - informasiyanın bir kompüter tərəfindən oxunması üçün necə təmsil olunduğunu dəyişdirmək
+
+
+          ## Resurslar
+
+          * [Məlumat Təmsil edən] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Fəaliyyət Bələdçisi ([MS Word] kimi kopyalayın (https://docs.google.com/ / d / 1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI / export? format = doc), [Google Doc] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kRPI)
+        teacher_markdown: |-
+          * [Məlumat Təmsil Etmə] (https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF] (https://docs.google.com/dxTu/WxSu/8/9 format = pdf))
+          * [Təmsil edən məlumat] (https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Nümunə 2 ([PDF] (https://docs.google.com/document/d/ 1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4 / export? Format = pdf))
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |-
+          # Baxış
+
+          Bir məlumat problemini həll etməyə kömək etmək üçün problem həll etmə müddətindən istifadə edəcəksiniz.
+
+          ## Resurslar
+
+          * [Məlumatla Problem Çözmə] (https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Fəaliyyət Bələdçisi
+        teacher_markdown: "* Məlumatla Problem Çözmə - Nümunə ([PDF] (https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, təşkilatlar tərəfindən real dünyada problemlərin həlli üçün məlumatların necə toplandığını və istifadə olunduğunu əhatə edir. Sinif məlumatların köməyi ilə həll edilə bilən üç ssenariyə baxır və onları həll etmək istədikləri məlumat növlərini və məlumatları necə toplaya bildiklərini beyin fırtınası edir. Hər bir ssenariyə, məlumatla oxşar problemi həll edən bir real dünya xidməti haqqında bir video da daxildir.
+
+
+          ## Resurslar
+
+          * [Gerçək Dünyadakı məlumatlar] (https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Fəaliyyət Kılavuzu
+      CSD-U5-SFLP Representation Matters:
+        markdown: |-
+          # Baxış
+
+          Məlumatların necə təmsil olunduğunun və qərar vermə tərzimizə necə təsir etdiyinin vacibliyi barədə ilk ləzzətinizi əldə edin. Bir neçə nəfərə hansı yeməyi sifariş etməli olduqlarına qərar verməyə kömək edəcəksiniz.
+
+          ## Resurslar
+
+          * [Nümayəndəlik Məsələləri - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |-
+          [açar]
+
+          * Təmsilçilik məsələləri (https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [Yemək Verileri] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Mənbə ([PDF] (https://docs.google.com/oc / d / 1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJr_VdVr/VC/V/V/V/V/V/V/V-n-n-n-n-n-n-n-l-c-c-c-c-c-c-c-c)
+
+          [/ açar]
+      CSD-U5-SFLP Representing Images:
+        markdown: |-
+          # Baxış
+
+          Son dərsdə öyrəndiyiniz açma qaydalarının şəkilləri təmsil etmək üçün necə istifadə edilə biləcəyini öyrənin. Yolda, daha əvvəl gördüyünüz nümayəndəlik sistemlərinin bəzi xüsusiyyətlərinin şəkillərə necə tətbiq olunduğunu araşdıracaqsınız.
+
+          ## Lüğət
+
+          * ** piksel ** - "şəkil elementi" üçün qısadır, daha böyük bir görüntünün bir rəng nöqtəsini ehtiva edən kiçik bir kvadrat və ya nöqtə olan rəqəmsal görüntünün əsas vahididir.
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: |-
+          # Baxış
+
+          Bu dərs ikili say sistemini təqdim edir. İkili (baza-2) say sistemindəki yer dəyərlərini təmsil edən bir sıra kartlarla sinif kartları üzü və üzü aşağı çevirib bitləri "aç" və ya "söndür" edir, daha sonra bu fərqli nəticələrdən çıxan rəqəmləri müşahidə edir. naxışlar Nəhayət, model ümumi 4 bitlik bir sistemə qədər uzanır.
+
+          ## Resurslar
+          * [Nömrələri Təmsil Etmə - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+          * [Sayı Kartları - Manipulyativ] (https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [açar]
+
+          * Nömrələri Təmsil edən - Nümunəvi ([Google Doc] ((https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/ açar]
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: |-
+          # Baxış
+
+          Bu dərs, insanların məlumatları necə gizlədə biləcəyini, hətta digər insanlar görə bilsə belə. Sinif emojilər üçün kodlama metoduna baxacaq, sonra açar sözdən istifadə edərək emoji mesajlarını şifrələməyin bir yolunu öyrənəcəkdir.
+
+
+          ## Resurslar
+
+          * [Məlumatların Gizli saxlanılması - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* Məlumatların gizli saxlanılması - Nümunə ([PDF] (https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))"
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |-
+          # Baxış
+
+          Bu bölməni bitirmək üçün seçdiyiniz problemin həllinə kömək etmək üçün bir tövsiyə və ya proqnoz vermək üçün məlumatdan istifadə etmək üçün bir yol hazırlayacaqsınız.
+
+          ## Resurslar
+
+          * [Tövsiyə et] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Layihə Kılavuzu
+          * [Tövsiyə et] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Rəy
+        teacher_markdown: |-
+          * Tövsiyə et - Layihə Rəhbərinin Nümunəsi ([PDF] (https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8Iexport?format=pdf))
+          * Bir Tövsiyə Edin - Nəzarətçi Nümunə ([PDF] (https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqY) Export?format=pdf)
+      GoingPlacesSafely-unplugged:
+        markdown: |-
+          # Yerlərə Təhlükəsiz Getmək
+
+          İnternet güclü, lakin bəzən təhlükəli bir yerdir. İnternetdə gəzərkən ehtiyatlı olun!
+      Unit 2 Lesson 10 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs CSS dərslərini və xüsusi rəngləri əhatə edir. Şagirdlər əvvəlcə RGB (qırmızı, yaşıl, mavi) dəyərlərdən istifadə edərək xüsusi rənglərin necə təyin olunacağını öyrənirlər, sonra bu rəngləri CSS dərslərindən istifadə edən yeni bir Dörd Fəsil veb səhifəsinə tətbiq edirlər. Dərslərdən istifadə edərək, tələbələr Four Seasons veb səhifəsinə daha çox üslub əlavə edirlər, sonra şəxsi veb saytlarını tərtib etmək üçün istifadə edirlər.
+          ## Lüğət
+
+          * ** HTML Class ** - Elementlərin hamısına eyni sinif adı verərək bərabər üslubları müəyyənləşdirməyi mümkün edir.
+
+          ## Təqdim olunan Kod
+
+          * [RGB Color] (// studio.code.org/docs/weblab/rgb-color/)
+
+          ## Resurslar
+
+          * [RGB Rəngləri - Fəaliyyət Bələdçisi] (https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+        teacher_markdown: "* [RGB Colors] (https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?copiedFromTrash)
+          - Fəaliyyət Kılavuzu ([PDF] (https://docs.google.com) 18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8
+          / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/18-gTTzzgggukuQB9bOmNTgwOd)))"
+      Unit 2 Lesson 16 Overview:
+        markdown: |-
+          # Baxış
+
+          Bölmənin son bir neçə günündə sinif öz veb saytlarını yekunlaşdırır, rəy almaq, rubrikanı nəzərdən keçirmək və saytda son nöqtələri qoymaq üçün həmyaşıdları ilə işləyir. Bölməni bağlamaq üçün hər kəs layihələrini və necə inkişaf etdiklərini paylaşır.
+
+
+          ## Resurslar
+
+          * [Yekun Şəxsi Veb Saytı - İcmal İnceleme] (https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
+          * [Yekun Şəxsi Veb səhifə - Layihə Kılavuzu] (https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
+          * [Final Fərdi Veb Saytı - Rubrik] (https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+        teacher_markdown: |-
+          [açar]
+
+          * [Son Şəxsi Veb səhifə] (https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Layihə Rəhbərinin Nümunəsi ([PDF] (https://docs.google.com) document / d / 1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7cv )VMVQ9WxVVVVV/V/9/1/1/1/1/1/1/1/DEE&old=1106/DK
+          * [Yekun Şəxsi Veb səhifə] (https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Peer Review Exemplar ([PDF] (https://.com) document / d / 1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE / export? format = pdf) | [DOCX] (https://docs.google.com/document/d/1GxyJPbd9In4GBgDQPXDx)))
+
+          [/ açar]
+      Unit 2 Lesson 7 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs CSS-i səhifədəki elementləri tərzləşdirməyin bir yolu kimi təqdim edir. Sinif CSS qayda dəstləri üçün əsas sintaksisini öyrənir və sonra HTML mətn elementlərini təsir edən xüsusiyyətləri araşdırır. Nəhayət, hər kəs mətn üslublarını şəxsi veb saytlarına tətbiq edir.
+          ## Lüğət
+
+          * ** CSS ** - CSS Cascading Style Sheets deməkdir. CSS hər bir HTML elementinin müəyyən qaydalara uyğun tərtib edilməsinə imkan verir.
+          * ** CSS Selector ** - Kodun üslubun tətbiq olunmalı hissəsini müəyyənləşdirir.
+
+          ## Təqdim olunan Kod
+
+          * ** [Rəng] (// studio.code.org/docs/weblab/color/)** - `color: value;`
+          * ** [Mətn Align] (// studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          * ** [Mətn Dekorasiyası] (// studio.code.org/docs/weblab/Text-Dec/)** - `mətn dekorasiyası: dəyər;`
+          * ** [Şrift Ailəsi] (// studio.code.org/docs/weblab/font-family/)** - `font-family: value;`
+          * ** [Şrift Ölçüsü] (// studio.code.org/docs/weblab/font-size/)** - `font-size: value;`
+      Unit 2 Lesson 8 Overview:
+        markdown: |-
+          # Baxış
+
+          Bu dərs daha çox mətn olmayan elementlərə diqqət yetirərək CSS stil xüsusiyyətləri ilə tanışlığı davam etdirir. Dərs, Dünyanın bir Şirniyyat səhifəsindəki yeni CSS üslublarını araşdırmaq və dəyişdirməklə başlayır. Daha sonra hər kəs bu yeni bilikləri şəxsi veb saytlarına tətbiq edir.
+
+          ## Təqdim olunan Kod
+
+          * ** [Arxa Rəng] (// studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          * ** [Float] (// studio.code.org/docs/weblab/float/)** - `float: value;`
+          * ** [Margin] (// studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          * ** [Genişlik] (// studio.code.org/docs/weblab/width/)** - `genişlik: dəyər;`
+          * ** [Boy] (// studio.code.org/docs/weblab/height/)** - `boy: dəyər;`
+          * ** [Sərhəd Stili] (// studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          * ** [Sərhəd genişliyi] (// studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          * ** [Sərhəd Rəngi] (// studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
+      courseAB_EOC_2021:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+      courseB_EOC_2021:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+      courseD_EOC_2021:
+        description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+      courseD_EOC_examples_2021:
+        display_name: Layihə Nümunələri
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          feedback: Düzgün!
+        - text: B
+        - text: C
+        - text: Yuxarıdakılardan heç biri
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          feedback: Düzgün!
+        - text: '10'
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_EOC_2021:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseE_EOC_examples_2021:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Tumbleweed ekranın yuxarı hissəsinə üzəcəkdir
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        - text: Çöp otu yuvarlanmağa başlayacaq
+          feedback: Düzgün!
+        - text: Çöp otu yanıb sönəcək.
+          feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+        questions:
+        - {}
+      courseF_artist_practice:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
+        display_name: Sənətçi təcrübəsi
+      courseF_events_practice:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
+        display_name: Tədbirlərin keçirilməsi praktikası
+        teacher_markdown: |-
+          # Seçim səviyyəsi baxış
+          Seçim səviyyəsi tələbələri tamamlamaq üçün əlavə səviyyəli bir menyu ilə təmin edir. Tələbələr burada ən azı bir sub-level keçmək lazımdır, lakin onlar kimi çox vasitəsilə işləyə bilər (və ya) kimi.
+
+          Siz tələbələr müstəqil variantları seçin və ya onlar keçmək lazımdır nə qədər sub-level kimi gözləntiləri müəyyən kömək etmək üçün aşağıdakı təsviri istifadə edə bilərsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  |Blast Off!|Learning to fly|Do a barrel roll|Shrink and Grow|Puff up the fish!|Penguin on the move|
+          |-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+          | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+      courseF_external_variableConstant:
+        markdown: |-
+          <h2>Değişkenler Hakkında Daha Fazlası</h2>
+
+          <img src="https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png" style="padding-left: 30px; width:300px; float:right;"/>
+          <h3>Bir değişkeni...sabit olarak kullanmanın harika bir yolunu öğrendiniz!
+          Bir değişkeni sabit olarak kullandığınızda, bir değeri bir kez ayarlarsınız, ardından "Çalıştır" ı tıkladıktan sonra o *aynı* değeri değiştirmeden programınızda birden çok kez kullanırsınız. </h3>
+          <br/><hr/>
+          <h3>Serinin sonraki bölümünde, program içinde *değişen* değişkenlerle kod yazacaksınız.</h3>
+      courseF_intro_apps:
+        description: CS əsaslarına xoş gəlmisiniz! Bütün bu layihələr Sprite Lab ilə
+          yaradılmışdır. Mümkün nə görmək üçün indi onlara cəhd edin. Bu kursun sonunda
+          bu kimi öz layihələrinizi yarada bilərsiniz... və daha çox!
+        display_name: Sprite Lab Tətbiqləri
+        teacher_markdown: |-
+          # Seçim səviyyəsi baxış
+          Seçim səviyyəsi tələbələri tamamlamaq üçün əlavə səviyyəli bir menyu ilə təmin edir. Tələbələr burada ən azı bir sub-level keçmək lazımdır, lakin onlar kimi çox vasitəsilə işləyə bilər (və ya) kimi.
+
+          Buradakı seçim tələbələri araşdıra biləcək tətbiqləri seçməyə məcbur edir. Bu həyata [dərs planı] olan bir iş hesabatı "təhsil apps" ilə əlaqələndirmək üçün nəzərdə tutulmuşdur(.././).
+      courseF_text_practice:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
+        display_name: Mətn və təcrübə göstərişlər
+        teacher_markdown: |
+          # Seçim səviyyəsinə baxış
+          Seçim səviyyəsi tələbələri tamamlamaq üçün əlavə səviyyəli bir menyu ilə təmin edir. Tələbələr burada ən azı bir sub-level keçmək lazımdır, lakin onlar kimi çox vasitəsilə işləyə bilər (və ya) kimi.
+
+          Siz tələbələr müstəqil variantları seçin və ya onlar keçmək lazımdır nə qədər sub-level kimi gözləntiləri müəyyən kömək etmək üçün aşağıdakı təsviri istifadə edə bilərsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Using Speech for Text|Text from Prompts|Name the robot!|Variable Labels|Big Text|Prompting for colors|Starting from scratch|
+          |-|-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+          | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |-
+          # CS Kəşfləri Kurs Sonrası Anket
+
+          ** Sizin girişiniz və rəyiniz bizim üçün vacibdir! ** Biz bunlardan istifadə edirik:
+
+          * kursda irəliləyişlər etmək
+          * təcrübənizi anlayın
+          * gələcəkdə hansı mövzular haqqında daha çox öyrənmək istədiyinizi bizə deyin
+
+          CS Kəşflərini daha da yaxşılaşdırmağa kömək etmək üçün vaxt ayırdığınız üçün təşəkkür edirik!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/lessons/1/levels/1/page/1" target="top"> CS Kəşflərini tamamlamaq üçün buraya vurun Kurs Sonrası Sorğu !!! </a>
+
+          (yeni bir sekmede açılır)
+
+          <br>
+        teacher_markdown: |-
+          ** Xahiş edirəm tələbələrinizi bu sorğunu tamamlasın !!! **
+
+          * Anketin anonim nəticələrini müəllimlər panelində görə bilərsiniz
+          * Nəticələr bizim üçün vacibdir (code.org) kurslarımızı davam etdirmək və inkişaf etdirmək.
+          * E-poçt vasitəsi ilə xəbərdar ediləcəyiniz öz girişinizi təqdim edə biləcəyiniz bir müəllim sorğusu da olacaq.
+
+          **Qeyd:**
+
+          * Bu səhifədəki düymə [studio.code.org/s/csp-post-survey ：(https://studio.code.org/s/csp-post-survey) ünvanına yönlənir
+          * İstəsəniz müəllimlər panelindəki açılan menyudan bölməniz üçün cari vahid olaraq "Tələbə Kurs Sonrası Anketini" təyin edə bilərsiniz.
+      csd-pre-survey-2017-levelgroup:
+        title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      csd-pre-survey-levelgroup_2019:
+        title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      csf_digital_trails:
+        markdown: |-
+          # Rəqəmsal Cığırı izləyin
+
+          ## What information is OK to have in your digital footprint?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Rəqəmsal Cığırı izləyin
+
+          ## What information is OK to have in your digital footprint?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Onlayn Qonşuluğum
+
+          ## How do you go places safely online?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Onlayn Qonşuluğum
+
+          ## How do you go places safely online?
+      express_EOC_2021:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      express_EOC_examples_2021:
+        display_name: Layihə Nümunələri
+      gradek1_activity_beNice:
+        markdown: "# Kompüter Laboratoriyasında davranış\n  \n<br/> <br/>\n    \n<a
+          href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<düymə>\nDərs planına keçin\n</button>\n</a>\n\n<br/>
+          <br/>"
+      outbreak_freeplay_choice:
+        display_name: Azad Oyna

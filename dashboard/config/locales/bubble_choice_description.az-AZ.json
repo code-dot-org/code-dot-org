@@ -2,7 +2,41 @@
   "az-AZ": {
     "data": {
       "bubble_choice_description": {
-        "courseF_extras_sim": "Özünün simulyasiyanı yarat və təkmilləşdir!"
+        "courseF_extras_sim": "Özünün simulyasiyanı yarat və təkmilləşdir!",
+        "CourseF_app_computer": "Bütün detalları birləşdirin və kompüteri necə açmaq olduğunu araşdırın!",
+        "courseC_artist_prog7_2021": "Bu heyvanın adı ilə birka xüsusi forma malikdir!",
+        "courseC_artist_prog_challenge2a_2021": "Mənə bu yolda sarı xətləri çəkməkdə kömək edin!",
+        "courseF_apps_aquarium": "Öz akvariumunuzu müxtəlif objektlərlə doldurun.",
+        "courseF_apps_card": "Bu proqram sizə bir neçə sual verəcək və sonra sizin üçün fərdi doğum günü mesajı yaradacaq!",
+        "courseF_apps_chatbot": "Bu robot sizə suallar verəcək və yazdığınız şeyi xatırlayacaq! Cavabınızı daxil edin və X-9 ilə söhbət edin!",
+        "courseF_apps_collector": "Bacardığın gədər cəld objektləri toplayın!",
+        "courseF_apps_madlib": "Bu proqram bir neçə söz daxil etməyinizi istəyəcək və sonra bir gülməli hekayə demək üçün bu sözlərdən istifadə edəcək!",
+        "courseF_apps_pet": "It üçün obyektlərin sürükleyin və reaksiyasına baxın!",
+        "courseF_editable_madlib": "Bu proqram bir neçə söz daxil etməyinizi istəyəcək və sonra bir gülməli hekayə demək üçün bu sözlərdən istifadə edəcək!",
+        "courseF_events_choice_conflict": "Təyyarəni bir tərəfə və digər tərəfə döndərin. Hadisələrin köməyi ilə davranışın idarə edilməsində çalışın.",
+        "courseF_events_conflict": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseF_events_freeplay_air": "Göydə görə biləcəyiniz quşlar və digər əşyalar ilə bir hava səhnəsi yaradın.",
+        "courseF_events_freeplay_animals": "Sevimli heyvanlar və canlılar ilə əyləncəli bir səhnə yaradın.",
+        "courseF_events_freeplay_blank": "Öz kostyumlarınızı seçin və ya onları özünüz çəkin!",
+        "courseF_events_freeplay_space": "Planetlərin, gəmilərin və əcnəbilərin ilə bir kosmik səhnə yaradın.",
+        "courseF_events_key": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseF_events_practice_reorder": "Bu koddakı problem quşun dayanmasıdır. Kodu düzgün qaydada verin.",
+        "courseF_events_ship": "Bir neçə saniyə sonra gəmini hərəkət etməyə məcbur edin. Hadisələri ilə davranış əlavə təcrübə keçir.",
+        "courseF_events_stops": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseF_events_time": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseF_sprites_freeplay_air": "Göydə görə biləcəyiniz quşlar və digər əşyalar ilə bir hava səhnəsi yaradın.",
+        "courseF_sprites_freeplay_animals": "Sevimli heyvanlar və canlılar ilə əyləncəli bir səhnə yaradın.",
+        "courseF_sprites_freeplay_blank": "Öz kostyumlarınızı seçin və ya onları özünüz çəkin!",
+        "courseF_sprites_freeplay_space": "Planetlərin, gəmilərin və əcnəbilərin ilə bir kosmik səhnə yaradın.",
+        "courseF_text_choice_color": "İstifadəçidən rəng adını tələb edin və proqramınızda istifadə edin.",
+        "courseF_text_choice_conversation": "Iki sprites söhbət etmək üçün \"Print\" blokları istifadə edin.",
+        "courseF_text_choice_events": "Mətn düzgün yazılmasını təmin etmək üçün hadisə blokunu əlavə edin.",
+        "courseF_text_choice_interview": "Koddakı səhv robotun dediklərini təhrif edir. Səhvi tapın və düzəldin.",
+        "courseF_text_choice_multiprompt": "Koddakı səhv Bu təbrik kartını pozdu. Tapmaq və səhv düzəltmək.",
+        "courseF_text_choice_title": "\"Header ekranlar\" mətn əlavə etmək üçün başqa bir yoldur. Burada onlara cəhd edin!",
+        "courseF_text_print": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "courseF_text_review": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "ramp_artist_loops4_2021": "Bu mükəmməl model, loop ardıcıllıqla yaradın"
       }
     }
   }

@@ -27,10 +27,21 @@
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
         "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "mavi"
+          "48d6215903dff56238e52e8891380c8f": "mavi",
+          "f59f10539890569d3b1deb0e4352ab84": "Bu gün özümü geyinirəm",
+          "810f7026db2f96c4e654f4664e44be04": "forma!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "qırmızı"
+          "bda9643ac6601722a28f238714274da4": "qırmızı",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Bu olduqca",
+          "c30c9d9f51c03a6d42d66cea54206abd": "bu gün deyilmi?",
+          "b92274a5b4513e80f4bd6a8136581578": "Ən qəribə kölgəsi budur",
+          "f54929e86cc7510907895070d8b05979": "Mən heç gördüm!",
+          "1df9f02f4866a1996ba55a14b80e4125": "Şapkam nə rəngdədir?",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!",
@@ -38,11 +49,37 @@
           "6b90c9823ff75e6a78aa63b392e7315a": "Xal: "
         },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Sən məni tapdın!"
+          "0b895ef4c917e50663bc2a7327cbee3d": "Sən məni tapdın!",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Üçə qədər say, yox olacağam! Məni tapmaq üçün 1 ilə 400 arasında bir rəqəm tapın!",
+          "74e3efe12b17fe00c01147733fad486d": "Məni tapmaq üçün bir rəqəm təxmin et!",
+          "3c5a6a6bfff469fd4c779912331f1049": "Bah!\n",
+          "0464d226582401370945003bc8850990": "Mwahahahaha!",
+          "765366ef0f68387ed2a6ca3a8d24182d": "Çox yüksək!",
+          "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!\n",
+          "0ceb38a3de45bf070e96e6657474f47d": "Çox aşağı!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "Choose Your Own Adventure": {
           "5282c58be05cdecc1308241480b66276": "Oyun Bitdi",
-          "710ba29e2eed73bc74a520631d0ab520": "Oyun Bitdi!"
+          "710ba29e2eed73bc74a520631d0ab520": "Oyun Bitdi!",
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Ah, narahat olma! Əminəm ki, tapa bilərəm.",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "İndi tapmaq üçün yola çıxacağam! Əlvida!",
+          "6d411b45e39818da535ba9f8a2cf58e2": "Məni ifritəyə çevirdi!",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "Bu çubuğun sahibini həqiqətən tapmalıyam!",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "Yardımınız üçün təşəkkür edirəm, amma indi getməliyəm",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hey, bir çubuq tapdım!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "Oh yox! Bu cadılar çubuğu!",
+          "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! İki çubuq tapdım! Kömək üçün ikincisini götür!",
+          "24a124016e7eec7a8fef5bc228541533": "Ah, narahat olma! Əminəm ki, tapa bilərəm",
+          "eb2a8486370211626bbcd04634b73593": "Salam! Sənin adın nədir?",
+          "09c9b4915a77a37699140b52b86e4cad": "Deyəsən çubuğumu itirmişəm. Hər yerdə gördünmü? 1. Bəli, 2. Xeyr",
+          "ede6020b3ffeeff2339ffbccaa0969df": "Yox? Hmm, tapmaqda mənə kömək etmək istəyirsən? 1. Bəli, 2. Xeyr",
+          "90a2bd046bc816f7d42c33d2a3b347d3": "Əla! Hansı istiqamət ola bilər? 1. Sağ, 2. Sol",
+          "7222972741bf95c7d2bf97d1a104fbf0": "Deyəsən çubuğumu itirmişəm. Hər yerdə gördünmü? 1. Bəli, 2. Xeyr",
+          "c499da20fd7c64b89860a41b61d2dd88": "Yox? Hmm, tapmaqda mənə kömək etmək istəyirsən? 1. Bəli, 2. Xeyr",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "Course 4 Play Lab Vars 1": {
           "c469f9393f38213de6fcffa9fe48008d": " -xal- "
@@ -61,7 +98,9 @@
         },
         "FoodFight": {
           "62f1b3a41b5eef66a4b2382bb2ab24f4": "Xal ",
-          "cc2ecba4e56986752892c0e68c8e32e0": "Səviyyə "
+          "cc2ecba4e56986752892c0e68c8e32e0": "Səviyyə ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "OPD-K5-projects-6": {
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
@@ -79,7 +118,9 @@
           "8292c7cbebf598e875ccd0c008958922": " kim?",
           "40f4f24106dde9234f43bf30465647e0": "Tuk tuk.",
           "3986de660e6560710c546cb2f22c12f3": "Kim var burda?",
-          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!"
+          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseC19_playLab_EOC5": {
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
@@ -119,18 +160,28 @@
           "a2e534e7e893bd7ddb5d2047ed29dc8e": "fillər toplandı "
         },
         "courseF_playlab_variables7c": {
-          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin."
+          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin.",
+          "105837607f006777512dc5b09322ea4f": "Zəhmət olmasa adınızı daxil edin.",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseF_playlab_variables8c": {
           "bec312aa7dbfb0c284d221d2aa8e9ffd": "Təbriklər, ",
           "8460ae10541cf8ded22a4e899ddfc0bb": "Bağışlayın, ",
-          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin."
+          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin.",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", Rəngi düşünürdüm",
+          "8622f69e8cf70458a82fc22d8e46372f": ", Rəngi düşünmürdüm",
+          "105837607f006777512dc5b09322ea4f": "Zəhmət olmasa adınızı daxil edin.",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseF_playlab_variables_challenge1": {
           "8292c7cbebf598e875ccd0c008958922": " kim?",
           "40f4f24106dde9234f43bf30465647e0": "Tuk tuk.",
           "3986de660e6560710c546cb2f22c12f3": "Kim var burda?",
-          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!"
+          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseF_playlab_variables_challenge2": {
           "6b90c9823ff75e6a78aa63b392e7315a": "Xal: "
@@ -149,7 +200,8 @@
         },
         "courseC19_playLab_sample2_2021": {
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
-          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
+          "83db90f8846d091d3532256816f105d9": "Bu Neiladır"
         },
         "courseC_data wizard_2021": {
           "5b402e6ea05e847a076e03ad74420c45": " quşlar!",
@@ -158,10 +210,324 @@
         },
         "courseF_apps_aquarium": {
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "məxluq",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "digər"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "digər",
+          "f655df68ec33643278de7e69794e8d76": "Virtual akvarium",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Nə əlavə edəcəksiniz?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Hansı balıq?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Hansı varlıq?",
+          "78574118d153534fd0925a2f5ca25e79": "Hansı şey?"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!",
+          "077449fb290b51b9d70c9f2f3d3213bc": "saniyələr",
+          "490082498449bd20ff0199737dfa4916": "Oyun növünü seçin:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Böyük kolleksiyaner oyun"
+        },
+        "Alien Defender": {
+          "66ca156974a9909af6aea88ad5cb915b": "Zombiləri yadplanetlidən uzaq tutun, onu kədərləndirirlər!",
+          "66363f1551b4fdb85c85222c629013b2": "Əcnəbini müdafiə et!",
+          "3b3d1f8225a16aac3f372c3062d8b194": "Kədərlənirsə, get daha çox bal üçün onu yenidən sevindir!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "Yaşayan heç kim o qədər gənc deyil.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "Çox cavan.",
+          "781b7711244d030e4ed6e1bfa883364e": "Hələ 20 deyiləm!",
+          "01bab55de9d3319f27c5213b4661c79f": "O qədər də köhnə deyil!",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "Bunu bacardınız!",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "Bu pinqvini axtarmamışdan əvvəl neçə yaşım olduğunu təxmin et!",
+          "919ba81fa27a3f187b7f51f1382c022f": "Neçə yaşım var",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "Virtual Pet 1_2019": {
+          "22661453237feb87f1b00dd17bc39666": "Hey! Enerji artdı!",
+          "4ac000226dd5bc7fc14ecde063245731": "Hey! Enerji sıfırlandı!"
+        },
+        "Virtual Pet 1_2020": {
+          "22661453237feb87f1b00dd17bc39666": "Hey! Enerji artdı!",
+          "4ac000226dd5bc7fc14ecde063245731": "Hey! Enerji sıfırlandı!"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseE_aboutme_1_2021": {
+          "8e985f60f328934accd78e7649584840": "Dondurma mənim yeganə zövqümdür!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "Zəhmət olmasa bir daha cəhd edin.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "Oyun bitdi!"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?",
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Salam, mən X-9! Sizin adınız nədir?",
+          "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Neçə yaşın var?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşınızı daxil edin:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "çox illər!",
+          "605f302ebc9f7fbacba60b15f551a633": "Sevdiyiniz rəng nədir?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Sevdiyiniz rəngi daxil edin:",
+          "ae096fbf24d913754b01a1601672bf62": "da!",
+          "1f258d88a70309efc1435ef5daa277a0": "Bu gün mənimlə söhbət etdiyiniz üçün təşəkkür edirik!"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
+          "bf08dd3d1961874f13e77c936aad27e5": "A Blank Space Story",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekti daxil edin:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
+          "e522ee28f39133b45497637539ff429b": "Rəqəmi daxil edin:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?",
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Salam, mən X-9! Sizin adınız nədir?",
+          "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Neçə yaşın var?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşınızı daxil edin:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "çox illər!",
+          "605f302ebc9f7fbacba60b15f551a633": "Sevdiyiniz rəng nədir?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Sevdiyiniz rəngi daxil edin:",
+          "ae096fbf24d913754b01a1601672bf62": "da!",
+          "1f258d88a70309efc1435ef5daa277a0": "Bu gün mənimlə söhbət etdiyiniz üçün təşəkkür edirik!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları",
+          "bf08dd3d1961874f13e77c936aad27e5": "A Blank Space Story",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekti daxil edin:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
+          "e522ee28f39133b45497637539ff429b": "Rəqəmi daxil edin:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_playlab_variables1a": {
+          "ea904c9d18bd602705f598372988aaa8": "Mən nə deyə bilərəm?",
+          "97a97de7add5e8dcd9f70a407d56968e": "Məqsəd!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "Neçə yaşın var Brian?",
+          "662722f1029078dad7a3683c64d8b922": "Heyrət!  Mən",
+          "ae096fbf24d913754b01a1601672bf62": "da!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "Bir zövq olsun",
+          "ecb2903fb054395baf72ea1da127be32": "Bir yaş üçün olduqca hündürsən",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": "yaşlı,",
+          "16e30dcbd70ec5a152eedded32c69476": "Adın nədir?",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Neçə yaşın var?",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "Səninlə görüşməkdən məmnunam,",
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_playlab_variables6c": {
+          "105837607f006777512dc5b09322ea4f": "Zəhmət olmasa adınızı daxil edin.",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_events": {
+          "c529a06c3f8518b63ff6dfac482b335c": "Bu planet adlandırın:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Robot adlandırın.",
+          "34088af1fb721900963462375b3bbe23": "Robot!"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?",
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         }
       }
     }
