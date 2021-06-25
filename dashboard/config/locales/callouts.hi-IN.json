@@ -1151,6 +1151,210 @@
         },
         "outbreak7": {
           "costumes_callout": "एक नई कॉस्ट्यूम बनाने के लिए क्लिक करें"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "यह ब्लॉक अपने प्रोग्राम में शामिल करें।",
+          "arrow_buttons": "तीर के बटन दबाकर अपने डांसर को नियंत्रित करें।"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "अपने कार्यक्रम में एक नई इवेंट जोड़ें।"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "नई ब्लॉक"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "नई ब्लॉक",
+          "new_block_4": "नई ब्लॉक"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "ब्लॉक को एक्सपैंड करने के लिए यहां क्लिक करें।",
+          "pointerlocation": "यहां एक सब्जेक्ट ब्लॉक ड्रैग करें।"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "एक नई कॉस्ट्यूम बनाने के लिए क्लिक करें"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "आपके द्वारा शुरूआत करने के लिए हमने यहाँ कुछ ब्लॉक रखे हैं"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "यह कोड आपके घर का निर्माण शुरू करेगा। क्या आप इसे खत्म कर सकते हैं?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "अपने प्रोग्राम को आज़माने के लिए \"Run\" चलाएँ",
+          "craft_drag_block_callout": "\"आगे की ओर मूव करें\" ब्लॉक को खींचें और इसे अन्य ब्लॉक के नीचे जोड़ें"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "ब्लॉक को यहाँ रखते हुए कार्रवाई दोहराएँ"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "यह कोड लावा की जाँच करेगा, क्या आप आगे बढ़ने के लिए कमांड जोड़ सकते हैं?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "इस लौह का खनन करें!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "इस नंबर का मतलब है कि अंतिम जवाब में इस प्रकार के केवल एक ब्लॉक का उपयोग किया जा सकता है।"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "क्या आपको पता है कि आपको जब भी जरूरत हो, आप एक लाइन से पीछे हट सकते हैं?"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "यह कॉलआउट है"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "इवेंट तीर की दिशा बदलने के लिए यहां क्लिक करें।"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "इससे आप \"बेतरतीब” ध्वनि चुन सकते हैं, जिसका मतलब है कि आपको पता नहीं कि आप क्या पाने वाले हैं, जब तक आप इसे सुन नहीं लेते!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "टूलबॉक्स में इन ब्लॉक्स में से केवल एक ब्लॉक है। आप इसका उपयोग कैसे करेंगे?"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "दिशाएं बदलने के लिए हरे ड्रॉप डाउन तीर का उपयोग करें।"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता के पास ले जाएं।"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "इस ब्लॉक का उपयोग करें, जब वैड्डलेस और चॉम्प छूते हैं!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "इस ब्लॉक से आप गेम स्थान के अलग-अलग हिस्सों में अभिनेताओं को मूव कर सकते हैं।"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "यदि आपको जरूरत हो तो आप टूलबॉक्स में से और ब्लॉक्स ले सकते हैं!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "कद्दू पर नंबर चार आपको बताता है कि लेने के लिए चार कद्दू उपलब्ध हैं।"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।",
+          "courseC_maze_programming3_3": "ये ब्लॉक्स पत्थर हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "यह आपकी पहली चुनौती पहेली है! ये मुश्किल बनाई गई हैं और इनके लिए कई बार प्रयास करने पड़ सकते हैं।",
+          "courseC_maze_programming7_2": "ये ब्लॉक्स पत्थर से बने हैं और इन्हें फेंका नहीं जा सकता।"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "इस पहेली में आपके पास इन ब्लॉक्स में से केवल एक ब्लॉक उपलब्ध है।"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "इस पहेली को सही करने के लिए आपको रंगों का उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग` ब्लॉक इसे आसान बनाता है!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।",
+          "4_5_Bee_Conditionals_2_2": "क्या आपको मदद की जरूरत है?  वीडियो संकेत के लिए यहां क्लिक करें!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "यह आपकी ब्लॉक सीमा है।  यह आपको बताती है कि आपके पास इन ब्लॉक्स में से उपयोग करने के लिए कितने बाकी हैं।"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सभी ब्लॉक्स को कनेक्ट करने के बाद, अपना प्रोग्राम शुरू करने के लिए \"चलाएं” को दबाएं।"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "यह टूलबॉक्स है। यहीं पर आप अपनी पहेलियों को पूरा करने के लिए अतिरिक्त ब्लॉक्स पाएंगे।"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "आप उन्हें फेंकने के लिए टूलबॉक्स में अतिरिक्त ब्लॉक्स खींच सकते हैं।"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "इन ब्लॉक्स पर संख्याएं नहीं दी गई हैं। आप जितने चाहें, उपयोग कर सकते हैं!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का उपयोग करके शुरुआत करें।"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में इस लेबल के अंतर्गत मूव किए गए हैं।"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge1_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "नीचे और कोड जोड़कर इस प्रोग्राम को चलता रखें।",
+          "courseE_artist_functions_challenge2_callout2": "यदि आपको यह डिज़ाइन पसंद नहीं है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते हैं, यह हर बार बदल जाती है।"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "आपके कोड के लिए और जगह बनाने के लिए टूलबॉक्स \"श्रेणी\" मोड में है।  `फॉर` लूप्स यहां स्थित हैं।"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "आप `फ़ॉर` लूप यहां पाएंगे!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
         }
       }
     }
