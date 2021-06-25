@@ -2024,6 +2024,18 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal [unit], units
   end
 
+  test "self.valid_scripts: omits in-development units" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    assert Script.any?(&:in_development?)
+
+    refute Script.valid_scripts(student).any?(&:in_development?)
+    refute Script.valid_scripts(teacher).any?(&:in_development?)
+    assert Script.valid_scripts(levelbuilder).any?(&:in_development?)
+  end
+
   test "self.valid_scripts: omits pilot units" do
     student = create :student
     teacher = create :teacher

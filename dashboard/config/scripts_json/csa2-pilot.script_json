@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-23 15:48:03 UTC",
+    "serialized_at": "2021-06-25 13:05:48 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -1882,6 +1882,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the expressions widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the + operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the / operator.\n* Clarify how to use the % operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
+        "progression_name": "Expressions Widget",
         "tips": [
           {
             "type": "teachingTip",
@@ -4460,6 +4461,32 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U2L4-L2"
+        ],
+        "progression": "Multiple Constructors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "0caac888-0ba7-4323-b10b-da6a7cd4e402"
+      },
+      "level_keys": [
+        "CSA U2L4-L2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4483,8 +4510,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 3,
+      "chapter": 16,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4509,8 +4536,34 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 4,
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U2L4-L5"
+        ],
+        "progression": "Constructor Overloading with Scanner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L4-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55"
+      },
+      "level_keys": [
+        "CSA U2L4-L5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4535,8 +4588,34 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L5-L1"
+        ],
+        "progression": "Expressions Widget"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L5-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3"
+      },
+      "level_keys": [
+        "CSA U2L5-L1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4561,8 +4640,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 2,
+      "chapter": 21,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4587,8 +4666,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 3,
+      "chapter": 22,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4613,8 +4692,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 4,
+      "chapter": 23,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4639,7 +4718,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4665,7 +4744,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4691,7 +4770,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4717,7 +4796,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4743,7 +4822,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4769,7 +4848,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4795,7 +4874,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4821,7 +4900,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4847,7 +4926,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4873,7 +4952,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4899,7 +4978,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4925,7 +5004,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4951,7 +5030,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4977,7 +5056,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5003,7 +5082,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5029,7 +5108,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5055,7 +5134,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5081,7 +5160,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5107,7 +5186,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5133,7 +5212,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5159,11 +5238,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1"
+        ],
         "progression": "Dessert Class Mutator Methods"
       },
       "named_level": false,
@@ -5182,11 +5264,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2"
+        ],
         "progression": "Dessert Class Mutator Methods"
       },
       "named_level": false,
@@ -5205,11 +5290,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3"
+        ],
         "progression": "Dessert Class Mutator Methods"
       },
       "named_level": false,
@@ -5228,11 +5316,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4"
+        ],
         "progression": "Mutator Methods for the Subclass"
       },
       "named_level": false,
@@ -5251,11 +5342,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5"
+        ],
         "progression": "Mutator Methods for the Subclass"
       },
       "named_level": false,
@@ -5274,11 +5368,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6"
+        ],
         "progression": "Mutator Methods for the Subclass"
       },
       "named_level": false,
@@ -5297,11 +5394,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5320,11 +5420,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L1"
+        ],
         "progression": "Printing an Object"
       },
       "named_level": false,
@@ -5343,11 +5446,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2"
+        ],
         "progression": "Overriding toString()"
       },
       "named_level": false,
@@ -5366,11 +5472,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3"
+        ],
         "progression": "Formatting toString()"
       },
       "named_level": false,
@@ -5389,11 +5498,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L4"
+        ],
         "progression": "Formatting toString()"
       },
       "named_level": false,
@@ -5412,11 +5524,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L5"
+        ],
         "progression": "FoodTruck toString()"
       },
       "named_level": false,
@@ -5435,11 +5550,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5458,11 +5576,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5481,11 +5602,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L11-L1"
+        ],
         "progression": "Store Management Project"
       },
       "named_level": false,
@@ -5504,11 +5628,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L12-L1"
+        ],
         "progression": "Store Management Project"
       },
       "named_level": false,
@@ -5527,11 +5654,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L13-L1"
+        ],
         "progression": "Store Management Project"
       },
       "named_level": false,
@@ -5709,6 +5839,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2L4-L2",
+        "script_level.level_keys": [
+          "CSA U2L4-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "0caac888-0ba7-4323-b10b-da6a7cd4e402"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2L4-L3",
         "script_level.level_keys": [
           "CSA U2L4-L3"
@@ -5733,6 +5875,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2L4-L5",
+        "script_level.level_keys": [
+          "CSA U2L4-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2L4-L6",
         "script_level.level_keys": [
           "CSA U2L4-L6"
@@ -5741,6 +5895,18 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot",
         "activity_section.key": "c580dab3-5180-44d3-b8bb-6867e30d2ba1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L5-L1",
+        "script_level.level_keys": [
+          "CSA U2L5-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3"
       }
     },
     {
@@ -6394,6 +6560,18 @@
       }
     },
     {
+      "name": "[KEY] U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YHxcaWVxO7j1dJHWvY5xEzCZfZnBQMT-5ULWhrPRFCY/edit?usp=sharing",
+      "key": "_key_u2l4_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U2L5 Extra Practice",
       "url": "https://docs.google.com/document/d/1y7s4q-hAw37m155j7AZAhU0_M7_RE4EZx-yxcKLYW0Q/edit#",
       "key": "_key_u2l5_extra_practice",
@@ -6523,6 +6701,18 @@
       },
       "seeding_key": {
         "resource.key": "combo_class_frq_print_out"
+      }
+    },
+    {
+      "name": "Construct an Object Cards",
+      "url": "https://docs.google.com/presentation/d/17TySKn5znJbjAerFkctXL54iVz6ZnhJCEKwLkWT6Wo4/edit?usp=sharing",
+      "key": "construct_an_object_cards_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "construct_an_object_cards_1"
       }
     },
     {
@@ -6727,6 +6917,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/12YjXgxnQNdmWvs9Q5KzeVemm8lBnx-EfEe_1R0QsGTU/edit?usp=sharing",
+      "key": "u2l4_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -6963,6 +7165,24 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "construct_an_object_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -9045,6 +9265,13 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.3"
       }
     },
     {

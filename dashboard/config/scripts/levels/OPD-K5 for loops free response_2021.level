@@ -5,7 +5,7 @@
     "tts_short_instructions_override": "Take a moment to reflect. How would you explain the concept of for loops to your students? What is one teaching practice that you could use to teach this concept?",
     "tts_long_instructions_override": "Take a moment to reflect. How would you explain the concept of for loops to your students? What is one teaching practice that you could use to teach this concept?",
     "instructions_important": "false",
-    "long_instructions": "# Reflection:  For Loops\r\n\r\n**Prompt:**\r\n\r\n* How would you explain the concept of for loops to your students? \r\n* How would you explain the difference between a loop and a for loop to your students?",
+    "long_instructions": "# Reflection:  For Loops\r\n\r\n## Prompt\r\n\r\n* For loops are an advanced concept introduced in Course F.\r\n\t* How would you explain the difference between a loop and a for loop to your students?\r\n\r\n***\r\n\r\n## Definitions\r\n\r\nA **for loop** is a loop with a predetermined beginning, end, and increment (step interval).  \r\n\r\nA **loop** is the action of doing something over again and again.\r\n\r\n* Refer to<a href=\"https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1\" target=\"blank\" > Lesson 9: Loops</a> in this online course to learn about loops.\r\n\r\n\r\n## Blockly Code Block\r\n\r\nHere are examples of for loop blocks students will use.\r\n\r\n![](https://images.code.org/0dc1d015a62c968fe02a763e0766a490-image-1624493711001.png)",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-11-07 01:12:44 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-06-16 13:28:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:40:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 01:12:44 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-06-16 13:28:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:40:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 00:18:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 18:01:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 18:03:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 18:03:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
