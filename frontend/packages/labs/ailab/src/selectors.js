@@ -3,7 +3,8 @@ import { ColumnTypes } from "./constants.js";
 import {
   getUniqueOptions,
   getExtrema,
-  isColumnReadOnly
+  isColumnReadOnly,
+  getColumnDescription
 } from './helpers/columnDetails';
 import { arrayIntersection } from './helpers/utils';
 import { filterColumnsByType } from './redux';
@@ -14,6 +15,7 @@ const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
 const getCurrentColumn = state => state.currentColumn;
 const getMetadata = state => state.metadata;
+const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -127,6 +129,29 @@ export const isCurrentColumnReadOnly = createSelector(
   [getCurrentColumn, getMetadata],
   (currentColumn, metadata) => {
     return isColumnReadOnly(metadata, currentColumn)
+  }
+)
+
+export const getCurrentColumnDescription = createSelector(
+  [getCurrentColumn, getMetadata, getTrainedModelDetails],
+  (currentColumn, metadata, trainedModelDetails) => {
+    return getColumnDescription(currentColumn, metadata, trainedModelDetails);
+  }
+)
+
+export const getSelectedColumnsDescriptions = createSelector(
+  [getSelectedColumns, getMetadata, getTrainedModelDetails],
+  (selectedColumns, metadata, trainedModelDetails) => {
+    return selectedColumns.map(column => {
+      return {
+        id: column,
+        description: getColumnDescription(
+          column,
+          metadata,
+          trainedModelDetails
+        )
+      };
+    });
   }
 )
 

@@ -84,28 +84,23 @@ export function getExtrema(data, column) {
   return extrema;
 }
 
-export function getColumnDescription(state, columnId) {
-  if (!state || !columnId) {
-    return null;
-  }
-
+export function getColumnDescription(column, metadata, trainedModelDetails) {
   // Use metadata if available.
-  if (state.metadata && state.metadata.fields) {
-    const field = state.metadata.fields.find(field => {
-      return field.id === columnId;
+  if (metadata && metadata.fields) {
+    const field = metadata.fields.find(field => {
+      return field.id === column;
     });
     return field.description;
   }
 
   // Try using a user-entered column description if available.
-  if (!state.columns) {
-    return;
-  }
-  const matchedColumn = state.columns.find(column => {
-    return column.id === columnId;
-  });
-  if (matchedColumn) {
-    return matchedColumn.description;
+  if (trainedModelDetails && trainedModelDetails.columns) {
+    const matchedColumn = trainedModelDetails.columns.find(column => {
+      return column.id === column;
+    });
+    if (matchedColumn) {
+      return matchedColumn.description;
+    }
   }
 
   // No column description available.

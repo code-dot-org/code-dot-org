@@ -4,10 +4,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   setTrainedModelDetail,
-  getSelectedColumnDescriptions,
   getDataDescription,
   isUserUploadedDataset
 } from "../redux";
+import { getSelectedColumnsDescriptions } from "../selectors";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";
@@ -222,7 +222,7 @@ export default connect(
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
-    columnDescriptions: getSelectedColumnDescriptions(state),
+    columnDescriptions: getSelectedColumnsDescriptions(state),
     dataDescription: getDataDescription(state),
     isUserUploadedDataset: isUserUploadedDataset(state)
   }),
