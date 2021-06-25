@@ -41,7 +41,7 @@ module VersionRedirectOverrider
   end
 
   def self.override_course_redirect?(session, course)
-    overridden_course_scripts = course.default_scripts.map(&:name) & script_version_overrides(session)
+    overridden_course_scripts = course.default_units.map(&:name) & script_version_overrides(session)
     course_version_overrides(session).include?(course.name) || !overridden_course_scripts.empty?
   end
 end

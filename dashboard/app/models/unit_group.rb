@@ -21,7 +21,7 @@ class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
-  has_many :default_scripts, through: :default_unit_group_units, source: :script
+  has_many :default_units, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
@@ -105,7 +105,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
-    unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
+    unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.beta
 
@@ -143,7 +143,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        alternate_scripts: summarize_alternate_scripts,
+        alternate_units: summarize_alternate_units,
         published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
@@ -152,7 +152,7 @@ class UnitGroup < ApplicationRecord
     )
   end
 
-  def summarize_alternate_scripts
+  def summarize_alternate_units
     alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
     alternates.map do |ugu|
@@ -167,11 +167,11 @@ class UnitGroup < ApplicationRecord
   # This method updates both our localizeable strings related to this course, and
   # the set of scripts that are in the course, then writes out our serialization
   # @param scripts [Array<String>] - Updated list of names of scripts in this course
-  # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
+  # @param alternate_units [Array<Hash>] Updated list of alternate scripts in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
+  def persist_strings_and_units_changes(scripts, alternate_units, course_strings)
     UnitGroup.update_strings(name, course_strings)
-    update_scripts(scripts, alternate_scripts) if scripts
+    update_scripts(scripts, alternate_units) if scripts
     save!
   end
 
@@ -191,15 +191,15 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param new_scripts [Array<String>]
-  # @param alternate_scripts [Array<Hash>] An array of hashes containing fields
+  # @param alternate_units [Array<Hash>] An array of hashes containing fields
   #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
-  def update_scripts(new_scripts, alternate_scripts = nil)
-    alternate_scripts ||= []
+  def update_scripts(new_scripts, alternate_units = nil)
+    alternate_units ||= []
     new_scripts = new_scripts.reject(&:empty?)
     new_scripts_objects = new_scripts.map {|s| Script.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
     scripts_to_remove = default_unit_group_units.map(&:script) - new_scripts_objects
-    scripts_to_remove -= alternate_scripts.map {|hash| Script.find_by_name!(hash['alternate_script'])}
+    scripts_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
     if scripts_to_remove.any?(&:prevent_course_version_change?)
       raise 'Cannot remove scripts that have resources or vocabulary'
@@ -218,7 +218,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit.update!(position: index + 1)
     end
 
-    alternate_scripts.each do |hash|
+    alternate_units.each do |hash|
       alternate_script = Script.find_by_name!(hash['alternate_script'])
       default_script = Script.find_by_name!(hash['default_script'])
       # alternate scripts should have the same position as the script they replace.
@@ -359,7 +359,7 @@ class UnitGroup < ApplicationRecord
       teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.map(&:summarize_for_resources_dropdown),
-      is_migrated: has_migrated_script?,
+      is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
@@ -581,7 +581,7 @@ class UnitGroup < ApplicationRecord
   # returns whether a script in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
     return nil unless user
-    script_ids = default_scripts.pluck(:id)
+    script_ids = default_units.pluck(:id)
     user.
       user_scripts.
       where(script_id: script_ids).
@@ -675,7 +675,7 @@ class UnitGroup < ApplicationRecord
     # which they made no progress.
 
     is_assigned = user.sections_as_student.any? {|s| s.unit_group == self}
-    has_progress = !!UserScript.find_by(user: user, script: default_scripts)
+    has_progress = !!UserScript.find_by(user: user, script: default_units)
     has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
     (is_assigned || has_progress) && has_pilot_teacher
   end
@@ -694,7 +694,7 @@ class UnitGroup < ApplicationRecord
   end
   # rubocop:enable Naming/PredicateName
 
-  def has_migrated_script?
-    !!default_scripts[0]&.is_migrated?
+  def has_migrated_unit?
+    !!default_units[0]&.is_migrated?
   end
 end
