@@ -12,8 +12,8 @@ class ScriptsControllerTest < ActionController::TestCase
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
-    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
+    @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     @no_progress_or_assignment_student = create :student
@@ -21,14 +21,14 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-    @partner_script = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @student_coursez_2017 = create :student
     @section_coursez_2017 = create :section, script: @coursez_2017
     @section_coursez_2017.add_student(@student_coursez_2017)
 
-    @migrated_script = create :script, is_migrated: true
-    @unmigrated_script = create :script
+    @migrated_unit = create :script, is_migrated: true
+    @unmigrated_unit = create :script
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -324,7 +324,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test "platformization partner can edit their scripts" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
-    get :edit, params: {id: @partner_script.id}
+    get :edit, params: {id: @partner_unit.id}
     assert_response :success
   end
 
@@ -341,12 +341,12 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "platformization partner can update their scripts" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    stub_file_writes(@partner_script.name)
+    stub_file_writes(@partner_unit.name)
 
     sign_in @platformization_partner
     patch :update, params: {
-      id: @partner_script.id,
-      script: {name: @partner_script.name},
+      id: @partner_unit.id,
+      script: {name: @partner_unit.name},
       script_text: '',
     }
     assert_response :success
@@ -982,37 +982,37 @@ class ScriptsControllerTest < ActionController::TestCase
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
-    params: -> {{id: @pilot_script.name}},
+    params: -> {{id: @pilot_unit.name}},
     name: 'signed out user cannot view pilot script'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-    params: -> {{id: @pilot_script.name}}, name: 'student cannot view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot script'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-    params: -> {{id: @pilot_script.name}},
+    params: -> {{id: @pilot_unit.name}},
     name: 'teacher without pilot access cannot view pilot script'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
-    params: -> {{id: @pilot_script.name, section_id: @pilot_section.id}},
+    params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
     name: 'pilot teacher can view pilot script'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-    params: -> {{id: @pilot_script.name}}, name: 'pilot student can view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot script'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-    params: -> {{id: @pilot_script.name}}, name: 'levelbuilder can view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot script'
   ) do
     refute response.body.include? no_access_msg
   end
@@ -1126,23 +1126,23 @@ class ScriptsControllerTest < ActionController::TestCase
     Timecop.return
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
+  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test "view all instructions page for migrated script" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
-    get :instructions, params: {id: @migrated_script.name}
+    get :instructions, params: {id: @migrated_unit.name}
     assert_response :success
   end
 
@@ -1150,7 +1150,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
-    get :instructions, params: {id: @unmigrated_script.name}
+    get :instructions, params: {id: @unmigrated_unit.name}
     assert_response :success
   end
 
@@ -1158,15 +1158,15 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
-    course_version = create :course_version, content_root: @migrated_script
-    lesson_group = create :lesson_group, script: @migrated_script
+    course_version = create :course_version, content_root: @migrated_unit
+    lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     lesson.programming_expressions = [create(:programming_expression)]
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
     lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
 
-    get :get_rollup_resources, params: {id: @migrated_script.name}
+    get :get_rollup_resources, params: {id: @migrated_unit.name}
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 4, response_body.length
@@ -1177,14 +1177,14 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
-    course_version = create :course_version, content_root: @migrated_script
-    lesson_group = create :lesson_group, script: @migrated_script
+    course_version = create :course_version, content_root: @migrated_unit
+    lesson_group = create :lesson_group, script: @migrated_unit
     lesson = create :lesson, lesson_group: lesson_group
     # Only add resources and standards, not programming expressions and vocab
     lesson.resources = [create(:resource, course_version_id: course_version.id)]
     lesson.standards = [create(:standard)]
 
-    get :get_rollup_resources, params: {id: @migrated_script.name}
+    get :get_rollup_resources, params: {id: @migrated_unit.name}
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 2, response_body.length
