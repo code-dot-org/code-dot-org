@@ -1,7 +1,6 @@
 pl:
   data:
     progressions:
-      '"If/Else" with the Bee': '"Jeżeli/w przeciwnym razie" z Pszczółką'
       Accelerometer Events: Akcelerometr Zdarzeń
       Adding Images: Dodawanie obrazów
       Adding Screens: Dodawanie Ekranów
@@ -14,6 +13,7 @@ pl:
       Attribution: Atrybucja
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
       Be a Super Digital Citizen: Bądź Super Cyfrowym Obywatelem
+      Binary Bracelets - Unplugged Activity: Binarne bransoletki - Aktywności bez komputera
       Binary Numbers: Liczby binarne
       Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
@@ -37,6 +37,7 @@ pl:
       Color LEDs: Kolorowe LED
       Combining Projects: Łączenie projektów
       Combining Representations: Łączenie reprezentacji
+      Conditionals with Cards - Unplugged Activity: Instrukcje warunkowe z kartami - Aktywności bez komputera
       'Conditionals: If Statements': 'Instrukcje Warunkowe: instrukcja "jeśli"'
       'Conditionals: If and If/Else Statements': 'Instrukcje Warunkowe: instrukcja "jeśli/w przeciwnym razie"'
       Create Your Own Animation: Utwórz własną animację
@@ -177,6 +178,8 @@ pl:
       Share Your Message: Udostępnij swoją wiadomość
       Side Scroller: Suwak boczny
       Simple Circuits: Proste układy
+      Skill Building: Budowanie umiejętności
+      Skill-Building: Budowanie umiejętności
       Sliders: Suwaki
       Smart Bike - Blinkers: Mądry rower - migacze
       Sprite Lab Project: Projekt Sprite Lab
@@ -212,13 +215,38 @@ pl:
       'Video:  Debugging with the Step Button': 'Film - Debugowanie za pomocą przycisku K '
       'Video:  Minecraft - The Agent': 'Film - Debugowanie za pomocą przycisku Krok'
       'Video:  Text  and Prompts': 'Film:  Tekst i monity'
-      'Video: "If/Else"': 'Film: "if/else"'
+      'Video: "If/Else"': 'Film: "jeśli/w przeciwnym razie"'
       'Video: AI: What is Machine Learning?': 'Film - AI: Co to jest uczenie maszynowe?'
       'Video: Artist Intro with JR Hildebrand': 'Film: Artysta wprowadzenie z JR Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Film: Artysta wprowadzenie z JR Hildebrand'
       'Video: Code Your Own Flappy Game': 'Film: Zakoduj własną grę z Flappym'
+      'Video: Conditionals: If Statements': 'Film: Instrukcje warunkowe: Instrukcje "jeśli" '
+      'Video: Conditionals: If and If/Else Statements': 'Film: Instrukcje warunkowe: Instrukcje "jeśli" i "jeśli/w przeciwnym razie"'
       'Video: Dance Party Events': 'Film: Potańcówki'
+      'Video: Dance Party Measures': 'Film: Takty w Potańcówce'
+      'Video: Dance Party Party On!': 'Film: Potańcówka rozpoczęta! '
+      'Video: Dance Party Properties': 'Film: Potańcówka Właściwości'
+      'Video: Dance Party Warm Up': 'Film: Potańcówka Rozgrzewka'
+      'Video: De-bugging with the Step Button': 'Film: Debugowanie za pomocą przycisku Krok '
+      'Video: Debugging with Scrat ': 'Film: Debugowanie ze Scratem '
+      'Video: Debugging with the Step Button': 'Film: Debugowanie za pomocą przycisku Krok '
       'Video: Events': 'Film: Zdarzenia'
+      'Video: Impacts on Society': 'Film: Wpływy na społeczeństwo'
+      'Video: Introducing Sprite Lab': 'Film: Przedstawiamy Sprite Lab  '
+      'Video: Introduction to Play Lab': 'Film: Przedstawiamy Play Lab  '
+      'Video: Loops in Artist': 'Film: Pętle z Artystą'
+      'Video: Loops with the Artist': 'Film: Pętle z Artystą'
+      'Video: Lots of Sprites': 'Film: Wiele Duszków'
+      'Video: Measures': 'Film: Takty'
+      'Video: Minecraft - Congratulations': 'Film: Minecraft - Gratulacje'
+      'Video: Minecraft - Functions': 'Film: Minecraft - Funkcja'
+      'Video: Minecraft - Repeat Loops': 'Film: Minecraft - Pętle powtarzania'
+      'Video: Minecraft - The Agent': 'Film: Minecraft - Agent'
+      'Video: Pair Programming': 'Film: Programowanie parami'
+      'Video: Pair Programming ': 'Film: Programowanie parami '
+      'Video: Programming with Blocks': 'Film: Programowanie z użyciem bloków'
+      'Video: Properties': 'Film: Wściwości'
+      'Video: Sprites in Action': 'Film: Duszki w akcji'
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
       Welcome to Monster Town: Witamy w mieście potworów

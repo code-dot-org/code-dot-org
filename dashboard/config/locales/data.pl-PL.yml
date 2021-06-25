@@ -37,7 +37,7 @@ pl:
         Applab: App Lab
         NetSim: Symulator internetowy
         Custom: Artysta
-        CustomStudio: Play Lab
+        CustomStudio: Lab Gier
         Gamelab: Laboratorium Gier (Game Lab)
         Spritelab: Sprite Lab
     trophy:
@@ -864,6 +864,9 @@ pl:
         csd_ml_intro_to_ai_lab: Lekcja 6
         csd_ml_import_model: Importowanie modelu AI
         csf_lots_of_sprites: 'Sprite Lab: Wiele duszków'
+        playlab_2021: Wprowadzenie do Play Lab
+        playlab_2021_reader: Wprowadzenie do Play Lab
+        csp_defining_calling_functions: Definiowanie i wywoływanie funkcji
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

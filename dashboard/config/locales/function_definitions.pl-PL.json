@@ -4292,6 +4292,76 @@
           "move and get nectar with counter": {
             "name": "Poruszaj się i zbieraj nektar wykorzystując licznik `counter`."
           }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "narysuj gwiazdę",
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości",
+            "parameters": {
+              "points": "punkty",
+              "length": "długość"
+            }
+          },
+          "draw a circle": {
+            "name": "narysuj okrąg",
+            "description": "narysuj okrąg o danym promieniu",
+            "parameters": {
+              "radius": "promień"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "narysuj rozetę",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość",
+              "repeat": "powtarzaj"
+            }
+          },
+          "draw a triangle": {
+            "name": "narysuj trójkąt",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a shape": {
+            "name": "narysuj wielokąt foremny",
+            "parameters": {
+              "sides": "boki",
+              "length": "długość"
+            }
+          },
+          "draw a house": {
+            "name": "narysuj dom",
+            "parameters": {
+              "length": "długość"
+            }
+          },
+          "draw a square": {
+            "name": "narysuj kwadrat",
+            "parameters": {
+              "length": "długość"
+            }
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "narysuj gwiazdę"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "narysuj gwiazdę"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "narysuj kwadrat"
+          }
         }
       }
     }

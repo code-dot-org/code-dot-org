@@ -5791,3 +5791,74 @@ pl-PL:
         questions:
         - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
             działa?
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Wyrażenia warunkowe z kartami
+
+          Zagraj w karty i twórz zasady takie jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam punkt" i "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          # Programowanie na papierze do rysowania
+
+          Napisz algorytmy, których mog użyć Twoi koledzy z klasy do rysowania obrazków.
+      OPD-K5 Stage3aGo_dani:
+        content1: opis tutaj
+      RelayProgramming-Unplugged_2021:
+        markdown: "# Programowanie sztafetowe\n\nPodzielcie się na zespoły i pracujcie
+          ze sobą nad pisaniem programów, które rysują obrazki. \n"
+      courseD_EOC_2021:
+        description: Dotarłeś do ostatniej lekcji Kursu D! Wybierz projekt do utworzenia.
+        display_name: Koniec projektu kursu
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: 'Pszczółka poleci do chmury i spróbuje zebrać nektar, bez względu
+            na okoliczności. '
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+            próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Pszczółka poleci do chmury i spróbuje zebrać nektar, jeśli jest pod
+            nią kwiatek.
+          correct: true
+          feedback: Poprawnie!
+        - text: 'Pszczółka poleci do chmury i nie zrobi nic więcej, bez względu na
+            okoliczności. '
+          feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
+            będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        - text: Nie wiem.
+          feedback: Blok "jeśli obok kwiatka" zapewnia, że pszczółka będzie próbować
+            zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
+        questions:
+        - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
+            pszczółka będzie musiała zebrać nektar jeden raz. Jeśli nie będzie, pszczółka
+            nie powinna robić niczego. Spójrz uważnie na poniższy kod. Jak sądzisz,
+            co się wydarzy, gdy klikniesz "Uruchom"?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Nic. Funkcja nie jest wywołana w programie.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje jeden kwadrat.
+          feedback: Niepoprawnie. Funkcja jest tak naprawdę wywołana dwukrotnie w
+            programie.
+        - text: Artysta narysuje dwa, nakładające się na siebie kwadraty.
+          feedback: Niepoprawnie. Długość każdego boku kwadratu wynosi tylko 100 pikseli,
+            ale artysta przeskakuje o 175 pikseli pomiędzy funkcjami.
+        - text: Artysta narysuje dwa kwadraty z małą przerwą pomiędzy nimi.
+          correct: true
+          feedback: Poprwnie. Funkcja jest wywołana w programie 2 razy, ze skokiem
+            pomiędzy.
+        questions:
+        - text: Co się stanie, gdy naciśniesz "Uruchom"?
+      csf_password_power-up_2021:
+        content1: opis tutaj
+        markdown: |
+          # Wzmocnij swoje hasło
+
+          ## Wskazówki, jak pamiętać hasło
+
+          * Zacznij od zapadającej w pamięć **frazy**.
+          * Tylko Twoi **rodzice** powinni znać Twoje hasło.
+          * Nigdy nie używaj w haśle żadnych **prywatnych** identyfikujących informacji
+          * Twórz hasła zawierające co najmniej **osiem** znaków.
+          * W haśle użyj liter, liczb i **symboli**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)

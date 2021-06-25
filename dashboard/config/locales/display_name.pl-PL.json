@@ -538,7 +538,12 @@
         "courseF_sprites_freeplay_blank": "Puste",
         "courseF_sprites_make": "Tworzenie duszków",
         "courseF_sprites_properties": "Właściwości duszka",
-        "ramp_artist_loops4_2021": "Star"
+        "ramp_artist_loops4_2021": "Star",
+        "CourseD_EOC_artist_2021": "Twórz obraz",
+        "CourseD_EOC_bounce1_2021": "Utwórz grę w koszykówkę",
+        "CourseD_EOC_starwars_2021": "Utwórz grę w klimacie Gwiezdnych Wojen",
+        "OPD-K5 WhatIsCS_dani": "Czym jest informatyka?",
+        "scrat_loops_C-F_video_2021": "Pętle w filmie wideo \"Epoka Lodowcowa\""
       }
     }
   }
