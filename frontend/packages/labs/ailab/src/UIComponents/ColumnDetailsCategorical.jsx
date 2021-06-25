@@ -75,4 +75,4 @@ export default class ColumnDetailsCategorical extends Component {
       </div>
     );
   }
-};
+}

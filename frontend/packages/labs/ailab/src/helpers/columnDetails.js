@@ -60,11 +60,11 @@ export function isSelectable(state, column) {
   return isColumnDataValid(state, column) && !isSelected(state, column);
 }
 
-export function isColumnReadOnly(state, column) {
+export function isColumnReadOnly(metadata, column) {
   const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
+    metadata &&
+    metadata.fields &&
+    metadata.fields.find(field => {
       return field.id === column;
     }).type;
   return !!metadataColumnType;

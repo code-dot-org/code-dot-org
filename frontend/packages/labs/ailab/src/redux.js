@@ -22,7 +22,8 @@ import {
   getUniqueOptionsCurrentColumn,
   getUniqueOptionsLabelColumn,
   getExtremaCurrentColumn,
-  getOptionFrequenciesCurrentColumn
+  getOptionFrequenciesCurrentColumn,
+  isCurrentColumnReadOnly
 } from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
@@ -707,7 +708,7 @@ function getSelectedColumns(state) {
     .concat(state.labelColumn)
     .filter(column => column !== undefined && column !== "")
     .map(columnId => {
-      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
+      return { id: columnId, readOnly: isColumnReadOnly(state.metadata, columnId) };
     });
 }
 
@@ -731,7 +732,7 @@ export function getCurrentColumnData(state) {
 
   const columnData = {
     id: state.currentColumn,
-    readOnly: isColumnReadOnly(state, state.currentColumn),
+    readOnly: isCurrentColumnReadOnly(state),
     dataType: state.columnsByDataType[state.currentColumn],
     description: getColumnDescription(state, state.currentColumn),
     isColumnDataValid: isColumnDataValid(state, state.currentColumn),

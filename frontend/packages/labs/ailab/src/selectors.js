@@ -1,6 +1,11 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
-import { getUniqueOptions, getExtrema } from './helpers/columnDetails';
+import {
+  getUniqueOptions,
+  getExtrema,
+  isColumnReadOnly
+} from './helpers/columnDetails';
+import { arrayIntersection } from './helpers/utils';
 import { filterColumnsByType } from './redux';
 
 const getData = state => state.data;
@@ -8,6 +13,7 @@ const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
 const getCurrentColumn = state => state.currentColumn;
+const getMetadata = state => state.metadata;
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -16,21 +22,25 @@ export const getCategoricalColumns = createSelector(
   }
 )
 
+export const getSelectedColumns = createSelector(
+  [getSelectedFeatures, getLabelColumn],
+  (selectedFeatures, labelColumn) => {
+    selectedFeatures.push(labelColumn)
+    return selectedFeatures;
+  }
+)
+
 export const getSelectedCategoricalColumns = createSelector(
-  [getCategoricalColumns, getSelectedFeatures, getLabelColumn],
-  (categoricalColumns, selectedFeatures, labelColumn) => {
-    return categoricalColumns.filter(
-      column => (selectedFeatures.includes(column) || column === labelColumn)
-    );
+  [getCategoricalColumns, getSelectedColumns],
+  (categoricalColumns, selectedColumns) => {
+    return arrayIntersection(categoricalColumns, selectedColumns);
   }
 )
 
 export const getSelectedCategoricalFeatures = createSelector(
   [getCategoricalColumns, getSelectedFeatures],
   (categoricalColumns, selectedFeatures) => {
-    return categoricalColumns.filter(
-      column => selectedFeatures.includes(column)
-    );
+    return arrayIntersection(categoricalColumns, selectedFeatures);
   }
 )
 
@@ -42,20 +52,16 @@ export const getNumericalColumns = createSelector(
 )
 
 export const getSelectedNumericalColumns = createSelector(
-  [getNumericalColumns, getSelectedFeatures, getLabelColumn],
-  (numericalColumns, selectedFeatures, labelColumn) => {
-    return numericalColumns.filter(
-      column => (selectedFeatures.includes(column) || column === labelColumn)
-    )
+  [getNumericalColumns, getSelectedColumns],
+  (numericalColumns, selectedColumns) => {
+    return arrayIntersection(numericalColumns, selectedColumns);
   }
 )
 
 export const getSelectedNumericalFeatures = createSelector(
   [getNumericalColumns, getSelectedFeatures],
   (numericalColumns, selectedFeatures) => {
-    return numericalColumns.filter(
-      column => selectedFeatures.includes(column)
-    );
+    return arrayIntersection(numericalColumns, selectedFeatures);
   }
 )
 
@@ -116,3 +122,34 @@ export const getExtremaCurrentColumn = createSelector(
     return getExtrema(data, currentColumn);
   }
 )
+
+export const isCurrentColumnReadOnly = createSelector(
+  [getCurrentColumn, getMetadata],
+  (currentColumn, metadata) => {
+    return isColumnReadOnly(metadata, currentColumn)
+  }
+)
+
+// export const getCurrentColumnData = createSelector(
+//   [
+//     getCurrentColumn,
+//     isCurrentColumnReadOnly,
+//     getColumnsByDataType,
+//     getCurrentColumnDescription,
+//     isCurrentColumnValid,
+//     isCurrentColumnSelectable,
+//     getUniqueOptionsCurrentColumn,
+//     getOptionFrequenciesCurrentColumn,
+//     getExtremaCurrentColumn
+//   ],
+//   (
+//     currentColumn,
+//     isReadOnly,
+//     columnsByDataType,
+//     description,
+//     isValid,
+//     isSelectable,
+//     uniqueOptions,
+//     extrema
+//   )
+// )

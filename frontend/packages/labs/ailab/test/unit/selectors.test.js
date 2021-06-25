@@ -1,4 +1,5 @@
 import {
+  getSelectedColumns,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
   getSelectedCategoricalFeatures,
@@ -10,9 +11,14 @@ import {
   getUniqueOptionsCurrentColumn,
   getExtremaByColumn,
   getExtremaCurrentColumn,
-  getOptionFrequenciesCurrentColumn
+  getOptionFrequenciesCurrentColumn,
+  isCurrentColumnReadOnly
 } from "../../src/selectors";
-import { classificationState, allNumericalState } from "./testData";
+import {
+  classificationState,
+  allNumericalState,
+  premadeDatasetState
+} from "./testData";
 
 describe("selecting columns by data type", () => {
   test("gets selected categorical features", async () => {
@@ -40,11 +46,14 @@ describe("getting category options", () => {
   test("gets unique options by column", async () => {
     const categoricalColumns = getCategoricalColumns
       .resultFunc(classificationState.columnsByDataType).sort();
+    const selectedColumns = getSelectedColumns.resultFunc(
+      classificationState.selectedFeatures,
+      classificationState.labelColumn
+    )
     const selectedCategoricalColumns =
       getSelectedCategoricalColumns.resultFunc(
         categoricalColumns,
-        classificationState.selectedFeatures,
-        classificationState.labelColumn
+        selectedColumns
       )
     const uniqueOptionsByColumn =
       getUniqueOptionsByColumn.resultFunc(
@@ -88,10 +97,13 @@ describe("getting extrema", () => {
   test("gets extrema by column", async () => {
     const numericalColumns = getNumericalColumns
       .resultFunc(allNumericalState.columnsByDataType);
-    const selectedNumericalColumns =  getSelectedNumericalColumns.resultFunc(
-      numericalColumns,
+    const selectedColumns = getSelectedColumns.resultFunc(
       allNumericalState.selectedFeatures,
       allNumericalState.labelColumn
+    )
+    const selectedNumericalColumns =  getSelectedNumericalColumns.resultFunc(
+      numericalColumns,
+      selectedColumns
     )
     const extremaByColumn =
       getExtremaByColumn.resultFunc(
@@ -114,5 +126,23 @@ describe("getting extrema", () => {
     expect(extrema.max).toBe(100);
     expect(extrema.min).toBe(40);
     expect(extrema.range).toBe(60);
+  });
+});
+
+describe("is current column readOnly", () => {
+  test("current column is readOnly", async () => {
+    const isReadOnly = isCurrentColumnReadOnly.resultFunc(
+      premadeDatasetState.currentColumn,
+      premadeDatasetState.metadata
+    )
+    expect(isReadOnly).toBe(true)
+  });
+
+  test("current column is not readOnly", async () => {
+    const isReadOnly = isCurrentColumnReadOnly.resultFunc(
+      allNumericalState.currentColumn,
+      allNumericalState.metadata
+    )
+    expect(isReadOnly).toBe(false)
   });
 });

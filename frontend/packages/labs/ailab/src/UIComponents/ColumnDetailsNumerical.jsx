@@ -32,4 +32,4 @@ export default class ColumnDetailsNumerical extends Component {
       </div>
     );
   }
-};
+}
