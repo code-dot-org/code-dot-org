@@ -4171,3 +4171,615 @@ id-ID:
         description: Anda telah menyelesaikan tutorial! Terus lakukan perubahan atau
           perbaikan pada proyek Anda. Anda dapat memilih untuk tetap menggunakan block
           yang sama atau mencoba toolbox yang diperluas.
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # The Big Event
+
+          Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Gelang Binary
+
+          Buat gelang yang mewakili nama Anda dalam sistem yang dipahami komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Kondisional Dengan Kartu
+
+          Mainkan permainan kartu dan buat aturan seperti "Jika saya menggambar kartu merah, saya mendapat poin" dan "Jika saya menggambar kartu hitam, Anda mendapat poin."
+      CourseF_outbreak_story:
+        content1: deskripsi di sini
+      CourseF_outbreak_story2:
+        content1: deskripsi di sini
+        markdown: "# Wabah: Berpikir Seperti Ilmuwan\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang pas untuk
+          mempelajari hal-hal yang mungkin sulit diamati di dunia nyata. Simulasi
+          membantu ilmuwan untuk mengatasi masalah dan menguji ide-ide baru dengan
+          aman dan efisien. Simulasi Anda adalah cara untuk menunjukkan bagaimana
+          wabah virus di Monster Town terlihat.\n\n## Reset dan Putar Ulang!\nBahkan
+          saat Anda menulis kodenya sendiri, sangat tidak mungkin mengetahui dengan
+          pasti apa yang akan terjadi saat Anda menekan jalankan. Monster itu berkeliling
+          secara acak, jadi Anda tidak akan tahu apakah virusnya menyebar dengan cepat
+          atau lambat. Setiap kali mengubah kode, pastikan untuk menjalankan simulasi
+          Anda lebih dari satu kali. Sesuatu tidak akan terjadi dengan cara yang sama
+          dua kali!\n\n## Mengumpulkan Data\nCoba tuliskan pengamatan Anda saat menjalankan
+          simulasinya. Anda dapat menghitung jumlah monster yang sakit atau gunakan
+          timer untuk melihat seberapa cepat sesuatu terjadi. Misalnya, berapa lama
+          umumnya semua monster sakit jika tidak ada yang memakai masker? \n\n## Membuat
+          Prediksi\nJika Anda memahami model Anda, Anda dapat menggunakannya untuk
+          membuat prediksi. Anda bahkan dapat mengubah cara menjalankan simulasi Anda
+          dan menebak apa yang akan terjadi secara berbeda. Misalnya:\n* Apa yang
+          akan terjadi jika monsternya dua kali lebih banyak?\n* Apa yang akan terjadi
+          jika monsternya bergerak dengan setengah kecepatan?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Apakah Monster Town seperti dunia nyata?\nAda
+          batasan terkait seberapa realistis model akan terlihat. \n* Apa kesamaan
+          simulasi wabah Anda dengan wabah virus di dunia nyata?\n* Apa perbedaannya?\nSetelah
+          menyelesaikan kegiatan ini, diskusikan pertanyaan-pertanyaan ini dengan
+          guru atau keluarga Anda!\n\n## Apa lagi yang dapat kita buatkan model?\nAnda
+          telah membuat model kerja wabah di Monster Town. Hal-hal apa saja yang tidak
+          dapat dilakukan atau ditunjukkan oleh simulasi Anda yang Anda harap dapat
+          diwujudkan? Tekan lanjutkan untuk terus belajar membuat model lebih banyak
+          lagi:\n* Menambah jumlah monster dalam simulasi\n* Membantu monster sembuh
+          dari virus\n* Probabilitas, kekebalan, vaksin, dan lainnya!\n\nAnda juga
+          dapat membagikan model simulasi Anda dengan orang lain, atau berbagi pesan
+          tentang apa yang menurut Anda dapat kita lakukan untuk membantu orang lain
+          tetap sehat saat virus masuk ke kota."
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # Merancang untuk Aksesibilitas
+
+          * Di dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilitas.
+          * Disabilitas meliputi fisik, pendengaran, visual, dan banyak lainnya.
+          * Disabilitas itu banyak macamnya dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Merancang aplikasi yang dapat diakses penyandang disabilitas membuat aplikasi tersebut lebih baik untuk semua orang juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          #Berbagi Digital
+
+          Dalam pelajaran ini, Anda akan mempertimbangkan tantangan dan keuntungan menghargai kepemilikan dan hak cipta, khususnya dalam lingkungan digital.
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # Serunya For Loop
+
+          Kita tahu bahwa loop memudahkan kita melakukan pengulangan berkali-kali, tetapi sekarang kita akan mempelajari kiat menggunakan loop dengan struktur tambahan yang bersifat bawaan.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Getting Loopy
+
+          Pelajaran ini memperkenalkan konsep pemrograman loops melalui aktivitas menari.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          # Pemrograman Kertas Grafik
+
+          Tulis algorithm yang dapat digunakan teman sekelas Anda untuk menggambar.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Happy Maps
+
+          Buat algoritma untuk memindahkan karakter melalui sebuah labirin.
+      Internet-Unplugged_2021:
+        markdown: |-
+          # Internet
+
+          Bangun internet Anda sendiri di kelas hanya dengan menggunakan lembaran kertas.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Move It, Move It
+
+          Gunakan peta dan berikan perintah untuk mencapai tujuan.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          #Teman Robot Cerdik Saya
+
+          Jadikan program Anda lebih singkat menggunakan loop!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          #Teman Robot Saya
+
+          Belajar memprogram dengan menulis kode untuk teman Anda!
+      OPD-K5 Stage3aGo_dani:
+        content1: deskripsi di sini
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          "#Pemrograman Relay
+
+          Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Menulis lagu
+
+          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # The Right App
+
+          * Setiap orang menggunakan komputer akhir-akhir ini, terutama telepon pintar.
+          * Aplikasi telepon pintar membantu orang melakukan hal-hal seperti berbicara dengan teman, mendengar musik, berbelanja, atau hanya menjelajahi web.
+          * Penting bagi pemrogram untuk memahami kebutuhan orang lain dan merancang aplikasi dengan mempertimbangkannya!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseAB_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      courseB_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: Si artis akan menggambar setiga sama sisi.
+          feedback: Salah.  Si artis menggambar persegi empat.
+        - text: Si artis akan mengambar sebuah garis.
+          feedback: Salah.  Si artis menggambar persegi empat.
+        - text: Si artis akan mengambar sebuah kotak.
+          correct: true
+          feedback: Benar!
+        - {}
+        questions:
+        - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
+            anda mengklik "Jalankan"?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+        - text: '12'
+          correct: true
+          feedback: Benar!
+        - text: '15'
+          feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+        - text: '20'
+          feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+        questions:
+        - text: Cermati kode di bawah ini. Berapa banyak labu yang akan dikumpulkan
+            petani setelah Anda mengklik "Jalankan"?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: Burung akhirnya akan kurang satu langkah dari babi.
+          feedback: Salah. Kode ini membawa burungnya pas ke babi.
+        - text: Burung pasti akan sampai ke babi.
+          correct: true
+          feedback: Benar!
+        - text: Burung akan menabrak TNT.
+          feedback: Salah. Kode ini membawa burungnya pas ke babi.
+        - feedback: Salah. Kode ini membawa burungnya pas ke babi.
+        questions:
+        - text: Baca kode berikut dengan teliti. Apa yang akan terjadi saat Anda mengklik
+            "Jalankan"?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        - text: BB-8 hanya akan bergerak satu kotak
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        - text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
+          correct: true
+          feedback: Benar!
+        - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+        questions:
+        - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Jalankan"?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 akan berjalan terlalu jauh dalam loop pertama.
+          feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+        - text: BB-8 tidak akan berjalan cukup jauh dalam loop pertama agar dapat
+            mengambil semua logam rongsokan.
+          correct: true
+          feedback: Benar!
+        - text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
+          feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+        - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
+            "Jalankan"?
+      courseD_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Benar!
+        - text: B
+          feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+        - text: C
+          feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+        - feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Cermati kode di bawah ini. Gambar manakah yang akan dihasilkan program
+            ini saat Anda mengklik "Jalankan"?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+            mengisap nektar jika ada bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
+            ada bunga di bawahnya.
+          correct: true
+          feedback: Benar!
+        - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
+            nektar jika ada bunga di bawah awan.
+        - feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+            mengisap nektar jika ada bunga di bawah awan.
+        questions:
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Jalankan"?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
+          feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+            mengisap nektar jika ada bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
+            ada bunga di bawahnya.
+          correct: true
+          feedback: Benar!
+        - text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
+          feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
+            nektar jika ada bunga di bawah awan.
+        - text: Saya tidak tahu.
+          feedback: Blok `if at flower` memastikan lebahnya hanya akan mencoba mengisap
+            nektar jika ada bunga di bawah awan.
+        questions:
+        - text: Awan menghalangi pemandangan. Mungkin ada bunga di bawah awan ini.
+            Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
+            ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
+            ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Jalankan"?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: 'Lebah akan mendapat madu bunga di setiap bunga dan membuat madu di
+            setiap sarang madu.
+
+'
+          correct: true
+          feedback: Benar!
+        - text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
+          feedback: 'Salah. Blok `if at flower` membiarkan lebah mendapat madu bunga
+            di setiap bunga dan membuat madu di setiap sarang lebah.
+
+'
+        - text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
+          feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
+        - feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
+        questions:
+        - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
+            setelah Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah
+            atau *satu* bunga di balik setiap awan.'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
+          feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+        - text: Lebah hanya akan mendapat 2 unit nektar.
+          feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+        - text: Lebah akan mendapatkan semua nektar.
+          correct: true
+          feedback: Benar!
+        - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+        questions:
+        - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
+            mengklik "Jalankan"?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+        - text: '8'
+          correct: true
+          feedback: Benar!
+        - text: '10'
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+        - text: '12'
+          feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+        questions:
+        - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
+            lebah saat Anda mengklik "Jalankan"?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: Pemanen akan mengumpulkan semua hasil panen.
+          feedback: Salah. Tidak ada kode di sini untuk memilih labu.
+        - text: Pemanen tidak akan memetik salah satu tanaman pada jalan yang diambilnya.
+          feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
+            tangga dan mengambil jagung atau selada sebanyak-banyaknya. Ia tidak akan
+            memilih labu.
+        - text: Pemanen akan memilih semua tanaman, kecuali labu.
+          correct: true
+          feedback: Benar!
+        - feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
+            tangga dan mengambil jagung atau selada sebanyak-banyaknya. Ia tidak akan
+            memilih labu.
+        markdown: |
+          Tunas dalam puzzle ini adalah jagung atau selada.
+          <br/>
+        questions:
+        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Tidak ada. code ini hanya akan membiarkan tanah yang rata.
+          feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan tumpukan tak terjamah sama sekali.
+          correct: true
+          feedback: Benar!
+        - text: Code ini akan membiarkan lubang tak terjamah sama sekali.
+          feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
+            tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
+            ini?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Tidak akan terjadi apa-apa.
+          feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+        - text: Petani tidak akan pernah berhenti menghilangkan kotoran.
+          feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+        - text: Petani akan menghilangkan kotoran sepanjang ada tumpukan, lalu berhenti
+            ketika tumpukan hilang.
+          correct: true
+          feedback: Benar!
+        - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: Zombie akan melewati jalan yang benar dan akhirnya bolak-balik selamanya.
+          correct: true
+          feedback: Benar!
+        - text: Zombi akan berhasil sampai ke bunga matahari.
+          feedback: Salah. Zombie akan melewati jalan yang benar dan akhirnya bolak-balik
+            selamanya.
+        - text: Zombi akan belok kanan di jalur pertama dan berputar-putar selamanya.
+          feedback: Salah. Zombie akan melewati jalan yang benar dan akhirnya bolak-balik
+            selamanya.
+        - feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
+            bolak-balik selamanya.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: Burung tidak akan bergerak sama sekali.
+          feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur, lalu
+            belok kiri. Burung akan terus begitu hingga menjangkau babi!
+        - text: Burung pasti akan sampai ke babi.
+          correct: true
+          feedback: Benar!
+        - text: Burung akan bergerak maju dan menabrak TNT.
+          feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur aman,
+            lalu belok kiri. Burung akan terus begitu sampai menjangkau babi!
+        - feedback: Kode membuat burung bergerak maju selagi ada jalur, lalu belok
+            kiri. Burung akan terus begitu hingga menjangkau babi!
+        questions:
+        - text: Cermati kode di bawah ini. Menurut Anda apa yang akan terjadi ketika
+            Anda mengklik "Jalankan"?
+      courseE_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      courseE_EOC_examples_2021:
+        display_name: Proyek Akhir Kursus
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Tidak akan terjadi apa-apa.
+        - {}
+        - correct: true
+          feedback: Benar!
+        - {}
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: Pemanen akan mengambil dua labu.
+          feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+        - text: Pemanen akan mengambil semua labu.
+          feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+        - text: Pemanen akan mengambil selada.
+          correct: true
+          feedback: Benar!
+        - text: Pemanen akan mengambil jagung.
+          feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+        questions:
+        - text: Perhatikan definisi fungsi di bawah ini. Apakah yang akan diambil
+            oleh pemanen?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Tidak ada. Function tidak dipanggil dalam program.
+          feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+        - text: Si artis akan mengambar sebuah persegi empat.
+          feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+        - text: Artis akan menggambar dua persegi empat yang tumpang-tindih.
+          feedback: Salah. Panjang setiap sisi persegi empat hanya 100 piksel, tetapi
+            si artis melompat sebanyak 175 piksel di antara function.
+        - text: Artis akan menggambar dua persegi empat dengan celah kecil di antaranya.
+          correct: true
+          feedback: Benar! Function dipanggil dua kali di dalam program, dengan lompatan
+            di antaranya.
+        questions:
+        - text: Apa yang akan terjadi ketika Anda menekan "Jalankan"?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Tidak ada. Function tidak dipanggil dalam program.
+          feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+        - text: Si artis akan mengambar sebuah persegi empat.
+          feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+        - text: Artis akan menggambar dua persegi empat yang tumpang-tindih.
+          feedback: Salah. Panjang setiap sisi persegi empat hanya 100 piksel, tetapi
+            si artis melompat sebanyak 175 piksel di antara function.
+        - text: Artis akan menggambar dua persegi empat dengan celah kecil di antaranya.
+          correct: true
+          feedback: Benar! Function dipanggil dua kali di dalam program, dengan lompatan
+            di antaranya.
+        questions:
+        - text: Apa yang akan terjadi ketika Anda menekan "Jalankan"?
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Tidak akan terjadi apa-apa.
+        - {}
+        - correct: true
+          feedback: Benar!
+        - {}
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseF_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      courseF_EOC_examples_2021:
+        display_name: Proyek Akhir Kursus
+      courseF_EOC_samples_2021:
+        display_name: Proyek Akhir Kursus
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: Si artis akan menggambar segitiga dengan sisi 50 piksel.
+          correct: true
+          feedback: Benar!
+        - text: Si artis akan menggambar poligon bersisi 50 dengan sisi 3 piksel.
+          feedback: Salah. Variabel `length` perlu berada di dalam loop `repeat` agar
+            bisa terjadi.
+        - text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
+          feedback: Salah.  Variabel `length` perlu digunakan di dalam blok `turn`
+            agar bisa terjadi.
+        - feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
+            by` sehingga artis akan menggambar segitiga dengan sisi 50 piksel.
+        questions:
+        - text: Kami telah menyetel variabel "length" ke 50. Apa yang akan terjadi
+            ketika Anda mengklik "Jalankan"?
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 'Lebah akan bergerak maju dan mengumpulkan semua nektar dari setiap
+            bunga. '
+          feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+        - text: 'Lebah akan bergerak maju dan mengumpulkan semua nektar dari setiap
+            bunga, kecuali satu. '
+          correct: true
+          feedback: Benar!
+        - text: 'Lebah akan bergerak maju dan mengumpulkan satu nektar dari setiap
+            bunga. '
+          feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+        - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+        markdown: |+
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
+
+
+        questions:
+        - text: Baca kode di bawah ini. Apa yang akan terjadi saat Anda mengklik "Jalankan"?
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: deskripsi di sini
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: Si artis akan memecahkan puzzle dengan benar.
+          feedback: Salah. Loop menggunakan "gambar poligon" bukannya "gambar garis
+            poligon".
+        - text: Artis akan menggambar empat persegi empat dengan pola jendela.
+          correct: true
+          feedback: Benar!
+        - text: Artis hanya akan menggambar satu garis persegi empat.
+          feedback: Salah. Program tidak memanggil "gambar garis poligon".
+        - text: Artis akan menggambar empat persegi empat saling bertumpuk.
+          feedback: Salah. Loop belok 90 derajat di antara panggilan untuk "menggambar
+            poligon".
+        questions:
+        - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
+      csf_be_a_super_digital_citizen_2021:
+        content1: deskripsi di sini
+      csf_password_power-up_2021:
+        content1: deskripsi di sini
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: deskripsi di sini
+      express_EOC_2021:
+        display_name: Proyek Akhir Kursus
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
+          feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+        - text: Laurel akan mencoba mengumpulkan harta karun di tempat yang tidak
+            ada satu pun sehingga muncul kesalahan.
+          correct: true
+          feedback: Benar!
+        - text: Laurel akan mengumpulkan semua harta karun.
+          feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+        - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+        questions:
+        - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
+            programnya dijalankan?

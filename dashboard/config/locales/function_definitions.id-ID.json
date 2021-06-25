@@ -1747,6 +1747,302 @@
               "length": "panjang"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "Fungsiku"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "Kemungkinan solusi"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "gambar bintang"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw square": {
+            "name": "gambar kotak"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          },
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "gambar kotak"
+          },
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "gambar kotak"
+          },
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          },
+          "draw triangle": {
+            "name": "gambar segitiga"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "gambar kotak"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "buat sesuatu"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "akhir dari permainan"
+          }
         }
       }
     }
