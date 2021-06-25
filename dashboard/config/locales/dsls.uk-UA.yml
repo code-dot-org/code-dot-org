@@ -2643,3 +2643,320 @@ uk-UA:
         title: Швидке опитування курсу Відкриття інформатики!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
         title: Швидке опитування курсу Відкриття інформатики!
+      CourseF_outbreak_story:
+        content1: опис тут
+      CourseF_outbreak_story2:
+        content1: опис тут
+        markdown: "# Спалах: Мислимо, як науковці\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nСимуляції - це чудовий спосід вивчити
+          речі, які може бути складно спостерігати у реальному світі. Вони допомагають
+          науковцям вирішувати проблеми та тестувати нові ідеї безпечно та ефективно.
+          Ваша симуляція - це спосіб показати, як може виглядати спалах вірусу в Монстро-місті.\n\n##
+          Перезапустити та переграти!\nНавіть коли ви самі пишете код, неможливо точно
+          знати, що трапиться, коли натиснути Запуск. Монстри блукають випадковими
+          траєкторіями, тож ви не знаєте, з якою швидкістю буде поширюватись вірус.
+          Щоразу, як ви міняєте код, не забувайте запустити свою симуляцію кілька
+          разів. Одне і те ж не трапиться двічі!\n\n## Збирати дані\nПробуйте записувати
+          свої спостереження, коли запускаєте симуляції. Можете рахувати кількість
+          монстрів, які захворюють, або використовуйте таймер, щоб побачити, як швидко
+          відбуваються події. Наприклад, скільки часу зазвичай проходить до захворювання
+          всіх монстрів, коли ніхто не носить масок? \n\n## Робити прогнози\nЯкщо
+          ви розумієте свою модель, ви можете її використовувати для прогнозування.
+          Можете навіть змінити хід своєї симуляції і припустити, що це змінить. Наприклад:\n*
+          Що станеться, якщо буде удвічі більше монстрів?\n* Що станеться, якщо монстри
+          рухатимуться удвічі повільніше?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Монстро-місто схоже на справжнє?\nЄ межа того,
+          наскільки реалістичною може бути модель. \n* Що ваша симуляція спалаху вірусу
+          має спільного зі справжніми спалахами?\n* У чому відмінності?\nКоли завершите
+          цю вправу, обговоріть ці питання з вчителями чи родиною!\n\n## Що ще можна
+          моделювати?\nВи вже створили робочу модель спалаху в Монстро-місті. Що є
+          такого, що ваша симуляція не робить, або що би ви хотіли, щоб вона робила?
+          Натисніть Продовжити, щоб дізнатись, як моделювати наступне:\n* Збільшення
+          кількості монстрів у симуляції\n* Допомогти монстрам вилікуватись від вірусу\n*
+          Ймовірності, імунітет, вакцини і більше!\n\nМожете поділитись своєю симуляційною
+          моделлю з іншими, або поширити повідомлення про те, що, на вашу думку, можна
+          зробити, щоб зберегти здоров'я, коли в місті з'являється вірус. \n"
+      OPD-K5 Stage3aGo_dani:
+        content1: опис тут
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_2021:
+        description: 'Ви дійшли до останнього уроку курсу D! Виберіть проект для створення. '
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: А
+          correct: true
+        - text: Б
+        - text: В
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: опис тут
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: опис тут
+        markdown: "# Супер цифровий громадянин\n\n## Як ми можемо допомогти, коли
+          бачимо кібер-знущання? "
+      csf_digital_trails_2021:
+        markdown: |-
+          # Йдіть Цифровим шляхом
+
+          ## Яку інформацію можна мати у своєму цифровому сліді?
+      csf_password_power-up_2021:
+        content1: опис тут
+        markdown: "# Підсилити свій пароль\n\n## Поради щодо запам'ятовування пароля\n\n*
+          Почни із пам’ятної **фрази**.\n* Тільки **батьки** можуть знати твій пароль.\n*
+          Ніколи не використовуй будь-яку **приватну** інформацію про себе у паролі.\n*
+          Створюй паролі щонайменше з **вісьмома** символами.\n* Використовуй у своєму
+          паролі літери, цифри та **символи**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: опис тут
+        markdown: |-
+          # STOP недоброзичливісті
+
+          ## Що ви повинні робити, якщо хтось недоброзичливий з вами онлайн?
+
+          * **В**ідстороньтеся.
+          * ** Р**озкажіть дорослому, якому довіряєте
+          * **O**K сайти спочатку.
+          * **З**робіть паузу та подумайте.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Моє Інтернет сусідство
+
+          ## Як безпечно відвідувати місця в Інтернеті?
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

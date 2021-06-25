@@ -329,6 +329,7 @@ uk:
     added_teacher: "%{name} додано як Вашого учителя"
     registered: Ви зареєструвались на %{section_name}.
     captcha_required: Будь ласка, заповніть капчу, щоб приєднатися до цього розділу.
+    already_exists: Ви вже приєдналися до розділу %{section_name}.
     error:
       signed_in: Будь ласка, вийдіть перед продовженням
       username_not_found: Користувача %{username} не знайдено
@@ -342,6 +343,8 @@ uk:
       provider_managed_section: Цей розділ доданий іншим провайдер і не може бути
         доданий. Будь ласка, попросіть вашого вчителя, що він додав Вас через %{provider},
         і перезавантажте розділ.
+      restricted_section: Не вдалося додати вас до розділу %{section_code} тому що
+        він заблокований. Будь ласка, зверніться за допомогою до свого вчителя.
     mail:
       student_disassociated:
         subject: 'Повідомлення Code.org: %{student_name} відтепер не є вашим учнем.'
