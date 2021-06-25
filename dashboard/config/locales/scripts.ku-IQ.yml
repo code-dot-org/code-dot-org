@@ -11,20 +11,10 @@ ku:
           title: Ders 1
           description_audience: تەمەنی ٤-٦
           lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
-            'Artist: Shapes':
-              name: 'هونەر: شێوە'
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
           lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
             Conditionals:
               name: مەرجیەکان
             Graph Paper Programming:
@@ -35,12 +25,6 @@ ku:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
-        Course4pre:
-          lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
         usability:
           lessons:
             Variables:

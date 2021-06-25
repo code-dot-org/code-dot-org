@@ -1,3 +1,4 @@
+---
 ku:
   data:
     blocks:
@@ -5,16 +6,10 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           MOVE1:
             MOVES.Roll: خل بوونەوە
             MOVES.ClapHigh: چەپڵەی بەهێز
@@ -38,36 +33,19 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_atTimestamp:
-        text: پاشان[TIMESTAMP][0][UNIT][1]
-        options:
-          UNIT:
-            '"measures"': پێوانەکان
+        text: پاشان{TIMESTAMP}{UNIT}
       Dancelab_changeColorBy:
-        text: بگۆڕە[COLOR][0][METHOD][1] بە ئەندازەی [AMOUNT][2]
-        options:
-          METHOD:
-            '"hue"': تۆنی ڕەنگ
-            '"saturation"': تێری ڕەنگ
-            '"brightness"': ڕووناکی
+        text: بگۆڕە{COLOR}{METHOD} بە ئەندازەی {AMOUNT}
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] بەردەوام [MOVE][1][DIR][2] تاهەتایە"
+        text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
           MOVE:
-            '"next"': "(دواتر)"
-            '"prev"': "(پێشتر)"
-            '"rand"': "(هەڕەمەکی)"
             MOVES.Roll: خل بوونەوە
             MOVES.ClapHigh: چەپڵەی بەهێز
             MOVES.Dab: Dab
@@ -79,12 +57,9 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] بەردەوام [MOVE][1][DIR][2] تاهەتایە"
+        text: "{SPRITE} بەردەوام {MOVE}{DIR} تاهەتایە"
         options:
           MOVE:
-            '"next"': "(دواتر)"
-            '"prev"': "(پێشتر)"
-            '"rand"': "(هەڕەمەکی)"
             MOVES.Roll: خل بوونەوە
             MOVES.ClapHigh: چەپڵەی بەهێز
             MOVES.Dab: Dab
@@ -96,49 +71,30 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_changePropBy:
-        text: بگۆڕە [SPRITE][0] [PROPERTY][1] بە بڕی [VAL][2]
+        text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
       Dancelab_changePropEachBy:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] بەردەوام [MOVE][1] [DIR][2] جارێک"
+        text: "{GROUP} بەردەوام {MOVE} {DIR} جارێک"
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           MOVE:
-            '"rand"': "(هەڕەمەکی)"
             MOVES.XBend: چەمینەوە
             MOVES.Roll: خل بوونەوە
             MOVES.XClapSide: چەپڵە
@@ -162,10 +118,9 @@ ku:
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] بەردەوام [MOVE][1] [DIR][2] جارێک"
+        text: "{SPRITE} بەردەوام {MOVE} {DIR} جارێک"
         options:
           MOVE:
-            '"rand"': "(هەڕەمەکی)"
             MOVES.XBend: چەمینەوە
             MOVES.Roll: خل بوونەوە
             MOVES.XClapSide: چەپڵە
@@ -189,47 +144,33 @@ ku:
             MOVES.XArmsUp: كشان
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_everySeconds:
-        text: 'هەموو [N][0] [UNIT][1] '
-        options:
-          UNIT:
-            '"measures"': پێوانەکان
+        text: 'هەموو {N} {UNIT} '
       Dancelab_everySecondsRange:
-        text: 'سەرجەم [N][0] [UNIT][1] لە [START][2] تا [STOP][3] '
+        text: 'سەرجەم {N} {UNIT} لە {START} تا {STOP} '
         options:
           UNIT:
             measures: پێوانەکان
             seconds: چرکە
       Dancelab_everyVerseChorus:
-        text: 'هەر [UNIT][0] '
-        options:
-          UNIT:
-            '"verse"': دێر
-            '"chorus"': كۆرس
+        text: 'هەر {UNIT} '
       Dancelab_getEnergy:
-        text: وەرگرە [RANGE][0]
+        text: وەرگرە {RANGE}
         options:
           RANGE:
             '"low"': دەنگی نزم
             '"mid"': ناوەند
             '"high"': سیانی
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
       Dancelab_getTime:
-        text: کاتی بەسەرچوو [UNIT][0]
-        options:
-          UNIT:
-            '"measures"': پێوانەکان
+        text: کاتی بەسەرچوو {UNIT}
       Dancelab_ifDanceIs:
         text: |-
-          ئەگەر [SPRITE][0] ئەنجام بدات [DANCE][1]
-          [DO1][2] [DO2][3]
+          ئەگەر {SPRITE} ئەنجام بدات {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: چەپڵەی بەهێز
@@ -244,17 +185,10 @@ ku:
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Dancelab_ifTime:
         text: |-
-          ئەگەر [UNIT][0] بریتی بێت لە [OP][1] [N][2]
-          [DO1][3] [DO2][4]
-        options:
-          UNIT:
-            '"measures"': پێوانەکان
-          OP:
-            '">"': ">"
-            '"<"': "\\<"
-            '"="': "="
+          ئەگەر {UNIT} بریتی بێت لە {OP} {N}
+          {DO1} {DO2}
       Dancelab_jumpTo:
-        text: "[SPRITE][0] بپەڕێتەوە بۆ [LOCATION][1]"
+        text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
@@ -269,16 +203,10 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
@@ -289,32 +217,19 @@ ku:
             "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": هەڕەمەکی
       Dancelab_layoutSprites:
-        text: '[GROUP][0] ڕێکبخە وەک [FORMAT][1]'
+        text: "{GROUP} ڕێکبخە وەک {FORMAT}"
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           FORMAT:
-            '"border"': چوارچێوە
-            '"inner"': چوارگۆشەی ناوەوە
-            '"circle"': بازنە
             '"grid"': هێڵدار
-            '"row"': ڕیز
-            '"column"': ستوون
-            '"x"': بەیەکداچوو
-            '"plus"': کۆ
             '"random"': هەڕەمەکی
       Dancelab_makeAnonymousDanceSprite:
-        text: '[COSTUME][0] ێکی نوێ دروستبکە لە [LOCATION][1]'
+        text: "{COSTUME} ێکی نوێ دروستبکە لە {LOCATION}"
         options:
           COSTUME:
             '"BEAR"': وورچ
@@ -332,21 +247,14 @@ ku:
             "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_makeNewDanceSprite:
-        text: |-
-          دانەیەکی نوێ دروست بکە لە [COSTUME][0] بە ناوی [NAME][1] لە [LOCATION][2]
+        text: دانەیەکی نوێ دروست بکە لە {COSTUME} بە ناوی {NAME} لە {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': بوونەوەری ئاسمانی
             '"BEAR"': وورچ
-            '"CAT"': پشیلە
-            '"DOG"': سەگ
-            '"DUCK"': مراوی
             '"FROG"': بۆق
-            '"MOOSE"': ڕەنە
+            '"MOOSE"': هەموو ڕەنەکان
             '"PINEAPPLE"': ئەناناس
-            '"ROBOT"': ڕۆبۆت
             '"SHARK"': ماسی قرش
-            '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
@@ -357,8 +265,7 @@ ku:
             "{x: 300, y: 300}": خوارەوە لای ڕاست
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": هەڕەمەکی
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          لە[N][0] دانەیەکی نوێ دروست بکە [COSTUME][1] لەناو [LAYOUT][2]
+        text: لە{N} دانەیەکی نوێ دروست بکە {COSTUME} لەناو {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -381,31 +288,18 @@ ku:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': بوونەوەری ئاسمانی
-            '"BEAR"': وورچەکان
-            '"CAT"': پشیلەکان
-            '"DOG"': سەگەکان
-            '"DUCK"': مراویەکان
-            '"FROG"': بۆقەکان
-            '"MOOSE"': ڕەنە
-            '"PINEAPPLE"': ئەناناس
-            '"ROBOT"': ڕۆبۆت
-            '"SHARK"': ماسی قرش
-            '"UNICORN"': ئەسپی یەکشاخە
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
+            '"MOOSE"': هەموو ڕەنەکان
+            '"ROBOT"': هەموو ڕۆبۆتەکان
           LAYOUT:
-            '"border"': چوارچێوە
-            '"inner"': چوارگۆشەی ناوەوە
-            '"circle"': بازنە
             '"grid"': هێڵدار
-            '"row"': ڕیز
-            '"column"': ستوون
-            '"x"': بەیەکداچوو
-            '"plus"': کۆ
             '"random"': هەڕەمەکی
       Dancelab_mixColors:
-        text: '[COLOR1][0] و [COLOR2][1] تێکەڵ بکە'
+        text: "{COLOR1} و {COLOR2} تێکەڵ بکە"
       Dancelab_nMeasures:
-        text: "پێوانە [N][0]"
+        text: پێوانە {N}
       Dancelab_onPointerDown:
         text: کاتێک نیشاندەرەکە بۆ خوارەوەیە
       Dancelab_onPointerDrag:
@@ -415,77 +309,17 @@ ku:
       Dancelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Dancelab_setBackground:
-        text: ڕەنگی پاشبنەما دیاریبکە [COLOR][0]
+        text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Dancelab_setBackgroundEffect:
         text: |-
           ئیفێکتی پاشبنەما دیاریبکە
-          [EFFECT][0] [PALETTE][1]
-        options:
-          EFFECT:
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(هەڕەمەکی)"
-            '"circles"': بازنە
-            '"color_cycle"': ڕەنگ
-            '"diamonds"': ئەڵماس
-            '"disco_ball"': تۆپی دیسکۆ
-            '"fireworks"': یاری ئاگرین
-            '"swirl"': هایپنۆ
-            '"kaleidoscope"': كالیدۆسکۆپ
-            '"lasers"': تەختەی سەمای لێزەری
-            '"splatter"': پڕژێنەری بۆیە
-            '"rainbow"': پەلكەزێرینە
-            '"snowflakes"': بەفر
-            '"text"': ناوی گۆرانیەکان
-            '"galaxy"': بۆشایی ئاسمان
-            '"sparkles"': بریسکە
-            '"spiral"': لوولپێچی
-            '"disco"': چوارگۆشە
-            '"stars"': ئەستێرە
-          PALETTE:
-            '"rave"': ڕەش و سپی
-            '"cool"': تۆنی شین
-            '"electronic"': ئەلکترۆنی
-            '"iceCream"': دۆندرمە
-            '"default"': ڕووناکی
-            '"neon"': نیۆن
-            '"tropical"': خولگەیی
-            '"vintage"': ڤینتەج
-            '"warm"': تۆنی سوور
+          {EFFECT} {PALETTE}
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           ئیفێکتی پاشبنەما دیاریبکە
-          [EFFECT][0] [PALETTE][1]
-        options:
-          EFFECT:
-            '"rand"': "(هەڕەمەکی)"
-            '"circles"': بازنە
-            '"color_cycle"': ڕەنگ
-            '"diamonds"': ئەڵماس
-            '"disco_ball"': تۆپی دیسکۆ
-            '"fireworks"': یاری ئاگرین
-            '"swirl"': هایپنۆ
-            '"kaleidoscope"': كالیدۆسکۆپ
-            '"lasers"': تەختەی سەمای لێزەری
-            '"splatter"': پڕژێنەری بۆیە
-            '"rainbow"': پەلكەزێرینە
-            '"snowflakes"': بەفر
-            '"text"': ناوی گۆرانیەکان
-            '"galaxy"': بۆشایی ئاسمان
-            '"sparkles"': بریسکە
-            '"spiral"': لوولپێچی
-            '"disco"': چوارگۆشە
-            '"stars"': ئەستێرە
-          PALETTE:
-            '"rave"': ڕەش و سپی
-            '"cool"': تۆنی شین
-            '"electronic"': ئەلکترۆنی
-            '"iceCream"': دۆندرمە
-            '"default"': ڕووناکی
-            '"neon"': نیۆن
-            '"tropical"': خولگەیی
-            '"vintage"': ڤینتەج
-            '"warm"': تۆنی سوور
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
-        text: خێرایی سەمای [SPRITE][0] بگۆڕە بۆ [SPEED][1]
+        text: خێرایی سەمای {SPRITE} بگۆڕە بۆ {SPEED}
         options:
           SPEED:
             '1': normal
@@ -494,20 +328,14 @@ ku:
             '0.5': خاو
             '0.25': زۆر خاو
       Dancelab_setDanceSpeedEach:
-        text: خێرایی سەمای [GROUP][0] دابنێ بە [SPEED][1]
+        text: خێرایی سەمای {GROUP} دابنێ بە {SPEED}
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           SPEED:
             '1': normal
             '2': خێرا
@@ -515,166 +343,85 @@ ku:
             '0.5': خاو
             '0.25': زۆر خاو
       Dancelab_setForegroundEffect:
-        text: ئیفێکتی پێشبنەما دابنێ [EFFECT][0]
-        options:
-          EFFECT:
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(هەڕەمەکی)"
-            '"bubbles"': بڵق
-            '"confetti"': بڕشتی کاغەز
-            '"hearts_red"': دڵ
-            '"music_notes"': نۆتەی مۆسیقا
-            '"pineapples"': ئەناناس
-            '"pizzas"': پیتزا
-            '"smiling_poop"': پیسایی
-            '"rain"': باران
-            '"floating_rainbows"': پەلكەزێرینە
-            '"smile_face"': خەندە
-            '"spotlight"': سپۆتلایت
-            '"color_lights"': ڕووناکی ستەیج
-            '"raining_tacos"': لەفەی تاکۆ
+        text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
       Dancelab_setForegroundEffectExtended:
-        text: ئیفێکتی پێشبنەما دابنێ [EFFECT][0]
-        options:
-          EFFECT:
-            '"rand"': "(هەڕەمەکی)"
-            '"bubbles"': بڵق
-            '"confetti"': بڕشتی کاغەز
-            '"hearts_red"': دڵ
-            '"music_notes"': نۆتەی مۆسیقا
-            '"pineapples"': ئەناناس
-            '"pizzas"': پیتزا
-            '"smiling_poop"': پیسایی
-            '"rain"': باران
-            '"floating_rainbows"': پەلكەزێرینە
-            '"smile_face"': خەندە
-            '"spotlight"': سپۆتلایت
-            '"color_lights"': ڕووناکی ستەیج
-            '"raining_tacos"': لەفەی تاکۆ
+        text: ئیفێکتی پێشبنەما دابنێ {EFFECT}
       Dancelab_setProp:
-        text: 'دابنی [SPRITE][0] [PROPERTY][1] بە بڕی [VAL][2] '
+        text: 'دابنی {SPRITE} {PROPERTY} بە بڕی {VAL} '
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
       Dancelab_setPropEach:
-        text: دابنێ [GROUP][0] [PROPERTY][1] بە بڕی [VAL][2]
+        text: دابنێ {GROUP} {PROPERTY} بە بڕی {VAL}
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
       Dancelab_setPropRandom:
-        text: بە هەڕەمەکی [SPRITE][0] [PROPERTY][1] ڕێکبخە
+        text: بە هەڕەمەکی {SPRITE} {PROPERTY} ڕێکبخە
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
       Dancelab_setTint:
-        text: سێبەری ڕەنگی [SPRITE][0] دابنێ بە [VAL][1]
+        text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
       Dancelab_setTintEach:
-        text: سێبەری ڕەنگی [THIS][0] دابنێ بە [VAL][1]
+        text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintEachInline:
-        text: سێبەری ڕەنگی [THIS][0] دابنێ بە [VAL][1]
+        text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintInline:
-        text: سێبەری ڕەنگی [SPRITE][0] دابنێ بە [VAL][1]
+        text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
       Dancelab_setVisible:
-        text: '[SPRITE][0] بینراو بکە بۆ [VISIBILITY][1]'
+        text: "{SPRITE} بینراو بکە بۆ {VISIBILITY}"
         options:
           VISIBILITY:
             'true': بینراو
             'false': نەبینراو
       Dancelab_setVisibleEach:
-        text: بینراویی [THIS][0] بکە بە [VISIBILITY][1]
+        text: بینراویی {THIS} بکە بە {VISIBILITY}
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           VISIBILITY:
             'true': بینراو
             'false': نەبینراو
       Dancelab_startMapping:
-        text: "[SPRITE][0] دەستپێدەکات [PROPERTY][1] دوای [RANGE][2]"
+        text: "{SPRITE} دەستپێدەکات {PROPERTY} دوای {RANGE}"
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
           RANGE:
             '"bass"': دەنگی نزم
             '"mid"': ناوەند
@@ -683,36 +430,21 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"tint"': سێبەری ڕەنگ
           RANGE:
             '"bass"': دەنگی نزم
             '"mid"': ناوەند
             '"treble"': سیانی
       Dancelab_stopMapping:
-        text: "[SPRITE][0] دەوەستێت [PROPERTY][1] دوای [RANGE][2]"
+        text: "{SPRITE} دەوەستێت {PROPERTY} دوای {RANGE}"
         options:
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"direction"': ئاڕاستەی جووڵە
-            '"tint"': سێبەری ڕەنگ
           RANGE:
             '"bass"': دەنگی نزم
             '"mid"': ناوەند
@@ -721,23 +453,12 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
-            '"rotation"': سوڕانەوە
-            '"x"': پێگەی ئاسۆیی
-            '"y"': پێگەی ستوونی
-            '"direction"': ئاڕاستەی جووڵە
-            '"tint"': سێبەری ڕەنگ
           RANGE:
             '"bass"': دەنگی نزم
             '"mid"': ناوەند
@@ -745,14 +466,6 @@ ku:
       Dancelab_translateStrings:
         options:
           STRING:
-            '"hearts_colorful"': دڵ
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -763,36 +476,10 @@ ku:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: کاتێک [KEY][0] دادەگیرێت
+        text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
-            '"space"': بۆشایی ئاسمان
-            '"enter"': ئینتەر
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -803,7 +490,7 @@ ku:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: کاتێک [RANGE][0] لە لووتکەیە
+        text: کاتێک {RANGE} لە لووتکەیە
         options:
           RANGE:
             '0': دەنگی نزم
@@ -814,153 +501,76 @@ ku:
       Dancelab_whenSetup2:
         text: دامەزراندن
       gamelab_addBehaviorSimple:
-        text: سپڕایت [SPRITE][0] دەستپێدەکات [BEHAVIOR][1]
+        text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
+        text: "{ANIMATION}"
       gamelab_changePropBy:
-        text: بگۆڕە [SPRITE][0] [PROPERTY][1] بە بڕی [VAL][2]
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: بگۆڕە {SPRITE} {PROPERTY} بە بڕی {VAL}
       gamelab_checkTouching:
-        text: "[CONDITION][0] [SPRITE1][1] بەر [SPRITE2][2] دەکەوێ"
+        text: "{CONDITION} {SPRITE1} بەر {SPRITE2} دەکەوێ"
       gamelab_clickedOn:
-        text: کاتێک [SPRITE][0] کرتە دەکرێت
+        text: کاتێک {SPRITE} کرتە دەکرێت
       gamelab_clickedSpritePointer:
-        text: "کرتە کرا [SPRITE][0]"
+        text: کرتە کرا {SPRITE}
       gamelab_comment:
-        text: 'کۆمێنت: [COMMENT][0]'
+        text: 'کۆمێنت: {COMMENT}'
       gamelab_createNewSprite:
-        text: "سپرایتێکی نوێ دروستبکە \n ناوی بنێ [NAME][0] \n بە جلوبەرگی [COSTUME][1] \n لە [LOCATION][2]"
+        text: "سپرایتێکی نوێ دروستبکە \n ناوی بنێ {NAME} \n بە جلوبەرگی {COSTUME} \n لە {LOCATION}"
       gamelab_destroy:
-        text: لاببە [THIS][0]
+        text: لاببە {THIS}
       gamelab_draggable:
         text: دەتوانرێ بجوڵێنرێ
       gamelab_edgesDisplace:
-        text: لێوارەکان ڕێگەدەگرن کە [SPRITE][0] بجوڵێ
+        text: لێوارەکان ڕێگەدەگرن کە {SPRITE} بجوڵێ
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
-            '"tint"': سێبەری ڕەنگ
+        text: "{SPRITE} {PROPERTY}"
       gamelab_getThisSprite:
-        text: "سپڕایتی [CHOICE][0]"
-        options:
-          CHOICE:
-            '"this"': ئەمە
+        text: سپڕایتی {CHOICE}
       gamelab_hideTitleScreen:
         text: شاشەی ناونیشان بشارەوە
       gamelab_isKeyPressed:
         options:
           KEY:
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_isTouchingEdges:
-        text: "[SPRITE][0] بەر لێوارەکان دەکەوێت"
+        text: "{SPRITE} بەر لێوارەکان دەکەوێت"
       gamelab_jumpTo:
-        text: "[SPRITE][0] بپەڕێتەوە بۆ [LOCATION][1]"
+        text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
       gamelab_keyPressed:
-        text: "[CONDITION][0] [KEY][1] داگیراوە"
+        text: "{CONDITION} {KEY} داگیراوە"
         options:
           KEY:
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_locationAt:
-        text: 'شوێنی x: [X][0] y: [Y][1]'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
+        text: 'شوێنی x: {X} y: {Y}'
       gamelab_locationMouse:
         text: شوێنی ماوس
       gamelab_locationOf:
-        text: شوێنی [SPRITE][0]
+        text: شوێنی {SPRITE}
       gamelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: سپرایتێکی [ANIMATION_NAME][0] نوێ دروست بکە لە [LOCATION][1]
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       gamelab_mirrorSprite:
-        text: "[SPRITE][0] ڕوودەکاتە [DIRECTION][1]"
+        text: "{SPRITE} ڕوودەکاتە {DIRECTION}"
       gamelab_mouseLocation:
         text: شوێنی ماوس
       gamelab_moveForward:
-        text: '[SPRITE][0] بجوڵێنە بەبڕی[DISTANCE][1] وێنەخاڵ بۆ پێشەوە'
+        text: "{SPRITE} بجوڵێنە بەبڕی{DISTANCE} وێنەخاڵ بۆ پێشەوە"
       gamelab_moveInDirection:
-        text: '[SPRITE][0] بجوڵێنە بەبڕی [DISTANCE][1] وێنەخاڵ [DIRECTION][2]'
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
+        text: "{SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ {DIRECTION}"
       gamelab_moveToward:
-        text: '[SPRITE][0] وێنەخاڵ بجوڵێنە [DISTANCE][1] بە ئاڕاستەی [TARGET][2]'
+        text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
       gamelab_newSpritePointer:
-        text: "کرتە کرا [SPRITE][0]"
+        text: کرتە کرا {SPRITE}
       gamelab_objectSpritePointer:
-        text: "کرتە کرا [SPRITE][0]"
+        text: کرتە کرا {SPRITE}
       gamelab_playSound:
-        text: دەنگ هەڵکەر [SOUND][0]
+        text: دەنگ هەڵکەر {SOUND}
       gamelab_pointInDirection:
-        text: ئاماژە [SPRITE][0] [DIRECTION][1]
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
+        text: ئاماژە {SPRITE} {DIRECTION}
       gamelab_printText:
-        text: چاپکردن [TEXT][0]
+        text: چاپکردن {TEXT}
       gamelab_randColor:
         text: رەنگێکی هەڕەمەکی
       gamelab_randomColor:
@@ -968,17 +578,17 @@ ku:
       gamelab_randomLocation:
         text: شوێنێکی هەڕەمەکی
       gamelab_removeAllBehaviors:
-        text: "[SPRITE][0] هەموو شتێک دەوەستێنێ"
+        text: "{SPRITE} هەموو شتێک دەوەستێنێ"
       gamelab_removeBehaviorSimple:
-        text: سپڕایت [SPRITE][0] دەستپێدەکات [BEHAVIOR][1]
+        text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_removeTint:
-        text: ڕەنگی [THIS][0] لاببە
+        text: ڕەنگی {THIS} لاببە
       gamelab_setAnimation:
-        text: جلوبەرگی [THIS][0] بگۆڕە بۆ [ANIMATION][1]
+        text: جلوبەرگی {THIS} بگۆڕە بۆ {ANIMATION}
       gamelab_setBackground:
-        text: ڕەنگی پاشبنەما دیاریبکە [COLOR][0]
+        text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       gamelab_setBackgroundImage:
-        text: پاشبنەما دابنێ [IMG][0]
+        text: پاشبنەما دابنێ {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ئەشكەوت
@@ -988,91 +598,69 @@ ku:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': گەلەستێرە
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': هێڵدار
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': پەلكەزێرینە
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': خەیاڵی-زانستی
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ئەستێرە
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
             undefined: هیچ
       gamelab_setBackgroundImageAs:
-        text: پاشبنەما دابنێ [IMG][0]
+        text: پاشبنەما دابنێ {IMG}
       gamelab_setProp:
-        text: دابنی [SPRITE][0] [PROPERTY][1] بە بڕی [VAL][2]
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: دابنی {SPRITE} {PROPERTY} بە بڕی {VAL}
       gamelab_setSizes:
-        text: '[SPRITE][0] [PROPERTY][1] بکە بە [N][2]%'
+        text: "{SPRITE} {PROPERTY} بکە بە {N}%"
         options:
           PROPERTY:
             '"width"': پانی
       gamelab_setTint:
-        text: ڕەنگی [THIS][0] بگۆڕە بۆ [COLOR][1]
+        text: ڕەنگی {THIS} بگۆڕە بۆ {COLOR}
       gamelab_setupSim:
         text: |-
           جوڵانەوەکە دیاریبکە لەگەڵ
-          [SPRITE1N][0][SPRITE1COSTUME]
-          [1]خێرایی[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME]
-          [4]خێرایی[SPRITE2SPEED][5]
+          {SPRITE1N}[SPRITE1COSTUME]
+          [1]خێرایی{SPRITE1SPEED}
+          {SPRITE2N}[SPRITE2COSTUME]
+          [4]خێرایی{SPRITE2SPEED}
           کۆکراوەی
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: شاشەی ناونیشان پشانبدە [BREAK][0] ناونیشان [TITLE][1] دەق [SUBTITLE][2]
+        text: شاشەی ناونیشان پشانبدە {BREAK} ناونیشان {TITLE} دەق {SUBTITLE}
       gamelab_spriteClicked:
-        text: "[CONDITION][0] [SPRITE][1] کرتە کراوە"
+        text: "{CONDITION} {SPRITE} کرتە کراوە"
       gamelab_subjectSpritePointer:
-        text: "کرتە کرا [SPRITE][0]"
+        text: کرتە کرا {SPRITE}
       gamelab_turn:
-        text: '[SPRITE][0] بسوڕێنە [DIRECTION][1] بە پلەی [N][2]'
+        text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
       gamelab_whenDownArrow:
         text: کاتێک هێمای خوارەوە دادەگیرێت
       gamelab_whenKey:
-        text: کاتێک [KEY][0] دادەگیرێت
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
+        text: کاتێک {KEY} دادەگیرێت
       gamelab_whenLeftArrow:
         text: کاتێک هێمای چەپ دادەگیرێت
       gamelab_whenRightArrow:
         text: کاتێک هێمای ڕاست دادەگیرێت
       gamelab_whenTouching:
-        text: کاتێک [SPRITE1][0] بە [SPRITE2][1] دەکەوێ
+        text: کاتێک {SPRITE1} بە {SPRITE2} دەکەوێ
       gamelab_whenUpArrow:
         text: کاتێک هێمای سەرەوە دادەگیرێت
       gamelab_whileDownArrow:
         text: کاتێک هێمای خوارەوە داگیراوە
       gamelab_whileKey:
-        text: کاتێک [KEY][0] داگیراوە
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
+        text: کاتێک {KEY} داگیراوە
       gamelab_whileLeftArrow:
         text: کاتێک هێمای چەپ داگیراوە
       gamelab_whileRightArrow:
         text: کاتێک هێمای ڕاست داگیراوە
       gamelab_whileTouching:
-        text: کاتێک [SPRITE1][0] بەر [SPRITE2][1] کەوتووە
+        text: کاتێک {SPRITE1} بەر {SPRITE2} کەوتووە
       gamelab_whileUpArrow:
         text: کاتێک هێمای سەرەوە داگیراوە
       gamelab_xLocationOf:
-        text: پۆتانی xی [SPRITE][0]
+        text: پۆتانی xی {SPRITE}
       gamelab_yLocationOf:
-        text: پۆتانی yی [SPRITE][0]
+        text: پۆتانی yی {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: سپڕایت [SPRITE][0] دەستپێدەکات [BEHAVIOR][1]
+        text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
-      Mikelab_changePropBy:
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: "{ANIMATION}"
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1083,26 +671,12 @@ ku:
             "{x: 300, y: 100}": سەرەوە لای ڕاست
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
-      Mikelab_getProp:
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
       Mikelab_groupChangeAnim:
-        text: '[SELECT][0] [COSTUME][1] بگۆڕە بۆ [COSTUME2][2]'
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: "{SELECT} {COSTUME} بگۆڕە بۆ {COSTUME2}"
       Mikelab_groupChangePropBy:
-        text: '[PROPERTY][0] ی [SELECT][1] [COSTUME][2] بگۆڕە بە بڕی [VAL][3]'
-        options:
-          SELECT:
-            '"this"': ئەمە
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: "{PROPERTY} ی {SELECT} {COSTUME} بگۆڕە بە بڕی {VAL}"
       Mikelab_groupCreateNewSprite:
-        text: '[COSTUME][0] ێکی نوێ دروستبکە لە [LOCATION][1]'
+        text: "{COSTUME} ێکی نوێ دروستبکە لە {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
@@ -1113,67 +687,39 @@ ku:
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
       Mikelab_groupDestroy:
-        text: لاببە [SELECT][0] [COSTUME][1]
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: لاببە {SELECT} {COSTUME}
       Mikelab_groupDisplace:
-        text: هەموو [COSTUME][0] ڕێگەدەگرن [COSTUME2][1] بجوڵێ
+        text: هەموو {COSTUME} ڕێگەدەگرن {COSTUME2} بجوڵێ
       Mikelab_groupEdgesDisplace:
-        text: لێوارەکان ڕێگەدەگرن [COSTUME][0] بجوڵێ
+        text: لێوارەکان ڕێگەدەگرن {COSTUME} بجوڵێ
       Mikelab_groupGetProp:
-        text: "[SELECT][0] [COSTUME][1] ی [PROPERTY][2]"
-        options:
-          SELECT:
-            '"average"': تێکڕا
-            '"this"': ئەمە
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: "{SELECT} {COSTUME} ی {PROPERTY}"
       Mikelab_groupRemoveAllBehaviors:
-        text: کردەوەکانی [SELECT][0] [COSTUME][1] بوەستێنە
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: کردەوەکانی {SELECT} {COSTUME} بوەستێنە
       Mikelab_groupRemoveBehaviorSimple:
-        text: "[SELECT][0] [COSTUME][1] وادەکات [BEHAVIOR][2] بوەستێت"
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: "{SELECT} {COSTUME} وادەکات {BEHAVIOR} بوەستێت"
       Mikelab_groupRemoveTint:
-        text: ڕەنگی [SELECT][0] [COSTUME][1] لاببە
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: ڕەنگی {SELECT} {COSTUME} لاببە
       Mikelab_groupSetProp:
-        text: '[PROPERTY][0] ی [SELECT][1] [COSTUME][2] دابنێ بەبڕی [VAL][3]'
-        options:
-          SELECT:
-            '"this"': ئەمە
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
+        text: "{PROPERTY} ی {SELECT} {COSTUME} دابنێ بەبڕی {VAL}"
       Mikelab_groupSetTint:
-        text: ڕەنگی [SELECT][0] [COSTUME][1] بگۆڕە بۆ [COLOR][2]
-        options:
-          SELECT:
-            '"this"': ئەمە
+        text: ڕەنگی {SELECT} {COSTUME} بگۆڕە بۆ {COLOR}
       Mikelab_groupWhenClickedOn:
-        text: کاتێک [COSTUME][0] کرتە دەکرێت
+        text: کاتێک {COSTUME} کرتە دەکرێت
       Mikelab_groupWhenXTouchesY:
-        text: کاتێک [COSTUME][0] بەر [COSTUME2][1] دەکەوێ
+        text: کاتێک {COSTUME} بەر {COSTUME2} دەکەوێ
       Mikelab_groupWhileClicked:
-        text: لەکاتی کاتی کرتەکردن لەسەر [COSTUME][0]
+        text: لەکاتی کاتی کرتەکردن لەسەر {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          کاتێک[COSTUME][0] بەر [COSTUME2][1] دەکەوێ
-          [STATEMENT][2]
+          کاتێک{COSTUME} بەر {COSTUME2} دەکەوێ
+          {STATEMENT}
       Mikelab_hasBehavior:
-        text: "[SPRITE][0] ئێستاکە [BEHAVIOR][1]"
+        text: "{SPRITE} ئێستاکە {BEHAVIOR}"
       Mikelab_ifDanceIs:
         text: |-
-          ئەگەر [SPRITE][0] ئەنجام بدات [DANCE][1]
-          [DO1][2] [DO2][3]
+          ئەگەر {SPRITE} ئەنجام بدات {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: چەپڵەی بەهێز
@@ -1187,33 +733,28 @@ ku:
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
       Mikelab_locationAt:
-        text: 'شوێنی x: [X][0] y: [Y][1]'
+        text: 'شوێنی x: {X} y: {Y}'
       Mikelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: رەنگێکی هەڕەمەکی
       Mikelab_removeBehaviorSimple:
-        text: سپڕایت [SPRITE][0] دەستپێدەکات [BEHAVIOR][1]
+        text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
-      Mikelab_setProp:
-        options:
-          PROPERTY:
-            '"rotation"': سوڕانەوە
-            '"direction"': ئاڕاستەی جووڵە
       Mikelab_setupSim:
         text: |-
           جوڵانەوەکە دیاریبکە لەگەڵ
-          [SPRITE1N][0][SPRITE1COSTUME]
-          [1]خێرایی[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME]
-          [4]خێرایی[SPRITE2SPEED][5]
+          {SPRITE1N}[SPRITE1COSTUME]
+          [1]خێرایی{SPRITE1SPEED}
+          {SPRITE2N}[SPRITE2COSTUME]
+          [4]خێرایی{SPRITE2SPEED}
           کۆکراوەی
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_sprite:
-        text: '[COSTUME][0] ێکی سپڕایتی نوێ لە [LOCATION][1]'
+        text: "{COSTUME} ێکی سپڕایتی نوێ لە {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
@@ -1224,9 +765,9 @@ ku:
             "{x: 100, y: 300}": خوارەوە لای چەپ
             "{x: 300, y: 300}": خوارەوە لای ڕاست
       Mikelab_whenClickedOn:
-        text: کاتێک [SPRITE][0] کرتە دەکرێت
+        text: کاتێک {SPRITE} کرتە دەکرێت
       Mikelab_whenKeyPressed:
-        text: کاتێک [KEY][0] دادەگیرێت
+        text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
             '"w"': ڕۆژئاوا
@@ -1239,33 +780,33 @@ ku:
       Mikelab_whenMouseClicked:
         text: کاتێ ماوس کرتە دەکرێ
       Mikelab_xLocationOf:
-        text: پۆتانی xی [SPRITE][0]
+        text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
-        text: پۆتانی yی [SPRITE][0]
+        text: پۆتانی yی {SPRITE}
       SpriteLab2Beta_spriteSay:
-        text: سپڕایت [SPRITE][0] بڵێ [TEXT][1] بەماوەی [SECONDS][2] چرکە
+        text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
         text: |-
           سپڕایت دروستبکە
-          [STATEMENT][0] ئەنجامبدە
+          {STATEMENT} ئەنجامبدە
       Vector_log:
-        text: نامەی لۆگ [MESSAGE][0]
+        text: نامەی لۆگ {MESSAGE}
       Vector_positionCenter:
         text: ناوەڕاست
       Vector_push:
-        text: خێرایی دیاریبکە [VECTOR][0]
+        text: خێرایی دیاریبکە {VECTOR}
       Vector_randomLocation:
         text: شوێنێکی هەڕەمەکی
       Vector_setColor:
-        text: ڕەنگ بکە بە [COLOR][0]
+        text: ڕەنگ بکە بە {COLOR}
       Vector_setSize:
-        text: پانی دیاریبکە [WIDTH][0] بەرزی [HEIGHT][1]
+        text: پانی دیاریبکە {WIDTH} بەرزی {HEIGHT}
       Vector_teleportTo:
-        text: شوێن دیاریبکە [POSITION][0]
+        text: شوێن دیاریبکە {POSITION}
       Vector_vectorNorth:
         text: باکوور
       Vector_where:
-        text: هەر سپڕایترێک کە [PROPERTY][0] بڕی [VALUE][1] بێت [STATEMENT][2] ئەنجامبدە
+        text: هەر سپڕایترێک کە {PROPERTY} بڕی {VALUE} بێت {STATEMENT} ئەنجامبدە
         options:
           PROPERTY:
             "'shapeColor'": ڕەنگ
@@ -1273,130 +814,83 @@ ku:
         options:
           FORMAT:
             '"grid"': هێڵدار
-            '"border"': چوارچێوە
-            '"row"': ڕیز
             '"random"': هەڕەمەکی
       binary_drawBin:
-        text: دووانی بکێشە [BIN][0]
+        text: دووانی بکێشە {BIN}
       binary_drawBinScreen:
         text: |-
           سکرین بکێشە
-          [B1][0]
-          [B2][1]
-          [B3][2]
-          [B4][3]
-          [B5][4]
-          [B6][5]
-          [B7][6]
-          [B8][7]
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
       binary_drawDec:
-        text: دەیی بکێشە [DEC][0]
+        text: دەیی بکێشە {DEC}
       binary_drawPixelHere:
-        text: وێنەخاڵ دیاریبکە [VAL][0]
+        text: وێنەخاڵ دیاریبکە {VAL}
         options:
           VAL:
-            '0': 'كوژانەوە'
-            '1': 'پێکردن'
-            '"toggle"': سویچ
+            '0': كوژانەوە
+            '1': پێکردن
       binary_drawString:
-        text: ڕیزبوند بکێشە [STR][0]
+        text: ڕیزبوند بکێشە {STR}
       binary_goTo:
-        text: بازبدە بۆ [LOC][0]
+        text: بازبدە بۆ {LOC}
       binary_goToHome:
         text: بازبدە بۆ سەرەوە لای چەپ
       binary_gridSize:
-        text: قەبارەی تۆڕە هێڵدارەکە دیاریبکە [SIZE][0]
+        text: قەبارەی تۆڕە هێڵدارەکە دیاریبکە {SIZE}
       binary_move:
-        text: '[DIR][0] بجوڵێنە'
+        text: "{DIR} بجوڵێنە"
       binary_whenKey:
-        text: کاتێک [KEY][0] دادەگیرێت
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
+        text: کاتێک {KEY} دادەگیرێت
       craft_ifPath:
         text: |-
-          ئەگەر ڕێگای [DIR][0]
-          [STATEMENT][1]
+          ئەگەر ڕێگای {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": بەرەو پێشەوە
-            "'right'": بۆ لای ڕاست
-            "'left'": بۆ لای چەپ
       craft_ifStandingOn:
         text: |-
-          ئەگەر وەستابێت لەسەر [TYPE][0]
-          [STATEMENT][1]
+          ئەگەر وەستابێت لەسەر {TYPE}
+          {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": مەرجانی شین
-            "'redCoralBlock'": مەرجانی سوور
             "'sand'": لم/وردە بەرد
-            "'wool_blue'": ئاوی قووڵ
-            "'seaLantern'": چرای دەریایی
       craft_ifStandingOnLimit:
         text: |-
-          ئەگەر وەستابێت لەسەر [TYPE][0]
-          [STATEMENT][1]
+          ئەگەر وەستابێت لەسەر {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": لم/وردە بەرد
-            "'darkPrismarine'": پریسمارینی تۆخ
-            "'seaLantern'": چرای دەریایی
       craft_log:
-        text: نامەی لۆگ [MESSAGE][0]
+        text: نامەی لۆگ {MESSAGE}
       craft_placeBlock:
-        text: جێگیربکە [blockType][0]
-        options:
-          blockType:
-            '"strippedOak"': دارڕێژ
-            '"strippedDarkOak"': دارڕێژی تۆخ
-            '"stoneBricks"': بلۆکی بەردین
-            '"mossyStoneBricks"': بلۆکی بەردی قەوزەدار
-            '"crackedStoneBricks"': بلۆکی بەردی شکاو
-            '"blueCoralBlock"': بلۆکی مەرجانی شین
-            '"pinkCoralBlock"': بلۆکی مەرجانی پەمەیی
-            '"magentaCoralBlock"': بلۆکی مەرجانی ئەرخەوانی
-            '"redCoralBlock"': بلۆکی مەرجانی سوور
-            '"yellowCoralBlock"': بلۆکی مەرجانی زەرد
-            '"blueDeadCoralBlock"': بلۆکی مەرجانی مردووی شین
-            '"pinkDeadCoralBlock"': بلۆکی مەرجانی مردووی پەمەیی
-            '"magentaDeadCoralBlock"': بلۆکی مەرجانی مردووی ئەرخەوانی
-            '"readDeadCoralBlock"': بلۆکی مەرجانی مردووی سوور
-            '"yellowDeadCoralBlock"': بلۆکی مەرجانی مردووی زەرد
-            '"prismarine"': بلۆکی پریسمارین
-            '"darkPrismarine"': پریسمارینی تۆخ
-            '"seaLantern"': چرای دەریایی
-            '"packedIce"': بەفری قالبکراو
-            '"blueIce"': بەفری شین
-            '"blackConcrete"': کۆنکریتی ڕەش
-            '"seaGrass"': گیای دەریایی
-            '"kelp"': گژوگیای دەریا
-            '"polishedGranite"': گرانێتی لووس
+        text: جێگیربکە {blockType}
       craft_placePrismarine:
         text: پریسمارین دابنێ
       craft_repeatUntilConduit:
         text: |-
           دووبارە بکەوە تا جۆگەکە تەواو دەبێت
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           دووبارە بکەوە تا ئامانجەکە
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: هێلکە ماسی [ENTITY][0]
+        text: هێلکە ماسی {ENTITY}
         options:
           ENTITY:
-            '"cod"': ماسی کۆد
             '"dolphin"': دۆلفین
-            '"salmon"': سەلەمۆن
-            '"seaTurtle"': کیسەڵی دەریایی
             '"squid"': ئەکتاپوس
-            '"tropicalFish"': ماسی کەمەرەیی
       craft_turn:
-        text: بسوڕێوە [DIR][0]
+        text: بسوڕێوە {DIR}
         options:
           DIR:
             right: بۆ لای ڕاست ↻
