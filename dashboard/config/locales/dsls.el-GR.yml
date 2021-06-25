@@ -2379,3 +2379,299 @@ el-GR:
         description: 'Τελειώσατε το εκπαιδευτικό βίντεο! Συνεχίστε να κάνετε αλλαγές
           ή βελτιώσεις στο έργο σας. Μπορείτε να επιλέξετε να συνεχίζετε να εργάζεστε
           με τα ίδια κομμάτια παζλ ή να δοκιμάσετε μια εκτεταμένη εργαλειοθήκη. '
+      CourseF_outbreak_story:
+        content1: περιγραφή εδώ
+      CourseF_outbreak_story2:
+        content1: περιγραφή εδώ
+        markdown: "# Έξαρση: Σκέφτομαι σαν ένας επιστήμονας\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nΟι προσομοιώσεις είναι ένας εξαιρετικός
+          τρόπος να αρχίσετε να μαθαίνετε οτιδήποτε είναι δύσκολο να παρατηρηθεί στον
+          πραγματικό κόσμο. Βοηθούν τους επιστήμονες να επιλύουν προβλήματα και να
+          δοκιμάσουν νέες ιδέες με ασφάλεια και αποδοτικότητα. Μια προσομοίωση δημιουργημένη
+          από εσάς είναι ένας τρόπος να δείξετε πώς μπορεί να μοιάζει μια έξαρση του
+          ιού στην Πόλη Τεράτων .\n \n\n## Επαναφέρετε και ξαναπαίξτε!\nΑκόμα και
+          όταν γράφετε τον κώδικα εσείς οι ίδιοι, είναι αδύνατον να ξέρετε τι θα συμβεί
+          όταν πατάτε εκτέλεση. Τα τέρατα περιφέρονται τυχαία, συνεπώς δεν μπορείτε
+          να ξέρετε αν ο ιός θα εξαπλωθεί γρήγορα ή αργά. Οποτεδήποτε αλλάζετε τον
+          κωδικό που δημιουργήσατε, βεβαιωθείτε ότι εκτελέσατε την προσομοίωση που
+          παράγετε πάνω από μία φορά. Τίποτα δεν θα συμβεί με τον ίδιο τρόπο δύο φορές.\n\n##Συλλέγοντας
+          δεδομένα\nΔοκιμάστε να σημειώσετε κάτω τις παρατηρήσεις σας καθώς εκτελείτε
+          την προσομοίωση που φτιάξατε. Μπορείτε να μετρήσετε τον αριθμό των τεράτων
+          που αρρωσταίνουν ή να χρησιμοποιήσετε ένα χρονοδιακόπτη για να δείτε την
+          ταχύτητα των συμβάντων. Για παράδειγμα , πόσος χρόνος συνήθως χρειάζεται
+          για να αρρωστήσουν όλα τα τέρατα αν κανένα δεν έχει μάσκες;\n\n##Κάνοντας
+          Προβλέψεις\nΑν κατανοείτε το μοντέλο που παράγετε, μπορείτε να το χρησιμοποιήσετε
+          για να κάνετε προβλέψεις. Μπορείτε ακόμα να αλλάζετε τον τρόπο με τον οποίο
+          εκτελείται η προσομοίωση που παράγετε και να μαντέψετε τι θα συμβεί διαφορετικά.
+          Για παράδειγμα:\n*Τι θα συνέβαινε αν υπήρχαν διπλάσια τέρατα από όσα υπάρχουν
+          τώρα;\n*Τι θα συνέβαινε αν τα τέρατα μετακινούνταν με τη μισή ταχύτητα;\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Είναι η Πόλη Τεράτων σαν τον πραγματικό κόσμο;\nΥπάρχει
+          ένα όριο σχετικά με τον βαθμό ρεαλισμού στον οποίο κάθε μοντέλο μπορεί να
+          φτάσει.\n* Τι κοινό έχει η προσομοίωση της έξαρσης που δημιουργήσατε  με
+          τις εξάρσεις του ιού στον πραγματικό κόσμο;\n* Ποιες είναι οι διαφορές;\nΌταν
+          τελειώσετε αυτή τη δραστηριότητα, συζητήστε τις παραπάνω ερωτήσεις με τους
+          δασκάλους ή την οικογένειά σας!\n\n##Για τι άλλο μπορούμε να φτιάξουμε μοντέλα;\nΈχετε
+          ήδη δημιουργήσει ένα λειτουργικό μοντέλο μιας έξαρσης ιού στην Πόλη Τεράτων.
+          Τι δεν μπορεί να κάνει η προσομοίωσή σας ή τι δεν δείχνει που θα ευχόσασταν
+          να έδειχνε; Πατήστε συνέχεια για τα επόμενα στάδια και μάθετε πως να δημιουργείτε
+          μοντέλα για ακόμα περισσότερα:\n* Αύξηση του αριθμού των τεράτων στην προσομοίωση\n*
+          Συμβολή στην ανάρρωση των τεράτων από τον ιό\n* Πιθανότητα, ανοσία, εμβόλια,
+          και πολλά άλλα!\n\nΜπορείτε να μοιραστείτε το μοντέλο προσομοίωσης που δημιουργήσατε
+          με άλλους, ή να μοιράσετε ένα μήνυμα σχετικά με το τι νομίζετε ότι μπορούμε
+          να κάνουμε να διατηρήσουμε τους άλλους υγιείς όταν ένας ιός έρχεται στην
+          πόλη.\n\n"
+      OPD-K5 Stage3aGo_dani:
+        content1: περιγραφή εδώ
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: Α
+          correct: true
+        - text: Β
+        - text: Γ
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: περιγραφή εδώ
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: περιγραφή εδώ
+      csf_password_power-up_2021:
+        content1: περιγραφή εδώ
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: περιγραφή εδώ
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
