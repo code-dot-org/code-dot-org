@@ -1321,6 +1321,280 @@
               "length": "haba"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "ang aking Function"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "gumuhit ng bituin"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          },
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "gumuhit ng parisukat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gumawa ng kahit ano"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "tapusin ang laro"
+          }
         }
       }
     }
