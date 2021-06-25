@@ -333,6 +333,72 @@
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "Por favor, tente outra vez.",
           "af142a90df4becc2aa7ae0d3acb3cc90": "Fim de jogo!"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Um cachorro!",
+          "336ad881e37e713ba0325500a8fa1f00": "cachorros!",
+          "27944770529dd15319a983bee8951560": "Um gato!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "gatos!",
+          "1c64ef29c853587fbe94f69f05272b79": "Um pássaro!",
+          "5b402e6ea05e847a076e03ad74420c45": "pássaros!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Um dragão!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "dragões!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Conte todos os animais!",
+          "f62038e77820419cd978f7b722da560a": "Quantos irão aparecer?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conte os animais de estimação"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "Este sou eu, Rikki! Eu gosto de programar, passear com a Thuy e tomar sorvete!",
+          "810896b14fc6615f0c76628b9b6a727e": "Essa é minha melhor amiga Thuy! Ela é muito boa em esportes!",
+          "6f97975a0bda0c9219915161149cbb26": "Esse é o meu computador! Eu programo nele TODO o tempo!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Olá, mundo!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Olá, mundo!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Olá, mundo!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Oi!"
+        },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "peixe",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "outro"
+        },
+        "courseF_apps_chatbot": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
+          "ae096fbf24d913754b01a1601672bf62": "também!"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!"
+        },
+        "courseF_editable_chatbot": {
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
+          "ae096fbf24d913754b01a1601672bf62": "também!"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
         }
       }
     }

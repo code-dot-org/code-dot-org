@@ -2,7 +2,6 @@
 pt:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" com a Abelha'
       Accelerometer Events: Eventos do Acelerômetro
       Adding Images: Adicionando Imagens
       Adding Screens: Adicionando Telas
@@ -48,6 +47,7 @@ pt:
       Debugging with the Step Button: Depuração com o Botão Step
       Demo Apps: Apps de Demonstração
       Design Mode: Modo de Design
+      Designing for Accessibility: Projetando para Acessibilidade
       Drawing: Desenho
       Events: Eventos
       Events and Linking Screens: Eventos e Telas de Links
@@ -102,6 +102,7 @@ pt:
       'Maze Intro: Programming with Blocks': 'Introdução ao Labirinto: Programando
         com Blocos'
       Measures: Compassos
+      'Mini-Project: About Me': Sobre mim com o Sprite Lab
       'Mini-Project: Alien Dance Moves': 'Mini-Projeto: Movimentos de dança alienígena'
       'Mini-Project: Alien Dance Party': 'Mini-Projeto: Festa de dança alienígena'
       'Mini-Project: Royal Battle': 'Mini-Projeto: Batalha Real'
@@ -122,10 +123,13 @@ pt:
       Movement with the Counter Pattern: Movimento com o Padrão de Contagem
       Multiframe Animations: Animações Multiframe
       Musical Arrays: Arrays Musicais
+      My Online Neighborhood: Minha Vizinhança Online
       Nested Loops with the Bee: Laços Alinhados com a Abelha
       New Shapes: Novas Formas
       Orientation: Orientação
       Pair Programming: Programação em duplas
+      Picturing Data: Estruturação de dados
+      Planning: Planejamento
       Platform Jumper - Background and Variables: Platform Jumper - Histórico e Variáveis
       Platform Jumper - Items: Platform Jumper - Itens
       Platform Jumper - Platforms: Platform Jumper - Plataformas
@@ -153,6 +157,7 @@ pt:
       Repeat Unit Statements: Repita as Declarações da Unidade
       Repeat Until Statements: Repita as Declarações da Unidade
       Representing Images: Representando Imagens
+      Review: Revisar
       Run a simulation: Executar uma Simulação
       Sample Programs: Programas de Exemplo
       Screen Design: Design de Tela
@@ -187,6 +192,7 @@ pt:
       Velocity: Velocidade
       Velocity and the Counter Pattern: Velocidade e o Padrão Contador
       Video: Vídeo
+      'Video: For Loops': 'Vídeo: Laços Para'
       Warm Up: Aquecimento
       Website Project: Projeto do SIte
       While Loops with the Farmer: While Loops com o agricultor
