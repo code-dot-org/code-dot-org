@@ -2337,3 +2337,165 @@ hr-HR:
         - {}
         questions:
         - {}
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Privatni i osobni podaci
+
+          ## Koje podatke o sebi možeš dijeliti na internetu?
+      courseD_EOC_2021:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_EOC_2021:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseE_EOC_examples_2021:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: opis ovdje
+        markdown: |
+          # Super digitalni građanin
+
+          ## Kako možemo reagirati kada vidimo internetsko zlostavljanje?
+      csf_password_power-up_2021:
+        content1: opis ovdje
+        markdown: |
+          # Ojačajte zaporku
+
+          ## Savjeti za sigurnijom zaporkom
+
+          * Korisi ** frazu ** koju nećeš zaboraviti.
+          * Samo tvoji ** roditelji ** trebaju znati tvoju zaporku.
+          * Nikada u zaporci ne koristi ** privatne ** podatke o identitetu.
+          * Neka tvoje zaporke imaju najmanje ** osam ** znakova.
+          * U zaporkama koristi slova, brojke i ** simbole **.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Moja internetska četvrt
+
+          ## Kako sigurno odlazite na mjesta na mreži?
+      express_EOC_2021:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
