@@ -8,95 +8,95 @@ nav: how_to_nav
 
 # Jak naplánovat vaši Hodinu kódu
 
-### Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu se snadno provádí i pro začátečníky! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Přidejte se k hnutí a absolvujte se skupinou studentů jejich první hodinu informatiky podle těchto kroků. Hodina kódu se snadno provádí i pro začátečníky! Pokud potřebujete při Hodině někoho na pomoc, můžete se spojit s [místním dobrovolníkem, ]({{ urls/volunteer_local }}) aby Vám ji pomohl zorganizovat ve Vaší třidě..
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### Jestliže máte nějaké dotazy, podívejte se do našeho [průvodce účastí]({{ localized_files/participation_guide }}).
 
 ***
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 1. Sledujte toto návodné video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 2. Explore Activities and Tutorials
+## 2. Probádejte aktivity a výukové kurzy
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Nabízíme množství zábavných [na studenty orientovaných výukových kurzů]({{ urls/learn }}) pro všechny věkové kategorie a zkušenostní úrovně. U studentů je populární dělat výukové kurzy vlastním tempem, ačkoli mnoho aktivit zahrnuje plány lekcí pro učitele, aby probíhala diskuse pod vedením, nebo za účelem prodloužení aktivity.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Bádejte v aktivitách a předem se rozhodněte, zda chcete vybrat jeden výukový kurz pro všechny studenty nebo zda chcete nechat každé dítě vybrat si svůj vlastní.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+## 3. Vytvořte svůj plán na tento den
 
-### Think about your technology needs - computers are optional!
+### Zamyslete se nad svými technickými potřebami - počítače nejsou nutné!
 
-- Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Otestujte si návody na počítačích nebo zařízení studentů a skontrolujte, že fungují správně v prohlížečích se zvukem a videem. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- Nejlepší zkušenost s Hodinou kódu je na počítačích připojených na internet. Nepotřebujete však počítač pro každé dítě a Hodinu programování můžete dělat dokonce i úplně bez počítače! Pro [offline aktivity](/learn) prostě zfiltrujte část technika učebny tak, aby tam byly možnosti „Žádné počítače ani zařízení“.
+- Otestujte si návody na počítačích nebo zařízení studentů a skontrolujte, že fungují správně v prohlížečích se zvukem a videem. Máte málo přenosové šířky? Plánujete zobrazit videa před celou třídou, aby nemusel každý student stahovat svá vlastní videa. Nebo zkuste offline návody.
 - Rozdejte sluchátka studentům, nebo požádejte studenty, aby si přinesli své vlastní, když kurz pracuje nejlépe se zvukem.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pokud se studenti spojí do dvojic, budou si vzájemně pomáhat a budou méně závislí na vyučujícím. Uvidí také, že informatika je společenská a týmová záležitost.
+- Nemáte dostatek zařízení? Použijte [párové programování](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pokud se studenti spojí do dvojic, budou si vzájemně pomáhat a budou méně závislí na vyučujícím. Uvidí také, že informatika je společenská a týmová záležitost.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-### Pick a day and time
+### Vyberte den a čas
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Lidé po celém světě se přidávají k oslavování Hodiny programování během týdne vzdělávání v počítačové vědě (9.-13. prosince), kdy budou vydány poslední výukové kurzy a aktivity. Ale Hodinu programování můžete dělat v kterýkoli den roku!
 
-## 4. Promote your Hour of Code
+## 4. Propagujte svou Hodinu programování
 
-Now that you've planned your event, it's time to start promoting it!
+Teď, když jste naplánovali svou akci, je čas začít ji propagovat!
 
-### Tell your School and Community
+### Řekněte to své škole a svému společenství
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Propaguje Hodinu programování k jiným učitelům, kteří se možná budou chtít přidat k té zábavě! Toto je také vynikající příležitost, jak oslovit PTSA ve Vaší škole nebo sdílet rodičovské zpravodaje a dát rodičům vědět, že jejich děti mohou přijít domů s tím, že si budou chtít vyzkoušet nějaké další aktivity a výukové kurzy!
 
-### Let Volunteers Know by Registering Your Event
+### Zaregistrováním své akce o ní dejte vědět svým dobrovolníkům
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Když se zaregistrujete na akci [Hodina programování](/), obdržíte užitečná e-mailová sdělení se zprávami a radami, jak uspořádat úspěšnou Hodinu programování. Jde také o způsob, jak můžete  sdělit svým místním dobrovolníkům, že jejich škola se zapojí. Vynikajícím prostředkem jsou dobrovolníci, kteří mohou přijít promluvit k Vaší třídě o počítačové vědě nebo prostě jen pomoci Vašim studentům s aktivitami Hodiny programování.
 
-### Get your Students Excited
+### Vzrušte své studenty
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Připravte žactvo na akci sdílením [inspiračních videí](/promote/resources) zdůrazňujících různorodé lidi a kreativní způsoby využívání počítačových věd. Nebo si objednejte inspirační plakáty pro svou třídu! Studenti vykazují větší ochotu k účasti na nějakém předmětu, když vidí, že lidé kolem nich, kteří jsou podobní jako oni, je v tom podporují.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Zjistěte si více o plakátech, videích, nálepkách a dalších způsobech, jak můžete [propagovat svou akci](/promote/resources#posters) ve svém společenství.
 
-## 5. Start your Hour of Code Strong
+## 5. Zahajte svou Hodinu programování silně
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Až přijde čas na oslavu Vaší hodiny programování, zajistěte, abyste svou událost zahájili silně, s těmito několika nástroji a  radami.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Pozvěte si [místního dobrovolníka, který by]({{ urls/volunteer_local }}) Vaše studenty inspiroval tím, že k nim promluví o rozsahu možností v dosahu počítačové vědy. Na světě jsou tisíce dobrovolníků připravených Vám pomoci s Vaší Hodinou programování buďto formou návštěvy třídy nebo přes video chat s Vašimi studenty!
 
 Ukažte inspirativní video:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Původní spouštěcí video Code.org, v němž vystoupí Bill Gates, Mark Zuckerberg, a hvězda NBA Chris Bosh. (K dispozici jsou verze v délce [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc), a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
+- Najděte si další inspirační [prostředky]({{ urls/inspire }}) a [videa](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Je v pořádku, jestliže je pro Vás i pro Vaše studenty počítačová věda naprostou novinkou. Tady je několik nápadů, jak můžete své aktivity „Hodiny programování“ uvést:
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
+- Vysvětlete způsoby, jakými technika ovlivňuje naše životy, přičemž uveďte příklady, které budou zajímat dívky i chlapce (mluvte o zachraňování životů, pomáhání lidem, spojování lidí, atd.).
 - Třída uvede seznam věcí každodenního života používající kód.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Podívejte se na tipy na to, jak dosáhnout, aby se dívky zajímaly o počítačovou vědu [tady]({{ urls/girls }}).
 
 
-## 6. Get Coding!
+## 6. Pojďme programovat!
 
-Direct students to the activity
+Naveďte studenty k aktivitě
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Odkaz na výukový kurz napište na tabuli. Odkaz najdete mezi [informacemi o vybraném výukovém kurzu]({{ urls/learn }}) pod počtem účastníků.
 
-When your students come across difficulties it's okay to respond:
+Když Vaši studenti narazí na nějaké překážky, je správné zareagovat:
 
-- “I don’t know. Let’s figure this out together.”
+- "Nevím. Přijďme na to společně.”
 - "Technologie nefunguje vždy tak, jak chceme."
 - "Učit se programovat je jako učit se nový jazyk; nejde hned mluvit plynule."
 
-What if a student finishes early?
+Co když nějaký student skončí dříve?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- Studenti se mohou podívat na všechny výukové kurzy a [zkusit jinou aktivitu Hodiny programování]({{ urls/learn }}).
 - Nebo požádejte studenty, kteří jsou brzy hotoví, aby pomohli spolužákům, kteří mají s aktivitou potíže.
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7. Slavte úspěchy svých studentů
 
 [col-33]
 
@@ -104,10 +104,10 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- Vytiskněte svým studentům [certifikáty]({{ urls/certificates }}).
+- [Natiskněte svým studentům nálepky „Dělal jsem hodinu programování!“]({{ urls/promote_stickers }}).
 - [Objednejte si volitelné trička](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pro vaší školu.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Fotografie a videa ze své akce „Hodina programování“ sdílejte na sociálních médiích. Použijte #HourOfCode a @codeorg, abychom mohli zveřejnit i Váš úspěch!
 
 ----
 
@@ -118,6 +118,6 @@ What if a student finishes early?
 
 ## Co následuje po Hodině kódu?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Počítačová věda nemusí končit „Hodinou programování“! Naše osnovy jsou webové a bezplatně použitelné, a to navždy. [Zjistěte si,](/beyond) jak můžete zavést počítačovou vědu do své školy a přiblížit ji svým studentům.
 
 {{ signup_button }}

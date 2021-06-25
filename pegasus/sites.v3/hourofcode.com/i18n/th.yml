@@ -30,7 +30,7 @@ th:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2560'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่สร้างขึ้นเอง  "
+  hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่เราสร้างขึ้นเอง  "
   hoc2020_header_with_line_break_markdown: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่สร้างขึ้นเอง
     \ "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -52,7 +52,7 @@ th:
   hoc2019_header_line2_mobile: เปลี่ยนโลกได้.
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
+  social_hoc2019_learn_computer_science: 'เรียนรู้วิทยาการคอมพิวเตอร์ มาเปลี่ยนโลกกันเถอะ
     #CSforGood #HourOfCode'
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -62,64 +62,61 @@ th:
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: "  AI for Oceans  "
-  oceans_landing_description: "  ศึกษารายละเอียดเรื่องการเรียนรู้ของระบบขั้นสูง และการใช้
-    AI อย่างมีศีลธรรม  "
+  oceans_landing_description: 'ศึกษารายละเอียดเรื่องการเรียนรู้ของระบบขั้นสูง และการใช้ปัญญาประดิษฐ์อย่างมีศีลธรรม  '
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: "  มีให้เลือกศึกษาในกว่า 25 ภาษา | ตั้งแต่เกรด 3 ขึ้นไป  "
-  oceans_landing_explanation: "  วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด! เรียนรู้เรื่องปัญญาประดิษฐ์
-    (AI) รวมถึงการเรียนรู้ของระบบขั้นสูง ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำ
-    AI มาใช้เพื่อระบุถึงปัญหาต่างๆ บนโลกใบนี้ สัมผัสประสบการณ์ความสนุกจากก้าวแรกบนเส้นทางสายใหม่ของ
-    Code.org เพื่อถ่ายทอดความรู้เรื่อง AI ให้มากยิ่งขึ้น เมื่อคุณใช้กิจกรรมของ AI
-    for Oceans แสดงว่าคุณกำลังฝึกใช้ต้นแบบการเรียนรู้ของระบบขั้นสูงที่แท้จริง <a href='#behind-the-scenes'>ศึกษาเพิ่มเติม</a>
-    \ "
-  oceans_landing_explanation_markdown: "  วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด!
+  oceans_landing_specs: 'มีให้เลือกศึกษาในกว่า 25 ภาษา | ตั้งแต่เกรด 3 ขึ้นไป  '
+  oceans_landing_explanation: 'วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด! เรียนรู้เรื่องปัญญาประดิษฐ์
+    (AI) รวมถึงการเรียนรู้ของระบบขั้นสูง ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำปัญญาประดิษฐ์มาใช้เพื่อระบุถึงปัญหาต่าง
+    ๆ บนโลกใบนี้ สัมผัสประสบการณ์ความสนุกจากก้าวแรกบนเส้นทางสายใหม่ของ Code.org เพื่อถ่ายทอดความรู้เรื่องปัญญาประดิษฐ์ให้มากยิ่งขึ้น
+    เมื่อคุณใช้กิจกรรมของ AI for Oceans แสดงว่าคุณกำลังฝึกใช้ต้นแบบการเรียนรู้ของระบบขั้นสูงที่แท้จริง
+    <a href=''#behind-the-scenes''>ศึกษาเพิ่มเติม</a>  '
+  oceans_landing_explanation_markdown: 'วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด!
     เรียนรู้เรื่องปัญญาประดิษฐ์ (AI) รวมถึงการเรียนรู้ของระบบขั้นสูง ข้อมูลการฝึกอบรมและอคติ
-    ขณะที่ดูเรื่องจริยธรรมและวิธีนำ AI มาใช้เพื่อระบุถึงปัญหาต่างๆ บนโลกใบนี้ สัมผัสประสบการณ์ความสนุกจากก้าวแรกบนเส้นทางสายใหม่ของ
-    Code.org เพื่อถ่ายทอดความรู้เรื่อง AI ให้มากยิ่งขึ้น เมื่อคุณใช้กิจกรรมของ AI
-    for Oceans แสดงว่าคุณกำลังฝึกใช้ต้นแบบการเรียนรู้ของระบบขั้นสูงที่แท้จริง [ศึกษาเพิ่มเติม](#behind-the-scenes)
-    \ "
+    ขณะที่ดูเรื่องจริยธรรมและวิธีนำปัญญาประดิษฐ์มาใช้เพื่อระบุถึงปัญหาต่าง ๆ บนโลกใบนี้
+    สัมผัสประสบการณ์ความสนุกจากก้าวแรกบนเส้นทางสายใหม่ของ Code.org เพื่อถ่ายทอดความรู้เรื่องปัญญาประดิษฐ์ให้มากยิ่งขึ้น
+    เมื่อคุณใช้กิจกรรมของ AI for Oceans แสดงว่าคุณกำลังฝึกใช้ต้นแบบการเรียนรู้ของระบบขั้นสูงที่แท้จริง
+    [ศึกษาเพิ่มเติม](#behind-the-scenes)  '
   oceans_landing_teacher_resources: "  แหล่งข้อมูลสำหรับผู้สอน  "
-  oceans_landing_teacher_resources_desc: "  วางแผนเรื่องบทเรียนและกิจกรรมเพื่อช่วยให้คุณสอนเรื่อง
-    AI รวมถึงการเรียนรู้ของระบบขั้นสูง ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรม
-    \ "
+  oceans_landing_teacher_resources_desc: 'แผนการเรียนการสอนและกิจกรรมที่จะช่วยให้คุณสอนเรื่องปัญญาประดิษฐ์
+    รวมถึงการเรียนรู้ของระบบ ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมควบคู่ไปด้วย '
   oceans_landing_resource_button: "  ดูแหล่งข้อมูล  "
-  oceans_landing_cs_for_good: "  CS for Good  "
+  oceans_landing_cs_for_good: 'CS for Good  '
   oceans_landing_cs_for_good_desc: "  แหล่งข้อมูลที่จะช่วยให้ผู้เรียนเข้าใจบทบาทของวิทยาการคอมพิวเตอร์ที่มีต่อการสร้างโลกที่เท่าเทียมกันมากขึ้น
     \ "
   oceans_landing_videos: "  วิดีโอเกี่ยวกับ AI และการเรียนรู้ของระบบขั้นสูง  "
   oceans_behind_the_scenes: "  AI for Oceans: หลังฉาก  "
-  oceans_behind_the_scenes_1: '  ระดับ 2-4 ใช้โมเดลการฝึกฝนล่วงหน้าที่จัดเตรียมได้จากโปรเจ็กต์
+  oceans_behind_the_scenes_1: ' ระดับ 2-4 ใช้ต้นแบบการฝึกฝนล่วงหน้าที่จัดเตรียมได้จากโปรเจ็กต์
     <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> โมเดล MobileNet คือ <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">โครงข่ายประสาทเทียมแบบ
+    MobileNet </a> ต้นแบบ MobileNet คือ <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">โครงข่ายประสาทเทียมแบบ
     Convolutional </a>ที่ได้รับการฝึกบน <a href="http://www.image-net.org/">ImageNet</a>
     ซึ่งก็คือชุดข้อมูลของภาพกว่า 14 ล้านภาพที่ใช้ลายมือเขียนกำกับภาพ เช่น ด้วยคำว่า
-    “ลูกโป่ง” หรือ “สตรอเบอรีย์” หากต้องการปรับโมเดลนี้ด้วยข้อมูลการฝึกที่ติดป้ายชื่อตามที่ผู้เรียนสร้างขึ้นมาจากกิจกรรมนี้
+    “ลูกโป่ง” หรือ “สตรอเบอรีย์” หากต้องการปรับต้นแบบนี้ด้วยข้อมูลการฝึกที่ติดป้ายชื่อตามที่ผู้เรียนสร้างขึ้นมาจากกิจกรรมนี้
     เราจะใช้เทคนิคที่ชื่อ <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
     Learning</a> แต่ละภาพที่อยู่ในชุดข้อมูลการฝึกฝนจะถูกป้อนเข้าสู่ MobileNet ในรูปของพิกเซล
     เพื่อรวมไว้ในรายการคำอธิบายประกอบที่น่าจะนำมาปรับใช้กับแต่ละภาพนั้นมากที่สุด ดังนั้น
     ในกรณีของภาพใหม่ เราจะป้อนภาพนั้นเข้าสู่ MobileNet และเปรียบเทียบรายการผลลัพธ์ของคำอธิบายประกอบกับคำอธิบายประกอบที่ได้จากชุดข้อมูลการฝึกฝน
     เราจำแนกภาพใหม่โดยใช้ป้ายชื่อเดิม (เช่น “ปลา” หรือ “ไม่ใช่ปลา”) เหมือนกับภาพที่ได้จากชุดการฝึกฝนที่ให้ผลลัพธ์ที่คล้ายกันมากที่สุด  '
-  oceans_behind_the_scenes_1_markdown: "  ระดับ 2-4 ใช้โมเดลการฝึกฝนล่วงหน้าที่จัดเตรียมได้จากโปรเจ็กต์
+  oceans_behind_the_scenes_1_markdown: " ระดับ 2-4 ใช้ต้นแบบการฝึกฝนล่วงหน้าที่จัดเตรียมได้จากโปรเจ็กต์
     [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    \ โมเดล MobileNet คือ [โครงข่ายประสาทเทียมแบบ Convolutional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    \ ต้นแบบ MobileNet คือ [โครงข่ายประสาทเทียมแบบ Convolutional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
     ที่ได้รับการฝึกบน [ImageNet](http://www.image-net.org/) ซึ่งก็คือชุดข้อมูลของภาพกว่า
     14 ล้านภาพที่ใช้ลายมือเขียนกำกับภาพ เช่น ด้วยคำว่า “ลูกโป่ง” หรือ “สตรอเบอรีย์”
-    หากต้องการปรับโมเดลนี้ด้วยข้อมูลการฝึกที่ติดป้ายชื่อตามที่ผู้เรียนสร้างขึ้นมาจากกิจกรรมนี้
+    หากต้องการปรับต้นแบบนี้ด้วยข้อมูลการฝึกที่ติดป้ายชื่อตามที่ผู้เรียนสร้างขึ้นมาจากกิจกรรมนี้
     เราจะใช้เทคนิคที่ชื่อ [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning)
     แต่ละภาพที่อยู่ในชุดข้อมูลการฝึกฝนจะถูกป้อนเข้าสู่ MobileNet ในรูปของพิกเซล เพื่อรวมไว้ในรายการคำอธิบายประกอบที่น่าจะนำมาปรับใช้กับแต่ละภาพนั้นมากที่สุด
     ดังนั้น ในกรณีของภาพใหม่ เราจะป้อนภาพนั้นเข้าสู่ MobileNet และเปรียบเทียบรายการผลลัพธ์ของคำอธิบายประกอบกับคำอธิบายประกอบที่ได้จากชุดข้อมูลการฝึกฝน
     เราจำแนกภาพใหม่โดยใช้ป้ายชื่อเดิม (เช่น “ปลา” หรือ “ไม่ใช่ปลา”) เหมือนกับภาพที่ได้จากชุดการฝึกฝนที่ให้ผลลัพธ์ที่คล้ายกันมากที่สุด
     \ "
-  oceans_behind_the_scenes_2: '  ระดับ 6-8 ใช้ <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+  oceans_behind_the_scenes_2: 'ระดับ 6-8 ใช้ <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM) เราดูที่แต่ละส่วนประกอบของปลา (เช่น ตา ปากและลำตัว) และประกอบเมตาดาต้าทั้งหมดของส่วนประกอบต่างๆ
     (เช่น จำนวนของฟัน รูปร่างของลำตัว) ลงไปในเวคเตอร์ของตัวเลขของปลาแต่ละตัว เราใช้เวคเตอร์เหล่านี้เพื่อฝึก
-    SVM เมื่อดูจากข้อมูลการฝึก สิ่งที่ SVM จะทำคือแยก “พื้นที่” ของปลาที่เป็นไปได้ทั้งหมดออกเป็นสองส่วนที่ตรงกับคลาสที่เราพยายามศึกษา
+    SVM ซึ่งเมื่อดูจากข้อมูลการฝึก สิ่งที่ SVM จะทำคือแยก “พื้นที่” ของปลาที่เป็นไปได้ทั้งหมดออกเป็นสองส่วนที่ตรงกับคลาสที่เราพยายามศึกษา
     (เช่น “สีฟ้า” หรือ “ไม่ใช่สีฟ้า”)  '
-  oceans_behind_the_scenes_2_markdown: "  ระดับ 6-8 ใช้ [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+  oceans_behind_the_scenes_2_markdown: ระดับ 6-8 ใช้ [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
     (SVM) เราดูที่แต่ละส่วนประกอบของปลา (เช่น ตา ปากและลำตัว) และประกอบเมตาดาต้าทั้งหมดของส่วนประกอบต่างๆ
     (เช่น จำนวนของฟัน รูปร่างของลำตัว) ลงไปในเวคเตอร์ของตัวเลขของปลาแต่ละตัว เราใช้เวคเตอร์เหล่านี้เพื่อฝึก
-    SVM เมื่อดูจากข้อมูลการฝึก สิ่งที่ SVM จะทำคือแยก “พื้นที่” ของปลาที่เป็นไปได้ทั้งหมดออกเป็นสองส่วนที่ตรงกับคลาสที่เราพยายามศึกษา
-    (เช่น “สีฟ้า” หรือ “ไม่ใช่สีฟ้า”)"
+    SVM ซึ่งเมื่อดูจากข้อมูลการฝึก สิ่งที่ SVM จะทำคือแยก “พื้นที่” ของปลาที่เป็นไปได้ทั้งหมดออกเป็นสองส่วนที่ตรงกับคลาสที่เราพยายามศึกษา
+    (เช่น “สีฟ้า” หรือ “ไม่ใช่สีฟ้า”)
   social_hoc2019_oceans_title: "  AI for Oceans #CSforGood  "
   social_hoc2019_oceans_desc: "  เรียนรู้เรื่อง AI รวมถึงการเรียนรู้ของระบบขั้นสูง
     ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำ AI มาใช้เพื่อระบุถึงปัญหาต่างๆ
@@ -133,46 +130,44 @@ th:
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ไปพร้อมกับแขกพิเศษ!
+    นักเรียนทุกช่วงอายุและความสามารถ รวมถึงนักเรียนที่ไม่มีคอมพิวเตอร์ สามารถเข้าร่วมเวิร์คช็อปเสมือนจริงของเราได้
+    ลองเรียนรู้ต่อที่บ้านผ่านกิจกรรมสดของ "ชั่วโมงเขียนโค้ด" ของเรา
   hoc_live_join_us: ร่วมกับเรา
   hoc_live_learn_more: เรียน​รู้​เพิ่ม​เติม
   hoc_overview_oceans_tutorial_header: "  AI for Oceans  "
   hoc_overview_oceans_tutorial_desc: "  เรียนรู้เรื่องปัญญาประดิษฐ์ (AI) รวมถึงการเรียนรู้ของระบบขั้นสูง
     ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำ AI มาใช้เพื่อระบุถึงปัญหาต่างๆ
     บนโลกใบนี้  "
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_what_is_ai: ปัญญาประดิษฐ์คืออะไร
+  ai_video_title_algorithm_bias: การต่อกรกับอคติในอัลกอริทึม
+  ai_video_title_phone_knows_dog: โทรศัพท์ของคุณทราบได้อย่างไรว่านี่คือน้องหมา
+  ai_video_title_what_is_ml: การเรียนรู้ของระบบคืออะไร
+  ai_video_title_ml_big_small_prickly: 'การเรียนรู้ของระบบ: การแก้ไขปัญหาใหญ่ เล็กและสุดโหด'
+  ai_video_title_ethics_of_ai: จริยธรรมของปัญญาประดิษฐ์
+  ai_video_title_ml_human_bias: การเรียนรู้ของระบบและอคติของคน
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  activity: กิจกรรม
   name: Name
-  description: Description
+  description: คำอธิบาย
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
+  ai_resource_header: สอนและเรียนรู้เกี่ยวกับปัญญาประดิษฐ์
   ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_minecraft_desc: 'เข้าถึงแหล่งข้อมูลต่าง ๆ ได้ฟรี ไม่ว่าจะเป็นแผนการเรียนการสอน
+    วิดีโอ หลักสูตรของวิทยาการคอมพิวเตอร์ และการฝึกอบรมผู้สอน (จำเป็นต้องมี Minecraft:
+    Education Edition)'
+  ai_resource_ml_for_kids: การเรียนรู้ของระบบสำหรับเด็กเล็ก
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_ibm_ml_for_kids: 'IBM: การเรียนรู้ของระบบสำหรับเด็กเล็ก'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs: 'ECS: ปัญญาประดิษฐ์ (AI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_elements_ai: องค์ประกอบของปัญญาประดิษฐ์
+  ai_resource_elements_ai_desc: ชุดของหลักสูตรออนไลน์ฟรีที่พัฒนาขึ้นจากความร่วมมือของบริษัท
+    Reaktor และมหาวิทยาลัยเฮลซิงกิ
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
@@ -180,19 +175,19 @@ th:
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
+  ai_activity_seeing_ai_desc: แอปฟรีที่ช่วยอธิบายความเป็นไปของโลกที่อยู่รอบตัวเราในภาษาต่าง
+    ๆ
   ai_activity_quick_draw: Quick, Draw!
   ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
   ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
     and poses.
   ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
+  ai_activity_experiments_desc: เริ่มสำรวจเรื่องการเรียนรู้ของระบบผ่านทางรูปภาพ การวาดภาพ
+    ภาษา เพลงและอีกมากมาย
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_zooniverse_desc: ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการะบุถึงสัตว์ชนิดต่าง
+    ๆ ที่อยู่ในภาพ
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -3156,11 +3151,10 @@ th:
   tutorial_tynkerd_longdescription: Design a custom hero and play as that character
     through this multi-level adventure game. You'll need to use your coding skills
     to solve puzzles, fight bugs, and save the motherboard!
-  tutorial_cdmy_longdescription: Codecademy is an interactive platform for learning
-    STEM skills that are critical for today's jobs. Join millions of Codecademy students
-    and learn the basics of coding and computer science by taking our fun Hour of
-    Code courses. By the end of each course, you'll have a real project that you can
-    show off to your friends and family.
+  tutorial_cdmy_longdescription: Codecademy คือแพล็ตฟอร์มแบบอินเทอร์แอ็คทีฟเพื่อเรียนรู้ทักษะ
+    STEM ที่สำคัญกับงานในปัจจุบันมาก เข้าร่วมกับนักศึกษา Codecademy อีกหลายล้านคน
+    และศึกษาเรื่องพื้นฐานของการเขียนโค้ดและวิทยาการคอมพิวเตอร์ผ่านหลักสูตร "ชั่วโมงเขียนโค้ด"
+    แสนสนุกของเรา และในตอนท้ายของแต่ละหลักสูตร คุณจะมีโปรเจ็กต์จริง ๆ ที่นำมาอวดเพื่อนและครอบครัวได้
   tutorial_codestersdance_longdescription: 'Students use a drag-to-text toolkit that
     allows them to start coding in Python right away! Students complete a set of guided
     practice activities in which they learn how to use and modify a variety of programming
@@ -5164,18 +5158,15 @@ th:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: คุณทราบไหมว่าโค้ดที่อยู่เบื้องหลังเกมสุดคลาสสิคอย่าง
+    Asteroids และ Lunar Lander นั้นง่ายกว่าที่คุณคิด และรู้ไหมว่าทั้งสองเกมมีสสารที่ตายตัว
+    ซึ่งในกิจกรรมนี้ คุณจะได้แก้ไขเกมดาวพระเคราะห์น้อยที่เสียหายเนื่องจากเรือเดินเป็นเส้นตรงได้อย่างเดียว
+    แล้วจะได้เพิ่มแรงโน้มถ่วงลงในเกม ก่อนลองจอดเรือบนดวงจันทร์! ทำงานได้บน Chromebooks
+    และอุปกรณ์อื่น!
+  tutorial_stempong_longdescription: คุณทราบไหมว่าโค้ดที่อยู่เบื้องหลังเกมยอดฮิตอย่าง
+    Bonk.io และเกมคลาสสิคอย่าง Pong นั้นง่ายกว่าที่คุณคิด และรู้ไหมว่าทั้งสองเกมมีสสารที่ตายตัว
+    ซึ่งในกิจกรรมนี้ คุณจะได้แก้ไขเกม Pong ที่เสียหายเพื่อให้สิ่งของต่าง ๆ กระเด้งกระดอนได้เหมือนเคย
+    แล้วจะได้เพิ่มแรงโน้มถ่วงเพื่อสร้างโคลนของเกม Bonk.io ทำงานได้บน Chromebooks และอุปกรณ์อื่น!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
@@ -9978,9 +9969,9 @@ th:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: "  วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด!
-    เรียนรู้เรื่อง AI รวมถึงการเรียนรู้ของระบบขั้นสูง ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำ
-    AI มาใช้เพื่อระบุถึงปัญหาต่างๆ บนโลกใบนี้  "
+  tutorial_ai-oceans_longdescription: 'วิทยาการคอมพิวเตอร์เป็นมากกว่าการเขียนโค้ด!
+    เรียนรู้เรื่องปัญญาประดิษฐ์ รวมถึงการเรียนรู้ของระบบ ข้อมูลการฝึกอบรมและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำปัญญาประดิษฐ์มาใช้เพื่อระบุถึงปัญหาต่าง
+    ๆ บนโลกใบนี้  '
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: ภาษาอังกฤษ
   tutorial_googlehero_language: English, Spanish

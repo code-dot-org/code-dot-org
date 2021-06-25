@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # How-to Guide for Volunteers
 ### Make a difference in a classroom today!
@@ -90,4 +90,4 @@ Code.org and our partners design all the Hour of Code activities to engage stude
 
 
 
-{{signup_button}}
+{{ signup_button }}

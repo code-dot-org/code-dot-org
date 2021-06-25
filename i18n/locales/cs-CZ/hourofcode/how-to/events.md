@@ -4,62 +4,62 @@ title: Jak na události Hodiny kódu
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Jak zorganizovat shromáždění nebo akci „Hodina programování“
 
-### Get your entire school or community involved in an Hour of Code!
+### Zapojte celou svou školu nebo společenství do „Hodiny programování“!
 
 * * *
 
-## 1. Prepare for your event
+## 1. Připravte se na svou akci
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Určete místo, datum a čas
+- Pošlete [a dopis](https://hourofcode.com/promote/resources#sample-emails) svému místnímu starostovi, členovi Kongresu, guvernérovi nebo nějaké vlivné osobě z průmyslu a pozvěte je, aby promluvili. Když budete na Hodině programování hostit voleného funkcionáře, podívejte se na naši [návodnou nástrojovou sadu]({{ localized_files/elected_official }}), kde najdete další informace.
+- Pozvěte média a tisk, například místní zpravodajskou stanici, noviny, education/tech bloggers. Další nápovědu najdete v naší [tiskové sadě]({{ promote/press_kit_url }}).
 
-## 2. During your event
+## 2. Během Vaší akce
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Svou akci zahajte jedním z našich [inspiračních videí]({{ promote/videos }}).
+- Předneste úvod podávající přehled významu počítačové vědy pomocí těchto [statistik a informační grafiky](%= resolve_url('/promote/stats') %).   
       
     
 - **Nápady na jiné akce**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - Pozvěte představitele místního průmyslu, aby diskutovat o své práci práci týkající se počítačové vědy
+    - Pozvěte nějakého místního politika a nechejte studenty, aby jej učili programovat.
+    - Nechejte skupinu studentů předvádět offline aktivitu.
+    - Nechejte skupinu studentů učit ředitele školy nebo skupinu učitelů programovat
+    - Jestliže už Vaše škola počítačovou vědu vyučuje, nechejte studenty předvádět projekty
 
-## 3. Share how it went
+## 3. Sdílejte, jak to probíhalo
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Obrázky z akce sdílejte na Facebooku a Twitteru, přičemž používejte hashtag **#HourOfCode**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Pořádejte Rodinný večer programování s Hodinou programování a pozvěte rodiče žáků k účasti
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Uvažte, že byste pořádali večerní akci K-5 a pozvali byste rodiče, aby se přidali ke svým studentům na hodinu počítačové vědy. Toto je vynikající způsob, jak můžete zapojit širší společenství a povzbudit rodiče k podpoře počítačové vědy ve Vaší škole. Naši partneři u Rodinného večera programování vytvořili integrovanou sadu akcí s plánovacími kontrolními seznamy, skriptem pro přednášejícího, zvacími e-maily, plakáty, PowerPointy a dalším, abyste mohli realizovat svou vlastní akci. [Kliknutím sem můžete sadu akcí stáhnout](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Příklad plánu školního shromáždění nebo akce
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Akce:** Zahajovací setkání celoškolního Týdne vzdělávání v počítačové vědě
+
+**Datum:** {{ campaign_date/start_short }} (začátek Týdne vzdělávání v počítačové vědě)
+
+**Čas:** Během školního dne. Nejlépe vyhovuje konání akce dopoledne. Doba přibližně 1 hodina.
+
+**Místo:** Školní aula (např. divadlo, tělocvična, jídelna)
 
 ## Spusťte show
 
-| Čas            | Činnost                                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05    | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05-10:15    | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15-10:30    | Speciální host promluví zázemí a jak technologie a informatika hrají důležitou roli v jejich každodenním životě.                      |
-| 10:30-10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                            |
-| 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                                 |
+| Čas            | Činnost                                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05    | Svou akci zahajte jedním z našich [inspiračních videí]({{ promote/videos }}).                                                                |
+| 10:05-10:15    | Ředitel přednese úvod podávající přehled významu počítačové vědy. Použijte těchto [statistik a informační grafiky]({{ promote/stats_url }}). |
+| 10:15-10:30    | Speciální host promluví zázemí a jak technologie a informatika hrají důležitou roli v jejich každodenním životě.                             |
+| 10:30-10:40 am | Studenti budou dělat předvádění Hodiny programování pro školu. Zábavný obrat: nechejte je učit ředitele školy, politika nebo jiné studenty!  |
+| 10:40-11:00 am | Studenti demonstrují nezapojenou aktivitu a jak lze učit informatiku bez použití počítačů.                                                   |
+| 11:00-11:05 am | Učitel, který pomohl přinést celoškolní akci dává závěrečné poznámky.                                                                        |
 
 {{ signup_button }}

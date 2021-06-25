@@ -4,7 +4,7 @@ title: Blurbs and useful stats
 
 <a id="blurb"></a>
 
-{{signup_button}}
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -50,4 +50,4 @@ Code.org is a 501c3 public non-profit dedicated to expanding participation in co
 
 {{ stats_carousel }}
 
-{{signup_button}}
+{{ signup_button }}

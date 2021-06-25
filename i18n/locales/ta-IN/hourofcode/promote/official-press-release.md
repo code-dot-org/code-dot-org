@@ -2,7 +2,7 @@
 title: தெரிவு செய்யப்பட்ட அதிகாரிகளுக்கான Hour of Code செய்தி வெளியீடு
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # தேர்ந்தெடுக்கப்பட்ட அதிகாரிகளுக்கு மாதிரி செய்தி வெளியீடு
 
@@ -43,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-{{signup_button}}
+{{ signup_button }}

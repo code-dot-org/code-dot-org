@@ -2,7 +2,7 @@
 title: Hour of Code How-To Guide for Virtual Events
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # Tips for a virtual Hour of Code event
 
@@ -62,10 +62,10 @@ Similar to how you started the event, come together afterwards to celebrate! Her
 - Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
 - Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
 - <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your virtual Hour of Code on social media. #HourOfCode மற்றும் @codeorg ஐப் பயன்படுத்துங்கள், இதன்மூலம் உங்கள் வெற்றியை நாங்கள் முன்னிலைப்படுத்த முடியும்!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
 
-{{signup_button}}
+{{ signup_button }}

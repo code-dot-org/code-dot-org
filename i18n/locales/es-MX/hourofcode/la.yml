@@ -64,8 +64,8 @@ la:
   social_hoc2019_dance: "¡Con la presencia de Katy Perry, Jonas Brothers, Lil Nas
     X, Panic at the Disco y muchos más!"
   oceans_landing_title: AI para océanos
-  oceans_landing_description: 'Explora el aprendizaje automático enseñando "A.I."
-    para reconocer a los peces. #CSforGood'
+  oceans_landing_description: Aprende sobre el aprendizaje automático y el uso ético
+    de la inteligencia artificial (IA).
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: Ahora disponible en más de 25 idiomas | +11 años
   oceans_landing_explanation: "¡Las ciencias de la computación son mucho más que programar!
@@ -84,7 +84,7 @@ la:
     automático. [Aprende más](#behind-the-scenes)."
   oceans_landing_teacher_resources: Recursos para docentes
   oceans_landing_teacher_resources_desc: Planes de lecciones y actividades para ayudarte
-    a enseñar AI, aprendizaje automático, fechas de entrenamientos y sesgos, mientras
+    a enseñar IA, aprendizaje automático, fechas de entrenamientos y sesgos, mientras
     exploras cuestiones éticas.
   oceans_landing_resource_button: Ver recursos
   oceans_landing_cs_for_good: Ciencias de la computación para el bien
@@ -135,12 +135,11 @@ la:
     de todos los peces posibles en dos partes, que corresponden a las clases que estamos
     tratando de aprender (como "azul" o "no azul").
   social_hoc2019_oceans_title: 'IA para océanos #CSForGood'
-  social_hoc2019_oceans_desc: Aprende sobre inteligencia artificial, aprendizaje automático,
-    datos de entrenamiento y prejuicios, mientras exploras cuestiones éticas y cómo
-    la inteligencia artificial se puede utilizar para abordar problemas mundiales.
-    ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
-    paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
-    estudios.
+  social_hoc2019_oceans_desc: Aprende sobre IA, aprendizaje automático, datos de entrenamiento
+    y prejuicios, mientras exploras cuestiones éticas y cómo la IA se puede utilizar
+    para abordar problemas mundiales. ¡Las ciencias de la computación son mucho más
+    que programar! Disfruta del primer paso de Code.org en un nuevo viaje para enseñar
+    más sobre la IA en nuestro plan de estudios.
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
   hoc_live_learn_title: Aprende con la Hora del Código En Vivo
@@ -155,9 +154,9 @@ la:
   hoc_live_join_us: Únete
   hoc_live_learn_more: Conoce más
   hoc_overview_oceans_tutorial_header: Océanos de AI
-  hoc_overview_oceans_tutorial_desc: Aprende sobre inteligencia artificial (IA), aprendizaje
-    automático, datos de entrenamiento y sesgos, mientras exploras cuestiones éticas
-    y cómo la IA se puede usar para abordar problemas mundiales.
+  hoc_overview_oceans_tutorial_desc: Aprende sobre la inteligencia artificial (IA),
+    aprendizaje automático, datos de entrenamiento y sesgos, mientras exploras cuestiones
+    éticas y cómo la IA se puede usar para abordar problemas mundiales.
   ai_video_title_what_is_ai: "¿Qué es IA?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"

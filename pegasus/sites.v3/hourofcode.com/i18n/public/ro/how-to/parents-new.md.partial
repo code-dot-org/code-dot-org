@@ -68,7 +68,7 @@ E în regulă dacă atât tu cât și copilul tău sunteți noi în informatică
 
 <h3>Rezolvați problema împreună</h3>
 În fine, dacă copilul tău întâmpină dificultăți, este ok sa îi răspunzi:
-- “I don’t know. Let’s figure this out together.”
+- „Nu știu. Haideți să rezolvăm asta împreună.”
 - "Tehnologia nu funcţionează întotdeauna în modul în care vrem noi."
 - "Învăţarea programarii este ca învăţarea unei limbi noi; nu veţi fi fluent imediat."
 
@@ -81,10 +81,10 @@ Hour of Code este un eveniment global, iar familia ta merită să sărbătoreasc
 
 - Tipărește <a href="https://staging.code.org/certificates"> Certificatele Hour of Code</a> pe care le acorzi atunci când copii tăi își finalizează activitatea
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Tipărește stickerele</a> acasă sau <a href="https://store.code.org/">cumpără-le online</a>, ca o surpriză suplimentară.
-- Împărtășește pe mediile de socializare fotografiile și videoclipurile tale de la Hour of Code. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Împărtășește pe mediile de socializare fotografiile și videoclipurile tale de la Hour of Code. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Ce urmeaza dupa Hour of Code?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. <a href="https://code.org/yourschool">Învață cum</a> să aduci azi CS în școala copilului tău.
+Studiul științei calculatoarelor nu trebuie să se încheie cu evenimentul Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. <a href="https://code.org/yourschool">Învață cum</a> să aduci azi CS în școala copilului tău.

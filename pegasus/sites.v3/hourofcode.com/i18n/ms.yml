@@ -30,16 +30,16 @@ ms:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header: "  Belajar hari ini, untuk membina masa depan lebih cerah.  "
   hoc2020_header_with_line_break_markdown: "  Belajar hari ini,      untuk membina
     masa depan yang lebih cerah.  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     today, build a brighter tomorrow.'
-  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2020_global_movement: Jam Kod ialah gerakan global yang mencapai puluhan
+    juta pelajar. Tutorial selama satu jam boleh didapati dalam 45+ bahasa untuk semua
+    peringkat umur.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
   hoc2020_ai_subheader: The Hour of Code 2020 is coming!
@@ -52,7 +52,7 @@ ms:
   hoc2019_header_line2_mobile: Ubah dunia.
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
+  social_hoc2019_learn_computer_science: 'Pelajari sains komputer. Mengubah dunia.
     #CSforGood #HourOfCode'
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -62,43 +62,43 @@ ms:
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)  "
-  oceans_landing_description: "  Belajar tentang pembelajaran mesin dan penggunaan
-    AI dengan beretika.  "
+  oceans_landing_description: 'Belajar tentang pembelajaran mesin dan penggunaan AI
+    secara beretika.  '
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: "  Terdapat dalam 25+ bahasa | Gred 3+  "
-  oceans_landing_explanation: "  Sains komputer ialah kursus yang melebihi pengekodan
+  oceans_landing_specs: 'Tersedia dalam 25+ bahasa | Gred 3+  '
+  oceans_landing_explanation: 'Sains komputer ialah kursus lebih daripada pengekodan
     semata-mata! Belajar tentang kecerdasan buatan (AI), pembelajaran mesin, data
-    latihan dan kejadian berat sebelah, sambil meneroka isu etika dan cara AI boleh
-    digunakan untuk mengatasi masalah dunia. Nikmati langkah pertama Code.org dalam
-    perjalanan baharu mengajar lebih banyak tentang AI. Apabila anda menggunakan aktiviti
-    AI for Oceans, anda melatih model pembelajaran mesin sebenar. <a href='#behind-the-scenes'>Pelajari
-    lebih lanjut</a>.  "
-  oceans_landing_explanation_markdown: "  Sains komputer ialah kursus yang melebihi
-    pengekodan semata-mata! Belajar tentang kecerdasan buatan (AI), pembelajaran mesin,
-    data latihan dan kecenderungan, sambil meneroka isu etika dan cara AI boleh digunakan
+    latihan dan kepincangan, sambil meneroka isu etika dan cara AI boleh digunakan
     untuk mengatasi masalah dunia. Nikmati langkah pertama Code.org dalam perjalanan
     baharu mengajar lebih banyak tentang AI. Apabila anda menggunakan aktiviti AI
-    for Oceans, anda melatih model pembelajaran mesin sebenar. [Pelajari lebih lanjut](#di
-    belakang tabir).  "
+    untuk Lautan, anda melatih model pembelajaran mesin sebenar. <a href=''#behind-the-scenes''>Pelajari
+    lebih lanjut</a>.  '
+  oceans_landing_explanation_markdown: Sains komputer ialah kursus lebih daripada
+    pengekodan semata-mata! Belajar tentang kecerdasan buatan (AI), pembelajaran mesin,
+    data latihan dan kepincangan, sambil meneroka isu etika dan cara AI boleh digunakan
+    untuk mengatasi masalah dunia. Nikmati langkah pertama Code.org dalam perjalanan
+    baharu mengajar lebih banyak tentang AI. Apabila anda menggunakan aktiviti AI
+    untuk Lautan, anda melatih model pembelajaran mesin sebenar. [Learn more](#di
+    belakang tabir).
   oceans_landing_teacher_resources: "  Sumber Para Guru  "
-  oceans_landing_teacher_resources_desc: "  Rancangan dan aktiviti pelajaran untuk
-    membantu anda mengajar AI, pembelajaran mesin, data latihan dan kejadian berat
-    sebelah, sambil meneroka masalah etika.  "
+  oceans_landing_teacher_resources_desc: 'Rancangan dan aktiviti pelajaran untuk membantu
+    anda mengajar AI, pembelajaran mesin, data latihan dan kepincangan, sambil meneroka
+    isu etika.  '
   oceans_landing_resource_button: "  Lihat Sumber  "
-  oceans_landing_cs_for_good: "  CS untuk Kebaikan  "
+  oceans_landing_cs_for_good: 'CS untuk Kebaikan  '
   oceans_landing_cs_for_good_desc: "  Sumber untuk membantu pelajar memahami peranan
     yang dimainkan oleh sains komputer dalam mewujudkan dunia yang lebih adil.  "
-  oceans_landing_videos: "  Video tentang AI dan Pembelajaran Mesin  "
-  oceans_behind_the_scenes: "  AI for Oceans (Kecerdasan Buatan untuk Lautan): Di
-    Belakang Tabir  "
-  oceans_behind_the_scenes_1: '  Tahap 2-4 menggunakan model pralatihan yang disediakan
+  oceans_landing_videos: 'Video tentang AI dan Pembelajaran Mesin  '
+  oceans_behind_the_scenes: 'AI for Oceans (Kecerdasan Buatan untuk Lautan): Di Belakang
+    Tabir  '
+  oceans_behind_the_scenes_1: 'Tahap 2-4 menggunakan model pralatihan yang disediakan
     oleh <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     projek </a> MobileNet. Model MobileNet ialah <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rangkaian
     neural konvolusional</a> yang telah dilatih dalam <a href="http://www.image-net.org/">ImageNet</a>,
     set data lebih daripada 14 juta imej yang dianotasi dengan tangan bersama perkataan
     seperti "belon" atau "strawberi". Untuk menyesuaikan model ini dengan data latihan
-    berlabel yang dihasilkan oleh pelajar dalam aktiviti ini, kami menggunakan teknik
-    yang dipanggil sebagai <a href="https://en.wikipedia.org/wiki/Transfer_learning">Pemindahan
+    berlabel yang dihasilkan oleh pelajar di dalam aktiviti ini, kami menggunakan
+    teknik yang dipanggil sebagai <a href="https://en.wikipedia.org/wiki/Transfer_learning">Pemindahan
     Pembelajaran</a>. Setiap imej dalam set data latihan dimasukkan ke dalam MobileNet,
     dalam bentuk piksel, bagi mendapatkan senarai anotasi yang berkemungkinan besar
     digunakan kepadanya. Kemudian, untuk imej baharu, kami memasukkannya ke dalam
@@ -106,35 +106,35 @@ ms:
     set data latihan. Kami mengklasifikasikan imej baharu mengikut label yang sama
     (seperti "ikan" atau "bukan ikan") dengan imej daripada set latihan yang hasilnya
     paling serupa.  '
-  oceans_behind_the_scenes_1_markdown: '  Tahap 2-4 menggunakan model pralatihan yang
+  oceans_behind_the_scenes_1_markdown: 'Tahap 2-4 menggunakan model pralatihan yang
     disediakan oleh [TensorFlow](https://www.tensorflow.org/) projek (https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     [MobileNet]. Model MobileNet ialah [rangkaian neural konvolusional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    yang telah dilatih dalam [ImageNet](http://www.image-net.org/), set data lebih
+    yang telah dilatih di dalam [ImageNet](http://www.image-net.org/), set data lebih
     daripada 14 juta imej yang dianotasi dengan tangan bersama perkataan seperti "belon"
     atau "strawberi". Untuk menyesuaikan model ini dengan data latihan berlabel yang
     dihasilkan oleh pelajar dalam aktiviti ini, kami menggunakan teknik yang dipanggil
     sebagai [Pemindahan Pembelajaran](https://en.wikipedia.org/wiki/Transfer_learning).
-    Setiap imej dalam set data latihan dimasukkan ke dalam MobileNet, dalam bentuk
+    Setiap imej di dalam set data latihan dimasukkan ke dalam MobileNet, dalam bentuk
     piksel, bagi mendapatkan senarai anotasi yang berkemungkinan besar digunakan kepadanya.
     Kemudian, untuk imej baharu, kami memasukkannya ke dalam MobileNet dan membandingkan
     senarai anotasi yang dihasilkannya dengan imej daripada set data latihan. Kami
     mengklasifikasikan imej baharu mengikut label yang sama (seperti "ikan" atau "bukan
     ikan") dengan imej daripada set latihan yang hasilnya paling serupa.  '
-  oceans_behind_the_scenes_2: '  Tahap 6-8 menggunakan <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Mesin
+  oceans_behind_the_scenes_2: 'Tahap 6-8 menggunakan <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Mesin
     Vektor Sokongan</a> (SVM). Kami melihat setiap komponen ikan (seperti mata, mulut,
     badan) dan mengumpulkan semua metadata untuk komponen tersebut (seperti bilangan
     gigi, bentuk badan) kepada vektor nombor untuk setiap ikan. Kami menggunakan vektor
     ini untuk melatih SVM Berdasarkan data latihan, SVM mengasingkan "ruang" semua
     kemungkinan ikan kepada dua bahagian, yang sepadan dengan kelas yang kita sedang
     cuba pelajari (seperti "biru" atau "bukan biru").  '
-  oceans_behind_the_scenes_2_markdown: '  Tahap 6-8 menggunakan [Mesin Vektor Sokongan](https://en.wikipedia.org/wiki/Support-vector_machine)
+  oceans_behind_the_scenes_2_markdown: 'Tahap 6-8 menggunakan [Mesin Vektor Sokongan](https://en.wikipedia.org/wiki/Support-vector_machine)
     (SVM). Kami melihat setiap komponen ikan (seperti mata, mulut, badan) dan mengumpulkan
     semua metadata untuk komponen tersebut (seperti bilangan gigi, bentuk badan) kepada
     vektor nombor untuk setiap ikan. Kami menggunakan vektor ini untuk melatih SVM
     Berdasarkan data latihan, SVM mengasingkan "ruang" semua kemungkinan ikan kepada
     dua bahagian, yang sepadan dengan kelas yang kita sedang cuba pelajari (seperti
     "biru" atau "bukan biru").  '
-  social_hoc2019_oceans_title: "  Kecerdasan Buatan untuk Lautan #CSforGood  "
+  social_hoc2019_oceans_title: 'Kecerdasan Buatan untuk Lautan #CSforGood  '
   social_hoc2019_oceans_desc: "  Belajar tentang AI, pembelajaran mesin, data latihan
     dan kejadian berat sebelah, sambil meneroka isu etika dan cara AI boleh digunakan
     untuk mengatasi masalah dunia. Sains komputer ialah kursus yang melebihi pengekodan
@@ -147,67 +147,67 @@ ms:
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: Pelajari konsep asas komputer sains bersama tetamu istimewa!
+    Pelajar daripada semua peringkat umur dan kebolehan, termasuk mereka yang tidak
+    mempunyai komputer, dialu-alukan menghadiri bengkel maya kami. Teruskan belajar
+    di rumah melalui episod Secara Langsung Jam Kod kami.
   hoc_live_join_us: Sertai kami
   hoc_live_learn_more: Ketahui lebih lanjut
   hoc_overview_oceans_tutorial_header: "  AI for Oceans (Kecerdasan Buatan untuk Lautan)
     \ "
-  hoc_overview_oceans_tutorial_desc: "  Belajar tentang kecerdasan buatan (AI), pembelajaran
-    mesin, data latihan dan kejadian berat sebelah, sambil meneroka isu etika dan
-    cara AI boleh digunakan untuk mengatasi masalah dunia.  "
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  hoc_overview_oceans_tutorial_desc: 'Belajar tentang kecerdasan buatan (AI), pembelajaran
+    mesin, data latihan dan kepincangan, sambil meneroka isu etika dan cara AI boleh
+    digunakan untuk mengatasi masalah dunia.  '
+  ai_video_title_what_is_ai: Apakah AI?
+  ai_video_title_algorithm_bias: Memerangi kepincangan di dalam algoritma
+  ai_video_title_phone_knows_dog: Bagaimanakah telefon anda tahu ini ialah anjing?
+  ai_video_title_what_is_ml: Apakah Pembelajaran Mesin?
+  ai_video_title_ml_big_small_prickly: 'Pembelajaran Mesin: Menyelesaikan Masalah
+    Besar, Kecil dan Sukar Dikendalikan'
+  ai_video_title_ethics_of_ai: Etika AI
+  ai_video_title_ml_human_bias: Pembelajaran Mesin dan Kepincangan Manusia
+  ai_video_title_seeing_ai: 'Melihat AI: Menjadikan dunia visual lebih mudah diakses'
+  activity: Aktiviti
   name: Name
-  description: Description
+  description: Huraian
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_header: Mengajar dan Mempelajari tentang AI
+  ai_resource_minecraft: AI Minecraft untuk Aktiviti yang
+  ai_resource_minecraft_desc: 'Akses sumber percuma termasuk rancangan pelajaran,
+    video, kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft:
+    Edisi Pendidikan)'
+  ai_resource_ml_for_kids: Pembelajaran Mesin untuk Kanak-kanak
+  ai_resource_ml_for_kids_desc: Latih model pembelajaran mesin dengan teks, nombor,
+    atau imej dan gunakannya untuk membuat permainan di dalam Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Pembelajaran Mesin untuk Kanak-kanak'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_ecs: 'ECS: Kecerdasan Buatan (AI)'
+  ai_resource_ecs_desc: Unit kurikulum berselang-seli yang baharu untuk kurikulum
+    Meneroka Sains Komputer (ECS).
+  ai_resource_elements_ai: Elemen AI
+  ai_resource_elements_ai_desc: Siri kursus dalam talian percuma yang dicipta oleh
+    Reaktor dan Universiti Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_cognimates_desc: Platform pendidikan AI untuk membina permainan, mengatur
+    cara robot dan latihan.
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_header: Baik Dikuasakan oleh AI dan ML
+  ai_activity_seeing_ai: Melihat AI
+  ai_activity_seeing_ai_desc: Aplikasi percuma yang menceritakan tentang dunia di
+    sekeliling anda dalam pelbagai bahasa.
+  ai_activity_quick_draw: Cepat, Lukis!
+  ai_activity_quick_draw_desc: Bolehkah rangkaian neural belajar mengenali contengan?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_teachable_desc: Melatih komputer mengenali imej, suara dan gaya anda
+    sendiri.
+  ai_activity_experiments: Eksperimen AI dengan Google
+  ai_activity_experiments_desc: Mula meneroka pembelajaran mesin melalui gambar, lukisan,
+    bahasa, muzik dan lebih banyak lagi.
+  ai_activity_zooniverse: Zooniverse - Syot Kilat Zebra Gunung
+  ai_activity_zooniverse_desc: Bantu melindungi Zebra Gunung Tanjung yang terancam
+    dengan mengenal pasti haiwan berbeza di dalam imej.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -219,8 +219,9 @@ ms:
   codeorg_homepage_hoc2018_musician_before: Featuring
   codeorg_homepage_hoc2018_musician_after: and more!
   codeorg_homepage_hoc2018_video: Watch our video
-  hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
-    of Code event. One-hour tutorials in over 45 languages. No experience needed.
+  hourofcode_homepage_hoc2018_header_line1: Sesiapa, di mana sahaja boleh menganjurkan
+    acara Jam Kod. Tutorial satu jam dalam lebih daripada 45 bahasa. Pengalaman tidak
+    diperlukan.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
   hoc2018_tutorial_mchoc_description: Minecraft kini kembali untuk Hour of Code dengan
     aktiviti yang baru! Mengembara dalam Minecraft dengan kod.
@@ -483,13 +484,14 @@ ms:
   front_join_us_learn_more: Ketahui lebih lanjut
   signup_closed: Pendaftaran untuk Hour of Code kini telah ditutup. Sila semak semula
     pada bulan Oktober untuk mendaftarkan diri dalam Hour of Code yang akan datang.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  signup_registration_not_required: Anda tidak perlu mendaftar untuk menyertainya!
+    Aktiviti Jam Kod diadakan sepanjang tahun. <a href='%{hoc_activities_url}'>Cuba
+    aktiviti</a> atau baca <a href='%{howto_guide_url}'>Panduan</a> kami bagi merancang
+    acara untuk kelas anda.
+  signup_registration_not_required_markdown: Anda tidak perlu mendaftar untuk menyertainya!
+    Aktiviti Jam Kod diadakan sepanjang tahun. [Try an activity](%{hoc_activities_url})
+    atau baca [How-to guide](%{howto_guide_url}) kami bagi merancang acara untuk kelas
+    anda.
   signup_registration_closed: Dan setiap tahun pada bulan Disember, kelas anda boleh
     menyertai berjuta-juta pelajar di seluruh dunia untuk meraikan Minggu Pendidikan
     Sains Komputer dengan Jam Kod. Kita akan membuka pendaftaran untuk sambutan tahunan
@@ -575,9 +577,9 @@ ms:
   social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
     explore and build underwater worlds with code.
   social_hoc2018_what_create: What will you create?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: Jam Kod ialah gerakan global yang mencapai puluhan
+    juta pelajar. Tutorial selama satu jam boleh didapati dalam 45+ bahasa untuk semua
+    peringkat umur.
   map_title: Peta Hour of Code
   map_header: 'Acara # Hour of Code di seluruh dunia'
   map_header_count_year: "%{event_count} events registered in %{year}"
@@ -618,13 +620,14 @@ ms:
     Cubalah tutorial-tutorial <a href='%{tutorials}'> dan aktiviti-aktiviti</a>. Kempen
     yang bermula dari akar umbi ini disokong oleh <a href='%{partners}'> lebih daripada
     400 rakan kongsi dan 200,000 pendidik</a> di seluruh dunia.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: Jam Kod dimulakan sebagai pengenalan satu jam kepada
+    sains komputer, yang direka bentuk bertujuan memudahkan "kod", untuk menunjukkan
+    bahawa sesiapa sahaja boleh mempelajari asasnya dan meluaskan penyertaan di dalam
+    bidang sains komputer. Sejak dari itu, ia telah menjadi usaha seluruh dunia untuk
+    meraikan sains komputer, bermula dengan aktiviti pengekodan selama 1 jam tetapi
+    berkembang kepada semua jenis usaha komuniti. Lihat [tutorials and activities](%{tutorials}).
+    Kempen akar umbi ini disokong oleh lebih daripada [400 partners](%{partners})
+    dan 200,000 pendidik di seluruh dunia.
   hoc_faq_last_year: Cublah tutorial yang tersedia
   hoc_faq_when_is_hoc_q: Bilakah Hour of Code diadakan?
   hoc_faq_when_is_hoc_a: Acara Hour of Code berlangsung setiap tahun, sempena dengan
@@ -718,22 +721,22 @@ ms:
     teka-teki atau menjawab soalan. <li><b>Laksanakan tanpa talian internet.</b> Kami
     menawarkan tutorial yang tidak memerlukan komputer sama sekali </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Tidak. Kami menyediakan tutorial Jam Kod yang boleh dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa sahaja yang ada bersama anda.
 
-    _Here are a few options:_
+    _Berikut ialah beberapa pilihan:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Bekerja secara berpasangan.** [Research shows](%{pair_programming_research}) pelajar belajar dengan lebih baik apabila menggunakan [pair programming](%{pair_programming_video}), berkongsi komputer dan berganding bahu. Menggalakkan pelajar anda menggandakan usaha.
+    - **Gunakan skrin projektor.** Jika anda mempunyai projektor dan skrin untuk komputer yang disambungkan ke Laman Web, seluruh kumpulan anda boleh melakukan Jam Kod bersama. Tonton bahagian video bersama dan secara bergilir menyelesaikan teka-teki atau menjawab soalan.
+    - **Laksanakan secara nirplag.** Kami menawarkan [tutorials that require no computer](%{unplugged_url}) sama sekali.
   hoc_faq_international_q: Saya dari negara <country>. Bagaimana untuk saya turut
     serta di peringkat antarabangsa?
   hoc_faq_international_a: Sesiapa sahaja boleh menganjurkan Acara Hour of Code, dari
     mana-mana tempat sahaja di seluruh dunia. Pada tahun lepas, pelajar-pelajar dari
     seluruh dunia telah bersama-sama menyertai Acara Hour of Code. Dapatkan maklumat
     lanjut <a href='/promote'>di sini</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: Sesiapa sahaja boleh menganjurkan acara Jam Kod,
+    di mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh dunia
+    telah bersama menyertai acara Jam Kod. Ketahui lebih lanjut [here](%{promote}).
   hoc_faq_tutorial_q: Bagaimana membuat tutorial untuk Hour of Code?
   hoc_faq_tutorial_a: Jika anda berminat untuk menjadi rakan kongsi tutorial, <a href='target-tutorial-guidelines'>
     ikuti garis panduan dan petunjuk kami</a>. Kami ingin menjadi hos dengan pelbagai
@@ -795,13 +798,14 @@ ms:
     mencari acara anda tersenarai di situ. Selain itu, kerana beribu-ribu orang yang
     mendaftar untuk Hour of Code, senarai peta dan acara biasanya mengambil masa 48
     jam untuk mengemaskinikan. Semak balik dalam beberapa hari!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: Kami minta maaf anda tidak melihat acara anda pada peta
+    Jam Kod. Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta itu
+    mengagregatkan data dan memaparkan satu titik untuk beberapa acara. Jika anda
+    klik [events page](%{events_url}) pada pautan di bawah peta, anda akan diarahkan
+    ke senarai semua acara mengikut negeri dan anda boleh menemui acara anda disenaraikan
+    di sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Jam Kod,
+    peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
+    kini. Sila semak semula dalam beberapa hari!
   hoc_faq_count_hoc_a: Penjejak Hour of Code bukan satu ukuran yang tepat untuk penggunaan.
     Kita tidak akan mengira unik ID pelajar dengan sempurna apabila menjejak penyertaan
     dalam Hour of Code, terutamanya kerana kita tidak memerlukan pelajar untuk log
@@ -886,9 +890,9 @@ ms:
   hoc_faq_logo_a: Hour of Code ialah tanda dagangan. Kita tidak mahu mengelakkan penggunaannya,
     tetapi kami mahu pastikan penggunaannya sesuai dalam beberapa had. Sila lihat
     <a href='%{logo_url}'> garis panduan ini bagi penggunaan</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: Jam Kod sudah menjadi tanda dagangan. Kami tidak mahu menghalang
+    penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
+    ditentukan. Sila lihat [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statistik dari acara Hour of Code 2013
   stats_growth: Ia adalah yang paling cepat untuk mencapai 15 juta pengguna.
   stats_i18n: Pelajar-pelajar belajar dalam lebih 45 jenis bahasa
@@ -3429,11 +3433,11 @@ ms:
   tutorial_tynkerd_longdescription: Design a custom hero and play as that character
     through this multi-level adventure game. You'll need to use your coding skills
     to solve puzzles, fight bugs, and save the motherboard!
-  tutorial_cdmy_longdescription: Codecademy is an interactive platform for learning
-    STEM skills that are critical for today's jobs. Join millions of Codecademy students
-    and learn the basics of coding and computer science by taking our fun Hour of
-    Code courses. By the end of each course, you'll have a real project that you can
-    show off to your friends and family.
+  tutorial_cdmy_longdescription: Codecademy ialah platform interaktif untuk mempelajari
+    kemahiran STEM yang sangat kritikal untuk pekerjaan masa kini. Sertai jutaan pelajar
+    Codecademy dan pelajari asas pengekodan dan sains komputer dengan mengikuti kursus
+    Jam Kod kami yang menyeronokkan. Pada akhir setiap kursus, anda akan memiliki
+    projek sebenar yang boleh ditunjukkan kepada rakan dan keluarga anda.
   tutorial_codestersdance_longdescription: 'Students use a drag-to-text toolkit that
     allows them to start coding in Python right away! Students complete a set of guided
     practice activities in which they learn how to use and modify a variety of programming
@@ -4188,14 +4192,15 @@ ms:
     berpandu sendiri yang dibintangi oleh kuliah video oleh Bill Gates, Mark Zuckerberg,
     Angry Birds dan Plants vs. Zombies. Belajar gelungan ulangan, syarat-syarat, dan
     algoritma asas. Terdapat dalam 37 bahasa.
-  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
-    animation projects. Note that headphones are recommended for this course. We will
-    use some existing sprites that support animations and show the code we need to
-    add to animate our characters. We'll also go over how to create our very own animation
-    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
-    for animation effects (similar to a flip-book animation) and the code behind it.
-    All instruction is contained within the Itch environment so there is no need to
-    be switching screens to follow along with the project.
+  tutorial_itchstop_longdescription: Kami akan menggunakan Itch untuk membina projek
+    animasi rangka berhenti kami sendiri. Sila ambil perhatian bahawa fon kepala disarankan
+    untuk kursus ini. Kami akan menggunakan sebahagian peperi sedia ada yang menyokong
+    animasi dan menunjukkan kod yang perlu kami masukkan untuk menghidupkan watak
+    kami. Kami juga akan mempertimbang cara mencipta kesan dan lukisan animasi kami
+    sendiri. Kami akan mempelajari cara menukar kostum peperi secara kasar berulang
+    kali untuk kesan animasi (serupa dengan animasi selak buku) dan kod di belakangnya.
+    Semua arahan terkandung di dalam persekitaran Itch, oleh itu tidak perlu beralih
+    skrin untuk mengikuti projek.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5490,30 +5495,33 @@ ms:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: Adakah anda tahu bahawa kod di sebalik
+    permainan Asteroid dan Pendarat Lunar klasik adalah lebih mudah berbanding yang
+    anda jangkakan? Adakah anda tahu bahawa kedua-dua permainan ini menggunakan pengetahuan
+    fizik yang tepat? Di dalam aktiviti ini, anda akan membaiki permainan asteroid
+    yang rosak dan kapal angkasanya pula hanya bergerak di dalam garisan lurus. Kemudian
+    anda akan memasukkan graviti ke dalam permainan dan cuba mendaratkan kapal tersebut
+    di bulan! Berfungsi dengan baik apabila menggunakan chromebook dan peranti lain!
+  tutorial_stempong_longdescription: Adakah anda tahu bahawa kod di sebalik permainan
+    popular Bonk.io dan Pong klasik adalah lebih mudah berbanding yang anda jangkakan?
+    Adakah anda tahu bahawa kedua-dua permainan ini menggunakan pengetahuan fizik
+    yang tepat? Di dalam aktiviti ini, anda akan membaiki versi permainan Pong yang
+    rosak supaya objek boleh melantun seperti biasa. Kemudian anda akan memasukkan
+    graviti untuk mencipta klon Bonk.io. Berfungsi dengan baik apabila menggunakan
+    chromebook dan peranti lain!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'Pilih kad daripada dek anda dan tafsirkan
+    kodnya untuk bergerak maju di dalam dunia. Gunakan kebolehan intuitif anda untuk
+    meneka peraturan dan belajar daripada kesilapan anda sendiri. Dibuat dengan teliti
+    oleh pasukan yang mencipta Sila Kira and Guru Senyap, dengan menggunakan asas
+    yang sama: kaedah cuba-cuba dan bukannya penjelasan yang panjang berjela-jela,
+    kemajuan lancar, tiada kod untuk ditaip, aksesibiliti kepada mereka yang sememangnya
+    baru bermula.'
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.
@@ -10363,10 +10371,10 @@ ms:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: "  Sains komputer ialah kursus yang melebihi
+  tutorial_ai-oceans_longdescription: 'Sains komputer ialah kursus lebih daripada
     pengekodan semata-mata! Belajar tentang AI, pembelajaran mesin, data latihan dan
-    kecenderungan, sambil meneroka isu etika dan cara AI boleh digunakan untuk mengatasi
-    masalah dunia.  "
+    kepincangan, sambil meneroka isu etika dan cara AI boleh digunakan untuk mengatasi
+    masalah dunia.  '
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Bahasa Inggeris
   tutorial_googlehero_language: English, Spanish

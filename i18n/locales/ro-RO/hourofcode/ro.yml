@@ -62,78 +62,80 @@ ro:
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
   oceans_landing_title: IA pentru Oceane
   oceans_landing_description: Învață despre învățarea automată și utilizarea etică
-    a IA.
+    a AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Disponibilă în peste 25 de limbi | Clasele 3+
-  oceans_landing_explanation: Informatica este mult mai mult decât codificare! Află
-    despre inteligența artificială (IA), învățarea automată, datele de instruire și
-    înclinații, explorând în același timp problemele etice și modul în care IA poate
-    fi utilizată pentru abordarea problemelor mondiale. Bucură-te de primul pas al
-    Code.org într-o nouă călătorie pentru a învăța mai multe despre IA. Când folosești
-    activitatea IA pentru Oceane, exersezi modele reale de învățare automată. <a href='#behind-the-scenes'>
-    Află mai multe </a>.
-  oceans_landing_explanation_markdown: Informatica este mult mai mult decât codificare!
-    Află despre inteligența artificială (IA), învățarea automată, datele de instruire
-    și înclinații, explorând în același timp problemele etice și modul în care IA
-    poate fi utilizată pentru abordarea problemelor mondiale. Bucură-te de primul
-    pas al Code.org într-o nouă călătorie pentru a învăța mai multe despre IA. Când
-    folosești activitatea IA pentru Oceane, exersezi modele reale de învățare automată.
-    [Află mai multe](#în culise).
+  oceans_landing_specs: Disponibil în peste 25 de limbi | Clasele 3+
+  oceans_landing_explanation: Știința calculatoarelor nu înseamnă doar programare!
+    Învață despre inteligența artificială (AI), învățarea automată, date de instruire
+    și erori sistematice, explorând în același timp problemele etice și modul în care
+    IA poate fi utilizată pentru soluționarea problemelor care afectează întreaga
+    lume. Alătură-te Code.org într-o nouă călătorie pentru a învăța mai multe despre
+    IA. Când desfășori activitatea IA pentru Oceane instruiești de fapt modele reale
+    de învățare automată. <a href='#behind-the-scenes'>Află mai multe</a>.
+  oceans_landing_explanation_markdown: Știința calculatoarelor nu înseamnă doar programare!
+    Învață despre inteligența artificială (IA), învățare automată, date de instruire
+    și erori sistematice, explorând în același timp problemele etice și modul în care
+    IA poate fi utilizată pentru soluționarea problemelor care afectează întreaga
+    lume. Alătură-te Code.org într-o nouă călătorie pentru a învăța mai multe despre
+    IA. Când desfășori activitatea IA pentru Oceane instruiești de fapt modele reale
+    de învățare automată. [Află mai multe](#behind-the-scenes).
   oceans_landing_teacher_resources: Resurse pentru Profesori
   oceans_landing_teacher_resources_desc: Planuri și activități de lecții ca să te
-    ajute să înveți IA, învățarea automată, datele de instruire și înclinațiile, în
-    timp ce explorezi problemele etice.
+    ajute să înveți despre IA, învățare automată, date de instruire și erori sistematice,
+    în timp ce explorezi problemele etice.
   oceans_landing_resource_button: Vizualizează Resursele
-  oceans_landing_cs_for_good: CS pentru Totdeauna
+  oceans_landing_cs_for_good: ȘC pentru a face bine
   oceans_landing_cs_for_good_desc: Resurse pentru a-i ajuta pe elevi să înțeleagă
     ce rol ar putea juca informatica în crearea unei lumi mai echitabile.
   oceans_landing_videos: Videoclipuri despre IA și Învățarea Automată
-  oceans_behind_the_scenes: 'IA pentru Oceane: În Culise'
-  oceans_behind_the_scenes_1: Nivelurile 2-4 utilizează un model de pre-instruire
-    furnizat de proiectul <a href="https://www.tensorflow.org/" >TensorFlow</a><a
+  oceans_behind_the_scenes: 'IA pentru Oceane: În culise'
+  oceans_behind_the_scenes_1: Nivelurile 2-4 utilizează un model instruit în prealabil,
+    pus la dispoziție de proiectul <a href="https://www.tensorflow.org/" >TensorFlow</a><a
     href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>.
     Un model MobileNet este o <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">rețea
-    neuronală convolutivă</a>care a fost instruit pe <a href="http://www.image-net.org/">
+    neuronală convolutivă</a>care a fost instruită pe <a href="http://www.image-net.org/">
     ImageNet </a>, un set de date de peste 14 milioane de imagini adnotate manual
-    cu cuvinte precum „balon” sau „căpșuni”. Pentru a personaliza acest model cu datele
+    cu cuvinte precum „balon” sau „căpșună”. Pentru a personaliza acest model cu datele
     de instruire etichetate pe care le generează elevul în această activitate, folosim
     o tehnică numită <a href="https://en.wikipedia.org/wiki/Transfer_learning"> Învățarea
-    de Transfer </a>. Fiecare imagine din setul de date de instruire este alimentată
-    pe MobileNet, sub formă de pixeli, pentru a obține o listă de adnotări care sunt
-    cel mai probabil se i se aplice acesteia. Apoi, pentru o nouă imagine, o alimentăm
-    către MobileNet și comparăm lista rezultată de adnotări cu cele din setul de date
-    de instruire. Clasificăm noua imagine cu aceeași etichetă (cum ar fi „pește” sau
-    „nu e pește”) ca imaginile din setul de instruire cu cele mai similare rezultate.
-  oceans_behind_the_scenes_1_markdown: 'Nivelurile 2-4 utilizează un model prefurnizat
-    de proiectul [TensorFlow] (https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
-    Un model MobileNet este o [rețea convolutivă neuronală] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    care a fost instruită pe [ImageNet] (http: // www.image-net.org/), un set de date
+    prin transfer </a>. Fiecare imagine din setul de date de instruire este încărcată
+    pe MobileNet, sub formă de pixeli, pentru a obține o listă de adnotări pentru
+    care există o mare probabilitate să fie aplicabile acesteia. Apoi, pentru o nouă
+    imagine, o încărcăm pe MobileNet și comparăm lista rezultată de adnotări cu cele
+    din setul de date de instruire. Clasificăm noua imagine cu aceeași etichetă (cum
+    ar fi „pește” sau „nu e pește”) ca și imaginile din setul de instruire cu cele
+    mai similare rezultate.
+  oceans_behind_the_scenes_1_markdown: Nivelurile 2-4 utilizează un model instruit
+    în prealabil, pus la dispoziție de proiectul [TensorFlow](https://www.tensorflow.org/)
+    [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    Un model MobileNet este o [rețea neuronală convolutivă] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    care a fost instruită pe [ImageNet](http://www.image-net.org/), un set de date
     de peste 14 milioane de imagini adnotate manual cu cuvinte precum „balon” sau
-    „căpșuni”. Pentru a personaliza acest model cu datele de instruire etichetate
-    pe care le generează elevul în această activitate, folosim o tehnică numită [Transfer
-    Learning] (https://en.wikipedia.org/wiki/Transfer_learning). Fiecare imagine din
-    setul de date de instruire este trimisă către MobileNet, sub formă de pixeli,
-    pentru a obține o listă de adnotări care sunt cel mai probabil să i se aplice.
-    Apoi, pentru o nouă imagine, o alimentăm către MobileNet și comparăm lista rezultată
-    de adnotări cu cele din setul de date de instruire. Clasificăm noua imagine cu
-    aceeași etichetă (cum ar fi „pește” sau „nu e pește”) ca imaginile din setul de
-    instruire cu cele mai similare rezultate.'
+    „căpșună”. Pentru a personaliza acest model cu datele de instruire etichetate
+    pe care le generează elevul în această activitate, folosim o tehnică numită [Învățarea
+    prin transfer] (https://en.wikipedia.org/wiki/Transfer_learning). Fiecare imagine
+    din setul de date de instruire este încărcată pe MobileNet, sub formă de pixeli,
+    pentru a obține o listă de adnotări pentru care există o mare probabilitate să
+    fie aplicabile acesteia. Apoi, pentru o nouă imagine, o încărcăm pe MobileNet
+    și comparăm lista rezultată de adnotări cu cele din setul de date de instruire.
+    Clasificăm noua imagine cu aceeași etichetă (cum ar fi „pește” sau „nu e pește”)
+    ca și imaginile din setul de instruire cu cele mai similare rezultate.
   oceans_behind_the_scenes_2: Nivelurile 6-8 utilizează un <a href="https://en.wikipedia.org/wiki/Support-vector_machine">
-    Support-Vector Machine </a> (SVM). Ne uităm la fiecare componentă a peștilor (precum
+    Support-Vector Machine </a> (SVM). Analizăm fiecare componentă a peștilor (precum
     ochii, gura, corpul) și asamblăm toate meta-datele pentru componente (precum numărul
-    de dinți, forma corpului) într-un vector de numere pentru fiecare pește. Folosim
+    de dinți, forma corpului) într-un vector numeric pentru fiecare pește. Folosim
     acești vectori pentru a instrui SVM. Pe baza datelor de instruire, SVM separă
     „spațiul” tuturor peștilor posibili în două părți, care corespund claselor pe
     care încercăm să le învățăm (cum ar fi „albastru” sau „nu e albastru”).
-  oceans_behind_the_scenes_2_markdown: Nivelurile 6-8 utilizează o [Mașină Vector
-    Suport] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Ne uităm
-    la fiecare componentă a peștilor (cum ar fi ochii, gura, corpul) și asamblăm toate
+  oceans_behind_the_scenes_2_markdown: Nivelurile 6-8 utilizează o [Support-Vector
+    Machine] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Analizăm
+    fiecare componentă a peștilor (cum ar fi ochii, gura, corpul) și asamblăm toate
     meta-datele pentru componente (cum ar fi numărul de dinți, forma corpului) într-un
     vector de numere pentru fiecare pește. Folosim acești vectori pentru a instrui
     SVM. Pe baza datelor de instruire, SVM separă „spațiul” tuturor peștilor posibili
     în două părți, care corespund claselor pe care încercăm să le învățăm (cum ar
     fi „albastru” sau „nu e albastru”).
-  social_hoc2019_oceans_title: 'IA pentru Oceane #CSpentruTotdeauna'
+  social_hoc2019_oceans_title: 'IA pentru Oceane #ȘCPentruAFaceBine'
   social_hoc2019_oceans_desc: Invață despre IA, învățarea automată, datele de instruire
     și înclinații, în timp ce explorezi problemele etice și modul în care IA poate
     fi utilizată pentru abordarea problemelor mondiale. Informația este despre mult
@@ -153,59 +155,61 @@ ro:
   hoc_live_join_us: Alătură-te
   hoc_live_learn_more: Aflați mai multe
   hoc_overview_oceans_tutorial_header: IA pentru Oceane
-  hoc_overview_oceans_tutorial_desc: Află despre inteligența artificială (IA), învățarea
-    automată, datele de instruire și înclinații, în timp ce explorezi probleme etice
-    și modul cum IA poate fi utilizată pentru abordarea prolemelor mondiale.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  hoc_overview_oceans_tutorial_desc: Învață despre inteligența artificială (IA), învățare
+    automată, date de instruire și erori sistematice, explorând în același timp problemele
+    etice și modul în care IA poate fi utilizată pentru soluționarea problemelor care
+    afectează întreaga lume.
+  ai_video_title_what_is_ai: Ce este IA?
+  ai_video_title_algorithm_bias: Combaterea erorilor sistematice în algoritmi
+  ai_video_title_phone_knows_dog: Cum știe telefonul tău că acesta este un câine?
+  ai_video_title_what_is_ml: Ce este învățarea automată?
+  ai_video_title_ml_big_small_prickly: 'Învățarea automată: cum să rezolvi probleme
+    mari, mici și spinoase'
+  ai_video_title_ethics_of_ai: Etica inteligenței artificiale
+  ai_video_title_ml_human_bias: Învățarea automată și erorile sistematice umane
+  ai_video_title_seeing_ai: 'IA care vede: cum să facem lumea vizuală mai accesibilă'
+  activity: Activitate
   name: Name
-  description: Description
+  description: Descriere
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_header: Învățați și predați despre IA
+  ai_resource_minecraft: IA din Minecraft pentru a face bine
+  ai_resource_minecraft_desc: 'Accesați resurse gratuite, inclusiv un plan de lecție,
+    clipuri video, programe de studiu în domeniul științei calculatoarelor și cursuri
+    de formare pentru profesori. (Aveți nevoie de Minecraft: Education Edition)'
+  ai_resource_ml_for_kids: Învățarea automată pentru copii
+  ai_resource_ml_for_kids_desc: Pregătiți un model de învățare automată care să includă
+    texte, numere sau imagini și folosiți-l pentru a crea jocuri în Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Învățare automată pentru copii'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_ecs: 'ECS: Inteligența artificială (IA)'
+  ai_resource_ecs_desc: O nouă unitate curriculară alternativă pentru programul de
+    studiu Explorarea științei calculatoarelor (ECS).
+  ai_resource_elements_ai: Elemente de IA
+  ai_resource_elements_ai_desc: O serie de cursuri online gratuite create de Reaktor
+    și Universitatea din Helsinki.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_cognimates_desc: O platformă educațională cu privire la inteligența
+    artificială pentru crearea de jocuri, programarea roboților și instruire.
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_header: Activități susținute de AI și ML
+  ai_activity_seeing_ai: AI care vede
+  ai_activity_seeing_ai_desc: O aplicație gratuită care îți descrie lumea din jurul
+    tău în mai multe limbi.
+  ai_activity_quick_draw: Repede, desenează!
+  ai_activity_quick_draw_desc: Poate o rețea neuronală să învețe să recunoască ce
+    ai mâzgălit?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_teachable_desc: Antrenează un computer să recunoască imagini, sunete
+    și posturi.
+  ai_activity_experiments: Experimente cu inteligența artificială cu Google
+  ai_activity_experiments_desc: Începe să explorezi învățarea automată cu ajutorul
+    imaginilor, desenelor, limbajului, muzicii și multe altele.
+  ai_activity_zooniverse: Zooniverse - Zebra de munte
+  ai_activity_zooniverse_desc: Ajută să protejezi zebra de munte din Cape Mountain
+    Zebra, o specie pe cale de dispariție, identificând animalele din imagini.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -652,18 +656,16 @@ ro:
     în comunitatea ta - cum ar fi un club extracuricular, non-profit sau la muncă.
     Sau, doar încearcă-l când %{campaign_date} este are loc."
   hoc_faq_behind_hoc_q: Cine este în spatele Hour of Code?
-  hoc_faq_behind_hoc_a: Evenimentul Hour of Code este organizat de <a href='http://code.org'>
-    Code.org</a>, o organizație non-profit dedicată extinderii educației cu privire
-    la tehnologia computerelor și programare, prin promovarea acesteia în școli și
-    prin creșterea participării femeilor dar și a elevilor din minorități. O <<a href='%{codeorg_url}/about/partners'>
-    coaliţie de parteneri fără precedent</a> susțin împreună Hour of Code &mdash;
-    inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America şi College
-    Board.
-  hoc_faq_behind_hoc_a_markdown: Hour of Code este condusă de Săptămâna Hour of Code
-    și a Educației Informatice [Comitetele de Consultanță și Analiză](%{partner_url})
-    precum și de o coaliție de parteneri fără precedent, care s-au adunat pentru a
-    sprijini Hour of Code - inclusiv Microsoft, Apple, Amazon, Cluburile Boys și Girls
-    din America și Consiliul Director al Colegiului.
+  hoc_faq_behind_hoc_a: Hour of Code este coordonată de Săptămâna Hour of Code și
+    Educație în domeniul științei calculatoarelor - <a href='%{partner_url}'>Comitetele
+    de Consultanță și Analiză</a> - precum și de o coaliție de parteneri fără precedent,
+    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
+  hoc_faq_behind_hoc_a_markdown: Hour of Code este coordonată de Săptămâna Hour of
+    Code și Educație în domeniul științei calculatoarelor [Comitetele de Consultanță
+    și Analiză](%{partner_url}) precum și de o coaliție de parteneri fără precedent,
+    care s-au alăturat pentru a sprijini Hour of Code - inclusiv Microsoft, Apple,
+    Amazon, Boys and Girls Clubs of America și Comisia pentru Educație.
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
   hoc_faq_host_a: Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate
     individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi
@@ -4052,14 +4054,15 @@ ro:
     în cursuri video susținute de Bill Gates, Mark Zuckerberg, Angry Birds and Plants
     vs. Zombies. Învață despre bucle repetitive, condiționale și algoritmi de bază.
     Disponibil în 37 de limbi.
-  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
-    animation projects. Note that headphones are recommended for this course. We will
-    use some existing sprites that support animations and show the code we need to
-    add to animate our characters. We'll also go over how to create our very own animation
-    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
-    for animation effects (similar to a flip-book animation) and the code behind it.
-    All instruction is contained within the Itch environment so there is no need to
-    be switching screens to follow along with the project.
+  tutorial_itchstop_longdescription: Vom folosi Itch pentru a construi propriile noastre
+    proiecte de animație. Rețineți că pentru acest curs sunt recomandate căștile.
+    Vom folosi sprite care există deja și care sunt compatibili cu animații și vom
+    arăta codul pe care trebuie să-l adăugăm pentru a ne anima personajele. De asemenea,
+    vom vedea cum putem să creăm propriile noastre efecte de animație și desene. Vom
+    învăța cum să schimbăm în mod repetat costumul unui sprite în scratch pentru efecte
+    de animație (similar cu o animație de tip flip-book) și codul pe care se bazează.
+    Toate instrucțiunile sunt incluse în mediul Itch, așa că nu este nevoie să treceți
+    la alte ecrane pentru a urmări desfășurarea proiectului.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5351,30 +5354,30 @@ ro:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: Știați că jocurile clasice Asteroids și
+    Lunar Lander au un cod mult mai simplu decât vă închipuiți? Știați că aceste două
+    jocuri includ concepte reale din fizică? În această activitate veți repara un
+    joc Asteroids care nu mai funcționează cum trebuia - nava se mișcă doar în linie
+    dreaptă. Apoi veți adăuga gravitația în joc și veți încerca să aselenizați! Funcționează
+    cu Chromebook și alte dispozitive!
+  tutorial_stempong_longdescription: Știați că Bonk.io, un joc extrem de popular,
+    dar și Pong, un joc clasic, au un cod mult mai simplu decât vă închipuiți? Știați
+    că aceste două jocuri includ concepte reale din fizică? În această activitate
+    veți repara un joc de Pong care nu mai funcționează cum trebuie - obiectele nu
+    mai ricoșează așa cum ar trebui. Apoi veți adăuga gravitația pentru a crea o clonă
+    de Bonk.io. Funcționează cu Chromebook și alte dispozitive!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'Selectează o carte din pachet și interpretează-i
+    codul pentru a avansa. Folosește-ți intuiția pentru a ghici regulile și învață
+    din propriile greșeli. Realizat de echipa care a lansat Compute it și Silent Teacher,
+    cu aceleași principii fundamentale: încercare-eroare în loc de explicații prea
+    detaliate, progresie ușoară, fără cod care să necesite tastare, accesibil pentru
+    începători.'
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.
@@ -10171,10 +10174,11 @@ ro:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Informatica este despre mult mai mult decât
-    programare! Învață despre IA, învățarea automată, date de instruire și înclinații,  în
-    timp ce explorezi probleme etice și modul cum IA poate fi utilizată pentru abordarea
-    prolemelor mondiale.
+  tutorial_ai-oceans_longdescription: 'Știința calculatoarelor nu înseamnă doar programare!
+    Învață despre inteligența artificială (IA), învățare automată, date de instruire
+    și erori sistematice, explorând în același timp problemele etice și modul în care
+    IA poate fi utilizată pentru soluționarea problemelor care afectează întreaga
+    lume. '
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: Română
   tutorial_googlehero_language: English, Spanish

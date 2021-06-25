@@ -2,7 +2,7 @@
 title: அரசு அதிகாரிகளுக்கான எவ்வாறு செய்வது என்பதற்கான வழிகாட்டி
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # உங்கள் முழு சமூகத்தையும் எப்படி ஈடுபடுத்துவது
 
@@ -61,4 +61,4 @@ Consider publishing an opinion piece in your local paper. See this [sample op-ed
 
 [Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
 
-{{signup_button}}
+{{ signup_button }}

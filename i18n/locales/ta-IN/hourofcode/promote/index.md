@@ -2,7 +2,7 @@
 title: இது குறித்து பரப்புங்கள்
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # கோட் ஆஃப் ஹவர் பகுதியில் உங்கள் சமூகத்தை ஈடுபடுத்தவும்
 
@@ -28,4 +28,4 @@ Tell your friends about the **#HourOfCode**!
 
 [Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. இது ஒரு மணி நேரத்திற்கு அப்பால் உங்கள் பகுதியில் கணினி அறிவியல் ஆதரவு உருவாக்க உதவ முடியும்.
 
-{{signup_button}}
+{{ signup_button }}
