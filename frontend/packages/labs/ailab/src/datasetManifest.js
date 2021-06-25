@@ -316,6 +316,14 @@ export const allDatasets = [
     metadataPath: "datasets/shapes_v2_toy.json",
     imagePath: "datasets/shapes_v2_toy.jpg",
     isToy: true
+  },
+  {
+    id: "shoe_survey_toy",
+    name: "Shoes Survey",
+    path: "datasets/shoe_survey_toy.csv",
+    metadataPath: "datasets/shoe_survey_toy.json",
+    imagePath: "datasets/shoe_survey_toy.jpg",
+    isToy: true
   }
 ];
 
