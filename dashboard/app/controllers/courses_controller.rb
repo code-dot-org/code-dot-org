@@ -100,13 +100,15 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
+    unit_group.update(course_params)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
     if unit_group.has_migrated_script? && unit_group.course_version
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
-
-    unit_group.update(course_params)
 
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
