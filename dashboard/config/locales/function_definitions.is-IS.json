@@ -3877,6 +3877,554 @@
               "length": "lengd"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "fallið mitt"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "byggja brú"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "hreinsa slóð"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "laga langa slóð"
+          },
+          "fix short path": {
+            "name": "laga stutta slóð"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "byggja stutta brú"
+          },
+          "build long bridge": {
+            "name": "byggja langa brú"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "teikna loga",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "teikna eld"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "teikna glugga"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get produce": {
+            "name": "sækja afurð"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check for corn": {
+            "name": "athuga með maís"
+          },
+          "corn rectangle": {
+            "name": "maísrétthyrningur"
+          },
+          "lettuce stairs": {
+            "name": "káltröppur"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "ljúka leik"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
         }
       }
     }

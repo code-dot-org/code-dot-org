@@ -1490,6 +1490,261 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Þú getur breytt þessari tölu.",
           "courseE_artist_ramp8_2": "Smelltu hér til að skrifa tölu fyrir hve oft á að endurtaka kóðann."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Veldu tegund dansara hér."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Bættu þessum kubbi í forritið þitt.",
+          "arrow_buttons": "Ýttu á örvarlyklana til að stjórna dansaranum."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Bættu þessum kubb í forritið þitt!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Bættu nýju atviki í forritið þitt."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nýr kubbur!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nýr kubbur!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nýr kubbur!",
+          "new_block_4": "Nýr kubbur!"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Notaðu þennan kubb til að skilja eftir athugasemdir fyrir þig eða kennarann um það hvernig kóðinn virkar."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Þessi litlu fyrirmæli hér segja tölvunni að keyra STÓRA bunkann af kóða með þvi heiti sem er á vinnusvæðinu."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Þetta er `endurtaka` lykkja! Settu hana á vinnusvæðið og bættu í hana kóða sem þú vilt að keyri aftur og aftur."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Umbinn getur svifið yfir vatn, en leikmaðurinn ekki!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Þú getur ekki fjarlægt þessa kubba, en þú getur breytt þeim!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Umbinn getur svifið yfir hraun, en leikmaðurinn ekki!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Við höfum sett kubba hér til að koma þér af stað"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Þessi kóði mun byrja að byggja húsið þitt. Getur þú klárað það?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Smelltu á \"Keyra\" til að prófa forritið þitt",
+          "craft_drag_block_callout": "Dragðu \"færa áfram\" kubb og festu hann neðan í hinn kubbinn"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Endurtaktu aðgerðir með því að setja kubba hér"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Þessi kóði mun athuga með hraun. Getur þú bætt við skipun um að fara áfram?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Grafðu út þetta járn!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Þessi tala táknar að það má bara nota einn svona kubb í lokasvarinu."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Veistu að þú getur teiknað aftur yfir línu hvenær sem þú þarft?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Þessi tala segir þér hve marga af þessum kubbum þú mátt nota í þessari þraut."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Smelltu á ljósperuna ef þú þarft vísbendingu!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Þetta er skýring"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Smelltu hér til að breyta stefnu atburðarörvarinnar."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Með þessu getur þú valið \"eitthvað\" hljóð, sem þýðir að þú veist ekki hvaða hljóð þú færð fyrr en þú heyrir það!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Þegar búið er að tengja alla kubbana er ýtt á \"Keyra\" til að ræsa forritið."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Það er aðeins einn af þessum kubbum í verkfærakassanum.  Hvernig ætlar þú að nota hann?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Smelltu á ljósperuna ef þú þarft vísbendingu!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Notaðu græna fellilistann til að skipta um stefnu."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Komdu leikmanninum til flaggsins til að komast í næsta áfanga."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Notaðu þennan kubb þegar Waddles og Chomp snertast!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Með þessum kubbi getur þú fært leikmenn á staði á leiksvæðinu."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Þessi kubbur er mjög mikilvægur í þessu verkefni. Gættu þess að nota hann!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Bættu þessu í miðju forritsins þíns."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Sérðu einhverja nýja kubba í verkfærakassanum? Ekki hafa áhyggjur, þeir verða útskýrðir seinna í stiginu."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Þú getur tekið fleiri kubba úr verkfærakassanum þegar þú þarft!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Tala 4 á graskerinu segir þér að þú getir tínt fjögur grasker."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Þessir kubbar eru læstir og ekki hægt að eyða þeim!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Dragðu kubba úr verkfærakassanum inn á vinnusvæðið."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Þegar búið er að tengja alla kubbana er ýtt á \"Keyra\" til að ræsa forritið."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.",
+          "courseC_maze_programming3_3": "Þessar blokkir eru úr steini og ekki hægt að fleygja þeim."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Þetta er fyrsta áskorunarþraut þín! Þær eru hafðar erfiðar og geta þurft nokkrar tilraunir.",
+          "courseC_maze_programming7_2": "Þessar blokkir eru úr steini og ekki hægt að fleygja þeim."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Þú hefur ekki nema einn svona kubb í þessari þraut."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Þú hefur ekki nema einn svona kubb í þessari þraut."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Þú þarft ekki að nota liti til að leysa þessa þraut. Ef þú vilt nota liti, er það auðvelt með kubbnum \"einhver litur\"!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Mundu að athuga með HVERT ský hvort það hafi BLÓM. Þú þarft ekkert að athuga með hunang.",
+          "4_5_Bee_Conditionals_2_2": "Þarftu aðstoð?  Smelltu hér til að sjá hjálparmyndband!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Notaðu þessa lykkju til að safna öllum blómasafanum (eða hunangi) frá einu blómi (eða búi)."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Þú þarft að nota `meðan slóð framundan` til að leysa þessa þraut."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Þetta sýnir fjölda kubbanna. Þá veistu hvað þú átt marga svona kubba eftir til að nota."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Þegar búið er að tengja alla kubbana er ýtt á \"Keyra\" til að ræsa forritið."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Þetta er Verkfærakassinn. Þar finnur þú fleiri kubba til að klára þrautirnar."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Dragðu óþarfa kubba aftur í verkfærakassann til að losa þig við þá.",
+          "stone_block_2": "Gráir kubbar eru naglfastir og ekki hægt að fleygja þeim."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Þessir kubbar hafa engar tölur. Þú getur notað eins marga og þú vilt!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Smelltu hér!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Við skulum nota þennan kubb til að byrja að búa til fyrsta ferninginn."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Þegar þessi græni kubbur er keyrður er allur kóðinn í fallinu keyrður. Hvað ætti listamaðurinn að gera næst eftir fyrsta ferninginn?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Kubbarnir sem búa til föll hafa verið færðir undir þetta merki í verkfærakassanum."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Haltu áfram með því að bæta meiri kóða við neðst.",
+          "courseE_artist_functions_challenge1_callout2": "Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Haltu áfram með því að bæta meiri kóða við neðst.",
+          "courseE_artist_functions_challenge2_callout2": "Ef þér líkar ekki þessi hönnun, getur þú breytt henni í hvað sem þú vilt!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Verkfærakassinn er með svolítið öðru skipulagi í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert með."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Þetta grænmeti er óþekkt. Það breytist í hvert sinn sem þú keyrir forritið."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Verkfærakassinn er flokkaður til að kóðinn fái meira pláss. `Frá` lykkjurnar eru hér undir."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Þú finnur `frá` lykkjuna hér!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Þú finnur reikningskubb hér."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Þú getur fundið breyturnar þínar hér!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Smelltu hér til að sjá þessa hegðun."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Festu alla kubbana vel saman og smelltu svo á \"Keyra\" til að ræsa forritið."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Dragðu kubba úr verkfærakassanum inn á vinnusvæðið."
         }
       }
     }
