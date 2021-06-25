@@ -60,6 +60,7 @@ es-MX:
       level: nivel
       marginX: margenX
       marginY: margenY
+      meal: comida
       myName: miNombre
       name: nombre
       nectar: néctar
@@ -76,9 +77,13 @@ es-MX:
       repetitions: repeticiones
       right: derecha
       score: puntuación
+      score1: puntuación1
+      score2: puntuación2
       screenHeight: alturaPantalla
       screenWidth: anchoPantalla
       set sides: fijar lados
+      setupSimScore1: configuraciónSimAnotador1
+      setupSimScore2: configuraciónSimAnotador2
       shout: gritar
       sides: lados
       size: tamaño
