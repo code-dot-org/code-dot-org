@@ -1,13 +1,13 @@
 {
   "name": "shapes_v1_toy",
   "card": {
-    "description": "Extracted features from a visual dataset showing different shapes",
+    "description": "Extracted features from a visual dataset showing different shapes.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Used to train AI Bot on how to classify shapes",
-      "potentialMisuses": "Anything other than the purpose above"
+      "potentialUses": "Used to train AI Bot on how to classify shapes.",
+      "potentialMisuses": "Anything other than the purpose above."
     }
   },
   "fields": [
