@@ -68,6 +68,24 @@ const sampleModes = {
       "club_sparse_toy"
     ],
     hideSelectLabel: true
+  },
+
+  "shapes-v1-test": {
+    datasets: [
+      "shapes_v1_toy",
+    ],
+    hideSelectLabel: true,
+    hideSave: true,
+    requireAccuracy: 90
+  },
+
+  "shapes-v2-test": {
+    datasets: [
+      "shapes_v2_toy",
+    ],
+    hideSelectLabel: true,
+    hideSave: true,
+    requireAccuracy: 90
   }
 };
 
