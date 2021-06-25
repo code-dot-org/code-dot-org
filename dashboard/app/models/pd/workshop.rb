@@ -439,6 +439,20 @@ class Pd::Workshop < ApplicationRecord
     ].include? subject
   end
 
+  def self.send_virtual_order_reminder_for_upcoming_in_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    scheduled_start_in_days(days).each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        email = Pd::WorkshopMailer.teacher_virtual_order_form_reminder(enrollment)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+      end
+    end
+    raise "Failed to send virtual order form reminders: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -520,6 +534,7 @@ class Pd::Workshop < ApplicationRecord
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
+    send_virtual_order_reminder_for_upcoming_in_days(7 * 4)
     send_reminder_to_close
     send_follow_up_after_days(30)
   end

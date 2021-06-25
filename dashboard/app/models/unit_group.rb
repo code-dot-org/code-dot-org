@@ -697,4 +697,13 @@ class UnitGroup < ApplicationRecord
   def has_migrated_unit?
     !!default_units[0]&.is_migrated?
   end
+
+  def prevent_course_version_change?
+    # rubocop:disable Style/SymbolProc
+    # For reasons I (Bethany) still don't understand, using a proc here causes
+    # the method to terminate unexpectedly without an error. My unproven guess
+    # is that this is due to the nested `any?` calls
+    default_scripts.any? {|s| s.prevent_course_version_change?}
+    # rubocop:enable Style/SymbolProc
+  end
 end
