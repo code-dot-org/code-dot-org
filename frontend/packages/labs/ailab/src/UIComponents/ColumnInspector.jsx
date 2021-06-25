@@ -14,6 +14,7 @@ import ColumnDetailsNumerical from "./ColumnDetailsNumerical";
 import ColumnDetailsCategorical from "./ColumnDetailsCategorical";
 import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 import AddFeatureButton from "./AddFeatureButton";
+import SelectLabelButton from "./SelectLabelButton";
 
 class ColumnInspector extends Component {
   static propTypes = {
