@@ -768,7 +768,7 @@ es:
         en modo normal. Disculpa las molestias.
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intenta volver a cargar la página
-  next_stage: "¡Finalizado! Sigue a la siguiente etapa"
+  next_stage: "¡Acabado! Sigue a la siguiente etapa"
   download_pdf: Abrir la planificación de la lección
   lesson_plan: Plan de clases
   view_lesson_plan: Ver el plan de estudios
@@ -975,8 +975,8 @@ es:
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
-    startover_body: Esto reiniciará el rompecabezas a su estado inicial y borrará
-      todos los datos que hayas agregado o cambiado.
+    startover_body: Esto reiniciará el rompecabeza a su estado inicial y borrará todos
+      los datos que hayas agregado o cambiado.
     startover_ok: Volver a empezar
     startover_cancel: Cancelar
   time:

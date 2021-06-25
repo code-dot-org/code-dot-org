@@ -3991,6 +3991,18 @@
               "length": "longitud",
               "sides": "lados"
             }
+          },
+          "small flower": {
+            "name": "flor pequeña"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORES LÓGICAS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "FLOR LÓGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORES LÓGICAS"
           }
         },
         "CourseD_EOC_artist_2021": {
@@ -4397,6 +4409,97 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "mover y obtener néctar con contador"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "dibujar una estrella",
+            "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+            "parameters": {
+              "points": "puntos",
+              "length": "longitud"
+            }
+          },
+          "draw a circle": {
+            "name": "dibujar un círculo",
+            "description": "Dibuja un circulo especificando su radio",
+            "parameters": {
+              "radius": "radio"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibujar un molinete",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud",
+              "repeat": "repetir"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibujar un triángulo",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud"
+            }
+          },
+          "draw a house": {
+            "name": "dibujar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a square": {
+            "name": "Dibuja un cuadrado",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "reinicia el juego"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "dibujar patillas"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "Dibuja un cuadrado"
+          },
+          "draw ear stems": {
+            "name": "dibujar patillas"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "dibujar una estrella"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "dibujar una estrella"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "Dibuja un cuadrado"
+          },
+          "draw ear stems": {
+            "name": "dibujar patillas"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "terminar el juego"
           }
         }
       }
