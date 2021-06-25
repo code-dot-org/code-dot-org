@@ -376,45 +376,6 @@ sk:
           (niekedy ich voláme procedúry) sú malé programy, ktoré môžeme opakovane
           používať vo väčšom programe. Táto lekcia pomôže študentom intuitívne pochopiť,
           prečo je kombinovanie kúskov kódu do funkcií tak užitočné.  '
-      swipeRightPassThrough:
-        title: Lekcia pracovných pohovorov
-        desc: "# Lekcia pracovných pohovorov\r\n\r\n## Potiahnite doprava pre IT\r\nV
-          tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi
-          partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské
-          profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov
-          mohli presvedčiť, aby absolvovali Kurz základov v informatike. \r\n\r\n###
-          Ako to funguje\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet,
-          ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že
-          presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete
-          doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas
-          lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré
-          sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto
-          si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\r\n\r\n\r\nKed
-          stlačíte \"Pokračovať\" nižšie, pošleme vám túto hru a odošleme do nej emailovú
-          adresu, s ktorou ste prihlásený na Code.org."
-      swipeRightPassThrough-test123:
-        title: Lekcia pracovných pohovorov
-        desc: "# Lekcia pracovných pohovorov\r\n\r\n## Potiahnite doprava pre IT\r\nV
-          tejto lekcií použijeme nástroj \"Potiahnite doprava pre IT\" vytvorený našimi
-          partnermi z MIT. V Potiahnite doprava pre IT budete čítať vzorové študentské
-          profily a skúsite vybrať konkrétne frázy a vyjadrenia, ktoré by týchto študentov
-          mohli presvedčiť, aby absolvovali Kurz základov v informatike. \r\n\r\n###
-          Ako to funguje\r\nV hre \"Potiahnite doprava pre IT\" uvidíte niekoľko viet,
-          ktoré môžete povedať každému študentovi. Vety, o ktorých si myslíte, že
-          presvedčia daného študenta pre prihlásenie sa na kurz informatiky, potiahnete
-          doprava a vety, ktoré podľa Vás nebudú fungovať, potiahnete doľava. Počas
-          lekcie budeme ako skupina diskutovať, vymieňať si názory na vety, ktoré
-          sú podľa Vás najúčinnejšie pre získanie nových študentov informatiky a takisto
-          si budete môcť porovnať Vaše výsledky s výsledkami ostatných zúčastnených.\r\n\r\n\r\nKed
-          stlačíte \"Pokračovať\" nižšie, pošleme vám túto hru a odošleme do nej emailovú
-          adresu, s ktorou ste prihlásený na Code.org."
-      brad-repro-bug-000:
-        title: Brand Repro Chyba 000
-        desc: "# Brad Repro Chyba 000\r\n## Pokus na zopakovanie chyby, ktorú nahlásil
-          Brooke\r\nproces je nasledovný:\r\n1. začal som s levelom \"unplugged\",
-          doplnil som informácie, stlačil som Uložiť a publikovať.\r\n2. \"zničil\"
-          som level\r\n3. spravil som \"označený\" level s rovnakým obsahom a rovnakým
-          menom. označil som políčko pre jeho zašifrovanie. stlačil som uložiť a publikovať"
       courseB_unplugged_MRF_2018:
         title: Moji robotickí kamaráti
         desc: Naučte sa programovať napísaním kódu pre vašich priateľov!
@@ -587,23 +548,6 @@ sk:
           živote, konkrétne vytvorením papierového lietadielka. Zameriava sa tiež
           na širšie súvislosti informatiky a podstatnú úlohu, ktorú v našom živote
           hrajú algoritmy.
-      test-uid-passthrough:
-        desc: "# Lekcia Náborových scenárov\r\n\r\n## Potiahni vpravo pre CS\r\nPre
-          tútu lekciu budeme používať nástroj \"Potiahni vpravo pre CS\", ktorý vyvinuli
-          naši partneri z MIT. V tomto nástroji si môžete prečítať profily študentov
-          a zvážiť ich špecifické programovacie prístupy, ktoré využijete na ich presvedčenie
-          zapísať sa do vášho kurzu CS Princípy Informatiky. \r\n\r\n## Ako to funguje\r\nPri
-          prehrávaní Potiahni vpravo pre CS uvidíte rad citátov, ktoré môžete študentom
-          povedať. Citáty, ktoré sa vám pre daného študenta budú zdať najefektívnejšie
-          môžete potiahnuť vpravo, tie, ktoré sa vám nebudú zdať vhodné, potiahnite
-          vľavo. Počas lekcie budeme diskutovať v skupine o vašich názoroch na typy
-          programovacích prístupov, ktoré sú podľa vás najefektívnejšie na pritiahnutie
-          študenta ku kurzu a budete mať možnosť vidieť ako ostatní vo vašej skupine
-          vyberali v jednotlivých debatách.\r\n<br><br><br><br>\r\n\r<span style=\"display:none\">submitButton
-          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
-          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/><a
-          class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>
-          kliknúť sem pre spustenie Potiahni vpravo pre CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame
@@ -658,9 +602,3 @@ sk:
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria
           pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si
           potiahnem čiernu kartu, ty dostaneš bod."
-      TheRightApp_2019:
-        title: Správna aplikácia
-        desc: "* Všetci dnes používame počítače, obzvlášť smartfóny. \r\n* Smartfónové
-          aplikácie alebo \"appky\" pomáhajú ľuďom napríklad hovoriť s priateľmi,
-          počúvať hudbu, nakupovať alebo len browsovať internet.\r\n* Pre programátorov
-          je dôležité poznať potreby druhých a zohľadniť ich pri návrhu aplikácií!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
