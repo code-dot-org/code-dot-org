@@ -2,7 +2,6 @@
 it:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" con l''Ape'
       Accelerometer Events: Eventi Accelerometro
       Adding Images: Aggiungere Immagini
       Adding Screens: Aggiungere Schermate
@@ -35,7 +34,7 @@ it:
       Create Your Own Animation: Crea la Tua Animazione
       Create a Story: Crea una Storia
       Create your project: Crea il tuo progetto
-      Creating a Simulation: Crea una Simulazione
+      Creating a Simulation: Crea una simulazione
       Data Visualization: Visualizzazione dei Dati
       De-bugging with the Step Button: Debugging con il Pulsante di Fase
       Debugging: Correzione errori (debugging)
@@ -78,7 +77,7 @@ it:
       Iteration and Parameters: Iterazione e Parametri
       LED Apps: App LED
       Layout with CSS: Layout con CSS
-      Learning from Simulations: Imparare dalle Simulazioni
+      Learning from Simulations: Imparare dalle simulazioni
       Lesson Extras: Esercizi Supplementari
       Light Show: Spettacolo di Luci
       Lists: Liste
@@ -106,16 +105,18 @@ it:
       'Mini-project: Sticker Design': 'Mini progetto: Progettazione dell''Adesivo'
       Modify simulation variables: Modifica le variabili di simulazione
       More Input: Altri Input
-      More Monsters: Più Mostri
+      More Monsters: Tanti mostri
       More Parameters: Più Parametri
       Motorcycle: Motocicletta
       Movement with the Counter Pattern: Movimento con lo Schema Contatore
       Multiframe Animations: Animazioni Multi-Fotogramma
       Musical Arrays: Insiemi Musicali
+      My Online Neighborhood: Il mio quartiere digitale
       Nested Loops with the Bee: Cicli Nidificati con l'Ape
       New Shapes: Nuove Forme
       Orientation: Orientamento
       Pair Programming: Programmazione in coppia
+      Planning: Gestione della classe
       Platform Jumper - Background and Variables: Saltatore di Piattaforme - Sfondo
         e Variabili
       Platform Jumper - Items: Saltatore di Piattaforme - Elementi
@@ -127,7 +128,7 @@ it:
       Practice: Pratica
       Predict: Predict
       Prediction: Previsione
-      Programming with Events: Programmare con gli Eventi
+      Programming with Events: Programmare con gli eventi
       Programming with Rey and BB-8: Programmare con Rey e BB-8
       Programs that Repeat: Programmi che Ripetono
       Project: Progetto
@@ -138,13 +139,14 @@ it:
       Publishing Your Website: Pubblicare il tuo sito web
       RGB Exploration: Esplorazione RGB
       Reading Sensors: Leggere i Sensori
-      Recovery: Recupero
+      Recovery: Guarigione
       Reflection: Riflessione
       Repeat Blocks: Blocchi Ripeti
       Repeat Blocks with BB-8: Blocchi Ripeti con BB-8
       Repeat Blocks with the Artist: Blocchi Ripeti con l'Artista
       Repeat Unit Statements: Ripeti Istruzioni Unitarie
       Repeat Until Statements: Ripeti Fino alle Istruzioni
+      Review: Rivedi
       Run a simulation: Esegui una simulazione
       Sample Programs: Programmi Campione
       Screen Design: Design Schermata
@@ -153,7 +155,7 @@ it:
       Setting Properties: Impostare le Proprietà
       Shapes and the Draw Loop: Forme e Cicli Infiniti
       Share Your App: Condividi la Tua App
-      Share Your Message: Condividi il Tuo Messaggio
+      Share Your Message: Condividi il tuo messaggio
       Side Scroller: Scorrimento Laterale
       Simple Circuits: Circuiti Semplici
       Sliders: Cursori
@@ -161,7 +163,7 @@ it:
       Sprite Lab Project: Progetto del Laboratorio dei personaggi
       Sprites and the Draw Loop: Sprite e Cicli Infiniti
       Star Chaser: Cacciatore di Stelle
-      Stopping the Outbreak with Masks: Ferma la Pandemia con le Mascherine
+      Stopping the Outbreak with Masks: Ferma la pandemia con le mascherine
       Styling Text: Stilizzare il Testo
       Styling with Classes: Stilizzare con le Classi
       Styling your Website: Stilizzare il tuo Sito Web
@@ -177,11 +179,13 @@ it:
       Using the LED: Usare i LED
       Using the Repeat Block: Uso del blocco Ripeti
       Using the Switch: Usare l'Interruttore
+      Vaccines: Vaccini
       Velocity: Velocità
       Video: Video
+      'Video: For Loops': 'Video: per i loop'
       Warm Up: Riscaldamento
       Website Project: Progetto del Sito Web
-      Welcome to Monster Town: Benvenuto alla Città dei Mostri
+      Welcome to Monster Town: Benvenuto nella Città dei Mostri
       While Loops with the Farmer: Cicli "mentre" con la contadina
       Wrap-up: Conclusione
       Your Personal Website: Il Tuo Sito Web Personale
