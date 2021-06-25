@@ -1382,6 +1382,261 @@
         },
         "MC HOC 2016 New Walk": {
           "MC_HOC_2016_New_Walk_callout2": "\"실행\" 버튼을 눌러 이동을 시작하세요."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "이 블록을 프로그램에 추가합니다.",
+          "arrow_buttons": "댄서를 조종하려면 화살표 단추를 누르세요."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "새 이벤트를 프로그램에 추가하십시오."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "새 블록!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "새 블록!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "새 블록!",
+          "new_block_4": "새 블록!"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "이 블록을 사용하여 코드 작동 방법에 관한 여러분 자신 또는 교사의 메모를 남기세요."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "이 작은 지시문을 사용하면 컴퓨터에서 작업 공간에 보이는 이름이 같은 '대형' 코드를 실행하게 됩니다."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "이것이 `반복` 루프입니다! 작업 공간으로 클릭하고 여러 번 실행하고 싶은 코드를 추가하세요."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "에이전트는 물 위를 호버링할 수 있지만 플레이어는 그럴 수 없어요!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "블록은 버릴 순 없지만 수정할 수는 있어요!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 호버링할 수 있지만 스티브와 알렉스를 그럴 수 없어요! "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "여러분이 시작할 수 있게 여기에 블록을 몇 개 놓아두었어요"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
+          "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 행동을 반복하세요"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "이 철을 채굴하세요!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "이 숫자는 이러한 종류의 퍼즐 중 한 개 만이 최종 답에서 사용할 수 있음을 의미합니다.  "
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "필요할 때마다 라인 그리기를 취소할 수 있다는 거 아세요?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "이것은 콜아웃입니다."
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "여기를 클릭하여 이벤트 화살표의 방향을 변경하세요."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "듣고 나서야 어떤 소리가 나오는지 아는 \"무작위' 사운드를 선택해 보세요!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "이러한 블록은 툴박스에 한 개만 있습니다. 어떻게 사용할거예요?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "힌트가 필요하면 전구를 클릭하세요!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "녹색 드롭다운 화살표를 사용해 방향을 바꾸세요."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "액터를 이 깃발로 가게 하여 다음 레벨로 넘어 가세요."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "와들과 촘프가 터치할 때 이 블록을 사용하세요!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "이 블록은 액터를 게임 공간 내 다른 부분으로 이동하게 해 줍니다."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "이 블록은 이 프로젝트에 매우 중요합니다. 반드시 사용하세요!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "이것을 프로그램 중간에 추가합니다."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "필요하면 툴박스에서 더 많은 블록을 가져올 수 있습니다!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "호박 위 숫자 4는 딸 수 있는 호박이 네 개가 있음을 말해 줍니다."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "이 블록은 잠겨 있으며 삭제할 수 없습니다!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
+          "courseC_maze_programming3_3": "이러한 블록은 돌이며 버릴 수 없습니다."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "이것은 첫 번째 도전 퍼즐입니다! 어렵고 서너 번 시도해 봐야 할 수도 있다는 의미입니다.",
+          "courseC_maze_programming7_2": "이러한 블록은 돌로 만들어 졌으며 버릴 수 없습니다."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "이 퍼즐을 맞추기 위해 색상을 사용할 필요는 없습니다. 원하면, 이 '램덤 색상' 블록이 쉽게 만들어 줍니다!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다.",
+          "4_5_Bee_Conditionals_2_2": "도움이 필요하세요? 여기를 클릭하여 동영상 힌트를 받으세요!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "이 루프를 사용하여 한송이 꽃 (또는 벌집)에서 과즙 (또는 꿀)을 모두 모으세요."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "이 퍼즐을 풀기 위해 `경로가 앞에 있는 동안` 블록을 사용해야 할 것입니다."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
+          "stone_block_2": "회색 블록은 버릴 수 없습니다."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseE_aboutme_2_2021": {
+          "": "여기를 클릭하세요!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "이 블록을 사용하는 것으로 시작하여 첫 번째 사각형을 만드는 걸 도와주세요."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "이 녹색 블록이 실행될 때, 함수 내 모든 코드는 실행될 것입니다. 첫 번째 사각형을 그린 후 아티스트는 무엇을 해야 할까요?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "이 녹색 블록이 실행될 때, 함수 내 모든 코드는 실행될 것입니다. 첫 번째 사각형을 그린 후 아티스트는 무엇을 해야 할까요?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "함수를 만들기 위한 블록은 툴박스 내 이 라벨 아래에서 이동했습니다."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
+          "courseE_artist_functions_challenge1_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
+          "courseE_artist_functions_challenge2_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "툴박스는 이번에는 약간 다르게 구성되어 있습니다! 다른 범주를 클릭하여 어떤 블록을 갖고 있는지 보세요."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "여기서 `for` 루프를 찾게 될 거예요!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "여기서 아래서 변수를 찾을 수 있습니다!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         }
       }
     }

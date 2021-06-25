@@ -4968,3 +4968,494 @@ ko-KR:
           6. Wikipedia.org - 사용자가 생성 한 콘텐츠가있는 무료 백과 사전
       csd-pre-survey-2017-levelgroup_2018:
         title: CS 발견 학생 과정 전 설문 조사
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # 빅 이벤트
+
+          컴퓨터 과학에서 이벤트는 컴퓨터가 모니터링하는 동작입니다. 이 레슨에서 여러분은 어느 버튼을 누르냐에 따라 다르게 반응할 것입니다.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # 바이너리 팔찌
+
+          컴퓨터가 이해하는 방식으로 이름을 나타내는 팔찌를 만드세요!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: "# 카드 조건문\n\n카드 게임을 하고 \"빨간 카드를 뽑으면 내가 1 포인트를 얻기\"와 \"검정색 카드를 뽑으면
+          상대방이 1 포인트 얻기\"등과 같은 규칙을 만드세요. "
+      CourseF_outbreak_story:
+        content1: 설명 입력
+      CourseF_outbreak_story2:
+        content1: 설명 입력
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # 접근가능성을 위한 설계
+
+          * 컴퓨터 과학 세계에서, **접근가능성**은 장애인을 위한 기술 창조에 관한 것입니다.
+          * 장애에는 신체적, 청각적, 시각적, 기타 많은 장애가 포함됩니다.
+          * 장애는 다양하고  **스마트폰 앱**과 같은 기술 사용방식을 포함하여 사람에게 많은 방식으로 영향을 미칩니다.
+          * 장애인을 위해 접근가능한 앱을 설계하는 것은 그러한 앱을 다른 모든 이들에게도 역시 더 낫게 만듭니다!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # 디지털 공유
+
+          이 레슨에서는 특히 디지털 환경에서 소유권과 저작권을 존중하는 것의 도전과 이점에 대해 생각해 볼 것입니다.
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # For 루프 펀
+
+          반복은 무한히 실행시키는 것을 가능하게 하지만, 이번에는 반복구조 안에 다른 구조를 넣어 실행시키는 방법을 배우게 됩니다.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # 게팅 루피 (Getting Loopy)
+
+          이 레슨은 댄스 활동을 통해 루프의 프로그래밍 개념을 소개합니다.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # 모눈종이 프로그래밍
+
+          그림을 그리기 위해 학급원이 사용할 수 있는 알고리즘을 작성하세요.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # 해피 맵
+
+          캐릭터를 미로 여기저기로 움직이게 만드는 알고리즘을 만드세요.
+      Internet-Unplugged_2021:
+        markdown: |
+          # 인터넷
+
+          단지 종이 조각을 사용하여 교실에 인터넷을 구축하세요.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # 이동, 이동
+
+          지도를 사용하고 코멘트를 제공해 목표에 도달합니다.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # 내 루피 로봇 친구
+
+          루프를 사용하여 프로그램을 더 짧게 만드세요!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: "# 내 로봇 친구 \n\n친구를 위해 코딩을 작성하며 프로그램을 배워 보세요!"
+      OPD-K5 Stage3aGo_dani:
+        content1: 설명 입력
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # 릴레이 프로그래밍
+
+          팀으로 나누고 그림을 그리는 프로그램을 함께 작성하세요.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # 작사
+
+          학생들은 노래 내 코러스의 개념을 사용하여 함수를 정의하고 호출하는 것에 대해 배웁니다.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |-
+          # 올바른 앱
+
+          * 오늘날 누구나 컴퓨터, 특히 스마트폰을 사용합니다.
+          * 스마트폰 앱은 친구와 말하기 또는 음악 감상, 쇼핑, 그저 웹 탐구 등과 같은 일을 하는데 도움을 줍니다.
+          * 프로그래머가 타인의 필요를 이해하고 그것을 염두해 두고 설계를 하는 것이 중요합니다!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseAB_EOC_2021:
+        display_name: 과정말 프로젝트
+      courseB_EOC_2021:
+        display_name: 과정말 프로젝트
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: 아티스트는 똑같은 길이의 변 세 개로 삼각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트는 단일 선을 그릴 것입니다.
+          feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+        - text: 아티스트가 정사각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - {}
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '12'
+          correct: true
+          feedback: 맞습니다!
+        - text: '15'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        - text: '20'
+          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 TNT와 충돌하게 될 것입니다.
+          feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+        - feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8은 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+        - text: BB-8은 스페이스 한 개 만큼 만 이동합니다.
+          feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+        - text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+        - text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: BB-8은 문제 없이 고철 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+        - feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_EOC_2021:
+        display_name: 과정말 프로젝트
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: 맞습니다!
+        - text: B
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - text: C
+          feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        - feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+        - feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무 것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+        - text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+          feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+        - text: 잘 모르겠음.
+          feedback: "'만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다."
+        questions:
+        - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
+            꽃이 없으면 벌은 아무 것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: 벌은 꽃에서 과즙을 얻고 벌집에서 꿀을 만들 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. `만약 꽃에서` 블록은 벌에게 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게  합니다.
+        - text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+          feedback: 틀렸습니다. 틀렸습니다. `만약 꽃에서` 블록은 벌에게 각 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게 합니다..
+        - feedback: 틀렸습니다. 틀렸습니다. `만약 꽃에서` 블록은 벌에게 각 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게 합니다..
+        questions:
+        - text: '아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어지리라 생각하세요? 기억하세요:  *한*개의 벌집에는
+            벌만 있거나 또는 각 구름 뒤에는 *한*송이 꽃만 있습니다.'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+          feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+        - text: 벌은 모든 과즙을 얻을 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '8'
+          correct: true
+          feedback: 맞습니다!
+        - text: '10'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        - text: '12'
+          feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: 수확인은 모든 작물을 모을 것입니다.
+          feedback: 틀렸습니다. 호박을 따기 위한 코드는 여기에 없습니다.
+        - text: 수확인은 그녀가 택한 경로에서는 어떤 작물도 따지 못할 것입니다.
+          feedback: 틀렸습니다. 코드에서는 수확인이 계단 패턴을 반복해서 만들어 발견만 하면 많은 옥수수 또는 상추를 딸 것입니다.
+            그녀는 호박은 따지 않을 것입니다.
+        - text: 수확인은 호박을 제외한 모든 작물을 딸 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다. 코드에서는 수확인이 계단 패턴을 반복해서 만들어 발견만 하면 많은 옥수수 또는 상추를 딸 것입니다.
+            그녀는 호박은 따지 않을 것입니다.
+        markdown: |
+          이 퍼즐에서 새싹은 옥수수 또는 상추가 될 것입니다.
+          <br/>
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+          feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+          feedback: 틀렸습니다. `while` 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        - feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: 아무 일도 일어나지 않을 거예요.
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+          feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+        - feedback: 이 코드에서 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: 새는 전혀 움직이지 않을 것입니다.
+          feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속합니다!
+        - text: 새는 돼지에게 갈 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+          feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속합니다!
+        - feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
+      courseE_EOC_2021:
+        display_name: 과정말 프로젝트
+      courseE_EOC_examples_2021:
+        display_name: 과정말 프로젝트
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: 아무 일도 일어나지 않을 거예요.
+        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - {}
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: 수확인은 두 개의 호박을 딸 것입니다.
+          feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+        - text: 수확인은 호박을 모두 딸 거예요.
+          feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+        - text: 수확인은 상추를 딸 거예요.
+          correct: true
+          feedback: 맞습니다!
+        - text: 수확인은 옥수수를 딸 거예요.
+          feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+        - text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+          feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+        - text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+          correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: 아무 일도 일어나지 않을 거예요.
+        - {}
+        - correct: true
+          feedback: 맞습니다!
+        - {}
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseF_EOC_2021:
+        display_name: 과정말 프로젝트
+      courseF_EOC_examples_2021:
+        display_name: 과정말 프로젝트
+      courseF_EOC_samples_2021:
+        display_name: 과정말 프로젝트
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+        - text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+          feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에서 사용해야 합니다.
+        - feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+          feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+          correct: true
+          feedback: 맞습니다!
+        - text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+          feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        - feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+        markdown: |+
+          아! `for` 루프를 사용하면 이 퍼즐이 훨씬 더 숴어 집니다!
+
+
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: 설명 입력
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+        - text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+          feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+        - text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+          feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
+      csf_be_a_super_digital_citizen_2021:
+        content1: 설명 입력
+      csf_password_power-up_2021:
+        content1: 설명 입력
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: 설명 입력
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # 나의 온라인 마을
+
+          ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
+      express_EOC_2021:
+        display_name: 과정말 프로젝트
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - text: 라우렐은 보물이 없는 곳에서 보물을 모으려 하고 그 때문에 오류가 발생합니다.
+          correct: true
+          feedback: 맞습니다!
+        - text: 라우렐은 보물 모두를 모을 것입니다.
+          feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+        questions:
+        - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
