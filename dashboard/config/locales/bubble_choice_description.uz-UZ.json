@@ -1,2 +1,13 @@
 {
+  "uz-UZ": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Hayvonlarning har biri uchun xonalar chizing.",
+        "courseD_bee_nestedLoops8_2021": "Har bir guldan nektarni yig‘ib oling va asalari uyasida asal chiqaring.",
+        "courseD_bee_nestedLoops9_2021": "Hamma asalni tayyorlang.",
+        "courseF_bee_variables_7a_2021": "Ushbu jumboq biroz boshqacha. Uni yechish uchun nima qilish kerak?",
+        "ramp_artist_loops8_2021": "O‘xshashlikni qidiring va sikllardan foydalangan holda hozirgi kodni qisqartiring!"
+      }
+    }
+  }
 }
