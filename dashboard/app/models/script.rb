@@ -285,6 +285,10 @@ class Script < ApplicationRecord
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
     end
 
+    if user.permission?(UserPermission::LEVELBUILDER)
+      units += all_scripts.select(&:in_development?)
+    end
+
     units
   end
 
@@ -1413,6 +1417,10 @@ class Script < ApplicationRecord
 
   def stable?
     published_state == SharedConstants::PUBLISHED_STATE.stable
+  end
+
+  def in_development?
+    published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
