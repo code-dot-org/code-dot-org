@@ -13,6 +13,7 @@ ta:
         Artist2: கலைஞர் 2
         Unplug5: செயல்பாடுகள்
         Farmer: விவசாயி
+        Unplug6: நிபந்தனைகள்
         Artist3: கலைஞர் 3
         Unplug7: பாடல் எழுதுதல்
         Farmer2: விவசாயி 2
@@ -25,6 +26,7 @@ ta:
         Flappy: சிறகடிக்கும் பறவை
         ArtistEC: கலைஞர்
         NetSim: இணைய மாதிரி
+        Custom: கலைஞர்
     trophy:
       name:
         Bronze: வெண்கலம்
@@ -42,23 +44,77 @@ ta:
         turtle_4_1: 'உங்களால் ஒரு முக்கோணியை (100 படவுருக்கள் உள்ள விளிம்புகளுடன்)
           3 தொகுதிகளை மட்டும் வைத்து வரைய முடியுமா? குறிப்பு: ஒரு "மீளும்" தொகுதியை
           பயன்படுத்துக.'
+        studio_k1_6: உங்கள் சொந்த கதையை உருவாக்கவும்! பூனை மற்றும் நாயைச் சுற்றி நகர்ந்து,
+          அவற்றைச் சொல்லச் செய்யுங்கள்.
     video:
       name:
+        artist_intro: கலைஞர் அறிமுகம்
         if: If தொகுப்பு
         function: செயல்பாடுகள்
         Unplug2: கணினிபூர்வமான சிந்தனை
         Unplug3: வரைதாள் செய்நிரல்
         Unplug4: வழிமுறைகள்
         Unplug5: செயல்பாடுகள்
+        Unplug6: நிபந்தனைகள்
         Unplug7: பாடல் எழுதுதல்
         Unplug8: நுண்புல
+        C1_artist_intro: கலைஞர் அறிமுகம்
+        C2_artist_intro: கலைஞர் அறிமுகம்
+        C2_artist_loops: கலைஞர் சுழல்கள்
+        C2_artist_debugging: கலைஞர் பிழைத்திருத்தம்
         C2_graph_paper: வரைதாள் செய்நிரல்
+        C2_conditionals_with_cards: நிபந்தனைகள்
+        C3_artist_intro: கலைஞர் அறிமுகம்
+        C3_artist_functions: கலைஞர் செயல்பாடுகள்
+        C3_artist_nested_loops: உள்ளமை சுழல்கள்
+        C3_bee_nested_loops: உள்ளமை சுழல்கள்
         C3_computational_thinking: கணினிபூர்வமான சிந்தனை
         C3_songwriting_with_parameters: பாடல் எழுதுதல்
         C4_loops_zombie: சுழற்சிகள்
+        C4_variables_artist: மாறிகள் - கலைஞர்
+        C4_math_artist: கணிதத்துடன் கலைஞரை நிரல் செய்தல்
+        C4_conditionals: நிபந்தனைகள்
         C4_unplugged_parameters: பாடல் எழுதுதல்
+        CSF_a_b_artist_loops: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        CSF_artist_angles: கலைஞரின் கோணங்கள்
+        frozen_intro: குறியீடு அறிமுக நேரம்
+        frozen_loops: சுழல்கள் அறிமுகம்
+        frozen_functions: செயல்பாடுகளுக்கு அறிமுகம்
+        infinity_playlab_intro: ப்ளே லேப் - அறிமுகம்
+        infinity_playlab_events: ப்ளே லேப் - நிகழ்வுகள்
+        infinity_playlab_repeat_forever: லேப் விளையாடு - என்றென்றும் செய்யவும்
+        csp_applab_functions: செயல்பாடுகளுக்கு அறிமுகம்
         csp_applab_loops: சுழற்சிகள்
+        csp_cs_is_changing_everything: கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது
+        starwars_intro: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்
+          - அறிமுகம்'
+        starwars_typing: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்
+          - ஜாவாஸ்கிரிப்ட்'
+        starwars_events: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்
+          - நிகழ்வுகள்'
+        starwars_congrats: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்
+          - வாழ்த்துக்கள்'
+        starwars_blocks_intro: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்
+          - அறிமுகம்'
+        starwars_blocks_events: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை
+          உருவாக்குதல் - நிகழ்வுகள்'
+        starwars_blocks_congrats: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை
+          உருவாக்குதல் - வாழ்த்துக்கள்'
+        mc_2016_intro: Minecraft Hour of Code - அறிமுகம்
+        mc_2016_loops: Minecraft Hour of Code - லூப்ஸ்
+        mc_2016_events: Minecraft Hour of Code- நிகழ்வுகள்
+        mc_2016_spawn: Minecraft Hour of Code - ஸ்பான்
+        mc_2016_congrats: Minecraft Hour of Code - வாழ்த்துக்கள்
+        mc_2017_agent_intro: Minecraft Hour of Code - முகவர்
+        mc_2017_repeat: மின்கிராஃப்ட் Hour of Code - சுழல்களை மீண்டும் செய்யவும்
+        mc_2017_functions: Minecraft Hour of Code - செயல்பாடுகள்
+        mc_2017_congratulations: Minecraft Hour of Code - வாழ்த்துக்கள்
+        mc_2017_puzzle_1: Minecraft Hour of Code - முகவர்
+        mc_2017_puzzle_3: மின்கிராஃப்ட் Hour of Code - சுழல்களை மீண்டும் செய்யவும்
+        mc_2017_puzzle_8: Minecraft Hour of Code - செயல்பாடுகள்
+        mc_2017_puzzle_12: Minecraft Hour of Code - இலவசமாக விளையாடு
         CSF_loops_AB: சுழற்சிகள்
+        CSF_StarWars_ProjectIntro: ஸ்டார் வார்ஸ் திட்டத்திற்கு அறிமுகம்
         hoc_dance_warmup: டான்ஸ் பார்ட்டி - வார்ம் அப்
         hoc_dance_events: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties: நடன விருந்து - பண்புகள்
@@ -67,3 +123,4 @@ ta:
         hoc_dance_warmup_2019: டான்ஸ் பார்ட்டி - வார்ம் அப்
         hoc_dance_events_2019: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties_2019: நடன விருந்து - பண்புகள்
+        csf_lots_of_sprites: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '
