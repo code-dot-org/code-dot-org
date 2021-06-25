@@ -122,7 +122,23 @@
         "frozen square loop": "Hola, sóc Anna d'Arendelle! Anem a fer un quadrat amb el bloc \"Repetir\", que fa servir menys blocs. Quantes vegades (???) haurà de repetir-se el contingut del bloc \"Repetir\" per fer un quadrat?",
         "frozen square loop 3x": "Anem a crear 3 quadrats, girant després de cada quadrat. Assegura't de girar 120 graus abans de cada nou quadrat.",
         "frozen square snowflake": "Pots fer un floquet de neu emprant el bloc \"Repetir\" per fer un quadrat 10 vegades i un bloc \"Girar\" que giri 36 graus entre cada quadrat?",
-        "courseF_bee2": "Pots usar un bucle per recollir tot el nèctar?"
+        "courseF_bee2": "Pots usar un bucle per recollir tot el nèctar?",
+        "CourseD_Dance_2020_05_2021": "_Ara sí que marquem el ritme!_\n\nAfegeix un bloc de <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"mesures\"</title></block></xml> al teu espai de treball. Fés que el dansaire comenci un nou moviment després de 6 mesures.",
+        "CourseD_Dance_2020_10_2021": "Anima't i segueix el ritme! Crea una dansa pròpia per compartir amb els teus amics.",
+        "CourseE_HOC 2018 Level_10_2021": "Hi ha un **calamar** ![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png) amagat per alguna banda d'aquest Monument de l'Oceà; el saps trobar?",
+        "CourseE_HOC 2018 Level_11_2021": "Construir una paret de **prismarina** ![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png) al voltant del formigó negre. Això activarà el **conducte** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png) i finalitzarà el teu repte!",
+        "CourseE_HOC 2018 Level_1_2021": "Necessites queviures pel viatge que t'espera. Troba una **barca** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png) dins del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).",
+        "CourseE_HOC 2018 Level_2_2021": "És molt més fàcil fer-ho amb una barca que no nedant a mar oberta! Vés fins al final del moll i fica-t'hi dins.",
+        "CourseE_HOC 2018 Level_3_2021": "Agafa els rems i condueix la teva barca per la mar oberta i pesca el **bacallà** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).",
+        "CourseE_HOC 2018 Level_4_2021": "Donem el bacallà per menjar al **dofí** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Fés servir un bloc de repetició per travessar l'oceà més ràpidament.",
+        "CourseE_HOC 2018 Level_5_2021": "Hi ha una **closca de nautilus** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) amagada per algun lloc! Explora el vaixell naufragat per trobar el **cofre** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).",
+        "CourseE_HOC 2018 Level_6_2021": "Fa un fred que pela! Atrapa un **salmó** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png) quan vagis fins a les runes submarines.",
+        "CourseE_HOC 2018 Level_7a_2021": "Has trobat les runes submarines. Cerca entre la sorra un **cofre** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png) que contingui la **prismarina** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) de tresor.",
+        "CourseE_HOC 2018 Level_8_2021": "Primer icebergs, i ara lava? Travessa aquesta illa volcànica i trobaràs els **peixos tropicals** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) a l'escull de corall.",
+        "CourseE_HOC 2018 Level_9b_2021": "Has aconseguit arribar al corall! Ara busca el **Cor de la Mar** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png) ! Fés servir el corall blau i vermell per arribar al **cofre** del tresor ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).",
+        "HOC 2018 Level_12_2021": "Felicitats! El món aquàtic t'espera amb els braços oberts. Construeix un escull de corall! Un volcà! Un vaixell naufragat! Depèn de tu.",
+        "Overworld Move to Sheep_2021": "Afegeix una segona instrucció \"avança\" per arribar a l'ovella.",
+        "courseD_maze_nestedLoops4_2021": "Porta'm fins al girasol!"
       }
     }
   }
