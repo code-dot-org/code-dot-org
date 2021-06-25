@@ -1266,6 +1266,275 @@
               "length": "length"
             }
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "points",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "दोहोरिएको"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "points",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "दोहोरिएको"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "points",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "दोहोरिएको"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "points",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "दोहोरिएको"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "draw a square"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "draw a square"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "draw a star"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "draw a star"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "draw a star"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "draw a star"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "draw a square"
+          },
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "draw a square"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "draw a square"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "end game"
+          }
         }
       }
     }
