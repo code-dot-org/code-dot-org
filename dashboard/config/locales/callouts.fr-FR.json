@@ -157,7 +157,7 @@
           "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
         },
         "Dance_2019_04": {
-          "dance_callout_02": "Ajoute ce bloc à ton programme !"
+          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
         },
         "Dance_2019_05": {
           "dance_callout_05": "Ajoute un nouvel événement à ton programme."
@@ -176,20 +176,20 @@
           "dance_callout_01": "Ajoutez ce bloc à votre programme!"
         },
         "Dance_Party_02": {
-          "dance_callout_02": "Ajoute ce bloc à ton programme !"
+          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
         },
         "Dance_Party_04": {
           "dance_callout_04": "Ajoutez ce bloc à votre programme!"
         },
         "Dance_Party_06": {
-          "dance_callout_06": "Ajoute ton nouveau danseur ici"
+          "dance_callout_06": "Ajoutez votre nouveau danseur ici"
         },
         "Dance_Party_11": {
           "dance_callout_11_a": "Nouveau bloc !",
           "dance_callout_11_b": "Nouveau bloc !"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Regarde ici les blocs « tous les canards »"
+          "dance_party_11_5_groups": "Regardez ici les blocs « tous les canards »"
         },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Utilise ce bloc pour laisser, à ton professeur ou toi-même, des notes sur le fonctionnement de ton code.\n"
@@ -1395,6 +1395,268 @@
         "outbreak2": {
           "minitoolbox": "Cliquez ici pour agrandir le bloc.",
           "pointerlocation": "Faites glisser un bloc sujet ici."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Choisis le type de danseur ici."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Ajoute ce bloc à ton programme.",
+          "arrow_buttons": "Appuie sur les boutons fléchés pour contrôler ton danseur."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Ajoutez ce bloc à votre programme!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Ajoute un nouvel événement à ton programme."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nouveau bloc !"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nouveau bloc !"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nouveau bloc !",
+          "new_block_4": "Nouveau bloc !"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Cliquez ici pour agrandir le bloc.",
+          "pointerlocation": "Faites glisser un bloc sujet ici."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Cliquez pour créer un nouveau costume"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Utilise ce bloc pour laisser, à ton professeur ou toi-même, des notes sur le fonctionnement de ton code.\n"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Cette petite instruction indique à l'ordinateur d'exécuter un GROS morceau de code avec le même nom dans l'espace de travail."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Ceci est une boucle « répéter » !  Cliquez dessus dans l'espace de travail et ajoutez le code que vous voulez exécuter en boucle."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "L'Agent peut survoler l'eau, mais votre joueur ne le peut pas !"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Vous ne pouvez pas jeter ces blocs, mais vous pouvez les modifier !"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "L'Agent peut survoler la lave, mais votre joueur ne le peut pas !  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Nous avons préparé des blocs pour vous aider à commencer."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ce code va commencer la construction de ta maison. Peux-tu le finir?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Clique sur « Exécuter » pour tester ton programme.",
+          "craft_drag_block_callout": "Fais glisser un bloc \"avancer\" et attache-le sous l’autre bloc"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Répète des actions en plaçant des blocs ici à l'intérieur"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ce code recherchera de la lave, peux-tu ajouter une commande pour avancer ?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Minez ce fer !"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Ce nombre t'indique combien de ces blocs tu peux utiliser dans ce puzzle."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ce numéro indique que seulement un bloc de ce type peut être utilisé dans la réponse finale."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Savais-tu que tu peux redessiner par dessus une ligne quand tu en as besoin?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Ce nombre t'indique combien de ces blocs tu peux utiliser dans ce puzzle."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Ceci est un appel"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Clique ici pour changer la direction de la flèche évènement."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Ceci te permet de choisir un son \"aléatoire\", ce qui veut dire que tu ne sais pas ce que tu auras jusqu'à ce que tu l'entende!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Il y a un seul de ces blocs dans la boîte à outils. Comment vas-tu l'utiliser ?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Utilise ce bloc pour collecter le trésor."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Clique sur l'ampoule si tu as besoin d'une astuce!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Utilise la flèche déroulante verte pour changer de direction."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Amène l'acteur jusqu'au drapeau pour passer au niveau suivant."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Utilise ce bloc lorsque Waddles et Chomp se percutent !"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ce bloc te laisse bouger les acteurs vers différentes parties de l'espace de jeu."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Ce bloc est très important pour ce projet. Assure-toi de l'utiliser !\n"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Ajoute ceci au milieu de ton programme.\n"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Vois-tu de nouveaux blocs dans la boîte à outils ? Ne t'inquiéte pas, nous te montrerons comment les utiliser dans une autre leçon."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Tu peux prendre plus de blocs de la boite à outils si tu en as besoin!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Le chiffre 4 sur la citrouille indique qu'il y a 4 citrouilles que tu peux ramasser."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ces blocs sont verrouillés et ne peuvent pas être supprimés !\n"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
+          "courseC_maze_programming3_3": "Ces blocs sont faits de pierre et ne peuvent pas être enlevés."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "C'est ton nombre maximum de blocs. Cela te dit combien de ces blocs il te reste à utiliser."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "C'est ton premier défi ! Ils sont faits pour être difficiles et peuvent demander plusieurs essais.",
+          "courseC_maze_programming7_2": "Ces blocs sont faits de pierre et ne peuvent être enlevés."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Tu as seulement un de ces blocs disponible dans le puzzle."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Tu n'as pas besoin d'utiliser des couleurs pour réussir ce puzzle. Si tu le souhaites, ce bloc `couleur aléatoire` le fait facilement!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Souviens-toi de vérifier si CHAQUE nuage a une FLEUR. Tu n’as pas du tout besoin de vérifier s’il y a des gâteaux de miel.",
+          "4_5_Bee_Conditionals_2_2": "Besoin d'aide ? Clique ici pour une vidéo d'indice !"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Utilise cette boucle pour ramasser tout le nectar (ou miel) d’une fleur (ou d’un rayon de miel)."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Tu devras utiliser le bloc `tant que chemin devant` afin de résoudre cette énigme."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "C'est ton nombre maximum de blocs. Cela te dit combien de ces blocs il te reste à utiliser."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Après avoir connecté tous les blocs, appuie sur \"Exécuter\" pour démarrer ton programme."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Voici la boite à outils. C'est ici que tu trouveras les blocs supplémentaires pour terminer tes énigmes."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Tu peux faire glisser des blocs supplémentaires vers la boite à outils pour les jeter.",
+          "stone_block_2": "Les blocs gris ne peuvent pas être jetés.\n"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Ces blocs n'ont pas de nombres sur eux. Tu peux en utiliser autant que tu veux !"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Clique ici !\n"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Commençons par utiliser ce bloc pour aider à créer le premier carré."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Lorsque ce bloc vert s'exécute, tout le code dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après avoir dessiné le premier carré?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Lorsque ce bloc vert s'exécute, tout le code dans la fonction sera exécuté. Qu'est ce que l'artiste doit faire après avoir dessiné le premier carré?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Tes blocs pour créer les fonctions ont été déplacés sous cette étiquette dans la boite à outils."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Continue ce programme en ajoutant plus de code à la fin.",
+          "courseE_artist_functions_challenge1_callout2": "Si tu n'aime pas ce concept, change-le à ta convenance !"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Continue ce programme en ajoutant plus de code à la fin.",
+          "courseE_artist_functions_challenge2_callout2": "Si tu n'aime pas ce concept, change-le à ta convenance !"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "La boîte à outils est organisée différemment ce coup-ci. Clique sur les catégories différentes pour voir les blocs à disposition."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Ce légume est inconnu. Il change à chaque fois que tu exécutes ce programme."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "La boîte à outils est en mode \"catégorie\" pour faire plus de place pour ton code. Les boucles \"for\" résident ici."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Tu trouveras la boucle `for` ici !"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Tu trouveras ton bloc `maths` ici."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Tu peux trouver tes variables ici, dessous !\n"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Clique ici pour voir comment ce comportement fonctionne.\n"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Après avoir enclenché tous les blocs ensemble, appuie sur « Exécuter » pour lancer ton programme."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Glisse les blocs de la boîte à outils dans ton espace de travail.\n"
         }
       }
     }

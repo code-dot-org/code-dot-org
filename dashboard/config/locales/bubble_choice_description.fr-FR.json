@@ -1,2 +1,13 @@
 {
+  "fr-FR": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Dessine des pièces pour chacun des animaux. ",
+        "courseD_bee_nestedLoops8_2021": "Recueille tout le nectar de chaque fleur et fabrique du miel dans chaque gâteau de miel. Utilise une boucle imbriquée.",
+        "courseD_bee_nestedLoops9_2021": "Fais tout le miel.",
+        "courseF_bee_variables_7a_2021": "Cette énigme est un peu différente. Que dois-tu faire pour le résoudre ?\n",
+        "ramp_artist_loops8_2021": "Cherche un modèle et réduis ce code en utilisant des boucles."
+      }
+    }
+  }
 }
