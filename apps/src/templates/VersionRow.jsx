@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
+import classnames from 'classnames';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -9,8 +10,9 @@ export default class VersionRow extends React.Component {
   static propTypes = {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
-    isLatest: PropTypes.bool,
-    isActive: PropTypes.bool,
+    isLatest: PropTypes.bool.isRequired,
+    isViewingVersion: PropTypes.bool.isRequired,
+    isProjectOwned: PropTypes.bool.isRequired,
     onChoose: PropTypes.func
   };
 
@@ -25,6 +27,7 @@ export default class VersionRow extends React.Component {
   render() {
     let buttons = [];
     if (this.props.isLatest) {
+      // this is the placeholder for the latest version (can't be restored)
       buttons.push(
         <button
           key={buttons.length}
@@ -36,7 +39,8 @@ export default class VersionRow extends React.Component {
           {msg.currentVersion()}
         </button>
       );
-    } else {
+    } else if (this.props.isProjectOwned) {
+      // this is a non-latest version and we own the project (it can be restored)
       buttons.push(
         <button
           key={buttons.length}
@@ -49,7 +53,8 @@ export default class VersionRow extends React.Component {
       );
     }
 
-    if (!this.props.isActive) {
+    if (!this.props.isViewingVersion) {
+      // we can view any version other than the version we're currently viewing
       buttons.push(
         <a
           key={buttons.length}
@@ -70,10 +75,10 @@ export default class VersionRow extends React.Component {
 
     return (
       <tr
-        className={[
-          'versionRow',
-          this.props.isActive ? 'activeVersion' : ''
-        ].join(' ')}
+        className={classnames({
+          versionRow: true,
+          highlight: this.props.isViewingVersion
+        })}
       >
         <td>
           <p>
