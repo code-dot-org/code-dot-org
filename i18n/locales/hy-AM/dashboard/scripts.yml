@@ -4,29 +4,14 @@ hy:
     script:
       category:
         csf_category_name: CS Fundamentals
-        csp_category_name: CS Principles
-        cspexams_category_name: CS Principles Practice Test
-        csp17_category_name: "'16-'17 CS Principles"
         hoc_category_name: Կոդի ժամ
         math_category_name: Մաթեմատիկա
         other_category_name: Այլ
       name:
         course1:
           title: Course 1
-          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
           description_audience: Ages 4-6
           lessons:
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Artist: Shapes':
-              name: 'Artist: Shapes'
-            'Bee: Loops':
-              name: 'Bee: Loops'
-            'Bee: Sequence':
-              name: մեղու. հաջորդականություն
             Building a Foundation:
               name: Building a Foundation
             Getting Loopy:
@@ -35,44 +20,15 @@ hy:
               name: Going Places Safely
             Happy Maps:
               name: Ուրախ Քարտեզներ
-            'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
-            'Maze: Debugging':
-              name: 'Maze: Debugging'
-            'Maze: Loops':
-              name: 'Լաբիրինթոս: Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
             Move it, Move it:
               name: Տեղափոխիր առարկան
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
             The Big Event:
               name: The Big Event
-          student_description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
         course2:
           title: Course 2
-          description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող են կարդալ և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում ուսանողները ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ պատմություններ կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
-          description_short: Start with Course 2 for students who can read.
           lessons:
-            'Artist: Debugging':
-              name: 'Artist: Debugging'
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Loops':
-              name: 'Bee: Loops'
             Binary Bracelets:
               name: Binary Bracelets
             Conditionals:
@@ -83,42 +39,20 @@ hy:
               name: Getting Loopy
             Graph Paper Programming:
               name: Գրաֆիկի Թուղթ Ծրագրավորում
-            'Maze: Loops':
-              name: 'Լաբիրինթոս: Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
             'Real-life Algorithms: Paper Planes':
               name: 'Real-life Algorithms: Paper Planes'
             Relay programming:
               name: Relay programming
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
             The Big Event:
               name: The Big Event
             Your Digital Footprint:
               name: Your Digital Footprint
-          student_description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող են կարդալ և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում ուսանողները ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ պատմություններ կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
         course3:
           title: Course 3
-          description_short: Course 3 is a follow-up to Course 2.
           description_audience: Ages 8-18
           lessons:
             Artist:
               name: Արտիստ
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Patterns':
-              name: 'Artist: Patterns'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Functions':
-              name: 'Bee: Functions'
-            'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
             Bounce:
               name: Ցատկում
             Computational Thinking:
@@ -129,22 +63,14 @@ hy:
               name: Dice Race
             Digital Citizenship:
               name: Digital Citizenship
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
             Functional Suncatchers:
               name: Functional Suncatchers
             Internet:
               name: Internet
             Maze:
               name: Maze
-            'Maze: Conditionals':
-              name: 'Maze: Conditionals'
             Songwriting:
               name: songwriting
-            'Studio: Create a Game':
-              name: 'Play Lab: Create a Game'
-            'Studio: Create a Story':
-              name: 'Play Lab: Create a Story'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -163,12 +89,9 @@ hy:
           student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
           lessons:
             Maze:
               name: Maze
-          student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -179,105 +102,24 @@ hy:
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
         course4:
           title: Course 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description_audience: Ages 10-18
           lessons:
             Artist:
               name: Արտիստ
-            Artist Binary:
-              name: Artist Binary
-            'Artist: For Loops':
-              name: 'Artist: For Loops'
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
             'Artist: Variables':
               name: 'Artist: Variables'
-            'Bee: For Loops':
-              name: 'Bee: For Loops'
-            'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
-            Extreme Challenge - Comprehensive:
-              name: Extreme Challenge - Comprehensive
-            Maze and Bee:
-              name: Maze and Bee
-            'Play Lab: For Loops':
-              name: 'Play Lab: For Loops'
-            'Play Lab: Functions with Parameters':
-              name: 'Play Lab: Functions with Parameters'
-            'Play Lab: Variables':
-              name: 'Play Lab: Variables'
-            Super Challenge - For Loops:
-              name: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters:
-              name: Super Challenge - Functions and Parameters
-            Super Challenge - Variables:
-              name: Super Challenge - Variables
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
-            'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
-          student_description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-        Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          lessons:
-            'Artist: Functions':
-              name: 'Artist: Functions'
-            'Artist: Loops':
-              name: 'Artist: Loops'
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
-            'Artist: Sequence':
-              name: 'Artist: Sequence'
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
-            'Bee: Debugging':
-              name: 'Bee: Debugging'
-            'Bee: Nested Loops':
-              name: 'Bee: Nested Loops'
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
-            'Maze: Sequence':
-              name: 'Maze: Sequence'
-          student_description: A brief rampup of concepts for students who have not taken Course 2 and 3.
         usability:
           lessons:
             Binary:
               name: երկուական
             For Loops:
               name: For Loops
-            Functions and Functions with Parameters:
-              name: Functions and Functions with Parameters
-            Intro:
-              name: Intro
             Variables:
               name: փոփոխականների
         algebra:
           lessons:
             'Eval: Conditionals':
               name: conditionals
-            'Eval: Strings and Images':
-              name: Strings and Images
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals and Piecewise Functions'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: The Design Recipe'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games and Coordinate Planes'
         infinity:
-          title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           lessons:
@@ -286,10 +128,6 @@ hy:
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
           lessons:
-            Defining Variables:
-              name: Defining Variables
-            Evaluation Blocks:
-              name: Evaluation Blocks
             The Design Recipe:
               name: The Design Recipe
         K5PD:
@@ -299,9 +137,7 @@ hy:
         netsim:
           title: Ինտերնետ Simulator
         20-hour:
-          title: Accelerated Intro to CS Course
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           description_audience: Ages 10-18
           lessons:
             Abstraction:
@@ -346,9 +182,6 @@ hy:
               name: Փաթեթավորեք-up
           student_description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
         edit-code:
-          title: Խմբագրել Code
-          description: Խմբագրել Code
-          description_short: Խմբագրել Code
           lessons:
             Play Lab:
               name: Play Lab
@@ -356,7 +189,6 @@ hy:
               name: The Artist
             The Maze:
               name: The Maze
-          student_description: Խմբագրել Code
         events:
           title: Իրադարձություններ
           description: Իրադարձություններ
@@ -368,53 +200,25 @@ hy:
         flappy:
           title: Flappy-ի կոդը
           description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
-          description_short: Write your own Flappy game in less than 10 minutes!
           lessons:
             Flappy Code:
               name: Flappy-ի կոդը
           student_description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
         jigsaw:
           title: ոլորահատ սղոց
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
           lessons:
             Jigsaw:
               name: ոլորահատ սղոց
-          student_description: Try our Jigsaw tutorial
         step:
           title: քայլ
-          description: Step tutorial
-          description_short: Step tutorial
           lessons:
             Step:
               name: քայլ
-          student_description: Step tutorial
-        Hour of Code:
-          title: Ժամ օրենսգրքի 2013-
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
-          lessons:
-            Hour of Code 2013:
-              name: Ժամ օրենսգրքի 2013-
-          student_description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-        cspunit1:
-          description_short: Programming
         algebraPD:
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: Booleans
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
         cspunit3:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -422,169 +226,82 @@ hy:
               name: Մինչ Loops
         algebraPD3:
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
             The Design Recipe:
               name: The Design Recipe
         algebraPD-NexTech:
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
         algebraPD-iZone:
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
         sciencePD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        cspunit2:
-          description_short: Programming
-          lessons:
-            The Internet:
-              name: The Internet Is for Everyone
         algebraPD2a:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Booleans:
-              name: Booleans
-            Defining Variables:
-              name: Defining Variables
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Free Play:
               name: Free Play
-            Strings and Images:
-              name: Strings and Images
             The Design Recipe:
               name: The Design Recipe
-          student_description: 'Phase 2 Online: Blended Summer Study'
         allthethings:
           lessons:
             Artist:
               name: Արտիստ
-            Bee:
-              name: Bee
             Bounce:
               name: Ցատկում
             Flappy:
               name: Flappy
             Jigsaw:
               name: ոլորահատ սղոց
-            Match:
-              name: Համապատասխան
             Maze:
               name: Maze
             Minecraft:
               name: Minecraft
-            Multi:
-              name: Մուլտի
         algebraPD2b:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Booleans:
-              name: Booleans
-            Defining Functions:
-              name: Defining Functions
-            Defining Variables:
-              name: Defining Variables
-            'Eval: Conditionals':
-              name: 'Eval: Conditionals'
-            Evaluation Blocks:
-              name: Evaluation Blocks
-            Strings and Images:
-              name: Strings and Images
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
-          student_description: 'Phase 2 Online: Blended Summer Study'
         cspfacilitator:
           lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
               name: Ինտերնետ Simulator
-            Welcome!:
-              name: Welcome!
         ECSPD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         algebraPD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
             The Design Recipe:
               name: The Design Recipe
-            Welcome!:
-              name: Welcome!
-          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         science-PD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         sciencePD2b-iZone:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-iZone:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-NexTech:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
-          student_description: 'Phase 2 Online: Blended Summer Study'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -607,112 +324,35 @@ hy:
               name: The Big Event
         ScienceP3OLPT2:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         Special Fun:
           description_audience: Ages 10-18
         SpecialSeries:
           description_audience: Ages 10-18
-        iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          lessons:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-          student_description: Create a story or make a game with Ice Age Play Lab!
         cspunit3temp:
-          description_short: Programming
           lessons:
             While Loops:
               name: Մինչ Loops
-        gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
-          lessons:
-            Gumball Play Lab:
-              name: Gumball Play Lab
-          student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           description_short: Explore a Minecraft world through code
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
         ScienceP3OLPT3:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
-        cspunit5:
-          description_short: Programming
-        cspunit4:
-          description_short: Programming
-        AlgebraA:
-          lessons:
-            'Calc: Defining Variables':
-              name: 'Calc: Defining Variables'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Evaluation Blocks'
-            'Eval: Strings and Images':
-              name: 'Eval: Strings and Images'
-            'Eval: Writing Contracts':
-              name: 'Eval: Writing Contracts'
-            'Unplugged: Contracts':
-              name: 'Unplugged: Contracts'
-            'Unplugged: The Design Recipe':
-              name: 'Unplugged: The Design Recipe'
-        AlgebraB:
-          lessons:
-            'Eval: Boolean Operators':
-              name: 'Eval: Boolean Operators'
-            'Eval: Conditionals':
-              name: 'Eval: Conditionals'
-            'Play Lab: Animation (Big Game)':
-              name: 'Play Lab: Animation (Big Game)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Play Lab: Boolean (Big Game)'
-            'Play Lab: Booleans':
-              name: 'Play Lab: Booleans'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Play Lab: Collision Detection (Big Game)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Play Lab: Defining Variables (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Unplugged: Booleans'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Unplugged: Collision Detection and the Distance Formula'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Unplugged: Conditionals and Piecewise Functions'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Unplugged: Video Games and Coordinate Planes'
         algebraPD1:
-          title: CS in Algebra Part 1
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
         csp1-2017:
@@ -720,7 +360,6 @@ hy:
             The Internet:
               name: Համացանց
         csp3-2017:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -739,26 +378,16 @@ hy:
           description_audience: Ages 8-18
         algebraFacilitator:
           lessons:
-            Evaluation Blocks:
-              name: Evaluation Blocks
             Teacher Dashboard:
               name: Ուսուցչի Վահանակ
         cspunit1-support:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         MikeTest:
           lessons:
             Artist Functions:
@@ -769,20 +398,10 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Bee: Conditionals'
         gradeKinder:
           lessons:
             Events:
               name: Իրադարձություններ
-            'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
             Loops:
               name: loops
             Programming:
@@ -799,60 +418,31 @@ hy:
           lessons:
             Events:
               name: Իրադարձություններ
-            'Jigsaw: Learn to drag and drop':
-              name: Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել
             Loops:
               name: loops
             Programming:
               name: Programming
         grade5:
           lessons:
-            'Artist: For Loops':
-              name: 'Artist: For Loops'
-            'Artist: Functions with Parameters':
-              name: 'Artist: Functions with Parameters'
             'Artist: Variables':
               name: 'Artist: Variables'
-            'Bee: For Loops':
-              name: 'Bee: For Loops'
-            'Bee: Functions with Parameters':
-              name: 'Bee: Functions with Parameters'
             Digital Citizenship:
               name: Digital Citizenship
-            'Play Lab: Variables':
-              name: 'Play Lab: Variables'
-            'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
         ecs-unit1:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-up:
               name: Փաթեթավորեք-up
         grade3:
           lessons:
-            'Artist: Nested Loops':
-              name: 'Artist: Nested Loops'
             Bee Debugging:
               name: Bee Debugging
             Bounce:
               name: Ցատկում
-            'Farmer: While Loops':
-              name: 'Farmer: While Loops'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         csd3-2017:
-          description_short: Programming
           lessons:
             Functions:
               name: գործառույթները
@@ -898,24 +488,14 @@ hy:
               name: Ուսուցչի Վահանակ
             The Design Recipe:
               name: The Design Recipe
-            Welcome!:
-              name: Welcome!
         csp-online-test:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         csp1-support:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         basketball:
           lessons:
             Bounce:
@@ -928,10 +508,6 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -964,18 +540,11 @@ hy:
               name: Conditionals with Cards
             Digital Citizenship:
               name: Digital Citizenship
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
             Nested Loops:
               name: nested Loops
             Introduction:
               name: ներածություն
         coursee-draft:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Digital Citizenship:
               name: Digital Citizenship
@@ -988,9 +557,6 @@ hy:
             Conditionals:
               name: conditionals
         coursef-draft:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Digital Citizenship:
               name: Digital Citizenship
@@ -1002,83 +568,42 @@ hy:
               name: Songwriting with Parameters
             Introduction:
               name: ներածություն
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
-        classic-hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-          lessons:
-            Hour of Code 2013:
-              name: Ժամ օրենսգրքի 2013-
-        hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-          lessons:
-            Hour of Code 2013:
-              name: Ժամ օրենսգրքի 2013-
         2016_sciencePD-phase2b:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         2016_sciencePD_phase2b:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         csp3-support:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         csp4-support:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
         sciencepd4:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         science-pd-ol-pt-5:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         csf2harvey:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Binary:
               name: երկուական
         sciencepd5:
           lessons:
-            Welcome!:
-              name: Welcome!
             Wrap-Up:
               name: Wrap-Up
         csp5-support:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
         csd6-draft:
           lessons:
             Lists:
@@ -1143,12 +668,8 @@ hy:
           lessons:
             Introduction:
               name: ներածություն
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
         artist-and-bb8:
           lessons:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
             Bounce:
               name: Ցատկում
         coursea-2017:
@@ -1179,8 +700,6 @@ hy:
           title: Կուրս E
           assignment_family_title: Կուրս E
           lessons:
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope Variables
             For Loop Fun:
@@ -1201,78 +720,51 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp1-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp2-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp3-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp4-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp5-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd1-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd6-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd5-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd4-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd3-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd2-dlp:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         express-2017:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Introduction:
               name: ներածություն
@@ -1296,14 +788,11 @@ hy:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
         subgoal-labels-opt-in:
           lessons:
             Thanks:
               name: շնորհակալություն
         csp3-research-mxghyt:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -1329,16 +818,9 @@ hy:
               name: Conditionals with Cards
             Digital Citizenship:
               name: Digital Citizenship
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
             Building a Foundation:
               name: Building a Foundation
         new-express:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Introduction:
               name: ներածություն
@@ -1360,8 +842,6 @@ hy:
           lessons:
             Building a Foundation:
               name: Building a Foundation
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope Variables
             For Loop Fun:
@@ -1396,8 +876,6 @@ hy:
               name: Building a Foundation
             Introduction:
               name: ներածություն
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope Variables
             For Loop Fun:
@@ -1411,7 +889,6 @@ hy:
             For Loops:
               name: For Loops
         csd3-1819draft:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -1420,7 +897,6 @@ hy:
             Functions:
               name: գործառույթները
         csd3-2018:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -1465,8 +941,6 @@ hy:
               name: Binary Bracelets
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Internet:
               name: Համացանց
             Crowdsourcing:
@@ -1499,8 +973,6 @@ hy:
               name: Digital Citizenship
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Graph Paper Programming:
               name: Գրաֆիկի Թուղթ Ծրագրավորում
             Relay Programming:
@@ -1548,8 +1020,6 @@ hy:
               name: Building a Foundation
             Introduction:
               name: ներածություն
-            Ice Age Play Lab:
-              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope Variables
             For Loop Fun:
@@ -1562,12 +1032,7 @@ hy:
           lessons:
             The Internet:
               name: Համացանց
-        csp2-2018:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
         csp3-2018:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -1579,110 +1044,74 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd2-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd3-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd4-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd5-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd6-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp1-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp2-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp3-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp4-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp5-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp-create-dlp-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd-novice-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         pre-express-2018:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee:
-              name: Spelling Bee
             Move It, Move It:
               name: Տեղափոխել այն, տեղափոխել այն
             Your Digital Footprint:
@@ -1691,8 +1120,6 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         frozen-2018:
           lessons:
             Artist:
@@ -1761,8 +1188,6 @@ hy:
               name: Digital Citizenship
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1809,10 +1234,6 @@ hy:
               name: For Loop Fun
             Binary Bracelets:
               name: Binary Bracelets
-            'Unplugged: Binary':
-              name: 'Unplugged: Binary'
-            Artist Binary:
-              name: Artist Binary
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1821,8 +1242,6 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
           lessons:
             'null':
               name: անվավեր
@@ -1882,8 +1301,6 @@ hy:
               name: Տեղափոխել այն, տեղափոխել այն
             Your Digital Footprint:
               name: Your Digital Footprint
-            Spelling Bee:
-              name: Spelling Bee
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1893,7 +1310,6 @@ hy:
             Lists:
               name: ցուցակները
         csd3-2019:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -1922,12 +1338,7 @@ hy:
           lessons:
             The Internet:
               name: Համացանց
-        csp2-2019:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
         csp3-2019:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -2025,20 +1436,15 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csd2-pilot:
           lessons:
             Lists:
               name: ցուցակները
         csd3-pilot:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -2048,8 +1454,6 @@ hy:
               name: գործառույթները
         csp3-pilot:
           lesson_groups:
-            content:
-              display_name: պարունակություն
             required:
               display_name: Overview
         csl-vn:
@@ -2062,8 +1466,6 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
           lessons:
             Focus Area 1:
               name: Curriculum
@@ -2071,60 +1473,40 @@ hy:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
         csp2-pilot:
           lesson_groups:
-            content:
-              display_name: պարունակություն
             required:
               display_name: Overview
         peru-2019:
@@ -2135,8 +1517,6 @@ hy:
               name: nested Loops
         csp6-pilot:
           lesson_groups:
-            content:
-              display_name: պարունակություն
             required:
               display_name: Overview
         k5-onlinepd-2019:
@@ -2229,7 +1609,6 @@ hy:
             Functions with Parameters:
               name: Գործառույթները պարամետրերով
         csd3-2020:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -2303,8 +1682,6 @@ hy:
               name: Conditionals with Cards
             'Unplugged: Binary':
               name: Binary Images
-            Artist Binary:
-              name: Artist Binary
             Digital Citizenship:
               name: Digital Citizenship
         coursee-2020:
@@ -2353,15 +1730,7 @@ hy:
               display_name: loops
             csf_events:
               display_name: Իրադարձություններ
-          lessons:
-            Spelling Bee:
-              name: Spelling Bee
-        csp1-2020:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
         csp3-virtual:
-          description_short: Programming
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
@@ -2372,9 +1741,6 @@ hy:
             Variables:
               name: փոփոխականների
         virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
           lessons:
             Functions:
               name: գործառույթները
@@ -2403,7 +1769,6 @@ hy:
             For Loops:
               name: For Loops
         csd3-virtual:
-          description_short: Programming
           lessons:
             Variables:
               name: փոփոխականների
@@ -2413,29 +1778,6 @@ hy:
               name: conditionals
             Functions:
               name: գործառույթները
-          lesson_groups:
-            csd3_1:
-              display_name: պարունակություն
-            csd3_2:
-              display_name: պարունակություն
-            cspSurvey:
-              display_name: պարունակություն
-        ui-test-script-in-course-2017:
-          lesson_groups:
-            lg_1:
-              display_name: պարունակություն
-        ui-test-script-in-course-2019:
-          lesson_groups:
-            lg_1:
-              display_name: պարունակություն
-        ui-test-versioned-script-2017:
-          lesson_groups:
-            lg_1:
-              display_name: պարունակություն
-        ui-test-versioned-script-2019:
-          lesson_groups:
-            lg_1:
-              display_name: պարունակություն
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -2455,7 +1797,6 @@ hy:
             lessonGroup-3:
               display_name: փոփոխականների
         csd3-2021:
-          description_short: Programming
           lessons:
             Variables:
               key: փոփոխականների
@@ -2474,10 +1815,6 @@ hy:
             Functions with Parameters:
               key: Գործառույթները պարամետրերով
               name: Գործառույթները պարամետրերով
-        csp1-2021:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2544,11 +1881,7 @@ hy:
               key: Conditionals with Cards
               name: Conditionals with Cards
             'Unplugged: Binary':
-              key: 'Unplugged: Binary'
               name: Binary Images
-            Artist Binary:
-              key: Artist Binary
-              name: Artist Binary
           lesson_groups:
             csf_events:
               display_name: Իրադարձություններ
@@ -2629,18 +1962,8 @@ hy:
               display_name: փոփոխականների
             variables:
               display_name: փոփոխականների
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: պարունակություն
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: ներածություն
             Loops:
               key: loops
               name: loops
@@ -2664,3 +1987,7 @@ hy:
               display_name: ներածություն
             Introduction:
               display_name: ներածություն
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-3:
+              name: Lesson Plans and Resources
