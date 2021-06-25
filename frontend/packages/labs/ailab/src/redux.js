@@ -729,21 +729,29 @@ export function getCurrentColumnData(state) {
     return null;
   }
 
-  return {
+  const columnData = {
     id: state.currentColumn,
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
-    uniqueOptions: getUniqueOptionsCurrentColumn(state),
-    extrema: getExtremaCurrentColumn(state),
-    frequencies: getOptionFrequenciesCurrentColumn(state),
     description: getColumnDescription(state, state.currentColumn),
-    hasTooManyUniqueOptions: hasTooManyUniqueOptions(
-      state,
-      state.currentColumn
-    ),
     isColumnDataValid: isColumnDataValid(state, state.currentColumn),
     isSelectable: isSelectable(state, state.currentColumn)
   };
+
+  const isCategorical = columnData.dataType === ColumnTypes.CATEGORICAL;
+  const isNumerical = columnData.dataType === ColumnTypes.NUMERICAL;
+
+  if (isCategorical) {
+    const uniqueOptions = getUniqueOptionsCurrentColumn(state);
+    columnData.uniqueOptions = uniqueOptions;
+    columnData.hasTooManyUniqueOptions = hasTooManyUniqueOptions(
+      uniqueOptions.length
+    );
+    columnData.frequencies = getOptionFrequenciesCurrentColumn(state)
+  } else if (isNumerical) {
+    columnData.extrema = getExtremaCurrentColumn(state);
+  }
+  return columnData;
 }
 
 /* Functions for processing column data for visualizations. */

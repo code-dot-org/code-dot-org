@@ -15,13 +15,8 @@ export function isColumnNumerical(state, column) {
   accurate models, and we don't want to overflow the metadata column for saved
   models.
 */
-export function hasTooManyUniqueOptions(state, column) {
-  if (isColumnCategorical(state, column)) {
-    const uniqueOptionsCount =
-      getUniqueOptions(state.data, state.currentColumn).length;
-    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
-  }
-  return false;
+export function hasTooManyUniqueOptions(uniqueOptionsCount) {
+  return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
 export function getUniqueOptions(data, column) {
