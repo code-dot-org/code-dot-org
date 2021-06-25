@@ -172,5 +172,14 @@
   "moveSpriteLocation": "crwdns2547504:0crwdne2547504:0",
   "createDraggableSprite": "crwdns2547506:0crwdne2547506:0",
   "createNotDraggableSPrite": "crwdns2547508:0crwdne2547508:0",
-  "moveSpriteByDrag": "crwdns2547510:0crwdne2547510:0"
+  "moveSpriteByDrag": "crwdns2547510:0crwdne2547510:0",
+  "foodNotTouchPet": "crwdns2590722:0crwdne2590722:0",
+  "addWhenTouchesEventToMakePetGrow": "crwdns2590724:0crwdne2590724:0",
+  "petNotGrowOnTouch": "crwdns2590726:0crwdne2590726:0",
+  "spritesNeedUniqueCostumes": "crwdns2590728:0crwdne2590728:0",
+  "createTwoDraggableSprites": "crwdns2590730:0crwdne2590730:0",
+  "startingSpritesShouldNotTouch": "crwdns2590732:0crwdne2590732:0",
+  "clickButNoPrint": "crwdns2590734:0crwdne2590734:0",
+  "secondClickButNoPrint": "crwdns2590736:0crwdne2590736:0",
+  "thirdClickButNoPrint": "crwdns2590738:0crwdne2590738:0"
 }
