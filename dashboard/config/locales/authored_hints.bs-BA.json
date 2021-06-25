@@ -140,6 +140,15 @@
         "courseC_artist_prog2_2021": {
           "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
           "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Postarajte se da se plesač pojavi na ekranu.\n\n_Ovaj level se završava nakon 4 takta._"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Plesač mora promjeniti novi pokret svako četiri takta.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n_Level se završava nakon 11 taktova._"
         }
       }
     }

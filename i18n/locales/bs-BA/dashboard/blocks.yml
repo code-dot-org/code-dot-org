@@ -6,16 +6,10 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           MOVE1:
             MOVES.Roll: Igra kukovima
             MOVES.ClapHigh: Klapni visoko
@@ -44,34 +38,19 @@ bs:
         text: nakon {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': taktovi
             '"seconds"': sekunde
       Dancelab_changeColorBy:
         text: izmjeni {COLOR} {METHOD} za {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': nijansa
-            '"saturation"': zasićenje
-            '"brightness"': osvjetljenost
       Dancelab_changeMoveEachLR:
         text: "{GROUP} radi {MOVE} {DIR} zauvijek"
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': svi jednorozi
           MOVE:
-            '"next"': "(Sljedeća)"
-            '"prev"': "(Prethodna)"
-            '"rand"': "(Slučajna)"
             MOVES.Roll: Igra kukovima
             MOVES.ClapHigh: Klapni visoko
             MOVES.Dab: Digni ruke
@@ -87,9 +66,6 @@ bs:
         text: "{SPRITE} radi {MOVE} {DIR} zauvijek"
         options:
           MOVE:
-            '"next"': "(Sljedeća)"
-            '"prev"': "(Prethodna)"
-            '"rand"': "(Slučajna)"
             MOVES.Roll: Igra kukovima
             MOVES.ClapHigh: Klapni visoko
             MOVES.Dab: Digni ruke
@@ -108,47 +84,28 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
       Dancelab_changePropEachBy:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
       Dancelab_doMoveEachLR:
         text: "{GROUP} uradi {MOVE} {DIR} jednom"
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           MOVE:
-            '"rand"': "(Slučajna)"
             MOVES.XBend: Savij
             MOVES.Roll: Igra kukovima
             MOVES.XClapSide: Klapni
@@ -176,7 +133,6 @@ bs:
         text: "{SPRITE} uradi {MOVE} {DIR} jednom"
         options:
           MOVE:
-            '"rand"': "(Slučajna)"
             MOVES.XBend: Savij
             MOVES.Roll: Igra kukovima
             MOVES.XClapSide: Klapni
@@ -204,7 +160,6 @@ bs:
         text: 'svako {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': taktovi
             '"seconds"': sekunde
       Dancelab_everySecondsRange:
         text: 'svako {N} {UNIT} od {START} do {STOP} '
@@ -214,10 +169,6 @@ bs:
             seconds: Sekunde
       Dancelab_everyVerseChorus:
         text: 'svako {UNIT} '
-        options:
-          UNIT:
-            '"verse"': protiv
-            '"chorus"': korus
       Dancelab_getEnergy:
         text: vrati {RANGE}
         options:
@@ -232,15 +183,10 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
       Dancelab_getTime:
         text: trenutno vrijeme u {UNIT}
         options:
           UNIT:
-            '"measures"': taktovi
             '"seconds"': sekunde
       Dancelab_ifDanceIs:
         text: |-
@@ -265,7 +211,6 @@ bs:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': taktovi
             '"seconds"': sekunde
       Dancelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
@@ -285,16 +230,10 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           LOCATION:
             "{x: 200, y: 100}": vrh
             "{x: 200, y: 300}": dno
@@ -311,26 +250,13 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           FORMAT:
-            '"border"': ivica
-            '"inner"': unutar kvadrata
             '"diamond"': dijamant
-            '"circle"': krug
             '"grid"': mreža
-            '"row"': red
-            '"column"': kolona
-            '"x"': unakrsno
-            '"plus"': plus
             '"random"': slučajno odabran
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -360,17 +286,14 @@ bs:
           nazvan {NAME} na {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Vanzemaljac
             '"BEAR"': Medvjed
-            '"CAT"': Mačka
-            '"DOG"': Pas
-            '"DUCK"': Patka
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
             '"FROG"': Žaba
-            '"MOOSE"': Los
+            '"MOOSE"': svi losovi
             '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
             '"SHARK"': Ajkula
-            '"UNICORN"': Jednorog
           LOCATION:
             "{x: 200, y: 100}": vrh
             "{x: 200, y: 300}": dno
@@ -388,27 +311,14 @@ bs:
           unutar {LAYOUT}
         options:
           COSTUME:
-            '"ALIEN"': Vanzemaljci
-            '"BEAR"': Medvjedi
-            '"CAT"': Mačke
-            '"DOG"': Psi
-            '"DUCK"': Patke
-            '"FROG"': Žabe
-            '"MOOSE"': Losovi
-            '"PINEAPPLE"': Ananasi
-            '"ROBOT"': Roboti
-            '"SHARK"': Ajkule
-            '"UNICORN"': Jednorozi
+            '"ALIEN"': svi vanzemaljci
+            '"CAT"': sve mačke
+            '"DOG"': svi psi
+            '"MOOSE"': svi losovi
+            '"ROBOT"': svi roboti
           LAYOUT:
-            '"border"': ivica
-            '"inner"': unutar kvadrata
             '"diamond"': dijamant
-            '"circle"': krug
             '"grid"': mreža
-            '"row"': red
-            '"column"': kolona
-            '"x"': unakrsno
-            '"plus"': plus
             '"random"': slučajno odabran
       Dancelab_mixColors:
         text: miks {COLOR1} i {COLOR2}
@@ -429,32 +339,6 @@ bs:
         options:
           EFFECT:
             '"none"': Nijedno
-            '"circles"': Krugovi
-            '"color_cycle"': Boje
-            '"diamonds"': Dijamanti
-            '"disco_ball"': Disko lopta
-            '"fireworks"': Vatromet
-            '"swirl"': Nilski konj
-            '"kaleidoscope"': Kaleidoskop
-            '"lasers"': Plesni podij laser
-            '"splatter"': Balončići
-            '"rainbow"': Duge
-            '"snowflakes"': Snijeg
-            '"text"': Imena pjesama
-            '"sparkles"': Svtlucanje
-            '"spiral"': Spirala
-            '"disco"': Kvadrati
-            '"stars"': Zvijezde
-          PALETTE:
-            '"rave"': Crno-bijelo
-            '"cool"': Cool
-            '"electronic"': Elektronski
-            '"iceCream"': Sladoled
-            '"default"': Svjetlo
-            '"neon"': Neon
-            '"tropical"': Tropsko
-            '"vintage"': Starinsko
-            '"warm"': Vruće
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           podesi efekat pozadine
@@ -462,33 +346,6 @@ bs:
         options:
           EFFECT:
             '"none"': Nijedno
-            '"rand"': "(Slučajna)"
-            '"circles"': Krugovi
-            '"color_cycle"': Boje
-            '"diamonds"': Dijamanti
-            '"disco_ball"': Disko lopta
-            '"fireworks"': Vatromet
-            '"swirl"': Nilski konj
-            '"kaleidoscope"': Kaleidoskop
-            '"lasers"': Plesni podij laser
-            '"splatter"': Prosute boje
-            '"rainbow"': Duge
-            '"snowflakes"': Snijeg
-            '"text"': Imena pjesama
-            '"sparkles"': Svtlucanje
-            '"spiral"': Spirala
-            '"disco"': Kvadrati
-            '"stars"': Zvijezde
-          PALETTE:
-            '"rave"': Crno-bijelo
-            '"cool"': Cool
-            '"electronic"': Elektronski
-            '"iceCream"': Sladoled
-            '"default"': Svjetlo
-            '"neon"': Neon
-            '"tropical"': Tropsko
-            '"vintage"': Starinsko
-            '"warm"': Vruće
       Dancelab_setDanceSpeed:
         text: podesi {SPRITE} brzinu plesa {SPEED}
         options:
@@ -503,16 +360,10 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           SPEED:
             '1': normal
             '2': brzo
@@ -524,38 +375,11 @@ bs:
         options:
           EFFECT:
             '"none"': Nijedno
-            '"bubbles"': Balončići
-            '"confetti"': Konfeti
-            '"hearts_red"': Srca
-            '"music_notes"': Muzičke note
-            '"pineapples"': Ananasi
-            '"pizzas"': Pizze
-            '"smiling_poop"': Krma
-            '"rain"': Kiša
-            '"floating_rainbows"': Duge
-            '"smile_face"': Osmjesi
-            '"spotlight"': Reflektor
-            '"color_lights"': Rasvjeta bine
-            '"raining_tacos"': Takosi
       Dancelab_setForegroundEffectExtended:
         text: podesi efekat sprijeda {EFFECT}
         options:
           EFFECT:
             '"none"': Nijedno
-            '"rand"': "(Slučajna)"
-            '"bubbles"': Balončići
-            '"confetti"': Konfeti
-            '"hearts_red"': Srca
-            '"music_notes"': Muzičke note
-            '"pineapples"': Ananasi
-            '"pizzas"': Pizze
-            '"smiling_poop"': Krma
-            '"rain"': Kiša
-            '"floating_rainbows"': Duge
-            '"smile_face"': Osmjesi
-            '"spotlight"': Reflektor
-            '"color_lights"': Rasvjeta bine
-            '"raining_tacos"': Takosi
       Dancelab_setProp:
         text: 'podesi {SPRITE} {PROPERTY} na{VAL} '
         options:
@@ -563,32 +387,19 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
       Dancelab_setPropEach:
         text: podesi {GROUP} {PROPERTY} na {VAL}
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
       Dancelab_setPropRandom:
         text: nasumično {SPRITE} {PROPERTY}
         options:
@@ -596,32 +407,18 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
       Dancelab_setTint:
         text: podesi {SPRITE} nijanse na {VAL}
       Dancelab_setTintEach:
@@ -629,31 +426,19 @@ bs:
         options:
           THIS:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
       Dancelab_setTintEachInline:
         text: podesi {THIS} nijanse na {VAL}
         options:
           THIS:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
       Dancelab_setTintInline:
         text: podesi {SPRITE} nijanse na {VAL}
       Dancelab_setVisible:
@@ -667,16 +452,10 @@ bs:
         options:
           THIS:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           VISIBILITY:
             'true': vidljivo
             'false': nevidljivo
@@ -687,10 +466,6 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
           RANGE:
             '"bass"': basovi
             '"mid"': mid
@@ -699,24 +474,14 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"tint"': nijanse
           RANGE:
             '"bass"': basovi
             '"mid"': mid
@@ -728,11 +493,6 @@ bs:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
           RANGE:
             '"bass"': basovi
             '"mid"': mid
@@ -741,25 +501,14 @@ bs:
         options:
           GROUP:
             '"ALIEN"': svi vanzemaljci
-            '"BEAR"': svi medvjedi
             '"CAT"': sve mačke
             '"DOG"': svi psi
-            '"DUCK"': sve patke
-            '"FROG"': sve žabe
             '"MOOSE"': svi losovi
-            '"PINEAPPLE"': svi ananasi
             '"ROBOT"': svi roboti
-            '"SHARK"': sve ajkule
-            '"UNICORN"': Jednorozi
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
-            '"rotation"': rotacija
-            '"x"': vodoravna pozicija
-            '"y"': uspravna pozicija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
           RANGE:
             '"bass"': basovi
             '"mid"': mid
@@ -767,16 +516,9 @@ bs:
       Dancelab_translateStrings:
         options:
           STRING:
-            '"hearts_colorful"': Srca
             '"diamond"': dijamant
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       Dancelab_whenKey:
         text: kada je pritisnuta {KEY} tipka
         options:
@@ -786,27 +528,9 @@ bs:
             '"down"': dolje
             '"right"': desno
             '"space"': svemir
-            '"enter"': enter
-            '"a"': a
-            '"d"': d
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       Dancelab_whenPeak:
         text: kada {RANGE} vrhunac
         options:
@@ -827,8 +551,6 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
             '"speed"': brzina
       gamelab_checkTouching:
         options:
@@ -840,9 +562,6 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
-            '"tint"': nijanse
             '"speed"': brzina
       gamelab_getTime:
         options:
@@ -856,26 +575,9 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"a"': a
-            '"d"': d
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} skoči na {LOCATION}"
       gamelab_keyPressed:
@@ -889,26 +591,9 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"a"': a
-            '"d"': d
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': 'n'
-            '"o"': o
-            '"p"': p
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-            '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -936,8 +621,6 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
             '"speed"': brzina
       gamelab_setProp_dropdown:
         options:
@@ -968,10 +651,6 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -980,16 +659,10 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1006,14 +679,10 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -1030,14 +699,10 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_ifDanceIs:
         text: |-
           ako {SPRITE} čini {DANCE}
@@ -1067,8 +732,6 @@ bs:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"rotation"': rotacija
-            '"direction"': smijer kretanja
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1124,8 +787,6 @@ bs:
         options:
           FORMAT:
             '"grid"': mreža
-            '"border"': ivica
-            '"row"': red
             '"random"': slučajno odabran
       binary_move:
         options:
@@ -1143,10 +804,6 @@ bs:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         options:
           DIR:

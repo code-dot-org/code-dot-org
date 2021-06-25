@@ -272,7 +272,11 @@
         "courseD_bee_nestedLoops8_2021": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
         "courseE_artist_functions1_dani": "Zdravo. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi da nacrtam kvadratne naočale. Savjet: premosnica između naočala je 25 piksela kraća od dužine kvadrata.",
         "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?",
-        "courseF_bee_for8_2021": "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\r\n"
+        "courseF_bee_for8_2021": "Ako tvoja petlja broji prema gore, prirast je dodat na brojač varijablu pri svakom prolasku kroz petlju. Za koliko trebaš povećati da bi sakupio/la 3, 6, 9 nektara?\\\r",
+        "CourseD_Dance_2020_05_2021": "Sada napravi da plesač započne novi pokret svako 6 taktova!",
+        "CourseD_Dance_2020_bonus3_2021": "Uspostavimo formaciju! (Klikni \"Opširnije\" za više detalja)",
+        "courseD_maze_nestedLoops4_2021": "Dovedi me do suncokreta!",
+        "courseD_maze_nestedLoops6_2021": "Dovedi me do suncokreta!"
       }
     }
   }
