@@ -471,7 +471,7 @@ WebLab.prototype.openErrorDialog = function(body) {
         this.openDialog({
           title: 'Web Lab Reset Complete',
           body: 'Reloading...',
-          renderFooter: () => null // No footer
+          hideFooter: true
         });
         reload();
       }
