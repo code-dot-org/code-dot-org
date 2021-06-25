@@ -2116,3 +2116,309 @@ si-LK:
         content1: විස්තරය මෙහි
       outbreak_story2:
         content1: විස්තරය මෙහි
+      CourseF_outbreak_story:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story2:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo_dani:
+        content1: විස්තරය මෙහි
+      'Overview: Design Mode':
+        markdown: |
+          #යෙදුම් විද්‍යාගාර සැලසුම් මාදිලියට සාදරයෙන් පිළිගනිමු
+          යෙදුම් විද්‍යාගාර සැලසුම් මාදිලියෙහි  "සැලසුම් මාදිලිය" මඟින් පරිශීලක අතුරුමුහුණත් අංග යෙදුමට (APP) ඇදගෙන යාමට ඉඩ දෙයි.
+
+          ### වචන මාලාව
+          * ** පරිශීලක අතුරුමුහුණත (UI) ** - පුද්ගලයෙකු (පරිශීලකයෙකු) පරිගණකය හෝ යෙදුම සමඟ කටයුතු කරන ආකාරය.
+          * ** UI මූලද්‍රව්‍ය ** හෝ  වස්තූන්,  රූප, පෙළ කොටු වැනි වස්තූන්, පහතට ඇද වැටෙන මෙනු, තිර යනාදිය  දමන්න.
+
+          ## උදාහරණය
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">1.</span>යෙදුම් ප්‍රදේශයට ඉහළින් නව ස්විච කට්ටලයක් ඔබට පෙනෙනු ඇති අතර එය "සැලසුම් ප්‍රකාරය" සහ කේත ප්‍රකාරය අතර ඉදිරියට සහ පසුපසට යාමට ඉඩ දෙයි.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>මූලද්‍රව්‍යයක් එකතු කිරීම ඔබට අවශ්‍ය ඕනෑම වේලාවක එය යෙදුමට ඇදගෙන යාම මගින් පහසුය. එය යෙදුම් තිරය මත වූ පසු ඔබට එය නැවත ස්ථානගත කළ හැකිය, ප්‍රමාණය වෙනස් කළ හැකිය සහ ඒ පිළිබඳ තවත් බොහෝ දේ වෙනස් කළ හැකිය.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>ගුණාංග ඒකකය</em> මඟින් ඔබට UI මූලද්‍රව්‍යයක පෙනුම සහ පෙනුම වෙනස් කළ හැකි සියල්ල පෙන්වයි.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>මූලද්රව්ය හැඳුනුම්පත</strong> වැදගත් වන්නේ එය ඔබේ කේතයේ ඇති මූලද්රව්යයට යොමු වන ආකාරය නිසාය. අපි පසුව මූලද්‍රව්‍ය හැඳුනුම්පත් සාකච්ඡා කරමු.</p>
+          </div>
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span> පරිශීලකයා දකින පාරිදි බොත්තම් මත අකුරු පෙළ  ඔබ කැමති ඕනෑම දෙයක් බවට පත් කළ හැකිය.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>සටහන: පහළට අනුචලනය(mouse scroll) කරන්න, UI මූලද්‍රව්‍යයක් සඳහා වෙනත් ගුණාංග පහතින් "සැඟවී" තිබිය හැක.</p>
+          </div>
+          <div style="clear: both"></div>
+          <hr>
+          ** දැන් ඔබ උත්සාහ කරන්න! **
+      'Overview: Images':
+        markdown: "# රූප\n## අන්තර්ජාලයේ ඇති රූපයක URL එකක් ඇතුළත් කරන්න\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\nරූපයක URL ලබා ගැනීමට ක්‍රම කිහිපයක්
+          තිබේ.  \nපොදු ක්‍රමවේදයක් නම් (දකුණේ පෙන්වා ඇත) වෙබ් පිටුවක ඔබ කැමති රූපයක්
+          සොයාගෙන මව්සයෙහි දකුණු බොත්තම ක්ලික් කරන්න (හෝ ctrl-click) සහ \"පින්තූර
+          ලිපිනය පිටපත් කරන්න\" (Copy Image Address) වැනි යමක් තෝරාගෙන යෙදුම් විද්‍යාගාරයේ
+          පෙළ ( text box) කොටු‌වෙහි ඔබට එය ඇලවිය හැකිය (paste).\n\nඔබට සැක සහිත නම්,
+          ඔබට \"රූපය නව ටැබ් එකක විවෘත කරන්න\" වැනි විකල්පයක් තෝරා ගත හැකි අතර එමඟින්
+          රූපය තනිවම හුදකලා වන අතර URL ලිපිනය ලිපින තීරුවේ පෙන්වනු ඇත, ඔබට යෙදුම්
+          විද්‍යාගාරයට පිටපත් කිරීමට / ඇලවීමට හැකිය.\n\n** පොදු වැරැද්ද **: රූපයේ
+          URL යකට වඩා * රූප සෙවුම් වෙබ් අඩවියක * URL භාවිතා කිරීම.\n* ඔබ සත්‍ය රූප
+          ගොනුවකට යන මාර්ගය ලබා ගැනීමට වග බලා ගන්න - **. Jpg **, **. Gif ** හෝ **.
+          Png ** සමඟ අවසන් වන දෙයක්.\n* මේ ආකාරයෙන් ආරම්භ වන URL: `https: //www.google.com/search?
+          Q = cat & espv = 2 & biw = 1497 ....` බොහෝ විට වැරදිය.\n## ඔබේම පින්තූර
+          උඩුගත කරන්න\nඔබ ඔබේ පරිගණකයේ පින්තූර සුරකින ලද්දේ නම් ඒවා යෙදුම් විද්‍යාගාරයේ
+          ** වත්කම් කළමනාකරු ** වෙත උඩුගත කළ හැකිය. *ගොනුව උඩුගත කරන්න * ක්ලික් කර
+          තිරයේ ඇති උපදෙස් අනුගමනය කරන්න.\nපින්තූර සඳහා ගොනුව වර්ග : **. Jpg **, **.
+          Png **, හෝ **. Gif ** විය යුතුය.\nඔබ රූපය උඩුගත කළ පසු, එම ගොනුවට රූපය සැකසීමට
+          ** තෝරාගන්න **  කීලික් කල යුතුය. ඔබ පින්තූර කිහිපයක් එකතු කළහොත්, ඔබ ගොනුවක්
+          උඩුගත කරන සෑම අවස්ථාවකම ඒවා ලැයිස්තුගත කර ඇති අතර ඔබ දැනටමත් උඩුගත කර ඇති
+          * ඕනෑම * ගොනුවක් භාවිතා කිරීමට තෝරා ගත හැකිය.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n###
+          එය උත්සාහ කිරීමට ඉදිරියට යන්න ක්ලික් කරන්න!\n\n\n"
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: විස්තරය මෙහි
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: විස්තරය මෙහි
+      csf_password_power-up_2021:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: විස්තරය මෙහි
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
