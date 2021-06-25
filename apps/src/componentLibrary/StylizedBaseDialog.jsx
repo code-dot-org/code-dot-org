@@ -67,7 +67,6 @@ export default function StylizedBaseDialog(props) {
       onClick={props.handleConfirmation}
     />
   ];
-  const footer = props.renderFooter(defaultButtons);
 
   return (
     <BaseDialog {...passThroughProps()} useUpdatedStyles>
@@ -76,7 +75,7 @@ export default function StylizedBaseDialog(props) {
       </div>
       <hr style={styles.hr} />
       <div style={{...styles.container, ...styles.body}}>{props.body}</div>
-      {footer && (
+      {!props.hideFooter && (
         <div>
           <hr style={styles.hr} />
           <div
@@ -86,7 +85,7 @@ export default function StylizedBaseDialog(props) {
               justifyContent: props.footerJustification
             }}
           >
-            {footer}
+            {props.renderFooter(defaultButtons)}
           </div>
         </div>
       )}
@@ -103,6 +102,7 @@ StylizedBaseDialog.propTypes = {
     'space-between'
   ]),
   renderFooter: PropTypes.func.isRequired,
+  hideFooter: PropTypes.bool,
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
   handleConfirmation: PropTypes.func.isRequired,
@@ -113,6 +113,7 @@ StylizedBaseDialog.propTypes = {
 StylizedBaseDialog.defaultProps = {
   footerJustification: 'flex-end',
   renderFooter: buttons => buttons,
+  hideFooter: false,
   confirmationButtonText: i18n.dialogOK(),
   cancellationButtonText: i18n.dialogCancel()
 };
