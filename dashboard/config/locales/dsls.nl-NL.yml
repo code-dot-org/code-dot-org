@@ -3541,3 +3541,237 @@ nl-NL:
             niets ligt, en dat veroorzaakt een fout.
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Juist!
+        - text: B
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: C
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: De bij zal vooruit gaan en maar een keer nectar halen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal slechts 2 eenheden nectar krijgen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal alle nectar krijgen.
+          correct: true
+          feedback: Juist!
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: '8'
+          correct: true
+          feedback: Juist!
+        - text: '10'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: '12'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: De oogster zal alle oogst verzamelen.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+          feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        - text: Deze code zal de hoop zand laten staan.
+          correct: true
+          feedback: Juist!
+        - text: Deze code zal de gaten niet vullen.
+          feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+        - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Er zal niets gebeuren.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal nooit stoppen met zand verwijderen.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+          correct: true
+          feedback: Juist!
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: De angry bird zal helemaal niet bewegen.
+          feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+          feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Er zal niets gebeuren.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+          feedback: Juist!
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Er zal niets gebeuren.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+          feedback: Juist!
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
+      csf_be_a_super_digital_citizen_2021:
+        content1: beschrijving hier
+      csf_digital_trails_2021:
+        markdown: |-
+          # Volg het digitale pad
+
+          ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
+      csf_password_power-up_2021:
+        content1: beschrijving hier
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Mijn Online Woonwijk
+
+          ## Hoe beweeg je veilig online?

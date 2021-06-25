@@ -828,6 +828,97 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Voeg dit blok toe aan je programma!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Voeg dit blok toe aan je programma.",
+          "arrow_buttons": "Druk op de pijltjestoetsen om je danser te besturen."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Voeg dit blok toe aan je programma!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Voeg een nieuw evenement toe aan je programma."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nieuw blok!",
+          "new_block_4": "Nieuw blok!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "We hebben hier al wat blokken geplaatst om je op weg te helpen"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Klik op \"Run\" om je programma te proberen"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Deze code kijkt of er lava is, kun jij een opdracht toevoegen om vooruit te bewegen?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Delf dit ijzer!"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "De blokken waarmee je functies maakt en waarmee je ze aanroept, staan in het vervolg onder dit label."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge1_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
         }
       }
     }

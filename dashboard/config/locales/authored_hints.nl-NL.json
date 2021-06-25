@@ -2727,16 +2727,16 @@
           "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "Om deze puzzle op te lossen, moet je het `verplaats speler 1 omhoog`-blok vastmaken aan de `wanneer pijltje naar boven`-gebeurtenis. En daarna moet je hetzelfde doen voor alle andere richtingen.",
@@ -3316,8 +3316,8 @@
           "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
-          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
+          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
           "challenge": "## Op zoek naar een extra uitdaging?\n\nU kunt de monsters sneller of langzamer laten bewegen.\n\n1.  Klik op 'Bewerken' in dit blok <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Verhoog of verlaag het cijfer in dit blok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nGebruik decimalen zoals '0,5' of '0,25' om de monsters langzamer te laten bewegen. Kies een cijfer groter dan 1 om ze sneller te laten bewegen."
@@ -3330,7 +3330,7 @@
           "hint1": "U moet nog 3 'bij aanraken' gebeurtenissen toevoegen om alle mogelijke combinaties van 'aanraken' tussen gezonde en geïnfecteerde sprites te kunnen controleren."
         },
         "outbreak7": {
-          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Denkt u vast te zitten? U kunt u programma altijd resetten door op 'Versiegeschiedenis' onder te klikken en daarna 'Opnieuw beginnen' te selecteren."
         },
         "OPD-K5-events-3": {
@@ -3709,8 +3709,8 @@
           "hint1": "Klik op de `+` knop op het gebeurtenisblok. Vul de lege plek in het blok 'kostuum wijzigen' met het 'subjectblok' dat aan de binnenkant zit.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
-          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Gebruik het blok 'kostuum wijzigen' bij een 'wanneer op geklikt' om monsters een mondkapje te geven:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVergeet niet om het kleine rode 'geklikte' blok eveneens te verslepen.",
+          "hint2": "Het nieuwe programma voor dit nieuwe dient er als volgt uit te zien:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Op zoek naar een extra uitdaging?\n\nU kunt de monsters sneller of langzamer laten bewegen.\n\n1.  Klik op 'Bewerken' in dit blok <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Verhoog of verlaag het cijfer in dit blok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nGebruik decimalen zoals '0,5' of '0,25' om de monsters langzamer te laten bewegen. Kies een cijfer groter dan 1 om ze sneller te laten bewegen."
@@ -3720,7 +3720,7 @@
           "hint1": "U moet nog 3 'bij aanraken' gebeurtenissen toevoegen om alle mogelijke combinaties van 'aanraken' tussen gezonde en geïnfecteerde sprites te kunnen controleren."
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vaccins\n\nU kunt het geven van een vaccin aan monsters simuleren als u op ze klikt. Gebruik het blok 'kostuum wijzigen' met deze gebeurtenis als u dat wilt doen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Denkt u vast te zitten? U kunt u programma altijd resetten door op 'Versiegeschiedenis' onder te klikken en daarna 'Opnieuw beginnen' te selecteren."
         },
         "courseA_maze_seq_challenge1_2021": {
@@ -4060,6 +4060,343 @@
         "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_c": "Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.\n\nDe andere 'voor`lus heeft slechts één standaard lus nodig om`counter\\` keer honing te maken.",
           "courseF_bee_for_challenge2_d": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Zorg ervoor dat er een danser op het scherm verschijnt.\n\n_Dit level eindigt na 4 maten._",
+          "challenges": "**Extra uitdaging**\n\n-   Kies een ander nummer om te spelen. \n-   Verplaats je danser naar een nieuwe locatie.\n-   Maak meer dan één danser."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   De danser moet een beweging uitvoeren. \n-   Je moet op een pijltjestoets drukken. \n\n_Dit level eindigt na 4 maten._",
+          "challenges": "**Extra uitdaging** \n\n-   Gebruik meer dan één blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Beide danser moet een beweging uitvoeren. \n-   Je moet op de pijltjestoetsen drukken. \n\n_Dit level eindigt na 4 maten._",
+          "challenges": "**Extra uitdaging** \n\n-   Laat een danser reageren op de linker en rechter pijltjestoetsen."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   De danser moet na 4 maten een nieuwe move doen.\n\n_Dit level eindigt na 8 maten._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Na 6 maten moet je danser een andere move doen dan na 4 maten.\n\n_Dit level eindigt na 12 maten._",
+          "challenges": "**Extra uitdaging** \n\n-   Verander de achtergrond wanneer de dansers van beweging wisselen."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Creëer één leaddancer en een groep back-up dansers.\n\n_Dit level eindigt na 7 maten._",
+          "challenges": "**Extra uitdaging** \n\n-   Creëer meerdere groepen back-up dansers."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Wijzig de grootte van ten minste één danser nadat de muziek is gestart. \n\n_Dit level eindigt na 6 maten._",
+          "challenges": "**Extra uitdaging**\n\n-   Experimenteer door andere eigenschappen te veranderen (breedte, hoogte, rotatie, enz.)"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Wijzig de tint van ten minste één danser. \n\n_Dit level eindigt na 6 maten._",
+          "tint_hint": "Is het je opgevallen dat je dansers niet precies veranderen in de kleur die je kiest? Dit komt omdat **tinten** de kleur die je kiest mengen met de kleuren van de danser."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Hoe haal ik dit level?**\n\n-   Druk gewoon op de knop \"Voltooien\"!",
+          "repeat_every_ideas": "**Ideeën nodig?**\n\n-   Verander herhaaldelijk de grootte van een danser om hem te laten groeien. \n-   Verander herhaaldelijk de rotatie van een danser om hem te laten draaien. \n-   Verander herhaaldelijk de horizontale of verticale positie van een danser om hem over het scherm te laten bewegen. \n\n\\_Je kunt ook negatieve getallen gebruiken om een tegenovergesteld effect te creëren!",
+          "next_previous": "**Extra uitdaging**\n\n-   Je kunt dit nieuwe gebeurtenisblok ook gebruiken om door een lijst van dansbewegingen te gaan door de beweging  te zetten op `(Willekeurig)`, `(Volgende)` of `(Vorige)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Het alternatieve blok valt in de categorie \"Dansers\"."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Zie je de **zeelantaarns** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hoe kun je een voorwaardelijk opdrachtblok met ze combineren om door het Oceaanmonument te komen?"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Wat een prachtig koraalrif! Blauw koraal geeft de \\*\\* rechte \\*\\* manier aan, en zorg ervoor dat je rood koraal niet \\*\\* links \\*\\* laat liggen!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Als je de functies correct aanroept, dan is dit het pad dat je zal volgen...",
+          "Function_intro_Ryan_a": "Je kunt een functie meerdere keren aanroepen in je programma!  Probeer de functie twee keer aan te roepen om deze puzzel op te lossen."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Sleep een 'ga vooruit'-blok uit de toolbox naar de werkruimte en maak deze vast onder het 'bij uitvoeren'-blok.",
+          "MC_HOC_2017_01_RETRY_b": "Vergeet niet op 'Uitvoeren' te klikken om de code voor de agent uit te voeren.",
+          "MC_HOC_2017_01_RETRY_c": "Wanneer er geen code meer over is voor de agent, kun je de speler bewegen met de pijltoetsen."
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Beweeg de agent twee vakjes naar voren om op de drukplaat te staan.  Hiermee wordt de deur voor de speler geopend.",
+          "MC_HOC_2017_02_Cole_b": "Druk op 'Uitvoeren'! \nJe kunt je code ook uitvoeren als deze niet juist is.  Blijf je code opnieuw uitvoeren en instellen om erachter te komen wat er misgaat.",
+          "MC_HOC_2017_02_Cole_c": "Wanneer de agent de deur heeft geopend, kun je de pijltoetsen gebruiken om de speler naar de kaart te bewegen.",
+          "MC_HOC_2017_02_Cole_d": "Wees er zeker van dat de agent het aangeduide pad op de kaart volgt!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Wanneer de agent zich op de drukplaat bevindt, kun je de pijltoetsen gebruiken om de speler naar het kompas te bewegen.",
+          "MC_HOC_2017_03_Cole_b": "Lijkt de code iets te lang?  Probeer een 'herhalen'-lus te gebruiken en kijk of je erachter kunt komen hoe je de code korter maakt!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Gebruik het 'rechtsom'-blok om de richting van de agent te veranderen. ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "De agent hoeft alleen de eerste drukplaat te bereiken, zodat Alex of Steve naar de bijl kunnen."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "De agent moet 7 keer 'naar voren' gaan.  Hoe kun je een 'herhalen'-lus hiervoor gebruiken?",
+          "MC_HOC_2017_04_Cole_c": "Druk op 'Uitvoeren'! \nJe kunt je code ook uitvoeren als deze niet juist is.  Blijf je code opnieuw uitvoeren en instellen om erachter te komen wat er misgaat.",
+          "MC_HOC_2017_04_Cole_b": "Wanener de agent de drukplaat bereikt, opent hij de deur voor de speler."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Wist je dat je meerdere stukken code in een lus kunt plaatsen?  Probeer een plank **en** naar voren in een 'herhalen'-lus te plaatsen om deze puzzel op te lossen.",
+          "MC_HOC_2017_05_Cole_b": "Leid de agent over de rivier, terwijl je een brug bouwt."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hoe vaak wordt deze lus uitgevoerd?  Hoe vaak _moet_ deze worden uitgevoerd?",
+          "MC_HOC_2017_06_Cole_b": "Help de Agent om een brug over het water te bouwen! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Al wat je de agent moet laten doen is het pad naar het mijnkarretje vrijmaken.",
+          "MC_HOC_2017_07_Cole_a": "Om deze puzzel op te lossen, moet je erachter komen wat de 'pad vrijmaken'-functie doet en deze zo vaak als nodig aanroepen met het kleine groene 'pad vrijmaken'-blok in de werkplaats.",
+          "MC_HOC_2017_07_Cole_b": "Probeer functieblokken met andere blokken uit de werkplaats te combineren om deze puzzel op te lossen."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Weet je niet waarheen te gaan? Zoek de stippellijn!",
+          "MC_HOC_2017_10_Cole_a": "Gebruik functies om deze puzzel makkelijker te maken om op te lossen!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Druk op 'Uitvoeren'! \nJe kunt je code ook uitvoeren als deze niet juist is.  Blijf je code opnieuw uitvoeren en instellen om erachter te komen wat er misgaat.",
+          "MC_HOC_2017_08_RY_b": "Er zijn VEEL manieren om deze puzzel op te lossen.  Probeer er een paar uit!",
+          "MC_HOC_2017_08_RY_c": "Probeer de stippellijn te volgen voor een eenvoudig pad doorheen de lava."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Probeer de agent wat bruggen te laten bouwen zodat Alex of Steve voorbij de grenzen van de kaart kunnen komen."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Je moet het `beweeg vooruit` blok twee keer gebruiken om bij de boom in de buurt te komen.",
+          "mc_2_b": "Het `vernietig blok` kommando kapt de boom om die recht voor je staat."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_b": "Het `vernietig blok` kommando kapt de boom om die recht voor je staat."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Het `beweeg voorwaarts` blok staat bovenaan de gereedschapskist.",
+          "mc_1_b": "Wees er zeker van dat beide `beweeg voorwaarts` blokken geplakt zijn aan het `als gestart` blok."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Gebruik het `plaats` blok eerst, vervolgens het `beweeg` blok.",
+          "mc_5_b": "Wees er zeker van dat beide blokken in de `herhaal` lus staan zodat de code meer dan één keer wordt uitgevoerd."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_c": "Je kan meer dan één blok binnen in een `herhaal` lus plaatsen."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_b": "Gebruik `herhaal` lussen om je code in te korten."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_b": "Een eenvoudige oplossing is om 2 keer naar het oosten te bewegen, en dan de schat te machtigen."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_b": "De kortste oplossing heeft 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lussen. De één achter de andere."
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Probeer dit pad om een oplossing te krijgen."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Als je vast loopt, schrijf dan eens de stappen uit op een stuk papier en kijk of je er een herhalend patroon in ziet."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_b": "Je zal het <xml><block type=\"maze_moveEast\"/></xml> blok willen gebruiken om deze puzzel op te lossen."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseB_maze_seq5_b": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseB_maze_seq5_c": "Niet zeker hoe het varken te bereiken? Probeer dit pad."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_b": "Als je vastzit, probeer dan de puzzel op te lossen in twee delen, één zijwaarts en één boven-en-beneden.",
+          "courseB_maze_seq5_c": "Er zijn meerdere manieren om deze puzzel op te lossen.",
+          "courseB_maze_seq5_d": "Niet zeker hoe het varken te bereiken? Probeer dit pad!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_b": "Probeer de code uit te voeren die je gegeven wordt om te zien waar je eindigt.",
+          "courseB_maze_seq7_c": "Kan je het varken niet bereiken? Probeer dit pad!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_b": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseB_maze_seq8_c": "Weet je niet welke weg te gaan? Probeer dit pad!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_b": "Bouw je programma één blok per keer en test terwijl je bouwt.",
+          "courseB_maze_seq9_c": "Er zijn meerdere manieren om deze puzzel op te lossen.",
+          "courseB_maze_seq9_d": "Zit je vast? Probeer dit pad!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Het kan zijn dat het kortste pad niet werkt deze keer.",
+          "courseB_maze_seq_challenge1_b": "Probeer om met de <xml><block type=\"maze_moveWest\"/></xml> blok te starten."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Je hoeft geen blokken toe te voegen of te verwijderen om deze puzzel op te lossen.",
+          "courseB_maze_seq_challenge2_b": "Herorder de blokken en gebruik het pad in de vorm van een trap."
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "De makkelijkste manier om dit te tekenen is om steeds vooruit te bewegen en naar rechts te draaien.",
+          "courseD_artist_nestedLoops1_b": "Je kunt deze driehoek tekenen met een `herhaal`-lus met twee blokken erin. Welke blokken heb je nodig?",
+          "courseD_artist_nestedLoops1_c": "Probeer de stappen op papier uit te schrijven, en zoek naar een patroon dat je eenvoudiger kunt maken met lussen."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "Je moet in totaal 6 driehoeken tekenen. Na elke driehoek moet je 60 graden draaien en dan de volgende tekenen. \n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Als je je driehoek tekent met de lus, zou de artiest op het eind dezelfde kant op moeten kijken als in het begin. Dat maakt de 60 graden draai een stuk makkelijker!",
+          "courseD_artist_nestedLoops1a_c": "Als je kleuren wilt gebruiken, gebruik dan het `zet kleur`-blok. Je hoeft niet per se dezelfde  kleuren te gebruiken als in het voorbeeld."
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "Nest je lussen door je driehoek-code te omringen met een andere `herhaal`-lus.",
+          "courseD_artist_nestedLoops2_b": "Denk er om dat je het `draai`-blok binnenin de lust plaatst, zodat de artiest na elke driehoek een keer draait."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.\n\nAls je vierkanten 20 pixels hoog zijn en ze staan 20 pixels uit elkaar, hoe ver moet je dan springen?",
+          "courseD_artist_nestedLoops3_b": "Vergeet niet, een geneste lus te gebruiken om deze puzzle snel op te lossen.",
+          "courseD_artist_nestedLoops3_c": "Gebruik eerst een `herhaal`-lus om een vierkant te maken. Herhaal vervolgens dat vierkant 8 keer, met telkens een sprong van 40 pixels tussendoor."
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "Om dit correct op te lossen, moet je bewegen **voordat** je draait. Anders zullen je cirkels telkens een heel klein beetje afwijken!",
+          "courseD_artist_nestedLoops4_a": "Om een cirkel te maken:\n\n-   Herhaal 360 keer\n    -   Beweeg 1 pixel vooruit\n    -   Draai 1 graad naar links",
+          "courseD_artist_nestedLoops4_b": "Vergeet niet om steeds 50 pixels vooruit te springen tussen elke twee cirkels.",
+          "courseD_artist_nestedLoops4_c": "Gebruik een geneste lus om je cirkels 4 keer te tekenen."
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "Dit kan heel makkelijk op de volgende manier:\n\n-   herhaal 4 keer\n    -   maak een cirkel\n    -   spring 50 pixels vooruit\n    -   draai 90 graden rechtsom",
+          "courseD_artist_nestedLoops5_b": "Om een cirkel te maken heb je een herhaal lus nodig die 360 keer herhaalt. In die lus moet je steeds 1 pixel vooruit bewegen en 1 graad draaien."
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_a": "Je sult hier geneste lussen moeten gebruiken. Gebruik eerst een lus om een vierkant te tekenen. Wat zal de buitenste lus moeten doen, als de binnenste lus een vierkant tekent?",
+          "courseD_artist_nestedLoops7_b": "Gebruik geneste lussen, waarbij de binnenste lus het vierkant tekent.\n\n-   herhaal 6 keer\n    -   teken een vierkant\n    -   sprint **50 pixels** vooruit\n    -   draai **60 graden**"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_a": "Om 8 zeshoeken in je tekening te krijgen, moet je tussendoor steeds **45 graden draaien**. Waarom? Want 360 graden (een keer helemaal ronddraaien) gedeeld door 8 (het aantal zeshoeken) is 45 graden.",
+          "courseD_artist_nestedLoops8_b": "Als je vastloopt, kijk dan eerst even naar de vorige puzzle, en verander de dingen die anders zijn.",
+          "courseD_artist_nestedLoops8_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n    -   teken een zesheok\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "Maak eerst een geneste lus zoals je al eerder hebt gedaan, maar deze keer met vierkanten.",
+          "courseD_artist_nestedLoops9_b": "Voeg een tweede setje geneste lussen toe na de eerste set, maar gebruik ditmaal driehoeken.",
+          "courseD_artist_nestedLoops9_c": "Gebruik twee geneste lussen:\n\n-   Herhaal 8 keer\n    -   teken een vierkant\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom\n-   Herhaal 8 keer\n    -   teken een driehoek\n    -   spring 50 pixels vooruit\n    -   draai 45 graden rechtsom"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een zeshoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met code die lijkt op levels die je eerder hebt gedaan, maar dan met cirkels (herhaal 360 keer: beweeg 1 vooruit, draai 1 graad).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nDit plaatje was gemaakt met een geneste lus die een vijfhoek (met zijden van 50px) 15 keer herhaald, met tussendoor steeds een draai van 48 graden"
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "Verander eerst de kleur naar blauw, en teken dan een achthoek met zijden van 50 pixels en hoeken van 45 graden linksom.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om de kleur groen te maken, en maak een driehoek met zijden van 50 pixels en hoeken van 120 graden.",
+          "courseD_artist_nestedLoops_challenge1_c": "Nadat je beide vormen hebt getekend, moet je 50 pixels vooruit springen en 90 graden rechtsom draaien.",
+          "courseD_artist_nestedLoops_challenge1_d": "Stop al je code in een `herhaal 4 keer`-lus om het af te maken."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "Om een regelmatige achthoek te maken moet de artiest 8 keer 45 graden draaien.",
+          "courseD_artist_nestedLoops_challenge2_b": "Om een vierkant te maken, moet de artiest 4 keer 90 graden draaien."
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "Je zult een `als`-blok nodig hebben om te kunnen zien of er een bloem onder de wolk staat, voordat je probeert nectar te halen."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_c": "Je hoeft niet te kijken of er honingraten zijn, in deze puzzle kan er onder een wolk alleen een bloem of lege grond zijn."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "Zorg dat je onder elke wolk checkt of er een honingraat is.",
+          "courseD_bee_conditionals6_b": "Voor deze puzzle hoef je niet te kijken of er bloemen staan onder de wolken.",
+          "courseD_bee_conditionals6_c": "Bestaat er een soort lus waarmee je je code eenvoudiger kunt maken?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen.",
+          "courseD_bee_conditionals7_b": "Als er geen bloem onder de wolk is, moet er een honingraat zijn. In deze puzzle hoef je geen rekening te houden met lege grond."
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**Herinnering:** De puzzel verandert elke keer date hij wordt uitgevoerd.\n\nJe zult een voorwaardelijk blok (`als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een route vinden die elke bloem en elke honingraat bereikt zonder een boom te raken? Je kunt het best een spiraal proberen.",
+          "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op bloem`blok, zal de code binnenin een `zolang nectar > 0`-blok alleen uitgevoerd worden als je op een bloem staat. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon eens uit:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?",
+          "courseD_collector_debugging1_c": "Vergeet niet om de `verzamel`-instructie te gebruiken zodra je een schat hebt bereikt."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Gebruik de `Stap` knop om te zien of alles gied gaat bij de eerste stap.\n\nEn hoe gaat het bij de tweede stap?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "Is er een plaats waar Laurel iets doet wat niet logisch is? En wat gebeurt er als je die blokken verandert?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "Gebruik het foutopsporing proces een paar keer achter elkaar. \n\nWat veroorzaakt het eerste probleem?\n\nEn als je dat probleem hebt opgelost, wat gaat er dan mis?",
+          "courseD_collector_debugging4_b": "Als je niet zo gauw ziet hoe je het traplooppatrron kunt maken, Probeer het patroon dan eens met je vinger te volgen en zeg de instructies hardop. \n\nVergeet daarbij niet, de richting van de draai te noemen.!"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "Loop eens door de code met de `Stap` knop. Gaat alles goed bij de eerste stap?\n\nEn bij de tweede?\n\nEn waar gaat het mis?"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_d": "**Oplossing:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "Deze tekening lijkt erg veel op de vorige, maar de `teken een rij ...`-functie moet nu een andere vorm tekenen.",
+          "courseD_artist_functions10_a": "Om te voorkomen dat je het `ga vooruit`-blok te vaak gebruikt, kun je een `teken een zeshoek`-functie maken en die functie een aantal keren aanroepen.",
+          "courseD_artist_functions10_c": "Zie je waar deze tekening een `teken een rij zeshoeken`-functie zou kunnen gebruiken?"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "Je programma: moet:\n\n-   functie gebruiken\n-   100 + 75 pixels vooruit bewegen\n-   functie gebruiken"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "Niet opgeven! Denk aan wat je tot nu toe geleerd hebt!",
+          "courseD_artist_functions5_b": "Functies maken het makkelijker om de opgeslagen code vanuit overal aan te roepn, niet alleen binnen een lus!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "Probeer eerst je functie te maken, en daarna de vensters een voor een toe te voegen."
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "Je hebt maar een 'ga vooruit'-blok nodig, maar je hebt flink wat 'spring vooruit'- en/of 'spring achteruit'-blokken nodig.",
+          "courseD_artist_functions8_a": "Maak eerst een functie om 1 vierkant te tekenen, en daarna een functie voor een hele rij vierkantjes.\n\nHoe zou je een 'teken een rij vierkanten'-functie kunen gebruiken om deze tekening te maken?",
+          "courseD_artist_functions8_d": "Om een rij vierkanten te maken:\n\n-   herhaal 3 keer\n    -   teken een vierkant met zijden van **50 pixels**\n    -   spring vooruit met **100 pixels**",
+          "courseD_artist_functions8_b": "Beschouw elke rij in deze tekening als een rij van 3 vierkanten. Hoeveel rijen vierkanten zijn er? Bedenk voor elk van deze rijen, waar je begint met tekenen.\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "Zie je de vier plaatsen waar je de `rij van vierkanten` kunt gebruiken voor deze tekening?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Deze puzzle kun je in 3 stukken verdelen:\n\n-   maak de 'teken een vierkant'-functie\n-   maak de 'teken een rij vierkanten'-functie\n-   gebruik de `teken een rij vierkanten`-functie vier keer om de tekening af te maken",
+          "courseD_artist_functions9_b": "Deze tekening kun je maken door 4 keer een rij driehoeken te tekenen, en telkens 60 of 120 graden te draaien voordat je de volgende rij driehoeken tekent.",
+          "courseD_artist_functions9_c": "Om een rij driehoeken te tekenen:\n\n-   herhaal 4 keer\n    -   teken een driehoek\n    -   spring vooruit met 50 pixels",
+          "courseD_artist_functions9_d": "Om deze ruit te tekenen:\n\n-   herhaal 2 keer\n    -   teken een rij driehoeken\n    -   draai met 60 graden\n    -   teken een rij driehoeken\n    -   draai met 120 graden"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "Als je de functie nog een keer aanroept, kun je hetzelfde ontwerp ook in de laatste hoek tekenen.",
+          "courseE_artist_functions_challenge1_b": "Je kunt ook naar aandere posities `springen`, of het hele ontwerp veranderen, zoals je maar wilt."
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nMet het `jump to` (spring naar) blok kun je de artiest laten springen maar elke pixel in het raster. Dit werkt door de artiest eerst een aantal pixels naar rechts te bewegen, en daarna een aantal pixels omlaag. Het begint altijd vanuit de linkerbovenhoek, dus het maakt helemaal niet uit waar de zombie is _voordat_ het commando wordt uitgevoerd!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien.",
+          "courseE_farmer_functions1_b": "Je hoeft maar een pompoen te plukken. Zou je een lus kunnen gebruiken om de pompoen te bereiken?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_b": "Gebruik een `herhaal tot`-blok om bij de pompoen te komen!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_b": "Er groeit geen mais op het tussenpaadje, dus je kunt gewoon vooruit bewegen en draaien.",
+          "courseE_farmer_functions2b_c": "je zut twee aparte `herhaal tot`-blokken moeten gebruiken om alle oogst te pakken te krijgen."
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "In plaats een 'herhaal'-blok kun je nu een 'zolang er een stapel ligt'-blok gebruiken om de boer te vertellen hoe vaak hij zand moet scheppen.",
+          "courseE_farmer_ramp12_b": "Je hoeft maar een keer voooruit te bewegen om bij het zand te komen."
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "De oplossing van deze puzzel lijkt sterk op de oplossing van de laatste puzzel, maar draait in de andere richting."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "Gebruik een 'als/anders'-blok om de boer te helpen te besluiten of ze linksom of rechtsom moet draaien."
         }
       }
     }
