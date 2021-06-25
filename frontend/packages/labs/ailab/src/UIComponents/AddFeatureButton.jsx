@@ -12,9 +12,9 @@ class AddFeatureButton extends Component {
     addSelectedFeature: PropTypes.func.isRequired
   };
 
-  addFeature = e => {
-    this.props.addSelectedFeature(this.props.column);
-    e.preventDefault();
+  addFeature = (event, column) => {
+    this.props.addSelectedFeature(column);
+    event.preventDefault();
   };
 
   render() {
@@ -23,7 +23,7 @@ class AddFeatureButton extends Component {
     return (
       <button
         type="button"
-        onClick={e => this.addFeature(e, column)}
+        onClick={event => this.addFeature(event, column)}
         style={styles.selectFeaturesButton}
       >
         Add feature

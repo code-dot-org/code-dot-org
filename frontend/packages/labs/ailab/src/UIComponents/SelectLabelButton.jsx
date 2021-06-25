@@ -12,9 +12,9 @@ class SelectLabelButton extends Component {
     setLabelColumn: PropTypes.func.isRequired
   };
 
-  setPredictColumn = (e, column) => {
+  setPredictColumn = (event, column) => {
     this.props.setLabelColumn(column);
-    e.preventDefault();
+    event.preventDefault();
   };
 
 
@@ -24,7 +24,7 @@ class SelectLabelButton extends Component {
     return (
       <button
         type="button"
-        onClick={e => this.setPredictColumn(e, column)}
+        onClick={event => this.setPredictColumn(event, column)}
         style={styles.selectLabelButton}
       >
         Select label
@@ -40,4 +40,4 @@ export default connect(
       dispatch(setLabelColumn(column));
     }
   })
-)(AddFeatureButton);
+)(SelectLabelButton);
