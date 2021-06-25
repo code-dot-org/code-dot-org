@@ -80,6 +80,10 @@ class UnitGroup < ApplicationRecord
     plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
   end
 
+  def in_development?
+    published_state == SharedConstants::PUBLISHED_STATE.in_development
+  end
+
   def self.file_path(name)
     Rails.root.join("config/courses/#{name}.course")
   end
@@ -287,6 +291,10 @@ class UnitGroup < ApplicationRecord
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
       courses += pilot_courses
+    end
+
+    if user && user.permission?(UserPermission::LEVELBUILDER)
+      courses += all_courses.select(&:in_development?)
     end
 
     courses
