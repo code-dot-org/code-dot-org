@@ -1,3 +1,4 @@
+---
 ka:
   data:
     blocks:
@@ -13,23 +14,15 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
-      Dancelab_changeColorBy:
-        options:
-          METHOD:
-            '"hue"': ელფერი
-            '"saturation"': გაჯერება
-            '"brightness"': სიმკვეთრე
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"rand"': "შემთხვევითი"
             MOVES.Rest: არცერთი
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"rand"': "შემთხვევითი"
             MOVES.Rest: არცერთი
       Dancelab_changePropBy:
         options:
@@ -37,7 +30,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
       Dancelab_changePropEachBy:
         options:
           GROUP:
@@ -46,18 +38,15 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: ყველა
           MOVE:
-            '"rand"': "შემთხვევითი"
             MOVES.Rest: არცერთი
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"rand"': "შემთხვევითი"
             MOVES.Rest: არცერთი
       Dancelab_everySeconds:
         options:
@@ -75,8 +64,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_getTime:
         options:
           UNIT:
@@ -89,9 +76,6 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
-          OP:
-            '">"': ">"
-            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -123,8 +107,6 @@ ka:
           FORMAT:
             '"diamond"': ბრილიანტი
             '"grid"': ბადე
-            '"row"': მწკრივი
-            '"column"': სვეტი
             '"random"': შემთხვევითი
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -167,8 +149,6 @@ ka:
           LAYOUT:
             '"diamond"': ბრილიანტი
             '"grid"': ბადე
-            '"row"': მწკრივი
-            '"column"': სვეტი
             '"random"': შემთხვევითი
       Dancelab_randomColor:
         text: შემთხვევითი ფერი
@@ -176,20 +156,10 @@ ka:
         options:
           EFFECT:
             '"none"': არცერთი
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "შემთხვევითი"
-            '"color_cycle"': ცისარტყელა
-            '"diamonds"': ბრილიანტები
-            '"rainbow"': ცისარტყელა
-            '"disco"': დისკო
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
             '"none"': არცერთი
-            '"rand"': "შემთხვევითი"
-            '"color_cycle"': ცისარტყელა
-            '"diamonds"': ბრილიანტები
-            '"rainbow"': ცისარტყელა
-            '"disco"': დისკო
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -212,19 +182,16 @@ ka:
         options:
           EFFECT:
             '"none"': არცერთი
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "შემთხვევითი"
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': არცერთი
-            '"rand"': "შემთხვევითი"
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -233,16 +200,12 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_setPropRandomEach:
         options:
           GROUP:
@@ -251,8 +214,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
       Dancelab_setTintEach:
         options:
           THIS:
@@ -271,8 +232,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
           RANGE:
             '"bass"': დაბალი
             '"mid"': საშუალო
@@ -285,8 +244,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"tint"': შეფერადება
           RANGE:
             '"bass"': დაბალი
             '"mid"': საშუალო
@@ -297,9 +254,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
           RANGE:
             '"bass"': დაბალი
             '"mid"': საშუალო
@@ -312,9 +266,6 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-            '"rotation"': შებრუნება
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
           RANGE:
             '"bass"': დაბალი
             '"mid"': საშუალო
@@ -323,8 +274,6 @@ ka:
         options:
           STRING:
             '"diamond"': ბრილიანტი
-            '"s"': s
-            '"w"': w
             '"x"': x
             '"y"': 'y'
       Dancelab_whenKey:
@@ -335,10 +284,6 @@ ka:
             '"down"': ქვემოთ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"d"': d
-            '"s"': s
-            '"w"': w
             '"x"': x
             '"y"': 'y'
       Dancelab_whenPeak:
@@ -359,10 +304,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
             '"speed"': სიჩქარე
       gamelab_checkTouching:
         options:
@@ -373,11 +316,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
-            '"tint"': შეფერადება
             '"speed"': სიჩქარე
       gamelab_getThisSprite:
         options:
@@ -395,10 +335,6 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"d"': d
-            '"s"': s
-            '"w"': w
             '"x"': x
             '"y"': 'y'
       gamelab_keyPressed:
@@ -412,19 +348,8 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"d"': d
-            '"s"': s
-            '"w"': w
             '"x"': x
             '"y"': 'y'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
       gamelab_locationMouse:
         text: თაგვის მდებარეობა
       gamelab_mirrorSprite:
@@ -434,20 +359,6 @@ ka:
             '"left"': მარცხნივ
       gamelab_mouseLocation:
         text: თაგვის მდებარეობა
-      gamelab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
-      gamelab_pointInDirection:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
       gamelab_randColor:
         text: შემთხვევითი ფერი
       gamelab_randomColor:
@@ -477,10 +388,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
             '"speed"': სიჩქარე
       gamelab_setProp_dropdown:
         options:
@@ -517,10 +426,6 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: როცა დაჭერილია ისარი მარცხნივ
       gamelab_whenRightArrow:
@@ -537,10 +442,6 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: სანამ დაჭერილია ისარი მარცხნივ
       gamelab_whileRightArrow:
@@ -551,10 +452,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -570,10 +469,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -584,10 +481,8 @@ ka:
             '"all"': ყველა
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -607,10 +502,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
@@ -629,10 +522,8 @@ ka:
             '"all"': ყველა
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -653,10 +544,8 @@ ka:
         options:
           PROPERTY:
             '"scale"': ზომა
-            '"rotation"': შებრუნება
             '"x"': x პოზიცია
             '"y"': y პოზიცია
-            '"direction"': მოძრაობის მიმართულება
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -720,7 +609,6 @@ ka:
         options:
           FORMAT:
             '"grid"': ბადე
-            '"row"': მწკრივი
             '"random"': შემთხვევითი
       aalab_someGraduallyStartIntervention:
         options:
@@ -751,10 +639,6 @@ ka:
             '"left"': მარცხნივ
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         options:
           DIR:

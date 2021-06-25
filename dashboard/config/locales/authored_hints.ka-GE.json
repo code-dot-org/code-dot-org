@@ -6516,6 +6516,1285 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "ამ თავსატეხის ამონახსნი ბოლო თავსატეხის ამონახსნის მსგავსი იქნება, თუმცა მიმართულებას შეიცვლის."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "პროგრამაში ფუნქციის გამოძახება ბევრჯერ შეგიძლიათ! ამ თავსატეხის ამოსახსნელად სცადეთ მისი ორჯერ გამოძახება."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_b": "აგენტის კოდის გასაშვებად, არ გამოგრჩეთ\"გაშვების\" ღილაკზე დაწკაპუნება."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "არის რამდენიმე ბილიკი, რომელსაც შეგიძლიათ გაყვეთ. რომელია მათგან უმოკლესი?",
+          "mc_8_b": "იმისათვის, რომ გაამარტივოთ კოდი, გამოიყენეთ `გამეორების` ციკლები.",
+          "mc_8_c": "თქვენი მიზანია შეაღწიოთ ეკრანის თავში მოთავსებული სახლის შესასვლელში."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "ხის წინ დასადგომად, დაგჭირდებათ ორჯერ გამოიყენოთ ბლოკი`წინ გადაადგილება`.  ",
+          "mc_2_b": "ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "ხეების მოჭრა ნებისმიერი თანმიმდევრობით შეგიძლიათ. რომელ ბილიკს დასჭირდება ბლოკების უმცირესი რაოდენობა?  ",
+          "mc_4_b": "ბრძანება `ბლოკის განადგურება` თქვენს წინ მდებარე ხეს მოჭრის."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "იმისათვის, რომ აირჩიოთ რისი განთავსება გინდათ, დააწექით ისარს ბლოკზე `განთავსება`.",
+          "mc_6_b": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.",
+          "mc_6_c": "ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "ბლოკი `წინ გადაადგილება` მოთავსებულია პანელის თავში.",
+          "mc_1_b": "დარწმუნდით, რომ `წინ გადაადგილების` ორივე ბლოკი მიმაგრებულია `გაშვების` ბლოკზე.  "
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "ჯერ გამოიყენეთ ბლოკი `განთავსება` და შემდეგ ბლოკი `გადაადგილება`.",
+          "mc_5_b": "იმისათვის, რომ კოდი ერთზე მეტჯერ გაუშვათ, დარწმუნდით, რომ ორივე ბლოკი `გამეორების` ციკლის შიგნითაა მოქცეული.",
+          "mc_5_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "იმისათვის, რომ დარგოთ მცენარეულობა იმ სივრცეში, სადაც დგახართ, გამოიყენეთ ბლოკი `მცენარეულობის დარგვა`.",
+          "mc_7_b": "წყლის პირას მდებარე მუქი ყავისფერი ხმელეთის ორივე ზოლს სჭირდება მარცვლეულობით შევსება.",
+          "mc_7_c": "ციკლში `გამეორება` შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "გამოიყენეთ ბლოკი `რკინიგზის განთავსება` იმისათვის, რომ რკინიგზა განათავსოთ იმ კვადრატზე, რომელზეც დგახართ.",
+          "mc_13_b": "იმისათვის, რომ კოდი შეამოკლოთ, გამოიყენეთ ციკლები `გამეორება`."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "`გაკრეჭვის` ბლოკი მოქმედებს თქვენ პირისპირ მდგომ ცხვარზე. ხედავთ ცხვარს თქვენ წინ?  ",
+          "mc_3_b": "თუ მოძრაობის მიმართულების შეცვლა გსურთ, გამოიყენეთ `მობრუნების` ბლოკი.  ",
+          "mc_3_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "ყველა კოდი თავის ადგილზეა. დროა, ლავაზე შეამოწმოთ და გაუმკლავდეთ მას. ახლა მხოლოდ გადაადგილების ბლოკის დამატება დაგრჩათ.",
+          "mc_11_b": "`წინ გადაადგილების`ბრძანება `თუ` წინადადების შიგნით უნდა განთავდეს თუ მის შემდეგ?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "სივრცეები წითელი ლაქებით არის ადგილი, სადაც მინერალურ ქვას იპოვით.",
+          "mc_12_b": "შეგიძლიათ გამოიყენოთ ციკლი `გამეორება`, იმისათვის, რომ თქვენი კოდი შეამოკლოთ?",
+          "mc_12_c": "გამოიყენეთ `თუ` დებულება, იმისათვის რომ ლავა შეამოწმოთ, შემდეგ განათავსეთ რიყის ქვები. "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "რკინის ბლოკები დალაქავებული ადგილებია ჩირაღდნის უკან! როგორ აპირებთ იქ მიაღწიოთ?",
+          "mc_10_b": "როდესაც ლავის პირას დგახართ, გამოიყენეთ ბლოკი: `განათავსეთ რიყის ქვა წინ`, იმისათვის რომ უსაფრთხო გახადოთ ბილიკი.\nამის შემდგ შეგიძლიათ მასზე გაიაროთ!",
+          "mc_10_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "პირისპირ შეეჩეხე რაიმეს? `განადგურების ბლოკი` გამოთხრის ამ ბლოკს შენ წინ.",
+          "mc_9_b": "კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `განადგურების ბლოკი` მათ გამოსათხრელად.",
+          "mc_9_c": "იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ ბლოკი `ჩირაღდნის განთავსება`."
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "ვერ მიხვდით, როგორ უნდა დაიხატოს ხაზი?  მიამაგრე ბლოკები <xml><block type=\"when_run\"/></xml> ბლოკს, რომ ნახო, რა მოხდება.",
+          "courseA_artist_loops2_b": "გამოიყენეთ ეს ბლოკი <xml><block type=\"simple_move_right\"/></xml> ამ თავსატეხის ამოსახსნელად."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "გააყოლე თითი პროგრამას, რომ ნახო, სად არის შეცდომა.",
+          "courseA_artist_loops3_b": "ამ თავსატეხის ამოსახსნელად შესაძლოა ამ ბლოკის მსგავსის გამოყენება მოგინდეთ.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.",
+          "courseA_artist_loops4_b": "რადგან თქვენ მხოლოდ ერთი <xml><block type=\"simple_move_right\"/></xml>\n\nბლოკის გამოყენება შეგიძლიათ, სცადეთ მისი ციკლში <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> მოთავსება."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "თავსატეხის დასასრულებლად, სცადე და გამოიყენე, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> რაც ისწავლე ბლოკების შესახებ!",
+          "courseA_artist_loops5_b": "თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.",
+          "courseA_artist_loops5_c": "რადგან თქვებ მხოლოდ ერთი <xml><block type=\"simple_move_right\"/></xml> ბლოკის გამოყენება შეგიძლიათ, სცადეთ მისი ციკლში \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nმოთავსება."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_b": "ამ თავსატეხის ამოსახსნელად, თქვენ დაგჭირდებათ 2 მიმართულებით 2 ბლოკის განთავსება."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_b": "ჯერ დაწერეთ კოდი ერთი ტალღისთვის, შემდეგ გაიმეორეთ იგივე მოქმედება მომდევნო ორი ტალღის დასახატად.",
+          "courseA_artist_loops7_c": "გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_b": "დამატებული ბლოკი უნდა განთავსდეს ამ \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> ციკლში.",
+          "courseA_artist_loops9_c": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "ამის მსგავსი ბლოკები: <xml>  <block type=\"simple_move_up_left\"/></xml> დაეხმარებიან თქვენს მხატვარს დახრილ ზედაპირებზე მოძრაობაში!"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "მას შემდეგ, რაც განძის შემცველ კვადრატამდე მიაღწევთ, მის ასაღებად ეს ბლოკი გამოიყენეთ.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "მარტივი ამონახსნია აღმოსავლეთისკენ 2-ჯერ გადაადგილდება, შემდეგ კი განძეულობის შეგროვება."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "სანამ განძეულობის შეგროვებას შეძლებთ, უნდა გადაადგილდეთ.",
+          "courseA_collector_loops2_b": "მას შემდეგ, რაც განძის შემცველ კვადრატამდე მიაღწევთ, მის ასაღებად ეს ბლოკი გამოიყენეთ.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_b": "გახსოვდეთ, თქვენ შეგიძლიათ 1-ზე მეტი ბლოკის განთავსება <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლში."
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_b": "სცადეთ პრობლემის დაყოფა ორ ნაწილად: ჯერ გვერდზე გადაადგილება, შემდეგ კი ქვემოთ.",
+          "courseA_collector_loops5_c": "თქვენ მოგიწევთ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლით დაწყება, რომელიც გადაადგილებს ლორელს დასავლეთისკენ და აგროვებს განძს."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "ვერ გაარკვიეთ, სად არის შეცდომა? სცადეთ კოდის ორჯერ გაშვება და ნახეთ რა მოხდება.",
+          "courseA_collector_loops6_b": "ყველაზე მოკლე ამოხსნა იყენებს 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლს, ერთს მეორის შემდეგ."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_b": "სცადეთ ამ თავსატეხის სამ ნაწილად დაყოფა და თითოეულისთვის ციკლის დაწერა.",
+          "courseA_collector_loops8_c": "გახსოვდეთ, რომ შეგიძლიათ კოდის ერთი ნაწილი დაწეროთ, შემდეგ კი \"გაშვების\" ღილაკზე დაჭერით ნახოთ, თუ რისი გაკეთება მოგიწევთ შემდეგ."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_b": "სცადეთ 2 ციკლის <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ჩადგმა მესამე ციკლში, რათა შეამოკლოთ თქვენი კოდი!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "სცადეთ თითოეულ ციკლში რიცხვების შეცვლა, თუ კოდში რაიმე პრობლემაა.",
+          "courseA_collector_loops_challenge1_b": "თუ რამეს ერთჯერადად ასრულებთ, ციკლის გამოყენება არ გჭირდებათ.",
+          "courseA_collector_loops_challenge1_c": "გამოქვაბულის მარჯვენა მხარეს 6 ძვირფასი ქვაა, თუმცა თქვენ უნდა გადაადგილდეთ და სამხრეთისკენ მოძრაობისას შეაგროვოთ ისინი მხოლოდ 5-ჯერ. ხვდებით რატომ?",
+          "courseA_collector_loops_challenge1_d": "თავდაპირველად მოცემული პროგრამა არ აგროვებს 2 ძვირფას ქვას. სცადეთ ამ კოდის ბოლოში დამატება:\n\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_b": "კოდის გასამეორებლად გადმოათრიეთ `გამეორების` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი. "
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.",
+          "courseA_maze_seq13_c": "ეს <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში."
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_b": "თქვენ დაგჭირდებათ ორი სხვადასხვა მიმართულების ბლოკი."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_b": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_b": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "ამ თავსატეხის ამოხსნის ორი გზა არსებობს."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "სცადეთ ჰარების თითით დათვლა. საწყისი ჰარი არ ჩათვალოთ!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_b": "ეს ამ თავსატეხის ამოსახსნელად საჭირო კოდია:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_b": "არ დაგავიწყდეთ, რომ პროგრამის დასრულების შემდეგ ჯორჯის დროშისკენ გადაადგილება შეგიძლიათ მარცხენა ისრის ღილაკით. როდესაც დროშა გამწვანდება, ამ დონეს დაასრულებთ!"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_b": "იცოდით, რომ თუ დააწკაპებთ ღილაკის მოვლენას, შეძლებთ ამ მოვლენისათვის ახალი ღილაკის არჩევას?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "გამოიყენეთ ეს ბლოკი, რათა აკონტროლოთ, თუ რა მოხდება მაშინ, როდესაც მსახიობები ერთმანეთს დაეჯახებიან.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "გამოაჩინეთ პინგვინი წოდლსი რობინზე დაწკაპუნების შემთხვევაში!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "გამოაჩინეთ მოჩვენება სახელით ბუა რობინზე დაწკაპუნების დროს!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"ხილული\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "გამოაჩინეთ ფუმფულა მონსტრი ჯეიდენი, როდესაც დააკლიკავთ ბუაზე!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "გამოაჩინეთ რობოტი სპიფი, როდესაც მონსტრზე დააკლიკავთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "საბოლოოდ, გამოაჩინეთ ჯადოქარი ვენდელი, როდესაც სპიფზე დააწკაპუნებთ!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "შეგიძლიათ ჩიტი აამღეროთ.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">ჭიკ-ჭიკ</title>\n          </block>\n    </next>\n\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "შეგიძლიათ რობოტს ხმოვანი სიგნალი ამოაშვებინოთ.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "შეგიძლიათ აღრენინოთ გაბრაზებულ მონსტრს.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">რრრ!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "თუ სკრატი იმას არ აკეთებს, რაც გინდათ, დარწმუნდით, რომ ბლოკები კარგად არის ერთმანეთში ჩასმული და დააწკაპუნეთ \"გაშვებას\".",
+          "2": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ რამე და თუ არ იმუშავებს, სცადეთ სხვა რამე!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "თუ გსურთ ამ ციკლის 4-ზე მეტჯერ გამეორება, შეგიძლიათ შეცვალოთ ბლოკის თავში განლაგებული რიცხვი.",
+          "courseB_artist_loops2_b": "სცადეთ კოდის გაშვება იმისათვის, რომ ნახოთ, სად წყვეტს მხატვარი მოძრაობას."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "გახსოვდეთ, რომ უკეთესი კოდისთვის სასარგებლოა ციკლის 'გამეორება'  <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>გამოყენება!",
+          "courseB_artist_loops3_b": "ამ ხაზის დასახატად მხატვარი სამხრეთით უნდა გადაადგილდეს."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "ახტომის ბლოკი საშუალებას გაძლევთ ხაზის დახატვის გარეშე გადაადგილდეთ წინ.",
+          "courseB_artist_loops4_b": "ამ თავსატეხის ამოსახსნელად დაგჭირდებათ გამეორების ციკლში ბლოკი დაამატოთ.",
+          "courseB_artist_loops4_c": "არ დაგავიწყდეთ, შეცვალოთ ციკლის გამეორების რიცხვი."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "გადაათრიეთ 'გამეორება'  <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> ციკლი და ჩასვით მასში სხვა ბლოკები. რამდენჯერ გჭირდებათ გამეორება?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების პოვნა."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "ეს გამოწვევა იყენებს **4** ციკლს ერთმანეთის მიყოლებით!",
+          "courseB_artist_loops7_b": "გაითვალისწინეთ, რომ ყოველი ციკლი ქმნის საფეხურების შაბლონს, რომლებიც სხვადასხვა მიმართულებით მიდის.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "ციკლები ასე უნდა აიწყოს:\n\n-   ციკლი 1\n    -   მარჯვნივ\n    -   ქვემოთ\n\n-   ციკლი 2\n    -   მარჯვნივ\n    -   ზემოთ\n\n-   ციკლი 3\n    -   მარცხნივ\n    -   ზემოთ\n\n-   ციკლი 4\n    -   მარცხნივ\n    -   ქვემოთ"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "რამდენჯერ უნდა გაიმეოროთ შაბლონი, რომ კიბე ააგოთ?",
+          "courseB_artist_loops8_b": "სცადეთ მოცემული კოდის გაშვება მისი მოქმედების სანახავად."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "გახსოვდეთ, რომ ახტომის ბლოკები გაძლევთ საშუალებას იმოძრაოთ ხაზების ხატვის გარეშე.",
+          "courseB_artist_loops9_b": "ამ თავსატეხის ამოსახსნელად დაგჭირდებათ W ბლოკის გამოყენება."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "ამის მსგავსი ბლოკები: <xml>  <block type=\"simple_move_up_right\"/></xml> დაეხმარებიან თქვენს მხატვარს დახრილ ზედაპირებზე მოძრაობაში!",
+          "courseB_artist_loops_challenge1_b": "როდესაც დაასრულებთ ერთ კამათელს, `გადახტით` შემდეგზე!",
+          "courseB_artist_loops_challenge1_c": "რამდენიმე ხაზზე თქვენ დაგჭირდებათ `გადაადგილდეთ` ან `ახტეთ` ორ-ორჯერ. "
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "თქვენ უკვე გაქვთ X-ის დასახატად საჭირო კოდი. ახლა მხოლოდ ის დაგრჩათ, რომ გაიმეოროთ X და `გადახტეთ` მომდევნო ადგილზე.",
+          "courseB_artist_loops_challenge2_b": "თქვენ შეგიძლიათ `ახტომის` ბლოკების გამოყენება სხვა ადგილებზე მოსახვედრად."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "თუ ვერ ხვდებით, სად ჩასვათ ციკლი 'გამეორება', დაწერეთ კოდი თანმიმდევრულად და მოძებნეთ კანონზომიერება.",
+          "courseB_collector_loops10_b": "სცადეთ ფურცელზე ჩამოწეროთ სვლები და იპოვოთ გამეორებადი ნაწილები."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "ეს ბლოკი: <xml><block type=\"collector_collect_simplified\"/></xml> შეგვიძლია გამვიყენოთ საგანძურის ასაღებად მაშინ, როდესაც განძის თავზე ვდგავართ."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "სანამ განძეულობის შეგროვებას შეძლებთ, უნდა გადაადგილდეთ.",
+          "courseB_collector_loops2_b": "როდესაც საგანძურამდე მიაღწევთ, მის ასაღებად ეს ბლოკი გამოიყენეთ: <xml><block type=\"collector_collect\"/></xml>."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "სცადეთ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> ბლოკის გამოყენება განძის მოსაპოვებლად.",
+          "courseB_collector_prog3_b": "გახსოვდეთ გამეორების ციკლში შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "შეცდომის ადგილის საპოვნელად, სცადეთ ნაბიჯის ღილაკის გამოყენება.",
+          "courseB_collector_loops4_c": "`გამეორების` ციკლის შემდეგ ლორელი გზას უნდა გაუყვეს <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> და საგანძრი აიღოს!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "ამოცანის შესასრულებლად სცადეთ ერთზე მეტი ციკლის გამოყენება.",
+          "courseB_collector_loops5_b": "სცადეთ რამდენჯერმე გაუშვათ კოდი და რომ ნახოთ, რა მოხდება."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "ვერ პოულობთ შეცდომას? გამოიყენეთ ღილაკი „ნაბიჯი“ და ცალ-ცალკე შეამოწმეთ თითოეული ბლოკი.",
+          "courseB_collector_loops6_b": "\"3\"-ზე დაკლიკებითა და განსხვავებული რიცხვის არჩევით შეგიძლიათ, შეცვალოთ ციკლის გამეორების რაოდენობა.",
+          "courseB_collector_loops6_c": "ამ თავსატეხის ამოსახსნელად თქვენ 3 `გამეორების` ბლოკის გამოყენება დაგჭირდებათ.",
+          "courseB_collector_loops6_d": "თუ დაიბენით, სცადეთ დაშალოთ თავსატეხი 3 ნაწილად."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "თუ თავსატეხთან მუშაობა გაგიჭირდათ, დახატეთ იგი ფურცელზე და შეეცადეთ ასე გაერკვეთ.",
+          "courseB_collector_loops7_b": "ამ თავსატეხის ამოსახსნელად დაგჭირდებათ გამეორების 3 ციკლი. ასევე, არ დაგავიწყდეთ, რომ ბოლოში დამატებითი საუნჯე გელოდებათ!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "თუ ვერ ხვდებით, სად ჩასვათ ციკლი 'გამეორება', დაწერეთ კოდი თანმიმდევრულად და მოძებნეთ კანონზომიერება."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "ეს ძალიან რთულად გეჩვენებათ? გასამარტივებლად, დაშალეთ ის სამ პატარა ამოცანად.  ",
+          "courseB_collector_loops9_b": "ამ ამოცანის ამოსახსნელად დაგჭირდებათ გამეორების 3 ციკლი ერთმანეთის მიყოლებით."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "დაიწყეთ შემდეგი ბრძანების ციკლში მოთავსებით:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "მწკრივიდან მწკრივზე გადასვლისთვის, ორჯერ გადადით აღმოსავლეთით.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nამის გაკეთება სულ 14 ბლოკით შეგიძლიათ. დააწკაპუნეთ შემდეგი რჩევის სანახავად. ",
+          "courseB_collector_loops_challenge1_d": "სცადეთ ეს!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "თუ რამე ისე არ მიდის, როგორც გინდათ, სცადეთ დბაგინგი! არ დანებდეთ!",
+          "courseB_collector_loops_challenge2a_b": "ნახეთ ეს ვარიანტი ლაბირინთის გასავლელად. ხედავთ რამე კანონზომიერ ნაბიჯებს, რომელთა გამეორებაც შეიძლება?",
+          "courseB_collector_loops_challenge2a_c": "მთელი განძის შესაგროვებლად დაგჭირდებათ ან ორი  <xml> <block type=\"collector_collect\"/></xml> ბლოკის დამატება თქვენს ციკლში, ან ბლოკის ჩასმა თავისივე 'გამეორება' ბლოკში"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი ჩავარდება წყალში!",
+          "courseB_iceage_loops10_b": "სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა ან ფურცელზე ჩამოწერა. ხედავთ რამე კანონზომიერებას?",
+          "courseB_iceage_loops10_c": "ეს გრძელი ფაზლია! მიყევით ამ გზას."
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი მასში ჩავარდება!",
+          "courseB_iceage_loops1_b": "უნდა გამოიყენოთ ეს ბლოკი:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "დაშალეთ ეს თავსატეხი ორ ნაწილად: პირველი ნაწილი - კუთხემდე, ხოლო მეორე - კუთხის შემდეგ.",
+          "courseB_iceage_loops2_b": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა.",
+          "courseB_iceage_loops2_c": "მიყევით ამ გზას სკტატის რკოსთან მისაყვანად."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "გამოიყენეთ ეს ახალი ბლოკი!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "კოდის გასამეორებლად გადაათრიეთ `გამეორების` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "სცადეთ, ჩამოწეროთ ნაბიჯები, რაც საჭიროა სკრატის რკოსთან მისაყვანად. ხედავთ კანონზომიერებას?",
+          "courseB_iceage_loops4_b": "არ მოერიდოთ თქვენი კოდის გაშვებას, რომ ნახოთ, რა მოხდება!",
+          "courseB_iceage_loops4_c": "სკრატი უნდა მიყვეს ამ გზას."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "თქვენი საბოლოო კოდი უნდა შეიცავდეს **სამ** გადაადგილების ბლოკს.",
+          "courseB_iceage_loops6_b": "კიდევ უნდა დაამატოთ მხოლოდ **ერთი** ციკლი!",
+          "courseB_iceage_loops6_c": "თქვენი საბოლოო გზა ასე უნდა გამოიყურებოდეს."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ფურცელზე ჩამოწერა. ხედავთ კანონზომიერებას?",
+          "courseB_iceage_loops7_b": "სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "გადაადგილების ბლოკები სწორადაა ჩასმული? კიდევ რისი შეცვლა შეგიძლიათ?",
+          "courseB_iceage_loops8_b": "პირველი ციკლი უნდა გამეორდეს **3**-ჯერ, მეორე უნდა გამეორდეს **5**-ჯერ, მესამე უნდა გამეორდეს **4**-ჯერ, ხოლო ბოლო ციკლი უნდა გამეორდეს **4**-ჯერ.",
+          "courseB_iceage_loops8_c": "გამოიყენეთ ციკლები, რომ დაეხმაროთ სკრატს ამ გზის გავლაში."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "გაგიჭირდათ? სცადეთ ამ ფაზლის დაშლა მცირე ნაწილებად. არ მოერიდოთ ფაზლის გაშვება კიდირების პროცესში!",
+          "courseB_iceage_loops9_b": "თქვენი საბოლოო კოდი უნდა შეიცავდეს **4** ციკლს.",
+          "courseB_iceage_loops9_c": "სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "დაუკავშირეთ ბლოკები <xml><block type=\"when_run\"/></xml> ბლოკს, იმისათვის რომ აამოძრაოთ ჩიტი!",
+          "courseB_maze_seq1_b": "იმისათვის, რომ ჩიტი ღორთან მიიყვანოთ, გამოქაჩეთ სამი ამ <xml><block type=\"maze_moveSouth\"/></xml> ისართაგან და დაუკავშირეთ ის <xml><block type=\"when_run\"/></xml> ბლოკს."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "სცადეთ ინსტრუქციების სათითაოდ დამატება, სანამ მიხვალთ რკომდე.",
+          "courseB_maze_seq4_b": "ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ ამ ბლოკის გამოყენება <xml><block type=\"maze_moveEast\"/></xml>."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "თუ გაიჭედეთ, სცადეთ ბილიკი ფურცელზე გადმოხატოთ.",
+          "courseB_maze_seq5_b": "ამ თავსატეხის ამოხსნის 2 გზა არსებობს!",
+          "courseB_maze_seq5_c": "ვერ გაარკვიეთ, როგორ მიხვიდეთ რკოსთან? სცადეთ ეს გზა."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "თქვენი საბოლოო კოდი უნდა შეიცავდეს სამ გადაადგილების ბლოკს.",
+          "courseB_maze_seq6_b": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ორ ნაწილად ამოხსნა, პირველად გვერდულად მოძრაობით, ხოლო მეორედ მაღლა-დაბლა.",
+          "courseB_maze_seq5_c": "ამ თავსატეხის ამოხსნის 2 გზა არსებობს.",
+          "courseB_maze_seq5_d": "ვერ გაარკვიეთ, როგორ მიხვიდეთ რკოსთან? სცადეთ ეს გზა!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "დაამატეთ ერთი ბლოკი, რომ სკრატი რკოსთან აღმოჩნდეს.",
+          "courseB_maze_seq7_b": "სცადეთ გამოიყენოთ მოცემული ბლოკი და ნახეთ, სად აღმოჩნდებით ბოლოს.",
+          "courseB_maze_seq7_c": "ვერ მიდიხართ რკომდე? სცადეთ ეს გზა!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "თავსატეხის ამოსახსნელად სცადეთ ბლოკების სათითაოდ დამატება.",
+          "courseB_maze_seq8_b": "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!",
+          "courseB_maze_seq8_c": "ვერ არკვევთ, რა გზით წახვიდეთ? სცადეთ ეს გზა!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "ჯერ სცადეთ ყველა ნაბიჯის ფურცელზე ჩამოწერა.",
+          "courseB_maze_seq9_b": "ააგეთ პროგრამა თითო ჯერზე თითო ბლოკის დამატებით და აგებისას პარალელურად ტესტეთ იგი.",
+          "courseB_maze_seq9_c": "ამ თავსატეხის ამოხსნის 2 გზა არსებობს.",
+          "courseB_maze_seq9_d": "გაიჭედეთ? სცადეთ ეს გზა!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "ამჯერად უმოკლესი ბილიკი შეიძლება არ გამოგვადგეს.",
+          "courseB_maze_seq_challenge1_b": "დასაწყაბად სცადეთ გამოიყენოთ ბლოკი: <xml><block type=\"maze_moveWest\"/></xml>."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "ამ თავსატეხის ამოსახსნელად თქვენ არ გჭირდებათ დაამატოთ ან წაიღოთ ბლოკები.",
+          "courseB_maze_seq_challenge2_b": "გადააწყვეთ ბლოკები და კიბის ფორმით დაალაგეთ."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "დეიზიმ რომ რამე თქვას, ეს ბლოკია საჭირო:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">სალამი.</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "მოვლენის დასამატებლად ეს ბლოკი უნდა გამოიყენოთ:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
+          "courseB_playlab_events3_b": "დეიზის განწყობის შესაცვლელად, ეს ბლოკი უნდა გამოიყენოთ:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">შემთხვევითი</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "ეს მოვლენა მარცხენა ისარს აკონტროლებს:\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">მარცხნივ</title>\n</block>\n</xml>",
+          "courseB_playlab_events4_b": "ეს არის ბლოკი, რომელიც რაინდს მარცხნივ ამოძრავებს.\n<xml>\n<block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "ეს არის მოვლენის ბლოკი, რომელიც აკონტროლებს მარჯვენა ისარს:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">მარჯვნივ</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "ამ ბლოკით რაინდი გაიქცევა.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "თქვენს დაგჭირდებათ მოვლენის ეს ბლოკები:\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">ზემოთ</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">ქვემოთ</title>\n</block>\n</xml>",
+          "courseB_playlab_events6_b": "განსხვავებული მიმართულების ასარჩევად გამოიყენეთ ქვემოთ მიმართული ისარი, რომელიც განთავსებულია შემდეგი მოვლენის ბლოკზე: `როდესაც ___ ისარს დავაწვებით`.\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "დავალების შესასრულებლად მიაღწიეთ ყველა დროშამდე!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "დაგჭირდებათ მოვლენის ეს ბლოკი:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_b": "ხმის ჩასართველად დაგჭირდებათ ეს ბლოკი.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">დარტყმა</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_c": "ეს ბლოკი დაგჭირდებათ რაინდის გასაქრობად:\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "ქვემოთ ჩამოიყვანეთ სხვა ცხოველები, როდესაც დააწვებით ღილაკს  `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "შეცვალეთ ცხოველების მოძრაობის სიჩქარე ამ ბლოკის გამოყენებით:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "რას იტყვის ყველა, როცა რბოლა დამთავრდება? ალაპარაკე ისინი ამ მოვლენის გამოყენებით:\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "ამ თამაშში ყველა ცხოველი უნდა გაქრეს მასზე დაწაპუნების შემდეგ და კვლავ უნდა გამოჩნდეს ერთი-ორი წამში!",
+          "courseB_playlab_events_challenge2_b": "გამოიყენეთ სხვა მოვლენის ბლოკი, იმისათვის რომ გააქროთ სხვა ცხოველები!\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "გამოიყენეთ დამატებითი ბრძანებები იმისათვის, რომ ცხოველებზე დაკლიკებისას ქულები დააგროვოთ ან ცხოველებმა ხმა გამოსცენ!\n<xml>\n<block type=\"studio_playSound\">\n\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "ცვლილებების დროა!\n\nზოგ ცხოველს სხვებზე მეტი ქულა მიანიჭეთ. \nგამოიყენეთ სხვადასხვა ხმები.\nშეცვალეთ ცხოველების ხასიათი!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "სცადეთ თითო ჯერზე თითო ბლოკი დაამატოთ, შემდეგ, იმის სანახავად თუ რა მოხდება, დააწკაპუნეთ \"გაშვებას\".",
+          "courseB_starWars_prog1_b": "ამ თავსატეხის ამოსახსნელად თქვენ აღმოსავლეთით გადაადგილება დაგჭირდებათ. რა მანძილზე უნდა გადაადგილდეთ?\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "გაყავით ეს პრობლემა ორ ნაწილად. მოიპოვეთ ჯართის ერთი გროვა, შემდეგ გაარკვიეთ, როგორ მოიპოვოთ ჯართის მეორე გროვა."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "ამ თავსატეხის ამოსახსნელად 3 სვლის გაკეთება მოგიწევთ.",
+          "courseB_starWars_prog3_b": "თითო ჯერზე დაწერეთ კოდის ერთი ბლოკი. გაუშვით კოდი, რომ გაარკვიოთ, რა უნდა იყოს შემდეგი ნაბიჯი."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "თითო ჯერზე დაწერეთ კოდის ერთი ბლოკი. გაუშვით კოდი, რომ გაარკვიოთ, რა უნდა იყოს შემდეგი ნაბიჯი.",
+          "courseB_starWars_prog4_b": "უფრო მოკლე კოდის შესაქმნელად, სცადეთ გამოიყენოთ `გამეორების` ბლოკი.\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "ხომ არ ჰგავს ამ მაგალითის სტრუქტურა უკანასკნელ თავსატეხს?",
+          "courseB_starWars_prog5_b": "BB-8 აიღებს ჯართს, როდესაც გადაუვლის მას.",
+          "courseB_starWars_prog5_c": "გაყევით თითით ამ ნიმუშს. მოძრაობის დროს დათვალეთ მეტალის ნატეხები.",
+          "courseB_starWars_prog5_da": "ნახეთ რა მოხდება თუ გამოიყენებთ კიბის საფეხურების თავსატეხის გადაწყვეტას:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "ეს ნიმუში უბრალოდ კიბის საფეხურია ორი ბიჯით თითო მიმართულებაზე!",
+          "courseB_starWars_prog6_b": "უფრო მოკლე კოდის შესაქმნელად, სცადეთ გამოიყენოთ `გამეორების` ბლოკი.\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "ხომ არ ჰგავს ამ მაგალითის სტრუქტურა უკანასკნელ თავსატეხს?",
+          "courseB_starWars_prog7_b": "BB-8 აიღებს ჯართს, როდესაც გადაუვლის მას.",
+          "courseB_starWars_prog7_c": "სცადეთ ამ თავსატეხში დიდი კიბის დახატვა. ფარავს თუ არა ის მთელ ჯართს?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "არაუშავს, თუ უკან დაუბრუნდებით სივრცეების იმ წყებას, სადაც უკვე გიმოგზაურიათ.",
+          "courseB_starWars_prog8_b": "სცადეთ გამოიყენოთ გამეორების ბლოკი იმისათვის, რომ ნახოთ, რა მოსდის ბლოკს, რომელიც შიგნით მოათავსეთ.\n<xml>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.",
+          "courseB_starWars_prog9_b": "ამ თავსატეხის ამოხსნის ბევრი გზა არსებობს.",
+          "courseB_starWars_prog9_c": "გამოგვადეგებოდა თუ არა აქ`გამეორების` ციკლი?"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "`მსახიობი 1-ისთვის ??? სურათის დაყენების` ბლოკი შეიძლება გამოყენებული იქნას სცენაზე მსახიობის დასამატებლად.",
+          "courseE_playLab_scaffold1_b": "ჩასვით `მსახიობის დაყენების` ბლოკი `როდის გაიქცეს` ბლოკის ქვეშ, რათა გამოაჩინოთ თქვენი მსახიობი პროგრამის დასაწყისშივე.",
+          "courseE_playLab_scaffold1_c": "გამოიყენეთ `???-ის ფონად დაყენება` თქვენი სცენისათვის ფონის შესარჩევად."
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "უნდა გქონდეთ ოთხი `როდესაც ისარი` მოვლენის ბლოკი ისეთი მიმართულებით, რომ იმოძრაონ თითოეულის ქვეშ.",
+          "courseE_playLab_scaffold1_c": "როდესაც მორჩებით, შეგიძლიათ გადაადგილოთ თქვენი გმირი ისრებიანი ღილაკებით!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "გამოიყენეთ `ქულის დამატება`, ქულის დასამატებლად და `ქულის გამოკლება` - გამოსაკლებად."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:\n<xml>\n<block type=\"studio_saySpriteChoices\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "მიამაგრეთ ამ ბლოკებიდან ორი ბლოკს `გაშვებისას`:\n<xml>\n<block type=\"studio_saySpriteChoices\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>",
+          "courseC_PlayLab_events2_b": "გამოიყენეთ ბლოკზე განთავსებული ჩამოსასშლელი მენიუ, იმისათვის რომ შეცვალოთ მოსაუბრე მსახიობები."
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "ამ თასატეხის ამოსახსნელად ჯორჯი უნდა შეატრიალოთ მარჯვნივ დაახლოებით 25 პიქსელით.",
+          "courseC_PlayLab_events3_b": "არის ინსტრუმენტების პანელში ბლოკი, რომელმაც შეიძლება, აამოძრავოს მსახიობი?",
+          "courseC_PlayLab_events3_c": "მიამაგრეთ ეს ბლოკი, ბლოკს `გაშვებისას`:\n<xml>\n<block type=\"studio_saySpriteChoices\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "\"გაშვება\" ღილაკზე დაწკაპუნებისას ჯორჯი უნდა გადაადგილდეს მარჯვნივ **100** პიქსელით, რათა მიაღწიოს კატა ზეთისხილამდე.",
+          "courseC_PlayLab_events4_a": "თავსატეხის ამოსახსნელად მიაბით 'მსახიობი \\_\\_ამბობს' ბლოკი 'როცა პერსონაჟი ეხება' მოვლენას."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "\"რა არის ახალი?\" ტექსტის საპოვნელად უნდა ჩამოშალოთ მენიუ `პერსონაჟი ამბობს` ბლოკში",
+          "courseC_PlayLab_events5_b": "პროგრამის გაშვებისას დააწექით ოქტავიას, იმისათვის რომ შეამოწმოთ, როგორ მუშაობს ის!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "თითოეულ მწვანე `როცა ისარი` ბლოკს ქვემოთ უნდა ჰქონდეს ერთი მოქმედება.",
+          "courseC_PlayLab_events6_b": "გამოიყენეთ ბლოკზე `გადაადგილე მსახიობი 1` განთავსებული ჩამოსაშლელი მენიუ, იმისათვის რომ შეცვალოთ ვადლეს მოძრაობის მიმართულება.",
+          "courseC_PlayLab_events6_c": "როცა მორჩებით, უნდა შეგეძლოთ, თქვენს კომპიუტერზე განთავსებული ისრის ღილაკების გამოყენებით ამოძრაოთ ბაჯბაჯა პერსონაჟები!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "თავსატეხის ამოსახსნელად გამოიყენეთ `პერსონაჟი 2-ის გადაადგილება 400 პიქსელით ზემოთ` და `პერსონაჟი 2-ის გადაადგილება 400 პიქსელით ქვემოთ` ციკლში `გამოყენება უსასრულოდ`. ",
+          "courseC_PlayLab_events7_b": "ციკლს `გამეორება უსასრულოდ` არ სჭირდება რომელიმე სხვა მოვლენის ბლოკთან დაკავშირება. ის თავისით გააქტიურდება."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "სწორი მოქმედების განსახორციელებლად ბლოკები უნდა მიაბათ 'როცა პერსონაჟი ეხება' ბლოკს.",
+          "courseC_PlayLab_events8_b": "გამოიყენეთ `პერსონაჟი ამბობს` და `ხმის ჩართვა` ბლოკები ინსტრუმენტების პანელში!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "თავსატეხის ამოხსნაში დაგეხმარებათ ბლოკი `ქულის დაწერა`.",
+          "courseC_PlayLab_events9_b": "დარწმუნდით, რომ თქვენი ახალი `როცა პერსონაჟი ეხება` ბლოკი ამბობს: მოქმედი პირი **1** და მოქმედი პირი **3**.",
+          "courseC_PlayLab_events9_c": "თქვენს სამუშაო სივრცეში ერთსა და იმავე დროს შეგიძლიათ, გქონდეთ ერთზე მეტი `როცა პერსონაჟი ეხება`მოვლენა, ასე რომ საჭირო არაა პირველი წაშალოთ!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.",
+          "courseC_PlayLab_eventsA_b": "ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "სათამაშო სივრცეში პერსონაჟების სხვადასხვა ადგილას გადასაადგილებლად, შეგიძლიათ გამოიყენოთ ეს ბლოკი: \n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
+          "courseC_PlayLab_events_challenge_b": "სხვა მსახიობებიდან ერთ-ერთთან შეხებისას სცადეთ, გამოიყენოთ ბლოკი `მოათავსეთ მსახიობი 1 მარცხენა შუა პოზიციაზე`. ეს თავიდან დაიწყებს თქვენს თამშს და ამგვარად, მოთამაშე შეძლებს გააგრძელოს ცდა!",
+          "courseC_PlayLab_events_challenge_c": "იმისათვის, რომ თამაში გააადვილოთ ან მეტად გამომწვევი გახადოთ, თქვენ ასევე შეგიძლიათ სხვადასხვა პერსონაჟს შეუცვალოთ მოძრაობის სიჩქარე. \n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "თავიდან ეს ბლიკი დაგჭირდებათ:\n<xml>\n<block type=\"jump_to_xy\">\n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_b": "სტიკერის დასახატად გამოიყენეთ ეს ბლოკი!\n<xml>\n<block type=\"sticker\">\n\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ 30 გრადუსით.",
+          "courseC_artist_loops2a_b": "იმისთვის, რომ გამეორებების რაოდენობა შეცვალოთ, დააწკაპუნეთ რიცხვზე `გამეორების` ციკლის თავზე."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "ჩიტის სტიკერის შემდეგ, ციკლის შიგნით მხოლოდ ერთი ბლოკის განთავსება დაგჭირდებათ.",
+          "courseC_artist_loops3a_b": "ღამურის ეტიკეტის საპოვნელად გამოიყენეთ ბლოკის `დახატე ეტიკეტი` თავზე განთავსებული ჩამოსაშლელი მენიუ."
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "წინ გადასახტომად გამოიყენეთ ეს ბლოკი:\n<xml>\n<block type=\"jump_by_constant\">\n\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\nარ დაგავიწყდეთ შეცვალოთ გადახტომის მანძილი!"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "გამოიყენეთ ეს ბლოკი, რათა განსაზღვროთ თქვენი ხაზების ნიმუში:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
+          "courseC_artist_loops5b_b": "ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად უნდა გადაადგილდეთ უკან იმდენივე ერთეულით, რამდენითაც წინ გადაადგილდებით."
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "ზემოთ განთავსებული დიზაინის მსგავსის ასაწყობად, სტიკერებს შორის გადახტით წინ 75 პიქსელზე ნაკლებით."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?\nშეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_b": "გინდათ შეამოკლოთ კოდი? სცადეთ ამ თავსატეხში ციკლის გამოყენება."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_b": "სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!",
+          "courseC_artist_prog4_c": "სამკუთხედის დასახატად, თქვენ მოგიწევთ:\n\n-   გადაადგილდეთ წინ\n-   მობრუნდეთ მარცხნივ 120 გრადუსით\n-   გადაადგილდეთ წინ\n-   მობრუნდეთ მარცხნივ 120 გრადუსით\n-   გადაადგილდეთ წინ"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ.",
+          "courseC_artist_prog5_c": "სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!",
+          "courseC_artist_prog5_d": "ყოველი მობრუნების კუთხე უნდა იყოს 90 გრადუსი და უნდა იყოს მიმართული მარჯვნისაკენ."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_c": "თქვენ შეგიძლიათ `მობრუნების` ბლოკების ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ, თუ რომელი კუთხე გჭირდებათ!",
+          "courseC_artist_prog7_d": "თქვენ დაგჭირდებათ:\n\n-   წინ გადაადგილდება\n-   45 გრადუსით მარჯვნივ მობრუნება\n-   წინ გადაადგილება\n-   90 გრადუსით მარჯვნივ მობრუნება\n-   წინ გადაადგილება\n-   45 გრადუსით მარჯვნივ მობრუნება\n\nგაიმეორეთ ეს ნიმუში 2-ჯერ!",
+          "courseC_artist_prog7_e": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "თქვენ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით შეგიძლიათ!"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების` ბლოკები!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "როდესაც განძის შემცველ ადგილზე დგახართ, გამოიყენეთ <xml><block type=\"collector_collect\"/></xml> ბლოკი, რათა აიღოთ ის.",
+          "courseC_collector_prog1_b": "უმარტივესი ამონახსნი იქნებოდა ერთხელ გადაადგილება წინ, შემდეგ კი განძის შეგროვება."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_c": "თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ მოძრაობები ფურცელზე დაწეროთ."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა.",
+          "courseC_collector_prog4_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_c": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ქაღალდზე ჩაწერა."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_b": "გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ."
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "დამატებითი განძის შესაგროვებლად შეგიძლიათ `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "თითოეულ სივრცეში შეგიძლიათ ერთზე მეტი`შეგროვების` ბლოკის გამოყენება."
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "ბლოკს, რომელიც გჭირდებათ, ჰქვია `სისწრაფის განსაზღვრა`. ",
+          "courseC_flappy_events2_b": "დააკავშირეთ `განსაზღვრე სისწრაფე` ბლოკი `გაშვებისას` ბლოკს, რათა ამოხსნათ ეს თავსატეხი."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "თუ რამე არასწორად მუშაობს, დარწმუნდით, რომ თქვენი ბლოკები სწორ მოვლენებს უკავშირდება სამუშაო სივრცეში."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "დააკავშირეთ `თამაშის დასრულების` ბლოკი `დაბრკოლებასთან დაჯახების` ბლოკს, რათა ამოხსნათ ეს თავსატეხი."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "თქვენ მოგიწევთ `ქულის მიღების` ბლოკის გამოყენება, რათა დაასრულოთ ეს დონე."
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "სცადეთ `აქნიე ____ რაოდენობით` ბლოკის დაკავშირება `როცა დააწკაპებთ` მოვლენასთან."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "თქვენ შეგიძლიათ ფონის შეცვლა `განსაზღვრე სცენა` ბლოკის გამოყენებით. "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "სცადეთ მეორე `სცენის განსაზღვრის` ბლოკის დაკავშირება, `დაბრკოლების გავლისას` მოვლენასთან, რათა დაასრულოთ ეს დონე."
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "დონის დასასრულებლად დაუკავშირეთ `დააყენე 0 ქულა` ბლოკი `როდესაც დაბრკოლებას დაეჯახები` მოვლენას."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "როდესაც მიაღწევთ გოგრას, გამოიყენეთ <xml><block type=\"harvester_pumpkin\"/></xml> ბლოკი მის შესაგროვებლად.",
+          "courseC_harvester_loops1_b": "თქვენ შეგიძლიათ ციკლის გამოყენება <xml><block type=\"harvester_pumpkin\"/></xml> ბლოკთან ერთად, რათა შეაგროვოთ კვადრატიდან ერთზე მეტი გოგრა."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა.",
+          "courseC_harvester_loops2_b": "პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება.",
+          "courseC_harvester_loops2_c": "ერთი ციკლი გაიმეორებს `წინ მოძრაობის` ბრძანებას, ხოლო მეორე გაიმეორებს `გოგრის შეგროვების` ბრძანებას."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება.",
+          "courseC_harvester_loops3_b": "პირველი გოგრებისთვის წინა თავსატეხის მსგავსი კოდის გამოყენება შეგიძლიათ. სად უნდა შეუხვიოთ ამის შემდეგ?",
+          "courseC_harvester_loops3_c": "თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "გამოიყენეთ ახალი - `შეაგროვე სიმინდი` ბლოკი, რათა შეაგროვოთ სიმინდი.",
+          "courseC_harvester_loops4_b": "თქვენ შეგიძლიათ გაამრავლოთ გამეორების ციკლები კოდში, ზოგი გამოიყენოთ სიმინდის შესაგროვებლად, ხოლო ზოგი გოგრების შესაგროვებლად.",
+          "courseC_harvester_loops4_c": "თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "თუ გაიჭედეთ, სცადეთ მთლიანი პროგრამის დახატვა, შემდეგ კი განმეორებადი ნაწილების პოვნა.",
+          "courseC_harvester_loops5_b": "გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან? მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "გახსოვდეთ, რომ ერთ გამეორების ციკლში რამდენიმე ბლოკის განლაგება შეგიძლიათ.",
+          "courseC_harvester_loops6_b": "არ დაგავიწყდეთ მობრუნება სიმინდის მწკრივის ბოლოს."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "ამ თავსატეხის ამოხსნა ორი გზით შეგიძლიათ: ჯერ შეაგროვოთ ან სიმინდი ან გოგრები.",
+          "courseC_harvester_loops7_b": "ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ რამდენიმე `გამეორების` ციკლი."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "გეცნობათ თუ არა ეს კიბის საფეხური წინა თავსატეხებიდან? მოძრაობები იგივე უნდა იყოს, უბრალოდ არ დაგავიწყდეთ გზაში მარცხვლეულის შეგროვება.",
+          "courseC_harvester_loops8_b": "თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "ციკლების გარეშე ამის შესრულება ძალიან რთული იქნება!",
+          "courseC_harvester_loops_challenge1_b": "თქვენ შეგიძლიათ გამოიყენოთ `წინ მოძრაობა` და `სიმინდის შეგროვება` იმდენჯერ, რამდენჯერაც დაგჭირდებათ, შემდეგ კი შეტრიალდეთ მარჯვნივ ყოველ კუთხესთან.",
+          "courseC_harvester_loops_challenge1_c": "სიმინდის შესაგროვებლად საუკეთესო ამონახსნი იყენებს `გამეორების` ბლოკს სხვა `გამეორების` ბლოკის შიგნით. თქვენ შეგიძლიათ ამ ნიმუშის გამოყენება დანარჩენი თავსატეხისთვისაც!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარჯვნივ</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "ამის ამოხსნის ერთი გზა ტეხილივით გამოიყენება. მეორე გზა - სპირალივით! ამგვარ თავსატეხს ბევრი ამონახსნი აქვს. მთავარია, არ დანებდე!",
+          "courseC_harvester_loops_challenge2_b": "თქვენ შეგიძლიათ გაიმეოროთ \"წინ გადაადგილება\" და \"სალათის ფურცლის შეგროვება\", იმდენჯერ, რამდენჯერაც დაჭირდებათ, შემდეგ, თითოეულ კუთხესთან შეუხვიეთ.",
+          "courseC_harvester_loops_challenge2_c": "თავსატეხის მხოლოდ 20 ბლოკით დასასრულებლად, ზიგზაგის ფორმის ფიგურა შეიძლება ორჯერ გამეორდეს!\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "ამ სპირალის ფორმის ფიგურის კოდის დასაწერად 18 ბლოკია საკმარისი!\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_b": "ამ თავსატეხის დასასრულებლად გჭირდებათ ერთი ბლოკის დამატება."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_c": "ვერ გაარკვიეთ, სად არის შეცდომა? სცადეთ კოდის ორჯერ გაშვება და ნახეთ რა მოხდება."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_b": "ვერ გაარკვიეთ, სად არის შეცდომა? სცადეთ კოდის ორჯერ გაშვება და ნახეთ რა მოხდება."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_b": "ერთ-ერთ ბრუნს სკრატი მცდარი მიმართულებით მიჰყავს, შეგიძლიათ გამოარკვიოთ რომელს?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_b": "კოდში პირველი დეფექტის პოვნისა და არმოფხვრის შემდეგ, გააგრძელეთ კოდში შეცდომების ძიებისა და მათი აღმოფხვრის პროცესი, იმისათვის რომ იპოვოთ შემდეგი.\nიმეორეთ ეს პროგრამა მანამ სანამ პროგრამა სწორად არ იმუშავებს!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "მარცხნივ თუ მარჯვნივ? ეს თქვენი გადასაწყვეტია!",
+          "courseC_maze_debugging_challenge1_b": "სკრატის ბილიკს მართკუთხედის ფორმა აქვს! ის ყოველ ჯერზე ერთი მიმართულებით უნდა შეტრიალდეს.",
+          "courseC_maze_debugging_challenge1_c": "თუ იჭედებით, ყოველთვის შეგიძლიათ თავიდან დაწყება და ახალი გზის პოვნა!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "თუ იჭედებით, სცადეთ კოდის გამართვა. სად დაიწყო შეცდომები?",
+          "courseC_maze_debugging_challenge2_c": "არსებობს ორი სხვადასხვა გზა, რომელსაც შეგიძლიათ გაჰყვეთ წინ გადაადგილებისა და მობრუნების მხოლოდ ოთხი ბლოკის გამოყენებით. თუ მოიფიქრებთ, როგორ გამოიყენოთ გამეორების ბლოკი, ის შესაძლოა მეტიც იყოს!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\nკოდის შუა ნაწილიდან ბლოკის წასაშლელად ყველა სხვა ბლოკი სამუშაო სივრცის სხვა ნაწილას გამოწიეთ.\nინსტრუმენტების პანელიდან უკან შეწიეთ ბლოკი, რომლის წაშლაც გინდათ.\nსაბოლოოდ, ყველა ბლოკი თავის ადგილზე დააბრუნეთ."
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_b": "თავსატეხის დასასრულებლად ჩიტს ერთხელ შეხვევა სჭირდება. შეგიძლია გამოარკვიო საით?",
+          "courseC_maze_programming5_c": "ამოხსნას ექნება ორი \"წინ გადაადგილების\" ბლოკი, ერთი მოხვევა, და ორით მეტი `წინ გადაადგილების` ბლოკი."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!",
+          "courseC_maze_programming6_b": "მიაყოლეთ თითი გზას, რომელი საფეხურები გაიარეთ ჩიტიდან ღორამდე?",
+          "courseC_maze_programming6_c": "გახსოვდეთ, მას შემდეგ, რაც ჩიტი სახით კედლისკენ დადგება, უპირველეს ყოვლისა უნდა შეუხვიოთ."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_b": "თუ გიჭირთ ამ თავსატეხისათვის ამოხსნა, სცადეთ მოძრაობები ფურცელზე დაწეროთ."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "გახსოვდეთ, თუ გაიჭედებით, შეგიძლიათ გამოიყენოთ ღილაკი \"ნაბიჯი\", იმისათვის რომ ნაბიჯ-ნაბიჯ, ხაზ-ხაზად გააკვირდეთ თქვენს კოდს.",
+          "courseC_maze_programming8_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "გოჭთან მისასვლელი მრავალი გზა არსებობს. გააყოლეთ თითი გზის საპოვნელად, შემდეგ კი დაწერეთ შესაბამისი პროგრამა!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_თუ უკან გამაგზავნით, გამოიჩინეთ სიფრთხილე და დარწმუნდით, რომ სწორად შევტრიალდები!_",
+          "courseC_maze_programming_challenge2_b": "უმოკლესი ამონახსნი იყენებს მხოლოდ 5 ბლოკს, მაგრამ მათ შორის ამ ბლოკს:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "ნუთუ არ ჰგავს ეს ნიმუში გიგანტური კიბის საფეხურებს? ნახეთ, შეგიძლიათ თუ არა წინა თავსატეხებში ნასწავლი მასალის გამოყენება ყველა მობრუნების შესასრულებლად.",
+          "courseC_starWars_loops10_b": "თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!\nამას **ჩასმული ციკლი** ეწოდება.",
+          "courseC_starWars_loops10_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "როდესაც BB-8 ზედ გადაუვლის ჯართს, ის მას ავტომატურად აგროვებს.",
+          "courseC_starWars_loops1_b": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება.",
+          "courseC_starWars_loops1_c": "ამ თავსატეხის ამოსახნელად ხუთჯერ მოგიწევთ `წინ გადაადგილება`."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "კოდის გასამეორებლად, გადმოათრიეთ `გამეორების` ციკლი, შემდეგ კი განათავსეთ მასში სასურველი ბლოკი."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "მობრუნების ბლოკზე \"მარცხნივ\"-ის გვერდით განთავსებულ ისარზე დაკლიკვით თქვენ შეგიძლიათ შეცვალოთ ის \"მარჯვენაზე\".",
+          "courseC_starWars_loops4_a": "გამოიყენეთ ორი `გამეორების` ბლოკი.",
+          "courseC_starWars_loops4_b": "ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი ბრძანება: `გადაადგილდეთ წინ`."
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "მობრუნების ბლოკზე \"მარცხნივ\"-ის გვერდით განთავსებულ ისარზე დაკლიკვით თქვენ შეგიძლიათ შეცვალოთ ის \"მარჯვენაზე\".",
+          "courseC_starWars_loops4_a": "გამოიყენეთ ორი `გამეორების` ბლოკი.",
+          "courseC_starWars_loops4_b": "ყოველ `გამეორების` ციკლში მოთავსდება მხოლოდ ერთი ბრძანება: `გადაადგილდეთ წინ`."
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "ქვემოთ სამოძრაოდ უნდა შეტრიალდეთ და შემდეგ იმოძრაოთ წინ.",
+          "courseC_starWars_loops5_a": "ამოხსნის საუკეთესო გზა მობრუნებას, შემდეგ ერთ `წინ გადაადგილებას`, კიდევ ერთ მობრუნებს და ციკლს იყენებს."
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების პოვნა.",
+          "courseC_starWars_loops6_b": "თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!\nამას **ჩასმული ციკლი** ეწოდება."
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "სცადეთ სვლების ქაღალდზე ჩაწერა, შემდეგ კი მსგავსების პოვნა.",
+          "courseC_starWars_loops6_b": "თუ ნაკლები კოდის გამოყენება გსურთ, შეგიძლიათ განათავსოთ ერთი `გამეორების ციკლი` მეორეში!\nამას **ჩასმული ციკლი** ეწოდება."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "ეს ნიმუში უფრო რთულად შეიძლება ჩანდეს, ვიდრე სინამდვილეში არის. ფარავს თუ არა ის მთელ ჯართს?",
+          "courseC_starWars_loops7_b": "თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ ყველა სვლის ფურცელზე გადაწერა და მსგავსების მოძებნა.",
+          "courseC_starWars_loops7_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "ეს ნიმუში უფრო რთულად შეიძლება ჩანდეს, ვიდრე სინამდვილეში არის. ფარავს თუ არა ის მთელ ჯართს?",
+          "courseC_starWars_loops7_b": "თუ ამ თავსატეხის ამოხსნას ვერ ახერხებთ, სცადეთ ყველა სვლის ფურცელზე გადაწერა და მსგავსების მოძებნა.",
+          "courseC_starWars_loops7_c": "შეცდომის დაშვების ნუ შეგეშინდებათ! მაშინაც კი, თუ თავსატეხი ჯერ არ ამოგიხსნიათ, გაუშვით კოდი და ნახეთ, რა მოხდება."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_b": "შეხედეთ ამოცანას პირველ ნახევარს, როგორც კიბის საფეხურის ამოცანას. აქამდე როგორ ხსნიდით ასეთ ამოცანებს?",
+          "course_starWars_loops8_c": "დააკვირდით ამ ბილიკს.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_b": "შეხედეთ ამოცანას პირველ ნახევარს, როგორც კიბის საფეხურის ამოცანას. აქამდე როგორ ხსნიდით ასეთ ამოცანებს?",
+          "course_starWars_loops8_c": "დააკვირდით ამ ბილიკს.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "`გამეორების`ციკლში ერთზე მეტი ბლოკის მოთავსება შეგიძლიათ.",
+          "course_starWars_loops9_c": "ამ თავსატეხის ამოსახსნელად მარცხნივ მობრუნება არ დაგჭირდებათ. შეიძლება, რომ თქვენი ყველა ბრუნი მარჯვნივ იყოს.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!",
+          "courseD_artist_project1_b": "გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს, ხოლო `წინ გადახტომა` - არა."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_a": "გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_b": "შეგიძლიათ ეს სამკუთხედი `განმეორების` ციკლში ორი ბლოკის მოთავსებით დახატოთ. რომელი ბლოკები დაგჭირდებათ?",
+          "courseD_artist_nestedLoops1_c": "სცადეთ ნაბიჯების ფურცელზე ჩამოწერა და განმეორებადი ნიმუშის მოძებნა, რომლების გამარტივებაც ციკლებით იქნება შესაძლებელი."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_b": "თუ თქვენ თქვენს სამკუთხედს ციკლით შექმნით, მხატვარი სახით უნდა იყოს იმავე მიმართულებით, რა მიმართულებითც იყო დაწყებისას. ეს 60 გრადუსიან ბრუნებს ბევრად გაამარტივებს.",
+          "courseD_artist_nestedLoops1a_c": "თუ ფერები გინდათ, გამოიყენეთ `ფერის შერჩევის` ბლოკი თქვენს კოდში. არაა აუცილებელი, თქვენი ფერები შაბლონის სურათის ფერებს ემთხვეოდეს."
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_b": "არ დაგავიწყდეთ `მობრუნების` ბლოკის ციკლში მოთავსება, რათა მხატვარი თითოეული სამკუთხედის შემდეგ მობრუნდეს."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "იმისათვის რომ კვადრატის თავიდან იმ ადგილზე მოხვდეთ, სადაც მე-2 კვადრატზე მუშაობა უნდა დაიწყო, გამოიყენეთ წინ გადახტომის\\` ბლოკი. \nრა სიშორეზე უნდა გადახტეთ, თუ კვადრატები 20 პიქსელის სიმაღლისაა და ერთმანეთისგანაც 20 პიქსელით არის დაშორებული?",
+          "courseD_artist_nestedLoops3_c": "დაიწყეთ `განმეორების` ციკლის გამოყენებით, რომ შექმნათ ერთი კვადრატი. შემდეგ გაიმეორეთ ის კვადრატი რვაჯერ, კვადრატებს შორის 40 პიქსელით გადაადგილებით. "
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_b": "წრის შესაქმნელად განმეორების ციკლი ისე უნდა დააყენოთ, რომ მან 360-ჯერ გაიმეოროს. ციკლის შიგნით გაადგილდით წინ 1 პიქსელით და მობრუნდით 1 გრადუსით."
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_b": "გამოიყენეთ ჩასმული ციკლი, სადაც შიდა ციკლი კვადრატის კოდია.\n\n-   გაიმეორეთ 6-ჯერ\n-   გააკეთეთ კვადრატი\n-   გადახტით წინ **50 პიქსელით**\n-   მობრუნდით **60 გრადუსით**"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_b": "თუ გაიჭედეთ, გადახედეთ უკანასკნელ თავსატეხს, შემდეგ კი შეცვალეთ, რაც განსხვავებულია.",
+          "courseD_artist_nestedLoops8_c": "გამოიყენეთ ჩასმული ციკლი:\n\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ ექვსკუთხედი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 გრადუსით"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_c": "გამოიყენეთ ორი ჩასმული ციკლი:\n\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ კვადრატი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ სამკუთხედ\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით"
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "დაიწყეთ ჩასმული ციკლის შექმნით, რათა დახატოთ ოთხი რვაკუთხედი. მობრუნდით 45 გრადუსით რომ გააკეთოთ რვაკუთხედი. გადახტით და მობრუნდით 90 გრადუსით თითოეულის შემდეგ.",
+          "courseD_artist_nestedLoops_challenge1_b": "დაამატეთ კოდი, რომ დახატოთ სამკუთხედი ჩასმულ ციკლში. გამოიყენეთ 120 გრადუსიანი ბრუნები თქვენი სამკუთხედისათვის.",
+          "courseD_artist_nestedLoops_challenge1_c": "გამოიყენეთ ჩასმული ციკლი:\n\n-   გაიმეორეთ 4-ჯერ\n-   დახატეთ რვაკუთხედი\n-   დახატეთ სამკუთხედი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 90 გრადუსით"
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "ჩვეულებრივი რვაკუთხედის დასახატად მხატვარმა უნდა შეასრულოს 45 გრადუსიანი ბრუნი 8-ჯერ.",
+          "courseD_artist_nestedLoops_challenge2_b": "კვადრატის დასახატად, მხატვარმა უნდა შეასრულოს ბრუნი 90 გრადუსით 4-ჯერ."
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!",
+          "courseD_artist_project1_b": "გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს, ხოლო `წინ გადახტომა` - არა."
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "ეს კიბის საფეხური იყენებს 76-გრადუსიან ბრუნს და მეორდება 4-ჯერ.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "ეს ორნამენტები ძალიან ჰგავს კიბის საფეხურებს სხვა თავსატეხებიდან, ოღონდ სხვა ზომის კუთხეა გამოყენებული."
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "გაიხსენეთ, რომ `წინ გადაადგილება` ხატავს ხაზს, ხოლო `წინ გადახტომა` - არა.",
+          "courseD_artist_project2_b": "მას შემდეგ, რაც დახატავთ და გადაადგილდებით პირველად, თქვენ შეგიძლიათ კოდის გამეორება მისი ციკლში მოთავსებით."
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "ეს ნახატი შეიქმნა 4 კიბის ციკლისა და `მარჯვნივ 180 გრადუსით მობრუნების` ბლოკის `ორჯერ გამეორების` ბლოკში მოთავსებით.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!",
+          "courseD_artist_project3_b": "სცადეთ ჩადგმული ციკლების გამოყენება!\n\nგამოიყენეთ კოდი, რომელიც შექმენით ხაზების დასახატად და ჩასვით ისინი სხვა ციკლში. ქვემოთ, გარე ციკლის დამთავრებამდე დაამატეთ ბლოკი, რომელიც შეატრიალებს ელზას.\n\n\\-სცადეთ 72 გრადუსი, თუ გარე ციკლს იმეორებთ 5-ჯერ\n\\-სცადეთ 60 გრადუსი, თუ გარე ციკლს იმეორებთ 6-ჯერ"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "ფიგურის სატრიალებლად განსხვავებული სიდიდეების გამოყენება შეგიძლიათ! რას იტყვით 18-ჯერ 20 გრადუსიან მობრუნებაზე?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "მოცემულია რვაკუთხა და სამკუთხა ფიფქები, მათ შორის 36-გრადუსიანი კუთხით.\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nეს კვადრატებიანი ექვსკუთხედების მიმდევრობაა:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "საცდელად, დახატეთ თქვენი პირველი ფიფქრი, შემდეგ დახატეთ მეორე."
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "აქ ორი განსხვავებული სიგრძის მქონე ფიფქია, ერთი დახატულია მეორის შემდეგ (მათ შორის 30 გრადუსიანი მობრუნებით.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "2 ექვსკუთხედისგან და 4 სამკუთხედისგან შემდგარი მწკრივები:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_c": "თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება, იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_b": "ამ ლაბირინთის გასავლელად თქვენ შეგიძლიათ `გამეორების` ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.",
+          "courseD_bee_conditionals2_c": "თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება, იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება."
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_b": "თქვენ შეგიძლიათ `გამეორების` ან `სანამ` ციკლის გამოყენება ფუტკრის წინ გადასაადგილებლად. გამოიყენეთ ის, რომელიც უფრო მოგწონთ!",
+          "courseD_bee_conditionals3_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება."
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_a": "განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა უნდა იბზუილოს ყოველ ყვავილიან მხარეს?",
+          "courseD_bee_conditionals5_c": "მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად, ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა. `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`.",
+          "courseD_bee_conditionals5_b": "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?"
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_b": "ამ შემთხვევაში, თქვენ არ მოგიწევთ ღრუბლების ქვეშ ნექტარის არსებობის შემოწმება.",
+          "courseD_bee_conditionals6_c": "არსებობს თუ არა ციკლი, რომელიც თქვენს კოდს გაამარტივებს?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_b": "თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.\n\nთქვენ დაგჭირდებათ პირობითი ბლოკის (`თუ` ან `თუ/სხვაგვარად`) გამოყენება ამ გამოწვევის დასაძლევად."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "შეგიძლიათ მოძებნოთ გზა, რომელიც მივა ყველა ყვავილთან და ფიჭასთან ხესთან დაჯახების გარეშე? საუკეთესო გზა სპირალურია.",
+          "courseD_bee_conditionals_challenge1_b": "ამ თავსატეხში ყოველი თავისუფალი ადგილი შეიძლება იყოს ყვავილი, ფიჭა ან არაფერი. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ გაიმეოროთ `თუ/სხვაგვარად`პირობითი ბლოკი ყოველ კვადრატთან."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "ზუსტად ისე, როგორც `თუ ყვავილია` ბლოკის შიგნით, `სანამ ნექტარი > 0` ბლოკის შიგნით განლაგებული კოდი გაიშვება მხოლოდ მაშინ, როდესაც ფუტკარი ყვავილთანაა. განსხვავება იმაშია, რომ შიგნით მოთავსებული კოდი გაიშვება განმეორებითად მანამ, სანამ ნექტარი გათავდება. სცადეთ ეს ნიმუში:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n\n<title name=\"ARG1\">nectarRemaining</title>\n<title name=\"OP\">&gt;</title>\n<title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n</block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_b": "სცადეთ კოდის დაწერა კვადრატის ერთი გვერდისთვის. შეგიძლიათ გამოიყენოთ ეს კოდი ციკლში, რათა შეაგროვოთ მთელი ნექტარი?",
+          "courseD_bee_nestedLoops1_c": "არ დაგავიწყდეთ `ნექტარის მოპოვების` ბლოკის გამოყენება მაშინ, როდესაც იქნებით ყვავილის შემცვველ კვადრატზე."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_c": "არ დაგავიწყდეთ `ნექტარის მოპოვების` ბლოკის გამოყენება მაშინ, როდესაც იქნებით ყვავილის შემცვველ კვადრატზე."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.",
+          "courseD_bee_nestedLoops2_c": "გახსოვდეთ, გამეორების ციკლში შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი."
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "თქვენს კოდში უნდა იყოს ეს ორივე მოვლენა:\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">მოქნევა</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">სტვენა</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "თქვენ მოგიწევთ ბურთის გასროლა თამაშის დაწყებისას, ასევე როდესაც მოახვედრებთ ბურთს კალათს და როდესაც ხელი აცდება ბურთს."
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "თქვენ შეგილიათ ააჩქაროთ ბურთი ან ხელი, ამ ბლოკების `გაშვებისას` მოვლენასთან დაკავშირებით.",
+          "courseD_bounce_events12s_b": "სცადეთ ყოველი გასროლაზე 2 ქულის მომატება და შეცვალეთ გუნდის სიმბოლო თქვენი ქალაქის გუნდის სიმბოლოთი!"
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "თქვენ უნდა დაუმატოთ `იმოძრავე მარცხნივ` ბლოკი `როდესაც მარცხენა ისარს დააჭერთ` მოვლენას, რათა აამუშავოთ ეს თამაში:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "არ დაგაწვიყდეთ \"გაშვებაზე\" დაჭერა და კალათთან ხელის მიყვანა, რათა ამოხსნათ ეს თავსატეხი."
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "თქვენ დაგჭირდებათ ორი `მოძრაობის` მოვლენის დაწერა, რათა აამუშავოთ ეს კოდი:\n\n<xml>\n<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n<block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n<next>\n<block type=\"bounce_moveRight\"/>\n</next>\n</block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "თქვენ არ გჭირდებათ ხელის გამოძრავება ამ თავსატეხის ამოსახსნელად.",
+          "courseD_bounce_events5s_b": "დარწმუნდით, რომ დაამატეთ თქვენი კოდი სამუშაო სივრცეში:\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "გაქვთ თუ არა მოვლენა, რომელიც ასე გამოიყურება?\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "თუ კოდი სწორად დაწერეთ, გასამარჯვებლად ხელის გადაადგილება არ უნდა დაგჭირდეთ."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "თუ გსურთ, შეგიძლიათ დაამატოთ ხმები მეტ ადგილას!"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_c": "არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_c": "რა მოხდება?\n\nრა უნდა მოხდეს?\n\nრას გეუბნებათ თქვენ ეს?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "არის თუ არა რამე ადგილი სადაც ლორელი უაზრო რაღაცებს აკეთებს? რა მოხდება თუ შეცვლით ამ ბლოკებს?"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "რა აკეთებს?\n\nრას უნდა აკეთებდეს?\n\nრას გეუბნებათ ეს?",
+          "courseD_collector_debugging5a_b": "როდესაც შეაგროვებთ განძეულობის პირველ რიგს, რა იქნება დარჩენილი შესასრულებლად თქვენს კოდში?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_b": "როგორც ჩანს, ყველა საჭირო ბლოკი უკვე სამუშაო სივრცეშია. თუ ამ ყველაფერმა დაგაბნიათ, სცადეთ \"თავიდან დაწყების\" ღილაკზე დაწკაპება."
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "არ დაგავიწყდეთ, რომ შეგიძლიათ `გაიმეოროთ` როგორც ერთი ბრძანება, ასევე უფრო გრძელი კოდი. თქვენ ასევე შეგიძლიათ `გაიმეოროთ` `გამეორების` ბლოკი!",
+          "courseD_bee_nested_loops_challenge2_b": "4-ვე ძვირფასი ქვის შესაგროვებლად ჯერ გამოიყენეთ ციკლი, რათა მოშორდეთ ცენტრს. შებრუნდით მარცხნივ ან მარჯვნივ, შემდეგ გამოიყენეთ ჩასმული ციკლი, რათა იმოძრავოთ განძის ერთი ბლოკიდან მეორისკენ. თუ გაიმეორებთ ჩადგმულ ციკლს საკმარისი რაოდენობით, შემგროვებელი მოივლის _მთლიან_ გვირაბს!",
+          "courseD_bee_nested_loops_challenge2_c": "უმოკლესი პროგრამა, რომელიც აგროვებს მთელ განძს იყენებს ერთ `შეგროვების` ბლოკს და ორ მობრუნებას.",
+          "courseD_bee_nested_loops_challenge2_d": "**ამოხსნა:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_c": "თქვენი `თუ` ბრძანება შეიძლება ასე გამოიყურებოდეს:\n\n\\-თუ სიმინდია\n\\-აიღე სიმინდი\n\\-სხვაგვარად\n\\-თუ სალათია\n\\\\t აიღე სალათი\n\nთუ იქ არაფერია, არაფერსაც არ აიღებთ!"
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`სანამ` ციკლი მიხედავს ცარიელ სივრცეებსაც! იქიდან გამომდინარე, რომ სალათი არ არის, ის არ შეაგროვებს მას და კოდი გაგრძლედება.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "თქვენ შეგიძლიათ გამოიყენოთ, როგორც `სანამ წინ გზა არსებობს` ციკლი, ასევე `გამეორების ციკლი`, რათა მთლიანად შეაგროვოთ მოსავალი."
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "ეს ახალი ციკლია: `გამეორება, სანამ გოგრაა`. შეგიძლიათ მიხვდეთ, თუ როგორ უნდა გამოიყენოთ ეს თავსატეხში?",
+          "courseD_farmer_condLoops5_b": "ყოველ ადგილას შეიძლება იყოს ერთზე მეტი სიმინდი ან სალათი. გამოიყენეთ `სანამ` ციკლი, რათა შეაგროვოთ ყველა მათგანი!"
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "\"ნაბიჯის\" ღილაკი შეიძლება ძალიან გამოგადგეთ ამ გამოწვევასთან გასამკლავებლად.",
+          "courseD_farmer_condLoops_challenge1_b": "ჩვეულებრივ, თქვენ უბრალოდ `აიღებდით გოგრას` თუ გოგრასთან იქნებოდით. კიდევ რისი გაკეთება გიწევთ, თუ გოგრასთან იქნებით?"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "ყოველ სივრცეში ბოსტნეულის სხვადასხვა რაოდენობაა. გამოიყენეთ `სანამ` ციკლი."
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "გროვის ასაღებად თქვენ მოგიწევთ წინ ოთხჯერ გადაადგილება. შეგიძლიათ თუ არა გამოიყენოთ ამისთვის `გამეორების` ციკლი?",
+          "courseD_farmer_while1_b": "მიწის ამოსაღებად გამოიყენეთ ბლოკი `ამოიღე 1`, როდესაც იდგებით მიწის გროვაზე."
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "ხვრელთან მისასვლელად მხოლოდ ერთხელ მოგიწევთ გადაადგილება.",
+          "courseD_farmer_while2_b": "თქვენი მოგიწევთ `შეავსე 1` ბლოკის გამოყენება ექვსჯერ. შეგიძლიათ სიმარტივისთვის ციკლის გამოყენება?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "ციკლი დაგეხმარებათ კოდის გამარტივებაში.",
+          "courseD_farmer_while3_b": "წესით, გროვასთან მისასვლელად არ უნდა დაგჭირდეთ `მობრუნების` ბლოკები."
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_b": "ეს ძალიან ჰგავს წინა თავსატეხს, განსხვავება მხოლოდ იმაშია, თუ რომელი ციკლში გჭირდებათ."
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_b": "მწკრივის ბოლოში მისასვლელად ფერმერი უნდა გადაადგილდეს წინ ჯამში ხუთჯერ. კიდევ რა უნდა გააკეთოს ფერმერმა?",
+          "courseD_farmer_conditionals5a_c": "გადაადგილდით წინ 5-ჯერ. წინ ყოველ გადაადგილებაზე მოაშორეთ ერთი ნიჩაბი მიწა `სანამ გროვაა` ბლოკის გამოყენებით."
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_c": "კიბის საფეხურების ნიმუში იყენებს შემდეგ ბლოკებს\n\n-   წინ გადაადგილება\n-   ხვრელის გავსება\n-   მარჯვნივ მობრუნება\n-   წინ გადაადგილება\n-   ხვრელის გავსება\n-   მარცხნივ მობრუნება\n\nრამდენჯერ უნდა გამოიყენოთ ეს ნიმუში?\n\nდარწმუნდით, რომ იყენებთ `როდესაც ხვრელია` ბლოკის მის გასავსებად."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_b": "`სანამ წინ გზაა` ციკლის გამეორების ციკლში განლაგება დაგეხმარებათ ამ თავსატეხის ამოხსნაში.",
+          "courseD_farmer_conditionals8_c": "რა უნდა გააკეთოთ ყოველი გზის ბოლოს?"
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "ყოველი ხვრელი ან გროვა განლაგებულია გზის ბოლოდამ ერთი ნაბიჯით **უკან**.",
+          "courseD_farmer_while_challenge1_b": "თუ გამოიყენებთ `სანამ` ციკლს, შეძლებთ უთხრათ ფერმერს, რომ მოაშოროს გროვა ან შეავსოს ხვრელი მაშინაც კი, როდესაც ისინი იქვე არ არის. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ დააპროგრამოთ ის ისე, რომ ფერმერმა ამოიღოს ნებისმიერი მიწის გროვა და შეავსოს ნებისმიერ ხვრელი, იმის მიუხედავად თუ სადაა ის განლაგებული.",
+          "courseD_farmer_conditionals8_c": "ამის ამოხსნა შესაძლებელია `გამეორების` ციკლების გამოყენების გარეშე. ამისთვის თქვენ დაგჭირდებათ ოთხი `სანამ` ციკლის გამოყენება."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "სავარაუდოდ, თქვენ უკვე გამოიყენეთ ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ შეიტანოთ მასში მცირე ცვლილებები."
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი ჩავარდება წყალში!",
+          "courseB_iceage_loops10_b": "სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა ან ფურცელზე ჩამოწერა. ხედავთ რამე კანონზომიერებას?",
+          "courseB_iceage_loops10_c": "ეს გრძელი ფაზლია! მიყევით ამ გზას."
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "ფრთხილად იყავით ჩატეხილ ყინულთან! სკრატი მასში ჩავარდება!",
+          "courseD_iceage_loops1_b": "უნდა გამოიყენოთ ეს ბლოკი:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "დაშალეთ ეს თავსატეხი ორ ნაწილად: პირველი ნაწილი - კუთხემდე, ხოლო მეორე - კუთხის შემდეგ.",
+          "courseD_iceage_loops2_b": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ხმამაღლა წარმოთქმა.",
+          "courseD_iceage_loops2_c": "მიყევით ამ გზას სკტატის რკოსთან მისაყვანად."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_b": "კოდის გასამეორებლად, გადმოათრიეთ `გამეორება` ციკლი, შემდეგ კი ჩასვით მასში სასურველი ბლოკი."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "არ მოერიდოთ თქვენი კოდის გაშვებას, რომ ნახოთ, რა მოხდება!",
+          "courseD_iceage_loops4_c": "სკრატი უნდა მიყვეს ამ გზას."
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_b": "კიდევ უნდა დაამატოთ მხოლოდ **ერთი** ციკლი!",
+          "courseD_iceage_loops6_c": "თქვენი საბოლოო გზა ასე უნდა გამოიყურებოდეს."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "თუ გაიჭედეთ, სცადეთ ნაბიჯების ფურცელზე ჩამოწერა. ხედავთ კანონზომიერებას?",
+          "courseB_iceage_loops7_b": "სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_b": "პირველი ციკლი უნდა გამეორდეს **3**-ჯერ, მეორე უნდა გამეორდეს **5**-ჯერ, მესამე უნდა გამეორდეს **4**-ჯერ, ხოლო ბოლო ციკლი უნდა გამეორდეს **4**-ჯერ.",
+          "courseD_iceage_loops8_c": "გამოიყენეთ ციკლები, რომ დაეხმაროთ სკრატს ამ გზის გავლაში."
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "გაგიჭირდათ? სცადეთ ამ ფაზლის დაშლა მცირე ნაწილებად. არ მოერიდოთ ფაზლის გაშვება კიდირების პროცესში!",
+          "courseD_iceage_loops9_b": "თქვენი საბოლოო კოდი უნდა შეიცავდეს **4** ციკლს.",
+          "courseD_iceage_loops9_c": "სკრატი უნდა მიყვეს ამ გზას რკოსთან მისასვლელად."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_b": "იმისათვის რომ ამ ბილიკს გაყვეთ, იმოძრავეთ წინ და შეუხვიეთ ერთ ადგილას, შემდეგ გააგრძელეთ მოძრაობა და შეუხვიეთ საპირისპირო მიმართულებით. რკოსთან მისაღწევად კიდევ ერთხელ გადაადგილდით წინ."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.",
+          "courseD_maze_nestedLoops3_c": "სცადეთ კოდის დაწერა სწორი გზისთვის და მობრუნებისთვის. შეგიძლიათ გაიმეოროთ ეს მზესუმზირასთან მისასვლელად?"
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_b": "დარწმუნდით, რომ დაკლიკვა ხდება სამივე ბლოკზე და ის დაკავშირებულია `როცა გაიშვება` ბლოკთან."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_b": "გახსოვდეთ, რომ მობრუნებები ჩიტის პერსპერქტივიდან იგულისხმება.",
+          "courseC_maze_programming5_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_b": "გახსოვდეთ, რომ მობრუნებები ჩიტის პერსპერქტივიდან იგულისხმება.",
+          "courseC_maze_programming5_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "ხედავთ თუ არა მიმდევრობებს, რომელთა ციკლში მოთავსებითაც კოდი შემოკლდება?",
+          "courseD_maze_until1_b": "სცადეთ ჩასმული ციკლის გამოყენება ამ თავსატეხის ამოსახსნელად."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_b": "თუ იჭედებით, სცადეთ ნაბიჯების ფურცელზე ამოწერა და განმეორებადი ნაწილების პოვნა.",
+          "courseD_maze_until3_c": "არის კიბის საფეხურის მსგავსი მიმდევრობა, რომელსაც შეგიძლიათ მიჰყვეთ ამ თავსატეხის ამოსახსნელად?",
+          "courseD_maze_until3_d": "არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება, რათა შეამოკლოთ თქვენი კოდი."
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_b": "არის კიბის საფეხურის მსგავსი მიმდევრობა, რომელსაც შეგიძლიათ მიჰყვეთ ამ თავსატეხის ამოსახსნელად?",
+          "courseD_maze_until4_c": "არ დაგავიწყდეთ `გამეორება, სანამ` ბლოკის გამოყენება, რათა შეამოკლოთ თქვენი კოდი."
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`, ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში."
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "იმისათვის, რომ გამოიყენოთ მხოლოდ ერთი `წინ გადაადგილება`, ჩასვით ის `გამეორება მზესუმზირამდე` ბლოკში."
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_b": "მიუხედავად იმისა, რომ წინა თავსატეხთან შედარებით აქ მეტი მობრუნებაა, თქვენი კოდი შეიძლება თითქმის იგივე იყოს, თუ `გამეორება სანამ` ბლოკს გამოიყენებთ!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "არ დაგავიწყდეთ თქვენი `გამეორება სანამ` ბლოკის გამოყენება, მზესუმზირასთან მისასვლელად!"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_c": "ხედავთ სად შეიძლება ამ ნახატმა გამოიყენოს ფუნქცია სახელად `ექვსკუთხედების მწკრივი`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "ყოველ კვადრატს აქვს 100 პიქსელის ტოლი გვერდი, რაც იმას ნიშნავს, რომ თქვენ მოგიწევთ 175 პიქსელით წინ გადაადგილება, სანამ მეორე კვადრატის ხატვას დაიწყებთ.",
+          "courseE_artist_functions1_b": "სათვალის ხატვისას ერთმანეთის გადამკვეთი ხაზების დახატვა დაშვებულია.",
+          "courseE_artist_functions1_c": "უფრო მოკლე კოდის მისაღებად, სცადეთ `გამეორების` ციკლის გამოყენება, რომ დახატოთ სათვალის კვადრატული ჩარჩო."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_b": "ფუნქია, რომელსაც დაწერთ, უნდა შეიცავდეს არა მთლიან პროგრამას, არამედ მხოლოდ იმ ნაწლის, რომელიც ხატავს კვადრატს 100 პიქსელი ზომის გვერდებით.",
+          "courseD_artist_functions2_c": "გამოიყენეთ მწვანე `კვადრატის დახატვის` ბლოკი, რომ \"გამოიძახოთ\" თქვენი ფუნქცია `როცა მირბის` ბლოკის ქვეშ. სხვანაირად თქვენი ფუნქციის კოდი არ გეშვება.\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/>\n</block></xml>",
+          "courseD_artist_functions2_a": "თქვენი პროგრამა უნდა:\n\n-   იყენებდეს ფუნქციას\n-   მოძრაობდეს წინ 100 + 75 პიქსელით\n-   იყენებდეს ფუნქციას"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "ფუნქია, რომელსაც დაწერთ, უნდა შეიცავდეს არა მთლიან პროგრამას, არამედ მხოლოდ იმ ნაწლის, რომელიც ხატავს კვადრატს 100 პიქსელი ზომის გვერდებით.",
+          "courseD_artist_functions2_c": "გამოიყენეთ მწვანე `კვადრატის დახატვის` ბლოკი, რომ \"გამოიძახოთ\" თქვენი ფუნქცია `როცა მირბის` ბლოკის ქვეშ. სხვანაირად თქვენი ფუნქციის კოდი არ გეშვება.\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/>\n</block></xml>",
+          "courseD_artist_functions2_a": "თქვენი პროგრამა უნდა:\n\n-   იყენებდეს ფუნქციას\n-   მოძრაობდეს წინ 100 + 75 პიქსელით\n-   იყენებდეს ფუნქციას"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_b": "თქვენს ციკლს შიგნით უნდა ჰქონდეს სამივე დასაწყები კოდის ბლოკი."
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_b": "ამოიღეთ `ვარსკვლავის დახატვის` ფუნქციის ბლოკი ინსტრუმენტების პანელიდან, რომ დაიწყოთ თქვენი ფუნქციის მშენებლობა. მას უნდა ჰქონდეს იგივე კოდი, რაც წინა თავსატეხს, ვინაიდან იგივე ვარსვკლავის ორნამენტს ხატავთ.",
+          "courseD_artist_functions4_c": "გამოიყენეთ მწვანე `ვარსკვლავის დახატვის` ბლოკი თქვენს მთავარ პროგრამაში ამ ფუნქციის გამოსაძახებლად. არ დაგავიწყდეთ ვარსკვლავებს შორის წინ გადახტომა!"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_c": "დაიწყეთ ვარსკვლავის ფორმის კოდის `ვარსკვლავის დახატვის` ფუნქციაში ჩასმით, შემდეგ კი გამოიყენეთ ეს ფუნქცია, რომ დახატოთ სამი ვარსკვლავი!"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_c": "დაიწყეთ ვარსკვლავის ფორმის კოდის `ვარსკვლავის დახატვის` ფუნქციაში ჩასმით, შემდეგ კი გამოიყენეთ ეს ფუნქცია, რომ დახატოთ სამი ვარსკვლავი!"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "თქვენ გჭირდებათ მხოლოდ ერთი `წინ გადაადგილების` ბლოკი, მაგრამ ამის გარდა, დაგჭირდებათ რამდენიმე `წინ გადახტომის` და/ან `უკან გადახტომის` ბლოკი!",
+          "courseD_artist_functions8_d": "კვადრატების ხაზის გასაკეთებლად,\n\n-   გაიმეორეთ 3-ჯერ\n-   დახატეთ კვადრატის **50 პიქსელი** სიგრძის გვერდებით\n-   გადახტით წინ **100 პიქსელით**",
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "შეგიძლიათ იპოვოთ ოთხივე ადგილი ამ ნახატში, სადაც `სამკუთხედების მწკრივის` გამოყენება შეიძლება?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_c": "სამკუთხედების მწკრივის დასახაზად:\n\n-   4-ჯერ გამეორება\n-   სამკუთხედის დახატვა\n-   50 პიქსელით წინ გადახტომა",
+          "courseD_artist_functions9_d": "ბრილიანტის დასახატად:\n\n-   გაიმეორეთ ორჯერ\n-   დახატეთ სამკუთხედების ხაზი\n-   მობრუნდით 60 გრადუსით\n-   დახატეთ სამკუთხედების ხაზი\n-   მობრუნდით 120 გრადუსით"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "თუ ფუნქციას კიდევ ერთხელ გამოიძახებთ, შეგიძლიათ შექმნათ იგივე დიზაინი საბოლოო კუთხეში.",
+          "courseE_artist_functions_challenge1_b": "აგრეთვე, შეგიძლიათ `გადახტეთ` სხვა პოზიციებზე, ან შეცვალოთ ყველაფერი როგორც მოგესურვებათ!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \nეს `გადახტომის` ბლოკი საშუალებას გაძლევთ ამოძრაოთ ზომბი სახატავი ბადის ნებისმიერ პიქსელზე, სადაც მოგესურვებათ. ბლოკი მუშაობს ზომის რაღაც პიქსელებით მარჯვნივ და რაღაც პიქსელებით დაბლა გადაყვანით. ათვლა ყოველთვის იწყება ზედა მარცხენა კუთხიდან, რაც ნიშნავს, რომ არ აქვს მნიშვნელობა, თუ სადაა ზომბი მხატვარი, სანამ ბრძანება გაეშვება!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ.",
+          "courseE_farmer_functions1_b": "თქვენ გჭირდებათ მხოლოდ ერთი გოგრის შეგროვება, მაგრამ იქნება შეგეძლოთ გოგრამდე მისასვლელად ციკლის გამოყენება?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_b": "გამოიყენეთ `გამეორება, სანამ` ბლოკი გოგრასთან მოსახვედრად!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "თქვენ შეგიძლიათ გამოიყენოთ `გამეორება, სანამ გოგრაა`, რათა მიაღწიოთ ორივე გზის ბოლომდე.",
+          "courseE_farmer_functions2b_b": "დამაკავშირებელ გზაზე სიმინდი არაა, ამიტომ თქვენ შეგიძლიათ იმოძრავოთ მის გასწრივ და შებრუნდეთ.",
+          "courseE_farmer_functions2b_c": "თქვენ დაგჭირდებათ ორი განცალკევებული `გამეორება, სანამ` ბლოკი, რათა შეაგროვოთ მთლიანი მოსავალი."
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "გამოიყენეთ მწვანე `სიმინდი და გოგრა` ბლოკი, რათა გამოიძახოთ ეს ფუნქცია."
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "იმისათვის, რომ უთხრათ ფერმერს, თუ რამდენჯერ აიღოს სალათის ფურცლები, `გამეორების` ციკლის გამოყნების მაგივრად, ამჯერად შეგიძლიათ გამოიყენოთ `სანამ კვლავ არის სალათი` ბლოკი.  ",
+          "courseE_farmer_ramp12_b": "სალათის ასაღებად მხოლოდ ერთხელ გჭირდებათ წინ გადაადგილება."
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "კოდის შესამოკლებლად, შეგიძლიათ `სანამ` ციკლი `გამეორების` ციკლის შიგნით ჩააშენოთ."
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "თქვენ კვლავ დაგჭირდებათ `გამეორების` ციკლსი გამოყენება ამ ყველაფრის გარეთ, რომ უთხრათ ფერმერს, რამდენჯერ გადაადგილდეს წინ და აიღოს სალათი."
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "მაინც დაგჭირდებათ, რომ ჯერ`მდე` ციკლი გამოიყენოთ, ხოლო მას შემდეგ რაც სალათის ფურცელს მიაღწევთ, გამოიყენეთ `სანამ` ციკლი."
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "ამ თავსატეხის ამოსახსნელად მაინც დაგჭირდებათ `მოვლენამდე` და `სანამ`ციკლების `გამეორების` ციკლში ჩასმა!"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "ამ თავსატეხის ამონახსნი ბოლო თავსატეხის ამონახსნის მსგავსი იქნება, თუმცა მიმართულებას შეიცვლის."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "გამოიყენეთ `თუ/კიდევ` ბლოკი იმისათვის, რომ ფერმერს დაეხმაროთ და გადააწყვეტინოთ, მარჯვნივ შეუხვიოს თუ მარცხნივ."
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "გამოიყენეთ `თუ/კიდევ` ბლოკი იმისათვის, რომ ფერმერს დაეხმაროთ და გადააწყვეტინოთ, მარჯვნივ შეუხვიოს თუ მარცხნივ."
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "თქვენი `for` ციკლი დაითვლის 15-დან 300-მდე 15-ის ტოლი ბიჯით.",
+          "courseF_artist_for6_b": "განათავსეთ `წინ გადაადგილებისა` და `მობრუნების` ბლოკები ამ`for` ციკლში.",
+          "courseF_artist_for6_c": "ამჯერად `მობრუნების` ბლოკში მხოლოდ გრადუსების რაოდენობის შეცვლა გიწევთ."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_c": "ამ თავსატეხის `for` ციკლი იწყება 15-ით და ადის 300-მდე 2-ს ტოლი ბიჯით.",
+          "courseF_artist_for7_d": "ეს სურათი იქმნება 89 გრადუსის ტოლი მობრუნებით."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "ამ კოდში ყველაფერი უნდა დატოვოთ ძველებურად, გარდა მობრუნების კუთხისა.",
+          "courseF_artist_for8_b": "სურვილის შემთხვევაში, შეგიძლიათ შეურჩიოთ თქვენს სპირალს განსხვავებული ფერი!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "თუ `განსაზღვრე ალფა` ბლოკს განათავსებთ `for` ციკლში და გამოიყენეთ `მთვლელის` ცვლადს მის შესაცვლელად, თქვენ შეძლებთ ამის მსგავსი დიზაინის შექმნას."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`კალმის სიგანე` 1-ია. პირველი კვადრატის გვერდები 50 პიქსელია, ხოლო ყოველი შემდეგი კვადრატის გვერდი 50 პიქსელით უფრო ფართოა, ვიდრე წინასი.",
+          "courseF_artist_for_challenge1_b": "ფუნჯის გამჭვირვალობა ყოველთვის ტოლია`მთვლელი`/2-ის.",
+          "courseF_artist_for_challenge1_c": "როდესაც დახატავთ ყველა კვადრატს არ დაგავიწყდეთ უკან გადახტომა, მობრუნება, ისევ გადახტომა და უკან მობრუნება!",
+          "courseF_artist_for_challenge1_d": "**ამოხსნა:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "`for ციკლი` იზდება 5-დან 250-მდე 2-ის ტოლი ბიჯით. ",
+          "courseF_artist_for_challenge2_a": "ფერის შეცვლა ხდება `განსაზღვრე ფერი წითლად, მწვანედ, ლურჯად` ბლოკით. წითელი ყოველთვის ტოლია 255-ის, მწვანე `მთვლელის`, ხოლო ლურჯი ყოველთვის არის`255 - მთვლელი`.",
+          "courseF_artist_for_challenge2_b": "კოდი გაცილებით უფრო მარტივია, ვიდრე შეიძლება იფიქროთ. უბრალოდ განსაზღვრეთ ფერი `for ციკლის` შიგნით, გადაადგილდით წინ, შემდეგ კი შებრუნდით.",
+          "courseF_artist_for_challenge2_d": "**ამოხსნა:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">მობრუნებამარჯვნივ</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "გაერთეთ ამ დონეზე! ნახეთ, რა მცირე ცვლილებების შეტანა შეგიძლიათ თქვენს კოდში.",
+          "courseF_artist_variables10_b": "თქვენ შეგიძლიათ გამოსცადოთ რამდენიმე რამ და გაუშვათ თქვენი კოდი რამდენჯერმე."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "დაიწყეთ თქვენი კოდი `სიგრძის განსაზღვრის` ბლოკით. სიგრძის ცვლადი დააყენეთ 150–ზე.",
+          "courseF_artist_variables7_b": "თქვენ შეგიძლიათ გამოიყენოთ `გამეორების` ციკლი, რათა გაამარტივოთ თქვენი სამკუთხედის კოდი.",
+          "courseF_artist_variables7_c": "სამკუთხედის კუთხეების დასახატად თქვენ მოგიწევთ 120 გრადუსით მობრუნება."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "არ დაგავიწყდეთ: თქვენი სამკუთხედის კოდი უნდა იწყებოდეს `სიგრძის განსაზღვრის` ბლოკით, ხოლო საწყისი მნიშვნელობა უნდა იყოს 150 პიქსელი.",
+          "courseF_artist_variables8_c": "დარწმუნდით, რომ იყენებთ `გამეორების` ციკლს სამკუთხედის დასახატად."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "ამ თავსატეხში თქვენ დაგჭირდებათ მხოლოდ ციკლის გამეორების რაოდენობის შეცვლა."
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_c": "ამ თავსატეხში, პირველი ყვავილების მიმდევრობა შედგება **14** ყვავილისგან, ხოლო მეორე **10** ყვავილისგან, მესამე შედგება **6** ყვავილისგან, მეოთხე კი **2**-სგან.\n\nამ ნახატში, **7** წითელი კვადრატია, **5** ნარინჯისფერი, **3** მწვანე და **1** ლურჯი ბლოკი.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nრა აქვთ საერთო ამ რიცხვებს?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "`გამეორების` ციკლში თქვენ დაგჭირდებათ ორი ბლოკი, რათა შეაგროვოთ მთელი ნექტარი."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_b": "არ დაგავიწყდეთ წინ გადაადგილება ციკლებს შორის, რათა მიაღწიოთ ყოველ ყვავილამდე."
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_b": "გამოიყენეთ `მთვლელის` ცვლადი ყოველ ციკლში, რათა ფუტკარმა დაფაროს სხვადასხვა მანძილი ყვავილებს შორის.",
+          "courseF_bee_for5_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება."
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_c": "თქვენი ციკლი უნდა ითვლიდეს **5-დან 1-მდე**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_c": "არ დაგავიწყდეთ `მთვლელის` ცვლადის გამოყენება თქვენს `გამეორების` ციკლში."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_b": "ამ თავსატეხში, ყვევილების შესაგროვებლად, თქვენ დაგჭირდებათ კიბის საფეხურისებრი პრინციპით მოძრაობა.",
+          "courseF_bee_for8_c": "თქვენ ციკლმა უნდა დაითვალოს _3-დან 15-მდე_ გარკვეული ნაზრდით. რისი ტოლია ნაზრდი?"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "მოძრაობის ამ ვარიანტს შეხედეთ:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "სცადეთ ორი `for` ციკლის გამოყენება: ერთი ასაცოცად და ნექტარის შესაგროვებლად, ხოლო მეორე ქვემოთ ჩამოსაძვრომად და თაფლის გასაკეთებლად.",
+          "courseF_bee_for_challenge2_c": "გაითვალისწინეთ, რომ ზრდადი კიბისებრი კოდის დასაწერად, `for` ციკლი საჭიროებს რამდენიმე ჩვეულებრივ ციკლს `მთვლელჯერ`, შესრულებულს გამეორების ციკლის შიგნით.\n\nმეორე `for` ციკლი საჭიროებს მხოლოდ ერთ ჩვეულებრივ ციკლს, რათა გააკეთოს `მთვლელის` ტოლი თაფლის რაოდენობა.",
+          "courseF_bee_for_challenge2_d": "**ამოხსნა:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ რამე და თუ არ იმუშავებს, სცადეთ სხვა რამე!"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "ყოველი `როდესაც___ისარი` მოვლენა საჭიროებს განსხვავებულ `ამოძრავე მსახიობი 1` ბრძანებას თავსატეხის ამოსახსნელად. "
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "თქვენ მოგიწევთ ორი ბლოკის დამატება `როდესაც მსახიობი 1 შეეხება მსახიობ 2-ს` მოვლენის ქვეშ.",
+          "iceage_sound_and_points_b": "თქვენ დაგჭირდებათ ორივე: `შეაგროვე ქულა` და `დაუკარი ___ ხმა` ბლოკები ამ დონის დასამთავრებლად."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "ამ თავსატეხის დასასრულებლად თქვენ მხოლოდ ორი ბლოკის დამატება დაგჭირდებათ. ",
+          "iceage_warn_ice_age_b": "დაამატეთ ორივე ახალი ბლოკი `გაშვებისას` მოვლენის შიგნით, რათა ისინი პროგრამის გაშვებისთანავე შესრულდნენ."
         }
       }
     }
