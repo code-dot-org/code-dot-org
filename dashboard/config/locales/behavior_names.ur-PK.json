@@ -40,6 +40,116 @@
           "recovering": "ریکور کرتے ہوئے",
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "Virtual Pet 1_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseE_aboutme_1_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_aquarium": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_card": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_chatbot": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_collector": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_madlib": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_pet": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_editable_card": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_editable_chatbot": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_editable_madlib": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_events_practice_reorder": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_conversation": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_events": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_freeplay": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_interview": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_multiprompt": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_card": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_card_finish": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_chatbot": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_chatbot_finish": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_madlib": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_madlib_finish": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "simcustom_2021": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         }
       }
     }

@@ -250,9 +250,6 @@ ur:
             Envelope Variables:
               name: لفافہ متغیرات
         dance:
-          title: ڈانس پارٹی
-          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور
-            مزید 25 کی خاصیت بنانا!
           lessons:
             Dance Party:
               name: ڈانس پارٹی
@@ -590,34 +587,10 @@ ur:
           lessons:
             Lesson:
               name: سبق
-        virustest:
-          title: وباء کے پھیلنے کا سیمیولیشن
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-        outbreak:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
-          lesson_groups:
-            outbreak:
-              display_name: وباء کی سیمولیشن
-          title: وباء کا سیمیولیٹر
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
-            کا سیمیولیشن بنائیں.
-          name: وباء کا پھیلنا
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
         2021drafting:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             lessonGroup-3:
               display_name: متغیرات
-            outbreak:
-              display_name: وباء کا سیمیولیٹر
         csd3-2021:
           lessons:
             Variables:
@@ -713,23 +686,11 @@ ur:
             csf_events:
               display_name: ایونٹس/واقعات
         csf-2021-pilot:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
-            outbreak:
-              display_name: وباء کی سیمولیشن
             lessonGroup-3:
               display_name: متغیرات
             variables:
               display_name: متغیرات
-        contagion-pilot:
-          description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
-          description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے
-            کا سیمیولیشن بنائیں.
-          student_description: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے
-            پھیلنے کا سیمیولیشن بنائیں.
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -744,3 +705,7 @@ ur:
             Variables:
               key: متغیرات
               name: متغیرات
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: ٹیچر کمیونٹی
