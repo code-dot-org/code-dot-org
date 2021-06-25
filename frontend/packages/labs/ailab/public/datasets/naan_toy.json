@@ -1,13 +1,13 @@
 {
   "name": "naan_toy",
   "card": {
-    "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations",
+    "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Help make recommendations for what kind of naan a new customer should order",
-      "potentialMisuses": "Anything other than recommendations"
+      "potentialUses": "Help make recommendations for what kind of naan a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
     }
   },
   "defaultLabelColumn": "preference",

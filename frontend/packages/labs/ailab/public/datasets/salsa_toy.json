@@ -1,13 +1,13 @@
 {
   "name": "salsa_toy",
   "card": {
-    "description": "Survey of customers in a taco shop on whether or not they like certain salsa combinations",
+    "description": "Survey of customers in a taco shop on whether or not they like certain salsa combinations.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Help make recommendations for what kind of salsa a new customer should order",
-      "potentialMisuses": "Anything other than salsa recommendations"
+      "potentialUses": "Help make recommendations for what kind of salsa a new customer should order.",
+      "potentialMisuses": "Anything other than salsa recommendations."
     }
   },
   "defaultLabelColumn": "preference",

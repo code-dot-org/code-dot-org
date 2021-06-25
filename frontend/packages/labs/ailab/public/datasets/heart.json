@@ -11,34 +11,34 @@
     }
   },
   "fields": [
-    { "type": "numerical", "id": "Age", "description": "" },
-    { "type": "categorical", "id": "Sex", "description": "" },
-    { "type": "categorical", "id": "Chest Pain Type", "description": "" },
+    { "type": "numerical", "id": "Age", "description": "Age of the patient." },
+    { "type": "categorical", "id": "Sex", "description": "Biological sex of the patient." },
+    { "type": "categorical", "id": "Chest Pain Type", "description": "Type of chest pain." },
     {
       "type": "numerical",
       "id": "Resting Blood Pressure",
-      "description": "Whether they have chest pain, and if so whether it is anginal: a feeling like your heart is being squeezed"
+      "description": "Whether they have chest pain, and if so whether it is anginal: a feeling like your heart is being squeezed."
     },
-    { "type": "numerical", "id": "Cholesterol", "description": "" },
+    { "type": "numerical", "id": "Cholesterol", "description": "Cholesterol in the blood." },
     {
       "type": "categorical",
       "id": "Fasting Blood Sugar > 120mg/dl",
-      "description": ""
+      "description": "Whether or not their fasting blood sugar is high (above 120)."
     },
     {
       "type": "categorical",
       "id": "Resting ECG Results",
-      "description": "Whether or not their fasting blood sugar is high (above 120)"
+      "description": "The results of an echycardiogram: whether there are abnormalities detected in their heart."
     },
     {
       "type": "numerical",
       "id": "Maximum Heart Rate Achieved",
-      "description": "The results of an echycardiogram: whether there are abnormalities detected in their heart."
+      "description": "During an exercise test, the highest the patient's heart rate reached."
     },
     {
       "type": "categorical",
       "id": "Exercise Induced Angina",
-      "description": "During an exercise test, the highest the patient's heart rate reached."
+      "description": "Whether or not exercise induced angina in the patient"
     },
     {
       "type": "numerical",
@@ -58,7 +58,7 @@
     {
       "type": "categorical",
       "id": "Diagnosis of Heart Disease",
-      "description": ""
+      "description": "Whether or not the patient has heart disease."
     }
   ]
 }

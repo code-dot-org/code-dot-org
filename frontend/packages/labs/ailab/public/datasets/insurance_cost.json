@@ -1,12 +1,12 @@
 {
   "name": "insurance_cost",
   "card": {
-    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI",
+    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI.",
     "source": "https://www.kaggle.com/mirichoi0218/insurance",
     "lastUpdated": "Unknown",
     "context": {
       "createdBy": "Unknown",
-      "potentialUses": "",
+      "potentialUses": "Can be used to predict whether or not someone is a smoker based on other insurance information",
       "potentialMisuses": ""
     }
   },
@@ -15,27 +15,27 @@
     {
       "type": "numerical",
       "id": "age",
-      "description": "age of primary beneficiary"
+      "description": "age of primary beneficiary."
     },
     {
       "type": "categorical",
       "id": "sex",
-      "description": "insurance contractor gender, female, male"
+      "description": "insurance contractor gender: female, male."
     },
     {
       "type": "numerical",
       "id": "bmi",
-      "description": "Body mass index"
+      "description": "Body mass index."
     },
     {
       "type": "numerical",
       "id": "children",
-      "description": "Number of children covered by health insurance"
+      "description": "Number of children covered by health insurance."
     },
     {
       "type": "categorical",
       "id": "smoker",
-      "description": "Whether the person smokes or not"
+      "description": "Whether the person smokes or not."
     },
     {
       "type": "categorical",
@@ -45,7 +45,7 @@
     {
       "type": "numerical",
       "id": "charges",
-      "description": "Individual medical costs billed by health insurance"
+      "description": "Individual medical costs billed by health insurance."
     }
   ]
 }

@@ -35,12 +35,12 @@
     {
       "type": "categorical",
       "id": "Company Relationship",
-      "description": "Their relationship to the company: e.g. \"founder\", \"CEO\", \"chairman\")"
+      "description": "Their relationship to the company: e.g. \"founder\", \"CEO\", \"chairman\")."
     },
     {
       "type": "categorical",
       "id": "Company Sector",
-      "description": "The sector their company is in, e.g. \"Finance\" or \"Software\""
+      "description": "The sector their company is in, e.g. \"Finance\" or \"Software\"."
     },
     {
       "type": "categorical",
@@ -85,17 +85,17 @@
     {
       "type": "categorical",
       "id": "Wealth Category",
-      "description": "Their category of wealth, e.g. \"Financial\", \"Non-Traded\", or \"Traded Sectors\""
+      "description": "Their category of wealth, e.g. \"Financial\", \"Non-Traded\", or \"Traded Sectors\"."
     },
     {
       "type": "categorical",
       "id": "Wealth Industry",
-      "description": "The industry their wealth is in"
+      "description": "The industry their wealth is in."
     },
     {
       "type": "categorical",
       "id": "Wealth Inherited",
-      "description": "Whether their wealth was inherited and where from, e.g. 'not inherited', 'father', '3rd generation'"
+      "description": "Whether their wealth was inherited and where from, e.g. 'not inherited', 'father', '3rd generation'."
     }
   ]
 }

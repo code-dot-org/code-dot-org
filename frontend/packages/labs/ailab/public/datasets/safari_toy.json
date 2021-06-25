@@ -6,8 +6,8 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Can be used to determine the best times to visit the safari to make sure you see the most amount of wildlife",
-      "potentialMisuses": "Only certain types of animals are tracked, so avoid jumping to conclusions on animals that are not a part of this set (like zebras or hippopotamus)"
+      "potentialUses": "Can be used to determine the best times to visit the safari to make sure you see the most amount of wildlife.",
+      "potentialMisuses": "Only certain types of animals are tracked, so avoid jumping to conclusions on animals that are not a part of this set (like zebras or hippopotamus)."
     }
   },
   "defaultLabelColumn": "lions",
@@ -15,62 +15,62 @@
     {
       "id": "lions",
       "type": "numerical",
-      "description": "Number of lions seen during a visit"
+      "description": "Number of lions seen during a visit."
     },
     {
       "id": "temperature",
       "type": "numerical",
-      "description": "Temperature during a visit"
+      "description": "Temperature during a visit."
     },
     {
       "id": "people",
       "type": "numerical",
-      "description": "Amount of total people on safari during a visit"
+      "description": "Amount of total people on safari during a visit."
     },
     {
       "id": "dayOfMonth",
       "type": "numerical",
-      "description": "The day of the month (1-31) of a visit"
+      "description": "The day of the month (1-31) of a visit."
     },
     {
       "id": "ticketRevenue",
       "type": "numerical",
-      "description": "The profit of the safari company on the day of a visit"
+      "description": "The profit of the safari company on the day of a visit."
     },
     {
       "id": "antelope",
       "type": "numerical",
-      "description": "Number of antelope seen during a visit"
+      "description": "Number of antelope seen during a visit."
     },
     {
       "id": "rhino",
       "type": "numerical",
-      "description": "Number of rhinos seen during a visit"
+      "description": "Number of rhinos seen during a visit."
     },
     {
       "id": "elephant",
       "type": "numerical",
-      "description": "Number of elephants seen during a visit"
+      "description": "Number of elephants seen during a visit."
     },
     {
       "id": "alligator",
       "type": "numerical",
-      "description": "Number of alligators seen during a visit"
+      "description": "Number of alligators seen during a visit."
     },
     {
       "id": "trees",
       "type": "numerical",
-      "description": "Number of overgrowth and trees providing shade seen during the visit"
+      "description": "Number of overgrowth and trees providing shade seen during the visit."
     },
     {
       "id": "mosquitos",
       "type": "numerical",
-      "description": "Number of mosquitos seen during the visit"
+      "description": "Number of mosquitos seen during the visit."
     },
     {
       "id": "overgrowthPercent",
       "type": "numerical",
-      "description": "Percent of the land that has grass and bushes and shrubbery during a visit"
+      "description": "Percent of the land that has grass and bushes and shrubbery during a visit."
     }
   ]
 }
