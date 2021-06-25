@@ -95,6 +95,36 @@
         },
         "frozen line": {
           "run": "\nTekan \"Run\" untuk mencuba program anda!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Tambah blok ini kepada atur cara anda!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Tambah blok ini kepada atur cara anda.",
+          "arrow_buttons": "Tekan butang anak panah untuk mengawal penari anda."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Tambah blok ini kepada atur cara anda!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Tambah acara baru ke program."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Blok baru!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Blok baru!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Blok baru!",
+          "new_block_4": "Blok baru!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klik sini untuk kembangkan blok.",
+          "pointerlocation": "Tarik blok subjek ke sini."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klik untuk mencipta kostum baru"
         }
       }
     }
