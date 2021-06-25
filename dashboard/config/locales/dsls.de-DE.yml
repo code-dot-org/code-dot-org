@@ -6530,3 +6530,844 @@ de-DE:
         description: Du hast das Tutorial abgeschlossen! Arbeite weiter an deinem
           Projekt, ändere und verbessere es. Du kannst dieselben Blöcke verwenden
           oder es mit einer erweiterten Toolbox versuchen.
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Das große Ereignis
+
+          In der Informatik sind Ereignisse Aktionen, die ein Computer überwacht. In dieser Lektion werden Sie je nachdem, welche Taste gedrückt wird, unterschiedlich reagieren.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Binäre Armbänder
+
+          Erstelle ein Armband, das deinen Namen in einem System repräsentiert, das Computer verstehen!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Bedingungen mit Karten
+
+          Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
+      CourseF_outbreak_story:
+        content1: hier die Beschreibung
+      CourseF_outbreak_story2:
+        content1: hier die Beschreibung
+        markdown: "# Ausbruch: Denke wie ein Wissenschaftler\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulationen sind eine tolle Sache,
+          um etwas zu erfahren, was sich in der realen Welt nicht beobachtet werden
+          kann. Wissenschaftler lösen damit Probleme und testen gefahrlos und effizient
+          neue Ideen. Mit deiner Simulation kannst du zeigen, wie ein Virenausbruch
+          in Monster Town ablaufen könnte.\n\n## Zurücksetzen und noch einmal spielen!\nAuch
+          wenn du deinen Code selbst schreibst, kannst du nie genau wissen, was passiert,
+          wenn du auf Ausführen klickst. Die Monster bewegen sich willkürlich, deshalb
+          weißt du nicht, ob sich das Virus schnell oder langsam ausbreitet. Immer
+          wenn du deinen Code änderst, solltest du die Simulation mehrmals ausführen.
+          Das Spiel ist nie dasselbe!\n\n## Sammle Daten\nSchreibe deine Beobachtungen
+          auf, wenn du die Simulation ausführst. Zähle beispielsweise die Monster,
+          die krank werden oder beobachte mit dem Timer, wie schnell es geht. Wie
+          lange dauert es gewöhnlich, bis alle Monster krank sind, wenn sie keine
+          Maske tragen. \n\n## Wage eine Prognose\nWenn du dein Modell gut kennst,
+          kannst du Prognosen aufstellen. Du kannst sogar die Ausführungen deiner
+          Simulation ändern und erraten, was diesmal anders sein wird. Zum Beispiel:\n*
+          Was würde passieren, wenn es doppelt so viele Monster sind?\n* Was würde
+          passieren, wenn sich die Monster halb so schnell bewegen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Ist Monster Town wie die richtige Welt?\nEin
+          Modell kann nicht zu hundert Prozent realistisch sein. \n* Was haben deine
+          Ausbruchssimulation und Virenausbrüche in der realen Welt gemeinsam?\n*
+          Was unterscheidet sie?\nSpreche mit deinen Lehrern oder deiner Familie darüber,
+          wenn du diese Aktivität beendet hast!\n\n## Was könntest du noch simulieren?\nDu
+          hast jetzt ein funktionierendes Arbeitsmodell eines Ausbruchs in Monster
+          Town. Was kann deine Simulation nicht modellieren oder zeigen, was du gerne
+          zeigen würdest? Klicke auf Fortfahren und lerne noch mehr zu modellieren:\n*
+          Erhöhe die Anzahl der Monster der Simulation\n* Hilf Monstern gesund zu
+          werden\n* Wahrscheinlichkeit, Immunität, Impfungen und mehr!\n\nDu kannst
+          deine Simulation auch mit anderen teilen oder eine Nachricht, was wir tun
+          könnten, damit andere gesund bleiben, wenn der Virus in die Stadt gelangt
+          ist. \n"
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # Entwerfen für Barrierefreiheit
+
+          * In der Welt der Informatik geht es bei der **Barrierefreiheit** darum, Technologien für Menschen mit Behinderungen zu entwickeln.
+          * Behinderungen umfassen physische, auditive, visuelle und viele andere.
+          * Behinderungen sind vielfältig und beeinflussen Menschen auf unterschiedliche Weise, einschließlich der Art und Weise, wie sie Technologien wie **Smartphone Apps** nutzen.
+          * Das Entwerfen von Apps, die für Menschen mit Behinderungen zugänglich sind, macht diese Apps auch für alle anderen besser!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Digital Sharing
+
+          In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # For Schleifen Spass
+
+          Wir wissen, dass Schleifen es uns ermöglichen, Dinge immer und immer wieder zu tun, aber jetzt werden wir lernen, wie man Schleifen mit zusätzlicher Struktur verwendet.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Getting Loopy
+
+          Diese Lektion führt in das Programmierkonzept von Schleifen durch eine Tanzaktivität ein.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Grafische Papierprogrammierung
+
+          Schreibe Algorithmen, mit denen Deine Mitschüler Bilder zeichnen können.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Happy Maps
+
+          Erstellen Sie einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
+      Internet-Unplugged_2021:
+        markdown: |
+          # Das Internet
+
+          Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Bewege etwas
+
+          Benutze eine Karte und gib Befehle ein, um das Ziel zu erreichen.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Meine Roboterfreunde (Schleifen)
+
+          Mache Dein Programme mit Schleifen kürzer!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Meine Roboterfreunde
+
+          Lerne zu programmieren, indem du Code für deine Freunde schreibst!
+      OPD-K5 Celebrate_dani:
+        markdown: |
+          # Weitere Schritte > Feiern!
+
+          Herzlichen Glückwunsch zum Abschluss dieses Online-Kurses zur beruflichen Weiterbildung. Wenn Sie alle Stufen dieses Kurses abgeschlossen haben, können Sie jetzt ein Zertifikat herunterladen und ausdrucken, indem Sie die folgenden Schritte ausführen:
+
+          1. Besuchen Sie [diesen Link](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Geben Sie Ihren Namen in das Eingabefeld/Kästchen ein.
+          3. Klicken Sie auf Zertifikate drucken.
+          4. Klicken Sie mit der rechten Maustaste auf das Bild des Zertifikats und wählen Sie "Bild speichern unter...", damit Sie es auf Ihren Computer herunterladen können.
+
+          Und vergessen Sie nicht... Sie können jederzeit zu diesem Online-Kurs zurückkehren, um Ihr Lernen zu überprüfen, auf Links oder Ressourcen zuzugreifen oder einfach Ihr Gedächtnis aufzufrischen!
+
+          Vielen Dank für Ihre Teilnahme! Wir können es kaum erwarten zu hören, wie Sie Informatik und Code Studio in Ihrem Klassenzimmer implementieren!
+      OPD-K5 Connect_dani:
+        markdown: "# Die nächsten Schritte > Verbindung aufnehmen\n\nÜber die weitere
+          formelle Ausbildung hinaus könnten Sie den Zugang zur code.org-Community
+          in Betracht ziehen, um von Anderen zu lernen oder einfach nur die Community
+          zu Unterstütze und ein Netzwerk von Gleichgesinnten zu finden. Hier ist
+          das Vorgehen:  \n\n<br/><br/>\n\n> **Fahren Sie fort an dem code.org Teacher
+          Professional Learning Community teilzunehmen:** Das Forum, das Sie während
+          des gesamten Kurses nutzen, wird eine großartige Ressource für Sie sein,
+          um voranzukommen. Sie können es nicht nur nutzen, um auf Ihre Erfahrungen
+          aus diesem Kurs zurückzugreifen, sondern auch, um Unterstützung auf Ihrem
+          weiteren Weg zu finden, oder sogar, um anderen, die Ihr Fachwissen benötigen,
+          Unterstützung anzubieten. Setzen Sie jetzt ein Lesezeichen und besuchen
+          Sie ihn oft: [http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+          \ \n\n<br/>\n\n> **Verbinden Sie sich mit [@teachcode](http://twitter.com/teachcode)
+          auf Twitter.**  \n\n<br/>\n\n> **Mit der Computer Science Teachers Association
+          (CSTA):** [Die CSTA](http://csta.acm.org/index.html) existiert eine engagierte
+          Gemeinschaft von Pädagogen in den USA, die sich dafür einsetzt, ihren Schülern
+          den Informatikunterricht zu vermitteln und gleichzeitig die allgemeine Öffentlichkeit
+          für das Thema zu sensibilisieren. Sie ist Gastgeberin einer jährlichen Konferenz
+          und hat auch Untergruppen, die lokale Treffen abhalten.\n"
+      OPD-K5 Stage3aGo_dani:
+        content1: hier die Beschreibung
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Die Macht der Worte
+
+          ## Was sollte man tun, wenn jemand im Internet eine gemeine oder verletzende Sprache verwendet?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Private und persönliche Informationen
+
+          ## Welche Informationen über dich darfst du online teilen?
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Relais-Programmierung
+
+          Teilt euch in Teams auf und arbeitet zusammen, um Programme zu schreiben, die Bilder zeichnen.
+      Songwriting-Unplugged_2021:
+        markdown: |
+          # Songwriting
+
+          Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
+          Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
+          Freunden zu reden, Musik zu hören, einzukaufen oder einfach nur im Internet
+          zu surfen.\n* Es ist wichtig für Programmierer, die Bedürfnisse anderer
+          zu verstehen und Anwendungen mit Blick auf sie zu entwickeln!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      courseAB_EOC_2021:
+        description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseB_EOC_2021:
+        description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
+          correct: true
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Künstler zeichnet eine einzelne Linie.
+          correct: true
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+        - text: Der Zeichner zeichnet ein Quadrat.
+          correct: true
+          feedback: Richtig!
+        - text: 'Der Zeichner zeichnet ein Fünfeck. '
+          correct: true
+          feedback: 'Falsch. Der Zeichner zeichnet ein Quadrat. '
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+        - text: '12'
+          correct: true
+          feedback: Richtig!
+        - text: '15'
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+        - text: '20'
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+        questions:
+        - text: Schau dir den Code unten genau an! Wie viele Kürbisse wird die Erntearbeiterin
+            sammeln, nachdem du auf "Ausführen" geklickt hast?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
+          correct: true
+          feedback: Falsch. Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+        - text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
+            dreht.
+          correct: true
+          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+        - text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
+            bewegen' Blöcke gibt.
+          correct: true
+          feedback: Richtig! Zunächst dreht sich Scrat in die falsche Richtung. Anschließend
+            bewegt sich Scrat nicht oft genug vorwärts, um die Eichel zu erreichen.
+        - text: 'Scrat bewegt sich nicht vom ersten Block weg.
+
+'
+          correct: true
+          feedback: In diesem Code befinden sich zwei Fehler. Zunächst dreht sich
+            Scrat in die falsche Richtung. Anschließend bewegt sich Scrat nicht oft
+            genug vorwärts, um die Eichel zu erreichen.
+        questions:
+        - text: Suche nach Fehlern in diesem Code. Wird Scrat die Eichel erreichen
+            oder gibt es ein Problem?
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
+          correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Vogel wird in das TNT laufen.
+          correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+        - text: Der Vogel wird gegen die Wand laufen.
+          correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+        questions:
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 wird sich nicht bewegen.
+          correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+        - text: BB-8 wird sich nur ein Feld vorwärts bewegen.
+          correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+        - text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
+            einsammeln.
+          correct: true
+          feedback: Richtig!
+        - text: BB-8 bewegt sich nur 3 Felder vorwärts.
+          correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+        questions:
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 wird mit der ersten Schleife zu weit fahren.
+          correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        - text: BB-8 wird mit der ersten Schleife nicht weit genug fahren, um den
+            gesamten Metallschrott einzusammeln.
+          correct: true
+          feedback: Richtig!
+        - text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+          correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        - text: BB-8 wird sich nach der ersten Schleife in die falsche Richtung drehen.
+          correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseD_EOC_2021:
+        description: Du hast die letzte Lektion von Kurs D erreicht! Wähle eine Aktivität
+          zum Weiterarbeiten aus.
+        display_name: Projekt am Ende des Kurses
+      courseD_EOC_examples_2021:
+        display_name: Projektbeispiele
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Richtig!
+        - text: B
+          correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+        - text: C
+          correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+        - correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
+            wenn du auf "Ausführen" klickst?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          correct: true
+          feedback: Falsch. Der Baustein `wenn an Blume` bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
+          feedback: Richtig!
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          correct: true
+          feedback: Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: 'Die Biene wird die Wolke nicht erreichen. '
+          correct: true
+          feedback: Falsch. Der Baustein `wenn an Blume` bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        questions:
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+          correct: true
+          feedback: Falsch. Der Baustein `wenn an Blume` bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+          correct: true
+          feedback: Richtig!
+        - text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+          correct: true
+          feedback: Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
+        - text: Ich weiß es nicht.
+          correct: true
+          feedback: Der Baustein `wenn an der Blume` bewirkt, dass die Biene nur dann
+            versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte befindet.
+        questions:
+        - text: Die Wolke versperrt die Sicht. Unter der Wolke könnte sich eine Blüte
+            befinden. Wenn dort eine Blüte ist, muss die Biene einmal Nektar holen.
+            Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
+            den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
+            nachdem du auf "Ausführen" geklickt hast?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: Die Biene bekommt an jeder Blüte Nektar und bei jeder Wabe Honig.
+          correct: true
+          feedback: Richtig!
+        - text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          correct: true
+          feedback: 'Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene an jeder Blüte Nektar und an jeder Wabe Honig erhält. '
+        - text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+          correct: true
+          feedback: Falsch. Falsch. Der 'wenn an der Blume'-Block lässt die Biene
+            Nektar an jeder Blume einsammeln, und Honig an jeder Honigwabe herstellen.
+        - text: 'Die Biene wird versuchen, Honig und Nektar sowohl von Blüten als
+            auch von Waben zu bekommen.
+
+'
+          correct: true
+          feedback: Falsch. Falsch. Der 'wenn an der Blume'-Block lässt die Biene
+            Nektar an jeder Blume einsammeln, und Honig an jeder Honigwabe herstellen.
+        questions:
+        - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
+            nach passieren, wenn du auf "Ausführen" klickst? Denke daran: Hinter jeder
+            Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
+          correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        - text: Die Biene wird nur 2 Einheiten Nektar sammeln.
+          correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        - text: Die Biene wird den gesamten Nektar sammeln.
+          correct: true
+          feedback: Richtig!
+        - text: Die Biene wird sich in die falsche Richtung drehen.
+          correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+        questions:
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
+            wenn du auf "Ausführen" klickst?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Richtig!
+        - text: '10'
+          correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+        - text: '12'
+          correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
+            Biene her, wenn du auf "Ausführen" klickst?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
+          correct: true
+          feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+        - text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
+          correct: true
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
+          correct: true
+          feedback: Richtig!
+        - correct: true
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+        markdown: |
+          Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
+          <br/>
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
+          correct: true
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        - text: 'Dieser Code lässt den Haufen völlig unberührt.
+
+'
+          correct: true
+          feedback: Richtig!
+        - text: Dieser Code lässt die Löcher völlig unberührt.
+          correct: true
+          feedback: 'Falsch. Die `solange`-Schleife kann jede Schleifengröße verarbeiten,
+            aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        - text: Dieser Code lässt das letzte Loch unverändert.
+          correct: true
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+'
+        questions:
+        - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
+            Aufgabe übrig sein?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Nichts wird passieren.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        - text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+          correct: true
+          feedback: Richtig!
+        - text: Der Landwirt wird nur einmal Schmutz entfernen.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
+            und her gehen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Zombie wird es bis zur Sonnenblume schaffen.
+          correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+        - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+            im Kreis herumlaufen.
+          correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+        - text: Der Zombie bleibt am Ende des Weges vor ihm stecken.
+          correct: true
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: Der Vogel wird sich überhaupt nicht bewegen.
+          correct: true
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen Weg gibt, und sich dann nach links dreht. Das macht er
+            so lange, bis er das Schwein erreicht!
+
+'
+        - text: Der Vogel wird bis zum Schwein kommen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
+          correct: true
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen sicheren Weg gibt, und sich dann nach links dreht. Das
+            macht er so lange, bis er das Schwein erreicht!
+
+'
+        - text: Der Vogel dreht sich in die falsche Richtung.
+          correct: true
+          feedback: Der Code bewirkt, dass sich der Vogel vorwärts bewegt, solange
+            es einen Weg gibt, und sich dann nach links dreht. Das macht er so lange,
+            bis er das Schwein erreicht!
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
+      courseE_EOC_2021:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseE_EOC_examples_2021:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Nichts wird passieren.
+          correct: true
+        - correct: true
+        - correct: true
+          feedback: Richtig!
+        - correct: true
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: Die Erntearbeiterin wird zwei Kürbisse ernten.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird alle Kürbisse ernten.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        - text: Die Erntearbeiterin wird den Salat ernten.
+          correct: true
+          feedback: Richtig!
+        - text: Die Erntearbeiterin wird den Mais ernten.
+          correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+        questions:
+        - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
+            ernten?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          correct: true
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+          correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
+        questions:
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+          correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+          correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+        - text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+          correct: true
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+        - text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+          correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
+        questions:
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Nichts wird passieren.
+          correct: true
+        - correct: true
+        - correct: true
+          feedback: Richtig!
+        - correct: true
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseF_EOC_2021:
+        description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseF_EOC_examples_2021:
+        description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseF_EOC_samples_2021:
+        display_name: Projekt am Ende des Kurses
+      courseF_events_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+          correct: true
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `Wiederholen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
+        - text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
+          correct: true
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `drehen`-Schleife`
+            befinden, damit dies möglich ist.
+
+'
+        - correct: true
+          feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
+            bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
+            langen Seiten zeichnet.
+
+'
+        questions:
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. '
+          correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - text: "Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. \n"
+          correct: true
+          feedback: Richtig!
+        - text: 'Die Biene wird sich vorwärts bewegen und von jeder Blüte eine Einheit
+            Nektar sammeln. '
+          correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        - correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+'
+        markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
+          viel einfacher! \n"
+        questions:
+        - text: 'Lese den nachfolgenden Code. Was passiert, wenn du auf "Ausführen"
+            klickst?
+
+'
+      courseF_sprites_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: hier die Beschreibung
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: Der Künstler wird diese Aufgabe richtig lösen.
+          correct: true
+          feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "eine Reihe von Polygonen zeichnen".
+        - text: Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
+          correct: true
+          feedback: Richtig!
+        - text: Der Künstler wird nur eine Reihe von Quadraten zeichnen.
+          correct: true
+          feedback: Falsch. Das Programm ruft die Funktion `eine Reihe von Polygonen
+            zeichnen` nicht auf.
+        - text: Der Künstler wird vier Quadrate übereinander zeichnen.
+          correct: true
+          feedback: Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+            zeichnen" um 90 Grad.
+        questions:
+        - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
+      csf_be_a_super_digital_citizen_2021:
+        content1: hier die Beschreibung
+        markdown: |-
+          # SUPERINTERNETNUTZER sind aufmerksam
+
+          ## Was kann man tun, wenn man im Internet auf Gemeinheiten trifft?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Folge der digitalen Spur
+
+          ## Welche Informationen dürfen in deinem digitalen Fußabdruck sein?
+      csf_password_power-up_2021:
+        content1: hier die Beschreibung
+        markdown: "# Nutze starke und sichere Passwörter!\n\n## Wichtige Tipps für
+          gute Passwörter\n\n* Wähle ein Passwort so, dass du es gut im **Gedächtnis**
+          behalten kannst. \n* Deine **Eltern** und nur sie sollten dein Passwort
+          kennen. \n* Nutze in deinem Passwort niemals **private** Informationen.\n*
+          Jedes Passwort sollte mindestens **acht** Zeichen lang sein. \n* Benutze
+          Buchstaben, Ziffern **und Symbole** in deinem Passwort. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: hier die Beschreibung
+        markdown: "# STOPPE Gemeinheiten\n\n## Was solltest du tun, wenn jemand online
+          gemein zu dir ist?\n\n* **I**nformiere einen vertrauenswürdigen Erwachsenen.\n*
+          **N**icht weiter auf der Seite bleiben\n* **F**inde sichere Seiten - lass
+          dir helfen  \n* **O**rdne deine Gedanken - mach eine Pause\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Meine Online-Nachbarschaft
+
+          ## Wie geht man sicher online?
+      express_EOC_2021:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      express_EOC_examples_2021:
+        display_name: Projektbeispiele
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel wird 4 Schätze einsammeln.
+          correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
+          correct: true
+          feedback: Richtig!
+        - text: Laurel wird alle Schätze einsammeln.
+          correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        - text: Laurel wird mit diesem Code einen Edelstein sammeln.
+          correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+        questions:
+        - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
+            wenn das Programm läuft?

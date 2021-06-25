@@ -1,2 +1,13 @@
 {
+  "de-DE": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Zeichne Räume für jedes Tier. ",
+        "courseD_bee_nestedLoops8_2021": "Sammle den gesamten Nektar jeder Blüte und erzeuge Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.",
+        "courseD_bee_nestedLoops9_2021": "Mach den ganzen Honig.",
+        "courseF_bee_variables_7a_2021": "Dieses Rätsel ist ein wenig anders.  Was musst du tun, um es zu lösen?",
+        "ramp_artist_loops8_2021": "Suche nach einem Muster und verkürze diesen Code, indem du Schleifen verwendest!"
+      }
+    }
+  }
 }
