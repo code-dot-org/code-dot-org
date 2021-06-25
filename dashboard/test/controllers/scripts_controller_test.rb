@@ -610,7 +610,7 @@ class ScriptsControllerTest < ActionController::TestCase
         id: script.id,
         script: {name: script.name},
         script_text: '',
-        old_script_text: 'different'
+        old_unit_text: 'different'
       }
     end
 
@@ -636,7 +636,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      old_script_text: ScriptDSL.serialize_lesson_groups(script)
+      old_unit_text: ScriptDSL.serialize_lesson_groups(script)
     }
 
     assert_response :success
