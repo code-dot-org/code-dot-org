@@ -1,0 +1,66 @@
+{
+  "name": "shapes_v2_toy",
+  "card": {
+    "description": "Extracted features from a visual dataset showing different shapes",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Used to train AI Bot on how to classify shapes",
+      "potentialMisuses": "Anything other than the purpose above"
+    }
+  },
+  "fields": [
+    {
+      "id": "sides",
+      "type": "categorical",
+      "description": "Number of sides the shape has"
+    },
+    {
+      "id": "symmetry",
+      "type": "categorical",
+      "description": "Is the shape symmetric (like flipping it onto itself and it's the same shape)"
+    },
+    {
+      "id": "equal sides",
+      "type": "categorical",
+      "description": "Does the shape have all equal sides?"
+    },
+    {
+      "id": "equal angles",
+      "type": "categorical",
+      "description": "Does the shape have all equal angles?"
+    },
+    {
+      "id": "has corners",
+      "type": "categorical",
+      "description": "Does the shape have corners?"
+    },
+    {
+      "id": "border color",
+      "type": "categorical",
+      "description": "Color of the shape's outline"
+    },
+    {
+      "id": "fill color",
+      "type": "categorical",
+      "description": "Color of the shape's interior"
+    },
+    {
+      "id": "background color",
+      "type": "categorical",
+      "description": "Color of the background behind the shape"
+    },
+    {
+      "id": "size",
+      "type": "categorical",
+      "description": "Either big or small"
+    },
+    {
+      "id": "shape",
+      "type": "categorical",
+      "description": "Type of shape"
+    }
+  ],
+  "defaultLabelColumn": "shape"
+}

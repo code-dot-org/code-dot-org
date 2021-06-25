@@ -300,6 +300,22 @@ export const allDatasets = [
     metadataPath: "datasets/club_specific_toy.json",
     imagePath: "datasets/club_specific_toy.jpg",
     isToy: true
+  },
+  {
+    id: "shapes_v1_toy",
+    name: "Shapes V1",
+    path: "datasets/shapes_v1_toy.csv",
+    metadataPath: "datasets/shapes_v1_toy.json",
+    imagePath: "datasets/shapes_v1_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "shapes_v2_toy",
+    name: "Shapes V2",
+    path: "datasets/shapes_v2_toy.csv",
+    metadataPath: "datasets/shapes_v2_toy.json",
+    imagePath: "datasets/shapes_v2_toy.jpg",
+    isToy: true
   }
 ];
 
