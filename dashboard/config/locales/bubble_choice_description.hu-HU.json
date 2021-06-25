@@ -1,2 +1,12 @@
 {
+  "hu-HU": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Rajzolj szobákat mindegyik állat számára. ",
+        "courseD_bee_nestedLoops8_2021": "Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden méhsejtbe. ",
+        "courseD_bee_nestedLoops9_2021": "Készítsd el az összes mézet.",
+        "ramp_artist_loops8_2021": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával."
+      }
+    }
+  }
 }

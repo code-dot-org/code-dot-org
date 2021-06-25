@@ -102,7 +102,7 @@
           "dance_party_11_5_groups": "Itt keresd az \"Összes kacsa\" blokkokat"
         },
         "Dance_2019_01": {
-          "dance_callout_01": "Add hozzá ezt a blokkot a programodhoz!"
+          "dance_callout_01": "Válaszd ki innen a táncos típusát!"
         },
         "Dance_2019_02": {
           "dance_callout_11_a": "Add hozzá ezt a blokkot a programodhoz.",
@@ -783,6 +783,163 @@
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Válaszd ki innen a táncos típusát!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Add hozzá ezt a blokkot a programodhoz.",
+          "arrow_buttons": "A nyílgombok megnyomásával vezéreld a táncosodat."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Add hozzá ezt a blokkot a programodhoz!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Vegyen fel új eseményeket a programjába."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Új blokk!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Új blokk!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Új blokk!",
+          "new_block_4": "Új blokk!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Ez a kis utasítás azt mondja a számítógépnek, hogy futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Ez egy \"ismétlés\" ciklus.  Vidd a munkaterületre, és add meg azt a kódot, amelyet újra és újra futtatni szeretnél."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Az Ügynök tud a víz fölött lebegni, de a játékos nem!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Ezeket a blokkokat nem dobhatod el, de szerkesztheted őket!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Az Ügynök tud a láva fölött lebegni, de a játékos nem!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Idetettünk néhány blokkot kezdetnek"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ez a kód megkezdi a házad építését. Be tudod fejezni?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ismételd a blokkokat úgy, hogy ide helyezed őket"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ez a kód leellenőrzi a lávát, hozzá tudsz adni egy utasítást, hogy előrelépjen?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Bányászd ki a vasat!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ez a szám azt jelenti, hogy csak egy blokkot használhatsz ebből a típusból a végső megoldáshoz."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Tudtad, hogy a sort visszahúzhatod, ahová csak szeretnéd?"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Ez a szám azt mondja el, hogy ezek közül a blokkok közül mennyit használhatsz a feladvány megoldásához."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Kattints a villanykörtére, ha segítségre van szükséged!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Ez egy felirat"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Kattints ide, hogy megváltoztasd az esemény nyíl irányát."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Ez lehetővé teszi, hogy válassz egy véletlen hangot. Vagyis addig nem tudhatod, hogy mit fogsz hallani, amíg meg nem hallod!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután minden blokkot csatlakoztattál, nyomj a futtatásra, hogy elinduljon a program."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Kattints a villanykörtére, ha segítségre van szükséged!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Látod az új blokkokat az eszköztárban? Ne aggódj, egy másik leckében meg fogjuk mutatni, hogyan használd őket."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Több blokkot is kihúzhatsz az eszköztárból, amikre épp szükséged van!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ezek a blokkok zárolva vannak és nem törölhetők!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután minden blokkot csatlakoztattál, nyomj a futtatásra, hogy elinduljon a program."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "courseC_maze_programming3_3": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Ez a felhasználható blokkok maximális száma. Azt mutatja meg, hogy mennyi blokkot használhatsz még fel."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Ezek a blokkok nincsenek korlátozva. Annyit használhatsz belőlük, amennyit akarsz!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket.",
+          "courseC_maze_programming7_2": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Csak egyetlen blokk érhető el ezekből ebben a feladványban."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Csak egyetlen blokk érhető el ezekből ebben a feladványban."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Emlékezz, ellenőrizni kell hogy van-e virág minden felhőben. A lépeket nem kell ellenőrizned."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Emlékezz, ellenőrizni kell hogy van-e virág minden felhőben. A lépeket nem kell ellenőrizned."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Ez a felhasználható blokkok maximális száma. Azt mutatja meg, hogy mennyi blokkot használhatsz még fel."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Ezek a blokkok nincsenek korlátozva. Annyit használhatsz belőlük, amennyit akarsz!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Miután minden blokkot csatlakoztattál, nyomj a futtatásra, hogy elinduljon a program."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Ezek a blokkok nincsenek korlátozva. Annyit használhatsz belőlük, amennyit akarsz!"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
         }
       }
     }
