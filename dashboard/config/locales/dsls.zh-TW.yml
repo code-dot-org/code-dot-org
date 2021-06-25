@@ -4401,6 +4401,10 @@ zh-TW:
           <hr>
 
           **現在你試試!**
+        teacher_markdown: |-
+          ### 先設計
+
+          許多學生可能會想要從Code Mode開始，但這堂課我們的重點是建立一個使用者介面的樣品。讓學生們知道他們很快就會碰到程式碼了。前面的關卡會讓學生們使用所有在App Lab可以拿到的元素來做設計，不用擔心他們真正要製作的應用程式。
       CSD U1 Lesson 5 Overview:
         markdown: |-
           ＃概述
@@ -4468,6 +4472,14 @@ zh-TW:
         teacher_markdown: "* [利用數據協助決策](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
           - 範例 ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
+        markdown: |-
+          # 概觀
+
+          在本課程當中，你將會練習透過資料在一些你熟悉的問題上面做決定。
+
+          ## 資源
+
+          * [透過資料做決定](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - 活動指南
       CSD-U5-SFLP Representing Numbers Part 1:
         teacher_markdown: |-
           [key]
@@ -5040,6 +5052,63 @@ zh-TW:
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
       CourseF_outbreak_story:
         content1: 在此描述
+        markdown: "# 疫情爆發：編寫自己的模擬\n\n## 歡迎來到怪獸城鎮！\n怪獸城鎮平常是一個快樂而健康的地方。怪獸城鎮的怪獸們喜歡四處走動去拜訪他們的朋友。
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n有一天，其中一個怪獸開始生病。怪獸感染了**病毒**！病毒是一種能讓你生病的微生物。其他的怪獸並不太擔心。他們繼續拜訪朋友。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久之後，又有兩隻怪獸生病了。是同一種病毒！似乎他們是從朋友那裡感染了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n病毒慢慢地擴散到附近的其他怪獸身上。健康的怪獸開始擔心他們會生病。生病的怪獸開始擔心他們會把病毒傳染給其他人。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 停止傳播\n幸運的是，在研究了病毒之後，怪獸城鎮的居民們有了一個重要發現。他們意識到，如果他們戴口罩，傳播病毒的可能性就更低。如果帶口罩，生病怪獸將病毒傳染給健康怪獸的可能性更低。\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          接下來會發生什麼？\n\n今天，你將編寫代碼創建並運行自己的怪獸城鎮病毒爆發**類比**。類比是一個過程或系統的電腦模型。學習編寫代碼並預測怪獸城鎮的居民會發生什麼。\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *病毒傳播的速度有多快？*\n\n* *每個人都會生病嗎？*\n\n*
+          *戴口罩有什麼幫助？*\n\n\n當你完成時，與他人分享你的模擬。當病毒到來時，你認為我們可以做些什麼來幫助他人保持健康？分享你的資訊。 \n"
       CourseF_outbreak_story2:
         content1: 在此描述
         markdown: "# 疫情爆發：像科學家一樣思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
@@ -5102,8 +5171,10 @@ zh-TW:
           對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC_2021:
         display_name: 課程結束專案
+        description: 你已經到達最後一堂課！選擇一個要建立的專案。
       courseB_EOC_2021:
         display_name: 課程結束專案
+        description: 你已經到達最後一堂課！選擇一個要建立的專案。
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: 小藝術家將畫出一個三邊相等的三角形。
@@ -5115,7 +5186,8 @@ zh-TW:
 '
           correct: true
           feedback: 正確！
-        - {}
+        - text: 藝術家將繪製一個五邊形
+          feedback: 不正確。藝術家繪製一個正方形。
         questions:
         - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_harvester_loops11_predict1_2021:
@@ -5141,7 +5213,8 @@ zh-TW:
         - text: 松鼠不會取得像果，因為「前進」的區塊不夠多。
           correct: true
           feedback: 正確。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
-        - feedback: 這段程式碼中有兩個臭蟲。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
+        - text: 鼠奎特不會從第一個方塊開始移動。
+          feedback: 這段程式碼中有兩個臭蟲。首先，松鼠轉錯了方向，再來松鼠前進的次數也不夠多到能取得橡果。
         questions:
         - text: 在這段程式碼裡找找看臭蟲。松鼠會取得橡果還是不會？
       courseC_multi_maze_programming8_predict1_2021:
@@ -5153,7 +5226,8 @@ zh-TW:
           feedback: 正確！
         - text: 這隻鳥會撞到炸藥。
           feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
-        - feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
+        - text: 鳥會撞到牆上。
+          feedback: 不正確。此程式碼會讓小鳥抓到豬豬。
         questions:
         - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseC_multi_starWars_predict1_2021:
@@ -5165,7 +5239,8 @@ zh-TW:
         - text: BB-8 將移動 5 次並獲得所有廢金屬
           correct: true
           feedback: 正確！
-        - feedback: 不正確。重複積木將使 BB-8 前進 5 次。
+        - text: BB-8只會移動3個空格。
+          feedback: 不正確。重複積木將使 BB-8 前進 5 次。
         questions:
         - text: 當你點擊「運行」時，你覺得會發生什麼？
       courseC_multi_starWars_predict2_2021:
@@ -5177,7 +5252,8 @@ zh-TW:
           feedback: 正確！
         - text: BB-8 會順利收集到所有廢金屬。
           feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
-        - feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
+        - text: BB-8會在第一次迴圈後轉向錯誤的方向。
+          feedback: 不正確。第一個迴圈需要讓 BB-8 向前移動 3 個空格，但是現在第一個迴圈僅向前移動了 2 個空格。
         questions:
         - text: 仔細查看下面的程式碼。點擊「運行」時會發生什麼？
       courseD_multi_bee_conditionals1_predict1_dani:
@@ -5214,23 +5290,35 @@ zh-TW:
         display_name: 課程結束專案
       courseF_EOC_samples_2021:
         display_name: 課程結束專案
+        description: 你即將開始你的最終項目。在開始之前，花些時間看一下示例項目。
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 精靈圖將僅向右旋轉。
+          feedback: 不正確。精靈圖也會向東移動。
+        - text: 精靈圖將僅向東移動。
+          feedback: 不正確。精靈圖沒有停止旋轉，因此它將同時進行兩種行為。
+        - text: 精靈圖將同時旋轉和移動。
+          correct: true
+          feedback: 正確！這兩種行為會同時發生。
+        - text: 精靈圖將先旋轉然後再移動。
+          feedback: 不正確。在精靈圖實驗室，連接的積木都會接連立即運行，所以這兩個行為將同時發生。
         questions:
-        - {}
+        - text: 閱讀代碼，然後做一個預測。
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"一個披薩即將到來！"'
+          feedback: 不正確。變數標籤不匹配。
+        - text: '"一份餐點即將到來！"'
+          feedback: 不正確。變數的標籤從來不會列印。
+        - text: '"一份食物即將到來！"'
+          feedback: 不正確。變數的標籤從來不會列印。
+        - text: '"一個 即將到來！"'
+          correct: true
+          feedback: 正確！變數標籤不匹配。
+        - text: 沒有什麼會列印。
+          feedback: 不正確。事件和列印積木仍將運行。
         questions:
-        - {}
+        - text: 這段代碼看起來很熟悉，但是請仔細閱讀。如果用戶輸入“披薩”，會列印什麼？
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: 小藝術家將繪製一個邊長 50 像素的三角形。
@@ -5240,7 +5328,8 @@ zh-TW:
           feedback: 不正確。變數`長度`必須放在`重複`積木中才能順利執行。
         - text: 小藝術家將繪製三條開放邊，然後轉向 50 度。
           feedback: 不正確。可能需要在`轉向`積木中使用到`長度`變數才能正確執行。
-        - feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
+        - text: 電腦將向使用者提示一個數字。
+          feedback: "`長度`變數設定為 50，並在`移動向前`積木中使用，因此小藝術家將繪製一個三角形，其邊長為 50 像素。"
         questions:
         - text: 我們將變數`長度`設定為 50。你覺得點擊「運行」時會發生什麼事呢？
       courseF_multi_bee_for3_predict1_2021:
@@ -5252,7 +5341,8 @@ zh-TW:
           feedback: 正確！
         - text: 蜜蜂會向前移動，並從每朵花中收集一個花蜜。
           feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
-        - feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
+        - text: '蜜蜂將向前移動，從1號和4號花上採集一個花蜜。 '
+          feedback: 不正確。`計次`重複積木會讓蜜蜂收集到正確數量的花蜜，但只能達到 4 朵花。
         markdown: '啊!  使用`計數`迴圈能使這個關卡變得容易得多！
 
 '
@@ -5260,22 +5350,36 @@ zh-TW:
         - text: 觀察下方的程式。點擊「運行」時會發生什麼事呢？
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 兩架飛機都將沿網格移動一個空格，然後停止。
+          feedback: 不正確。這些精靈圖擁有持續奔跑直到被告知停止的“行為”。
+        - text: 兩架飛機都將開始移動，不會停止。
+          correct: true
+          feedback: 正確！這些行為告訴飛機開始移動並持續前進。
+        - text: 一架飛機將首先移動，另一架飛機然後移動。
+          feedback: 不正確。精靈圖實驗室中的每個代碼塊都會接連立即運行。
+        - text: 飛機將墜毀。
+          feedback: 不正確。飛機不是定位在使它們互相接觸的位置。
         questions:
-        - {}
+        - text: 閱讀代碼，然後做一個預測。
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 程式將列印“Hello name!”
+          feedback: 不正確。名稱積木將被替換為你輸入的任何內容。
+        - text: 程式會用你輸入的名稱來歡迎你。
+          correct: true
+          feedback: 正確！你輸入的內容將用於替換名稱積木。
+        - text: 精靈圖將改變大小。
+          feedback: 不正確。文本被列印到螢幕上。
+        - text: 電腦會問另一個問題。
+          feedback: 不正確。在程式開始的時候，只會問一個問題。
         questions:
-        - {}
+        - text: 這個程式讓你用鍵盤輸入來回答問題。“列印”積木在螢幕上顯示文本。做一個預測：回答問題後會發生什麼？
       courseF_variables_stop:
         content1: 在此描述
+        markdown: "# 停止！\n\n## 你確定你準備好繼續前進了嗎？ \n\n\n在下一級別，你將開始為你的項目編寫代碼。如果你已經有了一個計畫，那效果會最好。\n\n完成的計畫應包括：\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* 你正在構建的項目類型。如賀卡、聊天機器人或空白區故事。\n*
+          你將向用戶詢問的問題列表。\n* 你將顯示到螢幕上的其他文本。\n* 你所需要的精靈圖的描述或繪圖（以及它們的行為）。\n\n如果你不確定自己是否準備好繼續前進，請諮詢你的老師！\n"
       csf_digital_trails_2021:
         markdown: |-
           #跟隨數位蹤跡
@@ -5308,8 +5412,420 @@ zh-TW:
           feedback: 正確！
         - text: Laurel 會收集到所有寶石。
           feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
-        - feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
+        - text: 用這段代碼讓羅瑞爾收集1個寶貝。
+          feedback: 不正確。萊拉 試圖在沒有寶藏的地方收集寶藏，這會導致錯誤。
         questions:
         - text: '仔細看一下這段程式碼。你認為程式執行後會發生什麼？
 
 '
+      CSD-U5-SFLP Representation Matters:
+        markdown: |-
+          # 概觀
+
+          讓我們來體驗一下資訊的呈現方式是如何影響我們做決定的。你將會幫助一些人決定他們該點什麼餐。
+
+          ## 資源
+
+          * [呈現的重要性 - 活動指南](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          "# 條件撲克牌
+
+          玩一個紙牌遊戲，建立一個規則，比如「如果我抽到一張紅牌，我就會得到一分」和「如果我抽到一張黑牌，你就會得到一分」。"
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          "# 無障礙設計
+
+          * 在電腦科學的世界裡，**無障礙**是指為殘疾人士創造科技。
+          * 殘疾包括身體、聽覺、視覺以及其他許多其他方面的殘疾。
+          * 殘疾分很多種類，在不同方面影響人們，包括他們使用**智慧型手機應用程式**等科技的方式。
+          * 為殘疾人士設計便利的應用程式也可以讓這些程式更好地為其他人服務！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          "# 數字化分享
+
+          在本課中，你將考慮尊重所有權和版權的挑戰和好處，特別是在數字環境中。"
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # 空白區故事
+
+          在這一課中，你將學習如何使用和編寫空白故事。觀看這段視訊，瞭解這如何與電腦科學相聯繫。
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          "# 程式設計畫圖
+
+          寫演算法，讓同學們可以用它來畫圖。"
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # 私人和個人資訊
+
+          ##什麼資訊是可以公開在網路上的?
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          "# 接力程式設計
+
+          分成小組，共同編寫程式來畫圖。"
+      SimonSays-Unplugged_2021:
+        markdown: "# 跟隨演算法"
+      Songwriting-Unplugged_2021:
+        markdown: |
+          "# 創作歌曲
+
+          利用歌曲中的副歌概念，學習函式的定義和呼叫。"
+      courseD_EOC_2021:
+        description: 你已經到達課程D的最後一課!選擇一個要創建的項目
+        display_name: 課程結束專案
+      courseD_EOC_examples_2021:
+        description: 你即將開始你的最終項目。在開始之前，花些時間看一下示例項目。
+        display_name: 項目示例
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: 正確！
+        - text: B
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
+        - text: C
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
+        - text: 以上都不是
+          feedback: 不正確。內層迴圈畫出了一個五邊形，外層迴圈將這個動作重複四次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 請仔細閱讀下方的程式。當你點擊「運行」時，這支程式將會畫出什麼圖形呢？
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: 無論如何，蜜蜂都需要移動到雲朵之中，並且嘗試獲取花蜜。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        - text: 蜜蜂會移動到雲朵之中，但只有在雲朵下方有花的情況，才會嘗試獲取花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會移動到雲朵上方，然後不管怎樣什麼也都不會做。
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下方有花的情況，蜜蜂才會嘗試獲取花蜜。
+        - text: '蜜蜂不會飛到雲端。 '
+          feedback: 不正確。`如果在花上`積木確保了只有在雲朵下有花的情況下，蜜蜂才會嘗試獲取花蜜。
+        questions:
+        - text: 雲朵遮擋了視線。雲朵下可能會有花。如果有花，蜜蜂就需要採集一次花蜜。如果沒有花，則蜜蜂應該什麼也不做。好好看看下方的程式。你認為點擊「運行」按鈕後會發生什麼事呢？
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+          feedback: 正確！
+        - text: 蜜蜂會嘗試從花朵和蜂窩中獲取花蜜。
+        - text: 蜜蜂會嘗試從花朵和蜂窩中獲取蜂蜜。
+        - text: 蜜蜂會嘗試從花朵和蜂巢中獲取蜂蜜和花蜜。
+        questions:
+        - text: '仔細看下面的代碼。  你覺得按一下「執行」之後會發生什麼？請記住：每朵雲的後面只會有*一*個蜂窩或者*一*朵花。
+
+'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: 蜜蜂將向前移動並收集一次花蜜。
+          feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        - text: 蜜蜂將只得到 2 個花蜜。
+          feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        - text: 蜜蜂會獲得所有的花蜜。
+          correct: true
+          feedback: 正確！
+        - text: 蜜蜂會轉向錯誤的方向。
+          feedback: 不正確。蜜蜂重複前進並收集花蜜的迴圈動作，從而順利通過了關卡。
+        questions:
+        - text: 仔細觀察下方的巢狀迴圈。並且點擊「運行」看看會發生什麼？
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: 不正確。蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        - text: '8'
+          correct: true
+          feedback: 正確！
+        - text: '10'
+          feedback: 不正確。蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        - text: '12'
+          feedback: 不正確。蜜蜂在向前移動迴圈的過程中收集到 2 個花蜜，然後在向下迴圈的過程中收集到 2 個花蜜。這個過程又處於另一個發生兩次的迴圈中。4
+            乘以 2 是 8！
+        questions:
+        - text: 仔細觀察下方的程式積木。當你點擊「運行」按鈕時，你覺得蜜蜂會釀造多少蜂蜜呢？
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: 收割機將收集所有農作物。
+          feedback: '不正確。這裡沒有用來收集南瓜的程式碼。
+
+'
+        - text: '收割機不會沿著她的路線收集任何農作物。
+
+'
+          feedback: '不正確。該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        - text: '收割機將採摘除南瓜以外的所有農作物。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: 收穫者只會採摘南瓜。
+          feedback: '不正確。該程式碼將令收割機反復畫出階梯狀圖案，並收集她遇到的盡可能多的玉米或生菜。她不會採摘南瓜。
+
+'
+        markdown: |
+          "這個關卡中的新芽將是玉米或生菜。
+          <br/>"
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: 什麼都沒有。此程式運行後會只剩下平地。
+          feedback: 錯誤，沒有移除土堆的程式積木。
+        - text: 此程式運行後土堆完全不受影響。
+          correct: true
+          feedback: 正確！
+        - text: 此程式運行後完全不會碰到坑洞。
+          feedback: 錯誤，`重複 判斷`迴圈會不斷的執行，除非條件判斷為 false，不過，沒有用於清除土堆的程式積木。
+        - text: 這段代碼將保持最後一個洞不受影響。
+          feedback: 錯誤，沒有移除土堆的程式積木。
+        questions:
+        - text: 看看下方的程式。這個關卡結束時還會剩下什麼呢？
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 農夫永遠都不會停止剷除土壤。
+          feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        - text: 只要有土堆，農夫就會移除它，直到它消失。
+          correct: true
+          feedback: 正確！
+        - text: 農夫只會移除一次泥土。
+          feedback: 錯誤，只要有土堆，農夫就會移除它，直到它消失。
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+          correct: true
+          feedback: 正確！
+        - text: 殭屍將成功吃到向日葵。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+        - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
+          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
+
+'
+        - text: 僵屍將被困在前進道路的盡頭。
+          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
+
+'
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: 小鳥角色完全不會動。
+          feedback: 不正確。程式將讓小鳥在有路的情況下一直向前移動，然後向左轉。它會持續一直這樣移動，直到抓到豬豬為止！
+        - text: 小鳥會成功抓住豬豬。
+          correct: true
+          feedback: 正確！
+        - text: 憤怒鳥會移到前方然後衝進炸藥堆裡。
+          feedback: 不正確。程式將讓小鳥在安全的的路徑上，持續不停向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
+        - text: 鳥轉向錯誤的方向。
+          feedback: 程式讓小鳥在有路的情況下一直向前移動，然後向左轉。它會一直這麼做，直到找到豬豬為止！
+        questions:
+        - text: 仔細看看下方的程式。點擊「運行」按鈕後，你認為會發生什麼事呢？
+      courseE_EOC_2021:
+        description: 你已經到達課程E的結尾!選擇一個要創建的項目
+        display_name: 課程結束專案
+      courseE_EOC_examples_2021:
+        description: 你已經到達課程E的結尾!選擇一個要創建的項目
+        display_name: 課程結束專案
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 不正確。外星人將開始在螢幕上上下移動。
+        - text: 外星人將開始從右向左巡邏。
+          feedback: 不正確。外星人將開始在螢幕上上下移動。
+        - text: 外星人將開始在螢幕上上下移動。
+          correct: true
+          feedback: 正確！
+        - text: 外星人將從螢幕頂部消失。
+          feedback: 不正確。藍色外星人將開始在螢幕上上下移動。
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: 收割機將採收兩顆南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        - text: 收割機將採收所有南瓜。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        - text: 收割機將採收生菜。
+          correct: true
+          feedback: 正確！
+        - text: 收割機將採收玉米。
+          feedback: '不正確。收割機會向前走，直到路徑的盡頭，然後轉身後再往回走，直到採摘生菜為止。
+
+'
+        questions:
+        - text: 查看下面定義的函式。收割機會採收什麼作物呢？
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: 什麼事都沒發生，因為程式沒有呼叫函式。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製一個正方形。
+          feedback: 不正確，這個函式在程式中被呼叫了兩次。
+        - text: 小藝術家將繪製兩個重疊的正方形。
+          feedback: 不正確。正方形每邊的長度只有 100 像素，但是小藝術家在函式之間跳躍了 175 像素。
+        - text: 小藝術家將繪製兩個間距很小正方形。
+          correct: true
+          feedback: 正確！該函式在程式中被呼叫了兩次，並且中間有向後跳躍了一小步。
+        questions:
+        - text: 按下「運行」後會發生什麼事呢？
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: 什麼都不會發生。
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將飄浮到螢幕頂部
+          feedback: 不正確。風滾草將開始翻滾
+        - text: 風滾草將開始翻滾
+          correct: true
+          feedback: 正確！
+        - text: 風滾草將忽明忽暗。
+          feedback: 不正確。風滾草將開始翻滾
+        questions:
+        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+      courseF_artist_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行循環和藝術家練習！
+        display_name: 藝術家練習
+      courseF_beeFor_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行for循環和蜜蜂練習！
+        display_name: 蜜蜂練習
+      courseF_beeVar_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行變數和蜜蜂練習！
+        display_name: 蜜蜂練習
+      courseF_bee_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行循環和蜜蜂練習！
+        display_name: 蜜蜂練習
+      courseF_events_freeplay:
+        description: 現在你可以使用所學的知識使項目更好！繼續向你的程式添加東西或開始一些新的東西！
+        display_name: 事件 - 自由發揮
+      courseF_events_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行事件練習！
+        display_name: 事件練習
+        teacher_markdown: |+
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但可以根據他們（或你）的喜好選擇做多少。
+
+          你可以使用下面的描述來幫助學生自我選擇，或者設定他們應該完成多少個子級別的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |點火起飛！|學習飛行|進行翻滾|收縮和放大|讓魚膨脹！|移動中的企鵝|
+          |-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+          | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+
+
+      courseF_intro_apps:
+        description: 歡迎來到電腦科學基礎！這些項目都是通過精靈圖實驗室創建的。現在嘗試它們，看看可能實現什麼。在本課程結束時，你將能夠自己製作此類項目及更多東西！
+        display_name: 精靈圖實驗室應用程式
+        teacher_markdown: |
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但可以根據他們（或你）的喜好選擇做多少。
+
+          這裡的選擇將學生帶到他們可以探索的示例應用程式。此活動旨在與[lesson plan](.././)中的探索應用程式工作表協調。
+      courseF_sprites_freeplay:
+        description: 現在輪到你去創造你想要的東西了！你會創建什麼樣的項目？
+        display_name: 精靈圖 - 自由發揮
+      courseF_sprites_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行精靈圖和行為練習！
+        display_name: 精靈圖練習
+        teacher_markdown: |+
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但可以根據他們（或你）的喜好選擇做多少。
+
+          你可以使用下面的描述來幫助學生自我選擇，或者設置他們應該完成多少個子級別的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |沙漠場景|調整水果的大小。|使帆船動起來|微風吹拂的日子|
+          |-|-|-|-|-|
+          | ***Type*** |**Review**|**Review**|**Review**|**Review**|
+          | ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
+
+
+      courseF_text_practice:
+        description: 到目前為止做得很好！選擇你的下一個活動。盡可能多地完成。繼續進行文本和提示練習！
+        display_name: 文本和提示練習
+        teacher_markdown: |+
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但可以根據他們（或你）的喜好選擇做多少。
+
+          你可以使用下面的描述來幫助學生自我選擇，或者設定他們應該完成多少個子級別的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |使用文本說話|來自提示的文本|命名機器人！|變數標籤|大文本|顏色提示|從頭開始|
+          |-|-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+          | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+
+
+      courseF_variables_projects:
+        description: 你將創建賀卡、聊天機器人或空白區故事。如果你已經完成了項目的\"第一部分\"，請前往\"第二部分\"。
+        display_name: 選擇一個項目
+        teacher_markdown: |
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但是應鼓勵為同一個項目完成**兩個**級別。
+
+          學生可能需要非常清楚的說明來理解如何在這裡進行選擇。每個項目選擇擁有兩個子級別。開始時，學生應從標記為“第一部分”的級別中選擇一個。當他們完成級別後，他們應回到這裡並選擇相同項目的“第二部分”。每個選擇的第一個級別將為學生提供回饋，因為他們將項目的基本組成部分放在一起。第二個級別是“自由發揮”，目的是允許學生對他們喜歡的代碼進行任何修改。
+      courseF_variables_samples:
+        description: 你將創建賀卡、聊天機器人或空白區故事。在開始之前，探索下面的示例項目，看看你對創建什麼感興趣。當你準備好開始規劃你自己的程式時，按\“完成\”。
+        display_name: 探索 - 示例程式
+        teacher_markdown: |
+          # 選擇級別概述
+          選擇級別提供供學生完成的額外級別功能表。學生必須完成這裡的至少一個子級別，但可以根據他們（或你）的喜好選擇做多少。
+
+          學生應該在決定他們想要創建什麼之前仔細地看這些項目。你可以把它們放在一起作為一課，也可以讓學生自己去探索。
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: 藝術家會完美地解決這個難題。
+          feedback: 不正確。重複積木之中應使用`繪製多邊形`而不是`繪製一排多邊形`。
+        - text: 小藝術家將依照窗戶的佈局來繪製四個正方形。
+          correct: true
+          feedback: 正確！
+        - text: 小藝術家將只畫一排正方形。
+          feedback: 不正確。程式沒有呼叫`繪製一排多邊形`的這個函式。
+        - text: 小藝術家將繪製向上重疊的四個正方形。
+          feedback: 不正確。在呼叫兩次`繪製多邊形`的函式之間，重複積木將角色旋轉了 90 度。
+        questions:
+        - text: 按下「運行」按鈕會發生什麼事呢？
+      csf_be_a_super_digital_citizen_2021:
+        content1: 在此描述
+        markdown: |-
+          #超級數位公民
+
+          ##當我們看到網絡霸凌行為時，我們如何成為好人？
+      csf_password_power-up_2021:
+        content1: 在此描述
+        markdown: |-
+          # 增強你的密碼
+
+          ## 記住關於密碼的秘訣
+
+          * 重一個難忘的短句開始
+          * 只有你的**雙親** 才知道你的密碼
+          * 絕對不要使用**私人**的身分訊息在密碼中
+          * 密碼長度至少要有**8**個字符
+          *在密碼中使用字母，數字和**符號**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      express_EOC_2021:
+        description: 你已經到達課程E的結尾!選擇一個要創建的項目
+        display_name: 課程結束專案
+      express_EOC_examples_2021:
+        description: 你即將開始你的最終項目。在開始之前，花些時間看一下示例項目。
+        display_name: 項目示例

@@ -5,6 +5,7 @@ zh-TW:
       actor: 角色
       color: 顏色
       counter: counter
+      dir: 資料夾
       direction: 方向
       height: 高度
       honey: 蜂蜜
@@ -13,9 +14,11 @@ zh-TW:
       min: 最小值
       nectar units: 花蜜單位
       nectars: 花蜜
+      numOctagons: 八邊形數目
       points: 分
       radius: 半徑
       sides: 邊
       size: 尺寸
       speed: 速度
+      theGuess: 猜測
       width: 寬度

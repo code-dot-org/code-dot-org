@@ -604,7 +604,8 @@
           "get nectar": {
             "name": "採集花蜜",
             "parameters": {
-              "counter": "counter"
+              "counter": "counter",
+              "dir": "資料夾"
             }
           }
         },
@@ -618,7 +619,10 @@
             "name": "draw a square 20"
           },
           "draw octagons": {
-            "name": "draw octagons"
+            "name": "draw octagons",
+            "parameters": {
+              "numOctagons": "八邊形數目"
+            }
           },
           "draw an octagon": {
             "name": "draw an octagon"
@@ -746,7 +750,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "check guess"
+            "name": "check guess",
+            "parameters": {
+              "theGuess": "猜測"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -3966,6 +3973,454 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "move and get nectar with counter"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "my function"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "小花"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "邏輯之花2"
+          },
+          "LOGIC FLOWER": {
+            "name": "邏輯之花"
+          },
+          "LOGIC FLOWERS": {
+            "name": "邏輯之花"
+          },
+          "draw a star": {
+            "name": "畫顆星星",
+            "description": "根據給予的點和邊來畫一個星星吧。",
+            "parameters": {
+              "points": "分",
+              "length": "長度"
+            }
+          },
+          "draw a circle": {
+            "name": "畫個圓形",
+            "description": "用提供的半徑畫一個圓",
+            "parameters": {
+              "radius": "半徑"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "畫個風車",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度",
+              "repeat": "重複"
+            }
+          },
+          "draw a triangle": {
+            "name": "畫個三角形",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a shape": {
+            "name": "畫個形狀",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度"
+            }
+          },
+          "draw a house": {
+            "name": "畫個房子",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a square": {
+            "name": "畫個正方形",
+            "parameters": {
+              "length": "長度",
+              "sides": "邊"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "畫顆星星",
+            "description": "根據給予的點和邊來畫一個星星吧。",
+            "parameters": {
+              "points": "分",
+              "length": "長度"
+            }
+          },
+          "draw a circle": {
+            "name": "畫個圓形",
+            "description": "用提供的半徑畫一個圓",
+            "parameters": {
+              "radius": "半徑"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "畫個風車",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度",
+              "repeat": "重複"
+            }
+          },
+          "draw a triangle": {
+            "name": "畫個三角形",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a shape": {
+            "name": "畫個形狀",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度"
+            }
+          },
+          "draw a house": {
+            "name": "畫個房子",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a square": {
+            "name": "畫個正方形",
+            "parameters": {
+              "length": "長度"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "畫顆星星",
+            "description": "根據給予的點和邊來畫一個星星吧。",
+            "parameters": {
+              "points": "分",
+              "length": "長度"
+            }
+          },
+          "draw a circle": {
+            "name": "畫個圓形",
+            "description": "用提供的半徑畫一個圓",
+            "parameters": {
+              "radius": "半徑"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "畫個風車",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度",
+              "repeat": "重複"
+            }
+          },
+          "draw a triangle": {
+            "name": "畫個三角形",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a shape": {
+            "name": "畫個形狀",
+            "parameters": {
+              "sides": "邊",
+              "length": "長度"
+            }
+          },
+          "draw a house": {
+            "name": "畫個房子",
+            "parameters": {
+              "length": "長度"
+            }
+          },
+          "draw a square": {
+            "name": "畫個正方形",
+            "parameters": {
+              "length": "長度"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "重置遊戲"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "build bridge"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "clear path"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "fix long path"
+          },
+          "fix short path": {
+            "name": "fix short path"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "build short bridge"
+          },
+          "build long bridge": {
+            "name": "build long bridge"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "function 1"
+          },
+          "function 2": {
+            "name": "function 2"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "函式名稱"
+          },
+          "draw hexagon": {
+            "name": "draw hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "draw line of hexagons"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "畫個正方形"
+          },
+          "draw ear stems": {
+            "name": "draw ear stems"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "畫顆星星"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "畫顆星星"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "draw a window"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "函式名稱"
+          },
+          "staggered squares": {
+            "name": "staggered squares"
+          },
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "draw square"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "畫個正方形"
+          },
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "draw square"
+          },
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "draw square"
+          },
+          "do something": {
+            "name": "函式名稱"
+          },
+          "staggered squares": {
+            "name": "staggered squares"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "函式名稱"
+          },
+          "draw triangle": {
+            "name": "draw triangle"
+          },
+          "draw line of triangles": {
+            "name": "draw line of triangles"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "draw hexagon"
+          },
+          "draw line of hexagons": {
+            "name": "draw line of hexagons"
+          },
+          "staggered squares": {
+            "name": "staggered squares"
+          },
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "draw square"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "my design"
+          },
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "my design"
+          },
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "畫個正方形"
+          },
+          "draw ear stems": {
+            "name": "draw ear stems"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "draw line of polygons"
+          },
+          "draw polygon": {
+            "name": "draw polygon"
+          },
+          "do something": {
+            "name": "函式名稱"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "pick along path"
+          },
+          "check square for corn": {
+            "name": "check square for corn"
+          },
+          "get all pumpkins": {
+            "name": "get all pumpkins"
+          },
+          "pumpkin square": {
+            "name": "pumpkin square"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "pick along path"
+          },
+          "pumpkin square": {
+            "name": "pumpkin square"
+          },
+          "check square for corn": {
+            "name": "check square for corn"
+          },
+          "get produce": {
+            "name": "get produce"
+          },
+          "get all pumpkins": {
+            "name": "get all pumpkins"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "pick along path"
+          },
+          "check for corn": {
+            "name": "check for corn"
+          },
+          "corn rectangle": {
+            "name": "corn rectangle"
+          },
+          "lettuce stairs": {
+            "name": "lettuce stairs"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "check square for corn"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "check square for corn"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "check square for corn"
+          },
+          "get all pumpkins": {
+            "name": "get all pumpkins"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "pick along path"
+          },
+          "check square for corn": {
+            "name": "check square for corn"
+          },
+          "get all pumpkins": {
+            "name": "get all pumpkins"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "check square for corn"
+          },
+          "get all pumpkins": {
+            "name": "get all pumpkins"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "garden square"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "garden square"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "garden square"
           }
         }
       }

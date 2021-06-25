@@ -1707,6 +1707,240 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "在這裡選擇舞者的類型。"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "將此程式積木添加到您的程式中。",
+          "arrow_buttons": "按箭頭按鈕控制舞者。"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "將新事件添加到程式中。"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "新的程式積木！",
+          "new_block_4": "新的程式積木！"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果",
+          "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "開採這塊鐵礦！"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "點擊這裡為你的項目添加新服裝！"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "點擊這裡為你的項目添加新服裝！"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "？"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "？"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "？"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "你可以在這裡放慢你的程式。"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "嘗試一次一個積木地遍歷代碼。"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色的積木是不能扔掉的。\n"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "請按一下這裡！\n"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_collector": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_pet": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "嘗試將when改為while。"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "此處新積木！"
+        },
+        "courseF_events_key": {
+          "whenKey": "使用在這裡找到的新事件積木。"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "這段代碼的順序不正確。"
+        },
+        "courseF_events_time": {
+          "events_category": "點擊這裡打開事件類別。"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "仔細看下面的代碼。"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "點擊這裡打開行為類別。"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "點擊這裡打開精靈圖類別。"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "點擊這裡打開位置類別。"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "在這裡尋找一個新積木。"
+        },
+        "courseF_text_answer": {
+          "answered_block": "在這裡尋找一個新積木！"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "你回答問題時背景顏色改變了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "你完成了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "在這裡尋找兩個新積木！",
+          "text_answer_finish": "標題螢幕顯示了3秒鐘嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "在這裡尋找新積木！"
+        },
+        "courseF_text_events": {
+          "events_category": "點擊這裡打開事件類別。"
+        },
+        "courseF_text_print": {
+          "print_block": "在這裡找到列印積木！",
+          "text_print_finish": "你的訊息列印在上面了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "在這裡找到提示積木！"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "仔細看下面的代碼。"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         }
       }
     }
