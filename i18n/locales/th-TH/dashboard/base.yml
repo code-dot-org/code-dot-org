@@ -268,16 +268,18 @@ th:
       create: 'สร้าง'
       applab: 'แอ๊ปแล็บ'
       artist: 'ศิลปิน'
+      artist_k1: 'ศิลปิน (เด็กวัยเรียนรู้)'
       bounce: 'กระเด้ง'
       dance: 'Dance Party'
-      frozen: 'Frozen'
+      frozen: 'โฟรเซ่น'
       gamelab: 'เกมแล๊บ (Game Lab)'
       gumball: 'โลกมหัศจรรย์ของ Gumball'
       iceage: 'ยุคน้ำแข็ง (Ice Age)'
       infinity: 'ไม่จำกัด'
       minecraft_adventurer: 'การผจญภัยในไมน์คราฟท์'
       minecraft_designer: 'ไมน์คราฟท์'
-      starwars: 'Star Wars'
+      sports: 'กีฬา'
+      starwars: 'สตาร์วอร์ส'
       starwarsblocks: 'สตาร์วอร์ส (บล็อก)'
       starwarsblocks_hour: 'สตาร์วอร์ส (บล็อก)'
     popup:
@@ -417,6 +419,7 @@ th:
   pdf_download: 'ดาวน์โหลด PDF'
   video_coming_soon: 'วีดีโอจะมาในเร็ว ๆ นี้!'
   share_code:
+    flappy_og_title: "มาดูรายละเอียดเกมแฟลปปี้ของฉันกันดีกว่า"
     studio_og_title: "มาลองแอปเพลย์แลป ของฉัน"
   builder:
     level:
@@ -430,25 +433,37 @@ th:
       title: 'Dance Party'
     dance-2019:
       title: 'Dance Party'
+    hoc:
+      title: 'เขาวงกตสุดคลาสสิค'
+      body: 'ลองใช้พื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง'
+    flappy:
+      title: 'แฟลปปี้โค้ด'
+      body: 'อยากจะลองเขียนเกมในแบบของคุณโดยใช้เวลาไม่ถึง 10 นาทีรึเปล่า แนะนำให้อ่านบทเรียน "แฟลปปี้โค้ด" ดูนะ'
     20-hour:
       title: 'หลักสูตรเร่งรัด'
       body: 'This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!'
       body_short: 'เรียนรู้วิทยาการคอมพิวเตอร์พื้นฐานในเวอร์ชั่นเร่งรัดของหลักสูตร 2-4'
+    hoc2014:
+      try_frozen: 'ศิลปินร่วมกับแอนนาและเอลซ่าจากโฟรเซ่น'
     gallery:
       title: "แกลเลอรี่"
     gamelab:
       title: "เกมแล๊บ (Game Lab)"
       body: "เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้"
       audience: "อายุ 13+"
+    hoc-encryption:
+      title: "การเข้ารหัสแบบง่าย ๆ"
+      body: "นักเรียนจะได้ศึกษาเทคนิคที่นำมาใช้สร้างและแคร็คข้อความที่เข้ารหัสไว้"
     weblab:
       body: "เว็ปแลป(Web Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรม ที่ซึ่งคุณสามารถสร้างหน้าเว็ปอย่างง่ายๆ โดยการใช้ HTML และ CSS ออกแบบหน้าเว็ปของคุณและแบ่งปันไซท์ของคุณในชั่วเวลาไม่กี่วินาที"
       audience: "อายุ 13+"
     frozen:
-      title: "Frozen"
+      title: "โฟรเซ่น"
     starwars:
-      title: "Star Wars"
+      title: "สตาร์วอร์ส"
     infinity:
       title: "เรื่องราวและเกม"
+      body: "ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity"
     minecraft:
       title: "ไมน์คราฟท์"
       body: "สำรวจโลก Minecraft ผ่านโค้ด"
@@ -459,13 +474,19 @@ th:
       title: "ไมน์คราฟท์"
     hero:
       title: "ไมน์คราฟท์"
-      body: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ"
+      body: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
+    sports:
+      title: "กีฬา"
+      body: "สร้างเกมบาสเก็ตบอลหรือมิกซ์แอนด์แมทช์หลาย ๆ เกม"
+    text-compression:
+      title: "การบีบอัดข้อความ"
     unplugged:
       title: "บทเรียนแบบออฟไลน์"
       audience: "อายุ 4+"
       body_short: "หากคุณไม่มีคอมพิวเตอร์ ให้ลองบทเรียนแบบออฟไลน์เหล่านี้ในห้องเรียน"
     unplugged_conditionals:
       title: "เงื่อนไข "
+      body: "ใช้ไพ่สำรับหนึ่งเพื่อเรียนเรื่องอัลกอริทึมและเงื่อนไขต่าง ๆ จากกิจกรรม \"ออฟไลน์\" นี้"
     widgets:
       audience: "อายุ 14+"
   landing:
@@ -554,7 +575,9 @@ th:
     review_in_progress: 'พร้อมพื่อทบทวน'
   hoc_download:
     minecraft_name: 'ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์'
-  view_teacher_guide: 'ดูคำแนะนำสำหรับครู'
+    starwars_blocks_name: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (บล็อก)'
+    starwars_javascript_name: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (จาวาสคริปต์)'
+  view_teacher_guide: 'ดูคำแนะนำสำหรับผู้สอน'
   pd:
     form_labels:
       email: 'อีเมล'

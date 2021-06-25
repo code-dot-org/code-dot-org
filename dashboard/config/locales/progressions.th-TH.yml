@@ -2,8 +2,11 @@
 th:
   data:
     progressions:
-      'Artist: Variables': 'ศิลปิน: Variables'
+      Artist Project: โปรเจ็กต์ศิลปิน
+      'Artist: Variables': 'ศิลปิน: ตัวแปร'
+      Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
       Debugging: การแก้ไขจุดบกพร่อง
+      Designing for Accessibility: การออกแบบสำหรับการช่วยการเข้าถึง
       Events: เหตุการณ์
       For Loops: การวนรอบ
       Free Play: เล่นฟรี
@@ -16,6 +19,7 @@ th:
       Programming with Rey and BB-8: การเขียนโปรแกรมกับเรย์และบีบี-8
       Project: โปรเจกต์
       Properties: คุณสมบัติ
+      Review: ตรวจสอบ
       Stopping the Outbreak with Masks: หยุดการระบาดด้วยหน้ากากอนามัย
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
       While Loops with the Farmer: ลูปขณะที่ (while loops) กับเกมเกษตรกร

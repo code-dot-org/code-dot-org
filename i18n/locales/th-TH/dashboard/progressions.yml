@@ -1,7 +1,9 @@
 th:
   data:
     progressions:
-      'Artist: Variables': 'ศิลปิน: Variables'
+      Artist Project: โปรเจ็กต์ศิลปิน
+      'Artist: Variables': 'ศิลปิน: ตัวแปร'
+      Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
       Debugging: การแก้ไขจุดบกพร่อง
       Designing for Accessibility: การออกแบบสำหรับการช่วยการเข้าถึง
       Events: เหตุการณ์
