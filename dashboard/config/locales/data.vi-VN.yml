@@ -653,6 +653,9 @@ vi:
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
         csd_what_computers_are: Máy tính là gì?
+        csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
+        playlab_2021: Giới thiệu về Phòng Trò Chơi
+        playlab_2021_reader: Giới thiệu về Phòng Trò Chơi
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

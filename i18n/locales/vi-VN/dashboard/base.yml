@@ -250,6 +250,7 @@ vi:
     invite_sent: 'Đã gửi lời mời'
     added_teacher: '%{name} được thêm như giáo viên của bạn'
     registered: "Bạn đã đăng kí cho mục %{section_name}."
+    already_exists: 'Bạn đã tham gia nhóm đào tạo %{section_name}.'
     error:
       signed_in: 'Xin vui lòng đăng xuất trước khi tiếp tục'
       username_not_found: 'Tên người sử dụng % {username} không tìm thấy'
@@ -259,6 +260,7 @@ vi:
       blank_code: "Vui lòng nhập một phần mã"
       cant_join_own_section: "Xin lỗi, bạn không thể tham gia phần riêng của bạn."
       provider_managed_section: "Mục này được quản lý bởi nhà cung cấp khác và bạn không thể tham gia. Vui lòng liên hệ giáo viên của bạn để %{provider} thêm bạn vào và tham gia mục này."
+      restricted_section: "Chúng tôi không thể thêm bạn vào nhóm đào tạo %{section_code} vì nhóm này bị khóa. Vui lòng liên hệ với giáo viên của bạn để được giúp đỡ."
     mail:
       student_disassociated:
         subject: "Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn."
@@ -917,6 +919,13 @@ vi:
       email_opt_in:
         opt_in_yes: 'Đồng ý'
         opt_in_no: 'Không'
+    international_opt_in:
+      title: 'Tham gia hội thảo'
+      intro: "Cảm ơn bạn đã dành thời gian để tham gia đào tạo về chương trình giảng dạy của Code.org. Sứ mệnh của chúng tôi là mang đến cơ hội học môn khoa học máy tính cho tất cả trẻ em ở tất cả các trường học trên toàn thế giới. Sứ mệnh này sẽ không thể thực hiện được nếu thiếu bạn."
+      instructions: "Vui lòng điền vào biểu mẫu bên dưới để cho biết 1) bạn đã tham dự hội thảo đào tạo do một trong những đối tác quốc tế của Code.org tổ chức và 2) bạn đồng ý chia sẻ thông tin của mình với đối tác quốc tế của chúng tôi ở quốc gia của bạn để họ có thể giúp đỡ bạn trên hành trình trở thành một giáo viên dạy môn khoa học máy tính."
+      thanks_markdown: "Cảm ơn bạn đã gửi đơn! Chúng tôi rất mong được hỗ trợ bạn khi bạn hiểu chương trình giảng dạy và công cụ của Code.org. Vui lòng tiếp tục chia sẻ câu hỏi và phản hồi của bạn với chúng tôi bằng cách viết thư cho chúng tôi theo địa chỉ [support@code.org](%{support_email_url}) hoặc bằng cách đăng trên [diễn đàn giáo viên](%{teacher_forum_url})!"
+      facilitator_not_listed: "Điều hành viên của tôi không có trong danh sách"
+      organizer_not_listed: "Người tổ chức của tôi không có trong danh sách"
   cookie_banner:
     accept: 'tôi đồng ý'
   copy: 'Sao chép'

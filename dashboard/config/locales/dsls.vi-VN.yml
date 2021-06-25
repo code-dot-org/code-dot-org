@@ -2424,3 +2424,585 @@ vi-VN:
         display_name: Dự án tổng kết khóa học
       courseF_EOC_2020:
         display_name: Dự án tổng kết khóa học
+      CourseF_outbreak_story:
+        content1: mô tả ở đây
+        markdown: |-
+          # Dịch bệnh bùng phát: Tự lập trình mô phỏng
+
+          ## Chào mừng bạn đến với Thị Trấn Quái Vật!
+          Thị Trấn Quái Vật vốn là một thị trấn hạnh phúc và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang khắp nơi để ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Một ngày nọ, một chú quái vật bắt đầu thấy không khỏe. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại vi khuẩn nhỏ xíu khiến bạn bị ốm. Các quái vật khác thì vẫn vô tư. Họ tiếp tục ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Không lâu sau, thêm hai quái vật nữa bị ốm. Vẫn là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Vi rút dần lây lan sang các quái vật khác ở gần. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị ốm. Các quái vật bị ốm bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật khác.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Ngăn chặn lây lan
+          May mắn thay, sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái vật bị ốm sẽ khó truyền vi rút cho các quái vật khỏe mạnh.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Rồi chuyện gì sẽ xảy ra?
+
+          Hôm nay, bạn sẽ lập trình để tạo ra và tự mình chạy **bản mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng của Thị Trấn Quái Vật.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Vi rút lây lan nhanh tới mức nào?*
+
+          * *Rồi rất cả mọi người sẽ bị ốm sao?*
+
+          * *Khẩu trang có tác dụng gì?*
+
+
+          Sau khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người khi vi rút lan tới thị trấn.
+      CourseF_outbreak_story2:
+        content1: mô tả ở đây
+        markdown: |
+          # Dịch bệnh bùng phát: Tư duy như nhà khoa học
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Mô phỏng là phương pháp lý tưởng để tìm hiểu những sự việc khó quan sát trong thế giới thực. Phương pháp này giúp các nhà khoa học giải quyết các vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là phương thức minh họa cách vi rút lây lan trong Thị Trấn Quái Vật.
+
+          ## Đặt lại và chạy lại!
+          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút "Chạy". Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
+
+          ## Thu thập dữ liệu
+          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị ốm hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị ốm nếu không có ai đeo khẩu trang?
+
+          ## Đưa ra dự đoán
+          Nếu bạn hiểu mô hình của mình, bạn có thể sử dụng mô hình đó để đưa ra dự đoán. Bạn thậm chí còn có thể thay đổi cách chạy mô phỏng và đoán xem sẽ có những thay đổi gì xảy ra. Ví dụ:
+          * Điều gì sẽ xảy ra nếu có số lượng quái vật gấp đôi?
+          * Điều gì sẽ xảy ra nếu tốc độ di chuyển của quái vật giảm còn một nửa?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Thị Trấn Quái Vật có giống thế giới thực không?
+          Mỗi mô hình đều có giới hạn về tính chân thực.
+          * Mô phỏng dịch bệnh bùng phát có điểm chung gì so với dịch bệnh bùng phát do vi rút trong thế giới thực?
+          * Điểm khác biệt là gì?
+          Sau khi hoàn thành hoạt động này, hãy thảo luận các câu hỏi này với thầy cô giáo và gia đình nhé!
+
+          ## Chúng ta có thể tạo mô hình nào khác?
+          Bạn đã tạo mô hình vận hành dịch bệnh bùng phát tại Thị Trấn Quái vật rồi. Những điểm nào bản mô phỏng của bạn chưa làm được hoặc cho thấy bạn mong muốn làm được điều đó? Hãy nhấn tiếp tục để tìm hiểu thêm và học thêm về cách tạo mô hình:
+          * Tăng số lượng quái vật trong bản mô phỏng
+          * Giúp quái vật hồi phục sau khi nhiễm vi rút
+          * Xác suất, miễn dịch, vắc xin và nhiều điều khác!
+
+          Bạn còn có thể chia sẻ mô hình mô phỏng của mình với người khác hoặc chia sẻ thông điệp về những gì bạn nghĩ bạn có thể làm được để giúp mọi người khỏe mạnh khi vi rút lan tới thị trấn.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Câu chuyện khoảng trống
+
+          Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
+      OPD-K5 CS Courses_dani:
+        markdown: "# Lập kế hoạch > Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa
+          học\nTất cả các khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết
+          đọc tới khóa dành cho học sinh trung học – đều có trên **[danh mục khóa
+          học](https://studio.code.org/courses)**. Để tìm các bài học Nguyên tắc cơ
+          bản của KHMT mà bạn đã luyện tập, hãy truy cập **[trang tiểu học](https://code.org/educate/curriculum/elementary-school)**
+          và cuộn xuống phần “Khóa học”. Tất cả khóa học của chúng tôi đều miễn phí.
+          Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định xem chương trình
+          đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Bước 2: Thiết lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến
+          trình của học sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản
+          của các em và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa
+          học. Hãy nhấp chuột vào liên kết này để **[xem một đoạn video ngắn](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          minh họa cách thiết lập lớp khoa học máy tính đầu tiên của bạn trên Code.org.
+          Bạn cũng có thể tìm thấy các bước trong **[bài viết hỗ trợ sau](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Bước 3: Chỉ định khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn
+          đang dạy – bạn sẽ thấy màn hình như dưới đây. Sau đó, bạn có thể nhấp chuột
+          vào “Chỉ định khóa học” và chỉ định khóa học đó cho một trong các nhóm của
+          bạn. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Bước 4: Bắt đầu dạy thôi!\nChỉ cần một bài học duy nhất để mang các khái
+          niệm khoa học máy tính vào lớp học của bạn. Sau khi thấy học sinh của mình
+          nhiệt tình với KHMT, hãy tiếp tục với giáo án hàng ngày để hướng dẫn học
+          sinh của mình, các hoạt động không sử dụng thiết bị điện tử để bạn có thể
+          thực hiện mà không cần máy tính và các diễn đàn để kết nối với các thầy
+          cô giáo khác.\n\n\n"
+      OPD-K5 Stage3aGo_dani:
+        content1: mô tả ở đây
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Làm theo thuật toán
+
+          Hãy chơi game và suy nghĩ về những lệnh cần thiết để cho kết quả phù hợp.
+      courseAB_EOC_2021:
+        description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
+      courseB_EOC_2021:
+        description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Họa sĩ sẽ vẽ hình ngũ giác
+          feedback: Sai. Họa sĩ vẽ hình vuông.
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - text: Scrat sẽ không di chuyển từ khối đầu tiên.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Chú chim sẽ va vào tường.
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: BB-8 sẽ chỉ di chuyển 3 ô.
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: BB-8 sẽ rẽ sai hướng sau vòng lặp đầu tiên.
+        questions:
+        - {}
+      courseD_EOC_2021:
+        description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
+          muốn nhé.
+        display_name: Dự án tổng kết khóa học
+      courseD_EOC_examples_2021:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Ví dụ dự án
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - text: Không mục nào ở trên
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Chú ong sẽ không chạm được đám mây.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Chú ong sẽ cố gắng lấy mật và mật hoa từ cả hoa và tổ ong.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Chũ ong sẽ rẽ sai hướng.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Người thu hoạch sẽ chỉ hái bí.
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Mã lệnh này sẽ không xử lý hố cuối cùng.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Bác nông dân sẽ làm sạch vết bẩn một lần duy nhất.
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Chú chim sẽ quay sai hướng.
+        questions:
+        - {}
+      courseE_EOC_2021:
+        display_name: Dự án tổng kết khóa học
+      courseE_EOC_examples_2021:
+        display_name: Dự án tổng kết khóa học
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - feedback: Sai. Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên
+            màn hình.
+        - text: Người ngoài hành tinh sẽ bắt đầu tuần tra từ phải sang trái.
+          feedback: Sai. Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên
+            màn hình.
+        - text: Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên màn hình.
+          correct: true
+        - text: Người ngoài hành tinh sẽ biến mất khỏi phía trên màn hình.
+          feedback: Sai. Người ngoài hành tinh xanh sẽ bắt đầu di chuyển lên và xuống
+            trên màn hình.
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ nổi lên trên cùng của màn hình
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ bắt đầu lăn
+          correct: true
+        - text: Cỏ lăn sẽ nhấp nháy.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        questions:
+        - {}
+      courseF_EOC_2021:
+        display_name: Dự án tổng kết khóa học
+      courseF_EOC_examples_2021:
+        display_name: Dự án tổng kết khóa học
+      courseF_EOC_samples_2021:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Dự án tổng kết khóa học
+      courseF_artist_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với vòng lặp và chương trình Họa
+          sĩ nhé!
+        display_name: Thực hành chương trình Họa sĩ
+      courseF_beeFor_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với vòng lặp for và chương trình
+          Chú ong nhé!
+        display_name: Thực hành chương trình Chú ong
+      courseF_beeVar_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với biến và chương trình Chú ong
+          nhé!
+        display_name: Thực hành chương trình Chú ong
+      courseF_bee_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với vòng lặp và chương trình Chú
+          ong nhé!
+        display_name: Thực hành chương trình Chú ong
+      courseF_events_freeplay:
+        description: Bây giờ bạn có thể vận dụng những kiến thức đã học để cải thiện
+          dự án của chính mình rồi! Hãy tiếp tục bổ sung vào chương trình của bạn
+          hoặc bắt đầu một dự án mới!
+        display_name: Sự kiện – Chơi tự do
+      courseF_events_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với sự kiện nhé!
+        display_name: Thực hành với Sự kiện
+        teacher_markdown: |+
+          # Tổng quan về cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
+
+          Bạn có thể sử dụng các mô tả bên dưới để giúp học sinh tự lựa chọn hoặc kỳ vọng số lượng cấp độ phụ mà các em phải hoàn thành.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Ra khơi nào! | Học bay | Nhào lộn | Thu nhỏ và phóng to | Làm phồng chú cá! | Cánh cụt di chuyển |
+          |-|-|-|-|-|-|-|
+          |**Đánh giá**|**Debug**|**Sửa lỗi**|**Debug**|**Nội dung tùy chọn**|**Nội dung tùy chọn**
+          | ***Khái niệm***|*events, behaviors*|*sự kiện, hành vi*|*events, behaviors*|*sự kiện, hành vi*|*when/while events*|*sự kiện when/while*|
+
+
+      courseF_events_predict_multi:
+        answers:
+        - text: Nhân vật sẽ chỉ xoay phải.
+          feedback: Sai. Nhân vật còn di chuyển sang phải nữa.
+        - text: Nhân vật sẽ chỉ di chuyển sang phải.
+          feedback: Sai. Nhân vật đã không ngừng xoay, do đó nhân vật sẽ thực hiện
+            cả hai hành vi cùng lúc.
+        - text: Nhân vật sẽ xoay và di chuyển cùng lúc.
+          correct: true
+          feedback: Chính xác! Cả hai hành vi sẽ xảy ra đồng thời.
+        - text: Nhân vật sẽ xoay trước, rồi di chuyển sau.
+          feedback: Sai. Trong Sprite Lab, các khối gắn với nhau sẽ xảy ra liên tiếp
+            nhau, vì vậy cả hai hành vi sẽ xảy ra đồng thời.
+        questions:
+        - text: Hãy đọc mã lệnh, sau đó dự đoán.
+      courseF_intro_apps:
+        description: Chào mừng bạn đến với Nguyên tắc cơ bản của KHMT! Tất cả các
+          dự án này đều được tạo bằng Sprite Lab. Hãy thử ngay để xem chúng ta có
+          thể làm được gì. Vào cuối khóa học này, bạn sẽ tạo ra được các dự án của
+          riêng mình như vậy... và hơn thế nữa!
+        display_name: Ứng dụng Sprite Lab
+        teacher_markdown: |
+          # Tổng quan về cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
+
+          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án] (.././).
+      courseF_labels_predict_multi:
+        answers:
+        - text: "“Một chiếc pizza sắp ra ngay đây!”"
+          feedback: Sai. Các nhãn biến không khớp.
+        - text: "“Một bữa ăn sắp ra ngay đây!”"
+          feedback: Sai. Nhãn của biến không bao giờ hiển thị.
+        - text: "“Một món sắp ra ngay đây!”"
+          feedback: Sai. Nhãn của biến không bao giờ hiển thị.
+        - text: "“Một  sắp ra ngay đây!”"
+          correct: true
+          feedback: Chính xác! Các nhãn biến không khớp.
+        - text: Màn hình sẽ không hiển thị nội dung nào.
+          feedback: Sai. Sự kiện và khối hiện sẽ vẫn hoạt động.
+        questions:
+        - text: Mã lệnh này có thể trông quen thuộc nhưng hãy đọc kỹ. Nội dung nào
+            sẽ được hiển thị nếu người dùng nhập “pizza”?
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Máy tính sẽ nhắc người dùng nhập số.
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Chú ong sẽ di chuyển về phía trước và thu thập một mật hoa từ hoa
+            số 1 và 4.
+        questions:
+        - {}
+      courseF_sprites_freeplay:
+        description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
+          sẽ thực hiện loại dự án nào?
+        display_name: Nhân vật – Chơi tự do
+      courseF_sprites_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với các nhân vật và hành vi nhé!
+        display_name: Thực hành nhân vật
+        teacher_markdown: |+
+          # Tổng quan về cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
+
+          Bạn có thể sử dụng các mô tả bên dưới để giúp học sinh tự lựa chọn hoặc kỳ vọng số lượng cấp độ phụ mà các em phải hoàn thành.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Cảnh sa mạc | Thay đổi kích thước trái cây | Tạo thuyền buồm chuyển động | Một ngày gió mát |
+          |-|-|-|-|-|
+          | ***Type*** |**Đánh giá**|**Review**|**Đánh giá**|**Đánh giá**|
+          | ***Khái niệm***|*sprites, locations*|*nhân vật, thuộc tính*|*sprites, locations, behaviors*|*hành vi*|
+
+
+      courseF_sprites_predict_multi:
+        answers:
+        - text: Cả hai máy bay sẽ di chuyển một ô dọc theo đường kẻ, sau đó dừng lại.
+          feedback: Sai. Những nhân vật này có “hành vi” tiếp tục chạy cho đến khi
+            được yêu cầu dừng lại.
+        - text: Cả hai máy bay sẽ bắt đầu di chuyển và không dừng lại.
+          correct: true
+          feedback: Chính xác! Những hành vi này yêu cầu máy bay bắt đầu di chuyển
+            và tiếp tục.
+        - text: Một máy bay sẽ di chuyển trước và máy bay kia sẽ di chuyển động.
+          feedback: Sai. Các khối mã lệnh trong Sprite Lab sẽ liên tiếp nhau.
+        - text: Máy bay sẽ đâm vào nhau.
+          feedback: Sai. Máy bay không được di chuyển đến vị trí khiến chúng đâm vào
+            nhau.
+        questions:
+        - text: Hãy đọc mã lệnh, sau đó dự đoán.
+      courseF_text_practice:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với văn bản và lời nhắc nhé!
+        display_name: Thực hành văn bản và lời nhắc
+        teacher_markdown: |+
+          # Tổng quan về cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
+
+          Bạn có thể sử dụng các mô tả bên dưới để giúp học sinh tự lựa chọn hoặc kỳ vọng số lượng cấp độ phụ mà các em phải hoàn thành.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Dùng lời nói cho văn bản|Văn bản theo lời nhắc|Hãy đặt tên robot!|Nhãn của biến|Chữ lớn|Lời nhắc cho màu sắc|Bắt đầu từ số 0|
+          |-|-|-|-|-|-|-|-|
+          | ***Loại*** |**Đánh giá**|**Debug**|**Sửa lỗi**|**Debug**|**Nội dung tùy chọn**|**Optional Content**|**Chơi tự do**
+          | ***Khái niệm***|*print block, events*|*lời nhắc, sự kiện*|*adding spaces*|*khớp nhãn của biến*|*title screen blocks*|*lưu màu*|*không có văn bản mới*
+
+
+      courseF_variables_predict_multi:
+        answers:
+        - text: Chương trình sẽ hiện chữ “Xin chào tên!”
+          feedback: Sai. Khối tên sẽ được thay thế bằng bất cứ văn bản nào bạn nhập
+            vào.
+        - text: Chương trình sẽ chào đón bạn với tên mà bạn nhập.
+          correct: true
+          feedback: Chính xác! Nội dung bạn nhập sẽ được sử dụng thay cho khối tên.
+        - text: Nhân vật sẽ thay đổi kích thước.
+          feedback: Sai. Chữ hiện ra trên màn hình.
+        - text: Máy tính sẽ hỏi một câu hỏi khác.
+          feedback: Sai. Chỉ một câu hỏi được đặt ra ngay khi chương trình bắt đầu.
+        questions:
+        - text: 'Chương trình này cho phép bạn trả lời câu hỏi bằng cách nhập bằng
+            bàn phím. Khối `print` sẽ hiện chữ trên màn hình. Hãy dự đoán: Điều gì
+            sẽ xảy ra sau khi trả lời câu hỏi?'
+      courseF_variables_projects:
+        description: Bạn sẽ tạo thiệp mừng, một chatbot hoặc câu chuyện khoảng trống.
+          Nếu bạn đã hoàn thành \"Part 1\" của dự án, hãy chuyển sang \"Part 2\".
+        display_name: Chọn dự án
+        teacher_markdown: |
+          # Tổng quan cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng nên hoàn thành **hai** cấp độ cho cùng một dự án.
+
+          Học sinh có thể cần được hướng dẫn thực sự rõ ràng để hiểu cách thay đổi các lựa chọn ở đây. Đối với mỗi lựa chọn dự án, có hai cấp độ phụ ở đây. Ban đầu, học sinh nên chọn một trong các cấp độ được đánh dấu “Phần 1”. Sau khi hoàn thành cấp độ đó, các em sẽ trở lại phần này và chọn “Phần 2” của *cùng một* dự án đó. Cấp độ đầu tiên cho mỗi lựa chọn sẽ cho học sinh phản hồi khi các em ghép các thành phần cơ bản của dự án với nhau. Cấp độ thứ hai là “chơi tự do” nhằm giúp học sinh thay đổi mã lệnh theo sở thích.
+      courseF_variables_samples:
+        description: Bạn sẽ tạo thiệp chúc mừng, chatbot hoặc câu chuyện khoảng trống.
+          Trước khi bắt đầu, hãy khám phá các dự án ví dụ bên dưới để xem bạn muốn
+          tạo gì. Nhấn \"Finish\" khi bạn sẵn sàng bắt đầu lập kế hoạch cho chương
+          trình của riêng mình.
+        display_name: Khám phá – Chương trình mẫu
+        teacher_markdown: |-
+          # Tổng quan về cấp độ lựa chọn
+          Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
+
+          Học sinh nên xem các dự án thật kỹ trước khi quyết định muốn sáng tạo điều gì. Bạn có thể quan sát cả lớp hoặc để học sinh tự khám phá.
+      courseF_variables_stop:
+        content1: mô tả ở đây
+        markdown: |
+          # Dừng lại!
+
+          ## Bạn đã sẵn sàng tiếp tục chưa?
+
+
+          Ở cấp độ tiếp theo, bạn sẽ bắt đầu viết mã lệnh cho dự án của mình. Phần này sẽ phát huy hiệu quả cao nhất nếu bạn đã có sẵn kế hoạch.
+
+          Kế hoạch đã hoàn thành của bạn nên bao gồm:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Loại dự án bạn đang xây dựng. Ví dụ: thiệp chúc mừng, chatbot hoặc câu chuyện khoảng trống.
+          * Danh sách các câu hỏi bạn sẽ hỏi người dùng.
+          * Văn bản khác bạn sẽ hiển thị ra màn hình.
+          * Mô tả hoặc bản vẽ của các nhân vật bạn sẽ cần (và các hành vi của chúng).
+
+          Nếu bạn không chắc mình đã sẵn sàng để tiếp tục hay chưa, hãy hỏi giáo viên nhé!
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: mô tả ở đây
+      csf_digital_trails_2021:
+        markdown: |-
+          # Theo dấu chân số
+
+          ## Thông tin nào là OK để có trong dấu chân số của bạn?
+      csf_password_power-up_2021:
+        content1: mô tả ở đây
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: mô tả ở đây
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Khu phố trực tuyến của tôi
+
+          ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
+      express_EOC_2021:
+        display_name: Dự án tổng kết khóa học
+      express_EOC_examples_2021:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Ví dụ dự án
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Laurel sẽ thu thập 1 mẩu kho báu bằng cách sử dụng mã lệnh này.
+        questions:
+        - {}

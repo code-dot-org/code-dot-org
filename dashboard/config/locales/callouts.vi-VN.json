@@ -537,6 +537,216 @@
         },
         "courseC_starWars_loops2_copy": {
           "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Chọn loại vũ công ở đây."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Thêm khối này vào chương trình của bạn.",
+          "arrow_buttons": "Nhấn các nút mũi tên để điều khiển vũ công của bạn."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Thêm khối này vào chương trình của bạn!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Thêm một sự kiện mới vào chương trình của bạn."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Khối mới!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Khối mới!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Khối mới!",
+          "new_block_4": "Khối mới!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Nhấn vào đây để mở rộng khối.",
+          "pointerlocation": "Kéo khối nội dung vào đây."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Nhấn để tạo trang phục mới"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Hướng dẫn nhỏ này yêu cầu máy tính chạy một tập hợp mã lệnh LỚN có cùng tên trong không gian làm việc."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Bạn không thể ném các khối lệnh đi, nhưng bạn có thể chỉnh sửa chúng!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Nhấn \"Run\" để thử chương trình của bạn"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Hãy đào khối sắt này!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Cho phép bạn chọn một âm thanh ngẫu nhiên."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Hãy thử thay đổi từ when thành while."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Các khối mới ở đây!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Sử dụng khối sự kiện mới có ở đây."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Khối này không đúng thứ tự."
+        },
+        "courseF_events_time": {
+          "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Nhấp chuột vào đây để mở danh mục Hành vi."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Nhấp chuột vào đây để mở danh mục Nhân vật."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Nhấp chuột vào đây để mở danh mục Vị trí."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Hãy tìm khối mới ở đây."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Tìm khối mới ở đây!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Nền có đổi màu khi bạn trả lời câu hỏi không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Bạn đã hoàn thành chưa chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu chưa, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Hãy tìm hai khối mới ở đây!",
+          "text_answer_finish": "Màn hình tiêu đề có hiện trong 3 giây không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Hãy tìm khối mới ở đây!"
+        },
+        "courseF_text_events": {
+          "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
+        },
+        "courseF_text_print": {
+          "print_block": "Hãy tìm khối hiện ở đây!",
+          "text_print_finish": "Nội dung của bạn đã xuất hiện ở trên chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Hãy tìm khối nhắc ở đây!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         }
       }
     }

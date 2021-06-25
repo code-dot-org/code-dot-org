@@ -398,51 +398,6 @@ vi:
           nhỏ mà bạn có thể sử dụng lặp đi lặp lại bên trong của chương trình lớn
           hơn. Bài học này sẽ giúp trực giác của sinh viên hiểu tại sao kết hợp các
           khối mã hóa thành các chức năng là rất hữu ích trong thực tế.  '
-      swipeRightPassThrough:
-        title: Phần kịch bản tuyển dụng
-        desc: "# Phần kịch bản tuyển dụng\r \n\r \n## Swipe Right for CS\r \nTrong
-          phần này, chúng tôi sẽ sử dụng một công cụ được gọi là \"Swipe Right for
-          CS\" (Trượt qua bên phải đến phần KHMT), đã được phát triển bởi các đối
-          tác tại MIT. Tong phần Swipe Right for CS, bạn sẽ đọc qua một số hồ sơ sinh
-          viên và xem xét câu lệnh cụ thể mà bạn có thể sử dụng để thuyết phục anh
-          ấy hoặc cô ấy ghi danh vào khóa học KHMT cơ bản của bạn. \r \n\r \n### Nó
-          vận hành thế nào\r \nKhi chơi trò chơi Swipe cho CS, bạn sẽ thấy một loạt
-          các dòng ghi chú mà bạn có thể nói cho mỗi học sinh. Bạn sẽ trượt qua bên
-          phải tới các dòng ghi chú mà bạn nghĩ rằng sẽ có hiệu quả trong việc thuyết
-          phục học sinh ghi danh vào các khóa học và trượt qua bên trái vào câu lệnh
-          mà bạn nghĩ rằng sẽ không có hiệu quả. Trong nội dung này chúng ta sẽ thảo
-          luận như là một nhóm về những suy nghĩ của bạn về các loại câu lệnh hiệu
-          quả nhất trong việc giúp một học sinh tham gia vào KHMT, và bạn sẽ có cơ
-          hội để xem cách những người khác trong hội thảo của bạn phản hồi trên mỗi
-          luận điểm. \r \n\r \n\r khi bạn nhấp vào tiếp tục dưới đây, chúng tôi sẽ
-          gửi cho bạn các trò chơi, và đi qua địa chỉ email Code.org mà bạn dùng để
-          đăng nhập."
-      swipeRightPassThrough-test123:
-        title: Phần kịch bản tuyển dụng
-        desc: "# Phần kịch bản tuyển dụng\r \n\r \n## Swipe Right for CS\r \nTrong
-          phần này, chúng tôi sẽ sử dụng một công cụ được gọi là \"Swipe Right for
-          CS\" (Trượt qua bên phải đến phần KHMT), đã được phát triển bởi các đối
-          tác tại MIT. Tong phần Swipe Right for CS, bạn sẽ đọc qua một số hồ sơ sinh
-          viên và xem xét câu lệnh cụ thể mà bạn có thể sử dụng để thuyết phục anh
-          ấy hoặc cô ấy ghi danh vào khóa học KHMT cơ bản của bạn. \r \n\r \n### Nó
-          vận hành thế nào\r \nKhi chơi trò chơi Swipe cho CS, bạn sẽ thấy một loạt
-          các dòng ghi chú mà bạn có thể nói cho mỗi học sinh. Bạn sẽ trượt qua bên
-          phải tới các dòng ghi chú mà bạn nghĩ rằng sẽ có hiệu quả trong việc thuyết
-          phục học sinh ghi danh vào các khóa học và trượt qua bên trái vào câu lệnh
-          mà bạn nghĩ rằng sẽ không có hiệu quả. Trong nội dung này chúng ta sẽ thảo
-          luận như là một nhóm về những suy nghĩ của bạn về các loại câu lệnh hiệu
-          quả nhất trong việc giúp một học sinh tham gia vào KHMT, và bạn sẽ có cơ
-          hội để xem cách những người khác trong hội thảo của bạn phản hồi trên mỗi
-          luận điểm. \r \n\r \n\r khi bạn nhấp vào tiếp tục dưới đây, chúng tôi sẽ
-          gửi cho bạn các trò chơi, và đi qua địa chỉ email Code.org mà bạn dùng để
-          đăng nhập."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Nỗ lực tạo lại một con bọ Brooke\r theo
-          quy trình sau:\r\n1. bắt đầu với cấp độ không cần máy tính. làm quen với
-          thông tin. nhấn sao lưu và đăng tin.\r\n2. \"phá huỷ\" cấp độ\r\n3. tạo
-          một cấp độ \"đánh dấu\" với cùng một nội dung và cùng tên. Kiểm tra hộp
-          thư mã hoá nó. nhấn sao lưu"
       courseB_unplugged_MRF_2018:
         title: Bạn bè robot của tôi
         desc: Học cách lập trình bằng việc viết mã cho bạn bè!
