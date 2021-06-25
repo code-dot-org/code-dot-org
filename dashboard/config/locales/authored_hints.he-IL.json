@@ -2275,6 +2275,476 @@
         "outbreak6": {
           "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של בלוק `אם אחוז סיכוי`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של `נגיעות` בין דמויות בריאות לבין דמויות נגועות."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   ודאו שמופיע רקדן על גבי המסך.\n\n-   השלב הזה מסתיים אחרי 4 תיבות",
+          "challenges": "**אתגרי בונוס**\n\n-   בחרו שיר אחר שיתנגן ברקע.\n-   הזיזו את הרקדן שלכם למקום חדש.\n-   צרו יותר מרקדן אחד."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן חייב לבצע צעד.\n-   עליכם ללחוץ על מקש חצים כלשהו.\n\n_שלב זה מסתיים אחרי 4 תיבות._",
+          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   כל רקדן צריך לבצע צעד ריקוד.\n-   אתם חייבים ללחוץ על מקשי החצים.\n\n_השלב הזה נגמר אחרי 6 תיבות._",
+          "challenges": "**אתגר בונוס**\n\n-   גרמו לרקדן להגיב למקשי החצים הימני והשמאלי."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן צריך להחליף לצעד חדש אחרי 4 תיבות.\n\n_השלב הזה מסתיים אחרי 8 תיבות._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   אחרי 6 תיבות, הרקדן שלכם צריך לרקוד ריקוד שונה מזה שהוא רקד אחרי 4 תיבות.\n\n-   השלב הזה מסתיים אחרי 11 תיבות",
+          "challenges": "**אתגר בונוס**\n\n-   שנו את הרקע בכל פעם שהרקדנים מחליפים צעדים."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "\\*\\* איך אנחנו עוברים את השלב הזה?\\*\\*\n\n-   צרו רקדן ראשי אחד וקבוצה של רקדני ליווי בתוך 4 התיבות הראשונות של השיר.\n\n_השלב הזה נגמר לאחר 7 תיבות._",
+          "challenges": "**אתגר בונוס**\n\n-   צרו מספר קבוצות של רקדני ליווי."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   שנו את גודלו של רקדן אחד לפחות.\n\n_השלב הזה נגמר אחרי 6 תיבות._",
+          "challenges": "**אתגר בונוס**\n\n-   נסו לשנות מאפיינים אחרים כמו רוחב או סיבוב."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   שנו את גודלו של רקדן אחד לפחות.\n\n_השלב הזה נגמר אחרי 6 תיבות._",
+          "tint_hint": "שמתם לב שהצבע של הרקדנים שלכם לא משתנה בדיוק לצבע שבחרתם? זה בגלל ש**גוונים** מערבבים את הצבע שבחרתם עם הצבעים של הרקדן."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**איך עוברים את השלב הזה?**\n\n-   פשוט לחצו על מקש ה\"סיום\"!",
+          "repeat_every_ideas": "**צריכים רעיונות?**\n\n-   שנו שוב ושוב את גודלו של רקדן כדי לגרום לו לגדול.\n-   שנו שוב ושוב את סיבובו של רקדן כדי לגרום לו להסתובב.\n\n_אתם יכולים להשתמש גם במספרים שליליים כדי ליצור אפקט הפוך!_",
+          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק המאורעות החדש הזה כדי לגלול רשימה של צעדי ריקוד על ידי שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "הבלוק החלופי נמצא בקטגוריית ה\"שחקנים\"."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "רואים את **המנורות הימיות** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? איך תוכלו להשתמש בפקודת תנאי איתן כדי לעבור את האנדרטה הימית?"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "אתם יכולים להשתמש בבלוק \"אִם יש נתיב\" כדי לעזור לכם לבצע את הפניות הנכונות / ימינה."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "רואים את הבלוקים של השוניות האדומות והכחולות? היעזרו בהם כציוני דרך עבור הפניות ימינה ושמאלה בתוך השונית."
+        },
+        "CourseF_outbreak1": {
+          "step1": "השתמשו בבלוקים הבאים ליצירת הדמויות שלכם:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n    <xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"חולים\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nבלוק זה נמצא בקטגוריית **דמויות** שבארגז הכלים.",
+          "step2": "שנו את גודל הדמויות באמצעות בלוק זה:\n<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nהוא נמצא בקטגוריית **פעולות** שבארגז הכלים.",
+          "step3": "גרמו לכל דמות להתחיל לשוטט באמצעות:\n<xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nהבלוק הזה נמצא בקטגוריית **פעולות** שבארגז הכלים."
+        },
+        "CourseF_outbreak2": {
+          "hint1": "לחצו על כפתור `+` בבלוק האירוע. מלאו את האזור הריק בגוש `החלף תחפושת` עם בלוק ה`נושא` שנמצא בתוכו.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם אירוע `כאשר נלחץ`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nהקפידו לגרור גם את בלוק ה`דמות שנחלצה` האדום הקטן!",
+          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני כמו למשל '0.5' או '0.25'. כדי לגרום להן לנוע מהר יותר, בחרו בכל מספר גדול מ-1."
+        },
+        "CourseF_outbreak6": {
+          "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של בלוק `אם אחוז סיכוי`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של `נגיעות` בין דמויות בריאות לבין דמויות נגועות."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "גררו בלוק `זוז קדימה` מארגז הכלים אל חלל העבודה, וחברו אותו למקומו מתחת לבלוק ה-`כשהריצה מתחילה`.",
+          "MC_HOC_2017_01_RETRY_b": "אל תשכחו ללחוץ על ״הרץ״ כדי להפעיל את הקוד עבור הסוכן.",
+          "MC_HOC_2017_01_RETRY_c": "אחרי שהסוכן יסיים להריץ את הקוד שלו, תוכלו להזיז את השחקן עם מקשי החצים!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "הזיזו את הסוכן שני צעדים קדימה ועמדו על משטח הלחיצה. כך הדלת תיפתח לשחקן שלכם.",
+          "MC_HOC_2017_02_Cole_b": "לחצו על ״הרץ״!\n\nאתם יכולים להריץ את הקוד שלכם גם אם הוא שגוי. הפעילו ואפסו את הקוד שלכם שוב ושוב עד שתבינו מה השתבש בו.",
+          "MC_HOC_2017_02_Cole_c": "אחרי שהסוכן יפתח את הדלת, השתמשו במקשי החצים כדי להזיז את השחקן אל המפה!",
+          "MC_HOC_2017_02_Cole_d": "ודאו שהסוכן הולך בדרך שמשורטטת על המפה!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "לאחר שתביאו את הסוכן אל משטח הלחיצה, תוכלו להשתמש במקשי החצים כדי להביא את השחקן אל המצפן!",
+          "MC_HOC_2017_03_Cole_b": "האם הקוד מרגיש לכם קצת ארוך מדי? נסו להשתמש בלולאת ה`חזור על` ונסו להבין איך לקצר אותו!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "השתמשו בבלוק ה-`פנה ימינה` כדי לשנות את הכיוון של הסוכן. ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "הסוכן צריך להגיע רק אל משטח הלחיצה הראשון כדי לאפשר לאלכס או לסטיב להגיע אל הגרזן."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "הסוכן צריך ל`זוז קדימה` 7 פעמים. איך תוכלו להשתמש בלולאת `חזור על` כדי לגרום לכך?",
+          "MC_HOC_2017_04_Cole_c": "לחצו על ״הרץ״!\n\nאתם יכולים להריץ את הקוד שלכם גם אם הוא שגוי. הפעילו ואפסו את הקוד שלכם שוב ושוב עד שתבינו מה השתבש בו.",
+          "MC_HOC_2017_04_Cole_b": "לאחר שהסוכן יגיע אל משטח הלחיצה, הוא יפתח את הדלת עבור השחקן."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "הידעתם שאתם יכולים לשים יותר מפיסת קוד אחת בתוך לולאה? נסו לזוז קדימה **וגם** להציב קרש בתוך `חזור על` כדי להשלים את החידה הזו.",
+          "MC_HOC_2017_05_Cole_b": "העבירו את הסוכן לצידו השני של הנהר על ידי בניית גשר תוך כדי תנועה."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "כמה פעמים הלולאה הזו רצה? כמה פעמים היא _צריכה_ לרוץ?",
+          "MC_HOC_2017_06_Cole_b": "עזרו לסוכן לבנות גשר כל הדרך על פני המים! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "אתם רק צריכים לגרום לסוכן לפלס את הדרך אל עגלת המכרה.",
+          "MC_HOC_2017_07_Cole_a": "כדי לפתור את החידה הזו, גלו מה פונקציית ה-`פנה דרך` עושה, והשתמשו בה כמה פעמים בעזרת בלוק ה-`פנה דרך` הירוק הקטן מארגז הכלים.",
+          "MC_HOC_2017_07_Cole_b": "נסו לערבב את בלוקי הפונקציות עם הבלוקים האחרים מארגז הכלים. זה יסייע לכם לפתור את החידה הזו."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "לא יודעים לאן ללכת? בדקו אם אתם יכולים למצוא את הקו המקווקו!",
+          "MC_HOC_2017_10_Cole_a": "השתמשו בפונקציות כדי לפתור את החידה בקלות!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "לחצו על ״הרץ״!\n\nאתם יכולים להריץ את הקוד שלכם גם אם הוא שגוי. הפעילו ואפסו את הקוד שלכם שוב ושוב עד שתבינו מה השתבש בו.",
+          "MC_HOC_2017_08_RY_b": "יש ה-מ-ו-ן דרכים לפתור את החידה הזו. נסו כמה מהן!",
+          "MC_HOC_2017_08_RY_c": "נסו לעקוב אחר הקו המקווקו לדרך קלה אל מעבר ללבה."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "נסו לגרום לסוכן לבנות כמה מסילות לעגלת המכרה, ואז תוכלו לצאת ולחקור את העולם!"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "אתם יכולים לצעוד בכמה דרכים. איזו היא הקצרה ביותר?",
+          "mc_8_b": "השתמשו בלולאות `חזור שוב` כדי לפשט את הקוד שלכם.",
+          "mc_8_c": "המטרה שלכם היא להיכנס לבית דרך דלת הכניסה, הנמצאת בצידו העליון של המסך."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "אתם צריכים ל`זוז קדימה` פעמיים כדי לעמוד מול העץ.  ",
+          "mc_2_b": "פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "אתם יכולים לחטוב עצים בכל סדר שתבחרו. איזו דרך מצריכה את המספר הקטן ביותר של בלוקים?  ",
+          "mc_4_b": "פקודת ה`השמד בלוק` חוטבת את העץ שנמצא מולכם."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "לחצו על החץ שעל בלוק ה`הנח`כדי לבחור מה ברצונכם למקם.",
+          "mc_6_b": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה.",
+          "mc_6_c": "אתם יכולים להניח יותר מבלוק אחד בתוך לולאת `חזור שוב`."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "בלוק ה-`זוז קדימה` נמצא בצידו העליון של ארגז הכלים.  ",
+          "mc_1_b": "ודאו ששני בלוקי ה-`זוז קדימה` מחוברים לבלוק ה-'התחל ריצה'.  "
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "הניחו ראשית את בלוק ה-`הנח', ואחרי כן את בלוק ה-`זוז קדימה\\`.",
+          "mc_5_b": "ודאו ששני הבלוקים נמצאים בתוך לולאת ה-`חזור שוב` כדי להריץ את הקוד יותר מפעם אחת.",
+          "mc_5_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "השתמשו בבלוק ה-`שתול יבול` כדי לשתול יבול במשבצת שבה אתם עומדים.",
+          "mc_7_b": "שני קווי האדמה החומים-כהים שליד המים צריכים להיות מלאים ביבולים.",
+          "mc_7_c": "אתם יכולים להניח יותר מבלוק אחד בתוך לולאת `חזור שוב`."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "השתמשו ב-`הנח מסילה` כדי להניח מסילה בריבוע שאתם עומדים עליו.",
+          "mc_13_b": "השתמשו בלולאות `חזור שוב` כדי לקצר את הקוד שלכם."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "בלוק ה-`גְזוז` פועל רק כאשר הכבשה עומדת מולכם. האם אתם פונים לעבר הכבשה?  ",
+          "mc_3_b": "אם אתם צריכים לשנות את הכיוון שאתם פונים אליו, השתמשו בבלוק `פנה`.  ",
+          "mc_3_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "כל הקוד מוכן ומזומן לבדוק האם יש בשטח לבה, ולהתמודד איתה. כל שעליכם לעשות הוא להוסיף בלוק כדי לזוז.",
+          "mc_11_b": "האם פקודת ה`זוז קדימה` שהצבתם צריכה להיות בתוך הצהרת ה`אם` - או אחריה?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "תוכלו למצוא רדסטון במשבצות עם הכתמים האדומים.",
+          "mc_12_b": "האם תוכלו להשתמש בלולאת `חזור שוב` כדי לקצר את הקוד שלכם?",
+          "mc_12_c": "השתמשו בהצהרת `אם` כדי לבדוק משבצות לגבי לבה, ואז מקמו אבני ריצוף. "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "בלוקי הברזל הם המשבצות המנוקדות שמאחורי הלפיד! איך אתם מתכוונים להגיע לשם?",
+          "mc_10_b": "כשאתם עומדים על קצה הלבה, השתמשו ב`הנח אבן קדימה` כדי ליצור דרך בטוחה. אחר כך, תוכלו ללכת מעליה!",
+          "mc_10_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "האם אתם פונים לכיוון הנכון? פקודת ה-`השמד בלוק` חוצבת את הלבנה שנמצאת מולכם.",
+          "mc_9_b": "הכתמים השחורים שעל הקיר הם פחם! השתמשו בפקודת `השמד בלוק` עליהם כדי לכרות את הפחם.",
+          "mc_9_c": "השתמשו ב`הנח לפיד` כדי לשים לפיד במקום שאתם עומדים בו."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_c": "מה הקוד עושה?\nמה הוא אמור לעשות?\nמה זה אומר לך?"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_a": "האם תוכלו להשתמש בלולאות על מנת לפתור את החידה הזו?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_c": "השתמשו בנתיב כדי לאסוף את כל התירס!"
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "לחצו 'הרץ' וראו מה קורה!",
+          "courseA_harvester_loops5b_c": "זוזו בכיוון אחד, ואז בכיוון השני בנתיב הזה."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_b": "השתמשו בשתי לולאות כדי ללכת בנתיב הזה."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_c": "לך בנתיב כדי לאסוף את כל התירס."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_c": "נסו להשתמש בנתיב הזה כדי לאסוף את כל התירס."
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_b": "אתם צריכים למחוק בלוק אחד."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_b": "אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "2": "אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
+          "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
+          "courseB_iceage_loops2_b": "אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.",
+          "courseB_iceage_loops2_c": "לך בנתיב אשר יביא את סקראט אל הבלוט."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "בקוד הסופי שלכם יהיו **שלושה** בלוקים של תנועה."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_c": "סקראט צריך ללכת בדרך המובילה אל הבלוט."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_b": "אם אתה מרגיש תקוע, נסה לפתור את החידה בשני שלבים, אחד לצדדים ואחד למטה-ולמעלה."
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "הוסף בלוק אחד כדי להזיז את סקראט אל הבלוט."
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_d": "תקועים? נסו את הנתיב הזה!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_c": "הגיעו לכל הדגלים כדי לעבור!"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "אם תשתמש בבלוק 'הזז קדימה ב 100 פיקסלים', אני אצייר קו בצורה אוטומטית.",
+          "courseC_artist_prog2_b": "אם יש לך בעיה לבצע פנייה, השתמש בבלוק 'פנה ימינה 90 מעלות'."
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "השתמש במחוון כדי להאט הכל עד אשר תוכל לראות כיצד הקוד שלך רץ שורה-אחר-שורה ואז תוכל לראות מה השתבש.",
+          "courseC_artist_prog5_b": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_e": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_b": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_b": "נסה להשתמש בכפתור \"צעד\" כדי להריץ את הקוד שלך שורה אחת בכל פעם. אתה רואה היכן הקוד פועל לא נכון?"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_b": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_d": "לך בדרך כדי לאסוף את האוצר."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "האם תוכל לדעת מה השתבש? \n\nנסה להשתמש בכפתור \"צעד\" כדי למצוא שגיאות על-ידי הרצה של כל קוד שורה אחר שורה."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_c": "מתקשה למצוא את הדרך לאסוף את כל האוצר? נסה את הדרך הזו!"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "כדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_b": "נסה לומר בקול מה סקראט צריך לעשות. האם זה גם מה שהקוד בסביבת העבודה אומר? מה השתבש?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   מה סקראט צריך לעשות?\n-   מה סקראט עושה?\n-   מה זה אומר לך?"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_b": "הדרך של סקראט היא בצורת מלבן! הוא זקוק להסתובב באותו כיוון בכל פעם."
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_c": "ישנן שתי דרכים שונות שתוכל ללכת בדרכם רק על ידי תנועה קדימה ופניה 4 פעמים. אם תמצא דרך אחת לעשות זאת בעזרת לולאה, יתכן ותמצא אפילו עוד דרכים!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\"."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_b": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\"."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_b": "כדי ללכת בדרך:\n\n-   זוז קדימה\n-   פנה לכיוון המתאים\n-   זוז קדימה\n-   פנה בכיווך ההופכי\n-   זוז קדימה"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "נסה להשתמש בכפתור \"צעד\" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "ישנן 2 דרכים לפתור את החידה הזו!"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_b": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "אל תפחד לטעות! הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_b": "זכור לשים בלוק 'פנה' בתוך הלולאה כך שהאמן יפנה לאחר כל משולש."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "נסה להשתמש בבלוק \"קפוץ קדימה\" כדי לזוז מהפינה של אחד הריבועים אל המקום שבו הוא צריך להתחיל את הריבוע הבא. \n\nאם כל ריבוע שלך הוא בגובה 20 פיקסלים והריבועים נמצאים במרחק 20 פיקסלים אחד מן השני, כמה רחוק אתה צריך לקפוץ?"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_b": "תוכל להשתמש בלולאת \"חזור\" או \"כל עוד דרך לפניך\" כדי לזוז בתוך המבוך הזה."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_c": "אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_c": "אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_a": "חשוב על כל צד של הדרך המלבנית כדרך בפני עצמה. הגדר לולאה מקוננת בתוך בלוק \"חזור\" ברמה החיצונית ולולאת \"כל עוד ישנה דרך\" כלולאה פנימית. כמה דרכים הדבורה צריכה לזמזם לדרכה אם הדבורה צריכה לאסוף פרח מכל צד?",
+          "courseD_bee_conditionals5_c": "ישנם ב-3 צדדים של המלבן פרחים, אז הקוד צריך \"לחזור 3 פעמים\". בכל חזרה הדבורה צריכה להמשיך לאורך הדרך \"כל עוד יש דרך לפנים\". כדי להמשיך לאורך הדרך, הדבורה צריכה ל-\"זוז קדימה\". כל עוד ישנה דרך, הדבורה צריכה לבדוק האם קיים פרח. \"אם קיים פרח\", הדבורה צריכה ל-\"אסוף צוף\".",
+          "courseD_bee_conditionals5_b": "בתוך הבלוק \"כל עוד יש דרך לפנים\" תצטרך לזוז קדימה ולבדוק האם יש פרח. איך אתה בודק אם יש פרח? מה אתה עושה אם יש פרח?"
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**זכור:** החידה הזו משתנה בכל ריצה חדשה. \n\nאתה תזדקק להשתמש בבלוק התניה (\"אם\" או \"אם/אחרת\") כדי לפתור את החידה."
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_c": "זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.  "
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "האם יש מקום בו לורל עושה משהו לא הגיוני? מה קורה כשאתה מחליף את הבלוקים הללו?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "נסה להשתמש בתהליך איתור שגיאות מספר פעמים ברצף. \n\nמה גורם לבעיה הראשונה?\n\nברגע שהשגיאה טופלה, מה משתבש?",
+          "courseD_collector_debugging4_b": "אם קצת קשה לך להבין איך ללכת בנתיב עם תבנית של מדרגה, נסה לעקוב אחר הנתיב בעזרת האצבע שלך כאשר אתה מציין בקול רם את הפקודות לאורך הדרך.\n\nאל תשכח לציין בקול גם את כיוון הפניות שבהם אתה הולך!"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "מה זה עושה?\n\nמה זה אמור לעשות?\n\nמה זה אומר לך?",
+          "courseD_collector_debugging5a_b": "ברגע שאספת את שורת האוצרות הראשונה, מה נשאר בקוד שלך?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "נסה להריץ את הקוד בעזרת הכפתור \"צעד\". האם הכל תקין בצעד הראשון? \n\nמה לגבי הצעד השני? \n\nאיפה הכל משתבש?",
+          "courseD_collector_debugging6_b": "נראה שכל הבלוקים כבר נמצאים בסביבת העבודה שלך. נסה ללחוץ על \"התחל מחדש\" אם דברים מתחילים להיות מבלבלים מדי."
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_b": "כדי לאסוף את 4 היהלומים, נשתמש בשלב הראשון בלולאה כדי לזוז הרחק מהמרכז. פנה שמאלה או ימינה ואז השתמש בלולאה מקוננת כדי לזוז מערימת האוצר הראשונה אל השנייה. אם תחזור על הלולאה המקוננות מספר פעמים, האוסף יזוז _בכל_ המערה!"
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "באפשרותך להשתמש או בלולאת \"כל עוד דרך לפניך\" או בעזרת לולאת \"חזור\" כדי לעבור דרך כל התבואה."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "הבלוק \"כל עוד דרך לפניך\" נותנת לך את האפשרות להמשיך ללכת, גם אם אתה לא יודע כמה משבצות יש בדרך.",
+          "courseD_farmer_conditionals8_b": "שימוש בלולאת \"כל עוד דרך לפניך\" בתוך לולאת \"חזור\" תעזור לך לפתור את החידה."
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_b": "כל בור נמצא בקצה השביל, אז השתמש בבלוק \"כל עוד דרך לפניך\" לפני שתשתמש בבלוק \"כל עוד יש בור\".",
+          "courseD_farmer_conditionals8_c": "שים לב שעליך לחזור על הבלוק \"כל עוד דרך לפניך\" והבלוק \"כל עוד יש בור\" 6 פעמים."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "נסה לעקוב אחר הדרך כדי להגיע לכל התירס! "
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
+          "courseD_iceage_loops2_b": "אם אתה מרגיש שאתה נתקע, נסה לומר בקול את הצעדים.",
+          "courseD_iceage_loops2_c": "לך בנתיב אשר יביא את סקראט אל הבלוט."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_b": "נסה לכתוב את הצעדים שסקראט צריך לעשות כדי להגיע אל הבלוט. האם אתה רואה את התבנית?"
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "אם אתה נתקע, נסה לכתוב את הצעדים על נייר. האם אתה רואה את התבנית החוזרת על עצמה?"
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_c": "סקראט צריך ללכת בדרך המובילה אל הבלוט."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_b": "כדי להגיע ליעד, זוז קדימה ופנה לכיוון המתאים, אז זוז קדימה שוב ופנה לכיוון ההפוך. זוז קדימה צעד אחד נוסף כדי להגיע לבלוט."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "נסה להשתמש בכפתור \"צעד\" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?",
+          "courseC_maze_programming5_c": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_b": "בדוק שכל 3 הבלוקים מחוברים יחד וכולם מחוברים לבלוק 'כשהריצה מתחילה'."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים שמתחת לו הצידה ותן להם לנוח במקום אחר בסביבת העבודה שלך. \n\nלחץ על הבלוק שאותו תרצה למחוק וגרור אותו בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים האחרים למקום שלהם."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "נסה להשתמש בכפתור \"צעד\" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?",
+          "courseC_maze_programming5_b": "זכור כי הפניה של הציפור היא מנקודת המבט שלה.",
+          "courseC_maze_programming5_c": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "נסה להשתמש בכפתור \"צעד\" כדי להריץ את הקוד שלך שורה אחר שורה. האם תצליח להבין כיצד עליך להמשיך?",
+          "courseC_maze_programming5_b": "זכור כי הפניה של הציפור היא מנקודת המבט שלה.",
+          "courseC_maze_programming5_c": "אל תפחד לטעות! נסה להוסיף בלוקים והריץ את הקוד ותראה מה יקרה, גם אם אתה חושב שעדיין לא פתרת את החידה."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "-   מה הקוד שלך עושה?\n-   מה הוא אמור לעשות?\n-   מה זה אומר לך?"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "אורך כל פאה של ריבוע הוא באורך 100 פיקסלים, זאת אומרת שצריך לזוז 175 פיקסלים לפני שמציירים את הריבוע השני.",
+          "courseE_artist_functions1_b": "זה בסדר שהאמן יחזור על עצמו בציור הקווים כדי לייצר משקפיים."
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "צור את הפונקציה תחת איזור \"פונקציות\" אשר בארגז הכלים."
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_c": "אל תפחד לטעות! הוסף בלוקים, הרץ את הקוד ותראה מה יקרה, גם אם לא סיימת לפתור עדיין את החידה."
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "אם הציפור לא מגיעה אל החזיר, בדוק היטב ששני הבלוקים מחוברים יחד היטב ואז לחץ \"הרץ\" שוב.",
+          "courseC_maze_programming1_b": "אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!"
         }
       }
     }

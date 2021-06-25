@@ -2525,3 +2525,318 @@ he-IL:
           # השכונה הוירטואלית שלי
 
           ## איך מטיילים בבטחון ברשת?
+      CourseF_outbreak_story:
+        content1: הוסיפו תיאור כאן
+      CourseF_outbreak_story2:
+        content1: הוסיפו תיאור כאן
+        markdown: |-
+          # התפרצות: לחשוב כמו מדען
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          סימולציות הן דרך נהדרת ללמוד דברים שעלולים להיות קשים לחיזוי בעולם האמיתי. הם עוזרים למדענים לפתור בעיות ולבדוק רעיונות חדשים בצורה בטוחה ויעילה. הסימולציה שלכם היא דרך להראות כיצד עשויה להיראות התפרצות וירוסים במפלצת־טאון.
+
+          ## אפסו והפעילו מחדש!
+          גם כשאתם כותבים את הקוד בעצמכם, אי אפשר לדעת בדיוק מה יקרה כשתלחצו על 'הפעל'. המפלצות משוטטות באופן אקראי, כך שאין לדעת אם הנגיף יתפשט במהירות או באיטיות. בכל פעם שאתם משנים את הקוד שלכם, ודאו שאתם מפעילים את הסימולציה שלכם יותר מפעם אחת. הדברים לא יקרו באותו אופן פעמיים!
+
+          ## איסוף מידע
+          נסו לתעד את התצפיות שלכם בזמן שאתם מריצים את הסימולציה שלכם. אתם יכולים לספור את מספר המפלצות החולות, או להשתמש בטיימר, כדי לראות כמה הדברים קורים במהירות. למשל, כמה זמן לוקח לכל המפלצות לחלות אם אין לאף אחת מהן מסכה?
+
+          ## חיזוי תחזיות
+          אם אתם מבינים את המודל שלכם, אתם יכולים להשתמש בו כדי לחזות תחזיות. אתם יכולים אפילו לשנות את אופן פעולת הסימולציה שלכם ולנחש מה יקרה אחרת. לדוגמה:
+          * מה היה קורה אם היו פי שתיים מפלצות?
+          * מה היה קורה אם המפלצות היו זזות במהירות נמוכה יותר בחצי?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## האם מפלצת־טאון היא כמו העולם האמיתי?
+          יש גבול עד כמה כל מודל יכול להיות מציאותי.
+          * מה המשותף לסימולציית ההתפרצות שלכם ולהתפרצויות וירוסים בעולם האמיתי?
+          * מהם ההבדלים ביניהן?
+          כשתסיימו פעילות זו, שוחחו על שאלות אלה עם המורים שלכם או עם משפחתכם!
+
+          ## מה עוד נוכל למדל?
+          יצרתם כבר מודל עובד של ההתפרצות במפלצת־טאון. מהם הדברים שהסימולציה שלכם לא יכולה לעשות או להראות - והייתם רוצים שהיא תוכל? לחצו על 'המשך' כדי להמשיך וללמוד למדל עוד יותר:
+          * הגדלת מספר המפלצות בסימולציה
+          * סיוע למפלצות בהחלמה מהווירוס
+          * הסתברות, חסינות, חיסונים ועוד!
+
+          אתם יכולים גם לשתף את מודל הסימולציה שלכם עם אחרים, או לשתף הודעה עם מחשבותיך לגבי הדברים שאנחנו יכולים לעשות כדי לשמור על בריאותם של אחרים כאשר מגיע לעיירה נגיף חדש.
+      OPD-K5 Stage3aGo_dani:
+        content1: הוסיפו תיאור כאן
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - text: '20'
+          correct: true
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: סקראט יגיע לבלוט. הקוד נקי וללא באגים.
+          correct: true
+          feedback: טעות. תחילה, סקראט פונה לכיוון הלא נכון ואחר כך סקראט לא מתקדם
+            מספיק צעדים קדימה כדי להגיע לבלוט.
+        - text: סקראט לא יגיע לבלוט כי הוא פונה לכיוון הלא נכון
+          correct: true
+          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
+            קדימה מספיק צעדים כדי להגיע לבלוט.
+        - text: לסקראט עדיין חסרים עוד בלוקים של "לזוז קדימה" ולכן הוא לא יגיע לבלוט.
+          correct: true
+          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
+            קדימה מספיק צעדים כדי להגיע לבלוט.
+        - correct: true
+          feedback: בקוד הזה יש שני באגים. תחילה סקראט פונה לכיוון הלא נכון, אחר כך
+            סקראט לא מתקדם קדימה מספיק צעדים כדי להגיע לבלוט.
+        questions:
+        - text: האם יש באגים בקוד הזה. האם סקראט יגיע בהצלחה לבלוט, או שיש בעיה בקוד?
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: א
+          correct: true
+        - text: ב
+          correct: true
+        - text: ג
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '10'
+          correct: true
+        - text: '12'
+          correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: הוסיפו תיאור כאן
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: הוסיפו תיאור כאן
+      csf_password_power-up_2021:
+        content1: הוסיפו תיאור כאן
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: הוסיפו תיאור כאן
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # השכונה הוירטואלית שלי
+
+          ## איך מטיילים בבטחון ברשת?
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
