@@ -3,10 +3,10 @@
 
 @media print {
   /* we have many components that we never want to include in a print view */
-  #script-breadcrumb,
+  #unit-breadcrumb,
   #teacher-panel-container,
   .__react_component_tooltip,
-  .script-overview-top-row,
+  .unit-overview-top-row,
   .progress-legend,
   .google-classroom-attribution {
     display: none;
