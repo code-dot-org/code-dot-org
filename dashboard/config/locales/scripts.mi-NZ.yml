@@ -7,25 +7,8 @@ mi:
       name:
         course1:
           title: Akoranga 1
-          description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā akonga
-            e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki te mahi
-            tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui ki te whakaoti
-            i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia e ngā akonga
-            i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari atu. Pai
-            mō ngā tamariki tau 1-2 i te kura.
-          description_short: Tīmataria ki te Akoranga 1 mō ngā kaipānui pīpī.
           description_audience: Ngā Tau 4-6
           lessons:
-            'Artist: Loops':
-              name: 'Rehetoi: Ngā Koromeke'
-            'Artist: Sequence':
-              name: 'Rehetoi: Raupapa'
-            'Artist: Shapes':
-              name: 'Rehetoi: Ngā Āhua'
-            'Bee: Loops':
-              name: 'Pī: Ngā Koromeke'
-            'Bee: Sequence':
-              name: 'Pī: Raupapa'
             Building a Foundation:
               name: Te Hanga Tūāpapa
             Getting Loopy:
@@ -34,55 +17,15 @@ mi:
               name: Te Karore Haumaru
             Happy Maps:
               name: Ngā Mahere Harikoa
-            'Jigsaw: Learn to drag and drop':
-              name: 'Pangahono: Ākona ki te tō me te whakataka'
-            'Maze: Debugging':
-              name: 'Rīrapa: Patuirotanga'
-            'Maze: Loops':
-              name: 'Rīrapa: Ngā Koromeke'
-            'Maze: Sequence':
-              name: 'Rīrapa: Raupapa'
             Move it, Move it:
               name: E Neke, E Neke
             'Real-life Algorithms: Plant a Seed':
               name: 'Hātepe Motuhenga: Whakatōkia he Kano'
-            Spelling Bee:
-              name: Ohu Takikupu
-            'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
             The Big Event:
               name: Te Takahanga Nui
-          student_description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā
-            akonga e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki
-            te mahi tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui
-            ki te whakaoti i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia
-            e ngā akonga i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari
-            atu. Pai mō ngā tamariki tau 1-2 i te kura.
         course2:
           title: Akoranga 2
-          description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou wheako
-            tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
-            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
-            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
-            2-5.
-          description_short: Tīmataria ki te Akoranga 2 mō ngā ākonga e taea ana te
-            pānui.
-          description_audience: Ngā Tau 6+ (me mātua pānui)
           lessons:
-            'Artist: Debugging':
-              name: 'Rehetoi: Patuirotanga'
-            'Artist: Loops':
-              name: 'Rehetoi: Ngā Koromeke'
-            'Artist: Nested Loops':
-              name: 'Rehetoi: Ngā Koromeke Tauroto'
-            'Artist: Sequence':
-              name: 'Rehetoi: Raupapa'
-            'Bee: Conditionals':
-              name: 'Pī: Ngā Here'
-            'Bee: Debugging':
-              name: 'Pī: Patuirotanga'
-            'Bee: Loops':
-              name: 'Pī: Ngā Koromeke'
             Binary Bracelets:
               name: Kōmore Ā-Rua
             Conditionals:
@@ -93,52 +36,20 @@ mi:
               name: Kia Koromeke
             Graph Paper Programming:
               name: Papatono Pepa Kauwhata
-            'Maze: Loops':
-              name: 'Rīrapa: Ngā Koromeke'
-            'Maze: Sequence':
-              name: 'Rīrapa: Raupapa'
             'Real-life Algorithms: Paper Planes':
               name: 'Hātepe Motuhenga: Waka Rererangi Pepa'
             Relay programming:
               name: Papatonotanga ā-Tānga
-            'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
             The Big Event:
               name: Te Takahanga Nui
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
-          student_description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou
-            wheako tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
-            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
-            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
-            2-5.
         course3:
           title: Akoranga 3
-          description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē i te Akoranga
-            2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa tuhiwaehere
-            i tirohia i ngā akoranga o muri kia waihanga i ngā otinga hangore mō ngā
-            rapanga matatini. Kia tae ki te paunga o tēnei ākoranga, ka waihangahia
-            e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri ki te tangata
-            ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
-          description_short: Ka whai-ake te Akoranga 3 i te Akoranga 2.
           description_audience: Ngā Tau 8-18
           lessons:
             Artist:
               name: Rehetoi
-            'Artist: Functions':
-              name: 'Rehetoi: Ngā Taumahi'
-            'Artist: Nested Loops':
-              name: 'Rehetoi: Ngā Koromeke Tauroto'
-            'Artist: Patterns':
-              name: 'Rehetoi: Ngā Tauira'
-            'Bee: Conditionals':
-              name: 'Pī: Ngā Here'
-            'Bee: Debugging':
-              name: 'Pī: Patuirotanga'
-            'Bee: Functions':
-              name: 'Pī: Ngā Taumahi'
-            'Bee: Nested Loops':
-              name: 'Pī: Ngā Koromeke Tauroto'
             Bounce:
               name: Tupana
             Computational Thinking:
@@ -149,28 +60,14 @@ mi:
               name: Whakataetae Mataono
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
-            'Farmer: While Loops':
-              name: 'Kaiahuwhenua: Ngā Koromeke I Te'
             Functional Suncatchers:
               name: Ngā Hopu Rā Taumahinga
             Internet:
               name: Te Ipurangi
             Maze:
               name: Rīrapa
-            'Maze: Conditionals':
-              name: 'Rīrapa: Ngā Here'
             Songwriting:
               name: Te Tito Waiata
-            'Studio: Create a Game':
-              name: 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
-            'Studio: Create a Story':
-              name: Taiwhanga Tākaro - Waihangahia tētahi Paki
-          student_description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē
-            i te Akoranga 2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa
-            tuhiwaehere i tirohia i ngā akoranga o muri kia waihanga i ngā otinga
-            hangore mō ngā rapanga matatini. Kia tae ki te paunga o tēnei ākoranga,
-            ka waihangahia e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri
-            ki te tangata ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
         playlab:
           title: Taiwhanga Tākaro
           description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
@@ -192,15 +89,9 @@ mi:
           student_description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
         hourofcode:
           title: Rīrapa Tauhira
-          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā
-            pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
           lessons:
             Maze:
               name: Rīrapa
-          student_description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
         frozen:
           title: Tuhia te waehere ki tō Anna me Elsa taha
           description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua ko
@@ -216,103 +107,17 @@ mi:
             waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
         course4:
           title: Akoranga 4
-          description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē i ngā Akoranga
-            2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga matatini rawa
-            i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti ana i ia wero.
-            Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga papatono hei
-            whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā taumahi whai
-            tawhā. E manakohia ana mō ngā taumata 4-8.
-          description_short: Me puta kē ngā ihu o ngā ākonga i ngā Akoranga 2 me te
-            3 i mua i te whai Akoranga 4.
-          description_audience: Ngā Tau 9-18
           lessons:
             Artist:
               name: Rehetoi
-            Artist Binary:
-              name: Rehetoi Tāhūrua
-            'Artist: For Loops':
-              name: 'Rehetoi: Mō Ngā Koromeke'
-            'Artist: Functions':
-              name: 'Rehetoi: Ngā Taumahi'
-            'Artist: Functions with Parameters':
-              name: 'Rehetoi: Ngā Taumahi whai Tawhā'
             'Artist: Variables':
               name: 'Rehetoi: Ngā Tāupe'
-            'Bee: For Loops':
-              name: 'Pī: Mō Ngā Koromeke'
-            'Bee: Functions with Parameters':
-              name: 'Pī: Ngā Taumahi whai Tawhā'
-            Extreme Challenge - Comprehensive:
-              name: Wero Nui Rawa Atu - Matawhānui
-            Maze and Bee:
-              name: Rīrapa me te Pī
-            'Play Lab: For Loops':
-              name: 'Taiwhanga Tākaro: Mō Ngā Koromeke'
-            'Play Lab: Functions with Parameters':
-              name: 'Taiwhanga Tākaro: Ngā Taumahi whai Tawhā'
-            'Play Lab: Variables':
-              name: 'Taiwhanga Tākaro: Ngā Tāupe'
-            Super Challenge - For Loops:
-              name: Wero Nui Rawa - Mō Ngā Koromeke
-            Super Challenge - Functions and Parameters:
-              name: 'Wero Nui Rawa: Ngā Taumahi me ngā Tawhā'
-            Super Challenge - Variables:
-              name: Wero Nui Rawa - Ngā Tāupe
-            'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
-            'Unplugged: Envelope Variables':
-              name: 'Momotu: Ngā Tāupe Pūhera'
-            'Unplugged: For Loop Fun':
-              name: 'Momotu: Mō te Ngahau Koromeke'
-            'Unplugged: Madlibs':
-              name: 'Momotu: Ngā Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Momotu: Titowaiata me ngā Tawhā'
-            'Unplugged: Tangrams':
-              name: 'Momotu: Ngā Hangawhitu'
-          student_description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē
-            i ngā Akoranga 2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga
-            matatini rawa i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti
-            ana i ia wero. Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga
-            papatono hei whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā
-            taumahi whai tawhā. E manakohia ana mō ngā taumata 4-8.
-        Course4pre:
-          title: Akoranga 4 Tōmua
-          description: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia whāia
-            te Akoranga 2 me te 3.
-          description_short: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia
-            whāia te Akoranga 2 me te 3.
-          lessons:
-            'Artist: Functions':
-              name: 'Rehetoi: Ngā Taumahi'
-            'Artist: Loops':
-              name: 'Rehetoi: Ngā Koromeke'
-            'Artist: Nested Loops':
-              name: 'Rehetoi: Ngā Koromeke Tauroto'
-            'Artist: Sequence':
-              name: 'Rehetoi: Raupapa'
-            'Bee: Conditionals':
-              name: 'Pī: Ngā Here'
-            'Bee: Debugging':
-              name: 'Pī: Patuirotanga'
-            'Bee: Nested Loops':
-              name: 'Pī: Ngā Koromeke Tauroto'
-            'Farmer: While Loops':
-              name: 'Kaiahuwhenua: Ngā Koromeke I Te'
-            'Maze: Sequence':
-              name: 'Rīrapa: Raupapa'
-          student_description: He akoranga poto o ngā ariā mā ngā ākonga kāore anō
-            kia whāia te Akoranga 2 me te 3.
         usability:
           lessons:
             Binary:
               name: Tāhūrua
             For Loops:
               name: Mō Ngā Koromeke
-            Functions and Functions with Parameters:
-              name: Ngā Taumahi me Ngā Taumahi whai Tawhā
-            Intro:
-              name: Whakataki
             Variables:
               name: Ngā Taurangi
         algebra:
@@ -320,7 +125,6 @@ mi:
             'Eval: Conditionals':
               name: Ngā Here
         infinity:
-          title: Taiwhanga Tākaro Disney Infinity
           description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau,
             kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
           description_short: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
@@ -341,13 +145,10 @@ mi:
         netsim:
           title: Pūtaruna ā-Ipurangi
         20-hour:
-          title: Whakataki Whakatere ki te Akoranga CS
           description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho
             o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia
             tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga
             2-4 kia whānui ake te wheako!
-          description_short: Ka whakaakona i tēnei akoranga 20-haora te roa ngā ariā
-            uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4.
           description_audience: Ngā Tau 10-18
           lessons:
             Abstraction:
@@ -413,14 +214,11 @@ mi:
               name: Calc
             Eval:
               name: Eval
-            Studio:
-              name: Taupuni
           student_description: Ngā Takunetanga
         flappy:
           title: Waehere Flappy
           description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te
             tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
-          description_short: Tuhia tō ake kēmu Flappy i te 10 meneti iti iho!
           lessons:
             Flappy Code:
               name: Waehere Flappy
@@ -428,39 +226,14 @@ mi:
             iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
         jigsaw:
           title: Pangahono
-          description: Whakamātauhia tā mātou akoranga Pangahono
-          description_short: Whakamātauhia tā mātou akoranga Pangahono
           lessons:
             Jigsaw:
               name: Pangahono
-          student_description: Whakamātauhia tā mātou akoranga Pangahono
         step:
           title: Hipanga
-          description: Akoranga Hātepe
-          description_short: Akoranga Hātepe
           lessons:
             Step:
               name: Hipanga
-          student_description: Akoranga Hātepe
-        Hour of Code:
-          title: Hour of Code 2013
-          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā
-            pūāhua o Angry Birds me Plants vs. Zombies!
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
-          student_description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā pūāhua o Angry Birds me Plants vs. Zombies!
-        CodeStudioPuzzleChallenge:
-          lessons:
-            Puzzles:
-              name: Ngā Panga
-        Tutorial Video - Code Studio Puzzle Challenge:
-          lessons:
-            Puzzles:
-              name: Ngā Panga
         algebraPD:
           lessons:
             Teacher Dashboard:
@@ -507,8 +280,6 @@ mi:
               name: Rīrapa
             Minecraft:
               name: Mahimaina
-            Studio:
-              name: Taupuni
         algebraPD2b:
           lessons:
             Teacher Dashboard:
@@ -577,52 +348,22 @@ mi:
           description_audience: Ngā Tau 10-18
         SpecialSeries:
           description_audience: Ngā Tau 10-18
-        iceage:
-          title: Taiwhanga Tākaro Ice Age
-          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Ice Age!
-          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Ice Age!
-          lessons:
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
-          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
-            Taiwhanga Tākaro Ice Age!
         cspunit3temp:
           lessons:
             While Loops:
               name: Ngā Koromeke I Te
-        gumball:
-          title: Taiwhanga Tākaro Gumball
-          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Gumball!
-          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Gumball!
-          lessons:
-            Gumball Play Lab:
-              name: Taiwhanga Tākaro Gumball
-          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
-            Taiwhanga Tākaro Gumball!
         starwars:
-          title: 'Nga Pakanga Whetū: Hangaia he ikarangi me te uhingaro'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
             kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         starwarsblocks:
-          title: 'Nga Pakanga Whetū: Hangaia he ikarangi me te uhingaro'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
             kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
             ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
         mc:
@@ -630,9 +371,6 @@ mi:
           description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
             rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve,
             i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
         ScienceP3OLPT3:
@@ -665,18 +403,6 @@ mi:
           lessons:
             Teacher Dashboard:
               name: Paemana Pouako
-        cspunit1-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -687,22 +413,10 @@ mi:
               name: Ngā Taumahi Rehetoi
         artistExemplar:
           description_audience: Ngā Tau 8-18
-        teachercon:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Pī: Ngā Here'
         gradeKinder:
           lessons:
             Events:
               name: Ngā Takunetanga
-            'Jigsaw: Learn to drag and drop':
-              name: 'Pangahono: Ākona ki te tō me te whakataka'
             Loops:
               name: Ngā Koromeke
             'Real-life Algorithms: Plant a Seed':
@@ -717,52 +431,24 @@ mi:
           lessons:
             Events:
               name: Ngā Takunetanga
-            'Jigsaw: Learn to drag and drop':
-              name: 'Pangahono: Ākona ki te tō me te whakataka'
             Loops:
               name: Ngā Koromeke
         grade5:
           lessons:
-            'Artist: For Loops':
-              name: 'Rehetoi: Mō Ngā Koromeke'
-            'Artist: Functions with Parameters':
-              name: 'Rehetoi: Ngā Taumahi whai Tawhā'
             'Artist: Variables':
               name: 'Rehetoi: Ngā Tāupe'
-            'Bee: For Loops':
-              name: 'Pī: Mō Ngā Koromeke'
-            'Bee: Functions with Parameters':
-              name: 'Pī: Ngā Taumahi whai Tawhā'
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
-            'Play Lab: Variables':
-              name: 'Taiwhanga Tākaro: Ngā Tāupe'
-            'Unplugged: Envelope Variables':
-              name: 'Momotu: Ngā Tāupe Pūhera'
-            'Unplugged: For Loop Fun':
-              name: 'Momotu: Mō te Ngahau Koromeke'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Momotu: Titowaiata me ngā Tawhā'
         ecs-unit1:
           lessons:
             Wrap-up:
               name: Tākaia
         grade3:
           lessons:
-            'Artist: Nested Loops':
-              name: 'Rehetoi: Ngā Koromeke Tauroto'
             Bee Debugging:
               name: Patuirotanga Pī
             Bounce:
               name: Tupana
-            'Farmer: While Loops':
-              name: 'Kaiahuwhenua: Ngā Koromeke I Te'
-        alltheplcthings:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
         csd3-2017:
           lessons:
             Functions:
@@ -809,47 +495,21 @@ mi:
               name: Paemana Pouako
             The Design Recipe:
               name: Te Tohutohu Hoahoa
-        csp-online-test:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csp1-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
         basketball:
-          title: Hangaia tētahi kēmu poitūkohu
-          description_short: Hangaia tētahi kēmu poitūkohu
-          description: Hangaia tētahi kēmu poitūkohu
           lessons:
             Bounce:
               name: Tupana
-          student_description: Hangaia tētahi kēmu poitūkohu
         csd2-2017:
           lessons:
             Peer Review:
               name: Arotake ā-Hoa
             Lists:
               name: Ngā Rārangi
-        csp2-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
         minecraft:
-          title: Pūhoahoa Hour of Code Mahimaina
           description_short: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
             i tāu ake whakaputanga Mahimaina.
           description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i
             tāu ake whakaputanga Mahimaina.
-          lessons:
-            Minecraft Hour of Code Designer:
-              name: Pūhoahoa Hour of Code Mahimaina
           student_description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
             i tāu ake whakaputanga Mahimaina.
         flappy-impact-study:
@@ -882,18 +542,11 @@ mi:
           lessons:
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
-            'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Nested Loops:
               name: Ngā Koromeke Tauroto
             Introduction:
               name: Kupu Whakataki
         coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
@@ -906,9 +559,6 @@ mi:
             Conditionals:
               name: Ngā Here
         coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
@@ -920,20 +570,6 @@ mi:
               name: Te Titowaiata me ngā Tawhā
             Introduction:
               name: Kupu Whakataki
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
-        classic-hoc-impact-study:
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
-        hoc-impact-study:
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-          lessons:
-            Hour of Code 2013:
-              name: Hour of Code 2013
         sports:
           title: Ngā Hākinakina
           description_short: Tuhia te waehere o tō ake hākinakina
@@ -950,18 +586,6 @@ mi:
           lessons:
             Wrap-Up:
               name: Whakamutunga
-        csp3-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csp4-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
         sciencepd4:
           lessons:
             Wrap-Up:
@@ -971,9 +595,6 @@ mi:
             Wrap-Up:
               name: Whakamutunga
         csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Binary:
               name: Tāhūrua
@@ -981,16 +602,6 @@ mi:
           lessons:
             Wrap-Up:
               name: Whakamutunga
-        csp5-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         csd6-draft:
           lessons:
             Lists:
@@ -1055,16 +666,12 @@ mi:
           lessons:
             Introduction:
               name: Kupu Whakataki
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
         csd2-old:
           lessons:
             Peer Review:
               name: Arotake ā-Hoa
         artist-and-bb8:
           lessons:
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
             Bounce:
               name: Tupana
         coursea-2017:
@@ -1085,8 +692,6 @@ mi:
               name: Ngā Koromeke Tauroto
         coursee-2017:
           lessons:
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
             Envelope Variables:
               name: Ngā Taurangi Kōpaki
             For Loop Fun:
@@ -1101,58 +706,7 @@ mi:
           lessons:
             Building a Foundation:
               name: Te Hanga Tūāpapa
-        cspnovice:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp1-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp2-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp3-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp4-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp5-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd1-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd6-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd5-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd4-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd3-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd2-dlp:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         express-2017:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Introduction:
               name: Kupu Whakataki
@@ -1174,8 +728,6 @@ mi:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hātepe Motuhenga: Whakatōkia he Kano'
-            Spelling Bee:
-              name: Ohu Takikupu
         subgoal-labels-opt-in:
           lessons:
             Thanks:
@@ -1204,16 +756,9 @@ mi:
               name: Ngā Koromeke Tauroto
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
-            'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Building a Foundation:
               name: Te Hanga Tūāpapa
         new-express:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Introduction:
               name: Kupu Whakataki
@@ -1235,8 +780,6 @@ mi:
           lessons:
             Building a Foundation:
               name: Te Hanga Tūāpapa
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
             Envelope Variables:
               name: Ngā Taurangi Kōpaki
             For Loop Fun:
@@ -1271,8 +814,6 @@ mi:
               name: Te Hanga Tūāpapa
             Introduction:
               name: Kupu Whakataki
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
             Envelope Variables:
               name: Ngā Taurangi Kōpaki
             For Loop Fun:
@@ -1335,8 +876,6 @@ mi:
               name: Kōmore Ā-Rua
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Internet:
               name: Te Ipurangi
             Crowdsourcing:
@@ -1365,8 +904,6 @@ mi:
               name: Te Kirirarautanga Matihiko
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Graph Paper Programming:
               name: Papatono Pepa Kauwhata
             Relay Programming:
@@ -1405,8 +942,6 @@ mi:
               name: Te Hanga Tūāpapa
             Introduction:
               name: Kupu Whakataki
-            Ice Age Play Lab:
-              name: Taiwhanga Tākaro Ice Age
             Envelope Variables:
               name: Ngā Taurangi Kōpaki
             For Loop Fun:
@@ -1425,88 +960,14 @@ mi:
           lessons:
             While Loops:
               name: Ngā Koromeke I Te
-        csd1-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd2-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd3-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd4-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd5-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd6-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp1-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp2-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp3-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp4-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp5-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp-explore-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp-create-dlp-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd-novice-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csd-apprentice-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp-novice-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp-apprentice-18:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         pre-express-2018:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Hātepe Motuhenga: Whakatōkia he Kano'
-            Spelling Bee:
-              name: Ohu Takikupu
             Move It, Move It:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
-        fit-test:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         frozen-2018:
           lessons:
             Artist:
@@ -1516,8 +977,6 @@ mi:
             Artist:
               name: Rehetoi
         dance:
-          description_short: Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith
-            Urban, Ciara me etahi atu!
           lessons:
             Dance Party:
               name: Te Pāti Kanikani
@@ -1594,8 +1053,6 @@ mi:
               name: Te Kirirarautanga Matihiko
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Dance Party:
               name: Te Pāti Kanikani
         coursee-2019:
@@ -1640,10 +1097,6 @@ mi:
               name: Kia Ngahau te Mahi Koromeke
             Binary Bracelets:
               name: Kōmore Ā-Rua
-            'Unplugged: Binary':
-              name: 'Momotu: Tāhūrua'
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Internet:
               name: Te Ipurangi
             Crowdsourcing:
@@ -1651,9 +1104,6 @@ mi:
             Dance Party:
               name: Te Pāti Kanikani
         andrea-test:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             'null':
               name: korenga
@@ -1717,8 +1167,6 @@ mi:
               name: E Neke, E Neke
             Your Digital Footprint:
               name: Tō Tapuwae Matihiko
-            Spelling Bee:
-              name: Ohu Takikupu
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1837,14 +1285,6 @@ mi:
               display_name: Ngā Rārangi
             csp_loops:
               display_name: Ngā Koromeke
-        fit2019-novice:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        fit2019-apprentice:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         csd2-pilot:
           lessons:
             Lists:
@@ -1857,70 +1297,18 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: Ngā Koromeke
             csf_events:
               display_name: Ngā Takunetanga
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         peru-2019:
           lessons:
             Introduction:
               name: Kupu Whakataki
             Nested Loops:
               name: Ngā Koromeke Tauroto
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
         dance-2019:
           lessons:
             Dance Party:
@@ -2083,8 +1471,6 @@ mi:
               name: Papatonotanga ā-Tānga
             'Unplugged: Binary':
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              name: Rehetoi Tāhūrua
             Digital Citizenship:
               name: Te Kirirarautanga Matihiko
             Dance Party:
@@ -2138,9 +1524,6 @@ mi:
               display_name: Ngā Koromeke
             csf_events:
               display_name: Ngā Takunetanga
-          lessons:
-            Spelling Bee:
-              name: Ohu Takikupu
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2152,9 +1535,6 @@ mi:
             Variables:
               name: Ngā Taurangi
         virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
           lessons:
             Functions:
               name: Ngā Taumahi
@@ -2192,29 +1572,6 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
-          lesson_groups:
-            csd3_1:
-              display_name: Ihirangi
-            csd3_2:
-              display_name: Ihirangi
-            cspSurvey:
-              display_name: Ihirangi
-        ui-test-script-in-course-2017:
-          lesson_groups:
-            lg_1:
-              display_name: Ihirangi
-        ui-test-script-in-course-2019:
-          lesson_groups:
-            lg_1:
-              display_name: Ihirangi
-        ui-test-versioned-script-2017:
-          lesson_groups:
-            lg_1:
-              display_name: Ihirangi
-        ui-test-versioned-script-2019:
-          lesson_groups:
-            lg_1:
-              display_name: Ihirangi
         2021drafting:
           lesson_groups:
             introduction:
@@ -2306,11 +1663,7 @@ mi:
               key: Te Pāti Kanikani
               name: Te Pāti Kanikani
             'Unplugged: Binary':
-              key: 'Momotu: Tāhūrua'
               name: Ngā Atahanga Tāhūrua
-            Artist Binary:
-              key: Rehetoi Tāhūrua
-              name: Rehetoi Tāhūrua
           lesson_groups:
             csf_events:
               display_name: Ngā Takunetanga
@@ -2395,18 +1748,8 @@ mi:
               display_name: Ngā Taurangi
             variables:
               display_name: Ngā Taurangi
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Kupu Whakataki
             Loops:
               key: Ngā Koromeke
               name: Ngā Koromeke
