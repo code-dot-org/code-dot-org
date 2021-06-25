@@ -7960,6 +7960,63 @@ zh-CN:
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CourseF_outbreak_story:
         content1: 描述
+        markdown: "# 疫情爆发：编写自己的模拟\n\n## 欢迎来到怪兽城镇！\n怪兽城镇平常是一个快乐而健康的地方。怪兽城镇的怪兽们喜欢四处走动去拜访他们的朋友。
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n有一天，其中一个怪兽开始生病。怪兽感染了**病毒**！病毒是一种能让你生病的微生物。其他的怪兽并不太担心。他们继续拜访朋友。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久之后，又有两只怪兽生病了。是同一种病毒！似乎他们是从朋友那里感染了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n病毒慢慢地扩散到附近的其他怪兽身上。健康的怪兽开始担心他们会生病。生病的怪兽开始担心他们会把病毒传染给其他人。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 停止传播\n幸运的是，在研究了病毒之后，怪兽城镇的居民们有了一个重要发现。他们意识到，如果他们戴口罩，传播病毒的可能性就更低。如果带口罩，生病怪兽将病毒传染给健康怪兽的可能性更低。\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          接下来会发生什么？\n\n今天，你将编写代码创建并运行自己的怪兽城镇病毒爆发**模拟**。模拟是一个过程或系统的计算机模型。学习编写代码并预测怪兽城镇的居民会发生什么。\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *病毒传播的速度有多快？*\n\n* *每个人都会生病吗？*\n\n*
+          *戴口罩有什么帮助？*\n\n\n当你完成时，与他人分享你的模拟。当病毒到来时，你认为我们可以做些什么来帮助他人保持健康？分享你的信息。 \n"
       CourseF_outbreak_story2:
         content1: 描述
         markdown: "# 疫情爆发：像科学家一样思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
@@ -8806,8 +8863,10 @@ zh-CN:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: 课程结束项目
+        description: 你已经完成了最后一课！选择一个要创建的项目。
       courseB_EOC_2021:
         display_name: 课程结束项目
+        description: 你已经完成了最后一课！选择一个要创建的项目。
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: 艺术家将会画一个等边三角形。
@@ -8817,7 +8876,8 @@ zh-CN:
         - text: 艺术家将会画一个正方形。
           correct: true
           feedback: 叮咚！答对啦！
-        - {}
+        - text: 艺术家将绘制一个五边形。
+          feedback: 不正确。艺术家绘制一个正方形。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_harvester_loops11_predict1_2021:
@@ -8843,7 +8903,8 @@ zh-CN:
         - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
           correct: true
           feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
-        - feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - text: 鼠奎特不会从第一个方块开始移动。
+          feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         questions:
         - text: 在代码中寻找缺陷。斯奎特是否能碰到橡子？
       courseC_multi_maze_programming8_predict1_2021:
@@ -8855,7 +8916,8 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
+        - text: 鸟会撞到墙上。
+          feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
         questions:
         - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseC_multi_starWars_predict1_2021:
@@ -8867,7 +8929,8 @@ zh-CN:
         - text: BB-8 将移动 5次, 并得到所有的废金属
           correct: true
           feedback: 叮咚！答对啦！
-        - feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
+        - text: BB-8只会移动3个空格。
+          feedback: 不正确。重复模块让 BB-8 向前移动 5 次。
         questions:
         - text: 当您单击 "运行" 时, 会发生什么情况？
       courseC_multi_starWars_predict2_2021:
@@ -8879,7 +8942,8 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
           feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
-        - feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
+        - text: BB-8会在第一次循环后转向错误的方向。
+          feedback: 不正确。当 BB-8 需要往前移动 3 格时，第一个循环只能让它向前移动 2 格。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_bee_conditionals1_predict1_dani:
@@ -8917,23 +8981,35 @@ zh-CN:
         display_name: 课程结束项目
       courseF_EOC_samples_2021:
         display_name: 课程结束项目
+        description: 你即将开始你的最终项目。在开始之前，花些时间看一下示例项目。
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 精灵图将仅向右旋转。
+          feedback: 不正确。精灵图也会向东移动。
+        - text: 精灵图将仅向东移动。
+          feedback: 不正确。精灵图没有停止旋转，因此它将同时进行两种行为。
+        - text: 精灵图将同时旋转和移动。
+          correct: true
+          feedback: 正确！这两种行为会同时发生。
+        - text: 精灵图将先旋转然后再移动。
+          feedback: 不正确。在精灵图实验室，连接的模块都会接连立即运行，所以这两个行为将同时发生。
         questions:
-        - {}
+        - text: 阅读代码，然后做一个预测。
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"一个披萨即将到来！"'
+          feedback: 不正确。变量标签不匹配。
+        - text: '"一份餐点即将到来！"'
+          feedback: 不正确。变量的标签从来不会打印。
+        - text: '"一份食物即将到来！"'
+          feedback: 不正确。变量的标签从来不会打印。
+        - text: '"一个 即将到来！"'
+          correct: true
+          feedback: 正确！变量标签不匹配。
+        - text: 没有什么会打印。
+          feedback: 不正确。事件和打印模块仍将运行。
         questions:
-        - {}
+        - text: 这段代码看起来很熟悉，但是请仔细阅读。如果用户输入“披萨”，会打印什么？
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: 艺术家将会绘制一个边长为50像素的三角形。
@@ -8943,7 +9019,8 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
+        - text: 计算机将向用户提示一个数字。
+          feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
         questions:
         - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
       courseF_multi_bee_for3_predict1_2021:
@@ -8955,7 +9032,8 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂将向前移动，并在每朵花中收集一个花蜜。
           feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
-        - feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
+        - text: '蜜蜂将向前移动，从1号和4号花上采集一个花蜜。 '
+          feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
         markdown: |+
           啊！ 使用 `计数循环` 让这一关简单多了！
 
@@ -8964,22 +9042,36 @@ zh-CN:
         - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 两架飞机都将沿网格移动一个空格，然后停止。
+          feedback: 不正确。这些精灵图拥有持续奔跑直到被告知停止的“行为”。
+        - text: 两架飞机都将开始移动，不会停止。
+          correct: true
+          feedback: 正确！这些行为告诉飞机开始移动并持续前进。
+        - text: 一架飞机将首先移动，另一架飞机然后移动。
+          feedback: 不正确。精灵图实验室中的每个代码块都会接连立即运行。
+        - text: 飞机将坠毁。
+          feedback: 不正确。飞机不是定位在使它们互相接触的位置。
         questions:
-        - {}
+        - text: 阅读代码，然后做一个预测。
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 程序将打印“Hello name!”
+          feedback: 不正确。名称模块将被替换为你输入的任何内容。
+        - text: 程序会用你输入的名称来欢迎你。
+          correct: true
+          feedback: 正确！你输入的内容将用于替换名称模块。
+        - text: 精灵图将改变大小。
+          feedback: 不正确。文本被打印到屏幕上。
+        - text: 计算机会问另一个问题。
+          feedback: 不正确。在程序开始的时候，只会问一个问题。
         questions:
-        - {}
+        - text: 这个程序让你用键盘输入来回答问题。“打印”模块在屏幕上显示文本。做一个预测：回答问题后会发生什么？
       courseF_variables_stop:
         content1: 描述
+        markdown: "# 停止！\n\n## 你确定你准备好继续前进了吗？ \n\n\n在下一级别，你将开始为你的项目编写代码。如果你已经有了一个计划，那效果会最好。\n\n完成的计划应包括：\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* 你正在构建的项目类型。如贺卡、聊天机器人或空白区故事。\n*
+          你将向用户询问的问题列表。\n* 你将显示到屏幕上的其他文本。\n* 你所需要的精灵图的描述或绘图（以及它们的行为）。\n\n如果你不确定自己是否准备好继续前进，请咨询你的老师！\n"
       csf_digital_trails_2021:
         markdown: |-
           # 顺着电子线索
@@ -9007,6 +9099,398 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 罗瑞尔要收集所有宝藏。
           feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
-        - feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
+        - text: 用这段代码让罗瑞尔收集1个宝贝。
+          feedback: 不正确。罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # 纸牌和条件语句
+
+          玩纸牌，创建一些这样的规则： "如果拿到红牌，获得 1 分" 以及 "如果拿到黑牌，你得 1 分"。
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |
+          # 无障碍设计
+
+          * 在计算机科学的世界中，**无障碍访问（accessibility）** 表示如何让残疾人访问的技术。
+          * 残障人士包括身体上，听觉，视觉以及其它类型。
+          * 残障人士的各方面都会受到影响，包括他们如何使用 **智能电话的应用**。
+          * 设计适合残疾人士使用的应用程序，也会使这些应用程序对其他所有人都更好！
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # 数字共享
+
+          这节课会思考尊重所有权和版权的挑战和好处，特别是在数字环境中。
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # 空白区故事
+
+          在这一课中，你将学习如何使用和编写空白故事。观看这段视频，了解这如何与计算机科学相联系。
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # 画图纸编程
+
+          写下算法，让同学能用来画图。
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # 个人资料和隐私
+
+          ## 你可以在网上分享什么信息？
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # 接力编程
+
+          分成小组，一起来写出能画图的程序。
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # 跟随算法
+
+          玩游戏并思考需要什么命令才能得到正确的结果。
+      Songwriting-Unplugged_2021:
+        markdown: |
+          # 写歌
+
+          用歌曲中副歌的概念，来学习定义和调用函数。
+      courseD_EOC_2021:
+        description: 你已经完成了课程D！点击以创建项目。
+        display_name: 课程结束项目
+      courseD_EOC_examples_2021:
+        description: 你即将开始你的最终项目。在开始之前，花些时间看一下示例项目。
+        display_name: 项目示例
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: B
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        - text: C
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        - text: 以上都不是
+          feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        - text: 蜜蜂会移动到云中，只有在下面有花朵的情况下，才会尝试采花粉。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂会采花粉。
+        - text: '蜜蜂不会飞到云端。 '
+          feedback: 错误。积木块 `如果在花上` 能确保，如果云下有花朵的话，蜜蜂只会采花粉。
+        questions:
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: '蜜蜂会在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会从花朵和蜂窝中获取花粉。
+          feedback: '错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+        - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
+          feedback: '错误。错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+        - text: 蜜蜂会尝试从花朵和蜂巢中获取蜂蜜和花蜜。
+          feedback: '错误。错误。“if at flower”（如果在花上）模块会让蜜蜂在每朵花上采到花蜜并在每个蜂窝里酿造蜂蜜。
+
+'
+        questions:
+        - text: 仔细查看下面的代码。在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
+          feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        - text: 蜜蜂只能得到2个花蜜。
+          feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        - text: 蜜蜂将会得到所有的花蜜。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 蜜蜂会转向错误的方向。
+          feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
+        questions:
+        - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        - text: '8'
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: '10'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        - text: '12'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
+        questions:
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: 收割者将收获所有的农作物。
+          feedback: 错误。没有收割南瓜的代码。
+        - text: 收割者将不会收割她路过的农作物。
+          feedback: 错误。代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
+        - text: 收割者将收获到除了南瓜以外的所有农作物。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 收获者只会采摘南瓜。
+          feedback: 错误。代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
+        markdown: |
+          这一关中的幼苗会是玉米或莴苣。
+          <br/>
+        questions:
+        - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: 没东西了。只会剩下平地。
+          feedback: 错误。没有任何代码用来清除土堆。
+        - text: 代码将对土堆不产生任何影响。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 代码将对地上的坑不产生任何影响。
+          feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
+        - text: 这段代码将保持最后一个洞不受影响。
+          feedback: 错误。没有任何代码用来清除土堆。
+        questions:
+        - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        - text: 农夫永远不停止地清除土堆。
+          feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 农夫只会移除一次泥土。
+          feedback: 不正确。农民一见到土堆就会去清除直到所有土堆被清除完毕。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: 僵尸会通过正确的路径, 最终会永远的来回走动。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 僵尸会到达向日葵。
+          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
+        - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
+          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
+        - text: 僵尸将被困在前进道路的尽头。
+          feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: 小鸟不会移动。
+          feedback: 错误。当有路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
+        - text: 小鸟会到达猪的位置。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 小鸟会撞上TNT炸药。
+          feedback: 错误。当有安全的路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
+        - text: 鸟转向错误的方向。
+          feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
+        questions:
+        - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
+      courseE_EOC_2021:
+        description: 你已经完成了课程E！点击以创建项目。
+        display_name: 课程结束项目
+      courseE_EOC_examples_2021:
+        description: 你已经完成了课程E！点击以创建项目。
+        display_name: 课程结束项目
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。外星人将开始在屏幕上上下移动。
+        - text: 外星人将开始从右向左巡逻。
+          feedback: 不正确。外星人将开始在屏幕上上下移动。
+        - text: 外星人将开始在屏幕上上下移动。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 外星人将从屏幕顶部消失。
+          feedback: 不正确。蓝色外星人将开始在屏幕上上下移动。
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: 收获者会采摘两个南瓜。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        - text: 收获者会采摘所有的南瓜。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        - text: 收获者会采摘莴苣。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 收获者会采摘玉米。
+          feedback: 错误。收获者会一直向前走到路的尽头，然后转向往回走，直到采摘了莴苣。
+        questions:
+        - text: 看看下面的函数定义。收获者会采摘什么？
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: 什么都没有发生，函数没有被调用。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家只会绘制一个正方形。
+          feedback: 不正确！这个函数实际上在程序中被调用了两次。
+        - text: 艺术家将绘制两个部分重叠的正方形。
+          feedback: 不正确！正方形的每条边的长度只有100像素，但是艺术家在不同的函数之间跳跃了175像素。
+        - text: 艺术家将绘制两个正方形，中间有空隙隔开。
+          correct: true
+          feedback: 正确的！该函数在程序中被调用两次，其间有一个跳转。
+        questions:
+        - text: 当您单击“运行”时，会发生什么情况？
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: 什么都不会发生。
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将飘浮到屏幕顶部
+          feedback: 不正确。风滚草将开始翻滚
+        - text: 风滚草将开始翻滚
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 风滚草将忽明忽暗。
+          feedback: 不正确。风滚草将开始翻滚
+        questions:
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseF_artist_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行循环和艺术家练习！
+        display_name: 艺术家练习
+      courseF_beeFor_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行for循环和蜜蜂练习！
+        display_name: 蜜蜂练习
+      courseF_beeVar_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行变量和蜜蜂练习！
+        display_name: 蜜蜂练习
+      courseF_bee_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行循环和蜜蜂练习！
+        display_name: 蜜蜂练习
+      courseF_events_freeplay:
+        description: 现在你可以使用所学的知识使项目更好！继续向你的程序添加东西或开始一些新的东西！
+        display_name: 事件 - 自由发挥
+      courseF_events_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行事件练习！
+        display_name: 事件练习
+        teacher_markdown: |+
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但可以根据他们（或你）的喜好选择做多少。
+
+          你可以使用下面的描述来帮助学生自我选择，或者设置他们应该完成多少个子级别的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |点火起飞！|学习飞行|进行翻滚|收缩和放大|让鱼膨胀！|移动中的企鹅|
+          |-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
+          | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
+
+
+      courseF_intro_apps:
+        description: 欢迎来到计算机科学基础！这些项目都是通过精灵图实验室创建的。现在尝试它们，看看可能实现什么。在本课程结束时，你将能够自己制作此类项目及更多东西！
+        display_name: 精灵图实验室应用程序
+        teacher_markdown: |
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但可以根据他们（或你）的喜好选择做多少。
+
+          这里的选择将学生带到他们可以探索的示例应用程序。此活动旨在与[lesson plan](.././)中的探索应用程序工作表协调。
+      courseF_sprites_freeplay:
+        description: 现在轮到你去创造你想要的东西了！你会创建什么样的项目？
+        display_name: 精灵图 - 自由发挥
+      courseF_sprites_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行精灵图和行为练习！
+        display_name: 精灵图练习
+        teacher_markdown: |+
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但可以根据他们（或你）的喜好选择做多少。
+
+          你可以使用下面的描述来帮助学生自我选择，或者设置他们应该完成多少个子级别的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |沙漠场景|调整水果的大小。|使帆船动起来|微风吹拂的日子|
+          |-|-|-|-|-|
+          | ***Type*** |**Review**|**Review**|**Review**|**Review**|
+          | ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
+
+
+      courseF_text_practice:
+        description: 到目前为止做得很好！选择你的下一个活动。尽可能多地完成。继续进行文本和提示练习！
+        display_name: 文本和提示练习
+        teacher_markdown: |+
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但可以根据他们（或你）的喜好选择做多少。
+
+          你可以使用下面的描述来帮助学生自我选择，或者设置他们应该完成多少个子级别的期望。
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |使用文本说话|来自提示的文本|命名机器人！|变量标签|大文本|颜色提示|从头开始|
+          |-|-|-|-|-|-|-|-|
+          | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+          | ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+
+
+      courseF_variables_projects:
+        description: 你将创建贺卡、聊天机器人或空白区故事。如果你已经完成了项目的\"第一部分\"，请前往\"第二部分\"。
+        display_name: 选择一个项目
+        teacher_markdown: |
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但是应鼓励为同一个项目完成**两个**级别。
+
+          学生可能需要非常清楚的说明来理解如何在这里进行选择。每个项目选择拥有两个子级别。开始时，学生应从标记为“第一部分”的级别中选择一个。当他们完成级别后，他们应回到这里并选择相同项目的“第二部分”。每个选择的第一个级别将为学生提供反馈，因为他们将项目的基本组成部分放在一起。第二个级别是“自由发挥”，目的是允许学生对他们喜欢的代码进行任何修改。
+      courseF_variables_samples:
+        description: 你将创建贺卡、聊天机器人或空白区故事。在开始之前，探索下面的示例项目，看看你对创建什么感兴趣。当你准备好开始规划你自己的程序时，按\“完成\”。
+        display_name: 探索 - 示例程序
+        teacher_markdown: |
+          # 选择级别概述
+          选择级别提供供学生完成的额外级别菜单。学生必须完成这里的至少一个子级别，但可以根据他们（或你）的喜好选择做多少。
+
+          学生应该在决定他们想要创建什么之前仔细地看这些项目。你可以把它们放在一起作为一课，也可以让学生自己去探索。
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: 艺术家将正确解决谜题。
+          feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
+        - text: 这位艺术家将在窗户形状内画四个正方形。
+          correct: true
+          feedback: 叮咚！答对啦！
+        - text: 艺术家只画正方形的一条边。
+          feedback: 不正确。该程序不调用“画一列多边形”。
+        - text: 这位艺术家将画四个互相重叠的正方形。
+          feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
+        questions:
+        - text: 点击 "运行" 按钮后会发生什么？
+      csf_be_a_super_digital_citizen_2021:
+        content1: 描述
+        markdown: |-
+          # 超级电子公民
+
+          ## 我们应该在有网络霸凌时怎么做？
+      csf_password_power-up_2021:
+        content1: 描述
+        markdown: |-
+          # 加强你的密码
+          ## 密码小窍门：
+
+          *使用你记得住的**短语**。
+          *只有**家长**能知道你的密码。
+          *绝对不能使用你的**私人资料**作为密码。
+          *密码必须要是**八字节**长。
+          *在密码中用字母，数字和**符号**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      express_EOC_2021:
+        description: 你已经完成了课程E！点击以创建项目。
+        display_name: 课程结束项目
+      express_EOC_examples_2021:
+        description: 你即将开始你的最终项目。在开始之前，花些时间看一下示例项目。
+        display_name: 项目示例

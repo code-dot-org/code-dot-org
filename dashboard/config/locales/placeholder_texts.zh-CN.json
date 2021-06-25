@@ -372,21 +372,170 @@
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "鱼",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "其他"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "其他",
+          "f655df68ec33643278de7e69794e8d76": "虚拟水族馆",
+          "a1a2a07348784279a1e7a6f46dc7e353": "你将添加什么？",
+          "0d3e73168beb875063ea0f0302fe32bd": "哪种鱼？",
+          "caaf8264ca397dba2d35ef902bbbd953": "哪种生物？",
+          "78574118d153534fd0925a2f5ca25e79": "哪种东西？"
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "你多大了？",
-          "ae096fbf24d913754b01a1601672bf62": " 也是！"
+          "ae096fbf24d913754b01a1601672bf62": " 也是！",
+          "a72e7c5c68af0546e963e510297f5233": "你好，我是X-9！你叫什么名字？",
+          "f0e5da70d264f312a1658d51c130b101": "输入你的名字：",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "输入你的年龄：",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " 岁！",
+          "605f302ebc9f7fbacba60b15f551a633": "你最喜欢什么颜色？",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "你最喜欢的颜色：",
+          "1f258d88a70309efc1435ef5daa277a0": "谢谢你今天和我聊天！"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "你赢了!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "你赢了!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " 秒",
+          "490082498449bd20ff0199737dfa4916": "选择游戏类型：",
+          "41f2b2212de0105c2a942ebb4a44e449": "大收藏家游戏！"
         },
         "courseF_editable_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "你多大了？",
-          "ae096fbf24d913754b01a1601672bf62": " 也是！"
+          "ae096fbf24d913754b01a1601672bf62": " 也是！",
+          "a72e7c5c68af0546e963e510297f5233": "你好，我是X-9！你叫什么名字？",
+          "f0e5da70d264f312a1658d51c130b101": "输入你的名字：",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "输入你的年龄：",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " 岁！",
+          "605f302ebc9f7fbacba60b15f551a633": "你最喜欢什么颜色？",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "你最喜欢的颜色：",
+          "1f258d88a70309efc1435ef5daa277a0": "谢谢你今天和我聊天！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "您叫什么名字？"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "选择1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "选择2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "选择3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "选择1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "选择2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "选择3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "天空舞者",
+          "78d989e01047ba7043a38650d695abaa": "选择玩家",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "选择1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "选择2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "选择3"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "这是Neila。",
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila正试图保护她的家免受太空机器人的伤害。",
+          "df8312187449c70820d7c58229a6b17e": "太空机器人在吓跑其他生物。",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila想帮助太空机器人学会友善。",
+          "b2f02bf648ce32c4362afe1578d41f70": "有效果！Neila向太空机器人展示了善良的力量。",
+          "2a28483f9f4f9ee44cec653a445d4c82": "其他的生物不再害怕了！"
+        },
+        "courseE_aboutme_1_2021": {
+          "8e985f60f328934accd78e7649584840": "冰淇淋是我最喜欢的美食！",
+          "31ba97bb501bb1f5b448221be09bad32": "那是我的柯基犬，Lollipop！我应该教她怎么编写代码！"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "你好，世界！"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "你好，世界！"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "你好，世界！"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "谁在过生日？",
+          "d1210f945885351b13feb9bbb868aeef": "他们几岁？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "派对游戏",
+          "bf08dd3d1961874f13e77c936aad27e5": "空白区故事",
+          "514b8d5320196898a9ced3efe0d4c802": "输入一个形容词：",
+          "88794317e8c695bbc7bc7d2f35792c7f": "输入一个物体：",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "输入一个身体部位：",
+          "e522ee28f39133b45497637539ff429b": "输入一个数字：",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " 游戏。",
+          "5306eed2fd2c43fe033efd6016c0c38b": "腿比赛！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "谁在过生日？",
+          "d1210f945885351b13feb9bbb868aeef": "他们几岁？",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "派对游戏",
+          "bf08dd3d1961874f13e77c936aad27e5": "空白区故事",
+          "514b8d5320196898a9ced3efe0d4c802": "输入一个形容词：",
+          "88794317e8c695bbc7bc7d2f35792c7f": "输入一个物体：",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "输入一个身体部位：",
+          "e522ee28f39133b45497637539ff429b": "输入一个数字：",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " 游戏。",
+          "5306eed2fd2c43fe033efd6016c0c38b": "腿比赛！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "你将要吃什么？",
+          "937dc37c06cc5d89a7096eb048b73590": " 即将到来！"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_choice_events": {
+          "c529a06c3f8518b63ff6dfac482b335c": "命名这个行星：",
+          "44506356d48394cd903b579df9de9117": "，地球人！",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "命名机器人。",
+          "34088af1fb721900963462375b3bbe23": "机器人！"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "谁在过生日？",
+          "d1210f945885351b13feb9bbb868aeef": "他们几岁？"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "我的问题"
         }
       }
     }
