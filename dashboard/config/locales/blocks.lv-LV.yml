@@ -2,18 +2,10 @@
 lv:
   data:
     blocks:
-      Dancelab_alternateMoves:
-        options:
-          GROUP:
-            '"UNICORN"': Vienradži
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekundes
-      Dancelab_changeMoveEachLR:
-        options:
-          GROUP:
-            '"UNICORN"': Vienradži
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -21,15 +13,9 @@ lv:
             '"height"': augstums
       Dancelab_changePropEachBy:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
-      Dancelab_doMoveEachLR:
-        options:
-          GROUP:
-            '"UNICORN"': Vienradži
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -55,19 +41,13 @@ lv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_jumpToEach:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nejaušs
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           FORMAT:
-            '"row"': rinda
-            '"column"': kolonna
             '"random"': nejaušs
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -88,44 +68,23 @@ lv:
         options:
           COSTUME:
             '"BEAR"': Lācis
-            '"CAT"': Kaķis
+            '"CAT"': kaķis
             '"DOG"': suns
-            '"DUCK"': Pīle
+            '"DUCK"': pīle
             '"FROG"': Varde
             '"PINEAPPLE"': Ananāss
-            '"ROBOT"': Robots
+            '"ROBOT"': robots
             '"SHARK"': Haizivs
-            '"UNICORN"': Vienradzis
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          COSTUME:
-            '"UNICORN"': Vienradži
           LAYOUT:
-            '"row"': rinda
-            '"column"': kolonna
             '"random"': nejaušs
       Dancelab_randomColor:
         text: nejauša krāsa
-      Dancelab_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"color_cycle"': Krāsas
-            '"rainbow"': Krāsas
-            '"disco"': Kvadrāti
-      Dancelab_setBackgroundEffectWithPalette:
-        options:
-          EFFECT:
-            '"color_cycle"': Krāsas
-            '"rainbow"': Krāsas
-            '"disco"': Kvadrāti
-      Dancelab_setDanceSpeedEach:
-        options:
-          GROUP:
-            '"UNICORN"': Vienradži
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -133,8 +92,6 @@ lv:
             '"height"': augstums
       Dancelab_setPropEach:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -145,23 +102,9 @@ lv:
             '"height"': augstums
       Dancelab_setPropRandomEach:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
-      Dancelab_setTintEach:
-        options:
-          THIS:
-            '"UNICORN"': Vienradži
-      Dancelab_setTintEachInline:
-        options:
-          THIS:
-            '"UNICORN"': Vienradži
-      Dancelab_setVisibleEach:
-        options:
-          THIS:
-            '"UNICORN"': Vienradži
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -169,8 +112,6 @@ lv:
             '"height"': augstums
       Dancelab_startMappingEach:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -181,8 +122,6 @@ lv:
             '"height"': augstums
       Dancelab_stopMappingEach:
         options:
-          GROUP:
-            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -243,23 +182,11 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': pa labi
             '"left"': pa kreisi
-      gamelab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      gamelab_pointInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
       gamelab_randColor:
         text: nejauša krāsa
       gamelab_randomColor:
@@ -407,7 +334,6 @@ lv:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"row"': rinda
             '"random"': nejaušs
       binary_move:
         options:
