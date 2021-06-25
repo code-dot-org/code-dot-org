@@ -1,2 +1,9 @@
 {
+  "no-NO": {
+    "data": {
+      "bubble_choice_description": {
+        "courseD_bee_nestedLoops8_2021": "Samle inn all nektaren fra hver blomst og lag honning i alle bikubene. Bruk løkke i løkke."
+      }
+    }
+  }
 }
