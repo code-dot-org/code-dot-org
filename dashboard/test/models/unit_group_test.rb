@@ -797,6 +797,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
+  test "self.valid_courses: omits in-development courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    assert UnitGroup.any?(&:in_development?)
+
+    refute UnitGroup.valid_courses(user: student).any?(&:in_development?)
+    refute UnitGroup.valid_courses(user: teacher).any?(&:in_development?)
+    assert UnitGroup.valid_courses(user: levelbuilder).any?(&:in_development?)
+  end
+
   test "self.valid_courses: omits pilot courses" do
     student = create :student
     teacher = create :teacher

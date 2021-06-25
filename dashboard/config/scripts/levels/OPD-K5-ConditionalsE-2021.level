@@ -8,7 +8,7 @@
     "name_suffix": "_2021",
     "parent_level_id": 27695,
     "encrypted": "false",
-    "long_instructions": "**Student lesson level shown here:  Course E - Lesson 14, Level 9:  Conditionals in Minecraft:  Voyage Aquatic.**"
+    "long_instructions": "**Watch this video from Course E - Lesson 14, Level 9:  Conditionals in Minecraft:  Voyage Aquatic.**"
   },
   "game_id": 54,
   "published": true,
@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-03-17 17:05:48 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-17 17:08:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-17 17:12:03 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-06-16 16:21:59 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:40:15 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:54:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:55:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-03-17 17:05:48 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-17 17:08:25 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-17 17:12:03 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-06-16 16:21:59 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:40:15 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:54:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 19:55:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 21:30:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

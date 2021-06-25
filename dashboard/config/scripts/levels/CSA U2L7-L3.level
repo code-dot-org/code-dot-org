@@ -6,16 +6,14 @@
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U2L7 Template"
+    "project_template_level_name": "CSA U2L7 Template",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNAq6u+PZhaG4dM2kgG\n5+86X1C7W/p9zu89TH/PH1ocqSOl7dSECMjHnIPtSl9tXsQ=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-22T16:28:14.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-23 16:29:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:29:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:14:47 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:46:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-24 23:49:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-06-24 23:57:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]"
 }]]></config>
 </Javalab>

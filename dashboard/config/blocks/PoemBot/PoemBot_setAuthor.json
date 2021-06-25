@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "setAuthor",
+    "blockText": "set poem author {AUTHOR}",
+    "args": [
+      {
+        "name": "AUTHOR",
+        "type": "String"
+      }
+    ]
+  }
+}
