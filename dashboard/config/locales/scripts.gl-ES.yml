@@ -9,25 +9,8 @@ gl:
       name:
         course1:
           title: Curso 1
-          description: O Curso 1 esta deseñado para permitir aos lectores primeirizos
-            crear programas de computador que lles axuden a aprender a colaborar con
-            outros, desenvolver habilidades de solución de problemas, e persistir
-            en tarefas difíciles. Para o final deste curso, os estudantes crean o
-            seu propio xogo personalizado ou historia que poden compartir. Recomendado
-            para primeiro grao de primaria.
-          description_short: O Curso 1 está deseñado para lectores temperáns.
           description_audience: Idades de 4 a 6 anos
           lessons:
-            'Artist: Loops':
-              name: 'Artista: Bucles'
-            'Artist: Sequence':
-              name: 'Artista: Secuencia'
-            'Artist: Shapes':
-              name: 'Artista: Formas'
-            'Bee: Loops':
-              name: 'Abella: Bucle'
-            'Bee: Sequence':
-              name: 'Abella: Secuencia'
             Building a Foundation:
               name: Construíndo unha base
             Getting Loopy:
@@ -36,53 +19,15 @@ gl:
               name: Ir a Sitios en modo Seguro
             Happy Maps:
               name: Mapas Felices
-            'Jigsaw: Learn to drag and drop':
-              name: 'Crebacabezas: aprende a arrastrar e soltar'
-            'Maze: Debugging':
-              name: 'Labirinto: Depuración (Debug)'
-            'Maze: Loops':
-              name: 'Labirinto: Bucles'
-            'Maze: Sequence':
-              name: 'Labirinto: Secuencia'
             Move it, Move it:
               name: Móveo, móveo
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
-            Spelling Bee:
-              name: Abella que Soletrea
-            'Studio: Create a Story':
-              name: 'Laboratorio de Xogo: Crea unha Historia'
             The Big Event:
               name: O Gran Evento
-          student_description: O Curso 1 esta deseñado para permitir aos lectores
-            primeirizos crear programas de computador que lles axuden a aprender a
-            colaborar con outros, desenvolver habilidades de solución de problemas,
-            e persistir en tarefas difíciles. Para o final deste curso, os estudantes
-            crean o seu propio xogo personalizado ou historia que poden compartir.
-            Recomendado para primeiro grao de primaria.
         course2:
           title: Curso 2
-          description: O Curso 2 está deseñado para estudantes que poden ler e non
-            teñen experiencia previa en programación. Neste curso os estudantes crearán
-            programas para resolver problemas e desenvolver xogos interactivos ou
-            historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
-          description_short: O Curso 2 está deseñado para estudantes que poden ler.
-          description_audience: A partir de 6 anos (cómpre saber ler)
           lessons:
-            'Artist: Debugging':
-              name: 'Artista: Depuración (Debug)'
-            'Artist: Loops':
-              name: 'Artista: Bucles'
-            'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
-            'Artist: Sequence':
-              name: 'Artista: Secuencia'
-            'Bee: Conditionals':
-              name: 'Abella: Condicionais'
-            'Bee: Debugging':
-              name: 'Abella: Depuración (Debug)'
-            'Bee: Loops':
-              name: 'Abella: Bucle'
             Binary Bracelets:
               name: Pulseiras Binarias
             Conditionals:
@@ -93,52 +38,20 @@ gl:
               name: Bucleándose
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
-            'Maze: Loops':
-              name: 'Labirinto: Bucles'
-            'Maze: Sequence':
-              name: 'Labirinto: Secuencia'
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: avión de papel'
             Relay programming:
               name: Programación por relevos
-            'Studio: Create a Story':
-              name: 'Laboratorio de Xogo: Crea unha Historia'
             The Big Event:
               name: O Gran Evento
             Your Digital Footprint:
               name: A túa pegada dixital
-          student_description: O Curso 2 está deseñado para estudantes que poden ler
-            e non teñen experiencia previa en programación. Neste curso os estudantes
-            crearán programas para resolver problemas e desenvolver xogos interactivos
-            ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de
-            primaria.
         course3:
           title: Curso 3
-          description: O Curso 3 está deseñado para estudantes que fixeron o Curso
-            2. Profundarase en temas de programación xa presentados nos cursos anteriores,
-            e que dan solucións flexíbeis a problemas máis complexos. Ao remate do
-            curso, os estudantes son quen de crear historias e xogos interactivos
-            que poden compartir con calquera. Recomendado para os cursos 4º a 5º de
-            Primaria.
-          description_short: O Curso 3 é unha continuación do Curso 2.
           description_audience: Idades de 8 a 18 anos
           lessons:
             Artist:
               name: Artista
-            'Artist: Functions':
-              name: 'Artista: Funcións'
-            'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
-            'Artist: Patterns':
-              name: 'Artista: Padróns'
-            'Bee: Conditionals':
-              name: 'Abella: Condicionais'
-            'Bee: Debugging':
-              name: 'Abella: Depuración (Debug)'
-            'Bee: Functions':
-              name: 'Abella: Funcións'
-            'Bee: Nested Loops':
-              name: 'Abella: Bucles Aniñados'
             Bounce:
               name: Rebote
             Computational Thinking:
@@ -149,28 +62,14 @@ gl:
               name: Xogo de dados
             Digital Citizenship:
               name: Cidadanía dixital
-            'Farmer: While Loops':
-              name: 'Granxeira: Bucles "Mentres" (While)'
             Functional Suncatchers:
               name: Tragaluces Funcionais
             Internet:
               name: Internet
             Maze:
               name: Labirinto
-            'Maze: Conditionals':
-              name: 'Labirinto: Condicionais'
             Songwriting:
               name: Composición
-            'Studio: Create a Game':
-              name: 'Laboratorio de Xogos: Crear un Xogo'
-            'Studio: Create a Story':
-              name: 'Laboratorio de Xogo: Crea unha Historia'
-          student_description: O Curso 3 está deseñado para estudantes que fixeron
-            o Curso 2. Profundarase en temas de programación xa presentados nos cursos
-            anteriores, e que dan solucións flexíbeis a problemas máis complexos.
-            Ao remate do curso, os estudantes son quen de crear historias e xogos
-            interactivos que poden compartir con calquera. Recomendado para os cursos
-            4º a 5º de Primaria.
         playlab:
           title: Laboratorio de Xogos
           description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
@@ -191,15 +90,9 @@ gl:
           student_description: Debuxa imaxes estupendas e deseños co Artista!
         hourofcode:
           title: Labirinto clásico
-          description: Proba os fundamentos da informática cos personaxes de Angry
-            Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
-          description_short: Proba os fundamentos da informática con moitos personaxes
-            divertidos!
           lessons:
             Maze:
               name: Labirinto
-          student_description: Proba os fundamentos da informática cos personaxes
-            de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
         frozen:
           title: Programa con Ana e Elsa
           description: Imos usar código para unirnos a Ana e Elsa mentres exploran
@@ -217,119 +110,24 @@ gl:
             compartir cos teus amigos!
         course4:
           title: Curso 4
-          description: O Curso 4 está deseñado para estudantes que fixeron os cursos
-            2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
-            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
-            Ao remate do curso, os estudantes serán quen de crear programas que amosen
-            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
-            dende 4º de Primaria a 2º de ESO.
-          description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos
-            2 e 3.
-          description_audience: Idades de 10 a 18 anos
           lessons:
             Artist:
               name: Artista
-            Artist Binary:
-              name: Artista binario
-            'Artist: For Loops':
-              name: Artista Bucles "Para" (for)
-            'Artist: Functions':
-              name: 'Artista: Funcións'
-            'Artist: Functions with Parameters':
-              name: 'Artista: Funcións con Parámetros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
-            'Bee: For Loops':
-              name: 'Abella: Bucles "Para" (For)'
-            'Bee: Functions with Parameters':
-              name: 'Abella: Funcións con parámetros'
-            Extreme Challenge - Comprehensive:
-              name: Desafío extremo - completo
-            Maze and Bee:
-              name: O labirinto e a abella
-            'Play Lab: For Loops':
-              name: 'Laboratorio de Xogos: Bucles "Para" (For)'
-            'Play Lab: Functions with Parameters':
-              name: 'Laboratorio de xogos: Funcións con parámetros'
-            'Play Lab: Variables':
-              name: 'Laboratorio de xogos: Variábeis'
-            Super Challenge - For Loops:
-              name: Super reto - bucles "Para" (for)
-            Super Challenge - Functions and Parameters:
-              name: Super reto - funcións e parámetros
-            Super Challenge - Variables:
-              name: Super desafío - Variábeis
-            'Unplugged: Binary':
-              name: 'Desconectado: binario'
-            'Unplugged: Envelope Variables':
-              name: 'Desconectado: Variábeis de Sobre'
-            'Unplugged: For Loop Fun':
-              name: 'Desconectado: Bucles "Para" (For) divertidos'
-            'Unplugged: Madlibs':
-              name: 'Desconectado: Madlibs'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de cancións con parámetros'
-            'Unplugged: Tangrams':
-              name: 'Desconectado: Tangrams'
-          student_description: O Curso 4 está deseñado para estudantes que fixeron
-            os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
-            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
-            Ao remate do curso, os estudantes serán quen de crear programas que amosen
-            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
-            dende 4º de Primaria a 2º de ESO.
-        Course4pre:
-          title: Prerequisitos do Curso 4
-          description: Un breve resumo de conceptos para os estudantes que non deron
-            os cursos 2 e 3.
-          description_short: Un breve resumo de conceptos para os estudantes que non
-            deron os cursos 2 e 3.
-          lessons:
-            'Artist: Functions':
-              name: 'Artista: Funcións'
-            'Artist: Loops':
-              name: 'Artista: Bucles'
-            'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
-            'Artist: Sequence':
-              name: 'Artista: Secuencia'
-            'Bee: Conditionals':
-              name: 'Abella: Condicionais'
-            'Bee: Debugging':
-              name: 'Abella: Depuración (Debug)'
-            'Bee: Nested Loops':
-              name: 'Abella: Bucles Aniñados'
-            'Farmer: While Loops':
-              name: 'Granxeira: Bucles "Mentres" (While)'
-            'Maze: Sequence':
-              name: 'Labirinto: Secuencia'
-          student_description: Un breve resumo de conceptos para os estudantes que
-            non deron os cursos 2 e 3.
         usability:
           lessons:
             Binary:
               name: Binario
             For Loops:
               name: Bucles "Para" (For)
-            Functions and Functions with Parameters:
-              name: Funcións e funcións con parámetros
-            Intro:
-              name: Introdución
             Variables:
               name: Variables
         algebra:
           lessons:
             'Eval: Conditionals':
               name: Condicionais
-            'Eval: Strings and Images':
-              name: Tiras de caracteres e imaxes
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcións por partes'
-            'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de deseño'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Offline: vídeo-xogos e plano de coordenadas'
         infinity:
-          title: Laboratorio de Xogo Disney Infinity
           description: Utiliza o laboratorio de xogos para crear unha historia ou
             xogo protagonizada por personaxes de Disney Infinity.
           description_short: Utiliza o laboratorio de xogos para crear unha historia
@@ -341,22 +139,15 @@ gl:
             ou xogo protagonizada por personaxes de Disney Infinity.
         algebrademo:
           lessons:
-            Defining Variables:
-              name: Definición de Variábeis
-            Evaluation Blocks:
-              name: Bloques de avaliación
             The Design Recipe:
               name: A receita de deseño
         netsim:
           title: Simulador de internet
         20-hour:
-          title: Curso acelerado de Introdución a programación informática
           description: Este curso de 20 horas introduce o núcleo da informática e
             os conceptos da programación. O curso está deseñado para o seu uso en
             clase para os cursos de primaria pero é divertido aprender con calquera
             idade!
-          description_short: Este curso de 20 horas cobre os conceptos básicos de
-            informática e programación dos cursos 2-4.
           description_audience: Idades de 10 a 18 anos
           lessons:
             Abstraction:
@@ -404,9 +195,6 @@ gl:
             clase para os cursos de primaria pero é divertido aprender con calquera
             idade!
         edit-code:
-          title: Editar código
-          description: Editar código
-          description_short: Editar código
           lessons:
             Play Lab:
               name: Laboratorio de Xogos
@@ -414,7 +202,6 @@ gl:
               name: O Artista
             The Maze:
               name: O Labirinto
-          student_description: Editar código
         events:
           title: Eventos
           description: Eventos
@@ -427,7 +214,6 @@ gl:
           title: Código do Flappy bird
           description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente
             o noso titorial sobre o Código do Flappy bird!
-          description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
           lessons:
             Flappy Code:
               name: Código do Flappy bird
@@ -435,43 +221,14 @@ gl:
             Experimente o noso titorial sobre o Código do Flappy bird!
         jigsaw:
           title: Crebacabezas
-          description: Proba o noso titorial de Jigsaw
-          description_short: Proba o noso titorial de Jigsaw
           lessons:
             Jigsaw:
               name: Crebacabezas
-          student_description: Proba o noso titorial de Jigsaw
         step:
           title: Paso
-          description: Titorial paso a paso
-          description_short: Titorial paso a paso
           lessons:
             Step:
               name: Paso
-          student_description: Titorial paso a paso
-        Hour of Code:
-          title: Hora de Código 2013
-          description: Proba os fundamentos da informática con personaxes de Angry
-            Birds e Plantas vs. Zombis!
-          description_short: Proba os fundamentos da informática con moitos personaxes
-            divertidos!
-          lessons:
-            Hour of Code 2013:
-              name: Hora de Código 2013
-          student_description: Proba os fundamentos da informática con personaxes
-            de Angry Birds e Plantas vs. Zombis!
-        algebraPD:
-          lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: Valores booleanos
-            Evaluation Blocks:
-              name: Bloques de avaliación
-            Strings and Images:
-              name: Tiras de caracteres e imaxes
         cspunit3:
           lessons:
             Creating Functions:
@@ -480,56 +237,22 @@ gl:
               name: Bucles mentres
         algebraPD3:
           lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
-            Strings and Images:
-              name: Tiras de caracteres e imaxes
             The Design Recipe:
               name: A receita de deseño
-        algebraPD-NexTech:
-          lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
-        algebraPD-iZone:
-          lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
         sciencePD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        cspunit2:
-          lessons:
-            The Internet:
-              name: A Internet é para todos
         algebraPD2a:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Booleans:
-              name: Valores booleanos
-            Defining Variables:
-              name: Definición de Variábeis
-            Evaluation Blocks:
-              name: Bloques de avaliación
             Free Play:
               name: Xogo libre
-            Strings and Images:
-              name: Tiras de caracteres e imaxes
             The Design Recipe:
               name: A receita de deseño
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         allthethings:
           lessons:
             Artist:
               name: Artista
-            Bee:
-              name: Abella
             Bounce:
               name: Rebote
             Flappy:
@@ -540,98 +263,44 @@ gl:
               name: Labirinto
             Minecraft:
               name: Minecraft
-        algebraPD2b:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          lessons:
-            Booleans:
-              name: Valores booleanos
-            Defining Functions:
-              name: Definir funcións
-            Defining Variables:
-              name: Definición de Variábeis
-            'Eval: Conditionals':
-              name: 'Eval: condicionais'
-            Evaluation Blocks:
-              name: Bloques de avaliación
-            Strings and Images:
-              name: Tiras de caracteres e imaxes
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspfacilitator:
           lessons:
             App Lab:
               name: Laboratorio de aplicacións
             Internet Simulator:
               name: Simulador de internet
-            Welcome!:
-              name: Benvido!
         K5-OnlinePD:
           lessons:
             Computer Science Fundamentals:
               name: Fundamentos de Informática
         ECSPD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-up:
               name: Sumario
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         algebraPD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
             The Design Recipe:
               name: A receita de deseño
-            Welcome!:
-              name: Benvido!
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         science-PD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b-iZone:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-iZone:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-up:
               name: Sumario
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-NexTech:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-up:
               name: Sumario
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -654,60 +323,28 @@ gl:
               name: O Gran Evento
         ScienceP3OLPT2:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         Special Fun:
           description_audience: Idades de 10 a 18 anos
         SpecialSeries:
           description_audience: Idades de 10 a 18 anos
-        iceage:
-          title: O xogo de laboratorio da Idade de xeo
-          description: Crea unha historia ou crea un xogo co laboratorio de xogo da
-            Idade de Xeo!
-          description_short: Crea unha historia ou crea un xogo co laboratorio de
-            xogo da Idade de Xeo!
-          lessons:
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
-          student_description: Crea unha historia ou crea un xogo co laboratorio de
-            xogo da Idade de Xeo!
         cspunit3temp:
           lessons:
             While Loops:
               name: Bucles mentres
-        gumball:
-          title: Laboratorio de xogo de Gumball
-          description: Crea unha historia ou fai un xogo co laboratorio de xogo de
-            Gumball!
-          description_short: Crea unha historia ou fai un xogo co laboratorio de xogo
-            de Gumball!
-          lessons:
-            Gumball Play Lab:
-              name: Laboratorio de xogo de Gumball
-          student_description: Crea unha historia ou fai un xogo co laboratorio de
-            xogo de Gumball!
         starwars:
-          title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
         starwarsblocks:
-          title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
         mc:
@@ -715,59 +352,12 @@ gl:
           description: Usa bloques de código para acompañar a Steve ou a Alex nunha
             aventura polo mundo de Minecraft
           description_short: Explora o mundo de Minecraft a través do código
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Usa bloques de código para acompañar a Steve ou a Alex
             nunha aventura polo mundo de Minecraft
         ScienceP3OLPT3:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
-        AlgebraA:
-          lessons:
-            'Calc: Defining Variables':
-              name: 'Calc: Definindo Variábeis'
-            'Calc: Evaluation Blocks':
-              name: 'Calc: Bloques de avaliación'
-            'Eval: Strings and Images':
-              name: 'Eval: Tiras de caracteres e imaxes'
-            'Eval: Writing Contracts':
-              name: 'Eval: Redacción de contratos'
-            'Unplugged: Contracts':
-              name: 'Desconectado: contratos'
-            'Unplugged: The Design Recipe':
-              name: 'Desconectado: A receita de deseño'
-        AlgebraB:
-          lessons:
-            'Eval: Boolean Operators':
-              name: 'Eval: Operadores booleanos'
-            'Eval: Conditionals':
-              name: 'Eval: condicionais'
-            'Play Lab: Animation (Big Game)':
-              name: 'Laboratorio de xogos: Animación (Big Game)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'Laboratorio de xogos: Booleano (Big Game)'
-            'Play Lab: Booleans':
-              name: 'Laboratorio de xogos: valores booleanos'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'Laboratorio de xogos: Detección de colisións (Big Game)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'Laboratorio de xogos: Definición de Variábeis (Big Game)'
-            'Unplugged: Booleans':
-              name: 'Desconectado: Booleanos'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'Desconectado: Detección de colisións e a fórmula de distancia'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'Desconectado: Condicionais e funcións por partes'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'Offline: vídeo-xogos e plano de coordenadas'
-        algebraPD1:
-          lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
         csp1-2017:
           lessons:
             The Internet:
@@ -786,10 +376,6 @@ gl:
               name: Funcións
         CSF_Secret_Sample:
           description_audience: Idades de 8 a 18 anos
-        algebraFacilitator:
-          lessons:
-            Evaluation Blocks:
-              name: Bloques de avaliación
         cspunit1-support:
           lesson_groups:
             required:
@@ -808,16 +394,10 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Abella: Condicionais'
         gradeKinder:
           lessons:
             Events:
               name: Eventos
-            'Jigsaw: Learn to drag and drop':
-              name: 'Crebacabezas: aprende a arrastrar e soltar'
             Loops:
               name: Bucles
             'Real-life Algorithms: Plant a Seed':
@@ -832,48 +412,24 @@ gl:
           lessons:
             Events:
               name: Eventos
-            'Jigsaw: Learn to drag and drop':
-              name: 'Crebacabezas: aprende a arrastrar e soltar'
             Loops:
               name: Bucles
         grade5:
           lessons:
-            'Artist: For Loops':
-              name: Artista Bucles "Para" (for)
-            'Artist: Functions with Parameters':
-              name: 'Artista: Funcións con Parámetros'
             'Artist: Variables':
               name: 'Artista: Variábeis'
-            'Bee: For Loops':
-              name: 'Abella: Bucles "Para" (For)'
-            'Bee: Functions with Parameters':
-              name: 'Abella: Funcións con parámetros'
             Digital Citizenship:
               name: Cidadanía dixital
-            'Play Lab: Variables':
-              name: 'Laboratorio de xogos: Variábeis'
-            'Unplugged: Envelope Variables':
-              name: 'Desconectado: Variábeis de Sobre'
-            'Unplugged: For Loop Fun':
-              name: 'Desconectado: Bucles "Para" (For) divertidos'
-            'Unplugged: Songwriting with Parameters':
-              name: 'Desconectado: Composición de cancións con parámetros'
         ecs-unit1:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-up:
               name: Sumario
         grade3:
           lessons:
-            'Artist: Nested Loops':
-              name: 'Artista: Bucles Aniñados'
             Bee Debugging:
               name: Depuración (debug) da Abella
             Bounce:
               name: Rebote
-            'Farmer: While Loops':
-              name: 'Granxeira: Bucles "Mentres" (While)'
         alltheplcthings:
           lesson_groups:
             required:
@@ -922,8 +478,6 @@ gl:
           lessons:
             The Design Recipe:
               name: A receita de deseño
-            Welcome!:
-              name: Benvido!
         csp-online-test:
           lesson_groups:
             required:
@@ -976,10 +530,6 @@ gl:
               name: Condicionais con cartas
             Digital Citizenship:
               name: Cidadanía dixital
-            'Unplugged: Binary':
-              name: 'Desconectado: binario'
-            Artist Binary:
-              name: Artista binario
             Nested Loops:
               name: Bucles aniñados
             Introduction:
@@ -1008,30 +558,12 @@ gl:
               name: Composición de música con parámetros
             Introduction:
               name: Introdución
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
-        classic-hoc-impact-study:
-          description_short: Proba os fundamentos da informática con moitos personaxes
-            divertidos!
-          lessons:
-            Hour of Code 2013:
-              name: Hora de Código 2013
-        hoc-impact-study:
-          description_short: Proba os fundamentos da informática con moitos personaxes
-            divertidos!
-          lessons:
-            Hour of Code 2013:
-              name: Hora de Código 2013
         2016_sciencePD-phase2b:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         2016_sciencePD_phase2b:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         csp3-support:
@@ -1044,14 +576,10 @@ gl:
               display_name: Visión xeral
         sciencepd4:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         science-pd-ol-pt-5:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         csf2harvey:
@@ -1060,8 +588,6 @@ gl:
               name: Binario
         sciencepd5:
           lessons:
-            Welcome!:
-              name: Benvido!
             Wrap-Up:
               name: Resumo
         csp5-support:
@@ -1132,12 +658,8 @@ gl:
           lessons:
             Introduction:
               name: Introdución
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
         artist-and-bb8:
           lessons:
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
             Bounce:
               name: Rebote
         coursea-2017:
@@ -1158,8 +680,6 @@ gl:
               name: Bucles aniñados
         coursee-2017:
           lessons:
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
               name: Variábeis de sobre
             For Loop Fun:
@@ -1246,8 +766,6 @@ gl:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
-            Spelling Bee:
-              name: Abella que Soletrea
         subgoal-labels-opt-in:
           lessons:
             Thanks:
@@ -1278,10 +796,6 @@ gl:
               name: Condicionais con cartas
             Digital Citizenship:
               name: Cidadanía dixital
-            'Unplugged: Binary':
-              name: 'Desconectado: binario'
-            Artist Binary:
-              name: Artista binario
             Building a Foundation:
               name: Construíndo unha base
         new-express:
@@ -1306,8 +820,6 @@ gl:
           lessons:
             Building a Foundation:
               name: Construíndo unha base
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
               name: Variábeis de sobre
             For Loop Fun:
@@ -1342,8 +854,6 @@ gl:
               name: Construíndo unha base
             Introduction:
               name: Introdución
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
               name: Variábeis de sobre
             For Loop Fun:
@@ -1408,8 +918,6 @@ gl:
               name: Pulseiras Binarias
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -1440,8 +948,6 @@ gl:
               name: Cidadanía dixital
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
             Relay Programming:
@@ -1486,8 +992,6 @@ gl:
               name: Construíndo unha base
             Introduction:
               name: Introdución
-            Ice Age Play Lab:
-              name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
               name: Variábeis de sobre
             For Loop Fun:
@@ -1580,8 +1084,6 @@ gl:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
-            Spelling Bee:
-              name: Abella que Soletrea
             Move It, Move It:
               name: Creando camiños
             Your Digital Footprint:
@@ -1658,8 +1160,6 @@ gl:
               name: Cidadanía dixital
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1706,10 +1206,6 @@ gl:
               name: Diversión con bucles "para" (for)
             Binary Bracelets:
               name: Pulseiras Binarias
-            'Unplugged: Binary':
-              name: 'Desconectado: binario'
-            Artist Binary:
-              name: Artista binario
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1777,8 +1273,6 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
-            Spelling Bee:
-              name: Abella que Soletrea
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2159,8 +1653,6 @@ gl:
               name: Condicionais con cartas
             'Unplugged: Binary':
               name: Imaxes binárias
-            Artist Binary:
-              name: Artista binario
             Digital Citizenship:
               name: Cidadanía dixital
         coursee-2020:
@@ -2209,9 +1701,6 @@ gl:
               display_name: Bucles
             csf_events:
               display_name: Eventos
-          lessons:
-            Spelling Bee:
-              name: Abella que Soletrea
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2351,11 +1840,7 @@ gl:
               key: Condicionais con cartas
               name: Condicionais con cartas
             'Unplugged: Binary':
-              key: 'Desconectado: binario'
               name: Imaxes binárias
-            Artist Binary:
-              key: Artista binario
-              name: Artista binario
           lesson_groups:
             csf_events:
               display_name: Eventos
@@ -2438,8 +1923,6 @@ gl:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introdución
             Loops:
               key: Bucles
               name: Bucles
@@ -2463,3 +1946,12 @@ gl:
               display_name: Introdución
             Introduction:
               display_name: Introdución
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Fundamentos de Informática
+              name: Fundamentos de Informática
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-3:
+              name: Plans e recursos da clase

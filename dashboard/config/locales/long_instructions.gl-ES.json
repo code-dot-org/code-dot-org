@@ -82,7 +82,14 @@
         "frozen square iterative": "Parece que estamos na metade do camiño para facer\nun cadrado. Imos xuntar 4 rectas para crear un cadrado.",
         "frozen square loop": "Oi, son a Anna de Arendelle! Imos facer un cadrado\nco bloque \"repita\", que usa menos bloques. Cantas veces (???) o bloque\n\"repita\" debe repetir os bloques dentro del para facer un cadrado?",
         "frozen square loop 3x": "Imos crear tres cadrados, virando despois\nde cada cadrado. Lémbrate de virar 120 graos antes de cada novo cadrado.",
-        "frozen square snowflake": "Consegues crear unha folerpa usando o bloque\n\"repita\" para crear un cadrado 10 veces e o bloque \"vire\" para virar 36\ngraos entre cada cadrado?"
+        "frozen square snowflake": "Consegues crear unha folerpa usando o bloque\n\"repita\" para crear un cadrado 10 veces e o bloque \"vire\" para virar 36\ngraos entre cada cadrado?",
+        "HOC 2018 Level_12_2021": "Noraboa! O mundo acuático aberto agarda por ti. Constrúe un arrecife de coral! Un volcán! Un nuafraxio! Ti decides.",
+        "Overworld Move to Sheep_2021": "Agrega un segundo comando \"andar adiante\" para chegar á ovella.",
+        "courseB_collector_loops_challenge2a_2021": "_\"Imos conseguir o tesouro!\"_\n\nAxuda a Laurel a conseguir alomenos **5** pezas do tesouro para rematar este quebracabezas.",
+        "courseD_bee_nestedLoops8_2021": "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. ",
+        "courseD_maze_nestedLoops4_2021": "Lévame até o xirasol!",
+        "courseF_bee2": "Vostede consegue usar un bucle para recoller todo o néctar?",
+        "courseF_bee_for_challenge2_2021": "Resolve este desafío usando o menor número\nde bloques posíbel."
       }
     }
   }
