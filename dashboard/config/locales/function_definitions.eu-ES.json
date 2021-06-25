@@ -1344,6 +1344,197 @@
           "end game": {
             "name": "bukatu jokoa"
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "marraztu izar bat",
+            "parameters": {
+              "points": "puntuak",
+              "length": "luzera"
+            }
+          },
+          "draw a circle": {
+            "name": "marraztu zirkulu bat"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "luzera",
+              "repeat": "errepikatu"
+            }
+          },
+          "draw a triangle": {
+            "name": "marraztu triangelu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a house": {
+            "name": "marraztu etxe bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a square": {
+            "name": "marraztu karratu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "marraztu izar bat",
+            "parameters": {
+              "points": "puntuak",
+              "length": "luzera"
+            }
+          },
+          "draw a circle": {
+            "name": "marraztu zirkulu bat"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "luzera",
+              "repeat": "errepikatu"
+            }
+          },
+          "draw a triangle": {
+            "name": "marraztu triangelu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a house": {
+            "name": "marraztu etxe bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a square": {
+            "name": "marraztu karratu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "marraztu izar bat",
+            "parameters": {
+              "points": "puntuak",
+              "length": "luzera"
+            }
+          },
+          "draw a circle": {
+            "name": "marraztu zirkulu bat"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "luzera",
+              "repeat": "errepikatu"
+            }
+          },
+          "draw a triangle": {
+            "name": "marraztu triangelu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a house": {
+            "name": "marraztu etxe bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          },
+          "draw a square": {
+            "name": "marraztu karratu bat",
+            "parameters": {
+              "length": "luzera"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "marraztu karratu bat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "marraztu izar bat"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "marraztu izar bat"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "marraztu karratu bat"
+          },
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "marraztu karratu bat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "egin zerbait"
+          }
         }
       }
     }

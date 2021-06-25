@@ -64,7 +64,25 @@
         "courseA_video_Stevie_2018": "Stevie eta Big Proiektua",
         "courseF_bee_for5_2021": "Aldagaiak",
         "courseF_sprites_properties": "Sprite-n Propietateak",
-        "ramp_artist_loops4_2021": "Bota"
+        "ramp_artist_loops4_2021": "Bota",
+        "App Lab Intro 8 - Video Design Mode": "Bideoa: Diseinu modua",
+        "App Lab Intro 8 - Video Getting Started": "Bideoa: Lehen urratsak",
+        "App Lab Intro 8 - Video Images and Sounds": "Bideoa: Irudiak eta soinuak",
+        "App Lab Intro 8 - Video Make It Interactive": "Bideoa: Egin interaktiboa",
+        "App Lab Intro 8 - Video Share Your App": "Bideoa: Partekatu zure aplikazioa",
+        "AppLab Intro 7 - Change Screen Color": "Aldatu pantailaren kolorea",
+        "AppLab Intro 7 - Change Text 2": "Aldatu testua",
+        "AppLab Intro 7 - Full Text": "Bi botoi",
+        "AppLab Intro 7 - onEvent intro": "Jarri botoiak lanean",
+        "AppLab Intro 7 - onEvent twoButtons": "onEvent praktika gehiago",
+        "AppLab Intro 7 - playSound": "Audioak erabiltzen.",
+        "AppLab Intro 7 - thisOrThatAddButton": "Hau edo Hori",
+        "AppLab Intro 7 - thisOrThatAddScreen": "Hau edo Hori",
+        "AppLab Intro 7 - thisOrThatPersonalize": "Hau edo Hori",
+        "AppLab Intro 7 - thisOrThatSetScreen": "Hau edo Hori",
+        "courseA_EOC_artist_1": "Artista: Zooa",
+        "courseA_EOC_artist_2": "Artista: Lorategia",
+        "courseA_EOC_artist_3": "Artista: Espazioa"
       }
     }
   }
