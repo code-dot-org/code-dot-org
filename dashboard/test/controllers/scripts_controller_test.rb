@@ -1043,7 +1043,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in script family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', published_state: SharedConstants::PUBLISHED_STATE.beta
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-script'}
