@@ -7,17 +7,10 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           MOVE1:
             MOVES.Roll: Gorut Jorran
             MOVES.ClapHigh: Spežže Bajas
@@ -42,36 +35,18 @@ se:
             MOVES.ThisOrThat: Dát vai Duot
       Dancelab_atTimestamp:
         text: maŋŋil {TIMESTAMP} {UNIT}
-        options:
-          UNIT:
-            '"measures"': távttat
       Dancelab_changeColorBy:
         text: rievdat {COLOR} {METHOD} {AMOUNT}:iin
-        options:
-          METHOD:
-            '"hue"': ivdnetona
-            '"saturation"': Man garra ivdni
-            '"brightness"': ivdnečuovgadat
       Dancelab_changeMoveEachLR:
         text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           MOVE:
-            '"next"': "(Boahtte)"
-            '"prev"': "(Ovddit)"
-            '"rand"': "(Sahtedohko)"
             MOVES.Roll: Gorut Jorran
             MOVES.ClapHigh: Spežže Bajas
             MOVES.Dab: Dab
@@ -86,9 +61,6 @@ se:
         text: "{SPRITE} daga {MOVE} {DIR} vaikko man galle geardde"
         options:
           MOVE:
-            '"next"': "(Boahtte)"
-            '"prev"': "(Ovddit)"
-            '"rand"': "(Sahtedohko)"
             MOVES.Roll: Gorut Jorran
             MOVES.ClapHigh: Spežže Bajas
             MOVES.Dab: Dab
@@ -104,48 +76,27 @@ se:
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
       Dancelab_changePropEachBy:
         text: rievdat {GROUP} {PROPERTY} {VAL}:in
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
       Dancelab_doMoveEachLR:
         text: "{GROUP} daga {MOVE} {DIR} ovtta geardde"
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           MOVE:
-            '"rand"': "(Sahtedohko)"
             MOVES.XBend: Bend
             MOVES.Roll: Gorut Jorran
             MOVES.XClapSide: Speaččo
@@ -172,7 +123,6 @@ se:
         text: "{SPRITE} daga {MOVE} {DIR} ovtta geardde"
         options:
           MOVE:
-            '"rand"': "(Sahtedohko)"
             MOVES.XBend: Bend
             MOVES.Roll: Gorut Jorran
             MOVES.XClapSide: Speaččo
@@ -199,9 +149,6 @@ se:
         text: gearddut juohke {N} távtta maŋŋil {START}
       Dancelab_everySeconds:
         text: gearddut juohke {N} {UNIT}
-        options:
-          UNIT:
-            '"measures"': távttat
       Dancelab_everySecondsRange:
         text: juohke {N} {UNIT} dán rájes {START} dása {STOP}
         options:
@@ -210,10 +157,6 @@ se:
             seconds: Sekunddat
       Dancelab_everyVerseChorus:
         text: juohke {UNIT}
-        options:
-          UNIT:
-            '"verse"': vearsa
-            '"chorus"': kora
       Dancelab_getEnergy:
         text: viečča {RANGE}
         options:
@@ -226,15 +169,8 @@ se:
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
       Dancelab_getTime:
         text: Dálá áigi {UNIT}:is
-        options:
-          UNIT:
-            '"measures"': távttat
       Dancelab_ifDanceIs:
         text: |-
           jus {SPRITE} lea dahkame {DANCE}
@@ -255,13 +191,6 @@ se:
         text: |-
           jus {UNIT} lea {OP} {N}
           {DO1} {DO2}
-        options:
-          UNIT:
-            '"measures"': távttat
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} njuike {LOCATION}:ii"
         options:
@@ -278,17 +207,10 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           LOCATION:
             "{x: 200, y: 100}": bajemusas
             "{x: 200, y: 300}": vuolemusas
@@ -302,30 +224,12 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           FORMAT:
-            '"border"': ravda
-            '"inner"': siskkáldas njealječiegat
-            '"circle"': jorba
             '"grid"': ruhtu
-            '"top"': bajimus ráidu
-            '"row"': ráidu
-            '"bottom"': vuolimus ráidu
-            '"left"': gurut kolonna
-            '"column"': kolonna
-            '"right"': olgeš kolonna
-            '"x"': ruossa
-            '"plus"': plussa
       Dancelab_makeAnonymousDanceSprite:
         text: ráhkat ođđa {COSTUME} {LOCATION}:s
         options:
@@ -335,7 +239,6 @@ se:
             '"MOOSE"': ealggat
             '"PINEAPPLE"': ananas
             '"SHARK"': háia
-            '"SLOTH"': láikkesealli
           LOCATION:
             "{x: 200, y: 100}": bajemusas
             "{x: 200, y: 300}": vuolemusas
@@ -351,12 +254,10 @@ se:
         options:
           COSTUME:
             '"BEAR"': guovža
-            '"DOG"': beana
             '"FROG"': rihcit
             '"MOOSE"': ealggat
             '"PINEAPPLE"': ananas
             '"SHARK"': háia
-            '"SLOTH"': láikkesealli
           LOCATION:
             "{x: 200, y: 100}": bajemusas
             "{x: 200, y: 300}": vuolemusas
@@ -392,30 +293,12 @@ se:
             '20': '20'
           COSTUME:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
-            '"MOOSE"': ealga
-            '"PINEAPPLE"': ananasat
+            '"MOOSE"': ealggat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           LAYOUT:
-            '"border"': ravda
-            '"inner"': siskkáldas njealječiegat
-            '"circle"': jorba
             '"grid"': ruhtu
-            '"top"': bajimus ráidu
-            '"row"': ráidu
-            '"bottom"': vuolimus ráidu
-            '"left"': gurut kolonna
-            '"column"': kolonna
-            '"right"': olgeš kolonna
-            '"x"': ruossa
-            '"plus"': plussa
       Dancelab_mixColors:
         text: seagut {COLOR1} ja {COLOR2}
       Dancelab_nMeasures:
@@ -432,76 +315,10 @@ se:
         text: |-
           bija duogábeal-effeavtta
           {EFFECT} {PALETTE}
-        options:
-          EFFECT:
-            '"circles"': Jorbbát
-            '"color_cycle"': Ivnnit
-            '"diamonds"': Diamánttat
-            '"disco_ball"': Diskospábba
-            '"fireworks"': Dollarusonat
-            '"swirl"': Hypno
-            '"kaleidoscope"': Kaleidoskohpa
-            '"lasers"': Laser Dánsenguolbi
-            '"splatter"': Málá Goaikkanas
-            '"rainbow"': Arvedávgi
-            '"snowflakes"': Muohta
-            '"text"': Lávlagiid namat
-            '"galaxy"': Gomuvuohta
-            '"sparkles"': Šelggonat
-            '"spiral"': Spirála
-            '"disco"': Njealječiegagat
-            '"stars"': Násttit
-          PALETTE:
-            '"rave"': Čáhppes ja Vilges
-            '"cool"': Čáffa
-            '"electronic"': Elektrovnnalaš
-            '"iceCream"': LákcaJiekŋa
-            '"default"': Čuovga
-            '"neon"': Neona
-            '"tropical"': Trohpalaš
-            '"vintage"': Retro
-            '"warm"': Liekkus
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           bija duogábeal-effeavtta
           {PALETTE} {EFFECT}
-        options:
-          EFFECT:
-            '"rand"': "(Sahtedohko)"
-            '"circles"': Jorbbát
-            '"quads"': Čiegat
-            '"color_cycle"': Ivnnit
-            '"diamonds"': Diamánttat
-            '"disco_ball"': Diskospábba
-            '"fireworks"': Dollarusonat
-            '"flowers"': Lieđit
-            '"growing_stars"': Šaddi Násttit
-            '"swirl"': Hypno
-            '"kaleidoscope"': Kaleidoskohpa
-            '"lasers"': Laser Dánsenguolbi
-            '"splatter"': Málá Goaikkanas
-            '"rainbow"': Arvedávgi
-            '"ripples_random"': Sahtedohko Bárožat
-            '"ripples"': Bárožat
-            '"snowflakes"': Muohta
-            '"text"': Lávlagiid namat
-            '"squiggles"': Squiggles
-            '"galaxy"': Gomuvuohta
-            '"sparkles"': Šelggonat
-            '"spiral"': Spirála
-            '"disco"': Njealječiegagat
-            '"stars"': Násttit
-            '"music_wave"': Bárut
-          PALETTE:
-            '"rave"': Čáhppes ja Vilges
-            '"cool"': Čáffa
-            '"electronic"': Elektrovnnalaš
-            '"iceCream"': LákcaJiekŋa
-            '"default"': Čuovga
-            '"neon"': Neona
-            '"tropical"': Trohpalaš
-            '"vintage"': Retro
-            '"warm"': Liekkus
       Dancelab_setDanceSpeed:
         text: bija {SPRITE} dánsenleavttu {SPEED}
         options:
@@ -516,17 +333,10 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           SPEED:
             '1': normal
             '2': jođánit
@@ -535,104 +345,40 @@ se:
             '0.25': hui njozet
       Dancelab_setForegroundEffect:
         text: bija ovddabeal-effeavtta {EFFECT}
-        options:
-          EFFECT:
-            '"bubbles"': Bulljarasat
-            '"confetti"': Konfetti
-            '"hearts_red"': Váimmut
-            '"music_notes"': MusihkkaNotat
-            '"pineapples"': Ananasat
-            '"pizzas"': Pizzat
-            '"smiling_poop"': Baika
-            '"rain"': Arvi
-            '"floating_rainbows"': Arvedávggit
-            '"smile_face"': Mojit
-            '"spotlight"': Spotčuovga
-            '"color_lights"': LávdeČuovggat
-            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: bija ovddabeal-effeavtta {EFFECT}
-        options:
-          EFFECT:
-            '"rand"': "(Sahtedohko)"
-            '"bubbles"': Bulljarasat
-            '"hearts_colorful"': Ivdnás Váimmut
-            '"confetti"': Konfetti
-            '"emojis"': Emojit
-            '"hearts_red"': Váimmut
-            '"music_notes"': MusihkkaNotat
-            '"paint_drip"': MálaGoaikkanas
-            '"pineapples"': Ananasat
-            '"pizzas"': Pizzat
-            '"smiling_poop"': Baika
-            '"rain"': Arvi
-            '"floating_rainbows"': Arvedávggit
-            '"smile_face"': Mojit
-            '"spotlight"': Spotčuovga
-            '"color_lights"': LávdeČuovggat
-            '"exploding_stars"': Starburst
-            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'bija {SPRITE} {PROPERTY} dása {VAL} '
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
       Dancelab_setPropEach:
         text: bija {GROUP} {PROPERTY} dása {VAL}
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
       Dancelab_setPropRandom:
         text: bija sahtedohko {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
       Dancelab_setPropRandomEach:
         text: bija sahtedohko {GROUP} {PROPERTY}
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
       Dancelab_setTint:
         text: bija {SPRITE} ivdnenyánssa dása {VAL}
       Dancelab_setTintEach:
@@ -640,33 +386,19 @@ se:
         options:
           THIS:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
       Dancelab_setTintEachInline:
         text: bija {THIS} ivdnenyánssa dása  {VAL}
         options:
           THIS:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
       Dancelab_setTintInline:
         text: bija {SPRITE} ivdnenyánssa dása {VAL}
       Dancelab_setVisible:
@@ -680,17 +412,10 @@ se:
         options:
           THIS:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           VISIBILITY:
             'true': oidnosis
             'false': čihkosis
@@ -699,10 +424,6 @@ se:
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
           RANGE:
             '"bass"': bássa
             '"mid"': gaskatona
@@ -712,23 +433,12 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"tint"': Ivdnenyánsa
           RANGE:
             '"bass"': bássa
             '"mid"': gaskatona
@@ -738,11 +448,6 @@ se:
         options:
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"direction"': lihkadanguovlu
-            '"tint"': Ivdnenyánsa
           RANGE:
             '"bass"': bássa
             '"mid"': gaskatona
@@ -752,24 +457,12 @@ se:
         options:
           GROUP:
             '"ALIEN"': Buot alien:at
-            '"BEAR"': guovžžat
             '"CAT"': bussát
             '"DOG"': beatnagat
-            '"DUCK"': čáhcelottit
-            '"FROG"': rihcihat
             '"MOOSE"': ealggat
-            '"PINEAPPLE"': ananasat
             '"ROBOT"': robotat
-            '"SHARK"': háiat
-            '"SLOTH"': láikkeseallit
-            '"UNICORN"': unikornat
           PROPERTY:
             '"width"': govdodat
-            '"rotation"': jorrat
-            '"x"': horisontála posišuvdna
-            '"y"': vertikála posišuvdna
-            '"direction"': lihkadanguovlu
-            '"tint"': Ivdnenyánsa
           RANGE:
             '"bass"': bássa
             '"mid"': gaskatona
@@ -778,36 +471,6 @@ se:
         text: jorgal {STRING}
         options:
           STRING:
-            '"music_wave"': Bárut
-            '"ripples"': Bárožat
-            '"ripples_random"': Sahtedohko Bárožat
-            '"quads"': Čiegat
-            '"flowers"': Lieđit
-            '"popsicles"': Lákcasággi
-            '"squiggles"': Squiggles
-            '"growing_stars"': Šaddi Násttit
-            '"emojis"': Emojit
-            '"hearts_colorful"': Váimmut
-            '"paint_drio"': MálaGoaikkanas
-            '"exploding_stars"': Starburst
-            '"row_top"': bajimus ráidu
-            '"row_bottom"': vuolimus ráidu
-            '"column_left"': gurut kolonna
-            '"column_right"': olgeš kolonna
-            '"mural"': Seaidnemaleriija
-            '"safari"': Safári
-            '"network"': Fierbmi
-            '"highway"': Váldoluodda
-            '"stream"': Rávdnje
-            '"tile"': Flisa
-            '"shadow"': Suoivvan
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -821,33 +484,7 @@ se:
         text: go {KEY} deaddilat
         options:
           KEY:
-            '"space"': gaska
-            '"enter"': enter
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -874,17 +511,10 @@ se:
         text: "{ANIMATION}"
       gamelab_atTime:
         text: dáppe {N} {UNIT}
-        options:
-          UNIT:
-            '"frames"': govat
       gamelab_bounceOff:
         text: "{SPRITE} báhccá {TARGET}"
       gamelab_changePropBy:
         text: rievdat {SPRITE} {PROPERTY} {VAL}:in
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} guoskkeha {SPRITE2}"
       gamelab_clickedOn:
@@ -908,52 +538,20 @@ se:
         text: buot sprite:at
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
-            '"tint"': Ivdnenyánsa
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
-            '"this"': dát
             '"other"': eará
       gamelab_getTime:
         text: áigi {UNIT}
-        options:
-          UNIT:
-            '"frames"': govat
       gamelab_hideTitleScreen:
         text: čiega šearpma bajilčállaga
       gamelab_isKeyPressed:
         text: go {KEY} lea deaddiluvvon
         options:
           KEY:
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} guoskkaha ravddaid"
       gamelab_isTouchingSprite:
@@ -964,39 +562,9 @@ se:
         text: "{CONDITION} {KEY} deaddiluvvon"
         options:
           KEY:
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_locationAt:
         text: 'sadji x: {X} y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Davvi
-            '"East"': Nuorta
-            '"South"': Lulli
-            '"West"': Oarji
       gamelab_locationMouse:
         text: sáhpán sadji
       gamelab_locationOf:
@@ -1017,12 +585,6 @@ se:
         text: sirdde  {SPRITE} {DISTANCE} pixeliid ovddos
       gamelab_moveInDirection:
         text: sirdde  {SPRITE} {DISTANCE} pixeliid {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Davvi
-            '"East"': Nuorta
-            '"South"': Lulli
-            '"West"': Oarji
       gamelab_moveToward:
         text: sirdde  {SPRITE} pixeliid {DISTANCE} {TARGET} guvlui
       gamelab_newSpritePointer:
@@ -1035,12 +597,6 @@ se:
         text: čuojatJiena {SOUND}
       gamelab_pointInDirection:
         text: čujut {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Davvi
-            '"East"': Nuorta
-            '"South"': Lulli
-            '"West"': Oarji
       gamelab_printText:
         text: čálit {TEXT}
       gamelab_randomLocation:
@@ -1062,17 +618,12 @@ se:
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': bána
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáksa
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ruhtu
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': násttit
             undefined: ii oktage
       gamelab_setBackgroundImageAs:
         text: bija duogábeali dása {IMG}
       gamelab_setProp:
         text: bija {SPRITE} {PROPERTY} dása {VAL}
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       gamelab_setSizes:
         text: bija {SPRITE} {PROPERTY} dása {N}%
         options:
@@ -1104,12 +655,6 @@ se:
         text: go vulos-njuolla lea deaddiluvvon
       gamelab_whenKey:
         text: go {KEY} deaddilat
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: go gurut-njuolla lea deaddiluvvon
       gamelab_whenRightArrow:
@@ -1122,12 +667,6 @@ se:
         text: go vulos-njuolla lea deaddiluvvon
       gamelab_whileKey:
         text: go {KEY} lea deaddiluvvon
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: go gurut-njuolla lea deaddiluvvon
       gamelab_whileRightArrow:
@@ -1155,11 +694,6 @@ se:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ii leat mu-gilkor
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
-      Mikelab_changePropBy:
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1172,24 +706,10 @@ se:
             "{x: 300, y: 300}": vuolemusas olgeš
       Mikelab_getNext:
         text: oaččo boahtte objeavtta
-      Mikelab_getProp:
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_groupChangeAnim:
         text: rievdat {SELECT} {COSTUME} {COSTUME2}:ii
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupChangePropBy:
         text: rievdat {PROPERTY} dás {SELECT} {COSTUME} dáinna {VAL}
-        options:
-          SELECT:
-            '"this"': dát
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_groupCreateNewSprite:
         text: ráhkat ođđa {COSTUME} {LOCATION}:s
         options:
@@ -1203,50 +723,22 @@ se:
             "{x: 300, y: 300}": vuolemusas olgeš
       Mikelab_groupDestroy:
         text: sihko {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupDisplace:
         text: buot {COSTUME} lássejit {COSTUME2} sirdimis
       Mikelab_groupEdgesDisplace:
         text: ravddat lássejit {COSTUME} sirdimis
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}:id {PROPERTY}"
-        options:
-          SELECT:
-            '"average"': gaskamearri
-            '"this"': dát
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_groupRemoveAllBehaviors:
         text: bisset {SELECT} {COSTUME} láhttemiid
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} bisána {BEHAVIOR}"
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupRemoveTint:
         text: sihko ivnni {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupSetProp:
         text: bija {PROPERTY} dán {SELECT} {COSTUME} dása {VAL}
-        options:
-          SELECT:
-            '"this"': dát
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_groupSetTint:
         text: rievdat ivnni {SELECT} {COSTUME} dákkár {COLOR}:n
-        options:
-          SELECT:
-            '"this"': dát
       Mikelab_groupWhenClickedOn:
         text: go {COSTUME} coahkkalat
       Mikelab_groupWhenXTouchesY:
@@ -1315,11 +807,6 @@ se:
         text: sirdde objeavtta gurutguvlui
       Mikelab_sendGood:
         text: sirdde objeavtta olgešguvlui
-      Mikelab_setProp:
-        options:
-          PROPERTY:
-            '"rotation"': jorrat
-            '"direction"': lihkadanguovlu
       Mikelab_setupSim:
         text: |-
           setup simulašuvdnii
@@ -1346,10 +833,6 @@ se:
         text: go sáhpán lea coahkkaluvvon
       Mikelab_whenYesNoClicked:
         text: go {KEY} lea coahkkaluvvon
-        options:
-          KEY:
-            '"yes"': juo
-            '"no"': a-a
       Mikelab_xLocationOf:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
@@ -1385,8 +868,6 @@ se:
         options:
           FORMAT:
             '"grid"': ruhtu
-            '"border"': ravda
-            '"row"': ráidu
       binary_drawBin:
         text: tevdne binára {BIN}
       binary_drawBinScreen:
@@ -1408,7 +889,6 @@ se:
           VAL:
             '0': eret
             '1': nalde
-            '"toggle"': lonohala
       binary_drawString:
         text: tevdne streaŋgga {STR}
       binary_goTo:
@@ -1421,68 +901,22 @@ se:
         text: sirdde {DIR}
       binary_whenKey:
         text: go {KEY} deaddilat
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
           jus geaidnu {DIR}
           {STATEMENT}
-        options:
-          DIR:
-            "'right'": olgeš guvlui
-            "'left'": gurut guvlui
       craft_ifStandingOn:
         text: |-
           jus lea {TYPE}
           {STATEMENT}
-        options:
-          TYPE:
-            "'blueCoralBlock'": alit korálla
-            "'redCoralBlock'": rukses korálla
-            "'wool_blue'": čieŋal
-            "'seaLantern'": mearrá likta
       craft_ifStandingOnLimit:
         text: |-
           jus lea {TYPE}
           {STATEMENT}
-        options:
-          TYPE:
-            "'darkPrismarine'": sevdnjes prismarina
-            "'seaLantern'": mearrá likta
       craft_log:
         text: logge dieđu {MESSAGE}
       craft_placeBlock:
         text: sadji {blockType}
-        options:
-          blockType:
-            '"strippedOak"': nálukeahtes áika
-            '"strippedDarkOak"': nálukeahtes sevdnjes áika
-            '"stoneBricks"': geađgediillat
-            '"mossyStoneBricks"': jeagilduvvon geađgediillat
-            '"crackedStoneBricks"': cuovkanan geađgediillat
-            '"blueCoralBlock"': alit korálla blohkka
-            '"pinkCoralBlock"': čuvgesrukses korálla blohkka
-            '"magentaCoralBlock"': mageanta korálla blohkka
-            '"redCoralBlock"': rukses korálla blohkka
-            '"yellowCoralBlock"': fiskes korálla blohkka
-            '"blueDeadCoralBlock"': jápmán alit korálla blohkka
-            '"pinkDeadCoralBlock"': jápmán čuvgesrukses korálla blohkka
-            '"magentaDeadCoralBlock"': jápmán magenta korálla blohkka
-            '"readDeadCoralBlock"': jápmán rukses korálla blohkka
-            '"yellowDeadCoralBlock"': jápmán fiskes korálla blohkka
-            '"prismarine"': prismarina
-            '"darkPrismarine"': sevdnjes prismarina
-            '"seaLantern"': mearrá likta
-            '"packedIce"': jiekŋa
-            '"blueIce"': alit jiekŋa
-            '"blackConcrete"': čáhppes betoŋga
-            '"seaGrass"': mearrarássi
-            '"kelp"': debbot
-            '"polishedGranite"': šelges granihtta
       craft_placePrismarine:
         text: bija prismarina
       craft_repeatUntilConduit:
@@ -1497,12 +931,8 @@ se:
         text: go leat bidjan olggos {ENTITY}
         options:
           ENTITY:
-            '"cod"': dorski
             '"dolphin"': delfiidna
-            '"salmon"': luossa
-            '"seaTurtle"': mearragalbarihcit
             '"squid"': áhkkár
-            '"tropicalFish"': trohpalaš guolli
       craft_turn:
         text: jorgal {DIR}
         options:
