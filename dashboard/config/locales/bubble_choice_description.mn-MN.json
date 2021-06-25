@@ -1,2 +1,12 @@
 {
+  "mn-MN": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Амьтан бүрт өрөө зураарай. ",
+        "courseD_bee_nestedLoops8_2021": "Цэцэг бүрээс бүх шүүсийг цуглуулж, сархинаг дотор зөгийн бал хийгээрэй. ",
+        "courseD_bee_nestedLoops9_2021": "Зөгийн балыг бүгдийг нь хийгээрэй.",
+        "ramp_artist_loops8_2021": "Дүрс хайж, гогцоо ашиглан энэ кодыг богино болгоорой."
+      }
+    }
+  }
 }
