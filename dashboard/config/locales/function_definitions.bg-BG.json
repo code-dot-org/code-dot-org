@@ -1541,6 +1541,219 @@
           "end game": {
             "name": "прекрати игра"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "моята функция"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw triangle": {
+            "name": "начертайте триъгълник"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
         }
       }
     }
