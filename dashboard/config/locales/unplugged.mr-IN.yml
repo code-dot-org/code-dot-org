@@ -1,1 +1,30 @@
---- {}
+---
+mr:
+  data:
+    unplugged:
+      Conditionals:
+        title: कंडीशनल्स
+      courseB_unplugged_MRF:
+        title: अनप्लग्ड कृती
+      courseB_unplugged_loopyMRF:
+        title: अनप्लग्ड कृती
+      courseC_Unplugged_ScreenOutTheMean:
+        title: अनप्लग्ड कृती
+      courseD_unplugged_digitalCitizenship:
+        title: अनप्लग्ड कृती
+      courseF_unplugged_powerOfWords:
+        title: अनप्लग्ड कृती
+      courseD_unplugged_digitalCitizenship_2018:
+        title: अनप्लग्ड कृती
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: अनप्लग्ड कृती
+      Conditionals_2018:
+        title: कंडीशनल्स
+      Conditionals_2019:
+        title: कंडीशनल्स
+      courseD_unplugged_digitalCitizenship_2019:
+        title: अनप्लग्ड कृती
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: अनप्लग्ड कृती
+      timeforcs_demo_conditionals:
+        title: कंडीशनल्स

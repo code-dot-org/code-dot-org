@@ -1,12 +1,106 @@
+---
 mr:
   data:
     script:
       name:
+        course2:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        course3:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+        playlab:
+          description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
+          description_short: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
+          student_description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
+        artist:
+          title: आर्टीस्ट
+          description: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
+          description_short: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+          student_description: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
+        hourofcode:
+          title: क्लासिक मेझ
+        frozen:
+          title: अॅना आणि एल्साबरोबर कोड लिहा
+          description: अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या मित्रमैत्रिणींशी तो शेअर करू शकाल.
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+          student_description: अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या मित्रमैत्रिणींशी तो शेअर करू शकाल.
+        course4:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+            'Artist: Variables':
+              name: 'आर्टीस्ट: व्हेरीएबल्स'
+        algebra:
+          lessons:
+            'Eval: Conditionals':
+              name: कंडीशनल्स
+        infinity:
+          description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
+          description_short: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
+          student_description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
+        20-hour:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
         events:
           title: ईव्हेंट्स
           description: ईव्हेंट्स
           description_short: ईव्हेंट्स
           student_description: ईव्हेंट्स
+        flappy:
+          title: फ्लॅपी कोड
+          description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय? आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
+          lessons:
+            Flappy Code:
+              name: फ्लॅपी कोड
+          student_description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय? आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
+        cspunit1:
+          lessons:
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        text-compression:
+          title: टेक्स्ट कॉम्प्रेशन
+          lessons:
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        allthethings:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        starwars:
+          description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+          description_short: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+          student_description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+        starwarsblocks:
+          description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+          description_short: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+          student_description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
+        mc:
+          title: माईनक्राफ्ट अवर ऑफ कोड
+        oceans:
+          title: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+        csp2-2017:
+          lessons:
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        csp4-2017:
+          lessons:
+            Simple Encryption:
+              name: सुलभ एनक्रीप्शन
+        MikeTest:
+          lessons:
+            Artist Functions:
+              name: आर्टीस्ट फंक्शन्स
         gradeKinder:
           lessons:
             Events:
@@ -15,19 +109,206 @@ mr:
           lessons:
             Events:
               name: ईव्हेंट्स
+        grade5:
+          lessons:
+            'Artist: Variables':
+              name: 'आर्टीस्ट: व्हेरीएबल्स'
+        csd3-2017:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
         k5concepts:
           lessons:
+            Conditionals:
+              name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: सुलभ एनक्रीप्शन
         minecraft:
           description_short: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
           description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
           student_description: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा.
+        flappy-impact-study:
+          lessons:
+            Flappy Code:
+              name: फ्लॅपी कोड
+        coursea-draft:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        courseb-draft:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        coursed-draft:
+          lessons:
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        coursee-draft:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        sports:
+          lessons:
+            Sports:
+              name: क्रीडा
+        coursee-ramp:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        csd3-draft:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        csd3-chapters:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        coursea-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        courseb-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        coursec-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        coursed-2017:
+          lessons:
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        coursee-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        coursef-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        express-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        pre-express-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        e-f-ramp:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+            Conditionals:
+              name: कंडीशनल्स
+        new-d:
+          lessons:
+            Nested Loops:
+              name: नेस्टेड लूप्स
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        new-express:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        new-e:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Conditionals:
+              name: कंडीशनल्स
+        new-f:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        pwc:
+          lessons:
+            Simple Encryption:
+              name: सुलभ एनक्रीप्शन
+        hero:
+          description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
+          lessons:
+            Minecraft Hour of Code:
+              name: माईनक्राफ्ट अवर ऑफ कोड
+          student_description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
+        course-e-2018:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+            Conditionals:
+              name: कंडीशनल्स
+        course-f-2018:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        csd3-1819draft:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        csd3-2018:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        express-2018:
+          lessons:
+            Nested Loops:
+              name: नेस्टेड लूप्स
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+        coursee-2018:
+          lessons:
+            Functions in Artist:
+              name: आर्टीस्टसह फंक्शन्स
+            Minecraft Hour of Code:
+              name: माईनक्राफ्ट अवर ऑफ कोड
+        coursef-2018:
+          lessons:
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+        csp2-2018:
+          lessons:
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        csp4-2018:
+          lessons:
+            Simple Encryption:
+              name: सुलभ एनक्रीप्शन
+        frozen-2018:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
+        frozen-2018-test:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
         dance:
-          title: डांस पार्टी
           lessons:
             Dance Party:
               name: डांस पार्टी
+        frozen-2018-test-b:
+          lessons:
+            Artist:
+              name: आर्टीस्ट
         dance--draft:
           lessons:
             Dance Party:
@@ -36,6 +317,19 @@ mr:
           lessons:
             Dance Party:
               name: डांस पार्टी
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        dance-extras:
+          description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+          student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+        coursef-2019:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
         dance-low:
           lessons:
             Dance Party:
@@ -44,21 +338,51 @@ mr:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+            csf_conditionals:
+              display_name: कंडीशनल्स
           lessons:
             Dance Party:
               name: डांस पार्टी
+        coursee-2019:
+          lesson_groups:
+            csf_nested_loops:
+              display_name: नेस्टेड लूप्स
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
+            Functions in Artist:
+              name: आर्टीस्टसह फंक्शन्स
         express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
           lessons:
+            Functions in Artist:
+              name: आर्टीस्टसह फंक्शन्स
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
             Dance Party:
               name: डांस पार्टी
+        dance-extras-gallery:
+          title: नाचत रहा
+          description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+          student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
         coursec-2019:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
         coursea-2019:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
         courseb-2019:
           lesson_groups:
             csf_events:
@@ -67,26 +391,125 @@ mr:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+        csd3-2019:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp2-2019:
+          lessons:
+            Text Compression:
+              name: टेक्स्ट कॉम्प्रेशन
+        csp4-2019:
+          lessons:
+            Simple Encryption:
+              name: सुलभ एनक्रीप्शन
+        time4csdemo:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csd3-pilot:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
         csl-vn:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+        peru-2019:
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Nested Loops:
+              name: नेस्टेड लूप्स
         dance-2019:
           lessons:
             Dance Party:
               name: डांस पार्टी
         k5-onlinepd-2019:
           lessons:
+            Conditionals:
+              name: कंडीशनल्स
             Events:
               name: ईव्हेंट्स
+        dance-extras-2019:
+          description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+          student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        time4cs-original-unit-1:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
+            csf_nested_loops:
+              display_name: नेस्टेड लूप्स
+        time4cs-experiment-unit-2:
+          lessons:
+            Functions with Artist:
+              name: आर्टीस्टसह फंक्शन्स
         time4cs-control-unit-1:
           lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
             csf_events:
               display_name: ईव्हेंट्स
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
             csf_events:
               display_name: ईव्हेंट्स
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
+        csd3-2020:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
         coursea-2020:
           lesson_groups:
             csf_events:
@@ -103,17 +526,44 @@ mr:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+            csf_conditionals:
+              display_name: कंडीशनल्स
           lessons:
             Dance Party:
               name: डांस पार्टी
+        coursee-2020:
+          lesson_groups:
+            csf_nested_loops:
+              display_name: नेस्टेड लूप्स
+          lessons:
+            Functions in Artist:
+              name: आर्टीस्टसह फंक्शन्स
+        coursef-2020:
+          lessons:
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
+            AI for Oceans:
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
         express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
           lessons:
             Dance Party:
               name: डांस पार्टी
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
+            Functions with Artist:
+              name: आर्टीस्टसह फंक्शन्स
+            For Loops with Artist:
+              name: आर्टीस्टसह फॉर लूप्स
         pre-express-2020:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+          lessons:
+            Loops in Artist:
+              name: आर्टीस्टमध्ये लूप्स
         code-break:
           lessons:
             Events:
@@ -122,11 +572,33 @@ mr:
           lessons:
             Events:
               name: ईव्हेंट्स
+            Conditionals:
+              name: कंडीशनल्स
+        csd3-virtual:
+          lessons:
+            Conditionals:
+              name: कंडीशनल्स
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+        csd3-2021:
+          lessons:
+            Conditionals:
+              key: कंडीशनल्स
+              name: कंडीशनल्स
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: कंडीशनल्स
         coursea-2021:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
         courseb-2021:
+          lessons:
+            Loops in Artist:
+              key: आर्टीस्टमध्ये लूप्स
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -139,17 +611,47 @@ mr:
             Dance Party:
               key: डांस पार्टी
               name: डांस पार्टी
+            Loops in Artist:
+              key: आर्टीस्टमध्ये लूप्स
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+            csf_conditionals:
+              display_name: कंडीशनल्स
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: कंडीशनल्स
+            Functions in Artist:
+              name: आर्टीस्टसह फंक्शन्स
+          lesson_groups:
+            ramp_up:
+              display_name: नेस्टेड लूप्स
+            csf_nested_loops:
+              display_name: कंडीशनल्स
+        coursef-2021:
+          lessons:
+            AI for Oceans:
+              key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+              name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+            For Loops in Artist:
+              name: आर्टीस्टसह फॉर लूप्स
         express-2021:
           lessons:
             Dance Party:
               key: डांस पार्टी
               name: डांस पार्टी
+            Functions with Artist:
+              key: आर्टीस्टसह फंक्शन्स
+              name: आर्टीस्टसह फंक्शन्स
+            For Loops with Artist:
+              key: आर्टीस्टसह फॉर लूप्स
+              name: आर्टीस्टसह फॉर लूप्स
             lesson-1:
               name: डांस पार्टी
           lesson_groups:
+            csf_conditionals:
+              display_name: कंडीशनल्स
             lessonGroup-9:
               display_name: ईव्हेंट्स
         pre-express-2021:
@@ -161,3 +663,6 @@ mr:
             Events:
               key: ईव्हेंट्स
               name: ईव्हेंट्स
+            Conditionals:
+              key: कंडीशनल्स
+              name: कंडीशनल्स

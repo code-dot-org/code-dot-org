@@ -59,6 +59,19 @@
         "Dance_Party_11": {
           "dance_callout_11_a": "नवीन ब्लॉक!",
           "dance_callout_11_b": "नवीन ब्लॉक!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "हा ब्लॉक तुमच्या प्रोग्राममध्ये जोडा!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "नवीन ब्लॉक!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "नवीन ब्लॉक!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "नवीन ब्लॉक!",
+          "new_block_4": "नवीन ब्लॉक!"
         }
       }
     }

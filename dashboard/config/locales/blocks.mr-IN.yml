@@ -6,16 +6,10 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           MOVE1:
             MOVES.Roll: बॉडी रोल
             MOVES.ClapHigh: वरची टाळी
@@ -44,34 +38,19 @@ mr:
         text: "{TIMESTAMP} {UNIT} नंतर"
         options:
           UNIT:
-            '"measures"': मापे
             '"seconds"': सेकंद
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} ला {AMOUNT} ने बदला"
-        options:
-          METHOD:
-            '"hue"': छटा
-            '"saturation"': संपृक्तता
-            '"brightness"': चमक
       Dancelab_changeMoveEachLR:
         text: "{GROUP} नेहेमी {MOVE} {DIR} करतात"
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           MOVE:
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Previous)"
             MOVES.Roll: बॉडी रोल
             MOVES.ClapHigh: वरची टाळी
             MOVES.Dab: डॅब
@@ -87,9 +66,6 @@ mr:
         text: "{SPRITE} नेहेमी {MOVE} {DIR} करतात"
         options:
           MOVE:
-            '"next"': "(Next)"
-            '"prev"': "(Previous)"
-            '"rand"': "(Previous)"
             MOVES.Roll: बॉडी रोल
             MOVES.ClapHigh: वरची टाळी
             MOVES.Dab: डॅब
@@ -108,48 +84,29 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
       Dancelab_changePropEachBy:
         text: "{GROUP} {PROPERTY} ला {VAL} ने बदला"
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
       Dancelab_doMoveEachLR:
         text: "{GROUP} एकदा {MOVE} {DIR} करतात"
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           MOVE:
-            '"rand"': "(Previous)"
             MOVES.XBend: वाका
             MOVES.Roll: बॉडी रोल
             MOVES.XClapSide: टाळ्या वाजवा
@@ -177,7 +134,6 @@ mr:
         text: "{SPRITE} एकदा {MOVE} {DIR} करतात"
         options:
           MOVE:
-            '"rand"': "(Previous)"
             MOVES.XBend: वाका
             MOVES.Roll: बॉडी रोल
             MOVES.XClapSide: टाळ्या वाजवा
@@ -204,7 +160,6 @@ mr:
       Dancelab_everySeconds:
         options:
           UNIT:
-            '"measures"': मापे
             '"seconds"': सेकंद
       Dancelab_everySecondsRange:
         text: 'every {N} {UNIT} from {START} to {STOP} '
@@ -214,10 +169,6 @@ mr:
             seconds: सेकंद
       Dancelab_everyVerseChorus:
         text: 'every {UNIT} '
-        options:
-          UNIT:
-            '"verse"': पद्य
-            '"chorus"': कोरस
       Dancelab_getEnergy:
         text: get {RANGE}
         options:
@@ -232,15 +183,10 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
       Dancelab_getTime:
         text: "{UNIT} मध्ये सध्याची वेळ"
         options:
           UNIT:
-            '"measures"': मापे
             '"seconds"': सेकंद
       Dancelab_ifDanceIs:
         text: |-
@@ -263,12 +209,7 @@ mr:
         text: "जर {UNIT}, {OP} {N} \n{DO1} {DO2} असेल"
         options:
           UNIT:
-            '"measures"': मापे
             '"seconds"': सेकंद
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} वर जा {LOCATION}"
         options:
@@ -282,16 +223,10 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           LOCATION:
             "{x: 200, y: 100}": वर
             "{x: 200, y: 300}": खाली
@@ -302,25 +237,12 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           FORMAT:
-            '"border"': सीमारेषा
-            '"inner"': चौरस च्या आत
-            '"circle"': वर्तुळ
             '"grid"': ग्रिड
-            '"row"': ओळ
-            '"column"': स्तंभ
-            '"x"': क्रिस-क्रॉस
-            '"plus"': प्लस
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -342,7 +264,6 @@ mr:
         options:
           COSTUME:
             '"BEAR"': अस्वल
-            '"DOG"': कुत्रा
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
@@ -378,25 +299,12 @@ mr:
             '20': '20'
           COSTUME:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           LAYOUT:
-            '"border"': सीमारेषा
-            '"inner"': चौरस च्या आत
-            '"circle"': वर्तुळ
             '"grid"': ग्रिड
-            '"row"': ओळ
-            '"column"': स्तंभ
-            '"x"': क्रिस-क्रॉस
-            '"plus"': प्लस
       Dancelab_mixColors:
         text: "{COLOR1} आणि {COLOR2} यांचे मिश्रण करा"
       Dancelab_nMeasures:
@@ -418,33 +326,6 @@ mr:
         options:
           EFFECT:
             '"none"': कुठलेच नाही
-            '"circles"': वर्तुळे
-            '"color_cycle"': रंग
-            '"diamonds"': हिरे
-            '"disco_ball"': डिस्को बॉल
-            '"fireworks"': फटाके
-            '"swirl"': हिप्नो
-            '"kaleidoscope"': कॅलिडोस्कोप
-            '"lasers"': लेसर डांस फ्लोर
-            '"splatter"': पेंट फवारणी
-            '"rainbow"': इंद्रधनुष्य
-            '"snowflakes"': हिमवर्षाव
-            '"text"': गाण्यांची नावे
-            '"galaxy"': स्पेस
-            '"sparkles"': स्पार्कल्स
-            '"spiral"': नागमोडी
-            '"disco"': चौरस
-            '"stars"': तारे
-          PALETTE:
-            '"rave"': काळा आणि पांढरा
-            '"cool"': मस्त
-            '"electronic"': इलेक्ट्रॉनिक
-            '"iceCream"': आईसक्रीम
-            '"default"': प्रकाश
-            '"neon"': निऑन
-            '"tropical"': उष्णकटिबंधीय
-            '"vintage"': व्हिंटेज
-            '"warm"': उबदार
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           set background effect
@@ -452,34 +333,6 @@ mr:
         options:
           EFFECT:
             '"none"': कुठलेच नाही
-            '"rand"': "(Previous)"
-            '"circles"': वर्तुळे
-            '"color_cycle"': रंग
-            '"diamonds"': हिरे
-            '"disco_ball"': डिस्को बॉल
-            '"fireworks"': फटाके
-            '"swirl"': हिप्नो
-            '"kaleidoscope"': कॅलिडोस्कोप
-            '"lasers"': लेसर डांस फ्लोर
-            '"splatter"': पेंट फवारणी
-            '"rainbow"': इंद्रधनुष्य
-            '"snowflakes"': हिमवर्षाव
-            '"text"': गाण्यांची नावे
-            '"galaxy"': स्पेस
-            '"sparkles"': स्पार्कल्स
-            '"spiral"': नागमोडी
-            '"disco"': चौरस
-            '"stars"': तारे
-          PALETTE:
-            '"rave"': काळा आणि पांढरा
-            '"cool"': मस्त
-            '"electronic"': इलेक्ट्रॉनिक
-            '"iceCream"': आईसक्रीम
-            '"default"': प्रकाश
-            '"neon"': निऑन
-            '"tropical"': उष्णकटिबंधीय
-            '"vintage"': व्हिंटेज
-            '"warm"': उबदार
       Dancelab_setDanceSpeed:
         text: set {SPRITE} dance speed to {SPEED}
         options:
@@ -494,16 +347,10 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           SPEED:
             '1': normal
             '2': जलद
@@ -515,38 +362,11 @@ mr:
         options:
           EFFECT:
             '"none"': कुठलेच नाही
-            '"bubbles"': फुगे
-            '"confetti"': कॉन्फेटी
-            '"hearts_red"': ह्रदय
-            '"music_notes"': संगीत नोट्स
-            '"pineapples"': अननस
-            '"pizzas"': पिझ्झा
-            '"smiling_poop"': पूप
-            '"rain"': पाऊस
-            '"floating_rainbows"': इंद्रधनुष्य
-            '"smile_face"': स्मित
-            '"spotlight"': स्पॉटलाइट
-            '"color_lights"': स्टेज लाइट्स
-            '"raining_tacos"': टाको
       Dancelab_setForegroundEffectExtended:
         text: अग्रभूमीचा प्रभाव {EFFECT} करा
         options:
           EFFECT:
             '"none"': कुठलेच नाही
-            '"rand"': "(Previous)"
-            '"bubbles"': फुगे
-            '"confetti"': कॉन्फेटी
-            '"hearts_red"': ह्रदय
-            '"music_notes"': संगीत नोट्स
-            '"pineapples"': अननस
-            '"pizzas"': पिझ्झा
-            '"smiling_poop"': पूप
-            '"rain"': पाऊस
-            '"floating_rainbows"': इंद्रधनुष्य
-            '"smile_face"': स्मित
-            '"spotlight"': स्पॉटलाइट
-            '"color_lights"': स्टेज लाइट्स
-            '"raining_tacos"': टाको
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} ला {VAL} वर सेट करा "
         options:
@@ -554,32 +374,19 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
       Dancelab_setPropEach:
         text: set {GROUP} {PROPERTY} to {VAL}
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} ला अनियत करा"
         options:
@@ -587,33 +394,19 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
       Dancelab_setPropRandomEach:
         text: "{GROUP} {PROPERTY} ला अनियत करा"
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
       Dancelab_setTint:
         text: "{SPRITE} चा रंग {VAL} सेट करा"
       Dancelab_setTintEach:
@@ -621,31 +414,19 @@ mr:
         options:
           THIS:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintEachInline:
         text: set {THIS} tint to {VAL}
         options:
           THIS:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
       Dancelab_setTintInline:
         text: "{SPRITE} चा रंग {VAL} सेट करा"
       Dancelab_setVisible:
@@ -659,16 +440,10 @@ mr:
         options:
           THIS:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           VISIBILITY:
             'true': दृश्य
             'false': अदृश्य
@@ -679,10 +454,6 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
           RANGE:
             '"bass"': बेस
             '"mid"': मिड
@@ -692,24 +463,14 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"tint"': रंग
           RANGE:
             '"bass"': बेस
             '"mid"': मिड
@@ -721,11 +482,6 @@ mr:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"direction"': हालचालीची दिशा
-            '"tint"': रंग
           RANGE:
             '"bass"': बेस
             '"mid"': मिड
@@ -735,25 +491,14 @@ mr:
         options:
           GROUP:
             '"ALIEN"': एलियन
-            '"BEAR"': अस्वल
             '"CAT"': मांजरी
             '"DOG"': कुत्री
-            '"DUCK"': बदके
-            '"FROG"': बेडूक
             '"MOOSE"': मूस
-            '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
-            '"SHARK"': शार्क
-            '"UNICORN"': यूनिकॉर्न
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
-            '"rotation"': फिरणे
-            '"x"': आडवी स्थिती
-            '"y"': उभी स्थिती
-            '"direction"': हालचालीची दिशा
-            '"tint"': रंग
           RANGE:
             '"bass"': बेस
             '"mid"': मिड
@@ -762,14 +507,6 @@ mr:
         text: translate {STRING}
         options:
           STRING:
-            '"hearts_colorful"': ह्रदय
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -788,32 +525,7 @@ mr:
             '"down"': खाली
             '"right"': उजवा
             '"space"': स्पेस
-            '"enter"': एंटर
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -843,16 +555,11 @@ mr:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
-            '"tint"': रंग
       gamelab_getTime:
         options:
           UNIT:
@@ -865,30 +572,7 @@ mr:
             '"left"': डावा
             '"right"': उजवा
             '"space"': स्पेस
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} वर जा {LOCATION}"
       gamelab_keyPressed:
@@ -899,30 +583,7 @@ mr:
             '"left"': डावा
             '"right"': उजवा
             '"space"': स्पेस
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -942,8 +603,6 @@ mr:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       gamelab_setProp_dropdown:
         options:
           PROPERTY:
@@ -968,10 +627,6 @@ mr:
             '"left"': डावा
             '"right"': उजवा
             '"space"': स्पेस
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -980,16 +635,10 @@ mr:
             '"left"': डावा
             '"right"': उजवा
             '"space"': स्पेस
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1001,14 +650,10 @@ mr:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -1020,14 +665,10 @@ mr:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_ifDanceIs:
         text: |-
           "if {SPRITE} is doing {DANCE}
@@ -1051,8 +692,6 @@ mr:
         options:
           PROPERTY:
             '"scale"': आकार
-            '"rotation"': फिरणे
-            '"direction"': हालचालीची दिशा
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1071,8 +710,6 @@ mr:
         options:
           FORMAT:
             '"grid"': ग्रिड
-            '"border"': सीमारेषा
-            '"row"': ओळ
       binary_move:
         options:
           DIR:
@@ -1089,7 +726,3 @@ mr:
             '"left"': डावा
             '"right"': उजवा
             '"space"': स्पेस
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
