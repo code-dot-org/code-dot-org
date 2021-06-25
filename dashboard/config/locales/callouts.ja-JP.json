@@ -1333,6 +1333,261 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "この数字は かえることができます。",
           "courseE_artist_ramp8_2": "ここをクリックして、くりかえしの回数をかえてみよう。"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "プログラムにこのブロックを追加！"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "このブロックをプログラムに追加します。",
+          "arrow_buttons": "矢印ボタンを押してダンサーをコントロールします。"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "プログラムにこのブロックを追加！"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "プログラムに新しいイベントを追加します。"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "新しいブロック！"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "新しいブロック！",
+          "new_block_4": "新しいブロック！"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "このブロックを使って、プログラムがどのように動くか あなたや先生のメモを 残すことができます。"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "このほんの小さな命令が、ワークスペースにある同じ名前をもったぼう大なコードを実行するようコンピューターに命令します。"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "これが「繰り返す」ループです!  ワークスペースにあるこれをクリックして、繰り返し実行したいコードを追加しましょう。"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent は水の上に立つことができますが、プレイヤーはできません!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "これらのブロックは削除できませんが、変更することはできます!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent は溶岩の上に立つことができますが、プレイヤーはできません!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "用意されたブロックを使って始めましょう"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "このコードで家を建ててみましょう"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "「実行」ボタンをおして、プログラムを動かしてください。",
+          "craft_drag_block_callout": "`前に すすむ` の下に もうひとつ`前に すすむ`を引っ付けよう。"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "ここにブロックを置いて繰り返しましょう"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "溶岩を調べるコードに前進のコマンドを追加しましょう"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "鉄を掘りましょう！"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ブロックの左上のかずは このブロックをつかう かいすうです。"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "ライン上を いったり きたりすることが できます。"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "このブロックで たからものを あつめます。"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "ひだりうえのすうじは、このブロックが つかえる かいすう です。"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "これは吹き出し"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "やじるしのほうこうをかえるには、やじるしをおしてください。"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "\"ランダム\"をえらぶと おとが ランダムに かわります。"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "このブロックをつかえるのは、1回だけです。どうやって つかいますか？\n"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "このブロックで たからものを あつめます。"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "ヒントが ほしいときは、でんきゅうを クリック！"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "やじるしのほうこう は、ドロップダウンで かわります。\n"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "はたを目指して 主人公を動かそう。"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "ペンギンが きょうりゅうに さわったとき につかうのは、このブロックです。"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "このブロックは、キャラを ほかの ばしょに いどうさせるのに つかいます。"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "このブロックはたいせつです。かならず、これを使います。"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "プログラムに これを ついかしよう。"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "ツールボックスに 新しいブロックが あるのが わかるかな？つかい方は、つぎの パズルで せつめいします。"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "ひつようなブロックがあれば、ツールボックスからとり出そう。"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "カボチャは、カボチャの右下に 書いてある数だけ あります。"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "灰色のブロックは、消すことができません。"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "courseC_maze_programming3_3": "はい色のブロックは けすことが できません。"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "これが、パズルへの さいしょの チャレンジです。あきらめずに がんばろう。",
+          "courseC_maze_programming7_2": "はい色のブロックは、けすことが できません。"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "１つだけブロックを入れます。"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "１つだけブロックを入れます。"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "パズルをクリアするのに色を変えるひつようはないけど、見本みたいにするのなら、`てきとうな色`を使ってみよう。"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "すべてのくもの下で花があるか調べてね。ハチの巣か どうかは 調べなくていいよ。",
+          "4_5_Bee_Conditionals_2_2": "わからないときは、ここをクリックしてビデオを見てみよう。"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "花（または、ハチの巣）のところで、すべてのミツを集める（または、ハチミツをつくる）には、これを使います。"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "このパズルでは、`前に道がある間` を使います。"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ブロックの左上にある数字は、そのブロックを使用できる回数です。"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックをつなげたら「実行」を押してプログラムを実行してください。"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "これはツールボックスで、パズルをクリアするのに必要なブロックが入っています。"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "余計なブロックを消すには、そのブロックをドラックしてツールボックスに持っていきます。",
+          "stone_block_2": "灰色のブロックは、消すことができません。"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "ブロックの左上に数字がないので、そのブロックは 何回でも 使えるよ！"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "ここクリック！"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "この命令で正方形をかくことから始めよう。"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "緑色の関数ブロックが実行されると、関数の中のすべてのブロックが実行されます。最初の正方形をかいたら、アーティストはつぎに何をしますか？"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "関数を作る命令は、ここをクリックすると出てきます。"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge1_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "この下にプログラムを書きたそう。",
+          "courseE_artist_functions_challenge2_callout2": "このデザインがイマイチなら、好きなデザインに変えてみよう。"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "こんどのツールボックスは前とちょっとちがいます。クリックすると そのカテゴリに ある命令が 出てきます。"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "作物は 何が なっているか わからないよ。プログラムが 実行される度に 変わります。"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "ツールボックスは、\"カテゴリー\"モードです。`まで` は、ここにあります。"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "`まで`は、ここにあります。"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "`計算 (けいさん)` ブロックは、ここにあります。"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "変数は、ここにあります。"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "クリックして どうなっているのか見てみよう。"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "すべてのブロックを つなげたら、\"実行（じっこう）\" を おしてみよう。"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
         }
       }
     }
