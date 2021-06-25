@@ -429,7 +429,7 @@ class CoursesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group
     unit_group.update!(name: 'csp-2017')
-    script = create :script, hidden: true, is_migrated: true
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
 
     assert_nil unit_group.course_version
