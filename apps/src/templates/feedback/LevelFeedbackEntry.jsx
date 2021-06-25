@@ -7,35 +7,37 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const measureElement = element => {
-  const DOMNode = ReactDOM.findDOMNode(element);
-  return {
-    height: DOMNode.offsetHeight
-  };
+const getElementHeight = element => {
+  return ReactDOM.findDOMNode(element).offsetHeight;
 };
 
-const initialCommentHeight = 40;
+const visibleCommentHeight = 30;
+
+const RubricPerformanceCopy = {
+  performanceLevel1: i18n.rubricLevelOneHeader(),
+  performanceLevel2: i18n.rubricLevelTwoHeader(),
+  performanceLevel3: i18n.rubricLevelThreeHeader(),
+  performanceLevel4: i18n.rubricLevelFourHeader()
+};
 
 export default class LevelFeedbackEntry extends Component {
   state = {
     expanded: false,
-    commentHeight: initialCommentHeight
+    commentHeight: 0
   };
 
   static propTypes = {feedback: shapes.feedback};
 
   expand = () => {
     this.setState({expanded: true});
-    if (this.longComment()) {
-      firehoseClient.putRecord(
-        {
-          study: 'all-feedback',
-          event: 'expand-feedback',
-          data_json: {feedback_id: this.props.feedback.id}
-        },
-        {includeUserId: true}
-      );
-    }
+    firehoseClient.putRecord(
+      {
+        study: 'all-feedback',
+        event: 'expand-feedback',
+        data_json: {feedback_id: this.props.feedback.id}
+      },
+      {includeUserId: true}
+    );
   };
 
   collapse = () => {
@@ -44,10 +46,8 @@ export default class LevelFeedbackEntry extends Component {
 
   componentDidMount() {
     this.comment &&
-      this.setState({commentHeight: measureElement(this.comment).height});
+      this.setState({commentHeight: getElementHeight(this.comment)});
   }
-
-  longComment = () => this.state.commentHeight > initialCommentHeight;
 
   render() {
     const {
@@ -63,46 +63,33 @@ export default class LevelFeedbackEntry extends Component {
       performance
     } = this.props.feedback;
 
+    const {expanded, commentHeight} = this.state;
+
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
     const commentExists = comment.length > 2;
 
     // These heights ensure that the initial line of the comment will be visible, and a 'sneak peak' of the second line for long comments.
-    var baseHeight;
-    switch (true) {
-      case commentExists && performance !== null:
-        baseHeight = 125;
-        break;
-      case commentExists || performance !== null:
-        baseHeight = 96;
-        break;
-      default:
-        baseHeight = 72;
+    let baseHeight = 72;
+    if (commentExists && performance !== null) {
+      baseHeight = 125;
+    } else if (commentExists || performance !== null) {
+      baseHeight = 96;
     }
-    // const baseHeight = performance && commentExists ? 132 : 112;
 
     const style = {
       backgroundColor: seenByStudent ? color.background_gray : color.white,
-      height: this.state.expanded ? 'auto' : baseHeight,
-      overflow: this.state.expanded ? 'none' : 'hidden',
+      height: expanded ? 'auto' : baseHeight,
+      overflow: expanded ? 'none' : 'hidden',
       ...styles.main
     };
 
-    const rubricPerformance = {
-      performanceLevel1: i18n.rubricLevelOneHeader(),
-      performanceLevel2: i18n.rubricLevelTwoHeader(),
-      performanceLevel3: i18n.rubricLevelThreeHeader(),
-      performanceLevel4: i18n.rubricLevelFourHeader()
-    };
+    const isCommentExpandable = commentHeight > visibleCommentHeight;
 
-    const showRightCaret = this.longComment() && !this.state.expanded;
-    const showDownCaret = this.longComment() && this.state.expanded;
+    const showCommentFade = isCommentExpandable && !expanded;
 
     return (
-      <div
-        style={style}
-        onClick={this.state.expanded ? this.collapse : this.expand}
-      >
+      <div style={style}>
         <div style={styles.lessonDetails}>
           <a href={linkToLevel}>
             <div style={styles.lessonLevel}>
@@ -118,31 +105,39 @@ export default class LevelFeedbackEntry extends Component {
           </div>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        {performance ? (
-          <div style={styles.rubricBox}>
-            <span>{i18n.feedbackRubricEvaluation()}</span>
+        {performance && (
+          <div style={styles.feedbackText}>
+            <span>{i18n.feedbackRubricEvaluation()}</span>&nbsp;
             <span style={styles.rubricPerformance}>
-              {rubricPerformance[performance]}
+              {RubricPerformanceCopy[performance]}
             </span>
           </div>
-        ) : null}
-        {showRightCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-right" />
-          </span>
-        ) : null}
-        {showDownCaret ? (
-          <span style={styles.iconBox}>
-            <FontAwesome style={styles.icon} icon="caret-down" />
-          </span>
-        ) : null}
-        {commentExists ? (
-          <span style={styles.commentBox}>
-            <div ref={r => (this.comment = r)} style={styles.comment}>
-              &quot;{comment}&quot;
-            </div>
-          </span>
-        ) : null}
+        )}
+        {commentExists && (
+          <div style={styles.commentContainer}>
+            {isCommentExpandable && (
+              <FontAwesome
+                style={styles.icon}
+                icon={expanded ? 'caret-down' : 'caret-right'}
+                onClick={expanded ? this.collapse : this.expand}
+              />
+            )}
+            <span style={styles.commentText}>
+              <div ref={r => (this.comment = r)} style={styles.feedbackText}>
+                &quot;{comment}&quot;
+              </div>
+              {showCommentFade && (
+                <div
+                  id="comment-fade"
+                  style={{
+                    ...styles.fadeout,
+                    ...(seenByStudent && styles.fadeoutSeen)
+                  }}
+                />
+              )}
+            </span>
+          </div>
+        )}
       </div>
     );
   }
@@ -150,20 +145,14 @@ export default class LevelFeedbackEntry extends Component {
 
 const styles = {
   main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    minHeight: 72,
+    border: `1px solid ${color.border_gray}`,
     width: '100%',
     marginBottom: 20,
-    display: 'flex',
-    flexFlow: 'wrap',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    padding: '8px 20px'
   },
   lessonDetails: {
-    width: '75%',
-    marginLeft: 20,
-    marginTop: 8,
+    display: 'inline-block',
     marginBottom: 4
   },
   lessonLevel: {
@@ -180,47 +169,43 @@ const styles = {
     marginBottom: 8
   },
   time: {
-    marginTop: 8,
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'right',
-    textAlign: 'right',
-    marginRight: 20,
-    width: 200
+    float: 'right'
   },
-  comment: {
+  feedbackText: {
     color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
     marginBottom: 8,
     fontSize: 14,
-    lineHeight: '21px',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  rubricBox: {
-    color: color.dark_charcoal,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 8,
-    fontSize: 14,
-    lineHeight: '21px',
-    width: '100%'
+    lineHeight: '21px'
   },
   rubricPerformance: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginLeft: 5
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   icon: {
-    fontSize: 18
-  },
-  iconBox: {
-    float: 'left',
-    paddingLeft: 25,
+    fontSize: 18,
+    paddingRight: 20,
+    paddingLeft: 5,
     cursor: 'pointer'
   },
-  commentBox: {
-    float: 'left',
-    width: '96%'
+  commentContainer: {
+    display: 'flex'
+  },
+  commentText: {
+    position: 'relative', // for positioning fade over comment text
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  fadeout: {
+    bottom: 0,
+    height: 'calc(100% - 15px)',
+    background:
+      'linear-gradient(rgba(255, 255, 255, .4) 0%,rgba(255, 255, 255, 1) 100%)',
+    position: 'absolute',
+    width: '100%'
+  },
+  fadeoutSeen: {
+    background:
+      'linear-gradient(rgba(242, 242, 242, .4) 0%,rgba(242, 242, 242, 1) 100%)'
   }
 };
