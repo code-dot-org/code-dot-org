@@ -939,7 +939,7 @@
   applab_name: "App Lab"
   gamelab_name: "Spill-lab"
   basketball_name: "Lag et basketball-spill"
-  sports_name: "Kod ditt eget sportsspill"
+  sports_name: "Kode ditt eget sportsspill"
   applab_gradelevel: "Minstealder 13 år"
   applab_shortdescription_congrats: "App Lab er et programmeringsmiljø hvor du kan lage enkle apper. Design en app, programmer med blokker eller JavaScript for å få den til å fungere og del appen din på få sekunder"
   codeorg_gradelevel: "Alder 4-104"

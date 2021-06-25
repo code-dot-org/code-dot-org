@@ -915,6 +915,12 @@
   coursed-2017_name: Kurz D (2017)
   coursee-2017_name: Kurz E (2017)
   coursef-2017_name: Kurz F (2017)
+  coursea-2018_name: Kurz A (2018)
+  courseb-2018_name: Kurz B (2018)
+  coursec-2018_name: Kurz C (2018)
+  coursed-2018_name: Kurz D (2018)
+  coursee-2018_name: Kurz E (2018)
+  coursef-2018_name: Kurz F (2018)
   coursea-2019_name: Kurz A (2019)
   courseb-2019_name: Kurz B (2019)
   coursec-2019_name: Kurz C (2019)
@@ -932,6 +938,7 @@
   express-2019_name: Rychlý kurz (2019)
   pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
   express-2020_name: Rychlý kurz (2020)
+  pre-express-2020_name: Rychlokurz pro předškoláky (2020)
   accelerated_name: "Zrychlený kurz"
   express_name: "Rychlý kurz"
   pre-express_name: Rychlý kurz pro předškoláky
@@ -1135,15 +1142,36 @@
   course2_shortdescription_congrats: "Pro studenty se základní schopností čtení tento kurz navazuje na kurz 1. Studenti vytvoří programy za účelem řešení problémů a vyvinou interaktivní hry nebo příběhy, které mohou sdílet. Vhodné pro 2.-5. třídu ZŠ."
   course3_shortdescription_congrats: "Připraveni na další úroveň? Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné pro 4.-5. ročník ZŠ."
   course4_shortdescription_congrats: "Můžeme postoupit dále? Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné pro 4.-8. ročník ZŠ."
+  coursea_shortdescription_congrats: "Úvod do počítačové vědy pro ty, kdo ještě neumí číst."
+  courseb_shortdescription_congrats: "Úvod do počítačové vědy pro ty, kdo ještě neumí číst. (Obdoba kurzu A, ale s větší rozmanitostí pro starší žactvo.)"
+  coursec_shortdescription_congrats: "Naučte se základy počítačové vědy a tvořte své vlastní umění, příběhy a hry."
   coursed_shortdescription_congrats: "Rychle zopakuje pojmy z Kurzu C, pak se posune dál s algoritmy, vnořenými cykly, podmínkami a dalším."
   coursee_shortdescription_congrats: "Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi."
+  coursef_shortdescription_congrats: "Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru."
+  coursea-2017_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+  courseb-2017_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. (Obdoba kurzu A, ale s větší rozmanitostí pro starší žactvo.)
+  coursec-2017_shortdescription_congrats: Naučte se základy počítačové vědy a tvořte své vlastní umění, příběhy a hry.
   coursed-2017_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C, pak se posune dál s algoritmy, vnořenými cykly, podmínkami a dalším.
   coursee-2017_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi.
+  coursef-2017_shortdescription_congrats: Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru.
+  coursea-2018_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+  courseb-2018_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. (Obdoba kurzu A, ale s větší rozmanitostí pro starší žactvo.)
+  coursec-2018_shortdescription_congrats: Naučte se základy počítačové vědy a tvořte své vlastní umění, příběhy a hry.
   coursed-2018_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C, pak se posune dál s algoritmy, vnořenými cykly, podmínkami a dalším.
   coursee-2018_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi.
+  coursef-2018_shortdescription_congrats: Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru.
+  coursea-2019_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst.
+  courseb-2019_shortdescription_congrats: Úvod do počítačové vědy pro ty, kdo ještě neumí číst. (Obdoba kurzu A, ale s větší rozmanitostí pro starší žactvo.)
+  coursec-2019_shortdescription_congrats: Naučte se základy počítačové vědy a tvořte své vlastní umění, příběhy a hry.
   coursed-2019_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C, pak se posune dál s algoritmy, vnořenými cykly, podmínkami a dalším.
   coursee-2019_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi.
+  coursef-2019_shortdescription_congrats: Naučte se všechny koncepce v základech počítačových věd a vytvořte si vlastní umělecké dílo, příběh nebo hru.
+  coursea-2020_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  courseb-2020_shortdescription_congrats: Učte se základy počítačových věd a internetové bezpečnosti. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet.
+  coursec-2020_shortdescription_congrats: Vytvářejte programy s posloupnostmi, cykly a událostmi. Převeďte své iniciály na binární kód, vyšetřete různé techniky řešení problémů a učte se reagovat na kybernetickou šikanu. Na konci tohoto kurzu vytvoříte svou vlastní hru nebo příběh, které budete moci sdílet!
   coursed-2020_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
+  coursee-2020_shortdescription_congrats: Začněte programovat s algoritmy, cykly, podmínkami a událostmi a pak přejděte k funkcím. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
+  coursef-2020_shortdescription_congrats: Naučte se požívat různé druhy cyklů, událostí, funkcí a podmínek. Řešte různé techniky řešení problémů a diskutujte o vlivu počítačových věd a internetu na společnost. V druhé části tohoto kurzu navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli a rodinou.
   codeorg_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   codeintl_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   thinkersmithspanish_longdescription: "Použitím předdefinovaného \"slovníkového Robota\" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění."
@@ -1360,6 +1388,7 @@
   compatibility_hide_this_warning: "Skrýt toto varování"
   compatibility_unsupported_browser: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
   compatibility_unsupported_browser_markdown: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
+  starwars_shortcode: "hvězda"
   flappy_shortcode: "mávni"
   header_home: "Domů"
   header_my_dashboard: "Můj přehled"
@@ -1436,6 +1465,7 @@
   hoc2018_creativity_create: "Vytvořit"
   hoc2018_creativity_hoc_coming: "Hodina kódu přichází…"
   hoc2018_creativity_what_will_you_create: "Co vytvoříš?"
+  hoc2018_creativity_courses_link: "Pokročte dále s <a href=\"https://studio.code.org/courses\">kurzy Code.org</a>"
   hoc2018_mc_page_title: "Hodina kódu s Minecraftem"
   hoc2018_mc_details: "Mnoho jazyků | Moderní prohlížeč a tablety | Od druhé třídy"
   hoc2018_mc_aquatic_description: "Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft s kódem."
@@ -1546,7 +1576,49 @@
   footer_support: "Nápověda a Komunita"
   footer_terms: "Podmínky"
   ai_for_oceans: "AI pomáhá oceánům"
+  ai_for_oceans_lesson_plan: "plán lekce"
+  ai_for_oceans_tile_description: "Pomozte umělé inteligenci vyčistit oceány tím, že ji vycvičíte, aby detekovala odpadky! Učte se o školicích datech a podjatosti a o tom, jak může umělá inteligence řešit problémy světa. Zobrazit"
+  how_ai_works: "Jak funguje umělá inteligence"
+  how_ai_works_tile_description: "V této sérii krátkých videí se naučíte něco o umělé inteligenci a o tom, proč na ní záleží. Vystoupí výkonný ředitel Microsoftu Satya Nadella a rozmanité obsazení odborníků."
+  watch_the_videos: "Podívejte se na videa"
+  ai_and_ethics: "Umělá inteligence a etika"
+  ai_and_ethics_tile_description: "Studenti se budou zamýšlet nad etickými důsledky umělé inteligence a pak budou společně pracovat na vytvoření prostředku „Etický kodex umělé inteligence“ pro tvůrce umělé inteligence a zákonodárce všude na světě."
+  view_lesson_plan: "Zobrazit plán lekcí"
   ai_in_partnership_with: "V rámci partnerství s"
   ai_microsoft_thanks: "Děkujeme společnosti Microsoft, že podporuje naši vizi a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy a dovednosti potřebné k dosahování úspěchu ve 21. století."
+  ai_ethics_panel_header: "Panelová diskuse o bádání v oblasti Etiky umělé inteligence"
+  ai_ethics_panel_description_1: "Zajděte hlouběji s některými z našich oblíbených odborníků na umělou inteligenci! Tato panelová diskuze se týká významné problematiky jako je algoritmická podjatost a budoucnost práce. Propojte si ji s našimi"
+  ai_ethics_lesson_plan: "Plán lekcí umělé inteligence a etiky"
+  ai_ethics_panel_description_2: "pro vynikající úvod do etiky umělé inteligence!"
+  cs_for_good: "Počítačová věda pro dobro"
+  cs_for_good_tile_description: "Prostředky, kterými můžete inspirovat studenty, aby se hluboce zamysleli nad rolí, kterou může počítačová věda sehrát při vytváření rovnostářštějšího a udržitelnějšího světa."
+  view_resources: "Zobrazte si prostředky"
+  imagine_cup_junior: "„Imagine Cup“ pro mladé"
+  imagine_cup_junior_tile_description: "Tato globální výzva umělé inteligence pro dobro představí studentům iniciativy  Microsoftu pro umělou inteligenci pro dobro a dá jim prostředky k vyřešení nějakého světového problému mocí umělé inteligence."
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  ai_seeing_ai: "Umělá inteligence vidění"
+  ai_seeing_ai_description: "Bezplatná aplikace, která mnoha různými jazyky vypráví o světě kolem Vás."
+  ai_quick_draw: "Rychle, kreslete!"
+  ai_quick_draw_description: "Umí se neuronová síť naučit rozpoznávat čmáranice?"
+  ai_teachable_machine: "Učitelný stroj"
+  ai_teachable_machine_description: "Vycvičte počítač tak, aby se naučil rozpoznávat Vaše vlastní obrázky, zvuky a pózy."
+  ai_google: "Pokusy s umělou inteligencí s Google"
+  ai_google_description: "Začněte bádat v oblasti strojového učení prostřednictvím obrázků, kreseb, jazyka, hudby a dalšího."
+  ai_zooniverse: "Zooniverse - Pořiďte snímek horské zebry"
+  ai_zooniverse_description: "Pomáhejte chránit ohroženou kapskou horskou zebru určováním různých zvířat na obrázcích."
+  ai_audience: "Obecenstvo"
+  ai_minecraft_description: 'Získejte přístup k bezplatným prostředkům, jako například k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou je Minecraft: Edice pro školy)'
+  ai_k_12_audience: "Věk 12 a více (potřebná schopnost čtení)"
+  ai_microsoft_workshop: "Bezplatné virtuální dílny od společnosti Microsoft"
+  ai_microsoft_workshop_description: "Podněcujte představivost s bezplatnými dílnami STEM a programování."
+  ai_machine_learning_for_kids: "Strojové učení pro děti"
+  ai_machine_learning_for_kids_description: "Vycvičte model strojového učení textem, čísly nebo obrázky a používejte jej k vytváření her ve Scratch."
+  ai_ibm_machine_learning_for_kids: 'IBM: strojové učení pro děti'
+  ai_ecs: 'ECS: umělá inteligence (UI)'
+  ai_ecs_description: "Nová alternativní jednotka osnov pro osnovy předmětu „Bádání v počítačové vědě“."
+  ai_elements: "Prvky umělé inteligence"
+  ai_elements_description: "Řada bezplatných online kurzů, které vytvořil Reaktor a Helsinská Univerzita."
+  ai_cognimates: "Cognimates (kognitivní protějšky)"
+  ai_cognimates_description: "Vzdělávací platforma na výuku umělé inteligence k vytváření her, programování robotů a cvičení."
+  ai_try_activity: "Zkuste aktivitu"

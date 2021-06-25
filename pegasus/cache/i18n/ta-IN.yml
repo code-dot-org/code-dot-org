@@ -109,6 +109,7 @@ ta-IN:
   enter_valid_age: ஒரு செல்லுபடியாகும் வயது தேர்ந்தெடுக்கவும்
   enter_valid_email: தயவுசெய்து சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்
   thanks_for_submitting: சமர்ப்பித்ததற்க்கு நன்றிகள்!
+  print_ice_art_from_frozen: உறைந்த பயிற்சிகளிலிருந்து பனி கலையை அச்சிடுங்கள்
   share_achievement: உங்கள் சாதனையை பகிரவும்
   country: நாடு
   city: நகரம்
@@ -132,6 +133,7 @@ ta-IN:
   enter_country: அமெரிக்காவுக்கு வெளியே இருந்தால் உங்கள் நாட்டை உள்ளிடவும்
   petition_thankyou: மனுவில் கையெழுத்திட்டமைக்கி நன்றி
   learn_classes: உள்ளூர் வகுப்புகளை கண்டுபிடி
+  just_did_accelerated: நான் முடுக்கப்பட்ட பாடத்திட்டத்தை முடித்தேன்- @codeorg பாருங்கள்!
   learn_hoc: ஒரு மணி நேரம் குறியீடை அறிய
   beyond_hoc: ஒரு மணி நேரம் தாண்டி
   what_gender: உங்கள் பாலினம் என்ன?
@@ -139,8 +141,13 @@ ta-IN:
   boy: ஆண்
   contact_form_topic_press: பத்திரிக்கை/ஊடகம் (பேட்டி அல்லது ஒப்பந்தம் பேசும் போது)
   studiobar_dance_title: நடன விருந்து
+  studiobar_flappy_title: 'பிளாப்பி கோட் '
   studiobar_frozen_title: நிரல்வரி நேரம்
+  studiobar_frozen_body: அண்ணா மற்றும் எல்சாவுடன் ஒரு குளிர்கால அதிசய நிலத்தை உருவாக்கவும்
+  homepage_slot_text_frozen: அண்ணா மற்றும் எல்சாவுடன் உறைந்திருக்கும்
+  homepage_slot_text_flappy: 'பிளாப்பி கோட் '
   homepage_action_text_try_it: இதை முயற்சிக்கவும்
+  homepage_action_text_girlvideo: ஒரு பெண்ணை ஊக்குவிக்கவும்
   homepage_signpetition_dropdown_text: நான் ஒப்புக்கொள்கிறேன்
   homepage_slot_text_title_hoc: நிரல்வரி நேரம்
   homepage_slot_text_link_hoc: நிரல்தொடர் மணியை முயல்க
@@ -149,10 +156,48 @@ ta-IN:
   contact_form_label_email: உங்கள் மின்னஞ்சல் முகவரி
   contact_form_label_message: செய்தி
   contact_form_label_submit: செய்தியை அனுப்பு
+  videos_more: முன்மாதிரிகள் மற்றும் பிரபலங்களைக் கொண்ட மேலும் <a href='%{inspiring_videos_playlist}'>
+    தூண்டுதலான வீடியோக்கள் </a>
+  videos_more_markdown: முன்மாதிரிகள் மற்றும் பிரபலங்களைக் கொண்ட மேலும் [உத்வேகம்
+    தரும் வீடியோக்கள்] %{inspiring_videos_playlist}
   starwars_blocks_title: தொகுதிகள்
+  starwars_blocks_specs: பல மொழிகள் | நவீன உலாவிகள், ஸ்மார்ட்போன்கள், டேப்லெட்டுகள்
+    | வயது 6-106
+  mc_name: Minecraft Hour of Code
+  minecraft_tutorials: Minecraft Hour of Code பயிற்சிகள்
+  minecraft_agent_description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
+    திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
   minecraft_agent_button: தொடங்குக
   minecraft_designer_button: தொடங்குக
   minecraft_adventurer_button: தொடங்குக
+  minecraft_no_internet: இணையம் இல்லையா?
+  minecraft_download_adventurer: Minecraft Adventurer இன் ஆஃப்லைன் பதிப்பைப் பதிவிறக்கவும்.
+  minecraft_subtitle: Minecraft Hour of Code
+  minecraft_og_designer: மணிநேர குறியீட்டிற்கான புதிய செயல்பாட்டுடன் Minecraft மீண்டும்
+    வந்துள்ளது. Minecraft இன் உங்கள் சொந்த பதிப்பில் நிரல் விலங்குகள் மற்றும் பிற
+    Minecraft உயிரினங்கள்.
+  minecraft_og_agent: மின்கிராஃப்ட் மணிநேர குறியீட்டிற்கு திரும்பியுள்ளது, நீங்கள்
+    தான் ஹீரோ! Minecraft பயோம்கள் வழியாக பயணத்திற்கு குறியீட்டை எழுதவும்.
+  sports_page_title: 'கோட் விளையாட்டு நேரம் '
+  sports_og_title: நீங்களே தள்ளுங்கள். யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்.
+  sports_video_title: நீங்களே தள்ளுங்கள். யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்.
+  sports_select_theme: உங்கள் டுடோரியல் தீம் தேர்ந்தெடுக்கவும்
+  sports_basketball_title: கூடைப்பந்து விளையாட்டை உருவாக்கவும்
+  sports_featured_athletes: சிறப்பு விளையாட்டு வீரர்களைப் பார்க்கவும்
+  sports_athletes_title: சிறப்பு விளையாட்டு வீரர்கள்
+  watch_inspirational_videos: நீங்கள் தொடங்குவதற்கு முன், இந்த உத்வேகம் தரும் வீடியோக்களில்
+    ஒன்றைப் பாருங்கள்
+  video_title_cs_is_everything: கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது
+  video_title_inspire_girl: ஒரு பெண்ணை ஊக்குவிக்கவும்
+  video_title_cs_intro: 'கணினி அறிவியல் அறிமுகம் '
+  video_title_schools_dont_teach: பெரும்பாலான பள்ளிகள் கற்பிக்காதவை
+  video_title_obama: கணினி அறிவியல் குறித்து ஜனாதிபதி ஒபாமா
+  video_title_hoc_is_here: Hour of Code இங்கே - யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்
+  video_title_anybody_can_learn: யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்
+  video_title_steph_curry: Hour of Code ஸ்டெஃப் கறியுடன்
+  video_title_my_name_is_aracely: என் பெயர் அராசிலி
+  no_internet: இணையம் இல்லையா?
+  download_offline: ஆஃப்லைன் பதிப்பைப் பதிவிறக்கவும்.
   volunteer_engineer_submission_field_name: பெயர்
   volunteer_engineer_submission_field_description: விளக்கம்
   volunteer_engineer_submission_field_email_preference_yes: ஆம்
@@ -166,6 +211,7 @@ ta-IN:
   dashboard_action_delete_no: இல்லை
   dashboard_sections_close: மூடவும்
   dashboard_students_name: பெயர்
+  dashboard_pre-express: 'முன் வாசகர் எக்ஸ்பிரஸ் பாடநெறி:'
   dashboard_sequence: தொடர்வரிசை
   dashboard_grade_other: வேறு
   dashboard_login_none: மின்னஞ்சல்
@@ -173,19 +219,86 @@ ta-IN:
   dashboard_puzzle: புதிர்
   dashboard_student: மாணவர்
   learn_more: இப்பொழுது முயற்சிக்கவும்
+  hoc2014_try_frozen: உறைந்ததிலிருந்து அண்ணா மற்றும் எல்சாவுடன் கலைஞர்
   carousel_heading_international: உங்கள் மொழியிலுள்ள பயிற்சிகள்
+  frozen_name: அண்ணா மற்றும் எல்சாவுடன் குறியீடு
+  codeorg_name: 'கிளாசிக் மேஸி '
+  codeintl_name: 'கிளாசிக் மேஸி '
   blockly_name: புலோக்லி
+  hourofcode_name: 'கிளாசிக் மேஸி '
+  infinity_name: முடிவிலி விளையாட்டு ஆய்வகம்
+  artist_name: கலைஞர்
   course1_name: கோர்ஸ் 1
+  coursea-draft_name: பாடநெறி அ
+  coursea_name: பாடநெறி அ
+  courseb-draft_name: பாடநெறி ஆ
+  courseb_name: 'பாடநெறி ஆ '
+  coursec-draft_name: பாடநெறி இ
+  coursec_name: 'பாடநெறி இ '
+  coursed-draft_name: பாடநெறி ஈ
+  coursed_name: 'பாடநெறி ஈ '
+  coursee-draft_name: பாடநெறி உ
+  coursee_name: 'பாடநெறி உ '
+  coursef-draft_name: பாடநெறி ஊ
+  coursef_name: 'பாடநெறி ஊ '
+  coursea-2017_name: பாடநெறி அ (2017)
+  coursec-2017_name: பாடநெறி இ (2017)
+  coursed-2017_name: பாடநெறி ஈ (2017)
+  coursee-2017_name: பாடநெறி உ(2017)
+  coursef-2017_name: பாடநெறி ஊ (2017)
+  pre-express-2018_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2018)
+  pre-express-2019_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2019)
+  pre-express-2020_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2020)
+  accelerated_name: 'முடுக்கப்பட்ட பாடஅமைப்பு '
+  pre-express_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி
+  20-hour_name: முடுக்கப்பட்ட பாடஅமைப்பு
+  classicmaze_name: 'கிளாசிக் மேஸி '
+  hoc-encryption_name: எளிய குறியாக்கம்
+  text-compression_name: உரை சுருக்க
+  basketball_name: கூடைப்பந்து விளையாட்டை உருவாக்கவும்
   lightbot_gradelevel: அனைத்து வயதினரும்
   thinkersmith_gradelevel: அனைத்து வயதினரும்
   lightbotintl_gradelevel: அனைத்து வயதினரும்
   blockly_gradelevel: அனைத்து வயதினரும்
+  frozen_gradelevel: வயது 8-108
+  artist_gradelevel: வயது 8-108
   course1_gradelevel: வயது 4-6
   coursed_gradelevel: தரம் 8+
   coursed-2017_gradelevel: தரம் 8+
   coursed-2018_gradelevel: தரம் 8+
   coursed-2019_gradelevel: தரம் 8+
   coursed-2020_gradelevel: தரம் 8+
+  frozen_shortdescription: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது
+    அவர்களுடன் சேர குறியீட்டைப் பயன்படுத்துவோம்.
+  starwars_shortdescription: 'டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும்
+    தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும் '
+  playlab_shortdescription: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை
+    உருவாக்கவும்!
+  infinity_shortdescription: டிஸ்னி முடிவிலி எழுத்துக்கள் நடித்த கதை அல்லது விளையாட்டை
+    உருவாக்க பிளே லேப் பயன்படுத்தவும்.
+  artist_shortdescription: கலைஞருடன் குளிர் படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!
+  coursea_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+  courseb_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+    (பாடநெறி A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
+  coursea-2017_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+  courseb-2017_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+    (பாடநெறி A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
+  coursea-2018_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+  courseb-2018_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+    (பாடநெறி A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
+  coursea-2019_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+  courseb-2019_shortdescription_congrats: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+    (பாடநெறி A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
+  frozen_longdescription: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது
+    அவர்களுடன் சேர குறியீட்டைப் பயன்படுத்துவோம். நீங்கள் பனி சறுக்குவது போல ஸ்னோஃப்ளேக்ஸ்
+    மற்றும் வடிவங்களை உருவாக்கி, குளிர்கால அதிசய நிலத்தை உருவாக்குவீர்கள், பின்னர்
+    நீங்கள் உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளலாம்!
+  starwars_longdescription: 'டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில்
+    உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும் '
+  playlab_longdescription: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை
+    உருவாக்கவும்! விலங்குகள், கடற்கொள்ளையர்கள், ஜோம்பிஸ், நிஞ்ஜாக்கள் மற்றும் இன்னும்
+    பல கதாபாத்திரங்களை நகர்த்தவும், ஒலிகளை உருவாக்கவும், புள்ளிகளை உருவாக்கவும், ஃபயர்பால்ஸை
+    கூட வீசவும்!
   lightbot_beyond_gradelevel: அனைத்து வயதினரும்
   flappy_shortcode: flap
   header_courses: பாடங்கள்
@@ -202,19 +315,138 @@ ta-IN:
   user_header_logout: வெளியேறு
   user_header_signin: உள்நுழை
   user_header_create: 'உருவாக்குக '
+  user_header_artist: 'கலைஞர் '
   user_header_dance: நடன விருந்து
+  applab_tile_subtitle: தொகுதி அடிப்படையிலான நிரலாக்கத்தைப் பயன்படுத்தி ஜாவாஸ்கிரிப்டில்
+    உங்கள் சொந்த பயன்பாட்டை உருவாக்கவும். அல்லது உரை அடிப்படையிலான நிரலாக்கத்துடன்
+    உங்கள் திறமைகளை அடுத்த கட்டத்திற்கு கொண்டு செல்லுங்கள்.(English Only)
   applab_tile_start_tutorial: தொடங்குக
+  applab_tile_teacher_guide: ஆசிரியர் வழிகாட்டியைக் காண்க
   hoc_overview_dance_title: நடன விருந்து
+  hoc_overview_dance_subtitle: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள ஒரு நடன விருந்துக்கு
+    குறியிடவும். கேட்டி பெர்ரி, மடோனா, ஜே. பால்வின், சியா, கீத் அர்பன், சியாரா மற்றும்
+    இன்னும் 25 பேர் இடம்பெற்றுள்ளனர்!
+  hoc_overview_dance_2019_subtitle: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள ஒரு நடன விருந்துக்கு
+    குறியிடவும். கேட்டி பெர்ரி, ஷான் மென்டிஸ், பீதி! டிஸ்கோவில், லில் நாஸ் எக்ஸ்,
+    ஜோனாஸ் பிரதர்ஸ், நிக்கி மினாஜ் மற்றும் இன்னும் 34 பேர்!
+  hoc_overview_title: Code.org இலிருந்து குறியீடு செயல்பாடுகளின் நேரம்
+  hoc_overview_subtitle_markdown: "[Hour of Code] (https://hourofcode.com) என்பது
+    180+ நாடுகளில் உள்ள பல்லாயிரக்கணக்கான மாணவர்களை அடையும் உலகளாவிய இயக்கமாகும்.
+    எவரும், எங்கும் ஒரு மணிநேர குறியீடு நிகழ்வை ஒழுங்கமைக்கலாம் அல்லது 45 க்கும் மேற்பட்ட
+    மொழிகளில் கிடைக்கக்கூடிய 500+ க்கும் மேற்பட்ட ஒரு மணி நேர பயிற்சிகளில் ஒன்றை முயற்சி
+    செய்யலாம்."
+  hoc_overview_partner_activities_title: கூட்டாளர்களிடமிருந்து கூடுதல் செயல்பாடுகள்
+  hoc_overview_partner_activities_body: " Code.org மற்றும் கூட்டாளர்களால் உருவாக்கப்பட்ட
+    அனைத்து வயது மற்றும் அனுபவ நிலைகளுக்காக 500 க்கும் மேற்பட்ட கணினி அறிவியல் செயல்பாடுகளை
+    \ Hour of Code வலைத்தளம் கொண்டுள்ளது."
+  hoc_overview_partner_activities_link: செயல்பாடுகளைக் காண்க
   hoc_overview_start_tutorial: தொடங்குக
+  hoc_overview_view_teacher_guide: ஆசிரியர் வழிகாட்டியைக் காண்க
   hoc2018_creativity_create: உருவாக்கு
+  hoc2018_creativity_courses_link: உடன் மேலும் செல்லுங்கள்<a href="https://studio.code.org/courses">Code.org
+    courses</a>
+  hoc2018_mc_page_title: Minecraft Hour of Code பயிற்சிகள்
+  hoc2018_mc_aquatic_description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
+    திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
+  hoc2018_mc_hero_description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
+    திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
   hoc2018_mc_start: தொடங்குக
+  hoc2018_mc_no_internet: இணையம் இல்லையா?
+  hoc2018_mc_download_adventurer: Minecraft Adventurer இன் ஆஃப்லைன் பதிப்பைப் பதிவிறக்கவும்.
+  hoc2018_mc_educators_box3_title: இலவச மாணவர் பட்டறையில் கலந்து கொள்ளுங்கள்
+  hoc2018_mc_educators_box3_desc: இலவச Hour of Code பட்டறைக்கு உங்கள் பகுதியில் உள்ள
+    மைக்ரோசாஃப்ட் ஸ்டோரைப் பார்வையிடவும். அனைத்து திறன் நிலைகளிலும் பங்கேற்பாளர்களுக்கு,
+    ஆறு வயது மற்றும் அதற்கு மேற்பட்டவர்கள்.
+  hoc2018_mc_educators_box3_button: ஒரு பட்டறை கண்டுபிடிக்கவும்
+  hoc2018_mc_educators_box4_title: மேலும் கணினி அறிவியல் வளங்களை அணுகவும்
+  hoc2018_mc_educators_box4_button: ஆதாரங்களை ஆராயுங்கள்
+  hoc2018_mc_watch_videos: நீங்கள் தொடங்குவதற்கு முன், இந்த உத்வேகம் தரும் வீடியோக்களில்
+    ஒன்றைப் பாருங்கள்
+  hoc2018_mc_videos_more: முன்மாதிரிகள் மற்றும் பிரபலங்களைக் கொண்ட மேலும் <a href='%{inspiring_videos_playlist}'>
+    தூண்டுதலான வீடியோக்கள் </a>
+  hoc2018_mc_video_title_steph_curry: Hour of Code ஸ்டெஃப் கறியுடன்
+  hoc2018_mc_video_title_sports: நீங்களே தள்ளுங்கள். யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்.
+  hoc2018_mc_video_title_cs_is_everything: கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது
+  hoc2018_mc_video_title_inspire_girl: ஒரு பெண்ணை ஊக்குவிக்கவும்
+  hoc2018_mc_video_title_cs_intro: 'கணினி அறிவியல் அறிமுகம் '
+  hoc2018_mc_video_title_schools_dont_teach: பெரும்பாலான பள்ளிகள் கற்பிக்காதவை
+  hoc2018_mc_video_title_obama: கணினி அறிவியல் குறித்து ஜனாதிபதி ஒபாமா
+  hoc2018_mc_video_title_hoc_is_here: Hour of Code இங்கே - யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்
+  hoc2018_mc_video_title_anybody_can_learn: யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்
+  hoc2018_mc_video_title_my_name_is_aracely: என் பெயர் அராசிலி
   hoc2018_mc_homepage_try_it: இதை முயற்சிக்கவும்
+  hoc2018_mc_back_journey: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
+    திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
+  hoc2018_mc_teacher_guide: ஆசிரியர் வழிகாட்டியைக் காண்க
   hoc2018_dance_party_main_heading: நடன விருந்து
+  hoc2018_dance_party_subheading: டான்ஸ் பார்ட்டியை மொழிபெயர்க்க உதவுங்கள்
   hoc2018_dance_party_box_title: நடன விருந்து
+  hoc2018_dance_party_box_description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள ஒரு நடன
+    விருந்தைக் குறியிடவும்!
   hoc2018_dance_party_button: தொடங்குக
+  hoc2018_dance_keep_on_dancing_box_title: ஆடிக்கொண்டே இரு
+  hoc2018_dance_keep_on_dancing_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல்
+    மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
+  hoc2018_dance_keep_on_dancing_specs: 'மொழி | வடிவம் | வயது 13+ '
+  hoc2018_dance_keep_on_dancing_button: பகுதி 2 ஐத் தொடங்குங்கள்
+  hoc2018_dance_teacher_resources_title: ஆசிரியர் வளங்கள்
+  hoc2018_dance_teacher_resources_tile1_description: பாட திட்டங்கள், சான்றிதழ்கள்
+    மற்றும் இசை வடிகட்டுதல்.
+  hoc2018_dance_teacher_resources_tile1_button: பாட திட்டம்
+  hoc2018_dance_teacher_resources_tile2_title: டான்ஸ் பார்ட்டி பிரிக்கப்படாதது
+  hoc2018_dance_teacher_resources_tile2_description: கணினிகள் தேவையில்லை! ஒரு நடன
+    விருந்தை ஒன்றாக நடனமாட குறியீட்டு கருத்துகளைக் கற்றுக்கொள்ளுங்கள்.
+  hoc2018_dance_teacher_resources_tile2_button: பிரிக்கப்படாத செயல்பாடு
+  hoc2018_dance_featured_student_creations_title: சிறப்பு மாணவர் படைப்புகள்
+  hoc2018_dance_videos_section_heading: ஊக்கம் பெறு
+  hoc2018_dance_video_title_what_is_creativity: படைப்பாற்றல் என்றால் என்ன?
+  hoc2018_dance_view_creativity_video_playlist: படைப்பாற்றல் என்றால் என்ன? முழுத்
+    தொடரைக் காண்க (5 நிமிடம்)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: உடன் கூட்டு
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: அமேசான் எதிர்கால
+    பொறியாளர் * என்பது கணினி வருமானத்தில் குறைந்த வருமானம் மற்றும் பிற பின்தங்கிய
+    குழந்தைகள் மற்றும் இளைஞர்களை ஊக்குவிப்பதற்கும், கல்வி கற்பதற்கும், பயிற்சியளிப்பதற்கும்
+    ஒரு விரிவான குழந்தை பருவத்திலிருந்து தொழில் திட்டமாகும். <<a href='%{amazon_future_engineer_link}'
+    target='_blank'> மேலும் அறிக </a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: அமேசான்
+    எதிர்கால பொறியாளர் * என்பது கணினி வருமானத்தில் குறைந்த வருமானம் மற்றும் பிற பின்தங்கிய
+    குழந்தைகள் மற்றும் இளைஞர்களை ஊக்குவிப்பதற்கும், கல்வி கற்பதற்கும், பயிற்சியளிப்பதற்கும்
+    ஒரு விரிவான குழந்தை பருவத்திலிருந்து தொழில் திட்டமாகும். [மேலும் அறிக](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: அமேசான் எதிர்கால
+    பொறியாளர் பற்றி மேலும் அறிக
+  hoc2018_dance_amazon_about_future_engineer_description: கணினி அறிவியல் கல்விக்கான
+    அணுகலை அதிகரிக்க அமேசானின் மழலையர் பள்ளி தொழில் திட்டத்தைப் பற்றி அறிக. எங்கள்
+    கோடைக்கால முகாம்கள், உயர்நிலைப் பள்ளி CS வகுப்புகள், உதவித்தொகை மற்றும் இன்டர்ன்ஷிப்
+    ஆகியவற்றில் எவ்வாறு ஈடுபடுவது என்பது பற்றிய தகவல்களைக் கண்டறியவும்.
+  hoc2018_dance_amazon_future_engineer_footer: "* இந்த டுடோரியலில் இசையைப் பயன்படுத்தும்
+    கலைஞர்கள் தங்கள் இசையை Code.org.க்கு உரிமம் வழங்குவதன் ஒரு பகுதியாக அமேசானை நிதியுதவி
+    செய்யவோ அல்லது அங்கீகரிக்கவோ இல்லை."
   hoc2018_dance_video2: நடன விருந்து - நிகழ்வுகள்
   hoc2018_dance_video3: நடன விருந்து - பண்புகள்
+  hoc2018_mc_with_microsoft: உடன் கூட்டு
+  hoc2018_mc_thank_microsoft: ஒவ்வொரு குழந்தைக்கும் கணினி அறிவியலைக் கற்றுக்கொள்வதற்கான
+    வாய்ப்பையும், 21 ஆம் நூற்றாண்டில் வெற்றி பெறுவதற்கான திறன்களையும் உறுதிசெய்வதற்கான
+    எங்கள் பார்வை மற்றும் நோக்கத்தை ஆதரித்த மைக்ரோசாப்ட் நிறுவனத்திற்கு நன்றி.
+  hoc2019_mc_mee_description1: 'புதிய Minecraft Hour of Code டுடோரியல் இப்போது Minecraft:
+    Windows, Mac, மற்றும் iPad க்கான கல்வி பதிப்பில் கிடைக்கிறது. குறியீட்டு முறையின்
+    அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் மாணவர்களுடன் AI ஐ ஆராயுங்கள்!'
+  hoc2019_mc_more_coding_resources: மேலும் குறியீட்டு வளங்கள்
+  hoc2019_dance_previous_versions: |-
+    டான்ஸ் பார்ட்டியின் முந்தைய பதிப்பைத் தேடுகிறீர்களா?
+    தொடங்க இங்கே கிளிக் செய்க [பகுதி 1](%{dance_2018_link})மற்றும் [பகுதி 2](%{dance_extras_2018_link}2018 முதல்.
+  hoc2020_mc_available_code_org: Code.org இல் கிடைக்கிறது
+  hoc2020_mc_available_mee: 'Minecraft இல் கிடைக்கிறது: கல்வி பதிப்பு'
+  hoc2020_mc_mee_description: 'புதிய Minecraft Hour of Code டுடோரியல் இப்போது Minecraft:
+    Windows, Mac, Chromebook மற்றும் iPad க்கான கல்வி பதிப்பில் கிடைக்கிறது. குறியீட்டு
+    முறையின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் மாணவர்களுடன் பன்முகத்தன்மை
+    மற்றும் சேர்க்கையை ஆராயுங்கள்! பாடம் திட்டம், வீடியோக்கள், கணினி அறிவியல் பாடத்திட்டம்,
+    பங்கு பாடங்கள் மற்றும் ஆசிரியர் பயிற்சிகள் உள்ளிட்ட இலவச ஆதாரங்களை அணுகவும்.'
   footer_privacy_policy: தனியுரிமை கொள்கை
   footer_about: பற்றி
+  ai_for_oceans: பெருங்கடல்களுக்கான AI
+  ai_in_partnership_with: உடன் கூட்டு
+  ai_microsoft_thanks: ஒவ்வொரு குழந்தைக்கும் கணினி அறிவியலைக் கற்றுக்கொள்வதற்கான வாய்ப்பையும்,
+    21 ஆம் நூற்றாண்டில் வெற்றி பெறுவதற்கான திறன்களையும் உறுதிசெய்வதற்கான எங்கள் பார்வை
+    மற்றும் நோக்கத்தை ஆதரித்த மைக்ரோசாப்ட் நிறுவனத்திற்கு நன்றி.
   ai_activity: செயல்பாடுகள்
   ai_description: விளக்கம்
