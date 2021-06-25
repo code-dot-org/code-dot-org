@@ -1,3 +1,4 @@
+---
 kk:
   data:
     blocks:
@@ -139,7 +140,7 @@ kk:
         options:
           CONDITION:
             '"when"': кезде
-            '"while"': болған кезде 
+            '"while"': болған кезде
       gamelab_getProp:
         options:
           PROPERTY:
@@ -162,7 +163,7 @@ kk:
         options:
           CONDITION:
             '"when"': кезде
-            '"while"': болған кезде 
+            '"while"': болған кезде
           KEY:
             '"up"': жоғары
             '"down"': төмен
@@ -220,7 +221,7 @@ kk:
         options:
           CONDITION:
             '"when"': кезде
-            '"while"': болған кезде 
+            '"while"': болған кезде
       gamelab_turn:
         options:
           DIRECTION:

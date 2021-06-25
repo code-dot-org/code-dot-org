@@ -166,6 +166,24 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Ашылмалы тізбекті пайдаланып \"???\" санға ауыстырыңыз"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Осы темірді өнде!"
         }
       }
     }

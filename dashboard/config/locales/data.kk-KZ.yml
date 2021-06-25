@@ -631,6 +631,8 @@ kk:
         CSF_loops_AB: Ілмек
         csd_pair_programming: Жұптасып Бағдарламалау
         csd_applab_parameters: Параметрлі Функциялар
+        playlab_2021: Ойын Лабораториясына Кіріспе
+        playlab_2021_reader: Ойын Лабораториясына Кіріспе
     callout:
       text:
         drag_blocks: '"Жылжыту" блогын алып оны төмендегі басқа блокке тіркеңіз'
