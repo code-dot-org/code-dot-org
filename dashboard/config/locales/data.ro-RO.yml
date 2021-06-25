@@ -64,7 +64,7 @@ ro:
         maze_2_1: Acest porcușor îmi zburlește penele. Ajută-mă să-l găsesc!
         maze_2_2_5: Trasează calea și du-mă la porcușorul nătâng. Evită TNT-ul sau
           penele-mi vor zbura!
-        maze_2_3: Ghidează-mă la răutatea verde! (Atenție la TNT)
+        maze_2_3: Ghidează-mă la răutatea verde! (Ferește-te de TNT)
         maze_2_4: Păstrează-ți calmul și ajută-mă să găsesc porcușorul rău. Altfel
           s-ar putea să mă enervez!
         maze_2_5: Există o modalitate prin care pot ajunge la porcușorul nătâng folosind
@@ -399,7 +399,7 @@ ro:
         studio_playlab_3: O puteți ajuta pe tenismenă să ajungă la pavilion?
         studio_playlab_4: Îl puteți ajuta pe băiatul tenisman (actor 1) să ajungă
           la fata de tenis (actor 2) și să lansați un sunet când ajunge acolo?
-        studio_playlab_5: Îl puteți ajuta pe robotul spatial să spună "Salutări pamantenilor"
+        studio_playlab_5: Îl puteți ajuta pe Spacebot să spună "Salutări earthlings"
           când se dă clic pe el? Nu uitaţi să daţi clic pe el după ce daţi clic pe
           Rulare
         studio_playlab_6: O puteți ajuta pe Vrăjitoare să se miște împrejur folosind
@@ -711,13 +711,13 @@ ro:
         applab_hoc_onevent: App Lab și Ora de cod - onEvent
         applab_hoc_designmode: Laboratorul de Aplicații Ora de Cod - mod de proiectare
         applab_hoc_share: Laboratorul de Aplicații Ora de Cod - Distribuire
-        mc_2017_agent_intro: Ora de Programare Minecraft - Agentul
-        mc_2017_repeat: Ora de Programare Minecraft - Bucle de repetiție
-        mc_2017_functions: Ora de Programare Minecraft - Funcții
+        mc_2017_agent_intro: Hour of Code în Minecraft - Agentul
+        mc_2017_repeat: Hour of Code în Minecraft - Bucle „repetă”
+        mc_2017_functions: Hour of Code în Minecraft - Funcții
         mc_2017_congratulations: Ora de Programare Minecraft - Felicitari
-        mc_2017_puzzle_1: Ora de Programare Minecraft - Agentul
-        mc_2017_puzzle_3: Ora de Programare Minecraft - Bucle de repetiție
-        mc_2017_puzzle_8: Ora de Programare Minecraft - Funcții
+        mc_2017_puzzle_1: Hour of Code în Minecraft - Agentul
+        mc_2017_puzzle_3: Hour of Code în Minecraft - Bucle „repetă”
+        mc_2017_puzzle_8: Hour of Code în Minecraft - Funcții
         mc_2017_puzzle_12: Ora de Programare Minecraft - Joacă la alegere
         hint_videos_d_11_3_first: 'Videoclipuri indiciu: D.11.3 primul'
         hint_videos_d_11_3_last: 'Videoclipuri indiciu: D.11.3 ultimul'
@@ -758,7 +758,7 @@ ro:
         CSF_Spritelab_MakeSprite_CDEF: Cum să faci un spiriduș în Sprite Lab
         CDEF_Video_SpritesInAction: Spiriduși în acțiune
         CSF_SpriteLab_SpritesInAction_CDEF: Spiriduși în acțiune
-        CSF_StarWars_ProjectIntro: Introducere în proiectul Star Wars
+        CSF_StarWars_ProjectIntro: Introducere în proiectul Războiul Stelelor
         mc_2018_intro: 'Minecraft: Introducere în aventura acvatică'
         MC_2018_loops: 'Minecraft: Repetă până când (repeat until) în aventura acvatică'
         mc_2018_conditionals: 'Minecraft: Condiționale în aventura acvatică'
@@ -838,6 +838,8 @@ ro:
         codebreak_e11: 'Code Break 11.0: Teorii cu Susan Wojcicki și China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula
           Mejia'
+        playlab_2021: Introducere in Play Lab
+        playlab_2021_reader: Introducere in Play Lab
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc
