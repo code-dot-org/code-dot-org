@@ -106,7 +106,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal 'stable', seeded_unit_group.published_state
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
-    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 3, seeded_unit_group.default_units.length
   end
 
   test "can seed unit group and create resources from hash" do
@@ -126,7 +126,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
-    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 3, seeded_unit_group.default_units.length
     assert_equal 2, seeded_unit_group.resources.length
     assert_equal 1, seeded_unit_group.student_resources.length
   end
@@ -172,7 +172,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     seeded_unit_group = UnitGroup.seed_from_hash(hash)
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
-    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 3, seeded_unit_group.default_units.length
     assert_equal 0, seeded_unit_group.resources.length
   end
 
@@ -216,7 +216,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     seeded_unit_group = UnitGroup.seed_from_hash(hash)
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
-    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 3, seeded_unit_group.default_units.length
     assert_equal 1, seeded_unit_group.student_resources.length
     resource_to_update.reload
     assert_equal 'updated name', resource_to_update.name
@@ -500,7 +500,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test 'unit group unit test data is properly initialized' do
       assert_equal 'my-unit-group', @unit_group.name
-      assert_equal %w(script1 script2 script3), @unit_group.default_scripts.map(&:name)
+      assert_equal %w(script1 script2 script3), @unit_group.default_units.map(&:name)
       assert_equal %w(script2a), @unit_group.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
@@ -696,9 +696,9 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'validate test data' do
-      assert_equal 2, @csp_2017.default_scripts.count
-      assert_equal 2, @csp_2018.default_scripts.count
-      assert_equal 1, @csd.default_scripts.count
+      assert_equal 2, @csp_2017.default_units.count
+      assert_equal 2, @csp_2018.default_units.count
+      assert_equal 1, @csd.default_units.count
     end
 
     test 'student with no progress has no progress' do

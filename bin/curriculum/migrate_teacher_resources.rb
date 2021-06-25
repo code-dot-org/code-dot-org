@@ -42,7 +42,7 @@ def migrate_resources_for_scripts
 end
 
 def migrate_resources_for_unit_groups
-  UnitGroup.all.to_a.select(&:has_migrated_script?).each do |unit_group|
+  UnitGroup.all.to_a.select(&:has_migrated_unit?).each do |unit_group|
     next if unit_group.teacher_resources.blank?
     course_version = unit_group.course_version
     next unless course_version

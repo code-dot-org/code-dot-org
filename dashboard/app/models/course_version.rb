@@ -33,7 +33,7 @@ class CourseVersion < ApplicationRecord
     message: "must contain only digits; got \"%{value}\"."
 
   def units
-    content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
+    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
 
   # "Interface" for content_root:
