@@ -182,9 +182,5 @@ en-GB:
             "'sand'": sand
       craft_moveForward:
         text: move forward
-      craft_placeBlock:
-        options:
-          blockType:
-            '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch

@@ -19,6 +19,12 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but the player can't!  "
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "This is a `repeat` loop!  Click it into the workspace and add code that you want to run again and again."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "The Agent can hover over lava, but the player can't!  "
         }
       }
     }
