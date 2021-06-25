@@ -1,11 +1,19 @@
 name 'OPD-K5-CourseNav-2021'
 skip_dialog true
 markdown <<MARKDOWN
-## Navigating this Course
+## Navigating Lessons in Part II
 
-### **Option A:** Use the table below and click on the next lesson for a particular course you plan on teaching.
+**You have completed Lesson 7:  Sequencing.**
 
-**Note:**  The next lesson you click on from the table will open in a new window.
+You can go through lessons in Part II using one of two options: 
+
+* **Option A** is best if you are limited on time and definitely know which course you will teach.
+
+* **Option B** is best if you are not limited on time, teach multiple grades, or do not know which course you will teach.
+
+
+## Option A
+Use the table below to go on to the next lesson and computer science concept that is part of the course you plan to teach. Click the next lesson listed in the table for the course of your choice.  
 
 <table style="width:100%; border-style:none;">
   <tr>
@@ -41,7 +49,7 @@ markdown <<MARKDOWN
     <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
         <li> <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a> </li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: For Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
       </ul>
@@ -49,7 +57,7 @@ markdown <<MARKDOWN
     <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: For Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
       </ul>
@@ -57,7 +65,7 @@ markdown <<MARKDOWN
     <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: For Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
       </ul>
@@ -65,7 +73,7 @@ markdown <<MARKDOWN
     <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" > Lesson 7: Sequencing </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: For Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >Lesson 10: Events </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals</a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects </a> </li>
@@ -74,9 +82,10 @@ markdown <<MARKDOWN
     <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
       <ul style="font-style:italic;">
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: For Loops </a></li>
+        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >Lesson 12: Functions  </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
+       
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
       </ul>
     </td>
@@ -91,5 +100,9 @@ markdown <<MARKDOWN
 </table>
 <br/>
 
-### **Option B:** Click "Continue" to go on to the next lesson for this online course.
+## Option B 
+
+Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to go on to Lesson 8: Sequencing with Sprites.
+
+##### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >Click here to access Part III: Next Steps.</a>
 MARKDOWN

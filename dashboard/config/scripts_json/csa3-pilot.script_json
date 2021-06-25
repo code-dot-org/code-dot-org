@@ -2,7 +2,6 @@
   "script": {
     "name": "csa3-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
@@ -15,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 15:19:14 UTC",
+    "serialized_at": "2021-06-24 13:41:44 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -228,7 +227,7 @@
     },
     {
       "key": "lesson-11",
-      "name": "Concert in the Theater Project - Day 1",
+      "name": "Concert in The Theater Project - Day 1",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -246,7 +245,7 @@
     },
     {
       "key": "lesson-12",
-      "name": "Concert in the Theater Project - Day 2",
+      "name": "Concert in The Theater Project - Day 2",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -263,7 +262,7 @@
     },
     {
       "key": "lesson-13",
-      "name": "Concert in the Theater Project - Day 3",
+      "name": "Concert in The Theater Project - Day 3",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
