@@ -380,40 +380,6 @@ nn:
           igjen og igjen i eit større program. Vi skal no hjelpe elevar med å intuitivt
           forstå korleis det å kombinere bitar av kode inn i funksjonar, er en veldig
           nyttig praksis.  '
-      swipeRightPassThrough:
-        title: Økt med rekrutteringsscenariar
-        desc: "# Øving med rekrutteringsscenarioer\r\n\r\n## Sveip til høgre for datavitskap\r\nI
-          denne øvinga nyttar vi eit berktøy som heiter \"Sveip til høgre for datavitskap\",
-          som er utvikla av partnarane våre i MIT. I Sveip til høgre for datavitskap,
-          kan du lese gjennom nokre studentprofilar og vurdere ulike utsagn som du
-          kan bruke for å overtyde han eller ho om å bruke i kurset om prinsipper
-          for datavitskap. \r\n\r\n### Slik fungerer det\r\nNår du spelar Sveip til
-          høgre for datavitskap ser du ei rekke påstandar du kan seie til kvar elev.
-          Du sveiper høre på det påstandar som du tenker kan vere effektive i å overbevise
-          elevane til å delta i kurset og sveipe til venstre på dei som ikkje er så
-          effektive. Gjennom øvinga vil vi diskutere som ei gruppe dine tankar om
-          påstandar som er mest effektive i å få elevar til å bli med i faget datavitskap
-          og du vil ha høve til å sjå korleis andre folk i workshopen sveipa på kvart
-          argument. \r\n\r\n\r\nNår du klikkar fortsett under, sender vi deg til spelet
-          saman med Code.org-epostadressa du er innlogga med."
-      swipeRightPassThrough-test123:
-        title: Økt med rekrutteringsscenariar
-        desc: "# Øving med rekrutteringsscenarioer\r\n\r\n## Sveip til høgre for datavitskap\r\nI
-          denne øvinga nyttar vi eit berktøy som heiter \"Sveip til høgre for datavitskap\",
-          som er utvikla av partnarane våre i MIT. I Sveip til høgre for datavitskap,
-          kan du lese gjennom nokre studentprofilar og vurdere ulike utsagn som du
-          kan bruke for å overtyde han eller ho om å bruke i kurset om prinsipper
-          for datavitskap. \r\n\r\n### Slik fungerer det\r\nNår du spelar Sveip til
-          høgre for datavitskap ser du ei rekke påstandar du kan seie til kvar elev.
-          Du sveiper høre på det påstandar som du tenker kan vere effektive i å overbevise
-          elevane til å delta i kurset og sveipe til venstre på dei som ikkje er så
-          effektive. Gjennom øvinga vil vi diskutere som ei gruppe dine tankar om
-          påstandar som er mest effektive i å få elevar til å bli med i faget datavitskap
-          og du vil ha høve til å sjå korleis andre folk i workshopen sveipa på kvart
-          argument. \r\n\r\n\r\nNår du klikkar fortsett under, sender vi deg til spelet
-          saman med Code.org-epostadressa du er innlogga med."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Mine robotvener
         desc: Lær å programmere med å skrive kode for venene dine!
@@ -604,10 +570,3 @@ nn:
         desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill
           og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss
           eg trekk eit svart kort, får du poeng."
-      TheRightApp_2019:
-        title: Den rette appen
-        desc: "* Alle nyttar datamaskiner i dag, spesielt smarte telefonar. \r\n*
-          Applikasjonar i smarttelefonar, eller \"appar\", hjelper folk med å gjere
-          ting som å snakke med venner, høyre på musikk, kjøpe ting eller berre finne
-          ting på nett.\r\n* Det er viktig for programmerarar å forstå andre folk
-          sine behov og designe appar som tek vare på det behovet!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
