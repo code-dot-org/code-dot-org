@@ -614,7 +614,7 @@ class ScriptsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_includes error.message, 'Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
+    assert_includes error.message, 'Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
   end
 
   test 'can update if database matches starting content for current edit page' do
