@@ -274,7 +274,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       error = assert_raises RuntimeError do
         unit_group.update_scripts(['unit2'])
       end
-      assert_includes error.message, 'Cannot remove scripts that have resources or vocabulary'
+      assert_includes error.message, 'Cannot remove units that have resources or vocabulary'
 
       unit_group.reload
       assert_equal 2, unit_group.default_unit_group_units.length
@@ -300,7 +300,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       error = assert_raises RuntimeError do
         unit_group1.update_scripts(['unit1', 'unit2'])
       end
-      assert_includes error.message, 'Cannot add scripts that have resources or vocabulary'
+      assert_includes error.message, 'Cannot add units that have resources or vocabulary'
 
       unit_group1.reload
       assert_equal 1, unit_group1.default_unit_group_units.length
