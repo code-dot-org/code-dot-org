@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 16:39:59 UTC",
+    "serialized_at": "2021-06-24 23:06:46 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp4-2021"
@@ -3433,7 +3433,7 @@
       "key": "245295f8-6af2-43ad-b3e4-ba9c339cd70c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n\n\n**Submit:** Students complete a final check of their completed projects on Level 2. The rubric is displayed in the instruction box.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n**Step 11:** Record Video\n\n* Students make a screen capture of their app being used. \n\n\n**Submit:** Students complete a final check of their completed projects on Level 2. The rubric is displayed in the instruction box.",
         "progression_name": "Submit Your Decision Maker App"
       },
       "seeding_key": {
@@ -6603,10 +6603,9 @@
     },
     {
       "name": "CSP U4 Practice PT Planning Guide",
-      "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-K9Fq9GPQlAuYfsrcJCVhls0Bcih7jLxLcirufVDwXI/edit?usp=sharing",
       "key": "csp_u4_practice_pt_planning_guide",
       "properties": {
-        "type": "Planning Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -6616,7 +6615,7 @@
     },
     {
       "name": "CSP U4 Practice PT Rubric",
-      "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1NfOGQsV9pT72cRKwSaN8PmYaBMwepjPzPjcXySnJg7E/edit?usp=sharing",
       "key": "csp_u4_practice_pt_rubric",
       "properties": {
         "type": "Rubric",
