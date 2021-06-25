@@ -1,2 +1,13 @@
 {
+  "tr-TR": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Hayvanların her biri için oda çizin. ",
+        "courseD_bee_nestedLoops8_2021": "Tüm çiçeklerdeki nektarları topla ve peteklere bal yap. İç içe döngü kullan. ",
+        "courseD_bee_nestedLoops9_2021": "Balın tamamını yap.",
+        "courseF_bee_variables_7a_2021": "Bu bulmaca biraz farklıdır. Bunu çözmek için ne yapmanız gerekir?",
+        "ramp_artist_loops8_2021": "Tekrarlayan deseni bulun ve kodu daha kısa yapın."
+      }
+    }
+  }
 }
