@@ -120,9 +120,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl = create_script_level_with_ancestors
 
     student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
     create(:user_level, user: student, level: sl.level)
 
-    summary = sl.summarize_for_teacher_panel(student)
+    summary = sl.summarize_for_teacher_panel(student, teacher)
     assert_equal sl.assessment, summary[:assessment]
     assert_equal sl.position, summary[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
@@ -132,6 +136,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'teacher panel summarize with progress on this level in another script' do
     student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
     sl = create_script_level_with_ancestors
     sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
@@ -144,7 +152,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level_source_id: nil
     )
 
-    summary = sl.summarize_for_teacher_panel(student)
+    summary = sl.summarize_for_teacher_panel(student, teacher)
     assert_equal sl.assessment, summary[:assessment]
     assert_equal sl.position, summary[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
@@ -154,6 +162,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'teacher panel summarize for BubbleChoice level' do
     student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
     sublevel1 = create :level, name: 'choice_1'
     sublevel2 = create :level, name: 'choice_2'
     bubble_choice = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
@@ -172,11 +184,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
       status: LEVEL_STATUS.not_tried,
       levelNumber: script_level.position,
       assessment: nil,
-      bonus: nil
+      bonus: nil,
+      teacherFeedbackReivewState: nil
     }
 
     # With no progress
-    summary = script_level.summarize_for_teacher_panel(student)
+    summary = script_level.summarize_for_teacher_panel(student, teacher)
     assert_equal expected_summary, summary
 
     # With progress on a BubbleChoice sublevel
@@ -184,22 +197,41 @@ class ScriptLevelTest < ActiveSupport::TestCase
     expected_summary[:paired] = false
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.perfect
-    expected_summary.merge!(ul.attributes)
-    summary = script_level.summarize_for_teacher_panel(student)
+    expected_summary.merge!(ul.reload.attributes)
+    summary = script_level.summarize_for_teacher_panel(student, teacher)
+    assert_equal expected_summary, summary
+
+    # With keepWorking feedback on a sublevel
+    ul2 = create :user_level, user: student, level: sublevel2, best_result: 20, script_id: script_level.script.id
+    create :teacher_feedback, student: student, teacher: teacher, level: sublevel2, script: script_level.script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    expected_summary[:passed] = true
+    expected_summary[:status] = LEVEL_STATUS.passed
+    expected_summary[:teacherFeedbackReivewState] = TeacherFeedback::REVIEW_STATES.keepWorking
+    expected_summary.merge!(ul2.reload.attributes)
+    summary = script_level.summarize_for_teacher_panel(student, teacher)
     assert_equal expected_summary, summary
   end
 
   test 'teacher panel summarize for contained level' do
     student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
     contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
     sl2 = create_script_level_with_ancestors({levels: [level_1]})
 
-    summary2 = sl2.summarize_for_teacher_panel(student)
+    create :teacher_feedback, student: student, teacher: teacher, level: level_1, script: sl2.script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    summary2 = sl2.summarize_for_teacher_panel(student, teacher)
+
     assert_equal sl2.assessment, summary2[:assessment]
     assert_equal sl2.position, summary2[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary2[:status]
+    assert_equal TeacherFeedback::REVIEW_STATES.keepWorking, summary2[:teacherFeedbackReivewState]
     assert_equal false, summary2[:passed]
     assert_equal student.id, summary2[:user_id]
     assert_equal true, summary2[:contained]
@@ -208,6 +240,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'teacher panel summarize for paired level' do
     student = create :student
     student2 = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
 
     sl = create_script_level_with_ancestors
     driver_ul = create(
@@ -226,8 +261,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     )
     create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
 
-    summary1 = sl.summarize_for_teacher_panel(student)
-    summary2 = sl.summarize_for_teacher_panel(student2)
+    summary1 = sl.summarize_for_teacher_panel(student, teacher)
+    summary2 = sl.summarize_for_teacher_panel(student2, teacher)
     assert_equal true, summary1[:paired]
     assert_equal true, summary2[:paired]
     assert_equal student.name, summary2[:driver]

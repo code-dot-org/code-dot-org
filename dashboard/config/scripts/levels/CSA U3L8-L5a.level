@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA U3L8 Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Theater Capacity",
+    "long_instructions": "Oh no! There may have been a booking error that put The Theater over capacity for the first month of concerts.\r\n\r\nThe Theater has a capacity of 250 seats.\r\n\r\n1. In `TheaterManager.java`, write the method `isWithinCapacity()` which takes in a list of tickets sold each night and checks that none are over capacity.\r\n\r\n2. In `MyTheater.java`, add the code segment shown below to check your method.\r\n\r\n```\r\npublic final class TheaterManager {\r\n\r\n   // Determine whether a performance has been oversold.\r\n   public static boolean isInCapacity(double[] ticketCount) {\r\n   \r\n      // Initialize variable to store the status\r\n      \r\n      // Create a loop to traverse the array\r\n      \r\n         // Update the status variable\r\n      \r\n      // Return the status\r\n   \r\n   }\r\n}\r\n\r\npublic class MyTheater {\r\n   public static void main(String[] args) {\r\n      int[] song = . . . ;\r\n      double[] sales = . . . ;\r\n      int[] ticketsSold = . . . ;\r\n      \r\n      boolean capacityNotMet = TheaterManager.isInCapacity(ticketsSold);\r\n      if (capacityNotMet) {\r\n         System.out.println(\"All performances are within capacity.\");\r\n      }\r\n      else {\r\n         System.out.println(\"Too many tickets have been sold!\");\r\n      }\r\n   }\r\n}\r\n```"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-28T18:13:30.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-28 18:31:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 13:28:32 UTC",
+    "serialized_at": "2021-06-25 13:05:48 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -4463,6 +4463,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2"
+        ],
         "progression": "Multiple Constructors"
       },
       "named_level": false,
@@ -4538,6 +4541,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5"
+        ],
         "progression": "Constructor Overloading with Scanner"
       },
       "named_level": false,
@@ -4587,6 +4593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1"
+        ],
         "progression": "Expressions Widget"
       },
       "named_level": false,
@@ -6551,6 +6560,18 @@
       }
     },
     {
+      "name": "[KEY] U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1YHxcaWVxO7j1dJHWvY5xEzCZfZnBQMT-5ULWhrPRFCY/edit?usp=sharing",
+      "key": "_key_u2l4_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U2L5 Extra Practice",
       "url": "https://docs.google.com/document/d/1y7s4q-hAw37m155j7AZAhU0_M7_RE4EZx-yxcKLYW0Q/edit#",
       "key": "_key_u2l5_extra_practice",
@@ -6680,6 +6701,18 @@
       },
       "seeding_key": {
         "resource.key": "combo_class_frq_print_out"
+      }
+    },
+    {
+      "name": "Construct an Object Cards",
+      "url": "https://docs.google.com/presentation/d/17TySKn5znJbjAerFkctXL54iVz6ZnhJCEKwLkWT6Wo4/edit?usp=sharing",
+      "key": "construct_an_object_cards_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "construct_an_object_cards_1"
       }
     },
     {
@@ -6884,6 +6917,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/12YjXgxnQNdmWvs9Q5KzeVemm8lBnx-EfEe_1R0QsGTU/edit?usp=sharing",
+      "key": "u2l4_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -7120,6 +7165,24 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "construct_an_object_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u2l4_extra_practice"
       }
     },
     {
@@ -9202,6 +9265,13 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.3"
       }
     },
     {

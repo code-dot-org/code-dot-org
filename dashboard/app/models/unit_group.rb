@@ -7,7 +7,7 @@
 #  properties      :text(65535)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  published_state :string(255)      default("beta"), not null
+#  published_state :string(255)      default("in_development"), not null
 #
 # Indexes
 #
@@ -107,7 +107,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
-    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.beta
+    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -696,5 +696,14 @@ class UnitGroup < ApplicationRecord
 
   def has_migrated_script?
     !!default_scripts[0]&.is_migrated?
+  end
+
+  def prevent_course_version_change?
+    # rubocop:disable Style/SymbolProc
+    # For reasons I (Bethany) still don't understand, using a proc here causes
+    # the method to terminate unexpectedly without an error. My unproven guess
+    # is that this is due to the nested `any?` calls
+    default_scripts.any? {|s| s.prevent_course_version_change?}
+    # rubocop:enable Style/SymbolProc
   end
 end

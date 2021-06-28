@@ -5,9 +5,16 @@ export default class Theater {
   }
 
   handleSignal(data) {
-    const imageString = 'data:image/gif;base64,' + data.detail.image;
-    const imgElement = this.getImgElement();
-    imgElement.src = imageString;
+    if (data.detail.image) {
+      const imageString = 'data:image/gif;base64,' + data.detail.image;
+      const imgElement = this.getImgElement();
+      imgElement.src = imageString;
+    }
+    if (data.detail.audio) {
+      const audioString = 'data:audio/wav;base64,' + data.detail.audio;
+      const audioElement = this.getAudioElement();
+      audioElement.src = audioString;
+    }
   }
 
   reset() {
@@ -17,5 +24,9 @@ export default class Theater {
 
   getImgElement() {
     return document.getElementById('theater');
+  }
+
+  getAudioElement() {
+    return document.getElementById('theater-audio');
   }
 }

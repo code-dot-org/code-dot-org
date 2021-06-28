@@ -1,0 +1,7 @@
+name 'CSA U3L8-L5'
+display_name 'Identifying Properties'
+description 'Help The Theater Manager check the performance and the stage for the concert!'
+
+sublevels
+level 'CSA U3L8-L5a'
+level 'CSA U3L8-L5b'
