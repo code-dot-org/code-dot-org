@@ -91,6 +91,13 @@ export default class CourseVersionPublishingEditor extends Component {
               </thead>
               <tbody>
                 <tr>
+                  <td style={styles.tableBorder}>In-Development</td>
+                  <td style={styles.tableBorder}>
+                    Only levelbuilder can see this course. Used for creating new
+                    content you don't want anyone to access.
+                  </td>
+                </tr>
+                <tr>
                   <td style={styles.tableBorder}>Pilot</td>
                   <td style={styles.tableBorder}>
                     A limited set of teachers who are in a pilot experiment can
