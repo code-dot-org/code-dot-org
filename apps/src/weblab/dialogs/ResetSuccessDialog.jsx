@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/weblab/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
-// TODO: i18n
 export default function ResetSuccessDialog(props) {
   return (
     <StylizedBaseDialog
       isOpen={props.isOpen}
       handleClose={props.handleClose}
-      title="Web Lab Reset Complete"
-      body="Reloading..."
+      title={i18n.resetComplete()}
+      body={i18n.reloading()}
       hideFooter
     />
   );
