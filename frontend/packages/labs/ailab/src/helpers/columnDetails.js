@@ -10,6 +10,11 @@ export function isColumnNumerical(state, column) {
   return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
 }
 
+export function filterColumnsByType(columnsByDataType, columnType) {
+  return Object.keys(columnsByDataType).filter(
+    column => columnsByDataType[column] === columnType
+  );
+}
 /*
   Categorical columns with too many unique values are unlikley to make
   accurate models, and we don't want to overflow the metadata column for saved

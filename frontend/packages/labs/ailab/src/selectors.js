@@ -6,10 +6,10 @@ import {
   isColumnReadOnly,
   getColumnDescription,
   hasTooManyUniqueOptions,
-  containsOnlyNumbers
+  containsOnlyNumbers,
+  filterColumnsByType
 } from './helpers/columnDetails';
 import { arrayIntersection } from './helpers/utils';
-import { filterColumnsByType } from './redux';
 
 const getData = state => state.data;
 const getColumnsByDataType = state => state.columnsByDataType;

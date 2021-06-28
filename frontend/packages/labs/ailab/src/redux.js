@@ -11,8 +11,6 @@ import {
 import {
   isColumnNumerical,
   isColumnCategorical,
-  isColumnReadOnly,
-  getColumnDescription,
   getColumnDataToSave,
 } from "./helpers/columnDetails.js";
 import { getUniqueOptionsLabelColumn } from "./selectors";
@@ -673,45 +671,6 @@ export function getPanelButtons(state) {
 
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
-}
-
-/* Functions for filtering and selecting columns by type.  */
-
-export function filterColumnsByType(columnsByDataType, columnType) {
-  return Object.keys(columnsByDataType).filter(
-    column => columnsByDataType[column] === columnType
-  );
-}
-
-function getCategoricalColumns(state) {
-  return filterColumnsByType(state.columnsByDataType, ColumnTypes.CATEGORICAL);
-}
-
-export function getSelectedCategoricalColumns(state) {
-  let intersection = getCategoricalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
-function getSelectedColumns(state) {
-  return state.selectedFeatures
-    .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "")
-    .map(columnId => {
-      return { id: columnId, readOnly: isColumnReadOnly(state.metadata, columnId) };
-    });
-}
-
-/* Functions for getting specific details about a batch of columns.  */
-
-export function getSelectedColumnDescriptions(state) {
-  return getSelectedColumns(state).map(column => {
-    return {
-      id: column.id,
-      description: getColumnDescription(state, column.id)
-    };
-  });
 }
 
 /* Functions for processing column data for visualizations. */
