@@ -21,7 +21,7 @@ social:
 
 <ul>
     <li><a href="#careers">Expose students to different careers and community roles</a></li>
-    <li><a href="#play">Role play different careers with students (and other playful activities)</a></li>
+    <li><a href="#play">Make time for fun activities that enable students to imagine different careers</a></li>
     <li><a href="#encourage">Encourage students</a></li>
     <li><a href="#extracurricular">Make parents aware of extracurricular activities that enhance student learning</a></li>
 </ul>
@@ -64,7 +64,8 @@ social:
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Inspirational videos and posters</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Show inspiring videos and hang posters of diverse CS role models in your classroom or computer lab.</div>
-        <a class="linktag" id="mentors" href="/beyond/mentors-and-community" target="_blank"><button>View resources</button></a>
+        <a class="linktag" id="k5-videos" href="/educate/resources/videos#inspirational-videos" target="_blank"><button>View videos</button></a>
+        <a class="linktag" id="k5-posters" href="/educate/resources/posters" target="_blank"><button>View posters</button></a>
   </div>
 </div>
 </div>
@@ -74,16 +75,9 @@ social:
 <p><a href="#top">[Back to top]</a></p>
 
 <a id="play"></a>
-<h2>Role play different careers with students (and other playful activities)</h2>
-<p>Children experience the world through play. Guide their exploration with these recommended activities.</p>
+<h2>Make time for fun activities that enable students to imagine different careers</h2>
+<p>Children experience the world through play. Guide their exploration with these activity suggestions.</p>
 
-<h3>Role Play</h3>
-<p>TBD...</p>
-
-<h3>Draw</h3>
-<p>TBD...</p>
-
-<h3>More Ideas</h3>
 <ul>
     <li><a href="https://code.org/educate/spritelab" target="_blank">Create your ‘future self’ avatar in Sprite Lab</a>. Have students create their own future selves in Sprite Lab. They can customize pre-made avatars and backgrounds or draw their own! Encourage them to program a short scene from a ‘day in the life’ of their future self. <i>(Ages 10+)</i>
     <li><strong>Career Vision Boards</strong>. Students use poster board or <a href="https://code.org/educate/spritelab" target="_blank">Sprite Lab</a> to create a career vision board, a collage of their hopes and expectations for the future. Collages can include words, drawings, and pictures. <i>(Ages 7+)</i></li>
