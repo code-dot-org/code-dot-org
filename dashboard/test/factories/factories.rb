@@ -492,7 +492,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "Level_#{n}"}
     sequence(:level_num) {|n| "1_2_#{n}"}
 
-    # User id must be non -nil for custom level
+    # User id must be non-nil for custom level
     user_id '1'
     game
 
