@@ -473,7 +473,7 @@ class JavalabEditor extends React.Component {
 
   editorHeaderText = () =>
     this.props.isReadOnlyWorkspace
-      ? javalabMsg.readonlyWorkspaceHeader()
+      ? msg.readonlyWorkspaceHeader()
       : javalabMsg.editor();
 
   render() {

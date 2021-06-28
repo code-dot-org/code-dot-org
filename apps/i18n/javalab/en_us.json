@@ -21,7 +21,6 @@
   "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
-  "readonlyWorkspaceHeader": "View only",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
 }
