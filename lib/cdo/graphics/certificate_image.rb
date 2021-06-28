@@ -179,13 +179,13 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 end
 
 def hoc_course?(course)
-  hoc_course = ScriptConstants.script_in_category?(:hoc, course)
+  hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
   hoc_course ||= Tutorials.new(:tutorials).contents("").any? {|tutorial| tutorial[:code] == course}
   hoc_course
 end
 
 def prefilled_title_course?(course)
-  hoc_course?(course) || ScriptConstants.script_in_category?(:twenty_hour, course)
+  hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course)
 end
 
 # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
@@ -209,7 +209,7 @@ end
 
 def certificate_template_for(course)
   if hoc_course?(course)
-    if ScriptConstants.script_in_category?(:minecraft, course)
+    if ScriptConstants.unit_in_category?(:minecraft, course)
       if course == ScriptConstants::MINECRAFT_HERO_NAME
         'MC_Hour_Of_Code_Certificate_Hero.png'
       elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
@@ -226,7 +226,7 @@ def certificate_template_for(course)
     else
       'hour_of_code_certificate.jpg'
     end
-  elsif ScriptConstants.script_in_category?(:twenty_hour, course)
+  elsif ScriptConstants.unit_in_category?(:twenty_hour, course)
     '20hours_certificate.jpg'
   else
     'blank_certificate.png'
