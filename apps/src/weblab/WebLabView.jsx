@@ -138,17 +138,19 @@ class WebLabView extends React.Component {
                   }
                   label=""
                 />
+                {!this.props.isFullScreenPreviewOn && (
+                  <PaneButton
+                    id="versions-header"
+                    iconClass="fa fa-clock-o"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    label={msg.showVersionsHeader()}
+                  />
+                )}
                 {!this.props.isFullScreenPreviewOn &&
                   !this.props.isReadOnlyWorkspace && (
                     <div>
-                      <PaneButton
-                        id="versions-header"
-                        iconClass="fa fa-clock-o"
-                        leftJustified={true}
-                        headerHasFocus={true}
-                        isRtl={false}
-                        label={msg.showVersionsHeader()}
-                      />
                       {maxProjectCapacity > 0 && projectSize > 0 && (
                         <Meter
                           id="weblab-project-capacity"

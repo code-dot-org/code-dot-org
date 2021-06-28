@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
+import classnames from 'classnames';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -9,7 +10,9 @@ export default class VersionRow extends React.Component {
   static propTypes = {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
-    isLatest: PropTypes.bool,
+    isLatest: PropTypes.bool.isRequired,
+    isViewingVersion: PropTypes.bool.isRequired,
+    isProjectOwned: PropTypes.bool.isRequired,
     onChoose: PropTypes.func
   };
 
@@ -22,10 +25,12 @@ export default class VersionRow extends React.Component {
   }
 
   render() {
-    let button;
+    let buttons = [];
     if (this.props.isLatest) {
-      button = (
+      // this is the placeholder for the latest version (can't be restored)
+      buttons.push(
         <button
+          key={buttons.length}
           type="button"
           className="btn-default"
           disabled="disabled"
@@ -34,15 +39,29 @@ export default class VersionRow extends React.Component {
           {msg.currentVersion()}
         </button>
       );
-    } else {
-      button = [
+    } else if (this.props.isProjectOwned) {
+      // this is a non-latest version and we own the project (it can be restored)
+      buttons.push(
+        <button
+          key={buttons.length}
+          type="button"
+          className="btn-info"
+          onClick={this.props.onChoose}
+        >
+          {msg.restoreThisVersion()}
+        </button>
+      );
+    }
+
+    if (!this.props.isViewingVersion) {
+      // we can view any version other than the version we're currently viewing
+      buttons.push(
         <a
-          key={0}
+          key={buttons.length}
           href={
             location.origin +
             location.pathname +
-            '?version=' +
-            this.props.versionId
+            (this.props.isLatest ? '' : '?version=' + this.props.versionId)
           }
           target="_blank"
           rel="noopener noreferrer"
@@ -50,20 +69,17 @@ export default class VersionRow extends React.Component {
           <button type="button" className="version-preview">
             <i className="fa fa-eye" />
           </button>
-        </a>,
-        <button
-          type="button"
-          key={1}
-          className="btn-info"
-          onClick={this.props.onChoose}
-        >
-          {msg.restoreThisVersion()}
-        </button>
-      ];
+        </a>
+      );
     }
 
     return (
-      <tr className="versionRow">
+      <tr
+        className={classnames({
+          versionRow: true,
+          highlight: this.props.isViewingVersion
+        })}
+      >
         <td>
           <p>
             {msg.versionHistory_versionLabel({
@@ -72,7 +88,7 @@ export default class VersionRow extends React.Component {
           </p>
         </td>
         <td width="275" style={{textAlign: 'right'}}>
-          {button}
+          {buttons}
         </td>
       </tr>
     );
