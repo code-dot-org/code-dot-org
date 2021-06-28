@@ -13,7 +13,7 @@ import {
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
 import { allDatasets, getAvailableDatasets } from "../datasetManifest";
-import { styles } from "../constants";
+import { styles, fileTypeErrorMessage } from "../constants";
 import ScrollableContent from "./ScrollableContent";
 
 class SelectDataset extends Component {
@@ -27,14 +27,15 @@ class SelectDataset extends Component {
     resetState: PropTypes.func.isRequired,
     specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
-    highlightDataset: PropTypes.string
+    highlightDataset: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      download: false
+      download: false,
+      showFileTypeError: false
     };
   }
 
@@ -53,7 +54,8 @@ class SelectDataset extends Component {
       this.props.setSelectedCSV(csvPath);
       this.props.setSelectedJSON(jsonPath);
       this.setState({
-        download: true
+        download: true,
+        showFileTypeError: false
       });
 
       parseCSV(csvPath, true, false);
@@ -64,11 +66,22 @@ class SelectDataset extends Component {
 
   handleUploadSelect = event => {
     this.props.resetState();
-    this.props.setSelectedCSV(event.target.files[0]);
+    const selectedCSV = event.target.files[0]
+    this.props.setSelectedCSV(selectedCSV);
     this.setState({
       download: false
     });
-    parseCSV(event.target.files[0], false, true);
+    if (selectedCSV.name.includes(".xls") ||
+    selectedCSV.type === "application/vnd.ms-excel") {
+      this.setState({
+        showFileTypeError: true
+      });
+    } else {
+      this.setState({
+        showFileTypeError: false
+      });
+      parseCSV(event.target.files[0], false, true);
+    }
   };
 
   render() {
@@ -122,7 +135,7 @@ class SelectDataset extends Component {
               <input
                 className="csv-input"
                 type="file"
-                accept=".csv"
+                accept=".csv,.xls,.xlsx"
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
@@ -130,6 +143,11 @@ class SelectDataset extends Component {
                 value=""
               />
             </label>
+            {this.state.showFileTypeError && (
+              <span style={styles.fileTypeErrorMessageConainer}>
+                {fileTypeErrorMessage}
+              </span>
+            )}
           </div>
         )}
       </div>
