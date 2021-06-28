@@ -730,27 +730,27 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    ScriptConstants.script_in_category?(:twenty_hour, name)
+    ScriptConstants.unit_in_category?(:twenty_hour, name)
   end
 
   def hoc?
-    ScriptConstants.script_in_category?(:hoc, name)
+    ScriptConstants.unit_in_category?(:hoc, name)
   end
 
   def flappy?
-    ScriptConstants.script_in_category?(:flappy, name)
+    ScriptConstants.unit_in_category?(:flappy, name)
   end
 
   def minecraft?
-    ScriptConstants.script_in_category?(:minecraft, name)
+    ScriptConstants.unit_in_category?(:minecraft, name)
   end
 
   def k5_draft_course?
-    ScriptConstants.script_in_category?(:csf2_draft, name)
+    ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
 
   def csf_international?
-    ScriptConstants.script_in_category?(:csf_international, name)
+    ScriptConstants.unit_in_category?(:csf_international, name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -824,7 +824,7 @@ class Script < ApplicationRecord
   end
 
   def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
 
   def get_script_level_by_id(script_level_id)
@@ -1167,7 +1167,7 @@ class Script < ApplicationRecord
       end
 
       lesson_groups.each do |original_lesson_group|
-        original_lesson_group.copy_to_script(copied_unit, new_level_suffix)
+        original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
       end
 
       course_version = copied_unit.get_course_version
@@ -1991,7 +1991,7 @@ class Script < ApplicationRecord
 
   def get_unit_resources_pdf_url
     if is_migrated?
-      Services::CurriculumPdfs.get_script_resources_url(self)
+      Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
 end

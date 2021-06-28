@@ -19,7 +19,7 @@ module VersionRedirectOverrider
     session[:course_version_overrides]
   end
 
-  def self.set_script_redirect_override(session, script_name)
+  def self.set_unit_redirect_override(session, script_name)
     overrides = script_version_overrides(session)
     unless script_name.blank? || overrides.include?(script_name)
       overrides << script_name
@@ -33,7 +33,7 @@ module VersionRedirectOverrider
     end
   end
 
-  def self.override_script_redirect?(session, script)
+  def self.override_unit_redirect?(session, script)
     script_overrides = script_version_overrides(session)
     course_overrides = course_version_overrides(session)
 

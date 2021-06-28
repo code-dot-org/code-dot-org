@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-06-28T18:46:49.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "The Theater Manager saw your `maxPitch()` method and was inspired to write a `minPitch()` method to help determine the full range of a song! Unfortunately, this method runs into an error.\r\n\r\n1. In `TheaterManager.java`, debug the `minPitch()` algorithm so that it returns the lowest value in the array of notes.\r\n\r\n2. In `MyTheater.java`, add the code segment shown below to test your method.\r\n\r\n```\r\npublic final class TheaterManager {\r\n\r\n   // Find the highest note in an array of music notes.\r\n   public static double maxPitch(int[] music) {\r\n      // To Do: Find and fix the error in the code!\r\n   }\r\n   \r\n}\r\n\r\npublic class MyTheater {\r\n   public static void main(String[] args) {\r\n      int[] song = . . . ;\r\n      double[] sales = . . . ;\r\n      int[] ticketsSold = . . . ;\r\n      \r\n      int minimumPitch = TheaterManager.minPitch(song);\r\n      System.out.println(\"The lowest pitch the actor must hit is \" + minimumPitch);\r\n   }\r\n}\r\n```",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA U3L8 Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>

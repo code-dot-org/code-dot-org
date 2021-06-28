@@ -47,7 +47,7 @@
     - if @lesson_extras
       - ScriptLevel.summarize_as_bonus_for_teacher_panel(@lesson.script, @bonus_level_ids, student)
     -else
-      - @script_level&.summarize_for_teacher_panel(student)
+      - @script_level&.summarize_for_teacher_panel(student, @current_user)
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}
