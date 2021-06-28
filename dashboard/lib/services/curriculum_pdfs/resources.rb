@@ -19,7 +19,7 @@ module Services
           return Pathname.new(File.join(subdirectory, filename))
         end
 
-        def get_script_resources_url(script)
+        def get_unit_resources_url(script)
           pathname = get_script_resources_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)

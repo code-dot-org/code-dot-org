@@ -2775,7 +2775,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
   end
 
   test 'raise error if try to add lesson in stable and i18n unit' do
@@ -2799,7 +2799,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
   end
 
   test 'raise error if try to add new lesson group in stable and i18n unit' do
