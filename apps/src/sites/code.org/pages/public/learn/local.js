@@ -42,10 +42,8 @@ $(function() {
   geocoder.addTo('#mapboxgeocoder');
 
   // Make the map sticky.
-  $('#map').css('position', 'sticky');
-  // Prevent the map from covering the footer
-  $(document).scroll(function() {
-    checkOffset();
+  $('#map').sticky({
+    bottomSpacing: $('#pagefooter').height() + 50
   });
 
   // Trigger query when a facet is changed.
@@ -55,25 +53,6 @@ $(function() {
       submitForm();
     });
 });
-
-// Prevent the map from covering the footer
-function checkOffset() {
-  // Once the user scrolls down far enough for the
-  // bottom of the map to touch the footer within 20px,
-  // set position to absolute
-  if (
-    $('#map').offset().top + $('#map').height() >=
-    document.body.scrollHeight - $('#pagefooter').height() - 20
-  ) {
-    $('#map').css('position', 'absolute');
-    // eslint-disable-next-line brace-style
-  }
-  // restore fixed position when the user scrolls up
-  else {
-    // Make the map sticky.
-    $('#map').css('position', 'sticky');
-  }
-}
 
 function submitForm() {
   var form_data = $('#class-search-form').serializeArray();
