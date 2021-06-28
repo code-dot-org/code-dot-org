@@ -55,6 +55,18 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(wrapper.find('input').length).to.equal(0);
   });
 
+  it('updates pilotExperiment when publish state changed to in-development', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: PublishedState.in_development}});
+
+    expect(updatePilotExperiment).to.have.been.calledWith('');
+  });
+
   it('updates pilotExperiment when publish state changed to beta', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />

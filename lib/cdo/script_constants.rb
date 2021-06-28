@@ -320,13 +320,13 @@ module ScriptConstants
     TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
-  def self.script_in_category?(category, script)
+  def self.unit_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
 
   def self.script_in_any_category?(script)
     CATEGORIES.keys.any? do |category|
-      script_in_category?(category, script)
+      unit_in_category?(category, script)
     end
   end
 
@@ -389,7 +389,7 @@ module ScriptConstants
 
   def self.has_congrats_page?(script)
     script == ACCELERATED_NAME ||
-      ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.unit_in_category?(:csf_international, script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
   end
 
@@ -434,17 +434,17 @@ module ScriptConstants
   end
 
   def self.i18n?(script)
-    ScriptConstants.script_in_category?(:csf_international, script) ||
-      ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script) ||
-      ScriptConstants.script_in_category?(:csf_2019, script) ||
-      ScriptConstants.script_in_category?(:csf_2020, script) ||
-      ScriptConstants.script_in_category?(:csf_2021, script) ||
-      ScriptConstants.script_in_category?(:csd, script) ||
-      ScriptConstants.script_in_category?(:csd_2018, script) ||
-      ScriptConstants.script_in_category?(:csd_2019, script) ||
-      ScriptConstants.script_in_category?(:twenty_hour, script) ||
-      ScriptConstants.script_in_category?(:hoc, script) ||
+    ScriptConstants.unit_in_category?(:csf_international, script) ||
+      ScriptConstants.unit_in_category?(:csf, script) ||
+      ScriptConstants.unit_in_category?(:csf_2018, script) ||
+      ScriptConstants.unit_in_category?(:csf_2019, script) ||
+      ScriptConstants.unit_in_category?(:csf_2020, script) ||
+      ScriptConstants.unit_in_category?(:csf_2021, script) ||
+      ScriptConstants.unit_in_category?(:csd, script) ||
+      ScriptConstants.unit_in_category?(:csd_2018, script) ||
+      ScriptConstants.unit_in_category?(:csd_2019, script) ||
+      ScriptConstants.unit_in_category?(:twenty_hour, script) ||
+      ScriptConstants.unit_in_category?(:hoc, script) ||
       JIGSAW_NAME == script ||
       ADDITIONAL_I18N_UNITS.include?(script)
   end

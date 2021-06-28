@@ -1127,7 +1127,7 @@ $default-modal-width: 640px;
   }
 }
 
-.script_name_container {
+.unit_name_container {
   overflow: hidden;
   padding-right: 5px;
 }
@@ -2479,14 +2479,6 @@ a.download-video {
     list-style-type: none;
   }
 }
-#script-updated {
-  color: $green;
-  display: none;
-}
-#edit-script-content {
-  float: left;
-  width: 25%;
-}
 
 #blockly-frame {
   width: 70%;
@@ -2494,14 +2486,6 @@ a.download-video {
 }
 #script_name {
   margin: 0 10px 0 0;
-}
-#edit-script-nav {
-  a {
-    display: block;
-    padding: 2px;
-    color: $dark_color;
-    font-size: 125%;
-  }
 }
 .edit_level {
   .field {
