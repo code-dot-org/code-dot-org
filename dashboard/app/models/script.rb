@@ -12,7 +12,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("beta"), not null
+#  published_state :string(255)      default("in_development"), not null
 #
 # Indexes
 #
@@ -571,7 +571,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name) : nil
+    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -995,7 +995,7 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : unit_data[:published_state],
+        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1021,7 +1021,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.beta) if new_suffix
+      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1140,7 +1140,7 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
+      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.in_development
       copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
@@ -1276,7 +1276,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.beta : general_params[:published_state],
+          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.in_development : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
