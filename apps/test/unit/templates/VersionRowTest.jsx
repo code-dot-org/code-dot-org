@@ -11,8 +11,16 @@ describe('VersionRow', () => {
     lastModified: new Date()
   };
 
-  it('renders preview and restore buttons for a non-current version', () => {
-    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={false} />);
+  it('renders preview and restore buttons for a non-latest version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isViewingVersion={false}
+        isProjectOwned={true}
+      />
+    );
+    expect(wrapper).to.not.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
         <button type="button" className="version-preview">
@@ -27,8 +35,39 @@ describe('VersionRow', () => {
     );
   });
 
-  it('renders a disabled button for the current version', () => {
-    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={true} />);
+  it('renders just restore button for viewed version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isViewingVersion={true}
+        isProjectOwned={true}
+      />
+    );
+    expect(wrapper).to.have.className('highlight');
+    expect(wrapper).to.not.containMatchingElement(
+      <a target="_blank">
+        <button type="button" className="version-preview">
+          <i className="fa fa-eye" />
+        </button>
+      </a>
+    );
+    expect(wrapper).to.containMatchingElement(
+      <button type="button" className="btn-info">
+        {msg.restoreThisVersion()}
+      </button>
+    );
+  });
+
+  it('renders a disabled button for the latest version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={true}
+        isViewingVersion={false}
+        isProjectOwned={true}
+      />
+    );
     expect(wrapper).to.containMatchingElement(
       <button type="button" className="btn-default" disabled="disabled">
         {msg.currentVersion()}
@@ -39,7 +78,13 @@ describe('VersionRow', () => {
   it('calls onChoose when restore button is clicked', () => {
     const onChoose = sinon.spy();
     const wrapper = shallow(
-      <VersionRow {...MINIMUM_PROPS} isLatest={false} onChoose={onChoose} />
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isViewingVersion={false}
+        isProjectOwned={true}
+        onChoose={onChoose}
+      />
     );
     expect(onChoose).not.to.have.been.called;
 
