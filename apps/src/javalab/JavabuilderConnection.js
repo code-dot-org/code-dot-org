@@ -52,7 +52,7 @@ export default class JavabuilderConnection {
       // TODO: Enable token decryption on local javabuilder server.
       url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}&levelId=${
         this.levelId
-      }`;
+      }&channelId=${this.channelId}`;
       if (optionsStr) {
         url += `&${optionsStr}`;
       }
