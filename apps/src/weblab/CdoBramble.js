@@ -1,7 +1,7 @@
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
 import {makeEnum} from '../utils';
-import {LOAD_FAILURE_MESSAGE, fatalErrorMessage} from './constants';
+import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
 import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
@@ -624,11 +624,12 @@ export default class CdoBramble {
     const {message, code} = error;
     this.logAction(PageAction.BrambleError, {error: message});
 
-    const modalMessage =
+    this.api.openFatalErrorDialog(
+      message,
       code === 'EFILESYSTEMERROR'
-        ? LOAD_FAILURE_MESSAGE
-        : fatalErrorMessage(message);
-    this.api.openErrorDialog(modalMessage);
+        ? FatalErrorType.LoadFailure
+        : FatalErrorType.Default
+    );
   }
 
   logAction(actionName, value = {}) {
