@@ -169,7 +169,7 @@ class UnitGroup < ApplicationRecord
   # @param units [Array<String>] - Updated list of names of units in this course
   # @param alternate_units [Array<Hash>] Updated list of alternate units in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_units_changes(scripts, alternate_units, course_strings)
+  def persist_strings_and_units_changes(units, alternate_units, course_strings)
     UnitGroup.update_strings(name, course_strings)
     update_scripts(units, alternate_units) if units
     save!
