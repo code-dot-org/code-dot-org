@@ -7,13 +7,12 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  wrapup_video_id :integer
-#  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("beta"), not null
+#  published_state :string(255)      default("in_development"), not null
 #
 # Indexes
 #
@@ -110,7 +109,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.hidden = true unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -284,6 +283,10 @@ class Script < ApplicationRecord
 
     if !with_hidden && has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
+    end
+
+    if user.permission?(UserPermission::LEVELBUILDER)
+      units += all_scripts.select(&:in_development?)
     end
 
     units
@@ -568,7 +571,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name) : nil
+    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -988,12 +991,11 @@ class Script < ApplicationRecord
       units_to_add << [{
         id: unit_data[:id],
         name: name,
-        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
         login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : unit_data[:published_state],
+        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1019,7 +1021,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(hidden: true) if new_suffix
+      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1138,7 +1140,8 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
+      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.in_development
+      copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
       copied_unit.is_course = destination_unit_group.nil?
@@ -1184,7 +1187,7 @@ class Script < ApplicationRecord
 
   # Clone this unit, appending a dash and the suffix to the name of this
   # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit as hidden, and
+  # the suffix to the name of each level. Mark the new unit published_state as beta, and
   # copy any translations and other metadata associated with the original unit.
   # @param options [Hash] Optional properties to set on the new unit.
   # @param options[:editor_experiment] [String] Optional editor_experiment name.
@@ -1197,7 +1200,8 @@ class Script < ApplicationRecord
     new_properties = {
       tts: false,
       announcements: nil,
-      is_course: false
+      is_course: false,
+      pilot_experiment: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
@@ -1269,11 +1273,10 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.beta : general_params[:published_state],
+          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.in_development : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1414,6 +1417,10 @@ class Script < ApplicationRecord
 
   def stable?
     published_state == SharedConstants::PUBLISHED_STATE.stable
+  end
+
+  def in_development?
+    published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)

@@ -206,6 +206,22 @@ class Lesson < ApplicationRecord
     !!has_lesson_plan
   end
 
+  # Returns a version of the named property which is fully ready for
+  # user-facing rendering. Currently does localization and markdown
+  # preprocessing, could in the future be expanded to do more.
+  def render_property(property_name)
+    result = get_localized_property(property_name)
+    result = Services::MarkdownPreprocessor.process(result || '')
+    return result
+  end
+
+  # A simple helper function to encapsulate creating a unique key, since this
+  # model does not have a unique identifier field of its own.
+  def get_localized_property(property_name)
+    key = Services::GloballyUniqueIdentifiers.build_lesson_key(self)
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
+  end
+
   def localized_title
     # The standard case for localized_title is something like "Lesson 1: Maze".
     # In the case of lockable lessons without lesson plans, we don't want to include the Lesson 1
@@ -401,7 +417,7 @@ class Lesson < ApplicationRecord
       unitIsLaunched: script.launched?,
       scriptPath: script_path(script),
       lessonPath: script_lesson_path(script, self),
-      lessonExtrasAvailableForScript: script.lesson_extras_available
+      lessonExtrasAvailableForUnit: script.lesson_extras_available
     }
   end
 
@@ -413,10 +429,10 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       key: key,
       displayName: localized_name,
-      overview: Services::MarkdownPreprocessor.process(overview || ''),
+      overview: render_property(:overview),
       announcements: announcements,
-      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      purpose: render_property(:purpose),
+      preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
@@ -439,7 +455,7 @@ class Lesson < ApplicationRecord
       key: key,
       position: relative_position,
       displayName: localized_name,
-      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
@@ -457,7 +473,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       key: key,
       displayName: localized_name,
-      overview: student_overview || '',
+      overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),

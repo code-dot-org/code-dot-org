@@ -61,6 +61,14 @@ class CoursesController < ApplicationController
       end
     end
 
+    if unit_group.in_development?
+      authenticate_user!
+      unless current_user.permission?(UserPermission::LEVELBUILDER)
+        render :no_access
+        return
+      end
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
@@ -92,17 +100,19 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
+    unit_group.update(course_params)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
     if unit_group.has_migrated_script? && unit_group.course_version
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
-    unit_group.update(course_params)
-
     # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
-      script.assign_attributes(published_state: course_params[:published_state], hidden: !course_params[:visible], properties: {pilot_experiment: course_params[:pilot_experiment]})
+      script.assign_attributes(published_state: course_params[:published_state], properties: {pilot_experiment: course_params[:pilot_experiment]})
       next unless script.changed?
       script.save!
       script.write_script_dsl
@@ -191,18 +201,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-
-    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
-
-    # Temporary transition code used to update the boolean values that control published_state
-    # This should be removed once we move off of booleans completely and on to published_state
-    if cp[:published_state] == SharedConstants::PUBLISHED_STATE.beta || cp[:published_state] == SharedConstants::PUBLISHED_STATE.pilot
-      cp[:visible] = false
-    elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.preview
-      cp[:visible] = true
-    elsif cp[:published_state] == SharedConstants::PUBLISHED_STATE.stable
-      cp[:visible] = true
-    end
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end
