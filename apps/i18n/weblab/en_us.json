@@ -4,8 +4,15 @@
   "addHTMLButton": "Add HTML",
   "currentProjectCapacity": "{currentMegabytes}MB of {totalMegabytes}MB used",
   "errorSavingProject": "Something didn't work while auto-saving your project. Check your internet connection and try manually saving. If this problem persists, try reloading the page to start over.",
+  "fatalError": "Fatal Error: {message}. If you're in Private Browsing mode, data can't be written.",
+  "loadFailure": "We're sorry, Web Lab failed to load for some reason.",
   "refreshPreview": "Refresh and Save",
+  "reloading": "Reloading...",
+  "reset": "Reset Web Lab",
+  "resetComplete": "Web Lab Reset Complete",
+  "resetFailure": "Failed to reset Web Lab: {message}.",
   "toggleInspectorOn": "Inspector: Off",
   "toggleInspectorOff": "Inspector: On",
+  "troubleshootingSupport": "Please see our support article [\"Troubleshooting Web Lab problems\"]({url}) for more information.",
   "uploadError": "Upload Error"
 }
