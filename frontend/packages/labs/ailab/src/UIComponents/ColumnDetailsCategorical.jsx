@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";
-import { getCategoricalColumns } from "../selectors";
+import { getCategoricalColumnDetails } from "../selectors";
 
 const barData = {
   labels: [],
@@ -41,9 +41,9 @@ class ColumnDetailsCategorical extends Component {
   };
 
   render() {
-    const { uniqueOptions, frequencies } = this.props.columnDetails;
+    const { id, uniqueOptions, frequencies } = this.props.columnDetails;
 
-    barData.labels = Object.values(uniqueOptions);
+    barData.labels = uniqueOptions && Object.values(uniqueOptions);
     barData.datasets[0].data = barData.labels.map(option => {
       return frequencies[option];
     });
@@ -54,7 +54,6 @@ class ColumnDetailsCategorical extends Component {
     return (
       <div>
         <div style={styles.bold}>Column information:</div>
-
         <div style={styles.barChart}>
           {barData.labels.length <= maxLabelsInHistogram && (
             <Bar

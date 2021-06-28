@@ -5,7 +5,8 @@ import {
   getExtrema,
   isColumnReadOnly,
   getColumnDescription,
-  hasTooManyUniqueOptions
+  hasTooManyUniqueOptions,
+  containsOnlyNumbers
 } from './helpers/columnDetails';
 import { arrayIntersection } from './helpers/utils';
 import { filterColumnsByType } from './redux';
@@ -28,8 +29,8 @@ export const getCategoricalColumns = createSelector(
 export const getSelectedColumns = createSelector(
   [getSelectedFeatures, getLabelColumn],
   (selectedFeatures, labelColumn) => {
-    selectedFeatures.push(labelColumn)
-    return selectedFeatures;
+    const selectedColumns = [...selectedFeatures, labelColumn];
+    return selectedColumns;
   }
 )
 
@@ -122,13 +123,14 @@ export const getExtremaByColumn = createSelector(
 export const getCurrentColumnData = createSelector(
   [getCurrentColumn, getData],
   (currentColumn, data) => {
-    return data.map(row => row[column]);
+    return data.map(row => row[currentColumn]);
   }
 )
+
 export const getExtremaCurrentColumn = createSelector(
-  [getCurrentColumnData],
-  (currentColumnData) => {
-    return getExtrema(currentColumnData);
+  [getCurrentColumn, getData],
+  (currentColumn, data) => {
+    return getExtrema(data, currentColumn);
   }
 )
 
@@ -170,64 +172,76 @@ export const isCurrentColumnSelectable = createSelector(
 )
 
 export const currentColumnContainsOnlyNumbers = createSelector(
-  [getCurrentColumnData],
-  (currentColumnData) => {
-    return containsOnlyNumbers(currentColumnData);
+  [getCurrentColumn, getData],
+  (currentColumn, data) => {
+    return containsOnlyNumbers(data, currentColumn);
+  }
+)
+
+export const currentColumnHasTooManyUniqueOptions = createSelector(
+  [getUniqueOptionsCurrentColumn],
+  (uniqueOptionsCurrentColumn) => {
+    return hasTooManyUniqueOptions(uniqueOptionsCurrentColumn.length);
+  }
+)
+
+export const currentColumnIsCategorical = createSelector(
+  [getCurrentColumn, getColumnsByDataType],
+  (currentColumn, columnsByDataType) => {
+    return columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL;
   }
 )
 
 export const getCategoricalColumnDetails = createSelector(
   [
     getCurrentColumn,
-    getColumnsByDataType,
+    currentColumnIsCategorical,
     getUniqueOptionsCurrentColumn,
     getOptionFrequenciesCurrentColumn
   ],
   (
     currentColumn,
-    columnsByDataType,
+    isCategorical,
     uniqueOptions,
     uniqueOptionFrequencies
   ) => {
     const categeoricalColumnDetails = {};
     categeoricalColumnDetails.id = currentColumn;
-    const isCategorical = columnDetails.dataType === ColumnTypes.CATEGORICAL;
     if (isCategorical) {
-      const uniqueOptions = uniqueOptions;
-      const hasTooManyUniqueOptions = hasTooManyUniqueOptions(
-        uniqueOptions.length
-      );
       categeoricalColumnDetails.uniqueOptions = uniqueOptions;
-      categeoricalColumnDetails.hasTooManyUniqueOptions =
-        hasTooManyUniqueOptions;
       categeoricalColumnDetails.frequencies = uniqueOptionFrequencies;
     }
     return categeoricalColumnDetails;
   }
 )
 
+export const currentColumnIsNumerical = createSelector(
+  [getCurrentColumn, getColumnsByDataType],
+  (currentColumn, columnsByDataType) => {
+    return columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL;
+  }
+)
+
 export const getNumericalColumnDetails = createSelector(
   [
     getCurrentColumn,
-    getColumnsByDataType,
+    currentColumnIsNumerical,
     getExtremaCurrentColumn,
     currentColumnContainsOnlyNumbers
   ],
   (
     currentColumn,
-    columnsByDataType,
-    description,
+    isNumerical,
     extrema,
     containsOnlyNumbers
   ) => {
-    const categeoricalColumnDetails = {};
-    categeoricalColumnDetails.id = currentColumn;
-    const isNumerical = columnDetails.dataType === ColumnTypes.NUMERICAL;
+    const numericalColumnDetails = {};
+    numericalColumnDetails.id = currentColumn;
     if (isNumerical) {
-      columnDetails.extrema = extrema;
-      columnDetails.containsOnlyNumbers = containsOnlyNumbers;
+      numericalColumnDetails.extrema = extrema;
+      numericalColumnDetails.containsOnlyNumbers = containsOnlyNumbers;
     }
-    return columnDetails;
+    return numericalColumnDetails;
   }
 )
 
@@ -246,13 +260,14 @@ export const getCurrentColumnDetails = createSelector(
     description,
     isSelectable
   ) => {
-
-    return {
-      id: currentColumn,
-      readOnly: isReadOnly,
-      dataType: columnsByDataType[currentColumn],
-      description: description,
-      isSelectable: isSelectable
-    };
+    if (currentColumn) {
+      return {
+        id: currentColumn,
+        readOnly: isReadOnly,
+        dataType: columnsByDataType[currentColumn],
+        description: description,
+        isSelectable: isSelectable
+      };
+    }
   }
 )

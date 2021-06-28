@@ -20,48 +20,15 @@ export function hasTooManyUniqueOptions(uniqueOptionsCount) {
 }
 
 export function getUniqueOptions(data, column) {
-  return Array.from(new Set(data.map(row => row[column]))).filter(
+  const columnData = getColumnData(data, column);
+  return Array.from(new Set(columnData)).filter(
     option => option !== undefined && option !== ""
   );
 }
 
-function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, column);
-}
-
-export function containsOnlyNumbers(currentColumnData) {
-  return currentColumnData.every(cell => !isNaN(cell));
-}
-
-function isValidNumericalData(state, column) {
-  return columnContainsOnlyNumbers(state.data, column);
-}
-
-export function isColumnDataValid(state, column) {
-  return (
-    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
-  ) ||
-  (isColumnNumerical(state, column) && isValidNumericalData(state, column));
-}
-
-function isLabel(state, column) {
-  return column === state.labelColumn;
-}
-
-function isFeature(state, column) {
-  return state.selectedFeatures.includes(column);
-}
-
-function isSelected(state, column) {
-  return isLabel(state, column) || isFeature(state, column);
-}
-
-export function isSelectable(state, column) {
-  return isColumnDataValid(state, column) && !isSelected(state, column);
-}
-
 export function isColumnReadOnly(metadata, column) {
   const metadataColumnType =
+    column &&
     metadata &&
     metadata.fields &&
     metadata.fields.find(field => {
@@ -74,7 +41,8 @@ function getColumnData(data, column) {
   return data.map(row => row[column]);
 }
 
-export function getExtrema(columnData) {
+export function getExtrema(data, column) {
+  const columnData = getColumnData(data, column);
   let extrema = {};
   extrema.max = Math.max(...columnData);
   extrema.min = Math.min(...columnData);
@@ -83,9 +51,14 @@ export function getExtrema(columnData) {
   return extrema;
 }
 
+export function containsOnlyNumbers(data, column) {
+  const columnData = getColumnData(data, column);
+  return columnData.every(cell => !isNaN(cell));
+}
+
 export function getColumnDescription(column, metadata, trainedModelDetails) {
   // Use metadata if available.
-  if (metadata && metadata.fields) {
+  if (column && metadata && metadata.fields) {
     const field = metadata.fields.find(field => {
       return field.id === column;
     });

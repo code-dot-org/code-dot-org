@@ -27,6 +27,12 @@ class ColumnInspector extends Component {
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
+    const isCategorical = currentColumnDetails && currentColumnDetails.dataType === 'categorical'
+    const isNumerical = currentColumnDetails && currentColumnDetails.dataType === 'numerical'
+
+    if (!currentColumnDetails) {
+      return null;
+    }
 
     return (
       currentColumnDetails && (
@@ -63,19 +69,8 @@ class ColumnInspector extends Component {
                 <CrossTab />
               </div>
             )}
-            {currentColumnDetails.uniqueOptions && (
-              <ColumnDetailsCategorical
-                id={currentColumnDetails.id}
-                uniqueOptions={currentColumnDetails.uniqueOptions}
-                optionFrequencies={currentColumnDetails.frequencies}
-              />
-            )}
-            {currentColumnDetails.extrema && (
-              <ColumnDetailsNumerical
-                isColumnDataValid={currentColumnDetails.isColumnDataValid}
-                extrema={currentColumnDetails.extrema}
-              />
-            )}
+            {isCategorical && <ColumnDetailsCategorical /> }
+            {isNumerical && <ColumnDetailsNumerical /> }
           </ScrollableContent>
 
           {selectingLabel && currentColumnDetails.isSelectable && (

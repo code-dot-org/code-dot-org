@@ -13,18 +13,9 @@ import {
   isColumnCategorical,
   isColumnReadOnly,
   getColumnDescription,
-  hasTooManyUniqueOptions,
   getColumnDataToSave,
-  isSelectable,
-  isColumnDataValid
 } from "./helpers/columnDetails.js";
-import {
-  getUniqueOptionsCurrentColumn,
-  getUniqueOptionsLabelColumn,
-  getExtremaCurrentColumn,
-  getOptionFrequenciesCurrentColumn,
-  isCurrentColumnReadOnly
-} from "./selectors";
+import { getUniqueOptionsLabelColumn } from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
@@ -721,40 +712,6 @@ export function getSelectedColumnDescriptions(state) {
       description: getColumnDescription(state, column.id)
     };
   });
-}
-
-/* Functions for retrieving aggregate details about a currently selected column. */
-
-export function getCurrentColumnData(state) {
-  if (!state.currentColumn) {
-    return null;
-  }
-
-  const columnData = {
-    id: state.currentColumn,
-    readOnly: isCurrentColumnReadOnly(state),
-    dataType: state.columnsByDataType[state.currentColumn],
-    description: getCurrentColumnDescription(state),
-    isSelectable: isSelectable(state, state.currentColumn)
-  };
-
-  const isCategorical = columnData.dataType === ColumnTypes.CATEGORICAL;
-  const isNumerical = columnData.dataType === ColumnTypes.NUMERICAL;
-
-  if (isCategorical) {
-    const uniqueOptions = getUniqueOptionsCurrentColumn(state);
-    const hasTooManyUniqueOptions = hasTooManyUniqueOptions(
-      uniqueOptions.length
-    );
-    columnData.uniqueOptions = uniqueOptions;
-    columnData.hasTooManyUniqueOptions = hasTooManyUniqueOptions,
-    columnData.isColumnDataValid = !hasTooManyUniqueOptions,
-    columnData.frequencies = getOptionFrequenciesCurrentColumn(state)
-  } else if (isNumerical) {
-    columnData.extrema = getExtremaCurrentColumn(state);
-    columnData.isColumnDataValid = columnContainsOnlyNumbers(stata.data, state.currentColumn)
-  }
-  return columnData;
 }
 
 /* Functions for processing column data for visualizations. */
