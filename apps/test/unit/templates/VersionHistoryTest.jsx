@@ -57,7 +57,8 @@ describe('VersionHistory', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: false
+        useFilesApi: false,
+        isProjectOwned: true
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -87,7 +88,8 @@ describe('VersionHistory', () => {
       props: {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
-        useFilesApi: true
+        useFilesApi: true,
+        isProjectOwned: true
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
