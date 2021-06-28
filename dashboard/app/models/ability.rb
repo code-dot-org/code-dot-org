@@ -310,6 +310,10 @@ class Ability
     if user.persisted?
       if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
         can :get_access_token, :javabuilder_session
+
+        # Temporarily allow management of CodeReviewComments by piloters --
+        # more nuanced permissioning up next
+        can :manage, CodeReviewComment
       end
     end
 
