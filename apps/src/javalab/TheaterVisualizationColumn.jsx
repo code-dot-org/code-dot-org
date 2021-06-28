@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import PreviewPaneHeader from './PreviewPaneHeader';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 
-export default class TheaterVisualizationColumn extends React.Component {
-  static propTypes = {};
+class TheaterVisualizationColumn extends React.Component {
+  static propTypes = {
+    // populated by redux
+    isReadOnlyWorkspace: PropTypes.bool
+  };
 
   state = {
     isCollapsed: false,
@@ -11,13 +16,16 @@ export default class TheaterVisualizationColumn extends React.Component {
   };
 
   render() {
+    const {isReadOnlyWorkspace} = this.props;
     const {isCollapsed, isFullscreen} = this.state;
+
     return (
       <div>
         <PreviewPaneHeader
           isCollapsed={isCollapsed}
           isFullscreen={isFullscreen}
           showAssetManagerButton
+          disableAssetManagerButton={isReadOnlyWorkspace}
           showPreviewTitle={false}
         />
         <ProtectedVisualizationDiv>
@@ -42,3 +50,7 @@ const styles = {
     height: 400
   }
 };
+
+export default connect(state => ({
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+}))(TheaterVisualizationColumn);
