@@ -106,7 +106,7 @@ export function buildOptionNumberKey(state, feature) {
 export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
-  columnData.description = getColumnDescription(state, column);
+  columnData.description = getColumnDescription(column, state.metadata, state.trainedModelDetails);
   if (isColumnCategorical(state, column)) {
     columnData.values = getUniqueOptions(state.data, column);
   } else if (isColumnNumerical(state, column)) {
