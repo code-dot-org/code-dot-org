@@ -71,16 +71,13 @@ class SelectDataset extends Component {
     this.setState({
       download: false
     });
-    if (selectedCSV.name.includes(".xls") ||
-    selectedCSV.type === "application/vnd.ms-excel") {
+    if (selectedCSV.name.includes(".csv") ||
+    selectedCSV.type === "text/csv") {
+        parseCSV(event.target.files[0], false, true);
+    } else {
       this.setState({
         showFileTypeErrorMessage: true
       });
-    } else {
-      this.setState({
-        showFileTypeErrorMessage: false
-      });
-      parseCSV(event.target.files[0], false, true);
     }
   };
 
