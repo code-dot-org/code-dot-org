@@ -782,6 +782,7 @@
   "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
   "errorLoadingRosteredSections": "Oops, there was a problem grabbing your sections from {type}.",
   "errorLoadingRosteredSectionsSupport": "If the problem persists, click here for troubleshooting tips.",
+  "errorOccurredTitle": "An Error Occurred",
   "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",
   "errorParsingLibrary": "There is an error in your imported library ({libraryName}). Try deleting and re-importing this library. {errorMessage}",
   "errorQuestionMarksInNumberField": "Try replacing \"???\" with a value.",
