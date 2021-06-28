@@ -18,7 +18,7 @@ class UniqueOptionsWarning extends Component {
     if (!showWarning) {
       return null;
     }
-    
+
     return (
       <div>
         <span style={styles.bold}>Note:</span>
