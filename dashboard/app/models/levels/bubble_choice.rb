@@ -173,10 +173,22 @@ class BubbleChoice < DSLDefined
 
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
-  # @return [Integer]
+  # @param [Script]
+  # @return [Level]
   def best_result_sublevel(user, script)
     ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
     ul&.level
+  end
+
+  def keep_working_sublevel(user, script)
+    # get latest feedback on sublevels where keepWorking is true
+    level_ids = sublevels.map(&:id)
+    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
+
+    if latest_feedbacks.any?
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      return keep_working_feedback&.level
+    end
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
