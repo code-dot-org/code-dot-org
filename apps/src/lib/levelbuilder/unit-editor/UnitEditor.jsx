@@ -287,7 +287,7 @@ class UnitEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
-      old_script_text: this.state.oldScriptText,
+      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
