@@ -882,6 +882,6 @@ Dashboard::Application.routes.draw do
   end
 
   resources :code_review_comments, only: [:create, :update, :destroy] do
-    get :project_comments, on: collection
+    get :project_comments, on: :collection
   end
 end
