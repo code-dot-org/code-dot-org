@@ -4,7 +4,7 @@ import {expect} from '../../../util/deprecatedChai';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types'; // Maureen move this type into templates/feedback
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import ReactDOM from 'react-dom';

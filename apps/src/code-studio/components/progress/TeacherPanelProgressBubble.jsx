@@ -12,7 +12,7 @@ import {
   BubbleBadgeWrapper,
   KeepWorkingBadge
 } from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
