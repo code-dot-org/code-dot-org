@@ -58,7 +58,7 @@ function showCourseEditor() {
         initialDescriptionTeacher={
           courseEditorData.course_summary.description_teacher || ''
         }
-        initialScriptsInCourse={courseEditorData.course_summary.scripts.map(
+        initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
           unit => unit.name
         )}
         unitNames={courseEditorData.script_names.sort()}

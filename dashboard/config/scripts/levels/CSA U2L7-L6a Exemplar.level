@@ -1,45 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "Create a class called `Cookie` that is a subclass of `Dessert`.\r\n\r\nA `Cookie` has `int diameter` and `boolean isChewy` as additional instance variables.\r\n\r\nInstantiate a `Cookie` object in `MyFoodTruck.java`.",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "parent_level_id": 28549,
-    "start_sources": {
-      "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cookie = new Dessert(\"chocolate chip\", 100, 1.00);\n\n    FoodTruck donutCompany = new FoodTruck(\"Amos\", cookie);\n\n    Dessert strawberryShortcake = new Cake(\"strawberry shortcake\", 10, 12.00, 3, \"strawberry\");\n\n    FoodTruck cakeTruck = new FoodTruck(\"Katie\", strawberryShortcake);\n\n    Cookie chocolateChip = new Cookie(\"chocolate chip\", 100, 1.00, 4, true);\n  }\n}",
-        "isVisible": true
-      },
-      "FoodTruck.java": {
-        "text": "class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // Write your constructor here\n  public FoodTruck(String owner, Dessert newDessert) {\n    this.owner = owner;\n    this.newDessert = newDessert;\n  }\n\n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.print(\"The food truck has \");\n    newDessert.printInfo();\n  }\n}",
-        "isVisible": true
-      },
-      "Dessert.java": {
-        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
-        "isVisible": true
-      },
-      "Cake.java": {
-        "text": "public class Cake extends Dessert {\n  private int layers;\n  private String topping;\n\n  public Cake(String flavor, int quantity, double price, int layers, String topping) {\n    super(flavor, quantity, price);\n    this.layers = layers;\n    this.topping = topping;\n  }\n}",
-        "isVisible": true
-      },
-      "Cookie.java": {
-        "text": "public class Cookie extends Dessert {\n  private int diameter;\n  private boolean isChewy;\n\n  public Cookie(String flavor, int quantity, double price, int diameter, boolean isChewy) {\n    super(flavor, quantity, price);\n    this.diameter = diameter;\n    this.isChewy = isChewy;\n  }\n}",
-        "isVisible": true
-      }
-    },
-    "display_name": "Cookie",
-    "bubble_choice_description": "Create a Cookie subclass",
-    "encrypted_examples": [
-
-    ]
-  },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-06-22T17:15:50.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-22 16:30:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:34:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:40:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:42:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:45:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:46:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:16:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:21:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:22:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-06-22 16:30:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:34:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:40:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:42:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:45:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:46:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:16:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:21:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 17:22:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:23:01 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-25 13:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "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\nUbMgRFniRiU=\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

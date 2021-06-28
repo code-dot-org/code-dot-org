@@ -1,28 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "Run the code. How does it compare to your prediction?\r\n\r\nWhy do you think the code ran this way?",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "start_sources": {
-      "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cake = new Dessert(-1);\n    cake.printInfo();\n  }\n}",
-        "isVisible": true
-      },
-      "Dessert.java": {
-        "text": "class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  public Dessert() {\n    flavor = \"mint chocolate\";\n    quantity = 5;\n    price = 2.75;\n  }\n\n  public Dessert(int quantity) {\n    boolean isValid = (quantity >= 0);\n\n    if (!isValid) {\n      this.quantity = 1;\n    } else {\n      this.quantity = quantity;\n    }\n\n    flavor = \"coconut\";\n    price = 1.50;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
-        "isVisible": true
-      }
-    },
-    "parent_level_id": 28461
-  },
   "game_id": 68,
   "created_at": "2021-06-16T19:17:01.000Z",
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:17:05 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:18:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:17:05 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:18:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:22:11 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 20:29:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTfqn9LztuTtIsxujUFklE4bnxZ/nT4jeg4++561ZdJsJGAiQ1YFqxMfpNK\nmR92YIMDp36v3pkCTscSrzjDHVKUKegH/4DpkdLKGDNgNtAXUp3kmvFhfkCD\nSyp4lQIbIeOn3w1QkLnc/haVqsaffUXkUmVKS3n8letjUFKY6A4tj8iFcEQq\nBwdtpJKz7iyGWwWKyT9UNZlXen2fcVwiBHlpTXI0sqpoCKwjzH1sDsnIgHud\nizTGXZOBQa2ST152o7Q1rP2KVV0hK4mT3n8JdgR7hF6siF3ryVvcLD1p+4qf\nvzf64iYk8BYgoUhuDNF/fkC8pmF8IzvT3vqzjGH75Ubu5uq70zaLIRKqps5P\nxXVF4nsSIYz1Arr7fi6JUqOIo917UvFJcgFvQ3iVkpHi3C3eNxLL195MKOKK\nK09CZ9cMvibtHpDTLlxfym//rHKN1lMRlFnDxGCEKnw1UfSRE+w1ywikKgfc\nrg0pP4tsNiaqf8ymwoYdCbwFe5+Tie69WE+Qs40yzlolNp04zXeld6MfIcGQ\nB6/pSAfp4ljd1o18KF8r6kah+nKYNyWEB43ufVJ0dR9/s88/G4QrzIyqqT3+\n1xam3lvVrD1irnFbUlTzi855TIbBM+Jsuwk8QkkuLF6WZXjU1jm61AtSCgUF\nLzVXD1Hk0Pjog1MKxf+HUTBRGn1rWgAdDHURcLr9SZqMdbzIyCqAAjSi+dBw\nZd+rVhc4VB9m6scRbJA1esLJ7KqA4vLoRUhRn7F7QEEYHmynAjebcoQcFYXN\nzz74SLU++PGXAtDnIyGhXNttKuDWd4csMy1WUbdCHvHBqfNzfRJMX9Nr09/X\nTdr/Ej2SGu7QhkgbRd5l20gTXjTpE9EIMYuDWjTqeUkzEHDvO9FLZJvQJ9xw\nH/HIV3Yv4O6imxKXviu110jqmyv12L7qhVXyNqffPCZSmGSxAaQW/IPqiNnw\ndn0qTgJbn227W+gbMEyhk9HNGzMbXMldSG9sJu1o4gPXn3rDG541ezbNHDrz\nKLwt8VZX6gQF5Rll3vq+16rKWKOew0x7gIOu6GnPEdBYVhNohGK+9zr8B3lT\nRguun0HRmmMU+ywMWjtywz6s+e5fllRFlnb703FutXFC6LHwaHzUE0Yqf811\n77+7IpDVmz1RtienxaC44aWUlBWHZScbWIoJI+w/GXma+BKbZYsHlqyrutMV\nAIKnkIjK/1AJM6NQSG8l8zynZHrxmuX+CFVqlb+sCqCBgrNMU9xC/p+cuOT9\nRVAvVxzPVwPZjExkxsGwDymIQFbsy3k3Mpro0x8ylF1GV3mA7GgIqz2CqqS+\n6LaNBqVOdovLk7BW/Y++6Ua0k8COZDcS5YnB1ajo1rzlWkvTZ5r6TqaMhZ0M\noOrZ7eplyBykm0p/35TcUSGKCUhPao0ZDhGzfrPHY+3eiQwnQLjZjhvode10\nvLBC7X/FLgsZcCr6LWgY8GyYppqxF1T+r+hEe5NecpF0+HIBA/7SidwFH5wJ\n4vPRwJVJip8MGEzJyroNmCcrEJJihJQ+Qwyr8jOc4Mjz3hI8u2IBSN4p8UmK\n1yLLqQMY8seZrIeu7aUIGas=\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

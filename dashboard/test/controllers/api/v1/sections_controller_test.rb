@@ -23,8 +23,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, visible: true, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, visible: true, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
   end

@@ -9,6 +9,8 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
+    @in_development_unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development
+
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
@@ -194,6 +196,29 @@ class CoursesControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @in_development_unit_group.name}},
+                              name: 'signed out user cannot view in-development unit group'
+
+  test_user_gets_response_for(:show, response: :success, user: :student,
+                              params: -> {{course_name: @in_development_unit_group.name}}, name: 'student cannot view in-development unit group'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :teacher,
+                              params: -> {{course_name: @in_development_unit_group.name}},
+                              name: 'teacher access cannot view in-development unit group'
+  ) do
+    assert response.body.include? no_access_msg
+  end
+
+  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+                              params: -> {{course_name: @in_development_unit_group.name}}, name: 'levelbuilder can view in-development unit group'
+  ) do
+    refute response.body.include? no_access_msg
+  end
+
   # Tests for create
 
   test "create: fails without levelbuilder permission" do
@@ -285,7 +310,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "update: sets visible and published_state on units in unit group" do
+  test "update: sets published_state on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     course = create :unit_group, name: 'course'
@@ -301,11 +326,8 @@ class CoursesControllerTest < ActionController::TestCase
     unit1.reload
     unit2.reload
 
-    assert course.visible?
     assert_equal course.published_state, SharedConstants::PUBLISHED_STATE.stable
-    refute unit1.hidden?
     assert_equal unit1.published_state, SharedConstants::PUBLISHED_STATE.stable
-    refute unit2.hidden?
     assert_equal unit2.published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
@@ -351,7 +373,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_nil unit_group.version_year
     assert_nil unit_group.family_name
     refute unit_group.has_verified_resources
-    refute unit_group.visible?
+    refute unit_group.launched?
     refute unit_group.stable?
 
     post :update, params: {
@@ -366,82 +388,17 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal '2019', unit_group.version_year
     assert_equal 'csp', unit_group.family_name
     assert unit_group.has_verified_resources
-    assert unit_group.visible?
+    assert unit_group.launched?
     assert unit_group.stable?
-  end
-
-  test "update: published state of stable sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019'
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.stable
-    }
-    unit_group.reload
-
-    assert unit_group.visible?
-  end
-
-  test "update: published state of preview sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
-    }
-    unit_group.reload
-
-    assert unit_group.visible?
-  end
-
-  test "update: published state of beta sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.beta
-    }
-    unit_group.reload
-
-    refute unit_group.visible?
-  end
-
-  test "update: published state of pilot sets visible correctly" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-
-    refute unit_group.visible?
-
-    post :update, params: {
-      course_name: unit_group.name,
-      published_state: SharedConstants::PUBLISHED_STATE.pilot,
-      pilot_experiment: 'my-pilot'
-    }
-    unit_group.reload
-
-    refute unit_group.visible?
   end
 
   test "update: persists teacher resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
-    unit_group.update!(name: 'csp-2017')
-    script = create :script, hidden: true, is_migrated: true
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
@@ -454,10 +411,10 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists student resources for migrated unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course_version = create :course_version, :with_unit_group
-    unit_group = course_version.content_root
-    unit_group.update!(name: 'csp-2017')
-    script = create :script, hidden: true, is_migrated: true
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
@@ -465,6 +422,20 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.student_resources.length
+  end
+
+  test "update: create course version for unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_group = create :unit_group
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+
+    assert_nil unit_group.course_version
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
+    unit_group.reload
+    refute_nil unit_group.course_version
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
