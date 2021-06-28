@@ -46,6 +46,13 @@ $(function() {
     bottomSpacing: $('#pagefooter').height() + 50
   });
 
+  //re-evaluate the page footer offset on window resize
+  $(window).resize(function() {
+    $('#map').sticky({
+      bottomSpacing: $('#pagefooter').height() + 50
+    });
+  });
+
   // Trigger query when a facet is changed.
   $('#class-search-facets')
     .find('select')
