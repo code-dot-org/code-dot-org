@@ -35,12 +35,14 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
-  REVIEW_STATES = [
-    "keepWorking",
-    "completed"
-  ]
+  REVIEW_STATES = OpenStruct.new(
+    {
+      keepWorking: 'keepWorking',
+      completed: 'completed'
+    }
+).freeze
 
-  validates_inclusion_of :review_state, in: REVIEW_STATES, allow_nil: true
+  validates_inclusion_of :review_state, in: REVIEW_STATES.to_h.values, allow_nil: true
 
   # Finds the script level associated with this object, using script id and
   # level id.
@@ -64,11 +66,15 @@ class TeacherFeedback < ApplicationRecord
 
   # returns the latest feedback from each teacher for the student on the level
   def self.get_latest_feedbacks_received(student_id, level_id, script_id)
-    where(
+    query = {
       student_id: student_id,
       level_id: level_id,
       script_id: script_id
-    ).latest_per_teacher
+    }
+
+    where(query).
+      latest_per_teacher.
+      order(created_at: :desc)
   end
 
   # returns the latest feedback for each student on every level in a script given by the teacher
@@ -84,13 +90,13 @@ class TeacherFeedback < ApplicationRecord
   end
 
   def self.latest_per_teacher
-    #Only select feedback from teachers who lead sections in which the student is still enrolled
-    find(
-      joins(:student_sections).
+    # Only select feedback from teachers who lead sections in which the student is still enrolled
+    # and get the latest feedback per teacher for each student on each level
+    where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
-        group([:teacher_id, :student_id]).
+        group([:teacher_id, :student_id, :level_id]).
         pluck('MAX(teacher_feedbacks.id)')
-    )
+  )
   end
 
   def self.has_feedback?(student_id)
