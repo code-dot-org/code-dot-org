@@ -20,7 +20,7 @@ export function filterColumnsByType(columnsByDataType, columnType) {
   accurate models, and we don't want to overflow the metadata column for saved
   models.
 */
-export function hasTooManyUniqueOptions(uniqueOptionsCount) {
+export function tooManyUniqueOptions(uniqueOptionsCount) {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 

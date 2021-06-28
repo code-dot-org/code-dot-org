@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
-import { getNumericalColumnDetails } from "../selectors";
+import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
 
 class ColumnDetailsNumerical extends Component {
   static propTypes = {

@@ -4,7 +4,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";
-import { getCategoricalColumnDetails } from "../selectors";
+import {
+  getCategoricalColumnDetails
+} from "../selectors/currentColumnSelectors";
 
 const barData = {
   labels: [],

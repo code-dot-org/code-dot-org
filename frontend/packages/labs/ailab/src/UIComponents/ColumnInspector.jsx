@@ -5,8 +5,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCurrentColumnDetails } from "../selectors";
-import { styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
+import { getCurrentColumnDetails } from "../selectors/currentColumnSelectors";
+import { styles, UNIQUE_OPTIONS_MAX, ColumnTypes } from "../constants.js";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
 import ScrollableContent from "./ScrollableContent";
@@ -28,8 +28,10 @@ class ColumnInspector extends Component {
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
 
-    const isCategorical = currentColumnDetails && currentColumnDetails.dataType === 'categorical'
-    const isNumerical = currentColumnDetails && currentColumnDetails.dataType === 'numerical'
+    const isCategorical = currentColumnDetails && currentColumnDetails.dataType
+      === ColumnTypes.CATEGORICAL;
+    const isNumerical = currentColumnDetails && currentColumnDetails.dataType
+      === ColumnTypes.NUMERICAL;
 
     if (!currentColumnDetails) {
       return null;

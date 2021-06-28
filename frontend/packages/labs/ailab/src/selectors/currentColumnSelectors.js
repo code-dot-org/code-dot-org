@@ -4,7 +4,7 @@ import {
   getExtrema,
   isColumnReadOnly,
   getColumnDescription,
-  hasTooManyUniqueOptions,
+  tooManyUniqueOptions,
   containsOnlyNumbers
 } from '../helpers/columnDetails';
 import {
@@ -189,9 +189,16 @@ export const currentColumnIsCategorical = createSelector(
   }
 )
 
+export const hasTooManyUniqueOptions = createSelector(
+  [getUniqueOptionsCurrentColumn, currentColumnIsCategorical],
+  (uniqueOptions, isCategorical) => {
+    return isCategorical && tooManyUniqueOptions(uniqueOptions.length);
+  }
+)
+
 export const isValidCategoricalData = createSelector(
-  [currentColumnIsCategorical, hasTooManyUniqueOptions],
-  (isCategorical, hasTooManyUniqueOptions) => {
-    return isCategorical && !hasTooManyUniqueOptions;
+  [currentColumnIsCategorical, getUniqueOptionsCurrentColumn],
+  (isCategorical, uniqueOptions) => {
+    return isCategorical && !tooManyUniqueOptions(uniqueOptions.length);
   }
 )
