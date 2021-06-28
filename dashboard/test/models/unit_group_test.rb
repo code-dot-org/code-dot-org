@@ -500,7 +500,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     test 'unit group unit test data is properly initialized' do
       assert_equal 'my-unit-group', @unit_group.name
-      assert_equal %w(unit1 unit2 unit3), @unit_group.default_scripts.map(&:name)
+      assert_equal %w(unit1 unit2 unit3), @unit_group.default_units.map(&:name)
       assert_equal %w(unit2a), @unit_group.alternate_unit_group_units.map(&:script).map(&:name)
     end
 
