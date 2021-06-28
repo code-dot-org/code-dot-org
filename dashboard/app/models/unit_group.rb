@@ -143,7 +143,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        alternate_scripts: summarize_alternate_scripts,
+        alternate_scripts: summarize_alternate_units,
         published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
@@ -152,7 +152,7 @@ class UnitGroup < ApplicationRecord
     )
   end
 
-  def summarize_alternate_scripts
+  def summarize_alternate_units
     alternates = alternate_unit_group_units.all
     return nil if alternates.empty?
     alternates.map do |ugu|
@@ -165,13 +165,13 @@ class UnitGroup < ApplicationRecord
   end
 
   # This method updates both our localizeable strings related to this course, and
-  # the set of scripts that are in the course, then writes out our serialization
-  # @param scripts [Array<String>] - Updated list of names of scripts in this course
-  # @param alternate_scripts [Array<Hash>] Updated list of alternate scripts in this course
+  # the set of units that are in the course, then writes out our serialization
+  # @param units [Array<String>] - Updated list of names of units in this course
+  # @param alternate_units [Array<Hash>] Updated list of alternate units in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_scripts_changes(scripts, alternate_scripts, course_strings)
+  def persist_strings_and_scripts_changes(units, alternate_units, course_strings)
     UnitGroup.update_strings(name, course_strings)
-    update_scripts(scripts, alternate_scripts) if scripts
+    update_scripts(units, alternate_units) if units
     save!
   end
 
@@ -190,53 +190,53 @@ class UnitGroup < ApplicationRecord
     File.write(UnitGroup.file_path(name), serialize)
   end
 
-  # @param new_scripts [Array<String>]
-  # @param alternate_scripts [Array<Hash>] An array of hashes containing fields
+  # @param new_units [Array<String>]
+  # @param alternate_units [Array<Hash>] An array of hashes containing fields
   #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
-  def update_scripts(new_scripts, alternate_scripts = nil)
-    alternate_scripts ||= []
-    new_scripts = new_scripts.reject(&:empty?)
-    new_scripts_objects = new_scripts.map {|s| Script.find_by_name!(s)}
+  def update_scripts(new_units, alternate_units = nil)
+    alternate_units ||= []
+    new_units = new_units.reject(&:empty?)
+    new_units_objects = new_units.map {|s| Script.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
-    scripts_to_remove = default_unit_group_units.map(&:script) - new_scripts_objects
-    scripts_to_remove -= alternate_scripts.map {|hash| Script.find_by_name!(hash['alternate_script'])}
+    units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
+    units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
-    if scripts_to_remove.any?(&:prevent_course_version_change?)
-      raise 'Cannot remove scripts that have resources or vocabulary'
+    if units_to_remove.any?(&:prevent_course_version_change?)
+      raise 'Cannot remove units that have resources or vocabulary'
     end
 
-    if new_scripts_objects.any? do |s|
+    if new_units_objects.any? do |s|
       s.unit_group != self && s.prevent_course_version_change?
     end
-      raise 'Cannot add scripts that have resources or vocabulary'
+      raise 'Cannot add units that have resources or vocabulary'
     end
 
-    new_scripts_objects.each_with_index do |script, index|
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: script) do |ugu|
+    new_units_objects.each_with_index do |unit, index|
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
       end
       unit_group_unit.update!(position: index + 1)
     end
 
-    alternate_scripts.each do |hash|
-      alternate_script = Script.find_by_name!(hash['alternate_script'])
-      default_script = Script.find_by_name!(hash['default_script'])
-      # alternate scripts should have the same position as the script they replace.
-      position = default_unit_group_units.find_by(script: default_script).position
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_script) do |ugu|
+    alternate_units.each do |hash|
+      alternate_unit = Script.find_by_name!(hash['alternate_script'])
+      default_unit = Script.find_by_name!(hash['default_script'])
+      # alternate units should have the same position as the unit they replace.
+      position = default_unit_group_units.find_by(script: default_unit).position
+      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_unit) do |ugu|
         ugu.position = position
         ugu.experiment_name = hash['experiment_name']
-        ugu.default_script = default_script
+        ugu.default_script = default_unit
       end
       unit_group_unit.update!(
         position: position,
         experiment_name: hash['experiment_name'],
-        default_script: default_script
+        default_script: default_unit
       )
     end
 
-    scripts_to_remove.each do |script|
-      UnitGroupUnit.where(unit_group: self, script: script).destroy_all
+    units_to_remove.each do |unit|
+      UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
     end
     # Reload model so that default_unit_group_units is up to date
     transaction {reload}
@@ -259,7 +259,7 @@ class UnitGroup < ApplicationRecord
     # Dropdown is sorted by category_priority ascending. "Full courses" should appear at the top.
     info[:category_priority] = -1
     info[:script_ids] = user ?
-      scripts_for_user(user).map(&:id) :
+      units_for_user(user).map(&:id) :
       default_unit_group_units.map(&:script_id)
     info
   end
@@ -275,10 +275,10 @@ class UnitGroup < ApplicationRecord
   # should be static data for users without any course experiments enabled, but
   # contains localized strings so we can only cache on a per locale basis.
   #
-  # @param [User] user Whose experiments to check for possible script substitutions.
+  # @param [User] user Whose experiments to check for possible unit substitutions.
   def self.valid_courses(user: nil)
     # Do not cache if the user might have a course experiment enabled which puts them
-    # on an alternate script.
+    # on an alternate unit.
     if user && has_any_course_experiments?(user)
       return UnitGroup.valid_courses_without_cache
     end
@@ -352,9 +352,9 @@ class UnitGroup < ApplicationRecord
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
       description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
-      scripts: scripts_for_user(user).map do |script|
+      scripts: units_for_user(user).map do |unit|
         include_lessons = false
-        script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
+        unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
@@ -375,8 +375,8 @@ class UnitGroup < ApplicationRecord
       title: localized_title,
       link: link,
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
-      units: scripts_for_user(user).map do |script|
-        script.summarize_for_rollup(user)
+      units: units_for_user(user).map do |unit|
+        unit.summarize_for_rollup(user)
       end,
       has_numbered_units: has_numbered_units?
     }
@@ -419,13 +419,13 @@ class UnitGroup < ApplicationRecord
     versions.sort_by {|info| info[:version_year]}.reverse
   end
 
-  # If a user has no experiments enabled, return the default set of scripts.
-  # If a user has an experiment enabled corresponding to an alternate script in
-  # this course, use the alternate script in place of the default script with
+  # If a user has no experiments enabled, return the default set of units.
+  # If a user has an experiment enabled corresponding to an alternate unit in
+  # this course, use the alternate unit in place of the default unit with
   # the same position.
   # @param user [User]
-  # @return [Array<Script>]
-  def scripts_for_user(user)
+  def units_for_user(user)
+    # @return [Array<Script>]
     default_unit_group_units.map do |ugu|
       select_unit_group_unit(user, ugu).script
     end
@@ -473,7 +473,7 @@ class UnitGroup < ApplicationRecord
 
     if user.student?
       alternates.each do |ugu|
-        # include hidden scripts when iterating over user scripts.
+        # include hidden units when iterating over user units.
         user.user_scripts.each do |us|
           return ugu if ugu.script == us.script
         end
@@ -553,8 +553,8 @@ class UnitGroup < ApplicationRecord
   # @return [Boolean] Whether the user has progress in this course.
   def has_progress?(user)
     return nil unless user
-    user_script_ids = user.user_scripts.pluck(:script_id)
-    unit_group_units_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_script_ids)
+    user_unit_ids = user.user_scripts.pluck(:script_id)
+    unit_group_units_with_progress = default_unit_group_units.where('course_scripts.script_id' => user_unit_ids)
 
     unit_group_units_with_progress.count > 0
   end
@@ -563,7 +563,7 @@ class UnitGroup < ApplicationRecord
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
-    user_script_ids = user.user_scripts.pluck(:script_id)
+    user_unit_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.
       joins(:default_unit_group_units).
@@ -573,18 +573,18 @@ class UnitGroup < ApplicationRecord
       where("properties -> '$.version_year' < ?", version_year).
       # exclude the current course.
       where.not(id: id).
-      # select only courses with scripts which the user has progress in.
-      where('course_scripts.script_id' => user_script_ids).
+      # select only courses with units which the user has progress in.
+      where('course_scripts.script_id' => user_unit_ids).
       count > 0
   end
 
-  # returns whether a script in this course has version_warning_dismissed.
+  # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
     return nil unless user
-    script_ids = default_scripts.pluck(:id)
+    unit_ids = default_scripts.pluck(:id)
     user.
       user_scripts.
-      where(script_id: script_ids).
+      where(script_id: unit_ids).
       select(&:version_warning_dismissed).
       any?
   end
@@ -665,11 +665,11 @@ class UnitGroup < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
 
-    # A user without the experiment has pilot script access if one of their
+    # A user without the experiment has pilot unit access if one of their
     # teachers has the pilot experiment enabled, AND they are either currently
     # assigned to or have progress in the course.
     #
-    # This logic is subtly different from the logic we use for pilot script
+    # This logic is subtly different from the logic we use for pilot unit
     # access: because we do not record when a user is assigned to a course, we
     # will fail to detect if a user was previously assigned to a pilot course in
     # which they made no progress.
@@ -681,7 +681,7 @@ class UnitGroup < ApplicationRecord
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
-  # script experiments enabled.
+  # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
