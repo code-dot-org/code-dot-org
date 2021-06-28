@@ -62,7 +62,8 @@ class JavalabEditor extends React.Component {
     isDarkMode: PropTypes.bool,
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
-    handleVersionHistory: PropTypes.func.isRequired
+    handleVersionHistory: PropTypes.func.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   static defaultProps = {
@@ -167,6 +168,10 @@ class JavalabEditor extends React.Component {
     } else {
       const lightModeExtension = this.editorModeConfigCompartment.of(lightMode);
       extensions.push(lightModeExtension);
+    }
+
+    if (this.props.isReadOnlyWorkspace) {
+      extensions.push(EditorView.editable.of(false));
     }
 
     this.editors[key] = new EditorView({
@@ -466,6 +471,11 @@ class JavalabEditor extends React.Component {
     }, 500);
   }
 
+  editorHeaderText = () =>
+    this.props.isReadOnlyWorkspace
+      ? msg.readonlyWorkspaceHeader()
+      : javalabMsg.editor();
+
   render() {
     const {
       orderedTabKeys,
@@ -483,7 +493,8 @@ class JavalabEditor extends React.Component {
       onCommitCode,
       isDarkMode,
       sources,
-      isEditingStartSources
+      isEditingStartSources,
+      isReadOnlyWorkspace
     } = this.props;
 
     let menuStyle = {
@@ -504,9 +515,14 @@ class JavalabEditor extends React.Component {
             isRtl={false}
             label={javalabMsg.newFile()}
             leftJustified
+            isDisabled={isReadOnlyWorkspace}
           />
           <PaneSection style={styles.backpackSection}>
-            <Backpack isDarkMode={isDarkMode} />
+            <Backpack
+              id={'javalab-editor-backpack'}
+              isDarkMode={isDarkMode}
+              isDisabled={isReadOnlyWorkspace}
+            />
           </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
@@ -515,6 +531,7 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             onClick={this.props.handleVersionHistory}
+            isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton
             id="javalab-editor-save"
@@ -523,8 +540,9 @@ class JavalabEditor extends React.Component {
             headerHasFocus
             isRtl={false}
             label={javalabMsg.commitCode()}
+            isDisabled={isReadOnlyWorkspace}
           />
-          <PaneSection>{javalabMsg.editor()}</PaneSection>
+          <PaneSection>{this.editorHeaderText()}</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
@@ -723,7 +741,8 @@ export default connect(
     validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
     height: state.javalab.renderedEditorHeight,
-    isEditingStartSources: state.pageConstants.isEditingStartSources
+    isEditingStartSources: state.pageConstants.isEditingStartSources,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
