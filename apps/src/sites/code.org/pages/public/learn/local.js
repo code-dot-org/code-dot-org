@@ -63,7 +63,7 @@ function checkOffset() {
   // set position to absolute
   if (
     $('#map').offset().top + $('#map').height() >=
-    $('#pagefooter').offset().top - 20
+    document.body.scrollHeight - $('#pagefooter').height() - 20
   ) {
     $('#map').css('position', 'absolute');
     // eslint-disable-next-line brace-style
