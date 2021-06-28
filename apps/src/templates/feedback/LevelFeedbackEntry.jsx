@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import shapes from './shapes';
+import {feedbackShape} from './types';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types'; // Maureen move this type into templates/feedback
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const getElementHeight = element => {
@@ -28,7 +28,7 @@ export default class LevelFeedbackEntry extends Component {
     commentHeight: 0
   };
 
-  static propTypes = {feedback: shapes.feedback};
+  static propTypes = {feedback: feedbackShape};
 
   expandComment = () => {
     this.setState({expanded: true});

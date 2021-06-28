@@ -5,7 +5,7 @@ import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progr
 import color from '@cdo/apps/util/color';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 const defaultUserLevel = {
   id: 123,

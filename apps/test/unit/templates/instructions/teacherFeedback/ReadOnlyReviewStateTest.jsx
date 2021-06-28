@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
