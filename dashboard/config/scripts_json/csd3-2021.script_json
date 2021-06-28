@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:10 UTC",
+    "serialized_at": "2021-06-26 21:24:04 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csd3-2021"
@@ -6889,6 +6889,18 @@
       },
       "seeding_key": {
         "activity_section.key": "2d58346e-e123-4477-8995-fefc448b3fe3",
+        "lesson_activity.key": "06f4dccb-71cc-4afb-907e-2ee69be55359"
+      }
+    },
+    {
+      "key": "8d6f1928-a54c-4009-838f-aba09ad0d38c",
+      "position": 3,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End of Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d6f1928-a54c-4009-838f-aba09ad0d38c",
         "lesson_activity.key": "06f4dccb-71cc-4afb-907e-2ee69be55359"
       }
     },

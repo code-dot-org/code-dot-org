@@ -52,7 +52,7 @@ module Services
         # script for the sync in. Note this may be a nested directory like "2021/csf"
         def self.get_script_subdirectory(script)
           # special-case Hour of Code scripts.
-          return "Hour of Code" if ScriptConstants.script_in_category?(:hoc, script.name)
+          return "Hour of Code" if ScriptConstants.unit_in_category?(:hoc, script.name)
 
           # catchall for scripts without courses
           return 'other' unless script.get_course_version.present?
