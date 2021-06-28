@@ -138,8 +138,6 @@ class TeacherFeedback < ApplicationRecord
   def summarize
     {
       id: id,
-      teacher_name: teacher.name,
-      feedback_provider_id: teacher.id,
       student_id: student_id,
       script_id: script_id,
       level_id: level_id,

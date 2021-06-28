@@ -4,8 +4,7 @@ export const teacherFeedbackShape = PropTypes.shape({
   comment: PropTypes.string,
   performance: PropTypes.string,
   student_seen_feedback: PropTypes.date,
-  created_at: PropTypes.date,
-  feedback_provider_id: PropTypes.number
+  created_at: PropTypes.date
 });
 
 export const rubricShape = PropTypes.shape({

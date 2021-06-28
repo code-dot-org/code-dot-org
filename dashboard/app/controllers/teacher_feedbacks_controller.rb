@@ -22,9 +22,11 @@ class TeacherFeedbacksController < ApplicationController
 
     # We need to know which feedback is the latest for a level/script in order to determine
     # if the level is awaiting another review from the teacher. (A level is awaiting review if it was marked
-    # as keep working by the teacher and then the student made progress)
+    # as keep working by the teacher and then the student made progress. This status can only apply to the
+    # latest feedback left by the teacher)
     #
-    # Here we have a map from level/script to true if we've marked the latest feedback in our list
+    # marked_latest_for_level is a map from level/script to true if we've marked the latest feedback for the level
+    # in our list
     marked_latest_for_level = {}
 
     @feedbacks_as_student_with_level_info = @feedbacks_as_student.map do |feedback|
