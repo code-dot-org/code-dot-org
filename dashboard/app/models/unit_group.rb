@@ -581,7 +581,7 @@ class UnitGroup < ApplicationRecord
   # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
     return nil unless user
-    unit_ids = default_scripts.pluck(:id)
+    unit_ids = default_units.pluck(:id)
     user.
       user_scripts.
       where(script_id: unit_ids).
@@ -703,7 +703,7 @@ class UnitGroup < ApplicationRecord
     # For reasons I (Bethany) still don't understand, using a proc here causes
     # the method to terminate unexpectedly without an error. My unproven guess
     # is that this is due to the nested `any?` calls
-    default_scripts.any? {|s| s.prevent_course_version_change?}
+    default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
   end
 end
