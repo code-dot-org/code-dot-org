@@ -2,14 +2,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import msg from '@cdo/locale';
-import weblabMsg from '@cdo/weblab/locale';
-import {resetFailedMessage} from './constants';
+import weblabI18n from '@cdo/weblab/locale';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
-import StylizedBaseDialog, {
-  FooterButton
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {
+  FatalErrorDialog,
+  ResetSuccessDialog,
+  UploadErrorDialog
+} from '@cdo/apps/weblab/dialogs/';
 import {Provider} from 'react-redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
@@ -20,6 +20,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
@@ -461,69 +462,49 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   });
 };
 
-WebLab.prototype.openErrorDialog = function(body) {
-  const onResetProject = () => {
+WebLab.prototype.openFatalErrorDialog = function(
+  message,
+  type = FatalErrorType.Default
+) {
+  const handleResetProject = () => {
     this.closeDialog();
     this.brambleHost?.resetFilesystem(err => {
       if (err) {
-        this.openErrorDialog(resetFailedMessage(err.message));
+        this.openFatalErrorDialog(err.message, FatalErrorType.ResetFailure);
       } else {
-        this.openDialog({
-          title: 'Web Lab Reset Complete',
-          body: 'Reloading...',
-          hideFooter: true
-        });
+        this.openResetSuccessDialog();
         reload();
       }
     });
   };
 
-  this.openDialog({
-    title: 'An Error Occurred',
-    // TODO: MAKE THIS HTML-FRIENDLY
-    body,
-    renderFooter: () => [
-      <FooterButton
-        text="Try Again"
-        onClick={reload}
-        key="cancel"
-        type="cancel"
-      />,
-      <FooterButton
-        text="Reset Web Lab"
-        onClick={onResetProject}
-        key="reset"
-        color="red"
-      />,
-      <FooterButton
-        text="Dismiss"
-        onClick={this.closeDialog}
-        key="confirm"
-        type="confirm"
-      />
-    ]
-  });
+  let errorMessage = weblabI18n.fatalError({message});
+  if (type === FatalErrorType.LoadFailure) {
+    errorMessage = weblabI18n.loadFailure();
+  } else if (type === FatalErrorType.ResetFailure) {
+    errorMessage = weblabI18n.resetFailure({message});
+  }
+
+  actions.openDialog(
+    <FatalErrorDialog
+      isOpen
+      errorMessage={errorMessage}
+      handleClose={this.closeDialog}
+      handleResetProject={handleResetProject}
+    />
+  );
 };
 
 WebLab.prototype.openUploadErrorDialog = function() {
-  this.openDialog({
-    title: weblabMsg.uploadError(),
-    body: weblabMsg.errorSavingProject(),
-    cancellationButtonText: msg.reloadPage(),
-    handleCancellation: reload
-  });
+  actions.openDialog(
+    <UploadErrorDialog isOpen handleClose={this.closeDialog} />
+  );
 };
 
-WebLab.prototype.openDialog = function(props) {
-  const dialog = (
-    <StylizedBaseDialog
-      isOpen
-      handleConfirmation={this.closeDialog}
-      handleClose={this.closeDialog}
-      {...props}
-    />
+WebLab.prototype.openResetSuccessDialog = function() {
+  actions.openDialog(
+    <ResetSuccessDialog isOpen handleClose={this.closeDialog} />
   );
-  actions.openDialog(dialog);
 };
 
 WebLab.prototype.closeDialog = function() {
@@ -688,7 +669,7 @@ WebLab.prototype.brambleApi = function() {
     onBrambleMountable: this.onBrambleMountable.bind(this),
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
-    openErrorDialog: this.openErrorDialog.bind(this),
+    openFatalErrorDialog: this.openFatalErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this)
