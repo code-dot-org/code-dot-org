@@ -27,7 +27,7 @@ class SelectDataset extends Component {
     resetState: PropTypes.func.isRequired,
     specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
-    highlightDataset: PropTypes.string,
+    highlightDataset: PropTypes.string
   };
 
   constructor(props) {
@@ -35,7 +35,7 @@ class SelectDataset extends Component {
 
     this.state = {
       download: false,
-      showFileTypeError: false
+      showFileTypeErrorMessage: false
     };
   }
 
@@ -55,7 +55,7 @@ class SelectDataset extends Component {
       this.props.setSelectedJSON(jsonPath);
       this.setState({
         download: true,
-        showFileTypeError: false
+        showFileTypeErrorMessage: false
       });
 
       parseCSV(csvPath, true, false);
@@ -74,11 +74,11 @@ class SelectDataset extends Component {
     if (selectedCSV.name.includes(".xls") ||
     selectedCSV.type === "application/vnd.ms-excel") {
       this.setState({
-        showFileTypeError: true
+        showFileTypeErrorMessage: true
       });
     } else {
       this.setState({
-        showFileTypeError: false
+        showFileTypeErrorMessage: false
       });
       parseCSV(event.target.files[0], false, true);
     }
@@ -143,7 +143,7 @@ class SelectDataset extends Component {
                 value=""
               />
             </label>
-            {this.state.showFileTypeError && (
+            {this.state.showFileTypeErrorMessage && (
               <span style={styles.fileTypeErrorMessageConainer}>
                 {fileTypeErrorMessage}
               </span>
