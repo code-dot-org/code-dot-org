@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getCurrentColumnDetails } from "../selectors/currentColumnSelectors";
-import { styles, UNIQUE_OPTIONS_MAX, ColumnTypes } from "../constants.js";
+import { styles, ColumnTypes } from "../constants.js";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
 import ScrollableContent from "./ScrollableContent";
@@ -15,6 +15,7 @@ import ColumnDetailsCategorical from "./ColumnDetailsCategorical";
 import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 import AddFeatureButton from "./AddFeatureButton";
 import SelectLabelButton from "./SelectLabelButton";
+import UniqueOptionsWarning from "./UniqueOptionsWarning";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -75,24 +76,13 @@ class ColumnInspector extends Component {
             {isCategorical && <ColumnDetailsCategorical /> }
             {isNumerical && <ColumnDetailsNumerical /> }
           </ScrollableContent>
-
           {selectingLabel && currentColumnDetails.isSelectable && (
             <SelectLabelButton column={currentColumnDetails.id} />
           )}
-
           {selectingFeatures && currentColumnDetails.isSelectable && (
             <AddFeatureButton column={currentColumnDetails.id} />
           )}
-
-          {currentColumnDetails.hasTooManyUniqueOptions && (
-            <div>
-              <span style={styles.bold}>Note:</span>
-              &nbsp; Categorical columns with more than {
-                UNIQUE_OPTIONS_MAX
-              }{" "}
-              unique values can not be selected as the label or a feature.
-            </div>
-          )}
+          <UniqueOptionsWarning />
         </div>
       )
     );
