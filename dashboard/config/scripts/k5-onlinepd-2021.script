@@ -14,6 +14,8 @@ level 'OPD-K5 whats your plan_2021', progression: 'Introduction'
 lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'OPD-K5 CSFCourses_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
+level 'OPD-K5 GettingStarted2_2021', progression: 'Getting Started'
+level 'OPD-K5 GettingStarted3_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
 level 'OPD-K5-GettingStarted3-2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
