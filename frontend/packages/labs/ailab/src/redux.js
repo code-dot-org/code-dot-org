@@ -734,8 +734,7 @@ export function getCurrentColumnData(state) {
     id: state.currentColumn,
     readOnly: isCurrentColumnReadOnly(state),
     dataType: state.columnsByDataType[state.currentColumn],
-    description: getColumnDescription(state, state.currentColumn),
-    isColumnDataValid: isColumnDataValid(state, state.currentColumn),
+    description: getCurrentColumnDescription(state),
     isSelectable: isSelectable(state, state.currentColumn)
   };
 
@@ -744,13 +743,16 @@ export function getCurrentColumnData(state) {
 
   if (isCategorical) {
     const uniqueOptions = getUniqueOptionsCurrentColumn(state);
-    columnData.uniqueOptions = uniqueOptions;
-    columnData.hasTooManyUniqueOptions = hasTooManyUniqueOptions(
+    const hasTooManyUniqueOptions = hasTooManyUniqueOptions(
       uniqueOptions.length
     );
+    columnData.uniqueOptions = uniqueOptions;
+    columnData.hasTooManyUniqueOptions = hasTooManyUniqueOptions,
+    columnData.isColumnDataValid = !hasTooManyUniqueOptions,
     columnData.frequencies = getOptionFrequenciesCurrentColumn(state)
   } else if (isNumerical) {
     columnData.extrema = getExtremaCurrentColumn(state);
+    columnData.isColumnDataValid = columnContainsOnlyNumbers(stata.data, state.currentColumn)
   }
   return columnData;
 }

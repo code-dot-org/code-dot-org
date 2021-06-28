@@ -5,7 +5,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCurrentColumnData } from "../redux";
+import { getCurrentColumnDetails } from "../selectors";
 import { styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -18,18 +18,18 @@ import SelectLabelButton from "./SelectLabelButton";
 
 class ColumnInspector extends Component {
   static propTypes = {
-    currentColumnData: PropTypes.object,
+    currentColumnDetails: PropTypes.object,
     currentPanel: PropTypes.string
   };
 
   render() {
-    const { currentColumnData, currentPanel } = this.props;
+    const { currentColumnDetails, currentPanel } = this.props;
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
 
     return (
-      currentColumnData && (
+      currentColumnDetails && (
         <div
           id="column-inspector"
           style={{
@@ -37,23 +37,23 @@ class ColumnInspector extends Component {
             ...styles.rightPanel
           }}
         >
-          <div style={styles.largeText}>{currentColumnData.id}</div>
+          <div style={styles.largeText}>{currentColumnDetails.id}</div>
           <ScrollableContent>
             <span style={styles.bold}>Data Type:</span>
             &nbsp;
-            {currentColumnData.readOnly && currentColumnData.dataType}
-            {!currentColumnData.readOnly && (
+            {currentColumnDetails.readOnly && currentColumnDetails.dataType}
+            {!currentColumnDetails.readOnly && (
               <ColumnDataTypeDropdown
-                columnId={currentColumnData.id}
-                currentDataType={currentColumnData.dataType}
+                columnId={currentColumnDetails.id}
+                currentDataType={currentColumnDetails.dataType}
               />
             )}
-            {currentColumnData.description && (
+            {currentColumnDetails.description && (
               <div>
                 <br />
                 <span style={styles.bold}>Description:</span>
                 &nbsp;
-                <div>{currentColumnData.description}</div>
+                <div>{currentColumnDetails.description}</div>
                 <br />
               </div>
             )}
@@ -63,30 +63,30 @@ class ColumnInspector extends Component {
                 <CrossTab />
               </div>
             )}
-            {currentColumnData.uniqueOptions && (
+            {currentColumnDetails.uniqueOptions && (
               <ColumnDetailsCategorical
-                id={currentColumnData.id}
-                uniqueOptions={currentColumnData.uniqueOptions}
-                optionFrequencies={currentColumnData.frequencies}
+                id={currentColumnDetails.id}
+                uniqueOptions={currentColumnDetails.uniqueOptions}
+                optionFrequencies={currentColumnDetails.frequencies}
               />
             )}
-            {currentColumnData.extrema && (
+            {currentColumnDetails.extrema && (
               <ColumnDetailsNumerical
-                isColumnDataValid={currentColumnData.isColumnDataValid}
-                extrema={currentColumnData.extrema}
+                isColumnDataValid={currentColumnDetails.isColumnDataValid}
+                extrema={currentColumnDetails.extrema}
               />
             )}
           </ScrollableContent>
 
-          {selectingLabel && currentColumnData.isSelectable && (
-            <SelectLabelButton column={currentColumnData.id} />
+          {selectingLabel && currentColumnDetails.isSelectable && (
+            <SelectLabelButton column={currentColumnDetails.id} />
           )}
 
-          {selectingFeatures && currentColumnData.isSelectable && (
-            <AddFeatureButton column={currentColumnData.id} />
+          {selectingFeatures && currentColumnDetails.isSelectable && (
+            <AddFeatureButton column={currentColumnDetails.id} />
           )}
 
-          {currentColumnData.hasTooManyUniqueOptions && (
+          {currentColumnDetails.hasTooManyUniqueOptions && (
             <div>
               <span style={styles.bold}>Note:</span>
               &nbsp; Categorical columns with more than {
@@ -103,7 +103,7 @@ class ColumnInspector extends Component {
 
 export default connect(
   state => ({
-    currentColumnData: getCurrentColumnData(state),
+    currentColumnDetails: getCurrentColumnDetails(state),
     currentPanel: state.currentPanel
   })
 )(ColumnInspector);

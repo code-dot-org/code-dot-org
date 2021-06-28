@@ -29,8 +29,8 @@ function isValidCategoricalData(state, column) {
   return !hasTooManyUniqueOptions(state, column);
 }
 
-export function columnContainsOnlyNumbers(data, column) {
-  return data.every(row => !isNaN(row[column]));
+export function containsOnlyNumbers(currentColumnData) {
+  return currentColumnData.every(cell => !isNaN(cell));
 }
 
 function isValidNumericalData(state, column) {
@@ -74,8 +74,7 @@ function getColumnData(data, column) {
   return data.map(row => row[column]);
 }
 
-export function getExtrema(data, column) {
-  const columnData = getColumnData(data, column);
+export function getExtrema(columnData) {
   let extrema = {};
   extrema.max = Math.max(...columnData);
   extrema.min = Math.min(...columnData);
