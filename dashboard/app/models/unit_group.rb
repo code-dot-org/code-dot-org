@@ -34,6 +34,11 @@ class UnitGroup < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
+  CSD = 'csd'.freeze
+  CSP = 'csp'.freeze
+  CSA = 'csa'.freeze
+  TEST = 'ui-test-course'.freeze
+
   def skip_name_format_validation
     !!plc_course
   end

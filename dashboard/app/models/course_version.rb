@@ -102,8 +102,12 @@ class CourseVersion < ApplicationRecord
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 
+  def self.should_cache?
+    Script.should_cache?
+  end
+
   def self.course_offering_keys(content_root_type)
-    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}") do
+    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
   end
