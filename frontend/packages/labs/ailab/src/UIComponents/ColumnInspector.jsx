@@ -27,6 +27,7 @@ class ColumnInspector extends Component {
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
+
     const isCategorical = currentColumnDetails && currentColumnDetails.dataType === 'categorical'
     const isNumerical = currentColumnDetails && currentColumnDetails.dataType === 'numerical'
 

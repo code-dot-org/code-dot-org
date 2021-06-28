@@ -1,23 +1,19 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
 import {
+  filterColumnsByType,
   getUniqueOptions,
   getExtrema,
-  isColumnReadOnly,
-  getColumnDescription,
-  hasTooManyUniqueOptions,
-  containsOnlyNumbers,
-  filterColumnsByType
-} from './helpers/columnDetails';
+  getColumnDescription
+ } from './helpers/columnDetails';
 import { arrayIntersection } from './helpers/utils';
 
-const getData = state => state.data;
-const getColumnsByDataType = state => state.columnsByDataType;
+export const getData = state => state.data;
+export const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
-const getCurrentColumn = state => state.currentColumn;
-const getMetadata = state => state.metadata;
-const getTrainedModelDetails = state => state.trainedModelDetails;
+export const getMetadata = state => state.metadata;
+export const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -87,28 +83,6 @@ export const getUniqueOptionsLabelColumn = createSelector(
   }
 )
 
-export const getUniqueOptionsCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return getUniqueOptions(data, currentColumn).sort()
-  }
-)
-
-export const getOptionFrequenciesCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    let optionFrequencies = {};
-    for (let row of data) {
-      if (optionFrequencies[row[currentColumn]]) {
-        optionFrequencies[row[currentColumn]]++;
-      } else {
-        optionFrequencies[row[currentColumn]] = 1;
-      }
-    }
-    return optionFrequencies;
-  }
-)
-
 export const getExtremaByColumn = createSelector(
   [getSelectedNumericalColumns, getData],
   (getSelectedNumericalColumns, data) => {
@@ -117,34 +91,6 @@ export const getExtremaByColumn = createSelector(
       extremaByColumn[column] = getExtrema(data, column)
     ))
     return extremaByColumn;
-  }
-)
-
-export const getCurrentColumnData = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return data.map(row => row[currentColumn]);
-  }
-)
-
-export const getExtremaCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return getExtrema(data, currentColumn);
-  }
-)
-
-export const isCurrentColumnReadOnly = createSelector(
-  [getCurrentColumn, getMetadata],
-  (currentColumn, metadata) => {
-    return isColumnReadOnly(metadata, currentColumn)
-  }
-)
-
-export const getCurrentColumnDescription = createSelector(
-  [getCurrentColumn, getMetadata, getTrainedModelDetails],
-  (currentColumn, metadata, trainedModelDetails) => {
-    return getColumnDescription(currentColumn, metadata, trainedModelDetails);
   }
 )
 
@@ -161,113 +107,5 @@ export const getSelectedColumnsDescriptions = createSelector(
         )
       };
     });
-  }
-)
-
-export const isCurrentColumnSelectable = createSelector(
-  [getSelectedColumns, getCurrentColumn],
-  (selectedColumns, currentColumn) => {
-    return !selectedColumns.includes(currentColumn);
-  }
-)
-
-export const currentColumnContainsOnlyNumbers = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return containsOnlyNumbers(data, currentColumn);
-  }
-)
-
-export const currentColumnHasTooManyUniqueOptions = createSelector(
-  [getUniqueOptionsCurrentColumn],
-  (uniqueOptionsCurrentColumn) => {
-    return hasTooManyUniqueOptions(uniqueOptionsCurrentColumn.length);
-  }
-)
-
-export const currentColumnIsCategorical = createSelector(
-  [getCurrentColumn, getColumnsByDataType],
-  (currentColumn, columnsByDataType) => {
-    return columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL;
-  }
-)
-
-export const getCategoricalColumnDetails = createSelector(
-  [
-    getCurrentColumn,
-    currentColumnIsCategorical,
-    getUniqueOptionsCurrentColumn,
-    getOptionFrequenciesCurrentColumn
-  ],
-  (
-    currentColumn,
-    isCategorical,
-    uniqueOptions,
-    uniqueOptionFrequencies
-  ) => {
-    const categeoricalColumnDetails = {};
-    categeoricalColumnDetails.id = currentColumn;
-    if (isCategorical) {
-      categeoricalColumnDetails.uniqueOptions = uniqueOptions;
-      categeoricalColumnDetails.frequencies = uniqueOptionFrequencies;
-    }
-    return categeoricalColumnDetails;
-  }
-)
-
-export const currentColumnIsNumerical = createSelector(
-  [getCurrentColumn, getColumnsByDataType],
-  (currentColumn, columnsByDataType) => {
-    return columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL;
-  }
-)
-
-export const getNumericalColumnDetails = createSelector(
-  [
-    getCurrentColumn,
-    currentColumnIsNumerical,
-    getExtremaCurrentColumn,
-    currentColumnContainsOnlyNumbers
-  ],
-  (
-    currentColumn,
-    isNumerical,
-    extrema,
-    containsOnlyNumbers
-  ) => {
-    const numericalColumnDetails = {};
-    numericalColumnDetails.id = currentColumn;
-    if (isNumerical) {
-      numericalColumnDetails.extrema = extrema;
-      numericalColumnDetails.containsOnlyNumbers = containsOnlyNumbers;
-    }
-    return numericalColumnDetails;
-  }
-)
-
-export const getCurrentColumnDetails = createSelector(
-  [
-    getCurrentColumn,
-    isCurrentColumnReadOnly,
-    getColumnsByDataType,
-    getCurrentColumnDescription,
-    isCurrentColumnSelectable
-  ],
-  (
-    currentColumn,
-    isReadOnly,
-    columnsByDataType,
-    description,
-    isSelectable
-  ) => {
-    if (currentColumn) {
-      return {
-        id: currentColumn,
-        readOnly: isReadOnly,
-        dataType: columnsByDataType[currentColumn],
-        description: description,
-        isSelectable: isSelectable
-      };
-    }
   }
 )
