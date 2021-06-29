@@ -12,6 +12,9 @@ import {CSVLink} from 'react-csv';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import experiments from '@cdo/apps/util/experiments';
+
+const keepWorkingExperiment = 'teacher-feedback-review-state';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
@@ -22,7 +25,8 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.performanceLevel(), key: 'performance'},
   {label: i18n.performanceLevelDetails(), key: 'performanceLevelDetails'},
   {label: i18n.feedback(), key: 'comment'},
-  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
+  {label: i18n.seenByStudent(), key: 'studentSeenFeedback'}
 ];
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
@@ -31,7 +35,8 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.feedback(), key: 'comment'},
-  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
+  {label: i18n.seenByStudent(), key: 'studentSeenFeedback'}
 ];
 
 /*
@@ -50,18 +55,40 @@ class FeedbackDownload extends Component {
     isCurrentScriptCSD: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+
+    this.headers = this.getHeaders(props.isCurrentScriptCSD);
+  }
+
+  getHeaders(isCurrentScriptCSD) {
+    let headers = isCurrentScriptCSD
+      ? CSV_FEEDBACK_RUBRIC_HEADERS
+      : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
+
+    if (experiments.isEnabled(keepWorkingExperiment)) {
+      const keepWorkingHeader = {
+        label: i18n.keepWorking(),
+        key: 'reviewStateLabel'
+      };
+      // create a copy to avoid modifying original constants
+      headers = [...headers];
+      headers.splice(-3, 0, keepWorkingHeader);
+    }
+
+    return headers;
+  }
+
   render() {
     const {
       sectionName,
       exportableFeedbackData,
       scriptName,
-      isCurrentScriptCSD,
       onClickDownload
     } = this.props;
 
-    const HEADERS = isCurrentScriptCSD
-      ? CSV_FEEDBACK_RUBRIC_HEADERS
-      : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
+    console.log(this.headers);
+    console.log(exportableFeedbackData);
 
     return (
       <div>
@@ -72,7 +99,7 @@ class FeedbackDownload extends Component {
             date: new Date().toDateString()
           })}
           data={exportableFeedbackData}
-          headers={HEADERS}
+          headers={this.headers}
           onClick={onClickDownload}
         >
           <Button
