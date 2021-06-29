@@ -201,6 +201,7 @@ class SaveModel extends Component {
                             }
                             placeholder={field.placeholder}
                             value={field.answer || ""}
+                            style={styles.saveInputsWidth}
                           />
                         </div>
                       )}
