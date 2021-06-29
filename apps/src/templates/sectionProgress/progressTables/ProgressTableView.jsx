@@ -356,7 +356,7 @@ class ProgressTableView extends React.Component {
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
-            excludeCsfColumn={!this.props.scriptData.csf}
+            includeCsfColumn={this.props.scriptData.csf}
             includeProgressNotApplicable
           />
         ) : (

@@ -209,7 +209,7 @@ class UnitOverview extends React.Component {
         )}
         <ProgressTable minimal={minimal} />
         {onOverviewPage && (
-          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
+          <ProgressLegend includeCsfColumn={!excludeCsfColumnInLegend} />
         )}
         <GoogleClassroomAttributionLabel />
       </div>
