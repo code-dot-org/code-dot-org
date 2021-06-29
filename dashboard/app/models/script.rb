@@ -1904,7 +1904,7 @@ class Script < ApplicationRecord
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
           reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
-          studentSeenFeedback: temp_feedback.student_seen_feedback.localtime.strftime("%D at %r")
+          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
         }
       end
     end
