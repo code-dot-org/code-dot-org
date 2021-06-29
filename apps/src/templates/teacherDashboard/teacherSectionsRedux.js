@@ -663,8 +663,10 @@ export default function teacherSections(state = initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      if (!assignmentFamilyMap[course.assignment_family_name]) {
-        assignmentFamilyMap[course.assignment_family_name] = _.pick(
+      // Make sure each assignment family is only added once.
+      const familyName = course.assignment_family_name;
+      if (familyName && !assignmentFamilyMap[familyName]) {
+        assignmentFamilyMap[familyName] = _.pick(
           course,
           assignmentFamilyFields
         );
