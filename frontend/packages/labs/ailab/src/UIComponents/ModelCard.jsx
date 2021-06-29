@@ -45,21 +45,39 @@ class ModelCard extends Component {
         <div style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Summary</h5>
+            <h5 style={styles.modelCardHeading}>Accuracy</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
-                Predict {label.id} based on{" "}
-                {selectedFeatures.length > 0 && percentCorrect && (
+                {percentCorrect && (
                   <span>
-                    {selectedFeatures.join(", ")} with {percentCorrect}%
-                    accuracy.
+                    {percentCorrect}%
                   </span>
                 )}
               </p>
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>About the Data </h5>
+            <h5 style={styles.modelCardHeading}>Intended Use</h5>
+            <div style={styles.modelCardContent}>
+              {trainedModelDetails.potentialUses && (
+                <p style={styles.modelCardDetails}>
+                  {trainedModelDetails.potentialUses}
+                </p>
+              )}
+            </div>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Limitations and Warnings</h5>
+            <div style={styles.modelCardContent}>
+              {trainedModelDetails.potentialMisuses && (
+                <p style={styles.modelCardDetails}>
+                  {trainedModelDetails.potentialMisuses}
+                </p>
+              )}
+            </div>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>About the Data</h5>
             <div style={styles.modelCardContent}>
               {datasetDetails.description && (
                 <p style={styles.modelCardDetails}>
@@ -74,23 +92,16 @@ class ModelCard extends Component {
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Intended Use</h5>
+            <h5 style={styles.modelCardHeading}>Features and Label</h5>
             <div style={styles.modelCardContent}>
-              {trainedModelDetails.potentialUses && (
-                <p style={styles.modelCardDetails}>
-                  {trainedModelDetails.potentialUses}
-                </p>
-              )}
-            </div>
-          </div>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Warnings</h5>
-            <div style={styles.modelCardContent}>
-              {trainedModelDetails.potentialMisuses && (
-                <p style={styles.modelCardDetails}>
-                  {trainedModelDetails.potentialMisuses}
-                </p>
-              )}
+              <p style={styles.modelCardDetails}>
+                Predict {label.id} based on{" "}
+                {selectedFeatures.length > 0 && (
+                  <span>
+                    {selectedFeatures.join(", ")}.
+                  </span>
+                )}
+              </p>
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
