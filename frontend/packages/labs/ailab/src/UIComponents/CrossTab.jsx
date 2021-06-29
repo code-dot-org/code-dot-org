@@ -48,6 +48,7 @@ class CrossTab extends Component {
             <div>
               The currently-selected data is too large to show in a table.
             </div>
+            <br />
           </div>
         )}
 
