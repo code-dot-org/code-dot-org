@@ -39,7 +39,7 @@
     {
       "id": "shoe",
       "type": "categorical",
-      "description": "What kind of shoe are you planning on wearing today?"
+      "description": "What kind of shoes are you planning on wearing today?"
     }
   ],
   "defaultLabelColumn": "shoe"

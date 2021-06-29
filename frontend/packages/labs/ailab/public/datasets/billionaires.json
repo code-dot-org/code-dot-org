@@ -95,7 +95,7 @@
     {
       "type": "categorical",
       "id": "Wealth Inherited",
-      "description": "Whether their wealth was inherited and where from, e.g. 'not inherited', 'father', '3rd generation'."
+      "description": "Whether their wealth was inherited and where from, e.g. \"not inherited\", \"father\", \"3rd generation\"."
     }
   ]
 }
