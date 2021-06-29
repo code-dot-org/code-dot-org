@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CodeReviewCommentsControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @pilot_teacher = create :teacher
     create(:single_user_experiment, min_user_id: @pilot_teacher.id, name: 'csa-pilot')
