@@ -2,14 +2,13 @@
   "script": {
     "name": "csa-videos",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-21 21:34:37 UTC",
+    "serialized_at": "2021-06-23 17:22:29 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa-videos"
@@ -3220,6 +3219,28 @@
       "level_keys": [
         "csa widget test2"
       ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 Video 1"
+        ],
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos",
+        "activity_section.key": "c14bf34f-3995-434a-a216-3930638b639e"
+      },
+      "level_keys": [
+        "U2L2 Video 1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3257,6 +3278,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-videos",
         "activity_section.key": "39e9deec-23ce-4e34-a31a-92c69e00c996"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 Video 1",
+        "script_level.level_keys": [
+          "U2L2 Video 1"
+        ],
+        "lesson.key": "lesson-24",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-videos",
+        "activity_section.key": "c14bf34f-3995-434a-a216-3930638b639e"
       }
     }
   ],

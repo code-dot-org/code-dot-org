@@ -27,7 +27,7 @@ class AddLevelDialogTop extends Component {
       currentPage: 1,
       levelName: '',
       levelType: props.searchOptions.levelOptions[0][1],
-      scriptId: props.searchOptions.scriptOptions[0][1],
+      unitId: props.searchOptions.scriptOptions[0][1],
       ownerId: props.searchOptions.ownerOptions[0][1],
       numPages: 0
     };
@@ -55,8 +55,8 @@ class AddLevelDialogTop extends Component {
     if (this.state.levelType) {
       queryParams.level_type = this.state.levelType;
     }
-    if (this.state.scriptId) {
-      queryParams.script_id = this.state.scriptId;
+    if (this.state.unitId) {
+      queryParams.script_id = this.state.unitId;
     }
     if (this.state.ownerId) {
       queryParams.owner_id = this.state.ownerId;
@@ -94,8 +94,8 @@ class AddLevelDialogTop extends Component {
     this.setState({levelType: event.target.value});
   };
 
-  handleChangeScript = event => {
-    this.setState({scriptId: event.target.value});
+  handleChangeUnit = event => {
+    this.setState({unitId: event.target.value});
   };
 
   handleChangeOwner = event => {
@@ -124,10 +124,10 @@ class AddLevelDialogTop extends Component {
                   handleSearch={this.handleNewSearch}
                   handleChangeLevelName={this.handleChangeLevelName}
                   handleChangeLevelType={this.handleChangeLevelType}
-                  handleChangeScript={this.handleChangeScript}
+                  handleChangeUnit={this.handleChangeUnit}
                   handleChangeOwner={this.handleChangeOwner}
                   ownerId={this.state.ownerId}
-                  scriptId={this.state.scriptId}
+                  unitId={this.state.unitId}
                   levelName={this.state.levelName}
                   levelType={this.state.levelType}
                 />

@@ -1,0 +1,14 @@
+name 'CSA U2L7-L6 Exemplar'
+editor_experiment ''
+display_name 'Creating Dessert Subclasses'
+description "Choose a Dessert subclass to implement."
+
+sublevels
+level 'CSA U2L7-L6a Exemplar'
+level 'CSA U2L7-L6b Exemplar'
+level 'CSA U2L7-L6c Exemplar'
+level 'CSA U2L7-L6d Exemplar'
+
+markdown <<MARKDOWN
+
+MARKDOWN

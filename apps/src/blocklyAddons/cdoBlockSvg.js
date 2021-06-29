@@ -15,6 +15,14 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.unusedSvg_.render(this.svgGroup_);
   }
 
+  /**
+   * @override
+   * Disable overwrite checks
+   */
+  mixin(mixinObj, opt_disableCheck) {
+    super.mixin(mixinObj, true);
+  }
+
   isVisible() {
     // TODO (eventually), but all Flappy blocks are visible, so this won't be a problem
     // until we convert other labs

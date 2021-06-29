@@ -14,7 +14,7 @@ social:
 ---
 <link href="/css/marketing.css" rel="stylesheet" />
 
-# Code.org 2021 Annual Report
+# Code.org 2020 Annual Report
 
 [<button>View PDF of this report</button>](/files/Code.org-Annual-Report-2019.pdf)
 <p><em>PDF needs to be updated</em></p>
@@ -39,19 +39,23 @@ During 2020, as schools closed or transitioned to online learning, we saw the di
 
 <h2 class="purple-block">2020 Highlights</h2>
 
-## We rapidly responded to school closures and Covid-19 with distance learning resources ➤
+<h2 class="highlight">We rapidly responded to school closures and Covid-19 with distance learning resources ➤</h2>
 
 As many schools closed their doors to in-person instruction in March, we made significant curriculum <a href="https://code.org/alternative-classrooms" target="_blank">modifications to support distance learning</a> across all of our courses and launched new <a href="https://code.org/athome" target="_blank">initiatives and resources to support</a> parents, teachers, and students as they navigated at home learning. In particular, we’re incredibly proud of <a href="https://code.org/break" target="_blank">Code Break</a>, a series of streamed interactive lessons with special guests that engaged tens of thousands of students of all ages worldwide with CS concepts and activities.
 
-<img src="/images/AR2020/codebreakcollage2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/codebreakcollage2020.png"/></p>
 
-## We shared research that shows computer science develops foundational learning skills ➤
+<div class="color-block bp0">
+<p class="callout-quote">Now that our school is closed and we are on distance learning mode, we had no trouble as they were already used to Code.org. I can easily track their practices and provide them with timely feedback. Most importantly, <em>they are motivated and feel excited</em> when they are able to see their products. They see no limitations and that is something that I am very thankful for.</p><p class="callout-attrib"><strong>— CS Discoveries Teacher</strong></p>
+</div>
+
+<h2 class="highlight">We shared research that shows computer science develops foundational learning skills ➤</h2>
 
 <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">Seven different studies</a> show: children who study computer science perform better in other subjects, excel at problem-solving, and are more likely to attend college. In April 2020 we released a 4-year longitudinal study conducted by West Coast Analytics, in which researchers found that in two large US school districts, high school students who took computer science were <a href="https://codeorg.medium.com/study-computer-science-students-much-more-likely-to-enroll-in-college-faca65b1476d" target="_blank">17% more likely to enroll in college</a> versus similarly-situated students who do not.
 
-<img src="/images/AR2020/csisfundamentalslide2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/csisfundamentalslide2020.png" /></p>
 
-## We launched an all-new CS Principles and released other course and platform updates ➤
+<h2 class="highlight">We launched an all-new CS Principles and released other course and platform updates ➤</h2>
 
 In June, we launched an <a href="https://codeorg.medium.com/new-cs-principles-curriculum-encourages-more-creativity-more-advanced-programming-and-focus-on-2680afc5d2a" target="_blank">all-new CS Principles curriculum</a> endorsed by the College Board that encourages more creativity, more advanced programming and a focus on ethics. We also released revised CS Discoveries and CS Fundamentals courses.
 
@@ -59,57 +63,131 @@ In <a href="https://curriculum.code.org/csd" target="_blank">CS Discoveries</a>,
 
 We updated the <a href="https://curriculum.code.org/csf" target="_blank">CS Fundamentals</a> curriculum with cross-curricular standards and new projects to empower student creativity. We also renewed our partnership with Common Sense Education in order to provide updated lessons on Digital Citizenship.
 
-## We took our workshops online and prepared over 4,200  educators to teach CS ➤
+<div class="callout-box bt0">
+<div class="col-40"><img src="/images/AR2020/kseip.jpg" /></div>
+<div class="col-60"><p class="callout-quote">“I have a new appreciation for computer science because of this program. I also know students whose <em>whole career path has shifted</em> because they found CS and found they had a passion for it (and are good at it too!)”</p><p class="callout-attrib">—<strong> Kerry Seip</strong>, Pleasant View Middle School, Colorado</p></div><div class="clear"></div>
+</div>
+
+<h2 class="highlight">We took our workshops online and prepared over 4,200  educators to teach CS ➤</h2>
 
 With the growing concern of COVID-19, safety became our top priority and we transitioned our Code.org Professional Learning Program workshops for middle and high school teachers to a <a href="https://codeorg.medium.com/code-org-collaborates-with-friday-institute-for-new-virtual-pd-model-44f3e02fb199" target="_blank">virtual format</a> for 2020. This allowed over 600 facilitators and over 3,000 new computer science teachers to take part and prepared to teach CS in the 2020-2021 school year.
 
-## We collected CS course offering data from 100% of US public high schools ➤ 
+<div class="color-block bp0">
+<p class="callout-quote">“Really great experience! Amazing, <em>super supportive instructors</em> and really well-prepared, thought out learning experiences. Very valuable professional development!”</p><p class="callout-attrib"><strong>— Julie Effertz</strong>, Curtin Elementary, Wisconsin</p>
+</div>
+
+<h2 class="highlight">We collected CS course offering data from 100% of US public high schools ➤</h2> 
 
 2 years after launch, our CS Access Report finally has data on 100% of U.S. public high schools. As a result, we were able to include data from all 50 states in our <a href="https://advocacy.code.org/stateofcs" target="_blank">2020 State of CS Report</a>, which reflects growth in CS adoption but still shows that <a href="https://codeorg.medium.com/2020-state-of-cs-report-shows-less-than-half-of-u-s-schools-teach-cs-2c733e3c5d54" target="_blank">less than half of US schools teach CS</a>. We released this 4th annual report at our largest State Policy Forum (~1000 participants) in October.
 
-<img src="/images/AR2020/stateofcsreport2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/stateofcsreport2020.png" /></p>
 
-## We delved deeper into the disparities in access to computer science to focus our efforts ➤ 
+<h2 class="highlight">We delved deeper into the disparities in access to computer science to focus our efforts ➤</h2> 
 
 While we have much left to do to create an equitable learning environment for our students, we are still proud of the strides we made in 2020 such as launching our <a href="https://codeorg.medium.com/" target="_blank">BEST plan</a>, which aims to better support our Black employees, students, and teachers; disaggregating demographic data by race and gender to uncover specific disparities; and adopting a major language change related to students from racial/ethnic and other groups, moving away from the use of “minority,” shown to be offensive. 
 
 We also integrated Microsoft Immersive Reader into curriculum instructions space to improve accessibility on the Code.org platform, and moved our CS Fundamentals course and all of Code.org’s Hour of Code tutorials to be 100% localized into 8 languages. 
 
-## We worked with states to pass CS initiatives totaling $57 Million in 2020 ➤
+<div class="callout-box bt0">
+<div class="col-33"><img src="/images/AR2020/eduran.jpg" /></div>
+<div class="col-66"><p class="callout-quote">“I am so glad I chose to lead this movement at my school. I would like more students to take the class. It is so fun to teach and learn with the CS Education community. I <em>love that the focus has always been access and equity</em> for all students.”</p><p class="callout-attrib">—<strong> Erin Duran</strong>, San Pasqual High, California</p></div><div class="clear"></div>
+</div>
+
+<h2 class="highlight">We worked with states to pass CS initiatives totaling $57 Million in 2020 ➤</h2>
 
 Despite shortened and suspended legislative sessions due to COVID-19 in 2020, states still recognized the importance of computer science education, perhaps now more than ever with renewed attention on the “digital divide” and the economic opportunities afforded through computer science. States allocated a combined $57 million toward K-12 computer science education efforts, created statewide plans to expand access, and enacted legislation requiring all schools to offer computer science. To date, all 50 states have enacted policies to make CS a foundational part of their K-12 education system.
 
-## We introduced a new initiative to incorporate Artificial Intelligence into our curriculum ➤ 
+<h2 class="highlight">We introduced a new initiative to incorporate Artificial Intelligence into our curriculum ➤</h2> 
 
 <a href="https://codeorg.medium.com/microsoft-code-org-partner-to-teach-ai-ethics-from-elementary-to-high-school-4b983fd809e3" target="_blank">In partnership with Microsoft</a>, Code.org launched a comprehensive approach to bring AI lessons into the classroom, from elementary school through high school. Launched in December, the AI initiative began with a new <a href="https://code.org/ai" target="_blank">AI resources page</a>, a new <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y" target="_blank">video series on AI</a>, featuring Microsoft CEO Satya Nadella along with leading technologists across industry and academia, a global launch of Code.org’s hit AI tutorial, <a href="http://code.org/oceans" target="_blank">AI for Oceans</a>, available in 25+ languages and optimized for mobile devices, a <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">classroom lesson plan</a> to help students explore and discuss the societal and ethical implications of AI, a lesson in the CS Principles curriculum about <a href="https://curriculum.code.org/csp-20/unit9/6/" target="_blank">machine learning and bias</a>.
 
-<img src="/images/AR2020/introtoai2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/introtoai2020.png"/></p>
 
-## We took on a different spin on our biggest CS celebration of the year in the Hour of Code ➤
+<h2 class="highlight">We took on a different spin on our biggest CS celebration of the year in the Hour of Code ➤</h2>
 
 With the rapid transition to at-home learning in March of 2020, we expanded our resources to meet the different needs of all students for Hour of Code. In addition to our library of <a href="https://hourofcode.com/us/how-to?utm_source=campaign-email&utm_medium=email&utm_campaign=hoc-2020&utm_term=12.7.20&utm_content=hoc-how-to" target="_blank">How-To Guides</a>, we also created a printable <a href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">Hour of Code Unplugged Activity Packet</a> for ages 4–18 so that students using limited technology at home can still participate. This year’s theme, <a href="https://code.org/csforgood" target="_blank">#CSforGood</a>, encompasses how technology can keep us connected in a challenging year, and how we must ensure access so no one is excluded from the opportunity to learn. 
 
-<img src="/images/AR2020/hoc1b2020.png" style="max-width:60%">
-
-<img src="/images/AR2020/hocteachertweet2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/hoc1b2020.png"></p>
 
 Also new this year, CodeBytes give students the opportunity to tune in for 20-minute lessons with computers, tablets, or smartphones to learn about various CS topics with Code.org staff.
 
-<img src="/images/AR2020/codebytes2020.png" style="max-width:60%">
+<p class="centerspot"><img src="/images/AR2020/fit-580/codebytes2020.png"></p>
 
-## We localized our core content to broaden opportunities for international students ➤
+<div class="color-block bp0">
+<p class="callout-quote">“I was very pleased that the Hour of Code activities were provided this year. <em>It gave the students something to look forward to</em> during a very ‘different’ school year. Thank you.”</p><p class="callout-attrib"><strong>—Elementary school teacher in Michigan</strong></p>
+</div>
+
+<h2 class="highlight">We localized our core content to broaden opportunities for international students ➤</h2>
 
 In 2020, Code.org increased investments in localizing our core content to 18 widely spoken languages—and, CS Fundamentals and all Code.org Hour of Code tutorials are now 100% localized to 8 languages. With these efforts, traffic to the Code.org website by non-US users increased to 49% of total pageviews and non-US usage of all Code.org courses grew to 53%. 
 
 In response to the impact of the global pandemic in schools, we shifted to broader regional initiatives to generate demand for CS, such as <a href="https://code.org/envivo" target="_blank">Hora del Código En Vivo</a>, <a href="https://africacodeweek.org/learn/the-app" target="_blank">Africa Code Week App</a>, and increasing non-English songs in <a href="https://code.org/dance" target="_blank">Dance Party</a>.
 
-## We partnered with local, regional, and global organizations to amplify our impact ➤
+<h2 class="highlight">We partnered with local, regional, and global organizations to amplify our impact ➤</h2>
 
 We onboarded ten new partners and explored new types of partnerships with multilateral organizations (World Bank, Inter-American Development Bank, UNESCO), regional and global nonprofits (JA Worldwide, Trust for the Americas, Dubai Future Foundation), corporations (Telefónica, Atlassian, Finastra), and pop culture entities (Miami Art House, Jaffna Stallions).
 
 To promote systems change with support from local partners, we worked with ministries of education in at least a dozen countries to include CS in the national curriculum. Finally, we collaborated with the Organisation for Economic Co-operation and Development (<a href="https://www.oecd.org/" target="_blank">OECD</a>) to include computational thinking in the Programme for International Student Assessment (<a href="https://www.oecd.org/pisa/aboutpisa/" target="_blank">PISA</a>) 2022 and with the <a href="https://www.brookings.edu/about-us/" target="_blank">Brookings Institution</a> on their <a href="https://www.brookings.edu/research/what-do-we-know-about-the-expansion-of-k-12-computer-science-education/" target="_blank">global CS education report</a> to be released in late 2021.
 
-<img src="/images/AR2020/robincode2020.png">
+<p class="centerspot"><img src="/images/AR2020/fit-580/robincode2020.png"></p>
 An Hour of Code activity organized by our Turkish partner Robin Code. <a href="https://codeorg.medium.com/how-robin-code-helped-bring-code-org-to-turkey-8be3a446afeb" target="_blank">Turkey has the second-most Code.org users</a> in the world, after the United States.
 
+<h2 class="purple-block">Code.org by the Numbers</h2>
+
+<table class="bythenumbers">
+<tr><th>Schools, states, countries</th><th>2020</th></tr>
+<tr><td>US High Schools teaching CS (Data from the Access Report) <br/><span class="goal2025">2025 Goal: 80% of all HS teach CS</span></td><td>47%</td></tr>
+<tr><td>US Students passing the AP CS exams <br/><span class="goal2025">2025 Goal: 350,000</span></td><td>187,331</td></tr>
+<tr><td>States that have established an “all schools must offer CS” policy OR a state CS plans + CS funding <br/><span class="goal2025">2025 Goal: 50</span></td><td>25</td></tr>
+<tr><td>70 countries have established plans for CS <br/><span class="goal2025">2025 Goal: 70</span></td><td>53</td></tr>
+<tr><th>Code.org Platform</th><th>2020</th></tr>
+<tr><td>Student accounts [all-time] on Code.org <br/><span class="goal2025">2025 Goal: 100M</span></td><td>55,000,000</td></tr>
+<tr><td>% of accounts from female students <br/><span class="goal2025">2025 Goal: 47%</span></td><td>45%</td></tr>
+<tr><td>Student accounts [all-time] on Code.org from outside the US <br/><span class="goal2025">2025 Goal: 60M</span></td><td>20,254,278</td></tr>
+<tr><th colspan="2">CS Principles</th></tr>
+<tr><td>Students that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 400k</span></td><td>239,878</td></tr>
+<tr><td>Female students that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 160k (40%)</span></td><td>81,037<br/>(34%)</td></tr>
+<tr><td>Students from underrepresented racial and ethnic groups* that have started Code.org CS Principles course in the academic year <br/><span class="goal2025">2025 Goal: 172k (43%)</span></td><td>101,618<br/>(43%)</td></tr>
+<tr><th colspan="2">CS Discoveries</th></tr>
+<tr><td>Students that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 2M</span></td><td>732,924</td></tr>
+<tr><td>Female students that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 900K (45%)</span></td><td>294,777<br/>(40%)</td></tr>
+<tr><td>Students from underrepresented racial and ethnic groups* that have started Code.org CS Discoveries course in the academic year <br/><span class="goal2025">2025 Goal: 900K (45%)</span></td><td>357,641<br/>(49%)</td></tr>
+<tr><th colspan="2">CS Fundamentals</th></tr>
+<tr><td>US Students that have started Code.org CS Fundamentals course in the academic year <br/><span class="goal2025">2025 Goal: 5M</span></td><td>4,310,000</td></tr>
+<tr><td>US Female students that have started Code.org CS Fundamentals course in the academic year <br/><span class="goal2025">2025 Goal: 50%</span></td><td>45.60%</td></tr>
+</table>
+
+<h2 class="purple-block">Finances</h2>
+
+For calendar year 2020 our total expenses were approximately $20 million. The chart below paints a general picture of how this money was spent.
+
+<p class="centerspot"><img src="/images/AR2020/fit-580/finances2020.png"></p>
+
+
+The table below shows the total cost breakdown of our headline achievements since founding.
+
+| Areas of effort / Achievements in 2013 - 2020                                                                                                                                                                                           | Fully-loaded cost (including admin) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------- |
+| **Diversity and Global Marketing:** Hour of Code campaign, 900M served, reaching 20% of students globally. 49% female participation.                                                                       | $16.1 million                       |
+| **Curriculum + Code Studio learning platform:** ~330 hours of coursework created, 1M teacher accounts. 46 million student accounts. 45% female, 50% underrepresented minorities.                                                       | $35.6 million                       |
+| **Partnership + professional learning:**  60 [regional partners](/educate/regional-partner) and almost 615 facilitators who have prepared over 106,000 new CS teachers across grades K-12. ($15.8M spent on grades K-5, $42.3M on grades 6-12.)| $66.5 million                      |
+| **Government affairs:** Policies changed in 50 states, $150M in state budgets allocated to computer science.                                                                                                                          | $10.9 million |
+| **International:** Translation of curriculum into 67 languages, support for 104 international partnerships.                                                                                                                             | $5.2 million |                         |
+| TOTAL SPENT (2013-2020)                                                                                                                                                                                                                 | $134.3 million                       |
+
+## Other reports
+
+* See recent [Code.org Statistics](/statistics)
+* See the [2019 Annual Report](/about/2019)
+* See the [2018 Annual Report](/about/2018)
+* See the [2017 Annual Report](/about/2017) 
+* See the [2016 Annual Report](/about/2016) and [2015-16 Code.org Evaluation Report](/files/EvaluationReport2015-16.pdf)
+* See the [2015 Annual Report](/about/2015) and [2014-15 Evaluation Report](/about/evaluation)
+* See the [2014 Annual Report](/about/2014)
+
+
+
+## Our generous donors
+
+<%= view :donors %>
 
