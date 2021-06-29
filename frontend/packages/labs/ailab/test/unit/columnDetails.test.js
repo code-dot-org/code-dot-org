@@ -4,13 +4,19 @@ import {
   filterColumnsByType,
   getUniqueOptions,
   tooManyUniqueOptions,
-  isColumnReadOnly
+  isColumnReadOnly,
+  getExtrema,
+  containsOnlyNumbers,
+  getColumnDescription
 } from '../../src/helpers/columnDetails.js';
 import {
   classificationState,
   allNumericalState,
   regressionState,
-  premadeDatasetState
+  premadeDatasetState,
+  mosquitoCountMax,
+  mosquitoCountMin,
+  mosquitoDescription
 } from './testData';
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../../src/constants.js";
 
@@ -83,5 +89,42 @@ describe("isColumnReadOnly", () => {
   test("column is not readOnly", async () => {
     const result = isColumnReadOnly(allNumericalState.metadata, 'batCount');
     expect(result).toBe(false);
+  });
+});
+
+describe("extrema", () => {
+  test("getExtrema", async () => {
+    const result = getExtrema(allNumericalState.data, 'mosquitoCount');
+    expect(result.max).toBe(mosquitoCountMax);
+    expect(result.min).toBe(mosquitoCountMin);
+    expect(result.range).toBe(mosquitoCountMax - mosquitoCountMin);
+  });
+});
+
+describe("containsOnlyNumbers", () => {
+  test("contains only numbers", async () => {
+    const result = containsOnlyNumbers(allNumericalState.data, 'mosquitoCount');
+    expect(result).toBe(true);
+  });
+
+  test("contains a string", async () => {
+    const result = containsOnlyNumbers(classificationState.data, 'play');
+    expect(result).toBe(false);
+  });
+});
+
+describe("getColumnDescription", () => {
+  test("gets description from metadata", async () => {
+    const result = getColumnDescription(
+      'mosquitoCount',
+      premadeDatasetState.metadata,
+      {}
+    );
+    expect(result).toEqual(mosquitoDescription);
+  });
+
+  test("no description", async () => {
+    const result = getColumnDescription('play', {}, {});
+    expect(result).toEqual(null);
   });
 });
