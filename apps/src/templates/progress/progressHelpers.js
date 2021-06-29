@@ -126,8 +126,10 @@ export function getIconForLevel(level, inProgressView = false) {
   }
 
   // default to desktop
-  return 'desktop';
+  return defaultBubbleIcon;
 }
+
+export const defaultBubbleIcon = 'desktop';
 
 /**
  * @returns Whether a level is an assessment level.
