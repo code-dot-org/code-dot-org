@@ -61,7 +61,8 @@ class CodeReviewCommentsController < ApplicationController
   # GET /code_review_comments/project_comments
   def project_comments
     @project_comments = CodeReviewComment.where(
-      channel_token_id: params[:channel_token_id],
+      storage_id: params[:storage_id],
+      storage_app_id: params[:storage_app_id],
       project_version: params[:project_version]
     )
 
@@ -73,7 +74,8 @@ class CodeReviewCommentsController < ApplicationController
   # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
-      :channel_token_id,
+      :storage_id,
+      :storage_app_id,
       :project_version,
       :commenter_id,
       :comment,
