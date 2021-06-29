@@ -46,7 +46,6 @@ export default function FatalErrorDialog(props) {
       isOpen={props.isOpen}
       title={commonI18n.errorOccurredTitle()}
       body={body}
-      handleConfirmation={props.handleClose}
       handleClose={props.handleClose}
       renderFooter={() => footerButtons}
     />
