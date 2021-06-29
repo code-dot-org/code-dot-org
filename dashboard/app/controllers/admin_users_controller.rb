@@ -116,6 +116,32 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # get /admin/user_progress
+  def user_progress_form
+    user_identifier = params[:user_identifier]
+    offset = params[:offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+    if user_identifier
+      user_identifier.strip!
+      @target_user = User.from_identifier(user_identifier)
+      flash[:alert] = 'User not found' unless @target_user
+    end
+
+    if @target_user
+      @user_scripts = UserScript.
+        where(user_id: @target_user.id).
+        order(updated_at: :desc).
+        limit(5).
+        offset(offset)
+    end
+
+    if @user_scripts
+      script_ids = @user_scripts.pluck(:script_id)
+      @user_levels = UserLevel.
+        where(user_id: @target_user.id, script_id: script_ids).
+        order(updated_at: :desc)
+    end
+  end
+
   # get /admin/permissions
   def permissions_form
     search_term = params[:search_term]
