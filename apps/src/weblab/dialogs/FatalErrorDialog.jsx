@@ -43,16 +43,17 @@ export default function FatalErrorDialog(props) {
 
   return (
     <StylizedBaseDialog
+      isOpen={props.isOpen}
       title={commonI18n.errorOccurredTitle()}
       body={body}
       handleConfirmation={props.handleClose}
       renderFooter={() => footerButtons}
-      {...props}
     />
   );
 }
 
 FatalErrorDialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
   handleClose: PropTypes.func.isRequired,
   handleResetProject: PropTypes.func.isRequired
