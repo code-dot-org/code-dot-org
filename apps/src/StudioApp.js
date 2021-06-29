@@ -677,9 +677,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
-        useFilesApi: !!config.useFilesApi,
-        viewingVersion: queryParams('version'),
-        isProjectOwned: project.isOwner()
+        useFilesApi: !!config.useFilesApi
       }),
       contentDiv
     );
@@ -774,7 +772,7 @@ StudioApp.prototype.scaleLegacyShare = function() {
 
 StudioApp.prototype.getCode = function() {
   if (!this.editCode) {
-    return codegen.workspaceCode(Blockly);
+    return Blockly.getWorkspaceCode();
   }
   if (this.hideSource) {
     return this.startBlocks_;

@@ -1,0 +1,9 @@
+name 'ml-plan survey-copy form'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Copy a Google Form
+
+## [Click Here](https://www.google.com/url?q=https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy&sa=D&source=editors&ust=1624990063499000&usg=AOvVaw1KbD8H51J-LhgO1mQIQEqT) to create a copy of a survey template we will use today
+MARKDOWN
