@@ -1869,6 +1869,11 @@ class Script < ApplicationRecord
       performanceLevel4: "rubric_performance_level_4"
     }
 
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed"
+    }
+
     feedback = {}
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
@@ -1897,7 +1902,9 @@ class Script < ApplicationRecord
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
           performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
+          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
+          studentSeenFeedback: temp_feedback.student_seen_feedback.localtime.strftime("%D at %r")
         }
       end
     end
