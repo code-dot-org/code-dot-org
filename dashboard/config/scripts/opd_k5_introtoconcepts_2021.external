@@ -1,39 +1,33 @@
 name 'OPD-K5 IntroToConcepts_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Part II: CS Concepts in Courses A - F
+# Part II: Concepts in Courses A - F
 
-##Welcome to Part II!  
+##Welcome to Part II:  Concepts in Courses A - F!  
 
-Part II of this online course, "Teaching Computer Science Fundamentals," focuses on the computer science concepts and skills students will learn in courses A - F.  Reflection prompts are provided at the end of each lesson to help you think about how to best incorporate CS teaching and student practices to support your students with learning computer science.
+Part II of this online course focuses on the computer science concepts and skills students will learn in courses A - F.  
 
 In each lesson of Part II you will find:
 
-* **Course Lesson Objectives** 
+* **Online Course Lesson Objectives** 
 * **CS Concepts**
 * **Learning Tools**
 * **Concepts Reiterated Across Courses**
+* **Reflection Prompts**
 
-## Course Lesson Objectives
+## Online Course Lesson Objectives
 
-The lesson objectives listed in this area are intended for you as the educator preparing to teach Computer Science Fundamentals courses, rather than student objectives in Computer Science Fundamentals lessons.  Student objectives are found in lesson plans.
+The objectives listed in this section are intended for you as the educator preparing to teach Computer Science Fundamentals courses, rather than as objectives for students in Computer Science Fundamentals lessons.  Objectives for students are found in lesson plans.
 
-An example of a course lesson objective is:
+## Computer Science Concepts
 
-* After completing Lesson 7, you will be able to:
-	* define sequencing and algorithms,
-    * use Blockly code blocks,
-    * use the "step button" for debugging.
+"Computer Science Concepts" include key vocabulary and definitions about the computer science concepts students will be learning throughout Computer Science Fundamentals courses.
 
-## CS Concepts
-
-"CS Concepts" include key vocabulary and definitions about the computer science concepts students will be learning throughout Computer Science Fundamentals courses.
-
-The "CS Concepts" section provides you with one or more of the following to support you in learning computer science concepts:
+The "Computer Science Concepts" section includes one or more of the following tasks for you to complete:
 
 * reading a lesson plan and previewing the teacher slide deck that accompanies the lesson.
-* watching a "Lesson in Action" video in which a teacher demonstrates giving a lesson to students.
-* watching the same video your students will watch that introduces a CS concept.
+* watching a "Lesson in Action" video in which a teacher demonstrates a lesson to students.
+* watching the same video that introduces a computer science concept to your students.
 
 
 ## Learning Tools
@@ -42,15 +36,15 @@ Students use Code.org's built-in learning tools and website features as they lea
 
 The "Learning Tools" section identifies the following learning tools students will engage with during lessons.
 
-* **Maze/Collector Puzzles (all courses):**  Recognizable by the 8x8 square grid, these puzzles ask students to move an on-screen character to complete a specified goal, sometimes collecting objects or performing other actions along the way. These levels feature characters from popular media franchises and others that are unique to Code.org.
+* **Maze/Collector Puzzles (all courses):**  Students move a character across an 8x8 square grid to perform actions such as collecting objects. 
 
 
-* **The Artist (all courses):**  Students can program the Artist character to move and turn over a blank canvas, creating drawings along the way. Puzzles require persistence as students work to re-create an image. Free play levels allow you to draw whatever you want. Creativity is encouraged!
+* **The Artist (all courses):**  Students program the Artist character to create drawings and require persistence to sometimes re-create an image. Free play levels with the Artist allow students to get creative and draw whatever they want. 
 
-* **Play Lab (Courses A - C):**  Featuring a diverse cast of fun actors, Play Lab allows students to create their own stories and simple games. Actors can speak, move and even express emotions. Play Lab projects are interactive, controlled by the user’s keyboard and mouse.
+* **Play Lab (Courses A - C):**  Students create their own stories and simple games using Play Lab. Characters can speak, move, and even express emotions. Play Lab projects are interactive and controlled by the user's keyboard and mouse.
 
+* **Sprite Lab (Courses E - F):**  Students create fun animations with Sprite Lab such as interactive posters, games, and simulations.
 
-* **Sprite Lab (Courses E - F):**  Sprite Lab is the most open-ended programming tool found in CS Fundamentals. It enables students to create fun animations in no time but is also a powerful tool for creating everything from interactive posters to games to simulations.
 
 <img src="https://images.code.org/b446bf892c83f490a904e37991674412-image-1623770868460.png" width="200px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
@@ -63,7 +57,11 @@ The "Learning Tools" section identifies the following learning tools students wi
 
 ## Concepts Reiterated Across Courses
 
-The "Concepts reiterated across courses" section provides you with a cross-section of student lesson levels that represent how a computer science concept unfolds and is reiterated within either a single course or across multiple courses.  The goal of this section is to provide you with an experience of the big picture for how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+The "Concepts reiterated across courses" section provides you with a cross-section of student lesson levels that represent how a computer science concept unfolds and is reiterated within either a single course or across multiple courses.  The goal of this section is to provide you with the big picture of how students learn computer science concepts and develop skills over time with Computer Science Fundamentals courses.
+
+## Reflection Prompts
+
+Reflection prompts are at the end of each lesson to help you think about planning, implementing, and teaching Computer Science Fundamentals courses.
 
 
 MARKDOWN

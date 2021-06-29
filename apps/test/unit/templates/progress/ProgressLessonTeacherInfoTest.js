@@ -33,11 +33,11 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenLessons={false}
+          unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
-          scriptName="My Script"
+          unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
@@ -67,11 +67,11 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenLessons={false}
+          unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
-          scriptName="My Script"
+          unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
@@ -100,11 +100,11 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenLessons={false}
+          unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
-          scriptName="My Script"
+          unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
           lockableAuthorized={true}
@@ -129,11 +129,11 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenLessons={false}
+          unitAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
-          scriptName="My Script"
+          unitName="My Unit"
           hasNoSections={false}
           toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
@@ -153,11 +153,11 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenLessons={false}
+        unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
-        scriptName="My Script"
+        unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
@@ -175,11 +175,11 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenLessons={false}
+        unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
-        scriptName="My Script"
+        unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
@@ -197,11 +197,11 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenLessons={false}
+        unitAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
-        scriptName="My Script"
+        unitName="My Unit"
         hasNoSections={true}
         toggleHiddenLesson={() => {}}
         lockableAuthorized={false}
@@ -219,11 +219,11 @@ describe('ProgressLessonTeacherInfo', () => {
             lesson={fakeLesson('Maze', 1)}
             section={section}
             lessonUrl={'code.org'}
-            scriptAllowsHiddenLessons={true}
+            unitAllowsHiddenLessons={true}
             hiddenLessonState={Immutable.fromJS({
               lessonsBySection: {11: {}}
             })}
-            scriptName="My Script"
+            unitName="My Unit"
             hasNoSections={false}
             toggleHiddenLesson={() => {}}
             lockableAuthorized={false}

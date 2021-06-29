@@ -751,7 +751,7 @@ describe('progressReduxTest', () => {
             ]
           }
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {}
       });
       assert.equal(results[0][0].isUnplugged, true);
@@ -763,7 +763,7 @@ describe('progressReduxTest', () => {
     it('sets isLocked to true if lesson is lockabe', () => {
       const results = levelsByLesson({
         lessons: lockableLessonData,
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {}
       });
       assert.equal(results[0][0].isLocked, true);
@@ -1032,7 +1032,7 @@ describe('progressReduxTest', () => {
           }
         ],
         lessons: [fakeLesson('Lesson Group', 'lesson1', 1)],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1060,7 +1060,7 @@ describe('progressReduxTest', () => {
           fakeLesson('Lesson Group', 'lesson2', 2),
           fakeLesson('Lesson Group', 'lesson3', 3)
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1094,7 +1094,7 @@ describe('progressReduxTest', () => {
             lessons: []
           }
         ],
-        scriptProgress: {},
+        unitProgress: {},
         levelResults: {},
         focusAreaLessonIds: []
       };
@@ -1374,8 +1374,8 @@ describe('progressReduxTest', () => {
         'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',
-        'progress/SET_SCRIPT_COMPLETED',
-        'progress/SET_SCRIPT_PROGRESS',
+        'progress/SET_UNIT_COMPLETED',
+        'progress/SET_UNIT_PROGRESS',
         'progress/MERGE_RESULTS',
         'progress/MERGE_PEER_REVIEW_PROGRESS',
         'progress/SET_CURRENT_LESSON_ID'

@@ -1,0 +1,9 @@
+name 'ml-class test-ai lab choice-parent'
+display_name 'Practice with Models in App Lab'
+
+sublevels
+level 'ml-class test-ai lab choice-1'
+level 'ml-class test-ai lab choice-2'
+level 'ml-class test-ai lab choice-3'
+level 'ml-class test-ai lab choice-4'
+level 'ml-class test-ai lab choice-5'

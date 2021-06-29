@@ -1339,6 +1339,8 @@ en:
             '"while"': while
       gamelab_spriteSay:
         text: "[SPRITE][0] say [SPEECH][1]"
+      gamelab_spriteSayTime:
+        text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
       gamelab_startAvoiding:
         text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:
@@ -1657,6 +1659,17 @@ en:
         text: 'location x: [X][0] y: [Y][1]'
       Mikelab_location_picker:
         text: "[LOCATION][0]"
+      Mikelab_poemTextJoin:
+        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Balancing on the"'
+            '"A chubby cat "': '"A chubby cat"'
+            '"The "': '"The "'
+          TEXT2:
+            '" fence"': '" fence"'
+            '""': '""'
+            '" breeze blows"': '" breeze blows"'
       Mikelab_randomColor:
         text: random color
       Mikelab_removeAllBehaviors:
@@ -1835,6 +1848,16 @@ en:
         text: setup Monster Town with[COUNT][0]monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      PoemBot_addLine:
+        text: add line [LINE][0]
+      PoemBot_randomWord:
+        text: random word
+      PoemBot_setAuthor:
+        text: set poem author [AUTHOR][0]
+      PoemBot_setTitle:
+        text: set poem title [TITLE][0]
+      PoemBot_showPoem:
+        text: show poem
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -1880,6 +1903,12 @@ en:
             '"border"': border
             '"row"': row
             '"random"': random
+      aalab_levelFailure:
+        text: student [STATE][0] wtih key [KEY][1]
+        options:
+          STATE:
+            '0': passes
+            '3': fails
       aalab_setSpeed:
         text: set monster speed to [VAL][0]
       aalab_setupSim:
@@ -1917,6 +1946,26 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      aalab_spriteSayChoices:
+        text: "[SPRITE][0] say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I have spoken."': I have spoken.
+            '"Bounty hunting is a complicated profession."': Bounty hunting is a complicated profession.
+            '"I will initiate self-destruct."': I will initiate self-destruct.
+            '"This is the way."': This is the way.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': People get built different. We don’t need to figure it out, we just need to respect it.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': You don’t need a mirror to look good. You’re beautiful on the inside.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Sometimes life is scary and dark. That is why we must find the light.
+            '"Everything small is just a smaller version of something big."': Everything small is just a smaller version of something big.
+            '"Suckin’ at something is the first step to being sorta good at something."': Suckin’ at something is the first step to being sorta good at something.
+            '"Life happens wherever you are, whether you make it or not."': Life happens wherever you are, whether you make it or not.
+            '"You can’t knock me down!"': You can’t knock me down!
+            '"Roar!"': Roar!
+            '"My first girlfriend turned into the moon."': My first girlfriend turned into the moon.
+            '"True humility is the only antidote to shame."': True humility is the only antidote to shame.
+            '"You are stronger and wiser and freer than you have ever been."': You are stronger and wiser and freer than you have ever been.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': You have to try every time. You can't quit because you're afraid you might fail.
       aalab_startIntervention:
         text: monsters begin [BEHAVIOR][0]
         options:

@@ -1493,6 +1493,9 @@ class Census::StateCsOffering < ApplicationRecord
       CDO.log.info "State CS Offering seeding: done processing "\
         "#{state_code}-#{school_year}-#{update} data. "\
         "#{succeeded} rows succeeded, #{skipped} rows skipped."
+
+    rescue Errno::ENOENT
+      CDO.log.warn "State CS Offering seed file #{filename} not found. Skipping..."
     end
   end
 

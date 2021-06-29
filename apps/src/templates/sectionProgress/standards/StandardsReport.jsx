@@ -40,7 +40,7 @@ class StandardsReport extends Component {
     teacherName: PropTypes.string,
     sectionName: PropTypes.string,
     teacherComment: PropTypes.string,
-    scriptDescription: PropTypes.string.isRequired,
+    unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
@@ -121,7 +121,7 @@ class StandardsReport extends Component {
                   section={this.props.section}
                   scriptFriendlyName={this.props.scriptFriendlyName}
                   scriptData={this.props.scriptData}
-                  scriptDescription={this.props.scriptDescription}
+                  unitDescription={this.props.unitDescription}
                   numStudentsInSection={this.props.numStudentsInSection}
                   numLessonsCompleted={this.props.numLessonsCompleted}
                   numLessonsInUnit={this.props.numLessonsInUnit}
@@ -211,7 +211,7 @@ export default connect(
     section: state.sectionData.section,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
-    scriptDescription: getSelectedScriptDescription(state),
+    unitDescription: getSelectedScriptDescription(state),
     numStudentsInSection: state.sectionData.section.students.length,
     teacherComment: state.sectionStandardsProgress.teacherComment,
     teacherName: state.currentUser.userName,

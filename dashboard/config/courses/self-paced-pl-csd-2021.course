@@ -10,7 +10,8 @@
   ],
   "published_state": "beta",
   "properties": {
-    "version_year": "2021"
+    "version_year": "2021",
+    "has_verified_resources": true
   },
   "resources": [
 

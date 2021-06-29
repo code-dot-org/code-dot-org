@@ -51,9 +51,9 @@ class UnitOverviewHeader extends Component {
     announcements: PropTypes.arrayOf(announcementShape),
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    scriptTitle: PropTypes.string.isRequired,
-    scriptDescription: PropTypes.string.isRequired,
-    scriptStudentDescription: PropTypes.string.isRequired,
+    unitTitle: PropTypes.string.isRequired,
+    unitDescription: PropTypes.string.isRequired,
+    unitStudentDescription: PropTypes.string.isRequired,
     betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
@@ -95,9 +95,9 @@ class UnitOverviewHeader extends Component {
       plcHeaderProps,
       scriptId,
       scriptName,
-      scriptTitle,
-      scriptDescription,
-      scriptStudentDescription,
+      unitTitle,
+      unitDescription,
+      unitStudentDescription,
       betaTitle,
       viewAs,
       isSignedIn,
@@ -195,7 +195,7 @@ class UnitOverviewHeader extends Component {
           <div id="heading" style={styles.heading}>
             <div style={styles.titleWrapper}>
               <h1 style={styles.title} id="script-title">
-                {scriptTitle}{' '}
+                {unitTitle}{' '}
                 {betaTitle && <span className="betatext">{betaTitle}</span>}
               </h1>
               {filteredVersions.length > 1 && (
@@ -210,14 +210,14 @@ class UnitOverviewHeader extends Component {
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}
-                markdown={scriptDescription}
+                markdown={unitDescription}
               />
             )}
             {viewAs === ViewType.Student && (
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}
-                markdown={scriptStudentDescription}
+                markdown={unitStudentDescription}
               />
             )}
           </div>
@@ -264,9 +264,9 @@ export default connect(state => ({
   announcements: state.announcements || [],
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
-  scriptTitle: state.progress.scriptTitle,
-  scriptDescription: state.progress.scriptDescription,
-  scriptStudentDescription: state.progress.scriptStudentDescription,
+  unitTitle: state.progress.unitTitle,
+  unitDescription: state.progress.unitDescription,
+  unitStudentDescription: state.progress.unitStudentDescription,
   betaTitle: state.progress.betaTitle,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,

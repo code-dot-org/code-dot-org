@@ -1,0 +1,390 @@
+---
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  CloudFront real-time log configuration storing all access logs to an S3 bucket.
+  Access logs are stored in compressed Parquet format, partitioned by date-hour (yyyy/MM/dd/HH),
+  and can be efficiently queried using Athena.
+  
+  To store access logs, reference the exported config in a CloudFront distribution, e.g.:
+  `RealtimeLogConfigArn: !ImportValue AccessLogs-Config`
+
+Parameters:
+  BucketName:
+    Type: String
+    Default: cdo-access-logs
+  BucketPrefix:
+    Type: String
+    Default: access-logs/
+  DatabaseName:
+    Type: String
+    Default: cdo_access_logs
+  TableName:
+    Type: String
+    Default: access_logs
+  ShardCount:
+    Type: Number
+    Default: 1
+Resources:
+  AccessLogConfig:
+    Type: AWS::CloudFront::RealtimeLogConfig
+    Properties:
+      Name: !Ref AWS::StackName
+      SamplingRate: 100
+      EndPoints:
+        - StreamType: Kinesis
+          KinesisStreamConfig:
+            RoleArn: !GetAtt AccessLogConfigRole.Arn
+            StreamArn: !GetAtt AccessLogStream.Arn
+      Fields:
+        # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
+        - timestamp
+        - c-ip
+        - time-to-first-byte
+        - sc-status
+        - sc-bytes
+        - cs-method
+        - cs-protocol
+        - cs-host
+        - cs-uri-stem
+        - cs-bytes
+        - x-edge-location
+        - x-edge-request-id
+        - x-host-header
+        - time-taken
+        - cs-protocol-version
+        - c-ip-version
+        - cs-user-agent
+        - cs-referer
+        - cs-cookie
+        - cs-uri-query
+        - x-edge-response-result-type
+        - x-forwarded-for
+        - ssl-protocol
+        - ssl-cipher
+        - x-edge-result-type
+        - fle-encrypted-fields
+        - fle-status
+        - sc-content-type
+        - sc-content-len
+        - sc-range-start
+        - sc-range-end
+        - c-port
+        - x-edge-detailed-result-type
+        - c-country
+        - cs-accept-encoding
+        - cs-accept
+        - cache-behavior-path-pattern
+        - cs-headers
+        - cs-header-names
+        - cs-headers-count
+  AccessLogBucket:
+    Type: AWS::S3::Bucket
+    DependsOn: AccessLogPartitionPermission
+    Properties:
+      BucketName: !Ref BucketName
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: alias/aws/s3
+            BucketKeyEnabled: true
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      NotificationConfiguration:
+        LambdaConfigurations:
+          - Event: 's3:ObjectCreated:*'
+            Function: !GetAtt AccessLogPartition.Arn
+            Filter: {S3Key: {Rules: [{Name: prefix, Value: !Ref BucketPrefix}]}}
+  AccessLogPartition:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: AccessLogPartition
+      Code: ./access_logs_partition.rb
+      Handler: access_logs_partition.handler
+      Environment:
+        Variables:
+          DATABASE: !Ref AccessLogDatabase
+          TABLE: !Ref AccessLogTable
+          PREFIX: !Ref BucketPrefix
+      Runtime: ruby2.7
+      Role: !GetAtt AccessLogRole.Arn
+  AccessLogPartitionPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !GetAtt AccessLogPartition.Arn
+      Principal: s3.amazonaws.com
+      SourceAccount: !Ref AWS::AccountId
+      SourceArn: !Sub 'arn:aws:s3:::${BucketName}'
+
+  AccessLogStream:
+    Type: AWS::Kinesis::Stream
+    Properties:
+      ShardCount: !Ref ShardCount
+      StreamEncryption:
+        EncryptionType: KMS
+        KeyId: alias/aws/kinesis
+  AccessLogDeliveryStream:
+    Type: AWS::KinesisFirehose::DeliveryStream
+    Properties:
+      DeliveryStreamName: !Ref AWS::StackName
+      DeliveryStreamType: KinesisStreamAsSource
+      KinesisStreamSourceConfiguration:
+        KinesisStreamARN: !GetAtt AccessLogStream.Arn
+        RoleARN: !GetAtt AccessLogDeliveryRole.Arn
+      ExtendedS3DestinationConfiguration:
+        BufferingHints: 
+          IntervalInSeconds: 60
+          SizeInMBs: 128
+        BucketARN: !GetAtt AccessLogBucket.Arn
+        RoleARN: !GetAtt AccessLogDeliveryRole.Arn
+        Prefix: !Ref BucketPrefix
+        ProcessingConfiguration:
+          Enabled: true
+          Processors:
+            - Type: Lambda
+              Parameters:
+                - {ParameterName: LambdaArn, ParameterValue: !GetAtt AccessLogProcessor.Arn}
+                - {ParameterName: RoleArn, ParameterValue: !GetAtt AccessLogDeliveryRole.Arn}
+        DataFormatConversionConfiguration:
+          Enabled: true
+          InputFormatConfiguration: {Deserializer: {OpenXJsonSerDe: {}}}
+          OutputFormatConfiguration: {Serializer: {ParquetSerDe: {}}}
+          SchemaConfiguration:
+            DatabaseName: !Ref AccessLogDatabase
+            TableName: !Ref AccessLogTable
+            RoleARN: !GetAtt AccessLogDeliveryRole.Arn
+  AccessLogProcessor:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: AccessLogProcessor
+      Code: ./access_logs.rb
+      Handler: access_logs.handler
+      Runtime: ruby2.7
+      MemorySize: 1024
+      Environment:
+        Variables:
+          DATABASE: !Ref AccessLogDatabase
+          TABLE: !Ref AccessLogTable
+      Role: !GetAtt AccessLogRole.Arn
+
+  AccessLogDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      DatabaseInput: {Name: !Ref DatabaseName}
+      CatalogId: !Ref AWS::AccountId
+  AccessLogTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref AccessLogDatabase
+      CatalogId: !Ref AWS::AccountId
+      TableInput:
+        Name: !Ref TableName
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: parquet
+          parquet.compression: SNAPPY
+          # Athena Partition Projection table properties.
+          # See: https://docs.aws.amazon.com/athena/latest/ug/partition-projection.html
+          projection.datehour.type: date
+          projection.datehour.range: 2021/01/01/00,NOW
+          projection.datehour.format: yyyy/MM/dd/HH
+          projection.datehour.interval: 1
+          projection.datehour.interval.unit: HOURS
+          projection.enabled: true
+          storage.location.template: !Sub 's3://${BucketName}/${BucketPrefix}${!datehour}'
+        PartitionKeys:
+          - {Name: datehour, Type: string}
+        StorageDescriptor:
+          Location: !Sub 's3://${BucketName}/${BucketPrefix}'
+          InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
+          Columns:
+            - {Name: timestamp,                   Type: timestamp}
+            - {Name: c-ip,                        Type: string}
+            - {Name: time-to-first-byte,          Type: float}
+            - {Name: sc-status,                   Type: int}
+            - {Name: sc-bytes,                    Type: int}
+            - {Name: cs-method,                   Type: string}
+            - {Name: cs-protocol,                 Type: string}
+            - {Name: cs-host,                     Type: string}
+            - {Name: cs-uri-stem,                 Type: string}
+            - {Name: cs-bytes,                    Type: int}
+            - {Name: x-edge-location,             Type: string}
+            - {Name: x-edge-request-id,           Type: string}
+            - {Name: x-host-header,               Type: string}
+            - {Name: time-taken,                  Type: float}
+            - {Name: cs-protocol-version,         Type: string}
+            - {Name: c-ip-version,                Type: string}
+            - {Name: cs-user-agent,               Type: string}
+            - {Name: cs-referer,                  Type: string}
+            - {Name: cs-cookie,                   Type: string}
+            - {Name: cs-uri-query,                Type: string}
+            - {Name: x-edge-response-result-type, Type: string}
+            - {Name: x-forwarded-for,             Type: string}
+            - {Name: ssl-protocol,                Type: string}
+            - {Name: ssl-cipher,                  Type: string}
+            - {Name: x-edge-result-type,          Type: string}
+            - {Name: fle-encrypted-fields,        Type: int}
+            - {Name: fle-status,                  Type: string}
+            - {Name: sc-content-type,             Type: string}
+            - {Name: sc-content-len,              Type: int}
+            - {Name: sc-range-start,              Type: int}
+            - {Name: sc-range-end,                Type: int}
+            - {Name: c-port,                      Type: int}
+            - {Name: x-edge-detailed-result-type, Type: string}
+            - {Name: c-country,                   Type: string}
+            - {Name: cs-accept-encoding,          Type: string}
+            - {Name: cs-accept,                   Type: string}
+            - {Name: cache-behavior-path-pattern, Type: string}
+            - {Name: cs-headers,                  Type: string}
+            - {Name: cs-header-names,             Type: string}
+            - {Name: cs-headers-count,            Type: int}
+
+  AccessLogRole:
+    Type: AWS::IAM::Role
+    Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal: { Service: lambda.amazonaws.com }
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: glue
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - glue:GetTable
+                  - glue:GetPartition
+                  - glue:CreatePartition
+                Resource:
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${AccessLogDatabase}'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${AccessLogDatabase}/${AccessLogTable}'
+  AccessLogConfigRole:
+    Type: AWS::IAM::Role
+    Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal: {Service: cloudfront.amazonaws.com}
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kinesis:PutRecord
+                  - kinesis:PutRecords
+                  - kinesis:DescribeStreamSummary
+                  - kinesis:DescribeStream
+                Resource: !GetAtt AccessLogStream.Arn
+  AccessLogDeliveryRole:
+    Type: AWS::IAM::Role
+    Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal: {Service: firehose.amazonaws.com}
+      Policies:
+        - PolicyName: firehose_delivery_policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:AbortMultipartUpload
+                  - s3:GetBucketLocation
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
+                  - s3:PutObject
+                Resource:
+                  - !GetAtt AccessLogBucket.Arn
+                  - !Sub '${AccessLogBucket.Arn}/*'
+              - Effect: Allow
+                Action:
+                  - kinesis:DescribeStream
+                  - kinesis:GetShardIterator
+                  - kinesis:GetRecords
+                  - kinesis:ListShards
+                Resource:
+                  - !GetAtt AccessLogStream.Arn
+              - Effect: Allow
+                Action:
+                  - glue:GetTable
+                  - glue:GetTableVersion
+                  - glue:GetTableVersions
+                Resource:
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${AccessLogDatabase}'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${AccessLogDatabase}/${AccessLogTable}'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:tableVersion/${AccessLogDatabase}/${AccessLogTable}/*'
+              - Effect: Allow
+                Action:
+                  - lambda:InvokeFunction
+                  - lambda:GetFunctionConfiguration
+                Resource:
+                  - !GetAtt AccessLogProcessor.Arn
+  AccessLogRedshiftSpectrumRole:
+    Type: AWS::IAM::Role
+    Properties:
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal: { Service: redshift.amazonaws.com }
+      Policies:
+        - PolicyName: s3
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetBucketLocation
+                  - s3:GetObject
+                  - s3:ListMultipartUploadParts
+                  - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
+                Resource:
+                  - !GetAtt AccessLogBucket.Arn
+                  - !Sub '${AccessLogBucket.Arn}/*'
+              - Effect: Allow
+                Action:
+                  - glue:GetDatabase
+                  - glue:GetDatabases
+                  - glue:GetTable
+                  - glue:GetTables
+                  - glue:GetPartition
+                  - glue:GetPartitions
+                  - glue:BatchGetPartition
+                Resource:
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${AccessLogDatabase}'
+                  - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${AccessLogDatabase}/${AccessLogTable}'
+
+Outputs:
+  AccessLogConfig:
+    Description: CloudFront real-time log config
+    Value: !Ref AccessLogConfig
+    Export: {Name: !Sub "${AWS::StackName}-Config"}
+  RedshiftSpectrumRoleARN:
+    Description: Redshift Spectrum Role ARN
+    Value: !GetAtt AccessLogRedshiftSpectrumRole.Arn
+    Export: {Name: !Sub "${AWS::StackName}-RedshiftSpectrumRoleARN"}

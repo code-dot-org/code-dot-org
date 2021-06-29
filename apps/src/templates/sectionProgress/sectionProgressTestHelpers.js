@@ -74,10 +74,10 @@ function buildSectionProgress(students, scriptData) {
   scriptData.lessons.forEach(lesson => {
     lesson.levels.forEach(level => {
       students.forEach(student => {
-        progress[student.id][level.id] = randomProgress();
+        progress[student.id][level.id] = randomProgress(level);
         level.sublevels &&
           level.sublevels.forEach(sublevel => {
-            progress[student.id][sublevel.id] = randomProgress();
+            progress[student.id][sublevel.id] = randomProgress(sublevel);
           });
       });
     });
@@ -92,10 +92,10 @@ function buildSectionProgress(students, scriptData) {
   };
 }
 
-function randomProgress() {
+function randomProgress(level) {
   const rand = Math.floor(Math.random() * 4);
   const paired = Math.floor(Math.random() * 10) === 0;
-  const timeSpent = Math.random() * 60 * 60;
+  const timeSpent = level.isConceptLevel ? 0 : Math.random() * 60 * 60 + 1;
   switch (rand) {
     case 0:
       return {
@@ -121,7 +121,7 @@ function randomProgress() {
         locked: false,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
-        timeSpent: undefined,
+        timeSpent: timeSpent,
         lastTimestamp: Date.now()
       };
     default:
@@ -296,36 +296,7 @@ function getScriptData(numLessons) {
         title: 'Lesson 2: Plotting Shapes',
         lesson_group_display_name: 'Chapter 1: Images and Animations',
         lockable: false,
-        levels: [
-          {
-            id: '3231',
-            url:
-              'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/2/levels/1',
-            progression: 'Lesson Overview',
-            progressionDisplayName: 'Lesson Overview',
-            kind: 'puzzle',
-            icon: null,
-            isUnplugged: false,
-            levelNumber: 1,
-            bubbleText: '1',
-            isConceptLevel: true,
-            bonus: null
-          },
-          {
-            id: '2106',
-            url:
-              'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/2/levels/2',
-            progression: 'Drawing Shapes',
-            progressionDisplayName: 'Drawing Shapes',
-            kind: 'puzzle',
-            icon: null,
-            isUnplugged: false,
-            levelNumber: 2,
-            bubbleText: '2',
-            isConceptLevel: false,
-            bonus: null
-          }
-        ],
+        levels: [],
         description_student:
           "Question of the Day: How can we clearly communicate how to draw something on a screen?This lesson explores the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab.The class uses a Game Lab tool  to interactively place shapes on Game Lab's 400 by 400 grid. Partners then take turns instructing each other how to draw a hidden image using this tool, accounting for many of the challenges of programming in Game Lab.",
         description_teacher:

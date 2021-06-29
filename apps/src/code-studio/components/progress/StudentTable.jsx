@@ -22,7 +22,7 @@ class StudentTable extends React.Component {
     // id, use the level_id property.
     userLevels: PropTypes.arrayOf(PropTypes.object),
     sectionId: PropTypes.number,
-    scriptName: PropTypes.string
+    unitName: PropTypes.string
   };
 
   getRowLink = studentId => {
@@ -34,7 +34,7 @@ class StudentTable extends React.Component {
         ? 'extras'
         : this.props.userLevels[0].levelNumber;
     } else {
-      url = this.props.scriptName;
+      url = this.props.unitName;
     }
 
     return url + queryStr;
@@ -79,7 +79,7 @@ class StudentTable extends React.Component {
                   )}
                   <div
                     style={
-                      userLevels ? styles.nameWithBubble : styles.nameInScript
+                      userLevels ? styles.nameWithBubble : styles.nameInUnit
                     }
                   >
                     {student.name}
@@ -133,7 +133,7 @@ const styles = {
   meRow: {
     padding: '1px 1px 1px 5px'
   },
-  nameInScript: {
+  nameInUnit: {
     paddingLeft: 5,
     margin: '1px 1px 1px 0',
     flexGrow: 1

@@ -2,7 +2,6 @@
   "script": {
     "name": "coursed-2019",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "teacher_resources": [
@@ -31,7 +30,6 @@
       "version_year": "2019",
       "has_lesson_plan": true,
       "curriculum_umbrella": "CSF",
-      "is_stable": true,
       "family_name": "coursed",
       "tts": true,
       "supported_locales": [

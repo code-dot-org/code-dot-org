@@ -11,7 +11,7 @@
         "isVisible": true
       },
       "FoodTruck.java": {
-        "text": "public class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // To Do: Write the constructor.\n  \n  \n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.println(\"The food truck has \" + newDessert.printInfo());\n  }\n}",
+        "text": "public class FoodTruck {\n  private String owner;\n  private Dessert newDessert;\n\n  // To Do: Write the constructor.\n  \n  \n  public void printTruckInfo() {\n    System.out.println(\"The owner is \" + owner);\n    System.out.print(\"The food truck has \");\n    newDessert.printInfo();\n  }\n}",
         "isVisible": true
       },
       "Cake.java": {
@@ -25,6 +25,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 19:33:03 +0000\",\"changed\":[\"name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:38:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:40:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 19:33:03 +0000\",\"changed\":[\"name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:38:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 19:40:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:45:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:47:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

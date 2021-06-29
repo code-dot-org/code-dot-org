@@ -1,28 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "Import `Dessert.java` from your **Backpack**.\r\n\r\nThe Project Mercury Pastries bestseller is their 6-count red-velvet flavored cupcakes for $6.50.\r\n\r\n1. Add a no-argument constructor to `Dessert.java` using this information for the default values.\r\n\r\n2. Using the no-argument constructor, create a `Dessert` object called `redVelvetPack` in `MyFoodTruck.java`.",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "parent_level_id": 28407,
-    "start_sources": {
-      "MyFoodTruck.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyFoodTruck {\n  public static void main(String[] args) {\n\tDessert cake = new Dessert(\"chocolate\", 5, 1.99);\n    cake.printInfo();\n\n    // Level 1\n    Dessert redVelvetPack = new Dessert();\n    redVelvetPack.printInfo();\n\n  }\n}",
-        "isVisible": true
-      },
-      "Dessert.java": {
-        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String newFlavor, int newQty, double newPrice) {\n    flavor = newFlavor;\n    quantity = newQty;\n    price = newPrice;\n  }\n\n  // Level 1\n  public Dessert() {\n    flavor = \"red velvet\";\n    quantity = 6;\n    price = newPrice;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
-        "isVisible": true
-      }
-    }
-  },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-06-16T21:34:15.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 21:34:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:35:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 21:34:20 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 21:35:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:01:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:02:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:21:31 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "gryN+UMIil/IryToWJ6erMuVxmmq/u8eNt7NnmaOnMexO5/yPvdsjFBt4SZz\nvSaxq8X0mPYJJwmhAMxYGjY6/SW+n4Z+PSQfRX3HxHyJ3QWcI3QMgS7yqG11\n8v1v6P3jNEiQcu2nopzqvsbLBQKU9SFAnMkx8GtVuTaz6qCDHnu3UzJL9q2q\nimFRAONib6P/tUoYXxl3Hb0CsADb5awxRMK1IgheERx2Q81ymICOxqgqrN8C\ngaYteap5WsASa0RDhZsZPJDkCMbk3LE3J/QLzxAowcScYSlYMgARl8Hsk2K+\njEyQrUOzWIOhpw0iy2iRo5cgtmUpwnOEpnwYddHNE92bg8Ln1dJhBeHSmeDr\nWPsbWDqRUZEIIKQ02ED3Q6XqTsBb/YRmuX7j1LoaEQDgPwjmUcLvcFO5pfn1\n/JWAa+eie8jCobMisoER4QTZg6rQfGzkn9udakS4E0m5iisAqQIGzo8CbuxN\nBaWxOHVteMQXB7LgE/wP5g7ZRubmuWB+rANbZ+5F6E3v/eOFrm+WXYv7Qf6u\n26siwWtaWKm2PlxkLzmdJbMjprZU6XDpxTgniIMjv9cx3+nz2M0wcb0OuENM\n4FaGrkG+dOeGzjEybhAPuNJtXck6SGO4xjtPVSMcikyzv9O9NgxPaKHq34ia\nZ38wLQiiIzQzf4DN/BDl6DKradZXrgNyc1oo3r8XbdmUsJbYHwlZVhlefDdV\nb86pa+hn2OZ5VfuhuswYV8pnCB9NaqxcqVNObDgGjOMu0PL2akIM3Zda5ELt\nFtoNwzeYX8E5LeozBzwdiha9NAp+xWHz+Gi7p6r6zhWGZnqGkqypPWu1AHAw\nxYdNEv8yPv3M6nzoMCGPQjFxLGVaFGKtvEhvTW5Bfzr6e7RkFM0dfCnDJB1F\nL0NxLH4IG1j2EQgfeLh8qaLxzim3NJJkvjoHONl/1yRrBisI5npWCuYOKKoF\nZkViFTDvbUIext7jZ7hO6pHf+ViM7OCngD36uSRCIzrumlD3e6KZyjkXI+87\n+lTRbNEw7fABdA30ZeLObbeOQJG7PQanmCaN/iO0I0/c+510jWqZSunN2+WO\nwfRDwgUTUkiEAPW8nLgK5WyflLmuBnKsj11oJmd/qvTWtGseXaSKziv8VzFR\n/XzA1b2n+mbCmzaTRpvFmsAYM9LIEZT0IQpRztYVENTwaQF1Ilmg8DjqyXeG\n7RXHXsTLBGGEQI7E7BWyjSx+xZs92yYJIAvDC4SUVlzcTT/dZK7oSxLW3/sb\nlnGfAWrk14Gd0V4uSRtqaADAZDeus7qriPK8fP7NJZD3uujcuo0mp8nmeLyy\nOQI6ryHubH3i8SAU05oWDihY7tWjDmnjb4ZjbB72UBO/kMxUYie7JCvHuUQq\nUWun4veA9wmbbFddTKmZORSKZ10VZiwhu6uF+iFKcxWQv3ROr6WfdfdpLdeW\nujrj2I5JHS+wcNXiIKIW/sVJvtAH+X5lUc1LqtVi3RztXe6uzb/TYApEJ1S/\nrFNLKI6mnCARRYo5qlDKqCSAi4iLhpKCQmKKud3Qryd69OCVkl46pAwNFvln\nJqWgp1P4I8zMYZH+RzObMR6jhPQAszXpVjCAXe7vj7qXcQ4NfB0qLvugvOHN\n7DPf6yQzP/RqZL9Nq2lcHoDKsPjj4FjxUC1oVbroGkU+APVDOltQBlv+nnNj\nZdyLzGQeCNCjv+8bidL/Ln4zQNlkJ3D2H5wknhqvbNJPv4UKR8HWexWUHxTb\nczIDrgdZF8YsPi1GT6QohwIfGpscBSp11Wurk+YRuZGa/54OOBFcztexNVT3\niRb1ii3UjNshapp8jsDFAd5yWeXZRdHHp4nf7ZcSN53r3GhhnJzKTSvWibYw\nM706B3+AmF7AzjoUWbg3MdAgtcWW8ip28nQISP//R0OFvH1t4ZyWFWAXeJ1l\ngd2k6QOt7LoXiC8I+eVm2A==\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

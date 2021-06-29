@@ -2,7 +2,6 @@
   "script": {
     "name": "csp1-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "pilot_experiment": "csp-piloters",
