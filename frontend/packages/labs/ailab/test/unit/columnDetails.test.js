@@ -3,12 +3,14 @@ import {
   isColumnNumerical,
   filterColumnsByType,
   getUniqueOptions,
-  tooManyUniqueOptions
+  tooManyUniqueOptions,
+  isColumnReadOnly
 } from '../../src/helpers/columnDetails.js';
 import {
   classificationState,
   allNumericalState,
-  regressionState
+  regressionState,
+  premadeDatasetState
 } from './testData';
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../../src/constants.js";
 
@@ -69,5 +71,17 @@ describe("unique options", () => {
   test("too many unique options", async () => {
     const result = tooManyUniqueOptions(UNIQUE_OPTIONS_MAX + 1);
     expect(result).toBe(true);
+  });
+});
+
+describe("isColumnReadOnly", () => {
+  test("column is readOnly", async () => {
+    const result = isColumnReadOnly(premadeDatasetState.metadata, 'batCount');
+    expect(result).toBe(true);
+  });
+
+  test("column is not readOnly", async () => {
+    const result = isColumnReadOnly(allNumericalState.metadata, 'batCount');
+    expect(result).toBe(false);
   });
 });
