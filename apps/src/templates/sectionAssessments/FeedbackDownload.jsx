@@ -39,6 +39,11 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
 
+const REVIEW_STATE_HEADER = {
+  label: i18n.reviewState(),
+  key: 'reviewStateLabel'
+};
+
 /*
  * Part of the Assessment Tab of Teacher Dashboard.
  * Shown when select a script that is either CSD or CSP
@@ -67,13 +72,9 @@ class FeedbackDownload extends Component {
       : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
 
     if (experiments.isEnabled(keepWorkingExperiment)) {
-      const keepWorkingHeader = {
-        label: i18n.reviewState(),
-        key: 'reviewStateLabel'
-      };
       // create a copy to avoid modifying original constants
       headers = [...headers];
-      headers.splice(-3, 0, keepWorkingHeader);
+      headers.splice(-3, 0, REVIEW_STATE_HEADER);
     }
 
     return headers;
