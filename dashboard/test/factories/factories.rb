@@ -1315,6 +1315,7 @@ FactoryGirl.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
+    association :level
     storage_id {storage_user.try(:id) || 2}
   end
 
@@ -1376,6 +1377,13 @@ FactoryGirl.define do
         create :script_level, script: tf.script, levels: [tf.level]
       end
     end
+  end
+
+  factory :code_review_comment do
+    association :commenter, factory: :teacher
+    association :channel_token
+    project_version 'a_project_version_string'
+    comment 'a comment about your project'
   end
 
   factory :teacher_score do
