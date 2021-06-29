@@ -1,13 +1,13 @@
 {
   "name": "salad_toy",
   "card": {
-    "description": "Survey of customers in a restaurant on whether or not they like certain salad combinations",
+    "description": "Survey of customers in a restaurant on whether or not they like certain salad combinations.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Help make recommendations for what kind of salad a new customer should order",
-      "potentialMisuses": "Anything other than recommendations"
+      "potentialUses": "Help make recommendations for what kind of salad a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
     }
   },
   "defaultLabelColumn": "preference",

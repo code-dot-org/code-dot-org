@@ -1,13 +1,13 @@
 {
   "name": "raspado_toy",
   "card": {
-    "description": "Survey of customers in a raspado shop on whether or not they like certain raspado combinations",
+    "description": "Survey of customers in a raspado shop on whether or not they like certain raspado combinations.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Help make recommendations for what kind of raspado a new customer should order",
-      "potentialMisuses": "Anything other than recommendations"
+      "potentialUses": "Help make recommendations for what kind of raspado a new customer should order.",
+      "potentialMisuses": "Anything other than recommendations."
     }
   },
   "defaultLabelColumn": "preference",

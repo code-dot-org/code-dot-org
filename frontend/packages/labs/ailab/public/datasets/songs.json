@@ -30,7 +30,7 @@
     {
       "id": "Loudness score",
       "type": "numerical",
-      "description": "A scoring of the song's loudness, where low negative numbers like -13 mean relatively quiet, and high negative numbers like -5 mean relatively loud"
+      "description": "A scoring of the song's loudness, where low negative numbers like -13 mean relatively quiet, and high negative numbers like -5 mean relatively loud."
     },
     {
       "id": "Tempo in beats per minute",

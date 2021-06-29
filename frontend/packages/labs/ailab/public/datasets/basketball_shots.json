@@ -35,12 +35,12 @@
     {
       "type": "numerical",
       "id": "Inches from left baseline",
-      "description": "Distance from the left baseline (the line behind a basket)"
+      "description": "Distance from the left baseline (the line behind a basket)."
     },
     {
       "type": "numerical",
       "id": "Inches from bottom sideline",
-      "description": "Distance from the bottom sideline (the line along the length of the court)"
+      "description": "Distance from the bottom sideline (the line along the length of the court)."
     },
     {
       "type": "categorical",

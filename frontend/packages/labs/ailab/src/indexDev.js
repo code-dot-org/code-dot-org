@@ -86,6 +86,14 @@ const sampleModes = {
     hideSelectLabel: true,
     hideSave: true,
     requireAccuracy: 90
+  },
+
+  "shoe-survey": {
+    datasets: [
+      "shoe_survey_toy"
+    ],
+    hideSelectLabel: true,
+    requireAccuracy: 75
   }
 };
 
