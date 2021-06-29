@@ -1637,16 +1637,17 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.36.tgz#b3eb7cb43c02cce058246d2507c05956be8d4c46"
-  integrity sha512-+z/eZOclumQLFa92Pi1S52lP1519EJuDO7TJ/XNVDtXgAyp2WiDfdaPd/RqTAaUSMKodyyOWBEzW8vF5cXVacA==
+"@code-dot-org/ml-playground@0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.37.tgz#c410a66a211d1264c864589eab50313fa55ccda2"
+  integrity sha512-oTtSl4IO/hkh8Q/AVuutn+Z537rD4dqhaNig7okWlaSG+d6ATBVGsCBry8SVWM3JvkNLvPIogr/en2kqzDAtjA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
     "@fortawesome/react-fontawesome" "^0.1.7"
     chart.js "^2.9.4"
     react-chartjs-2 "^2.11.1"
+    reselect "^4.0.0"
 
 "@code-dot-org/p5.play@^1.3.17-cdo":
   version "1.3.17-cdo"
@@ -13893,6 +13894,11 @@ requires-port@1.x.x, requires-port@^1.0.0:
 reqwest@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/reqwest/-/reqwest-1.1.6.tgz#4b6894d29596bf8e824a25f34975df15562ee813"
+
+reselect@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
 
 reserved-words@^0.1.2:
   version "0.1.2"
