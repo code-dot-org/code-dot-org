@@ -209,7 +209,7 @@ class ScriptsController < ApplicationController
     unit_id = params[:id]
     if ScriptConstants::FAMILY_NAMES.include?(unit_id)
       script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
-      Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+      Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
     elsif params[:action] == "edit"
       return Script.get_without_cache(unit_id)
