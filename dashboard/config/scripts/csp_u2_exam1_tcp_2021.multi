@@ -8,6 +8,16 @@ wrong 'User Datagram Protocol (UDP)'
 wrong 'HyperText Transfer Protocol (HTTP)'
 
 teacher_markdown <<MARKDOWN
+**Explanation:** While both TCP and UDP both involve the sending and receiving of packets, TCP is the protocol used when the accuracy or completeness of a message is a priority.
+
+[Lesson 5 - Packets](https://studio.code.org/s/csp2-2021/lessons/5) showed the difference between these two protocols.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.C-4: IP, TCP, and UDP are common protocols used on the Internet.
+
+* CSN-1.D.2: The HTTP protocol is used on the World Wide Web.
+:::
 
 MARKDOWN
 

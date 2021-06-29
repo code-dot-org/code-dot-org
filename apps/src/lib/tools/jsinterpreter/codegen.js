@@ -13,67 +13,6 @@ exports.ForStatementMode = {
   UPDATE: 3
 };
 
-//
-// Blockly specific codegen functions:
-//
-
-var INFINITE_LOOP_TRAP =
-  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
-
-var LOOP_HIGHLIGHT = 'loopHighlight();\n';
-var LOOP_HIGHLIGHT_RE = new RegExp(
-  LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*',
-  'g'
-);
-
-/**
- * Returns javascript code to call a timeout check
- */
-exports.loopTrap = function() {
-  return INFINITE_LOOP_TRAP;
-};
-
-exports.loopHighlight = function(apiName, blockId) {
-  var args = "'block_id_" + blockId + "'";
-  if (blockId === undefined) {
-    args = '%1';
-  }
-  return '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')');
-};
-
-/**
- * Extract the user's code as raw JavaScript.
- * @param {string} code Generated code.
- * @return {string} The code without serial numbers and timeout checks.
- */
-exports.strip = function(code) {
-  return (
-    code
-      // Strip out serial numbers.
-      .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
-      // Remove timeouts.
-      .replace(new RegExp(utils.escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
-      // Strip out loop highlight
-      .replace(LOOP_HIGHLIGHT_RE, '')
-      // Strip out class namespaces.
-      .replace(/(StudioApp|Maze|Turtle)\./g, '')
-      // Strip out particular helper functions.
-      .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
-      // Collapse consecutive blank lines.
-      .replace(/\n\n+/gm, '\n\n')
-      // Trim.
-      .replace(/^\s+|\s+$/g, '')
-  );
-};
-
-/**
- * Extract the user's code as raw JavaScript.
- */
-exports.workspaceCode = function(blockly) {
-  var code = blockly.Generator.blockSpaceToCode('JavaScript', null, false);
-  return exports.strip(code);
-};
-
 function populateFunctionsIntoScope(
   interpreter,
   scope,
