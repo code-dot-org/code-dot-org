@@ -643,7 +643,7 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
-    const assignmentFamilies = [];
+    const assignmentFamilyMap = {};
 
     // Array of assignment ids of units which belong to any valid courses.
     let secondaryAssignmentIds = [];
@@ -663,10 +663,11 @@ export default function teacherSections(state = initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      // Use the assignment family fields from the course in that family with
-      // the default version year, 2017.
-      if (course.version_year === defaultVersionYear) {
-        assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
+      if (!assignmentFamilyMap[course.assignment_family_name]) {
+        assignmentFamilyMap[course.assignment_family_name] = _.pick(
+          course,
+          assignmentFamilyFields
+        );
       }
 
       secondaryAssignmentIds.push(...scriptAssignIds);
@@ -699,14 +700,12 @@ export default function teacherSections(state = initialState, action) {
       // them, one must first select the corresponding course from the assignment
       // family dropdown, and then select the unit from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Use the assignment family fields from the unit in that family with
-        // the default version year, 2017.
-        if (versionYear === defaultVersionYear) {
-          assignmentFamilies.push({
+        if (!assignmentFamilyMap[assignmentFamilyName]) {
+          assignmentFamilyMap[assignmentFamilyName] = {
             ..._.pick(unit, assignmentFamilyFields),
             assignment_family_title: assignmentFamilyTitle,
             assignment_family_name: assignmentFamilyName
-          });
+          };
         }
       }
     });
@@ -714,7 +713,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       validAssignments,
-      assignmentFamilies
+      assignmentFamilies: _.values(assignmentFamilyMap)
     };
   }
 
