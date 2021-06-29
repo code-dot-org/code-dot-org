@@ -1,4 +1,7 @@
 class CodeReviewCommentsController < ApplicationController
+  before_action :decrypt_channel_id
+
+  check_authorization # if we want to keep this, put authorization on each action
   load_and_authorize_resource
   # TO DO: More nuanced permissioning. Sketched permissions below:
   # create:
@@ -19,7 +22,14 @@ class CodeReviewCommentsController < ApplicationController
 
   # POST /code_review_comments
   def create
+    # conditions for being able to create a comment on a project:
+    return unless @project_owner == current_user ||
+      @project_owner.student_of?(current_user) ||
+      current_user.sections.intersection(@project_owner.sections)
+
     @code_review_comment = CodeReviewComment.new(code_review_comments_params)
+
+    authorize! :create, @code_review_comment
 
     if @code_review_comment.save
       render json: @code_review_comment
@@ -32,6 +42,9 @@ class CodeReviewCommentsController < ApplicationController
   # or just create a new comment?
   # PATCH /code_review_comments/:id
   def update
+    return unless current_user == @code_review_comment.commenter ||
+      @project_owner.student_of?(current_user)
+
     if @code_review_comment.update(code_review_comments_params)
       head :ok
     else
@@ -41,6 +54,8 @@ class CodeReviewCommentsController < ApplicationController
 
   # PATCH /code_review_comments/:id/resolve
   def resolve
+    return unless current_user == @project_owner
+
     if @code_review_comment.update(is_resolved: true)
       head :ok
     else
@@ -50,6 +65,9 @@ class CodeReviewCommentsController < ApplicationController
 
   # DELETE /code_review_comments/:id
   def destroy
+    return unless current_user == @code_review_comment.commenter ||
+      @project_owner.student_of?(current_user)
+
     if @code_review_comment.delete
       head :ok
     else
@@ -60,6 +78,11 @@ class CodeReviewCommentsController < ApplicationController
   # require project id, project version
   # GET /code_review_comments/project_comments
   def project_comments
+    # conditions for being able to create a comment on a project:
+    return unless @project_owner == current_user ||
+      @project_owner.student_of?(current_user) ||
+      current_user.sections.intersection(@project_owner.sections)
+
     @project_comments = CodeReviewComment.where(
       storage_app_id: params[:storage_app_id],
       project_version: params[:project_version]
@@ -69,6 +92,11 @@ class CodeReviewCommentsController < ApplicationController
   end
 
   private
+
+  def decrypt_channel_id
+    @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+    @project_owner = User.find(user_id_for_storage_id(storage_id))
+  end
 
   # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params

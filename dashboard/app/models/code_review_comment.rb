@@ -23,6 +23,7 @@ class CodeReviewComment < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :commenter, class_name: 'User'
+  belongs_to :project_owner, class_name: 'User'
 
   validates :comment, presence: true
 end
