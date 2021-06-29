@@ -622,6 +622,8 @@ en:
         playlab_2021: Introduction to Play Lab
         playlab_2021_reader: Introduction to Play Lab
         csp_defining_calling_functions: Defining and Calling Functions
+        csp_tutorial_datatab: Data Tab in App Lab
+        csp_tutorial_libraries: Libraries in App Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
