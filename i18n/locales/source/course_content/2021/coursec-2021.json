@@ -1181,10 +1181,13 @@
   },
   "https://studio.code.org/s/coursec-2021/lessons/16/levels/3": {
     "short_instructions": "Use events and actions to make your hero move. Get to the targets.",
-    "long_instructions": "Use  blocks like events and actions to make your player move when you press the arrow keys.  \n\nGet the player to the targets to complete this puzzle.",
+    "long_instructions": "Use events and actions to make your actor move when you press the arrow keys.\n\nMove the actor in all 4 directions for 3 seconds to finish the level.",
     "authored_hints": {
-      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
       "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
+      "playlab_up": "To move your actor up, you can connect these blocks:\n[blockly block][0]",
+      "playlab_down": "To move your actor down, you can connect these blocks:\n[blockly block][0]",
+      "playlab_left": "To move your actor left, you can connect these blocks:\n[blockly block][0]",
+      "playlab_right": "To move your actor right, you can connect these blocks:\n[blockly block][0]\n ",
       "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
     },
     "placeholder_texts": {

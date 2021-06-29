@@ -92,4 +92,13 @@ class CourseVersionTest < ActiveSupport::TestCase
     course_version.key = '0123456789'
     assert course_version.valid?
   end
+
+  test "throws exception if changing course version of content root that prevent course version change" do
+    script = create :script, is_course: true
+    script.stubs(:prevent_course_version_change?).returns(true)
+    course_offering = create :course_offering
+    assert_raises do
+      CourseVersion.add_course_version(course_offering, script)
+    end
+  end
 end
