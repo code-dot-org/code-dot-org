@@ -12,6 +12,7 @@
   - else
     We know things come up and you may no longer be able to attend. Please click this link to
     = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
+    = '(' + @cancel_url + ')'
     if you aren't going to be able to make it.
     - unless @workshop.virtual?
       Workshop materials and food are ordered based on enrollment numbers.
