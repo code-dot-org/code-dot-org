@@ -43,13 +43,13 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal Script.all, assigns(:scripts)
   end
 
-  test "should redirect when script has a redirect_to property" do
-    script = create :script
-    new_script = create :script
-    script.update(redirect_to: new_script.name)
+  test "should redirect when unit has a redirect_to property" do
+    unit = create :script
+    new_unit = create :script
+    unit.update(redirect_to: new_unit.name)
 
-    get :show, params: {id: script.name}
-    assert_redirected_to "/s/#{new_script.name}"
+    get :show, params: {id: unit.name}
+    assert_redirected_to "/s/#{new_unit.name}"
   end
 
   test "should not get index if not signed in" do
@@ -78,7 +78,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show of custom script" do
+  test "should get show of custom unit" do
     get :show, params: {id: 'course1'}
     assert_response :success
   end
@@ -148,20 +148,20 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "should use script name as param where script name is words but looks like a number" do
-    script = create(:script, name: '15-16')
+  test "should use unit name as param where unit name is words but looks like a number" do
+    unit = create(:script, name: '15-16')
     get :show, params: {id: "15-16"}
 
     assert_response :success
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
   end
 
-  test "should use script name as param where script name is words" do
-    script = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
+  test "should use unit name as param where unit name is words" do
+    unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
 
     assert_response :success
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
   end
 
   test "renders 404 when id is an invalid id" do
@@ -224,7 +224,7 @@ class ScriptsControllerTest < ActionController::TestCase
   # There are tests on can_view_version? in script_test.rb which verify that it returns true if a student is assigned
   # or has made progress in a different version from the latest stable version. This test verifies that ultimately
   # the student is not redirected if true is returned.
-  test "show: do not redirect student to latest stable version in family if they can view the script version" do
+  test "show: do not redirect student to latest stable version in family if they can view the unit version" do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     sign_in @no_progress_or_assignment_student
     get :show, params: {id: @coursez_2017.name}
@@ -297,38 +297,38 @@ class ScriptsControllerTest < ActionController::TestCase
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
-    script = Script.find_by_name('course1')
-    get :edit, params: {id: script.name}
+    unit = Script.find_by_name('course1')
+    get :edit, params: {id: unit.name}
 
-    assert_equal script, assigns(:script)
+    assert_equal unit, assigns(:script)
   end
 
-  test 'platformization partner cannot create script' do
+  test 'platformization partner cannot create unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
     post :create, params: {
-      script: {name: 'test-script-create'},
+      script: {name: 'test-unit-create'},
       script_text: '',
       is_migrated: true
     }
     assert_response :forbidden
   end
 
-  test "platformization partner cannot edit our scripts" do
+  test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
     get :edit, params: {id: @coursez_2019.id}
     assert_response :forbidden
   end
 
-  test "platformization partner can edit their scripts" do
+  test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
     get :edit, params: {id: @partner_unit.id}
     assert_response :success
   end
 
-  test "platformization partner cannot update our scripts" do
+  test "platformization partner cannot update our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
     patch :update, params: {
@@ -339,7 +339,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "platformization partner can update their scripts" do
+  test "platformization partner can update their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     stub_file_writes(@partner_unit.name)
 
@@ -366,53 +366,53 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'create' do
-    script_name = 'test-script-create'
+    unit_name = 'test-unit-create'
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with("#{Rails.root}/config/scripts/#{script_name}.script", "is_migrated true\n").once
+    File.stubs(:write).with("#{Rails.root}/config/scripts/#{unit_name}.script", "is_migrated true\n").once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script_name}.script_json" && JSON.parse(contents)['script']['name'] == script_name
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
     end
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
     post :create, params: {
-      script: {name: script_name},
+      script: {name: unit_name},
       is_migrated: true
     }
-    assert_redirected_to edit_script_path id: script_name
+    assert_redirected_to edit_script_path id: unit_name
 
-    script = Script.find_by_name(script_name)
-    assert_equal script_name, script.name
-    assert script.is_migrated
+    unit = Script.find_by_name(unit_name)
+    assert_equal unit_name, unit.name
+    assert unit.is_migrated
   end
 
-  test 'cannot create legacy script' do
+  test 'cannot create legacy unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script_name = 'legacy'
+    unit_name = 'legacy'
     post :create, params: {
-      script: {name: script_name},
+      script: {name: unit_name},
     }
 
     assert_response :bad_request
-    refute Script.find_by_name(script_name)
+    refute Script.find_by_name(unit_name)
   end
 
   test 'destroy raises exception for evil filenames' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    # Note that these script names (intentionally) fail model validation.
+    # Note that these unit names (intentionally) fail model validation.
     [
-      '~/evil_script_name',
-      '../evil_script_name',
-      'subdir/../../../evil_script_name'
+      '~/evil_unit_name',
+      '../evil_unit_name',
+      'subdir/../../../evil_unit_name'
     ].each do |name|
-      evil_script = Script.new(name: name)
-      evil_script.save(validate: false)
+      evil_unit = Script.new(name: name)
+      evil_unit.save(validate: false)
       assert_raise ArgumentError do
-        delete :destroy, params: {id: evil_script.id}
+        delete :destroy, params: {id: evil_unit.id}
       end
     end
   end
@@ -422,144 +422,144 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.in_development
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.pilot
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
-    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{script.name}.script"}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
-      filename == "#{Rails.root}/config/scripts_json/#{script.name}.script_json" && JSON.parse(contents)['script']['name'] == script.name
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
     end
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.stable
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -567,17 +567,17 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.preview
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -585,30 +585,30 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in @levelbuilder
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
-    script.reload
-    assert_equal script.published_state, SharedConstants::PUBLISHED_STATE.beta
+    unit.reload
+    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     error = assert_raises RuntimeError do
       post :update, params: {
-        id: script.id,
-        script: {name: script.name},
+        id: unit.id,
+        script: {name: unit.name},
         script_text: '',
         old_unit_text: 'different'
       }
@@ -621,58 +621,58 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
     create(
       :script_level,
-      script: script,
+      script: unit,
       lesson: lesson,
       levels: [create(:maze)]
     )
-    stub_file_writes(script.name)
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
-      old_unit_text: ScriptDSL.serialize_lesson_groups(script)
+      old_unit_text: ScriptDSL.serialize_lesson_groups(unit)
     }
 
     assert_response :success
   end
 
-  test 'can update migrated script containing migrated script levels' do
+  test 'can update migrated unit containing migrated script levels' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    unit = create :script, name: 'migrated', is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
     activity = create :lesson_activity, lesson: lesson
     section = create :activity_section, lesson_activity: activity
 
     # A migrated script level is one with an activity section.
     create(
       :script_level,
-      script: script,
+      script: unit,
       lesson: lesson,
       activity_section: section,
       activity_section_position: 1,
       levels: [create(:applab)]
     )
 
-    stub_file_writes(script.name)
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(script),
+      script_text: ScriptDSL.serialize_lesson_groups(unit),
     }
     assert_response :success
-    assert script.is_migrated
-    assert script.script_levels.any?
+    assert unit.is_migrated
+    assert unit.script_levels.any?
   end
 
   test 'cannot update migrated script containing legacy script levels' do
