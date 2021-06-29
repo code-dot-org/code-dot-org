@@ -26,7 +26,7 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.performanceLevelDetails(), key: 'performanceLevelDetails'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
-  {label: i18n.seenByStudent(), key: 'studentSeenFeedback'}
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
@@ -36,7 +36,7 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
-  {label: i18n.seenByStudent(), key: 'studentSeenFeedback'}
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
 
 /*
@@ -86,9 +86,6 @@ class FeedbackDownload extends Component {
       scriptName,
       onClickDownload
     } = this.props;
-
-    console.log(this.headers);
-    console.log(exportableFeedbackData);
 
     return (
       <div>
