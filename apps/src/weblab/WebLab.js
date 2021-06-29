@@ -462,55 +462,6 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   });
 };
 
-WebLab.prototype.openFatalErrorDialog = function(
-  message,
-  type = FatalErrorType.Default
-) {
-  const handleResetProject = () => {
-    this.closeDialog();
-    this.brambleHost?.resetFilesystem(err => {
-      if (err) {
-        this.openFatalErrorDialog(err.message, FatalErrorType.ResetFailure);
-      } else {
-        this.openResetSuccessDialog();
-        reload();
-      }
-    });
-  };
-
-  let errorMessage = weblabI18n.fatalError({message});
-  if (type === FatalErrorType.LoadFailure) {
-    errorMessage = weblabI18n.loadFailure();
-  } else if (type === FatalErrorType.ResetFailure) {
-    errorMessage = weblabI18n.resetFailure({message});
-  }
-
-  actions.openDialog(
-    <FatalErrorDialog
-      isOpen
-      errorMessage={errorMessage}
-      handleClose={this.closeDialog}
-      handleResetProject={handleResetProject}
-    />
-  );
-};
-
-WebLab.prototype.openUploadErrorDialog = function() {
-  actions.openDialog(
-    <UploadErrorDialog isOpen handleClose={this.closeDialog} />
-  );
-};
-
-WebLab.prototype.openResetSuccessDialog = function() {
-  actions.openDialog(
-    <ResetSuccessDialog isOpen handleClose={this.closeDialog} />
-  );
-};
-
-WebLab.prototype.closeDialog = function() {
-  actions.closeDialog();
-};
-
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function() {
   if (!this.readOnly) {
@@ -610,6 +561,55 @@ WebLab.prototype.loadFileEntries = function() {
  */
 WebLab.prototype.reset = function(ignore) {
   // TODO - implement
+};
+
+WebLab.prototype.openFatalErrorDialog = function(
+  message,
+  type = FatalErrorType.Default
+) {
+  const handleResetProject = () => {
+    this.closeDialog();
+    this.brambleHost?.resetFilesystem(err => {
+      if (err) {
+        this.openFatalErrorDialog(err.message, FatalErrorType.ResetFailure);
+      } else {
+        this.openResetSuccessDialog();
+        reload();
+      }
+    });
+  };
+
+  let errorMessage = weblabI18n.fatalError({message});
+  if (type === FatalErrorType.LoadFailure) {
+    errorMessage = weblabI18n.loadFailure();
+  } else if (type === FatalErrorType.ResetFailure) {
+    errorMessage = weblabI18n.resetFailure({message});
+  }
+
+  actions.openDialog(
+    <FatalErrorDialog
+      isOpen
+      errorMessage={errorMessage}
+      handleClose={this.closeDialog}
+      handleResetProject={handleResetProject}
+    />
+  );
+};
+
+WebLab.prototype.openUploadErrorDialog = function() {
+  actions.openDialog(
+    <UploadErrorDialog isOpen handleClose={this.closeDialog} />
+  );
+};
+
+WebLab.prototype.openResetSuccessDialog = function() {
+  actions.openDialog(
+    <ResetSuccessDialog isOpen handleClose={this.closeDialog} />
+  );
+};
+
+WebLab.prototype.closeDialog = function() {
+  actions.closeDialog();
 };
 
 WebLab.prototype.getAppReducers = function() {
