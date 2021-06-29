@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-28 21:05:25 UTC",
+    "serialized_at": "2021-06-29 16:06:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -3874,30 +3874,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5 Your Plan_copy_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 Your Plan_copy_2021"
-        ],
-        "lesson.key": "Next steps",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 Your Plan_copy_2021"
-      ]
-    },
-    {
-      "chapter": 148,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5-FinalReflection-2021"
         ]
       },
@@ -3916,8 +3892,8 @@
       ]
     },
     {
-      "chapter": 149,
-      "position": 6,
+      "chapter": 148,
+      "position": 5,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -5541,17 +5517,6 @@
         "level.key": "OPD-K5 Assessment_copy_2021",
         "script_level.level_keys": [
           "OPD-K5 Assessment_copy_2021"
-        ],
-        "lesson.key": "Next steps",
-        "lesson_group.key": "k5_next_steps_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 Your Plan_copy_2021",
-        "script_level.level_keys": [
-          "OPD-K5 Your Plan_copy_2021"
         ],
         "lesson.key": "Next steps",
         "lesson_group.key": "k5_next_steps_1",

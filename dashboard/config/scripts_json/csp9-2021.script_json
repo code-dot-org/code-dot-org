@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-28 21:23:59 UTC",
+    "serialized_at": "2021-06-29 14:05:42 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
@@ -2693,6 +2693,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U9L7_CFU1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      },
+      "level_keys": [
+        "csp_U9L7_CFU1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "U9L7 Free Response"
         ],
@@ -2714,7 +2737,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2740,7 +2763,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2766,7 +2789,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3058,6 +3081,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csp_U9L7_CFU1",
+        "script_level.level_keys": [
+          "csp_U9L7_CFU1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U9L7 Free Response",
         "script_level.level_keys": [
           "U9L7 Free Response"
@@ -3333,6 +3368,12 @@
     {
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
+        "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "csp-u9-presentation"
       }
     },
