@@ -47,6 +47,7 @@ export default function FatalErrorDialog(props) {
       title={commonI18n.errorOccurredTitle()}
       body={body}
       handleConfirmation={props.handleClose}
+      handleClose={props.handleClose}
       renderFooter={() => footerButtons}
     />
   );
