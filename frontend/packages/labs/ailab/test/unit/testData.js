@@ -140,3 +140,23 @@ export const allNumericalState = {
     mosquitoCount: 'numerical'
   }
 };
+
+export const premadeDatasetState = {
+  ...allNumericalState,
+  metadata: {
+    name: 'bats_eat_mozzies',
+    defaultLabelColumn: 'mosquitoCount',
+    fields: [
+      {
+        id: 'mosquitoCount',
+        type: 'numerical',
+        description: 'How many mosquitoes there are.'
+      },
+      {
+        id: 'batCount',
+        type: 'numerical',
+        description: 'How many bats there are.'
+      }
+    ]
+  }
+}

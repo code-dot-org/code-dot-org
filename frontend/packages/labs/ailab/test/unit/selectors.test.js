@@ -1,4 +1,5 @@
 import {
+  getSelectedColumns,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
   getSelectedCategoricalFeatures,
@@ -7,12 +8,13 @@ import {
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
   getUniqueOptionsLabelColumn,
-  getUniqueOptionsCurrentColumn,
-  getExtremaByColumn,
-  getExtremaCurrentColumn,
-  getOptionFrequenciesCurrentColumn
+  getExtremaByColumn
 } from "../../src/selectors";
-import { classificationState, allNumericalState } from "./testData";
+import {
+  classificationState,
+  allNumericalState,
+  premadeDatasetState
+} from "./testData";
 
 describe("selecting columns by data type", () => {
   test("gets selected categorical features", async () => {
@@ -40,11 +42,14 @@ describe("getting category options", () => {
   test("gets unique options by column", async () => {
     const categoricalColumns = getCategoricalColumns
       .resultFunc(classificationState.columnsByDataType).sort();
+    const selectedColumns = getSelectedColumns.resultFunc(
+      classificationState.selectedFeatures,
+      classificationState.labelColumn
+    )
     const selectedCategoricalColumns =
       getSelectedCategoricalColumns.resultFunc(
         categoricalColumns,
-        classificationState.selectedFeatures,
-        classificationState.labelColumn
+        selectedColumns
       )
     const uniqueOptionsByColumn =
       getUniqueOptionsByColumn.resultFunc(
@@ -65,33 +70,19 @@ describe("getting category options", () => {
     )
     expect(uniqueOptions).toEqual(['no', 'yes']);
   });
-
-  test("gets unique options current column", async () => {
-    const uniqueOptions = getUniqueOptionsCurrentColumn.resultFunc(
-      classificationState.currentColumn,
-      classificationState.data
-    )
-    expect(uniqueOptions).toEqual(['cool', 'hot', 'mild']);
-  });
-
-  test("gets option frequencies current column", async () => {
-    const optionFrequencies = getOptionFrequenciesCurrentColumn.resultFunc(
-      classificationState.currentColumn,
-      classificationState.data
-    )
-    expect(optionFrequencies).toEqual({ hot: 2, mild: 2, cool: 2 });
-  });
-
 });
 
 describe("getting extrema", () => {
   test("gets extrema by column", async () => {
     const numericalColumns = getNumericalColumns
       .resultFunc(allNumericalState.columnsByDataType);
-    const selectedNumericalColumns =  getSelectedNumericalColumns.resultFunc(
-      numericalColumns,
+    const selectedColumns = getSelectedColumns.resultFunc(
       allNumericalState.selectedFeatures,
       allNumericalState.labelColumn
+    )
+    const selectedNumericalColumns =  getSelectedNumericalColumns.resultFunc(
+      numericalColumns,
+      selectedColumns
     )
     const extremaByColumn =
       getExtremaByColumn.resultFunc(
@@ -104,15 +95,5 @@ describe("getting extrema", () => {
     expect(extremaByColumn['mosquitoCount'].max).toBe(10);
     expect(extremaByColumn['mosquitoCount'].min).toBe(1);
     expect(extremaByColumn['mosquitoCount'].range).toBe(9);
-  });
-
-  test("gets extrema current column", async () => {
-    const extrema = getExtremaCurrentColumn.resultFunc(
-      allNumericalState.currentColumn,
-      allNumericalState.data
-    )
-    expect(extrema.max).toBe(100);
-    expect(extrema.min).toBe(40);
-    expect(extrema.range).toBe(60);
   });
 });

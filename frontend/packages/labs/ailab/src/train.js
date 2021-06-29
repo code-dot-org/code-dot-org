@@ -4,13 +4,13 @@ import KNNTrainer from "./trainers/KNNTrainer";
 
 import { buildOptionNumberKey } from "./helpers/columnDetails.js";
 import {
-  getSelectedCategoricalColumns,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
+import { getSelectedCategoricalColumns } from "./selectors";
 import {
   TestDataLocations,
   PERCENT_OF_DATASET_FOR_TESTING

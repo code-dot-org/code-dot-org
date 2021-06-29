@@ -5,7 +5,7 @@ import {
   setColumnsByDataType,
   setRemovedRowsCount
 } from "./redux";
-import { columnContainsOnlyNumbers } from "./helpers/columnDetails.js";
+import { containsOnlyNumbers } from "./helpers/columnDetails.js";
 import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
@@ -68,7 +68,7 @@ const countRemovedRows = (originalData, cleanedData) => {
 const setDefaultColumnDataType = data => {
   const columns = Object.keys(data[0]);
   for (let column of columns) {
-    if (columnContainsOnlyNumbers(data, column)) {
+    if (containsOnlyNumbers(data, column)) {
       store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
     } else {
       store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))

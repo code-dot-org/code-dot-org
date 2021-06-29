@@ -1,26 +1,27 @@
 /* React component to handle showing details of numerical columns. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { styles } from "../constants";
+import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
 
-export default class ColumnDetailsNumerical extends Component {
+class ColumnDetailsNumerical extends Component {
   static propTypes = {
-    isColumnDataValid: PropTypes.bool,
-    extrema: PropTypes.object
+    columnDetails: PropTypes.object
   };
 
   render() {
-    const { isColumnDataValid, extrema } = this.props;
+    const { extrema, containsOnlyNumbers } = this.props.columnDetails;
 
     return (
       <div>
         <div style={styles.bold}>Column information:</div>
-        {!isColumnDataValid && (
+        {!containsOnlyNumbers && (
           <p style={styles.error}>
             Numerical columns cannot contain strings.
           </p>
         )}
-        {isColumnDataValid && (
+        {containsOnlyNumbers && extrema && (
           <div style={styles.contents}>
             min: {extrema.min}
             <br />
@@ -32,4 +33,10 @@ export default class ColumnDetailsNumerical extends Component {
       </div>
     );
   }
-};
+}
+
+export default connect(
+  state => ({
+    columnDetails: getNumericalColumnDetails(state)
+  })
+)(ColumnDetailsNumerical);

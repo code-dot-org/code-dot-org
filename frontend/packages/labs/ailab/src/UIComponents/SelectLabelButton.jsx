@@ -1,4 +1,4 @@
-/* React component to handle selecting columns as features. */
+/* React component to handle selecting a column as the label. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";

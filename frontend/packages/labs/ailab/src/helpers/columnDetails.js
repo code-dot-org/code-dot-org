@@ -10,61 +10,33 @@ export function isColumnNumerical(state, column) {
   return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
 }
 
+export function filterColumnsByType(columnsByDataType, columnType) {
+  return Object.keys(columnsByDataType).filter(
+    column => columnsByDataType[column] === columnType
+  );
+}
 /*
   Categorical columns with too many unique values are unlikley to make
   accurate models, and we don't want to overflow the metadata column for saved
   models.
 */
-export function hasTooManyUniqueOptions(uniqueOptionsCount) {
+export function tooManyUniqueOptions(uniqueOptionsCount) {
   return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
 export function getUniqueOptions(data, column) {
-  return Array.from(new Set(data.map(row => row[column]))).filter(
+  const columnData = getColumnData(data, column);
+  return Array.from(new Set(columnData)).filter(
     option => option !== undefined && option !== ""
   );
 }
 
-function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, column);
-}
-
-export function columnContainsOnlyNumbers(data, column) {
-  return data.every(row => !isNaN(row[column]));
-}
-
-function isValidNumericalData(state, column) {
-  return columnContainsOnlyNumbers(state.data, column);
-}
-
-export function isColumnDataValid(state, column) {
-  return (
-    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
-  ) ||
-  (isColumnNumerical(state, column) && isValidNumericalData(state, column));
-}
-
-function isLabel(state, column) {
-  return column === state.labelColumn;
-}
-
-function isFeature(state, column) {
-  return state.selectedFeatures.includes(column);
-}
-
-function isSelected(state, column) {
-  return isLabel(state, column) || isFeature(state, column);
-}
-
-export function isSelectable(state, column) {
-  return isColumnDataValid(state, column) && !isSelected(state, column);
-}
-
-export function isColumnReadOnly(state, column) {
+export function isColumnReadOnly(metadata, column) {
   const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
+    column &&
+    metadata &&
+    metadata.fields &&
+    metadata.fields.find(field => {
       return field.id === column;
     }).type;
   return !!metadataColumnType;
@@ -84,28 +56,28 @@ export function getExtrema(data, column) {
   return extrema;
 }
 
-export function getColumnDescription(state, columnId) {
-  if (!state || !columnId) {
-    return null;
-  }
+export function containsOnlyNumbers(data, column) {
+  const columnData = getColumnData(data, column);
+  return columnData.every(cell => !isNaN(cell));
+}
 
+export function getColumnDescription(column, metadata, trainedModelDetails) {
   // Use metadata if available.
-  if (state.metadata && state.metadata.fields) {
-    const field = state.metadata.fields.find(field => {
-      return field.id === columnId;
+  if (column && metadata && metadata.fields) {
+    const field = metadata.fields.find(field => {
+      return field.id === column;
     });
     return field.description;
   }
 
   // Try using a user-entered column description if available.
-  if (!state.columns) {
-    return;
-  }
-  const matchedColumn = state.columns.find(column => {
-    return column.id === columnId;
-  });
-  if (matchedColumn) {
-    return matchedColumn.description;
+  if (trainedModelDetails && trainedModelDetails.columns) {
+    const matchedColumn = trainedModelDetails.columns.find(column => {
+      return column.id === column;
+    });
+    if (matchedColumn) {
+      return matchedColumn.description;
+    }
   }
 
   // No column description available.
@@ -134,7 +106,7 @@ export function buildOptionNumberKey(state, feature) {
 export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
-  columnData.description = getColumnDescription(state, column);
+  columnData.description = getColumnDescription(column, state.metadata, state.trainedModelDetails);
   if (isColumnCategorical(state, column)) {
     columnData.values = getUniqueOptions(state.data, column);
   } else if (isColumnNumerical(state, column)) {

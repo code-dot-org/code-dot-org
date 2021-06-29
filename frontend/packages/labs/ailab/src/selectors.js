@@ -1,13 +1,19 @@
 import { createSelector } from 'reselect';
 import { ColumnTypes } from "./constants.js";
-import { getUniqueOptions, getExtrema } from './helpers/columnDetails';
-import { filterColumnsByType } from './redux';
+import {
+  filterColumnsByType,
+  getUniqueOptions,
+  getExtrema,
+  getColumnDescription
+ } from './helpers/columnDetails';
+import { arrayIntersection } from './helpers/utils';
 
-const getData = state => state.data;
-const getColumnsByDataType = state => state.columnsByDataType;
+export const getData = state => state.data;
+export const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
-const getCurrentColumn = state => state.currentColumn;
+export const getMetadata = state => state.metadata;
+export const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -16,21 +22,25 @@ export const getCategoricalColumns = createSelector(
   }
 )
 
+export const getSelectedColumns = createSelector(
+  [getSelectedFeatures, getLabelColumn],
+  (selectedFeatures, labelColumn) => {
+    const selectedColumns = [...selectedFeatures, labelColumn];
+    return selectedColumns;
+  }
+)
+
 export const getSelectedCategoricalColumns = createSelector(
-  [getCategoricalColumns, getSelectedFeatures, getLabelColumn],
-  (categoricalColumns, selectedFeatures, labelColumn) => {
-    return categoricalColumns.filter(
-      column => (selectedFeatures.includes(column) || column === labelColumn)
-    );
+  [getCategoricalColumns, getSelectedColumns],
+  (categoricalColumns, selectedColumns) => {
+    return arrayIntersection(categoricalColumns, selectedColumns);
   }
 )
 
 export const getSelectedCategoricalFeatures = createSelector(
   [getCategoricalColumns, getSelectedFeatures],
   (categoricalColumns, selectedFeatures) => {
-    return categoricalColumns.filter(
-      column => selectedFeatures.includes(column)
-    );
+    return arrayIntersection(categoricalColumns, selectedFeatures);
   }
 )
 
@@ -42,20 +52,16 @@ export const getNumericalColumns = createSelector(
 )
 
 export const getSelectedNumericalColumns = createSelector(
-  [getNumericalColumns, getSelectedFeatures, getLabelColumn],
-  (numericalColumns, selectedFeatures, labelColumn) => {
-    return numericalColumns.filter(
-      column => (selectedFeatures.includes(column) || column === labelColumn)
-    )
+  [getNumericalColumns, getSelectedColumns],
+  (numericalColumns, selectedColumns) => {
+    return arrayIntersection(numericalColumns, selectedColumns);
   }
 )
 
 export const getSelectedNumericalFeatures = createSelector(
   [getNumericalColumns, getSelectedFeatures],
   (numericalColumns, selectedFeatures) => {
-    return numericalColumns.filter(
-      column => selectedFeatures.includes(column)
-    );
+    return arrayIntersection(numericalColumns, selectedFeatures);
   }
 )
 
@@ -77,28 +83,6 @@ export const getUniqueOptionsLabelColumn = createSelector(
   }
 )
 
-export const getUniqueOptionsCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return getUniqueOptions(data, currentColumn).sort()
-  }
-)
-
-export const getOptionFrequenciesCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    let optionFrequencies = {};
-    for (let row of data) {
-      if (optionFrequencies[row[currentColumn]]) {
-        optionFrequencies[row[currentColumn]]++;
-      } else {
-        optionFrequencies[row[currentColumn]] = 1;
-      }
-    }
-    return optionFrequencies;
-  }
-)
-
 export const getExtremaByColumn = createSelector(
   [getSelectedNumericalColumns, getData],
   (getSelectedNumericalColumns, data) => {
@@ -110,9 +94,18 @@ export const getExtremaByColumn = createSelector(
   }
 )
 
-export const getExtremaCurrentColumn = createSelector(
-  [getCurrentColumn, getData],
-  (currentColumn, data) => {
-    return getExtrema(data, currentColumn);
+export const getSelectedColumnsDescriptions = createSelector(
+  [getSelectedColumns, getMetadata, getTrainedModelDetails],
+  (selectedColumns, metadata, trainedModelDetails) => {
+    return selectedColumns.map(column => {
+      return {
+        id: column,
+        description: getColumnDescription(
+          column,
+          metadata,
+          trainedModelDetails
+        )
+      };
+    });
   }
 )

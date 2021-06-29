@@ -11,19 +11,9 @@ import {
 import {
   isColumnNumerical,
   isColumnCategorical,
-  isColumnReadOnly,
-  getColumnDescription,
-  hasTooManyUniqueOptions,
   getColumnDataToSave,
-  isSelectable,
-  isColumnDataValid
 } from "./helpers/columnDetails.js";
-import {
-  getUniqueOptionsCurrentColumn,
-  getUniqueOptionsLabelColumn,
-  getExtremaCurrentColumn,
-  getOptionFrequenciesCurrentColumn
-} from "./selectors";
+import { getUniqueOptionsLabelColumn } from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
@@ -681,77 +671,6 @@ export function getPanelButtons(state) {
 
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
-}
-
-/* Functions for filtering and selecting columns by type.  */
-
-export function filterColumnsByType(columnsByDataType, columnType) {
-  return Object.keys(columnsByDataType).filter(
-    column => columnsByDataType[column] === columnType
-  );
-}
-
-function getCategoricalColumns(state) {
-  return filterColumnsByType(state.columnsByDataType, ColumnTypes.CATEGORICAL);
-}
-
-export function getSelectedCategoricalColumns(state) {
-  let intersection = getCategoricalColumns(state).filter(
-    x => state.selectedFeatures.includes(x) || x === state.labelColumn
-  );
-  return intersection;
-}
-
-function getSelectedColumns(state) {
-  return state.selectedFeatures
-    .concat(state.labelColumn)
-    .filter(column => column !== undefined && column !== "")
-    .map(columnId => {
-      return { id: columnId, readOnly: isColumnReadOnly(state, columnId) };
-    });
-}
-
-/* Functions for getting specific details about a batch of columns.  */
-
-export function getSelectedColumnDescriptions(state) {
-  return getSelectedColumns(state).map(column => {
-    return {
-      id: column.id,
-      description: getColumnDescription(state, column.id)
-    };
-  });
-}
-
-/* Functions for retrieving aggregate details about a currently selected column. */
-
-export function getCurrentColumnData(state) {
-  if (!state.currentColumn) {
-    return null;
-  }
-
-  const columnData = {
-    id: state.currentColumn,
-    readOnly: isColumnReadOnly(state, state.currentColumn),
-    dataType: state.columnsByDataType[state.currentColumn],
-    description: getColumnDescription(state, state.currentColumn),
-    isColumnDataValid: isColumnDataValid(state, state.currentColumn),
-    isSelectable: isSelectable(state, state.currentColumn)
-  };
-
-  const isCategorical = columnData.dataType === ColumnTypes.CATEGORICAL;
-  const isNumerical = columnData.dataType === ColumnTypes.NUMERICAL;
-
-  if (isCategorical) {
-    const uniqueOptions = getUniqueOptionsCurrentColumn(state);
-    columnData.uniqueOptions = uniqueOptions;
-    columnData.hasTooManyUniqueOptions = hasTooManyUniqueOptions(
-      uniqueOptions.length
-    );
-    columnData.frequencies = getOptionFrequenciesCurrentColumn(state)
-  } else if (isNumerical) {
-    columnData.extrema = getExtremaCurrentColumn(state);
-  }
-  return columnData;
 }
 
 /* Functions for processing column data for visualizations. */

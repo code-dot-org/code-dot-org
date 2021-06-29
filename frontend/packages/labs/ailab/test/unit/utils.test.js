@@ -2,6 +2,7 @@ import {
   isEmpty,
   getKeyByValue,
   areArraysEqual,
+  arrayIntersection,
   getRandomInt
 } from '../../src/helpers/utils.js';
 
@@ -10,6 +11,8 @@ const menu = {
   lunch: "sushi",
   dinner: "lasagna"
 };
+
+const flavors = ["chocolate", "vanilla", "strawberry"];
 
 describe("isEmpty", () => {
   test("empty", async () => {
@@ -36,8 +39,6 @@ describe("getKeyByValue", () => {
 });
 
 describe("areArraysEqual", () => {
-  const flavors = ["chocolate", "vanilla", "strawberry"];
-
   test("equal", async () => {
     const result = areArraysEqual(flavors, flavors);
     expect(result).toBe(true);
@@ -52,6 +53,20 @@ describe("areArraysEqual", () => {
   test("not equal", async () => {
     const result = areArraysEqual(flavors, []);
     expect(result).toBe(false);
+  });
+});
+
+describe("arrayIntersection", () => {
+  test("element in both", async () => {
+    const berries = ["strawberry", "raspberry"]
+    const result = arrayIntersection(flavors, berries);
+    expect(result).toEqual(["strawberry"]);
+  });
+
+  test("no intersection", async () => {
+    const empty = [];
+    const result = arrayIntersection(flavors, empty);
+    expect(result).toEqual(empty);
   });
 });
 

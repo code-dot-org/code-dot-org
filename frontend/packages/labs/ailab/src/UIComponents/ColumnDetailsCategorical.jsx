@@ -1,8 +1,12 @@
 /* React component to handle showing details of categorical columns. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";
+import {
+  getCategoricalColumnDetails
+} from "../selectors/currentColumnSelectors";
 
 const barData = {
   labels: [],
@@ -33,19 +37,17 @@ const chartOptions = {
   maintainAspectRatio: false
 };
 
-export default class ColumnDetailsCategorical extends Component {
+class ColumnDetailsCategorical extends Component {
   static propTypes = {
-    id: PropTypes.string,
-    uniqueOptions: PropTypes.object,
-    optionFrequencies: PropTypes.object
+    columnDetails: PropTypes.object
   };
 
   render() {
-    const { uniqueOptions, optionFrequencies, id } = this.props;
+    const { id, uniqueOptions, frequencies } = this.props.columnDetails;
 
-    barData.labels = Object.values(uniqueOptions);
+    barData.labels = uniqueOptions && Object.values(uniqueOptions);
     barData.datasets[0].data = barData.labels.map(option => {
-      return optionFrequencies[option];
+      return frequencies[option];
     });
     barData.datasets[0].label = id;
 
@@ -54,7 +56,6 @@ export default class ColumnDetailsCategorical extends Component {
     return (
       <div>
         <div style={styles.bold}>Column information:</div>
-
         <div style={styles.barChart}>
           {barData.labels.length <= maxLabelsInHistogram && (
             <Bar
@@ -75,4 +76,10 @@ export default class ColumnDetailsCategorical extends Component {
       </div>
     );
   }
-};
+}
+
+export default connect(
+  state => ({
+    columnDetails: getCategoricalColumnDetails(state)
+  })
+)(ColumnDetailsCategorical);
