@@ -265,7 +265,6 @@ ActiveRecord::Schema.define(version: 2021_06_29_133900) do
   end
 
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
-    t.integer "storage_id", null: false
     t.integer "storage_app_id", null: false
     t.string "project_version", null: false
     t.integer "commenter_id", null: false
@@ -277,7 +276,7 @@ ActiveRecord::Schema.define(version: 2021_06_29_133900) do
     t.timestamp "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_id", "storage_app_id", "project_version"], name: "index_code_review_comments_on_project_identifier_and_version"
+    t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
   end
 
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

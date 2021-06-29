@@ -3,7 +3,6 @@
 # Table name: code_review_comments
 #
 #  id               :bigint           not null, primary key
-#  storage_id       :integer          not null
 #  storage_app_id   :integer          not null
 #  project_version  :string(255)      not null
 #  commenter_id     :integer          not null
@@ -18,7 +17,7 @@
 #
 # Indexes
 #
-#  index_code_review_comments_on_project_identifier_and_version  (storage_id,storage_app_id,project_version)
+#  index_code_review_comments_on_storage_app_id_and_version  (storage_app_id,project_version)
 #
 class CodeReviewComment < ApplicationRecord
   acts_as_paranoid

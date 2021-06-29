@@ -12,8 +12,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
   test 'can create CodeReviewComment' do
     post :create, params: {
-      storage_id: 1,
-      storage_app_id: 2,
+      storage_app_id: 1,
       project_version: 'a_project_version_string',
       commenter_id: @pilot_teacher.id,
       comment: 'a comment'
@@ -37,8 +36,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
   test 'can get all comments for a given project and version' do
     project_identifiers = {
-      storage_id: 1234,
-      storage_app_id: 5678,
+      storage_app_id: 1234,
       project_version: 'test_get_project_comments_string'
     }
 
