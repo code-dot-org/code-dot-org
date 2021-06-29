@@ -16,7 +16,7 @@ describe('StandardsReport', () => {
       teacherName: 'Awesome Teacher',
       sectionName: 'Great Section',
       teacherComment: null,
-      scriptDescription: 'This script teaches things',
+      unitDescription: 'This script teaches things',
       numStudentsInSection: 15,
       numLessonsCompleted: 5,
       numLessonsInUnit: 10,

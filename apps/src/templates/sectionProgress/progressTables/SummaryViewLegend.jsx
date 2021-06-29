@@ -28,6 +28,11 @@ export default class SummaryViewLegend extends Component {
               )}
             </tr>
             <tr>
+              <th style={styles.th}>
+                {i18n.progress()}
+                <br />
+                {i18n.notApplicable()}
+              </th>
               <th style={styles.th}>{i18n.notStarted()}</th>
               <th style={styles.th}>{i18n.inProgress()}</th>
               <th style={styles.th}>
@@ -50,6 +55,7 @@ export default class SummaryViewLegend extends Component {
           </thead>
           <tbody>
             <tr>
+              <td style={styles.td}>—</td>
               <td style={styles.td}>
                 <ProgressBox
                   style={styles.boxStyle}
@@ -127,7 +133,8 @@ const styles = {
   },
   td: {
     border: `1px solid ${color.lightest_gray}`,
-    padding: 15
+    padding: 15,
+    textAlign: 'center'
   },
   boxStyle: {
     margin: '0 auto'

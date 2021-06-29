@@ -14,9 +14,9 @@ import teacherSections, {
   setRosterProvider,
   setValidAssignments,
   setValidGrades,
-  setTextToSpeechScriptIds,
-  setPreReaderScriptIds,
-  setLessonExtrasScriptIds,
+  setTextToSpeechUnitIds,
+  setPreReaderUnitIds,
+  setLessonExtrasUnitIds,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
@@ -49,9 +49,9 @@ const {
   currentUserId,
   hasSeenStandardsReportInfo,
   localeCode,
-  textToSpeechScriptIds,
-  preReaderScriptIds,
-  lessonExtrasScriptIds,
+  textToSpeechUnitIds,
+  preReaderUnitIds,
+  lessonExtrasUnitIds,
   showSectionProgressDetails
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -85,9 +85,9 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setLessonExtrasScriptIds(lessonExtrasScriptIds));
-  store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
-  store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
+  store.dispatch(setLessonExtrasUnitIds(lessonExtrasUnitIds));
+  store.dispatch(setTextToSpeechUnitIds(textToSpeechUnitIds));
+  store.dispatch(setPreReaderUnitIds(preReaderUnitIds));
   store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
 
   // DCDO Flag - show/hide Lock Section field

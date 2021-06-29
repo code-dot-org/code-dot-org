@@ -2,7 +2,6 @@
   "script": {
     "name": "csp-novice-18",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,

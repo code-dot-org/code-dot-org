@@ -38,7 +38,7 @@ def update_script_ids
           level = teacher_feedback.level
           # if the level appears in only one stable script, set its script id to
           # point to that script.
-          stable_scripts = level.script_levels.map(&:script).select(&:is_stable)
+          stable_scripts = level.script_levels.map(&:script).select(&:stable?)
           if stable_scripts.count == 1
             script = stable_scripts.first
             teacher_feedback.update!(script_id: script.id)

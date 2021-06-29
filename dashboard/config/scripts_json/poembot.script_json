@@ -2,7 +2,6 @@
   "script": {
     "name": "poembot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "is_migrated": true

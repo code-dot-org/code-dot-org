@@ -7,23 +7,10 @@ import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {connect} from 'react-redux';
 
-// Give all of our TDs a padding
-const TD = ({style, ...props}) => (
-  <td
-    style={{
-      ...styles.tdStyle,
-      ...style
-    }}
-    {...props}
-  />
-);
-TD.propTypes = {
-  style: PropTypes.object
-};
-
 class ProgressLegend extends Component {
   static propTypes = {
     excludeCsfColumn: PropTypes.bool.isRequired,
+    includeProgressNotApplicable: PropTypes.bool,
     // Redux
     isRtl: PropTypes.bool
   };
@@ -51,6 +38,13 @@ class ProgressLegend extends Component {
           </tr>
           <tr style={styles.secondRow}>
             <TD colSpan={4} />
+            {this.props.includeProgressNotApplicable && (
+              <TD>
+                {i18n.progress()}
+                <br />
+                {i18n.notApplicable()}
+              </TD>
+            )}
             <TD>{i18n.notStarted()}</TD>
             <TD>{i18n.inProgress()}</TD>
             {!excludeCsfColumn && (
@@ -89,6 +83,11 @@ class ProgressLegend extends Component {
                 {i18n.map()}
               </div>
             </TD>
+            {this.props.includeProgressNotApplicable && (
+              <TD>
+                <div style={styles.center}>—</div>
+              </TD>
+            )}
             <TD>
               <div style={styles.center}>
                 <ProgressBubble
@@ -168,6 +167,11 @@ class ProgressLegend extends Component {
                 {i18n.choiceLevel()}
               </div>
             </TD>
+            {this.props.includeProgressNotApplicable && (
+              <TD rowSpan={secondRowRowSpan}>
+                <div style={styles.center}>—</div>
+              </TD>
+            )}
             <TD rowSpan={secondRowRowSpan}>
               <div style={styles.center}>
                 <ProgressBubble
@@ -325,6 +329,20 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center'
   }
+};
+
+// Give all of our TDs a padding
+const TD = ({style, ...props}) => (
+  <td
+    style={{
+      ...styles.tdStyle,
+      ...style
+    }}
+    {...props}
+  />
+);
+TD.propTypes = {
+  style: PropTypes.object
 };
 
 export const UnconnectedProgressLegend = ProgressLegend;

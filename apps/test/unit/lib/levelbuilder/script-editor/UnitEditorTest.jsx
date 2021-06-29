@@ -67,7 +67,7 @@ describe('UnitEditor', () => {
       isLevelbuilder: true,
       locales: [],
       name: 'test-unit',
-      scriptFamilies: [],
+      unitFamilies: [],
       teacherResources: [],
       versionYearOptions: [],
       initialFamilyName: '',

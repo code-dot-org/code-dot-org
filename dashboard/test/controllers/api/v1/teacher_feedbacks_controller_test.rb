@@ -239,12 +239,15 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     section2 = create :section, user: teacher2
     section2.add_student(@student)
 
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_out @teacher
-    teacher_sign_in_and_give_feedback(teacher2, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
-    sign_out teacher2
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT3, PERFORMANCE3)
-    sign_out @teacher
+    create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT1, performance: PERFORMANCE1
+
+    feedback2 = create :teacher_feedback, teacher: teacher2, student: @student, script: @script_level.script, level: @level, comment: COMMENT2, performance: PERFORMANCE2
+    feedback2.created_at = feedback2.created_at + 1
+    feedback2.save validate: false
+
+    feedback3 = create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT3, performance: PERFORMANCE3
+    feedback3.created_at = feedback3.created_at + 2
+    feedback3.save validate: false
 
     sign_in @student
     get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}

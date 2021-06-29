@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewScriptForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewScriptForm';
+import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
 
 $(document).ready(() => {
-  ReactDOM.render(<NewScriptForm />, document.getElementById('form'));
+  ReactDOM.render(<NewUnitForm />, document.getElementById('form'));
 });

@@ -2,7 +2,6 @@
   "script": {
     "name": "csp9-2020",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSP",
@@ -22,7 +21,6 @@
           "https://curriculum.code.org/csp-20/unit9/standards/"
         ]
       ],
-      "is_stable": true,
       "script_announcements": [
         {
           "notice": "",

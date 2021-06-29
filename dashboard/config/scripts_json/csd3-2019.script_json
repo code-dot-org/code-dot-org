@@ -2,7 +2,6 @@
   "script": {
     "name": "csd3-2019",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -38,7 +37,6 @@
       "has_lesson_plan": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
       "family_name": "csd3",
       "script_announcements": [

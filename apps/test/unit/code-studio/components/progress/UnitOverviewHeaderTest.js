@@ -18,10 +18,10 @@ const defaultProps = {
   hasVerifiedResources: false,
   scriptId: 99,
   scriptName: 'course1',
-  scriptTitle: 'Course One',
-  scriptDescription:
+  unitTitle: 'Course One',
+  unitDescription:
     '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-  scriptStudentDescription:
+  unitStudentDescription:
     '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
   versions: []
 };

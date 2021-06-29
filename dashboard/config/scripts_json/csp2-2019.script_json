@@ -2,7 +2,6 @@
   "script": {
     "name": "csp2-2019",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -35,7 +34,6 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit2/{LESSON}",
       "curriculum_umbrella": "CSP",
-      "is_stable": true,
       "family_name": "csp2",
       "hideable_lessons": true
     },

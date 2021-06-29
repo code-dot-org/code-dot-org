@@ -11,7 +11,7 @@
         "isVisible": true
       },
       "MyFoodTruck.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyFoodTruck {\n  public static void main(String[] args) {\n    \n    // To Do: Create a Scanner object\n\n\n\n    // To Do: Get user input for the flavor, quantity, and price\n\n\n\n    // To Do: Create a Dessert object with the user input\n    \n    \n    cake.printInfo();  \n  }\n}",
+        "text": "import java.util.Scanner;\n\npublic class MyFoodTruck {\n  public static void main(String[] args) {\n    \n    // To Do: Create a Scanner object\n\n\n\n    // To Do: Get user input for the flavor, quantity, and price\n\n\n\n    // To Do: Create a Dessert object with the user input\n    \n    \n    cake.printInfo();\n\n    // To Do: Close the Scanner object.\n\n    \n  }\n}",
         "isVisible": true
       }
     }
@@ -21,6 +21,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-15 18:34:44 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:35:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:45:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:47:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-15 18:34:44 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:35:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:45:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:47:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 15:58:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

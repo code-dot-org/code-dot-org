@@ -1,0 +1,9 @@
+name 'ml-class test-app lab choice parent'
+display_name 'Customize Your App'
+
+sublevels
+level 'ml-class test-app lab choice-1'
+level 'ml-class test-app lab choice-2'
+level 'ml-class test-app lab choice-3'
+level 'ml-class test-app lab choice-4'
+level 'ml-class test-app lab choice-5'

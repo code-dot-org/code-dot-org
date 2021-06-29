@@ -3,6 +3,11 @@ function spriteSay(sprite,speech){
   setProp(sprite, "timeout", 120);
 }
 
+function spriteSayChoices(sprite,speech){
+  setProp(sprite, "speech", speech);
+  setProp(sprite, "timeout", 120);
+}
+
 function spriteSayTime(sprite,speech,time){
   setProp(sprite, "speech", speech);
   setProp(sprite, "timeout", time*30);
@@ -20,6 +25,7 @@ function speechBubbles(){
     var spriteTimeout=getProp({id: spriteIds[i]}, "timeout");
 
     if(spriteTimeout&&spriteSpeech!=undefined){
+      push();
       var widthOfText=textWidth(spriteSpeech);
       var textHeight=16;//font size
       
@@ -124,6 +130,7 @@ function speechBubbles(){
 
       text(spriteSpeech,rectX+(boxWidth)/2,rectY+2.5);
       changePropBy({id: spriteIds[i]}, "timeout", -1);
+      pop();
     }
   }
 

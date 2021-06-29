@@ -44,11 +44,11 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_LESSON_EXTRAS_SCRIPT_IDS =
-  'teacherDashboard/SET_LESSON_EXTRAS_SCRIPT_IDS';
-const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
-  'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
-const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
+const SET_LESSON_EXTRAS_UNIT_IDS =
+  'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
+const SET_TEXT_TO_SPEECH_UNIT_IDS =
+  'teacherDashboard/SET_TEXT_TO_SPEECH_UNIT_IDS';
+const SET_PREREADER_UNIT_IDS = 'teacherDashboard/SET_PREREADER_UNIT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -109,16 +109,16 @@ export const __testInterface__ = {
 // Action Creators
 //
 export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
-export const setLessonExtrasScriptIds = ids => ({
-  type: SET_LESSON_EXTRAS_SCRIPT_IDS,
+export const setLessonExtrasUnitIds = ids => ({
+  type: SET_LESSON_EXTRAS_UNIT_IDS,
   ids
 });
-export const setTextToSpeechScriptIds = ids => ({
-  type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
+export const setTextToSpeechUnitIds = ids => ({
+  type: SET_TEXT_TO_SPEECH_UNIT_IDS,
   ids
 });
-export const setPreReaderScriptIds = ids => ({
-  type: SET_PREREADER_SCRIPT_IDS,
+export const setPreReaderUnitIds = ids => ({
+  type: SET_PREREADER_UNIT_IDS,
   ids
 });
 export const setAuthProviders = providers => ({
@@ -233,7 +233,7 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  */
 export const unassignSection = sectionId => (dispatch, getState) => {
   dispatch(beginEditingSection(sectionId, true));
-  const {initialCourseId, initialScriptId} = getState().teacherSections;
+  const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
   firehoseClient.putRecord(
     {
@@ -242,7 +242,7 @@ export const unassignSection = sectionId => (dispatch, getState) => {
       data_json: JSON.stringify(
         {
           sectionId,
-          scriptId: initialScriptId,
+          scriptId: initialUnitId,
           courseId: initialCourseId,
           date: new Date()
         },
@@ -523,9 +523,9 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
-  lessonExtrasScriptIds: [],
-  textToSpeechScriptIds: [],
-  preReaderScriptIds: [],
+  lessonExtrasUnitIds: [],
+  textToSpeechUnitIds: [],
+  preReaderUnitIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -606,24 +606,24 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === SET_LESSON_EXTRAS_SCRIPT_IDS) {
+  if (action.type === SET_LESSON_EXTRAS_UNIT_IDS) {
     return {
       ...state,
-      lessonExtrasScriptIds: action.ids
+      lessonExtrasUnitIds: action.ids
     };
   }
 
-  if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+  if (action.type === SET_TEXT_TO_SPEECH_UNIT_IDS) {
     return {
       ...state,
-      textToSpeechScriptIds: action.ids
+      textToSpeechUnitIds: action.ids
     };
   }
 
-  if (action.type === SET_PREREADER_SCRIPT_IDS) {
+  if (action.type === SET_PREREADER_UNIT_IDS) {
     return {
       ...state,
-      preReaderScriptIds: action.ids
+      preReaderUnitIds: action.ids
     };
   }
 
@@ -645,7 +645,7 @@ export default function teacherSections(state = initialState, action) {
     const validAssignments = {};
     const assignmentFamilies = [];
 
-    // Array of assignment ids of scripts which belong to any valid courses.
+    // Array of assignment ids of units which belong to any valid courses.
     let secondaryAssignmentIds = [];
 
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
@@ -673,38 +673,37 @@ export default function teacherSections(state = initialState, action) {
     });
     secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
 
-    action.validScripts.forEach(script => {
-      const assignId = assignmentId(null, script.id);
+    action.validScripts.forEach(unit => {
+      const assignId = assignmentId(null, unit.id);
 
-      // Put each script in its own assignment family with the default version
+      // Put each unit in its own assignment family with the default version
       // year, unless those values were provided by the server.
       const assignmentFamilyName =
-        script.assignment_family_name || script.script_name;
-      const assignmentFamilyTitle =
-        script.assignment_family_title || script.name;
-      const versionYear = script.version_year || defaultVersionYear;
-      const versionTitle = script.version_title || defaultVersionYear;
+        unit.assignment_family_name || unit.script_name;
+      const assignmentFamilyTitle = unit.assignment_family_title || unit.name;
+      const versionYear = unit.version_year || defaultVersionYear;
+      const versionTitle = unit.version_title || defaultVersionYear;
 
       validAssignments[assignId] = {
-        ...script,
+        ...unit,
         courseId: null,
-        scriptId: script.id,
+        scriptId: unit.id,
         assignId,
-        path: `/s/${script.script_name}`,
+        path: `/s/${unit.script_name}`,
         assignment_family_name: assignmentFamilyName,
         version_year: versionYear,
         version_title: versionTitle
       };
 
-      // Do not add assignment families for scripts belonging to courses. To assign
+      // Do not add assignment families for units belonging to courses. To assign
       // them, one must first select the corresponding course from the assignment
-      // family dropdown, and then select the script from the secondary dropdown.
+      // family dropdown, and then select the unit from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Use the assignment family fields from the script in that family with
+        // Use the assignment family fields from the unit in that family with
         // the default version year, 2017.
         if (versionYear === defaultVersionYear) {
           assignmentFamilies.push({
-            ..._.pick(script, assignmentFamilyFields),
+            ..._.pick(unit, assignmentFamilyFields),
             assignment_family_title: assignmentFamilyTitle,
             assignment_family_name: assignmentFamilyName
           });
@@ -742,7 +741,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage, script overview)
+      // in a way that only provides name/id per section, in other places (homepage, unit overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -830,7 +829,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
-      initialScriptId: initialSectionData.scriptId,
+      initialUnitId: initialSectionData.scriptId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
@@ -854,15 +853,15 @@ export default function teacherSections(state = initialState, action) {
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
-      // TODO: enable autoplay by default if script is a pre-reader script
+      // TODO: enable autoplay by default if unit is a pre-reader unit
       // and teacher is on IE, Edge or Chrome after initial release
       // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
-      //   state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
-      const script =
+      //   state.preReaderUnitIds.indexOf(action.props.scriptId) > -1;
+      const unit =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
-      if (script) {
+      if (unit) {
         lessonExtraSettings.lessonExtras =
-          script.lesson_extras_available || defaultLessonExtras;
+          unit.lesson_extras_available || defaultLessonExtras;
       }
     }
 
@@ -928,7 +927,7 @@ export default function teacherSections(state = initialState, action) {
       section_creation_timestamp: section.createdAt,
       page_name: state.pageType
     };
-    if (section.scriptId !== state.initialScriptId) {
+    if (section.scriptId !== state.initialUnitId) {
       assignmentData.script_id = section.scriptId;
     }
     if (section.courseId !== state.initialCourseId) {
@@ -1110,7 +1109,7 @@ export function isSaveInProgress(state) {
   return getRoot(state).saveInProgress;
 }
 
-export function assignedScriptName(state) {
+export function assignedUnitName(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
@@ -1228,18 +1227,18 @@ const assignmentsForSection = (validAssignments, section) => {
 };
 
 /**
- * Get the name of the course/script assigned to the given section
+ * Get the name of the course/unit assigned to the given section
  * @returns {string[]}
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   // we might not have an assignment object if we have a section that was somehow
-  // assigned to a hidden script (and we dont have permissions to see hidden scripts)
+  // assigned to a hidden unit (and we dont have permissions to see hidden units)
   return assignments.map(assignment => (assignment ? assignment.name : ''));
 };
 
 /**
- * Get the path of the course/script assigned to the given section
+ * Get the path of the course/unit assigned to the given section
  * @returns {string[]}
  */
 export const assignmentPaths = (validAssignments, section) => {
@@ -1248,12 +1247,12 @@ export const assignmentPaths = (validAssignments, section) => {
 };
 
 /**
- * Is the given script ID a CSF course? `script.rb` owns the list.
+ * Is the given unit ID a CSF course? `script.rb` owns the list.
  * @param state
  * @param id
  */
 export const lessonExtrasAvailable = (state, id) =>
-  state.teacherSections.lessonExtrasScriptIds.indexOf(id) > -1;
+  state.teacherSections.lessonExtrasUnitIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
