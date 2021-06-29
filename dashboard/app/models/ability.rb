@@ -56,7 +56,8 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :javabuilder_session
+      :javabuilder_session,
+      CodeReviewComment
     ]
     cannot :index, Level
 
