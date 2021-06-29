@@ -1381,7 +1381,9 @@ FactoryGirl.define do
 
   factory :code_review_comment do
     association :commenter, factory: :teacher
-    association :channel_token
+
+    storage_id 1
+    storage_app_id 2
     project_version 'a_project_version_string'
     comment 'a comment about your project'
   end
