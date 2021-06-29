@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_222109) do
+ActiveRecord::Schema.define(version: 2021_06_24_200622) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -262,6 +262,21 @@ ActiveRecord::Schema.define(version: 2021_06_23_222109) do
     t.datetime "voided_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "channel_token_id", null: false
+    t.string "project_version", null: false
+    t.integer "commenter_id", null: false
+    t.text "comment", limit: 16777215
+    t.integer "project_owner_id"
+    t.integer "section_id"
+    t.boolean "is_from_teacher"
+    t.boolean "is_resolved"
+    t.timestamp "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["channel_token_id", "project_version"], name: "index_code_review_comments_on_project_id_and_version"
   end
 
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1506,7 +1521,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_222109) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
-    t.string "published_state", default: "beta", null: false
+    t.string "published_state", default: "in_development", null: false
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
@@ -1729,7 +1744,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_222109) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "published_state", default: "beta", null: false
+    t.string "published_state", default: "in_development", null: false
     t.index ["name"], name: "index_unit_groups_on_name"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end

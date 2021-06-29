@@ -14,7 +14,7 @@ social:
 ---
 <link href="/css/marketing.css" rel="stylesheet" />
 
-# Code.org 2021 Annual Report
+# Code.org 2020 Annual Report
 
 [<button>View PDF of this report</button>](/files/Code.org-Annual-Report-2019.pdf)
 <p><em>PDF needs to be updated</em></p>
@@ -158,3 +158,36 @@ An Hour of Code activity organized by our Turkish partner Robin Code. <a href="h
 </table>
 
 <h2 class="purple-block">Finances</h2>
+
+For calendar year 2020 our total expenses were approximately $20 million. The chart below paints a general picture of how this money was spent.
+
+<p class="centerspot"><img src="/images/AR2020/fit-580/finances2020.png"></p>
+
+
+The table below shows the total cost breakdown of our headline achievements since founding.
+
+| Areas of effort / Achievements in 2013 - 2020                                                                                                                                                                                           | Fully-loaded cost (including admin) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------- |
+| **Diversity and Global Marketing:** Hour of Code campaign, 900M served, reaching 20% of students globally. 49% female participation.                                                                       | $16.1 million                       |
+| **Curriculum + Code Studio learning platform:** ~330 hours of coursework created, 1M teacher accounts. 46 million student accounts. 45% female, 50% underrepresented minorities.                                                       | $35.6 million                       |
+| **Partnership + professional learning:**  60 [regional partners](/educate/regional-partner) and almost 615 facilitators who have prepared over 106,000 new CS teachers across grades K-12. ($15.8M spent on grades K-5, $42.3M on grades 6-12.)| $66.5 million                      |
+| **Government affairs:** Policies changed in 50 states, $150M in state budgets allocated to computer science.                                                                                                                          | $10.9 million |
+| **International:** Translation of curriculum into 67 languages, support for 104 international partnerships.                                                                                                                             | $5.2 million |                         |
+| TOTAL SPENT (2013-2020)                                                                                                                                                                                                                 | $134.3 million                       |
+
+## Other reports
+
+* See recent [Code.org Statistics](/statistics)
+* See the [2019 Annual Report](/about/2019)
+* See the [2018 Annual Report](/about/2018)
+* See the [2017 Annual Report](/about/2017) 
+* See the [2016 Annual Report](/about/2016) and [2015-16 Code.org Evaluation Report](/files/EvaluationReport2015-16.pdf)
+* See the [2015 Annual Report](/about/2015) and [2014-15 Evaluation Report](/about/evaluation)
+* See the [2014 Annual Report](/about/2014)
+
+
+
+## Our generous donors
+
+<%= view :donors %>
+
