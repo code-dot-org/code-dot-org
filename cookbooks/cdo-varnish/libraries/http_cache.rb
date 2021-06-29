@@ -19,13 +19,13 @@ class HttpCache
 
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script, because they are project-backed.
-  UNCACHED_SCRIPT_LEVEL_PATHS = [
+  UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.
-  CACHED_SCRIPTS_MAP = %w(
+  CACHED_UNITS_MAP = %w(
     aquatic
     starwars
     starwarsblocks
@@ -49,7 +49,7 @@ class HttpCache
   ).freeze
 
   def self.cached_scripts
-    CACHED_SCRIPTS_MAP.keys
+    CACHED_UNITS_MAP.keys
   end
 
   ALLOWED_WEB_REQUEST_HEADERS = %w(
@@ -203,14 +203,14 @@ class HttpCache
           # Some script levels in cacheable scripts are project-backed and
           # should not be cached in CloudFront. Use CloudFront Behavior
           # precedence rules to not cache these paths, but all paths in
-          # CACHED_SCRIPTS_MAP that don't match this path will be cached.
+          # CACHED_UNITS_MAP that don't match this path will be cached.
           {
-            path: UNCACHED_SCRIPT_LEVEL_PATHS,
+            path: UNCACHED_UNIT_LEVEL_PATHS,
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
           {
-            path: CACHED_SCRIPTS_MAP.values,
+            path: CACHED_UNITS_MAP.values,
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
           },
@@ -270,11 +270,11 @@ class HttpCache
   end
 
   def self.uncached_script_level_path?(script_level_path)
-    UNCACHED_SCRIPT_LEVEL_PATHS.include?(script_level_path)
+    UNCACHED_UNIT_LEVEL_PATHS.include?(script_level_path)
   end
 
   # Return true if the levels for the given script name can be publicly cached by proxies.
   def self.allows_public_caching_for_script(script_name)
-    CACHED_SCRIPTS_MAP.include?(script_name)
+    CACHED_UNITS_MAP.include?(script_name)
   end
 end

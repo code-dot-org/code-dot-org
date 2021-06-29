@@ -2,18 +2,25 @@ name 'OPD-K5-PartIIOutline-2021'
 title 'Sequencing Introduced'
 description 'description here'
 markdown <<MARKDOWN
-# Part II:  CS Concepts in Courses A - F
-**Suggested Total Time: 4 - 6 hours**
+# Part II:  Concepts in Courses A - F
 
-Below is an outline of the lessons included in Part II. Approximate times for each lesson are provided. However, feel free to start and stop at your own pace and take more or less time to meet your learning needs.
+Below is an outline of the lessons included in Part II:  Concepts in Courses A - F. 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 6: Part II Overview** </a>(20 minutes)
+We suggest planning 20 - 25 minutes to complete lesson 7 through 15 in Part II. However, feel free to start and stop at your own pace and take more or less time as needed.
 
-This overview is part of Lesson 6 which you are in. 
+**Suggested Total Time: 3 - 4 hours**
 
-## Navigating this Course
+## Navigating Lessons in Part II
 
-### **Option A:** Use the table below to go through lessons for a particular course you plan on teaching.
+You can go through lessons in Part II using one of two options: 
+
+* **Option A** is best if you are limited on time and definitely know which course you will teach.
+
+* **Option B** is best if you are not limited on time, teach multiple grades, or do not know which course you will teach.
+
+
+## Option A
+Use the table below to know which lessons and computer science concepts are part of the course you plan to teach.  For example, if you plan on teaching Course E, then click on Lesson 8:  Sequencing with Sprites listed in the table and continue on with Lessons 9, 11, 12, and 15.  
 
 <table style="width:100%; border-style:none;">
   <tr>
@@ -83,8 +90,9 @@ This overview is part of Lesson 6 which you are in.
       <ul style="font-style:italic;">
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >Lesson 8: Sequencing with Sprites </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >Lesson 9: Loops </a></li>
+         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >Lesson 12: Functions  </a></li>
-        <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >Lesson 11: Conditionals </a></li>
+       
         <li><a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >Lesson 15: End of Course Projects</a> </li>
       </ul>
     </td>
@@ -99,25 +107,31 @@ This overview is part of Lesson 6 which you are in.
 </table>
 <br/>
 
-### **Option B:** Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.
+## Option B 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" >**Lesson 7: Sequencing** </a> (20 minutes)
+Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to begin with Lesson 7:  Sequencing and continue on until you complete all lessons in Part II.
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >**Lesson 8: Sequencing with Sprites** </a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 6: Part II Overview** </a>
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >**Lesson 9: Loops** </a> (20 minutes)
+This overview is part of Lesson 6, the lesson in which you are currently working in.
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >**Lesson 10: Events**</a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" >**Lesson 7: Sequencing** </a> 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >**Lesson 11: Conditionals** </a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >**Lesson 8: Sequencing with Sprites** </a> 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >**Lesson 12: Functions**  </a>(20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >**Lesson 9: Loops** </a> 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/13/levels/1" target="blank" >**Lesson 13: Variables**</a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >**Lesson 10: Events**</a> 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/14/levels/1" target="blank" >**Lesson 14: For Loops**</a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >**Lesson 11: Conditionals** </a> 
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 15: End of Course Projects** </a> (20 minutes)
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >**Lesson 12: Functions**  </a>
 
-<a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >**Click here to access Part III: Next Steps.** </a>
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/13/levels/1" target="blank" >**Lesson 13: Variables**</a> 
+
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/14/levels/1" target="blank" >**Lesson 14: For Loops**</a> 
+
+#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 15: End of Course Projects** </a> 
+
+##### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >Click here to access Part III: Next Steps.</a>
 MARKDOWN

@@ -8,18 +8,18 @@ const buttonStyle = {
   marginBottom: 20
 };
 
-export default function NewScriptForm() {
+export default function NewUnitForm() {
   return (
     <form action="/s" method="post">
       <RailsAuthenticityToken />
       <label>
-        Script Slug
+        Unit Slug
         <HelpTip>
           <p>
-            The script slug is used to create the link to the script. It is in
-            the format of studio.code.org/s/script-slug-here. A script slug can
-            only contain lowercase letters, numbers and dashes. Once you set the
-            slug it can not be updated.
+            The unit slug is used to create the link to the unit. It is in the
+            format of studio.code.org/s/unit-slug-here. A unit slug can only
+            contain lowercase letters, numbers and dashes. Once you set the slug
+            it can not be updated.
           </p>
         </HelpTip>
       </label>

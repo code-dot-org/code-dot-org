@@ -1,13 +1,13 @@
 name 'OPD-K5 CSTeachingLearning1'
 skip_dialog true
 markdown <<MARKDOWN
-# CS Teaching Practices
+# Teaching Practices
 
-The curriculum is designed to help you incrporate the following CS teaching practices focused on inclusion during any Computer Science Fundamentals lessons.
+The following teaching practices focus on inclusion for any Computer Science Fundamentals lesson and stem from Code.org's <a href="https://code.org/educate/curriculum/values" target="blank" rel="noopener noreferrer">Curriculum values</a>. 
 
 <img src="https://images.code.org/44e2eb0f1b35d6922bb0fbc98fecbabc-image-1622756073372.png" class="level-image">
 
-The CS teaching practices stem from Code.org's <a href="https://code.org/educate/curriculum/values" target="blank" rel="noopener noreferrer">Curriculum values</a>. 
+
 
 ## Role of the Teacher (Lead Learner)
 #### You can practice acting as the lead learner with this motto, “I may not know the answer, but I know that together we can figure it out.”

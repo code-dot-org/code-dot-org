@@ -1,28 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "Run the code. What error do you get?\r\n\r\nChange line 16 in `Dessert.java` to `quantity = quantity - 1;`\r\n\r\nDo you still get the error?",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "start_sources": {
-      "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert cake = new Dessert(-2);\n    cake.eat();\n  }\n}",
-        "isVisible": true
-      },
-      "Dessert.java": {
-        "text": "public class Dessert {\n  private int quantity;\n\n  public Dessert(int newQty) {\n    boolean isValid = (newQty >= 0);\n\n    if (!isValid) {\n      quantity = 1;\n    }\n    else {\n      quantity = newQty;\n    }\n  }\n\n  public void eat() {\n    quantity = quantity - 1;\n  }\n}",
-        "isVisible": true
-      }
-    },
-    "parent_level_id": 28446
-  },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-06-16T17:07:02.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 17:06:36 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 17:07:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 17:07:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 17:06:36 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 17:07:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-16 17:07:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:22:01 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "gryN+UMIil/IryToWJ6erMuVxmmq/u8eNt7NnmaOnMexO5/yPvdsjFBt4SZz\nvSaxLHEnZPIyiUX9fIXjMleU/2ZwqIttVJinhsxqnjeO2ennfI/+dKXNm8+p\nXwIt2g5xHH5jPAobWspKZ0TtJLsWfFcVKNnv4YexULYlHEgVWfQc0COsHHDy\nf4tQjLibbEJU8m+dxljG9A3q8OOMkwQboNFrNFfof8BZteQRmma5jLVeobGY\nkIfgfW5ldlIzgYNOHLdpuXGZ63Sq/BbfTPSM7YY0wA/TkR2UGLGwFTFyOJm8\nVfrlMF0dTd9RfUvGVbZY7PaPpdPwtNdj/WbNLcczMEo6lo2DJ0a9fau8kPwe\naF1JvBTqFqjGGsLOlE62cRN1VuuxomkvaUjZ93tF4Py+NXLM+p0sb1oHnrzv\nU4cB0+9Zp8XtfcdLy/ifurEgPkmxQnCIhaWVpddCyWjFHyd3B7obrG0TNEKO\nBI0w+RV4ZEzf18rgIHu7P0KQA/B3ZiSEstB6PPkrhO/Q5SOoEqGWAp8R7YaO\nXV2boE8bYoh1/FA5TV7rtYhyx5DiScfpFN0Tc7hNKjY/9ryzQrynmSC59WZo\nriKaN74EWJM0HemEhKsBBxIyBJta2MMmUgaqaotLRzEdECCX6CllyFqYOqZ1\nWDVrGd6l3VhFov92+aCiQlSC4jMVl/S2m4/vL03rtWhJ+/B7cufwGmDNYyWE\nquKqvN57A0TFl+Iq76dGRApd2c1gXe39JpXYMLdx8XdUoywq6fDieEEsQYb8\nspvPwFmx6R0STiTbLrPu6jpj+/Ni1l2ygVv/W7xHuPDCTzDKDXjaIu16wTom\nMqcry+1ljV0QE4efsgFNrgXutL7XpJgn0aD26wkhckegeePwvT/f50M1KaQn\ny7mDXh+S3vvBGJenHAd3VarpYt2qVahHWxmpVcAMsE0X/0+Ztd88UGfyldOc\nxY7jMN+qOUpcklwg9ak5yQWIvU147Nfr0hAPYJMwLkSkhKrllneW/s5nVZLV\njlYKJO3Bf+js+aCgCMdOpOs8A8wHVeQwrp8tnxZh9O29THAT3//Ux3c3H9N8\nD1HEBQkwa/cxXe9atPGkxQwUcNO4QfMyvgSQWEuif4yMpeEY7xYsp8eaS2oq\nsu1T0d4n1RKycwC7wUHnie++QZpKlROqeA==\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

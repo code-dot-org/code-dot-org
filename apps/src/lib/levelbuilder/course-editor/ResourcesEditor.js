@@ -84,9 +84,9 @@ export default class ResourcesEditor extends Component {
     if (useMigratedResources && !this.props.courseVersionId) {
       return (
         <strong>
-          Cannot add resources to migrated script without course version. A
-          script must belong to a course or have 'Is a Standalone Course'
-          checked to have a course version.
+          Cannot add resources to migrated unit without course version. A unit
+          must belong to a course or have 'Is a Standalone Unit' checked to have
+          a course version.
         </strong>
       );
     }

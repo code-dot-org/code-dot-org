@@ -1,0 +1,42 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Hi
+  = @enrollment.first_name + ','
+
+%p
+  Your virtual summer workshop is 4-weeks away!
+  = @workshop.organizer.name
+  is looking forward to welcoming you to the
+  = @workshop.course
+  Professional Learning Program beginning
+  = @workshop.sessions.first.start_date_us_format + "."
+
+%p
+  Code.org would like to ship workshop materials directly to you
+  at an address that’s most convenient. Please complete the form below
+  this week to ensure they arrive in advance of your workshop!
+
+%p
+  Things to note:
+  %ul
+    %li
+      Your order will arrive via FedEx approximately 3-weeks from when you press submit.
+    %li
+      If you submit the form less than 3-weeks prior to your workshop, don’t worry!
+      Digital versions are available for you to reference during your workshop.
+    %li
+      The materials are available at no cost to you and include the Code.org curriculum guide and swag.
+
+%p
+  = link_to 'Click here', 'https://studio.code.org/form/virtual_order_form'
+  (https://studio.code.org/form/virtual_order_form) to provide Code.org with your shipping address.
+  If you prefer to reference digital versions of the materials, you can skip this step!
+
+%p
+  Thank you,
+  %br
+  = @workshop.organizer.name

@@ -37,12 +37,12 @@ The table below outlines the number of lessons and CS concepts within each cours
     </th>
   </tr>
   <tr>
-    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">13 lessons, ~13 hours to complete</td>
-    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">13 lessons, ~13 hours to complete</td>
-    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">16 lessons, ~16 hours to complete</td>
-    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">17 lessons, ~17 hours to complete</td>
-    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18-20 hours to complete</td>
-    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">20 lessons, ~20-22 hours to complete</td>
+    <td style="background-color:#f9cb9c; text-align:center;color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br>~13 hours to complete</td>
+    <td style="background-color:#ffe599; text-align:center; color:black; border-style:none; vertical-align: text-top;"">13 lessons<br></br>~13 hours to complete</td>
+    <td style="background-color:#d2da0e; text-align:center; color:black; border-style:none; vertical-align: text-top;"">16 lessons<br></br>~16 hours to complete</td>
+    <td style="background-color:#68ebf5; text-align:center; color:black; border-style:none; vertical-align: text-top;"">17 lessons<br></br>~17 hours to complete</td>
+    <td style="background-color:#9ed7ed; text-align:center; color:black; border-style:none; vertical-align: text-top;"">18 lessons<br></br>~18-20 hours to complete</td>
+    <td style="background-color:#c9c1e9; text-align:center; color:black; border-style:none; vertical-align: text-top;"">20 lessons<br></br>~20-22 hours to complete</td>
   </tr>
   <tr>
     <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Project Mercury Pastries gives a discount of 10% if the total cost is greater than $25.00.\r\n\r\nFor example, if the price is set to $1.00 and the quantity is 30, the price should be set to $0.90 to reflect the discount.\r\n\r\nImport `Dessert.java` from your **Backpack**.\r\n\r\nUpdate the three parameter constructor for the `Dessert` class.",
+    "long_instructions": "Project Mercury Pastries gives a discount of 10% if the total cost is at least $25.00.\r\n\r\nFor example, if the price is set to $1.00 and the quantity is 30, the price should be set to $0.90 to reflect the discount.\r\n\r\nImport `Dessert.java` from your **Backpack**.\r\n\r\nUpdate the constructor with three (3) parameters found in the `Dessert` class.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
@@ -11,13 +11,15 @@
         "text": "",
         "isVisible": true
       }
-    }
+    },
+    "project_template_level_name": "CSA U2L6 Template",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNAq6u+PZhaG4dM2kgG\n5+86UY+rZZJ6/IrD6Pc/KeF2JTBnlsf8kGOU2cczHuy+fT0=\n"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-06-16T19:01:53.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 19:03:02 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 19:03:02 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 16:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 16:28:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:08:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-06-24 13:14:00 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:46:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

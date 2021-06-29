@@ -149,7 +149,7 @@ class UnitOverview extends React.Component {
         {onOverviewPage && (
           <div>
             {this.props.courseLink && (
-              <div className="script-breadcrumb" style={styles.navArea}>
+              <div className="unit-breadcrumb" style={styles.navArea}>
                 <a href={this.props.courseLink} style={styles.navLink}>{`< ${
                   this.props.courseTitle
                 }`}</a>

@@ -9,7 +9,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 export default class HeaderPopup extends Component {
   static propTypes = {
     scriptName: PropTypes.string,
-    unitData: PropTypes.object,
+    scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     linesOfCodeText: PropTypes.string,
     minimal: PropTypes.bool,
@@ -33,7 +33,7 @@ export default class HeaderPopup extends Component {
 
     progress.retrieveProgress(
       this.props.scriptName,
-      this.props.unitData,
+      this.props.scriptData,
       this.props.currentLevelId
     );
 
