@@ -1,4 +1,14 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+
+const INFINITE_LOOP_TRAP =
+  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+
+const LOOP_HIGHLIGHT = 'loopHighlight();\n';
+const LOOP_HIGHLIGHT_RE = new RegExp(
+  LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*',
+  'g'
+);
+
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
  * This wrapper will facilitate migrating from CDO Blockly to Google Blockly
@@ -27,6 +37,35 @@ const BlocklyWrapper = function(blocklyInstance) {
     };
   };
 };
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Extract the user's code as raw JavaScript.
+ * @param {string} code Generated code.
+ * @return {string} The code without serial numbers and timeout checks.
+ */
+function strip(code) {
+  return (
+    code
+      // Strip out serial numbers.
+      .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
+      // Remove timeouts.
+      .replace(new RegExp(escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
+      // Strip out loop highlight
+      .replace(LOOP_HIGHLIGHT_RE, '')
+      // Strip out class namespaces.
+      .replace(/(StudioApp|Maze|Turtle)\./g, '')
+      // Strip out particular helper functions.
+      .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
+      // Collapse consecutive blank lines.
+      .replace(/\n\n+/gm, '\n\n')
+      // Trim.
+      .replace(/^\s+|\s+$/g, '')
+  );
+}
 
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
@@ -111,6 +150,33 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
+  };
+
+  blocklyWrapper.setInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
+  };
+
+  blocklyWrapper.clearInfiniteLoopTrap = function() {
+    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+  };
+
+  blocklyWrapper.getInfiniteLoopTrap = function() {
+    return Blockly.JavaScript.INFINITE_LOOP_TRAP;
+  };
+
+  blocklyWrapper.loopHighlight = function(apiName, blockId) {
+    var args = "'block_id_" + blockId + "'";
+    if (blockId === undefined) {
+      args = '%1';
+    }
+    return (
+      '  ' + apiName + '.' + LOOP_HIGHLIGHT.replace('()', '(' + args + ')')
+    );
+  };
+
+  blocklyWrapper.getWorkspaceCode = function() {
+    const code = Blockly.Generator.blockSpaceToCode('JavaScript', null, false);
+    return strip(code);
   };
 
   return blocklyWrapper;
