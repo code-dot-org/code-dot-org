@@ -1155,7 +1155,7 @@ class Script < ApplicationRecord
 
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
-        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_scripts.length + 1)
+        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
         copied_unit.reload
       else
         copied_unit.is_course = true

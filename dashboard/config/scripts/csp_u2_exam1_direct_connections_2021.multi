@@ -8,5 +8,20 @@ wrong 'The data of the image is routed through a sequence of directly connected 
 wrong 'Both devices are directly connected to at least one part of the Internet’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** A path between two devices connected to the internet is a sequence of directly connected devices, not one single direct connection.
+
+Students demonstrated this when building networks in [Lesson 2 - Building a Network](https://studio.code.org/s/csp2-2021/lessons/2)
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.B.2: Access to the Internet depends on the ability to connect a computing device to a part of the Internet.
+
+* CSN-1.B.3: A protocol is an agreed-upon set of rules that specify the behavior of some system.
+
+* CSN-1.B.4: The protocols used in the Internet are open which allows users to easily connect additional computing devices to the Internet.
+
+* CSN-1.A.5: A path between two computing devices on a computer network (a sender or a receiver) is a sequence of directly-connected computing devices beginning at the sender and ending at the receive. 
+:::
+
 
 MARKDOWN
