@@ -68,7 +68,7 @@ class FeedbackDownload extends Component {
 
     if (experiments.isEnabled(keepWorkingExperiment)) {
       const keepWorkingHeader = {
-        label: i18n.keepWorking(),
+        label: i18n.reviewState(),
         key: 'reviewStateLabel'
       };
       // create a copy to avoid modifying original constants
