@@ -50,6 +50,7 @@ class Statement extends Component {
           {labelColumn || "____"}
           {currentPanel === "dataDisplayLabel" && labelColumn && (
             <div
+              id="statement-label"
               onClick={() => this.removeLabel()}
               style={styles.statementDeleteIcon}
             >
@@ -71,6 +72,7 @@ class Statement extends Component {
                     {selectedFeature}
                     {currentPanel === "dataDisplayFeatures" && (
                       <div
+                        id="statement-feature"
                         onClick={() => this.removeFeature(selectedFeature)}
                         style={styles.statementDeleteIcon}
                       >

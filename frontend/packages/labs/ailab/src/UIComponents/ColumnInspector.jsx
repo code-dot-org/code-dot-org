@@ -196,6 +196,7 @@ class ColumnInspector extends Component {
             currentColumnData.isSelectable && (
               <button
                 type="button"
+                id="select-label-button"
                 onClick={e => this.setPredictColumn(e, currentColumnData.id)}
                 style={styles.selectLabelButton}
               >
@@ -207,6 +208,7 @@ class ColumnInspector extends Component {
             currentColumnData.isSelectable && (
               <button
                 type="button"
+                id="select-feature-button"
                 onClick={e => this.addFeature(e, currentColumnData.id)}
                 style={styles.selectFeaturesButton}
               >
