@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-29 18:15:03 UTC",
+    "serialized_at": "2021-06-29 21:28:33 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -1433,6 +1433,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "b7a4b9b2-7b67-46d3-8340-df0cee13d280",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "3a7e1300-3a4a-44bb-9c3b-2a5455ff7b6b",
+      "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a7e1300-3a4a-44bb-9c3b-2a5455ff7b6b",
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aiml-2021"
@@ -5704,6 +5717,17 @@
       }
     },
     {
+      "key": "16dc3dec-43f0-4f26-8220-02479eeea703",
+      "position": 2,
+      "properties": {
+        "progression_name": "Individual Club Investigations - Choice Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "16dc3dec-43f0-4f26-8220-02479eeea703",
+        "lesson_activity.key": "01dc4921-b7fb-405f-acd5-750ce40ebb5c"
+      }
+    },
+    {
       "key": "435a8239-f59a-4747-9319-ae0f1e1fb30e",
       "position": 1,
       "properties": {
@@ -5731,6 +5755,17 @@
       "seeding_key": {
         "activity_section.key": "f3fa54a8-c7e9-4a6f-807c-dd5fa192e615",
         "lesson_activity.key": "b7a4b9b2-7b67-46d3-8340-df0cee13d280"
+      }
+    },
+    {
+      "key": "efc428d2-bd99-424e-8387-35c2de806733",
+      "position": 1,
+      "properties": {
+        "progression_name": "Club App"
+      },
+      "seeding_key": {
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733",
+        "lesson_activity.key": "3a7e1300-3a4a-44bb-9c3b-2a5455ff7b6b"
       }
     },
     {
@@ -7792,6 +7827,144 @@
     },
     {
       "chapter": 58,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Individual Club Investigations - Choice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-bad data-club choice parent"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "16dc3dec-43f0-4f26-8220-02479eeea703"
+      },
+      "level_keys": [
+        "ml-bad data-club choice parent"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Club App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-club app-import model"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      },
+      "level_keys": [
+        "ml-club app-import model"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Club App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-club app-edit text"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      },
+      "level_keys": [
+        "ml-club app-edit text"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Club App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-club app-add theme"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      },
+      "level_keys": [
+        "ml-club app-add theme"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Club App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-club app-home screen design"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      },
+      "level_keys": [
+        "ml-club app-home screen design"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Club App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-club app-home screen event"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      },
+      "level_keys": [
+        "ml-club app-home screen event"
+      ]
+    },
+    {
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7817,7 +7990,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7843,7 +8016,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8552,6 +8725,78 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aiml-2021",
         "activity_section.key": "d8c18ca0-e0cd-40a6-a5cf-4f0a7deb7de6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-bad data-club choice parent",
+        "script_level.level_keys": [
+          "ml-bad data-club choice parent"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "16dc3dec-43f0-4f26-8220-02479eeea703"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-club app-import model",
+        "script_level.level_keys": [
+          "ml-club app-import model"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-club app-edit text",
+        "script_level.level_keys": [
+          "ml-club app-edit text"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-club app-add theme",
+        "script_level.level_keys": [
+          "ml-club app-add theme"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-club app-home screen design",
+        "script_level.level_keys": [
+          "ml-club app-home screen design"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-club app-home screen event",
+        "script_level.level_keys": [
+          "ml-club app-home screen event"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "efc428d2-bd99-424e-8387-35c2de806733"
       }
     },
     {
