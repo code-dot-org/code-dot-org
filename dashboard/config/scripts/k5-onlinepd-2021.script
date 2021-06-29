@@ -5,6 +5,7 @@ published_state 'beta'
 lesson_group 'Implementing and Teaching CS', display_name: 'Part I:  Teaching and Implementing Computer Science'
 lesson 'Welcome to "Teaching Computer Science Fundamentals"', display_name: 'Welcome and Introduction', has_lesson_plan: false
 level 'OPD-K5 Participation_copy_2021', progression: 'Introduction'
+level 'OPD-K5-PLVid-2021', progression: 'Introduction'
 level 'OPD-K5 Outline_copy_2021', progression: 'Introduction'
 level 'OPD-K5 Why teach CS_copy_2021', progression: 'Introduction'
 level 'OPD-K5 About_copy_2021', progression: 'Introduction'
