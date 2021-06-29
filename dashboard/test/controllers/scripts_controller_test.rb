@@ -721,7 +721,7 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceTypes: ['curriculum', 'vocabulary', ''],
       resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
     }
-    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
+    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(unit.name).teacher_resources
   end
 
   test 'updates migrated teacher resources' do
