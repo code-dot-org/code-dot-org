@@ -68,7 +68,7 @@ class UnitEditor extends React.Component {
     initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
@@ -287,7 +287,7 @@ class UnitEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
-      old_script_text: this.state.oldScriptText,
+      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -636,7 +636,7 @@ class UnitEditor extends React.Component {
                     updateVersionYear={versionYear =>
                       this.setState({versionYear})
                     }
-                    families={this.props.scriptFamilies}
+                    families={this.props.unitFamilies}
                     versionYearOptions={this.props.versionYearOptions}
                     isCourse={this.state.isCourse}
                     publishedState={this.state.publishedState}
@@ -849,7 +849,7 @@ class UnitEditor extends React.Component {
               <HelpTip>
                 <p>
                   Used only for Professional Learning Courses. Deprecation
-                  prevents Peer Reviews conducted as part of this Script from
+                  prevents Peer Reviews conducted as part of this unit from
                   being displayed in the admin-only Peer Review Dashboard.
                 </p>
               </HelpTip>

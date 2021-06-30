@@ -270,7 +270,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           lessonEditPath: lesson.lessonEditPath,
           name: lesson.name,
           /*
-           * NOTE: The Script Edit GUI no longer includes the editing of levels
+           * NOTE: The Unit Edit GUI no longer includes the editing of levels
            * as those have been moved out to the lesson edit page. We include
            * level information here behind the scenes because it allows us to
            * continue to use ScriptDSl for the time being until we are ready
@@ -310,7 +310,7 @@ export const getSerializedLessonGroups = (rawLessonGroups, levelKeyList) => {
   const lessonGroups = _.cloneDeep(rawLessonGroups);
   let s = [];
   lessonGroups.forEach(lessonGroup => {
-    if (lessonGroup.userFacing && lessonGroup.lessons.length > 0) {
+    if (lessonGroup.userFacing) {
       let t = `lesson_group '${lessonGroup.key}'`;
       if (lessonGroup.displayName) {
         t += `, display_name: '${escape(lessonGroup.displayName)}'`;

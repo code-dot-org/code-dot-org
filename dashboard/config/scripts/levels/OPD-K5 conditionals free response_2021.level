@@ -5,7 +5,7 @@
     "tts_short_instructions_override": "How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
     "tts_long_instructions_override": "In this lesson, we explored how conditionals help programmers add logic to their code.\r\n\r\nNow take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?",
     "instructions_important": "false",
-    "long_instructions": "# Reflection: Conditionals\r\n\r\n**Prompts:**\r\n\r\n* How would you explain the concept of conditionals to your students? \r\n* How will the context-setting lesson (Conditional with Cards) support your students with learning about conditionals?",
+    "long_instructions": "# Reflection: Conditionals\r\n\r\n## Prompt\r\n\r\n* What additional support, if any, do you anticipate for your students as they learn about conditionals?\r\n\r\n***\r\n\r\n## Definitions\r\n\r\n**Conditionals** are statements that only run under certain conditions.\r\n\r\n## Blocky Code Blocks\r\n\r\n**If block:**The code inside a conditional block runs if a condition is true. \r\n\r\n![](https://images.code.org/9983e113e9c6054965213756d3b81eb5-image-1624490216431.png)\r\n\r\n**If/else block:** The code inside a conditional block runs if a condition is true, otherwise if the condition is false other code is run.\r\n\r\n![](https://images.code.org/3cebddbfb55a2b6c34d82462f24ecbd3-image-1624490362404.png)",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-16 16:35:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:26:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:27:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-16 16:35:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:26:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-17 17:27:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 23:21:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 23:56:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 17:58:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

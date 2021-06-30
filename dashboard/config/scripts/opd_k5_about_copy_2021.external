@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # What is Computer Science?
 
-<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" width="500px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 ##### The Computer Science Teacher Association (CSTA) defines computer science as, “The study of computers and **algorithmic processes**, including their principles, their **hardware and software designs**, their implementation, and their **impact on society**.”
 

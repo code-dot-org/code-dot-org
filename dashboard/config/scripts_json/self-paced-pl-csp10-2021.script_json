@@ -2,7 +2,6 @@
   "script": {
     "name": "self-paced-pl-csp10-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "is_migrated": true
