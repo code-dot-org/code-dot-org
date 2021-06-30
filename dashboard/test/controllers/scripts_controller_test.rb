@@ -675,63 +675,63 @@ class ScriptsControllerTest < ActionController::TestCase
     assert unit.script_levels.any?
   end
 
-  test 'cannot update migrated script containing legacy script levels' do
+  test 'cannot update migrated unit containing legacy script levels' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, name: 'migrated', is_migrated: true
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
+    unit = create :script, name: 'migrated', is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group, name: 'problem lesson'
 
     # A legacy script level is one without an activity section.
     create(
       :script_level,
-      script: script,
+      script: unit,
       lesson: lesson,
       levels: [create(:applab)]
     )
 
-    stub_file_writes(script.name)
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       is_migrated: true,
-      script_text: ScriptDSL.serialize_lesson_groups(script),
+      script_text: ScriptDSL.serialize_lesson_groups(unit),
     }
 
     assert_response :not_acceptable
     msg = 'Legacy script levels are not allowed in migrated units. Problem lessons: [\"problem lesson\"]'
     assert_includes response.body, msg
-    assert script.is_migrated
-    assert script.script_levels.any?
+    assert unit.is_migrated
+    assert unit.script_levels.any?
   end
 
   test 'updates teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       resourceTypes: ['curriculum', 'vocabulary', ''],
       resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
     }
-    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
+    assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(unit.name).teacher_resources
   end
 
   test 'updates migrated teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
-    stub_file_writes(script.name)
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
+    stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: script
+    course_version = create :course_version, content_root: unit
     teacher_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version),
@@ -739,48 +739,48 @@ class ScriptsControllerTest < ActionController::TestCase
     ]
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       resourceIds: teacher_resources.map(&:id),
       is_migrated: true
     }
-    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(unit.name).resources.map {|r| r[:key]}
   end
 
   test 'updates migrated student resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
-    stub_file_writes(script.name)
+    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta, is_migrated: true
+    stub_file_writes(unit.name)
 
-    course_version = create :course_version, content_root: script
+    course_version = create :course_version, content_root: unit
     student_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
     ]
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       studentResourceIds: student_resources.map(&:id),
       is_migrated: true
     }
-    assert_equal student_resources.map(&:key), Script.find_by_name(script.name).student_resources.map {|r| r[:key]}
+    assert_equal student_resources.map(&:key), Script.find_by_name(unit.name).student_resources.map {|r| r[:key]}
   end
 
   test 'updates pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
       published_state: SharedConstants::PUBLISHED_STATE.pilot
@@ -788,21 +788,21 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_equal 'pilot-experiment', Script.find_by_name(script.name).pilot_experiment
-    # pilot scripts are always marked with the pilot published state
-    assert_equal Script.find_by_name(script.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
+    # pilot units are always marked with the pilot published state
+    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
-  test 'does not hide script with blank pilot_experiment' do
+  test 'does not hide unit with blank pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       pilot_experiment: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview
@@ -810,84 +810,84 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    assert_nil Script.find_by_name(script.name).pilot_experiment
-    # blank pilot_experiment does not cause script to have published_state of pilot
-    assert_equal Script.find_by_name(script.name).published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_nil Script.find_by_name(unit.name).pilot_experiment
+    # blank pilot_experiment does not cause unit to have published_state of pilot
+    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
-    assert_nil script.project_sharing
-    assert_nil script.curriculum_umbrella
-    assert_nil script.family_name
-    assert_nil script.version_year
+    assert_nil unit.project_sharing
+    assert_nil unit.curriculum_umbrella
+    assert_nil unit.family_name
+    assert_nil unit.version_year
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
       version_year: '2017'
     }
-    script.reload
+    unit.reload
 
-    assert script.project_sharing
-    assert_equal 'CSF', script.curriculum_umbrella
-    assert_equal 'my-fam', script.family_name
-    assert_equal '2017', script.version_year
+    assert unit.project_sharing
+    assert_equal 'CSF', unit.curriculum_umbrella
+    assert_equal 'my-fam', unit.family_name
+    assert_equal '2017', unit.version_year
   end
 
   test 'set_and_unset_teacher_resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     # Test doing this twice because teacher_resources in particular is set via its own code path in update_teacher_resources,
     # which can cause incorrect behavior if it is removed during the Script.add_unit while being added via the
     # update_teacher_resources during the same call to Script.update_text
     2.times do
       post :update, params: {
-        id: script.id,
-        script: {name: script.name},
+        id: unit.id,
+        script: {name: unit.name},
         script_text: '',
         resourceTypes: ['curriculum', 'something_else'],
         resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
       }
       assert_response :success
-      script.reload
+      unit.reload
 
-      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], script.teacher_resources
+      assert_equal [['curriculum', '/link/to/curriculum'], ['something_else', 'link/to/something_else']], unit.teacher_resources
     end
 
     # Unset the properties.
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       resourceTypes: [''],
       resourceLinks: ['']
     }
     assert_response :success
-    script.reload
+    unit.reload
 
-    assert_nil script.teacher_resources
+    assert_nil unit.teacher_resources
   end
 
   test 'set and unset all general_params' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
     # Set most of the properties.
     # omitted: professional_learning_course, announcements because
@@ -915,25 +915,25 @@ class ScriptsControllerTest < ActionController::TestCase
     }
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
     }.merge(general_params)
     assert_response :success
-    script.reload
+    unit.reload
 
     general_params.each do |k, v|
       if v == 'on'
-        assert_equal !!v, !!script.send(k), "Property didn't update: #{k}"
+        assert_equal !!v, !!unit.send(k), "Property didn't update: #{k}"
       else
-        assert_equal v, script.send(k), "Property didn't update: #{k}"
+        assert_equal v, unit.send(k), "Property didn't update: #{k}"
       end
     end
 
     # Unset the properties.
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
+      id: unit.id,
+      script: {name: unit.name},
       script_text: '',
       curriculum_path: '',
       version_year: '',
@@ -946,35 +946,35 @@ class ScriptsControllerTest < ActionController::TestCase
       background: ''
     }
     assert_response :success
-    script.reload
+    unit.reload
 
-    assert_equal({}, script.properties)
+    assert_equal({}, unit.properties)
   end
 
-  test 'add lesson to script' do
+  test 'add lesson to unit' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     level = create :level
-    script = create :script
-    stub_file_writes(script.name)
+    unit = create :script
+    stub_file_writes(unit.name)
 
-    assert_empty script.lessons
+    assert_empty unit.lessons
 
-    script_text = <<~UNIT_TEXT
+    unit_text = <<~UNIT_TEXT
       lesson 'lesson 1', display_name: 'lesson 1'
       level '#{level.name}'
     UNIT_TEXT
 
     post :update, params: {
-      id: script.id,
-      script: {name: script.name},
-      script_text: script_text,
+      id: unit.id,
+      script: {name: unit.name},
+      script_text: unit_text,
     }
-    script.reload
+    unit.reload
 
     assert_response :success
-    assert_equal level, script.lessons.first.script_levels.first.level
+    assert_equal level, unit.lessons.first.script_levels.first.level
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
@@ -983,36 +983,36 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
     params: -> {{id: @pilot_unit.name}},
-    name: 'signed out user cannot view pilot script'
+    name: 'signed out user cannot view pilot unit'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-    params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
     params: -> {{id: @pilot_unit.name}},
-    name: 'teacher without pilot access cannot view pilot script'
+    name: 'teacher without pilot access cannot view pilot unit'
   ) do
     assert response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
     params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
-    name: 'pilot teacher can view pilot script'
+    name: 'pilot teacher can view pilot unit'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-    params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-    params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot script'
+    params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
   ) do
     refute response.body.include? no_access_msg
   end
@@ -1040,25 +1040,25 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? no_access_msg
   end
 
-  test 'should redirect to latest stable version in script family for student without progress or assignment' do
+  test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-unit', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'ui-test-versioned-script'}
+      get :show, params: {id: 'ui-test-versioned-unit'}
     end
 
     dogs1.update!(published_state: SharedConstants::PUBLISHED_STATE.stable)
-    get :show, params: {id: 'ui-test-versioned-script'}
+    get :show, params: {id: 'ui-test-versioned-unit'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-unit', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
+    get :show, params: {id: 'ui-test-versioned-unit'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-script'}
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-unit', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
+    get :show, params: {id: 'ui-test-versioned-unit'}
     assert_redirected_to "/s/dogs2"
   end
 
@@ -1075,8 +1075,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([unit_file])
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
@@ -1089,8 +1089,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([unit_file])
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
@@ -1103,8 +1103,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:student)
 
     create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([unit_file])
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
@@ -1117,8 +1117,8 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:teacher)
 
     create(:level, name: "Level 1")
-    script_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([script_file])
+    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+    Script.setup([unit_file])
 
     get :show, params: {id: 'test-fixture-visible-after'}
     assert_response :success
@@ -1138,7 +1138,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
-  test "view all instructions page for migrated script" do
+  test "view all instructions page for migrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
@@ -1146,7 +1146,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "view all instructions page for unmigrated script" do
+  test "view all instructions page for unmigrated unit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
@@ -1154,7 +1154,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+  test "get_rollup_resources return rollups for a unit with code, resources, standards, and vocab" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
@@ -1173,7 +1173,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
   end
 
-  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+  test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in(@levelbuilder)
 
@@ -1191,8 +1191,8 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 
-  def stub_file_writes(script_name)
-    filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
+  def stub_file_writes(unit_name)
+    filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"]
     File.stubs(:write).with do |filename, _|
       filenames_to_stub.include?(filename) || filename.end_with?('scripts.en.yml')
     end
