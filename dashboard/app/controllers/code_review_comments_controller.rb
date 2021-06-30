@@ -1,12 +1,15 @@
 class CodeReviewCommentsController < ApplicationController
   before_action :decrypt_channel_id
 
-  check_authorization # if we want to keep this, put authorization on each action
-  load_and_authorize_resource
+  # check_authorization # if we want to keep this, put authorization on each action
+  # load_and_authorize_resource # put this back once permissioning in cancan
+  # all actions require being signed in
+
+  load_resource
   # TO DO: More nuanced permissioning. Sketched permissions below:
-  # create:
-  #   students (in same section as project owner?) and
-  #   teachers (only teacher leading section?) can create comments
+  # xxxcreate:
+  # xxx  students (in same section as project owner?) and
+  # xxx  teachers (only teacher leading section?) can create comments
   # update (ie, change comment):
   #   comment creator
   #   teacher (only teacher leading section?)
@@ -23,18 +26,22 @@ class CodeReviewCommentsController < ApplicationController
   # POST /code_review_comments
   def create
     # conditions for being able to create a comment on a project:
-    return unless @project_owner == current_user ||
+    return head :forbidden unless @project_owner == current_user ||
       @project_owner.student_of?(current_user) ||
-      current_user.sections.intersection(@project_owner.sections)
+      (current_user.sections_as_student & @project_owner.sections_as_student).any?
 
-    @code_review_comment = CodeReviewComment.new(code_review_comments_params)
+    additional_attributes = {
+      commenter_id: current_user.id,
+      storage_app_id: @storage_app_id
+    }
+    @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
-    authorize! :create, @code_review_comment
+    #authorize! :create, @code_review_comment
 
     if @code_review_comment.save
-      render json: @code_review_comment
+      return render json: @code_review_comment
     else
-      head :bad_request
+      return head :bad_request
     end
   end
 
@@ -54,7 +61,7 @@ class CodeReviewCommentsController < ApplicationController
 
   # PATCH /code_review_comments/:id/resolve
   def resolve
-    return unless current_user == @project_owner
+    render :forbidden unless current_user == @project_owner
 
     if @code_review_comment.update(is_resolved: true)
       head :ok
@@ -65,7 +72,7 @@ class CodeReviewCommentsController < ApplicationController
 
   # DELETE /code_review_comments/:id
   def destroy
-    return unless current_user == @code_review_comment.commenter ||
+    render :forbidden unless current_user == @code_review_comment.commenter ||
       @project_owner.student_of?(current_user)
 
     if @code_review_comment.delete
@@ -79,9 +86,9 @@ class CodeReviewCommentsController < ApplicationController
   # GET /code_review_comments/project_comments
   def project_comments
     # conditions for being able to create a comment on a project:
-    return unless @project_owner == current_user ||
+    render :forbidden unless @project_owner == current_user ||
       @project_owner.student_of?(current_user) ||
-      current_user.sections.intersection(@project_owner.sections)
+      (current_user.sections_as_student & @project_owner.sections_as_student).any?
 
     @project_comments = CodeReviewComment.where(
       storage_app_id: params[:storage_app_id],
@@ -94,16 +101,15 @@ class CodeReviewCommentsController < ApplicationController
   private
 
   def decrypt_channel_id
+    # TO DO: handle errors in decrypting, or can't find user
     @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
-    @project_owner = User.find(user_id_for_storage_id(storage_id))
+    @project_owner = User.find(user_id_for_storage_id(@storage_id))
   end
 
   # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
-      :storage_app_id,
       :project_version,
-      :commenter_id,
       :comment,
       :is_resolved
     )
