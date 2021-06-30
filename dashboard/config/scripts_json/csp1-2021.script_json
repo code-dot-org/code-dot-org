@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-28 15:53:24 UTC",
+    "serialized_at": "2021-06-30 18:24:14 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -5758,6 +5758,42 @@
       }
     },
     {
+      "name": "U1 High Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1wm-dWM_MyuWv_ANcY7wOwB30DfePpJUGVS_Iju73F40/edit?usp=sharing",
+      "key": "u1_high_score_sample_article_markup",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Poster ",
+      "url": "https://docs.google.com/presentation/d/1Z7w4PeNIK5MhhoBYZ6nf_I005BwGx0GjENTIGIi-WfA/edit?usp=sharing",
+      "key": "u1_high_score_sample_poster",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/19D-A1wmOP-RjrqiMrbJ4sZFN5SnsfQVRdyB4CePnqJw/edit?usp=sharing",
+      "key": "u1_high_score_sample_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
       "name": "Flippy Do",
       "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
       "key": "u1_l4_flippy_do",
@@ -5792,6 +5828,42 @@
       },
       "seeding_key": {
         "resource.key": "u1_l4_how_to_make_a_flippydo"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1JR2p0KS4HeBiwy5j5nAGMsIv6lRYwp8w6j6-he1JqQ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_article_markup",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Poster",
+      "url": "https://docs.google.com/presentation/d/1nWytpB3lOHq8U1ptGQ0r3IWg1jfH2fDxK88vNhq8d_E/edit?usp=sharing",
+      "key": "u1_mid_score_sample_poster",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/1jXio0Ws5iXv_pcZXqIJ13hrYrYxJN0PtIDUynEX9DZ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_rubric"
       }
     },
     {
@@ -6041,6 +6113,42 @@
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "resource.key": "csp_unit_1_project_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_rubric"
       }
     },
     {

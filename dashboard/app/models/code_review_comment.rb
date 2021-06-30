@@ -3,7 +3,7 @@
 # Table name: code_review_comments
 #
 #  id               :bigint           not null, primary key
-#  channel_token_id :integer          not null
+#  storage_app_id   :integer          not null
 #  project_version  :string(255)      not null
 #  commenter_id     :integer          not null
 #  comment          :text(16777215)
@@ -17,8 +17,12 @@
 #
 # Indexes
 #
-#  index_code_review_comments_on_project_id_and_version  (channel_token_id,project_version)
+#  index_code_review_comments_on_storage_app_id_and_version  (storage_app_id,project_version)
 #
 class CodeReviewComment < ApplicationRecord
   acts_as_paranoid
+
+  belongs_to :commenter, class_name: 'User'
+
+  validates :comment, presence: true
 end

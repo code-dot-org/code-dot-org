@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Run the code. How does it compare to your prediction?\r\n\r\nWhy do you think the code ran this way?",
+    "long_instructions": "Run the code. How does it compare to your prediction?\r\n\r\nWhy do you think the code ran this way?\r\n\r\nFix the bug in the code.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
@@ -23,6 +23,6 @@
   "created_at": "2021-06-16T18:56:51.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:13:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:46:00 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-16 18:59:39 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:13:30 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:46:00 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-28 21:33:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
