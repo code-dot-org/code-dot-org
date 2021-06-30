@@ -45,17 +45,6 @@ class CodeReviewCommentsController < ApplicationController
     end
   end
 
-  # PATCH /code_review_comments/:id
-  def update
-    return head :forbidden unless current_user == @code_review_comment.commenter
-
-    if @code_review_comment.update(code_review_comments_params)
-      return head :ok
-    else
-      return head :bad_request
-    end
-  end
-
   # PATCH /code_review_comments/:id/resolve
   def resolve
     return head :forbidden unless current_user == @code_review_comment.project_owner
@@ -70,8 +59,7 @@ class CodeReviewCommentsController < ApplicationController
 
   # DELETE /code_review_comments/:id
   def destroy
-    return head :forbidden unless current_user == @code_review_comment.commenter ||
-      @code_review_comment.project_owner.student_of?(current_user)
+    return head :forbidden unless @code_review_comment.project_owner.student_of?(current_user)
 
     if @code_review_comment.delete
       return head :ok
