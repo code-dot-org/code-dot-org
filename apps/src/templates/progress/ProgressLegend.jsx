@@ -24,10 +24,6 @@ export default class ProgressLegend extends Component {
     includeReviewState: PropTypes.bool
   };
 
-  static defaultProps = {
-    includeReviewState: true
-  };
-
   render() {
     const statusColumns = this.getLevelStatusColumns();
     const detailColumns = this.getLevelDetailsColumns();
