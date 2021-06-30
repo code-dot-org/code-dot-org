@@ -317,7 +317,7 @@ module ScriptConstants
     AIML = "aiml".freeze,
 
     # Testing
-    TEST = 'ui-test-versioned-unit'.freeze
+    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.unit_in_category?(category, script)
