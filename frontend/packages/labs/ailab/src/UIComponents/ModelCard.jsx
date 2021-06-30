@@ -48,11 +48,9 @@ class ModelCard extends Component {
             <h5 style={styles.modelCardHeading}>Accuracy</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
-                {percentCorrect && (
-                  <span>
-                    {percentCorrect}%
-                  </span>
-                )}
+                <span>
+                  {percentCorrect}%
+                </span>
               </p>
             </div>
           </div>
