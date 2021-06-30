@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-21 21:33:16 UTC",
+    "serialized_at": "2021-06-29 18:15:03 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -301,12 +301,31 @@
       }
     },
     {
-      "key": "lesson-18",
-      "name": "Mini-Project: Make an App with ML",
+      "key": "lesson14",
+      "name": "AI Code of Ethics",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
+        "student_overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Mini-Project: Make an App with ML",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -318,10 +337,10 @@
     {
       "key": "lesson-21",
       "name": "Planning an ML Project",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -333,10 +352,10 @@
     {
       "key": "lesson-22",
       "name": "Designing Data Collection",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -348,10 +367,10 @@
     {
       "key": "lesson-23",
       "name": "Train Model from Good Data",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -363,10 +382,10 @@
     {
       "key": "lesson-19",
       "name": "Train Model from Bad Data",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -378,10 +397,10 @@
     {
       "key": "lesson-20",
       "name": "Create App",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -393,10 +412,10 @@
     {
       "key": "lesson16",
       "name": "Make an \"AI for Social Good\" App",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.\r\n\r\n**Question of the Day:** How can I use the Problem Solving Process to build an \"AI for Social Good\" App?",
@@ -412,10 +431,10 @@
     {
       "key": "lesson13",
       "name": "AI for Social Good",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn how AI can be used for social good by reviewing several real-life examples. They then define a social issue they care about and create a user persona affected by that issue. The social issue and user persona are to be carried with students throughout the remainder of the unit as inspiration for further inquiry and creativity. \r\n\r\n**Question of the Day:** “How can AI be used to address social issues?” ",
@@ -424,25 +443,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson13",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "lesson14",
-      "name": "AI Code of Ethics",
-      "absolute_position": 22,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 22,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
-        "student_overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aiml-2021"
       }
@@ -1106,6 +1106,48 @@
       }
     },
     {
+      "key": "4a22d67e-707b-45c1-9d4b-5fc155954832",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "d083543c-8417-4ad7-a9e5-18157e2e38a8",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d083543c-8417-4ad7-a9e5-18157e2e38a8",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
       "key": "b1cd287d-c354-440d-a0fd-144166dc6306",
       "position": 1,
       "properties": {
@@ -1120,25 +1162,11 @@
       }
     },
     {
-      "key": "85d97ff3-887d-4cf6-9bd0-c0d2b056cbe3",
+      "key": "c265414a-b360-4f4f-9d85-392b88314ae5",
       "position": 2,
       "properties": {
-        "duration": 40,
-        "name": "Day 1"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "85d97ff3-887d-4cf6-9bd0-c0d2b056cbe3",
-        "lesson.key": "lesson-18",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "c265414a-b360-4f4f-9d85-392b88314ae5",
-      "position": 3,
-      "properties": {
-        "duration": 40,
-        "name": "Day 2"
+        "duration": 35,
+        "name": "Acticity"
       },
       "seeding_key": {
         "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5",
@@ -1149,7 +1177,7 @@
     },
     {
       "key": "1e0a37e1-5727-40ea-b8b6-bf02bf9fba0a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1246,6 +1274,19 @@
       }
     },
     {
+      "key": "2c69c310-1d56-4225-9a7a-c83d31a140ad",
+      "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c69c310-1d56-4225-9a7a-c83d31a140ad",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
       "key": "c59b8a3e-dfde-4ed9-8230-27c9a517dcc7",
       "position": 1,
       "properties": {
@@ -1288,6 +1329,19 @@
       }
     },
     {
+      "key": "8880e961-5f4c-4131-ab89-1067684d5da3",
+      "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3",
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
       "key": "a4283a56-ed5c-401d-8413-3036e80505b5",
       "position": 1,
       "properties": {
@@ -1324,6 +1378,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ff895405-f60b-4af5-b8a4-2b3885751b9b",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "01dc4921-b7fb-405f-acd5-750ce40ebb5c",
+      "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01dc4921-b7fb-405f-acd5-750ce40ebb5c",
         "lesson.key": "lesson-19",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aiml-2021"
@@ -1492,48 +1559,6 @@
       "seeding_key": {
         "lesson_activity.key": "e2e635c2-8d9c-42fc-b31e-425d8476058e",
         "lesson.key": "lesson13",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "4a22d67e-707b-45c1-9d4b-5fc155954832",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832",
-        "lesson.key": "lesson14",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7",
-      "position": 2,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7",
-        "lesson.key": "lesson14",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "d083543c-8417-4ad7-a9e5-18157e2e38a8",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d083543c-8417-4ad7-a9e5-18157e2e38a8",
-        "lesson.key": "lesson14",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aiml-2021"
       }
@@ -3272,30 +3297,8 @@
       }
     },
     {
-      "key": "dfe4bee2-8fb7-40e3-8608-dd4bdf887b74",
-      "position": 1,
-      "properties": {
-        "progression_name": "Dataset #1: Tacos"
-      },
-      "seeding_key": {
-        "activity_section.key": "dfe4bee2-8fb7-40e3-8608-dd4bdf887b74",
-        "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
-      }
-    },
-    {
-      "key": "1c4017dc-ecea-46b8-8e2b-7a8ae1b54934",
-      "position": 2,
-      "properties": {
-        "progression_name": "Dataset #2: Ice Cream"
-      },
-      "seeding_key": {
-        "activity_section.key": "1c4017dc-ecea-46b8-8e2b-7a8ae1b54934",
-        "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
-      }
-    },
-    {
       "key": "1a926676-97b4-4a29-bc21-c005ebae26a0",
-      "position": 3,
+      "position": 1,
       "properties": {
         "progression_name": "Dataset #3: Pizza"
       },
@@ -3306,12 +3309,23 @@
     },
     {
       "key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388",
-      "position": 4,
+      "position": 2,
       "properties": {
         "progression_name": "You Choose: Restaurant Recommendations"
       },
       "seeding_key": {
         "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388",
+        "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
+      }
+    },
+    {
+      "key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Recognizing Shapes"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
         "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
       }
     },
@@ -5357,6 +5371,111 @@
       }
     },
     {
+      "key": "07a92074-bcf5-4304-967d-2cc5432b1c97",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\r\n\r\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\r\n\r\n**Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\r\n\r\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "07a92074-bcf5-4304-967d-2cc5432b1c97",
+        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
+      }
+    },
+    {
+      "key": "c45071f6-fd30-4dcb-aad4-7f2fa3a6bd6e",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal**: This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion.\r\n\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c45071f6-fd30-4dcb-aad4-7f2fa3a6bd6e",
+        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
+      }
+    },
+    {
+      "key": "ccfca520-a6f3-43a4-8bf0-9bf7bc864662",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \r\n\r\n- **Ethics:** guidelines for good behavior."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccfca520-a6f3-43a4-8bf0-9bf7bc864662",
+        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
+      }
+    },
+    {
+      "key": "5b08ffa4-fce7-479d-8b2e-b2cb8a4afbb3",
+      "position": 4,
+      "properties": {
+        "description": "When we discuss right and wrong, good and bad, we are discussing “ethics”. As we create our own apps using machine learning and AI, it's important to consider the ethical impact of our decisions. No matter how “intelligent” machines may appear, they are still tools that humans create. If created or used without the right guidelines, machines with AI can easily make unethical decisions, such as being biased against someone’s gender or race. The more aware we are of ethical issues involving AI, the better we will be able to make sure that AI benefits everyone in society.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5b08ffa4-fce7-479d-8b2e-b2cb8a4afbb3",
+        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
+      }
+    },
+    {
+      "key": "9b7393b9-4d8b-4a2b-a13c-ea52470d5993",
+      "position": 1,
+      "properties": {
+        "description": "**Groups**: Place students in groups of three or four.",
+        "name": "Research and Reflect\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b7393b9-4d8b-4a2b-a13c-ea52470d5993",
+        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
+      }
+    },
+    {
+      "key": "278e13d0-c65f-4689-b293-909a18505eff",
+      "position": 2,
+      "properties": {
+        "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "278e13d0-c65f-4689-b293-909a18505eff",
+        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
+      }
+    },
+    {
+      "key": "186f88de-ce30-45de-9097-c2f96dfd9c63",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the **AI Ethics Research Areas** document with each group. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the **AI Ethics Research Reflection **handout. \r\n\r\n\r\n\r\n#### AI Ethics Research Reflection\r\n\r\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "186f88de-ce30-45de-9097-c2f96dfd9c63",
+        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
+      }
+    },
+    {
+      "key": "574cea28-0e51-487c-a074-64e07c306b24",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\r\n\r\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
+        "name": "Draft “Our AI Code of Ethics” Resource \r"
+      },
+      "seeding_key": {
+        "activity_section.key": "574cea28-0e51-487c-a074-64e07c306b24",
+        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
+      }
+    },
+    {
+      "key": "78545d9f-4ece-4fd9-b48f-1b0e47dc94f6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "78545d9f-4ece-4fd9-b48f-1b0e47dc94f6",
+        "lesson_activity.key": "d083543c-8417-4ad7-a9e5-18157e2e38a8"
+      }
+    },
+    {
       "key": "b2d2465d-2c42-4ccc-b508-33ee2c57fc29",
       "position": 1,
       "properties": {
@@ -5364,16 +5483,6 @@
       "seeding_key": {
         "activity_section.key": "b2d2465d-2c42-4ccc-b508-33ee2c57fc29",
         "lesson_activity.key": "b1cd287d-c354-440d-a0fd-144166dc6306"
-      }
-    },
-    {
-      "key": "7b8aa9e2-6fa4-4bff-949c-841f69af0a14",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7b8aa9e2-6fa4-4bff-949c-841f69af0a14",
-        "lesson_activity.key": "85d97ff3-887d-4cf6-9bd0-c0d2b056cbe3"
       }
     },
     {
@@ -5457,6 +5566,17 @@
       }
     },
     {
+      "key": "ecc65529-534f-41e8-a6de-99fc04a93be2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Copy Google Form"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecc65529-534f-41e8-a6de-99fc04a93be2",
+        "lesson_activity.key": "2c69c310-1d56-4225-9a7a-c83d31a140ad"
+      }
+    },
+    {
       "key": "bf8231c8-6863-49ab-9097-2b8ffead7bf1",
       "position": 1,
       "properties": {
@@ -5487,6 +5607,61 @@
       }
     },
     {
+      "key": "58e85bb7-ab0f-4a9f-80c2-67347b4a9a19",
+      "position": 1,
+      "properties": {
+        "progression_name": "Take Kim's Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "58e85bb7-ab0f-4a9f-80c2-67347b4a9a19",
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3"
+      }
+    },
+    {
+      "key": "765e27c0-2e66-4adc-9632-2eef6a5c7fbd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Download Kim's Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "765e27c0-2e66-4adc-9632-2eef6a5c7fbd",
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3"
+      }
+    },
+    {
+      "key": "3a8020ae-a858-4c06-a77f-d151497ab461",
+      "position": 3,
+      "properties": {
+        "progression_name": "Upload Kim's Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a8020ae-a858-4c06-a77f-d151497ab461",
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3"
+      }
+    },
+    {
+      "key": "55fbdc02-02ea-4495-8f97-169f8705827b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Download Isaac's Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "55fbdc02-02ea-4495-8f97-169f8705827b",
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3"
+      }
+    },
+    {
+      "key": "c615c453-bf15-4537-8403-859128abd772",
+      "position": 5,
+      "properties": {
+        "progression_name": "Upload Isaac CSV"
+      },
+      "seeding_key": {
+        "activity_section.key": "c615c453-bf15-4537-8403-859128abd772",
+        "lesson_activity.key": "8880e961-5f4c-4131-ab89-1067684d5da3"
+      }
+    },
+    {
       "key": "f23f745a-5976-4d8a-a964-af3cd9f0fdad",
       "position": 1,
       "properties": {
@@ -5514,6 +5689,18 @@
       "seeding_key": {
         "activity_section.key": "5c3e2c30-5dc1-4d7d-bc87-2134cecc35b5",
         "lesson_activity.key": "ff895405-f60b-4af5-b8a4-2b3885751b9b"
+      }
+    },
+    {
+      "key": "d8c18ca0-e0cd-40a6-a5cf-4f0a7deb7de6",
+      "position": 1,
+      "properties": {
+        "name": "Club Investigations",
+        "progression_name": "All Club Investigations"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c18ca0-e0cd-40a6-a5cf-4f0a7deb7de6",
+        "lesson_activity.key": "01dc4921-b7fb-405f-acd5-750ce40ebb5c"
       }
     },
     {
@@ -5957,111 +6144,6 @@
       }
     },
     {
-      "key": "07a92074-bcf5-4304-967d-2cc5432b1c97",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\r\n\r\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\r\n\r\n**Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\r\n\r\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
-        "name": "Journal\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "07a92074-bcf5-4304-967d-2cc5432b1c97",
-        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
-      }
-    },
-    {
-      "key": "c45071f6-fd30-4dcb-aad4-7f2fa3a6bd6e",
-      "position": 2,
-      "properties": {
-        "description": " **Discussion Goal**: This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion.\r\n\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "c45071f6-fd30-4dcb-aad4-7f2fa3a6bd6e",
-        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
-      }
-    },
-    {
-      "key": "ccfca520-a6f3-43a4-8bf0-9bf7bc864662",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \r\n\r\n- **Ethics:** guidelines for good behavior."
-      },
-      "seeding_key": {
-        "activity_section.key": "ccfca520-a6f3-43a4-8bf0-9bf7bc864662",
-        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
-      }
-    },
-    {
-      "key": "5b08ffa4-fce7-479d-8b2e-b2cb8a4afbb3",
-      "position": 4,
-      "properties": {
-        "description": "When we discuss right and wrong, good and bad, we are discussing “ethics”. As we create our own apps using machine learning and AI, it's important to consider the ethical impact of our decisions. No matter how “intelligent” machines may appear, they are still tools that humans create. If created or used without the right guidelines, machines with AI can easily make unethical decisions, such as being biased against someone’s gender or race. The more aware we are of ethical issues involving AI, the better we will be able to make sure that AI benefits everyone in society.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5b08ffa4-fce7-479d-8b2e-b2cb8a4afbb3",
-        "lesson_activity.key": "4a22d67e-707b-45c1-9d4b-5fc155954832"
-      }
-    },
-    {
-      "key": "9b7393b9-4d8b-4a2b-a13c-ea52470d5993",
-      "position": 1,
-      "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
-        "name": "Research and Reflect\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b7393b9-4d8b-4a2b-a13c-ea52470d5993",
-        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
-      }
-    },
-    {
-      "key": "278e13d0-c65f-4689-b293-909a18505eff",
-      "position": 2,
-      "properties": {
-        "description": "Roleplay time! Today you are a group of AI experts. Each group specializes in a particular area of AI ethics. You are holding a meeting to write an “AI Code of Ethics”, which will be a set of rules for people who work on AI machines and lawmakers worldwide! One example of a rule might be, “AI must treat all people fairly.” Before you begin writing these rules, you will research your area and discuss it with your group members.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "278e13d0-c65f-4689-b293-909a18505eff",
-        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
-      }
-    },
-    {
-      "key": "186f88de-ce30-45de-9097-c2f96dfd9c63",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the **AI Ethics Research Areas** document with each group. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the **AI Ethics Research Reflection **handout. \r\n\r\n\r\n\r\n#### AI Ethics Research Reflection\r\n\r\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout."
-      },
-      "seeding_key": {
-        "activity_section.key": "186f88de-ce30-45de-9097-c2f96dfd9c63",
-        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
-      }
-    },
-    {
-      "key": "574cea28-0e51-487c-a074-64e07c306b24",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\r\n\r\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
-        "name": "Draft “Our AI Code of Ethics” Resource \r"
-      },
-      "seeding_key": {
-        "activity_section.key": "574cea28-0e51-487c-a074-64e07c306b24",
-        "lesson_activity.key": "e9f9dd48-0ca6-4eb3-bbb2-fdab11087fa7"
-      }
-    },
-    {
-      "key": "78545d9f-4ece-4fd9-b48f-1b0e47dc94f6",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_",
-        "name": "Journal\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "78545d9f-4ece-4fd9-b48f-1b0e47dc94f6",
-        "lesson_activity.key": "d083543c-8417-4ad7-a9e5-18157e2e38a8"
-      }
-    },
-    {
       "key": "7f7f35d4-3b64-46f2-9cc9-6c86787f773d",
       "position": 1,
       "properties": {
@@ -6494,58 +6576,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ml-intro categorical-tacos-2021"
-        ],
-        "progression": "Dataset #1: Tacos"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro categorical-tacos-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "dfe4bee2-8fb7-40e3-8608-dd4bdf887b74"
-      },
-      "level_keys": [
-        "ml-intro categorical-tacos-2021"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ml-intro categorical-ice cream-2021"
-        ],
-        "progression": "Dataset #2: Ice Cream"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro categorical-ice cream-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "1c4017dc-ecea-46b8-8e2b-7a8ae1b54934"
-      },
-      "level_keys": [
-        "ml-intro categorical-ice cream-2021"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "ml-intro categorical-pizza-2021"
         ],
         "progression": "Dataset #3: Pizza"
@@ -6566,8 +6596,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 4,
+      "chapter": 11,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6589,6 +6619,58 @@
       },
       "level_keys": [
         "ml-intro categorical-food choices-2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1"
+        ],
+        "progression": "Recognizing Shapes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v1"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d"
+      },
+      "level_keys": [
+        "ml-intro ai lab-shapes v1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v2"
+        ],
+        "progression": "Recognizing Shapes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v2"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d"
+      },
+      "level_keys": [
+        "ml-intro ai lab-shapes v2"
       ]
     },
     {
@@ -7553,6 +7635,167 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Copy Google Form"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-plan survey-copy form"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "ecc65529-534f-41e8-a6de-99fc04a93be2"
+      },
+      "level_keys": [
+        "ml-plan survey-copy form"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Take Kim's Survey"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-good data-kim survey"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "58e85bb7-ab0f-4a9f-80c2-67347b4a9a19"
+      },
+      "level_keys": [
+        "ml-good data-kim survey"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Download Kim's Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-good data-kim data"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "765e27c0-2e66-4adc-9632-2eef6a5c7fbd"
+      },
+      "level_keys": [
+        "ml-good data-kim data"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Upload Kim's Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-good data-upload csv"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "3a8020ae-a858-4c06-a77f-d151497ab461"
+      },
+      "level_keys": [
+        "ml-good data-upload csv"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Download Isaac's Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-good data-isaac data"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "55fbdc02-02ea-4495-8f97-169f8705827b"
+      },
+      "level_keys": [
+        "ml-good data-isaac data"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Upload Isaac CSV"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-good data-upload isaac csv"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "c615c453-bf15-4537-8403-859128abd772"
+      },
+      "level_keys": [
+        "ml-good data-upload isaac csv"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "All Club Investigations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-bad data-club investigations"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "d8c18ca0-e0cd-40a6-a5cf-4f0a7deb7de6"
+      },
+      "level_keys": [
+        "ml-bad data-club investigations"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ml-final project-ai lab-2021"
         ],
@@ -7574,7 +7817,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7600,7 +7843,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7737,30 +7980,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-tacos-2021",
-        "script_level.level_keys": [
-          "ml-intro categorical-tacos-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "dfe4bee2-8fb7-40e3-8608-dd4bdf887b74"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-intro categorical-ice cream-2021",
-        "script_level.level_keys": [
-          "ml-intro categorical-ice cream-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "1c4017dc-ecea-46b8-8e2b-7a8ae1b54934"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ml-intro categorical-pizza-2021",
         "script_level.level_keys": [
           "ml-intro categorical-pizza-2021"
@@ -7781,6 +8000,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro ai lab-shapes v1",
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v1"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro ai lab-shapes v2",
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v2"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d"
       }
     },
     {
@@ -8229,6 +8472,90 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-plan survey-copy form",
+        "script_level.level_keys": [
+          "ml-plan survey-copy form"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "ecc65529-534f-41e8-a6de-99fc04a93be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-good data-kim survey",
+        "script_level.level_keys": [
+          "ml-good data-kim survey"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "58e85bb7-ab0f-4a9f-80c2-67347b4a9a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-good data-kim data",
+        "script_level.level_keys": [
+          "ml-good data-kim data"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "765e27c0-2e66-4adc-9632-2eef6a5c7fbd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-good data-upload csv",
+        "script_level.level_keys": [
+          "ml-good data-upload csv"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "3a8020ae-a858-4c06-a77f-d151497ab461"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-good data-isaac data",
+        "script_level.level_keys": [
+          "ml-good data-isaac data"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "55fbdc02-02ea-4495-8f97-169f8705827b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-good data-upload isaac csv",
+        "script_level.level_keys": [
+          "ml-good data-upload isaac csv"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "c615c453-bf15-4537-8403-859128abd772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-bad data-club investigations",
+        "script_level.level_keys": [
+          "ml-bad data-club investigations"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aiml-2021",
+        "activity_section.key": "d8c18ca0-e0cd-40a6-a5cf-4f0a7deb7de6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-final project-ai lab-2021",
         "script_level.level_keys": [
           "ml-final project-ai lab-2021"
@@ -8265,6 +8592,18 @@
     }
   ],
   "resources": [
+    {
+      "name": "5 Why's - Activity Guide",
+      "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view",
+      "key": "5_why_s_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "5_why_s_activity_guide"
+      }
+    },
     {
       "name": "AI and Machine Learning Lesson 13-AI for Social Good",
       "url": "https://docs.google.com/presentation/d/1BYO14wwzxIJlqvQjD58UUb4OxoBCIuZFFfEvEFNcQQo/copy",
@@ -8400,6 +8739,17 @@
       }
     },
     {
+      "name": "App Brainstorm - Activity Guide",
+      "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view",
+      "key": "app_brainstorm_-_activity_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "app_brainstorm_-_activity_guide"
+      }
+    },
+    {
       "name": "Classification with Machine Learning",
       "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
       "key": "classification-with-machine-learning",
@@ -8476,6 +8826,17 @@
       }
     },
     {
+      "name": "Isaac's Survey Data - Student Resource",
+      "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy",
+      "key": "isaac_s_survey_data_-_student_resource",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "isaac_s_survey_data_-_student_resource"
+      }
+    },
+    {
       "name": "[KEY] Classification with Machine Learning",
       "url": "https://studio.code.org/s/ai-unit-pilot/stage/4/puzzle/1",
       "key": "key-classification-with-machine-learning",
@@ -8485,6 +8846,17 @@
       },
       "seeding_key": {
         "resource.key": "key-classification-with-machine-learning"
+      }
+    },
+    {
+      "name": "Kim's Survey Data - Student Resource",
+      "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy",
+      "key": "kim_s_survey_data_-_student_resource",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "kim_s_survey_data_-_student_resource"
       }
     },
     {
@@ -8623,6 +8995,18 @@
       },
       "seeding_key": {
         "resource.key": "supervised-and-unsupervised-scenarios"
+      }
+    },
+    {
+      "name": "Survey Planning - Activity Guide",
+      "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view",
+      "key": "survey_planning_-_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "survey_planning_-_activity_guide"
       }
     },
     {
@@ -8804,6 +9188,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-ethics-research-areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-ethics-research-reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "our-ai-code-of-ethics-template-slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-18",
         "resource.key": "unit_7_-_ai_and_machine_learning"
       }
@@ -8816,14 +9224,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "5_why_s_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "app_brainstorm_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-22",
         "resource.key": "unit_7_-_ai_and_machine_learning"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "survey_planning_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-23",
         "resource.key": "unit_7_-_ai_and_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "kim_s_survey_data_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "isaac_s_survey_data_-_student_resource"
       }
     },
     {
@@ -8884,30 +9322,6 @@
       "seeding_key": {
         "lesson.key": "lesson13",
         "resource.key": "ai-for-social-good"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-ethics-research-areas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-ethics-research-reflection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "our-ai-code-of-ethics-template-slides"
       }
     },
     {
@@ -9074,16 +9488,6 @@
       }
     },
     {
-      "key": "user_persona",
-      "word": "User Persona",
-      "definition": "a semi-fictional user created by designers to represent the needs of real people",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_persona"
-      }
-    },
-    {
       "key": "ethics",
       "word": "Ethics",
       "definition": "guidelines for good behavior.",
@@ -9091,6 +9495,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "key": "user_persona",
+      "word": "User Persona",
+      "definition": "a semi-fictional user created by designers to represent the needs of real people",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_persona"
       }
     }
   ],
@@ -9169,14 +9583,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson13",
-        "vocabulary.key": "user_persona"
+        "lesson.key": "lesson14",
+        "vocabulary.key": "ethics"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson14",
-        "vocabulary.key": "ethics"
+        "lesson.key": "lesson13",
+        "vocabulary.key": "user_persona"
       }
     }
   ],
@@ -9466,6 +9880,36 @@
       }
     },
     {
+      "key": "2ac5ab5e-8129-478e-bd40-a262315692c8",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "objective.key": "2ac5ab5e-8129-478e-bd40-a262315692c8"
+      }
+    },
+    {
+      "key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec",
+      "properties": {
+        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "objective.key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec"
+      }
+    },
+    {
+      "key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee",
+      "properties": {
+        "description": "Create at least one guiding principle that addresses an AI ethics issue."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "objective.key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee"
+      }
+    },
+    {
       "key": "26a18e15-9fff-4543-b7fe-b2c6df50d52d",
       "properties": {
         "description": "Apply the Problem Solving Process to create an AI for Social Good App"
@@ -9503,36 +9947,6 @@
       "seeding_key": {
         "lesson.key": "lesson13",
         "objective.key": "eeccf973-31a9-465a-8bd4-5827062f9d91"
-      }
-    },
-    {
-      "key": "2ac5ab5e-8129-478e-bd40-a262315692c8",
-      "properties": {
-        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "2ac5ab5e-8129-478e-bd40-a262315692c8"
-      }
-    },
-    {
-      "key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec",
-      "properties": {
-        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "d17f9e8e-6694-4adb-8be6-ebfc519446ec"
-      }
-    },
-    {
-      "key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee",
-      "properties": {
-        "description": "Create at least one guiding principle that addresses an AI ethics issue."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "objective.key": "1e99636b-02ab-4a68-869b-f8c5c4c761ee"
       }
     },
     {
