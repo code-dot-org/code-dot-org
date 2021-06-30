@@ -119,7 +119,7 @@ class AdminUsersController < ApplicationController
   # get /admin/user_progress
   def user_progress_form
     user_identifier = params[:user_identifier]
-    offset = params[:offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
+    script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL
     if user_identifier
       user_identifier.strip!
       @target_user = User.from_identifier(user_identifier)
@@ -131,7 +131,7 @@ class AdminUsersController < ApplicationController
         where(user_id: @target_user.id).
         order(updated_at: :desc).
         limit(5).
-        offset(offset)
+        offset(script_offset)
     end
 
     if @user_scripts
