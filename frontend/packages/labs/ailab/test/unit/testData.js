@@ -106,11 +106,16 @@ export const classificationState = {
   }
 };
 
+export const batCountMax = 100;
+export const batCountMin = 40;
+export const mosquitoCountMax = 10;
+export const mosquitoCountMin = 1;
+
 export const allNumericalState = {
   data: [
     {
-      batCount: 100,
-      mosquitoCount: 1
+      batCount: batCountMax,
+      mosquitoCount: mosquitoCountMin
     },
     {
       batCount: 90,
@@ -128,8 +133,8 @@ export const allNumericalState = {
       batCount: 50,
       mosquitoCount: 6
     },{
-      batCount: 40,
-      mosquitoCount: 10
+      batCount: batCountMin,
+      mosquitoCount: mosquitoCountMax
     }
   ],
   currentColumn: 'batCount',
@@ -141,6 +146,8 @@ export const allNumericalState = {
   }
 };
 
+export const mosquitoDescription = 'How many mosquitoes there are.';
+
 export const premadeDatasetState = {
   ...allNumericalState,
   metadata: {
@@ -150,7 +157,7 @@ export const premadeDatasetState = {
       {
         id: 'mosquitoCount',
         type: 'numerical',
-        description: 'How many mosquitoes there are.'
+        description: mosquitoDescription
       },
       {
         id: 'batCount',
