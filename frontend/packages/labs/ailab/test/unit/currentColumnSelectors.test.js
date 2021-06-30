@@ -9,7 +9,9 @@ import {
 import {
   classificationState,
   allNumericalState,
-  premadeDatasetState
+  premadeDatasetState,
+  batCountMax,
+  batCountMin
 } from "./testData";
 
 describe("derives details about current categorical column", () => {
@@ -44,9 +46,9 @@ describe("derives details about current numerical column", () => {
       allNumericalState.currentColumn,
       allNumericalState.data
     )
-    expect(extrema.max).toBe(100);
-    expect(extrema.min).toBe(40);
-    expect(extrema.range).toBe(60);
+    expect(extrema.max).toBe(batCountMax);
+    expect(extrema.min).toBe(batCountMin);
+    expect(extrema.range).toBe(batCountMax - batCountMin);
   });
 
   test("current column contains only numbers", () => {
