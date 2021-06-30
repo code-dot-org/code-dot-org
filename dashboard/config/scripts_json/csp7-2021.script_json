@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:42 UTC",
+    "serialized_at": "2021-06-30 21:29:46 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp7-2021"
@@ -3454,6 +3454,30 @@
       }
     },
     {
+      "name": "U7 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/IkLKTGzikCSPtIsS2-Pee8-guSAae9DXBCGOjwCSVuA/view",
+      "key": "u7_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u7_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U7 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1AY5cxJ02hMq0YxHdKUhyyxUCAaJl-v9ixHDLczqGJGM/edit?usp=sharing",
+      "key": "u7_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u7_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
       "name": "Virtual Modification Resources",
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
@@ -3555,6 +3579,18 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Library Part 3",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "resource.key": "u7_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "resource.key": "u7_high_score_sample_planning_guide_rubric"
       }
     },
     {

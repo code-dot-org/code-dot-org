@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:41 UTC",
+    "serialized_at": "2021-06-30 21:27:17 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -6176,6 +6176,78 @@
       }
     },
     {
+      "name": "U5 Hackathon High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/zmiLk9B9ZWKLeJtoXNEiuxn92IpZukOz8xZWBLzzz9M",
+      "key": "u5_hackathon_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U5 Hackathon High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1oz5uUMSTi4VKGwBfT9cW3riBUFE5MEbg2baHPDg_U2k/edit?usp=sharing",
+      "key": "u5_hackathon_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U5 Hackathon High Score Sample Written Responses",
+      "url": "https://docs.google.com/document/d/1HbpOLfJHCzWEJjOsoXhl2QKocIcs32G3iB-zzw0ddXc/edit?usp=sharing",
+      "key": "u5_hackathon_high_score_sample_written_responses",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_written_responses"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/hGGs32BtXJMHnxpglngOa3XWPYHzy1obVNG9GYrgU5I",
+      "key": "u5_hackathon_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1k4Gy9UlB7jNfDwq-zFxyODi5fgNTaom1uuTE7HgpFv8/edit?usp=sharing",
+      "key": "u5_hackathon_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample Written Responses",
+      "url": "https://docs.google.com/document/d/1CnpIoCRDR511Poisw9AWBs2_MZjYS4fKJGiqV_mIdss/edit?usp=sharing",
+      "key": "u5_hackathon_mid_score_sample_written_responses",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_written_responses"
+      }
+    },
+    {
       "name": "Virtual Modification Resources",
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
@@ -6373,6 +6445,42 @@
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
         "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_written_responses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_written_responses"
       }
     },
     {

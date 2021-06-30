@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:40 UTC",
+    "serialized_at": "2021-06-30 21:19:13 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp3-2021"
@@ -3904,6 +3904,54 @@
       }
     },
     {
+      "name": "U3 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/82d6E4UAb6YG4psuAnKVtGVR4bGp1thGQ5IJXYux8uM",
+      "key": "u3_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1TRZwaqBMKFIp8FuKMd0bnFZP3OJhV6YrUFWrU8RF0kM/edit?usp=sharing",
+      "key": "u3_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/ylMrNrR86gj9RiHJ1qcoAgf3bJfgU79XCM09yJn7DWQ",
+      "key": "u3_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1kk2G4pPOr8wfN0tQzOm_mFvwMDbcmvreehC5QA3y91c/edit?usp=sharing",
+      "key": "u3_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
       "name": "Virtual Modification Resources",
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
@@ -4023,6 +4071,30 @@
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
         "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
       }
     },
     {

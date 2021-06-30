@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-06-30 18:16:49 UTC",
+    "serialized_at": "2021-06-30 21:52:52 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -4603,10 +4603,43 @@
       "key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487",
       "position": 1,
       "properties": {
-        "progression_name": "Pet Levels"
+        "progression_name": "Customize Your App"
       },
       "seeding_key": {
         "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487",
+        "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a"
+      }
+    },
+    {
+      "key": "5f9ae590-3b7b-4230-b4f5-a7d9e39d645b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f9ae590-3b7b-4230-b4f5-a7d9e39d645b",
+        "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a"
+      }
+    },
+    {
+      "key": "26348425-3e89-40ea-97a8-099c2f9bd203",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "26348425-3e89-40ea-97a8-099c2f9bd203",
+        "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a"
+      }
+    },
+    {
+      "key": "42778a27-f33a-44bb-a9ef-209e38f412b0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "42778a27-f33a-44bb-a9ef-209e38f412b0",
         "lesson_activity.key": "5f12419c-3d6c-4d1b-9e1a-7e952d71b75a"
       }
     },
@@ -7198,7 +7231,7 @@
         "level_keys": [
           "ml-models in applab-screens-2-2021"
         ],
-        "progression": "Pet Levels"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
@@ -7224,7 +7257,7 @@
         "level_keys": [
           "ml-models in applab-screens-1-2021"
         ],
-        "progression": "Pet Levels"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
@@ -7250,7 +7283,7 @@
         "level_keys": [
           "ml-models in applab-screens-3-2021"
         ],
-        "progression": "Pet Levels"
+        "progression": "Customize Your App"
       },
       "named_level": false,
       "bonus": false,
@@ -7270,10 +7303,33 @@
     {
       "chapter": 34,
       "position": 7,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-choice parent"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "5f9ae590-3b7b-4230-b4f5-a7d9e39d645b"
+      },
+      "level_keys": [
+        "ml-models in applab-choice parent"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Pet Levels"
+        "progression": "Assessment"
       },
       "named_level": false,
       "bonus": false,
@@ -7284,22 +7340,19 @@
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
+        "activity_section.key": "26348425-3e89-40ea-97a8-099c2f9bd203"
       },
       "level_keys": [
         "ml-models in applab-zoo assessment"
       ]
     },
     {
-      "chapter": 35,
-      "position": 8,
-      "activity_section_position": 5,
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-practice choice-2021"
-        ],
-        "progression": "Pet Levels"
+        "progression": "Challenges"
       },
       "named_level": false,
       "bonus": false,
@@ -7310,15 +7363,15 @@
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
+        "activity_section.key": "42778a27-f33a-44bb-a9ef-209e38f412b0"
       },
       "level_keys": [
         "ml-models in applab-practice choice-2021"
       ]
     },
     {
-      "chapter": 36,
-      "position": 9,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7340,8 +7393,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 10,
+      "chapter": 38,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7363,8 +7416,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 11,
+      "chapter": 39,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7386,8 +7439,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 12,
+      "chapter": 40,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -7409,8 +7462,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 13,
+      "chapter": 41,
+      "position": 14,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -7432,8 +7485,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 14,
+      "chapter": 42,
+      "position": 15,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -7455,7 +7508,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7481,7 +7534,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7507,7 +7560,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7533,7 +7586,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7559,7 +7612,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7585,7 +7638,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7611,7 +7664,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7637,7 +7690,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -7663,7 +7716,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -7689,7 +7742,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7715,7 +7768,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7741,7 +7794,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7767,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7793,7 +7846,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7819,7 +7872,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7845,7 +7898,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7871,7 +7924,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7897,7 +7950,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7923,7 +7976,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7946,7 +7999,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7972,7 +8025,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7998,7 +8051,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8024,7 +8077,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8050,7 +8103,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8076,7 +8129,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8099,7 +8152,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 7,
       "assessment": true,
@@ -8122,7 +8175,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8148,7 +8201,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8174,7 +8227,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8599,6 +8652,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-models in applab-choice parent",
+        "script_level.level_keys": [
+          "ml-models in applab-choice parent"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "5f9ae590-3b7b-4230-b4f5-a7d9e39d645b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-models in applab-zoo assessment",
         "script_level.level_keys": [
           "ml-models in applab-zoo assessment"
@@ -8606,7 +8671,7 @@
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
+        "activity_section.key": "26348425-3e89-40ea-97a8-099c2f9bd203"
       }
     },
     {
@@ -8618,7 +8683,7 @@
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "a24ab4c9-4d3c-4ad7-a20e-c53b2f9d8487"
+        "activity_section.key": "42778a27-f33a-44bb-a9ef-209e38f412b0"
       }
     },
     {
