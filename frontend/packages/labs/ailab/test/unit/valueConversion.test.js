@@ -1,8 +1,11 @@
-import { convertValueForDisplay, convertValueForTraining } from '../../src/helpers/valueConversion';
+import {
+  convertValueForDisplay,
+  convertValueForTraining,
+  getConvertedPredictedLabel
+} from '../../src/helpers/valueConversion';
 import { classificationState } from './testData';
 
 describe("converting categorical values", () => {
-
   const categoryOptionStrings = Object.keys(
     classificationState.featureNumberKey[classificationState.labelColumn]
   );
@@ -32,5 +35,10 @@ describe("converting categorical values", () => {
       );
       expect(machineLearningNumber).toBe(convertedValue);
     });
+  })
+
+  test("convert predicted label for display", async () => {
+    const predictedLabel = getConvertedPredictedLabel(classificationState);
+    expect(predictedLabel).toBe('yes');
   })
 });

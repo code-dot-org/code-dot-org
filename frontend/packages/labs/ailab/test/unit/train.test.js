@@ -9,9 +9,9 @@ import rootReducer, {
   setLabelColumn,
   addSelectedFeature,
   setColumnsByDataType,
-  setTestData,
-  getConvertedPredictedLabel
+  setTestData
 } from "../../src/redux";
+import { getConvertedPredictedLabel } from "../../src/helpers/valueConversion";
 
 describe("train functions", () => {
   test("train and predict with numerical data", async () => {

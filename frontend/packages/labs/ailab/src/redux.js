@@ -841,14 +841,6 @@ export function getConvertedAccuracyCheckExamples(state) {
   return convertedAccuracyCheckExamples;
 }
 
-export function getConvertedPredictedLabel(state) {
-  return convertValueForDisplay(
-    state,
-    state.prediction,
-    state.labelColumn
-  );
-}
-
 export function getConvertedLabels(state, rawLabels = []) {
   return rawLabels.map(label =>
     convertValueForDisplay(state, label, state.labelColumn)
