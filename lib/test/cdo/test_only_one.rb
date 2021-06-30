@@ -32,4 +32,14 @@ class OnlyOneTest < Minitest::Test
     refute only_one_running?(tmp1)
     refute only_one_running?(tmp2)
   end
+
+  # Return false even when a file (inode) is replaced by a different file sharing the same path.
+  def test_replaced_file
+    tmp = Tempfile.new
+    tmp_path = tmp.path
+    assert only_one_running?(tmp)
+    tmp.unlink
+    tmp2 = File.new(tmp_path, File::CREAT)
+    refute only_one_running?(tmp2)
+  end
 end
