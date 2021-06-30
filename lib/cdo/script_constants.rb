@@ -317,7 +317,10 @@ module ScriptConstants
     AIML = "aiml".freeze,
 
     # Testing
-    TEST = 'ui-test-versioned-unit'.freeze
+    #
+    # note that this constant is hard to rename from 'script' to 'unit' because
+    # doing so causes the course version to change, causing seeding to fail.
+    TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
   def self.unit_in_category?(category, script)
