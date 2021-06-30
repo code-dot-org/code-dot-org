@@ -21,7 +21,7 @@ class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
-  has_many :default_scripts, through: :default_unit_group_units, source: :script
+  has_many :default_units, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
@@ -105,7 +105,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
-    unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
+    unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
 
@@ -143,7 +143,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        alternate_scripts: summarize_alternate_units,
+        alternate_units: summarize_alternate_units,
         published_state: published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
@@ -169,7 +169,7 @@ class UnitGroup < ApplicationRecord
   # @param units [Array<String>] - Updated list of names of units in this course
   # @param alternate_units [Array<Hash>] Updated list of alternate units in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_scripts_changes(units, alternate_units, course_strings)
+  def persist_strings_and_units_changes(units, alternate_units, course_strings)
     UnitGroup.update_strings(name, course_strings)
     update_scripts(units, alternate_units) if units
     save!
@@ -359,7 +359,7 @@ class UnitGroup < ApplicationRecord
       teacher_resources: teacher_resources,
       migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.map(&:summarize_for_resources_dropdown),
-      is_migrated: has_migrated_script?,
+      is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
@@ -581,7 +581,7 @@ class UnitGroup < ApplicationRecord
   # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
     return nil unless user
-    unit_ids = default_scripts.pluck(:id)
+    unit_ids = default_units.pluck(:id)
     user.
       user_scripts.
       where(script_id: unit_ids).
@@ -675,7 +675,7 @@ class UnitGroup < ApplicationRecord
     # which they made no progress.
 
     is_assigned = user.sections_as_student.any? {|s| s.unit_group == self}
-    has_progress = !!UserScript.find_by(user: user, script: default_scripts)
+    has_progress = !!UserScript.find_by(user: user, script: default_units)
     has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
     (is_assigned || has_progress) && has_pilot_teacher
   end
@@ -694,8 +694,8 @@ class UnitGroup < ApplicationRecord
   end
   # rubocop:enable Naming/PredicateName
 
-  def has_migrated_script?
-    !!default_scripts[0]&.is_migrated?
+  def has_migrated_unit?
+    !!default_units[0]&.is_migrated?
   end
 
   def prevent_course_version_change?
@@ -703,7 +703,7 @@ class UnitGroup < ApplicationRecord
     # For reasons I (Bethany) still don't understand, using a proc here causes
     # the method to terminate unexpectedly without an error. My unproven guess
     # is that this is due to the nested `any?` calls
-    default_scripts.any? {|s| s.prevent_course_version_change?}
+    default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
   end
 end
