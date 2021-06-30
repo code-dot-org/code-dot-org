@@ -38,6 +38,9 @@ def main
   find_and_process('ap_cs_offerings') do |object_key|
     Census::ApCsOffering.dry_run_new_test_file(object_key)
   end
+  find_and_process('ap_school_codes') do |object_key|
+    Census::ApSchoolCode.dry_run_new_test_file(object_key)
+  end
   find_and_process('ib_cs_offerings') do |object_key|
     Census::IbCsOffering.dry_seed_s3_object(object_key)
   end
