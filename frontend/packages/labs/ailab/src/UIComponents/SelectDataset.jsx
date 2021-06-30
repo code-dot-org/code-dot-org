@@ -27,7 +27,8 @@ class SelectDataset extends Component {
     resetState: PropTypes.func.isRequired,
     specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
-    highlightDataset: PropTypes.string
+    highlightDataset: PropTypes.string,
+    invalidData: PropTypes.string
   };
 
   constructor(props) {
@@ -69,6 +70,16 @@ class SelectDataset extends Component {
       download: false
     });
     parseCSV(event.target.files[0], false, true);
+  };
+
+  getInvalidDataMessage = () => {
+    if (this.props.invalidData === "tooFewRows") {
+      return "Please upload a CSV with at least 2 rows.";
+    } else if (this.props.invalidData === "tooFewColumns") {
+      return "Please upload a CSV with at least 2 columns.";
+    } else {
+      return null;
+    }
   };
 
   render() {
@@ -130,6 +141,9 @@ class SelectDataset extends Component {
                 value=""
               />
             </label>
+            <span style={styles.invalidDataMessageContainer}>
+              {this.getInvalidDataMessage()}
+            </span>
           </div>
         )}
       </div>
@@ -143,7 +157,8 @@ export default connect(
     jsonfile: state.jsonfile,
     specifiedDatasets: getSpecifiedDatasets(state),
     name: state.name,
-    highlightDataset: state.highlightDataset
+    highlightDataset: state.highlightDataset,
+    invalidData: state.invalidData
   }),
   dispatch => ({
     resetState() {

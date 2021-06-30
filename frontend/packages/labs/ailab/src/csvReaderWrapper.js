@@ -2,6 +2,7 @@ import Papa from "papaparse";
 import { store } from "./index.js";
 import {
   setImportedData,
+  setInvalidData,
   setColumnsByDataType,
   setRemovedRowsCount
 } from "./redux";
@@ -57,6 +58,12 @@ const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
   store.dispatch(setImportedData(cleanedData, userUploadedData));
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(cleanedData);
+  }
+
+  if (cleanedData.length < 2) {
+    store.dispatch(setInvalidData("tooFewRows"));
+  } else if (Object.keys(cleanedData[0]).length < 2) {
+    store.dispatch(setInvalidData("tooFewColumns"));
   }
 }
 

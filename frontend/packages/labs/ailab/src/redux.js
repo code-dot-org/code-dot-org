@@ -31,6 +31,7 @@ const SET_MODE = "SET_MODE";
 const SET_SELECTED_NAME = "SET_SELECTED_NAME";
 const SET_SELECTED_CSV = "SET_SELECTED_CSV";
 const SET_SELECTED_JSON = "SET_SELECTED_JSON";
+const SET_INVALID_DATA = "SET_INVALID_DATA";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_REMOVED_ROWS_COUNT = "SET_REMOVED_ROWS_COUNT";
@@ -80,6 +81,10 @@ export function setSelectedCSV(csvfile) {
 
 export function setSelectedJSON(jsonfile) {
   return { type: SET_SELECTED_JSON, jsonfile };
+}
+
+export function setInvalidData(invalidData) {
+  return { type: SET_INVALID_DATA, invalidData };
 }
 
 export function setImportedData(data, userUploadedData) {
@@ -235,6 +240,8 @@ const initialState = {
   name: undefined,
   csvfile: undefined,
   jsonfile: undefined,
+  // Possible values for invalidData: "tooFewRows", and "tooFewColumns".
+  invalidData: undefined,
   data: [],
   metadata: {},
   removedRowsCount: 0,
@@ -295,6 +302,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       jsonfile: action.jsonfile
+    };
+  }
+  if (action.type === SET_INVALID_DATA) {
+    return {
+      ...state,
+      invalidData: action.invalidData
     };
   }
   if (action.type === SET_IMPORTED_DATA) {
