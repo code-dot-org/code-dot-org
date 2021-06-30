@@ -2,11 +2,12 @@ import {
   getScatterPlotData,
   getCrossTabData,
   labelColumnIsNumerical,
-  // labelColumnIsCategorical,
+  labelColumnIsCategorical,
   getUniqueOptionsLabelColumn
 } from '../../src/selectors/visualizationSelectors';
 import {
-  currentColumnIsNumerical
+  currentColumnIsNumerical,
+  currentColumnIsCategorical
 } from '../../src/selectors/currentColumnSelectors';
 import { allNumericalState, classificationState } from './testData';
 
@@ -33,6 +34,27 @@ describe("getScatterPlotData", () => {
       allNumericalState.data
     )
     expect(expected).toEqual(scatterPlotData);
+  });
+});
+
+describe("getCrossTabData", () => {
+  test("gets cross tab data", async () => {
+    const sampleExpectedResult = {
+      featureValues: [ 'hot' ],
+      labelCounts: { no: 1, yes: 1 },
+      labelPercents: { no: 50, yes: 50 }
+    };
+    const crossTabData = getCrossTabData.resultFunc(
+      classificationState.labelColumn,
+      labelColumnIsCategorical,
+      classificationState.currentColumn,
+      currentColumnIsCategorical,
+      classificationState.data,
+      getUniqueOptionsLabelColumn
+    )
+    expect(crossTabData.labelName).toEqual('play');
+    expect(crossTabData.featureNames).toEqual(['temp']);
+    expect(crossTabData.results[0]).toEqual(sampleExpectedResult);
   });
 });
 
