@@ -1,5 +1,7 @@
 /* Mock state to be used across the testing suite. */
 
+export const sunDescription = "How sunny was it.";
+
 export const regressionState = {
   data: [
     {
@@ -42,6 +44,14 @@ export const regressionState = {
       'medium' : 1,
       'high' : 2,
     }
+  },
+  trainedModelDetails: {
+    columns: [
+      {
+        id: 'sun',
+        description: sunDescription
+      }
+    ]
   }
 };
 
