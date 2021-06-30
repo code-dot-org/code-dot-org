@@ -1196,10 +1196,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in(@levelbuilder)
 
     Script.expects(:get_from_cache).never
-    Script.expects(:get_without_cache).returns(@migrated_unit).once
+    Script.expects(:get_without_cache).with(@migrated_unit.name, true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Script.expects(:get_from_cache).returns(@migrated_unit).once
+    Script.expects(:get_from_cache).with(@migrated_unit.name).returns(@migrated_unit).once
     Script.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
