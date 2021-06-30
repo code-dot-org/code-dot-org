@@ -79,6 +79,7 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
@@ -642,6 +643,9 @@ class UnitEditor extends React.Component {
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})
+                    }
+                    preventCourseVersionChange={
+                      this.props.preventCourseVersionChange
                     }
                   />
                 </div>
