@@ -5,21 +5,20 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
   setup_all do
     @project_owner = create :student
-    @another_student = create :student
     @project_owner_channel_id = 'encrypted_channel_id'
     @project_owner_storage_id = 123
     @project_storage_app_id = 456
-    @project_version_string = 'special_long_project_version_stringzzzz'
+    @project_version_string = 'special_project_version_string'
 
     @teacher = create :teacher
     @section = create :section, user: @teacher
+    @another_student = create :student
   end
 
   test 'student can create CodeReviewComment on their own project' do
     stub_storage_apps_calls
 
     sign_in @project_owner
-
     post :create, params: {
       channel_id: @project_owner_channel_id,
       project_version: 'a_project_version_string',
@@ -33,7 +32,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     stub_storage_apps_calls
 
     sign_in @another_student
-
     post :create, params: {
       channel_id: @project_owner_channel_id,
       project_version: 'a_project_version_string',
@@ -51,7 +49,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     end
 
     sign_in @another_student
-
     post :create, params: {
       channel_id: @project_owner_channel_id,
       project_version: 'a_project_version_string',
@@ -67,7 +64,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     create :follower, student_user: @project_owner, section: @section
 
     sign_in @teacher
-
     post :create, params: {
       channel_id: @project_owner_channel_id,
       project_version: 'a_project_version_string',
@@ -81,7 +77,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     stub_storage_apps_calls
 
     sign_in @teacher
-
     post :create, params: {
       channel_id: @project_owner_channel_id,
       project_version: 'a_project_version_string',
@@ -99,7 +94,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_nil code_review_comment.is_resolved
 
     sign_in @project_owner
-
     patch :resolve, params: {id: code_review_comment.id}
 
     assert_response :success
@@ -114,7 +108,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_nil code_review_comment.is_resolved
 
     sign_in @another_student
-
     patch :resolve, params: {id: code_review_comment.id}
 
     assert_response :forbidden
@@ -126,7 +119,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
       project_owner_id: @project_owner.id
 
     sign_in @teacher
-
     delete :destroy, params: {id: code_review_comment.id}
 
     assert_response :success
@@ -137,7 +129,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
       project_owner_id: @project_owner.id
 
     sign_in @teacher
-
     delete :destroy, params: {id: code_review_comment.id}
 
     assert_response :forbidden
@@ -148,7 +139,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
       project_owner_id: @project_owner.id
 
     sign_in @project_owner
-
     delete :destroy, params: {id: code_review_comment.id}
 
     assert_response :forbidden
@@ -159,7 +149,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     setup_project_comments_tests
 
     sign_in @project_owner
-
     get :project_comments, params: {
       channel_id: @project_owner_channel_id,
       project_version: @project_version_string
@@ -178,7 +167,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     end
 
     sign_in @another_student
-
     get :project_comments, params: {
       channel_id: @project_owner_channel_id,
       project_version: @project_version_string
@@ -195,7 +183,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     create :follower, student_user: @project_owner, section: @section
 
     sign_in @teacher
-
     get :project_comments, params: {
       channel_id: @project_owner_channel_id,
       project_version: @project_version_string
@@ -210,7 +197,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     setup_project_comments_tests
 
     sign_in @another_student
-
     get :project_comments, params: {
       channel_id: @project_owner_channel_id,
       project_version: @project_version_string
@@ -224,7 +210,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     setup_project_comments_tests
 
     sign_in @teacher
-
     get :project_comments, params: {
       channel_id: @project_owner_channel_id,
       project_version: @project_version_string
