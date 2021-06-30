@@ -16,7 +16,7 @@ import {
  } from '../selectors';
 import { ColumnTypes } from "../constants.js";
 
-const getCurrentColumn = state => state.currentColumn;
+export const getCurrentColumn = state => state.currentColumn;
 
 export const getCurrentColumnDetails = createSelector(
   [

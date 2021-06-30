@@ -13,8 +13,6 @@ import {
   getColumnDataToSave,
 } from "./helpers/columnDetails.js";
 import { getDatasetDetails } from "./helpers/datasetDetails.js";
-import { getUniqueOptionsLabelColumn } from "./selectors.js";
-import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
   RegressionTrainer,
@@ -669,113 +667,6 @@ export function getPanelButtons(state) {
 
 export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
-}
-
-/* Functions for processing column data for visualizations. */
-
-/* Returns an object with information for the CrossTab UI.
- *
- * Here is an example result:
- *
- *  {
- *    results: [
- *      {
- *        featureValues: ["1", "1"],
- *        labelCounts: { yes: 2, no: 1 },
- *        labelPercents: { yes: 67, no: 33 }
- *      },
- *      {
- *        featureValues: ["0", "0"],
- *        labelCounts: { yes: 25, no: 42 },
- *        labelPercents: { yes: 37, no: 63 }
- *      },
- *      {
- *        featureValues: ["1", "0"],
- *        labelCounts: { yes: 6, no: 5 },
- *        labelPercents: { yes: 55, no: 45 }
- *      },
- *      {
- *        featureValues: ["0", "1"],
- *        labelCounts: { no: 2, yes: 2 },
- *        labelPercents: { no: 50, yes: 50 }
- *      }
- *    ],
- *    uniqueLabelValues: ["yes", "no"],
- *    featureNames: ["caramel", "crispy"],
- *    labelName: "delicious?"
- *  }
- *
- */
-
-export function getCrossTabData(state) {
-  if (!state.labelColumn || !state.currentColumn) {
-    return null;
-  }
-
-  if (
-    !isColumnCategorical(state, state.labelColumn) ||
-    !isColumnCategorical(state, state.currentColumn)
-  ) {
-    return null;
-  }
-
-  var results = [];
-
-  // For each row of data, determine whether we have found a new or existing
-  // combination of feature values.  If new, then add a new entry to our results
-  // array.  Then record or increment the count for the corresponding label
-  // value.
-
-  for (let row of state.data) {
-    var featureValues = [];
-    featureValues.push(row[state.currentColumn]);
-
-    var existingEntry = results.find(result => {
-      return areArraysEqual(result.featureValues, featureValues);
-    });
-
-    if (!existingEntry) {
-      existingEntry = {
-        featureValues,
-        labelCounts: { [row[state.labelColumn]]: 1 }
-      };
-      results.push(existingEntry);
-    } else {
-      if (!existingEntry.labelCounts[row[state.labelColumn]]) {
-        existingEntry.labelCounts[row[state.labelColumn]] = 1;
-      } else {
-        existingEntry.labelCounts[row[state.labelColumn]]++;
-      }
-    }
-  }
-
-  // Now that we have all the counts of label values, we can determine the
-  // corresponding percentage values.
-
-  for (let result of results) {
-    let totalCount = 0;
-    for (let labelCount of Object.values(result.labelCounts)) {
-      totalCount += labelCount;
-    }
-    result.labelPercents = {};
-    for (let key of Object.keys(result.labelCounts)) {
-      result.labelPercents[key] = Math.round(
-        (result.labelCounts[key] / totalCount) * 100
-      );
-    }
-  }
-
-  // Take inventory of all unique label values we have seen, which allows us to
-  // generate the header at the top of the CrossTab UI.
-
-  const uniqueLabelValues =  getUniqueOptionsLabelColumn(state);
-
-  return {
-    results,
-    uniqueLabelValues,
-    featureNames: [state.currentColumn],
-    labelName: state.labelColumn
-  };
 }
 
 export function getScatterPlotData(state) {

@@ -11,7 +11,7 @@ import { arrayIntersection } from './helpers/utils';
 export const getData = state => state.data;
 export const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
-const getLabelColumn = state => state.labelColumn;
+export const getLabelColumn = state => state.labelColumn;
 export const getMetadata = state => state.metadata;
 export const getTrainedModelDetails = state => state.trainedModelDetails;
 
@@ -73,13 +73,6 @@ export const getUniqueOptionsByColumn = createSelector(
       uniqueOptionsByColumn[column] = getUniqueOptions(data, column).sort()
     ))
     return uniqueOptionsByColumn;
-  }
-)
-
-export const getUniqueOptionsLabelColumn = createSelector(
-  [getLabelColumn, getData],
-  (labelColumn, data) => {
-    return getUniqueOptions(data, labelColumn).sort()
   }
 )
 
