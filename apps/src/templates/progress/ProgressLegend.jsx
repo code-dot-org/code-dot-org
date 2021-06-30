@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {
   BasicBubble,
@@ -14,6 +13,10 @@ import {levelProgressStyle} from './progressStyles';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
+import './styles.scss';
+
+const MAX_UNSPLIT_STATUS_COLUMNS = 5;
+
 export default class ProgressLegend extends Component {
   static propTypes = {
     includeCsfColumn: PropTypes.bool.isRequired,
@@ -29,15 +32,13 @@ export default class ProgressLegend extends Component {
     const statusColumns = this.getLevelStatusColumns();
     const detailColumns = this.getLevelDetailsColumns();
 
-    return (
-      <div style={styles.container}>
-        {this.renderTable(detailColumns, statusColumns)}
-      </div>
-    );
+    return this.renderTable(detailColumns, statusColumns);
   }
 
   renderTable(detailColumns, statusColumns) {
-    if (detailColumns && statusColumns?.length > 6) {
+    // If we have too many status columns to show in the width allowed,
+    // we split the table in two.
+    if (detailColumns && statusColumns?.length > MAX_UNSPLIT_STATUS_COLUMNS) {
       return (
         <div>
           {this.renderTable(null, statusColumns)}
@@ -54,28 +55,20 @@ export default class ProgressLegend extends Component {
     const rows = _.zip(...columns);
 
     return (
-      <table style={styles.table} className="progress-legend">
+      <table className="progress-legend">
         <thead>
-          <tr style={styles.header}>
-            <TD style={styles.headerCell}>{i18n.levelType()}</TD>
-            {detailColumns && (
-              <TD style={styles.headerCell} colSpan={3}>
-                {i18n.levelDetails()}
-              </TD>
-            )}
+          <tr>
+            <td>{i18n.levelType()}</td>
+            {detailColumns && <td colSpan={3}>{i18n.levelDetails()}</td>}
             {statusColumns && (
-              <TD style={styles.headerCell} colSpan={statusColumns.length}>
-                {i18n.levelStatus()}
-              </TD>
+              <td colSpan={statusColumns.length}>{i18n.levelStatus()}</td>
             )}
           </tr>
-          {statusColumns && (
-            <tr style={styles.secondRow}>{rows[0].map(cell => cell)}</tr>
-          )}
+          {statusColumns && <tr>{rows[0].map(cell => cell)}</tr>}
         </thead>
         <tbody>
-          <tr style={styles.subsequentRow}>{rows[1].map(cell => cell)}</tr>
-          <tr style={styles.subsequentRow}>{rows[2].map(cell => cell)}</tr>
+          <tr>{rows[1].map(cell => cell)}</tr>
+          <tr>{rows[2].map(cell => cell)}</tr>
         </tbody>
       </table>
     );
@@ -103,147 +96,116 @@ export default class ProgressLegend extends Component {
 
   getLevelDetailsColumns() {
     const column1 = [
-      <TD />,
-      <TD>
-        <div style={styles.iconAndText}>
-          <FontAwesome icon="file-text" style={styles.icon} />
-          {i18n.text()}
-        </div>
-      </TD>,
-      <TD>
-        <div style={styles.iconAndTextDivTop}>
-          <FontAwesome icon="scissors" style={styles.icon} />
-          {i18n.unplugged()}
-        </div>
-        <div style={styles.iconAndTextDivBottom}>
-          <FontAwesome icon="flag-checkered" style={styles.icon} />
-          {i18n.stageExtras()}
-        </div>
-      </TD>
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('file-text', i18n.text())}
+      </td>,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('scissors', i18n.unplugged())}
+        {this.getLevelDetails('flag-checkered', i18n.stageExtras())}
+      </td>
     ];
     const column2 = [
-      <TD />,
-      <TD>
-        <div style={styles.iconAndText}>
-          <FontAwesome icon="video-camera" style={styles.icon} />
-          {i18n.video()}
-        </div>
-      </TD>,
-      <TD>
-        <div style={styles.iconAndTextDivTop}>
-          <FontAwesome icon="desktop" style={styles.icon} />
-          {i18n.online()}
-        </div>
-        <div style={styles.iconAndTextDivBottom}>
-          <FontAwesome icon="check-circle" style={styles.icon} />
-          {i18n.progressLegendAssessment()}
-        </div>
-      </TD>
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('video-camera', i18n.video())}
+      </td>,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('desktop', i18n.online())}
+        {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}
+      </td>
     ];
     const column3 = [
-      <TD />,
-      <TD style={styles.endBorder}>
-        <div style={styles.iconAndText}>
-          <FontAwesome icon="map" style={styles.icon} />
-          {i18n.map()}
-        </div>
-      </TD>,
-      <TD style={styles.endBorder}>
-        <div style={styles.iconAndTextDivTop}>
-          <FontAwesome icon="list-ul" style={styles.icon} />
-          {i18n.question()}
-        </div>
-        <div style={styles.iconAndTextDivBottom}>
-          <FontAwesome icon="sitemap" style={styles.icon} />
-          {i18n.choiceLevel()}
-        </div>
-      </TD>
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()} className="end-border">
+        {this.getLevelDetails('map', i18n.map())}
+      </td>,
+      <td key={_.uniqueId()} className="end-border">
+        {this.getLevelDetails('list-ul', i18n.question())}
+        {this.getLevelDetails('sitemap', i18n.choiceLevel())}
+      </td>
     ];
     return [column1, column2, column3];
   }
 
   getLevelTypeColumn() {
     return [
-      <TD key={_.uniqueId()} />,
-      <TD key={_.uniqueId()} style={styles.endBorder}>
-        {i18n.concept()}
-      </TD>,
-      <TD key={_.uniqueId()} style={styles.endBorder}>
-        {i18n.activity()}
-      </TD>
+      <td key={_.uniqueId()} />,
+      <td key={_.uniqueId()}>{i18n.concept()}</td>,
+      <td key={_.uniqueId()}>{i18n.activity()}</td>
     ];
   }
 
   getProgressNAColumn() {
     return [
-      <TD key={_.uniqueId()}>
+      <td key={_.uniqueId()}>
         {i18n.progress()}
         <br />
         {i18n.notApplicable()}
-      </TD>,
-      <TD key={_.uniqueId()}>
-        <div style={styles.center}>—</div>
-      </TD>,
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>—</div>
-      </TD>
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>—</div>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>—</div>
+      </td>
     ];
   }
 
   getNotStartedColumn() {
     return [
-      <TD key={_.uniqueId()}>{i18n.notStarted()}</TD>,
-      <TD key={_.uniqueId()}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()}>{i18n.notStarted()}</td>,
+      <td key={_.uniqueId()}>
+        <div>
           {this.getBubble(
             LevelStatus.not_tried,
             true,
             `${i18n.concept()}: ${i18n.notStarted()}`
           )}
         </div>
-      </TD>,
-      <TD key={_.uniqueId()}>
-        <div style={styles.center}>
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>
           {this.getBubble(
             LevelStatus.not_tried,
             false,
             `${i18n.activity()}: ${i18n.notStarted()}`
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getInProgressColumn() {
     return [
-      <TD key={_.uniqueId()}>{i18n.inProgress()}</TD>,
-      <TD key={_.uniqueId()}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()}>{i18n.inProgress()}</td>,
+      <td key={_.uniqueId()}>
+        <div>
           {this.getBubble(
             LevelStatus.attempted,
             true,
             `${i18n.concept()}: ${i18n.inProgress()}`
           )}
         </div>
-      </TD>,
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.attempted,
             false,
             `${i18n.activity()}: ${i18n.inProgress()}`
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getKeepWorkingColumn() {
     return [
-      <TD key={_.uniqueId()}>{i18n.keepWorking()}</TD>,
+      <td key={_.uniqueId()}>{i18n.keepWorking()}</td>,
       this.getNotApplicableCell(),
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.attempted,
             false,
@@ -251,16 +213,16 @@ export default class ProgressLegend extends Component {
             true
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getNeedsReviewColumn() {
     return [
-      <TD key={_.uniqueId()}>{i18n.needsReview()}</TD>,
+      <td key={_.uniqueId()}>{i18n.needsReview()}</td>,
       this.getNotApplicableCell(),
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.perfect,
             false,
@@ -268,76 +230,83 @@ export default class ProgressLegend extends Component {
             true
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getTooManyBlocksColumn() {
     return [
-      <TD key={_.uniqueId()}>
+      <td key={_.uniqueId()}>
         <div>{i18n.completed()}</div>
-        <div style={styles.secondaryText}>({i18n.tooManyBlocks()})</div>
-      </TD>,
+        <div>({i18n.tooManyBlocks()})</div>
+      </td>,
       this.getNotApplicableCell(),
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.passed,
             false,
             `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getPerfectColumn() {
     return [
-      <TD key={_.uniqueId()}>
+      <td key={_.uniqueId()}>
         <div>{i18n.completed()}</div>
-        {this.props.includeCsfColumn && (
-          <div style={styles.secondaryText}>({i18n.perfect()})</div>
-        )}
-      </TD>,
-      <TD key={_.uniqueId()}>
-        <div style={styles.center}>
+        {this.props.includeCsfColumn && <div>({i18n.perfect()})</div>}
+      </td>,
+      <td key={_.uniqueId()}>
+        <div>
           {this.getBubble(
             LevelStatus.perfect,
             true,
             `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
           )}
         </div>
-      </TD>,
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      </td>,
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.perfect,
             false,
             `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getAssessmentsColumn() {
     return [
-      <TD key={_.uniqueId()}>{i18n.assessmentAndSurvey()}</TD>,
+      <td key={_.uniqueId()}>{i18n.assessmentAndSurvey()}</td>,
       this.getNotApplicableCell(),
-      <TD key={_.uniqueId()} rowSpan={2}>
-        <div style={styles.center}>
+      <td key={_.uniqueId()} rowSpan={2}>
+        <div>
           {this.getBubble(
             LevelStatus.submitted,
             false,
             `${i18n.activity()}: ${i18n.submitted()}`
           )}
         </div>
-      </TD>
+      </td>
     ];
   }
 
   getNotApplicableCell() {
-    return <TD key={_.uniqueId()}>{i18n.notApplicable()}</TD>;
+    return <td key={_.uniqueId()}>{i18n.notApplicable()}</td>;
+  }
+
+  getLevelDetails(icon, text) {
+    return (
+      <div className="level-details">
+        <FontAwesome icon={icon} />
+        {text}
+      </div>
+    );
   }
 
   getBubble(status, isConcept, text, includeKeepWorkingBadge = false) {
@@ -358,90 +327,3 @@ export default class ProgressLegend extends Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    marginTop: 60
-  },
-  table: {
-    textAlign: 'center',
-    marginBottom: 20,
-    // Margin to get it to line up with ProgressLesson
-    marginLeft: 3,
-    marginRight: 3
-  },
-  tdStyle: {
-    padding: 10,
-    borderStyle: 'none'
-  },
-  header: {
-    backgroundColor: color.white,
-    color: color.charcoal,
-    whiteSpace: 'nowrap'
-  },
-  secondRow: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid',
-    verticalAlign: 'top'
-  },
-  subsequentRow: {
-    backgroundColor: color.white,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid'
-  },
-  endBorder: {
-    borderInlineEnd: 'solid',
-    borderWidth: 2,
-    borderColor: color.lightest_gray
-  },
-  headerCell: {
-    fontWeight: 'bold',
-    fontSize: 18
-  },
-  secondaryText: {
-    fontSize: 10
-  },
-  iconAndText: {
-    whiteSpace: 'nowrap'
-  },
-  iconAndTextDiv: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 16
-  },
-  iconAndTextDivTop: {
-    whiteSpace: 'nowrap',
-    paddingTop: 10,
-    paddingBottom: 16
-  },
-  iconAndTextDivBottom: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 10
-  },
-  icon: {
-    marginInlineEnd: 5,
-    size: 20
-  },
-  center: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-};
-
-// Give all of our TDs a padding
-const TD = ({style, ...props}) => (
-  <td
-    style={{
-      ...styles.tdStyle,
-      ...style
-    }}
-    {...props}
-  />
-);
-TD.propTypes = {
-  style: PropTypes.object
-};

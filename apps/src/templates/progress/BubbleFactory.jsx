@@ -10,7 +10,7 @@ import TooltipWithIcon from './TooltipWithIcon';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
-import './bubbleStyles.scss';
+import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
 export const BubbleShape = makeEnum('circle', 'diamond', 'pill');
