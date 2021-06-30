@@ -3,7 +3,8 @@ import {
   getAccuracyClassification,
   getAccuracyGrades,
   getResultsByGrade,
-  getPercentCorrect
+  getPercentCorrect,
+  getResultsDataInDataTableForm
 } from '../../src/helpers/accuracy.js';
 import { classificationState, regressionState } from './testData';
 import { ResultsGrades, ColumnTypes } from '../../src/constants.js';
@@ -90,7 +91,52 @@ const classificationTestCases = [
     grades: mixedGrades,
     percent: lowAccuracyPercent
   }
+];
+
+const gradesTestCases = [
+  {
+    case: "getResultsByGrade - correct, regression",
+    state: regressionState,
+    grades: regressionGrades,
+    gradeType: ResultsGrades.CORRECT
+  },
+  {
+    case: "getResultsByGrade - incorrect, regression",
+    state: regressionState,
+    grades: regressionGrades,
+    gradeType: ResultsGrades.INCORRECT
+  },
+  {
+    case: "getResultsByGrade - correct, classification",
+    state: classificationState,
+    grades: mixedGrades,
+    gradeType: ResultsGrades.CORRECT
+  },
+  {
+    case: "getResultsByGrade - incorrect, classification",
+    state: classificationState,
+    grades: mixedGrades,
+    gradeType: ResultsGrades.INCORRECT
+  }
 ]
+
+const regressionDataForTable = [
+  { sun: 'high', height: 4 },
+  { sun: 'high', height: 3.75 },
+  { sun: 'medium', height: 2.63 },
+  { sun: 'medium', height: 2.46 },
+  { sun: 'low', height: 1.6 },
+  { sun: 'low', height: 1 }
+];
+
+const classificationDataForTable = [
+  { temp: 'cool', weather: 'rainy', play: 'yes' },
+  { temp: 'mild', weather: 'rainy', play: 'yes' },
+  { temp: 'mild', weather: 'overcast', play: 'yes' },
+  { temp: 'mild', weather: 'sunny', play: 'no' },
+  { temp: 'hot', weather: 'overcast', play: 'no' },
+  { temp: 'hot', weather: 'sunny', play: 'yes' }
+];
 
 describe('get accuracy', () => {
   classificationTestCases.forEach(testCase => {
@@ -140,41 +186,40 @@ describe('get percent correct', () => {
 });
 
 describe('get results', () => {
-  test("getResultsByGrade - correct, regression", async () => {
-    const results = getResultsByGrade(regressionState, ResultsGrades.CORRECT);
-    const resultsCount = results.examples.length;
-    const expectedCount = regressionGrades.filter(
-      grade => grade === ResultsGrades.CORRECT
-    ).length;
-    expect(resultsCount).toBe(expectedCount);
+  gradesTestCases.forEach(testCase => {
+    test(testCase.case, async () => {
+      const results = getResultsByGrade(testCase.state, testCase.gradeType);
+      const resultsCount = results.examples.length;
+      const expectedCount = testCase.grades.filter(
+        grade => grade === testCase.gradeType
+      ).length;
+      expect(resultsCount).toBe(expectedCount);
+    })
   });
 
-  test("getResultsByGrade - incorrect, regression", async () => {
-    const results = getResultsByGrade(regressionState, ResultsGrades.INCORRECT);
+  test('regression - all', async () => {
+    const results = getResultsByGrade(regressionState, ResultsGrades.ALL);
     const resultsCount = results.examples.length;
-    const expectedCount = regressionGrades.filter(
-      grade => grade === ResultsGrades.INCORRECT
-    ).length;
-    expect(resultsCount).toBe(expectedCount);
+    const expectedCount = regressionGrades.length;
+    expect(resultsCount).toEqual(expectedCount);
   });
 
-  test("getResultsByGrade - correct, classification", async () => {
-    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
-    const results = getResultsByGrade(classificationState, ResultsGrades.CORRECT);
+  test('classification - all', async () => {
+    const results = getResultsByGrade(classificationState, ResultsGrades.ALL);
     const resultsCount = results.examples.length;
-    const expectedCount = mixedGrades.filter(
-      grade => grade === ResultsGrades.CORRECT
-    ).length;
-    expect(resultsCount).toBe(expectedCount);
+    const expectedCount = mixedGrades.length;
+    expect(resultsCount).toEqual(expectedCount);
+  })
+});
+
+describe('get results data in data table form', () => {
+  test('regression', async () => {
+    const resultsData = getResultsDataInDataTableForm(regressionState);
+    expect(resultsData).toEqual(regressionDataForTable);
   });
 
-  test("getResultsByGrade - incorrect, classification", async () => {
-    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
-    const results = getResultsByGrade(classificationState, ResultsGrades.INCORRECT);
-    const resultsCount = results.examples.length;
-    const expectedCount = mixedGrades.filter(
-      grade => grade === ResultsGrades.INCORRECT
-    ).length;
-    expect(resultsCount).toBe(expectedCount);
+  test('classification', async () => {
+    const resultsData = getResultsDataInDataTableForm(classificationState);
+    expect(resultsData).toEqual(classificationDataForTable);
   });
 });
