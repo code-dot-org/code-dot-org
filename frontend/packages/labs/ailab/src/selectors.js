@@ -3,8 +3,7 @@ import { ColumnTypes } from "./constants.js";
 import {
   filterColumnsByType,
   getUniqueOptions,
-  getExtrema,
-  getColumnDescription
+  getExtrema
  } from './helpers/columnDetails';
 import { arrayIntersection } from './helpers/utils';
 
