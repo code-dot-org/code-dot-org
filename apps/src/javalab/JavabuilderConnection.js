@@ -48,11 +48,9 @@ export default class JavabuilderConnection {
     let url = this.javabuilderUrl;
     const optionsStr = queryString.stringify(this.options);
     if (window.location.hostname.includes('localhost')) {
-      // We're hitting the local javabuilder server. Just pass the projectUrl and levelId.
+      // We're hitting the local javabuilder server. Just pass the required parameters.
       // TODO: Enable token decryption on local javabuilder server.
-      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}&levelId=${
-        this.levelId
-      }`;
+      url += `?levelId=${this.levelId}&channelId=${this.channelId}`;
       if (optionsStr) {
         url += `&${optionsStr}`;
       }
