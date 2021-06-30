@@ -2,6 +2,7 @@ import UserPreferences from '../lib/util/UserPreferences';
 import {DisplayTheme} from './DisplayTheme';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
+const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
@@ -29,6 +30,10 @@ export const appendInputLog = input => ({
 export const appendOutputLog = output => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'output', text: output}
+});
+
+export const clearConsoleLogs = () => ({
+  type: CLEAR_CONSOLE_LOGS
 });
 
 export const setAllValidation = validation => ({
@@ -123,6 +128,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       consoleLogs: [...state.consoleLogs, action.log]
+    };
+  }
+  if (action.type === CLEAR_CONSOLE_LOGS) {
+    return {
+      ...state,
+      consoleLogs: []
     };
   }
   if (action.type === SET_SOURCE) {
