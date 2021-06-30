@@ -880,4 +880,9 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :code_review_comments, only: [:create, :update, :destroy] do
+    patch :resolve, on: :member
+    get :project_comments, on: :collection
+  end
 end
