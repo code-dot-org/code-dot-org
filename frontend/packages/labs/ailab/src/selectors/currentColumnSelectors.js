@@ -11,12 +11,12 @@ import {
   getSelectedColumns,
   getData,
   getColumnsByDataType,
-  getMetadata
+  getMetadata,
+  getTrainedModelDetails
  } from '../selectors';
 import { ColumnTypes } from "../constants.js";
 
 const getCurrentColumn = state => state.currentColumn;
-const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCurrentColumnDetails = createSelector(
   [
