@@ -2,7 +2,6 @@
   "script": {
     "name": "csd4-draft",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "exclude_csf_column_in_legend": true,

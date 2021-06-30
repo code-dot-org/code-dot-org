@@ -85,8 +85,6 @@ class LessonGroup < ApplicationRecord
         lesson_group.save! if lesson_group.changed?
       end
 
-      LessonGroup.prevent_lesson_group_with_no_lessons(lesson_group, raw_lesson_group[:lessons].length)
-
       new_lessons = Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
       lesson_group.lessons = new_lessons
       lesson_group.save!
@@ -113,11 +111,6 @@ class LessonGroup < ApplicationRecord
         raise "The key #{reserved_lesson_group[:key]} is a reserved key. It must have the display name: #{reserved_lesson_group[:display_name]}."
       end
     end
-  end
-
-  # All lesson groups should have lessons in them
-  def self.prevent_lesson_group_with_no_lessons(lesson_group, num_lessons)
-    raise "Every lesson group should have at least one lesson. Lesson Group #{lesson_group.key} has no lessons." if num_lessons < 1
   end
 
   def localized_display_name
@@ -228,7 +221,7 @@ class LessonGroup < ApplicationRecord
     end
   end
 
-  def copy_to_script(destination_script, new_level_suffix = nil)
+  def copy_to_unit(destination_script, new_level_suffix = nil)
     return if script == destination_script
     raise 'Both lesson group and script must be migrated' unless script.is_migrated? && destination_script.is_migrated?
     raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
@@ -240,7 +233,7 @@ class LessonGroup < ApplicationRecord
     copied_lesson_group.save!
 
     lessons.each do |original_lesson|
-      copied_lesson = original_lesson.copy_to_script(destination_script, new_level_suffix)
+      copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
       raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
     end
     Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)

@@ -47,7 +47,7 @@ $(document).ready(function() {
       activities,
       searchOptions,
       lessonData.programmingEnvironments,
-      lessonData.lessonExtrasAvailableForScript
+      lessonData.lessonExtrasAvailableForUnit
     )
   );
   store.dispatch(initResources('lessonResource', lessonData.resources || []));

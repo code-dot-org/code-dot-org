@@ -2,7 +2,6 @@
   "script": {
     "name": "coursed-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,

@@ -32,7 +32,7 @@ class LevelTokenDetails extends Component {
 
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
-    lessonExtrasAvailableForScript: PropTypes.bool
+    lessonExtrasAvailableForUnit: PropTypes.bool
   };
 
   handleCheckboxChange = field => {
@@ -72,7 +72,7 @@ class LevelTokenDetails extends Component {
                 disabled={
                   option === 'bonus' &&
                   !this.props.scriptLevel[option] &&
-                  !this.props.lessonExtrasAvailableForScript
+                  !this.props.lessonExtrasAvailableForUnit
                 }
               />
               &nbsp;
@@ -80,7 +80,7 @@ class LevelTokenDetails extends Component {
               <ReactTooltip id={tooltipIds[option]} delayShow={500}>
                 <div style={styles.tooltip}>
                   {option === 'bonus' &&
-                  !this.props.lessonExtrasAvailableForScript
+                  !this.props.lessonExtrasAvailableForUnit
                     ? !this.props.scriptLevel[option]
                       ? disabledBonusTooltipText
                       : bonusAlreadySelectedTooltipText
@@ -129,7 +129,7 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 
 export default connect(
   state => ({
-    lessonExtrasAvailableForScript: state.lessonExtrasAvailableForScript
+    lessonExtrasAvailableForUnit: state.lessonExtrasAvailableForUnit
   }),
   {
     setScriptLevelField
