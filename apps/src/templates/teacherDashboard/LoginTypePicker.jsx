@@ -48,6 +48,7 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const gridLayoutHeight = hasThirdParty ? '275px' : '160px';
 
     // explicitly constrain the container as a whole to the width of the
     // content. We expect that differing length of translations versus english
@@ -62,23 +63,30 @@ class LoginTypePicker extends Component {
       zIndex: '600'
     };
 
+    // style grid container for Login Type Cards
+    const loginTypeCardGridContainerStyle = {
+      height: gridLayoutHeight,
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gridAutoRows: '150px',
+      gridGap: '5px'
+    };
+
     return (
       <div style={containerStyle}>
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
-        <div>
-          <CardContainer>
-            {withGoogle && (
-              <GoogleClassroomCard onClick={this.openImportDialog} />
-            )}
-            {withMicrosoft && (
-              <MicrosoftClassroomCard onClick={this.openImportDialog} />
-            )}
-            {withClever && <CleverCard onClick={this.openImportDialog} />}
-            <PictureLoginCard onClick={setLoginType} />
-            <WordLoginCard onClick={setLoginType} />
-            <EmailLoginCard onClick={setLoginType} />
-          </CardContainer>
+        <div style={loginTypeCardGridContainerStyle}>
+          {withGoogle && (
+            <GoogleClassroomCard onClick={this.openImportDialog} />
+          )}
+          {withMicrosoft && (
+            <MicrosoftClassroomCard onClick={this.openImportDialog} />
+          )}
+          {withClever && <CleverCard onClick={this.openImportDialog} />}
+          <PictureLoginCard onClick={setLoginType} />
+          <WordLoginCard onClick={setLoginType} />
+          <EmailLoginCard onClick={setLoginType} />
         </div>
         {!hasThirdParty && (
           <div>
