@@ -9,7 +9,7 @@ import {
 } from "./helpers/accuracy.js";
 import {
   isColumnNumerical,
-  isColumnCategorical,
+  // isColumnCategorical,
   getColumnDataToSave,
 } from "./helpers/columnDetails.js";
 import { getDatasetDetails } from "./helpers/datasetDetails.js";
