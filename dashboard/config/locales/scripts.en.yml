@@ -23201,7 +23201,7 @@ en:
           lesson_groups: {}
           name: kodea-pd-2021
         vpl-csd-2021:
-          title: CS Discoveries Virtual Professional Learning 2020 - 21
+          title: CS Discoveries Virtual Professional Learning 2021 - 22
           description: ''
           student_description: ''
           description_short: ''
@@ -23247,6 +23247,8 @@ en:
               name: Module 8
               description_student: ''
               description_teacher: ''
+            new lesson:
+              name: lesson display name
           lesson_groups:
             CSD_Module 1:
               display_name: Module 1
@@ -23264,6 +23266,8 @@ en:
               display_name: Module 7
             CSD_Module 8:
               display_name: Module 8
+            lesson group:
+              display_name: lesson group display name
           name: vpl-csd-2021
         vpl-csp-2021:
           title: CS Principles Virtual Professional Learning
@@ -23702,7 +23706,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: poster-draft
-          title: Story Board (V1)
+          title: Story Board (V1 - Control)
           description_audience: ''
           description_short: Story Board (V1)
           description: ''
@@ -24120,6 +24124,14 @@ en:
           lesson_groups: {}
           name: ai-lab
           title: AI Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
+        poster-experiment:
+          lessons: {}
+          lesson_groups: {}
+          name: poster-experiment
+          title: Story Board (V1 - Experiment)
           description_audience: ''
           description_short: ''
           description: ''
