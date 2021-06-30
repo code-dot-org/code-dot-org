@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 import {
   setTrainedModelDetail,
   getDataDescription,
-  isUserUploadedDataset,
-  getSelectedColumnsDescriptions
+  isUserUploadedDataset
 } from "../redux";
+import { getSelectedColumnsDescriptions } from "../selectors";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";

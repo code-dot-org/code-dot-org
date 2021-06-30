@@ -72,8 +72,8 @@ export function getColumnDescription(column, metadata, trainedModelDetails) {
 
   // Try using a user-entered column description if available.
   if (trainedModelDetails && trainedModelDetails.columns) {
-    const matchedColumn = trainedModelDetails.columns.find(col => {
-      return col.id === column;
+    const matchedColumn = trainedModelDetails.columns.find(column => {
+      return column.id === column;
     });
     if (matchedColumn) {
       return matchedColumn.description;

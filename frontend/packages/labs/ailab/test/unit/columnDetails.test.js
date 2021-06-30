@@ -16,8 +16,7 @@ import {
   premadeDatasetState,
   mosquitoCountMax,
   mosquitoCountMin,
-  mosquitoDescription,
-  sunDescription
+  mosquitoDescription
 } from './testData';
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../../src/constants.js";
 
@@ -122,15 +121,6 @@ describe("getColumnDescription", () => {
       {}
     );
     expect(result).toEqual(mosquitoDescription);
-  });
-
-  test("gets description from trained model details", async () => {
-    const result = getColumnDescription(
-      'sun',
-      {},
-      regressionState.trainedModelDetails
-    );
-    expect(result).toEqual(sunDescription);
   });
 
   test("no description", async () => {

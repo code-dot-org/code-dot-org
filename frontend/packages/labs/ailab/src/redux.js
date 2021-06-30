@@ -12,7 +12,6 @@ import {
   isColumnNumerical,
   isColumnCategorical,
   getColumnDataToSave,
-  getColumnDescription
 } from "./helpers/columnDetails.js";
 import { getUniqueOptionsLabelColumn } from "./selectors";
 import { convertValueForDisplay } from "./helpers/valueConversion.js";
@@ -458,6 +457,7 @@ export default function rootReducer(state = initialState, action) {
     } else {
       trainedModelDetails[action.field] = action.value;
     }
+
     return {
       ...state,
       ...trainedModelDetails
@@ -930,20 +930,6 @@ export function getDatasetDetails(state) {
   datasetDetails.numRows = state.data.length;
   datasetDetails.isUserUploaded = isUserUploadedDataset(state);
   return datasetDetails;
-}
-
-export function getSelectedColumnsDescriptions(state) {
-  const selectedColumns = [...state.selectedFeatures, state.labelColumn];
-  return selectedColumns.map(column => {
-    return {
-      id: column,
-      description: getColumnDescription(
-        column,
-        state.metadata,
-        state.trainedModelDetails
-      )
-    };
-  });
 }
 
 export function getFeaturesToSave(state) {
