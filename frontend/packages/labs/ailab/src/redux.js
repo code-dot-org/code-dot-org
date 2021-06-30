@@ -435,7 +435,7 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
-    let trainedModelDetails = state.trainedModelDetails;
+    let trainedModelDetails = {...state.trainedModelDetails};
 
     if (action.isColumn) {
       if (!trainedModelDetails.columns) {
@@ -460,7 +460,7 @@ export default function rootReducer(state = initialState, action) {
 
     return {
       ...state,
-      ...trainedModelDetails
+      trainedModelDetails
     };
   }
   if (action.type === SET_INSTRUCTIONS_KEY_CALLBACK) {

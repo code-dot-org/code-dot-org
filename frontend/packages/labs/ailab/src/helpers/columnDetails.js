@@ -61,11 +61,11 @@ export function containsOnlyNumbers(data, column) {
   return columnData.every(cell => !isNaN(cell));
 }
 
-export function getColumnDescription(column, metadata, trainedModelDetails) {
+export function getColumnDescription(columnId, metadata, trainedModelDetails) {
   // Use metadata if available.
-  if (column && metadata && metadata.fields) {
+  if (columnId && metadata && metadata.fields) {
     const field = metadata.fields.find(field => {
-      return field.id === column;
+      return field.id === columnId;
     });
     return field.description;
   }
@@ -73,7 +73,7 @@ export function getColumnDescription(column, metadata, trainedModelDetails) {
   // Try using a user-entered column description if available.
   if (trainedModelDetails && trainedModelDetails.columns) {
     const matchedColumn = trainedModelDetails.columns.find(column => {
-      return column.id === column;
+      return column.id === columnId;
     });
     if (matchedColumn) {
       return matchedColumn.description;
