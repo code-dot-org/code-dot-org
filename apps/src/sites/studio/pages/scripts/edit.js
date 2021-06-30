@@ -97,6 +97,7 @@ export default function initPage(unitEditorData) {
           scriptData.weeklyInstructionalMinutes
         }
         initialCourseVersionId={scriptData.courseVersionId}
+        preventCourseVersionChange={scriptData.preventCourseVersionChange}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
