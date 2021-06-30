@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 18:24:14 UTC",
+    "serialized_at": "2021-06-30 21:37:40 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -5597,6 +5597,18 @@
       }
     },
     {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
       "name": "CSP Unit 1 - Digital Information",
       "url": "https://docs.google.com/presentation/d/1GvzemSaA6WDc1MRkZdLHv6RkmEl3wLEjncW1Gd56F5I/edit?usp=sharing",
       "key": "csp_unit_1_-_digital_information",
@@ -6174,6 +6186,12 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp1-2021"
       }
     }
