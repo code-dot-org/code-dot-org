@@ -703,7 +703,9 @@ class UnitGroup < ApplicationRecord
     # For reasons I (Bethany) still don't understand, using a proc here causes
     # the method to terminate unexpectedly without an error. My unproven guess
     # is that this is due to the nested `any?` calls
-    default_units.any? {|s| s.prevent_course_version_change?}
+    resources.any? ||
+      student_resources.any? ||
+      default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
   end
 end
