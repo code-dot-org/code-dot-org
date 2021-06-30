@@ -31,3 +31,28 @@ export function getConvertedPredictedLabel(state) {
     state.labelColumn
   );
 }
+
+export function getConvertedLabels(state, rawLabels = []) {
+  return rawLabels.map(label =>
+    convertValueForDisplay(state, label, state.labelColumn)
+  );
+}
+
+export function getConvertedAccuracyCheckExamples(state) {
+  const convertedAccuracyCheckExamples = [];
+  var example;
+  for (example of state.accuracyCheckExamples) {
+    let convertedAccuracyCheckExample = [];
+    for (var i = 0; i < state.selectedFeatures.length; i++) {
+      convertedAccuracyCheckExample.push(
+        convertValueForDisplay(
+          state,
+          example[i],
+          state.selectedFeatures[i]
+        )
+      );
+    }
+    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
+  }
+  return convertedAccuracyCheckExamples;
+}

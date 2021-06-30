@@ -14,7 +14,6 @@ import {
   getColumnDataToSave,
 } from "./helpers/columnDetails.js";
 import { getUniqueOptionsLabelColumn } from "./selectors";
-import { convertValueForDisplay } from "./helpers/valueConversion.js";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
@@ -820,31 +819,6 @@ export function getTableData(state, useResultsData) {
   } else {
     return state.data;
   }
-}
-
-export function getConvertedAccuracyCheckExamples(state) {
-  const convertedAccuracyCheckExamples = [];
-  var example;
-  for (example of state.accuracyCheckExamples) {
-    let convertedAccuracyCheckExample = [];
-    for (var i = 0; i < state.selectedFeatures.length; i++) {
-      convertedAccuracyCheckExample.push(
-        convertValueForDisplay(
-          state,
-          example[i],
-          state.selectedFeatures[i]
-        )
-      );
-    }
-    convertedAccuracyCheckExamples.push(convertedAccuracyCheckExample);
-  }
-  return convertedAccuracyCheckExamples;
-}
-
-export function getConvertedLabels(state, rawLabels = []) {
-  return rawLabels.map(label =>
-    convertValueForDisplay(state, label, state.labelColumn)
-  );
 }
 
 export function isRegression(state) {

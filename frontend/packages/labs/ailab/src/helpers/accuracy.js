@@ -6,13 +6,13 @@
   "correct".
 */
 
-import { ResultsGrades, REGRESSION_ERROR_TOLERANCE, } from "../constants.js";
+import { ResultsGrades, REGRESSION_ERROR_TOLERANCE } from "../constants.js";
 import { getExtrema } from "./columnDetails.js";
 import {
-  getConvertedAccuracyCheckExamples,
   getConvertedLabels,
-  isRegression
-} from "../redux.js"
+  getConvertedAccuracyCheckExamples
+} from "./valueConversion.js";
+import { isRegression } from "../redux.js"
 
 export function getAccuracyClassification(state) {
   let accuracy = {};
