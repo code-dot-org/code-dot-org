@@ -69,14 +69,16 @@ class SaveModel extends Component {
     });
     fields.push({
       id: "potentialMisuses",
-      text: "Warnings:",
+      text: "Limitations and Warnings:",
       description:
-        "Describe any situations where this model could potentially \
-        be misused, or any places where bias could potentially show up in the \
-        model. Important questions to consider are:",
+        `Describe any limitations in how this model was created or how it \
+        should be used. You may say things like "Avoid using this model \
+        for..." or "Be cautious about...". \n
+        Important questions to consider are:`,
       descriptionDetails: [
-        "Is there enough data to create an accurate model?",
-        "Does the data represent all possible users and scenarios?"
+        "Does the data represent all possible users and scenarios?",
+        "Did you gather enough data to be confident in the model's accuracy?",
+        "Are there situations where this model definitely shouldn't be used?"
       ],
       placeholder: "Write a brief description."
     });
@@ -92,7 +94,7 @@ class SaveModel extends Component {
 
     const dataDescriptionField = {
       id: "datasetDescription",
-      text: "Description:",
+      text: "About the Data:",
       placeholder:
         "How was the data collected? Who collected it? When was it collected?",
       answer: this.props.dataDescription
@@ -119,6 +121,39 @@ class SaveModel extends Component {
                 maxLength={ModelNameMaxLength}
               />
             </div>
+          </div>
+          <div>
+            {this.getUsesFields().map(field => {
+              return (
+                <div key={field.id} style={styles.cardRow}>
+                  <div style={styles.bold}>{field.text}</div>
+                  <div>{field.description}</div>
+                  <ul>
+                    {field.descriptionDetails &&
+                      field.descriptionDetails.map((detail, index) => {
+                        return (
+                          <li style={styles.regularText} key={index}>
+                            {detail}
+                          </li>
+                        );
+                      })}
+                  </ul>
+                  {!field.answer && (
+                    <div>
+                      <textarea
+                        rows="4"
+                        onChange={event =>
+                          this.handleChange(event, field.id, field.isColumn)
+                        }
+                        placeholder={field.placeholder}
+                        style={styles.saveInputsWidth}
+                      />
+                    </div>
+                  )}
+                  {field.answer && <div>{field.answer}</div>}
+                </div>
+              );
+            })}
           </div>
           <div key={dataDescriptionField.id} style={styles.cardRow}>
             <div style={styles.bold}>{dataDescriptionField.text}</div>
@@ -166,6 +201,7 @@ class SaveModel extends Component {
                             }
                             placeholder={field.placeholder}
                             value={field.answer || ""}
+                            style={styles.saveInputsWidth}
                           />
                         </div>
                       )}
@@ -177,39 +213,6 @@ class SaveModel extends Component {
                 })}
               </div>
             )}
-          </div>
-          <div>
-            {this.getUsesFields().map(field => {
-              return (
-                <div key={field.id} style={styles.cardRow}>
-                  <div style={styles.bold}>{field.text}</div>
-                  <div>{field.description}</div>
-                  <ul>
-                    {field.descriptionDetails &&
-                      field.descriptionDetails.map((detail, index) => {
-                        return (
-                          <li style={styles.regularText} key={index}>
-                            {detail}
-                          </li>
-                        );
-                      })}
-                  </ul>
-                  {!field.answer && (
-                    <div>
-                      <textarea
-                        rows="4"
-                        onChange={event =>
-                          this.handleChange(event, field.id, field.isColumn)
-                        }
-                        placeholder={field.placeholder}
-                        style={styles.saveInputsWidth}
-                      />
-                    </div>
-                  )}
-                  {field.answer && <div>{field.answer}</div>}
-                </div>
-              );
-            })}
           </div>
         </ScrollableContent>
       </div>
