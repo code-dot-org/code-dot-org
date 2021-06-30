@@ -624,6 +624,7 @@ en:
         csp_defining_calling_functions: Defining and Calling Functions
         csp_tutorial_datatab: Data Tab in App Lab
         csp_tutorial_libraries: Libraries in App Lab
+        PL-Video-21: Welcome to Code.org's Professional Learning!
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

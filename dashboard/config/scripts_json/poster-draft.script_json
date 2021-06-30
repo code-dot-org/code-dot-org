@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:54:12 UTC",
+    "serialized_at": "2021-06-30 14:35:53 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
@@ -368,6 +368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_menu"
+        ],
         "progression": "Mini-Lessons"
       },
       "named_level": false,
