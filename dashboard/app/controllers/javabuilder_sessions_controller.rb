@@ -12,6 +12,7 @@ class JavabuilderSessionsController < ApplicationController
   def get_access_token
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
+    # TODO: remove project_url after javabuilder is deployed with update to no longer need it
     project_url = params[:projectUrl]
     level_id = params[:levelId]
     options = params[:options]
