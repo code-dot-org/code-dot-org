@@ -13,7 +13,6 @@ export const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 const getLabelColumn = state => state.labelColumn;
 export const getMetadata = state => state.metadata;
-export const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -91,21 +90,5 @@ export const getExtremaByColumn = createSelector(
       extremaByColumn[column] = getExtrema(data, column)
     ))
     return extremaByColumn;
-  }
-)
-
-export const getSelectedColumnsDescriptions = createSelector(
-  [getSelectedColumns, getMetadata, getTrainedModelDetails],
-  (selectedColumns, metadata, trainedModelDetails) => {
-    return selectedColumns.map(column => {
-      return {
-        id: column,
-        description: getColumnDescription(
-          column,
-          metadata,
-          trainedModelDetails
-        )
-      };
-    });
   }
 )
