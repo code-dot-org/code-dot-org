@@ -1,31 +1,13 @@
 class CodeReviewCommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :decrypt_channel_id, only: [:create, :project_comments]
 
-  # check_authorization # if we want to keep this, put authorization on each action
-  # load_and_authorize_resource # put this back once permissioning in cancan
-  # all actions require being signed in
-
+  # TO DO: uncomment once we've moved permissioning into CanCan
+  #check_authorization
   load_resource
-  # TO DO: More nuanced permissioning. Sketched permissions below:
-  # xxxcreate:
-  # xxx  students (in same section as project owner?) and
-  # xxx  teachers (only teacher leading section?) can create comments
-  # update (ie, change comment):
-  #   comment creator
-  #   teacher (only teacher leading section?)
-  # resolve:
-  #   owner of project (independent of account type) can update comments to resolved
-  # destroy:
-  #   comment creator
-  #   teacher (leading section?) can delete their own comments (or comments of their students)
-  # project_comments (get comments for a project):
-  #   project owner
-  #   teacher (leading section?)
-  #   any other student in section?
 
   # POST /code_review_comments
   def create
-    # conditions for being able to create a comment on a project:
     return head :forbidden unless @project_owner == current_user ||
       @project_owner.student_of?(current_user) ||
       (current_user.sections_as_student & @project_owner.sections_as_student).any?
@@ -35,8 +17,6 @@ class CodeReviewCommentsController < ApplicationController
       storage_app_id: @storage_app_id
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
-
-    #authorize! :create, @code_review_comment
 
     if @code_review_comment.save
       return render json: @code_review_comment
@@ -68,10 +48,8 @@ class CodeReviewCommentsController < ApplicationController
     end
   end
 
-  # require project id, project version
   # GET /code_review_comments/project_comments
   def project_comments
-    # conditions for being able to create a comment on a project:
     return head :forbidden unless @project_owner == current_user ||
       @project_owner.student_of?(current_user) ||
       (current_user.sections_as_student & @project_owner.sections_as_student).any?
