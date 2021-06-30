@@ -3,7 +3,6 @@ import '../assetManagement/download';
 import {makeEnum} from '../utils';
 import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
-import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
@@ -200,14 +199,89 @@ export default class CdoBramble {
     this.invokeAll(this.onProjectChangedCallbacks);
   }
 
-  onFileChanged(path) {
-    removeDisallowedHtmlContent(
-      this.Bramble.getFileSystem(),
-      this.brambleProxy,
-      path,
-      this.disallowedHtmlTags,
-      this.handleFileChange.bind(this)
+  /**
+   * Find disallowed HTML content based on this.disallowedHtmlTags
+   * @param {string} path HTML file to check
+   * @param {disallowedContentCallback} callback Callback with disallowed content, if found
+   */
+  /**
+   * @callback disallowedContentCallback
+   * @param {HTMLDocument} dom DOM parsed from file data
+   * @param {NodeList} nodes Nodes in DOM that are disallowed
+   * @param {string[]} tags Matches from this.disallowedHtmlTags that exist in DOM
+   */
+  detectDisallowedHtml(path, callback) {
+    const onFileDataReceived = (err, data) => {
+      // No-op if Bramble was unable to read the file.
+      if (err) {
+        callback(err);
+        return;
+      }
+
+      const dom = new DOMParser().parseFromString(data, 'text/html');
+      let disallowedContent = {dom, nodes: [], tags: []};
+      this.disallowedHtmlTags?.forEach(tag => {
+        const nodes = dom.querySelectorAll(tag);
+        if (nodes.length > 0) {
+          disallowedContent = {
+            ...disallowedContent,
+            nodes: [...disallowedContent.nodes, ...nodes],
+            tags: [...disallowedContent.tags, tag]
+          };
+        }
+      });
+
+      callback(null, disallowedContent);
+    };
+
+    this.getFileData(path, onFileDataReceived, 'utf8');
+  }
+
+  /**
+   *
+   * @param {HTMLDocument} dom
+   * @param {NodeList} nodes Nodes in DOM to be removed
+   * @returns {string} A new HTML document with disallowed nodes removed from DOM
+   */
+  removeDisallowedHtml(dom, nodes) {
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].parentElement.removeChild(nodes[i]);
+    }
+    return this.createHtmlDocument(
+      dom.head.innerHTML.trim(),
+      dom.body.innerHTML.trim()
     );
+  }
+
+  preprocessHtml(path, callback) {
+    this.detectDisallowedHtml(path, (err, disallowedContent) => {
+      const {dom, nodes, tags} = disallowedContent;
+
+      // No-op if this check fails or we detect no disallowed content.
+      if (err || tags?.length === 0) {
+        callback();
+        return;
+      }
+
+      this.brambleProxy.enableReadOnly();
+      this.api.openDisallowedHtmlDialog(this.cleanPath(path), tags, () => {
+        this.writeFileData(path, this.removeDisallowedHtml(dom, nodes), err => {
+          this.brambleProxy.disableReadOnly();
+          callback();
+        });
+      });
+    });
+  }
+
+  onFileChanged(path) {
+    const callback = () => this.handleFileChange(path);
+
+    if (this.isHtml(path)) {
+      this.preprocessHtml(path, callback);
+      return;
+    }
+
+    callback();
   }
 
   onFileDeleted(path) {
@@ -353,8 +427,8 @@ export default class CdoBramble {
     });
   }
 
-  getFileData(path, callback) {
-    this.fileSystem().readFile(path, {encoding: null}, (err, fileData) => {
+  getFileData(path, callback, encoding = null) {
+    this.fileSystem().readFile(path, {encoding}, (err, fileData) => {
       err &&
         console.error(`CdoBramble unable to read ${path} from Bramble. ${err}`);
 
@@ -636,12 +710,21 @@ export default class CdoBramble {
     logToCloud.addPageAction(actionName, value);
   }
 
+  isHtml(path) {
+    return path.endsWith('.html');
+  }
+
+  createHtmlDocument(head, body) {
+    return `<!DOCTYPE html>\n<html>\n  <head>\n${head ||
+      ''}\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
+  }
+
   addFileHTML() {
     this.brambleProxy?.addNewFile(
       {
         basenamePrefix: 'new',
         ext: 'html',
-        contents: createHtmlDocument()
+        contents: this.createHtmlDocument()
       },
       err => {
         if (err) {
