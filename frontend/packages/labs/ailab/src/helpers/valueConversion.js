@@ -23,3 +23,11 @@ export function convertValueForTraining(state, value, column) {
     : parseFloat(value);
   return convertedValue;
 }
+
+export function getConvertedPredictedLabel(state) {
+  return convertValueForDisplay(
+    state,
+    state.prediction,
+    state.labelColumn
+  );
+}

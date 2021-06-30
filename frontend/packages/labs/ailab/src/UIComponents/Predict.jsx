@@ -4,11 +4,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { store } from "../index.js";
 import train from "../train";
-import {
-  setTestData,
-  getConvertedPredictedLabel,
-  getPredictAvailable
-} from "../redux";
+import { setTestData, getPredictAvailable } from "../redux";
+import { getConvertedPredictedLabel } from "../helpers/valueConversion";
 import {
   getSelectedCategoricalFeatures,
   getSelectedNumericalFeatures,

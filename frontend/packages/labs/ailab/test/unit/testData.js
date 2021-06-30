@@ -98,6 +98,7 @@ export const classificationState = {
   },
   accuracyCheckLabels: [1, 0, 0, 0, 0, 1],
   accuracyCheckExamples: [[0,2], [1,2], [1,1], [1,0], [2,1], [2,0]],
+  prediction: 0,
   featureNumberKey: {
     'temp': {
       'cool' : 0,
