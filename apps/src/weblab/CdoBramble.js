@@ -206,9 +206,8 @@ export default class CdoBramble {
    */
   /**
    * @callback disallowedContentCallback
-   * @param {HTMLDocument} dom DOM parsed from file data
-   * @param {NodeList} nodes Nodes in DOM that are disallowed
-   * @param {string[]} tags Matches from this.disallowedHtmlTags that exist in DOM
+   * @param {string} newDom DOM without disallowed content
+   * @param {string[]} tags Matches from this.disallowedHtmlTags that exist in original DOM
    */
   detectDisallowedHtml(path, callback) {
     const onFileDataReceived = (err, data) => {
@@ -218,44 +217,34 @@ export default class CdoBramble {
         return;
       }
 
-      const dom = new DOMParser().parseFromString(data, 'text/html');
-      let disallowedContent = {dom, nodes: [], tags: []};
+      let disallowedTags = [];
+      let disallowedNodes = [];
+      const dom = this.domFromString(data);
       this.disallowedHtmlTags?.forEach(tag => {
-        const nodes = dom.querySelectorAll(tag);
-        if (nodes.length > 0) {
-          disallowedContent = {
-            ...disallowedContent,
-            nodes: [...disallowedContent.nodes, ...nodes],
-            tags: [...disallowedContent.tags, tag]
-          };
+        const matches = dom.querySelectorAll(tag);
+        if (matches.length > 0) {
+          disallowedNodes = [...disallowedNodes, ...matches];
+          disallowedTags.push(tag);
         }
       });
 
-      callback(null, disallowedContent);
+      for (let i = 0; i < disallowedNodes.length; i++) {
+        disallowedNodes[i].parentElement.removeChild(disallowedNodes[i]);
+      }
+
+      const newDom = this.createHtmlDocument(
+        dom.head.innerHTML.trim(),
+        dom.body.innerHTML.trim()
+      );
+      callback(null, {newDom, tags: disallowedTags});
     };
 
     this.getFileData(path, onFileDataReceived, 'utf8');
   }
 
-  /**
-   *
-   * @param {HTMLDocument} dom
-   * @param {NodeList} nodes Nodes in DOM to be removed
-   * @returns {string} A new HTML document with disallowed nodes removed from DOM
-   */
-  removeDisallowedHtml(dom, nodes) {
-    for (var i = 0; i < nodes.length; i++) {
-      nodes[i].parentElement.removeChild(nodes[i]);
-    }
-    return this.createHtmlDocument(
-      dom.head.innerHTML.trim(),
-      dom.body.innerHTML.trim()
-    );
-  }
-
   preprocessHtml(path, callback) {
     this.detectDisallowedHtml(path, (err, disallowedContent) => {
-      const {dom, nodes, tags} = disallowedContent;
+      const {tags, newDom} = disallowedContent;
 
       // No-op if this check fails or we detect no disallowed content.
       if (err || tags?.length === 0) {
@@ -265,7 +254,7 @@ export default class CdoBramble {
 
       this.brambleProxy.enableReadOnly();
       this.api.openDisallowedHtmlDialog(this.cleanPath(path), tags, () => {
-        this.writeFileData(path, this.removeDisallowedHtml(dom, nodes), err => {
+        this.writeFileData(path, newDom, err => {
           this.brambleProxy.disableReadOnly();
           callback();
         });
@@ -714,8 +703,12 @@ export default class CdoBramble {
     return path.endsWith('.html');
   }
 
+  domFromString(str) {
+    return new DOMParser().parseFromString(str, 'text/html');
+  }
+
   createHtmlDocument(head, body) {
-    return `<!DOCTYPE html>\n<html>\n  <head>\n${head ||
+    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${head ||
       ''}\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
   }
 
