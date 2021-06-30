@@ -219,6 +219,7 @@ class Script < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
+    is_maker_unit
   )
 
   def self.twenty_hour_unit
@@ -254,7 +255,7 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units
-    visible_units.select {|s| s.family_name == 'csd6'}
+    visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
@@ -1498,6 +1499,7 @@ class Script < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
+      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
@@ -1733,7 +1735,8 @@ class Script < ApplicationRecord
       :is_course,
       :show_calendar,
       :is_migrated,
-      :include_student_lesson_plans
+      :include_student_lesson_plans,
+      :is_maker_unit
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
