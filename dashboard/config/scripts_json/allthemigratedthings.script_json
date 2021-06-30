@@ -13,7 +13,7 @@
       "include_student_lesson_plans": true
     },
     "new_name": null,
-    "family_name": "ui-test-versioned-script",
+    "family_name": "ui-test-versioned-unit",
     "serialized_at": "2021-06-16 23:01:32 UTC",
     "published_state": "beta",
     "seeding_key": {
