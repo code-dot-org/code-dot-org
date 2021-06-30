@@ -257,7 +257,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.script_in_category?(:hoc, script.name)
+        if ScriptConstants.unit_in_category?(:hoc, script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.version_year
           File.join(level_content_directory, script.version_year)

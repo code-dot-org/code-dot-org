@@ -625,7 +625,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    assert_includes @response.body, 'level cannot be renamed'
 
     script.pilot_experiment = 'platformization-partners'
     script.published_state = 'pilot'
@@ -634,6 +634,12 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_includes @response.body, level.name
     assert_includes @response.body, 'level cannot be renamed'
+
+    script_level.destroy!
+    get :edit, params: {id: level.id}
+    assert_response :success
+    assert_includes @response.body, level.name
+    assert_not_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of stanadalone project level" do

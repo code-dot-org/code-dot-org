@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:17 UTC",
+    "serialized_at": "2021-06-29 23:20:45 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp6-2021"
@@ -1576,7 +1576,7 @@
       "key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
       "position": 9,
       "properties": {
-        "description": "Have groups calculate their speedup and share with the room. \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cover the primary points of speed in the real world.\n\n* Students probably noticed their speedup is lower than the number of people helping sort. Sorting with two people doesn't give a speedup of 2. Sorting with 3 people doesn't give a speedup of 3.\n* Because some portions are always still sequential, the benefits of adding more processors will go down and eventually the speedup reaches a limit."
+        "description": "Have groups calculate their speedup and share with the room. \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cover the primary points of speedup in the real world.\n\n* Students probably noticed their speedup is lower than the number of people helping sort. Sorting with two people doesn't give a speedup of 2. Sorting with 3 people doesn't give a speedup of 3.\n* Because some portions are always still sequential, the benefits of adding more processors will go down and eventually the speedup reaches a limit."
       },
       "seeding_key": {
         "activity_section.key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
@@ -2251,18 +2251,6 @@
       }
     },
     {
-      "name": "Folding@home Supercomputing Project",
-      "url": "https://youtu.be/RGGzMQ2oFrA",
-      "key": "folding_home_supercomputing_project",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "folding_home_supercomputing_project"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -2347,18 +2335,6 @@
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
         "resource.key": "the_halting_problem_the_unsolvable_problem"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "resource.key": "folding_home_supercomputing_project"
       }
     },
     {

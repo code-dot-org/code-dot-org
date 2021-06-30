@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Strategy
 
-<img src="https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28 PM.png" class="level-image">
+<img src="https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28 PM.png" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 
 **Journaling** for reflection is a popular tool in education. All lessons in CS Fundamentals include reflection prompts for students to answer questions and write down thoughts about a lesson in a journal.

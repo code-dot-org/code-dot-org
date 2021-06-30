@@ -23,7 +23,7 @@
 
 require 'cdo/shared_constants'
 
-# Ordered partitioning of script levels within a script
+# Ordered partitioning of script levels within a unit
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
   include LevelsHelper
@@ -75,9 +75,9 @@ class Lesson < ApplicationRecord
   # between the two is that relative_position numbers the lessons in order in
   # two groups
   #
-  # 1. lessons that are numbered on the script overview page (lockable false OR
+  # 1. lessons that are numbered on the unit overview page (lockable false OR
   # has_lesson_plan true)
-  # 2. lessons that are not numbered on the script overview page (lockable true
+  # 2. lessons that are not numbered on the unit overview page (lockable true
   # AND has_lesson_plan false)
   #
   # if we have two lessons without lesson plans that are lockable followed by a
@@ -89,16 +89,16 @@ class Lesson < ApplicationRecord
 
   include CodespanOnlyMarkdownHelper
 
-  def self.add_lessons(script, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
-    script.lessons.reload
+  def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
+    unit.lessons.reload
     raw_lessons.map do |raw_lesson|
       Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(script, raw_lesson)
+      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
 
-      lesson = script.lessons.detect {|l| l.key == raw_lesson[:key]} ||
+      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
         Lesson.find_or_create_by(
           key: raw_lesson[:key],
-          script: script
+          script: unit
         ) do |l|
           l.name = "" # will be updated below, but cant be null
           l.relative_position = 0 # will be updated below, but cant be null
@@ -120,7 +120,7 @@ class Lesson < ApplicationRecord
       lesson.save! if lesson.changed?
 
       lesson.script_levels = ScriptLevel.add_script_levels(
-        script, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
+        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
       )
       lesson.save!
       lesson.reload
@@ -131,10 +131,10 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def self.prevent_changing_stable_i18n_key(script, raw_lesson)
-    if script.stable? && ScriptConstants.i18n?(script.name) && I18n.t("data.script.name.#{script.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
+  def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
+    if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
 
-      raise "Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
+      raise "Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
     end
   end
 
@@ -201,7 +201,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if ScriptConstants.script_in_category?(:csf, script.name) || ScriptConstants.script_in_category?(:csf_2018, script.name)
+    return false if ScriptConstants.unit_in_category?(:csf, script.name) || ScriptConstants.unit_in_category?(:csf_2018, script.name)
 
     !!has_lesson_plan
   end
@@ -229,7 +229,7 @@ class Lesson < ApplicationRecord
 
     if script.lessons.to_a.many?
       I18n.t('stage_number', number: relative_position) + ': ' + localized_name
-    else # script only has one lesson, use the script name
+    else # unit only has one lesson, use the unit name
       script.title_for_display
     end
   end
@@ -274,9 +274,9 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def script_resource_pdf_url
+  def unit_resource_pdf_url
     if script.is_migrated?
-      Services::CurriculumPdfs.get_script_resources_url(script)
+      Services::CurriculumPdfs.get_unit_resources_url(script)
     end
   end
 
@@ -366,13 +366,13 @@ class Lesson < ApplicationRecord
     }
   end
 
-  # Provides data about this lesson needed by the script edit page.
+  # Provides data about this lesson needed by the unit edit page.
   #
   # TODO: [PLAT-369] trim down to only include those fields needed on the
-  # script edit page
+  # unit edit page
   def summarize_for_unit_edit
     summary = summarize(true, for_edit: true).dup
-    # Do not let script name override lesson name when there is only one lesson
+    # Do not let unit name override lesson name when there is only one lesson
     summary[:name] = name
     summary[:lesson_group_display_name] = lesson_group&.display_name
     summary.freeze
@@ -380,7 +380,7 @@ class Lesson < ApplicationRecord
 
   # Provides all the editable data related to this lesson and its activities for
   # display on the lesson edit page, excluding any lesson attributes which can
-  # be edited on the script edit page (e.g. name and key).
+  # be edited on the unit edit page (e.g. name and key).
   #
   # The only non-editable data included are the ids of activities and activity
   # sections, which are needed to identify those objects but cannot themselves
@@ -446,7 +446,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: script_resource_pdf_url
+      scriptResourcesPdfUrl: unit_resource_pdf_url
     }
   end
 
@@ -628,7 +628,7 @@ class Lesson < ApplicationRecord
       lesson_activity
     end
 
-    # It's too messy to keep track of all 3 position values for scripts during
+    # It's too messy to keep track of all 3 position values for units during
     # this update, so just set activity_section_position as the source of truth
     # and then fix chapter and position values after.
     script.fix_script_level_positions
@@ -671,7 +671,7 @@ class Lesson < ApplicationRecord
   # this lesson is in a CSF course offering, the other lesson may also be in
   # any other CSF course offering.
   # 2. same lesson key (untranslated lesson name)
-  # The results are sorted first by version year and then by script name.
+  # The results are sorted first by version year and then by unit name.
   #
   # This method is intended only to be used in levelbuilder mode, when script
   # caching is disabled.
@@ -679,7 +679,7 @@ class Lesson < ApplicationRecord
   # The purpose of this method is to help curriculum writers find lessons
   # related to the one they are currently editing in which they might want to
   # make similar edits. The heuristic used by this method is that the lesson key
-  # will not change when a script is deep-copied into a new version year, or
+  # will not change when a unit is deep-copied into a new version year, or
   # when a lesson is shared across CSF courses within the same version year. If
   # this heuristic proves to be inadequate, we could consider adding an explicit
   # link between related lessons.
@@ -760,30 +760,30 @@ class Lesson < ApplicationRecord
   end
 
   # Makes a copy of the lesson and adds it to the end last lesson group
-  # in destination_script. It does not clone levels.
-  # Both destination_script and the script this lesson is in must:
+  # in destination_unit. It does not clone levels.
+  # Both destination_unit and the unit this lesson is in must:
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def copy_to_script(destination_script, new_level_suffix = nil)
-    return if script == destination_script
-    raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination unit and lesson must be in a course version' if destination_script.get_course_version.nil? || script.get_course_version.nil?
+  def copy_to_unit(destination_unit, new_level_suffix = nil)
+    return if script == destination_unit
+    raise 'Both lesson and unit must be migrated' unless script.is_migrated? && destination_unit.is_migrated?
+    raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil? || script.get_course_version.nil?
 
     copied_lesson = dup
     copied_lesson.key = copied_lesson.name
-    copied_lesson.script_id = destination_script.id
+    copied_lesson.script_id = destination_unit.id
 
-    destination_lesson_group = destination_script.lesson_groups.last
+    destination_lesson_group = destination_unit.lesson_groups.last
     unless destination_lesson_group
-      destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: false, key: 'new-lesson-group')
-      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
+      destination_lesson_group = LessonGroup.create!(script: destination_unit, position: 1, user_facing: false, key: 'new-lesson-group')
+      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
     end
     copied_lesson.lesson_group_id = destination_lesson_group.id
 
-    copied_lesson.absolute_position = destination_script.lessons.count + 1
+    copied_lesson.absolute_position = destination_unit.lessons.count + 1
     copied_lesson.relative_position =
-      destination_script.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+      destination_unit.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
 
     copied_lesson.save!
 
@@ -829,7 +829,7 @@ class Lesson < ApplicationRecord
     copied_lesson.opportunity_standards = opportunity_standards
 
     # Copy objects that require course version, i.e. resources and vocab
-    course_version = destination_script.get_course_version
+    course_version = destination_unit.get_course_version
     copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
 
     copied_lesson.vocabularies = vocabularies.map do |original_vocab|
@@ -843,9 +843,9 @@ class Lesson < ApplicationRecord
     end.uniq
 
     copied_lesson.save!
-    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
-    destination_script.fix_script_level_positions
-    destination_script.write_script_json
+    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
+    destination_unit.fix_script_level_positions
+    destination_unit.write_script_json
     copied_lesson
   end
 

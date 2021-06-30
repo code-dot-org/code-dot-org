@@ -140,6 +140,7 @@ class JavalabView extends React.Component {
                 text={i18n.finish()}
                 onClick={onContinue}
                 style={styles.finish}
+                isDisabled={this.props.isReadOnlyWorkspace}
               />
             )}
           </div>
