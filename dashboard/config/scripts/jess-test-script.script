@@ -131,5 +131,17 @@ level 'VPL - CSD Module 7 - Alternative Unit', progression: 'Preview: Alternate 
 level 'VPL - CSD Module 8 - Alternative Unit', progression: 'Preview: Alternate Units to Unit 6 (~10 mins)'
 level 'VPL - CSD - Module 7 Wrap Up', progression: 'Module 7 Asynchronous Wrap Up (~10 mins)'
 
-lesson 'Self Paced Playground', display_name: 'Self-Paced Playground', has_lesson_plan: false
+lesson 'Module 8', display_name: 'Module 8', has_lesson_plan: false
+level 'VPL - CSD Module 8 Overview', progression: 'Module 8 Overview'
+level 'VPL - CSD - Module 8 - CI', progression: 'Curriculum Investigation Overview'
+level 'VPL - CSD - Module 8 - U6L6', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Lesson 2', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 Level 3', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - U6L6 - Level 4', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD Module 8  U6L6 Reflection', progression: 'Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)'
+level 'VPL - CSD - Module 8 - Conclusions and Connections2', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD U6 Chapter 1 Project', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD M8 Conclusions and Connections Reflection', progression: 'Conclusions and Connections (~20 - 25 mins)'
+level 'VPL - CSD Module 7 - Equity Journey', progression: 'Equity Journey (~5 mins)'
+level 'VPL - CSD - Module 8 Wrap Up', progression: 'Module 8 Asynchronous Wrap Up (~10 mins)'
 
