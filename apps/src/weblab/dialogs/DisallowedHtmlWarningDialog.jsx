@@ -6,15 +6,19 @@ import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 
 export default function DisallowedHtmlWarningDialog(props) {
   const body = (
-    <SafeMarkdown
-      markdown={weblabI18n.disallowedHtml({
-        filename: props.filename,
-        disallowedTags: props.disallowedTags.join(', ')
-      })}
-    />
+    <div>
+      <SafeMarkdown
+        markdown={weblabI18n.disallowedHtml({
+          filename: props.filename,
+          disallowedTags: props.disallowedTags.join(', ')
+        })}
+      />
+      <SupportArticleMarkdown />
+    </div>
   );
 
   return (
