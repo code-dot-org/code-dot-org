@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getScatterPlotData } from "../redux";
+import { getScatterPlotData } from "../selectors/visualizationSelectors.js";
 import { styles, colors } from "../constants.js";
 import { Scatter } from "react-chartjs-2";
 
@@ -71,7 +71,7 @@ class ScatterPlot extends Component {
     };
 
     if (scatterPlotData) {
-      scatterDataCombined.datasets[0].data = scatterPlotData.data;
+      scatterDataCombined.datasets[0].data = scatterPlotData.coordinates;
 
       chartOptionsCombined.scales.xAxes[0].scaleLabel.labelString =
         scatterPlotData.feature;

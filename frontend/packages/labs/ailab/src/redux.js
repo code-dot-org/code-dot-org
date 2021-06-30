@@ -669,39 +669,7 @@ export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
 }
 
-export function getScatterPlotData(state) {
-  if (!state.labelColumn || !state.currentColumn) {
-    return null;
-  }
-
-  if (
-    !isColumnNumerical(state, state.labelColumn) ||
-    !isColumnNumerical(state, state.currentColumn)
-  ) {
-    return null;
-  }
-
-  if (state.labelColumn === state.currentColumn) {
-    return null;
-  }
-
-  // For each row, record the X (feature value) and Y (label value).
-  const data = [];
-  for (let row of state.data) {
-    data.push({ x: row[state.currentColumn], y: row[state.labelColumn] });
-  }
-
-  const label = state.labelColumn;
-  const feature = state.currentColumn;
-
-  return {
-    label,
-    feature,
-    data
-  };
-}
-
-/* Functions for processing data to display for results. */
+/* Functions for processing data to display. */
 
 export function getTableData(state, useResultsData) {
   if (useResultsData) {

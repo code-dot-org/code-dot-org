@@ -2,11 +2,56 @@ import { createSelector } from 'reselect';
 import { getLabelColumn, getData, getColumnsByDataType } from "../selectors.js";
 import {
   getCurrentColumn,
-  currentColumnIsCategorical
+  currentColumnIsCategorical,
+  currentColumnIsNumerical
 } from './currentColumnSelectors.js';
 import { getUniqueOptions } from "../helpers/columnDetails.js";
 import { areArraysEqual } from "../helpers/utils.js";
 import { ColumnTypes } from "../constants.js";
+
+export const getScatterPlotData = createSelector(
+  [
+    getLabelColumn,
+    (state, props) => labelColumnIsNumerical(state, props),
+    getCurrentColumn,
+    currentColumnIsNumerical,
+    getData
+  ],
+  (
+    labelColumn,
+    labelColumnIsNumerical,
+    currentColumn,
+    currentColumnIsNumerical,
+    data
+  ) => {
+    if (!labelColumn || !currentColumn) {
+      return null;
+    }
+
+    if (!currentColumnIsNumerical || !labelColumnIsNumerical) {
+      return null;
+    }
+
+    if (labelColumn === currentColumn) {
+      return null;
+    }
+
+    // For each row, record the X (feature value) and Y (label value).
+    const coordinates = [];
+    for (let row of data) {
+      coordinates.push({ x: row[currentColumn], y: row[labelColumn] });
+    }
+
+    const label = labelColumn;
+    const feature = currentColumn;
+
+    return {
+      label,
+      feature,
+      coordinates
+    };
+  }
+)
 
 /* Returns an object with information for the CrossTab UI.
  *
@@ -123,6 +168,13 @@ export const getCrossTabData = createSelector(
       featureNames: [currentColumn],
       labelName: labelColumn
     };
+  }
+)
+
+export const labelColumnIsNumerical = createSelector(
+  [getLabelColumn, getColumnsByDataType],
+  (labelColumn, columnsByDataType) => {
+    return columnsByDataType[labelColumn] === ColumnTypes.NUMERICAL;
   }
 )
 
