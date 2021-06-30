@@ -6,7 +6,11 @@
   of the range of labels to count as "correct".
 */
 
-import { ResultsGrades, REGRESSION_ERROR_TOLERANCE } from "../constants.js";
+import {
+  ResultsGrades,
+  REGRESSION_ERROR_TOLERANCE,
+  MLTypes
+} from "../constants.js";
 import { getExtrema } from "./columnDetails.js";
 import {
   getConvertedLabels,
@@ -76,6 +80,15 @@ export function getAccuracyGrades(state) {
     ? getAccuracyRegression(state).grades
     : getAccuracyClassification(state).grades;
   return grades;
+}
+
+export function getSummaryStat(state) {
+  let summaryStat = {};
+  summaryStat.type = isRegression(state)
+    ? MLTypes.REGRESSION
+    : MLTypes.CLASSIFICATION;
+  summaryStat.stat = getPercentCorrect(state);
+  return summaryStat;
 }
 
 export function getPercentCorrect(state) {

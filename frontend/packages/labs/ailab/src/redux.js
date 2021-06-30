@@ -4,7 +4,7 @@ import {
 } from "./helpers/navigationValidation.js";
 import { reportPanelView } from "./helpers/metrics.js";
 import {
-  getPercentCorrect,
+  getSummaryStat,
   getResultsDataInDataTableForm
 } from "./helpers/accuracy.js";
 import {
@@ -16,7 +16,6 @@ import { getUniqueOptionsLabelColumn } from "./selectors";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
-  MLTypes,
   RegressionTrainer,
   ClassificationTrainer,
   TestDataLocations,
@@ -868,15 +867,6 @@ export function getFeaturesToSave(state) {
 
 export function getLabelToSave(state) {
   return getColumnDataToSave(state, state.labelColumn);
-}
-
-function getSummaryStat(state) {
-  let summaryStat = {};
-  summaryStat.type = isRegression(state)
-    ? MLTypes.REGRESSION
-    : MLTypes.CLASSIFICATION;
-  summaryStat.stat = getPercentCorrect(state);
-  return summaryStat;
 }
 
 export function getTrainedModelDataToSave(state) {

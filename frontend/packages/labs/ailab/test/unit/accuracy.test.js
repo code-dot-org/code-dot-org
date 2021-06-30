@@ -4,10 +4,11 @@ import {
   getAccuracyGrades,
   getResultsByGrade,
   getPercentCorrect,
-  getResultsDataInDataTableForm
+  getResultsDataInDataTableForm,
+  getSummaryStat
 } from '../../src/helpers/accuracy.js';
 import { classificationState, regressionState } from './testData';
-import { ResultsGrades, ColumnTypes } from '../../src/constants.js';
+import { ResultsGrades, ColumnTypes, MLTypes } from '../../src/constants.js';
 
 const regressionGrades = [
   ResultsGrades.INCORRECT,
@@ -209,7 +210,7 @@ describe('get results', () => {
     const resultsCount = results.examples.length;
     const expectedCount = mixedGrades.length;
     expect(resultsCount).toEqual(expectedCount);
-  })
+  });
 });
 
 describe('get results data in data table form', () => {
@@ -221,5 +222,19 @@ describe('get results data in data table form', () => {
   test('classification', async () => {
     const resultsData = getResultsDataInDataTableForm(classificationState);
     expect(resultsData).toEqual(classificationDataForTable);
+  });
+});
+
+describe('get summary stat', () => {
+  test('classification', async () => {
+    const summaryStat = getSummaryStat(classificationState);
+    expect(summaryStat.stat).toBe(lowAccuracyPercent);
+    expect(summaryStat.type).toBe(MLTypes.CLASSIFICATION);
+  });
+
+  test('regression', async () => {
+    const summaryStat = getSummaryStat(regressionState);
+    expect(summaryStat.stat).toBe(regressionPercent);
+    expect(summaryStat.type).toBe(MLTypes.REGRESSION);
   });
 });
