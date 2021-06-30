@@ -7,9 +7,9 @@ import {
   setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
-  setHistoricResult,
-  getPercentCorrect
+  setHistoricResult
 } from "../redux";
+import { getPercentCorrect } from "../helpers/accuracy";
 import { logFirehoseMetric } from "../helpers/metrics";
 const KNN = require("ml-knn");
 

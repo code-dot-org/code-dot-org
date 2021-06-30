@@ -2,7 +2,8 @@ import {
   getAccuracyRegression,
   getAccuracyClassification,
   getAccuracyGrades,
-  getResultsByGrade
+  getResultsByGrade,
+  getPercentCorrect
 } from '../../src/helpers/accuracy.js';
 import { classificationState, regressionState } from './testData';
 import { ResultsGrades, ColumnTypes } from '../../src/constants.js';
@@ -16,7 +17,7 @@ const regressionGrades = [
   ResultsGrades.INCORRECT
 ];
 
-const classificationGrades = [
+const mixedGrades = [
   ResultsGrades.INCORRECT,
   ResultsGrades.CORRECT,
   ResultsGrades.CORRECT,
@@ -52,64 +53,93 @@ const mostlyCorrectGrades = [
   ResultsGrades.INCORRECT
 ];
 
+const inaccuratePercent = "0.00";
+const accuratePercent = "100.00";
+const mostlyCorrectPercent = "83.33";
+const lowAccuracyPercent = "33.33";
+// error tolerance of +/- 0.15, 4/6 correct
+const regressionPercent = "66.67";
+
+const accurateResults  = [1, 0, 0, 0, 0, 1];
 const mixedResults = [0, 0, 0, 1, 1, 0];
+const mostlyAccurateResults = [1, 0, 0, 0, 0, 0];
+const inaccurateResults = [0, 1, 1, 1, 1, 0];
 
-describe('redux functions', () => {
-  test('getAccuracyClassification - all accurate', async () => {
-    const accurateResults  = [1, 0, 0, 0, 0, 1];
-    classificationState['accuracyCheckPredictedLabels'] = accurateResults;
+const classificationTestCases = [
+  {
+    case: "classification - accurate",
+    results: accurateResults,
+    grades: allCorrectGrades,
+    percent: accuratePercent
+  },
+  {
+    case: "classification - inaccurate",
+    results: inaccurateResults,
+    grades: allIncorrectGrades,
+    percent: inaccuratePercent
+  },
+  {
+    case: "classification - mostly accurate",
+    results: mostlyAccurateResults,
+    grades: mostlyCorrectGrades,
+    percent: mostlyCorrectPercent
+  },
+  {
+    case: "classification - low accuracy",
+    results: mixedResults,
+    grades: mixedGrades,
+    percent: lowAccuracyPercent
+  }
+]
 
-    const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual(allCorrectGrades);
-    expect(accuracy.percentCorrect).toBe('100.00');
-  });
+describe('get accuracy', () => {
+  classificationTestCases.forEach(testCase => {
+    test(testCase.case, async () => {
+      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
+      const accuracy = getAccuracyClassification(classificationState);
+      expect(accuracy.grades).toEqual(testCase.grades);
+      expect(accuracy.percentCorrect).toEqual(testCase.percent);
+    })
+  })
 
-  test('getAccuracyClassification - mostly accurate', async () => {
-    const mostlyAccurateResults = [1, 0, 0, 0, 0, 0];
-    classificationState['accuracyCheckPredictedLabels'] =
-      mostlyAccurateResults;
-
-    const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual(mostlyCorrectGrades);
-    expect(accuracy.percentCorrect).toBe('83.33');
-  });
-
-  test('getAccuracyClassification - not very accurate', async () => {
-    classificationState['accuracyCheckPredictedLabels'] = mixedResults;
-    const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual(classificationGrades);
-    expect(accuracy.percentCorrect).toBe('33.33');
-  });
-
-  test('getAccuracyClassification - 0% accuracy', async () => {
-    const inaccurateResults = [0, 1, 1, 1, 1, 0];
-    classificationState['accuracyCheckPredictedLabels'] =
-      inaccurateResults;
-
-    const accuracy = getAccuracyClassification(classificationState);
-    expect(accuracy.grades).toEqual(allIncorrectGrades);
-    expect(accuracy.percentCorrect).toBe('0.00');
-  });
-
-  test("getAccuracyRegression", async () => {
+  test('regression', async () => {
     const accuracy = getAccuracyRegression(regressionState);
     expect(accuracy.grades).toEqual(regressionGrades);
-    // error tolerance of +/- 0.15, 4/6 correct
-    expect(accuracy.percentCorrect).toBe("66.67");
-  });
+    expect(accuracy.percentCorrect).toBe(regressionPercent);
+  })
+});
 
-  test("getAccuracyGrades - regression", async () => {
+describe('get grades', () => {
+  classificationTestCases.forEach(testCase => {
+    test(testCase.case, async () => {
+      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
+      const grades = getAccuracyGrades(classificationState);
+      expect(grades).toEqual(testCase.grades);
+    })
+  })
+
+  test('regression', async () => {
     const grades = getAccuracyGrades(regressionState);
     expect(grades).toEqual(regressionGrades);
   })
+});
 
-  test("getAccuracyGrades - classification", async () => {
-    classificationState['accuracyCheckPredictedLabels'] =
-      mixedResults;
-    const grades = getAccuracyGrades(classificationState);
-    expect(grades).toEqual(classificationGrades);
+describe('get percent correct', () => {
+  classificationTestCases.forEach(testCase => {
+    test(testCase.case, async () => {
+      classificationState['accuracyCheckPredictedLabels'] = testCase.results;
+      const percentCorrect = getPercentCorrect(classificationState);
+      expect(percentCorrect).toEqual(testCase.percent);
+    })
   })
 
+  test('regression', async () => {
+    const percentCorrect = getPercentCorrect(regressionState);
+    expect(percentCorrect).toEqual(regressionPercent);
+  })
+});
+
+describe('get results', () => {
   test("getResultsByGrade - correct, regression", async () => {
     const results = getResultsByGrade(regressionState, ResultsGrades.CORRECT);
     const resultsCount = results.examples.length;
@@ -132,7 +162,7 @@ describe('redux functions', () => {
     classificationState['accuracyCheckPredictedLabels'] = mixedResults;
     const results = getResultsByGrade(classificationState, ResultsGrades.CORRECT);
     const resultsCount = results.examples.length;
-    const expectedCount = classificationGrades.filter(
+    const expectedCount = mixedGrades.filter(
       grade => grade === ResultsGrades.CORRECT
     ).length;
     expect(resultsCount).toBe(expectedCount);
@@ -142,7 +172,7 @@ describe('redux functions', () => {
     classificationState['accuracyCheckPredictedLabels'] = mixedResults;
     const results = getResultsByGrade(classificationState, ResultsGrades.INCORRECT);
     const resultsCount = results.examples.length;
-    const expectedCount = classificationGrades.filter(
+    const expectedCount = mixedGrades.filter(
       grade => grade === ResultsGrades.INCORRECT
     ).length;
     expect(resultsCount).toBe(expectedCount);

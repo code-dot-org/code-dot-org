@@ -4,9 +4,8 @@ import {
 } from "./helpers/navigationValidation.js";
 import { reportPanelView } from "./helpers/metrics.js";
 import {
-  getAccuracyClassification,
-  getAccuracyRegression,
-  getResultsByGrade
+  getResultsByGrade,
+  getPercentCorrect
 } from "./helpers/accuracy.js";
 import {
   isColumnNumerical,
@@ -823,13 +822,6 @@ export function getTableData(state, useResultsData) {
 
 export function isRegression(state) {
   return isColumnNumerical(state, state.labelColumn);
-}
-
-export function getPercentCorrect(state) {
-  const percentCorrect = isRegression(state)
-    ? getAccuracyRegression(state).percentCorrect
-    : getAccuracyClassification(state).percentCorrect;
-  return percentCorrect;
 }
 
 export function getCorrectResults(state) {
