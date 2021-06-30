@@ -389,10 +389,15 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
+      this.currentCode = Blockly.getWorkspaceCode();
       this.studioApp_.addChangeHandler(() => {
-        if (!getStore().getState().runState.isRunning) {
-          this.reset();
-          this.preview.apply(this);
+        const newCode = Blockly.getWorkspaceCode();
+        if (newCode !== this.currentCode) {
+          this.currentCode = newCode;
+          if (!getStore().getState().runState.isRunning) {
+            this.reset();
+            this.preview.apply(this);
+          }
         }
       });
     }
