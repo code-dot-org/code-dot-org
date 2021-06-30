@@ -93,7 +93,7 @@ function isPanelAvailable(state, panelId) {
 }
 
 function isDataUploaded(state) {
-  return state.data.length > 0;
+  return state.data.length > 0 && !state.invalidData;
 }
 
 function minOneFeatureSelected(state) {

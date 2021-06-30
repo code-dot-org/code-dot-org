@@ -316,6 +316,10 @@ export const styles = {
     cursor: "pointer"
   },
 
+  invalidDataMessageContainer: {
+    margin: 20
+  },
+
   specifyColumnsItem: {
     display: "inline-block",
     width: "20%"
