@@ -1043,22 +1043,22 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-unit', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
 
     assert_raises ActiveRecord::RecordNotFound do
-      get :show, params: {id: 'ui-test-versioned-unit'}
+      get :show, params: {id: 'ui-test-versioned-script'}
     end
 
     dogs1.update!(published_state: SharedConstants::PUBLISHED_STATE.stable)
-    get :show, params: {id: 'ui-test-versioned-unit'}
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', family_name: 'ui-test-versioned-unit', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-unit'}
+    create :script, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', family_name: 'ui-test-versioned-unit', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
-    get :show, params: {id: 'ui-test-versioned-unit'}
+    create :script, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
+    get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end
 
