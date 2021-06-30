@@ -5,3 +5,6 @@ version_year '2021'
 published_state 'pilot'
 pilot_experiment '20-21-virtual-AYW-CSD'
 
+lesson_group 'lesson group', display_name: 'lesson group display name'
+lesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true
+

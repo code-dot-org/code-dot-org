@@ -18,7 +18,8 @@ const placeholderFiles = [
  */
 export class Backpack extends Component {
   static propTypes = {
-    isDarkMode: PropTypes.bool.isRequired
+    isDarkMode: PropTypes.bool.isRequired,
+    isDisabled: PropTypes.bool.isRequired
   };
 
   state = {
@@ -48,7 +49,7 @@ export class Backpack extends Component {
   };
 
   render() {
-    const {isDarkMode} = this.props;
+    const {isDarkMode, isDisabled} = this.props;
     const {dropdownOpen} = this.state;
 
     return (
@@ -68,6 +69,7 @@ export class Backpack extends Component {
           }}
           isHorizontal
           onClick={this.toggleDropdown}
+          isDisabled={isDisabled}
         />
         {dropdownOpen && (
           <div

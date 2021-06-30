@@ -58,6 +58,14 @@ const BlocklyWrapper = function(blocklyInstance) {
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
+  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.loopHighlight = function() {}; // TODO
+  blocklyWrapper.getWorkspaceCode = function() {
+    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
+
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
@@ -191,6 +199,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
     }
   });
+
+  blocklyWrapper.addChangeListener = function(handler) {
+    Blockly.mainBlockSpace.addChangeListener(handler);
+  };
+
+  blocklyWrapper.getWorkspaceCode = function() {
+    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
 
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};

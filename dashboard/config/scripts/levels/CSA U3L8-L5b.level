@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA U3L8 Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "long_instructions": "Seats in Zone 3 and 4 have a partially obscured view of the stage. The Theater Manager wants to make sure they are able to see the full visual, so it is important that no shapes are drawn below (350, 300) on the stage.\r\n\r\n1. In `TheaterManager.java`, write the method `isInView()` to make sure that all shapes in the array are initialized with `x` coordinates between 0 and 350, and `y` coordinates are between 0 and 300. If all shapes are visible to the audience, it should return `true`, otherwise it should return `false`.\r\n\r\n2. In `MyTheater.java`, add the code segment shown below to check your method.\r\n\r\n```\r\npublic final class TheaterManager {\r\n\r\n   // Checks that all shapes are are within the required (x, y) coordinates.\r\n   public static boolean isInView(Shape[] shapes) {\r\n   \r\n      // Initialize variable to store the status\r\n      \r\n      // Create a loop to traverse the array\r\n      \r\n         // Update the status variable\r\n      \r\n      // Return the status\r\n   \r\n   }\r\n}\r\n\r\npublic class MyTheater {\r\n   public static void main(String[] args) {\r\n      int[] song = . . . ;\r\n      double[] sales = . . . ;\r\n      int[] ticketsSold = . . . ;\r\n      \r\n\r\n   }\r\n}\r\n```"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-28T18:14:05.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-28 20:21:48 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

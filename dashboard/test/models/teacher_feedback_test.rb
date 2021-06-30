@@ -15,8 +15,10 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     section = create :section, user: teacher
     section.add_student(student)
 
-    create :teacher_feedback, teacher: teacher, student: student
-    latest_feedback = create :teacher_feedback, teacher: teacher, student: student
+    level = create :level
+
+    create :teacher_feedback, teacher: teacher, student: student, level: level
+    latest_feedback = create :teacher_feedback, teacher: teacher, student: student, level: level
 
     retrieved = TeacherFeedback.latest_per_teacher
     assert_equal([latest_feedback], retrieved)
@@ -31,9 +33,15 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     section2 = create :section, user: teachers[1]
     section2.add_student(student)
 
+    level = create :level
+
     feedbacks = teachers.map do |teacher|
-      create :teacher_feedback, teacher: teacher, student: student
-      create :teacher_feedback, teacher: teacher, student: student
+      # older feedback
+      old_feedback = create :teacher_feedback, teacher: teacher, student: student, level: level
+      old_feedback.created_at = old_feedback.created_at - 1
+      old_feedback.save validate: false
+
+      create :teacher_feedback, teacher: teacher, student: student, level: level
     end
 
     retrieved = TeacherFeedback.latest_per_teacher
@@ -49,9 +57,11 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     section2 = create :section, user: teachers[1]
     section2.add_student(student)
 
+    level = create :level
+
     feedbacks = teachers.map do |teacher|
-      create :teacher_feedback, teacher: teacher, student: student
-      create :teacher_feedback, teacher: teacher, student: student
+      create :teacher_feedback, teacher: teacher, student: student, level: level
+      create :teacher_feedback, teacher: teacher, student: student, level: level
     end
 
     #Remove student from section associated with first teacher/feedback
@@ -70,8 +80,10 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     section.add_student(students[0])
     section.add_student(students[1])
 
+    level = create :level
+
     feedbacks = students.map do |student|
-      create :teacher_feedback, teacher: teacher, student: student
+      create :teacher_feedback, teacher: teacher, student: student, level: level
     end
 
     assert_equal([feedbacks[0]], TeacherFeedback.where(student: students[0]).latest_per_teacher)
@@ -273,5 +285,59 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_queries(7) do
       assert_equal script_level, feedback.get_script_level
     end
+  end
+
+  test 'get_latest_feedbacks_received returns latest feedback for student on level' do
+    teacher = create :teacher
+    students = create_list :student, 2
+    section = create :section, user: teacher
+    section.add_student(students[0])
+    section.add_student(students[1])
+
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+
+    expected_feedback = create :teacher_feedback, teacher: teacher, student: students[0], script: script, level: level
+    create :teacher_feedback, teacher: teacher, student: students[1], script: script, level: level
+
+    # create additional feedbacks which should not be returned
+    script_level2 = create :script_level
+    script2 = script_level2.script
+    level2 = script_level2.levels.first
+
+    create :teacher_feedback, teacher: teacher, student: students[0], script: script2, level: level2
+    create :teacher_feedback, teacher: teacher, student: students[1], script: script2, level: level2
+
+    retrieved = TeacherFeedback.get_latest_feedbacks_received(students[0].id, level.id, script.id)
+    assert_equal([expected_feedback], retrieved)
+  end
+
+  test 'get_latest_feedbacks_received returns latest feedback for student each level (when multiple are provided) sorted by most recent first' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    level1 = create :level
+    level2 = create :level
+    script_level = create :script_level, levels: [level1, level2]
+    script = script_level.script
+
+    # 2 feedbacks for level1 created first
+    create :teacher_feedback, teacher: teacher, student: student, script: script, level: level1
+    expected_feedback1 = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level1
+    expected_feedback1.created_at = expected_feedback1.created_at - 1
+    expected_feedback1.save validate: false
+
+    # then feedback for level 2 created
+    create :teacher_feedback, teacher: teacher, student: student, script: script, level: level2
+    expected_feedback2 = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level2
+    expected_feedback2.reload
+
+    retrieved = TeacherFeedback.get_latest_feedbacks_received(student.id, [level1.id, level2.id], script.id)
+
+    # we get most recent feedback for each level sorted by created date
+    assert_equal([expected_feedback2, expected_feedback1], retrieved)
   end
 end

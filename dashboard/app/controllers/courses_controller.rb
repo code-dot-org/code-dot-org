@@ -99,22 +99,24 @@ class CoursesController < ApplicationController
 
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
-    unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
-    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
-    if unit_group.has_migrated_script? && unit_group.course_version
+    unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    unit_group.update(course_params)
+    CourseOffering.add_course_offering(unit_group)
+    unit_group.reload
+
+    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_unit?
+    if unit_group.has_migrated_unit? && unit_group.course_version
       unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
-    unit_group.update(course_params)
-
     # Update the published state of all the units in the course to be same as the course
-    unit_group.default_scripts.each do |script|
-      script.assign_attributes(published_state: course_params[:published_state], properties: {pilot_experiment: course_params[:pilot_experiment]})
-      next unless script.changed?
-      script.save!
-      script.write_script_dsl
-      script.write_script_json
+    unit_group.default_units.each do |unit|
+      unit.assign_attributes(published_state: course_params[:published_state], properties: {pilot_experiment: course_params[:pilot_experiment]})
+      next unless unit.changed?
+      unit.save!
+      unit.write_script_dsl
+      unit.write_script_json
     end
     unit_group.reload
     render json: unit_group.summarize
@@ -132,7 +134,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    return render :forbidden unless unit_group.default_units[0].is_migrated
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -140,7 +142,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    return render :forbidden unless unit_group.default_units[0].is_migrated
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -148,7 +150,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    return render :forbidden unless unit_group.default_units[0].is_migrated
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -156,7 +158,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    return render :forbidden unless unit_group.default_units[0].is_migrated
     @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -165,16 +167,16 @@ class CoursesController < ApplicationController
     course_version = unit_group.course_version
     return render status: 400, json: {error: 'Course does not have course version'} unless course_version
     rollup_pages = []
-    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
+    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.resources.empty?}}
+    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.resources.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.standards.empty?}}
+    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.standards.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(unit_group), course_version_id: course_version.id))
     end
-    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.vocabularies.empty?}}
+    if unit_group.default_units.any? {|s| s.lessons.any? {|l| !l.vocabularies.empty?}}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(unit_group), course_version_id: course_version.id))
     end
     rollup_pages.each do |r|
@@ -199,7 +201,7 @@ class CoursesController < ApplicationController
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = SharedConstants::PUBLISHED_STATE.beta unless cp[:published_state]
+    cp[:published_state] = SharedConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

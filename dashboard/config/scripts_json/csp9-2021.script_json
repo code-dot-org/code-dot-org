@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:18 UTC",
+    "serialized_at": "2021-06-29 22:57:20 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
@@ -1791,7 +1791,7 @@
       "key": "200309df-e5c8-410f-8eb4-9732bf012fde",
       "position": 1,
       "properties": {
-        "description": "This lesson is In-Development"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n**Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
       },
       "seeding_key": {
         "activity_section.key": "200309df-e5c8-410f-8eb4-9732bf012fde",
@@ -1799,10 +1799,54 @@
       }
     },
     {
-      "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+      "key": "06c51836-0f7a-431b-a447-4df51e52b845",
+      "position": 2,
+      "properties": {
+        "description": "Today we are going to try our own hands at cropping and then closely examine a real-world situation where training a model to crop photos leads to algorithmic bias.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "06c51836-0f7a-431b-a447-4df51e52b845",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2"
+      }
+    },
+    {
+      "key": "f0275648-a641-4538-9829-899b737f3c14",
       "position": 1,
       "properties": {
-        "progression_name": "Cropping Widget"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n**Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
+        "duration": "10",
+        "name": "Cropping Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0275648-a641-4538-9829-899b737f3c14",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "7338e604-d570-42e2-88dd-33ec59314640",
+      "position": 2,
+      "properties": {
+        "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model, just like we saw in AI for Oceans. This model could be used to crop other photos being uploaded to the social media site, just like the model we trained yesterday was used to identify certain types of fish and sea creatures. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7338e604-d570-42e2-88dd-33ec59314640",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
+        "progression_name": "Cropping Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing bias, connect back to the training students did in the previous lesson when deciding what an “angry”  or “fun” fish looks like, pushing students to consider how their opinions might lead to problems when training an AI model that would be widely used."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
@@ -1810,9 +1854,144 @@
       }
     },
     {
-      "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+      "key": "669112b9-d4ef-444d-94f4-75c60936ae04",
+      "position": 4,
+      "properties": {
+        "description": "It turns out that the issue of how to crop an image is something social media platforms have been working on for some time. We are going to watch a video that shows the issues that arose when Twitter used machine learning to train an algorithm to do this cropping. ",
+        "duration": "20",
+        "name": "Twitter Cropping Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "669112b9-d4ef-444d-94f4-75c60936ae04",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "6346f541-a862-46f4-9e4f-95e66fb88e6a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
+      },
+      "seeding_key": {
+        "activity_section.key": "6346f541-a862-46f4-9e4f-95e66fb88e6a",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "328b2a3a-3d7c-46c0-b320-3f995796e77d",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "328b2a3a-3d7c-46c0-b320-3f995796e77d",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "0f8a0ca3-e9fc-45e4-a905-e36885f4bc08",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n**Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This discussion is framed around the Twitter cropping algorithm and the evidence highlighted in the video. You may choose to open this discussion up to other examples based on your students’ experiences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f8a0ca3-e9fc-45e4-a905-e36885f4bc08",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "7fa54223-6a79-4e0a-bafe-4dd8418acbac",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n**Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The rest of this video dives deeper into machine learning and algorithmic bias, including other examples of how it can lead to harm for certain groups of people. If you’d like to show the entire video to your students, consider watching the parts not listed at the end of class. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7fa54223-6a79-4e0a-bafe-4dd8418acbac",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "b893f9b6-f0bd-4eeb-a667-2e435b013e8d",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
+      },
+      "seeding_key": {
+        "activity_section.key": "b893f9b6-f0bd-4eeb-a667-2e435b013e8d",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "679377a4-0457-4feb-8ada-486a7e40a618",
+      "position": 10,
+      "properties": {
+        "description": "Now that you’ve had time to consider how you might respond, we are going to read about how this actually played out and Twitter’s response when presented with evidence of bias in their cropping algorithm.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "679377a4-0457-4feb-8ada-486a7e40a618",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "b4376806-f596-40c4-b253-fba7a204bb5c",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred tools of digital annotation, and may require some additional adjustments to some of the later annotation strategies in this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4376806-f596-40c4-b253-fba7a204bb5c",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "0effcaa2-fbf7-47b2-98da-47888ecd7423",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0effcaa2-fbf7-47b2-98da-47888ecd7423",
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471"
+      }
+    },
+    {
+      "key": "71cfbb57-2435-4d43-8051-8f24d45b2d61",
+      "position": 2,
+      "properties": {
+        "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71cfbb57-2435-4d43-8051-8f24d45b2d61",
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471"
+      }
+    },
+    {
+      "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+      "position": 3,
+      "properties": {
+        "description": "---\n\n### Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following was an unintended effect of the use of the Twitter cropping algorithm?\n",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -2512,7 +2691,33 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_U9L7_CFU1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      },
+      "level_keys": [
+        "csp_U9L7_CFU1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "U9L7 Free Response"
@@ -2535,7 +2740,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2561,7 +2766,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2587,7 +2792,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2879,6 +3084,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csp_U9L7_CFU1",
+        "script_level.level_keys": [
+          "csp_U9L7_CFU1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U9L7 Free Response",
         "script_level.level_keys": [
           "U9L7 Free Response"
@@ -2927,18 +3144,6 @@
     }
   ],
   "resources": [
-    {
-      "name": "Are We Automating Racism",
-      "url": "https://www.youtube.com/watch?v=Ok5sKLXqynQ",
-      "key": "are_we_automating_racism",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "are_we_automating_racism"
-      }
-    },
     {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
@@ -3041,18 +3246,6 @@
       }
     },
     {
-      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
-      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
-      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3062,19 +3255,6 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
-      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
-      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
-      },
-      "seeding_key": {
-        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
       }
     },
     {
@@ -3155,24 +3335,6 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "are_we_automating_racism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
       }
     },
     {
