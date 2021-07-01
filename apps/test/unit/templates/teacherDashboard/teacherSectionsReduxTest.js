@@ -446,6 +446,31 @@ describe('teacherSectionsRedux', () => {
         )
       );
     });
+
+    it('adds assignmentFamily for standalone unit with non-2017 version year', () => {
+      const scripts = validScripts.concat([
+        {
+          id: 37,
+          name: 'CS Et Cetera 2021',
+          script_name: 'csetc-2021',
+          category: 'other',
+          position: null,
+          category_priority: 3,
+          assignment_family_title: 'CS Et Cetera',
+          assignment_family_name: 'csetc',
+          version_year: '2021'
+        }
+      ]);
+
+      const action = setValidAssignments(validCourses, scripts);
+      const nextState = reducer(initialState, action);
+
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Et Cetera'
+        )
+      );
+    });
   });
 
   describe('setSections', () => {
