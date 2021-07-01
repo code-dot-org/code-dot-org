@@ -188,13 +188,11 @@ describe('TeacherFeedback', () => {
         id: 5,
         level_id: 123,
         performance: null,
-        student_id: 1,
-        teacher_name: 'Tim The Teacher'
+        student_id: 1
       };
 
       it('displays TeacherFeedbackStatus if latestFeedback exists', () => {
         const latestFeedback = {
-          feedback_provider_id: 5,
           student_seen_feedback: new Date()
         };
 
@@ -364,8 +362,7 @@ describe('TeacherFeedback', () => {
         id: 5,
         level_id: 123,
         performance: null,
-        student_id: 1,
-        teacher_name: 'Tim The Teacher'
+        student_id: 1
       };
 
       it('displays TeacherFeedbackStatus', () => {
@@ -408,8 +405,7 @@ describe('TeacherFeedback', () => {
               id: 5,
               level_id: 123,
               performance: 'performanceLevel2',
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
+              student_id: 1
             }}
           />
         );
