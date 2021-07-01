@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
-  getPercentCorrect,
   setShowResultsDetails,
   getCorrectResults,
   getIncorrectResults
 } from "../redux";
+import { getPercentCorrect } from "../helpers/accuracy";
 import { ResultsGrades, styles } from "../constants";
 import ResultsToggle from "./ResultsToggle";
 import ResultsTable from "./ResultsTable";

@@ -14,6 +14,13 @@ import {
 } from "./valueConversion.js";
 import { isRegression } from "../redux.js"
 
+export function getPercentCorrect(state) {
+  const percentCorrect = isRegression(state)
+    ? getAccuracyRegression(state).percentCorrect
+    : getAccuracyClassification(state).percentCorrect;
+  return percentCorrect;
+}
+
 export function getAccuracyClassification(state) {
   let accuracy = {};
   let numCorrect = 0;
