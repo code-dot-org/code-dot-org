@@ -7,7 +7,6 @@ import {
   getSelectedNumericalColumns,
   getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
-  getUniqueOptionsLabelColumn,
   getExtremaByColumn
 } from "../../src/selectors";
 import {
@@ -61,14 +60,6 @@ describe("getting category options", () => {
     expect(uniqueOptionsByColumn['weather']).toEqual(
       ['overcast', 'rainy', 'sunny']
     );
-  });
-
-  test("gets unique options label column", async () => {
-    const uniqueOptions = getUniqueOptionsLabelColumn.resultFunc(
-      classificationState.labelColumn,
-      classificationState.data
-    )
-    expect(uniqueOptions).toEqual(['no', 'yes']);
   });
 });
 
