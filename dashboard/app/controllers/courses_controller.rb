@@ -26,8 +26,6 @@ class CoursesController < ApplicationController
   def show
     # csp and csd are each "course families", each containing multiple "course versions".
     # When the url of a course family is requested, redirect to a specific course version.
-    #
-    # For now, use hard-coded list to determine whether the given course_name is actually a course family name.
     if UnitGroup.family_names.include?(params[:course_name])
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to_course = UnitGroup.all_courses.
