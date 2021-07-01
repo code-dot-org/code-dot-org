@@ -2,12 +2,12 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setShowResultsDetails } from "../redux";
 import {
-  setShowResultsDetails,
+  getPercentCorrect,
   getCorrectResults,
   getIncorrectResults
-} from "../redux";
-import { getPercentCorrect } from "../helpers/accuracy";
+} from "../helpers/accuracy";
 import { ResultsGrades, styles } from "../constants";
 import ResultsToggle from "./ResultsToggle";
 import ResultsTable from "./ResultsTable";

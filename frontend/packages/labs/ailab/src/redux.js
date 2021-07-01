@@ -4,8 +4,8 @@ import {
 } from "./helpers/navigationValidation.js";
 import { reportPanelView } from "./helpers/metrics.js";
 import {
-  getResultsByGrade,
-  getPercentCorrect
+  getSummaryStat,
+  getResultsDataInDataTableForm
 } from "./helpers/accuracy.js";
 import {
   isColumnNumerical,
@@ -16,7 +16,6 @@ import { getUniqueOptionsLabelColumn } from "./selectors";
 import { areArraysEqual } from "./helpers/utils.js";
 import {
   ColumnTypes,
-  MLTypes,
   RegressionTrainer,
   ClassificationTrainer,
   TestDataLocations,
@@ -837,45 +836,6 @@ export function isRegression(state) {
   return isColumnNumerical(state, state.labelColumn);
 }
 
-export function getCorrectResults(state) {
-  return getResultsByGrade(state, ResultsGrades.CORRECT);
-}
-
-export function getIncorrectResults(state) {
-  return getResultsByGrade(state, ResultsGrades.INCORRECT);
-}
-
-export function getAllResults(state) {
-  return getResultsByGrade(state, ResultsGrades.ALL);
-}
-
-// Return results data so that it looks like regular data provided to the
-// DataTable.
-export function getResultsDataInDataTableForm(state) {
-  const resultsByGrades = getAllResults(state);
-
-  if (!resultsByGrades || resultsByGrades.examples.length === 0) {
-    return null;
-  }
-
-  // None of the existing uses of this function should need more than 10
-  // items.  Increase the value here if they do.
-  const numItems = Math.min(10, resultsByGrades.examples.length);
-
-  const results = [];
-  for (var i = 0; i < numItems; i++) {
-    results[i] = {};
-
-    state.selectedFeatures.map((feature, index) => {
-      results[i][feature] = resultsByGrades.examples[i][index];
-    })
-
-    results[i][state.labelColumn] = resultsByGrades.predictedLabels[i];
-  }
-
-  return results;
-}
-
 /* Functions for processing data about a trained model to save. */
 
 export function isUserUploadedDataset(state) {
@@ -920,15 +880,6 @@ export function getFeaturesToSave(state) {
 
 export function getLabelToSave(state) {
   return getColumnDataToSave(state, state.labelColumn);
-}
-
-function getSummaryStat(state) {
-  let summaryStat = {};
-  summaryStat.type = isRegression(state)
-    ? MLTypes.REGRESSION
-    : MLTypes.CLASSIFICATION;
-  summaryStat.stat = getPercentCorrect(state);
-  return summaryStat;
 }
 
 export function getTrainedModelDataToSave(state) {
