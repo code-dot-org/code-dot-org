@@ -7,6 +7,7 @@ module Pd
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
       COURSE_ADMIN = 'Admin'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze
@@ -179,7 +180,8 @@ module Pd
     COURSE_KEY_MAP = {
       COURSE_CSF => 'csf',
       COURSE_CSD => 'csd',
-      COURSE_CSP => 'csp'
+      COURSE_CSP => 'csp',
+      COURSE_CSA => 'csa'
     }
   end
 end
