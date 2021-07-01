@@ -143,6 +143,16 @@ const validCourses = [
     assignment_family_title: 'CS Principles',
     assignment_family_name: 'csp',
     version_year: '2017'
+  },
+  {
+    id: 31,
+    name: 'CS X 2017',
+    script_name: 'csx-2017',
+    category: 'Full Courses',
+    position: 2,
+    category_priority: 0,
+    assignment_family_title: 'CS X',
+    version_year: '2017'
   }
 ];
 
@@ -420,6 +430,19 @@ describe('teacherSectionsRedux', () => {
       assert(
         assignmentFamilies.find(
           af => af.assignment_family_name === scriptInCourse.script_name
+        )
+      );
+    });
+
+    it('only adds assignmentFamily for courses with family name', () => {
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Principles'
+        )
+      );
+      assert.isUndefined(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS X'
         )
       );
     });
