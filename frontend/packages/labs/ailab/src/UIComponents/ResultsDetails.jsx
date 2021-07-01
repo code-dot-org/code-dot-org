@@ -19,7 +19,7 @@ class ResultsDetails extends Component {
     resultsTab: PropTypes.string,
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    percentCorrect: PropTypes.number,
+    percentCorrect: PropTypes.string,
     setShowResultsDetails: PropTypes.func,
     correctResults: PropTypes.object,
     incorrectResults: PropTypes.object,
