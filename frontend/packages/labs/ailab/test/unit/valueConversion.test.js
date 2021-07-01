@@ -1,7 +1,9 @@
 import {
   convertValueForDisplay,
   convertValueForTraining,
-  getConvertedPredictedLabel
+  getConvertedPredictedLabel,
+  getConvertedLabels,
+  getConvertedAccuracyCheckExamples
 } from '../../src/helpers/valueConversion';
 import { classificationState } from './testData';
 
@@ -41,4 +43,25 @@ describe("converting categorical values", () => {
     const predictedLabel = getConvertedPredictedLabel(classificationState);
     expect(predictedLabel).toBe('yes');
   })
+
+  test("convert labels for display", async () => {
+    const labels = getConvertedLabels(
+      classificationState,
+      classificationState.accuracyCheckLabels
+    );
+    expect(labels).toEqual(['no', 'yes', 'yes', 'yes', 'yes', 'no']);
+  })
+
+  test("convert accuracy check examples for display", async () => {
+    const examples = getConvertedAccuracyCheckExamples(classificationState);
+    expect(examples).toEqual([
+      ['cool', 'rainy'],
+      ['mild', 'rainy'],
+      ['mild', 'overcast'],
+      ['mild', 'sunny'],
+      ['hot', 'overcast'],
+      ['hot', 'sunny']
+    ]);
+  })
+
 });
