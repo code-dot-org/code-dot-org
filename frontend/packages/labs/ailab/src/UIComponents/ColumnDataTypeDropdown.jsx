@@ -8,7 +8,7 @@ import { ColumnTypes } from "../constants.js";
 class ColumnDataTypeDropdown extends Component {
   static propTypes = {
     columnId: PropTypes.string,
-    currentDataType: PropTypes.oneOf(ColumnTypes),
+    currentDataType: PropTypes.oneOf(Object.values(ColumnTypes)),
     setColumnsByDataType: PropTypes.func.isRequired
   };
 
