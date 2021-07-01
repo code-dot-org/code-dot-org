@@ -13,9 +13,9 @@ import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/Fee
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
-  rubricShape,
-  ReviewStates
+  rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 

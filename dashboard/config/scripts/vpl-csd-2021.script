@@ -5,6 +5,21 @@ version_year '2021'
 published_state 'pilot'
 pilot_experiment '20-21-virtual-AYW-CSD'
 
-lesson_group 'lesson group', display_name: 'lesson group display name'
-lesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true
+lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
+level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
+level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
+level 'VPL-CSD 2020 Summer Review', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
+level 'VPL - CSD - Variables Overview', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD Module Variable Video with Reflection', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD-U3 Variables Predict Where XY_2021', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD - Variable Resources', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Variables naming rules v2_2018_21', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD - Random Numbers Overview', progression: 'New Content (~ 35 mins)'
+level 'VPL-CSD U3 Random random ellipse2_2018_21', progression: 'New Content (~ 35 mins)'
+level 'VPL - CSD Module 1 New Content Reflection', progression: 'New Content (~ 35 mins)'
+level 'VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD Module 1 Debugging Reflection 1', progression: 'Debugging (~ 25 mins)'
+level 'VPL-CSD Games variables practice_2020', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD Module 1 Debugging Reflection 2', progression: 'Debugging (~ 25 mins)'
+level 'VPL - CSD - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~ 10 mins)'
 

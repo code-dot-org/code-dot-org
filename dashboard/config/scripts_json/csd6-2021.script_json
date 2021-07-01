@@ -20,7 +20,8 @@
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225
+      "weekly_instructional_minutes": 225,
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
