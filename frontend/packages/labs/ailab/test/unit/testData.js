@@ -147,12 +147,18 @@ export const allNumericalState = {
   }
 };
 
+export const premadeDatasetName = 'bats_eat_mozzies';
+export const batDatasetDescription = 'Count of bats and mosquitios';
 export const mosquitoDescription = 'How many mosquitoes there are.';
 
 export const premadeDatasetState = {
   ...allNumericalState,
+  csvfile: 'bats-eat-mozzies.csv',
   metadata: {
-    name: 'bats_eat_mozzies',
+    name: premadeDatasetName,
+    card: {
+      description: batDatasetDescription
+    },
     defaultLabelColumn: 'mosquitoCount',
     fields: [
       {
@@ -166,5 +172,17 @@ export const premadeDatasetState = {
         description: 'How many bats there are.'
       }
     ]
+  }
+}
+
+export const playDatasetDescription = "Survey of the weather, temperature and whether it was a good day to play outside.";
+
+export const userUploadedDatasetState = {
+  ...classificationState,
+  csvfile: {
+    name: 'play-outside-today?.csv',
+  },
+  trainedModelDetails: {
+    datasetDescription: playDatasetDescription
   }
 }

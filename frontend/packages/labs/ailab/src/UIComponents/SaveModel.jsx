@@ -2,11 +2,11 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setTrainedModelDetail } from "../redux";
 import {
-  setTrainedModelDetail,
-  getDataDescription,
+  getDatasetDescription,
   isUserUploadedDataset
-} from "../redux";
+} from "../helpers/datasetDetails";
 import { getSelectedColumnsDescriptions } from "../selectors";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
@@ -226,7 +226,7 @@ export default connect(
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnsDescriptions(state),
-    dataDescription: getDataDescription(state),
+    dataDescription: getDatasetDescription(state),
     isUserUploadedDataset: isUserUploadedDataset(state)
   }),
   dispatch => ({

@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
-import { getLabelToSave, getFeaturesToSave, getDatasetDetails } from "../redux";
+import { getLabelToSave, getFeaturesToSave } from "../redux";
 import { getPercentCorrect } from "../helpers/accuracy";
+import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 
