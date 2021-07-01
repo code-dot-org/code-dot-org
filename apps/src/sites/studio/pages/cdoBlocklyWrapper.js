@@ -152,6 +152,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.Generator.get('JavaScript');
   };
 
+  blocklyWrapper.addChangeListener = function(handler) {
+    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
+    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', handler);
+  };
+
   blocklyWrapper.setInfiniteLoopTrap = function() {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
   };
