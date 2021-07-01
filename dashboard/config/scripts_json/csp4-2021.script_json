@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 23:06:46 UTC",
+    "serialized_at": "2021-07-01 17:14:21 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp4-2021"
@@ -6552,6 +6552,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp4-2021/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp4-2021/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
       "name": "CSP Conditionals Make - Museum Ticket Generator App",
       "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
       "key": "conditionals-make-activity-guide",
@@ -6586,6 +6608,18 @@
       },
       "seeding_key": {
         "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -6770,6 +6804,54 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U4 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/lbl7hzxzm4WsAa75hJVFqMykHh7YfI5_te2qrxqh2uI",
+      "key": "u4_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U4 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1a74SEh_S7NqBmWVdhw9FLoRjDIM8C_5Q-alJkJiInQA/edit?usp=sharing",
+      "key": "u4_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U4 Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/5cwc9FM-cZe5TG4wy5wh3QGguDb5Si_juSUBdCFZRsA",
+      "key": "u4_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U4 Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1mwmJdpiMS6WeH5q_2LWVvPLsI8LVXJLs9n_96GU-g7w/edit?usp=sharing",
+      "key": "u4_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_mid_score_sample_planning_guide_rubric"
       }
     },
     {
@@ -7095,6 +7177,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 15: Assessment Day",
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
@@ -7128,6 +7234,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
         "script.name": "csp4-2021"
       }
     }

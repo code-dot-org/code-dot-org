@@ -1940,6 +1940,37 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal('CSP Test', assignable_info[:category])
   end
 
+  test 'get_feedback_for_section returns feedbacks for students in the section on the script' do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    weblab_level = create :weblab
+    gamelab_level = create :gamelab
+    create(:script_level, lesson: lesson, levels: [weblab_level], script: script)
+    create(:script_level, lesson: lesson, levels: [gamelab_level], script: script)
+
+    teacher = create :teacher
+    student1 = create :student
+    student2 = create :student
+
+    section = create :section, user: teacher
+    section.add_student(student1)
+    section.add_student(student2)
+
+    feedback1 = create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student1, comment: "Testing", performance: 'performanceLevel1')
+    create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student2)
+    create(:teacher_feedback, script: script, level: gamelab_level, teacher: teacher, student: student2)
+
+    feedback_for_section = script.get_feedback_for_section(section)
+
+    assert_equal(3, feedback_for_section.keys.length) # expect 3 feedbacks
+    feedback1_result = feedback_for_section[feedback1.id]
+    assert_equal(student1.name, feedback1_result[:studentName])
+    assert_equal("Testing", feedback1_result[:comment])
+    assert_equal("Extensive Evidence", feedback1_result[:performance])
+    assert_equal("Never reviewed", feedback1_result[:reviewStateLabel])
+  end
+
   # This test checks that all categories that may show up in the UI have
   # translation strings.
   test 'all visible categories have translations' do
@@ -2775,7 +2806,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
   end
 
   test 'raise error if try to add lesson in stable and i18n unit' do
@@ -2799,7 +2830,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
   end
 
   test 'raise error if try to add new lesson group in stable and i18n unit' do
@@ -3052,8 +3083,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     test 'can copy a standalone unit into a unit group' do
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal 2, @unit_group.default_scripts.count
-      assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
+      assert_equal 2, @unit_group.default_units.count
+      assert_equal 'coursename2-2021', @unit_group.default_units[1].name
       assert_equal cloned_unit.unit_group, @unit_group
     end
 

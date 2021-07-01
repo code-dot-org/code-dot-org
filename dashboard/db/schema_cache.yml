@@ -1781,7 +1781,7 @@ columns:
     collation: 
     comment: 
   - &243 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: channel_token_id
+    name: storage_app_id
     table_name: code_review_comments
     sql_type_metadata: *3
     'null': false
@@ -13092,7 +13092,7 @@ columns_hash:
     updated_at: *241
   code_review_comments:
     id: *242
-    channel_token_id: *243
+    storage_app_id: *243
     project_version: *244
     commenter_id: *245
     comment: *246
@@ -14766,4 +14766,4 @@ data_sources:
   users_view: true
   videos: true
   vocabularies: true
-version: 20210624200622
+version: 20210629133900

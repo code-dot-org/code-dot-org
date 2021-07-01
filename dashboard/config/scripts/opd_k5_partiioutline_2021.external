@@ -4,7 +4,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Part II:  Concepts in Courses A - F
 
-Below is an outline of the lessons included in Part II:  Concepts in Courses A - F. 
+Below is a list of the lessons included in Part II:  Concepts in Courses A - F. 
 
 We suggest planning 20 - 25 minutes to complete lesson 7 through 15 in Part II. However, feel free to start and stop at your own pace and take more or less time as needed.
 
@@ -111,27 +111,25 @@ Use the table below to know which lessons and computer science concepts are part
 
 Go lesson by lesson for all concepts included in Computer Science Fundamentals courses.  Click "Continue" to begin with Lesson 7:  Sequencing and continue on until you complete all lessons in Part II.
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 6: Part II Overview** </a>
+* Lesson 6: Part II Overview - This overview is part of Lesson 6, the lesson in which you are currently working in.
 
-This overview is part of Lesson 6, the lesson in which you are currently working in.
+* Lesson 7: Sequencing
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/7/levels/1" target="blank" >**Lesson 7: Sequencing** </a> 
+* Lesson 8: Sequencing with Sprites
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/8/levels/1" target="blank" >**Lesson 8: Sequencing with Sprites** </a> 
+* Lesson 9: Loops
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/9/levels/1" target="blank" >**Lesson 9: Loops** </a> 
+* Lesson 10: Events
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/10/levels/1" target="blank" >**Lesson 10: Events**</a> 
+* Lesson 11: Conditionals
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/11/levels/1" target="blank" >**Lesson 11: Conditionals** </a> 
+* Lesson 12: Functions
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/12/levels/1" target="blank" >**Lesson 12: Functions**  </a>
+* Lesson 13: Variables
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/13/levels/1" target="blank" >**Lesson 13: Variables**</a> 
+* Lesson 14: For Loops
 
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/14/levels/1" target="blank" >**Lesson 14: For Loops**</a> 
-
-#### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/15/levels/1" target="blank" >**Lesson 15: End of Course Projects** </a> 
+* Lesson 15: End of Course Projects
 
 ##### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >Click here to access Part III: Next Steps.</a>
 MARKDOWN

@@ -37,7 +37,8 @@ class ScriptDslTest < ActiveSupport::TestCase
     deprecated: false,
     is_course: false,
     background: nil,
-    is_migrated: false
+    is_migrated: false,
+    is_maker_unit: false
   }
 
   test 'test Script DSL' do
