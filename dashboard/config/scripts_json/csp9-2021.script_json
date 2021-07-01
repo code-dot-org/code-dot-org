@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 22:57:20 UTC",
+    "serialized_at": "2021-07-01 17:21:12 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
@@ -3145,6 +3145,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp9-2021/resources",
+      "key": "all_resources_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_9"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp9-2021/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
+      }
+    },
+    {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
       "key": "big-data-citizen-science-machine-learning-activity-guide",
@@ -3192,6 +3214,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3255,6 +3289,54 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U9 Sample Project 1",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "name": "U9 Sample Project 2",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "name": "U9 Sample Project 3",
+      "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
+      "key": "u9_sample_project_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "name": "U9 Sample Project 4",
+      "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
+      "key": "u9_sample_project_4",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_4"
       }
     },
     {
@@ -3351,6 +3433,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_4"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "resource.key": "csp-u9-presentation"
       }
@@ -3384,6 +3490,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
         "script.name": "csp9-2021"
       }
     }
