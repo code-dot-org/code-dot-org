@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Hammer from 'hammerjs';
 
 import trackEvent from '../../util/trackEvent';
-import {tryGetLocalStorage, trySetLocalStorage} from '../../utils';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -25,13 +25,13 @@ import Sounds from '../../Sounds';
 import {TestResults} from '../../constants';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ARROW_KEY_NAMES} from '../utils';
+import {ARROW_KEY_NAMES, handlePlayerSelection} from '@cdo/apps/craft/utils';
 import {
   showArrowButtons,
   dismissSwipeOverlay
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
-import reducers, {setPlayerSelectionDialog} from '@cdo/apps/craft/redux';
+import reducers from '@cdo/apps/craft/redux';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -131,22 +131,15 @@ export default class Craft {
 
       if (config.level.showPopupOnLoad) {
         if (config.level.showPopupOnLoad === 'playerSelection') {
-          getStore().dispatch(
-            setPlayerSelectionDialog(true, selectedPlayer => {
-              if (selectedPlayer) {
-                trackEvent(
-                  'MinecraftAgent',
-                  'ClickedCharacter',
-                  selectedPlayer
-                );
-              } else {
-                selectedPlayer = DEFAULT_CHARACTER;
-              }
-              Craft.setCurrentCharacter(selectedPlayer);
-              getStore().dispatch(setPlayerSelectionDialog(false));
-              Craft.initializeAppLevel(config.level);
-              showInstructions();
-            })
+          const onPlayerSelected = selectedPlayer => {
+            Craft.setCurrentCharacter(selectedPlayer);
+            Craft.initializeAppLevel(config.level);
+            showInstructions();
+          };
+          handlePlayerSelection(
+            DEFAULT_CHARACTER,
+            onPlayerSelected,
+            'MinecraftAgent'
           );
         }
       } else {

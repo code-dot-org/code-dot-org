@@ -11,7 +11,14 @@ import CraftDialog from './CraftDialog';
  * Example: #steve-portrait renders Steve's image, so any players will require
  * a similar CSS selector to render properly.
  */
-function PlayerSelectionDialog({isOpen, players, handlePlayerSelection}) {
+function PlayerSelectionDialog({
+  isOpen,
+  players,
+  handlePlayerSelection,
+  title = i18n.playerSelectLetsGetStarted(),
+  titleClassName = 'minecraft-big-yellow-header',
+  hideSubtitle = false
+}) {
   function renderPlayer(name) {
     const formattedName = name.toLowerCase();
     return (
@@ -34,10 +41,12 @@ function PlayerSelectionDialog({isOpen, players, handlePlayerSelection}) {
       isOpen={isOpen}
       handleClose={() => handlePlayerSelection(undefined)}
     >
-      <h1 className="minecraft-big-yellow-header" id="getting-started-header">
-        {i18n.playerSelectLetsGetStarted()}
+      <h1 className={titleClassName} id="getting-started-header">
+        {title}
       </h1>
-      <h2 id="select-character-text">{i18n.playerSelectChooseCharacter()}</h2>
+      {!hideSubtitle && (
+        <h2 id="select-character-text">{i18n.playerSelectChooseCharacter()}</h2>
+      )}
       <div id="choose-character-container">{players.map(renderPlayer)}</div>
     </CraftDialog>
   );
@@ -46,7 +55,10 @@ function PlayerSelectionDialog({isOpen, players, handlePlayerSelection}) {
 PlayerSelectionDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   players: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handlePlayerSelection: PropTypes.func.isRequired
+  handlePlayerSelection: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  titleClassName: PropTypes.string,
+  hideSubtitle: PropTypes.bool
 };
 
 export default connect(state => ({

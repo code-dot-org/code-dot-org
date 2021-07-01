@@ -498,6 +498,13 @@ $height-to-width: 434 / 477;
     line-height: 11px;
     font-size: 30px;
   }
+
+  .minecraft-big-gray-header {
+    @extend .minecraft-big-yellow-header;
+
+    color: #e7e8ea;
+    margin-bottom: 23px;
+  }
 }
 
 .craft-popup {
@@ -626,10 +633,6 @@ $height-to-width: 434 / 477;
     @media screen and (max-height: 630px) {
       margin-top: -18px;
     }
-  }
-
-  #close-character-select {
-    @include mc-x-close-button();
   }
 
   .choose-character-button {
