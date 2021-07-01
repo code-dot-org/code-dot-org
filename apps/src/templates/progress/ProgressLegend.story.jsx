@@ -28,7 +28,7 @@ export default storybook => {
           <ProgressLegend
             includeCsfColumn
             includeProgressNotApplicable
-            includeReviewState
+            includeReviewStates
           />
         </div>
       )
