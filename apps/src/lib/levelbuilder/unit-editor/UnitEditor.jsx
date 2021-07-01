@@ -68,6 +68,7 @@ class UnitEditor extends React.Component {
     initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
+    initialIsMakerUnit: PropTypes.bool,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
@@ -137,6 +138,7 @@ class UnitEditor extends React.Component {
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
+      isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
@@ -310,7 +312,8 @@ class UnitEditor extends React.Component {
         resource => resource.id
       ),
       is_migrated: this.props.isMigrated,
-      include_student_lesson_plans: this.state.includeStudentLessonPlans
+      include_student_lesson_plans: this.state.includeStudentLessonPlans,
+      is_maker_unit: this.state.isMakerUnit
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -483,6 +486,23 @@ class UnitEditor extends React.Component {
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this unit.</p>
+            </HelpTip>
+          </label>
+          <label>
+            Is a Maker Unit
+            <input
+              type="checkbox"
+              checked={this.state.isMakerUnit}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({isMakerUnit: !this.state.isMakerUnit})
+              }
+            />
+            <HelpTip>
+              <p>
+                If checked, this unit uses the maker toolkit and teachers who
+                teach it may be eligible for maker toolkit discounts.
+              </p>
             </HelpTip>
           </label>
           <label>

@@ -120,8 +120,7 @@ describe('TopInstructions', () => {
               id: 5,
               level_id: 123,
               performance: 'performanceLevel2',
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
+              student_id: 1
             }
           ],
           rubric: {
