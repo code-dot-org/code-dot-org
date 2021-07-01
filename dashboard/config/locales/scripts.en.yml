@@ -23278,7 +23278,7 @@ en:
           lessons:
             Module 1:
               key: Module 1
-              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
+              name: Module 1
               description_student: ''
               description_teacher: ''
             Module 2:
@@ -23316,7 +23316,12 @@ en:
               name: 'Module 8: Building community and preparing students for the AP Exam'
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: vpl-csp-2021
         self-paced-pl-csd1-2021:
           lessons:
             lesson-1:
