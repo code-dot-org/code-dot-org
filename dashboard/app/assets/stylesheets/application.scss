@@ -37,6 +37,8 @@ $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+$selectUserTypeButtonColor: #b00;
+$selectUserTypeButtonColorHover: #0b0;
 
 @import "bootstrap";
 // Font-awesome 4.6.3
@@ -1745,6 +1747,14 @@ a.download-video {
 
   .signup {
     margin: 20px 0;
+  }
+
+  .select-user-type-button {
+    background-color: $selectUserTypeButtonColor;
+  }
+
+  .select-user-type-button:hover {
+    background-color: $selectUserTypeButtonColorHover;
   }
 
   .finish-signup {
