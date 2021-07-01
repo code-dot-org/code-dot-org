@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-01 17:24:54 UTC",
+    "serialized_at": "2021-07-01 20:16:24 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -1125,7 +1125,6 @@
       "key": "b1cd287d-c354-440d-a0fd-144166dc6306",
       "position": 1,
       "properties": {
-        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1139,8 +1138,8 @@
       "key": "c265414a-b360-4f4f-9d85-392b88314ae5",
       "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Acticity"
+        "duration": 40,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5",
@@ -2290,6 +2289,8 @@
       "key": "9cf4efa4-a8ac-4dad-932a-7538193bb7f6",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _What are some examples we’ve seen so far in class of how AI is being used to solve problems? Or, what are some examples you might know of from outside of class?_",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "9cf4efa4-a8ac-4dad-932a-7538193bb7f6",
@@ -2297,9 +2298,55 @@
       }
     },
     {
+      "key": "00b1136f-0158-47ab-a667-8c04658b23ee",
+      "position": 2,
+      "properties": {
+        "description": "Have students write in their journals, then discuss with a neighbor before sharing as a full class. Keep a list of ideas at the front of the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "00b1136f-0158-47ab-a667-8c04658b23ee",
+        "lesson_activity.key": "ab8a8325-284f-4f9b-baf3-a35ffd0ad9ae"
+      }
+    },
+    {
+      "key": "c1e44676-071a-4fed-990e-06acf9774b55",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** This prompt helps focus attention on how Artificial Intelligence specifically is helping to solve problems, as opposed to other forms of technology. Many of the videos so far have mentioned ways that AI is being used, such as helping to screen for cancer or being used in driverless cars. Students may also draw in examples of AI from outside the classroom, especially if there has been a recent story in the news. Make sure to focus on examples that use AI specifically, especially examples that involve making decisions from data (as have been shown in class)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c1e44676-071a-4fed-990e-06acf9774b55",
+        "lesson_activity.key": "ab8a8325-284f-4f9b-baf3-a35ffd0ad9ae"
+      }
+    },
+    {
+      "key": "cb0a0a93-e118-479e-ae18-f64cdede46b4",
+      "position": 4,
+      "properties": {
+        "description": "These are excellent examples, and they show a wide range of issues that artificial intelligence can help solve. Today, we’ll have a chance to dive in and see other ways that AI is making an impact on the rest of the world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb0a0a93-e118-479e-ae18-f64cdede46b4",
+        "lesson_activity.key": "ab8a8325-284f-4f9b-baf3-a35ffd0ad9ae"
+      }
+    },
+    {
+      "key": "aa4398c7-36fb-49fb-a786-4d51ed629f55",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day**:  How is AI helping to solve problems around the world?"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa4398c7-36fb-49fb-a786-4d51ed629f55",
+        "lesson_activity.key": "ab8a8325-284f-4f9b-baf3-a35ffd0ad9ae"
+      }
+    },
+    {
       "key": "b800e48f-1ffc-4020-acf1-04d760eb4475",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "b800e48f-1ffc-4020-acf1-04d760eb4475",
@@ -2307,12 +2354,197 @@
       }
     },
     {
+      "key": "b79bbcf1-856f-4223-b90c-f923bdc0196c",
+      "position": 2,
+      "properties": {
+        "description": "**Remarks**: When we use artificial intelligence to solve problems, we still go through the problem-solving process - define, prepare, try, and reflect. As we do that, it’s important to empathize with our users and ask “Who is included? Who is excluded?”. This can be harder to think about - let’s look at an example of how AI can help include people who are sometimes left out of the latest technology.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b79bbcf1-856f-4223-b90c-f923bdc0196c",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "60a337ef-a9f1-4cd0-99c3-b42e90e0b46f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Display the [r seeing_ai/aiml/2021]. Prompt students with the Questions to Consider before starting the video."
+      },
+      "seeding_key": {
+        "activity_section.key": "60a337ef-a9f1-4cd0-99c3-b42e90e0b46f",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "f75fda84-d4a3-42c7-8c70-8ea293e9fd42",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* _What problems does this app help Andre solve?_\n* _What data does it use?_\n* _How does Andre interact with the app?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "f75fda84-d4a3-42c7-8c70-8ea293e9fd42",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "83b807cd-078c-4c36-a7b1-5c37db65bd1d",
+      "position": 5,
+      "properties": {
+        "description": "**Discussion Goal:** Students should recall several examples from the video, such as describing the outside world while riding in a taxi or recognizing handwriting or reading social media posts. Students should also be able to describe how Andre interacts with the app - usually by pointing at an object and having it recognize it. Students may struggle describing the data that it uses, but guide students to realize that it probably had to look at a lot of similar images of the world as training data before it could recognize what Andre was looking at."
+      },
+      "seeding_key": {
+        "activity_section.key": "83b807cd-078c-4c36-a7b1-5c37db65bd1d",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "5d044eed-dbd3-4230-bed0-c38e7e682e2c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What could be an unintended consequence of this app? For example, maybe it could be helpful and used in a different way to solve another problem. Or, maybe it could have unintended consequences that could be harmful for users?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d044eed-dbd3-4230-bed0-c38e7e682e2c",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "c8c4fae8-d498-4e9f-83e5-3fe32c31f2ac",
+      "position": 7,
+      "properties": {
+        "description": "Clarify for students that, for this question, they do not have to refer to anything in the video - they can come up with their own ideas using their imaginations or drawing from personal experiences. Have students discuss with a neighbor first before sharing as a full group."
+      },
+      "seeding_key": {
+        "activity_section.key": "c8c4fae8-d498-4e9f-83e5-3fe32c31f2ac",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "faf003d5-5314-4e87-9f45-b611923214c0",
+      "position": 8,
+      "properties": {
+        "description": "**Discussion Goal:** There is no single right answer to this question - it’s more important that students share the reasoning behind their thoughts. Students may comment on how image recognition isn’t perfect and it may incorrectly identify something for Andre that could be harmful. Students may also wonder if this app could be used for deaf people as well, using audio from their environment to tell what’s going on. Or, they may remember the handwriting comment from the video and suggest that the app could be used to help students improve their handwriting."
+      },
+      "seeding_key": {
+        "activity_section.key": "faf003d5-5314-4e87-9f45-b611923214c0",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "97cf02e4-aa14-4710-a875-0d778274316e",
+      "position": 9,
+      "properties": {
+        "description": "This is one example of how artificial intelligence is making an impact on the world. Today, you’ll have a chance to investigate other examples of AI as we investigate these same questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "97cf02e4-aa14-4710-a875-0d778274316e",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "109005d8-492a-43f2-9b42-d244976f8f35",
+      "position": 10,
+      "properties": {
+        "description": "**Distribute:** Pass out the [r innovations_in_ai_-_activity_guide/aiml/2021] to each student. "
+      },
+      "seeding_key": {
+        "activity_section.key": "109005d8-492a-43f2-9b42-d244976f8f35",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "a718e1fa-c4ab-4a23-8fcf-7288ae3cee87",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the instructions for the activity guide. Have students choose a topic they would like to research. They can change topics during class, but selecting one initially is helpful when starting their research."
+      },
+      "seeding_key": {
+        "activity_section.key": "a718e1fa-c4ab-4a23-8fcf-7288ae3cee87",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "9a51a0bd-76a4-427e-b257-93c0f329d2f9",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/aiml/2021] so students have access to some starting resources to begin their search."
+      },
+      "seeding_key": {
+        "activity_section.key": "9a51a0bd-76a4-427e-b257-93c0f329d2f9",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "1e80ab93-2416-4b77-8886-33a6fed8c519",
+      "position": 13,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they research different applications of AI. Make sure students are finding examples that truly involve artificial intelligence, especially making decisions from data."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e80ab93-2416-4b77-8886-33a6fed8c519",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "46b6ac09-6c4e-4e59-9b46-c0f901f8b6aa",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students begin filling out the back of their activity guide, where they will describe the innovation that they found. Remind students that the final question is their opinion based on their imagination or other experiences - it does not have to come from a video or news article."
+      },
+      "seeding_key": {
+        "activity_section.key": "46b6ac09-6c4e-4e59-9b46-c0f901f8b6aa",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "2eb2cbdf-382a-4c19-8625-f943dc8ecc6c",
+      "position": 15,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they answer the questions on the their activity guide. If students are struggling to write down responses, ask them to explain their innovation to you and then prompt them to write down some of their responses on the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "2eb2cbdf-382a-4c19-8625-f943dc8ecc6c",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
+      "key": "4aa92791-294e-4df6-a220-cbd3563fbc66",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pair-Share:** Have students find one other person in the class. Each person takes turns describing the innovation that they found, summarizing their responses to the activity guide. This activity can be repeated several times, but students should have at least one other example of an AI innovation that isn’t their own."
+      },
+      "seeding_key": {
+        "activity_section.key": "4aa92791-294e-4df6-a220-cbd3563fbc66",
+        "lesson_activity.key": "0e9b52c6-f25a-43e3-b2f1-4a6f813c3ad1"
+      }
+    },
+    {
       "key": "00fb8f68-ea09-4057-9cca-fda20866b279",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _Describe one other AI innovation you heard about during today’s lesson. What problem was it solving? What data did it use?_"
       },
       "seeding_key": {
         "activity_section.key": "00fb8f68-ea09-4057-9cca-fda20866b279",
+        "lesson_activity.key": "433f706a-c2f2-4048-977b-8567ebc03e48"
+      }
+    },
+    {
+      "key": "ec74cfe8-e158-425b-92c3-1b3a3db6ed14",
+      "position": 2,
+      "properties": {
+        "description": "Students shouldn’t summarize the innovation they researched - instead, they should summarize one of the innovations they heard from their peers.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "[This can be used as a formative assessment or ticket out the door.]"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ec74cfe8-e158-425b-92c3-1b3a3db6ed14",
         "lesson_activity.key": "433f706a-c2f2-4048-977b-8567ebc03e48"
       }
     },
@@ -5459,9 +5691,31 @@
       }
     },
     {
-      "key": "b2d2465d-2c42-4ccc-b508-33ee2c57fc29",
+      "key": "7ce8d918-ee0e-452b-8455-a08e4dcb1f80",
       "position": 1,
       "properties": {
+        "name": "Get Started",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Start Right Away:** Get students started on this project right away so they have time to finish. Even though this mini-project is scheduled for only a single class period, you can consider spreading this project out over two days - one day for training a model and making a model card, and one day for customizing the app."
+          },
+          {
+            "type": "contentCorner",
+            "markdown": "LESSON NOTE: Or - have some of the example apps from previous class available here as exemplars in the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ce8d918-ee0e-452b-8455-a08e4dcb1f80",
+        "lesson_activity.key": "b1cd287d-c354-440d-a0fd-144166dc6306"
+      }
+    },
+    {
+      "key": "b2d2465d-2c42-4ccc-b508-33ee2c57fc29",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Pass out a copy of \n[r create_an_ml_app_-_project_guide/aiml/2021] to each student."
       },
       "seeding_key": {
         "activity_section.key": "b2d2465d-2c42-4ccc-b508-33ee2c57fc29",
@@ -5469,9 +5723,22 @@
       }
     },
     {
+      "key": "2afe76d4-46b9-499e-af89-9d3697dac631",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Overview of the project. Read through the overview on the project guide and through the next few slides."
+      },
+      "seeding_key": {
+        "activity_section.key": "2afe76d4-46b9-499e-af89-9d3697dac631",
+        "lesson_activity.key": "b1cd287d-c354-440d-a0fd-144166dc6306"
+      }
+    },
+    {
       "key": "e9b10931-8ab7-4c3f-82fc-5ba5fb576acf",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students can choose from several real-world datasets to train a model.",
+        "progression_name": "Train a Model in AI Lab"
       },
       "seeding_key": {
         "activity_section.key": "e9b10931-8ab7-4c3f-82fc-5ba5fb576acf",
@@ -5479,9 +5746,88 @@
       }
     },
     {
+      "key": "9566f49e-62ac-482e-a966-aa41776d8889",
+      "position": 2,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they walk through the project guide. Slides are provided with the same instructions to help focus and direct students as they work."
+      },
+      "seeding_key": {
+        "activity_section.key": "9566f49e-62ac-482e-a966-aa41776d8889",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "c7b84d43-9887-4538-9043-3b0f0791eb5a",
+      "position": 3,
+      "properties": {
+        "description": "**Step 1 - Examine Your Data:** Students will choose a dataset from the provided list in AI Lab "
+      },
+      "seeding_key": {
+        "activity_section.key": "c7b84d43-9887-4538-9043-3b0f0791eb5a",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "9aa9967c-8060-4416-a7f6-64d0d04ffa2e",
+      "position": 4,
+      "properties": {
+        "description": "**Step 2 - Train your Model:** Students will choose at least 2 features to train their model. They will record their choices on their project guide. \n\nThey should aim to get at least 70% accuracy to earn full credit on the rubric."
+      },
+      "seeding_key": {
+        "activity_section.key": "9aa9967c-8060-4416-a7f6-64d0d04ffa2e",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "c5eca652-1a14-4387-afc5-0ef4045e6a7e",
+      "position": 5,
+      "properties": {
+        "description": "**Step 3 - Save Your Model, Create a Model Card:** Students will create a model card in AI Lab and save their model. They will also record some of their answers on their project guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "c5eca652-1a14-4387-afc5-0ef4045e6a7e",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "ff9cdb5f-9296-4a36-9fca-a7071ef517d0",
+      "position": 6,
+      "properties": {
+        "description": "**Step 4 - Create Your App:** Students will create their app in App Lab. Apps should have at least a theme and a welcome screen to earn full credit on the rubric."
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9cdb5f-9296-4a36-9fca-a7071ef517d0",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "c3942254-992f-47af-ba09-73d4d62eed3c",
+      "position": 7,
+      "properties": {
+        "progression_name": "Create an App in App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3942254-992f-47af-ba09-73d4d62eed3c",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
+      "key": "c387b679-7b73-438b-ad7a-3e6fa0562987",
+      "position": 8,
+      "properties": {
+        "description": "**Step 5 - Reflect:** Students will reflect on their model and how it could be improved. Students should also review the rubric to verify they met all of the requirements for the project."
+      },
+      "seeding_key": {
+        "activity_section.key": "c387b679-7b73-438b-ad7a-3e6fa0562987",
+        "lesson_activity.key": "c265414a-b360-4f4f-9d85-392b88314ae5"
+      }
+    },
+    {
       "key": "195cb613-d068-41cd-b34a-20bd82bb3e81",
       "position": 1,
       "properties": {
+        "description": "Make sure students submit their projects in App Lab. Collect their project guides to review along with the project rubric.",
+        "name": "Submit Projects"
       },
       "seeding_key": {
         "activity_section.key": "195cb613-d068-41cd-b34a-20bd82bb3e81",
@@ -8781,6 +9127,52 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Train a Model in AI Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-mini project-ai lab 2"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "e9b10931-8ab7-4c3f-82fc-5ba5fb576acf"
+      },
+      "level_keys": [
+        "ml-mini project-ai lab 2"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create an App in App Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-mini project-app lab"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "c3942254-992f-47af-ba09-73d4d62eed3c"
+      },
+      "level_keys": [
+        "ml-mini project-app lab"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Create a Google Form"
       },
       "named_level": false,
@@ -8799,7 +9191,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8822,7 +9214,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8845,7 +9237,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8868,7 +9260,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8891,7 +9283,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8914,7 +9306,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8937,7 +9329,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8960,7 +9352,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8983,7 +9375,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9006,7 +9398,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9029,7 +9421,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9052,7 +9444,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9075,7 +9467,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9098,7 +9490,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9121,7 +9513,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9147,7 +9539,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9173,7 +9565,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9754,6 +10146,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-mini project-ai lab 2",
+        "script_level.level_keys": [
+          "ml-mini project-ai lab 2"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "e9b10931-8ab7-4c3f-82fc-5ba5fb576acf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-mini project-app lab",
+        "script_level.level_keys": [
+          "ml-mini project-app lab"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "c3942254-992f-47af-ba09-73d4d62eed3c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-plan survey-copy form",
         "script_level.level_keys": [
           "ml-plan survey-copy form"
@@ -10059,10 +10475,9 @@
     },
     {
       "name": "\"AI for Social Good\" App",
-      "url": "https://docs.google.com/document/d/10utUMSwAbcY-pV_EHxtsToSTav1vFLH70tmiqvSfn8U/edit",
+      "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit",
       "key": "ai-for-social-good-app",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -10154,6 +10569,18 @@
       }
     },
     {
+      "name": "Create an ML App - Project Guide",
+      "url": "https://docs.google.com/presentation/d/1KIYZMBbLq0iUIX8-od6ZE0bDhz9l2VGGFVnEJD-drp4/edit",
+      "key": "create_an_ml_app_-_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app_-_project_guide"
+      }
+    },
+    {
       "name": "Feedback - AI for Social Good",
       "url": "https://docs.google.com/document/d/1QHSkRdjq8qLZ5ixwk6Se26Ggel2yqEWmYi8QM3ZIGmc/edit",
       "key": "feedback-ai-for-social-good",
@@ -10189,6 +10616,41 @@
       },
       "seeding_key": {
         "resource.key": "importing-ai-models"
+      }
+    },
+    {
+      "name": "Innovations in AI",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "key": "innovations_in_ai",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "name": "Innovations in AI - Activity Guide",
+      "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#",
+      "key": "innovations_in_ai_-_activity_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "name": "Innovations in AI Research Areas - Student Resource",
+      "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#",
+      "key": "innovations_in_ai_research_areas_-_student_resource",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
       }
     },
     {
@@ -10247,6 +10709,18 @@
       },
       "seeding_key": {
         "resource.key": "make_club_app"
+      }
+    },
+    {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/presentation/d/1KIYZMBbLq0iUIX8-od6ZE0bDhz9l2VGGFVnEJD-drp4/edit",
+      "key": "mini-project_create_an_ml_app",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_create_an_ml_app"
       }
     },
     {
@@ -10398,6 +10872,18 @@
       }
     },
     {
+      "name": "Seeing AI",
+      "url": "https://www.youtube.com/watch?v=DybczED-GKE",
+      "key": "seeing_ai",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_ai"
+      }
+    },
+    {
       "name": "Study Time App (Pilot)",
       "url": "https://studio.code.org/projects/applab/iA_UcpvExFzb7b69vDbccJG4riaRiI2zk9thdkNc2uQ?enableExperiments=applab-ml",
       "key": "study-time-app-pilot",
@@ -10518,7 +11004,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-17",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "seeing_ai"
       }
     },
     {
@@ -10662,7 +11166,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-18",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "mini-project_create_an_ml_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "create_an_ml_app_-_project_guide"
       }
     },
     {
