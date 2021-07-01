@@ -115,9 +115,9 @@ const styles = {
     textAlign: 'center'
   },
   collapser: {
-    paddingRight: '8px',
-    fontSize: '20px',
+    paddingRight: 8,
+    fontSize: 20,
     verticalAlign: 'middle',
-    width: '11px'
+    width: 11
   }
 };
