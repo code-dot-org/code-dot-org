@@ -6,21 +6,17 @@ import queryString from "query-string";
 const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
-    hideModelCard: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
     requireAccuracy: 50,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideInstructionsOverlay: true
   },
 
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
@@ -36,14 +32,12 @@ const sampleModes = {
       "salsa_toy"
     ],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
   safari: {
     datasets: ["safari_toy"],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
