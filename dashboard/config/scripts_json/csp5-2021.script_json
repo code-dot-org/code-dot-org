@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 21:27:17 UTC",
+    "serialized_at": "2021-07-01 17:19:13 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -6013,6 +6013,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp5-2021/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp5-2021/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -6035,6 +6057,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-u5-hackathon-submission-on-ap-classroom"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -6512,6 +6546,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
         "script.name": "csp5-2021"
       }
     }

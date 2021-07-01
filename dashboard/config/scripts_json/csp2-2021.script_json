@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 22:00:38 UTC",
+    "serialized_at": "2021-07-01 17:18:30 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -2760,6 +2760,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp2-2021/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp2-2021/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -2781,6 +2803,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3148,6 +3182,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
         "script.name": "csp2-2021"
       }
     }
