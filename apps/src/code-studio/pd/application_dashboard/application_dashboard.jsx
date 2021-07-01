@@ -53,6 +53,11 @@ const paths = {
     type: 'teacher',
     name: 'CS Principles Teacher Applications',
     course: 'csp'
+  },
+  csa_teachers: {
+    type: 'teacher',
+    name: 'Computer Science A Teacher Applications',
+    course: 'csa'
   }
 };
 
