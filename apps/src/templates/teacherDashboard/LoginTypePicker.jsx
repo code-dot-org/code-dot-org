@@ -68,7 +68,8 @@ class LoginTypePicker extends Component {
       display: 'grid',
       gridTemplateColumns: 'repeat(3, 1fr)',
       gridAutoRows: '150px',
-      gridGap: '5px'
+      gridGap: '5px',
+      overflow: 'auto'
     };
 
     return (
