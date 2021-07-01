@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 15:56:32 UTC",
+    "serialized_at": "2021-07-01 21:00:30 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "jess-test-script"
