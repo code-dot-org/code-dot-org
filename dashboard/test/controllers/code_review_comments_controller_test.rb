@@ -15,6 +15,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     @another_student = create :student
   end
 
+  test 'signed out cannot create CodeReviewComment' do
+    post :create
+    assert_redirected_to_sign_in
+  end
+
   test 'student can create CodeReviewComment on their own project' do
     stub_storage_apps_calls
 
