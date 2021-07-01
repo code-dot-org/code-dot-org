@@ -1940,6 +1940,37 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal('CSP Test', assignable_info[:category])
   end
 
+  test 'get_feedback_for_section returns feedbacks for students in the section on the script' do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    weblab_level = create :weblab
+    gamelab_level = create :gamelab
+    create(:script_level, lesson: lesson, levels: [weblab_level], script: script)
+    create(:script_level, lesson: lesson, levels: [gamelab_level], script: script)
+
+    teacher = create :teacher
+    student1 = create :student
+    student2 = create :student
+
+    section = create :section, user: teacher
+    section.add_student(student1)
+    section.add_student(student2)
+
+    feedback1 = create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student1, comment: "Testing", performance: 'performanceLevel1')
+    create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student2)
+    create(:teacher_feedback, script: script, level: gamelab_level, teacher: teacher, student: student2)
+
+    feedback_for_section = script.get_feedback_for_section(section)
+
+    assert_equal(3, feedback_for_section.keys.length) # expect 3 feedbacks
+    feedback1_result = feedback_for_section[feedback1.id]
+    assert_equal(student1.name, feedback1_result[:studentName])
+    assert_equal("Testing", feedback1_result[:comment])
+    assert_equal("Extensive Evidence", feedback1_result[:performance])
+    assert_equal("Never reviewed", feedback1_result[:reviewStateLabel])
+  end
+
   # This test checks that all categories that may show up in the UI have
   # translation strings.
   test 'all visible categories have translations' do

@@ -242,6 +242,7 @@ class ScriptsController < ApplicationController
       :curriculum_umbrella,
       :family_name,
       :version_year,
+      :is_maker_unit,
       :project_sharing,
       :login_required,
       :hideable_lessons,
