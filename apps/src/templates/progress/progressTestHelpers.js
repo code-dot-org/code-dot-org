@@ -176,6 +176,7 @@ export const fakeScriptData = (overrideFields = {}) => {
     id: 1,
     name: 'csd1-2020',
     title: 'CSD Unit 1 - Problem Solving and Computing (20-21)',
+    csf: false,
     lessons: [],
     ...overrideFields
   };

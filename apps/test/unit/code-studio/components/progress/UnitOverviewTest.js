@@ -2,6 +2,7 @@ import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import {UnconnectedUnitOverview as UnitOverview} from '@cdo/apps/code-studio/components/progress/UnitOverview';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const defaultProps = {
@@ -30,7 +31,7 @@ describe('UnitOverview', () => {
   it('includes a UnitOverviewTopRow/ProgressLegend on overview page', () => {
     const wrapper = shallow(<UnitOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(UnitOverviewTopRow)').length, 1);
-    assert.equal(wrapper.find('Connect(ProgressLegend)').length, 1);
+    assert.equal(wrapper.find(ProgressLegend).length, 1);
   });
 
   it('includes no UnitOverviewTopRow/ProgressLegend if not on overview page', () => {
@@ -38,6 +39,6 @@ describe('UnitOverview', () => {
       <UnitOverview {...defaultProps} onOverviewPage={false} />
     );
     assert.equal(wrapper.find('UnitOverviewTopRow').length, 0);
-    assert.equal(wrapper.find('ProgressLegend').length, 0);
+    assert.equal(wrapper.find(ProgressLegend).length, 0);
   });
 });

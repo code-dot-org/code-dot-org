@@ -23,6 +23,7 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {
   fakeLessonWithLevels,
   fakeStudents,
@@ -30,6 +31,7 @@ import {
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
@@ -175,6 +177,13 @@ describe('ProgressTableView', () => {
     it('renders the ProgressLegend', () => {
       const wrapper = setUp(ViewType.DETAIL);
       expect(wrapper.find(ProgressLegend)).to.have.length(1);
+    });
+
+    it('renders review state badges in ProgressLegend when enabled', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const wrapper = setUp(ViewType.DETAIL);
+      expect(wrapper.find(KeepWorkingBadge)).to.have.length(2);
+      sinon.restore();
     });
 
     it('renders ProgressTableDetailCells', () => {

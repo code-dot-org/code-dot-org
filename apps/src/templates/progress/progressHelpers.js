@@ -156,6 +156,10 @@ export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
 }
 
+export function isUnitCsd(scriptData) {
+  return scriptData.name.startsWith('csd');
+}
+
 /**
  * Computes summary of a student's progress in a lesson's levels.
  * @param {{id: studentLevelProgressType}} studentLevelProgress
