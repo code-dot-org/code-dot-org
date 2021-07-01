@@ -195,6 +195,14 @@ class BubbleChoice < DSLDefined
     end
   end
 
+  # gets the sublevel which will represent the overall progress for the level
+  # (displayed in the progress bubble)
+  def get_sublevel_for_progress(student, script)
+    keep_working_level = keep_working_sublevel(student, script)
+    best_result_level = best_result_sublevel(student, script)
+    return keep_working_level || best_result_level
+  end
+
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.

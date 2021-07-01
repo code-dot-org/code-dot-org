@@ -36,6 +36,7 @@ require 'cdo/shared_constants'
 class ScriptLevel < ApplicationRecord
   include SerializedProperties
   include LevelsHelper
+  include UsersHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
 
@@ -550,27 +551,9 @@ class ScriptLevel < ApplicationRecord
     levels.map(&:contained_levels).flatten
   end
 
-  # Returns the level whose status will determine state of the progress bubble
-  def get_level_for_progress(student)
-    # If the level is a bubble choice, determine which sublevel's status to display in our progress bubble.
-    # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
-    # progress for sublevel that has the best result. Otherwise display progress for the level.
-    if bubble_choice?
-      keep_working_level = level.keep_working_sublevel(student, script)
-      best_result_level = level.best_result_sublevel(student, script)
-      return keep_working_level || best_result_level || level
-    elsif contained_levels.any?
-      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only display our first contained level, display progress for that level.
-      return contained_levels.first
-    else
-      return level
-    end
-  end
-
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
-    level_for_progress = get_level_for_progress(student)
+    level_for_progress = get_level_for_progress(student, oldest_active_level, script)
     user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
 
     status = activity_css_class(user_level)
