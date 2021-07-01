@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {
   ViewType,
   scriptDataPropType
@@ -12,6 +13,7 @@ import {
   studentLessonProgressType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {isUnitCsd} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   getCurrentUnitData,
   jumpToLessonDetails
@@ -135,6 +137,13 @@ class ProgressTableView extends React.Component {
     if (prevProps.currentView !== this.props.currentView) {
       this.setRowsToRender();
     }
+  }
+
+  shouldShowReviewStates() {
+    return (
+      experiments.isEnabled(experiments.KEEP_WORKING) &&
+      (this.props.scriptData.csf || isUnitCsd(this.props.scriptData))
+    );
   }
 
   /**
@@ -357,6 +366,7 @@ class ProgressTableView extends React.Component {
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
             includeCsfColumn={this.props.scriptData.csf}
+            includeReviewState={this.shouldShowReviewStates()}
             includeProgressNotApplicable
           />
         ) : (
