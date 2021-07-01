@@ -31,7 +31,6 @@ import {
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
-import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
@@ -179,10 +178,11 @@ describe('ProgressTableView', () => {
       expect(wrapper.find(ProgressLegend)).to.have.length(1);
     });
 
-    it('renders review state badges in ProgressLegend when enabled', () => {
+    it('passes `includeReviewStates` to ProgressLegend when enabled', () => {
       sinon.stub(experiments, 'isEnabled').returns(true);
       const wrapper = setUp(ViewType.DETAIL);
-      expect(wrapper.find(KeepWorkingBadge)).to.have.length(2);
+      expect(wrapper.find(ProgressLegend).props().includeReviewStates).to.be
+        .true;
       sinon.restore();
     });
 

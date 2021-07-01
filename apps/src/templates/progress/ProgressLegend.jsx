@@ -21,7 +21,7 @@ export default class ProgressLegend extends Component {
   static propTypes = {
     includeCsfColumn: PropTypes.bool.isRequired,
     includeProgressNotApplicable: PropTypes.bool,
-    includeReviewState: PropTypes.bool
+    includeReviewStates: PropTypes.bool
   };
 
   render() {
@@ -74,15 +74,15 @@ export default class ProgressLegend extends Component {
     const {
       includeCsfColumn,
       includeProgressNotApplicable,
-      includeReviewState
+      includeReviewStates
     } = this.props;
 
     const columns = [];
     includeProgressNotApplicable && columns.push(this.getProgressNAColumn());
     columns.push(this.getNotStartedColumn());
     columns.push(this.getInProgressColumn());
-    includeReviewState && columns.push(this.getKeepWorkingColumn());
-    includeReviewState && columns.push(this.getNeedsReviewColumn());
+    includeReviewStates && columns.push(this.getKeepWorkingColumn());
+    includeReviewStates && columns.push(this.getNeedsReviewColumn());
     includeCsfColumn && columns.push(this.getTooManyBlocksColumn());
     columns.push(this.getPerfectColumn());
     columns.push(this.getAssessmentsColumn());

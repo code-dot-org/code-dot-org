@@ -15,7 +15,7 @@ describe('ProgressLegend', () => {
       <ProgressLegend
         includeCsfColumn
         includeProgressNotApplicable
-        includeReviewState
+        includeReviewStates
       />
     );
     expect(wrapper.find('table')).to.have.lengthOf(2);
@@ -35,7 +35,7 @@ describe('ProgressLegend', () => {
 
   it('renders badges for review states', () => {
     const wrapper = shallow(
-      <ProgressLegend includeReviewState includeCsfColumn />
+      <ProgressLegend includeReviewStates includeCsfColumn />
     );
     expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(2);
   });
