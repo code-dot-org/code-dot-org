@@ -30,9 +30,7 @@ class Predict extends Component {
   };
 
   handleChange = (event, feature) => {
-    const testData = this.props.testData;
-    testData[feature] = event.target.value;
-    this.props.setTestData(testData);
+    this.props.setTestData(feature, event.target.value);
   };
 
   onClickPredict = () => {
@@ -139,8 +137,8 @@ export default connect(
     extremaByColumn: getExtremaByColumn(state)
   }),
   dispatch => ({
-    setTestData(testData) {
-      dispatch(setTestData(testData));
+    setTestData(feature, value) {
+      dispatch(setTestData(feature, value));
     }
   })
 )(Predict);

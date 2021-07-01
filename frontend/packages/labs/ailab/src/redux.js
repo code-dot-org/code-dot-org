@@ -155,8 +155,8 @@ export function setTrainingLabels(trainingLabels) {
   return { type: SET_TRAINING_LABELS, trainingLabels };
 }
 
-export function setTestData(testData) {
-  return { type: SET_TEST_DATA, testData };
+export function setTestData(feature, value) {
+  return { type: SET_TEST_DATA, feature, value };
 }
 
 export function setPrediction(prediction) {
@@ -417,7 +417,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_TEST_DATA) {
     return {
       ...state,
-      testData: action.testData,
+      testData: { ...state.testData, [action.feature]: action.value },
       prediction: undefined
     };
   }
@@ -443,7 +443,7 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
-    let trainedModelDetails = {...state.trainedModelDetails};
+    let trainedModelDetails = { ...state.trainedModelDetails };
 
     if (action.isColumn) {
       if (!trainedModelDetails.columns) {
