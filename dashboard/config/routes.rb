@@ -452,6 +452,7 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_merge', to: 'admin_users#studio_person_merge', as: 'studio_person_merge'
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
+  get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
   post '/census/review', to: 'census_reviewers#create'
 
