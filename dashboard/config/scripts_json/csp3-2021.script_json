@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:40 UTC",
+    "serialized_at": "2021-07-01 17:18:52 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp3-2021"
@@ -3819,6 +3819,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp3-2021/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp3-2021/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
       "name": "App Development Planning Guide",
       "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
       "key": "app_development_planning_guide",
@@ -3853,6 +3875,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3901,6 +3935,54 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U3 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/82d6E4UAb6YG4psuAnKVtGVR4bGp1thGQ5IJXYux8uM",
+      "key": "u3_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1TRZwaqBMKFIp8FuKMd0bnFZP3OJhV6YrUFWrU8RF0kM/edit?usp=sharing",
+      "key": "u3_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/ylMrNrR86gj9RiHJ1qcoAgf3bJfgU79XCM09yJn7DWQ",
+      "key": "u3_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U3 Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1kk2G4pPOr8wfN0tQzOm_mFvwMDbcmvreehC5QA3y91c/edit?usp=sharing",
+      "key": "u3_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
       }
     },
     {
@@ -4027,6 +4109,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "u3_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
@@ -4054,6 +4160,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
         "script.name": "csp3-2021"
       }
     }
