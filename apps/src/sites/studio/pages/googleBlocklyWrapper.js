@@ -200,8 +200,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
-  blocklyWrapper.addChangeListener = function(handler) {
-    Blockly.mainBlockSpace.addChangeListener(handler);
+  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+    blockspace.addChangeListener(handler);
   };
 
   blocklyWrapper.getWorkspaceCode = function() {
