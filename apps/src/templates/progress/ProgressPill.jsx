@@ -7,7 +7,11 @@ import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
-import {BubbleBadgeWrapper, AssessmentBadge} from './BubbleBadge';
+import {
+  BubbleBadgeWrapper,
+  AssessmentBadge,
+  KeepWorkingBadge
+} from './BubbleBadge';
 import {connect} from 'react-redux';
 
 /**
@@ -29,43 +33,31 @@ class ProgressPill extends React.Component {
     isRtl: PropTypes.bool
   };
 
-  render() {
+  getUrl() {
     const {
       levels,
-      icon,
-      text,
-      tooltip,
       disabled,
       selectedSectionId,
-      progressStyle,
-      isRtl
+      onSingleLevelClick
     } = this.props;
 
-    const multiLevelStep = levels.length > 1;
-    let url =
-      multiLevelStep || disabled || this.props.onSingleLevelClick
-        ? undefined
-        : levels[0].url;
-    if (url && selectedSectionId) {
+    if (levels.length > 1 || disabled || onSingleLevelClick) {
+      return;
+    }
+
+    let url = levels[0].url;
+
+    if (selectedSectionId) {
       url += stringifyQueryParams({section_id: selectedSectionId});
     }
-    let onClick =
-      !multiLevelStep && !disabled && !url
-        ? () => this.props.onSingleLevelClick(levels[0])
-        : undefined;
 
-    let style = {
-      ...styles.levelPill,
-      ...((url || onClick) && hoverStyle),
-      ...(!multiLevelStep &&
-        levelProgressStyle(levels[0].status, levels[0].kind))
-    };
+    return url;
+  }
 
-    // Adjust icon margins if locale is RTL
-    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
+  getTooltipProps() {
+    const {tooltip} = this.props;
 
-    // If we're passed a tooltip, we also need to reference it from our div
-    let tooltipProps = {};
+    const tooltipProps = {};
     if (tooltip) {
       const id = tooltip.props.tooltipId;
       tooltipProps['data-tip'] = true;
@@ -73,9 +65,49 @@ class ProgressPill extends React.Component {
       tooltipProps['aria-describedby'] = id;
     }
 
-    // Only put the assessment icon on if its a single assessment level (not set)
-    const levelIsAssessment =
-      isLevelAssessment(levels[0]) && levels.length === 1;
+    return tooltipProps;
+  }
+
+  render() {
+    const {
+      levels,
+      icon,
+      text,
+      tooltip,
+      disabled,
+      progressStyle,
+      isRtl,
+      onSingleLevelClick
+    } = this.props;
+
+    const firstLevel = levels[0];
+
+    const multiLevelStep = levels.length > 1;
+
+    const url = this.getUrl();
+
+    let onClick =
+      !multiLevelStep && !disabled && !url
+        ? () => onSingleLevelClick(firstLevel)
+        : undefined;
+
+    let style = {
+      ...styles.levelPill,
+      ...((url || onClick) && hoverStyle),
+      ...(!multiLevelStep &&
+        levelProgressStyle(firstLevel.status, firstLevel.kind))
+    };
+
+    // Adjust icon margins if locale is RTL
+    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
+
+    const tooltipProps = this.getTooltipProps();
+
+    // Only put the bubble badge on if its a single assessment level (not set)
+    const displayBadge =
+      !multiLevelStep &&
+      (firstLevel['teacherFeedbackReviewState'] === 'keepWorking' ||
+        isLevelAssessment(firstLevel));
 
     const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
 
@@ -100,9 +132,13 @@ class ProgressPill extends React.Component {
             </div>
           )}
           {tooltip}
-          {levelIsAssessment && (
+          {displayBadge && (
             <BubbleBadgeWrapper>
-              <AssessmentBadge />
+              {firstLevel['teacherFeedbackReviewState'] === 'keepWorking' ? (
+                <KeepWorkingBadge />
+              ) : (
+                <AssessmentBadge />
+              )}
             </BubbleBadgeWrapper>
           )}
         </div>

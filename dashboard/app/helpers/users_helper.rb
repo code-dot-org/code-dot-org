@@ -211,21 +211,31 @@ module UsersHelper
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
 
+        level_for_progress = get_level_for_progress(user, level, script)
+
+        # contained_level_id = level.contained_levels.try(:first).try(:id)
+        # ul = user_levels_by_level.try(:[], contained_level_id || level_id)
+
+        ul = user_levels_by_level.try(:[], level_for_progress.id)
+
+        # feedback for contained level is stored with the level ID not the contained level ID
+        # which is why we pass level_id here - maureen make this better
+        level_id_for_feedback =  level.contained_levels.any? ? level.id : level_for_progress.id
+        level_progress = get_level_progress(
+          level_id_for_feedback, user.id, ul, sl, paired_user_levels, include_timestamp
+        )
+
+        # maureen come back to review state for bubble choice
         if level.is_a?(BubbleChoice) # we have a parent level
           bubble_choice_progress = get_bubble_choice_progress(
             level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp
           )
           if bubble_choice_progress
             progress.merge!(bubble_choice_progress.compact)
+            sum_time_spent = bubble_choice_progress&.values&.reduce(0) {|sum, sublevel_progress| sum + sublevel_progress[:time_spent]}
+            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
           end
-          next
         end
-
-        contained_level_id = level.contained_levels.try(:first).try(:id)
-        ul = user_levels_by_level.try(:[], contained_level_id || level_id)
-        level_progress = get_level_progress(
-          ul, sl, paired_user_levels, include_timestamp
-        )
 
         next unless level_progress
 
@@ -243,13 +253,35 @@ module UsersHelper
     progress
   end
 
+  # Returns the level whose status will determine overall progress for the level
+  def get_level_for_progress(user, level, script)
+    # If the level is a bubble choice, determine which sublevel's status to display in our progress bubble.
+    # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+    # progress for sublevel that has the best result. Otherwise display progress for the level.
+    if level.is_a?(BubbleChoice)
+      sublevel_for_progress = level.get_sublevel_for_progress(user, script)
+      return sublevel_for_progress if sublevel_for_progress.present?
+    elsif level.contained_levels.any?
+      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
+      # We only display our first contained level, display progress for that level.
+      return level.contained_levels.first
+    end
+
+    return level
+  end
+
   # Summarizes a user's progress on a particular level
   private def get_level_progress(
+    level_id_for_feedback,
+    user_id,
     user_level,
     script_level,
     paired_user_levels,
     include_timestamp
   )
+    # maureen figure out what to do here if there's no progress but feedback exists
+    feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level_id_for_feedback, script_level.script.id).first
+
     # if we don't have a user level, that means the user doesn't have any
     # progress on this level, so the client interprets a nil value as not_tried.
     # however, the default state of a lockable level is locked, so if the
@@ -268,7 +300,8 @@ module UsersHelper
       result: user_level.best_result || nil,
       paired: (paired_user_levels.include? user_level.id) || nil,
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
-      time_spent: user_level.time_spent&.to_i
+      time_spent: user_level.time_spent&.to_i,
+      teacher_feedback_review_state: feedback&.review_state
     }.compact
   end
 
@@ -289,7 +322,7 @@ module UsersHelper
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
-      sublevel_progress = get_level_progress(ul, script_level, paired_user_levels, include_timestamp)
+      sublevel_progress = get_level_progress(sublevel.id, user.id, ul, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress
@@ -302,8 +335,8 @@ module UsersHelper
     # if we don't have a best progress, we don't have any progress
     return nil if best_progress.nil?
 
-    progress[level.id] = best_progress.clone
-    progress[level.id][:time_spent] = sum_time_spent if sum_time_spent > 0
+    # progress[level.id] = best_progress.clone
+    # progress[level.id][:time_spent] = sum_time_spent if sum_time_spent > 0
     progress
   end
 
