@@ -20,7 +20,7 @@ describe('craft utils', () => {
       sinon.restore();
     });
 
-    it('closes player selection dialog after opening', () => {
+    it('closes dialog after selecting a player', () => {
       sinon
         .stub(craftRedux, 'openPlayerSelectionDialog')
         .callsFake(callback => callback('Steve'));
