@@ -31,6 +31,8 @@
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
       .span5
+        %button.select-user-type-button{onClick: 'selectUserTypeTeacher()'} Teacher
+        %button.select-user-type-button{onClick: 'selectUserTypeStudent()'} Student
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       .span2
     .row#parent-email-container
@@ -141,6 +143,14 @@
         = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
+
+:javascript
+  function selectUserTypeTeacher() {
+    console.log('Teacher');
+  }
+  function selectUserTypeStudent() {
+    console.log('Student');
+  }
 
 :ruby
   script_data = {
