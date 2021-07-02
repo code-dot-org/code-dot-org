@@ -55,10 +55,17 @@ class I18nScriptUtils
 
     # Make sure we treat the strings 'y' and 'n' as strings, and not bools
     yaml_bool = /^(?:y|Y|n|N)$/
+    # Make sure we use the right format for strings with '#' in them, otherwise
+    # YAML parsers might treat part of the string as a YAML comment.
+    octothorp = /#/
     ast.grep(Psych::Nodes::Scalar).each do |node|
       if yaml_bool.match node.value
         node.plain = false
         node.quoted = true
+      elsif octothorp.match node.value
+        node.plain = false
+        node.quoted = true
+        node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED
       end
     end
 
