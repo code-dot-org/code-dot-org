@@ -12,11 +12,12 @@
       "project_sharing": true,
       "include_student_lesson_plans": true,
       "version_year": "2021",
-      "is_course": true
+      "is_course": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-01 20:16:24 UTC",
+    "serialized_at": "2021-07-02 15:26:53 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -945,7 +946,8 @@
       "key": "092e7142-dafc-48f1-b3e1-691062a81420",
       "position": 2,
       "properties": {
-        "name": "Activity V2"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420",
@@ -955,22 +957,8 @@
       }
     },
     {
-      "key": "56c8b316-5fd9-4920-852f-7392325d2752",
-      "position": 3,
-      "properties": {
-        "duration": 35,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "56c8b316-5fd9-4920-852f-7392325d2752",
-        "lesson.key": "lesson9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
       "key": "9f3d4572-6b10-42e5-89ac-9b13e7b7d470",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -3464,8 +3452,19 @@
       }
     },
     {
-      "key": "1a926676-97b4-4a29-bc21-c005ebae26a0",
+      "key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
       "position": 1,
+      "properties": {
+        "progression_name": "Recognizing Shapes"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
+        "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
+      }
+    },
+    {
+      "key": "1a926676-97b4-4a29-bc21-c005ebae26a0",
+      "position": 2,
       "properties": {
         "progression_name": "Dataset #3: Pizza"
       },
@@ -3476,23 +3475,12 @@
     },
     {
       "key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "You Choose: Restaurant Recommendations"
       },
       "seeding_key": {
         "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388",
-        "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
-      }
-    },
-    {
-      "key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
-      "position": 3,
-      "properties": {
-        "progression_name": "Recognizing Shapes"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d",
         "lesson_activity.key": "1aff2dff-8eef-47d1-8932-5736db3f442c"
       }
     },
@@ -3781,7 +3769,7 @@
       "key": "88f74dcb-f399-4aa1-aad1-36a60ede7443",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**_ Imagine you are babysitting a young cousin and they run up to you from playing looking upset and asking for help. They show you that they skinned their knee and it isn’t bleeding, but it’s very pink. What would your reaction be?_\r\n\r\n_(1) Tell them to deal with it and go back to playing_\r\n\r\n_(2) Tell them to wait a minute while you go get some band-aids_\r\n\r\n_(3) Call 911 and ask for an ambulance_\r\n\r\nHave students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between option (1) and option (2).\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What kind of injury would lead you to make a different choice?_\r\n\r\nHave students think individually first, then share with a partner before having a full-group discussion.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you are babysitting a young cousin and they run up to you from playing looking upset and asking for help. They show you that they skinned their knee and it isn’t bleeding, but it’s very pink. What would your reaction be?_\n\n_(1) Tell them to deal with it and go back to playing_\n\n_(2) Tell them to wait a minute while you go get some band-aids_\n\n_(3) Call 911 and ask for an ambulance_\n\nHave students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between option (1) and option (2).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What kind of injury would lead you to make a different choice?_\n\nHave students think individually first, then share with a partner before having a full-group discussion.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4836,7 +4824,7 @@
       "key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [Activity Guide] to each student."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the  to each student.\n[r unplugged_knn_-_activity_guide/aiml/2021]"
       },
       "seeding_key": {
         "activity_section.key": "c589d268-67e6-4c07-ae30-dfcadbf16418",
@@ -4942,7 +4930,7 @@
       "key": "015eedd8-8d21-4ede-8c7e-b44848440644",
       "position": 9,
       "properties": {
-        "description": "**Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4956,45 +4944,200 @@
       }
     },
     {
-      "key": "1f4afe90-80fd-4c32-9212-a42d5167fafe",
-      "position": 1,
+      "key": "34264da5-bbee-46af-9656-bb23b6d2f8c7",
+      "position": 10,
       "properties": {
-        "description": "**Vocabulary:** Display the slide with this vocabulary on it\r\n\r\n- **Classification:** predicting a category based on other features.\r\n- **Regression:** predicting a number based on other features.",
-        "name": "Regression Quest\r"
+        "description": "**Circulate:** Monitor students as they complete this process. An answer key is provided to help check answers."
       },
       "seeding_key": {
-        "activity_section.key": "1f4afe90-80fd-4c32-9212-a42d5167fafe",
-        "lesson_activity.key": "56c8b316-5fd9-4920-852f-7392325d2752"
+        "activity_section.key": "34264da5-bbee-46af-9656-bb23b6d2f8c7",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
       }
     },
     {
-      "key": "c4c3adcf-26b4-434f-8221-a24c196d4ec2",
-      "position": 2,
+      "key": "237a3a11-97d0-4a6b-98e9-ed636be51cf9",
+      "position": 11,
       "properties": {
-        "description": "Most of the problems we’ve solved so far have been classification problems, where we try to separate data into categories to make a prediction. This was similar to the first prompt from today’s warm up. Today, we’re going to focus on a new type of problem called regression, which is when we calculate a number to make a prediction. This is similar to the second prompt from today’s warm up.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Ask students to share out only their predictions for locations B and C, and which location has the least number of zombies."
+      },
+      "seeding_key": {
+        "activity_section.key": "237a3a11-97d0-4a6b-98e9-ed636be51cf9",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "f06f556b-d838-404c-95d2-b6e8f5103caf",
+      "position": 12,
+      "properties": {
+        "description": "This is an example of how we can take new data and compare it to our existing data, then use those similarities to make predictions. This happens a lot in machine learning apps where we are trying to predict how much something should cost, or how many people will be at a location, or how often an event will happen. But - it’s not enough to just make a prediction: we should also be able to check our accuracy to see how we did.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c4c3adcf-26b4-434f-8221-a24c196d4ec2",
-        "lesson_activity.key": "56c8b316-5fd9-4920-852f-7392325d2752"
+        "activity_section.key": "f06f556b-d838-404c-95d2-b6e8f5103caf",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
       }
     },
     {
-      "key": "5d7633f5-081c-4165-9f2e-eb71a625bed1",
-      "position": 3,
+      "key": "0a6d4645-40f1-4482-bc26-94f8e5721603",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the next slide, which introduces the activity for today. Students will simulate being in a pandemic where a virus is spreading and infecting different parts of town. They will learn a strategy to predict how many infections are in certain locations by finding similarities with other parts of town. Continue talking through the slides with the class until it is time to distribute the handout.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student one Activity Guide - Regression with Machine Learning. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the next two slides, which correspond to the instructions on the activity guide. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to work on the handout, either alone or with a partner. The handout follows a story that ultimately has students working through and then reflecting on a regression algorithm. As students work through the handout, here are some places where you can check in or offer guidance. Also note that answers can be found in Regression Quest (Teacher Version) - Answer Key:\r\n\r\n\r\n#### Regression with Machine Learning\r\n\r\n**Questions 1, 2:** It is critical that students first become familiar with the training data. Question 1 simply asks them to mark whether each variable is categorical or numerical, then feature or label. Some students might see “Location #” as a variable, but in this case remind them that is an index used to identify a row in the dataset, and is not a feature. Question 2 asks students if they notice any relationships between variables in the dataset, another task students should become used to as they become more comfortable with AI and machine learning. An example response to this question is in the answer key, but encourage students to take their time answering as it is important that they explore the data before using it to train a model.\r\n\r\n**Question 3:** This question marks the beginning of the algorithm proper. Tom’s “setup program” assists students in creating their regression algorithm. First, just as Tom suggests, they will consider heading to their school. However, because the number of infections at the school is unknown, they need to come up with a plan. Tom suggests they first compare the school to all other locations in Tom’s dataset (i.e., the training data). Here, students should simply complete the table, where they compare their school’s features (“school”, “indoor”) to those of other locations, then write the total number of similarities for each comparison. Several rows have been prefilled to give them a start. Be sure to check in with students as they complete this step (it might be a good idea to do it as a class), as making errors here will impact the next steps of the algorithm.\r\n\r\n**Question 4:** This question asks students to write the three locations that are most similar to their school. That is, the three locations with the highest total similarities. The order they write these in doesn’t matter. To answer this question, students should refer to the table above, specifically the “Total Similarities” column.\r\n\r\n**Question 5:** Finally, Tom (with students’ help, of course) predicts the label for their school (i.e., infections) by summing the infections of the three most similar locations, then dividing by three. If your students have not yet learned how to calculate averages, or otherwise struggle with the arithmetic, please be sure to do this step as a class. \r\n\r\n**Question 6:** Here, students are free to write, in their own words, how they managed to train Tom to estimate the number of infections at the school. They should refer to all of the previous questions in the handout for guidance. A sample response is provided in the answer key.  \r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Bring the class back together. If students worked mostly independently, go over the entire handout using the answer key as a reference. In any case, be sure to allow students to volunteer their own responses to Question 6, which also answers the question of the day."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the  to each student\n[r knn_accuracy_-_activity_guide/aiml/2021]"
       },
       "seeding_key": {
-        "activity_section.key": "5d7633f5-081c-4165-9f2e-eb71a625bed1",
-        "lesson_activity.key": "56c8b316-5fd9-4920-852f-7392325d2752"
+        "activity_section.key": "0a6d4645-40f1-4482-bc26-94f8e5721603",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "71da1aec-c5d3-4abd-bc2a-421c2d32ffc5",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the overview of this task - the class has been rescued and can now see how many zombies were actually at Locations A, B, and C. Using this information, students can start to calculate the accuracy of their results.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Accuracy and Numerical Data:** Accuracy is calculated differently for numerical data than it is for categorical data. This part of the activity is important for building conceptual understanding so when students see these same calculations in AI Lab, they’ll have a reference for understanding what it means. Skipping too fast through this section may mean students are confused when they see accuracy in AI Lab with numerical data.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "71da1aec-c5d3-4abd-bc2a-421c2d32ffc5",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "58dd66b7-ab53-4b08-88e7-536decac36fe",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Based on the results, what was the accuracy of our model? How many locations did it predict exactly correct?"
+      },
+      "seeding_key": {
+        "activity_section.key": "58dd66b7-ab53-4b08-88e7-536decac36fe",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "fc589c60-0ff8-48ff-9120-8b971b01b346",
+      "position": 16,
+      "properties": {
+        "description": "**Discussion Goal:** Students should notice that our model is 0% accurate if we were expecting it to be perfectly correct. Guide students to consider whether it’s okay for the model to be “close enough” - for example, when weather apps predict the temperature, we let it be okay if they’re off by a few degrees as long as they are close enough."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc589c60-0ff8-48ff-9120-8b971b01b346",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "a799fa5b-2efe-4dd3-a126-8fc210fc706f",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would the accuracy of our model be if it was okay that we were within 5 of the actual value? If we were within 20?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a799fa5b-2efe-4dd3-a126-8fc210fc706f",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "a96b7401-f7ee-43bf-b0e6-41f244e121d0",
+      "position": 18,
+      "properties": {
+        "description": "**Discussion Goal:** Students should notice that if the number is too large (like within 20), then the model appears highly accurate, and if the number is lower than the model appears less accurate."
+      },
+      "seeding_key": {
+        "activity_section.key": "a96b7401-f7ee-43bf-b0e6-41f244e121d0",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "3e8d7997-9357-4a70-9b84-98fe24255ad7",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Look at the data in the table below and calculate the accuracy of our model using these three different approaches."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e8d7997-9357-4a70-9b84-98fe24255ad7",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "bdc3cf61-52cd-49b0-b0cd-253976d0aa07",
+      "position": 20,
+      "properties": {
+        "description": "**Circulate:** Check in with students as they calculate the remaining accuracy. An answer key is provided with the correct answers."
+      },
+      "seeding_key": {
+        "activity_section.key": "bdc3cf61-52cd-49b0-b0cd-253976d0aa07",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "3d730814-9991-4604-a245-9d29645dd639",
+      "position": 21,
+      "properties": {
+        "description": "When making predictions with numerical data, it’s rare for the prediction to be an exact match with the actual number. Instead, we can check if the prediction is “close enough” to the actual value and base our accuracy from that. But, deciding what “close enough” is depends on the situation. Tomorrow, we’ll see how AI Lab makes predictions with numerical data and how to understand it’s accuracy.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3d730814-9991-4604-a245-9d29645dd639",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "9efa87d5-a400-49b6-be60-73adb00488ef",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In one of the rows, the model predicted 0 but the actual value was 2. Is this close enough to count as a correct prediction?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9efa87d5-a400-49b6-be60-73adb00488ef",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "93dd44d8-1cb1-4e7a-962e-4495bc97e507",
+      "position": 23,
+      "properties": {
+        "description": "**Discussion Goal:** This should be a quick discussion, where students will likely say that yes - this is close enough to count as correct."
+      },
+      "seeding_key": {
+        "activity_section.key": "93dd44d8-1cb1-4e7a-962e-4495bc97e507",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "ec7d6f8d-f0cc-40d1-9ffb-4c36336152f9",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In one of the rows, the model predicted 0 **zombies** but the actual value was 2 **zombies**. Even though this is close enough to be correct, is that okay for the people in this situation?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec7d6f8d-f0cc-40d1-9ffb-4c36336152f9",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
+      }
+    },
+    {
+      "key": "609fc08b-abee-4c24-bf5c-72595a247294",
+      "position": 25,
+      "properties": {
+        "description": "**Discussion Goal:** Guide students to remembering that even though the data represents numbers, the situation involves people under specific circumstances. Even though the situation is from a science fiction story, if we put ourselves in the shoes of the people in this city: this means they likely went to a location where they weren’t expecting any zombies and instead found two. Even though the numbers were close enough to be correct, this small margin of error had a huge effect on the people involved.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**AI Accuracy in the Real World:** [Story about how AI Accuracy effects things like cancer predictions or life/death situations]"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "609fc08b-abee-4c24-bf5c-72595a247294",
+        "lesson_activity.key": "092e7142-dafc-48f1-b3e1-691062a81420"
       }
     },
     {
       "key": "ba8b2004-ffc2-4720-8e18-a4c4afd2ccdc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _In today's lesson, we made predictions based on how similar the school was to the type and indoor/outdoor features of each location. What are some additional features you wish you had data on to help make a prediction?_",
+        "description": "**Prompt**: _What are other situations where you think machine learning models should be exactly accurate because close-enough isn’t okay?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -5006,7 +5149,7 @@
       "key": "15c77531-5344-416b-93da-36258c34586c",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Student answers will vary, but they should brainstorm other factors that they think would be related to the number of infections between two similar places. They may wish they knew each location on a map, or the maximum occupancy, or what type of ventilation the locations have. Importantly, students should be able to justify why they chose these additional features - either because it feels related to how infections work (like ventilation), or because it feels like a good way to judge how similar two locations are (like location on a map)"
+        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution\n* [others]"
       },
       "seeding_key": {
         "activity_section.key": "15c77531-5344-416b-93da-36258c34586c",
@@ -8184,58 +8327,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ml-intro categorical-pizza-2021"
-        ],
-        "progression": "Dataset #3: Pizza"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro categorical-pizza-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "1a926676-97b4-4a29-bc21-c005ebae26a0"
-      },
-      "level_keys": [
-        "ml-intro categorical-pizza-2021"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ml-intro categorical-food choices-2021"
-        ],
-        "progression": "You Choose: Restaurant Recommendations"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro categorical-food choices-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
-      },
-      "level_keys": [
-        "ml-intro categorical-food choices-2021"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "ml-intro ai lab-shapes v1"
         ],
         "progression": "Recognizing Shapes"
@@ -8256,8 +8347,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 4,
+      "chapter": 11,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8279,6 +8370,58 @@
       },
       "level_keys": [
         "ml-intro ai lab-shapes v2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza-2021"
+        ],
+        "progression": "Dataset #3: Pizza"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-pizza-2021"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1a926676-97b4-4a29-bc21-c005ebae26a0"
+      },
+      "level_keys": [
+        "ml-intro categorical-pizza-2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices-2021"
+        ],
+        "progression": "You Choose: Restaurant Recommendations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices-2021"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
+      },
+      "level_keys": [
+        "ml-intro categorical-food choices-2021"
       ]
     },
     {
@@ -8729,6 +8872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2-2021"
+        ],
         "progression": "Adding New Screens"
       },
       "named_level": false,
@@ -8752,6 +8898,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1-2021"
+        ],
         "progression": "Adding New Screens"
       },
       "named_level": false,
@@ -8775,6 +8924,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3-2021"
+        ],
         "progression": "Adding New Screens"
       },
       "named_level": false,
@@ -8798,6 +8950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-choice parent"
+        ],
         "progression": "Practice"
       },
       "named_level": false,
@@ -8821,6 +8976,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo assessment"
+        ],
         "progression": "Assessment"
       },
       "named_level": false,
@@ -8844,6 +9002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-practice choice-2021"
+        ],
         "progression": "Challenge"
       },
       "named_level": false,
@@ -9127,6 +9288,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-ai lab 2"
+        ],
         "progression": "Train a Model in AI Lab"
       },
       "named_level": false,
@@ -9150,6 +9314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-app lab"
+        ],
         "progression": "Create an App in App Lab"
       },
       "named_level": false,
@@ -9173,6 +9340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-plan survey-copy form"
+        ],
         "progression": "Create a Google Form"
       },
       "named_level": false,
@@ -9196,6 +9366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim survey"
+        ],
         "progression": "Kim's Survey"
       },
       "named_level": false,
@@ -9219,6 +9392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim data"
+        ],
         "progression": "Kim's Survey Data"
       },
       "named_level": false,
@@ -9242,6 +9418,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload csv"
+        ],
         "progression": "AI Lab and Kim's Data"
       },
       "named_level": false,
@@ -9265,6 +9444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-isaac data"
+        ],
         "progression": "Isaac's Survey Data"
       },
       "named_level": false,
@@ -9288,6 +9470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload isaac csv"
+        ],
         "progression": "AI Lab and Isaac's Data"
       },
       "named_level": false,
@@ -9311,6 +9496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-club investigations"
+        ],
         "progression": "Club Datasets"
       },
       "named_level": false,
@@ -9334,6 +9522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-loneliness all"
+        ],
         "progression": "Alternative Datasets"
       },
       "named_level": false,
@@ -9357,6 +9548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-import model"
+        ],
         "progression": "Import Your Model"
       },
       "named_level": false,
@@ -9380,6 +9574,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-edit text"
+        ],
         "progression": "Import Your Model"
       },
       "named_level": false,
@@ -9403,6 +9600,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-add theme"
+        ],
         "progression": "Import Your Model"
       },
       "named_level": false,
@@ -9426,6 +9626,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen design"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "named_level": false,
@@ -9449,6 +9652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen event"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "named_level": false,
@@ -9472,6 +9678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-choice parent"
+        ],
         "progression": "Customize Your App"
       },
       "named_level": false,
@@ -9495,6 +9704,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-club app-review submit"
+        ],
         "progression": "Review Your App"
       },
       "named_level": false,
@@ -9702,30 +9914,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-pizza-2021",
-        "script_level.level_keys": [
-          "ml-intro categorical-pizza-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "1a926676-97b4-4a29-bc21-c005ebae26a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-intro categorical-food choices-2021",
-        "script_level.level_keys": [
-          "ml-intro categorical-food choices-2021"
-        ],
-        "lesson.key": "lesson5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ml-intro ai lab-shapes v1",
         "script_level.level_keys": [
           "ml-intro ai lab-shapes v1"
@@ -9746,6 +9934,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "1ee6bf08-50b4-40a1-8747-bf890525f06d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro categorical-pizza-2021",
+        "script_level.level_keys": [
+          "ml-intro categorical-pizza-2021"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "1a926676-97b4-4a29-bc21-c005ebae26a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro categorical-food choices-2021",
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices-2021"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
       }
     },
     {
@@ -10436,10 +10648,9 @@
     },
     {
       "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1duhFg6-NyUw5GBhCdkJbnC21IP_PoILvrlvl_HdOdZY/edit",
       "key": "ai-ethics-research-areas",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -10474,18 +10685,6 @@
       }
     },
     {
-      "name": "\"AI for Social Good\" App",
-      "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit",
-      "key": "ai-for-social-good-app",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "ai-for-social-good-app"
-      }
-    },
-    {
       "name": "AI: Training Data & Bias",
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai-training",
@@ -10496,6 +10695,30 @@
       },
       "seeding_key": {
         "resource.key": "ai-training"
+      }
+    },
+    {
+      "name": "AI Lab Numerical Data",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "key": "ai_lab_numerical_data",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab_numerical_data"
+      }
+    },
+    {
+      "name": "AI Lab Select Label",
+      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/edit",
+      "key": "ai_lab_select_label",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab_select_label"
       }
     },
     {
@@ -10543,6 +10766,42 @@
       }
     },
     {
+      "name": "App Lab If-Statements",
+      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/edit",
+      "key": "app_lab_if-statements",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "app_lab_if-statements"
+      }
+    },
+    {
+      "name": "App Lab Import",
+      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/edit",
+      "key": "app_lab_import",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "app_lab_import"
+      }
+    },
+    {
+      "name": "App Lab New Design Elts",
+      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/edit",
+      "key": "app_lab_new_design_elts",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "app_lab_new_design_elts"
+      }
+    },
+    {
       "name": "Classification with Machine Learning",
       "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
       "key": "classification-with-machine-learning",
@@ -10581,6 +10840,75 @@
       }
     },
     {
+      "name": "Crosstabs and Models",
+      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/edit",
+      "key": "crosstabs_and_models",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "crosstabs_and_models"
+      }
+    },
+    {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/presentation/d/1SrfMDyQYbbY_5rgOTBniEPx3U2y4YCDC2nezFzDx46s/edit",
+      "key": "design_an_ai_app",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app"
+      }
+    },
+    {
+      "name": "Design an AI App - Project Guide",
+      "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit",
+      "key": "design_an_ai_app_-_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "name": "Exemplar - Design an AI App",
+      "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw",
+      "key": "exemplar_-_design_an_ai_app",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_design_an_ai_app"
+      }
+    },
+    {
+      "name": "Exemplar - Design an AI App Model Card",
+      "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit",
+      "key": "exemplar_-_design_an_ai_app_model_card",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_design_an_ai_app_model_card"
+      }
+    },
+    {
+      "name": "Exemplar - Design an AI App Project Guide",
+      "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit",
+      "key": "exemplar_-_design_an_ai_app_project_guide",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
+      }
+    },
+    {
       "name": "Feedback - AI for Social Good",
       "url": "https://docs.google.com/document/d/1QHSkRdjq8qLZ5ixwk6Se26Ggel2yqEWmYi8QM3ZIGmc/edit",
       "key": "feedback-ai-for-social-good",
@@ -10604,18 +10932,6 @@
       },
       "seeding_key": {
         "resource.key": "fruit-veggie-cards"
-      }
-    },
-    {
-      "name": "Importing AI Models",
-      "url": "https://www.youtube.com/watch?v=aQXOauieMbk",
-      "key": "importing-ai-models",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "importing-ai-models"
       }
     },
     {
@@ -10654,15 +10970,27 @@
       }
     },
     {
-      "name": "Introduction to AI Lab",
-      "url": "https://www.youtube.com/watch?v=O6E_2bjCTBQ",
-      "key": "introduction-to-ai-lab",
+      "name": "Intro AI Lab",
+      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/edit",
+      "key": "intro_ai_lab",
       "properties": {
-        "type": "Video",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "introduction-to-ai-lab"
+        "resource.key": "intro_ai_lab"
+      }
+    },
+    {
+      "name": "Intro to ML",
+      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/edit",
+      "key": "intro_to_ml",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_ml"
       }
     },
     {
@@ -10700,6 +11028,17 @@
       }
     },
     {
+      "name": "KNN Accuracy - Activity Guide",
+      "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
+      "key": "knn_accuracy_-_activity_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "knn_accuracy_-_activity_guide"
+      }
+    },
+    {
       "name": "Make Club App",
       "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/edit",
       "key": "make_club_app",
@@ -10709,6 +11048,18 @@
       },
       "seeding_key": {
         "resource.key": "make_club_app"
+      }
+    },
+    {
+      "name": "Medical Model Card",
+      "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/edit",
+      "key": "medical_model_card",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "medical_model_card"
       }
     },
     {
@@ -10748,18 +11099,6 @@
       }
     },
     {
-      "name": "Neural Networks",
-      "url": "https://www.youtube.com/watch?v=JrXazCEACVo",
-      "key": "neural-networks",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "neural-networks"
-      }
-    },
-    {
       "name": "Our AI Code of Ethics [Template]",
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our-ai-code-of-ethics-template-slides",
@@ -10769,19 +11108,6 @@
       },
       "seeding_key": {
         "resource.key": "our-ai-code-of-ethics-template-slides"
-      }
-    },
-    {
-      "name": "Peer Review - \"AI For Social Good\" App Project",
-      "url": "https://docs.google.com/document/d/1HOhhpMuTMjNOL5qAwSNOyM3IlL3RfDuOUvzgJdpNcKQ/edit",
-      "key": "peer-review-ai-for-social-good",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "peer-review-ai-for-social-good"
       }
     },
     {
@@ -10833,45 +11159,6 @@
       }
     },
     {
-      "name": "Regression with Machine Learning",
-      "url": "https://docs.google.com/document/d/1O6ssxJ8yLD8UoyaXoSafgM3G3UOyN6s0nWI6GWF2Zv0/view",
-      "key": "regression-with-machine-learning",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "regression-with-machine-learning"
-      }
-    },
-    {
-      "name": "Regression with Machine Learning",
-      "url": "https://docs.google.com/document/d/1OVSIjtzr08K_Bt3G1gZhc1g9OnIdMaX8pzGIrh4SD58/edit",
-      "key": "regression-with-machine-learning-1",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "regression-with-machine-learning-1"
-      }
-    },
-    {
-      "name": "Rubric - \"AI for Social Good\" App",
-      "url": "https://docs.google.com/document/d/16PzqiRGWNLhh_rRbKR1HEAuIffOv9PplHWC6Jkjn30U/edit",
-      "key": "rubric-ai-for-social-good-app",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "rubric-ai-for-social-good-app"
-      }
-    },
-    {
       "name": "Seeing AI",
       "url": "https://www.youtube.com/watch?v=DybczED-GKE",
       "key": "seeing_ai",
@@ -10881,18 +11168,6 @@
       },
       "seeding_key": {
         "resource.key": "seeing_ai"
-      }
-    },
-    {
-      "name": "Study Time App (Pilot)",
-      "url": "https://studio.code.org/projects/applab/iA_UcpvExFzb7b69vDbccJG4riaRiI2zk9thdkNc2uQ?enableExperiments=applab-ml",
-      "key": "study-time-app-pilot",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "study-time-app-pilot"
       }
     },
     {
@@ -10909,6 +11184,18 @@
       }
     },
     {
+      "name": "Supervised / Unsupervised",
+      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/edit",
+      "key": "supervised_unsupervised",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "supervised_unsupervised"
+      }
+    },
+    {
       "name": "Survey Planning - Activity Guide",
       "url": "https://docs.google.com/document/d/1vLzqaZDRjA8_wvb4dePTLpXY5Skhy44JvxpCIAcLDE8/view",
       "key": "survey_planning_-_activity_guide",
@@ -10918,6 +11205,18 @@
       },
       "seeding_key": {
         "resource.key": "survey_planning_-_activity_guide"
+      }
+    },
+    {
+      "name": "SVM Unplugged",
+      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/edit",
+      "key": "svm_unplugged",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "svm_unplugged"
       }
     },
     {
@@ -10968,6 +11267,40 @@
       "seeding_key": {
         "resource.key": "unit_7_-_ai_and_machine_learning"
       }
+    },
+    {
+      "name": "Unplugged KNN",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "key": "unplugged_knn",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_knn"
+      }
+    },
+    {
+      "name": "Unplugged KNN - Activity Guide",
+      "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
+      "key": "unplugged_knn_-_activity_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_knn_-_activity_guide"
+      }
+    },
+    {
+      "name": "Unplugged KNN - Answer Key",
+      "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
+      "key": "unplugged_knn_-_answer_key",
+      "properties": {
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_knn_-_answer_key"
+      }
     }
   ],
   "lessons_resources": [
@@ -10980,13 +11313,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson1",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson2",
-        "resource.key": "neural-networks"
+        "resource.key": "intro_to_ml"
       }
     },
     {
@@ -10999,6 +11326,12 @@
       "seeding_key": {
         "lesson.key": "lesson2",
         "resource.key": "unit_7_-_ai_and_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson2",
+        "resource.key": "supervised_unsupervised"
       }
     },
     {
@@ -11028,7 +11361,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson3",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "crosstabs_and_models"
       }
     },
     {
@@ -11052,13 +11385,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson4",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson5",
-        "resource.key": "introduction-to-ai-lab"
+        "resource.key": "svm_unplugged"
       }
     },
     {
@@ -11070,19 +11397,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson5",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "intro_ai_lab"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson6",
-        "resource.key": "importing-ai-models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson6",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "app_lab_import"
       }
     },
     {
@@ -11094,49 +11415,55 @@
     {
       "seeding_key": {
         "lesson.key": "lesson7",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "medical_model_card"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson12",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "ai_lab_select_label"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson10",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "app_lab_if-statements"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson9",
-        "resource.key": "regression-with-machine-learning"
+        "resource.key": "unplugged_knn"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson9",
-        "resource.key": "regression-with-machine-learning-1"
+        "resource.key": "unplugged_knn_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson9",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "unplugged_knn_-_answer_key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "resource.key": "knn_accuracy_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson8",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "ai_lab_numerical_data"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson11",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
+        "resource.key": "app_lab_new_design_elts"
       }
     },
     {
@@ -11244,12 +11571,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson16",
-        "resource.key": "ai-for-social-good-app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
         "resource.key": "model-card-digital-template"
       }
     },
@@ -11262,19 +11583,31 @@
     {
       "seeding_key": {
         "lesson.key": "lesson16",
-        "resource.key": "peer-review-ai-for-social-good"
+        "resource.key": "design_an_ai_app_-_project_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson16",
-        "resource.key": "rubric-ai-for-social-good-app"
+        "resource.key": "design_an_ai_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson16",
-        "resource.key": "study-time-app-pilot"
+        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "exemplar_-_design_an_ai_app_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "exemplar_-_design_an_ai_app"
       }
     },
     {
