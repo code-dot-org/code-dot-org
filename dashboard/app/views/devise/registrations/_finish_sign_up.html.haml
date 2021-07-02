@@ -33,7 +33,7 @@
       .span5
         %button.select-user-type-button{onClick: 'selectUserTypeTeacher()'} Teacher
         %button.select-user-type-button{onClick: 'selectUserTypeStudent()'} Student
-        = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
+        -# = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       .span2
     .row#parent-email-container
       .span8#parent-email-section
@@ -146,10 +146,10 @@
 
 :javascript
   function selectUserTypeTeacher() {
-    console.log('Teacher');
+    sessionStorage.setItem('userType', 'teacher');
   }
   function selectUserTypeStudent() {
-    console.log('Student');
+    sessionStorage.setItem('userType', 'student');
   }
 
 :ruby
