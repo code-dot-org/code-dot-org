@@ -1623,6 +1623,277 @@
         },
         "outbreak7": {
           "costumes_callout": "Klicke, um ein neues Kostüm zu erstellen."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Wähle hier den Typ des Tänzers aus."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Fügen diesen Baustein deinem Programm hinzu.",
+          "arrow_buttons": "Drücke zum Steuern Deiner Tänzerin die Pfeiltasten."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Füge diesen Baustein deinem Programm hinzu!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Füge deinem Programm ein neues Ereignis hinzu."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Neuer Block!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Neuer Block!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Neuer Block!",
+          "new_block_4": "Neuer Block!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klicke hier, um den Block zu erweitern.",
+          "pointerlocation": "Ziehe einen Subjekt-Block hierher."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klicke, um ein neues Kostüm zu erstellen."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Verwende diesen Baustein, um dir selbst oder Deinem Lehrer Notizen darüber zu machen, wie Dein Code funktioniert."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Diese kleine Anweisung sagt dem Computer, dass er ein GROSSES Code-Stück mit dem entsprechenden Namen im Arbeitsbereich ausführen soll."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Dies ist eine \"wiederholen\"-Schleife.  Klicke in den Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden soll."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Der Agent kann über Wasser schweben. Der Spieler kann das nicht!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Du kannst diese Blöcke nicht verwerfen. Du kannst sie jedoch bearbeiten!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Der Agent kann über Lava schweben. Der Spieler kann das nicht!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Hier haben wir ein paar Bausteine für den Anfang."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Dieser Code wird anfangen dein Haus zu bauen. Kannst du es fertigstellen?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Drücke auf \"Ausführen\", um dein Programm auszuprobieren.",
+          "craft_drag_block_callout": "Ziehe einen \"Vorwärts\"-Block und hänge ihn unter dem anderen Block an"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Wiederhole Aktionen, indem du hier Bausteine hineinsetzt."
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Dieser Code sucht nach Lava. Kannst du einen Befehl zum Vorwärtsbewegen hinzufügen?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Baue dieses Eisen ab!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Diese Zahl gibt an, wie viele dieser Blöcke in dieser Aufgabe verwendet werden können."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Diese Zahl bedeutet, dass du nur einen dieser Blöcke für die Lösung verwenden darfst."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Wusstest du, dass du über eine Linie nochmals darüber zeichnen kannst, wann immer es nötig ist?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Benutze diesen Block, um den Schatz einzusammeln."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Diese Zahl gibt an, wie viele dieser Blöcke in dieser Aufgabe verwendet werden können."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Klicke auf die Glühbirne wenn du einen Tipp brauchst!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Dies ist ein Hinweis"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klicke hier um die Richtung des Pfeils im Ereignis-Block zu ändern."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Hier kannst du einen 'zufälligen' Ton auswählen. Das heißt, du weißt nicht, welcher Ton es sein wird, bis du ihn hörst!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Es gibt in der Werkzeugkiste nur einen dieser Blöcke. Wie wirst du ihn verwenden?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Benutze diesen Block, um den Schatz einzusammeln."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Klicke auf die Glühbirne wenn du einen Tipp brauchst!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Verwende den grünen Dropdown-Pfeil, um die Richtung zu ändern."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Bringe die Figur zu dieser Fahne, um zum nächsten Level zu gelangen.\n"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Verwende diesen Block, wenn sich Waddles und Chomp berühren!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Mit diesem Block kannst du Figuren zu verschiedene Stellen im Spielbereich bewegen."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Dieser Baustein ist für dieses Projekt sehr wichtig. Achte darauf diesen zu verwenden!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Füge dies in der Mitte deines Programms hinzu."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Siehst du ein paar neue Blöcke in der Toolbox?  Keine Sorge, wir zeigen dir, wie du sie in einer anderen Lektion verwenden kannst."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Du kannst dir mehr Blöcke aus der Werkzeugkiste holen, wenn du sie brauchst!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Die Zahl vier auf dem Kürbis sagt dir, dass es vier Kürbisse zu pflücken gibt."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Diese Bausteine sind gesperrt und können nicht gelöscht werden!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Du kannst zusätzliche Blöcke in die Werkzeugkiste ziehen, um sie wegzuwerfen.",
+          "courseC_maze_programming3_3": "Diese Blöcke sind aus Stein und können nicht weggeworfen werden."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du willst!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Das hier ist deine erste Herausforderung! Herausforderungen sind schwierig und vielleicht sind mehrere Versuche nötig. ",
+          "courseC_maze_programming7_2": "Diese Blöcke sind aus Stein und können nicht weggeworfen werden."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "In dieser Aufgabe hast du nur einen dieser Blöcke zur Verfügung."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Du brauchst keine Farben zu verwenden, um diese Aufgabe zu lösen. Aber wenn du willst, kannst du es dir mit dem Block `setze zufällige Farbe` leicht machen!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Vergiss nicht, zu überprüfen ob JEDE Wolke eine Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Vergiss nicht, zu überprüfen ob JEDE Wolke eine Blüte hat. Du brauchst sie überhaupt nicht auf Honigwaben zu prüfen.",
+          "4_5_Bee_Conditionals_2_2": "Brauchst du Hilfe? Klicke hier für einen VIDEO-Tipp!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Verwende diese Schleife, um den gesamten Nektar (oder Honig) von einer Blüte (oder Wabe) einzusammeln."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Um dieses Rätsel zu lösen, musst du den Baustein `Solange ein Weg vor Dir liegt` verwenden."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du willst!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Du kannst zusätzliche Blöcke in die Werkzeugkiste ziehen, um sie wegzuwerfen.",
+          "stone_block_2": "Graue Bausteine können nicht entfernt werden."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du willst!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Klicke hier!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Lass uns zuerst diesen Baustein für das Zeichnen des ersten Quadrats zu verwenden."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Wenn dieser grüne Baustein ausgeführt wird, wird der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun, wenn er das erste Quadrat gezeichnet hat?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Wenn dieser grüne Baustein ausgeführt wird, wird der gesamte Code in der Funktion ausgeführt. Was sollte der Künstler tun, wenn er das erste Quadrat gezeichnet hat?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Deine Bausteine zum Erstellen von Funktionen wurden in der Werkzeugkiste unter dieses Etikett verschoben."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Lass dieses Programm weiterlaufen, indem du unten mehr Code hinzufügst.",
+          "courseE_artist_functions_challenge1_callout2": "Wenn dir dieses Design nicht gefällt, ändere es so, wie es dir gefällt."
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Lass dieses Programm weiterlaufen, indem du unten mehr Code hinzufügst.",
+          "courseE_artist_functions_challenge2_callout2": "Wenn dir dieses Design nicht gefällt, ändere es so, wie es dir gefällt."
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Dieses Gemüse ist unbekannt.  Es ändert sich bei jeder Ausführung des Programms."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Die Werkzeugkiste ist diesmal ein wenig anders organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche Bausteine dir zur Verfügung stehen."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Dieses Gemüse ist unbekannt.  Es ändert sich bei jeder Ausführung des Programms."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Dieses Gemüse ist unbekannt.  Es ändert sich bei jeder Ausführung des Programms."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Die Werkzeugkiste befindet sich im \"Kategorie\"-Modus, um mehr Platz für deinen Code zu schaffen. Die \"Für\"-Schleifen ist hier drin."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Die \"Für\"-Schleife findest du hier!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Du findest den `Mathe-Block hier."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Deine Variablen findest du hier drunter!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Klicken Sie hier, um zu sehen, wie dieses Verhalten funktioniert."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Nachdem alle Bausteine zusammengesteckt wurden, drücke auf \"Ausführen \", um dein Programm zu starten."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich."
         }
       }
     }
