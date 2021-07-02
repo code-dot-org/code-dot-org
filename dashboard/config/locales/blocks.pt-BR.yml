@@ -8,17 +8,10 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           MOVE1:
             MOVES.Roll: Rolar
             MOVES.ClapHigh: Bater palmas
@@ -47,36 +40,20 @@ pt:
         text: após {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': compassos
             '"seconds"': segundos
       Dancelab_changeColorBy:
         text: alterar {COLOR} {METHOD} por {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': tonalidade
-            '"saturation"': saturação
-            '"brightness"': brilho
       Dancelab_changeMoveEachLR:
         text: "{GROUP} executa {MOVE} {DIR} para sempre"
         options:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': todos unicórnios
           MOVE:
-            '"next"': "(Próximo)"
-            '"prev"': "(Anterior)"
-            '"rand"': "(Aleatório)"
             MOVES.Roll: Rolar
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
@@ -92,9 +69,6 @@ pt:
         text: "{SPRITE} executa {MOVE} {DIR} para sempre"
         options:
           MOVE:
-            '"next"': "(Próximo)"
-            '"prev"': "(Anterior)"
-            '"rand"': "(Aleatório)"
             MOVES.Roll: Rolar
             MOVES.ClapHigh: Bater palmas
             MOVES.Dab: Dança dab
@@ -113,52 +87,31 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
       Dancelab_changePropEachBy:
         text: alterar {GROUP} {PROPERTY} por {VAL}
         options:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
       Dancelab_doMoveEachLR:
         text: "{GROUP} executa {MOVE} {DIR} uma vez"
         options:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           MOVE:
-            '"rand"': "(Aleatório)"
             MOVES.XBend: Dobrar
             MOVES.Roll: Rolar
             MOVES.XClapSide: Bater palmas
@@ -186,7 +139,6 @@ pt:
         text: "{SPRITE} executa {MOVE} {DIR} uma vez"
         options:
           MOVE:
-            '"rand"': "(Aleatório)"
             MOVES.XBend: Dobrar
             MOVES.Roll: Rolar
             MOVES.XClapSide: Bater palmas
@@ -216,7 +168,6 @@ pt:
         text: 'a cada {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': compassos
             '"seconds"': segundos
       Dancelab_everySecondsRange:
         text: 'cada {N} {UNIT} de {START} até {STOP} '
@@ -226,10 +177,6 @@ pt:
             seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
-        options:
-          UNIT:
-            '"verse"': verso
-            '"chorus"': refrão
       Dancelab_getEnergy:
         text: obter {RANGE}
         options:
@@ -244,20 +191,15 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
       Dancelab_getTime:
         text: "{UNIT} decorrido"
         options:
           UNIT:
-            '"measures"': compassos
             '"seconds"': segundos
       Dancelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -277,12 +219,7 @@ pt:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': compassos
             '"seconds"': segundos
-          OP:
-            '">"': ">"
-            '"<"': "\\<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} pular para {LOCATION}"
         options:
@@ -303,17 +240,10 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           LOCATION:
             "{x: 200, y: 100}": parte de cima
             "{x: 200, y: 300}": parte de baixo
@@ -331,31 +261,13 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           FORMAT:
-            '"border"': borda
-            '"inner"': quadrado interno
             '"diamond"': diamante
-            '"circle"': círculo
             '"grid"': grade
-            '"top"': linha superior
-            '"row"': linha
-            '"bottom"': linha inferior
-            '"left"': coluna esquerda
-            '"column"': coluna
-            '"right"': coluna da direita
-            '"x"': linhas cruzadas
-            '"plus"': mais
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         text: fazer um(a) novo(a) {COSTUME} em {LOCATION}
@@ -371,7 +283,6 @@ pt:
             '"PINEAPPLE"': Abacaxi
             '"ROBOT"': robô
             '"SHARK"': Tubarão
-            '"SLOTH"': preguiça
             '"UNICORN"': unicórnio
           LOCATION:
             "{x: 200, y: 100}": parte de cima
@@ -390,18 +301,17 @@ pt:
           chamada {NAME} em {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Alienígena
+            '"ALIEN"': alienígena
             '"BEAR"': Urso
-            '"CAT"': Gato
-            '"DOG"': Cão
-            '"DUCK"': Pato
+            '"CAT"': gato
+            '"DOG"': cachorro
+            '"DUCK"': pato
             '"FROG"': Sapo
-            '"MOOSE"': Alce
+            '"MOOSE"': alce
             '"PINEAPPLE"': Abacaxi
-            '"ROBOT"': Robô
+            '"ROBOT"': robô
             '"SHARK"': Tubarão
-            '"SLOTH"': preguiça
-            '"UNICORN"': Unicórnio
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 200, y: 100}": parte de cima
             "{x: 200, y: 300}": parte de baixo
@@ -439,32 +349,14 @@ pt:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Alienígenas
-            '"BEAR"': Ursos
-            '"CAT"': Gatos
-            '"DOG"': Cães
-            '"DUCK"': Patos
-            '"FROG"': Sapos
-            '"MOOSE"': Alce
-            '"PINEAPPLE"': Abacaxis
-            '"ROBOT"': Robôs
-            '"SHARK"': Tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"ALIEN"': alienígenas
+            '"CAT"': gatos
+            '"DOG"': cachorros
+            '"MOOSE"': alce
+            '"ROBOT"': robôs
           LAYOUT:
-            '"border"': borda
-            '"inner"': quadrado interno
             '"diamond"': diamante
-            '"circle"': círculo
             '"grid"': grade
-            '"top"': linha superior
-            '"row"': linha
-            '"bottom"': linha inferior
-            '"left"': coluna esquerda
-            '"column"': coluna
-            '"right"': coluna da direita
-            '"x"': linhas cruzadas
-            '"plus"': mais
             '"random"': aleatório
       Dancelab_mixColors:
         text: Mesclar {COLOR1} e {COLOR2}
@@ -485,73 +377,11 @@ pt:
         options:
           EFFECT:
             '"none"': Nenhum
-            '"circles"': Círculos
-            '"color_cycle"': Cores
-            '"diamonds"': Diamantes
-            '"disco_ball"': Bola de discoteca
-            '"fireworks"': Fogos de artifício
-            '"swirl"': Hipno
-            '"kaleidoscope"': Caleidoscópio
-            '"lasers"': Laser de pista de dança
-            '"splatter"': Respingos de tinta
-            '"rainbow"': Arco-íris
-            '"snowflakes"': Neve
-            '"text"': Título da música
-            '"galaxy"': Espaço
-            '"sparkles"': Brilhos
-            '"spiral"': Espiral
-            '"disco"': Quadrados
-            '"stars"': Estrelas
-          PALETTE:
-            '"rave"': Preto e branco
-            '"cool"': Tons de azul
-            '"electronic"': Electrônica
-            '"iceCream"': Sorvete
-            '"default"': Claro
-            '"neon"': Néon
-            '"tropical"': Tropical
-            '"vintage"': Vintage
-            '"warm"': Tons de vermelho
       Dancelab_setBackgroundEffectWithPalette:
         text: definir o efeito do plano de fundo {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Nenhum
-            '"rand"': "(Aleatório)"
-            '"circles"': Círculos
-            '"quads"': Ângulos
-            '"color_cycle"': Cores
-            '"diamonds"': Diamantes
-            '"disco_ball"': Bola de discoteca
-            '"fireworks"': Fogos de artifício
-            '"flowers"': Flores
-            '"growing_stars"': Estrelas em crescimento
-            '"swirl"': Hipno
-            '"kaleidoscope"': Caleidoscópio
-            '"lasers"': Laser de pista de dança
-            '"splatter"': Respingos de tinta
-            '"rainbow"': Arco-íris
-            '"ripples_random"': Ondulações Aleatórias
-            '"ripples"': Ondulação
-            '"snowflakes"': Neve
-            '"text"': Título da música
-            '"squiggles"': Rabiscos
-            '"galaxy"': Espaço
-            '"sparkles"': Brilhos
-            '"spiral"': Espiral
-            '"disco"': Quadrados
-            '"stars"': Estrelas
-            '"music_wave"': Ondas
-          PALETTE:
-            '"rave"': Preto e branco
-            '"cool"': Tons de azul
-            '"electronic"': Electrônica
-            '"iceCream"': Sorvete
-            '"default"': Claro
-            '"neon"': Néon
-            '"tropical"': Tropical
-            '"vintage"': Vintage
-            '"warm"': Tons de vermelho
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
         options:
@@ -567,17 +397,10 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           SPEED:
             '1': normal
             '2': rápido
@@ -589,42 +412,11 @@ pt:
         options:
           EFFECT:
             '"none"': Nenhum
-            '"bubbles"': Bolhas
-            '"confetti"': Confete
-            '"hearts_red"': Corações
-            '"music_notes"': Notas musicais
-            '"pineapples"': Abacaxis
-            '"pizzas"': Pizzas
-            '"smiling_poop"': Cocô
-            '"rain"': Chuva
-            '"floating_rainbows"': Arco-íris
-            '"smile_face"': Sorrisos
-            '"spotlight"': Olofote
-            '"color_lights"': Luzes de palco
-            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: definir o efeito do primeiro plano {EFFECT}
         options:
           EFFECT:
             '"none"': Nenhum
-            '"rand"': "(Aleatório)"
-            '"bubbles"': Bolhas
-            '"hearts_colorful"': Corações coloridos
-            '"confetti"': Confete
-            '"emojis"': Emojis
-            '"hearts_red"': Corações
-            '"music_notes"': Notas musicais
-            '"paint_drip"': Gota de Tinta
-            '"pineapples"': Abacaxis
-            '"pizzas"': Pizzas
-            '"smiling_poop"': Cocô
-            '"rain"': Chuva
-            '"floating_rainbows"': Arco-íris
-            '"smile_face"': Sorrisos
-            '"spotlight"': Olofote
-            '"color_lights"': Luzes de palco
-            '"exploding_stars"': Starburst
-            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'Definir {SPRITE} {PROPERTY} para {VAL} '
         options:
@@ -632,34 +424,20 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
       Dancelab_setPropEach:
         text: definir {GROUP} {PROPERTY} para {VAL}
         options:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
       Dancelab_setPropRandom:
         text: aleatorizar {SPRITE} {PROPERTY}
         options:
@@ -667,35 +445,20 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
       Dancelab_setPropRandomEach:
         text: aleatorizar {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
       Dancelab_setTint:
         text: definir tonalidade {SPRITE} para {VAL}
       Dancelab_setTintEach:
@@ -704,34 +467,20 @@ pt:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
       Dancelab_setTintEachInline:
         text: definir tonalidade de {THIS} para {VAL}
         options:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
       Dancelab_setTintInline:
         text: definir tonalidade {SPRITE} para {VAL}
       Dancelab_setVisible:
@@ -746,17 +495,10 @@ pt:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           VISIBILITY:
             'true': visível
             'false': invisível
@@ -767,10 +509,6 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
           RANGE:
             '"bass"': grave
             '"mid"': médio
@@ -781,25 +519,14 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"tint"': tonalidade
           RANGE:
             '"bass"': grave
             '"mid"': médio
@@ -811,11 +538,6 @@ pt:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"direction"': direção do movimento
-            '"tint"': tonalidade
           RANGE:
             '"bass"': grave
             '"mid"': médio
@@ -826,26 +548,14 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
-            '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
             '"height"': altura
-            '"rotation"': rotação
-            '"x"': posição horizontal
-            '"y"': posição vertical
-            '"direction"': direção do movimento
-            '"tint"': tonalidade
           RANGE:
             '"bass"': grave
             '"mid"': médio
@@ -854,39 +564,9 @@ pt:
         text: traduzir {STRING}
         options:
           STRING:
-            '"music_wave"': Ondas
-            '"ripples"': Ondulação
-            '"ripples_random"': Ondulações Aleatórias
-            '"quads"': Ângulos
-            '"flowers"': Flores
-            '"popsicles"': Pirulitos
-            '"squiggles"': Rabiscos
-            '"growing_stars"': Estrelas em crescimento
-            '"emojis"': Emojis
-            '"hearts_colorful"': Corações
-            '"paint_drio"': Gota de Tinta
-            '"exploding_stars"': Starburst
-            '"row_top"': linha superior
-            '"row_bottom"': linha inferior
-            '"column_left"': coluna esquerda
-            '"column_right"': coluna da direita
             '"diamond"': diamante
-            '"mural"': Mural
-            '"safari"': Safári
-            '"network"': Rede
-            '"highway"': Rodovia
-            '"stream"': Transmissão
-            '"tile"': Telha
-            '"shadow"': Sombra
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -905,34 +585,9 @@ pt:
             '"down"': para baixo
             '"right"': para direita
             '"space"': espaço
-            '"enter"': enter
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -953,11 +608,6 @@ pt:
         text: configuração
       Dancelab_whenSetup2:
         text: configuração
-      Dancelab_whenSetupSong:
-        options:
-          SONG:
-            '"hammer"': MC Hammer - U Can't Touch This
-            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -971,10 +621,8 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
             '"speed"': velocidade
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
@@ -1002,17 +650,13 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
-            '"tint"': tonalidade
             '"speed"': velocidade
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
-            '"this"': este
             '"other"': outro
       gamelab_getTime:
         options:
@@ -1028,32 +672,9 @@ pt:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
       gamelab_jumpTo:
@@ -1070,41 +691,11 @@ pt:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
       gamelab_locationAt:
         text: 'localização x: {X} y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
       gamelab_locationMouse:
         text: posição do mouse
       gamelab_locationOf:
@@ -1127,12 +718,6 @@ pt:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
         text: mover {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
       gamelab_moveToward:
         text: mover {SPRITE} distância {DISTANCE} em direção a {TARGET}
       gamelab_newSpritePointer:
@@ -1143,12 +728,6 @@ pt:
         text: reproduzir som {SOUND}
       gamelab_pointInDirection:
         text: aponte {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
       gamelab_printText:
         text: imprimir {TEXT}
       gamelab_randColor:
@@ -1180,8 +759,6 @@ pt:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficção
-              científica
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrelas
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo
               d'água
@@ -1201,10 +778,8 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
             '"speed"': velocidade
       gamelab_setProp_dropdown:
         options:
@@ -1260,10 +835,6 @@ pt:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: quando a seta para esquerda for pressionada
       gamelab_whenRightArrow:
@@ -1283,10 +854,6 @@ pt:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: enquanto a seta para a esquerda estiver pressionada
       gamelab_whileRightArrow:
@@ -1318,10 +885,8 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1343,28 +908,22 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_groupChangeAnim:
         text: alterar {SELECT} {COSTUME} para {COSTUME2}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupChangePropBy:
         text: mudar {PROPERTY} de {SELECT} {COSTUME} de {VAL}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_groupCreateNewSprite:
         text: fazer um(a) novo(a) {COSTUME} em {LOCATION}
         options:
@@ -1384,7 +943,6 @@ pt:
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupDisplace:
         text: todos {COSTUME} bloqueia {COSTUME2} de se mover
       Mikelab_groupEdgesDisplace:
@@ -1392,51 +950,39 @@ pt:
       Mikelab_groupGetProp:
         text: "{SELECT} {PROPERTY} de {COSTUME}"
         options:
-          SELECT:
-            '"average"': média
-            '"this"': este
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_groupRemoveAllBehaviors:
         text: parar comportamentos de {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} interrompe {BEHAVIOR}"
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupRemoveTint:
         text: remover cor de {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupSetProp:
         text: definir {PROPERTY} de {SELECT} {COSTUME} para {VAL}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_groupSetTint:
         text: alterar a cor de {SELECT} {COSTUME} para {COLOR}
         options:
           SELECT:
             '"all"': todos
-            '"this"': este
       Mikelab_groupWhenClickedOn:
         text: quando {COSTUME} for clicado
       Mikelab_groupWhenXTouchesY:
@@ -1458,7 +1004,7 @@ pt:
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -1518,10 +1064,8 @@ pt:
         options:
           PROPERTY:
             '"scale"': tamanho
-            '"rotation"': rotação
             '"x"': posição x
             '"y"': posição y
-            '"direction"': direção do movimento
       Mikelab_setupSim:
         text: |-
           simulação de configuração com
@@ -1577,10 +1121,6 @@ pt:
         text: quando o personagem for clicado
       Mikelab_whenYesNoClicked:
         text: quando {KEY} for clicado
-        options:
-          KEY:
-            '"yes"': sim
-            '"no"': não
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1629,8 +1169,6 @@ pt:
         options:
           FORMAT:
             '"grid"': grade
-            '"border"': borda
-            '"row"': linha
             '"random"': aleatório
       aalab_someGraduallyStartIntervention:
         options:
@@ -1667,7 +1205,6 @@ pt:
           VAL:
             '0': desligado
             '1': ligado
-            '"toggle"': alternar
       binary_drawString:
         text: desenhar string {STR}
       binary_goTo:
@@ -1693,10 +1230,6 @@ pt:
             '"left"': para esquerda
             '"right"': para direita
             '"space"': espaço
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
           se o caminho estiver {DIR}
@@ -1704,20 +1237,14 @@ pt:
         options:
           DIR:
             "'ahead'": adiante
-            "'right'": à direita
-            "'left'": à esquerda
       craft_ifStandingOn:
         text: |-
           se estiver em cima de {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": coral azul
-            "'redCoralBlock'": coral vermelho
             "'sand'": areia
-            "'wool_blue'": água profunda
             "'planksOak'": tábuas de carvalho
-            "'seaLantern'": lanterna do mar
       craft_ifStandingOnLimit:
         text: |-
           se estiver em cima de {TYPE}
@@ -1725,40 +1252,12 @@ pt:
         options:
           TYPE:
             "'sand'": areia
-            "'darkPrismarine'": prismarinho escuro
-            "'seaLantern'": lanterna do mar
       craft_log:
         text: mostra mensagem {MESSAGE}
       craft_moveForward:
         text: avance
       craft_placeBlock:
         text: colocar {blockType}
-        options:
-          blockType:
-            '"strippedOak"': carvalho descascado
-            '"strippedDarkOak"': carvalho escuro descascado
-            '"stoneBricks"': tijolos de pedra
-            '"mossyStoneBricks"': tijolos de pedra com musgo
-            '"crackedStoneBricks"': tijolos de pedra rachados
-            '"blueCoralBlock"': bloco de coral azul
-            '"pinkCoralBlock"': bloco de coral rosa
-            '"magentaCoralBlock"': bloco de coral magenta
-            '"redCoralBlock"': bloco de coral vermelho
-            '"yellowCoralBlock"': bloco de coral amarelo
-            '"blueDeadCoralBlock"': bloco de coral azul morto
-            '"pinkDeadCoralBlock"': bloco de coral rosa morto
-            '"magentaDeadCoralBlock"': bloco de coral magenta morto
-            '"readDeadCoralBlock"': bloco de coral vermelho morto
-            '"yellowDeadCoralBlock"': bloco de coral amarelo morto
-            '"prismarine"': prismarinho
-            '"darkPrismarine"': prismarinho escuro
-            '"seaLantern"': lanterna do mar
-            '"packedIce"': gelo compactado
-            '"blueIce"': gelo azul
-            '"blackConcrete"': concreto preto
-            '"seaGrass"': erva marinha
-            '"kelp"': alga
-            '"polishedGranite"': granito polido
       craft_placePrismarine:
         text: colocar prismarinho
       craft_placeTorch:
@@ -1775,12 +1274,8 @@ pt:
         text: invocar {ENTITY}
         options:
           ENTITY:
-            '"cod"': bacalhau
             '"dolphin"': golfinho
-            '"salmon"': salmão
-            '"seaTurtle"': tartaruga marinha
             '"squid"': lula
-            '"tropicalFish"': peixe tropical
       craft_turn:
         text: virar {DIR}
         options:
