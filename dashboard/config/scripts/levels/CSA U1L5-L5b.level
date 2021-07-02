@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-02T16:08:31.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Create a new `Painter` using the parameterized constructor and paint the street as shown below.\r\n\r\nSyntax for creating a new `Painter`:\r\n```\r\nClassName painterName = new ClassName(int x, int y, String direction, int paint);\r\n```",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "published": true
+}]]></config>
+</Javalab>
