@@ -56,6 +56,12 @@
           },
           "draw a head": {
             "name": "bir baş çək"
+          },
+          "draw body and arms": {
+            "parameters": {
+              "armlength": "qoluzunluğu",
+              "bodylength": "bədənuzunluğu"
+            }
           }
         },
         "2-3 Artist Debugging 6": {
@@ -183,6 +189,12 @@
         "Choose Your Own Adventure": {
           "story": {
             "name": "hekayə"
+          },
+          "witch ending": {
+            "name": "ifritə bitən"
+          },
+          "starting path": {
+            "name": "başlanğıc yolu"
           }
         },
         "Course 4 Artist Binary 1": {
@@ -303,7 +315,8 @@
           "get many nectar": {
             "name": "çoxlu nektar al",
             "parameters": {
-              "direction": "istiqamət"
+              "direction": "istiqamət",
+              "nectars": "nektar"
             }
           }
         },
@@ -311,8 +324,9 @@
           "get nectar make honey": {
             "name": "nektar al bal hazırla",
             "parameters": {
-              "honey": "bal",
-              "direction": "istiqamət"
+              "honey": "bal ",
+              "direction": "istiqamət",
+              "nectars": "nektar"
             }
           }
         },
@@ -339,7 +353,7 @@
             "name": "atıl",
             "parameters": {
               "height": "hündürlük",
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           }
         },
@@ -355,7 +369,7 @@
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           }
         },
@@ -363,7 +377,7 @@
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           }
         },
@@ -371,7 +385,7 @@
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj",
+              "actor": "personaj  ",
               "speed": "sürət"
             }
           }
@@ -380,7 +394,7 @@
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj",
+              "actor": "personaj  ",
               "speed": "sürət"
             }
           }
@@ -441,6 +455,9 @@
         "Find the Wizard": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "check guess": {
+            "name": "tahmin edin"
           }
         },
         "FoodFight": {
@@ -757,13 +774,13 @@
             "name": "atıl",
             "parameters": {
               "height": "hündürlük",
-              "actor": "personaj"
+              "actor": "personaj  "
             }
           },
           "patrol": {
             "name": "patrul",
             "parameters": {
-              "actor": "personaj",
+              "actor": "personaj  ",
               "speed": "sürət"
             }
           }
@@ -1956,7 +1973,8 @@
           "checker": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "dama"
           },
           "do something": {
             "name": "bir şey etmək"
@@ -1964,12 +1982,14 @@
           "Make gingham": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "Şüşə et"
           },
           "black outline": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "qara kontur"
           }
         },
         "courseF_artist_fwp2": {
@@ -1977,12 +1997,14 @@
             "name": "kvadrat çək",
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "description": "uzunluq parametri olan bir kvadrat çəkin"
           },
           "checker": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "dama"
           },
           "do something": {
             "name": "bir şey etmək"
@@ -1990,12 +2012,14 @@
           "Make gingham": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "Şüşə et"
           },
           "black outline": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "qara kontur"
           }
         },
         "courseF_artist_fwp2_predict1": {
@@ -2003,7 +2027,8 @@
             "name": "kvadrat çək",
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "description": "uzunluq parametri olan bir kvadrat çəkin"
           }
         },
         "courseF_artist_fwp3": {
@@ -2016,17 +2041,20 @@
           "draw a square2": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "kvadrat çək"
           },
           "filled square": {
             "parameters": {
               "size": "ölçü"
-            }
+            },
+            "name": "doldurulmuş kvadrat"
           },
           "black outline": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "qara kontur"
           }
         },
         "courseF_artist_fwp4": {
@@ -2197,32 +2225,32 @@
         },
         "courseF_bee_variables_7_2018": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "courseF_bee_variables_7_2019": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "courseF_bee_variables_7_2020": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "courseF_bee_variables_8_2018": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
-            "name": "topla"
+            "name": "topla "
           }
         },
         "grade5_artist_binary11": {
@@ -2499,7 +2527,8 @@
           "check guess": {
             "parameters": {
               "theGuess": "təxmini"
-            }
+            },
+            "name": "tahmin edin"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2594,6 +2623,411 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "oyunu bitir"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "oyun qazandı"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "mənim funksiyam"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "kiçik gül"
+          },
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq",
+              "sides": "tərəflər"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "bir ulduz çək",
+            "parameters": {
+              "points": "xallar",
+              "length": "uzunluq"
+            }
+          },
+          "draw a circle": {
+            "name": "çevrə çək",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq",
+              "repeat": "təkrar et"
+            }
+          },
+          "draw a triangle": {
+            "name": "üçbucaq çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a shape": {
+            "name": "bir forma çək",
+            "parameters": {
+              "sides": "tərəflər",
+              "length": "uzunluq"
+            }
+          },
+          "draw a house": {
+            "name": "ev çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat çək",
+            "parameters": {
+              "length": "uzunluq"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "oyunu yenidən başlad"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "qısa körpü düzəldin"
+          },
+          "build long bridge": {
+            "name": "uzun körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "bir ulduz çək"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "pəncərə çəkin"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          },
+          "draw triangle": {
+            "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw square": {
+            "name": "bir kvadrat çək"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "kvadrat çək"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
+          },
+          "do something": {
+            "name": "bir şey etmək"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "bal nektarı"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "hərəkət və bal etmək"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "hərəkət və bal etmək"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "bütün nektar toplamaq"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "bütün nektar almaq"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "gəzmək"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "yoxlayın və seçin"
+          },
+          "find pumpkin": {
+            "name": "balqabaq tapmaq"
+          },
+          "wander path": {
+            "name": "gəzmək yolu"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "qarğıdalı və balqabaq"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "qarğıdalı və balqabaq"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "qarğıdalı və balqabaq"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "qarğıdalı və balqabaq"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "qarğıdalı və balqabaq"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "gəzmək"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "gəzmək"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "yalnız nektar alın"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "yalnız bal etmək"
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHaley"
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHaley"
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHaley"
           }
         }
       }
