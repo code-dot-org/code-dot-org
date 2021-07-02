@@ -18,6 +18,7 @@ import {
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -84,17 +85,32 @@ export class TeacherFeedback extends Component {
     this.setState({comment: value});
   };
 
-  onReviewStateChange = reviewState =>
-    this.setState({
-      reviewState: reviewState
-    });
-
   // Review state changes are tracked differently than comment or performance
   // because the teacher could repeatedly leave feedback for the student to
   // keep working, which would have the same review_state value, but should be treated
   // as independent feedbacks.
-  onReviewStateUpdated = isChanged =>
-    this.setState({reviewStateUpdated: isChanged});
+  onReviewStateChange = (oldState, newState, isChanged) => {
+    this.setState({
+      reviewState: newState,
+      reviewStateUpdated: isChanged
+    });
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_feedback',
+        study_group: 'V0',
+        event: 'keep_working',
+        data_json: JSON.stringify({
+          student_id: this.studentId,
+          script_id: this.props.serverScriptId,
+          level_id: this.props.serverLevelId,
+          old_state: oldState,
+          new_state: newState
+        })
+      },
+      {includeUserId: true}
+    );
+  };
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
@@ -180,7 +196,6 @@ export class TeacherFeedback extends Component {
             latestReviewState={latestFeedback?.review_state || null}
             isAwaitingTeacherReview={this.isAwaitingTeacherReview}
             setReviewState={this.onReviewStateChange}
-            setReviewStateChanged={this.onReviewStateUpdated}
           />
         )}
       </div>

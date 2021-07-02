@@ -15,8 +15,7 @@ class EditableReviewState extends Component {
   static propTypes = {
     latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
     isAwaitingTeacherReview: PropTypes.bool,
-    setReviewState: PropTypes.func,
-    setReviewStateChanged: PropTypes.func
+    onReviewStateChange: PropTypes.func
   };
 
   checkbox = null;
@@ -47,13 +46,12 @@ class EditableReviewState extends Component {
   };
 
   onCheckboxChange = () => {
+    const oldReviewState = this.state.reviewState;
     const newReviewState = this.getNextReviewState();
-    this.setState({reviewState: newReviewState}, this.setCheckboxState);
+    const isChanged = newReviewState !== this.initialReviewState;
 
-    this.props.setReviewState(newReviewState);
-    this.props.setReviewStateChanged(
-      newReviewState !== this.initialReviewState
-    );
+    this.setState({reviewState: newReviewState}, this.setCheckboxState);
+    this.props.onReviewStateChange(oldReviewState, newReviewState, isChanged);
   };
 
   getNextReviewState() {
