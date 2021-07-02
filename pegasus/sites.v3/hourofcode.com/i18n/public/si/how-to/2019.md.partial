@@ -6,7 +6,7 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# පැයක කේථ කරනය සැලසුම් කරන්නේ කෙසේද
+# පැයක කේථ කරනය සැලසුම් කරන්නේ කෙසේද?
 
 ### මෙහි සඳහන් පියවර මඟින් සිසු කණ්ඩායමකට ඔවුන්ගේ පරිගණක විද්‍යාවේ පළමු පැය අත් විඳීමට සලස්වන්න. Hour of Code සියලුදෙනාටම ඉතා පහසුය - ආධුනිකයන් සඳහාද පහසු වේ! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 

@@ -26,7 +26,7 @@ At a time when demand for skilled programmers has never been higher, we’re tur
 
 Why is this? And how can we address it?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. Dalam **[DAERAH SEKOLAH]** pada tahun lepas, hanya **[NUMBER]** pelajar menduduki Peperiksaan Penempatan Lanjutan (AP) Sains Komputer untuk peringkat kolej, ia sama dengan **[%]** daripada semua pelajar yang menduduki AP di dalam negeri kita. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 

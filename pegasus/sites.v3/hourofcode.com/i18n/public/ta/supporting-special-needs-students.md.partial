@@ -4,7 +4,7 @@ title: Supporting special needs students for the Hour of Code
 
 # Supporting students with disabilities for the Hour of Code
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+கணினி அறிவியல் கல்வி வாரத்தில் யார் வேண்டுமானாலும் ஒரு மணிநேர குறியீட்டை முயற்சி செய்யலாம். Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
 
 ## Fit a variety of needs with unplugged and online tutorials
 
@@ -20,7 +20,7 @@ For example, do your students have reduced mobility or dexterity? If all your st
 
 ### Students who are blind or low vision
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. மேலும், நீங்கள் ஒரு மணி நேர குறியீட்டைத் தாண்டிச் செல்ல விரும்பினால், கோரம் குழுவில் கூடுதல் கருவிகள் மற்றும் பாடத்திட்டங்கள் உள்ளன.
 
 If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
 

@@ -13,7 +13,7 @@ title: Sample Resolution Supportive of Computer Science Education Week and Hour 
 #### **RESOLUTION**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### สนับสนุนเป้าหมายและแนวคิดของ "สัปดาห์วิชาการวิทยาการคอมพิวเตอร์"
 
 Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
