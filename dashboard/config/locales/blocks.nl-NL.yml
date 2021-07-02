@@ -10,17 +10,10 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           MOVE1:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
@@ -49,36 +42,20 @@ nl:
         text: na {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': maten
             '"seconds"': seconden
       Dancelab_changeColorBy:
         text: verander {COLOR} {METHOD} met {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': tint
-            '"saturation"': verzadiging
-            '"brightness"': helderheid
       Dancelab_changeMoveEachLR:
         text: "{GROUP} doe {MOVE} {DIR} voor altijd"
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': alle eenhoorns
           MOVE:
-            '"next"': "(Volgende)"
-            '"prev"': "(Vorige)"
-            '"rand"': "(Willekeurig)"
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dab
@@ -94,9 +71,6 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
           MOVE:
-            '"next"': "(Volgende)"
-            '"prev"': "(Vorige)"
-            '"rand"': "(Willekeurig)"
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dab
@@ -115,52 +89,31 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_changePropEachBy:
         text: wissel {GROUP} {PROPERTY} met {VAL}
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_doMoveEachLR:
         text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           MOVE:
-            '"rand"': "(Willekeurig)"
             MOVES.XBend: Buig
             MOVES.Roll: Body Roll
             MOVES.XClapSide: Klap
@@ -188,7 +141,6 @@ nl:
         text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
-            '"rand"': "(Willekeurig)"
             MOVES.XBend: Buig
             MOVES.Roll: Body Roll
             MOVES.XClapSide: Klap
@@ -218,7 +170,6 @@ nl:
         text: 'elke {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': maten
             '"seconds"': seconden
       Dancelab_everySecondsRange:
         text: 'elke {N} {UNIT} van {START} tot {STOP} '
@@ -228,10 +179,6 @@ nl:
             seconds: Seconden
       Dancelab_everyVerseChorus:
         text: 'elke {UNIT} '
-        options:
-          UNIT:
-            '"verse"': couplet
-            '"chorus"': refrein
       Dancelab_getEnergy:
         text: krijg [RANGE] [0]
         options:
@@ -246,15 +193,10 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
       Dancelab_getTime:
         text: "{UNIT} verstreken"
         options:
           UNIT:
-            '"measures"': maten
             '"seconds"': seconden
       Dancelab_ifDanceIs:
         text: |-
@@ -277,12 +219,7 @@ nl:
         text: als {UNIT} is {OP} {N} {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': maten
             '"seconds"': seconden
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} ga naar {LOCATION}"
         options:
@@ -303,17 +240,10 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           LOCATION:
             "{x: 200, y: 100}": boven
             "{x: 200, y: 300}": onder
@@ -331,31 +261,13 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           FORMAT:
-            '"border"': grens
-            '"inner"': binnenkant vierkant
             '"diamond"': diamant
-            '"circle"': cirkel
             '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
-            '"bottom"': onderste rij
-            '"left"': linkerkolom
-            '"column"': kolom
-            '"right"': rechterkolom
-            '"x"': kriskras
-            '"plus"': Plus
             '"random"': willekeurig
       Dancelab_makeAnonymousDanceSprite:
         text: maak een nieuwe {COSTUME} op {LOCATION}
@@ -371,7 +283,6 @@ nl:
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Haai
-            '"SLOTH"': traagheid
             '"UNICORN"': eenhoorn
           LOCATION:
             "{x: 200, y: 100}": boven
@@ -390,18 +301,17 @@ nl:
           genaamd {NAME} op {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Buitenaards wezen
+            '"ALIEN"': buitenaards wezen
             '"BEAR"': Beer
-            '"CAT"': Kat
-            '"DOG"': Hond
-            '"DUCK"': Eend
+            '"CAT"': kat
+            '"DOG"': hond
+            '"DUCK"': eend
             '"FROG"': Kikker
-            '"MOOSE"': Eland
+            '"MOOSE"': elanden
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Haai
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorn
+            '"UNICORN"': eenhoorn
           LOCATION:
             "{x: 200, y: 100}": boven
             "{x: 200, y: 300}": onder
@@ -439,32 +349,14 @@ nl:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Buitenaardse wezens
-            '"BEAR"': Beren
-            '"CAT"': Katten
-            '"DOG"': Honden
-            '"DUCK"': Eenden
-            '"FROG"': Kikkers
-            '"MOOSE"': Eland
-            '"PINEAPPLE"': Ananassen
+            '"ALIEN"': aliens
+            '"CAT"': katten
+            '"DOG"': honden
+            '"MOOSE"': elanden
             '"ROBOT"': robots
-            '"SHARK"': Haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           LAYOUT:
-            '"border"': grens
-            '"inner"': binnenkant vierkant
             '"diamond"': diamant
-            '"circle"': cirkel
             '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
-            '"bottom"': onderste rij
-            '"left"': linkerkolom
-            '"column"': kolom
-            '"right"': rechterkolom
-            '"x"': kriskras
-            '"plus"': Plus
             '"random"': willekeurig
       Dancelab_mixColors:
         text: Meng {COLOR1} en {COLOR2}
@@ -485,33 +377,6 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
-            '"circles"': Tunnel
-            '"color_cycle"': Kleuren
-            '"diamonds"': Ruiten
-            '"disco_ball"': Discobal
-            '"fireworks"': Vuurwerk
-            '"swirl"': Hypno
-            '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser dansvloer
-            '"splatter"': Verfspetters
-            '"rainbow"': Regenboog
-            '"snowflakes"': Sneeuw
-            '"text"': Namen van liedjes
-            '"galaxy"': Ruimte
-            '"sparkles"': Twinkelingen
-            '"spiral"': Spiraal
-            '"disco"': Vierkanten
-            '"stars"': Sterren
-          PALETTE:
-            '"rave"': Zwart en wit
-            '"cool"': Cool
-            '"electronic"': Elektronisch
-            '"iceCream"': Ijsco
-            '"default"': Licht
-            '"neon"': Neon
-            '"tropical"': Tropisch
-            '"vintage"': Vintage
-            '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "achtergrondeffect
@@ -519,41 +384,6 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
-            '"rand"': "(Willekeurig)"
-            '"circles"': Tunnel
-            '"quads"': Hoeken
-            '"color_cycle"': Kleuren
-            '"diamonds"': Ruiten
-            '"disco_ball"': Discobal
-            '"fireworks"': Vuurwerk
-            '"flowers"': Bloemen
-            '"growing_stars"': Groeiende sterren
-            '"swirl"': Hypno
-            '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser dansvloer
-            '"splatter"': Verfspetters
-            '"rainbow"': Regenboog
-            '"ripples_random"': Willekeurige rimpelingen
-            '"ripples"': Rimpelingen
-            '"snowflakes"': Sneeuw
-            '"text"': Namen van liedjes
-            '"squiggles"': Kronkels
-            '"galaxy"': Ruimte
-            '"sparkles"': Twinkelingen
-            '"spiral"': Spiraal
-            '"disco"': Vierkanten
-            '"stars"': Sterren
-            '"music_wave"': Golven
-          PALETTE:
-            '"rave"': Zwart en wit
-            '"cool"': Cool
-            '"electronic"': Elektronisch
-            '"iceCream"': Ijsco
-            '"default"': Licht
-            '"neon"': Neon
-            '"tropical"': Tropisch
-            '"vintage"': Vintage
-            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
@@ -569,17 +399,10 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           SPEED:
             '1': normaal
             '2': snel
@@ -591,42 +414,11 @@ nl:
         options:
           EFFECT:
             '"none"': Geen
-            '"bubbles"': Bubbels
-            '"confetti"': Confetti
-            '"hearts_red"': Hartjes
-            '"music_notes"': Muzieknoten
-            '"pineapples"': Ananassen
-            '"pizzas"': Pizza's
-            '"smiling_poop"': Poop
-            '"rain"': Regen
-            '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiles
-            '"spotlight"': Spotlight
-            '"color_lights"': Podiumverlichting
-            '"raining_tacos"': Taco‘s
       Dancelab_setForegroundEffectExtended:
         text: stel {EFFECT} in als voorgrondeffect
         options:
           EFFECT:
             '"none"': Geen
-            '"rand"': "(Willekeurig)"
-            '"bubbles"': Bubbels
-            '"hearts_colorful"': Kleurrijke Harten
-            '"confetti"': Confetti
-            '"emojis"': Emojis
-            '"hearts_red"': Hartjes
-            '"music_notes"': Muzieknoten
-            '"paint_drip"': Verfdruppelen
-            '"pineapples"': Ananassen
-            '"pizzas"': Pizza's
-            '"smiling_poop"': Poop
-            '"rain"': Regen
-            '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiles
-            '"spotlight"': Spotlight
-            '"color_lights"': Podiumverlichting
-            '"exploding_stars"': Sterrenvorming
-            '"raining_tacos"': Taco‘s
       Dancelab_setProp:
         text: 'stel {SPRITE} {PROPERTY} in op {VAL} '
         options:
@@ -634,34 +426,20 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_setPropEach:
         text: stel {GROUP} {PROPERTY} in op {VAL}
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
       Dancelab_setPropRandom:
         text: maak {SPRITE} {PROPERTY} willekeurig
         options:
@@ -669,35 +447,20 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
       Dancelab_setPropRandomEach:
         text: maak {GROUP} {PROPERTY} willekeurig
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
       Dancelab_setTint:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setTintEach:
@@ -706,34 +469,20 @@ nl:
           THIS:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
       Dancelab_setTintEachInline:
         text: stel {THIS} tint op {VAL}
         options:
           THIS:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
       Dancelab_setTintInline:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setVisible:
@@ -748,17 +497,10 @@ nl:
           THIS:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           VISIBILITY:
             'true': zichtbaar
             'false': onzichtbaar
@@ -769,10 +511,6 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
           RANGE:
             '"bass"': Bass
             '"mid"': midden
@@ -783,25 +521,14 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"tint"': tint
           RANGE:
             '"bass"': Bass
             '"mid"': midden
@@ -813,11 +540,6 @@ nl:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"direction"': bewegingsrichting
-            '"tint"': tint
           RANGE:
             '"bass"': Bass
             '"mid"': midden
@@ -828,26 +550,14 @@ nl:
           GROUP:
             sprites: alle
             '"ALIEN"': aliens
-            '"BEAR"': beren
             '"CAT"': katten
             '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
             '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
             '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': Eenhoorns
           PROPERTY:
             '"scale"': grootte
             '"width"': breedte
             '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-            '"direction"': bewegingsrichting
-            '"tint"': tint
           RANGE:
             '"bass"': Bass
             '"mid"': midden
@@ -856,39 +566,9 @@ nl:
         text: translate {STRING}
         options:
           STRING:
-            '"music_wave"': Golven
-            '"ripples"': Rimpelingen
-            '"ripples_random"': Willekeurige rimpelingen
-            '"quads"': Hoeken
-            '"flowers"': Bloemen
-            '"popsicles"': Ijslolly’s
-            '"squiggles"': Kronkels
-            '"growing_stars"': Groeiende sterren
-            '"emojis"': Emojis
-            '"hearts_colorful"': Hartjes
-            '"paint_drio"': Verfdruppelen
-            '"exploding_stars"': Sterrenvorming
-            '"row_top"': bovenste rij
-            '"row_bottom"': onderste rij
-            '"column_left"': linkerkolom
-            '"column_right"': rechterkolom
             '"diamond"': diamant
-            '"mural"': Muurschildering
-            '"safari"': Safari
-            '"network"': Netwerk
-            '"highway"': Snelweg
-            '"stream"': Stroom
-            '"tile"': Tegel
-            '"shadow"': Schaduw
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -907,34 +587,9 @@ nl:
             '"down"': omlaag
             '"right"': rechts
             '"space"': ruimte
-            '"enter"': enter
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -963,16 +618,13 @@ nl:
         options:
           UNIT:
             '"seconds"': seconden
-            '"frames"': frames
       gamelab_changePropBy:
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
             '"speed"': snelheid
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
@@ -1000,23 +652,18 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
-            '"tint"': tint
             '"speed"': snelheid
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
-            '"this"': Dit
             '"other"': anders
       gamelab_getTime:
         options:
           UNIT:
             '"seconds"': seconden
-            '"frames"': frames
       gamelab_hideTitleScreen:
         text: titelscherm verbergen
       gamelab_isKeyPressed:
@@ -1027,32 +674,9 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} raakt randen aan"
       gamelab_jumpTo:
@@ -1069,42 +693,13 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': y
-            '"z"': z
       gamelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
       gamelab_locationModifier:
         text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
-        options:
-          DIRECTION:
-            '"North"': Naar het noorden
-            '"East"': Oost
-            '"South"': Zuid
-            '"West"': West
       gamelab_locationMouse:
         text: muis-locatie
       gamelab_locationOf:
@@ -1125,12 +720,6 @@ nl:
         text: "{SPRITE} {DISTANCE} pixels vooruit verplaatsen"
       gamelab_moveInDirection:
         text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Naar het noorden
-            '"East"': Oost
-            '"South"': Zuid
-            '"West"': West
       gamelab_moveToward:
         text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
       gamelab_newSpritePointer:
@@ -1141,12 +730,6 @@ nl:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Naar het noorden
-            '"East"': Oost
-            '"South"': Zuid
-            '"West"': West
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -1178,7 +761,6 @@ nl:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Melkweg
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': raster
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regenboog
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sterren
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder
               water
@@ -1198,10 +780,8 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
             '"speed"': snelheid
       gamelab_setProp_dropdown:
         options:
@@ -1257,10 +837,6 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: wanneer linker pijl ingedrukt
       gamelab_whenRightArrow:
@@ -1280,10 +856,6 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: zolang linker pijl ingedrukt
       gamelab_whileRightArrow:
@@ -1315,10 +887,8 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1337,28 +907,22 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupChangeAnim:
         text: wijzig {SELECT} {COSTUME} in {COSTUME2}
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupChangePropBy:
         text: verandering {PROPERTY} van {SELECT} {COSTUME} door {VAL}
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupCreateNewSprite:
         text: maak een nieuwe {COSTUME} op {LOCATION}
         options:
@@ -1377,7 +941,6 @@ nl:
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupDisplace:
         text: alle {COSTUME} blok {COSTUME2}
       Mikelab_groupEdgesDisplace:
@@ -1385,51 +948,39 @@ nl:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
-          SELECT:
-            '"average"': Gemiddeld
-            '"this"': Dit
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupRemoveAllBehaviors:
         text: stop {SELECT} {COSTUME} gedragingen
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupRemoveTint:
         text: verwijder kleur van {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupSetProp:
         text: set {PROPERTY} van {SELECT} {COSTUME} tot {VAL}
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupSetTint:
         text: kleur van {SELECT} {COSTUME} naar {COLOR}
         options:
           SELECT:
             '"all"': alle
-            '"this"': Dit
       Mikelab_groupWhenClickedOn:
         text: wanneer {COSTUME} klikte
       Mikelab_groupWhenXTouchesY:
@@ -1511,10 +1062,8 @@ nl:
         options:
           PROPERTY:
             '"scale"': grootte
-            '"rotation"': rotatie
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_setupSim:
         text: |-
           Setup-simulatie met
@@ -1569,10 +1118,6 @@ nl:
         text: wanneer de muis klikte
       Mikelab_whenYesNoClicked:
         text: wanneer {KEY} klikte
-        options:
-          KEY:
-            '"yes"': Ja. Ja
-            '"no"': Nee
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1621,8 +1166,6 @@ nl:
         options:
           FORMAT:
             '"grid"': raster
-            '"border"': grens
-            '"row"': rij
             '"random"': willekeurig
       aalab_someGraduallyStartIntervention:
         options:
@@ -1659,7 +1202,6 @@ nl:
           VAL:
             '0': af
             '1': op
-            '"toggle"': Schakelen
       binary_drawString:
         text: tekenreeks {STR}
       binary_goTo:
@@ -1685,10 +1227,6 @@ nl:
             '"left"': links
             '"right"': rechts
             '"space"': ruimte
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
           als pad {DIR}
@@ -1696,20 +1234,14 @@ nl:
         options:
           DIR:
             "'ahead'": voor
-            "'right'": naar rechts
-            "'left'": naar links
       craft_ifStandingOn:
         text: |-
           als staande op {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": blauw koraal
-            "'redCoralBlock'": rood koraal
             "'sand'": zand
-            "'wool_blue'": diep water
             "'planksOak'": eikenhouten planken
-            "'seaLantern'": zeelantaarn
       craft_ifStandingOnLimit:
         text: |-
           als staande op {TYPE}
@@ -1717,40 +1249,12 @@ nl:
         options:
           TYPE:
             "'sand'": zand
-            "'darkPrismarine'": donkere prismarien
-            "'seaLantern'": zeelantaarn
       craft_log:
         text: log bericht {MESSAGE}
       craft_moveForward:
         text: beweeg vooruit
       craft_placeBlock:
         text: plaats {blockType}
-        options:
-          blockType:
-            '"strippedOak"': geschaafd eikenhout
-            '"strippedDarkOak"': donker geschaafd eikenhout
-            '"stoneBricks"': bakstenen
-            '"mossyStoneBricks"': mossige blokstenen
-            '"crackedStoneBricks"': gebarsten blokstenen
-            '"blueCoralBlock"': blauw koraalblok
-            '"pinkCoralBlock"': roze koraalblok
-            '"magentaCoralBlock"': magenta koraalblok
-            '"redCoralBlock"': rood koraalblok
-            '"yellowCoralBlock"': geel koraalblok
-            '"blueDeadCoralBlock"': blauw dood koraalblok
-            '"pinkDeadCoralBlock"': roze dood koraalblok
-            '"magentaDeadCoralBlock"': magenta dood koraalblok
-            '"readDeadCoralBlock"': rood dood koraalblok
-            '"yellowDeadCoralBlock"': geel dood koraalblok
-            '"prismarine"': prismarien
-            '"darkPrismarine"': donkere prismarien
-            '"seaLantern"': zeelantaarn
-            '"packedIce"': pakijs
-            '"blueIce"': blauw ijs
-            '"blackConcrete"': zwart beton
-            '"seaGrass"': zeegras
-            '"kelp"': zeewier
-            '"polishedGranite"': gepolijst graniet
       craft_placePrismarine:
         text: plaats prismarien
       craft_placeTorch:
@@ -1767,12 +1271,8 @@ nl:
         text: spawn {ENTITY}
         options:
           ENTITY:
-            '"cod"': kabeljauw
             '"dolphin"': dolfijn
-            '"salmon"': zalm
-            '"seaTurtle"': schildpad
             '"squid"': inktvis
-            '"tropicalFish"': tropische vis
       craft_turn:
         text: draai {DIR}
         options:
