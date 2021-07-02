@@ -1,0 +1,18 @@
+name 'SP-VPL-21-mod2-ReadSupportArticles'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Practice finding a support article 
+
+<img src="https://images.code.org/9b0a969cb039c058983ce9b8fb570fe2-image-1625261315653.09.15 PM.png" width="350px" style="border-radius:10px;  float:right; margin: 0 0 40px 40px;">
+
+#####1. Open a new tab.
+#####2. Navigate to Code.org.
+#####3. Click on the "?" in the upper right hand corner of the screen.
+#####4. Select a support article that interests you.
+
+<div style="clear:both"/>
+
+
+MARKDOWN

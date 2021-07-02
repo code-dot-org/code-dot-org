@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 17:53:30 UTC",
+    "serialized_at": "2021-07-02 20:11:02 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -2025,7 +2025,7 @@
       "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n**Discussion Goal:** This is a way of doing something to a set of elements. In this case, we have five text boxes named `\"text0\"`, `\"text1\"`, `\"text2\"`, `\"text3\"`, and `\"text4\"`\n* `\"text\" + i ` is evaluated each round of the loop. \n    * First round: `\"text0\"`\n    * Second round: `\"text1\"`\n    * Third round: `\"text2\"`\n    * Fourth round: `\"text3\"`\n    * Fifth round: `\"text4\"`\n* So when the first round of the loop is executed, the element with the `\"text0\"` ID is changed to whatever information is in the for loop. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",

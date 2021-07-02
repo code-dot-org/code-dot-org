@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 17:04:21 UTC",
+    "serialized_at": "2021-07-02 21:46:28 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -183,11 +183,23 @@
       }
     },
     {
-      "key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01",
+      "key": "c511ad4a-9c7a-428d-9319-afa20c965bcc",
       "position": 1,
       "properties": {
+        "name": "Help and Support",
+        "progression_name": "Find help"
+      },
+      "seeding_key": {
+        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc",
+        "lesson_activity.key": "66b9c0d4-d636-411d-aa5b-0115c69c04ee"
+      }
+    },
+    {
+      "key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01",
+      "position": 2,
+      "properties": {
         "name": "Navigating to Support",
-        "progression_name": "Find Support"
+        "progression_name": "Read support articles"
       },
       "seeding_key": {
         "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01",
@@ -196,10 +208,10 @@
     },
     {
       "key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Report a Problem",
-        "progression_name": "Report a Problem"
+        "progression_name": "Report a problem"
       },
       "seeding_key": {
         "activity_section.key": "4a6100b5-1ef2-45f1-b1f4-c43b650d1630",
@@ -208,10 +220,10 @@
     },
     {
       "key": "db9dd65e-e160-48c4-a8bc-2e97608132a8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Teacher Community",
-        "progression_name": "Join the Teacher Community"
+        "progression_name": "Join the teacher community"
       },
       "seeding_key": {
         "activity_section.key": "db9dd65e-e160-48c4-a8bc-2e97608132a8",
@@ -219,14 +231,22 @@
       }
     },
     {
-      "key": "c511ad4a-9c7a-428d-9319-afa20c965bcc",
-      "position": 4,
+      "key": "95f80568-ae45-462d-85ff-6189d046ea28",
+      "position": 5,
       "properties": {
-        "name": "Help and Support",
-        "progression_name": "Help and Support"
       },
       "seeding_key": {
-        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc",
+        "activity_section.key": "95f80568-ae45-462d-85ff-6189d046ea28",
+        "lesson_activity.key": "66b9c0d4-d636-411d-aa5b-0115c69c04ee"
+      }
+    },
+    {
+      "key": "d9b749c9-8d33-45a4-b900-88a2c328e2ac",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d9b749c9-8d33-45a4-b900-88a2c328e2ac",
         "lesson_activity.key": "66b9c0d4-d636-411d-aa5b-0115c69c04ee"
       }
     }
@@ -655,23 +675,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD 2020 Summer Review_2021"
+          "SP-VPL-21-mod2-navigating support"
         ],
-        "progression": "Find Support"
+        "progression": "Find help"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD 2020 Summer Review_2021"
+          "SP-VPL-21-mod2-navigating support"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01"
+        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
       },
       "level_keys": [
-        "VPL-CSD 2020 Summer Review_2021"
+        "SP-VPL-21-mod2-navigating support"
       ]
     },
     {
@@ -680,10 +700,33 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Read support articles"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "6974f988-2ebd-40c5-b6f1-d9bd54d99a01"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL-CSD Games variables practice_2021"
         ],
-        "progression": "Report a Problem"
+        "progression": "Report a problem"
       },
       "named_level": false,
       "bonus": false,
@@ -701,15 +744,15 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 3,
+      "chapter": 20,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL-CSD 2020 - Module 2 CI - Draw Loop_2021"
         ],
-        "progression": "Report a Problem"
+        "progression": "Report a problem"
       },
       "named_level": false,
       "bonus": false,
@@ -727,15 +770,15 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 4,
+      "chapter": 21,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL - CSD U5 Chapter 1 Project_2021"
         ],
-        "progression": "Join the Teacher Community"
+        "progression": "Join the teacher community"
       },
       "named_level": false,
       "bonus": false,
@@ -753,15 +796,15 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 5,
+      "chapter": 22,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL - CSD U3 game intro_2018_2019_pilot_2021"
         ],
-        "progression": "Join the Teacher Community"
+        "progression": "Join the teacher community"
       },
       "named_level": false,
       "bonus": false,
@@ -779,15 +822,15 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 6,
+      "chapter": 23,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "VPL - CSD - Variable Resources_2021"
         ],
-        "progression": "Join the Teacher Community"
+        "progression": "Join the teacher community"
       },
       "named_level": false,
       "bonus": false,
@@ -1000,9 +1043,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD 2020 Summer Review_2021",
+        "level.key": "SP-VPL-21-mod2-navigating support",
         "script_level.level_keys": [
-          "VPL-CSD 2020 Summer Review_2021"
+          "SP-VPL-21-mod2-navigating support"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "c511ad4a-9c7a-428d-9319-afa20c965bcc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
