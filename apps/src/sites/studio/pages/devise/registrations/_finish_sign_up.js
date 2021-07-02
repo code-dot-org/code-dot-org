@@ -105,7 +105,10 @@ $(document).ready(() => {
   });
 
   function getUserType() {
-    return $('#user_user_type')[0].value;
+    var toReturn = sessionStorage.getItem('userType')
+      ? sessionStorage.getItem('userType')
+      : 'student';
+    return toReturn;
   }
 
   function setUserType(userType) {
