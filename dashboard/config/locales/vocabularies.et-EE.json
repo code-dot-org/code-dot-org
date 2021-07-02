@@ -1,0 +1,56 @@
+{
+  "et-EE": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Muutuja"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Määra"
+        },
+        "drop/courseb/2021": {
+          "word": "Kükita"
+        },
+        "drop/coursea/2021": {
+          "word": "Kükita"
+        },
+        "binary/coursec/2021": {
+          "word": "Binaarne"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Tingimuslaused"
+        },
+        "conditionals/express/2021": {
+          "word": "Tingimuslaused"
+        },
+        "function/express/2021": {
+          "word": "Funktsioon"
+        },
+        "variable/express/2021": {
+          "word": "Muutuja"
+        },
+        "define/express/2021": {
+          "word": "Määra"
+        },
+        "drop/pre-express/2021": {
+          "word": "Kükita"
+        },
+        "copyright/coursee/2021": {
+          "word": "Autoriõigus"
+        },
+        "function/coursee/2021": {
+          "word": "Funktsioon"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Tingimuslaused"
+        },
+        "define/coursee/2021": {
+          "word": "Määra"
+        }
+      }
+    }
+  }
+}
