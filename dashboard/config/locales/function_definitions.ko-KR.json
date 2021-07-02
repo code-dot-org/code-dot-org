@@ -2088,6 +2088,362 @@
           "potential solution": {
             "name": "잠재적 솔루션"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "내가 만든 함수"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "다리 짓기"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "경로 확보"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "긴 경로 고치기"
+          },
+          "fix short path": {
+            "name": "짧은 길 고치기"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "짧은 다리 짓기"
+          },
+          "build long bridge": {
+            "name": "긴 다리 짓기"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "함수 1"
+          },
+          "function 2": {
+            "name": "함수 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "불꽃 그리기",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "불 그리기"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "부스터"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "별 그리기"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "사각형 그리기"
+          },
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "함수 이름"
+          },
+          "draw triangle": {
+            "name": "삼각형 그리기"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "사각형 그리기"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "사각형 그리기"
+          },
+          "draw ear stems": {
+            "name": "이어스템 그리기"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "함수 이름"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "게임 끝내기"
+          }
         }
       }
     }
