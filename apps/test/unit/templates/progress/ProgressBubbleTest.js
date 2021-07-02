@@ -11,6 +11,7 @@ import {
   BubbleSize,
   BubbleShape
 } from '@cdo/apps/templates/progress/BubbleFactory';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import * as utils from '@cdo/apps/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {
@@ -278,8 +279,9 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-
-    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.assessment);
   });
 
   it('does not show AssessmentBadge on bubble on assessment level, if smallBubble is true', () => {
