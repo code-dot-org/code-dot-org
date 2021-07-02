@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Paint a Pinwheel",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nUse the array of paint colors to draw a pinwheel in the middle of The Neighborhood.\r\n\r\n**Additional Challenge:** Can you create methods for the triangle and use it to paint this mural?",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nCreate a `PainterPlus` object at (6, 6) facing North with 50 units of paint.\r\n\r\nUse the array of paint colors to draw a pinwheel in the middle of The Neighborhood.\r\n\r\n![](https://images.code.org/3615cb5ea3351ba0e6dbc497c8a84013-image-1625234856710.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -1336,6 +1336,6 @@
   "created_at": "2021-06-29T19:28:58.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-29 20:05:49 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:37:48 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-29 20:05:49 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 19:37:48 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 14:08:14 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
