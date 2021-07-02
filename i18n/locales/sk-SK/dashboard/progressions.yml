@@ -1,7 +1,6 @@
 sk:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" (ak/potom) so včelou'
       Accelerometer Events: Udalosti s akcelerometrom
       Adding Images: Pridanie obrázkov
       Adding Screens: Pridanie obrazoviek
@@ -97,8 +96,8 @@ sk:
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
       'Mini-Project: Royal Battle': 'Mini-Projekt: Kráľovský súboj'
-      'Mini-Project: Snowflake #1': 'Mini-Projekt: Snehová vločka č.1'
-      'Mini-Project: Snowflake #2': 'Mini-Projekt: Snehová vločka č.2'
+      "Mini-Project: Snowflake #1": "Mini-Projekt: Snehová vločka č.1"
+      "Mini-Project: Snowflake #2": "Mini-Projekt: Snehová vločka č.2"
       'Mini-Project: Swimming Fish': 'Mini-Projekt: Plávajúca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Projekt: Plávajúca ryba (pokračovanie)'
       'Mini-Project: Virtual Pet': 'Mini-Projekt: Virtuálny maznáčik'
