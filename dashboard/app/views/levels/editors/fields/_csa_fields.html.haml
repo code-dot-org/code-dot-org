@@ -64,3 +64,15 @@
       neighborhoodFields.classList.add('collapse');
     }
   }
+
+  - content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_preload_assets_theater.js')}
+
+#preload_asset.in.collapse{class: ('collapse' if @level.csa_view_mode != 'theater')}
+  = f.label :preload_asset_list, 'Preload asset list'
+  %p A list of assets to be preloaded at page load time. The extension must be wav, png, jpg, or jpeg. (click the plus sign to add an asset)
+  - @level.preload_asset_list = [''] unless @level.preload_asset_list.try(:present?)
+  - @level.preload_asset_list.each do |url|
+    = text_field_tag 'level[preload_asset_list][]', url, placeholder: 'Asset URL', style: 'width: 100%; box-sizing: border-box; min-height: 28px;'
+  #plusPreloadAssetList
+    %i.fa.fa-plus-circle
