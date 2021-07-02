@@ -10,7 +10,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2} from '../../lib/ui/Headings';
+import BaseDialog from '../BaseDialog.jsx';
 import DialogFooter from './DialogFooter';
+import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -40,43 +42,31 @@ class LoginTypePicker extends Component {
 
   render() {
     const {title, providers, setLoginType, handleCancel, disabled} = this.props;
-    const withGoogle =
-      providers && providers.includes(OAuthSectionTypes.google_classroom);
+    const withGoogle = true;
+    //providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    const gridLayoutHeight = hasThirdParty ? '275px' : '160px';
 
-    // explicitly constrain the container as a whole to the width of the
+    // explicitly constrain the dialog as a whole to the width of the
     // content. We expect that differing length of translations versus english
     // source text can cause unexpected layout changes, and this constraint
     // should help mitigate some of them.
-    const containerStyle = {maxWidth: styleConstants['content-width']};
+    const dialogStyle = {maxWidth: styleConstants['content-width']};
 
     // anchor email address policy note to footer just above 'Cancel' button
     const emailPolicyNoteStyle = {
-      position: 'absolute',
       top: '0px',
       zIndex: '600'
     };
 
-    // style grid container for Login Type Cards
-    const loginTypeCardGridContainerStyle = {
-      height: gridLayoutHeight,
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3, 1fr)',
-      gridAutoRows: '150px',
-      gridGap: '5px',
-      overflow: 'auto'
-    };
-
     return (
-      <div style={containerStyle}>
+      <BaseDialog isOpen={true} style={dialogStyle}>
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
-        <div style={loginTypeCardGridContainerStyle}>
+        <CardContainer>
           {withGoogle && (
             <GoogleClassroomCard onClick={this.openImportDialog} />
           )}
@@ -87,7 +77,7 @@ class LoginTypePicker extends Component {
           <PictureLoginCard onClick={setLoginType} />
           <WordLoginCard onClick={setLoginType} />
           <EmailLoginCard onClick={setLoginType} />
-        </div>
+        </CardContainer>
         {!hasThirdParty && (
           <div>
             {i18n.thirdPartyProviderUpsell() + ' '}
@@ -114,7 +104,7 @@ class LoginTypePicker extends Component {
             disabled={disabled}
           />
         </DialogFooter>
-      </div>
+      </BaseDialog>
     );
   }
 }
