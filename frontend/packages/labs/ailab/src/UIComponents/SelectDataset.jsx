@@ -13,7 +13,7 @@ import {
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
 import { allDatasets, getAvailableDatasets } from "../datasetManifest";
-import { styles, fileTypeErrorMessage } from "../constants";
+import { styles } from "../constants";
 import ScrollableContent from "./ScrollableContent";
 
 class SelectDataset extends Component {
@@ -34,8 +34,7 @@ class SelectDataset extends Component {
     super(props);
 
     this.state = {
-      download: false,
-      showFileTypeErrorMessage: false
+      download: false
     };
   }
 
@@ -54,8 +53,7 @@ class SelectDataset extends Component {
       this.props.setSelectedCSV(csvPath);
       this.props.setSelectedJSON(jsonPath);
       this.setState({
-        download: true,
-        showFileTypeErrorMessage: false
+        download: true
       });
 
       parseCSV(csvPath, true, false);
@@ -66,19 +64,11 @@ class SelectDataset extends Component {
 
   handleUploadSelect = event => {
     this.props.resetState();
-    const selectedCSV = event.target.files[0]
-    this.props.setSelectedCSV(selectedCSV);
+    this.props.setSelectedCSV(event.target.files[0]);
     this.setState({
       download: false
     });
-    if (selectedCSV.name.includes(".csv") ||
-    selectedCSV.type === "text/csv") {
-        parseCSV(event.target.files[0], false, true);
-    } else {
-      this.setState({
-        showFileTypeErrorMessage: true
-      });
-    }
+    parseCSV(event.target.files[0], false, true);
   };
 
   render() {
@@ -132,7 +122,7 @@ class SelectDataset extends Component {
               <input
                 className="csv-input"
                 type="file"
-                accept=".csv"
+                accept=".csv,text/csv,application/vnd.ms-excel"
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
@@ -140,11 +130,6 @@ class SelectDataset extends Component {
                 value=""
               />
             </label>
-            {this.state.showFileTypeErrorMessage && (
-              <span style={styles.fileTypeErrorMessageConainer}>
-                {fileTypeErrorMessage}
-              </span>
-            )}
           </div>
         )}
       </div>

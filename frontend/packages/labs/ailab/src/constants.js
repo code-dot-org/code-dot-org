@@ -36,8 +36,6 @@ export const saveMessages = {
   piiProfanity: "Your model could not be saved because it contains profanity or personally identifying information (e.g. email, address, phone number)."
 };
 
-export const fileTypeErrorMessage = "There was an error. Please upload a CSV."
-
 export function getFadeOpacity(animationProgress) {
   return animationProgress > 0.95
     ? 1 - (animationProgress - 0.95) / 0.05
@@ -958,9 +956,5 @@ export const styles = {
 
   navigationButtonsContainer: {
     position: "relative"
-  },
-
-  fileTypeErrorMessageConainer: {
-    margin: 10
   }
 };
