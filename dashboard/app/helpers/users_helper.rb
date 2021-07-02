@@ -210,12 +210,7 @@ module UsersHelper
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
-
-        level_for_progress = get_level_for_progress(user, level, script)
-
-        # contained_level_id = level.contained_levels.try(:first).try(:id)
-        # ul = user_levels_by_level.try(:[], contained_level_id || level_id)
-
+        level_for_progress = level.get_level_for_progress(user, script)
         ul = user_levels_by_level.try(:[], level_for_progress.id)
 
         # feedback for contained level is stored with the level ID not the contained level ID
@@ -232,6 +227,7 @@ module UsersHelper
           )
           if bubble_choice_progress
             progress.merge!(bubble_choice_progress.compact)
+
             sum_time_spent = bubble_choice_progress&.values&.reduce(0) {|sum, sublevel_progress| sum + sublevel_progress[:time_spent]}
             level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
           end
@@ -251,23 +247,6 @@ module UsersHelper
       end
     end
     progress
-  end
-
-  # Returns the level whose status will determine overall progress for the level
-  def get_level_for_progress(user, level, script)
-    # If the level is a bubble choice, determine which sublevel's status to display in our progress bubble.
-    # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
-    # progress for sublevel that has the best result. Otherwise display progress for the level.
-    if level.is_a?(BubbleChoice)
-      sublevel_for_progress = level.get_sublevel_for_progress(user, script)
-      return sublevel_for_progress if sublevel_for_progress.present?
-    elsif level.contained_levels.any?
-      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only display our first contained level, display progress for that level.
-      return level.contained_levels.first
-    end
-
-    return level
   end
 
   # Summarizes a user's progress on a particular level

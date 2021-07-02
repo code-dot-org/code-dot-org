@@ -156,6 +156,9 @@ class BubbleChoice < DSLDefined
                               else
                                 SharedConstants::LEVEL_STATUS.not_tried
                               end
+
+        level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
+        level_info[:teacher_feedback_review_state] = level_feedback&.review_state
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -195,8 +198,9 @@ class BubbleChoice < DSLDefined
     end
   end
 
-  # gets the sublevel which will represent the overall progress for the level
-  # (displayed in the progress bubble)
+  # Determine which sublevel's status to display in our progress bubble.
+  # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+  # progress for sublevel that has the best result
   def get_sublevel_for_progress(student, script)
     keep_working_level = keep_working_sublevel(student, script)
     best_result_level = best_result_sublevel(student, script)
