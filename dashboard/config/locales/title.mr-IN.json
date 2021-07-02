@@ -1,2 +1,17 @@
 {
+  "mr-IN": {
+    "data": {
+      "title": {
+        "Conditionals": "कंडीशनल्स ",
+        "Conditionals_2018": "कंडीशनल्स ",
+        "courseB_unplugged_MRF": "अनप्लग्ड कृती ",
+        "courseB_unplugged_loopyMRF": "अनप्लग्ड कृती ",
+        "courseC_Unplugged_ScreenOutTheMean": "अनप्लग्ड कृती ",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "अनप्लग्ड कृती ",
+        "courseD_unplugged_digitalCitizenship": "अनप्लग्ड कृती ",
+        "courseD_unplugged_digitalCitizenship_2018": "अनप्लग्ड कृती ",
+        "courseF_unplugged_powerOfWords": "अनप्लग्ड कृती "
+      }
+    }
+  }
 }
