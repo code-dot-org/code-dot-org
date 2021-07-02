@@ -899,7 +899,7 @@ ro:
     instructions_headline: 'Fără internet?'
     instructions: 'Instrucţiuni pentru profesori: dacă aveţi servicii de Internet slabe, aceste tutoriale Hour of Cide sunt disponibile pentru a descărca şi instala pentru utilizarea neconectată. Alegeti limba si platforma, descărcati şi instalati pe toate computerele în clasa dvs. Vă recomandăm să utilizaţi o unitate USB pentru a instala pe toate computerele. Notă: studenţii nu vor fi capabiil să intre în Code Studio, salva progresul sau imprima certificatele. Profesorii pot imprima certificatele înainte, din timp <a href="%{url}"> aici</a>.'
     minecraft_name: 'Ora de Programare Minecraft'
-    starwars_blocks_name: 'Star Wars: Programarea unei galaxii cu blocuri de cod'
+    starwars_blocks_name: 'Star Wars: Programarea unei galaxii - Evenimente'
     starwars_javascript_name: 'Star Wars: Programarea unei galaxii - JavaScript'
     download_message: 'Download %{app_name} pentru utilizare offline (136MB)'
     download_in_Albanian: 'Descărcaţi în albaneză:'
