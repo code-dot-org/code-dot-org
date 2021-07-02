@@ -228,7 +228,9 @@ module UsersHelper
           if bubble_choice_progress
             progress.merge!(bubble_choice_progress.compact)
 
-            sum_time_spent = bubble_choice_progress&.values&.reduce(0) {|sum, sublevel_progress| sum + sublevel_progress[:time_spent]}
+            sum_time_spent = bubble_choice_progress&.values&.reduce(0) do |sum, sublevel_progress|
+              sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
+            end
             level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
           end
         end
@@ -268,6 +270,11 @@ module UsersHelper
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
+      elsif feedback.present?
+        return {
+          status: LEVEL_STATUS.not_tried,
+          teacher_feedback_review_state: feedback.review_state
+        }
       else
         return nil
       end
@@ -295,7 +302,6 @@ module UsersHelper
     include_timestamp
   )
     progress = {}
-    sum_time_spent = 0
     best_progress = nil
 
     # get progress for sublevels to save in levels hash
@@ -305,7 +311,6 @@ module UsersHelper
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress
-      sum_time_spent += sublevel_progress[:time_spent] || 0
       if !best_progress || sublevel_progress[:result] > best_progress[:result]
         best_progress = sublevel_progress
       end
@@ -314,8 +319,6 @@ module UsersHelper
     # if we don't have a best progress, we don't have any progress
     return nil if best_progress.nil?
 
-    # progress[level.id] = best_progress.clone
-    # progress[level.id][:time_spent] = sum_time_spent if sum_time_spent > 0
     progress
   end
 
