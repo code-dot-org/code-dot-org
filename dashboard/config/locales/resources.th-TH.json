@@ -1,0 +1,206 @@
+{
+  "th-TH": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "สนุกกับ For ลูป"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "สนุกกับ For ลูป"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "สนุกกับ For ลูป"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "สนุกกับ For ลูป"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "สนุกกับ For ลูป"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "การใช้แบบจำลอง"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "อินเทอร์เน็ต"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "อินเทอร์เน็ต"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "อินเทอร์เน็ต"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "คู่มือการใช้งาน"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "สตีวี่และโครงการใหญ่"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "บั๊กที่รอดหูรอดตาไป"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "มาวนลูปกัน"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "มาวนลูปกัน"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "มาวนลูปกัน"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "มาวนลูปกัน"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "คู่มือการใช้งาน"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "แผนที่แห่งความสุข"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "คู่มือการใช้งาน"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "เพื่อนหุ่นยนต์"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "เพื่อนหุ่นยนต์"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "เพื่อนหุ่นยนต์"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "เพื่อนหุ่นยนต์"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "เพื่อนหุ่นยนต์"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "อีเวนท์ใหญ่"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "คู่มือการใช้งาน"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "การเขียนกระดาษกราฟ"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "โปรแกรมการถ่ายทอดข้อมูล"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "เงื่อนไข"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "เงื่อนไข"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "เงื่อนไข"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "เงื่อนไข"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "เงื่อนไข"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "คู่มือการใช้งาน"
+        },
+        "pair_programming/express/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "variables_video/express/2021": {
+          "name": "ตัวแปร"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "ติดตามอัลกอริทึม"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "การออกแบบสำหรับการช่วยการเข้าถึง"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "คู่มือการใช้งาน"
+        }
+      }
+    }
+  }
+}
