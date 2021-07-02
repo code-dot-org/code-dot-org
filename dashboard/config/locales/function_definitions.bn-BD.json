@@ -1252,6 +1252,194 @@
           "end game": {
             "name": "খেলা শেষ করুন"
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          },
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
         }
       }
     }
