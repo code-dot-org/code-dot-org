@@ -2,7 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
+import {makeEnum} from '@cdo/apps/utils';
+import {BubbleSize, BubbleShape} from './BubbleFactory';
 
+export const BadgeType = makeEnum('assessment', 'keepWorking');
+
+export default function BubbleBadge({badgeType, bubbleSize, bubbleShape}) {
+  const badge = getBadge(badgeType);
+  if (!badge || bubbleSize !== BubbleSize.full) {
+    return null;
+  }
+  return (
+    <BubbleBadgeWrapper isDiamond={bubbleShape === BubbleShape.diamond}>
+      {badge}
+    </BubbleBadgeWrapper>
+  );
+}
+BubbleBadge.propTypes = {
+  badgeType: PropTypes.oneOf(Object.values(BadgeType)).isRequired,
+  bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
+  bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
+};
+
+function getBadge(badgeType) {
+  switch (badgeType) {
+    case BadgeType.assessment:
+      return <AssessmentBadge />;
+    case BadgeType.keepWorking:
+      return <KeepWorkingBadge />;
+    default:
+      return null;
+  }
+}
 export function BubbleBadgeWrapper({isDiamond, children}) {
   const bubblePositioning = isDiamond
     ? styles.diamondBubblePosition
