@@ -210,7 +210,8 @@ class ShareAllowedDialog extends React.Component {
       embedOptions = {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
-        iframeHeight: applabConstants.APP_HEIGHT + 140,
+        // Extra 40 pixels added to account for left and right padding divs (20 px each side)
+        iframeHeight: applabConstants.APP_HEIGHT + 140 + 40,
         iframeWidth: applabConstants.APP_WIDTH + 32
       };
     } else if (this.props.appType === 'gamelab') {
