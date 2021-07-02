@@ -90,6 +90,7 @@ class Census::StateCsOffering < ApplicationRecord
     NE
     NY
     SD
+    TN
     OR
     PA
     VA

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:42 UTC",
+    "serialized_at": "2021-07-01 17:21:12 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp9-2021"
@@ -2691,8 +2691,11 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU1"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -2714,7 +2717,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "U9L7 Free Response"
@@ -3142,15 +3145,25 @@
   ],
   "resources": [
     {
-      "name": "Are We Automating Racism",
-      "url": "https://www.youtube.com/watch?v=Ok5sKLXqynQ",
-      "key": "are_we_automating_racism",
+      "name": "All Resources",
+      "url": "/s/csp9-2021/resources",
+      "key": "all_resources_9",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "are_we_automating_racism"
+        "resource.key": "all_resources_9"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp9-2021/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
       }
     },
     {
@@ -3201,6 +3214,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3255,18 +3280,6 @@
       }
     },
     {
-      "name": "Sharing learnings about our image cropping algorithm (Twitter)",
-      "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
-      "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3279,16 +3292,51 @@
       }
     },
     {
-      "name": "Twitter says its image-cropping algorithm was biased, so it's ditching it (CNN)",
-      "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
-      "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
+      "name": "U9 Sample Project 1",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "name": "U9 Sample Project 2",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "name": "U9 Sample Project 3",
+      "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
+      "key": "u9_sample_project_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "name": "U9 Sample Project 4",
+      "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
+      "key": "u9_sample_project_4",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_4"
       }
     },
     {
@@ -3373,30 +3421,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "are_we_automating_racism"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "resource.key": "csp-u9-presentation"
       }
@@ -3405,6 +3429,30 @@
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_4"
       }
     },
     {
@@ -3442,6 +3490,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
         "script.name": "csp9-2021"
       }
     }

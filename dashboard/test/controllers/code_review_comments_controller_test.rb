@@ -8,16 +8,13 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     create(:single_user_experiment, min_user_id: @pilot_teacher.id, name: 'csa-pilot')
   end
 
+  setup {sign_in @pilot_teacher}
+
   test 'can create CodeReviewComment' do
-    sign_in(@pilot_teacher)
-
-    channel_token = create :channel_token
-    commenter = create :teacher
-
     post :create, params: {
-      channel_token_id: channel_token.id,
+      storage_app_id: 1,
       project_version: 'a_project_version_string',
-      commenter_id: commenter.id,
+      commenter_id: @pilot_teacher.id,
       comment: 'a comment'
     }
 
@@ -25,8 +22,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
   end
 
   test 'can delete CodeReviewComment' do
-    sign_in(@pilot_teacher)
-
     code_review_comment = create :code_review_comment
 
     assert_not_nil CodeReviewComment.find_by(id: code_review_comment.id)
@@ -40,32 +35,26 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
   end
 
   test 'can get all comments for a given project and version' do
-    sign_in(@pilot_teacher)
-
-    channel_token = create :channel_token
+    project_identifiers = {
+      storage_app_id: 1234,
+      project_version: 'test_get_project_comments_string'
+    }
 
     2.times do
-      create :code_review_comment,
-        channel_token: channel_token,
-        project_version: 'test_get_project_comments_string'
+      create :code_review_comment, project_identifiers
     end
 
     # Create third code review comment from another project
     # to make sure we only fetch the correct set of comments.
     create :code_review_comment
 
-    get :project_comments, params: {
-      channel_token_id: channel_token.id,
-      project_version: 'test_get_project_comments_string'
-    }
+    get :project_comments, params: project_identifiers
 
     assert_response :success
     assert_equal 2, JSON.parse(response.body).length
   end
 
-  test 'renders successfully for project with no comments' do
-    sign_in(@pilot_teacher)
-
+  test 'responds successfully for project with no comments' do
     channel_token = create :channel_token
 
     get :project_comments, params: {
@@ -78,8 +67,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
   end
 
   test 'can mark comment as resolved' do
-    sign_in(@pilot_teacher)
-
     code_review_comment = create :code_review_comment
 
     assert_nil code_review_comment.is_resolved
