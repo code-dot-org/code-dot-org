@@ -5,6 +5,7 @@ import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {P5LabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
@@ -34,6 +35,13 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
+    } else if (mode === 'ANIMATION') {
+      firehoseClient.putRecord({
+        study: 'animation-library',
+        study_group: 'control-2020',
+        event: 'tab-click',
+        data_string: this.props.spriteLab ? 'spritelab' : 'gamelab'
+      });
     }
 
     this.props.onInterfaceModeChange(mode);
