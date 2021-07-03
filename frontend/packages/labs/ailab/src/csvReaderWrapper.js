@@ -47,7 +47,7 @@ const getCleanedRow = (row) => {
 }
 
 const isCellValid = (cell) => {
-  return cell !== undefined && cell !== "";
+  return cell !== undefined && cell !== "" && typeof cell === "string";
 }
 
 const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
