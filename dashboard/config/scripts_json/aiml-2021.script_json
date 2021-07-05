@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-05 18:59:26 UTC",
+    "serialized_at": "2021-07-05 19:00:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -9045,29 +9045,6 @@
     },
     {
       "chapter": 37,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use models applab-practice choice"
-        ],
-        "lesson.key": "lesson10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613"
-      },
-      "level_keys": [
-        "ml-use models applab-practice choice"
-      ]
-    },
-    {
-      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9093,7 +9070,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9119,7 +9096,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9145,7 +9122,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9171,7 +9148,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9197,7 +9174,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9223,7 +9200,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9249,7 +9226,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9275,7 +9252,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -9301,7 +9278,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9327,7 +9304,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9353,7 +9330,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9379,7 +9356,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9405,7 +9382,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9431,7 +9408,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9457,7 +9434,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9483,7 +9460,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9509,7 +9486,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9535,7 +9512,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9561,7 +9538,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9587,7 +9564,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9613,7 +9590,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9639,7 +9616,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9665,7 +9642,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9691,7 +9668,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9717,7 +9694,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9743,7 +9720,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9769,7 +9746,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9795,7 +9772,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9821,7 +9798,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10273,18 +10250,6 @@
         "level.key": "ml-use models applab-practice choice-2021",
         "script_level.level_keys": [
           "ml-use models applab-practice choice-2021"
-        ],
-        "lesson.key": "lesson10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021",
-        "activity_section.key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use models applab-practice choice",
-        "script_level.level_keys": [
-          "ml-use models applab-practice choice"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
