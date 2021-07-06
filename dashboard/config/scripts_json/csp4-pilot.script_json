@@ -2,7 +2,6 @@
   "script": {
     "name": "csp4-pilot",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "has_verified_resources": true,

@@ -21,4 +21,23 @@ class ObjectiveTest < ActiveSupport::TestCase
     assert_equal expected_edit_summary, objective.summarize_for_edit
     assert_equal expected_show_summary, objective.summarize_for_lesson_show
   end
+
+  test "summarize retrives translations" do
+    objective = create(:objective, description: "English description")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "objectives" => {
+          objective.key => {
+            "description" => "Translated description"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English description", objective.summarize_for_lesson_show[:description])
+    I18n.locale = test_locale
+    assert_equal("Translated description", objective.summarize_for_lesson_show[:description])
+    I18n.locale = I18n.default_locale
+  end
 end

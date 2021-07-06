@@ -40,21 +40,23 @@ module Services
             # We use URLs as keys for lessons in Crowdin, to make things easier for
             # translators. For the actual translation files, though, we'd like to use
             # more-standard keys.
-            rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
-              route_params = Rails.application.routes.recognize_path(lesson_url)
-              lesson = Lesson.joins(:script).
-                find_by(
-                  "scripts.name": route_params[:script_id],
-                  relative_position: route_params[:position].to_i,
-                  has_lesson_plan: true
-                )
-              unless lesson.present?
-                STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
-                next
+            if result.key?(:lessons)
+              rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
+                route_params = Rails.application.routes.recognize_path(lesson_url)
+                lesson = Lesson.joins(:script).
+                  find_by(
+                    "scripts.name": route_params[:script_id],
+                    relative_position: route_params[:position].to_i,
+                    has_lesson_plan: true
+                  )
+                unless lesson.present?
+                  STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
+                  next
+                end
+                [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
               end
-              [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
+              result[:lessons] = rekeyed_lessons.compact.to_h
             end
-            result[:lessons] = rekeyed_lessons.to_h
 
             # Finally, write each resulting collection of strings out to a rails i18n
             # config file.

@@ -652,7 +652,6 @@ module Services
       attributes(
         :name,
         :wrapup_video_id,
-        :hidden,
         :login_required,
         :properties,
         :new_name,

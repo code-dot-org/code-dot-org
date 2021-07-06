@@ -3,7 +3,7 @@ import React from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 /**
- * Component for editing lesson extras settings on scripts
+ * Component for editing lesson extras settings on units
  */
 export default class LessonExtrasEditor extends React.Component {
   static propTypes = {
@@ -60,7 +60,7 @@ export default class LessonExtrasEditor extends React.Component {
               />
               <HelpTip>
                 <p>
-                  If checked this script will have the projects widget (recent
+                  If checked this unit will have the projects widget (recent
                   projects and new project buttons) visible in lesson extras.
                 </p>
               </HelpTip>

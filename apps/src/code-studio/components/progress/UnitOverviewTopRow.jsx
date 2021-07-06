@@ -125,7 +125,7 @@ class UnitOverviewTopRow extends React.Component {
       : styles.buttonMarginLTR;
 
     return (
-      <div style={styles.buttonRow} className="script-overview-top-row">
+      <div style={styles.buttonRow} className="unit-overview-top-row">
         {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div style={styles.buttonsInRow}>
             <Button

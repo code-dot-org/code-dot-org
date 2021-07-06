@@ -20001,7 +20001,7 @@ en:
           name: csd6-2021
           student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
         csp1-2021:
-          title: CSP Unit 1 - Digital Information ('21-'22)
+          title: Digital Information ('21-'22)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
@@ -20114,7 +20114,7 @@ en:
           name: csp1-2021
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
         csp2-2021:
-          title: CSP Unit 2 - The Internet ('21-'22)
+          title: The Internet ('21-'22)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
@@ -20177,7 +20177,7 @@ en:
           name: csp2-2021
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
         csp3-2021:
-          title: CSP Unit 3 - Intro to App Design ('21-'22)
+          title: Intro to App Design ('21-'22)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
@@ -20244,7 +20244,7 @@ en:
           name: csp3-2021
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
         csp4-2021:
-          title: CSP Unit 4 - Variables, Conditionals, and Functions ('21-'22)
+          title: Variables, Conditionals, and Functions ('21-'22)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
@@ -20278,7 +20278,7 @@ en:
               key: Conditionals Investigate
               name: Conditionals Investigate
               description_student: Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals.
-              description_teacher: In this lesson students work with partners to investigate three versions of the "Thermostat App" to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.
+              description_teacher: In this lesson students work with partners to investigate three versions of the "Lemon Squeeze" app to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.
             Conditionals Practice:
               key: Conditionals Practice
               name: Conditionals Practice
@@ -20373,7 +20373,7 @@ en:
           name: csp4-2021
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
         csp5-2021:
-          title: CSP Unit 5 - Lists, Loops, and Traversals ('21-'22)
+          title: Lists, Loops, and Traversals ('21-'22)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
           description_audience: ''
@@ -20519,7 +20519,7 @@ en:
           name: csp5-2021
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
         csp6-2021:
-          title: CSP Unit 6 - Algorithms ('21-'22)
+          title: Algorithms ('21-'22)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
           description_audience: ''
@@ -20588,7 +20588,7 @@ en:
           name: csp6-2021
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
         csp7-2021:
-          title: CSP Unit 7 - Parameters, Return, and Libraries ('21-'22)
+          title: Parameters, Return, and Libraries ('21-'22)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
@@ -20657,7 +20657,7 @@ en:
           name: csp7-2021
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csp8-2021:
-          title: CSP Unit 8 - Create PT Prep ('21-'22)
+          title: Create PT Prep ('21-'22)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
@@ -20683,10 +20683,12 @@ en:
               description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
           lesson_groups: {}
           name: csp8-2021
-          student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
+
+'
         csp9-2021:
-          title: CSP Unit 9 - Data ('21-'22)
-          description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          title: Data ('21-'22)
+          description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description_audience: ''
           lessons:
@@ -20744,10 +20746,10 @@ en:
               display_name: 'Unit 9: Data'
               description: "### Unit Philosophy and Pedagogy\n\n\n* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. \n\n* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they've added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students' ability to create a variety of visualizations quickly.\n\n\n### Major Assessment and Projects\n\nStudents use the data visualizer to find and present a data story. Using what they've learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.3 Extracting Information from Data\n* 2.4 Using Programs with Data\n* 5.3 Computing Bias\n* 5.4 Crowdsourcing"
           name: csp9-2021
-          student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
+          student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
         csp10-2021:
-          title: CSP Unit 10 - Cybersecurity and Global Impacts ('21-'22)
-          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          title: Cybersecurity and Global Impacts ('21-'22)
+          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
           lessons:
@@ -20826,7 +20828,9 @@ en:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
               description: "### Unit Philosophy and Pedagogy\n\n* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n* **Ending the Year as \"Deciders\":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n\n\n### Major Assessment and Projects\n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 5.1 Beneficial and Harmful Effects\n* 5.6 Safe Computing"
           name: csp10-2021
-          student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
+          student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+
+'
         coursea-2021:
           title: Course A (2021)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
@@ -22534,15 +22538,15 @@ en:
               description_student: You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem.
               description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.
             lesson-11:
-              name: Concert in the Theater Project - Day 1
+              name: Concert in The Theater Project - Day 1
               description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio.
               description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.
             lesson-12:
-              name: Concert in the Theater Project - Day 2
+              name: Concert in The Theater Project - Day 2
               description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
               description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
             lesson-13:
-              name: Concert in the Theater Project - Day 3
+              name: Concert in The Theater Project - Day 3
               description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
               description_teacher: In the previous lesson, students created a prioritized list of work to complete. In this lesson, students self-assess their work against the project rubric then review their prioritized list to inform their revisions to their concert. Students then share their final projects with their peers to celebrate their successes.
             lesson-14:
@@ -22577,7 +22581,9 @@ en:
               description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
               description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
             lesson-2:
-              name: Concert in the Theater Project - Day 1
+              name: Neighborhood Block Party Project - Day 1
+              description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
+              description_teacher: Students design and build a game engine for this project, focusing primarily on the conditional logic needed to make the game interactive and responsive. Students begin by choosing a simple game and identify its core functionalities. They write pseudocode for these components and begin the development of their project.
             lesson-3:
               name: Solving Problems with the Math Class
               description_student: In Unit 3, you looked at the source code for the `Math` class, but now it’s time to see what it can do! In this lesson, you learn about `final` classes and static methods and identify their purposes and uses. You use some of the `Math` class methods - `Math.pow(double a, double b)`,  `Math.abs(double a)`, and `Math.sqrt(double a)` - to solve problems.
@@ -22608,8 +22614,12 @@ en:
               description_teacher: Students learn how to construct truth tables to represent compound Boolean expressions. Students work together to use truth tables to prove De Morgan’s Laws and explore open-source code.
             lesson-12:
               name: Neighborhood Block Party Project - Day 2
+              description_student: Now that you have a plan, today’s goal is to write code. You begin the development of your game engine by translating your pseudocode to Java. You participate in a code review and reflect on your progress to prepare for the final development of your game engine.
+              description_teacher: In the previous lesson, students planned a game engine for a simple game and wrote pseudocode for its core functions. Students begin the development of their game engine by translating their pseudocode to Java. They participate in a code review and reflect on their progress to prepare for the final development of their game engine.
             lesson-13:
               name: Neighborhood Block Party Project - Day 3
+              description_student: It’s Block Party Day! Before the party begins, you will participate in two iterations to further develop your game engine and revise your priority list based on your progress and project requirements. At the end of class, you celebrate your success by playing each other's games and celebrating your development.
+              description_teacher: Students begin the second iteration of their project. After working on their code, they self-assess their work against the project rubric and create a final priority list for their last iteration. Students then complete their last iteration, and the class celebrates in the form of a block party where students play each others’ games. Students finish the project with a final reflection and identify potential next steps to continue developing their game.
             lesson-14:
               name: FRQ Day
               description_student: 'Today you complete a Free Response Question (FRQ) almost completely on your own. To derive a solution for the FRQ on your own, you will follow a three step process: annotating, writing pseudocode, and writing code in Java. Finally, you score your attempt against a scoring rubric and reflect on your experience.'
@@ -22675,7 +22685,7 @@ en:
           description: ''
           student_description: ''
         k5-onlinepd-2021:
-          title: Teaching Computer Science Fundamentals '21-'22
+          title: Teaching Computer Science Fundamentals ('21-'22)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -22759,7 +22769,7 @@ en:
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
             CS Teaching and Student Practices:
-              name: CS Teaching Practices and Strategies
+              name: Teaching Practices and Strategies
             Implementation Approaches and Barriers:
               name: Addressing Barriers
             Part II Overview:
@@ -22770,7 +22780,7 @@ en:
             k5_getting_started_1:
               display_name: Introduction
             k5_basic_concepts_1:
-              display_name: 'Part II:  CS Concepts in Courses A - F'
+              display_name: 'Part II:  Concepts in Courses A - F'
             k5_diving_deeper_1:
               display_name: 'Diving Deeper: Courses E and F'
             k5_next_steps_1:
@@ -22778,7 +22788,7 @@ en:
             Introduction:
               display_name: Introduction
             Implementing and Teaching CS:
-              display_name: 'Part I:  Teaching and Implementing CS'
+              display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -23191,7 +23201,7 @@ en:
           lesson_groups: {}
           name: kodea-pd-2021
         vpl-csd-2021:
-          title: CS Discoveries Virtual Professional Learning 2020 - 21
+          title: CS Discoveries Virtual Professional Learning 2021 - 22
           description: ''
           student_description: ''
           description_short: ''
@@ -23237,6 +23247,8 @@ en:
               name: Module 8
               description_student: ''
               description_teacher: ''
+            new lesson:
+              name: lesson display name
           lesson_groups:
             CSD_Module 1:
               display_name: Module 1
@@ -23254,9 +23266,11 @@ en:
               display_name: Module 7
             CSD_Module 8:
               display_name: Module 8
+            lesson group:
+              display_name: lesson group display name
           name: vpl-csd-2021
         vpl-csp-2021:
-          title: CS Principles Virtual Professional Learning
+          title: CS Principles Virtual Professional Learning 21 - 22
           description: ''
           student_description: ''
           description_short: ''
@@ -23264,12 +23278,12 @@ en:
           lessons:
             Module 1:
               key: Module 1
-              name: 'Module 1: Introducing Unit 4 and new pedagogy for teaching programming'
+              name: Module 1
               description_student: ''
               description_teacher: ''
             Module 2:
               key: Module 2
-              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
+              name: Module 2
               description_student: ''
               description_teacher: ''
             Module 3:
@@ -23302,7 +23316,12 @@ en:
               name: 'Module 8: Building community and preparing students for the AP Exam'
               description_student: ''
               description_teacher: ''
-          lesson_groups: {}
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: vpl-csp-2021
         self-paced-pl-csd1-2021:
           lessons:
             lesson-1:
@@ -23342,9 +23361,14 @@ en:
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
-              name: Code.org Learning Platform
+              name: Navigating the Code.org learning platform
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
             lesson-5:
               name: Setting Up Class Sections
             lesson-7:
@@ -23352,22 +23376,27 @@ en:
             lesson-6:
               name: Tracking Student Progress and Providing Feedback
             lesson-3:
-              name: Lesson Plans and Resources
+              name: Navigating lesson plans and resources
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 20 minutes
             lesson-2:
               name: Lesson Plan Structure
             lesson-8:
-              name: Support for Teachers
+              name: Navigating support
               description_student: 
-              description_teacher: 
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 10 minutes"
             lesson-9:
               name: Teacher Community
             lesson-10:
               name: Report a Problem
           lesson_groups:
             lessonGroup-2:
-              display_name: Navigating the Code.org Learning Platform
+              display_name: Navigating Code.org
             lessonGroup-3:
               display_name: Navigating Lesson Plans and Resources
             lessonGroup-4:
@@ -23376,7 +23405,7 @@ en:
           title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools \n* Locate and use course lesson plans and teacher resources \n* Access support while teaching the course \n\n**Suggested Time:** 1 hour\n\n\n\n\n"
+          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
         self-paced-pl-csd3-2021:
           lessons: {}
           lesson_groups: {}
@@ -23692,7 +23721,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: poster-draft
-          title: Story Board (V1)
+          title: Story Board (V1 - Control)
           description_audience: ''
           description_short: Story Board (V1)
           description: ''
@@ -23893,6 +23922,8 @@ en:
               name: 'U2L1: Defining Attributes'
             lesson-24:
               name: 'U2L2: Using Variables'
+              description_student: 
+              description_teacher: 
             lesson-25:
               name: 'U2L3: Writing Constructors'
             lesson-26:
@@ -24024,6 +24055,98 @@ en:
               display_name: Unit 5
           name: csa-videos
           title: CSA Videos
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csa3-exemplars:
+          lessons:
+            lesson-1:
+              name: Creating Arrays
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Accessing and Modifying Elements
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Traversing Arrays with for Loops
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Traversing Arrays with while Loops
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Storing Objects into Arrays
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Traversing Arrays with Enhanced for Loops
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Using Static Variables and Constants
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Answering Questions with Arrays
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Solving Problems with Arrays
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Manipulating Elements in an Array
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Concert in The Theater Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Concert in The Theater Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: Concert in The Theater Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa3-exemplars
+          title: Unit 3 - Expanding Program Data [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+        ai-lab:
+          lessons:
+            lesson-1:
+              name: AI Lab
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: ai-lab
+          title: AI Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
+        poster-experiment:
+          lessons: {}
+          lesson_groups: {}
+          name: poster-experiment
+          title: Story Board (V1 - Experiment)
           description_audience: ''
           description_short: ''
           description: ''

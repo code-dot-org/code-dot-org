@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ProjectInfo from './ProjectInfo';
-import UnitName from './UnitName';
+import ScriptName from './ScriptName';
 import LessonProgress from '../progress/LessonProgress';
 import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
@@ -10,7 +10,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 
 // These components will be given additional width beyond what they desire.
-const unitNameExtraWidth = 10;
+const scriptNameExtraWidth = 10;
 const lessonProgressExtraWidth = 10;
 
 class HeaderMiddle extends React.Component {
@@ -18,9 +18,9 @@ class HeaderMiddle extends React.Component {
     projectInfoOnly: PropTypes.bool,
     appLoadStarted: PropTypes.bool,
     appLoaded: PropTypes.bool,
-    unitNameData: PropTypes.object,
+    scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
-    unitData: PropTypes.object,
+    scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     linesOfCodeText: PropTypes.string,
     isRtl: PropTypes.bool
@@ -32,7 +32,7 @@ class HeaderMiddle extends React.Component {
     this.state = {
       width: this.getWidth(),
       projectInfoDesiredWidth: 0,
-      unitNameDesiredWidth: 0,
+      scriptNameDesiredWidth: 0,
       lessonProgressDesiredWidth: 0,
       finishDesiredWidth: 0,
       initialDelay: true
@@ -79,9 +79,9 @@ class HeaderMiddle extends React.Component {
     width,
     projectInfoOnly,
     projectInfoDesiredWidth,
-    unitNameDesiredWidth,
+    scriptNameDesiredWidth,
     lessonProgressDesiredWidth,
-    numUnitLessons,
+    numScriptLessons,
     finishDesiredWidth,
     showFinish
   ) {
@@ -116,11 +116,11 @@ class HeaderMiddle extends React.Component {
     remainingWidth = remainingWidth - progressWidth;
 
     // We might show the popup (which reveals the MiniView when clicked) for
-    // one of two reasons: because there are multiple lessons in this unit,
+    // one of two reasons: because there are multiple lessons in this script,
     // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (numUnitLessons > 1) {
+    if (numScriptLessons > 1) {
       showPopup = true;
     } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
@@ -139,14 +139,14 @@ class HeaderMiddle extends React.Component {
 
     remainingWidth = remainingWidth - finishWidth;
 
-    // We will also take care of padding the unit name with an extra 5 pixels
+    // We will also take care of padding the script name with an extra 5 pixels
     // on each side.
-    const unitNameWidth = Math.min(
+    const scriptNameWidth = Math.min(
       remainingWidth,
-      unitNameDesiredWidth + unitNameExtraWidth
+      scriptNameDesiredWidth + scriptNameExtraWidth
     );
 
-    remainingWidth = remainingWidth - unitNameWidth;
+    remainingWidth = remainingWidth - scriptNameWidth;
 
     // Center the contents in HeaderMiddle.
     const leftWidth = remainingWidth / 2;
@@ -154,7 +154,7 @@ class HeaderMiddle extends React.Component {
     return {
       left: leftWidth,
       projectInfo: projectInfoWidth,
-      scriptName: unitNameWidth,
+      scriptName: scriptNameWidth,
       progress: progressWidth,
       popup: popupWidth,
       finish: finishWidth,
@@ -164,9 +164,9 @@ class HeaderMiddle extends React.Component {
 
   render() {
     const {
-      unitNameData,
+      scriptNameData,
       lessonData,
-      unitData,
+      scriptData,
       currentLevelId,
       linesOfCodeText,
       isRtl
@@ -180,17 +180,17 @@ class HeaderMiddle extends React.Component {
       this.state.width,
       this.props.projectInfoOnly,
       this.state.projectInfoDesiredWidth,
-      this.state.unitNameDesiredWidth,
+      this.state.scriptNameDesiredWidth,
       this.state.lessonProgressDesiredWidth,
       this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
       this.state.finishDesiredWidth,
       showFinish
     );
 
-    const extraUnitNameData = unitNameData
+    const extraScriptNameData = scriptNameData
       ? {
-          ...unitNameData,
-          width: widths.scriptName - unitNameExtraWidth,
+          ...scriptNameData,
+          width: widths.scriptName - scriptNameExtraWidth,
           setDesiredWidth: width => {
             this.setDesiredWidth('scriptName', width);
           }
@@ -233,23 +233,23 @@ class HeaderMiddle extends React.Component {
             />
           )}
 
-          {extraUnitNameData && (
+          {extraScriptNameData && (
             <div
               id="unit_name_container"
               style={{
                 float: 'left',
                 textAlign: 'right',
-                marginLeft: unitNameExtraWidth / 2,
-                marginRight: unitNameExtraWidth / 2,
+                marginLeft: scriptNameExtraWidth / 2,
+                marginRight: scriptNameExtraWidth / 2,
                 boxSizing: 'border-box',
-                width: widths.scriptName - unitNameExtraWidth,
+                width: widths.scriptName - scriptNameExtraWidth,
                 visibility:
-                  widths.scriptName === unitNameExtraWidth
+                  widths.scriptName === scriptNameExtraWidth
                     ? 'hidden'
                     : undefined
               }}
             >
-              <UnitName {...extraUnitNameData} isRtl={isRtl} />
+              <ScriptName {...extraScriptNameData} isRtl={isRtl} />
             </div>
           )}
 
@@ -286,8 +286,8 @@ class HeaderMiddle extends React.Component {
               }}
             >
               <HeaderPopup
-                scriptName={unitData.name}
-                unitData={unitData}
+                scriptName={scriptData.name}
+                scriptData={scriptData}
                 currentLevelId={currentLevelId}
                 linesOfCodeText={linesOfCodeText}
                 windowHeight={this.state.windowHeight}

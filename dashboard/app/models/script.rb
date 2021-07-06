@@ -7,13 +7,12 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  wrapup_video_id :integer
-#  hidden          :boolean          default(FALSE), not null
 #  user_id         :integer
 #  login_required  :boolean          default(FALSE), not null
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("beta"), not null
+#  published_state :string(255)      default("in_development"), not null
 #
 # Indexes
 #
@@ -110,7 +109,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.hidden = true unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -219,6 +218,7 @@ class Script < ApplicationRecord
     include_student_lesson_plans
     is_migrated
     seeded_from
+    is_maker_unit
   )
 
   def self.twenty_hour_unit
@@ -254,7 +254,7 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units
-    visible_units.select {|s| s.family_name == 'csd6'}
+    visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
@@ -283,6 +283,10 @@ class Script < ApplicationRecord
 
     if !with_hidden && has_any_pilot_access?(user)
       units += all_scripts.select {|s| s.has_pilot_access?(user)}
+    end
+
+    if user.permission?(UserPermission::LEVELBUILDER)
+      units += all_scripts.select(&:in_development?)
     end
 
     units
@@ -567,7 +571,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name) : nil
+    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -726,27 +730,27 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    ScriptConstants.script_in_category?(:twenty_hour, name)
+    ScriptConstants.unit_in_category?(:twenty_hour, name)
   end
 
   def hoc?
-    ScriptConstants.script_in_category?(:hoc, name)
+    ScriptConstants.unit_in_category?(:hoc, name)
   end
 
   def flappy?
-    ScriptConstants.script_in_category?(:flappy, name)
+    ScriptConstants.unit_in_category?(:flappy, name)
   end
 
   def minecraft?
-    ScriptConstants.script_in_category?(:minecraft, name)
+    ScriptConstants.unit_in_category?(:minecraft, name)
   end
 
   def k5_draft_course?
-    ScriptConstants.script_in_category?(:csf2_draft, name)
+    ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
 
   def csf_international?
-    ScriptConstants.script_in_category?(:csf_international, name)
+    ScriptConstants.unit_in_category?(:csf_international, name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -820,7 +824,7 @@ class Script < ApplicationRecord
   end
 
   def self.beta?(name)
-    name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
+    name == Script::EDIT_CODE_NAME || ScriptConstants.unit_in_category?(:csf2_draft, name)
   end
 
   def get_script_level_by_id(script_level_id)
@@ -987,12 +991,11 @@ class Script < ApplicationRecord
       units_to_add << [{
         id: unit_data[:id],
         name: name,
-        hidden: unit_data[:hidden].nil? ? true : unit_data[:hidden], # default true
         login_required: unit_data[:login_required].nil? ? false : unit_data[:login_required], # default false
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.beta : unit_data[:published_state],
+        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1018,7 +1021,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(hidden: true) if new_suffix
+      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1137,7 +1140,8 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.beta
+      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.in_development
+      copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
       copied_unit.is_course = destination_unit_group.nil?
@@ -1151,7 +1155,7 @@ class Script < ApplicationRecord
 
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
-        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_scripts.length + 1)
+        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
         copied_unit.reload
       else
         copied_unit.is_course = true
@@ -1163,7 +1167,7 @@ class Script < ApplicationRecord
       end
 
       lesson_groups.each do |original_lesson_group|
-        original_lesson_group.copy_to_script(copied_unit, new_level_suffix)
+        original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
       end
 
       course_version = copied_unit.get_course_version
@@ -1183,7 +1187,7 @@ class Script < ApplicationRecord
 
   # Clone this unit, appending a dash and the suffix to the name of this
   # unit. Also clone all the levels in the unit, appending an underscore and
-  # the suffix to the name of each level. Mark the new unit as hidden, and
+  # the suffix to the name of each level. Mark the new unit published_state as beta, and
   # copy any translations and other metadata associated with the original unit.
   # @param options [Hash] Optional properties to set on the new unit.
   # @param options[:editor_experiment] [String] Optional editor_experiment name.
@@ -1196,7 +1200,8 @@ class Script < ApplicationRecord
     new_properties = {
       tts: false,
       announcements: nil,
-      is_course: false
+      is_course: false,
+      pilot_experiment: nil
     }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
@@ -1268,11 +1273,10 @@ class Script < ApplicationRecord
       Script.add_unit(
         {
           name: unit_name,
-          hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.beta : general_params[:published_state],
+          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.in_development : general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1415,6 +1419,10 @@ class Script < ApplicationRecord
     published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
+  def in_development?
+    published_state == SharedConstants::PUBLISHED_STATE.in_development
+  end
+
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
@@ -1490,6 +1498,7 @@ class Script < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
+      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
@@ -1723,7 +1732,8 @@ class Script < ApplicationRecord
       :is_course,
       :show_calendar,
       :is_migrated,
-      :include_student_lesson_plans
+      :include_student_lesson_plans,
+      :is_maker_unit
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
@@ -1859,6 +1869,11 @@ class Script < ApplicationRecord
       performanceLevel4: "rubric_performance_level_4"
     }
 
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed"
+    }
+
     feedback = {}
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
@@ -1887,7 +1902,9 @@ class Script < ApplicationRecord
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
           performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
+          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
+          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
         }
       end
     end
@@ -1981,7 +1998,7 @@ class Script < ApplicationRecord
 
   def get_unit_resources_pdf_url
     if is_migrated?
-      Services::CurriculumPdfs.get_script_resources_url(self)
+      Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
 end

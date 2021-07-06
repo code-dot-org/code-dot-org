@@ -2,7 +2,6 @@
   "script": {
     "name": "csd6-2017",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,
@@ -39,11 +38,12 @@
       "curriculum_umbrella": "CSD",
       "family_name": "csd6",
       "tts": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_maker_unit": true
     },
     "new_name": "csd6-2017",
     "family_name": "csd6",
-    "serialized_at": "2021-06-17 22:28:46 UTC",
+    "serialized_at": "2021-06-23 23:39:32 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2017"

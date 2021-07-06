@@ -1,28 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "Run `MyFoodTruck.java`. What do you notice about the output of this program?\r\n\r\nFix the code to print each value on a separate line with text to label the value.",
-    "mini_rubric": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "parent_level_id": 28565,
-    "start_sources": {
-      "Dessert.java": {
-        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public String getFlavor() {\n    return flavor;\n  }\n\n  public int getQuantity() {\n    return quantity;\n  }\n\n  public double getPrice() {\n    return price;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
-        "isVisible": true
-      },
-      "MyFoodTruck.java": {
-        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n    Dessert newDessert = new Dessert(\"chocolate\", 12, 2.99);\n\n    System.out.println(\"newDessert flavor: \" + newDessert.getFlavor());\n    System.out.print(\"newDessert quantity: \" + newDessert.getQuantity());\n    System.out.print(\"newDessert price: \" + newDessert.getPrice());\n  }\n}",
-        "isVisible": true
-      }
-    }
-  },
   "game_id": 68,
   "created_at": "2021-06-22T18:12:09.000Z",
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-22 18:12:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:13:35 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-22 18:12:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-22 18:13:35 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 17:24:00 +0000\",\"changed\":[\"encrypted\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-25 16:46:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTfnnfTur3jfR0o88FWKaIt6+8iPV9WXctHOdDxGTBufnM6fAN4ubU4oczZ\n1Bu49QRd/QD/YB0StzXoL32IPHgEpoFOK2cJac36CTwnNXWQyQC6qL3p8FQ5\nkR3uDgZuJtwBQa9Lj8wwuRK+fjI6ViBNDjEFb9wKe8sz21GYjEolW/at6eYC\nQCcYjISZ379FXDD+Zj7R/7z1yFA7Bd7kAP5CtS4QvM7SnwdDaGGIyOCeANii\nm/P6w99uyPn2oEsz34xP++loWTxelx71A7G5bXAMPniFc2keEVHIRL/MD1sX\nFA8+O+5ZtEegYNVuuBj7zgc34btPw91WGPg3aY6esOLH4M9CcvnseKvXL5Ko\nJX5uGMdZitwUV8umXzFTJQnOigqgvC6vZvjtl7tddZ9/RfkYHRcVmHl1nt+6\nbhZv2AdI+x8T7dg/uO4xA0YR8A47eehP8aE8iWxOLRHX2oLhJ2LYL3WYRTgV\nhscFlQg0SR8tgfUA6aPeElATCHDGO3IuoDusiroIU3wkU6YOzZ+7pJBNUKCq\nYScj+ZZEw0n0EOKkufPbn4L6hVcLWpEmWTu2a9/WOVFwBxERKYeSWwq6Wz1N\nMNFHN2CUTpelMMA+5PWlvYs1J+Y3LkCx+HiSsbxBcdflYuei7TdUUMBoLU9K\nmXh/B5qDt2lWnkKmOdoA+Tcu/YeWwDLfO6kROVVP7ArJxJin+3w15oJlfRgl\nVQHap3nykjufOWqrwensbLP/9olLVoENJjC214Y8Z7Z/CAoxDpF+2EpInh+o\nLUTgySrpUxQpbHWWf5WHzdslb3kGZOd/eiqBhF1+KIE3QpxsmBvDe7u1cHRB\nD7abNJwrgmOCil2trtvuJJ2vLGOIwBldktwqBf6NG+9FURzZL+yEkEwEZxID\nqE5VIRXrkRK7K/+G5/Qr1lSMLAyWF/lS0uipQfXGSyrQSWidUBWt7W7KSN6b\nDdXk9H57XvAlHORQUlyY9aJGyjDEdB0S6hQZyaOm2X0o4y5HylgWjqzZXG9j\n2gocic8r1QuxH5ncmSlrD/gFp3U2/C9gBv2zxXRxqB3VdaXL5WDqUNgATZSQ\njqcMTNgGjP2zx1glAGVk8olUAd0IL6a4bulHXaIL6Nj/aPRCfNQqo66r9rqQ\nCzVqUs0r+sIxNgMULDUjhTe+OFUZrz34jOPCqXIcoVTHlkdLbUuQNOxkn/By\nmCQBktCScoRLdgZmLx2rkdeBDwsbwWqkJSByFnV1VDujSwfmAXwdl0O9Umag\n4J5C0uUyewz6Dhd+USwhasWRZ02lUMQMQGRQtXkINNR6kmgWNSg47dkTDMyK\nllSOGstSNHgegtu2cknwbwPFBOsv3jXE8A0FL/kzlc1ZpqKGzEqbzcrnIRBZ\n56KR6aJdIbzqHGZg+Oz92VViYKpc/Zr80Z7u+5f5IIlVBaes7Tnu7PE3SV74\nVQA5jpjZ9jIR8ewg64ryIiBMhLiF40FDmHjgELQDArtb/oJed9rb/RYOERlg\njGaerJChYDGgHpLtB96Rm93XWsv4aE1kCG+L3ZgZ72WVdtnH+rnUR9xdKZut\nmptGmOnL8UT6GrFZJHamS/OcojvLjPpuDjo8p/D4NHA5fc2CkT2ZFQ94XGwX\nWtQevc69k5HokMMX9w9OzPrV8QMYNw88D4pGbVWPw6RmnPlO1nDpIV+3Q8hL\n6mjSq34PPVVTyfHf1+abFmkZz5+hFX1Vl81imVbo1DRJSsWqowZRzzXD/2Ry\nSQsQDcdE+7Gr/1R8iRq2e0jvaU3uy37VbSjD/bkh0zr+3RFxNQ2YSt7a\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

@@ -1,4 +1,6 @@
 import i18n from './locale';
+import trackEvent from '@cdo/apps/util/trackEvent';
+import * as craftRedux from '@cdo/apps/craft/redux';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',
@@ -85,5 +87,23 @@ export function blockTypesToDropdownOptions(blockTypes) {
   return blockTypes.map(function(blockType) {
     const displayName = BLOCK_NAME_TO_DISPLAY_TEXT[blockType] || blockType;
     return [displayName, blockType];
+  });
+}
+
+export function handlePlayerSelection(
+  defaultPlayer,
+  onComplete,
+  craftEventType = 'Minecraft'
+) {
+  craftRedux.openPlayerSelectionDialog(selectedPlayer => {
+    craftRedux.closePlayerSelectionDialog();
+
+    if (selectedPlayer) {
+      trackEvent(craftEventType, 'ClickedCharacter', selectedPlayer);
+    } else {
+      selectedPlayer = defaultPlayer;
+    }
+
+    onComplete(selectedPlayer);
   });
 }
