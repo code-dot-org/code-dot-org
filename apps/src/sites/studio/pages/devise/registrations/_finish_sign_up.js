@@ -99,19 +99,16 @@ $(document).ready(() => {
     }
   }
 
-  $('#user_user_type').change(function() {
-    var value = $(this).val();
-    setUserType(value);
+  document.addEventListener('selectUserType', e => {
+    setUserType(e.detail);
   });
 
   function getUserType() {
-    var toReturn = sessionStorage.getItem('userType')
-      ? sessionStorage.getItem('userType')
-      : 'student';
-    return toReturn;
+    return $('#user_user_type').val();
   }
 
   function setUserType(userType) {
+    $('#user_user_type').val(userType);
     if (userType) {
       trackUserType(userType);
     }

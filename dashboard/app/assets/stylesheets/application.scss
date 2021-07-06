@@ -37,8 +37,10 @@ $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
-$selectUserTypeButtonColor: #b00;
-$selectUserTypeButtonColorHover: #0b0;
+$selectUserTypeButtonBackgroundColor: #fff;
+$selectUserTypeButtonTextColor: #000;
+$selectUserTypeButtonBackgroundColorHover: #00adbc;
+$selectUserTypeButtonTextColorHover: #fff;
 
 @import "bootstrap";
 // Font-awesome 4.6.3
@@ -1749,12 +1751,55 @@ a.download-video {
     margin: 20px 0;
   }
 
-  .select-user-type-button {
-    background-color: $selectUserTypeButtonColor;
+  .select-user-type-teacher-button, .select-user-type-student-button {
+    min-width: 225px;
+    min-height: 300px;
+    position: relative;
+    background-color: $selectUserTypeButtonBackgroundColor;
+    color: $selectUserTypeButtonTextColor;
+    border-radius: 15px;
+
+    .user-type-name {
+      position: absolute;
+      left: 35%;
+      top: 20px;
+      text-align: center;
+    }
+
+    .user-type-desc {
+      position: absolute;
+      top: 55px;
+      text-align: left;
+      margin-right: 5px;
+    }
+
+    .user-type-abilities-unordered-list {
+      position: absolute;
+      text-align: left;
+      margin-right: 5px;
+    }
   }
 
-  .select-user-type-button:hover {
-    background-color: $selectUserTypeButtonColorHover;
+  .select-user-type-teacher-button {
+    .user-type-abilities-unordered-list {
+      top: 80px;
+    }
+  }
+
+  .select-user-type-student-button {
+    .user-type-abilities-unordered-list {
+      top: 100px;
+    }
+  }
+
+  .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
+    background-color: $selectUserTypeButtonBackgroundColorHover;
+    color: $selectUserTypeButtonTextColorHover;
+  }
+
+  .select-user-type-button-selected {
+    background-color: $selectUserTypeButtonBackgroundColorHover;
+    color: $selectUserTypeButtonTextColorHover;
   }
 
   .finish-signup {

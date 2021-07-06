@@ -31,9 +31,24 @@
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
       .span5
-        %button.select-user-type-button{onClick: 'selectUserTypeTeacher()'} Teacher
-        %button.select-user-type-button{onClick: 'selectUserTypeStudent()'} Student
-        -# = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
+        %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
+          %b.user-type-name Teacher
+          %p.user-type-desc For educators
+          %ul.user-type-abilities-unordered-list
+            %li Create and manage sections
+            %li Join sections
+            %li Assign activities
+            %li View and provide feedback on student work
+            %li Access professional learning resources
+            %li Explore all of Code.org's courses and resources
+        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
+          %b.user-type-name Student
+          %p.user-type-desc For learners who don't intend on teaching a course
+          %ul.user-type-abilities-unordered-list
+            %li Join sections
+            %li View and complete assigned work
+            %li Learn at your own pace
+            %li Explore all of Code.org's courses and resources
       .span2
     .row#parent-email-container
       .span8#parent-email-section
@@ -145,11 +160,27 @@
     %button.submit= t('signup_form.go_to_account')
 
 :javascript
+  const teacherButton = document.getElementById('select-user-type-teacher');
+  const studentButton = document.getElementById('select-user-type-student');
   function selectUserTypeTeacher() {
-    sessionStorage.setItem('userType', 'teacher');
+    // select 'student' as user type
+    var selectTeacherEvent = new CustomEvent('selectUserType', {
+      detail: 'teacher'
+    });
+    document.dispatchEvent(selectTeacherEvent);
+    // keep selected button styled the same as button:hover so it's clear what the current selection is
+    teacherButton.classList.add('select-user-type-button-selected');
+    studentButton.classList.remove('select-user-type-button-selected');
   }
   function selectUserTypeStudent() {
-    sessionStorage.setItem('userType', 'student');
+    // select 'student' as user type
+    var selectStudentEvent = new CustomEvent('selectUserType', {
+      detail: 'student'
+    });
+    document.dispatchEvent(selectStudentEvent);
+    // keep selected button styled the same as button:hover so it's clear what the current selection is
+    studentButton.classList.add('select-user-type-button-selected');
+    teacherButton.classList.remove('select-user-type-button-selected');
   }
 
 :ruby
