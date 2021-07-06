@@ -1,0 +1,213 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Alexander High School,,380176000004,10411,Robotics Engineering,10,4,0,0,0,0,0,0,0
+Northern Cass High School,,380004400138,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Shanley High-Sullivan Middle School,,380002700486,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,27510,AP Computer Science Principles (CTE) 10-12,16,2,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,27520,AP Computer Science A (CTE) 10-12,12,0,0,0,0,0,0,0,0
+Central Campus School,,381303000433,27128,Mobile Applications Development 9-12,16,3,0,0,0,0,0,0,0
+Century High School,,380001400047,27520,AP Computer Science A (CTE) 10-12,13,2,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27510,AP Computer Science Principles (CTE) 10-12,16,4,0,0,0,0,0,0,0
+Mandan High School,,381182000387,27120,Introduction to Programming Languges,15,2,0,0,0,0,0,0,0
+Mandan High School,,381182000387,27120,Introduction to Programming Languges,16,1,0,0,0,0,0,0,0
+Tioga High School,,380003900635,23011,Comp Applications,3,2,0,0,0,0,0,0,0
+Alexander High School,,380176000004,27120,Introduction to Programming Languges,14,3,0,0,0,0,0,0,0
+May-Port CG Middle-High School,,380004100406,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+New Salem-Almont High School,,380039200493,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Parshall High School,,381494000528,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,27120,Introduction to Programming Languges,16,3,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,27120,Introduction to Programming Languges,9,1,0,0,0,0,0,0,0
+North High School,,380678000205,27125,Fund of JAVA Program,10,2,0,0,0,0,0,0,0
+Magic City Campus High School,,381303000442,27120,Introduction to Programming Languges,12,1,0,0,0,0,0,0,0
+Magic City Campus High School,,381303000442,27120,Introduction to Programming Languges,3,0,0,0,0,0,0,0,0
+Kindred High School,,380002500335,23580,AP Comp Sci A,1,0,0,0,0,0,0,0,0
+Williston High School,,381988000695,27120,Introduction to Programming Languges,12,5,0,0,0,0,0,0,0
+Williston High School,,381988000695,27120,Introduction to Programming Languges,8,3,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,23580,AP Comp Sci A,1,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,27520,AP Computer Science A (CTE) 10-12,12,0,0,0,0,0,0,0,0
+Central Campus School,,381303000433,27128,Mobile Applications Development 9-12,12,2,0,0,0,0,0,0,0
+Century High School,,380001400047,27510,AP Computer Science Principles (CTE) 10-12,10,5,0,0,0,0,0,0,0
+Century High School,,380001400047,27520,AP Computer Science A (CTE) 10-12,13,2,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27520,AP Computer Science A (CTE) 10-12,10,2,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27122,Program Ess-Vis Bas,20,3,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27520,AP Computer Science A (CTE) 10-12,10,2,0,0,0,0,0,0,0
+Mandan High School,,381182000387,27520,AP Computer Science A (CTE) 10-12,13,2,0,0,0,0,0,0,0
+Lake Area Career & Tech Center,,388064000721,27120,Introduction to Programming Languges,19,1,0,0,0,0,0,0,0
+Rugby High School,,381613000563,27510,AP Computer Science Principles (CTE) 10-12,2,1,0,0,0,0,0,0,0
+Dickinson High School,,380003800132,27510,AP Computer Science Principles (CTE) 10-12,17,2,0,0,0,0,0,0,0
+Garrison High School,,380759000234,27122,Program Ess-Vis Bas,1,1,0,0,0,0,0,0,0
+Turtle Lake-Mercer High School,,381850000641,27122,Program Ess-Vis Bas,1,1,0,0,0,0,0,0,0
+Wilton High School,,381320000457,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+South High School,,380678000208,27120,Introduction to Programming Languges,12,0,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,10411,Robotics Engineering,14,3,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,27125,Fund of JAVA Program,22,5,0,0,0,0,0,0,0
+Belfield High School,,380621000181,27120,Introduction to Programming Languges,9,5,0,0,0,0,0,0,0
+Kindred High School,,380002500335,23011,Comp Applications,15,3,0,0,0,0,0,0,0
+Williston High School,,381988000695,11583,AP Computer Science A (Math) 10-12,3,0,0,0,0,0,0,0,0
+Hazen High School,,380003100294,27120,Introduction to Programming Languges,3,0,0,0,0,0,0,0,0
+North Shore Plaza High School,,380005800507,27120,Introduction to Programming Languges,5,2,0,0,0,0,0,0,0
+New England High School,,380002700487,23011,Comp Applications,6,3,0,0,0,0,0,0,0
+Wilton High School,,381320000457,23580,AP Comp Sci A,1,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,27122,Program Ess-Vis Bas,17,2,0,0,0,0,0,0,0
+Century High School,,380001400047,27510,AP Computer Science Principles (CTE) 10-12,10,5,0,0,0,0,0,0,0
+Century High School,,380001400047,27122,Program Ess-Vis Bas,24,1,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27122,Program Ess-Vis Bas,21,3,0,0,0,0,0,0,0
+Legacy High School,,380001400866,27510,AP Computer Science Principles (CTE) 10-12,16,4,0,0,0,0,0,0,0
+Tioga High School,,380003900635,27120,Introduction to Programming Languges,3,2,0,0,0,0,0,0,0
+Lake Area Career & Tech Center,,388064000721,27120,Introduction to Programming Languges,1,1,0,0,0,0,0,0,0
+Beulah High School,,380003200032,27120,Introduction to Programming Languges,10,2,0,0,0,0,0,0,0
+Dickinson High School,,380003800132,27510,AP Computer Science Principles (CTE) 10-12,14,1,0,0,0,0,0,0,0
+North High School,,380678000205,10411,Robotics Engineering,17,1,0,0,0,0,0,0,0
+Fargo Davies High School,,380678000855,10411,Robotics Engineering,23,1,0,0,0,0,0,0,0
+Kindred High School,,380002500335,23580,AP Comp Sci A,2,0,0,0,0,0,0,0,0
+Williston High School,,381988000695,27120,Introduction to Programming Languges,4,1,0,0,0,0,0,0,0
+Williston High School,,381988000695,23582,AP Computer Science Principles 10-12,3,2,0,0,0,0,0,0,0
+Velva High School,,381704000591,27120,Introduction to Programming Languges,8,2,0,0,0,0,0,0,0
+Velva High School,,381704000591,27120,Introduction to Programming Languges,15,5,0,0,0,0,0,0,0
+Ellendale High School,,380609000178,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Hope Christian Academy,,380002700487,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Medina High School,,381266000419,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+South High School,,380678000208,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Cavalier High School,,380001800089,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+North Sargent High School,,381429000505,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Barnes County North High School,,380006000702,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+South High School,,380678000208,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Montpelier High School,,381323000459,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Fessenden-Bowdon High School,,380004900213,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Central Campus School,,381303000433,10411,Robotics Engineering,7,1,0,0,0,0,0,0,0
+Central Campus School,,381303000433,10411,Robotics Engineering,11,0,0,0,0,0,0,0,0
+Central Campus School,,381303000433,10411,Robotics Engineering,16,2,0,0,0,0,0,0,0
+Central Campus School,,381303000433,10411,Robotics Engineering,21,1,0,0,0,0,0,0,0
+Central Campus School,,381303000433,10411,Robotics Engineering,14,1,0,0,0,0,0,0,0
+New Town High School,,381392000015,27120,Introduction to Programming Languges,5,0,0,0,0,0,0,0,0
+New Town High School,,381392000015,27120,Introduction to Programming Languges,2,0,0,0,0,0,0,0,0
+New Town High School,,381392000015,27120,Introduction to Programming Languges,2,0,0,0,0,0,0,0,0
+Devils Lake High School,,380504000126,23012,Comp Programming,3,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,10411,Robotics Engineering,7,1,0,0,0,0,0,0,0
+Wahpeton High School,,381902000666,23582,AP Computer Science Principles 10-12,9,2,0,0,0,0,0,0,0
+Williston High School,,381988000695,27130,Computer Gaming & Design 9-12,2,1,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Carrington High School,,380005300088,23012,Comp Programming,2,0,0,0,0,0,0,0,0
+Central High School,,380813000254,27122,Program Ess-Vis Bas,8,0,0,0,0,0,0,0,0
+Velva High School,,381704000591,23012,Comp Programming,4,1,0,0,0,0,0,0,0
+Velva High School,,381704000591,23012,Comp Programming,4,1,0,0,0,0,0,0,0
+Fessenden-Bowdon High School,,380004900213,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Dakota Adventist Academy,,380002700487,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+North High School,,380678000205,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Northern Cass High School,,380004400138,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Richardton-Taylor High School,,380004800551,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,10411,Robotics Engineering,7,1,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,4,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Carrington High School,,380005300088,23012,Comp Programming,7,1,0,0,0,0,0,0,0
+Carrington High School,,380005300088,23012,Comp Programming,6,0,0,0,0,0,0,0,0
+Watford City High School,,381254000415,27130,Computer Gaming & Design 9-12,16,1,0,0,0,0,0,0,0
+Watford City High School,,381254000415,27510,AP Computer Science Principles (CTE) 10-12,7,1,0,0,0,0,0,0,0
+Central High School,,380813000254,10411,Robotics Engineering,6,0,0,0,0,0,0,0,0
+Dakota Prairie High School,,380004000649,27130,Computer Gaming & Design 9-12,7,4,0,0,0,0,0,0,0
+Red River High School,,380813000261,10411,Robotics Engineering,1,1,0,0,0,0,0,0,0
+West Fargo High School,,381941000683,10411,Robotics Engineering,10,1,0,0,0,0,0,0,0
+West Fargo High School,,381941000683,27120,Introduction to Programming Languges,18,1,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27120,Introduction to Programming Languges,17,0,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27128,Mobile Applications Development 9-12,13,1,0,0,0,0,0,0,0
+Velva High School,,381704000591,23580,AP Comp Sci A,4,1,0,0,0,0,0,0,0
+Velva High School,,381704000591,23580,AP Comp Sci A,4,1,0,0,0,0,0,0,0
+Carrington High School,,380005300088,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Edgeley High School,,380585000166,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Wishek High School,,382019000707,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Cavalier High School,,380001800089,27130,Computer Gaming & Design 9-12,1,1,0,0,0,0,0,0,0
+New Town High School,,381392000015,27120,Introduction to Programming Languges,5,0,0,0,0,0,0,0,0
+Century High School,,380001400047,10411,Robotics Engineering,7,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,10411,Robotics Engineering,8,0,0,0,0,0,0,0,0
+Century High School,,380001400047,10411,Robotics Engineering,2,0,0,0,0,0,0,0,0
+Legacy High School,,380001400866,10411,Robotics Engineering,1,0,0,0,0,0,0,0,0
+Wahpeton High School,,381902000666,23582,AP Computer Science Principles 10-12,9,2,0,0,0,0,0,0,0
+Northwood High School,,381434000509,27122,Program Ess-Vis Bas,1,1,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Minnewaukan High School,,381299000431,23012,Comp Programming,9,4,0,0,0,0,0,0,0
+Richland Jr-Sr High School,,380003600553,27120,Introduction to Programming Languges,1,0,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27120,Introduction to Programming Languges,12,0,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27128,Mobile Applications Development 9-12,11,0,0,0,0,0,0,0,0
+Park River Area High School,,380040100526,27120,Introduction to Programming Languges,11,4,0,0,0,0,0,0,0
+Park River Area High School,,380040100526,27120,Introduction to Programming Languges,12,7,0,0,0,0,0,0,0
+Central Cass High School,,380409000100,23012,Comp Programming,11,4,0,0,0,0,0,0,0
+Central High School,,380813000254,10411,Robotics Engineering,1,0,0,0,0,0,0,0,0
+Wishek High School,,382019000707,27125,Fund of JAVA Program,1,0,0,0,0,0,0,0,0
+Central High School,,380813000254,27122,Program Ess-Vis Bas,4,2,0,0,0,0,0,0,0
+Central High School,,380813000254,27121,Integrated Math for Computer Science (CTE) 9-12,1,1,0,0,0,0,0,0,0
+Garrison High School,,380759000234,27125,Fund of JAVA Program,1,1,0,0,0,0,0,0,0
+Washburn High School,,381929000674,27125,Fund of JAVA Program,6,0,0,0,0,0,0,0,0
+Wing High School,,382013000705,27125,Fund of JAVA Program,1,0,0,0,0,0,0,0,0
+Des Lacs-Burlington High School,,381873000647,27120,Introduction to Programming Languges,1,0,0,0,0,0,0,0,0
+Elgin-New Leipzig High School,,380004500175,27120,Introduction to Programming Languges,1,1,0,0,0,0,0,0,0
+Linton High School,,380001700371,10411,Robotics Engineering,14,0,0,0,0,0,0,0,0
+Central High School,,380813000254,27122,Program Ess-Vis Bas,2,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,3,2,0,0,0,0,0,0,0
+West Fargo High School,,381941000683,27125,Fund of JAVA Program,7,1,0,0,0,0,0,0,0
+West Fargo High School,,381941000683,27120,Introduction to Programming Languges,20,2,0,0,0,0,0,0,0
+Richardton-Taylor High School,,380004800551,10411,Robotics Engineering,10,4,0,0,0,0,0,0,0
+Wishek High School,,382019000707,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Hazen High School,,380003100294,27125,Fund of JAVA Program,2,0,0,0,0,0,0,0,0
+Linton High School,,380001700371,27125,Fund of JAVA Program,1,0,0,0,0,0,0,0,0
+New Salem-Almont High School,,380039200493,27125,Fund of JAVA Program,2,1,0,0,0,0,0,0,0
+New Salem-Almont High School,,380039200493,27120,Introduction to Programming Languges,2,0,0,0,0,0,0,0,0
+Garrison High School,,380759000234,27120,Introduction to Programming Languges,2,0,0,0,0,0,0,0,0
+Elgin-New Leipzig High School,,380004500175,27120,Introduction to Programming Languges,1,1,0,0,0,0,0,0,0
+New Salem-Almont High School,,380039200493,27120,Introduction to Programming Languges,1,0,0,0,0,0,0,0,0
+Ellendale High School,,380609000178,23582,AP Computer Science Principles 10-12,5,0,0,0,0,0,0,0,0
+New England High School,,380002700487,23011,Comp Applications,19,10,0,0,0,0,0,0,0
+Northern Cass High School,,380004400138,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Central Cass High School,,380409000100,23580,AP Comp Sci A,1,0,0,0,0,0,0,0,0
+Bismarck High School,,380001400045,27510,AP Computer Science Principles (CTE) 10-12,16,2,0,0,0,0,0,0,0
+Century High School,,380001400047,27122,Program Ess-Vis Bas,22,2,0,0,0,0,0,0,0
+Mandan High School,,381182000387,27520,AP Computer Science A (CTE) 10-12,13,2,0,0,0,0,0,0,0
+Lake Area Career & Tech Center,,388064000721,27120,Introduction to Programming Languges,16,5,0,0,0,0,0,0,0
+Rugby High School,,381613000563,10411,Robotics Engineering,1,0,0,0,0,0,0,0,0
+Rugby High School,,381613000563,27510,AP Computer Science Principles (CTE) 10-12,3,1,0,0,0,0,0,0,0
+Beulah High School,,380003200032,27120,Introduction to Programming Languges,10,2,0,0,0,0,0,0,0
+Dickinson High School,,380003800132,27510,AP Computer Science Principles (CTE) 10-12,2,2,0,0,0,0,0,0,0
+Flasher High School,,380693000219,27122,Program Ess-Vis Bas,1,1,0,0,0,0,0,0,0
+Linton High School,,380001700371,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Washburn High School,,381929000674,27122,Program Ess-Vis Bas,6,0,0,0,0,0,0,0,0
+Wing High School,,382013000705,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+North High School,,380678000205,10411,Robotics Engineering,11,2,0,0,0,0,0,0,0
+North High School,,380678000205,27120,Introduction to Programming Languges,10,2,0,0,0,0,0,0,0
+Berthold High School,,380005800030,27510,AP Computer Science Principles (CTE) 10-12,21,9,0,0,0,0,0,0,0
+Cavalier High School,,380001800089,27120,Introduction to Programming Languges,9,2,0,0,0,0,0,0,0
+Kindred High School,,380002500335,23011,Comp Applications,15,3,0,0,0,0,0,0,0
+Williston High School,,381988000695,27130,Computer Gaming & Design 9-12,6,2,0,0,0,0,0,0,0
+Williston High School,,381988000695,27120,Introduction to Programming Languges,19,5,0,0,0,0,0,0,0
+Williston High School,,381988000695,11583,AP Computer Science A (Math) 10-12,6,1,0,0,0,0,0,0,0
+ND Center for Distance Education,,380002700487,23012,Comp Programming,1,0,0,0,0,0,0,0,0
+Fessenden-Bowdon High School,,380004900213,23012,Comp Programming,1,1,0,0,0,0,0,0,0
+Central Campus School,,381303000433,23580,AP Comp Sci A,1,0,0,0,0,0,0,0,0
+Garrison High School,,380759000234,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Carrington High School,,380005300088,27130,Computer Gaming & Design 9-12,2,0,0,0,0,0,0,0,0
+Larimore High School,,381086000355,27130,Computer Gaming & Design 9-12,1,0,0,0,0,0,0,0,0
+Devils Lake High School,,380504000126,23011,Comp Applications,2,0,0,0,0,0,0,0,0
+Century High School,,380001400047,10411,Robotics Engineering,4,0,0,0,0,0,0,0,0
+Legacy High School,,380001400866,10411,Robotics Engineering,2,1,0,0,0,0,0,0,0
+Glenburn High School,,380785000238,27120,Introduction to Programming Languges,12,2,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,1,0,0,0,0,0,0,0,0
+Red River High School,,380813000261,27122,Program Ess-Vis Bas,3,0,0,0,0,0,0,0,0
+Williston High School,,381988000695,27120,Introduction to Programming Languges,2,1,0,0,0,0,0,0,0
+Carrington High School,,380005300088,23012,Comp Programming,2,0,0,0,0,0,0,0,0
+Watford City High School,,381254000415,27510,AP Computer Science Principles (CTE) 10-12,8,1,0,0,0,0,0,0,0
+Watford City High School,,381254000415,27130,Computer Gaming & Design 9-12,2,1,0,0,0,0,0,0,0
+Watford City High School,,381254000415,27130,Computer Gaming & Design 9-12,20,0,0,0,0,0,0,0,0
+Dakota Prairie High School,,380004000649,27130,Computer Gaming & Design 9-12,11,1,0,0,0,0,0,0,0
+West Fargo High School,,381941000683,10411,Robotics Engineering,11,0,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27122,Program Ess-Vis Bas,5,1,0,0,0,0,0,0,0
+West Fargo Sheyenne High School,,381941000838,27125,Fund of JAVA Program,21,2,0,0,0,0,0,0,0
+Horace High School,,381941000838,27120,Introduction to Programming Languges,8,0,0,0,0,0,0,0,0
+Flasher High School,,380693000219,27125,Fund of JAVA Program,1,1,0,0,0,0,0,0,0
+Turtle Lake-Mercer High School,,381850000641,27125,Fund of JAVA Program,1,1,0,0,0,0,0,0,0
+Wilton High School,,381320000457,27125,Fund of JAVA Program,1,0,0,0,0,0,0,0,0
+Garrison High School,,380759000234,27120,Introduction to Programming Languges,2,0,0,0,0,0,0,0,0
+Des Lacs-Burlington High School,,381873000647,27120,Introduction to Programming Languges,1,0,0,0,0,0,0,0,0
+Underwood High School,,381866000645,11041,Integrated Math for Computer Science (Math) 9-12,5,2,0,0,0,0,0,0,0
