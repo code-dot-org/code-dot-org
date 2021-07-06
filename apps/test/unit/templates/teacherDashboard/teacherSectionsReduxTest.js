@@ -400,7 +400,7 @@ describe('teacherSectionsRedux', () => {
       const assignment = validAssignments[assignId];
       assert.equal('Accelerated Course', assignment.name);
       assert.equal('20-hour', assignment.assignment_family_name);
-      assert.equal('2017', assignment.version_year);
+      assert.equal(undefined, assignment.version_year);
     });
 
     it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
