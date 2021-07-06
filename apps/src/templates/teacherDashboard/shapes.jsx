@@ -88,7 +88,7 @@ export const assignmentFamilyShape = PropTypes.shape({
 export const assignmentVersionShape = PropTypes.shape({
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  isStable: PropTypes.bool.isRequired,
+  isStable: PropTypes.bool,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
   locales: PropTypes.arrayOf(PropTypes.string).isRequired,
