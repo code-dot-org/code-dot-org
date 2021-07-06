@@ -1512,7 +1512,6 @@ class Script < ApplicationRecord
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
-      preventCourseVersionChange: prevent_course_version_change?,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url
     }
@@ -1551,6 +1550,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
