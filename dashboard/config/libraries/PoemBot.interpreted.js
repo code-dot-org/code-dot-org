@@ -5,13 +5,15 @@
 // Poem: An object that has field for title, author, and lines. The title and author
 // fields should both have type Text. The lines field should be an array of Line values.
 
-// CONSTANTS
+/* BEGIN CONSTANTS */
 var outerMargin = 50;
 var defaultLineHeight = 50;
 var defaultFontSize = 25;
 var blankText = {value: '', type: 'blank'};
+var playspaceSize = 400;
+/* END CONSTANTS */
 
-// STATE
+/* BEGIN STATE */
 var poem = {
   title: blankText,
   author: blankText,
@@ -20,7 +22,7 @@ var poem = {
 var isVisible = false;
 var backgroundEffect = function() {};
 var foregroundEffect = function() {};
-
+/* END STATE */
 
 // This function runs as part of the draw loop
 function poemBotDraw() {
@@ -42,19 +44,19 @@ function drawPoem() {
   textAlign(CENTER);
   if (poem.title) {
     textSize(defaultFontSize * 2);
-    text(poem.title, 200, yCursor);
+    text(poem.title, playspaceSize / 2, yCursor);
     textSize(defaultFontSize);
     yCursor += defaultLineHeight;
   }
   if (poem.author) {
     yCursor -= defaultLineHeight / 2;
     textSize(16);
-    text(poem.author, 200, yCursor);
+    text(poem.author, playspaceSize / 2, yCursor);
     textSize(defaultFontSize);
     yCursor += defaultLineHeight;
   }
 
-  var lineHeight = (400 - yCursor) / poem.lines.length;
+  var lineHeight = (playspaceSize - yCursor) / poem.lines.length;
   for (var i = 0; i < poem.lines.length; i++) {
     drawPoemLine(poem.lines[i], yCursor);
     textSize(defaultFontSize);
@@ -72,12 +74,12 @@ function drawPoemLine(line, yPos) {
   }
   var fullLine = words.join(' ');
   var fullWidth = textWidth(fullLine);
-  textSize(Math.min(defaultFontSize, defaultFontSize * (400 - outerMargin) / fullWidth));
+  textSize(Math.min(defaultFontSize, defaultFontSize * (playspaceSize - outerMargin) / fullWidth));
 
   // recompute with scaled textSize
   fullWidth = textWidth(fullLine);
 
-  var start = 200 - fullWidth/2;
+  var start = playspaceSize / 2 - fullWidth/2;
   textAlign(LEFT);
   var xCursor = start;
   for (i = 0; i < line.length; i++) {
@@ -105,11 +107,12 @@ function flatten(list1, list2) {
   return result;
 }
 
-// BLOCK DEFINITIONS
+/* BEGIN BLOCK DEFINITIONS */
 function textConcat(text1, text2) {
   if (!text1) {
     return text2;
-  } if (!text2) {
+  }
+  if (!text2) {
     return text1;
   }
   return flatten(text1, text2);
@@ -183,7 +186,7 @@ function setForegroundEffect(effectName) {
     bubbles = [];
     for (i = 0; i < 25; i++) {
       bubbles.push({
-        x: random(-100, 400),
+        x: random(-100, playspaceSize),
         y: 410,
         velocityX: random(-2, 2),
         size: random(6, 12, 18),
@@ -205,7 +208,7 @@ function setForegroundEffect(effectName) {
           bubble.y = 420;
         }
         bubble.x += bubble.velocityX;
-        if (bubble.x < 0 || bubble.x > 400) {
+        if (bubble.x < 0 || bubble.x > playspaceSize) {
           bubble.velocityX *= -1;
         }
         pop();
@@ -214,3 +217,4 @@ function setForegroundEffect(effectName) {
     };
   }
 }
+/* END BLOCK DEFINITIONS */
