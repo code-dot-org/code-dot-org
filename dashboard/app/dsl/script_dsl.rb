@@ -31,7 +31,6 @@ class ScriptDSL < BaseDSL
     @tts = false
     @deprecated = false
     @is_course = false
-    @background = nil
     @is_migrated = false
   end
 
@@ -63,7 +62,6 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
-  string :background
   string :published_state
 
   def teacher_resources(resources)
@@ -171,7 +169,6 @@ class ScriptDSL < BaseDSL
       deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
-      background: @background,
       is_migrated: @is_migrated
     }
   end
@@ -363,7 +360,6 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
-    s << "background '#{script.background}'" if script.background
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
