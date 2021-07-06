@@ -30,7 +30,9 @@ export default class ReviewTab extends Component {
     return (
       <div style={styles.reviewsContainer}>
         {this.renderReadyForReviewCheckbox()}
-        <Comment />
+        {demoComments.map(commentProps => {
+          return <Comment {...commentProps} />;
+        })}
         <CommentEditor />
       </div>
     );
@@ -52,3 +54,46 @@ const styles = {
     margin: '10px 0'
   }
 };
+
+const demoComments = [
+  {
+    name: 'Another Student',
+    timestampString: '2020/01/01 at 9:30 AM',
+    isResolved: false,
+    isFromTeacher: false,
+    isFromProjectOwner: false,
+    isFromOlderVersionOfProject: false
+  },
+  {
+    name: 'Older Version',
+    timestampString: '2020/01/01 at 9:30 AM',
+    isResolved: true,
+    isFromTeacher: false,
+    isFromProjectOwner: false,
+    isFromOlderVersionOfProject: true
+  },
+  {
+    name: 'Resolved Comment',
+    timestampString: '2020/01/01 at 9:30 AM',
+    isResolved: true,
+    isFromTeacher: false,
+    isFromProjectOwner: false,
+    isFromOlderVersionOfProject: false
+  },
+  {
+    name: 'Mr. Teacher',
+    timestampString: '2020/01/01 at 9:30 AM',
+    isResolved: false,
+    isFromTeacher: true,
+    isFromProjectOwner: false,
+    isFromOlderVersionOfProject: false
+  },
+  {
+    name: 'Project Owner',
+    timestampString: '2020/01/01 at 9:30 AM',
+    isResolved: false,
+    isFromTeacher: false,
+    isFromProjectOwner: true,
+    isFromOlderVersionOfProject: false
+  }
+];
