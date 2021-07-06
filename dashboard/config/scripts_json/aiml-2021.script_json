@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-05 19:00:31 UTC",
+    "serialized_at": "2021-07-06 18:58:38 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -2756,8 +2756,9 @@
       "key": "78b2b050-7ae5-4f81-a323-76160d0f07b1",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** Have students continue to the next level in Code Studio. In this level, students have access to the Data Tab in Code Studio. Show students how to access the data, and explain that this data represents a survey given to 500 students about the decisions they make for wearing shoes. Demonstrate how to access the Cross Tab chart and how to view correlations between answers. Highlight any “hot spots” in the data as a way to see when a certain answer seems to be highly correlated with a certain shoe type.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** [take survey]",
         "name": "Ultimate Shoe Recommender",
+        "progression_name": "Shoe Recommendation Survey",
         "tips": [
           {
             "type": "teachingTip",
@@ -2771,19 +2772,8 @@
       }
     },
     {
-      "key": "76fb0647-ea59-4d24-a7f1-a000316a3e33",
-      "position": 16,
-      "properties": {
-        "progression_name": "Ultimate Shoe Recommender"
-      },
-      "seeding_key": {
-        "activity_section.key": "76fb0647-ea59-4d24-a7f1-a000316a3e33",
-        "lesson_activity.key": "0c2aabd5-43ce-422e-b181-a451fa21c435"
-      }
-    },
-    {
       "key": "3cc2b93e-a758-490c-a5a9-32912de379e3",
-      "position": 17,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What hot spots did you find in the data? How do you think this will be helpful for a model to make shoe recommendations?_"
       },
@@ -2794,7 +2784,7 @@
     },
     {
       "key": "35403959-7050-4beb-8f4d-70c33fb8cf9a",
-      "position": 18,
+      "position": 17,
       "properties": {
         "description": " **Discussion Goal:** Students should be able to highlight several hot spot areas, such as answering “No” to “Do you wear socks?” is highly likely to indicate that you should wear sandals. Students should indicate that they can use this data to help their model make decisions, even if they’re not completely sure how to do this yet.\r\n\r"
       },
@@ -2805,7 +2795,7 @@
     },
     {
       "key": "2a88d7eb-c59b-45ac-962e-ff8516ba9921",
-      "position": 19,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display a slide to remind students of the following definitions\r\n\r\n- **Feature:** an input that the model uses to make decisions\r\n- **Label:** the output you are trying to decide or predict with a model\r\n\r\nEmphasize that in this data, each of the questions are the features which are being used to predict what type of shoe to recommend, which is the label.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the description of the app they’re about to look at, which uses the data shown to make its recommendations. Highlight that this app uses a Points Added model, which analyzes the results from all of the questions to determine which shoe to recommend."
       },
@@ -2816,7 +2806,7 @@
     },
     {
       "key": "13e08daa-5747-46b1-af6f-5f742c3672e8",
-      "position": 20,
+      "position": 19,
       "properties": {
         "tips": [
           {
@@ -2832,7 +2822,7 @@
     },
     {
       "key": "88e03086-5ef1-4486-8950-cde76ed1d587",
-      "position": 21,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where this app is available to test. Have students answer the questions and see if the recommendations match what they saw in the data. They can also check a “show model” box on each screen, which will display the point totals on each screen of the app."
       },
@@ -2843,7 +2833,7 @@
     },
     {
       "key": "280ddf58-b0ce-4ca6-ad91-b55243b6b638",
-      "position": 22,
+      "position": 21,
       "properties": {
         "progression_name": "Ultimate Shoe Recommender"
       },
@@ -2854,7 +2844,7 @@
     },
     {
       "key": "e030d1fa-c8eb-4cb1-a347-6aebad08d660",
-      "position": 23,
+      "position": 22,
       "properties": {
         "description": "One of the most effective ways to make recommendations involves looking at data from our users. But analyzing that data took some time, even for a short survey like this - imagine if there were 20 questions instead of 3! Or if you were recommending a whole outfit instead of just shoes! In the next lesson, we’ll see how a computer can make this process easier and how it can try to “learn” from data to make decisions!",
         "remarks": true
@@ -8298,24 +8288,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models-shoes data-2021"
-        ],
-        "progression": "Ultimate Shoe Recommender"
+        "progression": "Shoe Recommendation Survey"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models-shoes data-2021"
+          "ml-models-shoe survey"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "76fb0647-ea59-4d24-a7f1-a000316a3e33"
+        "activity_section.key": "78b2b050-7ae5-4f81-a323-76160d0f07b1"
       },
       "level_keys": [
-        "ml-models-shoes data-2021"
+        "ml-models-shoe survey"
       ]
     },
     {
@@ -9911,14 +9898,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models-shoes data-2021",
+        "level.key": "ml-models-shoe survey",
         "script_level.level_keys": [
-          "ml-models-shoes data-2021"
+          "ml-models-shoe survey"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "76fb0647-ea59-4d24-a7f1-a000316a3e33"
+        "activity_section.key": "78b2b050-7ae5-4f81-a323-76160d0f07b1"
       }
     },
     {
@@ -10943,6 +10930,18 @@
       }
     },
     {
+      "name": "Finding Patterns in Data",
+      "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
+      "key": "finding_patterns_in_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "finding_patterns_in_data"
+      }
+    },
+    {
       "name": "Fruit & Veggie Cards",
       "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
       "key": "fruit-veggie-cards",
@@ -11132,6 +11131,19 @@
       }
     },
     {
+      "name": "Patterns in Data",
+      "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
+      "key": "patterns_in_data",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "patterns_in_data"
+      }
+    },
+    {
       "name": "Planning Your App",
       "url": "https://docs.google.com/document/d/1rmvlcILbpqRaDD_Wzu5YyCqCidPiKd04MAbFuaz9lRw/view",
       "key": "planning-your-app",
@@ -11189,6 +11201,18 @@
       },
       "seeding_key": {
         "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "name": "Shoe Survey",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
+      "key": "shoe_survey",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "shoe_survey"
       }
     },
     {
@@ -11365,6 +11389,24 @@
       "seeding_key": {
         "lesson.key": "lesson3",
         "resource.key": "crosstabs_and_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "resource.key": "shoe_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "resource.key": "patterns_in_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "resource.key": "finding_patterns_in_data"
       }
     },
     {
