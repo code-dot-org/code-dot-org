@@ -18,13 +18,13 @@ export default class Comment extends Component {
   };
 
   renderName = () => {
-    const teacherCommentSuffix = this.props.isFromTeacher
-      ? ' (only visible to you)'
-      : '';
+    const teacherCommentSuffix = ' (only visible to you)';
     return (
       <span>
         <span style={styles.name}>{this.props.name}</span>
-        <span style={styles.teacherNameSuffix}>{teacherCommentSuffix}</span>
+        {this.props.isFromTeacher && (
+          <span style={styles.teacherNameSuffix}>{teacherCommentSuffix}</span>
+        )}
       </span>
     );
   };
@@ -40,6 +40,7 @@ export default class Comment extends Component {
     return (
       <div
         style={{
+          ...styles.commentContainer,
           ...(isFromOlderVersionOfProject &&
             styles.olderVersionCommentTextColor)
         }}
@@ -70,12 +71,7 @@ export default class Comment extends Component {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          scrambled it to make a type specimen book.
         </div>
       </div>
     );
@@ -107,7 +103,10 @@ const styles = {
   comment: {
     clear: 'both',
     backgroundColor: color.lighter_gray,
-    margin: '0 0 10px 0'
+    padding: '10px 12px'
+  },
+  commentContainer: {
+    margin: '0 0 25px 0'
   },
   projectOwnerComment: {
     backgroundColor: color.lightest_cyan
