@@ -9,7 +9,8 @@ class CodeReviewCommentsController < ApplicationController
   def create
     additional_attributes = {
       commenter_id: current_user.id,
-      storage_app_id: @storage_app_id
+      storage_app_id: @storage_app_id,
+      project_owner_id: @project_owner.id
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
