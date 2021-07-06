@@ -1,0 +1,27 @@
+{
+  "category": "",
+  "config": {
+    "func": "setBackgroundEffect",
+    "blockText": "set background effect {BG_EFFECT}",
+    "args": [
+      {
+        "name": "BG_EFFECT",
+        "options": [
+          [
+            "solid",
+            "\"solid\""
+          ],
+          [
+            "rainbow",
+            "\"rainbow\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}
