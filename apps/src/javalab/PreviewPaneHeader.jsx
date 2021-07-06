@@ -42,7 +42,11 @@ export default function PreviewPaneHeader({
       {showAssetManagerButton && (
         <PaneButton
           headerHasFocus
-          onClick={() => assets.showAssetManager()}
+          onClick={() =>
+            assets.showAssetManager(null, null, null, {
+              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .gif, .png'
+            })
+          }
           iconClass="fa fa-upload"
           label={i18n.manageAssets()}
           isRtl={false}
