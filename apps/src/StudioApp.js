@@ -83,20 +83,21 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 1200;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var MAX_VISUALIZATION_WIDTH = 400;
-var MIN_VISUALIZATION_WIDTH = 200;
+const MIN_WIDTH = 1200;
+const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
+const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-var MAX_PHONE_WIDTH = 500;
+const MAX_PHONE_WIDTH = 500;
 
 class StudioApp extends EventEmitter {
   constructor() {
