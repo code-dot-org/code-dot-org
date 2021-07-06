@@ -132,6 +132,15 @@ export function beginUpload(filename) {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
+  firehoseClient.putRecord({
+    study: 'animation-library',
+    study_group: 'control-2020',
+    event: 'upload',
+    data_json: JSON.stringify({
+      size: result.size
+    })
+  });
+
   return function(dispatch, getState) {
     const {goal, uploadFilename} = getState().animationPicker;
     const key = result.filename.replace(/\.png$/i, '');

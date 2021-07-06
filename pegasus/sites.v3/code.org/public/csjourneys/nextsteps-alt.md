@@ -71,17 +71,18 @@ social:
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Give students time in class to explore career pathways and encourage them to write down questions they have.</li>
-        <li style="color:#ffffff">Encourage students to join CareerVillage.org and post their questions.</li>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li>
+        <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
+        <li style="color:#ffffff">Encourage students to join <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a> and post their questions.</li><br>
+        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li>
-        <li style="color:#ffffff">Give students time in class to reflect and discuss.</li>
-        <li style="color:#ffffff">Point students to code.org/beyond, where they can explore opportunities to take the next step on their own CS Journeys.</li>
+        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
+        <li style="color:#ffffff">Give students time in class to reflect and discuss.</li><br>
+        <li style="color:#ffffff">Encourage students to post any unanaswered questions they have on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>.</li><br>
+        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
     </ul>
   </div>
   <div style="clear: both"></div>
@@ -162,7 +163,7 @@ social:
 
 <a id="event-4"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Building Your Network: The Power of Community</h2>
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making Connections and Building Support Networks</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
@@ -194,3 +195,6 @@ social:
 </div>
 
 <div style="clear:both; margin-bottom:35px"></div>
+
+<hr>
+<p>“footsteps” icon made by freepik. Sourced from www.flaticon.com.</p>
