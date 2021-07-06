@@ -573,7 +573,6 @@ function newSectionData(id, courseId, scriptId, loginType) {
   };
 }
 
-const defaultVersionYear = '2017';
 const defaultLessonExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
@@ -684,9 +683,6 @@ export default function teacherSections(state = initialState, action) {
       const assignmentFamilyName =
         unit.assignment_family_name || unit.script_name;
       const assignmentFamilyTitle = unit.assignment_family_title || unit.name;
-      const versionYear = unit.version_year || defaultVersionYear;
-      const versionTitle = unit.version_title || defaultVersionYear;
-
       validAssignments[assignId] = {
         ...unit,
         courseId: null,
@@ -694,8 +690,8 @@ export default function teacherSections(state = initialState, action) {
         assignId,
         path: `/s/${unit.script_name}`,
         assignment_family_name: assignmentFamilyName,
-        version_year: versionYear,
-        version_title: versionTitle
+        version_year: unit.version_year,
+        version_title: unit.version_title
       };
 
       // Do not add assignment families for units belonging to courses. To assign
