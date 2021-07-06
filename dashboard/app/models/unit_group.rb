@@ -39,7 +39,7 @@ class UnitGroup < ApplicationRecord
     CSP = 'csp'.freeze,
     CSA = 'csa'.freeze,
     TEST = 'ui-test-course'.freeze
-  ]
+  ].freeze
 
   def skip_name_format_validation
     !!plc_course
