@@ -8,9 +8,14 @@ export default class Comment extends Component {
       <div>
         <div style={styles.commentHeaderContainer}>
           <span style={styles.name}>Ben Brooks</span>
-          <div
+          <span
             className="fa fa-ellipsis-h"
             style={styles.ellipsisMenu}
+            onClick={() => console.log('hello!')}
+          />
+          <span
+            className="fa fa-check"
+            style={styles.check}
             onClick={() => console.log('hello!')}
           />
           <span style={styles.timestamp}>2020/01/01 at 9:30 AM</span>
@@ -31,6 +36,7 @@ export default class Comment extends Component {
   }
 }
 
+// TODO: dedupe ellipsis and check styles
 const styles = {
   name: {
     fontWeight: 'bold'
@@ -41,9 +47,17 @@ const styles = {
     lineHeight: '18px',
     margin: '0 0 0 5px'
   },
+  check: {
+    color: color.green,
+    float: 'right',
+    fontSize: '24px',
+    lineHeight: '18px',
+    margin: '0 0 0 5px'
+  },
   comment: {
     clear: 'both',
-    backgroundColor: color.lighter_gray
+    backgroundColor: color.lighter_gray,
+    margin: '0 0 10px 0'
   },
   timestamp: {
     fontStyle: 'italic',
