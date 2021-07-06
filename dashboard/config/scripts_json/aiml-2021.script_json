@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-02 15:26:53 UTC",
+    "serialized_at": "2021-07-05 19:00:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -1486,8 +1486,21 @@
       }
     },
     {
-      "key": "db076fac-284d-4453-9132-6fc6b2381a12",
+      "key": "00358ac2-6c9c-4a97-83cd-c5cda266378d",
       "position": 1,
+      "properties": {
+        "name": "Code"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00358ac2-6c9c-4a97-83cd-c5cda266378d",
+        "lesson.key": "lesson15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "db076fac-284d-4453-9132-6fc6b2381a12",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1501,7 +1514,7 @@
     },
     {
       "key": "aacd2df1-3ea7-4c2b-83b0-1c4ef2e92cdc",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1515,7 +1528,7 @@
     },
     {
       "key": "5ec08e00-cf81-4fdc-ac0a-297958087e3f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1529,7 +1542,7 @@
     },
     {
       "key": "cd23b323-b435-4ffa-87d0-58b3f1d2c456",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Levels"
       },
@@ -7895,6 +7908,17 @@
       }
     },
     {
+      "key": "d566ae17-50de-4965-8c2e-4c52e57412f0",
+      "position": 1,
+      "properties": {
+        "description": "[`if-statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`getPrediction`(#d3e965)](/docs/applab/getPrediction/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`setScreen()`(#fff176)](/docs/applab/setScreen/)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d566ae17-50de-4965-8c2e-4c52e57412f0",
+        "lesson_activity.key": "00358ac2-6c9c-4a97-83cd-c5cda266378d"
+      }
+    },
+    {
       "key": "7f7f35d4-3b64-46f2-9cc9-6c86787f773d",
       "position": 1,
       "properties": {
@@ -9002,16 +9026,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-practice choice-2021"
-        ],
         "progression": "Challenge"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-practice choice-2021"
+          "ml-use models applab-practice choice-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
@@ -9019,7 +9040,7 @@
         "activity_section.key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613"
       },
       "level_keys": [
-        "ml-models in applab-practice choice-2021"
+        "ml-use models applab-practice choice-2021"
       ]
     },
     {
@@ -10226,9 +10247,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-practice choice-2021",
+        "level.key": "ml-use models applab-practice choice-2021",
         "script_level.level_keys": [
-          "ml-models in applab-practice choice-2021"
+          "ml-use models applab-practice choice-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "lessonGroup-2",
@@ -10829,7 +10850,7 @@
     },
     {
       "name": "Create an ML App - Project Guide",
-      "url": "https://docs.google.com/presentation/d/1KIYZMBbLq0iUIX8-od6ZE0bDhz9l2VGGFVnEJD-drp4/edit",
+      "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
       "properties": {
         "audience": "Student",
@@ -11006,11 +11027,11 @@
     },
     {
       "name": "[KEY] Classification with Machine Learning",
-      "url": "https://studio.code.org/s/ai-unit-pilot/stage/4/puzzle/1",
+      "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "key-classification-with-machine-learning",
       "properties": {
         "type": "Activity Guide",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "key-classification-with-machine-learning"
@@ -11257,18 +11278,6 @@
       }
     },
     {
-      "name": "Unit 7 - AI and Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1C3NwQa3vVJncUjsN8X7S_ecZEP0cVp5tWmcHfUQNSq0/view",
-      "key": "unit_7_-_ai_and_machine_learning",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit_7_-_ai_and_machine_learning"
-      }
-    },
-    {
       "name": "Unplugged KNN",
       "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
       "key": "unplugged_knn",
@@ -11320,12 +11329,6 @@
       "seeding_key": {
         "lesson.key": "lesson2",
         "resource.key": "supervised-and-unsupervised-scenarios"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson2",
-        "resource.key": "unit_7_-_ai_and_machine_learning"
       }
     },
     {
@@ -12283,7 +12286,301 @@
       "seeding_key": {
         "lesson.key": "lesson1",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-i.K-2"
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson1",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson2",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson3",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson9",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson8",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
       }
     }
   ],
