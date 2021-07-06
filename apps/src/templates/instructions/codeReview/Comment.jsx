@@ -1,26 +1,72 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
 // shape includes comment, commenter, project ID, project version, is from teacher?
 export default class Comment extends Component {
-  render() {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    timestampString: PropTypes.string.isRequired,
+    isResolved: PropTypes.bool.isRequired,
+    isFromTeacher: PropTypes.bool.isRequired,
+    isFromProjectOwner: PropTypes.bool.isRequired,
+    isFromOlderVersionOfProject: PropTypes.bool.isRequired
+  };
+
+  state = {
+    showEllipsisMenu: false
+  };
+
+  renderName = () => {
+    const teacherCommentSuffix = this.props.isFromTeacher
+      ? ' (only visible to you)'
+      : '';
     return (
-      <div>
+      <span>
+        <span style={styles.name}>{this.props.name}</span>
+        <span style={styles.teacherNameSuffix}>{teacherCommentSuffix}</span>
+      </span>
+    );
+  };
+
+  render() {
+    const {
+      timestampString,
+      isResolved,
+      isFromProjectOwner,
+      isFromOlderVersionOfProject
+    } = this.props;
+
+    return (
+      <div
+        style={{
+          ...(isFromOlderVersionOfProject &&
+            styles.olderVersionCommentTextColor)
+        }}
+      >
         <div style={styles.commentHeaderContainer}>
-          <span style={styles.name}>Ben Brooks</span>
+          {this.renderName()}
           <span
             className="fa fa-ellipsis-h"
             style={styles.ellipsisMenu}
-            onClick={() => console.log('hello!')}
+            onClick={() =>
+              this.setState({showEllipsisMenu: !this.state.showEllipsisMenu})
+            }
           />
-          <span
-            className="fa fa-check"
-            style={styles.check}
-            onClick={() => console.log('hello!')}
-          />
-          <span style={styles.timestamp}>2020/01/01 at 9:30 AM</span>
+          {!isResolved && <span className="fa fa-check" style={styles.check} />}
+          <span style={styles.timestamp}>{timestampString}</span>
+          {this.state.showEllipsisMenu && (
+            <div>Placeholder for ellipsis menu</div>
+          )}
         </div>
-        <div style={styles.comment}>
+        <div
+          style={{
+            ...styles.comment,
+            ...(isFromProjectOwner && styles.projectOwnerComment),
+            ...(isFromOlderVersionOfProject &&
+              styles.olderVersionCommentBackgroundColor)
+          }}
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -41,11 +87,15 @@ const styles = {
   name: {
     fontWeight: 'bold'
   },
+  teacherNameSuffix: {
+    fontStyle: 'italic'
+  },
   ellipsisMenu: {
     float: 'right',
     fontSize: '24px',
     lineHeight: '18px',
-    margin: '0 0 0 5px'
+    margin: '0 0 0 5px',
+    cursor: 'pointer'
   },
   check: {
     color: color.green,
@@ -59,6 +109,11 @@ const styles = {
     backgroundColor: color.lighter_gray,
     margin: '0 0 10px 0'
   },
+  projectOwnerComment: {
+    backgroundColor: color.lightest_cyan
+  },
+  olderVersionCommentTextColor: {color: color.light_gray},
+  olderVersionCommentBackgroundColor: {backgroundColor: color.background_gray},
   timestamp: {
     fontStyle: 'italic',
     float: 'right',
