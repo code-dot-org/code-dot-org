@@ -18,6 +18,7 @@ import {
   AssessmentBadge,
   KeepWorkingBadge
 } from './BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -81,10 +82,11 @@ export default class ProgressBubble extends React.Component {
       level.isConceptLevel
     );
 
+    const hasKeepWorkingFeedback =
+      level.teacherFeedbackReviewState === ReviewStates.keepWorking;
+
     const displayBubbleBadge =
-      (isLevelAssessment(level) ||
-        level.teacherFeedbackReviewState === 'keepWorking') &&
-      !smallBubble;
+      (isLevelAssessment(level) || hasKeepWorkingFeedback) && !smallBubble;
 
     const bubble = (
       <BasicBubble
@@ -96,7 +98,7 @@ export default class ProgressBubble extends React.Component {
         {content}
         {displayBubbleBadge && (
           <BubbleBadgeWrapper isDiamond={level.isConceptLevel}>
-            {level.teacherFeedbackReviewState === 'keepWorking' ? (
+            {hasKeepWorkingFeedback ? (
               <KeepWorkingBadge />
             ) : (
               <AssessmentBadge />

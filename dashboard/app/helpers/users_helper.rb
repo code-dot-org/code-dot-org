@@ -213,8 +213,8 @@ module UsersHelper
         level_for_progress = level.get_level_for_progress(user, script)
         ul = user_levels_by_level.try(:[], level_for_progress.id)
 
-        # feedback for contained level is stored with the level ID not the contained level ID
-        # which is why we pass level_id here - maureen make this better
+        # For contained levels, progress is stored with the contained level id but feedback is stored with
+        # the level id, which is why we need a different level id to get feedback for contained levels.
         level_id_for_feedback =  level.contained_levels.any? ? level.id : level_for_progress.id
         level_progress = get_level_progress(
           level_id_for_feedback, user.id, ul, sl, paired_user_levels, include_timestamp
@@ -259,7 +259,6 @@ module UsersHelper
     paired_user_levels,
     include_timestamp
   )
-    # maureen figure out what to do here if there's no progress but feedback exists
     feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level_id_for_feedback, script_level.script.id).first
 
     # if we don't have a user level, that means the user doesn't have any

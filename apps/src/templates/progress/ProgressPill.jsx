@@ -13,6 +13,7 @@ import {
   KeepWorkingBadge
 } from './BubbleBadge';
 import {connect} from 'react-redux';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -103,11 +104,13 @@ class ProgressPill extends React.Component {
 
     const tooltipProps = this.getTooltipProps();
 
+    const hasKeepWorkingFeedback =
+      firstLevel['teacherFeedbackReviewState'] === ReviewStates.keepWorking;
+
     // Only put the bubble badge on if its a single assessment level (not set)
     const displayBadge =
       !multiLevelStep &&
-      (firstLevel['teacherFeedbackReviewState'] === 'keepWorking' ||
-        isLevelAssessment(firstLevel));
+      (hasKeepWorkingFeedback || isLevelAssessment(firstLevel));
 
     const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
 
@@ -134,7 +137,7 @@ class ProgressPill extends React.Component {
           {tooltip}
           {displayBadge && (
             <BubbleBadgeWrapper>
-              {firstLevel['teacherFeedbackReviewState'] === 'keepWorking' ? (
+              {hasKeepWorkingFeedback ? (
                 <KeepWorkingBadge />
               ) : (
                 <AssessmentBadge />
