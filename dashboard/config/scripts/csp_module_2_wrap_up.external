@@ -5,6 +5,7 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 # Module 2 asynchronous work wrap-up
+*(Estimated time: 10 minutes)*
 
 ## Next steps
 

@@ -1,12 +1,13 @@
 /** @file Redux action-creators for WebLab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-import * as utils from '../utils';
+import {getStore} from '@cdo/apps/redux';
+import * as utils from '@cdo/apps/utils';
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(
   'CHANGE_FULL_SCREEN_PREVIEW_ON',
   'CHANGE_INSPECTOR_ON',
-  'CHANGE_SHOW_ERROR',
+  'CHANGE_DIALOG',
   'CHANGE_MAX_PROJECT_CAPACITY',
   'CHANGE_PROJECT_SIZE'
 );
@@ -36,14 +37,15 @@ export function changeInspectorOn(inspectorOn) {
 }
 
 /**
- * Change the showError state between true or false
- * @param {!Boolean} showError
- * @returns {{type: ActionType, showError: Boolean}}
+ * Set a dialog to be rendered from <WebLabView/>.
+ * @param {Node|null} dialog A dialog (React/HTML element, node, etc) that will
+ * be rendered in <WebLabView/>, or null, which will clear the dialog.
+ * @returns {{type: ActionType, dialog: Node}}
  */
-export function changeShowError(showError) {
+export function changeDialog(dialog = null) {
   return {
-    type: ActionType.CHANGE_SHOW_ERROR,
-    showError
+    type: ActionType.CHANGE_DIALOG,
+    dialog
   };
 }
 
@@ -68,4 +70,16 @@ export function changeProjectSize(bytes) {
     type: ActionType.CHANGE_PROJECT_SIZE,
     bytes
   };
+}
+
+/**
+ * Helpers
+ */
+
+export function openDialog(dialog) {
+  getStore().dispatch(changeDialog(dialog));
+}
+
+export function closeDialog() {
+  getStore().dispatch(changeDialog(null));
 }
