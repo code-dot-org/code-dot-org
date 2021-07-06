@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-06 15:35:42 UTC",
+    "serialized_at": "2021-07-06 21:43:56 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -167,7 +167,7 @@
       "key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4",
       "position": 1,
       "properties": {
-        "progression_name": "Location and Structure"
+        "progression_name": "Use a lesson plan to prepare for a lesson"
       },
       "seeding_key": {
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4",
@@ -178,7 +178,7 @@
       "key": "05f4f7ee-560a-4e52-aef8-2afee74f2357",
       "position": 2,
       "properties": {
-        "progression_name": "Lesson Plan Structure"
+        "progression_name": "Explore additional teacher resources"
       },
       "seeding_key": {
         "activity_section.key": "05f4f7ee-560a-4e52-aef8-2afee74f2357",
@@ -342,7 +342,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Location and Structure"
+        "progression": "Use a lesson plan to prepare for a lesson"
       },
       "named_level": false,
       "bonus": false,
@@ -365,30 +365,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Location and Structure"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-mod2-TeachersInClassrooms"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
-      },
-      "level_keys": [
-        "SP-VPL-21-mod2-TeachersInClassrooms"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Location and Structure"
+        "progression": "Use a lesson plan to prepare for a lesson"
       },
       "named_level": false,
       "bonus": false,
@@ -406,12 +383,12 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Location and Structure"
+        "progression": "Use a lesson plan to prepare for a lesson"
       },
       "named_level": false,
       "bonus": false,
@@ -426,6 +403,29 @@
       },
       "level_keys": [
         "SP-VPL_21-mod2-MakeAPlan-LessonPlanning"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore additional teacher resources"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "05f4f7ee-560a-4e52-aef8-2afee74f2357"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TeachersInClassrooms"
       ]
     },
     {
@@ -669,18 +669,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms",
-        "script_level.level_keys": [
-          "SP-VPL-21-mod2-TeachersInClassrooms"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-21-mod2-ExploreLessonPlan",
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ExploreLessonPlan"
@@ -701,6 +689,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
         "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "05f4f7ee-560a-4e52-aef8-2afee74f2357"
       }
     },
     {
