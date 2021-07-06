@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
-import {appendInputLog} from './javalabRedux';
+import {appendInputLog, clearConsoleLogs} from './javalabRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
@@ -41,6 +41,7 @@ class JavalabConsole extends React.Component {
     // populated by redux
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
+    clearConsoleLogs: PropTypes.func,
     isDarkMode: PropTypes.bool
   };
 
@@ -95,7 +96,7 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {isDarkMode, style, leftColumn} = this.props;
+    const {isDarkMode, style, leftColumn, clearConsoleLogs} = this.props;
 
     return (
       <div style={style}>
@@ -104,6 +105,9 @@ class JavalabConsole extends React.Component {
             id="javalab-console-clear"
             headerHasFocus
             isRtl={false}
+            onClick={() => {
+              clearConsoleLogs();
+            }}
             label={javalabMsg.clearConsole()}
           />
           <PaneSection>{javalabMsg.console()}</PaneSection>
@@ -148,7 +152,8 @@ export default connect(
     isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    appendInputLog: log => dispatch(appendInputLog(log))
+    appendInputLog: log => dispatch(appendInputLog(log)),
+    clearConsoleLogs: () => dispatch(clearConsoleLogs())
   })
 )(JavalabConsole);
 

@@ -25,7 +25,7 @@ class YourSchool extends Component {
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     showProfessionalLearningBanner: PropTypes.bool,
-    teacherApplicationMode: PropTypes.bool
+    teacherApplicationMode: PropTypes.string
   };
 
   state = {

@@ -11,7 +11,7 @@
     "csppostap-2017",
     "csp-post-survey"
   ],
-  "alternate_scripts": [
+  "alternate_units": [
     {
       "experiment_name": "subgoals-group-a",
       "alternate_script": "csp3-a",
@@ -41,8 +41,7 @@
     ],
     "has_verified_resources": true,
     "family_name": "csp",
-    "version_year": "2017",
-    "visible": true
+    "version_year": "2017"
   },
   "resources": [
 

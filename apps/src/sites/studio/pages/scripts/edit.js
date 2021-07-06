@@ -83,7 +83,8 @@ export default function initPage(unitEditorData) {
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialFamilyName={scriptData.family_name || ''}
         initialVersionYear={scriptData.version_year || ''}
-        scriptFamilies={unitEditorData.script_families}
+        initialIsMakerUnit={scriptData.is_maker_unit || false}
+        unitFamilies={unitEditorData.script_families}
         versionYearOptions={unitEditorData.version_year_options}
         isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}

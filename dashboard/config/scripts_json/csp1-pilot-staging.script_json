@@ -2,7 +2,6 @@
   "script": {
     "name": "csp1-pilot-staging",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
       "project_sharing": true

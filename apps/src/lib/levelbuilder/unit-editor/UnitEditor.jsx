@@ -68,7 +68,8 @@ class UnitEditor extends React.Component {
     initialCurriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
-    scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialIsMakerUnit: PropTypes.bool,
+    unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
@@ -137,6 +138,7 @@ class UnitEditor extends React.Component {
       projectSharing: this.props.initialProjectSharing,
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       versionYear: this.props.initialVersionYear,
+      isMakerUnit: this.props.initialIsMakerUnit,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
@@ -287,7 +289,7 @@ class UnitEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
-      old_script_text: this.state.oldScriptText,
+      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -310,7 +312,8 @@ class UnitEditor extends React.Component {
         resource => resource.id
       ),
       is_migrated: this.props.isMigrated,
-      include_student_lesson_plans: this.state.includeStudentLessonPlans
+      include_student_lesson_plans: this.state.includeStudentLessonPlans,
+      is_maker_unit: this.state.isMakerUnit
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -486,6 +489,23 @@ class UnitEditor extends React.Component {
             </HelpTip>
           </label>
           <label>
+            Is a Maker Unit
+            <input
+              type="checkbox"
+              checked={this.state.isMakerUnit}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({isMakerUnit: !this.state.isMakerUnit})
+              }
+            />
+            <HelpTip>
+              <p>
+                If checked, this unit uses the maker toolkit and teachers who
+                teach it may be eligible for maker toolkit discounts.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
             Supported locales
             <HelpTip>
               <p>
@@ -636,7 +656,7 @@ class UnitEditor extends React.Component {
                     updateVersionYear={versionYear =>
                       this.setState({versionYear})
                     }
-                    families={this.props.scriptFamilies}
+                    families={this.props.unitFamilies}
                     versionYearOptions={this.props.versionYearOptions}
                     isCourse={this.state.isCourse}
                     publishedState={this.state.publishedState}
@@ -849,7 +869,7 @@ class UnitEditor extends React.Component {
               <HelpTip>
                 <p>
                   Used only for Professional Learning Courses. Deprecation
-                  prevents Peer Reviews conducted as part of this Script from
+                  prevents Peer Reviews conducted as part of this unit from
                   being displayed in the admin-only Peer Review Dashboard.
                 </p>
               </HelpTip>

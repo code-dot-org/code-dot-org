@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "The Theater Manager is looking for an actor for the lead role of an upcoming musical. It is important that this person can sing all of the notes in the range of their solos!\r\n\r\n1. In `TheaterManager.java`, write the method `maxPitch()` which takes in an array of notes in the solo and returns the highest note.\r\n\r\n2. In `MyTheater.java`, add the code segment shown below to test your method.\r\n\r\n```\r\npublic final class TheaterManager {\r\n\r\n   // Find the highest note in an array of music notes.\r\n   public static double maxPitch(int[] music) {\r\n   \r\n      // Initialize a variable to store the highest note\r\n      \r\n      // Create a loop to traverse the array\r\n      \r\n         // Update the variable storing the highest note\r\n      \r\n      // Return the highest note\r\n      \r\n   }\r\n   \r\n}\r\n\r\npublic class MyTheater {\r\n   public static void main(String[] args) {\r\n      int[] song = . . . ;\r\n      double[] sales = . . . ;\r\n      int[] ticketsSold = . . . ;\r\n      \r\n      int maximumPitch = TheaterManager.maxPitch(song);\r\n      System.out.println(\"The highest pitch the actor must hit is \" + maximumPitch);\r\n   }\r\n}\r\n```",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA U3L8 Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-28T18:41:34.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-28 18:59:02 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

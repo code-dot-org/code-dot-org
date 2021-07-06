@@ -2,7 +2,6 @@
   "script": {
     "name": "ecs-unit1",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "pd": true,

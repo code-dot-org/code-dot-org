@@ -2,7 +2,6 @@
   "script": {
     "name": "csp2-support",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "professional_learning_course": "CSP Support",

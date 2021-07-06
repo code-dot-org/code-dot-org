@@ -2,19 +2,18 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Help the owner of the Project Mercury Pastries Food Truck keep track of her desserts! Write the `Dessert` class by implementing the following in `Dessert.java`:\r\n\r\n1. Declaring instance variables for the flavor, quantity available, and price so she can enter these values for each of her desserts.\r\n\r\n2. Writing the constructor to create a `Dessert` object that takes `newFlavor`, `newQuantity`, and `newPrice` as its parameters and initializes the instance variables to these values.\r\n\r\n```\r\npublic class Dessert {\r\n   // Declare instance variables for\r\n   // flavor, quantity, and price\r\n   \r\n   \r\n   \r\n   // Write Dessert constructor\r\n   \r\n   \r\n   . . .\r\n   public void printInfo() {  }\r\n}\r\n```",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L3 Template",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNAq6u+PZhaG4dM2kgG\n5+86dRh0pVnz2lEnDQIcDTaMAD8OAvdHri50/rH7dn8DPdw=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-15T18:30:06.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-15 18:37:22 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:38:04 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:57:16 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-15 18:37:22 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:38:04 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-15 18:57:16 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-23 16:05:19 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-24 13:10:19 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:43:52 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

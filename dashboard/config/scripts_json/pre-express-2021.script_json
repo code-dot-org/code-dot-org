@@ -2,7 +2,6 @@
   "script": {
     "name": "pre-express-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-06-17 22:31:25 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-02 16:35:17 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }

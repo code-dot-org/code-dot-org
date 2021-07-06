@@ -2,7 +2,6 @@
   "script": {
     "name": "cspunit4draft",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
     },

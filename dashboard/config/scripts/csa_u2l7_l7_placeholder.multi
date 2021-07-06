@@ -1,0 +1,10 @@
+name 'CSA U2L7-L7 Placeholder'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+An online music application wants to show information about songs and music artists. What kind of relationship would a `Song` and `MusicArtist` class have?
+MARKDOWN
+
+wrong 'An is-a relationship. The MusicArtist class should be a subclass of the Song class.'
+wrong 'An is-a relationship. The Song class should be a subclass of the MusicArtist class.'
+right 'A has-a relationship. The Song class has a MusicArtist attribute.'
