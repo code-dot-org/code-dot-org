@@ -1,0 +1,46 @@
+name 'SP-VPL-21-mod2-navigating support'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating to support
+
+<img src="https://images.code.org/9edd9f47a54fe869cd79466c018ba600-image-1625255716340.32.08 PM.png" style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+### To access general teacher support:
+
+1. Click on the "?" to access the support dropdown menu.
+2. Select the type of support you would like to access.
+
+Additional support.... 
+
+<div style= "clear:both"/>
+
+# Types of general teacher support
+
+<img src="https://images.code.org/dc36e49ec4a6eed993d5f5fae17c7416-image-1625258924035.46.35 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+
+## Help and support
+
+Description of help and support
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/b7131045327b33e100d4de0d7f37b173-image-1625259197446.52.59 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+
+
+## Report a problem
+
+description of report a problem 
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/a66a3bdbeccc2c1d00941f66a04feebd-image-1625258823243.46.47 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+
+## Teacher community
+
+description of forum
+
+<div style="clear:both"/>
+
+MARKDOWN

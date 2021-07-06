@@ -1194,6 +1194,19 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 
+  test "get_unit bypasses cache for edit route" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    Script.expects(:get_from_cache).never
+    Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
+    get :edit, params: {id: @migrated_unit.name}
+
+    Script.expects(:get_from_cache).with(@migrated_unit.name).returns(@migrated_unit).once
+    Script.expects(:get_without_cache).never
+    get :show, params: {id: @migrated_unit.name}
+  end
+
   def stub_file_writes(unit_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{unit_name}.script", "#{Rails.root}/config/scripts_json/#{unit_name}.script_json"]
     File.stubs(:write).with do |filename, _|

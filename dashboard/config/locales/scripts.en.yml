@@ -23270,7 +23270,7 @@ en:
               display_name: lesson group display name
           name: vpl-csd-2021
         vpl-csp-2021:
-          title: CS Principles Virtual Professional Learning
+          title: CS Principles Virtual Professional Learning 21 - 22
           description: ''
           student_description: ''
           description_short: ''
@@ -23283,7 +23283,7 @@ en:
               description_teacher: ''
             Module 2:
               key: Module 2
-              name: 'Module 2: Variables in Unit 4 and the role of collaboration'
+              name: Module 2
               description_student: ''
               description_teacher: ''
             Module 3:
@@ -23361,9 +23361,14 @@ en:
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
-              name: Code.org Learning Platform
+              name: Navigating the Code.org learning platform
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
             lesson-5:
               name: Setting Up Class Sections
             lesson-7:
@@ -23371,22 +23376,27 @@ en:
             lesson-6:
               name: Tracking Student Progress and Providing Feedback
             lesson-3:
-              name: Lesson Plans and Resources
+              name: Navigating lesson plans and resources
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 20 minutes
             lesson-2:
               name: Lesson Plan Structure
             lesson-8:
-              name: Support for Teachers
+              name: Navigating support
               description_student: 
-              description_teacher: 
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 10 minutes"
             lesson-9:
               name: Teacher Community
             lesson-10:
               name: Report a Problem
           lesson_groups:
             lessonGroup-2:
-              display_name: Navigating the Code.org Learning Platform
+              display_name: Navigating Code.org
             lessonGroup-3:
               display_name: Navigating Lesson Plans and Resources
             lessonGroup-4:
@@ -23395,7 +23405,7 @@ en:
           title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools \n* Locate and use course lesson plans and teacher resources \n* Access support while teaching the course \n\n**Suggested Time:** 1 hour\n\n\n\n\n"
+          description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
         self-paced-pl-csd3-2021:
           lessons: {}
           lesson_groups: {}
