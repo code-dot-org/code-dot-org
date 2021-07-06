@@ -214,7 +214,6 @@ class Script < ApplicationRecord
     tts
     deprecated
     is_course
-    background
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
@@ -1496,7 +1495,6 @@ class Script < ApplicationRecord
       tts: tts?,
       deprecated: deprecated?,
       is_course: is_course?,
-      background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1715,7 +1713,6 @@ class Script < ApplicationRecord
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
-      :background,
       :weekly_instructional_minutes,
     ]
     boolean_keys = [
