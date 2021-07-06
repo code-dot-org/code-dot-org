@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 16:35:45 UTC",
+    "serialized_at": "2021-07-02 17:53:30 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -1346,7 +1346,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
+            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n"
           }
         ]
       },
@@ -1359,7 +1359,7 @@
       "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.\n\n**Discussion Goal:** Use this paired-group discussion to push students on using new vocabulary associated with lists and referring/pointing to specific lines when explaining their answers to the questions. Both programs use `.length` in ways that might be challenging for students to understand. Demonstrating the difference between using `.length` and `.length-1` to the class could be useful.\n\n**Modify:** Have pairs modify the app the investigated based on the instructions for the particular app."
       },
       "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
@@ -1381,7 +1381,7 @@
       "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** *Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.\n\n**Discussion Goal:** Make sure students understand how the properties of the dropdown and the lists are working together in this program. Demonstrating how to find these properties and play around with them in design mode might help your students better understand the connection.\n\n**Modify:** If short on time, have students modify the default names. If not, have students modify the app to pick groups of 3 rather than 2.",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1397,18 +1397,6 @@
       },
       "seeding_key": {
         "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb",
-        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
-      }
-    },
-    {
-      "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 6,
-      "properties": {
-        "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
-        "name": "Modify Apps\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
         "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
       }
     },
