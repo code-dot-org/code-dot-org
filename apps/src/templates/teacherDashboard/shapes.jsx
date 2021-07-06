@@ -61,8 +61,8 @@ export const assignmentShape = PropTypes.shape({
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
+  version_year: PropTypes.string,
+  version_title: PropTypes.string,
   is_stable: PropTypes.bool,
   supported_locales: PropTypes.arrayOf(PropTypes.string)
 });
