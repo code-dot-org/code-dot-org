@@ -112,7 +112,7 @@ class ScriptsController < ApplicationController
       levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
-      script_families: CourseVersion.course_offering_keys('Script'),
+      script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
@@ -207,12 +207,12 @@ class ScriptsController < ApplicationController
 
   def set_unit
     unit_id = params[:id]
-    @script = CourseVersion.course_offering_keys('Script').include?(unit_id) ?
+    @script = Script.family_names.include?(unit_id) ?
       Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(unit_id)
     raise ActiveRecord::RecordNotFound unless @script
 
-    if CourseVersion.course_offering_keys('Script').include?(unit_id)
+    if Script.family_names.include?(unit_id)
       Script.log_redirect(unit_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
     end
 

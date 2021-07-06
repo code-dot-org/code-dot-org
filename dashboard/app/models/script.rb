@@ -301,6 +301,10 @@ class Script < ApplicationRecord
       all_scripts.freeze
     end
 
+    def family_names
+      (CourseVersion.course_offering_keys('Script') + ScriptConstants::FAMILY_NAMES).uniq.sort
+    end
+
     private
 
     def visible_units
