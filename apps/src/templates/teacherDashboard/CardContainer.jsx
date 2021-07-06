@@ -7,7 +7,8 @@ const style = {
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
-  justifyContent: 'flexStart'
+  justifyContent: 'flexStart',
+  paddingTop: '110px'
 };
 
 /** Uses flexbox to arrange content cards into nice rows with wrapping. */

@@ -41,7 +41,7 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
+    const {providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle = true;
     //providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -50,11 +50,11 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
 
-    // explicitly constrain the dialog as a whole to the width of the
-    // content. We expect that differing length of translations versus english
-    // source text can cause unexpected layout changes, and this constraint
-    // should help mitigate some of them.
-    const dialogStyle = {maxWidth: styleConstants['content-width']};
+    // update dialog style to remain consistent with other dialogs in the user flow
+    // for creating a section.
+    const dialogStyle = {
+      padding: '20px'
+    };
 
     // anchor email address policy note to footer just above 'Cancel' button
     const emailPolicyNoteStyle = {
@@ -62,10 +62,29 @@ class LoginTypePicker extends Component {
       zIndex: '600'
     };
 
+    //AAAAAAAAAA
+    const testStyle = {
+      position: 'absolute',
+      top: '20px',
+      width: '90%',
+      backgroundColor: '#ffffff',
+      zIndex: 5
+    };
+
     return (
-      <BaseDialog isOpen={true} style={dialogStyle}>
-        <Heading1>{title}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+      <BaseDialog
+        isOpen={true}
+        style={dialogStyle}
+        uncloseable={true}
+        hideCloseButton={true}
+        useUpdatedStyles={true}
+        fixedWidth={styleConstants['content-width']}
+        hideBackdrop={false}
+      >
+        <div style={testStyle}>
+          <Heading1>{i18n.newSectionUpdated()}</Heading1>
+          <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+        </div>
         <CardContainer>
           {withGoogle && (
             <GoogleClassroomCard onClick={this.openImportDialog} />
@@ -87,14 +106,14 @@ class LoginTypePicker extends Component {
             {' ' + i18n.connectAccountThirdPartyProviders()}
           </div>
         )}
+        <div style={emailPolicyNoteStyle}>
+          <b>{i18n.note()}</b>
+          {' ' + i18n.emailAddressPolicy() + ' '}
+          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+            {i18n.moreInfo()}
+          </a>
+        </div>
         <DialogFooter>
-          <div style={emailPolicyNoteStyle}>
-            <b>{i18n.note()}</b>
-            {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-              {i18n.moreInfo()}
-            </a>
-          </div>
           <Button
             __useDeprecatedTag
             onClick={handleCancel}
