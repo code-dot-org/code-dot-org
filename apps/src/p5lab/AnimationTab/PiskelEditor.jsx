@@ -63,7 +63,7 @@ class PiskelEditor extends React.Component {
      * - The Piskel editor saves continuously, so we only want to log the first
      * event to Firehose.
      */
-    this.hasLoggedFirehoseEvent = false;
+    this.hasLoggedFirehoseEvent_ = false;
 
     this.piskel = new PiskelApi();
     this.piskel.attachToPiskel(this.iframe);
@@ -207,14 +207,14 @@ class PiskelEditor extends React.Component {
       return;
     }
 
-    if (!this.hasLoggedFirehoseEvent) {
+    if (!this.hasLoggedFirehoseEvent_) {
       firehoseClient.putRecord({
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'asset-editing',
         data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
       });
-      this.hasLoggedFirehoseEvent = true;
+      this.hasLoggedFirehoseEvent_ = true;
     }
 
     this.props.editAnimation(this.loadedAnimation_, {
