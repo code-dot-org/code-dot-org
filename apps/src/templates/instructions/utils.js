@@ -157,7 +157,7 @@ export function convertXmlToBlockly(xmlContainer) {
     // resize after initial render, so we also want to resize the container
     // whenever a blockSpaceChange results in the content size changing.
     let metrics = blockSpace.getMetrics();
-    Blockly.addChangeListener(function() {
+    Blockly.addChangeListener(blockSpace, function() {
       const oldHeight = metrics.contentHeight;
       const oldWidth = metrics.contentWidth;
       const newHeight = blockSpace.getMetrics().contentHeight;

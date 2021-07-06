@@ -125,6 +125,6 @@ const styles = {
     justifyContent: 'flex-end',
     alignItems: 'center',
     height: '100%',
-    paddingRight: '10px'
+    paddingInlineEnd: '10px'
   }
 };
