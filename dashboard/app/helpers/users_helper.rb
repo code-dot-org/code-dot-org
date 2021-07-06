@@ -220,12 +220,11 @@ module UsersHelper
           level_id_for_feedback, user.id, ul, sl, paired_user_levels, include_timestamp
         )
 
-        # maureen come back to review state for bubble choice
         if level.is_a?(BubbleChoice) # we have a parent level
           bubble_choice_progress = get_bubble_choice_progress(
             level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp
           )
-          if bubble_choice_progress
+          if bubble_choice_progress.present?
             progress.merge!(bubble_choice_progress.compact)
 
             sum_time_spent = bubble_choice_progress&.values&.reduce(0) do |sum, sublevel_progress|
@@ -302,7 +301,6 @@ module UsersHelper
     include_timestamp
   )
     progress = {}
-    best_progress = nil
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
@@ -311,13 +309,7 @@ module UsersHelper
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress
-      if !best_progress || sublevel_progress[:result] > best_progress[:result]
-        best_progress = sublevel_progress
-      end
     end
-
-    # if we don't have a best progress, we don't have any progress
-    return nil if best_progress.nil?
 
     progress
   end
