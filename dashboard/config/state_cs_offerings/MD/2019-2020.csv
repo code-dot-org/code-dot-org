@@ -1,0 +1,823 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Fort Hill High,,240003000015,10012,Exploring Computer Science,107,41,0,0,0,0,51,0,0
+Fort Hill High,,240003000015,10019,AP Computer Science Principles,17,0,0,0,0,0,0,0,0
+Fort Hill High,,240003000015,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Center for Career & Technical Education,,240003000030,10152,Computer Programming,11,0,0,0,0,0,0,0,0
+Allegany High,,240003000001,10012,Exploring Computer Science,38,16,0,0,0,0,14,0,0
+Allegany High,,240003000001,10019,AP Computer Science Principles,14,0,0,0,0,0,0,0,0
+Allegany High,,240003000001,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Mountain Ridge High School,,240003001636,10012,Exploring Computer Science,101,46,0,0,0,0,55,0,0
+Mountain Ridge High School,,240003001636,10019,AP Computer Science Principles,32,17,0,0,0,0,0,0,0
+Mountain Ridge High School,,240003001636,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Glen Burnie High,,240006000075,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Glen Burnie High,,240006000075,10972,CTE - AP Computer Science Principles,19,0,0,0,0,0,0,0,0
+Lindale Middle,,240006000087,10205,Computer Gaming and Design,65,0,18,0,0,0,42,10,0
+North County High,,240006090441,10152,Computer Programming,13,0,0,0,0,0,0,0,0
+North County High,,240006090441,10961,CTE - Java Fundamentals,30,0,0,0,0,0,11,0,0
+North County High,,240006090441,10972,CTE - AP Computer Science Principles,203,93,52,38,0,0,69,11,0
+North County High,,240006090441,10973,CTE - AP Computer Science A,50,14,0,0,0,0,10,0,0
+Severna Park High,,240006000127,10972,CTE - AP Computer Science Principles,159,50,0,11,0,0,0,17,0
+Severna Park High,,240006000127,10973,CTE - AP Computer Science A,38,0,0,0,0,0,0,0,0
+Northeast High,,240006000103,10972,CTE - AP Computer Science Principles,31,14,0,0,0,0,0,0,0
+Chesapeake High,,240012000362,10152,Computer Programming,31,0,0,0,0,0,0,0,0
+Chesapeake High,,240012000362,10970,CTE- Foundations of Computer Science,121,38,0,11,0,0,16,26,0
+Chesapeake High,,240012000362,10972,CTE - AP Computer Science Principles,30,0,0,0,0,0,0,0,0
+Chesapeake High,,240012000362,10973,CTE - AP Computer Science A,14,0,0,0,0,0,0,0,0
+Broadneck High,,240006001402,10152,Computer Programming,50,0,0,0,0,0,0,0,0
+Broadneck High,,240006001402,10970,CTE- Foundations of Computer Science,206,63,17,18,0,0,24,22,0
+Broadneck High,,240006001402,10972,CTE - AP Computer Science Principles,47,12,0,0,0,0,0,0,0
+Broadneck High,,240006001402,10973,CTE - AP Computer Science A,16,0,0,0,0,0,0,0,0
+Arundel High,,240006000040,10152,Computer Programming,23,0,0,0,0,0,0,0,0
+Arundel High,,240006000040,10961,CTE - Java Fundamentals,32,0,0,0,0,0,0,0,0
+Arundel High,,240006000040,10970,CTE- Foundations of Computer Science,267,111,68,19,0,0,45,37,0
+Arundel High,,240006000040,10972,CTE - AP Computer Science Principles,93,36,14,0,0,0,0,0,0
+Arundel High,,240006000040,10973,CTE - AP Computer Science A,29,0,0,0,0,0,0,0,0
+Meade High,,240006000099,10970,CTE- Foundations of Computer Science,359,147,199,76,0,0,174,59,26
+Meade High,,240006000099,10972,CTE - AP Computer Science Principles,28,13,10,0,0,0,11,0,0
+Meade High,,240006000099,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Old Mill Middle South,,240006000108,10205,Computer Gaming and Design,26,0,0,0,0,0,13,0,0
+Old Mill High,,240006000109,10961,CTE - Java Fundamentals,27,0,0,0,0,0,0,0,0
+Old Mill High,,240006000109,10972,CTE - AP Computer Science Principles,24,0,0,0,0,0,0,0,0
+Annapolis High,,240006000037,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Southern High,,240006000132,10972,CTE - AP Computer Science Principles,65,33,0,0,0,0,0,0,0
+Central Middle,,240006000054,10205,Computer Gaming and Design,82,12,0,12,0,0,19,11,0
+South River High,,240006000055,10972,CTE - AP Computer Science Principles,166,59,0,16,0,0,11,15,0
+South River High,,240006000055,10973,CTE - AP Computer Science A,78,20,0,0,0,0,0,0,0
+Chesapeake Science Point,,240006001401,10961,CTE - Java Fundamentals,58,23,15,0,0,0,0,10,0
+Northeast EDLP at Parkville High School,,240012001754,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Southeast EDLP at Dundalk High School,,240012001759,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Home Assignments-Secondary,,240012000935,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Home Assignments-Secondary,,240012000935,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Catonsville Center for Alternative Studies,,240012000436,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Meadowood Education Center,,240012000777,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Rosedale Center,,240012000831,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Rosedale Center,,240012000831,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Catonsville Middle,,240012000354,10012,Exploring Computer Science,120,46,41,0,0,0,51,40,0
+Southwest Academy,,240012000411,10012,Exploring Computer Science,393,185,253,52,0,0,280,52,11
+Southwest Academy,,240012000411,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Southwest Academy,,240012000411,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Woodlawn High Center for Pre-Eng. Res.,,240012000502,10970,CTE- Foundations of Computer Science,171,49,135,15,0,0,123,35,0
+Woodlawn High Center for Pre-Eng. Res.,,240012000502,10972,CTE - AP Computer Science Principles,44,17,33,0,0,0,29,0,0
+Woodlawn High Center for Pre-Eng. Res.,,240012000502,10973,CTE - AP Computer Science A,17,0,10,0,0,0,11,0,0
+Catonsville High,,240012000355,10970,CTE- Foundations of Computer Science,105,41,34,0,0,0,45,0,0
+Catonsville High,,240012000355,10972,CTE - AP Computer Science Principles,60,15,10,0,0,0,19,0,0
+Western School of Technology & Env. Science,,240012000248,10970,CTE- Foundations of Computer Science,20,0,10,0,0,0,0,0,0
+Western School of Technology & Env. Science,,240012000248,10972,CTE - AP Computer Science Principles,19,0,10,0,0,0,0,0,0
+Western School of Technology & Env. Science,,240012000248,10973,CTE - AP Computer Science A,25,10,10,0,0,0,0,0,0
+Featherbed Lane Elementary,,240012000385,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Deer Park Elementary,,240012000371,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Northwest Academy of Health Sciences,,240012001431,10012,Exploring Computer Science,302,140,269,13,0,0,210,56,0
+Woodlawn Middle,,240012000501,10012,Exploring Computer Science,84,43,73,0,0,0,72,17,0
+Deer Park Middle Magnet School,,240012000372,10012,Exploring Computer Science,150,61,132,0,0,0,86,21,0
+Windsor Mill Middle,,240012001574,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Milford Mill Academy,,240012000432,10970,CTE- Foundations of Computer Science,156,72,138,0,0,0,89,20,0
+Milford Mill Academy,,240012000432,10972,CTE - AP Computer Science Principles,14,0,14,0,0,0,0,0,0
+Randallstown High,,240012000458,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Pikesville High,,240012000449,10970,CTE- Foundations of Computer Science,167,80,68,21,0,0,66,29,0
+Pikesville High,,240012000449,10972,CTE - AP Computer Science Principles,29,0,11,0,0,0,0,0,0
+Franklin Middle,,240012000389,10012,Exploring Computer Science,1237,586,602,208,0,0,627,213,22
+Franklin Middle,,240012000389,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Owings Mills High,,240012001347,10970,CTE- Foundations of Computer Science,93,45,55,16,0,0,45,10,25
+Owings Mills High,,240012001347,10972,CTE - AP Computer Science Principles,19,0,13,0,0,0,0,0,0
+Owings Mills High,,240012001347,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Franklin High,,240012000390,10970,CTE- Foundations of Computer Science,90,33,37,0,0,0,27,12,0
+Franklin High,,240012000390,10973,CTE - AP Computer Science A,12,0,0,0,0,0,0,0,0
+New Town High,,240012001547,10970,CTE- Foundations of Computer Science,345,174,321,0,0,0,168,41,0
+New Town High,,240012001547,10972,CTE - AP Computer Science Principles,14,0,13,0,0,0,0,0,0
+New Town High,,240012001547,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Hereford High,,240012001432,10970,CTE- Foundations of Computer Science,253,130,0,0,0,0,13,50,0
+Hereford High,,240012001432,10972,CTE - AP Computer Science Principles,54,24,0,0,0,0,0,0,0
+Hereford High,,240012001432,10973,CTE - AP Computer Science A,12,0,0,0,0,0,0,0,0
+Ridgely Middle,,240012001434,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Cockeysville Middle,,240012000366,10012,Exploring Computer Science,318,142,97,51,0,0,109,74,0
+Dulaney High,,240012000373,10970,CTE- Foundations of Computer Science,212,90,46,26,0,0,63,44,0
+Dulaney High,,240012000373,10972,CTE - AP Computer Science Principles,162,64,16,0,0,0,17,11,0
+Dulaney High,,240012000373,10973,CTE - AP Computer Science A,47,10,0,0,0,0,0,0,0
+Halstead Academy,,240012000407,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Harford Hills Elementary,,240012000400,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Dumbarton Middle,,240012000374,10012,Exploring Computer Science,873,367,116,158,0,0,240,154,197
+Dumbarton Middle,,240012000374,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Loch Raven Technical Academy,,240012000419,10012,Exploring Computer Science,270,157,190,17,0,0,180,68,0
+Towson High Law & Public Policy,,240012000487,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Towson High Law & Public Policy,,240012000487,10972,CTE - AP Computer Science Principles,63,20,0,0,0,0,0,0,0
+Towson High Law & Public Policy,,240012000487,10973,CTE - AP Computer Science A,14,0,0,0,0,0,0,0,0
+Parkville High & Center for Math/Science,,240012000443,10970,CTE- Foundations of Computer Science,178,68,81,19,0,0,80,15,25
+Parkville High & Center for Math/Science,,240012000443,10972,CTE - AP Computer Science Principles,43,12,16,0,0,0,14,0,0
+Parkville High & Center for Math/Science,,240012000443,10973,CTE - AP Computer Science A,12,0,0,0,0,0,0,0,0
+Loch Raven High,,240012000420,10970,CTE- Foundations of Computer Science,118,50,52,0,0,0,53,24,0
+Loch Raven High,,240012000420,10972,CTE - AP Computer Science Principles,25,0,0,0,0,0,0,0,0
+Loch Raven High,,240012000420,10973,CTE - AP Computer Science A,18,0,0,0,0,0,0,0,0
+George W. Carver Center for Arts & Technology,,240012000230,10970,CTE- Foundations of Computer Science,69,39,13,0,0,0,0,0,0
+George W. Carver Center for Arts & Technology,,240012000230,10972,CTE - AP Computer Science Principles,23,0,0,0,0,0,0,0,0
+George W. Carver Center for Arts & Technology,,240012000230,10973,CTE - AP Computer Science A,24,0,0,0,0,0,0,0,0
+Chapel Hill Elementary,,240012000358,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Perry Hall Middle,,240012000447,10012,Exploring Computer Science,606,302,149,25,0,0,188,86,0
+Perry Hall High,,240012000446,10970,CTE- Foundations of Computer Science,131,34,31,0,0,0,36,0,0
+Perry Hall High,,240012000446,10972,CTE - AP Computer Science Principles,47,10,0,0,0,0,14,0,0
+Perry Hall High,,240012000446,10973,CTE - AP Computer Science A,20,0,0,0,0,0,0,0,0
+Berkshire Elementary,,240012000349,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Norwood Elementary,,240012000434,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Norwood Elementary,,240012000434,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Charlesmont Elementary,,240012000359,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Logan Elementary,,240012000421,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Dundalk Middle,,240012000376,10012,Exploring Computer Science,49,23,14,21,0,0,21,0,25
+Holabird Middle,,240012000408,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Holabird Middle,,240012000408,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+General John Stricker Middle,,240012001438,10012,Exploring Computer Science,230,119,45,23,0,0,152,67,0
+General John Stricker Middle,,240012001438,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Patapsco High & Center for Arts,,240012000444,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Patapsco High & Center for Arts,,240012000444,10972,CTE - AP Computer Science Principles,23,0,0,0,0,0,12,0,0
+Patapsco High & Center for Arts,,240012000444,10973,CTE - AP Computer Science A,16,0,0,0,0,0,11,0,0
+Dundalk High,,240012000377,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Dundalk High,,240012000377,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Dundalk High,,240012000377,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Arbutus Middle,,240012000342,10012,Exploring Computer Science,296,116,71,13,0,0,153,50,0
+Lansdowne High & Academy of Finance,,240012000416,10970,CTE- Foundations of Computer Science,44,16,20,0,0,0,19,0,0
+Lansdowne High & Academy of Finance,,240012000416,10972,CTE - AP Computer Science Principles,11,0,0,0,0,0,0,0,0
+Golden Ring Middle,,240012001439,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Parkville Middle & Center of Technology,,240012000442,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Overlea High,,240012000438,10970,CTE- Foundations of Computer Science,128,50,89,0,0,0,88,17,0
+Overlea High,,240012000438,10972,CTE - AP Computer Science Principles,13,0,0,0,0,0,0,0,0
+Chesapeake Terrace Elementary,,240012000363,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Sussex Elementary,,240012000482,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Middlesex Elementary,,240012000430,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Middlesex Elementary,,240012000430,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Deep Creek Elementary,,240012000369,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Stemmers Run Middle,,240012000478,10012,Exploring Computer Science,280,108,90,32,0,0,196,76,0
+Middle River Middle,,240012001440,10012,Exploring Computer Science,323,150,141,45,0,0,229,66,10
+Middle River Middle,,240012001440,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Middle River Middle,,240012001440,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Deep Creek Middle,,240012000370,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Deep Creek Middle,,240012000370,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Sparrows Point Middle,,240012010500,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Kenwood High IB and Sports Science,,240012000412,10970,CTE- Foundations of Computer Science,132,53,63,14,0,0,79,27,0
+Kenwood High IB and Sports Science,,240012000412,10972,CTE - AP Computer Science Principles,14,0,0,0,0,0,0,0,0
+Kenwood High IB and Sports Science,,240012000412,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Sparrows Point High,,240012000477,10970,CTE- Foundations of Computer Science,91,41,0,0,0,0,37,0,0
+Sparrows Point High,,240012000477,10972,CTE - AP Computer Science Principles,25,0,0,0,0,0,0,0,0
+Sparrows Point High,,240012000477,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Chesapeake High,,240012000362,10970,CTE- Foundations of Computer Science,134,38,0,11,0,0,16,26,0
+Chesapeake High,,240012000362,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Chesapeake High,,240012000362,10973,CTE - AP Computer Science A,18,0,0,0,0,0,0,0,0
+Eastern Technical High School,,240012000379,10970,CTE- Foundations of Computer Science,215,109,60,0,0,0,50,10,0
+Eastern Technical High School,,240012000379,10972,CTE - AP Computer Science Principles,185,101,31,0,0,0,50,0,0
+Eastern Technical High School,,240012000379,10973,CTE - AP Computer Science A,39,10,0,0,0,0,13,0,0
+Patuxent High,,240015000611,10970,CTE- Foundations of Computer Science,142,81,30,10,0,0,24,29,0
+Patuxent High,,240015000611,10972,CTE - AP Computer Science Principles,46,25,0,0,0,0,0,0,0
+Patuxent High,,240015000611,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Calvert High,,240015000508,10970,CTE- Foundations of Computer Science,73,30,11,0,0,0,14,14,0
+Calvert High,,240015000508,10972,CTE - AP Computer Science Principles,52,23,0,0,0,0,0,0,0
+Calvert High,,240015000508,10973,CTE - AP Computer Science A,10,0,0,0,0,0,0,0,0
+Huntingtown High School,,240015001342,10970,CTE- Foundations of Computer Science,86,36,0,0,0,0,0,15,0
+Huntingtown High School,,240015001342,10972,CTE - AP Computer Science Principles,22,0,0,0,0,0,0,0,0
+Huntingtown High School,,240015001342,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Northern High,,240015000516,10970,CTE- Foundations of Computer Science,66,16,0,0,0,0,0,0,0
+Northern High,,240015000516,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Northern High,,240015000516,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Lockerman Middle School,,240018000526,10152,Computer Programming,282,131,26,52,0,0,152,21,11
+North Caroline High School,,240018000523,10971,CTE- Computer Science Essentials,152,71,16,50,0,0,83,20,30
+North Caroline High School,,240018000523,10972,CTE - AP Computer Science Principles,36,0,0,0,0,0,14,0,0
+North Caroline High School,,240018000523,10973,CTE - AP Computer Science A,15,0,0,0,0,0,0,0,0
+Colonel Richardson High School,,240018000518,10971,CTE- Computer Science Essentials,81,38,26,0,0,0,44,0,0
+Colonel Richardson High School,,240018000518,10972,CTE - AP Computer Science Principles,20,0,0,0,0,0,0,0,0
+Colonel Richardson High School,,240018000518,10973,CTE - AP Computer Science A,12,0,0,0,0,0,0,0,0
+Colonel Richardson Middle School,,240018000519,10152,Computer Programming,100,57,17,0,0,0,61,0,0
+Francis Scott Key High,,240021000533,10012,Exploring Computer Science,55,22,0,0,0,0,15,0,0
+Liberty High,,240021001394,10012,Exploring Computer Science,128,52,0,0,0,0,0,0,0
+Liberty High,,240021001394,10019,AP Computer Science Principles,34,0,0,0,0,0,0,0,0
+Century High,,240021001161,10012,Exploring Computer Science,120,40,0,0,0,0,13,0,0
+Century High,,240021001161,10019,AP Computer Science Principles,86,23,0,0,0,0,0,0,0
+Manchester Valley High,,240021001672,10012,Exploring Computer Science,88,33,0,0,0,0,19,12,0
+Manchester Valley High,,240021001672,10019,AP Computer Science Principles,46,0,0,0,0,0,0,0,0
+Winters Mill High,,240021001185,10012,Exploring Computer Science,61,17,0,0,0,0,15,12,0
+Winters Mill High,,240021001185,10019,AP Computer Science Principles,29,0,0,0,0,0,0,0,0
+Westminster High,,240021000552,10012,Exploring Computer Science,119,46,0,0,0,0,17,0,0
+Westminster High,,240021000552,10019,AP Computer Science Principles,33,0,0,0,0,0,0,0,0
+Carroll County Career & Technology Center,,240021000979,10971,CTE- Computer Science Essentials,22,0,0,0,0,0,0,0,0
+Carroll County Career & Technology Center,,240021000979,10972,CTE - AP Computer Science Principles,22,0,0,0,0,0,0,0,0
+Carroll County Career & Technology Center,,240021000979,10973,CTE - AP Computer Science A,41,0,0,0,0,0,0,0,0
+South Carroll High,,240021000546,10012,Exploring Computer Science,44,19,0,0,0,0,0,0,0
+South Carroll High,,240021000546,10019,AP Computer Science Principles,41,13,0,0,0,0,0,0,0
+Bohemia Manor High,,240024000558,10011,Computer Science Principles,81,41,0,0,0,0,35,19,0
+Bohemia Manor High,,240024000558,10972,CTE - AP Computer Science Principles,34,11,0,0,0,0,0,0,0
+Bohemia Manor Middle,,240024000791,10012,Exploring Computer Science,252,91,20,22,0,0,100,47,0
+Elkton High,,240024000568,10011,Computer Science Principles,65,30,18,10,0,0,30,10,0
+Elkton High,,240024000568,10971,CTE- Computer Science Essentials,12,0,0,0,0,0,0,0,0
+Elkton Middle,,240024000567,10012,Exploring Computer Science,363,152,112,61,0,0,259,78,15
+Cherry Hill Middle,,240024000564,10012,Exploring Computer Science,241,110,35,29,0,0,111,28,0
+North East Middle,,240024000574,10012,Exploring Computer Science,439,182,34,27,0,0,210,101,0
+North East High,,240024000575,10011,Computer Science Principles,39,19,0,0,0,0,22,0,0
+North East High,,240024000575,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+North East High,,240024000575,10972,CTE - AP Computer Science Principles,11,0,0,0,0,0,0,0,0
+Rising Sun Middle School,,240024000580,10012,Exploring Computer Science,409,159,0,21,0,0,145,96,0
+Perryville Middle,,240024000578,10012,Exploring Computer Science,358,175,22,13,0,0,163,79,0
+Perryville High,,240024000577,10011,Computer Science Principles,67,32,0,0,0,0,33,10,0
+Perryville High,,240024000577,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Perryville High,,240024000577,10972,CTE - AP Computer Science Principles,12,0,0,0,0,0,0,0,0
+Rising Sun High,,240024090469,10011,Computer Science Principles,52,24,0,0,0,0,14,0,0
+Rising Sun High,,240024090469,10971,CTE- Computer Science Essentials,11,0,0,0,0,0,0,0,0
+Rising Sun High,,240024090469,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Milton M. Somers Middle School,,240027000601,10011,Computer Science Principles,116,45,57,0,0,0,28,16,0
+La Plata High School,,240027000596,10012,Exploring Computer Science,104,54,24,0,0,0,22,11,0
+La Plata High School,,240027000596,10970,CTE- Foundations of Computer Science,27,0,0,0,0,0,0,0,0
+La Plata High School,,240027000596,10972,CTE - AP Computer Science Principles,37,18,0,0,0,0,0,0,0
+La Plata High School,,240027000596,10973,CTE - AP Computer Science A,21,0,0,0,0,0,0,0,0
+Maurice J. McDonough High School,,240027000600,10012,Exploring Computer Science,99,44,55,10,0,0,26,0,0
+Maurice J. McDonough High School,,240027000600,10970,CTE- Foundations of Computer Science,49,0,29,0,0,0,0,0,0
+Maurice J. McDonough High School,,240027000600,10972,CTE - AP Computer Science Principles,25,12,0,0,0,0,0,0,0
+Maurice J. McDonough High School,,240027000600,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Piccowaxen Middle School,,240027000604,10011,Computer Science Principles,164,47,18,0,0,0,33,24,0
+Thomas Stone High School,,240027000607,10012,Exploring Computer Science,101,46,71,17,0,0,47,10,0
+Thomas Stone High School,,240027000607,10970,CTE- Foundations of Computer Science,17,0,11,0,0,0,0,0,0
+Thomas Stone High School,,240027000607,10972,CTE - AP Computer Science Principles,10,0,0,0,0,0,0,0,0
+Thomas Stone High School,,240027000607,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+John Hanson Middle School,,240027000595,10011,Computer Science Principles,295,125,180,43,0,0,162,53,18
+Benjamin Stoddert Middle School,,240027000583,10011,Computer Science Principles,316,146,224,41,0,0,175,40,14
+Westlake High School,,240027000144,10012,Exploring Computer Science,239,99,182,25,0,0,111,22,18
+Westlake High School,,240027000144,10970,CTE- Foundations of Computer Science,48,0,30,0,0,0,13,0,0
+Westlake High School,,240027000144,10972,CTE - AP Computer Science Principles,63,35,48,0,0,0,16,0,0
+Westlake High School,,240027000144,10973,CTE - AP Computer Science A,11,0,0,0,0,0,0,0,0
+Mattawoman Middle School,,240027000615,10011,Computer Science Principles,554,224,414,65,0,0,275,66,21
+North Point High School,,240027001416,10012,Exploring Computer Science,300,166,195,13,0,0,68,0,0
+North Point High School,,240027001416,10970,CTE- Foundations of Computer Science,40,0,28,0,0,0,0,0,0
+North Point High School,,240027001416,10972,CTE - AP Computer Science Principles,94,43,45,0,0,0,0,0,0
+North Point High School,,240027001416,10973,CTE - AP Computer Science A,16,0,0,0,0,0,0,0,0
+Theodore G. Davis Middle School,,240027001647,10011,Computer Science Principles,354,127,260,37,0,0,160,58,12
+Matthew Henson Middle School,,240027000599,10011,Computer Science Principles,345,121,245,44,0,0,152,48,17
+General Smallwood Middle School,,240027000589,10011,Computer Science Principles,224,81,122,16,0,0,132,35,0
+Robert D. Stethem Educational Center,,240027001395,10012,Exploring Computer Science,17,0,14,0,0,0,12,0,0
+St. Charles High School,,240027001727,10012,Exploring Computer Science,220,106,165,20,0,0,102,25,0
+St. Charles High School,,240027001727,10970,CTE- Foundations of Computer Science,82,22,57,0,0,0,34,0,0
+St. Charles High School,,240027001727,10972,CTE - AP Computer Science Principles,37,12,21,0,0,0,0,0,0
+St. Charles High School,,240027001727,10973,CTE - AP Computer Science A,10,0,0,0,0,0,0,0,0
+Henry E. Lackey High School,,240027000597,10012,Exploring Computer Science,105,44,59,0,0,0,50,0,0
+Henry E. Lackey High School,,240027000597,10970,CTE- Foundations of Computer Science,46,0,19,0,0,0,18,0,0
+Henry E. Lackey High School,,240027000597,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Henry E. Lackey High School,,240027000597,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+North Dorchester Middle School,,240030000619,10012,Exploring Computer Science,81,44,11,0,0,0,37,0,0
+South Dorchester School,,240030000622,10012,Exploring Computer Science,10,0,0,0,0,0,0,0,0
+Mace's Lane Middle School,,240030001423,10012,Exploring Computer Science,466,231,332,46,0,0,358,54,16
+Frederick High,,240033000632,10972,CTE - AP Computer Science Principles,11,0,0,0,0,0,0,0,0
+West Frederick Middle,,240033000658,10012,Exploring Computer Science,38,0,0,12,0,0,19,0,0
+Gov. Thomas Johnson High,,240033000634,10965,CTE- Java Foundations,18,0,0,0,0,0,0,0,0
+Gov. Thomas Johnson High,,240033000634,10966,CTE- Java Programming,0,0,0,0,0,0,0,0,0
+Gov. Thomas Johnson High,,240033000634,10972,CTE - AP Computer Science Principles,14,0,0,0,0,0,0,0,0
+Monocacy Middle,,240033001413,10012,Exploring Computer Science,48,12,0,14,0,0,20,0,0
+Frederick County Career & Technology Center,,240033001011,10199,Computer Programming - Other,36,0,0,0,0,0,0,0,0
+Frederick County Career & Technology Center,,240033001011,10966,CTE- Java Programming,14,0,0,0,0,0,0,0,0
+Frederick County Career & Technology Center,,240033001011,10971,CTE- Computer Science Essentials,61,0,0,0,0,0,0,0,0
+Gov. Thomas Johnson Middle,,240033001549,10012,Exploring Computer Science,28,0,0,0,0,0,11,0,0
+Crestwood Middle,,240033001357,10012,Exploring Computer Science,16,0,0,0,0,0,0,0,0
+Middletown Middle,,240033000640,10012,Exploring Computer Science,21,0,0,0,0,0,0,0,0
+Middletown High,,240033000641,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Middletown High,,240033000641,10972,CTE - AP Computer Science Principles,19,0,0,0,0,0,0,0,0
+Urbana High,,240033000616,10159,IB Computer Science,19,0,0,0,0,0,0,0,0
+Urbana High,,240033000616,10965,CTE- Java Foundations,0,0,0,0,0,0,0,0,0
+Urbana High,,240033000616,10966,CTE- Java Programming,0,0,0,0,0,0,0,0,0
+Urbana High,,240033000616,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Urbana High,,240033000616,10972,CTE - AP Computer Science Principles,58,15,0,0,0,0,0,0,0
+Windsor Knolls Middle,,240033000392,10012,Exploring Computer Science,36,0,0,0,0,0,0,0,0
+Urbana Middle,,240033001536,10012,Exploring Computer Science,40,0,0,0,0,0,0,0,0
+Linganore High,,240033000638,10972,CTE - AP Computer Science Principles,23,0,0,0,0,0,0,0,0
+New Market Middle,,240033001379,10012,Exploring Computer Science,15,0,0,0,0,0,0,0,0
+Oakdale Middle,,240033001163,10012,Exploring Computer Science,25,0,0,0,0,0,0,0,0
+Oakdale High,,240033001688,10199,Computer Programming - Other,34,13,0,0,0,0,0,0,0
+Oakdale High,,240033001688,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Oakdale High,,240033001688,10972,CTE - AP Computer Science Principles,24,0,0,0,0,0,0,0,0
+Catoctin High,,240033000629,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Thurmont Middle,,240033000651,10012,Exploring Computer Science,47,0,0,0,0,0,16,0,0
+Ballenger Creek Middle,,240033090446,10012,Exploring Computer Science,52,0,11,0,0,0,16,0,0
+Tuscarora High,,240033001550,10965,CTE- Java Foundations,17,0,0,0,0,0,0,0,0
+Tuscarora High,,240033001550,10966,CTE- Java Programming,0,0,0,0,0,0,0,0,0
+Tuscarora High,,240033001550,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Tuscarora High,,240033001550,10972,CTE - AP Computer Science Principles,19,0,0,0,0,0,0,0,0
+Brunswick High,,240033000627,10965,CTE- Java Foundations,14,0,0,0,0,0,0,0,0
+Brunswick Middle,,240033001409,10012,Exploring Computer Science,47,0,0,0,0,0,16,0,0
+Walkersville Middle,,240033000656,10012,Exploring Computer Science,29,0,0,0,0,0,0,0,0
+Walkersville High,,240033000655,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+Walkersville High,,240033000655,10972,CTE - AP Computer Science Principles,16,0,0,0,0,0,0,0,0
+Swan Meadow School,,240036000676,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Northern Middle School,,240036001351,10011,Computer Science Principles,63,33,0,0,0,0,29,0,0
+Southern Middle School,,240036000675,10011,Computer Science Principles,113,52,0,0,0,0,55,0,0
+Northern Garrett High School,,240036000671,10970,CTE- Foundations of Computer Science,36,22,0,0,0,0,10,0,0
+Northern Garrett High School,,240036000671,10972,CTE - AP Computer Science Principles,17,0,0,0,0,0,0,0,0
+Northern Garrett High School,,240036000671,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Southern Garrett High School,,240036000674,10970,CTE- Foundations of Computer Science,112,57,0,0,0,0,37,22,0
+Southern Garrett High School,,240036000674,10972,CTE - AP Computer Science Principles,33,16,0,0,0,0,10,0,0
+Southern Garrett High School,,240036000674,10973,CTE - AP Computer Science A,17,0,0,0,0,0,0,0,0
+Edgewood High,,240039000690,10951,CTE- Introduction to programming and applications,78,31,45,0,0,0,43,0,0
+Edgewood High,,240039000690,10972,CTE - AP Computer Science Principles,61,36,21,0,0,0,18,0,0
+Joppatowne High,,240039000705,10972,CTE - AP Computer Science Principles,17,0,0,0,0,0,0,0,0
+Patterson Mill High School,,240039001638,10972,CTE - AP Computer Science Principles,123,54,0,11,0,0,0,0,0
+Patterson Mill High School,,240039001638,10973,CTE - AP Computer Science A,22,0,0,0,0,0,0,0,0
+Aberdeen High,,240039000679,10951,CTE- Introduction to programming and applications,150,66,60,12,0,0,92,37,0
+Aberdeen High,,240039000679,10972,CTE - AP Computer Science Principles,48,22,15,0,0,0,12,0,0
+Aberdeen High,,240039000679,10973,CTE - AP Computer Science A,28,11,0,0,0,0,0,0,0
+Harford Technical High,,240039000694,10951,CTE- Introduction to programming and applications,85,24,0,0,0,0,19,0,0
+Harford Technical High,,240039000694,10972,CTE - AP Computer Science Principles,31,0,0,0,0,0,0,0,0
+Bel Air High,,240039000683,10972,CTE - AP Computer Science Principles,169,92,0,0,0,0,19,0,0
+Fallston High,,240039000691,10972,CTE - AP Computer Science Principles,35,13,0,0,0,0,0,0,0
+C. Milton Wright High,,240039001380,10972,CTE - AP Computer Science Principles,18,0,0,0,0,0,0,0,0
+C. Milton Wright High,,240039001380,10973,CTE - AP Computer Science A,22,0,0,0,0,0,0,0,0
+North Harford High,,240039000710,10951,CTE- Introduction to programming and applications,44,13,0,0,0,0,0,0,0
+North Harford High,,240039000710,10972,CTE - AP Computer Science Principles,89,47,0,0,0,0,13,0,0
+Havre de Grace High,,240039000697,10972,CTE - AP Computer Science Principles,49,21,12,0,0,0,19,0,0
+Havre de Grace High,,240039000697,10973,CTE - AP Computer Science A,10,0,0,0,0,0,0,0,0
+Howard High,,240042000738,10011,Computer Science Principles,294,141,49,14,0,0,20,21,0
+Howard High,,240042000738,10970,CTE- Foundations of Computer Science,83,22,12,0,0,0,0,0,0
+Howard High,,240042000738,10973,CTE - AP Computer Science A,42,0,0,0,0,0,0,0,0
+Mount Hebron High,,240042000743,10011,Computer Science Principles,250,127,24,11,0,0,17,10,0
+Mount Hebron High,,240042000743,10970,CTE- Foundations of Computer Science,58,11,0,0,0,0,0,0,0
+Mount Hebron High,,240042000743,10973,CTE - AP Computer Science A,47,14,0,0,0,0,0,0,0
+Centennial High,,240042000722,10011,Computer Science Principles,297,152,19,0,0,0,21,14,0
+Centennial High,,240042000722,10970,CTE- Foundations of Computer Science,79,16,0,0,0,0,0,0,0
+Centennial High,,240042000722,10973,CTE - AP Computer Science A,86,21,0,0,0,0,0,0,0
+Marriotts Ridge High,,240042001437,10011,Computer Science Principles,197,95,12,0,0,0,0,0,0
+Marriotts Ridge High,,240042001437,10970,CTE- Foundations of Computer Science,54,18,0,0,0,0,0,0,0
+Marriotts Ridge High,,240042001437,10973,CTE - AP Computer Science A,43,17,0,0,0,0,0,0,0
+Glenelg High,,240042000731,10011,Computer Science Principles,92,50,0,0,0,0,0,0,0
+Glenelg High,,240042000731,10970,CTE- Foundations of Computer Science,28,0,0,0,0,0,0,0,0
+Glenelg High,,240042000731,10973,CTE - AP Computer Science A,19,0,0,0,0,0,0,0,0
+Atholton High,,240042000719,10011,Computer Science Principles,107,49,21,10,0,0,0,0,0
+Atholton High,,240042000719,10970,CTE- Foundations of Computer Science,58,15,11,0,0,0,0,0,0
+Atholton High,,240042000719,10973,CTE - AP Computer Science A,28,0,0,0,0,0,0,0,0
+Wilde Lake High,,240042000762,10011,Computer Science Principles,25,13,11,0,0,0,0,0,0
+Wilde Lake High,,240042000762,10970,CTE- Foundations of Computer Science,16,0,0,0,0,0,0,0,0
+River Hill High,,240042000816,10011,Computer Science Principles,238,102,16,16,0,0,11,0,0
+River Hill High,,240042000816,10970,CTE- Foundations of Computer Science,94,19,0,0,0,0,0,0,0
+River Hill High,,240042000816,10973,CTE - AP Computer Science A,51,20,0,0,0,0,0,0,0
+Reservoir High,,240042001200,10011,Computer Science Principles,57,23,14,0,0,0,0,0,0
+Reservoir High,,240042001200,10970,CTE- Foundations of Computer Science,34,11,0,0,0,0,0,0,0
+Reservoir High,,240042001200,10973,CTE - AP Computer Science A,17,0,0,0,0,0,0,0,0
+Oakland Mills High,,240042000745,10011,Computer Science Principles,34,13,12,0,0,0,12,0,0
+Oakland Mills High,,240042000745,10970,CTE- Foundations of Computer Science,13,0,0,0,0,0,0,0,0
+Oakland Mills High,,240042000745,10973,CTE - AP Computer Science A,11,0,0,0,0,0,0,0,0
+Hammond High,,240042000735,10011,Computer Science Principles,55,20,13,0,0,0,17,0,0
+Hammond High,,240042000735,10970,CTE- Foundations of Computer Science,36,0,15,0,0,0,0,0,0
+Hammond High,,240042000735,10973,CTE - AP Computer Science A,28,0,0,0,0,0,0,0,0
+Long Reach High,,240042000822,10011,Computer Science Principles,53,19,11,0,0,0,13,0,0
+Long Reach High,,240042000822,10970,CTE- Foundations of Computer Science,46,0,14,0,0,0,13,0,0
+Long Reach High,,240042000822,10973,CTE - AP Computer Science A,12,0,0,0,0,0,0,0,0
+Kent County High,,240045000768,10157,AP Computer Science A,18,10,0,0,0,0,0,0,0
+Kent County Middle School,,240045000766,10012,Exploring Computer Science,310,154,75,39,0,0,185,71,11
+Seneca Valley High,,240048000918,10012,Exploring Computer Science,67,33,26,23,0,0,21,0,0
+Seneca Valley High,,240048000918,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Seneca Valley High,,240048000918,10961,CTE - Java Fundamentals,18,0,0,0,0,0,0,0,0
+Seneca Valley High,,240048000918,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Seneca Valley High,,240048000918,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Seneca Valley High,,240048000918,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Ridgeview Middle,,240048000903,10012,Exploring Computer Science,132,39,27,35,0,0,19,0,0
+Neelsville Middle,,240048000759,10012,Exploring Computer Science,182,71,57,82,0,0,64,13,22
+Quince Orchard High,,240048001509,10012,Exploring Computer Science,98,33,16,24,0,0,13,0,0
+Quince Orchard High,,240048001509,10157,AP Computer Science A,64,26,0,0,0,0,0,0,0
+Quince Orchard High,,240048001509,10961,CTE - Java Fundamentals,47,14,0,0,0,0,0,0,0
+Quince Orchard High,,240048001509,10970,CTE- Foundations of Computer Science,22,0,0,0,0,0,0,0,0
+Quince Orchard High,,240048001509,10972,CTE - AP Computer Science Principles,68,19,0,0,0,0,0,0,0
+Quince Orchard High,,240048001509,10973,CTE - AP Computer Science A,16,0,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10152,Computer Programming,24,0,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10156,Computer Programming - Other Language,61,17,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10157,AP Computer Science A,52,24,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10160,Particular Topics in Computer Programming,109,39,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10970,CTE- Foundations of Computer Science,60,25,0,0,0,0,0,0,0
+Poolesville High,,240048000897,10973,CTE - AP Computer Science A,43,16,0,0,0,0,0,0,0
+Roberto W. Clemente Middle,,240048000493,10152,Computer Programming,67,24,0,0,0,0,0,0,0
+Roberto W. Clemente Middle,,240048000493,10153,Visual Basic (VB) Programming,76,24,0,0,0,0,0,0,0
+Richard Montgomery High,,240048000902,10012,Exploring Computer Science,11,0,0,0,0,0,0,0,0
+Richard Montgomery High,,240048000902,10157,AP Computer Science A,226,104,25,21,0,0,21,15,0
+Richard Montgomery High,,240048000902,10159,IB Computer Science,39,12,0,0,0,0,0,0,0
+Richard Montgomery High,,240048000902,10973,CTE - AP Computer Science A,51,18,0,0,0,0,0,0,0
+Julius West Middle,,240048000857,10012,Exploring Computer Science,133,38,29,26,0,0,20,14,11
+Herbert Hoover Middle,,240048000849,10012,Exploring Computer Science,28,27,0,0,0,0,0,0,0
+Rockville High,,240048000912,10012,Exploring Computer Science,180,98,28,93,0,0,38,45,28
+Rockville High,,240048000912,10157,AP Computer Science A,114,43,14,33,0,0,19,0,0
+Rockville High,,240048000912,10159,IB Computer Science,10,0,0,0,0,0,0,0,0
+Rockville High,,240048000912,10972,CTE - AP Computer Science Principles,30,0,0,10,0,0,0,0,0
+Rockville High,,240048000912,10973,CTE - AP Computer Science A,30,0,0,0,0,0,0,0,0
+Tilden Middle School,,240048001450,10012,Exploring Computer Science,58,26,11,0,0,0,0,0,0
+Thomas S. Wootton High,,240048000934,10012,Exploring Computer Science,271,144,44,37,0,0,17,49,13
+Thomas S. Wootton High,,240048000934,10157,AP Computer Science A,337,146,22,13,0,0,0,19,0
+Thomas S. Wootton High,,240048000934,10961,CTE - Java Fundamentals,96,29,0,0,0,0,0,0,0
+Thomas S. Wootton High,,240048000934,10970,CTE- Foundations of Computer Science,39,16,0,0,0,0,0,0,0
+Thomas S. Wootton High,,240048000934,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Thomas S. Wootton High,,240048000934,10973,CTE - AP Computer Science A,76,25,0,0,0,0,0,0,0
+Robert Frost Middle School,,240048001447,10012,Exploring Computer Science,64,12,0,0,0,0,0,0,0
+Northwest High,,240048001040,10012,Exploring Computer Science,134,48,29,30,0,0,15,12,0
+Northwest High,,240048001040,10157,AP Computer Science A,53,28,0,0,0,0,0,0,0
+Northwest High,,240048001040,10961,CTE - Java Fundamentals,53,0,13,10,0,0,0,0,0
+Northwest High,,240048001040,10970,CTE- Foundations of Computer Science,21,0,0,0,0,0,0,0,0
+Northwest High,,240048001040,10972,CTE - AP Computer Science Principles,52,15,0,0,0,0,0,0,0
+Northwest High,,240048001040,10973,CTE - AP Computer Science A,15,0,0,0,0,0,0,0,0
+John H. Poole Middle,,240048000861,10012,Exploring Computer Science,65,15,0,0,0,0,0,10,0
+Clarksburg High,,240048001541,10012,Exploring Computer Science,370,174,135,91,0,0,75,49,31
+Clarksburg High,,240048001541,10157,AP Computer Science A,167,100,30,21,0,0,12,10,0
+Clarksburg High,,240048001541,10961,CTE - Java Fundamentals,47,0,10,0,0,0,10,0,0
+Clarksburg High,,240048001541,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Clarksburg High,,240048001541,10972,CTE - AP Computer Science Principles,47,0,10,0,0,0,0,0,0
+Clarksburg High,,240048001541,10973,CTE - AP Computer Science A,40,0,0,0,0,0,0,0,0
+Francis Scott Key Middle,,240048090453,10012,Exploring Computer Science,120,63,57,47,0,0,47,13,18
+Paint Branch High,,240048000890,10012,Exploring Computer Science,68,26,38,14,0,0,19,0,0
+James Hubert Blake High,,240048001044,10012,Exploring Computer Science,169,87,67,44,0,0,38,13,0
+James Hubert Blake High,,240048001044,10157,AP Computer Science A,33,12,14,0,0,0,0,0,0
+James Hubert Blake High,,240048001044,10961,CTE - Java Fundamentals,22,0,0,0,0,0,0,0,0
+James Hubert Blake High,,240048001044,10973,CTE - AP Computer Science A,27,0,10,0,0,0,0,0,0
+Briggs Chaney Middle,,240048090450,10012,Exploring Computer Science,64,15,38,12,0,0,20,0,0
+Hallie Wells Middle School,,240048001739,10012,Exploring Computer Science,34,12,0,0,0,0,0,0,0
+Bethesda-Chevy Chase High,,240048000784,10012,Exploring Computer Science,355,165,68,61,0,0,26,66,30
+Bethesda-Chevy Chase High,,240048000784,10157,AP Computer Science A,112,43,10,10,0,0,0,0,0
+Bethesda-Chevy Chase High,,240048000784,10961,CTE - Java Fundamentals,43,0,12,0,0,0,0,0,0
+Bethesda-Chevy Chase High,,240048000784,10970,CTE- Foundations of Computer Science,24,0,0,0,0,0,0,0,0
+Bethesda-Chevy Chase High,,240048000784,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Bethesda-Chevy Chase High,,240048000784,10973,CTE - AP Computer Science A,25,0,0,0,0,0,0,0,0
+Westland Middle,,240048000949,10012,Exploring Computer Science,63,18,0,0,0,0,0,0,0
+Walter Johnson High,,240048000942,10012,Exploring Computer Science,304,132,32,54,0,0,18,61,21
+Walter Johnson High,,240048000942,10157,AP Computer Science A,99,34,0,0,0,0,0,0,0
+Walter Johnson High,,240048000942,10961,CTE - Java Fundamentals,113,27,13,19,0,0,0,0,0
+Walter Johnson High,,240048000942,10970,CTE- Foundations of Computer Science,50,16,0,0,0,0,0,0,0
+Walter Johnson High,,240048000942,10972,CTE - AP Computer Science Principles,30,0,0,0,0,0,0,0,0
+Walter Johnson High,,240048000942,10973,CTE - AP Computer Science A,34,0,0,0,0,0,0,0,0
+Walt Whitman High,,240048000941,10012,Exploring Computer Science,82,40,0,10,0,0,0,0,11
+Walt Whitman High,,240048000941,10157,AP Computer Science A,51,19,0,0,0,0,0,0,0
+Walt Whitman High,,240048000941,10961,CTE - Java Fundamentals,67,20,0,0,0,0,0,0,0
+Walt Whitman High,,240048000941,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Walt Whitman High,,240048000941,10973,CTE - AP Computer Science A,46,0,0,0,0,0,0,0,0
+Sherwood High,,240048000921,10012,Exploring Computer Science,88,32,0,10,0,0,0,10,0
+Sherwood High,,240048000921,10157,AP Computer Science A,49,13,0,0,0,0,0,0,0
+Sherwood High,,240048000921,10973,CTE - AP Computer Science A,33,0,0,0,0,0,0,0,0
+William H. Farquhar Middle,,240048000957,10012,Exploring Computer Science,59,10,17,0,0,0,0,0,0
+Col. Zadok Magruder High,,240048000808,10012,Exploring Computer Science,93,22,21,20,0,0,19,0,0
+Col. Zadok Magruder High,,240048000808,10973,CTE - AP Computer Science A,15,0,0,0,0,0,0,0,0
+Lakelands Park Middle,,240048001441,10012,Exploring Computer Science,65,22,0,15,0,0,0,0,0
+Watkins Mill High,,240048001525,10012,Exploring Computer Science,123,57,41,58,0,0,30,13,19
+Watkins Mill High,,240048001525,10961,CTE - Java Fundamentals,19,0,0,0,0,0,0,0,0
+Watkins Mill High,,240048001525,10972,CTE - AP Computer Science Principles,31,0,0,0,0,0,0,0,0
+Gaithersburg High,,240048000838,10012,Exploring Computer Science,203,71,57,100,0,0,46,23,27
+Gaithersburg High,,240048000838,10157,AP Computer Science A,40,16,12,11,0,0,0,0,0
+Gaithersburg High,,240048000838,10961,CTE - Java Fundamentals,63,12,16,23,0,0,0,0,0
+Gaithersburg High,,240048000838,10970,CTE- Foundations of Computer Science,20,0,0,0,0,0,0,0,0
+Gaithersburg High,,240048000838,10972,CTE - AP Computer Science Principles,32,0,0,12,0,0,0,0,0
+Gaithersburg High,,240048000838,10973,CTE - AP Computer Science A,15,0,0,0,0,0,0,0,0
+Gaithersburg Middle,,240048000837,10012,Exploring Computer Science,25,0,0,10,0,0,0,0,0
+Montgomery Village Middle School,,240048000879,10012,Exploring Computer Science,33,0,0,20,0,0,17,0,0
+Redland Middle,,240048000901,10012,Exploring Computer Science,95,51,20,31,0,0,28,10,0
+Winston Churchill High,,240048000956,10012,Exploring Computer Science,221,105,36,18,0,0,0,56,0
+Winston Churchill High,,240048000956,10157,AP Computer Science A,419,180,19,29,0,0,0,30,0
+Winston Churchill High,,240048000956,10961,CTE - Java Fundamentals,65,21,0,0,0,0,0,0,0
+Winston Churchill High,,240048000956,10972,CTE - AP Computer Science Principles,16,0,0,0,0,0,0,0,0
+Winston Churchill High,,240048000956,10973,CTE - AP Computer Science A,105,21,0,0,0,0,0,0,0
+Cabin John Middle School,,240048001526,10012,Exploring Computer Science,51,0,0,0,0,0,0,0,0
+Damascus High,,240048001455,10012,Exploring Computer Science,143,60,25,33,0,0,15,0,0
+Damascus High,,240048001455,10157,AP Computer Science A,54,20,0,0,0,0,0,0,0
+John T. Baker Middle School,,240048001456,10012,Exploring Computer Science,429,193,57,132,0,0,67,89,15
+Rocky Hill Middle,,240048000660,10012,Exploring Computer Science,68,27,12,10,0,0,0,0,0
+Kingsview Middle,,240048000863,10012,Exploring Computer Science,99,21,21,0,0,0,14,0,0
+Takoma Park Middle School,,240048000933,10152,Computer Programming,124,41,0,12,0,0,0,0,0
+Takoma Park Middle School,,240048000933,10153,Visual Basic (VB) Programming,125,45,13,0,0,0,0,0,0
+Montgomery Blair High,,240048000877,10156,Computer Programming - Other Language,0,0,0,0,0,0,0,0,0
+Montgomery Blair High,,240048000877,10157,AP Computer Science A,189,81,83,33,0,0,39,0,10
+Montgomery Blair High,,240048000877,10160,Particular Topics in Computer Programming,240,87,16,0,0,0,0,11,0
+Montgomery Blair High,,240048000877,10199,Computer Programming - Other,28,0,0,0,0,0,0,0,0
+Montgomery Blair High,,240048000877,10961,CTE - Java Fundamentals,43,0,16,0,0,0,0,0,0
+Montgomery Blair High,,240048000877,10970,CTE- Foundations of Computer Science,115,48,0,0,0,0,0,0,0
+Montgomery Blair High,,240048000877,10973,CTE - AP Computer Science A,22,0,0,0,0,0,0,0,0
+Eastern Middle School,,240048001457,10012,Exploring Computer Science,47,20,16,17,0,0,15,0,0
+Sligo Middle,,240048001458,10012,Exploring Computer Science,60,12,15,23,0,0,21,0,0
+Wheaton High,,240048000951,10012,Exploring Computer Science,54,26,0,32,0,0,16,0,19
+Wheaton High,,240048000951,10157,AP Computer Science A,67,29,26,20,0,0,20,0,0
+Wheaton High,,240048000951,10970,CTE- Foundations of Computer Science,24,0,0,19,0,0,10,0,0
+Wheaton High,,240048000951,10972,CTE - AP Computer Science Principles,163,25,54,76,0,0,41,22,17
+Wheaton High,,240048000951,10973,CTE - AP Computer Science A,56,11,18,14,0,0,17,0,0
+Albert Einstein High,,240048000773,10012,Exploring Computer Science,176,83,34,78,0,0,39,26,16
+Albert Einstein High,,240048000773,10157,AP Computer Science A,22,0,0,0,0,0,0,0,0
+Albert Einstein High,,240048000773,10972,CTE - AP Computer Science Principles,11,0,0,0,0,0,0,0,0
+Albert Einstein High,,240048000773,10973,CTE - AP Computer Science A,17,0,0,0,0,0,0,0,0
+Newport Mill Middle,,240048001207,10012,Exploring Computer Science,57,0,0,33,0,0,23,0,0
+Northwood High School,,240048001366,10012,Exploring Computer Science,179,97,59,80,0,0,61,16,27
+Northwood High School,,240048001366,10157,AP Computer Science A,10,0,0,0,0,0,0,0,0
+Northwood High School,,240048001366,10961,CTE - Java Fundamentals,12,0,0,0,0,0,0,0,0
+Northwood High School,,240048001366,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Northwood High School,,240048001366,10973,CTE - AP Computer Science A,13,0,0,0,0,0,0,0,0
+Springbrook High,,240048000926,10012,Exploring Computer Science,222,78,107,64,0,0,72,12,27
+Springbrook High,,240048000926,10157,AP Computer Science A,65,21,28,16,0,0,24,0,0
+Springbrook High,,240048000926,10159,IB Computer Science,20,0,13,0,0,0,0,0,0
+Springbrook High,,240048000926,10961,CTE - Java Fundamentals,17,0,0,0,0,0,0,0,0
+Springbrook High,,240048000926,10970,CTE- Foundations of Computer Science,19,0,0,0,0,0,0,0,0
+Springbrook High,,240048000926,10972,CTE - AP Computer Science Principles,27,0,10,0,0,0,0,0,0
+Springbrook High,,240048000926,10973,CTE - AP Computer Science A,77,12,35,10,0,0,20,0,0
+Parkland Middle,,240048000891,10012,Exploring Computer Science,148,68,22,104,0,0,75,0,22
+John F. Kennedy High,,240048000855,10012,Exploring Computer Science,97,30,31,53,0,0,33,0,15
+John F. Kennedy High,,240048000855,10159,IB Computer Science,0,0,0,0,0,0,0,0,0
+John F. Kennedy High,,240048000855,10973,CTE - AP Computer Science A,22,0,0,0,0,0,0,0,0
+Col. E. Brooke Lee Middle,,240048000806,10012,Exploring Computer Science,110,54,22,69,0,0,42,10,23
+Earle B. Wood Middle,,240048000820,10012,Exploring Computer Science,291,105,34,130,0,0,89,67,47
+Argyle Middle,,240048000409,10012,Exploring Computer Science,34,12,13,10,0,0,16,0,0
+Argyle Middle,,240048000409,10152,Computer Programming,38,0,13,0,0,0,15,0,0
+Argyle Middle,,240048000409,10156,Computer Programming - Other Language,182,48,45,104,0,0,78,14,14
+Argyle Middle,,240048000409,10970,CTE- Foundations of Computer Science,109,34,31,60,0,0,38,12,14
+Silver Creek Middle,,240048001741,10012,Exploring Computer Science,32,0,0,0,0,0,0,0,0
+John L Gildner Regional Inst for Children & Adol,,240048001398,10012,Exploring Computer Science,33,14,15,0,0,0,0,32,0
+High Point High,,240051001059,10157,AP Computer Science A,10,0,0,0,0,0,0,0,0
+High Point High,,240051001059,10970,CTE- Foundations of Computer Science,339,131,76,241,0,0,264,15,117
+High Point High,,240051001059,10972,CTE - AP Computer Science Principles,54,18,24,22,0,0,39,0,0
+Beltsville Academy,,240051000978,10012,Exploring Computer Science,124,55,19,86,0,0,93,0,29
+Martin Luther King Jr. Middle,,240048001417,10012,Exploring Computer Science,326,158,159,114,0,0,199,51,51
+Judith P. Hoyer Montessori,,240051000414,10012,Exploring Computer Science,24,10,15,0,0,0,0,0,0
+Annapolis Road Academy,,240051000865,10970,CTE- Foundations of Computer Science,30,0,18,12,0,0,23,0,0
+Accokeek Academy,,240051001686,10012,Exploring Computer Science,296,145,216,43,0,0,123,26,12
+Friendly High,,240051001038,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Suitland High,,240051001164,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Green Valley Academy at Edgar Allan Poe,,240051001047,10012,Exploring Computer Science,21,0,15,0,0,0,19,0,0
+Benjamin Stoddert Middle,,240051001464,10012,Exploring Computer Science,254,118,213,38,0,0,188,26,21
+Thurgood Marshall Middle School,,240051001465,10012,Exploring Computer Science,268,121,192,62,0,0,195,33,25
+Benjamin D. Foulois Academy,,240051001684,10012,Exploring Computer Science,80,54,78,0,0,0,31,0,0
+Maya Angelou French Immersion,,240051001554,10012,Exploring Computer Science,41,18,38,0,0,0,18,0,0
+Andrew Jackson Academy,,240051001683,10012,Exploring Computer Science,58,30,53,0,0,0,33,15,0
+Samuel P. Massie Academy,,240051001555,10012,Exploring Computer Science,64,39,58,0,0,0,41,0,0
+Drew Freeman Middle,,240051001034,10012,Exploring Computer Science,315,148,244,61,0,0,260,28,28
+Imagine Lincoln Public Charter,,240051001648,10012,Exploring Computer Science,44,21,40,0,0,0,23,0,0
+Tall Oaks High,,240051001424,10970,CTE- Foundations of Computer Science,21,0,12,0,0,0,16,0,0
+Benjamin Tasker Middle School,,240051000982,10012,Exploring Computer Science,333,183,238,37,0,0,142,48,15
+Isaac J. Gourdine Middle,,240051001095,10012,Exploring Computer Science,253,109,154,79,0,0,168,51,37
+Stephen Decatur Middle,,240072000880,10012,Exploring Computer Science,257,127,186,58,0,0,156,40,24
+Imagine Andrews Public Charter,,240051001701,10012,Exploring Computer Science,45,20,34,0,0,0,12,0,0
+Dwight D. Eisenhower Middle,,240051001024,10012,Exploring Computer Science,342,163,173,137,0,0,235,23,54
+Chesapeake Math and IT Public Charter,,240051001708,10012,Exploring Computer Science,206,113,155,24,0,0,58,18,0
+Chesapeake Math and IT Public Charter,,240051001708,10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+Chesapeake Math and IT Public Charter,,240051001708,10951,CTE- Introduction to programming and applications,39,11,32,0,0,0,15,0,0
+Chesapeake Math and IT Public Charter,,240051001708,10972,CTE - AP Computer Science Principles,31,14,18,0,0,0,10,0,0
+Gwynn Park High,,240051001052,10157,AP Computer Science A,30,0,26,0,0,0,0,0,0
+Gwynn Park High,,240051001052,10961,CTE - Java Fundamentals,19,10,17,0,0,0,0,0,0
+Gwynn Park High,,240051001052,10970,CTE- Foundations of Computer Science,294,133,241,30,0,0,116,43,0
+Gwynn Park High,,240051001052,10972,CTE - AP Computer Science Principles,34,0,25,0,0,0,0,0,0
+Gwynn Park Middle,,240051001051,10012,Exploring Computer Science,236,118,197,23,0,0,104,10,0
+John Hanson Montessori,,240051000870,10012,Exploring Computer Science,24,13,23,0,0,0,0,0,0
+Oxon Hill High,,240051001123,10155,Java Programming,32,12,22,0,0,0,10,0,0
+Oxon Hill High,,240051001123,10157,AP Computer Science A,24,0,18,0,0,0,0,0,0
+Oxon Hill High,,240051001123,10972,CTE - AP Computer Science Principles,48,12,34,0,0,0,15,0,0
+Potomac High,,240051001133,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Oxon Hill Middle,,240051001471,10012,Exploring Computer Science,321,169,136,151,0,0,231,42,76
+G. James Gholson Middle,,240051001211,10012,Exploring Computer Science,379,176,256,109,0,0,288,50,48
+Kettering Middle,,240051001472,10012,Exploring Computer Science,303,143,262,31,0,0,177,55,13
+Charles Herbert Flowers High,,240051002951,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Charles Herbert Flowers High,,240051002951,10157,AP Computer Science A,47,18,39,0,0,0,17,0,0
+Charles Herbert Flowers High,,240051002951,10951,CTE- Introduction to programming and applications,55,19,53,0,0,0,20,0,0
+Charles Herbert Flowers High,,240051002951,10961,CTE - Java Fundamentals,11,0,10,0,0,0,0,0,0
+Charles Herbert Flowers High,,240051002951,10970,CTE- Foundations of Computer Science,17,0,16,0,0,0,0,0,0
+Charles Herbert Flowers High,,240051002951,10972,CTE - AP Computer Science Principles,117,62,101,14,0,0,64,0,0
+Kenmoor Middle,,240051001473,10012,Exploring Computer Science,361,176,236,90,0,0,267,56,48
+Ernest Everett Just Middle,,240051001223,10012,Exploring Computer Science,262,127,237,17,0,0,152,33,11
+Chesapeake Math and IT South Public Charter,,240051001726,10012,Exploring Computer Science,182,80,170,0,0,0,44,0,0
+Chesapeake Math and IT South Public Charter,,240051001726,10157,AP Computer Science A,16,0,16,0,0,0,0,0,0
+Chesapeake Math and IT South Public Charter,,240051001726,10961,CTE - Java Fundamentals,34,14,32,0,0,0,0,0,0
+Chesapeake Math and IT South Public Charter,,240051001726,10972,CTE - AP Computer Science Principles,16,0,13,0,0,0,0,0,0
+International High school @ Largo,,240051001737,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Duval High,,240051001023,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Duval High,,240051001023,10157,AP Computer Science A,31,12,21,0,0,0,14,0,0
+Duval High,,240051001023,10970,CTE- Foundations of Computer Science,222,102,121,83,0,0,161,0,31
+Duval High,,240051001023,10972,CTE - AP Computer Science Principles,30,0,18,11,0,0,16,0,0
+Dora Kennedy French Immersion,,240051001245,10012,Exploring Computer Science,43,29,35,0,0,0,13,0,0
+Robert Goddard Montessori,,240051001251,10012,Exploring Computer Science,32,14,25,0,0,0,0,0,0
+Samuel Ogle Middle,,240051001152,10012,Exploring Computer Science,313,150,203,61,0,0,119,41,17
+Excel Academy Public Charter,,240051001540,10012,Exploring Computer Science,38,17,30,0,0,0,23,0,0
+Frederick Douglass High,,240009000209,10970,CTE- Foundations of Computer Science,64,26,58,0,0,0,27,0,0
+James Madison Middle,,240051001475,10012,Exploring Computer Science,319,152,267,34,0,0,145,47,10
+"Dr. Henry A. Wise, Jr. High",,240051001542,10157,AP Computer Science A,26,0,22,0,0,0,0,0,0
+"Dr. Henry A. Wise, Jr. High",,240051001542,10970,CTE- Foundations of Computer Science,47,22,36,0,0,0,26,0,0
+Imagine Foundations at Leeland PCS,,240051001637,10012,Exploring Computer Science,52,22,51,0,0,0,18,0,0
+Imagine Foundations at Morningside PCS,,240051001706,10012,Exploring Computer Science,73,45,71,0,0,0,26,0,0
+Hyattsville Middle,,240051001065,10012,Exploring Computer Science,347,179,93,206,0,0,249,38,65
+Nicholas Orem Middle,,240051001112,10012,Exploring Computer Science,415,195,63,345,0,0,354,32,172
+International High School @ Langley Park,,240051001738,10970,CTE- Foundations of Computer Science,104,47,0,91,0,0,94,0,85
+Fairmont Heights High,,240051001029,10961,CTE - Java Fundamentals,72,35,51,16,0,0,43,0,0
+Fairmont Heights High,,240051001029,10970,CTE- Foundations of Computer Science,244,109,164,66,0,0,180,45,18
+Fairmont Heights High,,240051001029,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Thomas G. Pullen School,,240051001174,10012,Exploring Computer Science,96,59,76,13,0,0,41,0,0
+Walker Mill Middle,,240051001477,10012,Exploring Computer Science,286,135,256,25,0,0,184,36,10
+William W. Hall Academy,,240051001462,10012,Exploring Computer Science,71,37,40,30,0,0,57,0,12
+William Wirt Middle,,240051001186,10012,Exploring Computer Science,548,245,96,426,0,0,481,44,240
+Parkdale High,,240051001126,10157,AP Computer Science A,21,0,13,0,0,0,17,0,0
+Parkdale High,,240051001126,10970,CTE- Foundations of Computer Science,215,110,72,133,0,0,153,20,39
+Thomas Johnson Middle,,240051001175,10012,Exploring Computer Science,442,213,228,189,0,0,323,35,86
+Charles Carroll Middle,,240051001004,10012,Exploring Computer Science,567,264,166,379,0,0,462,50,156
+Middleton Valley Academy,,240051001544,10012,Exploring Computer Science,51,23,46,0,0,0,39,0,0
+Buck Lodge Middle,,240051000993,10012,Exploring Computer Science,557,282,40,498,0,0,493,46,263
+Eleanor Roosevelt High,,240051001027,10157,AP Computer Science A,98,27,43,0,0,0,33,0,0
+Eleanor Roosevelt High,,240051001027,10951,CTE- Introduction to programming and applications,88,25,48,14,0,0,43,0,0
+Eleanor Roosevelt High,,240051001027,10970,CTE- Foundations of Computer Science,550,274,369,137,0,0,338,65,46
+Eleanor Roosevelt High,,240051001027,10972,CTE - AP Computer Science Principles,136,55,83,14,0,0,47,0,0
+Greenbelt Middle,,240051001049,10012,Exploring Computer Science,543,257,274,202,0,0,374,69,88
+College Park Academy,,240051001718,10012,Exploring Computer Science,113,50,72,23,0,0,46,0,0
+College Park Academy,,240051001718,10019,AP Computer Science Principles,21,0,16,0,0,0,0,0,0
+College Park Academy,,240051001718,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+College Park Academy,,240051001718,10970,CTE- Foundations of Computer Science,76,46,49,23,0,0,34,0,0
+College Park Academy,,240051001718,10972,CTE - AP Computer Science Principles,39,16,24,0,0,0,12,0,0
+College Park Academy,,240051001718,10973,CTE - AP Computer Science A,21,0,16,0,0,0,0,0,0
+Community Based Classrooms,,240051001067,10970,CTE- Foundations of Computer Science,17,0,0,0,0,0,0,0,0
+Queen Anne's County High School,,240054001195,10970,CTE- Foundations of Computer Science,56,12,0,0,0,0,20,0,0
+Queen Anne's County High School,,240054001195,10972,CTE - AP Computer Science Principles,21,0,0,0,0,0,0,0,0
+Queen Anne's County High School,,240054001195,10973,CTE - AP Computer Science A,10,0,0,0,0,0,0,0,0
+Kent Island High School,,240054001076,10970,CTE- Foundations of Computer Science,53,12,0,0,0,0,0,11,0
+Kent Island High School,,240054001076,10972,CTE - AP Computer Science Principles,48,0,0,0,0,0,0,0,0
+Kent Island High School,,240054001076,10973,CTE - AP Computer Science A,20,0,0,0,0,0,0,0,0
+Spring Ridge Middle,,240060001237,10970,CTE- Foundations of Computer Science,98,58,20,0,0,0,21,0,0
+Chopticon High,,240060001218,10970,CTE- Foundations of Computer Science,84,32,0,0,0,0,13,0,0
+Chopticon High,,240060001218,10972,CTE - AP Computer Science Principles,26,0,0,0,0,0,0,0,0
+Leonardtown Middle,,240060001229,10970,CTE- Foundations of Computer Science,33,16,0,0,0,0,0,0,0
+Leonardtown High,,240060001356,10970,CTE- Foundations of Computer Science,183,61,13,13,0,0,19,28,0
+Leonardtown High,,240060001356,10972,CTE - AP Computer Science Principles,56,10,0,0,0,0,0,0,0
+Leonardtown High,,240060001356,10973,CTE - AP Computer Science A,24,0,0,0,0,0,0,0,0
+Great Mills High,,240060001224,10970,CTE- Foundations of Computer Science,124,48,37,19,0,0,62,11,0
+Great Mills High,,240060001224,10972,CTE - AP Computer Science Principles,53,15,0,0,0,0,0,0,0
+Great Mills High,,240060001224,10973,CTE - AP Computer Science A,15,0,0,0,0,0,0,0,0
+Esperanza Middle,,240060001220,10970,CTE- Foundations of Computer Science,101,68,10,0,0,0,15,0,0
+Chesapeake Charter School,,240060001639,10970,CTE- Foundations of Computer Science,0,0,0,0,0,0,0,0,0
+Washington Academy and High School,,240057001213,10152,Computer Programming,34,13,18,0,0,0,21,0,0
+Washington Academy and High School,,240057001213,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Crisfield Academy and High School,,240057001201,10152,Computer Programming,40,0,0,0,0,0,19,0,0
+Easton High,,240063001242,10970,CTE- Foundations of Computer Science,209,115,35,59,0,0,113,25,33
+Easton High,,240063001242,10972,CTE - AP Computer Science Principles,21,0,0,0,0,0,0,0,0
+Easton High,,240063001242,10973,CTE - AP Computer Science A,11,0,0,0,0,0,0,0,0
+St. Michaels Middle/High School,,240063001248,10970,CTE- Foundations of Computer Science,38,11,0,0,0,0,13,0,0
+Williamsport High,,240066001295,10154,C++ Programming,0,0,0,0,0,0,0,0,0
+South Hagerstown High,,240066001288,10961,CTE - Java Fundamentals,0,0,0,0,0,0,0,0,0
+South Hagerstown High,,240066001288,10970,CTE- Foundations of Computer Science,81,24,13,0,0,0,46,0,0
+South Hagerstown High,,240066001288,10972,CTE - AP Computer Science Principles,10,0,0,0,0,0,0,0,0
+South Hagerstown High,,240066001288,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Clear Spring High,,240066001260,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Boonsboro High,,240066001256,10154,C++ Programming,13,0,0,0,0,0,0,0,0
+Boonsboro High,,240066001256,10970,CTE- Foundations of Computer Science,83,22,0,0,0,0,15,0,0
+Boonsboro High,,240066001256,10972,CTE - AP Computer Science Principles,33,12,0,0,0,0,0,0,0
+Boonsboro High,,240066001256,10973,CTE - AP Computer Science A,11,0,0,0,0,0,0,0,0
+Smithsburg High,,240066001285,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Smithsburg High,,240066001285,10970,CTE- Foundations of Computer Science,69,18,0,0,0,0,20,11,0
+Smithsburg High,,240066001285,10972,CTE - AP Computer Science Principles,28,11,0,0,0,0,0,0,0
+Smithsburg High,,240066001285,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+North Hagerstown High,,240066001275,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+North Hagerstown High,,240066001275,10154,C++ Programming,0,0,0,0,0,0,0,0,0
+North Hagerstown High,,240066001275,10159,IB Computer Science,0,0,0,0,0,0,0,0,0
+North Hagerstown High,,240066001275,10970,CTE- Foundations of Computer Science,86,34,14,15,0,0,44,0,0
+North Hagerstown High,,240066001275,10972,CTE - AP Computer Science Principles,24,0,0,0,0,0,0,0,0
+North Hagerstown High,,240066001275,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Mardela Middle & High,,240069001306,10012,Exploring Computer Science,200,107,24,0,0,0,82,31,0
+Mardela Middle & High,,240069001306,10972,CTE - AP Computer Science Principles,36,18,0,0,0,0,14,0,0
+Pittsville Elementary & Middle,,240069001312,10012,Exploring Computer Science,168,80,0,0,0,0,83,22,0
+Wicomico Middle,,240069001319,10012,Exploring Computer Science,557,265,268,95,0,0,421,81,99
+Wicomico High,,240069001320,10970,CTE- Foundations of Computer Science,73,33,28,10,0,0,52,0,0
+Wicomico High,,240069001320,10972,CTE - AP Computer Science Principles,13,0,0,0,0,0,10,0,0
+Wicomico High,,240069001320,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Salisbury Middle,,240069001145,10012,Exploring Computer Science,358,168,222,27,0,0,273,72,0
+James M. Bennett High,,240069001305,10970,CTE- Foundations of Computer Science,93,58,15,0,0,0,21,0,0
+James M. Bennett High,,240069001305,10972,CTE - AP Computer Science Principles,47,15,0,0,0,0,0,0,0
+James M. Bennett High,,240069001305,10973,CTE - AP Computer Science A,10,0,0,0,0,0,0,0,0
+Bennett Middle,,240069001299,10012,Exploring Computer Science,627,323,220,75,0,0,351,109,36
+Parkside High,,240069001309,10970,CTE- Foundations of Computer Science,25,0,0,0,0,0,0,0,0
+Parkside High,,240069001309,10972,CTE - AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+Parkside High,,240069001309,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+Pocomoke High,,240072001330,10012,Exploring Computer Science,15,0,0,0,0,0,0,0,0
+Pocomoke Middle,,240072001329,10152,Computer Programming,49,21,24,0,0,0,32,0,0
+Snow Hill High,,240072001334,10012,Exploring Computer Science,12,0,0,0,0,0,0,0,0
+Snow Hill Middle,,240072001333,10152,Computer Programming,59,24,15,0,0,0,28,0,0
+Stephen Decatur Middle,,240072000880,10152,Computer Programming,193,89,0,0,0,0,31,0,0
+Stephen Decatur High,,240072001335,10012,Exploring Computer Science,28,12,0,0,0,0,0,0,0
+Stephen Decatur High,,240072001335,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Berlin Intermediate,,240072001323,10152,Computer Programming,208,73,17,19,0,0,82,13,0
+Worcester Technical High School,,240072001091,10012,Exploring Computer Science,59,30,0,0,0,0,22,0,0
+Worcester Technical High School,,240072001091,10971,CTE- Computer Science Essentials,31,0,0,0,0,0,0,0,0
+Worcester Technical High School,,240072001091,10972,CTE - AP Computer Science Principles,20,0,0,0,0,0,0,0,0
+Worcester Technical High School,,240072001091,10973,CTE - AP Computer Science A,0,0,0,0,0,0,0,0,0
+City Springs Elementary/Middle,,240009000175,10011,Computer Science Principles,169,72,160,0,0,0,121,32,0
+James McHenry Elementary/Middle,,240009000253,10011,Computer Science Principles,220,107,203,0,0,0,169,35,0
+Lakeland Elementary/Middle,,240009000264,10011,Computer Science Principles,176,79,58,109,0,0,54,14,32
+Tench Tilghman Elementary/Middle,,240009000320,10011,Computer Science Principles,37,21,33,0,0,0,24,0,0
+Stadium School,,240009000571,10011,Computer Science Principles,93,46,83,0,0,0,51,17,0
+Johnston Square Elementary,,240009000258,10011,Computer Science Principles,216,109,209,0,0,0,170,34,0
+Commodore John Rogers Elementary/Middle,,240009000180,10011,Computer Science Principles,315,146,175,121,0,0,150,34,75
+Sandtown-Winchester Achievement Academy,,240009000335,10011,Computer Science Principles,414,200,403,0,0,0,306,72,0
+Harlem Park Elementary/Middle,,240009000239,10011,Computer Science Principles,281,137,273,0,0,0,218,40,0
+Harford Heights Elementary,,240009001153,10011,Computer Science Principles,64,30,62,0,0,0,45,18,0
+Montebello Elementary/Middle,,240009000281,10011,Computer Science Principles,70,28,67,0,0,0,41,0,0
+Hampstead Hill Academy,,240009000234,10011,Computer Science Principles,267,125,52,119,0,0,52,0,38
+Abbottston Elementary,,240009000143,10011,Computer Science Principles,322,147,293,12,0,0,192,52,12
+Waverly Elementary/Middle,,240009000329,10011,Computer Science Principles,102,50,95,0,0,0,69,14,0
+Margaret Brent Elementary/Middle,,240009000276,10011,Computer Science Principles,34,10,21,0,0,0,19,0,0
+Barclay Elementary/Middle,,240009000152,10011,Computer Science Principles,151,78,128,17,0,0,86,21,12
+Hampden Elementary/Middle,,240009000233,10011,Computer Science Principles,62,29,30,0,0,0,22,12,0
+Dr. Nathan A. Pitts-Ashburton Elementary/Middle,,240009000149,10011,Computer Science Principles,54,27,51,0,0,0,31,13,0
+Edgecombe Circle Elementary,,240009000192,10011,Computer Science Principles,178,78,171,0,0,0,120,48,0
+Rosemont Elementary/Middle,,240009000307,10011,Computer Science Principles,327,157,318,0,0,0,209,48,0
+Mount Royal Elementary/Middle,,240009000285,10011,Computer Science Principles,619,307,549,16,0,0,273,69,0
+Calverton Elementary/Middle,,240009000164,10011,Computer Science Principles,118,58,113,0,0,0,90,20,0
+Francis Scott Key Elementary/Middle,,240009000205,10011,Computer Science Principles,433,204,211,48,0,0,149,86,10
+North Bend Elementary/Middle,,240009000602,10011,Computer Science Principles,433,203,397,25,0,0,230,65,22
+William Paca Elementary,,240009000334,10011,Computer Science Principles,411,213,217,182,0,0,230,47,150
+Thomas Johnson Elementary/Middle,,240009000323,10011,Computer Science Principles,453,229,82,35,0,0,96,62,11
+Fort Worthington Elementary/Middle,,240009000204,10011,Computer Science Principles,744,368,674,51,0,0,475,113,37
+Windsor Hills Elementary/Middle,,240009000337,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Wildwood Elementary/Middle,,240009000273,10011,Computer Science Principles,568,264,549,17,0,0,340,105,10
+Franklin Square Elementary/Middle,,240009000208,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Collington Square Elementary/Middle,,240009000179,10011,Computer Science Principles,335,157,327,0,0,0,249,53,0
+Bay-Brook Elementary/Middle,,240009000154,10011,Computer Science Principles,36,23,20,14,0,0,22,0,0
+Booker T. Washington Middle,,240009000160,10011,Computer Science Principles,75,31,72,0,0,0,54,20,0
+Walter P. Carter Elementary/Middle,,240009000328,10011,Computer Science Principles,377,185,357,12,0,0,243,94,0
+The Historic Cherry Hill Elementary/Middle,,240009000171,10011,Computer Science Principles,567,274,534,25,0,0,436,111,10
+Arundel Elementary,,240009000148,10011,Computer Science Principles,277,141,260,13,0,0,196,35,0
+Excel Academy at Francis M. Wood High,,240009001343,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Excel Academy at Francis M. Wood High,,240009001343,10971,CTE- Computer Science Essentials,291,152,280,0,0,0,191,84,0
+Dickey Hill Elementary/Middle,,240009000186,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Maree Garnett Farring Elementary/Middle,,240009001363,10011,Computer Science Principles,602,301,165,286,0,0,247,87,191
+Woodhome Elementary/Middle,,240009000339,10011,Computer Science Principles,196,85,156,18,0,0,64,24,10
+Curtis Bay Elementary/Middle,,240009000183,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Hazelwood Elementary/Middle,,240009000241,10011,Computer Science Principles,89,38,83,0,0,0,41,18,0
+Garrett Heights Elementary/Middle,,240009000213,10011,Computer Science Principles,278,138,248,0,0,0,147,43,0
+Govans Elementary,,240009000223,10011,Computer Science Principles,215,103,204,0,0,0,126,42,0
+Guilford Elementary/Middle,,240009001428,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Highlandtown Elementary/Middle #215,,240009000243,10011,Computer Science Principles,52,31,0,43,0,0,15,0,20
+Morrell Park Elementary/Middle,,240009000284,10011,Computer Science Principles,173,82,68,27,0,0,100,36,17
+The Mount Washington School,,240009000286,10011,Computer Science Principles,209,105,174,0,0,0,45,21,0
+Pimlico Elementary/Middle,,240009000299,10011,Computer Science Principles,89,40,76,0,0,0,54,22,0
+Westport Academy,,240009000331,10011,Computer Science Principles,89,38,80,0,0,0,63,27,0
+Violetville Elementary/Middle,,240009000326,10011,Computer Science Principles,57,27,31,15,0,0,30,11,0
+John Ruhrah Elementary/Middle,,240009000257,10011,Computer Science Principles,545,264,30,467,0,0,157,47,366
+Holabird Elementary/Middle,,240009000247,10011,Computer Science Principles,427,227,174,200,0,0,177,57,142
+The Belair-Edison School,,240009000161,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Thomas Jefferson Elementary/Middle,,240009000322,10011,Computer Science Principles,65,28,61,0,0,0,36,0,0
+Roland Park Elementary/Middle,,240009000306,10011,Computer Science Principles,703,335,261,37,0,0,70,47,17
+Arlington Elementary,,240009000146,10011,Computer Science Principles,53,29,42,10,0,0,30,0,11
+Glenmount Elementary/Middle,,240009000222,10011,Computer Science Principles,518,267,473,25,0,0,207,92,19
+Hamilton Elementary/Middle,,240009000231,10011,Computer Science Principles,416,208,344,22,0,0,122,47,0
+Highlandtown Elementary/Middle #237,,240009000244,10011,Computer Science Principles,868,413,123,714,0,0,236,60,559
+Benjamin Franklin High School at Masonville Cove,,240009000157,10971,CTE- Computer Science Essentials,230,102,100,66,0,0,107,57,49
+Graceland Park/O'Donnel Heights Elementary/Middle,,240009000224,10011,Computer Science Principles,53,30,11,38,0,0,17,0,21
+Fallstaff Elementary/Middle,,240009000199,10011,Computer Science Principles,356,159,169,176,0,0,104,36,149
+Armistead Gardens Elementary/Middle,,240009000147,10011,Computer Science Principles,701,348,67,450,0,0,268,90,187
+Leith Walk Elementary/Middle,,240009000268,10011,Computer Science Principles,691,336,638,40,0,0,294,109,28
+Beechfield Elementary/Middle,,240009000155,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Cross Country Elementary/Middle,,240009000182,10011,Computer Science Principles,449,226,374,52,0,0,171,61,27
+"Dr. Bernard Harris, Sr., Elementary",,240009000187,10011,Computer Science Principles,218,119,209,0,0,0,155,44,0
+Callaway Elementary,,240009000163,10011,Computer Science Principles,229,122,216,0,0,0,133,42,0
+"Dr. Martin Luther King, Jr., Elementary/Middle",,240009000188,10011,Computer Science Principles,204,109,195,0,0,0,140,41,0
+Calvin M. Rodwell Elementary/Middle,,240009001390,10011,Computer Science Principles,673,326,623,34,0,0,344,90,14
+Empowerment Academy,,240009001558,10011,Computer Science Principles,218,121,215,0,0,0,88,28,0
+William S. Baer School,,240009000336,10011,Computer Science Principles,11,0,10,0,0,0,0,11,0
+Claremont School,,240009000176,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Lois T. Murray Elementary/Middle,,240009001364,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Midtown Academy,,240009000883,10011,Computer Science Principles,22,13,20,0,0,0,10,0,0
+The Crossroads School,,240009001291,10011,Computer Science Principles,56,31,41,10,0,0,20,11,0
+ConneXions: A  Community Based Arts School,,240009001302,10971,CTE- Computer Science Essentials,51,32,51,0,0,0,30,0,0
+City Neighbors Charter School,,240009001478,10011,Computer Science Principles,54,30,38,0,0,0,13,13,0
+Patterson Park Public Charter School,,240009001480,10011,Computer Science Principles,500,267,222,191,0,0,159,76,90
+Southwest Baltimore Charter School,,240009001527,10011,Computer Science Principles,42,19,33,0,0,0,20,0,0
+Independence School Local I,,240009001632,10971,CTE- Computer Science Essentials,38,10,34,0,0,0,18,14,0
+Baltimore International Academy,,240009001631,10011,Computer Science Principles,627,317,553,31,0,0,219,28,0
+Baltimore Montessori Public Charter School,,240009001657,10011,Computer Science Principles,108,55,76,0,0,0,40,28,0
+Afya Public Charter School,,240009001661,10011,Computer Science Principles,110,64,106,0,0,0,53,36,0
+The Reach! Partnership School,,240009001663,10971,CTE- Computer Science Essentials,56,22,56,0,0,0,25,11,0
+Joseph C. Briscoe Academy,,240009001662,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Joseph C. Briscoe Academy,,240009001662,10971,CTE- Computer Science Essentials,0,0,0,0,0,0,0,0,0
+City Neighbors Hamilton,,240009001680,10011,Computer Science Principles,28,13,17,0,0,0,0,0,0
+KIPP Harmony Academy,,240009001681,10011,Computer Science Principles,173,92,169,0,0,0,85,17,0
+Baltimore Leadership School for Young Women,,240009001682,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Baltimore Leadership School for Young Women,,240009001682,10971,CTE- Computer Science Essentials,75,75,74,0,0,0,27,0,0
+N.A.C.A. Freedom and Democracy Academy II,,240009001678,10011,Computer Science Principles,37,18,36,0,0,0,19,0,0
+N.A.C.A. Freedom and Democracy Academy II,,240009001678,10971,CTE- Computer Science Essentials,54,28,51,0,0,0,30,16,0
+Bluford Drew Jemison STEM Academy West,,240009001675,10011,Computer Science Principles,49,0,47,0,0,0,31,16,0
+Bluford Drew Jemison STEM Academy West,,240009001675,10971,CTE- Computer Science Essentials,34,0,34,0,0,0,20,11,0
+Elmer A. Henderson: A Johns Hopkins Partnership,,240009001670,10011,Computer Science Principles,270,129,264,0,0,0,142,24,0
+Lillie May Carroll Jackson School,,240009001734,10011,Computer Science Principles,146,146,144,0,0,0,64,20,0
+Tunbridge Public Charter School,,240009001689,10011,Computer Science Principles,386,200,316,0,0,0,78,48,0
+Vanguard Collegiate Middle,,240009001693,10011,Computer Science Principles,334,147,296,17,0,0,187,78,58
+Baltimore Collegiate School for Boys,,240009001736,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+Green Street Academy,,240009001691,10011,Computer Science Principles,118,59,113,0,0,0,64,12,0
+Green Street Academy,,240009001691,10971,CTE- Computer Science Essentials,142,69,136,0,0,0,65,23,0
+Baltimore Design School,,240009001703,10011,Computer Science Principles,226,143,217,0,0,0,122,27,0
+Baltimore Design School,,240009001703,10971,CTE- Computer Science Essentials,68,44,63,0,0,0,33,12,0
+Creative City Public Charter School,,240009001716,10011,Computer Science Principles,118,71,95,0,0,0,55,18,0
+Baltimore International Academy West,,240009001752,10011,Computer Science Principles,40,20,39,0,0,0,20,0,0
+Baltimore Polytechnic Institute,,240009000151,10157,AP Computer Science A,87,43,58,0,0,0,24,0,0
+Baltimore Polytechnic Institute,,240009000151,10971,CTE- Computer Science Essentials,332,155,206,44,0,0,71,0,0
+Patterson High,,240009000297,10157,AP Computer Science A,19,0,0,12,0,0,0,0,0
+Patterson High,,240009000297,10971,CTE- Computer Science Essentials,233,101,115,95,0,0,98,31,93
+Forest Park High,,240009000203,10971,CTE- Computer Science Essentials,112,48,88,18,0,0,46,0,20
+Forest Park High,,240009000203,10972,CTE - AP Computer Science Principles,12,0,10,0,0,0,0,0,0
+Western High,,240009000330,10157,AP Computer Science A,12,12,0,0,0,0,0,0,0
+Western High,,240009000330,10971,CTE- Computer Science Essentials,169,169,153,0,0,0,63,0,0
+Mergenthaler Vocational-Technical High,,240009000280,10971,CTE- Computer Science Essentials,472,224,436,28,0,0,180,36,0
+Achievement Academy at Harbor City High,,240009000236,10971,CTE- Computer Science Essentials,218,86,200,16,0,0,121,57,0
+Paul Laurence Dunbar High,,240009000298,10971,CTE- Computer Science Essentials,232,71,209,18,0,0,89,10,0
+Digital Harbor High School,,240009001313,10157,AP Computer Science A,23,0,13,0,0,0,0,0,0
+Digital Harbor High School,,240009001313,10971,CTE- Computer Science Essentials,462,176,287,138,0,0,196,94,126
+Reginald F. Lewis High,,240009001331,10971,CTE- Computer Science Essentials,186,65,161,17,0,0,87,39,13
+National Academy Foundation,,240009001339,10011,Computer Science Principles,151,69,125,25,0,0,94,41,20
+Academy for College and Career Exploration,,240009001381,10011,Computer Science Principles,107,46,98,0,0,0,70,20,0
+Academy for College and Career Exploration,,240009001381,10971,CTE- Computer Science Essentials,216,89,154,49,0,0,96,49,32
+Vivien T. Thomas Medical Arts Academy,,240009001385,10971,CTE- Computer Science Essentials,263,213,241,10,0,0,155,37,0
+Augusta Fells Savage Institute of Visual Arts,,240009001387,10971,CTE- Computer Science Essentials,197,88,192,0,0,0,119,58,0
+Coppin Academy,,240009001530,10971,CTE- Computer Science Essentials,113,58,109,0,0,0,48,17,0
+Renaissance Academy,,240009001531,10971,CTE- Computer Science Essentials,97,47,95,0,0,0,61,35,0
+Frederick Douglass High,,240009000209,10971,CTE- Computer Science Essentials,151,62,147,0,0,0,87,47,0
+Carver Vocational-Technical High,,240009000168,10971,CTE- Computer Science Essentials,234,106,224,0,0,0,123,36,0
+Carver Vocational-Technical High,,240009000168,10972,CTE - AP Computer Science Principles,28,12,28,0,0,0,12,0,0
+Baltimore City College,,240009000150,10159,IB Computer Science,379,227,272,29,0,0,80,11,0
+Eager Street Academy,,240009000885,10011,Computer Science Principles,0,0,0,0,0,0,0,0,0
+The Seed School of Maryland,,240002701669,10012,Exploring Computer Science,11,0,0,0,0,0,11,0,0
+The Seed School of Maryland,,240002701669,10019,AP Computer Science Principles,0,0,0,0,0,0,0,0,0
+The Seed School of Maryland,,240002701669,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
