@@ -27,7 +27,7 @@ class P5LabVisualizationHeader extends React.Component {
 
   changeInterfaceMode = mode => {
     // Make sure code workspace is rendered properly after switching from the Animation Tab.
-    if (mode === 'CODE') {
+    if (mode === P5LabInterfaceMode.CODE) {
       if (this.props.spriteLab) {
         // Sprite Lab (Blockly) doesn't need a window resize event, but it does need to rerender.
         setTimeout(() => Blockly.mainBlockSpace.render(), 0);
@@ -35,7 +35,7 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
-    } else if (mode === 'ANIMATION') {
+    } else if (mode === P5LabInterfaceMode.ANIMATION) {
       firehoseClient.putRecord({
         study: 'animation-library',
         study_group: 'control-2020',
