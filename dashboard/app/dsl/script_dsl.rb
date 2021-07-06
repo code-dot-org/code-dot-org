@@ -359,11 +359,7 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
-<<<<<<< HEAD
-=======
-    s << "background '#{script.background}'" if script.background
     s << "is_maker_unit true" if script.is_maker_unit
->>>>>>> staging
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
