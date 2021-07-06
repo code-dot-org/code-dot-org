@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-06 18:58:38 UTC",
+    "serialized_at": "2021-07-06 22:14:30 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -2622,7 +2622,7 @@
       "key": "f71a0c51-2c5d-4264-b2fc-a7d6b9d63c19",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio Level 2 - Shoe Recommender. The second level contains a basic program that helps students decide what shoes to wear. Have students run the program a few times.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into the first level of Code Studio. This level contains a basic program that helps students decide what shoes to wear. Have students run the program a few times.",
         "name": "Shoe Recommender\r"
       },
       "seeding_key": {
@@ -2667,7 +2667,13 @@
       "key": "0b15e81a-d2e1-4c1c-adc0-b0736031a978",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is just randomly making decisions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What would improve this model to help it make better decisions?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is just randomly making decisions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Preview of Model Cards:** The format used on this slide is a precursor to Model Cards, which students will see in later lessons. For now, you can describe these descriptions like a name tag or nutrition label on a model - it helps identify and describe how the model works for anyone who uses the app."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b15e81a-d2e1-4c1c-adc0-b0736031a978",
@@ -2678,7 +2684,7 @@
       "key": "1f3dff11-7bc4-4af2-8dd0-d9549c91e93d",
       "position": 8,
       "properties": {
-        "description": " **Discussion Goal:** Help students make connections between the topics they brainstormed in the warm-up and this app. If students don’t arrive at this conclusion on their own, be sure to say this explicitly: this app could be improved if it asked the user questions to help it make decisions. This will help connect to the next app that students will preview."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What would improve this model to help it make better decisions?_\n\n **Discussion Goal:** Guide students towards the conclusion that this app could be improved if it used user input and asked questions to help it make decisions. Try to make connections back to the warm-up discussion and how apps can make bad choices when they don't have strong examples from their users. This will help connect to the next app that students will preview."
       },
       "seeding_key": {
         "activity_section.key": "1f3dff11-7bc4-4af2-8dd0-d9549c91e93d",
@@ -2723,7 +2729,7 @@
       "key": "317c9ba5-4264-4294-93ab-d77207c3effb",
       "position": 12,
       "properties": {
-        "description": " **Discussion Goal:** Students may realize that they can only get certain answers based on certain decisions, and may intuitively describe some sort of “flow” through the program that leads to certain decisions. They may also question or criticize the decisions behind how some shoes are chosen. This is a good point to focus on to help transition to the next model students will look at.\r\n\r"
+        "description": " **Discussion Goal:** Students may realize that they can only get certain answers based on certain decisions, and may intuitively describe some sort of “flow” through the program that leads to certain decisions. They may also question or criticize the decisions behind how some shoes are chosen. This is a good point to return to in a later discussion.\n\nAs students narrow-in on the branching structure of this app, show students the following slide which shows the tree that the app uses to make its recommendations."
       },
       "seeding_key": {
         "activity_section.key": "317c9ba5-4264-4294-93ab-d77207c3effb",
@@ -2734,7 +2740,7 @@
       "key": "e56fe301-f936-4035-8862-9ced4eb889ff",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is using a process called a Decision Tree to make its recommendations.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would improve this model to help it make better decisions?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is using a process called a Decision Tree to make its recommendations."
       },
       "seeding_key": {
         "activity_section.key": "e56fe301-f936-4035-8862-9ced4eb889ff",
@@ -2745,7 +2751,7 @@
       "key": "52ec38ad-1469-4e53-814c-80dd3665b68c",
       "position": 14,
       "properties": {
-        "description": " **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes. Try to highlight this idea of getting input from our users to help make our decision, which helps transition to the next activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Do you agree with the questions that were asked and how the shoes were assigned? Who do you think decided which shoes went with each answer?\n\n **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes, or that these decisions may not represent all people who may want to use the app. Try to highlight this idea of getting input from our users to help make our decision, rather than relying on your own personal experiences since they may not represent all situations. This helps transition to the next activity."
       },
       "seeding_key": {
         "activity_section.key": "52ec38ad-1469-4e53-814c-80dd3665b68c",
@@ -2756,15 +2762,9 @@
       "key": "78b2b050-7ae5-4f81-a323-76160d0f07b1",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** [take survey]",
-        "name": "Ultimate Shoe Recommender",
-        "progression_name": "Shoe Recommendation Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Cross Tab Video:** [Click Here](https://www.youtube.com/watch?v=Jc33T55D2sA&feature=youtu.be) to view a video walking through the Cross Tab screen in App Lab. This is similar to how you would want to present this screen to students. You can decide to use this as a reference when walking through the data yourself, or you can show this video directly to students.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** Have students continue to the next level in Code Studio, where they will take a survey asking several questions about their day and what shoes they are wearing. Students can take the survey multiple times to represent different situations, such as:\n- Pretending it’s the weekend\n- Pretending you’re going to a birthday party\n- Pretending you’re sick and not feeling well\n",
+        "name": "Shoe Recommendation Survey",
+        "progression_name": "Shoe Recommendation Survey"
       },
       "seeding_key": {
         "activity_section.key": "78b2b050-7ae5-4f81-a323-76160d0f07b1",
@@ -2775,7 +2775,13 @@
       "key": "3cc2b93e-a758-490c-a5a9-32912de379e3",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What hot spots did you find in the data? How do you think this will be helpful for a model to make shoe recommendations?_"
+        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/aiml/2021] video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3cc2b93e-a758-490c-a5a9-32912de379e3",
@@ -2786,7 +2792,13 @@
       "key": "35403959-7050-4beb-8f4d-70c33fb8cf9a",
       "position": 17,
       "properties": {
-        "description": " **Discussion Goal:** Students should be able to highlight several hot spot areas, such as answering “No” to “Do you wear socks?” is highly likely to indicate that you should wear sandals. Students should indicate that they can use this data to help their model make decisions, even if they’re not completely sure how to do this yet.\r\n\r"
+        "description": " **Distribute:** pass out the [r patterns_in_data/aiml/2021] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** As you see students filling in the sentence starters, ask them to explain why they picked these two answers. Students should be able to refer back to the data and use the row to highlight how choosing a particular answer has a strong relationship with a certain shoe. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "35403959-7050-4beb-8f4d-70c33fb8cf9a",
@@ -2797,7 +2809,7 @@
       "key": "2a88d7eb-c59b-45ac-962e-ff8516ba9921",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display a slide to remind students of the following definitions\r\n\r\n- **Feature:** an input that the model uses to make decisions\r\n- **Label:** the output you are trying to decide or predict with a model\r\n\r\nEmphasize that in this data, each of the questions are the features which are being used to predict what type of shoe to recommend, which is the label.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the description of the app they’re about to look at, which uses the data shown to make its recommendations. Highlight that this app uses a Points Added model, which analyzes the results from all of the questions to determine which shoe to recommend."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** _Using trends from all five questions, what are some shoes we can recommend based on the patterns in the data?_\n\n**Discussion Goal:** Students should combine several trends together to help recommend a shoe. For example, if someone says they'll spend time indoors, with sunny weather, wearing socks: then we can recommend tennis shoes to this person. Have several students share and try to hear recommendations for each type of shoe. If possible, record some of the responses at the front of the room to use in the next level.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display a slide to remind students of the following definitions\n\n- **Feature:** an input that the model uses to make decisions\n- **Label:** the output you are trying to decide or predict with a model\n\nEmphasize that in this data, each of the questions are the features which are being used to predict what type of shoe to recommend, which is the label.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the description of the app they’re about to look at, which uses the data shown to make its recommendations. Highlight that this app has a new section about the data that it used to create its model."
       },
       "seeding_key": {
         "activity_section.key": "2a88d7eb-c59b-45ac-962e-ff8516ba9921",
@@ -2805,26 +2817,10 @@
       }
     },
     {
-      "key": "13e08daa-5747-46b1-af6f-5f742c3672e8",
+      "key": "88e03086-5ef1-4486-8950-cde76ed1d587",
       "position": 19,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Advancing Between Levels:** Because students aren't writing code in this level, it may be a little confusing on how to advance to the next level. There are two ways to guide students to the next level when finished:\r\n\r\n- Have them click the next bubble at the top of their screen\r\n- Press \"Run\" on the app. Nothing will happen, but a Finish button will appear below the app. Clicking the finish button will continue to the next level\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "13e08daa-5747-46b1-af6f-5f742c3672e8",
-        "lesson_activity.key": "0c2aabd5-43ce-422e-b181-a451fa21c435"
-      }
-    },
-    {
-      "key": "88e03086-5ef1-4486-8950-cde76ed1d587",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where this app is available to test. Have students answer the questions and see if the recommendations match what they saw in the data. They can also check a “show model” box on each screen, which will display the point totals on each screen of the app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where this app is available to test. Have students answer the questions and see if the recommendations match what they saw in the data."
       },
       "seeding_key": {
         "activity_section.key": "88e03086-5ef1-4486-8950-cde76ed1d587",
@@ -2833,7 +2829,7 @@
     },
     {
       "key": "280ddf58-b0ce-4ca6-ad91-b55243b6b638",
-      "position": 21,
+      "position": 20,
       "properties": {
         "progression_name": "Ultimate Shoe Recommender"
       },
@@ -2843,10 +2839,21 @@
       }
     },
     {
+      "key": "5f1de631-2b33-48fd-9abc-b3a8e240d804",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Advance to the next slide, which shows an arrow connecting how Data becomes a Model. With this slide displayed, transition to the remarks below."
+      },
+      "seeding_key": {
+        "activity_section.key": "5f1de631-2b33-48fd-9abc-b3a8e240d804",
+        "lesson_activity.key": "0c2aabd5-43ce-422e-b181-a451fa21c435"
+      }
+    },
+    {
       "key": "e030d1fa-c8eb-4cb1-a347-6aebad08d660",
       "position": 22,
       "properties": {
-        "description": "One of the most effective ways to make recommendations involves looking at data from our users. But analyzing that data took some time, even for a short survey like this - imagine if there were 20 questions instead of 3! Or if you were recommending a whole outfit instead of just shoes! In the next lesson, we’ll see how a computer can make this process easier and how it can try to “learn” from data to make decisions!",
+        "description": "Today, we saw how you can take data and use it to help create a model that makes recommendations. But analyzing that data took some time, even for a short survey like this - imagine if there were 20 questions instead of 3! Or if you were recommending a whole outfit instead of just shoes! In the next lesson, we’ll see one of the strategies that a computer uses to make it easier to turn data into a model.",
         "remarks": true
       },
       "seeding_key": {
@@ -3578,7 +3585,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
-        "name": "Main Activity",
+        "duration": "15",
+        "name": "Survey Analysis",
         "progression_name": "Book Recommender App",
         "tips": [
           {
@@ -3641,13 +3649,7 @@
       "key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** **[[questions probably didn't have strong relationship with book recommendations, so decided not to use them in the model. Way to review yesterday's lesson and how feature selection is an important part of AI Lab]]**",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**Lesson Writing Tension:** I want the wrap-up prompt to be a formative assessment opportunity, since this is important for the first time getting into App Lab.\n\nBUT - that means I lose the opportunity to ask the ethics/bias question around including gender. The \"Another class asked about gender and found a relationship - should they use it?\".\n\nCan I actually do that here instead? Should I change the survey to not have the other silly questions and instead try and have that convo here?\n\nThis is like the fundamental problem I run into - wanting to include thoughtful discussion around sources of bias, but not wanting it to feel like an \"add on\" to the lesson, which I'm worried is what would happen if I included it here."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** Guide students towards the conclusion that these questions probably didn't have strong relationships in the data or lead to an accurate model. Students may hypothesize that this is because the questions didn't seem to be related to books, but we'll never know for sure without seeing the actual data. "
       },
       "seeding_key": {
         "activity_section.key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
@@ -3655,10 +3657,29 @@
       }
     },
     {
-      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
+      "key": "195a6e0b-ed01-4fcb-a11f-8311d23c9930",
       "position": 6,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the “How to Import Models in AppLab” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Additional Resources:** Even though including gender on a survey may feel innocent to some students, studies have shown that gender bias can creep into recommendation and selection processes in unintended and unexpected ways. For example, a machine learning algorithm designed to screen job candidates in the tech industry was discovered to be [biased against against women](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G) and perpetuating stereotypes in the tech industry. Importantly, this phenomenon can exist even without AI and Machine Learning, such as a study showing how [gender bias was impacting selection for symphonic orchestras](https://www.princeton.edu/news/2000/11/28/blind-orchestra-auditions-better-women-study-finds).\n\nIf students are interested in this topic, consider having them explore the **[Survival of the Best Fit](https://www.survivalofthebestfit.com/)** game which simulates a similar phenomenon. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "195a6e0b-ed01-4fcb-a11f-8311d23c9930",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly.",
+        "duration": "20",
+        "name": "Importing a Model",
         "progression_name": "Import a Model",
         "tips": [
           {
@@ -3674,7 +3695,7 @@
     },
     {
       "key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Ensure that students can recognize the lines of code where each of these events are happening in their code."
       },
@@ -3685,7 +3706,7 @@
     },
     {
       "key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the [`addPair`(#BB77C7)](/docs/applab/addPair/) blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block"
       },
@@ -3696,7 +3717,7 @@
     },
     {
       "key": "6712ead7-42d3-4d1f-ad8c-5334555b6826",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
       },
@@ -3707,7 +3728,7 @@
     },
     {
       "key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Customize Your App"
       },
@@ -3718,7 +3739,7 @@
     },
     {
       "key": "0a56918e-1c87-4a73-a20f-c70392c253a3",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 3:** Students will update the text on their app so it is easier for a user to understand. Instead of the one or two word description from the pre-generated design elements, students will use the same questions they saw in the survey.\n- **Level 4:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 5:** Students add a home screen to their app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 6:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like."
       },
@@ -3729,7 +3750,7 @@
     },
     {
       "key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
         "progression_name": "Choice Levels: Customize Your App"
@@ -10935,7 +10956,7 @@
       "key": "finding_patterns_in_data",
       "properties": {
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "finding_patterns_in_data"

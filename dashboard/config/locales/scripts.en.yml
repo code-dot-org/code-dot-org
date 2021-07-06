@@ -24143,7 +24143,11 @@ en:
           description_short: ''
           description: ''
         poster-experiment:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poster-experiment
           title: Story Board (V1 - Experiment)
