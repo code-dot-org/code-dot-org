@@ -1,0 +1,87 @@
+name 'SP-VPL-21-mod2-ExploreLessonPlan'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Explore a lesson plan
+
+#### 1. Open a new tab.
+#### 2. Navigate to ..... 
+#### 3. Locate and explore each of the following.
+
+<hr style="clear:both"/>
+
+<details>
+<summary><strong>Unit navigation and printing</strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRaIZqaVIwqvO1C-sdHZXgZW0M7nFpwAduQLNaxZK7yIPcID8_8tuLdHHAIXdZb7TvEBjjKKd7qDJWC/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Overview and purpose</strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vR81j4TwBNFbCkQjMxBuKDJIkgU-izAiQ4ru9uhtGodZMjBF7VnOoAxcekzzmEyESOsCd9GzthryHL7/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Assessment opportunities </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTj4c5NynqWIoAKj0SY2fzpMXLUu9vZfj3_54EzrooHQKA_XLBhTsL5NT2eAuaf7Y7uTkilOnARMr9U/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Standards </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTk72PpbXt3yuB-kGhzGwQOjJVQtLml2ioR9KowTI5HLsVh9Mx0ommA0DkHnrt6HOXkt_JAXoFiVydw/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Objectives </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRt0F1yv5Qc3yjoxaeI49vy4ezZil99THqc3FI9WAh6IyvTHCbtmoOyY8gRIPARvoXWvnwM4-q3tyg5/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Preparation </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTv8MXRaP6UuAqm6297m7iGumOwhtglqXoipBqewUo5t5stTvB8BiN1sYhBF02ZPI0lZLdDw3-4QXRE/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Links </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQIJpF6OZcW46s50lccmzO5ndI8GtwIifjebFefnhKFJed2EAJPuCW518Y31olFroKIEuLnwSv0L1Dv/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Vocabulary </strong></summary>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRlPOgeG64LLO3Nq26h60T0fFj-aW4FleTMfRpR3L-KeksoJKm2dsENZLhN4G3JsI2wH78FzpG7lfwD/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+<details>
+<summary><strong>Teaching guide </strong></summary>
+
+<img src="https://images.code.org/7f4e5737ad24fd834a31f66cb5022432-image-1625428307867.51.23 PM.png" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> short description
+</details>
+
+<div style="clear:both"/>
+
+
+MARKDOWN

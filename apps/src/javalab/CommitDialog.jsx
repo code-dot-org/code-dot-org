@@ -172,7 +172,8 @@ const styles = {
     borderBottom: `1px solid ${color.lightest_gray}`
   },
   fileLabel: {
-    flexGrow: 2
+    flexGrow: 2,
+    color: color.default_text
   },
   checkbox: {
     width: 18,

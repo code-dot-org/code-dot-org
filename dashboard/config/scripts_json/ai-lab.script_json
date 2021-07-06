@@ -2,13 +2,14 @@
   "script": {
     "name": "ai-lab",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "2021"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-29 16:28:30 UTC",
+    "family_name": "aiml",
+    "serialized_at": "2021-07-02 18:50:16 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ai-lab"
@@ -89,6 +90,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-class test-ai lab foods"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "named_level": false,
@@ -112,6 +116,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-class test-ai lab choice-parent"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "named_level": false,
@@ -135,6 +142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-class test-app lab import"
+        ],
         "progression": "Using Models in App Lab"
       },
       "named_level": false,
@@ -158,6 +168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-class test-app lab choice parent"
+        ],
         "progression": "Using Models in App Lab"
       },
       "named_level": false,
