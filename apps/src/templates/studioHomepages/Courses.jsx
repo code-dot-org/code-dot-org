@@ -22,7 +22,8 @@ class Courses extends Component {
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    showAiCard: PropTypes.bool
   };
 
   componentDidMount() {
@@ -112,7 +113,7 @@ class Courses extends Component {
                     announcement={specialAnnouncement}
                   />
                 )}
-                <CoursesTeacherEnglish />
+                <CoursesTeacherEnglish showAiCard={this.props.showAiCard} />
               </div>
             )}
 

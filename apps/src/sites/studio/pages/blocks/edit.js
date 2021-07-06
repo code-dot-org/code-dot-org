@@ -127,9 +127,7 @@ function updateBlockPreview() {
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
-  Blockly.mainBlockSpace
-    .getCanvas()
-    .addEventListener('blocklyBlockSpaceChange', onBlockSpaceChange);
+  Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {

@@ -406,6 +406,8 @@
   "courseBlocksToolsTitleTeacher": "Tools and resources for your classroom",
   "courseBlocksToolsTitleNonEn": "Tools for middle and high school (English only)",
   "courseBlocksToolsDescription": "In addition to our courses, teachers can use tools to teach students how to create apps, animations, games, or websites. We also have lessons and widgets to teach encryption, text compression, and other computer science concepts. Browse our other resources to inspire students with posters, videos, or by inviting guest speakers.",
+  "courseBlocksToolsAi": "AI Module",
+  "courseBlocksToolsAiDescription": "Students will learn the fundamentals of artificial intelligence and machine learning and discuss their implications. Suitable for grades 6-12.",
   "courseBlocksToolsAppLab": "App Lab",
   "courseBlocksToolsAppLabDescription": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
   "courseBlocksToolsGameLab": "Game Lab",
