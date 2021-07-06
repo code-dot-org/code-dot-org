@@ -138,8 +138,6 @@ class TeacherFeedback < ApplicationRecord
   def summarize
     {
       id: id,
-      teacher_name: teacher.name,
-      feedback_provider_id: teacher.id,
       student_id: student_id,
       script_id: script_id,
       level_id: level_id,
@@ -149,6 +147,8 @@ class TeacherFeedback < ApplicationRecord
       student_seen_feedback: student_seen_feedback,
       review_state: review_state,
       student_last_updated: user_level&.updated_at,
+      seen_on_feedback_page_at: seen_on_feedback_page_at,
+      student_first_visited_at: student_first_visited_at,
       student_updated_since_feedback: student_updated_since_feedback?
     }
   end
