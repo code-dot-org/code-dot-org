@@ -1,16 +1,9 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2021-06-29T19:36:36.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "display_name": "Paint a Checkerboard",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nUse the array of paint colors to draw a checkerboard in the middle of The Neighborhood.\r\n\r\n**Additional Challenge:** Can you do this task using a `while` loop and the mod `%` operator?",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nCreate a `PainterPlus` object at (3, 3) facing East with 50 units of paint.\r\n\r\nUse the array of paint colors to draw the checkerboard shown below in the middle of The Neighborhood.\r\n\r\n![](https://images.code.org/484a468082698c8447e7018b6666e141-image-1625163261295.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "serialized_maze": [
@@ -1327,8 +1320,19 @@
         }
       ]
     ],
-    "csa_view_mode": "neighborhood"
+    "csa_view_mode": "neighborhood",
+    "start_sources": {
+      "MyNeighborhood.java": {
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\tString[] paintColors = {\"Crimson\", \"Green\", \"DodgerBlue\", \"Snow\"};\n\n\n    \n\n  }\n}",
+        "isVisible": true
+      }
+    }
   },
-  "published": true
+  "game_id": 68,
+  "created_at": "2021-06-29T19:36:36.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-07-01 18:14:34 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-01 18:15:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

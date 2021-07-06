@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:43 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-02 16:48:14 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -3139,6 +3139,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp10-2021/resources",
+      "key": "all_resources_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_10"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp10-2021/standards",
+      "key": "all_standards_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_10"
+      }
+    },
+    {
       "name": "Call Center - Reading Passage",
       "url": "https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing",
       "key": "call-center-reading-passage",
@@ -3199,6 +3221,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-unit-10-project-overview"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3571,6 +3605,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_10",
+        "script.name": "csp10-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_10",
         "script.name": "csp10-2021"
       }
     }

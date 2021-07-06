@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 15:42:30 UTC",
+    "serialized_at": "2021-07-01 21:00:30 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "jess-test-script"
@@ -307,7 +307,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD U3 Variables Predict Where XY_2020"
+          "VPL-CSD-U3 Variables Predict Where XY_2021"
         ],
         "progression": "New Content (~ 35 mins)"
       },
@@ -315,14 +315,14 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD U3 Variables Predict Where XY_2020"
+          "VPL-CSD-U3 Variables Predict Where XY_2021"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL-CSD U3 Variables Predict Where XY_2020"
+        "VPL-CSD-U3 Variables Predict Where XY_2021"
       ]
     },
     {
@@ -357,7 +357,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD U3 Variables naming rules v2_2018_2020"
+          "VPL-CSD U3 Variables naming rules v2_2018_21"
         ],
         "progression": "New Content (~ 35 mins)"
       },
@@ -365,14 +365,14 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD U3 Variables naming rules v2_2018_2020"
+          "VPL-CSD U3 Variables naming rules v2_2018_21"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL-CSD U3 Variables naming rules v2_2018_2020"
+        "VPL-CSD U3 Variables naming rules v2_2018_21"
       ]
     },
     {
@@ -407,7 +407,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD U3 Random random ellipse2_2018_2020"
+          "VPL-CSD U3 Random random ellipse2_2018_21"
         ],
         "progression": "New Content (~ 35 mins)"
       },
@@ -415,14 +415,14 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD U3 Random random ellipse2_2018_2020"
+          "VPL-CSD U3 Random random ellipse2_2018_21"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL-CSD U3 Random random ellipse2_2018_2020"
+        "VPL-CSD U3 Random random ellipse2_2018_21"
       ]
     },
     {
@@ -657,7 +657,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Draw Loop"
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop"
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
@@ -665,14 +665,14 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Draw Loop"
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop"
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       },
       "level_keys": [
-        "VPL-CSD 2020 - Module 2 CI - Draw Loop"
+        "VPL-CSD 2021 - Module 2 CI - Draw Loop"
       ]
     },
     {
@@ -3384,9 +3384,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD U3 Variables Predict Where XY_2020",
+        "level.key": "VPL-CSD-U3 Variables Predict Where XY_2021",
         "script_level.level_keys": [
-          "VPL-CSD U3 Variables Predict Where XY_2020"
+          "VPL-CSD-U3 Variables Predict Where XY_2021"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
@@ -3406,9 +3406,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD U3 Variables naming rules v2_2018_2020",
+        "level.key": "VPL-CSD U3 Variables naming rules v2_2018_21",
         "script_level.level_keys": [
-          "VPL-CSD U3 Variables naming rules v2_2018_2020"
+          "VPL-CSD U3 Variables naming rules v2_2018_21"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
@@ -3428,9 +3428,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD U3 Random random ellipse2_2018_2020",
+        "level.key": "VPL-CSD U3 Random random ellipse2_2018_21",
         "script_level.level_keys": [
-          "VPL-CSD U3 Random random ellipse2_2018_2020"
+          "VPL-CSD U3 Random random ellipse2_2018_21"
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
@@ -3538,9 +3538,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD 2020 - Module 2 CI - Draw Loop",
+        "level.key": "VPL-CSD 2021 - Module 2 CI - Draw Loop",
         "script_level.level_keys": [
-          "VPL-CSD 2020 - Module 2 CI - Draw Loop"
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop"
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
