@@ -157,7 +157,7 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
-    @body_classes = @script_level.script.background
+    @body_classes = @level.properties['background']
 
     present_level
   end

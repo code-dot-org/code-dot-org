@@ -12,6 +12,7 @@ import {
   studentLessonProgressType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   getCurrentUnitData,
   jumpToLessonDetails
@@ -356,7 +357,8 @@ class ProgressTableView extends React.Component {
         </div>
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
-            excludeCsfColumn={!this.props.scriptData.csf}
+            includeCsfColumn={this.props.scriptData.csf}
+            includeReviewStates={shouldShowReviewStates(this.props.scriptData)}
             includeProgressNotApplicable
           />
         ) : (

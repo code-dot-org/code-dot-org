@@ -263,7 +263,6 @@ class ScriptsController < ApplicationController
       :announcements,
       :pilot_experiment,
       :editor_experiment,
-      :background,
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],

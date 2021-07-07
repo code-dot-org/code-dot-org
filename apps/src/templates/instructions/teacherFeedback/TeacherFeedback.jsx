@@ -25,8 +25,6 @@ const ErrorType = {
   Save: 'Save'
 };
 
-const keepWorkingExperiment = 'teacher-feedback-review-state';
-
 export class TeacherFeedback extends Component {
   static propTypes = {
     user: PropTypes.number,
@@ -171,9 +169,7 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForTeacher() {
-    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
-    // window.appOptions.experiments, which is queried by experiments.js
-    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
+    const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
     const latestFeedback = this.state.latestFeedback;
 
     return (
