@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 14:36:56 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-07-01 03:11:38 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-experiment"
     }

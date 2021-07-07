@@ -30,16 +30,18 @@
       Family: aurora-mysql5.7
       Parameters: {'innodb_monitor_enable': 'all'}
 
-  DatabaseSecret:
+<% db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
+  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
-      Name: !Sub "CfnStack/${AWS::StackName}/database-secret"
+      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
+<% secret; end -%>
 
   DBProxy:
     Type: AWS::RDS::DBProxy
@@ -47,7 +49,10 @@
       DBProxyName: !Ref AWS::StackName
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
-      Auth: [{AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret, IAMAuth: DISABLED}]
+      Auth:
+<% db_secrets.each do |secret| -%>
+        - {AuthScheme: SECRETS, SecretARN: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
+<%end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyRole:
@@ -58,7 +63,9 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret}
+<% db_secrets.each do |secret| -%>
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
+<%end -%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup

@@ -205,16 +205,22 @@ class ScriptsController < ApplicationController
     end
   end
 
-  def set_unit
+  def get_unit
     unit_id = params[:id]
-    @script = ScriptConstants::FAMILY_NAMES.include?(unit_id) ?
-      Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale) :
-      Script.get_from_cache(unit_id)
-    raise ActiveRecord::RecordNotFound unless @script
-
     if ScriptConstants::FAMILY_NAMES.include?(unit_id)
-      Script.log_redirect(unit_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+      script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+      Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
+      return script
+    elsif params[:action] == "edit"
+      return Script.get_without_cache(unit_id, with_associated_models: true)
+    else
+      return Script.get_from_cache(unit_id)
     end
+  end
+
+  def set_unit
+    @script = get_unit
+    raise ActiveRecord::RecordNotFound unless @script
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
@@ -236,6 +242,7 @@ class ScriptsController < ApplicationController
       :curriculum_umbrella,
       :family_name,
       :version_year,
+      :is_maker_unit,
       :project_sharing,
       :login_required,
       :hideable_lessons,
@@ -256,7 +263,6 @@ class ScriptsController < ApplicationController
       :announcements,
       :pilot_experiment,
       :editor_experiment,
-      :background,
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
