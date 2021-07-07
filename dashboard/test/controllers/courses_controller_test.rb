@@ -438,7 +438,7 @@ class CoursesControllerTest < ActionController::TestCase
     refute_nil unit_group.course_version
   end
 
-  test "update: cannot course version for unit groups" do
+  test "update: cannot change course version for unit groups" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group
