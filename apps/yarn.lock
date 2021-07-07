@@ -1622,10 +1622,10 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/maze@2.12.0":
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.12.0.tgz#ae18f501847caf23f64d8c80ef3681874e25183c"
-  integrity sha512-kLjOqnWfahnyHNy6LiwXgaR7IdvFU6Uzq7zdrAy/mHcTWTdu2R2LI6i6d+I+DXxindZKXbm8QVriFuTpwVPUGA==
+"@code-dot-org/maze@2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.13.0.tgz#27bdc2b76de59d67df78b9b1d2737fe104a349f4"
+  integrity sha512-fVQxq6ys+84Dzt2QnZJzOaxdkxE3kckAw4i8gC+1YMQ8yvkHX8xoFfwknOou3lu8SoAQm+cBIii8a7palesUPQ==
 
 "@code-dot-org/ml-activities@0.0.26":
   version "0.0.26"
