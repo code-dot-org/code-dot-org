@@ -35,20 +35,22 @@ const cleanData = (data) => {
 
 const getCleanedRow = (row) => {
   for (var column in row) {
-    var cellValue = row[column];
+    if (column !== "__parsed_extra") {
+      var cellValue = row[column];
 
-    if (!isCellValid(cellValue)) {
-      return null;
+      if (!isCellValid(cellValue)) {
+        return null;
+      }
+
+      row[column] = cellValue.trim();
     }
-
-    row[column] = cellValue.trim();
   }
 
   return row;
 }
 
 const isCellValid = (cell) => {
-  return cell !== undefined && cell !== "";
+  return cell !== undefined && cell !== "" && typeof cell === "string";
 }
 
 const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
