@@ -42,7 +42,7 @@ class ModelCard extends Component {
             style={styles.summaryScreenBotImage}
           />
         </div>
-        <div style={styles.modelCardContainer}>
+        <div id="model-card" style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Summary</h5>
