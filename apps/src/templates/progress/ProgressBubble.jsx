@@ -17,7 +17,7 @@ import {
   BubbleBadgeWrapper,
   AssessmentBadge,
   KeepWorkingBadge
-} from './BubbleBadge';
+} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**

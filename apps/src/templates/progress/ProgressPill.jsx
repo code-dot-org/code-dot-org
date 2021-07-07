@@ -11,7 +11,7 @@ import {
   BubbleBadgeWrapper,
   AssessmentBadge,
   KeepWorkingBadge
-} from './BubbleBadge';
+} from '@cdo/apps/templates/progress/BubbleBadge';
 import {connect} from 'react-redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
