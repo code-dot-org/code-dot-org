@@ -1,3 +1,4 @@
+
 # == Schema Information
 #
 # Table name: pd_applications
@@ -35,27 +36,52 @@
 #
 
 module Pd::Application
-  class PrincipalApproval2021Application < PrincipalApprovalApplicationBase
-    include Pd::PrincipalApproval2021ApplicationConstants
+  class PrincipalApprovalApplication < ApplicationBase
+    include Pd::PrincipalApprovalApplicationConstants
 
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher2021Application',
+    belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
     validates_presence_of :teacher_application
 
-    # @override
+    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
     def year
       self.class.year
     end
 
     def self.year
-      YEAR_20_21
+      YEAR_21_22
+    end
+
+    def self.next_year
+      YEAR_22_23
+    end
+
+    # @override
+    def set_type_and_year
+      self.application_type = PRINCIPAL_APPROVAL_APPLICATION
+      self.application_year = year
+    end
+
+    def underrepresented_minority_percent
+      sanitize_form_data_hash.select do |k, _|
+        [
+          :black,
+          :hispanic,
+          :pacific_islander,
+          :american_indian
+        ].include? k
+      end.values.map(&:to_f).reduce(:+)
+    end
+
+    def placeholder?
+      JSON.parse(form_data).empty?
     end
 
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
 
-      Pd::Application::PrincipalApproval2021Application.create(
+      Pd::Application::PrincipalApprovalApplication.create(
         form_data: {}.to_json,
         application_guid: teacher_application.application_guid
       )
@@ -63,7 +89,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      existing_application = Pd::Application::PrincipalApproval2021Application.find_by(application_guid: application_guid)
+      existing_application = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
 
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
@@ -78,7 +104,7 @@ module Pd::Application
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
           "I hope to include this course in the #{year} master schedule",
-          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (2021-22)",
+          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year})",
           "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
@@ -89,32 +115,40 @@ module Pd::Application
           TEXT_FIELDS[:dont_know_explain]
         ],
         replace_which_course_csp: [
-          'Beauty and Joy of Computing',
-          'CodeHS',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS50',
-          'Exploring Computer Science',
-          'Intro to Computer Science',
-          'Intro to Programming',
-          'Mobile CSP',
-          'Project Lead the Way - Computer Science',
-          'UTeach CSP',
-          'Web Development',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csd: [
           'CodeHS',
           'Codesters',
           'Computer Applications (ex: using Microsoft programs)',
           'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
           'Exploring Computer Science',
           'Globaloria',
+          'ICT',
           'My CS',
           'Project Lead the Way - Computer Science',
           'Robotics',
           'ScratchEd',
           'Typing',
+          'Technology Foundations',
+          'We’ve created our own course',
+          TEXT_FIELDS[:other_please_explain]
+        ],
+        replace_which_course_csd:  [
+          'CodeHS',
+          'Codesters',
+          'Computer Applications (ex: using Microsoft programs)',
+          'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
+          'Exploring Computer Science',
+          'Globaloria',
+          'ICT',
+          'My CS',
+          'Project Lead the Way - Computer Science',
+          'Robotics',
+          'ScratchEd',
+          'Typing',
+          'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],
