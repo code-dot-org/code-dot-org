@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 14:35:53 UTC",
+    "serialized_at": "2021-07-06 19:46:42 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
