@@ -30,7 +30,6 @@ class ScriptDSL < BaseDSL
     @tts = false
     @deprecated = false
     @is_course = false
-    @background = nil
     @is_migrated = false
     @is_maker_unit = false
   end
@@ -63,7 +62,6 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
-  string :background
   string :published_state
 
   def teacher_resources(resources)
@@ -170,7 +168,6 @@ class ScriptDSL < BaseDSL
       deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
-      background: @background,
       is_migrated: @is_migrated,
       is_maker_unit: @is_maker_unit
     }
@@ -362,7 +359,6 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
-    s << "background '#{script.background}'" if script.background
     s << "is_maker_unit true" if script.is_maker_unit
 
     s << '' unless s.empty?

@@ -913,7 +913,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: 'CSF',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
-      background: 'fake-background',
     }
 
     post :update, params: {
@@ -945,7 +944,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
-      background: ''
     }
     assert_response :success
     unit.reload
