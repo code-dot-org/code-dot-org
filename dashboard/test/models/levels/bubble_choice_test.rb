@@ -360,4 +360,19 @@ DSL
     assert_equal [@bubble_choice, parents[0], parents[1]], BubbleChoice.parent_levels(@sublevel1.name)
     assert_equal [@bubble_choice, parents[0], parents[2]], BubbleChoice.parent_levels(@sublevel2.name)
   end
+
+  test 'only actual sublevels are considered sublevels' do
+    sublevel = create :level
+    contained_level = create :level
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED,
+      position: 2
+    )
+    bubble_choice.reload
+    assert_equal [sublevel, contained_level], bubble_choice.child_levels.to_a
+    assert_equal [sublevel], bubble_choice.sublevels.to_a
+  end
 end

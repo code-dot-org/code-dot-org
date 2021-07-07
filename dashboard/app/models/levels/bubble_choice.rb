@@ -48,7 +48,11 @@ class BubbleChoice < DSLDefined
 
   # Returns all of the sublevels for this BubbleChoice level in order.
   def sublevels
-    child_levels.all.order(:position)
+    levels_child_levels.
+      includes(:child_level).
+      where(kind: ParentLevelsChildLevel::SUBLEVEL).
+      order('position ASC').
+      map(&:child_level)
   end
 
   def sublevel_at(index)
