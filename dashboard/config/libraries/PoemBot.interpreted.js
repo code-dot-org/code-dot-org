@@ -218,3 +218,29 @@ function setForegroundEffect(effectName) {
   }
 }
 /* END BLOCK DEFINITIONS */
+
+//Mike's setPoem prototype
+
+function setPoem(key){
+  if(key=="wordsworth"){
+    poem = {
+      title: "I Wandered Lonely as a Cloud",
+      author: "William Wordsworth",
+      lines: []
+    };
+    poem.lines.push([{value: "I wandered lonely as a cloud", type: 'literal'}]);
+    poem.lines.push([{value: "That floats on high o'er vales and hills,", type: 'literal'}]);
+    poem.lines.push([{value: "When all at once I saw a crowd,", type: 'literal'}]);
+    poem.lines.push([{value: "A host, of golden daffodils;", type: 'literal'}]);
+    poem.lines.push([{value: "Beside the lake, beneath the trees,", type: 'literal'}]);
+    poem.lines.push([{value: "Fluttering and dancing in the breeze.", type: 'literal'}]);
+    poem.lines.push([{value: "", type: 'literal'}]);
+    poem.lines.push([{value: "Continuous as the stars that shine", type: 'literal'}]);
+    poem.lines.push([{value: "And twinkle on the milky way,", type: 'literal'}]);
+    poem.lines.push([{value: "They stretched in never-ending line", type: 'literal'}]);
+    poem.lines.push([{value: "Along the margin of a bay:", type: 'literal'}]);
+    poem.lines.push([{value: "Ten thousand saw I at a glance,", type: 'literal'}]);
+    poem.lines.push([{value: "Tossing their heads in sprightly dance.", type: 'literal'}]);
+  }
+
+}

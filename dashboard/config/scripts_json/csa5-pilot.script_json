@@ -6,27 +6,541 @@
     "properties": {
       "curriculum_umbrella": "CSA",
       "is_migrated": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "hideable_lessons": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:31 UTC",
+    "serialized_at": "2021-07-07 18:38:17 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa5-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Creating Tables of Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.",
+        "preparation": "* Gather three sticky notes per student",
+        "student_overview": "In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Traversing a 2D Array by Rows",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Traversing a 2D Array by Columns",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Using Enhanced for Loops",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Evaluating 2D Arrays",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Applying Standard Algorithms",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Reversing Elements",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Shifting Elements",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Finding Duplicates",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Searching for Elements",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "A Sustainable Neighborhood Project - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "A Sustainable Neighborhood Project - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "A Sustainable Neighborhood Project - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a",
+      "position": 1,
+      "properties": {
+        "duration": 7,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "a6b98686-d39d-410d-95a6-955b4cc5eb42",
+      "position": 2,
+      "properties": {
+        "duration": 33,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "5455423d-c875-43a3-aee5-69e5d1293d41",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7bb8b3a9-07d4-4f63-9d23-8cfafeb75bfa",
+      "position": 1,
+      "properties": {
+        "description": "Today, we will learn about two-dimensional or 2D arrays. First, let’s review what you know about 1D arrays through a round of the Array Game.",
+        "duration": "5",
+        "name": "The Array Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb8b3a9-07d4-4f63-9d23-8cfafeb75bfa",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "c4b03afe-f5e7-44d9-b0b7-8842366b240a",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student three sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write quantities for cakes, pies, and donuts that the Food Truck owner could have in her inventory on each sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Both the warm-up and wrap-up activities use these sticky notes. After the warm-up activity, have students place the sticky notes on their desks."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c4b03afe-f5e7-44d9-b0b7-8842366b240a",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "9ae176ec-10ad-40af-b865-a7851fda2738",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To play the array game, have students stand up and place them in groups of 3-4. Groups need to stand close to the area where the presentation is displayed. For each question, select a student to use the sticky notes they created.\n* Choose a student to place sticky notes in the designated array square on the slide.\n* Read the question out loud to the class.\n* Have groups discuss, then select a group to answer the question. If the group gets the answer wrong, select another group. Rotate to different groups for each question.\n   * Answers vary based on the student's sticky note.\n   * For the length of the array, have different students place fewer of their stickies on the slide, so the array's length varies.\n* Have the student take the sticky notes off the slide and click through the animation to display the next question.\n* Repeat the instructions for the next round."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ae176ec-10ad-40af-b865-a7851fda2738",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "037ff996-39c9-4f98-8c8d-3aea1953036a",
+      "position": 4,
+      "properties": {
+        "description": "Great work! Arrays are useful for storing and organizing multiple values in a list format. Let’s review the syntax for 1D arrays, as we will be building on these concepts throughout the unit. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "037ff996-39c9-4f98-8c8d-3aea1953036a",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "7687cea2-f792-417f-a841-d3dc9a95b1a6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the syntax for 1D arrays.\n* Declare and initialize an array\n* Initialize with values\n* Access elements of an array\n* Modifies elements of an array\n",
+        "duration": "2",
+        "name": "1D Array Syntax Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "7687cea2-f792-417f-a841-d3dc9a95b1a6",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "54bfd793-caf2-4608-ab7f-2e969b61a1b1",
+      "position": 1,
+      "properties": {
+        "description": "A two-dimensional, or 2D, array is similar to a 1D array but with one important difference. A 2D array is an array of arrays!",
+        "duration": "9",
+        "name": "Introduction to 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "54bfd793-caf2-4608-ab7f-2e969b61a1b1",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "4913e0f8-0f87-43f2-a866-16c7823115af",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the components of a two-dimensional array.\n* Define two-dimensional array\n* Define outer array\n* Define inner array\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing an array.\n* Declare a two-dimensional array\n* Initialize the array using the `new` keyword\n* Declare and create the array in one line of code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the two ways to declare and store values in an array.\n* Use square brackets ( `[  ]` ) to assign an array to an index position\n* Create an initializer list in curly braces ( `{  }` ) and assign it as the value of the 2D array"
+      },
+      "seeding_key": {
+        "activity_section.key": "4913e0f8-0f87-43f2-a866-16c7823115af",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "7b64b1bd-b48e-4878-8ffa-8b502f12965f",
+      "position": 3,
+      "properties": {
+        "duration": "8",
+        "name": "Unplugged: Creating 2D Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b64b1bd-b48e-4878-8ffa-8b502f12965f",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "51e0c322-9af4-4ced-b3a1-b0890457bae3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck owner has expanded her business and now operates four food trucks. The dessert availability and prices vary by location. To help the owner, let’s create 2D arrays to keep track of her expanded inventory. ",
+        "duration": "8",
+        "name": "Accessing Values in 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "51e0c322-9af4-4ced-b3a1-b0890457bae3",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "247f5547-9d30-4aea-8356-cf4d1496d89a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students replace the zeros in the provided 2D array to match the table provided. Have students continue to Level 2 to declare and initialize a 2D."
+      },
+      "seeding_key": {
+        "activity_section.key": "247f5547-9d30-4aea-8356-cf4d1496d89a",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "c18f95b4-c820-4208-a11d-26802c638c69",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access values from a two-dimensional array.\n* Access a row of data by indexing using the row number\n* Access a single element by indexing using the row and column number\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the self-check exercise in pairs before discussing the answers as a class. Click through the animated slide to reveal the correct answers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 3 on Code Studio. Students write a method that returns a given row of data from a 2D array in this choice level.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on the amount of time remaining, you may choose to assign one or both choices. Encourage students who finish early to work on the second choice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c18f95b4-c820-4208-a11d-26802c638c69",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "01ff7a1d-699b-4f46-9dc3-726d90560dfb",
+      "position": 7,
+      "properties": {
+        "description": "The Project Mercury Food Truck is trying new ways to attract new customers to their business, including changing prices, taking larger orders, and adding more desserts to their inventory. Let’s help the owner update the data in the `inventory` and `prices` 2D arrays.  ",
+        "duration": "5",
+        "name": "Updating Values in 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "01ff7a1d-699b-4f46-9dc3-726d90560dfb",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "5db00e16-d5d5-4a27-a339-0fb4e50d1c5c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Each choice provides opportunities to practice accessing and modifying elements in either the `inventory` and `prices` 2D arrays. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may try to use a loop to modify elements of the 2D array, but it is not required. If you notice a student is struggling with this level, assure them that directly accessing each element is sufficient for completing this level. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5db00e16-d5d5-4a27-a339-0fb4e50d1c5c",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "6cf0b092-83aa-46b2-b243-8baee24ed2c2",
+      "position": 1,
+      "properties": {
+        "description": "Great job! We will be working closely with the 2D arrays we developed today for the remainder of the unit. Let’s review what you learned about 2D arrays by playing a round of the Array Game. This time we will place sticky notes in a 2D array.",
+        "duration": "5",
+        "name": "The 2D Array Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6cf0b092-83aa-46b2-b243-8baee24ed2c2",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "649a3712-58f2-4e81-bea2-ebf61ca28518",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary "
+      },
+      "seeding_key": {
+        "activity_section.key": "649a3712-58f2-4e81-bea2-ebf61ca28518",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "11fa8eb4-fbee-4029-8a61-8e13515fbdb3",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "11fa8eb4-fbee-4029-8a61-8e13515fbdb3",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    }
   ],
   "script_levels": [
 
@@ -35,10 +549,62 @@
 
   ],
   "resources": [
-
+    {
+      "name": "[KEY] U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1wgQT6zb-L72rpzy6PltrVfEDYuMdD90LEdGObjeP9d4/edit",
+      "key": "_key_u5l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1I8tnsQSaCx-QA-ow0cIa3Pn13zmLHkhRtCkeDyjdvek/edit",
+      "key": "u5l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 5 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1fOFoglAExmIiTifW0hNRxO3lGb1R-mN-1M20CMJYFXY/edit?usp=sharing",
+      "key": "unit_5_presentation_slides",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_presentation_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u5l1_extra_practice"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -47,19 +613,169 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "initializer_list",
+      "word": "Initializer List",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( { } )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "key": "two_dimensional_d_array",
+      "word": "Two-Dimensional (2D) Array",
+      "definition": "An array of arrays often represented as a table with rows and columns",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "key": "outer_array",
+      "word": "Outer Array",
+      "definition": "The outermost array of a two-dimensional array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "key": "inner_array",
+      "word": "Inner Array",
+      "definition": "An array that is nested inside another array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "key": "row",
+      "word": "Row",
+      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "key": "column",
+      "word": "Column",
+      "definition": "A vertical (up and down) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "column"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "b0181547-2c7a-44ed-b0e7-a20b34f95878",
+      "properties": {
+        "description": "Declare and initialize a 2D array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b0181547-2c7a-44ed-b0e7-a20b34f95878"
+      }
+    },
+    {
+      "key": "8865bb64-86d6-48cc-82d6-c149a53eca94",
+      "properties": {
+        "description": "Initialize the values of a 2D array using an initializer list"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8865bb64-86d6-48cc-82d6-c149a53eca94"
+      }
+    },
+    {
+      "key": "ba85f416-4529-4853-9019-e7d97ba8a128",
+      "properties": {
+        "description": "Access and modify 2D array elements using row and column indexes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ba85f416-4529-4853-9019-e7d97ba8a128"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.4"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
