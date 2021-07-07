@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-06 18:58:38 UTC",
+    "serialized_at": "2021-07-07 16:38:07 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -784,19 +784,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111",
-        "lesson.key": "lesson6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "aiml-2021"
-      }
-    },
-    {
-      "key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
-      "position": 4,
-      "properties": {
-        "name": "Old Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360",
         "lesson.key": "lesson6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021"
@@ -1970,7 +1957,7 @@
       "key": "cc19a0fd-68ee-444b-b6ed-45ed116bcaa6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  How is machine learning similar to human learning?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  What are different types of machine learning?"
       },
       "seeding_key": {
         "activity_section.key": "cc19a0fd-68ee-444b-b6ed-45ed116bcaa6",
@@ -1981,7 +1968,13 @@
       "key": "2d3b5ff9-130e-4581-9a35-13a9b0abcdb3",
       "position": 1,
       "properties": {
-        "description": "**Preparation:** Have students keep their journal out so they can take notes on the vocabulary from today."
+        "description": "**Preparation:** Have students keep their journal out so they can take notes on the vocabulary from today.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary:** This lesson introduces a lot of vocabulary that is used throughout the unit. Introducing it early gives students a chance to familiarize themselves with these terms so they can begin using them to describe their work. But, it's still a lot of vocabulary, which can be challenging. Consider some of the following strategies to help students internalize these words:\n\n- Create a Word Wall that contains the word, a definition, and a drawing illustrating the concept\n- Have students record each vocabulary word in their journal along with a sketch\n- Have students read the slides aloud and practice saying the vocabulary words as they are presented.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2d3b5ff9-130e-4581-9a35-13a9b0abcdb3",
@@ -1993,13 +1986,8 @@
       "position": 2,
       "properties": {
         "description": "**Display:** Show the next slide, which displays a graphic comparing A.I. Bot and a human brain.",
-        "name": "Unsupervised Learning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Vocabulary:** This lesson introduces a lot of vocabulary that is used throughout the unit. Introducing it early gives students a chance to familiarize themselves with these terms so they can begin using them to describe their work. But, it's still a lot of vocabulary, which can be challenging. Consider some of the following strategies to help students internalize these words:\n\n- Create a Word Wall that contains the word, a definition, and a drawing illustrating the concept\n- Have students record each vocabulary word in their journal along with a sketch\n- Have students read the slides aloud and practice saying the vocabulary words as they are presented.\n"
-          }
-        ]
+        "duration": "10",
+        "name": "Unsupervised Learning"
       },
       "seeding_key": {
         "activity_section.key": "5acbd9cc-dcb5-43e4-b9ef-2a38aeac6b52",
@@ -2010,7 +1998,7 @@
       "key": "2be74bbf-fdfb-465e-aae1-bb7951e66455",
       "position": 3,
       "properties": {
-        "description": "When we learn something new, we create a “Mental Model” in our brain to help represent the information and break it down into pieces. For example, when learning about the solar system, we think of small orbs rotating around each other to represent the planets. Computers do this too  - when they learn something new, they create a “Machine Learning Model” to help represent the information. This model helps them make a decision. Yesterday, we helped A.I. Bot develop a model for deciding whether something is a fish or not.",
+        "description": "When we learn something new, we create a “Mental Model” in our brain to help represent information and break it down into pieces. For example, when learning about the solar system, we think of small orbs rotating around each other to represent the planets. Computers do this too  - when they learn something new, they create a “Machine Learning Model” to help represent the information. This model helps them make a decision. Yesterday, we helped A.I. Bot develop a model for deciding whether something is a fish or not.",
         "remarks": true
       },
       "seeding_key": {
@@ -2045,7 +2033,7 @@
       "key": "ee1d872e-bb8f-49a5-8548-5652fc774e6f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio Level 2 - Looking for Patterns"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of [r types_of_machine_learning/aiml/2021] to each student. Students will use this activity guide while working through levels in Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.\n"
       },
       "seeding_key": {
         "activity_section.key": "ee1d872e-bb8f-49a5-8548-5652fc774e6f",
@@ -2056,7 +2044,13 @@
       "key": "8c0df74a-8255-43b8-9469-4bf985619e0d",
       "position": 7,
       "properties": {
-        "progression_name": "Looking for Patterns"
+        "progression_name": "Looking for Patterns",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Colors and Data:** The triplets of numbers in each box represents Red, Green, and Blue color values. Students may have seen this before in previous units, but it's also okay if they haven't - that's what makes this an example of unsupervised learning. After the lesson, if students want to learn more about colors and data, consider showing them this [video on colors and pixels](https://www.youtube.com/watch?v=15aqFQQVBWU) to help explain what is happening."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8c0df74a-8255-43b8-9469-4bf985619e0d",
@@ -2067,7 +2061,7 @@
       "key": "f888b004-d9a8-4428-982c-852658cfa113",
       "position": 8,
       "properties": {
-        "description": "Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
       },
       "seeding_key": {
         "activity_section.key": "f888b004-d9a8-4428-982c-852658cfa113",
@@ -2078,7 +2072,7 @@
       "key": "07638610-7cfa-47b9-b889-85e7bda4966e",
       "position": 9,
       "properties": {
-        "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns."
+        "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** Finding patterns in data that doesn't have any labels\n- **Features:** The inputs that a model uses to make decisions"
       },
       "seeding_key": {
         "activity_section.key": "07638610-7cfa-47b9-b889-85e7bda4966e",
@@ -2089,7 +2083,7 @@
       "key": "b9644242-4c3f-47a0-b6bd-44dcafcbefa8",
       "position": 10,
       "properties": {
-        "description": "This is really fascinating! Just by grouping similar numbers together, we were able to find patterns and create different color groupings. This is an example of **Unsupervised Learning**, where we were able to learn something without any outside guidance. The only thing we paid attention to were the numbers on the cards, called the **features**. This is similar to how online recommendations work - computers try to find patterns in the items we buy so they can suggest new items for us.",
+        "description": "This is really fascinating! Just by grouping similar numbers together, we were able to find patterns and create different color groupings. This is an example of **Unsupervised Learning**, where we were able to learn something using just the data itself. The only thing we paid attention to were the numbers on the cards, called the **features**. This is similar to how online recommendations work - computers try to find patterns in the items we buy so they can suggest new items for us.",
         "remarks": true
       },
       "seeding_key": {
@@ -2101,7 +2095,7 @@
       "key": "7dc47493-9d58-42e9-b4cf-2258d168bcba",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** When a model trains itself to learn.\n- **Features:** the inputs that a model uses to make decisions\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Help students understand that the most important aspect of unsupervised learning is that the learning happens by observation and without any external help."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are similar to unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Try to identify situations where students were noticing patterns without clear directions, such as the unspoken rules of their home or community. They will likely think of situations from when they were much younger, especially when they thought they learned something from observation, but it didn't actually end up being true."
       },
       "seeding_key": {
         "activity_section.key": "7dc47493-9d58-42e9-b4cf-2258d168bcba",
@@ -2113,6 +2107,7 @@
       "position": 12,
       "properties": {
         "description": "Unsupervised Learning is one way that computers can learn something new. But this isn't like what we did yesterday - yesterday we helped the computer learn something new by providing examples. This is like when you get older and a coach or mentor can help teach you something new. In the next level, we're going to try and learn something new with somebody's help.",
+        "duration": "10",
         "name": "Supervised Learning",
         "remarks": true
       },
@@ -2147,7 +2142,7 @@
       "key": "e8e02031-1ebb-43cd-865c-d97613c2bda9",
       "position": 15,
       "properties": {
-        "description": "**Circulate:** Check in with students as they complete this activity. This activity can frustrate students, especially if they’re not sure what to be looking for. Encourage students to click the “See all results” button to see which words have been accepted and which words have been rejected. Help them notice what all the accepted words have in common, and what makes them different from the rejected works. If students figure out the secret early, encourage them to keep it a secret until the class discussion.",
+        "description": "**Circulate:** Check in with students as they complete this activity. This activity can frustrate students, especially if they’re not sure what to be looking for. Encourage students to click the “See all results” button to see which words have been accepted and which words have been rejected. Help them notice what all the accepted words have in common, and what makes them different from the rejected works. If students figure out the secret early, encourage them to keep it a secret until the class discussion.\n\nRemind students to complete the activity guide as they work through this level.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2175,7 +2170,7 @@
       "key": "053d4f70-f9ba-4784-a964-cba2928bdbf3",
       "position": 17,
       "properties": {
-        "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern."
+        "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
       },
       "seeding_key": {
         "activity_section.key": "053d4f70-f9ba-4784-a964-cba2928bdbf3",
@@ -2195,19 +2190,8 @@
       }
     },
     {
-      "key": "f09a9486-d0bb-48ce-a54a-11547947c10b",
-      "position": 19,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
-      },
-      "seeding_key": {
-        "activity_section.key": "f09a9486-d0bb-48ce-a54a-11547947c10b",
-        "lesson_activity.key": "d71d704d-9939-415e-bcaf-5a8d169cdad2"
-      }
-    },
-    {
       "key": "0f7b7082-8987-4de8-a55c-d2c0bd36c609",
-      "position": 20,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm up are supervised learning?_"
       },
@@ -2218,7 +2202,7 @@
     },
     {
       "key": "5ff1d76a-13ff-4b23-a175-a1f4b59e98f0",
-      "position": 21,
+      "position": 20,
       "properties": {
         "description": " **Discussion Goal:** Have students reflect on the examples shared during the warm-up, trying to identify which ones are supervised learning. Help students understand that the key distinction is that learning happens by examples from someone who is helping or coaching during the learning.\n"
       },
@@ -2229,13 +2213,15 @@
     },
     {
       "key": "b51e78b6-c7b6-465b-a45d-3c90f6e8d17c",
-      "position": 22,
+      "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** Go through the next several slides and have students vote on whether or not each scenario is an example of supervised or unsupervised learning. With each example, ask students to explain what makes it supervised or unsupervised. Look for answers that center around whether or not the learning happened through support and training. If someone was helping you learn, it’s supervised learning; if you observed first and then experimented on your own, then it’s unsupervised learning.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the second page of the activity guide, students are given several scenarios to identify as supervised or unsupervised learning. Have students read through the scenarios and complete the task individually, then have students pair-up to compare answers and talk through their reasoning.\n\n**Circulate:** Monitor students as they complete this activity, checking that they can reason through the differences between supervised and unsupervised learning. An answer key is provided to help check student responses.",
+        "duration": "15",
+        "name": "Supervised and Unsupervised Learning",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Answer Key:** An answer key is provided for these scenarios in the teacher resources - you can use this as a reference during this activity to help guide student discussion.\n"
+            "markdown": "**Human Learning vs Machine Learning:** These scenarios are provided as a way for students to think about how their own learning experiences may be similar to machine learning and to help internalize the vocabulary in this lesson, but human learning and machine learning are still fundamentally very different. \n\nFor now, guide students to see how scenarios where someone is learning by training with a teacher or mentor is similar to Supervised Learning, and scenarios where they learn independently by drawing their own conclusions is similar to Unsupervised Learning."
           }
         ]
       },
@@ -2245,32 +2231,25 @@
       }
     },
     {
-      "key": "f8359c85-979e-40c9-953b-62ad53df74f0",
-      "position": 23,
+      "key": "4975b444-f4b2-48b7-bc01-acf8ffc25c9b",
+      "position": 22,
       "properties": {
-        "description": "We’ve now seen two types of machine learning - supervised and unsupervised. In this unit, we’ll mostly be looking at supervised learning with training data. But the human brain is pretty powerful - do you think A.I. Bot will ever learn enough to rival our own intelligence? We haven’t reached that point yet, but it might be possible in the future with something called Neural Networks.",
-        "name": "Neural Networks",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cycle through the next several slides and invite students to share their responses. This is an opportunity to have a discussion about each scenario and hear why students think certain scenarios are similar to supervised or unsupervised learning.\n\n**Discussion Goal:** These discussion are less about being absolutely right or wrong, and more about the reasoning being used to compare why certain situations are supervised or unsupervised. Encourage students to discuss with each other, especially if they disagree about a certain scenario. Students may be unsure about some scenarios, which is a good opportunity to clarify the differences between supervised and unsupervised learning as a full class."
       },
       "seeding_key": {
-        "activity_section.key": "f8359c85-979e-40c9-953b-62ad53df74f0",
+        "activity_section.key": "4975b444-f4b2-48b7-bc01-acf8ffc25c9b",
         "lesson_activity.key": "d71d704d-9939-415e-bcaf-5a8d169cdad2"
       }
     },
     {
-      "key": "f270b500-6ab7-4ae0-ab9a-5c3106347950",
-      "position": 24,
+      "key": "0ae29c1d-583a-4c7b-acba-b9b666c45c9b",
+      "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video in the slides on Neural Networks",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Neural Networks:** Neural Networks are helpful for exploring how human learning is like machine learning, but they are not a part of the hands-on experiences students will have in this unit. Students do not need to remember the specifics from this video about how they work. However, neural networks are used in many of the technologies students may be familiar with (like facial recognition or youtube recommendations) and may appear in student research in future lessons, so this video is helpful in giving a general understanding in case the topic comes up in their research later.\n"
-          }
-        ]
+        "description": "Today we've seen two examples of machine learning, and how they can be similar to some of our own learning experiences as humans. Tomorrow, we'll have a chance to research examples of machine learning and see how this type of learning can be used to solve problems in the world.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f270b500-6ab7-4ae0-ab9a-5c3106347950",
+        "activity_section.key": "0ae29c1d-583a-4c7b-acba-b9b666c45c9b",
         "lesson_activity.key": "d71d704d-9939-415e-bcaf-5a8d169cdad2"
       }
     },
@@ -2278,8 +2257,14 @@
       "key": "a13b8065-464b-458a-aa76-eb7b1a87043a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _At the end of the video, Deon mentions several examples of how AI is being used to solve problems in society. If you could pick a big problem for AI to help solve, what problem would you choose?_\r\n\r\n**Discussion Goal:** This prompt ties into tomorrow’s lesson, where students consider how AI can be used to solve a societal problem.\r\n\r\nHave students record their thoughts in their journals, and invite a few students to share their examples with the class.",
-        "name": "Journal\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How are human learning and machine learning similar? How are they different?_\n\n**Discussion Goal:** This is an opportunity to summarize the learning from today and apply vocabulary correctly. While discussing, try to have students use the vocabulary from the lesson (feature, label, training, etc) correctly.\n\nHave students record their thoughts in their journals, and invite a few students to share their examples with the class.",
+        "name": "Journal\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Reading through student responses to this prompt can help determine how well students internalized the differences between supervised and unsupervised learning. The activity guide from today can also be used as a formative assessment with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a13b8065-464b-458a-aa76-eb7b1a87043a",
@@ -2470,7 +2455,7 @@
       "key": "9a51a0bd-76a4-427e-b257-93c0f329d2f9",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/aiml/2021] so students have access to some starting resources to begin their search."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/aiml/2021] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "9a51a0bd-76a4-427e-b257-93c0f329d2f9",
@@ -2540,7 +2525,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "[This can be used as a formative assessment or ticket out the door.]"
+            "markdown": "**Formative Assessment:** Consider using this prompt as an exit \"ticket out the door\" where students can describe the innovation they heard from a partner. Alternatively, these responses can be collected and read later to determine how well students were able to research different applications of AI."
           }
         ]
       },
@@ -2622,7 +2607,7 @@
       "key": "f71a0c51-2c5d-4264-b2fc-a7d6b9d63c19",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio Level 2 - Shoe Recommender. The second level contains a basic program that helps students decide what shoes to wear. Have students run the program a few times.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into the first level of Code Studio. This level contains a basic program that helps students decide what shoes to wear. Have students run the program a few times.",
         "name": "Shoe Recommender\r"
       },
       "seeding_key": {
@@ -2667,7 +2652,13 @@
       "key": "0b15e81a-d2e1-4c1c-adc0-b0736031a978",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is just randomly making decisions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What would improve this model to help it make better decisions?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is just randomly making decisions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Preview of Model Cards:** The format used on this slide is a precursor to Model Cards, which students will see in later lessons. For now, you can describe these descriptions like a name tag or nutrition label on a model - it helps identify and describe how the model works for anyone who uses the app."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b15e81a-d2e1-4c1c-adc0-b0736031a978",
@@ -2678,7 +2669,7 @@
       "key": "1f3dff11-7bc4-4af2-8dd0-d9549c91e93d",
       "position": 8,
       "properties": {
-        "description": " **Discussion Goal:** Help students make connections between the topics they brainstormed in the warm-up and this app. If students don’t arrive at this conclusion on their own, be sure to say this explicitly: this app could be improved if it asked the user questions to help it make decisions. This will help connect to the next app that students will preview."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What would improve this model to help it make better decisions?_\n\n **Discussion Goal:** Guide students towards the conclusion that this app could be improved if it used user input and asked questions to help it make decisions. Try to make connections back to the warm-up discussion and how apps can make bad choices when they don't have strong examples from their users. This will help connect to the next app that students will preview."
       },
       "seeding_key": {
         "activity_section.key": "1f3dff11-7bc4-4af2-8dd0-d9549c91e93d",
@@ -2723,7 +2714,7 @@
       "key": "317c9ba5-4264-4294-93ab-d77207c3effb",
       "position": 12,
       "properties": {
-        "description": " **Discussion Goal:** Students may realize that they can only get certain answers based on certain decisions, and may intuitively describe some sort of “flow” through the program that leads to certain decisions. They may also question or criticize the decisions behind how some shoes are chosen. This is a good point to focus on to help transition to the next model students will look at.\r\n\r"
+        "description": " **Discussion Goal:** Students may realize that they can only get certain answers based on certain decisions, and may intuitively describe some sort of “flow” through the program that leads to certain decisions. They may also question or criticize the decisions behind how some shoes are chosen. This is a good point to return to in a later discussion.\n\nAs students narrow-in on the branching structure of this app, show students the following slide which shows the tree that the app uses to make its recommendations."
       },
       "seeding_key": {
         "activity_section.key": "317c9ba5-4264-4294-93ab-d77207c3effb",
@@ -2734,7 +2725,7 @@
       "key": "e56fe301-f936-4035-8862-9ced4eb889ff",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is using a process called a Decision Tree to make its recommendations.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What would improve this model to help it make better decisions?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the basic description of this app, confirming that the model is using a process called a Decision Tree to make its recommendations."
       },
       "seeding_key": {
         "activity_section.key": "e56fe301-f936-4035-8862-9ced4eb889ff",
@@ -2745,7 +2736,7 @@
       "key": "52ec38ad-1469-4e53-814c-80dd3665b68c",
       "position": 14,
       "properties": {
-        "description": " **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes. Try to highlight this idea of getting input from our users to help make our decision, which helps transition to the next activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Do you agree with the questions that were asked and how the shoes were assigned? Who do you think decided which shoes went with each answer?\n\n **Discussion Goal:** Students might notice that some selections are hidden behind other choices that may not be ideal - for example, this model only has you wear sneakers when it’s raining and sports cleats when it’s not raining. Students may suggest that the tree needs to be rearranged based on their own experiences for when to wear shoes, or that these decisions may not represent all people who may want to use the app. Try to highlight this idea of getting input from our users to help make our decision, rather than relying on your own personal experiences since they may not represent all situations. This helps transition to the next activity."
       },
       "seeding_key": {
         "activity_section.key": "52ec38ad-1469-4e53-814c-80dd3665b68c",
@@ -2756,15 +2747,9 @@
       "key": "78b2b050-7ae5-4f81-a323-76160d0f07b1",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** [take survey]",
-        "name": "Ultimate Shoe Recommender",
-        "progression_name": "Shoe Recommendation Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Cross Tab Video:** [Click Here](https://www.youtube.com/watch?v=Jc33T55D2sA&feature=youtu.be) to view a video walking through the Cross Tab screen in App Lab. This is similar to how you would want to present this screen to students. You can decide to use this as a reference when walking through the data yourself, or you can show this video directly to students.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Code Studio:** Have students continue to the next level in Code Studio, where they will take a survey asking several questions about their day and what shoes they are wearing. Students can take the survey multiple times to represent different situations, such as:\n- Pretending it’s the weekend\n- Pretending you’re going to a birthday party\n- Pretending you’re sick and not feeling well\n",
+        "name": "Shoe Recommendation Survey",
+        "progression_name": "Shoe Recommendation Survey"
       },
       "seeding_key": {
         "activity_section.key": "78b2b050-7ae5-4f81-a323-76160d0f07b1",
@@ -2775,7 +2760,13 @@
       "key": "3cc2b93e-a758-490c-a5a9-32912de379e3",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What hot spots did you find in the data? How do you think this will be helpful for a model to make shoe recommendations?_"
+        "description": "Once students have taken the survey, redirect them to the front of the room to see what happens with all of the data they've been generating.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r finding_patterns_in_data/aiml/2021] video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3cc2b93e-a758-490c-a5a9-32912de379e3",
@@ -2786,7 +2777,13 @@
       "key": "35403959-7050-4beb-8f4d-70c33fb8cf9a",
       "position": 17,
       "properties": {
-        "description": " **Discussion Goal:** Students should be able to highlight several hot spot areas, such as answering “No” to “Do you wear socks?” is highly likely to indicate that you should wear sandals. Students should indicate that they can use this data to help their model make decisions, even if they’re not completely sure how to do this yet.\r\n\r"
+        "description": " **Distribute:** pass out the [r patterns_in_data/aiml/2021] Activity Guide to each student.\n\n**Do This:** Have students complete the activity by finding patterns and trends in the data using the Cross Tab charts. An answer key is provided for you to check answers.\n\n**Circulate:** Monitor students as they complete this activity guide. The sentence starters for each table should correlate with the hot spots in the data, while the final two answers can be more open ended and depend more on how well students justify their answers.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** As you see students filling in the sentence starters, ask them to explain why they picked these two answers. Students should be able to refer back to the data and use the row to highlight how choosing a particular answer has a strong relationship with a certain shoe. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "35403959-7050-4beb-8f4d-70c33fb8cf9a",
@@ -2797,7 +2794,7 @@
       "key": "2a88d7eb-c59b-45ac-962e-ff8516ba9921",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display a slide to remind students of the following definitions\r\n\r\n- **Feature:** an input that the model uses to make decisions\r\n- **Label:** the output you are trying to decide or predict with a model\r\n\r\nEmphasize that in this data, each of the questions are the features which are being used to predict what type of shoe to recommend, which is the label.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the description of the app they’re about to look at, which uses the data shown to make its recommendations. Highlight that this app uses a Points Added model, which analyzes the results from all of the questions to determine which shoe to recommend."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** _Using trends from all five questions, what are some shoes we can recommend based on the patterns in the data?_\n\n**Discussion Goal:** Students should combine several trends together to help recommend a shoe. For example, if someone says they'll spend time indoors, with sunny weather, wearing socks: then we can recommend tennis shoes to this person. Have several students share and try to hear recommendations for each type of shoe. If possible, record some of the responses at the front of the room to use in the next level.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display a slide to remind students of the following definitions\n\n- **Feature:** an input that the model uses to make decisions\n- **Label:** the output you are trying to decide or predict with a model\n\nEmphasize that in this data, each of the questions are the features which are being used to predict what type of shoe to recommend, which is the label.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the description of the app they’re about to look at, which uses the data shown to make its recommendations. Highlight that this app has a new section about the data that it used to create its model."
       },
       "seeding_key": {
         "activity_section.key": "2a88d7eb-c59b-45ac-962e-ff8516ba9921",
@@ -2805,26 +2802,10 @@
       }
     },
     {
-      "key": "13e08daa-5747-46b1-af6f-5f742c3672e8",
+      "key": "88e03086-5ef1-4486-8950-cde76ed1d587",
       "position": 19,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Advancing Between Levels:** Because students aren't writing code in this level, it may be a little confusing on how to advance to the next level. There are two ways to guide students to the next level when finished:\r\n\r\n- Have them click the next bubble at the top of their screen\r\n- Press \"Run\" on the app. Nothing will happen, but a Finish button will appear below the app. Clicking the finish button will continue to the next level\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "13e08daa-5747-46b1-af6f-5f742c3672e8",
-        "lesson_activity.key": "0c2aabd5-43ce-422e-b181-a451fa21c435"
-      }
-    },
-    {
-      "key": "88e03086-5ef1-4486-8950-cde76ed1d587",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where this app is available to test. Have students answer the questions and see if the recommendations match what they saw in the data. They can also check a “show model” box on each screen, which will display the point totals on each screen of the app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where this app is available to test. Have students answer the questions and see if the recommendations match what they saw in the data."
       },
       "seeding_key": {
         "activity_section.key": "88e03086-5ef1-4486-8950-cde76ed1d587",
@@ -2833,7 +2814,7 @@
     },
     {
       "key": "280ddf58-b0ce-4ca6-ad91-b55243b6b638",
-      "position": 21,
+      "position": 20,
       "properties": {
         "progression_name": "Ultimate Shoe Recommender"
       },
@@ -2843,10 +2824,21 @@
       }
     },
     {
+      "key": "5f1de631-2b33-48fd-9abc-b3a8e240d804",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Advance to the next slide, which shows an arrow connecting how Data becomes a Model. With this slide displayed, transition to the remarks below."
+      },
+      "seeding_key": {
+        "activity_section.key": "5f1de631-2b33-48fd-9abc-b3a8e240d804",
+        "lesson_activity.key": "0c2aabd5-43ce-422e-b181-a451fa21c435"
+      }
+    },
+    {
       "key": "e030d1fa-c8eb-4cb1-a347-6aebad08d660",
       "position": 22,
       "properties": {
-        "description": "One of the most effective ways to make recommendations involves looking at data from our users. But analyzing that data took some time, even for a short survey like this - imagine if there were 20 questions instead of 3! Or if you were recommending a whole outfit instead of just shoes! In the next lesson, we’ll see how a computer can make this process easier and how it can try to “learn” from data to make decisions!",
+        "description": "Today, we saw how you can take data and use it to help create a model that makes recommendations. But analyzing that data took some time, even for a short survey like this - imagine if there were 20 questions instead of 3! Or if you were recommending a whole outfit instead of just shoes! In the next lesson, we’ll see one of the strategies that a computer uses to make it easier to turn data into a model.",
         "remarks": true
       },
       "seeding_key": {
@@ -2966,7 +2958,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Create a Class Graph:** If you have the classroom space available, we recommend adapting this activity to be completed physically as an entire class on a graph that has been created on the floor of the classroom (see image as an example). The flow of the activity remains the same, except each student takes a card and physically stands in their recommended spot on the graph. The class then decides on how to use string to divide the students into “fruit” and “vegetable” groups. Any remaining students then take on the role of the “test” foods and see how they would be classified as either a fruit or vegetable.\r\n"
+            "markdown": "**Create a Class Graph:** If you have the classroom space available, we recommend adapting this activity to be completed physically as an entire class on a graph that has been created on the floor of the classroom. The flow of the activity remains the same, except each student takes a card and physically stands in their recommended spot on the graph. The class then decides on how to use string to divide the students into “fruit” and “vegetable” groups. Any remaining students then take on the role of the “test” foods and see how they would be classified as either a fruit or vegetable.\n"
           }
         ]
       },
@@ -3187,7 +3179,7 @@
       "key": "6815f247-541f-4dbe-b659-50beae419f47",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down what we did today into steps for a computer to follow, how would you describe those steps?_\r\n\r\nDiscussion Goal: This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\r\n\r\n- Graph the data\r\n- Draw a line to separate the data into zones\r\n- When new data comes, see which zone it lands in to make a decision",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down what we did today into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3503,7 +3495,7 @@
       "key": "6ac51382-acd6-4f59-b521-032a9fc3266c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** A class is interested in making a book recommendation app for new students. The app will ask several questions and, based on the responses, will recommend a book that other people in the class have read.\n\n\n**Prompt:** _What is a question you think they should ask to help recommend a book?_\n\nHave students journal individually, then share their answers with a neighbor. Ask students to share-out with the whole class and keep track of responses at the front of the classroom.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** A class is interested in making a book recommendation app for new students. The app will ask several questions and, based on the responses, will recommend a book that other people in the class have read.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is a question you think they should ask to help recommend a book?_\n\nHave students journal individually, then share their answers with a neighbor. Ask students to share-out with the whole class and keep track of responses at the front of the classroom.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3526,7 +3518,7 @@
       "key": "a0baab02-fa2e-4a20-944e-d35b1c5b9872",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Take The Quiz**: Have students log into a computer and take the [Book Recommender Quiz](https://docs.google.com/forms/d/e/1FAIpQLSeobjrYyl-y-T2Mu9IvC0YTya7pHRvdjAW_1RyIgopqZI9rQA/viewform). Once they have completed the quiz, they can click the \"See Previous Responses\" link to view the data from the quiz.",
+        "description": "**Digitally Distribute**: Have students log into a computer and digitally distribute the [Book Recommender Quiz](https://docs.google.com/forms/d/e/1FAIpQLSeobjrYyl-y-T2Mu9IvC0YTya7pHRvdjAW_1RyIgopqZI9rQA/viewform). Once they have completed the quiz, they can click the \"See Previous Responses\" link to view the data from the quiz.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3543,7 +3535,7 @@
       "key": "1883f43f-3b04-417f-9485-e4a061441b57",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the machine learning process _[Dan Note: this will have circles or something going from Problem --> Data --> Model --> App. There will be an arrow pointing at the App part to tie in with the remark below]_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Data --> Model --> App process"
       },
       "seeding_key": {
         "activity_section.key": "1883f43f-3b04-417f-9485-e4a061441b57",
@@ -3554,7 +3546,7 @@
       "key": "41c16d55-adbe-4607-b9ff-60af3009546b",
       "position": 6,
       "properties": {
-        "description": "Yesterday, we learned that AI Lab can take data - like this - and turn it into a model that can be used to make a decision. In this case, we're trying to decide what book to recommend to a new student. Today, we're going to learn how to take that model and turn it into an app that people can use.",
+        "description": "So far, we've explored how Data can be used to create a Model. Today, we'll see how you can use the Model to create an App that people can use. We're going to help create this Book Recommender app and learn how to use machine learning models in App Lab.",
         "remarks": true
       },
       "seeding_key": {
@@ -3574,12 +3566,9 @@
       }
     },
     {
-      "key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
+      "key": "5f5a7e7c-86a2-4088-97b5-d1e2bc1abf70",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
-        "name": "Main Activity",
-        "progression_name": "Book Recommender App",
         "tips": [
           {
             "type": "teachingTip",
@@ -3588,13 +3577,27 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "5f5a7e7c-86a2-4088-97b5-d1e2bc1abf70",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first contains a working version of the app that students will create today. Have students run the program a few times.",
+        "duration": "15",
+        "name": "Survey Analysis",
+        "progression_name": "Book Recommender App"
+      },
+      "seeding_key": {
         "activity_section.key": "2a68d88e-9822-45a1-a779-b8cc6274e7b4",
         "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
       }
     },
     {
       "key": "652fe87c-8a35-45bc-a770-741ecb0a626c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "What is your Ideal Vacation?"
       },
@@ -3605,7 +3608,7 @@
     },
     {
       "key": "eb424716-5003-4a67-a2f6-be31b9285373",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _What design elements did you see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class.\n\n **Discussion Goal:** Students will probably notice that buttons, images, and text labels are used extensively. Be sure to remind students that each screen is an element as well. If students are missing any elements, use this as an opportunity to remind students of design mode in App Lab.",
         "tips": [
@@ -3622,7 +3625,7 @@
     },
     {
       "key": "8ad0e6f5-c08b-4cfe-a3d0-93247ad5cc4e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What coding commands would you expect to see in this app?_\n\nHave students brainstorm on their own or record a list in their journals, then invite them to share as a full class. \n\n**Discussion Goal:** Students should predict that onEvent is being used for each button, and that setScreen is used to switch between screens. If students have been through Unit 3 of CS Discoveries, they may also predict that if-statements are used to generate the final answer, but it is okay if this isn’t discussed.",
         "tips": [
@@ -3639,15 +3642,9 @@
     },
     {
       "key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** **[[questions probably didn't have strong relationship with book recommendations, so decided not to use them in the model. Way to review yesterday's lesson and how feature selection is an important part of AI Lab]]**",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**Lesson Writing Tension:** I want the wrap-up prompt to be a formative assessment opportunity, since this is important for the first time getting into App Lab.\n\nBUT - that means I lose the opportunity to ask the ethics/bias question around including gender. The \"Another class asked about gender and found a relationship - should they use it?\".\n\nCan I actually do that here instead? Should I change the survey to not have the other silly questions and instead try and have that convo here?\n\nThis is like the fundamental problem I run into - wanting to include thoughtful discussion around sources of bias, but not wanting it to feel like an \"add on\" to the lesson, which I'm worried is what would happen if I included it here."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _The app is missing two questions from the survey:_\n- _Which type of sandwich is your favorite?_\n- _What kind of day do you like?_\n\n_Why do you think those questions didn't make it into the model?_\n\n**Discussion Goal:** Guide students towards the conclusion that these questions probably didn't have strong relationships in the data or lead to an accurate model. Students may hypothesize that this is because the questions didn't seem to be related to books, but we'll never know for sure without seeing the actual data. "
       },
       "seeding_key": {
         "activity_section.key": "8791b5cc-e0ff-4543-ac99-80e091cd40d7",
@@ -3655,15 +3652,34 @@
       }
     },
     {
-      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
-      "position": 6,
+      "key": "195a6e0b-ed01-4fcb-a11f-8311d23c9930",
+      "position": 7,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the “How to Import Models in AppLab” video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _This class considered asking about gender on the survey to help recommend a book, but decided against it._\n\n_Do you think there is any harm in including a question about gender in the survey? Why or why not?_\n\n**Discussion Goal:** This is an opportunity to explore how demographic features, like gender or race or age, should or shouldn't be used in machine learning models. Some students may think it's harmless to include gender in the survey, since it may have a strong relation to certain types of books. Other students may bring up how about gender can lead to stereotypes, or how there may not be enough data to be gender inclusive in the survey especially for non-binary students.\n\nGuide students to consider whether or not it feels like the best type of question to ask considering that the class is trying to predict a book recommendation. Have the class consider whether gender feels like a necessary question, or if other questions will also lead to accurate recommendations. In this way, asking about gender is similar to the previous two questions about which sandwich you like or the type of day you're having: the other questions are probably better predictors of what type of book you may read.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Additional Resources:** Even though including gender on a survey may feel innocent to some students, studies have shown that gender bias can creep into recommendation and selection processes in unintended and unexpected ways. For example, a machine learning algorithm designed to screen job candidates in the tech industry was discovered to be [biased against against women](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G) and perpetuating stereotypes in the tech industry. Importantly, this phenomenon can exist even without AI and Machine Learning, such as a study showing how [gender bias was impacting selection for symphonic orchestras](https://www.princeton.edu/news/2000/11/28/blind-orchestra-auditions-better-women-study-finds).\n\nIf students are interested in this topic, consider having them explore the **[Survival of the Best Fit](https://www.survivalofthebestfit.com/)** game which simulates a similar phenomenon. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "195a6e0b-ed01-4fcb-a11f-8311d23c9930",
+        "lesson_activity.key": "63ab0026-e3d1-46ae-8b1d-e3cf0c16490c"
+      }
+    },
+    {
+      "key": "85d2e7dc-ea7d-44bb-8387-096d92a53b87",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. Here they will import a model into their app and test that it works correctly. Have them follow the instructions on the screen to import their first model.",
+        "duration": "20",
+        "name": "Importing a Model",
         "progression_name": "Import a Model",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**This Can Be Overwhelming:** When models are imported into AppLab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
+            "markdown": "**This Can Be Overwhelming:** When models are imported into App Lab, a lot of code is pre-generated and this can be overwhelming. Students may feel nervous about needing to understand everything that’s happened. You may want to reassure students in the following way:\n\n- Remind students that they already know a lot of what’s happening based on the discussion they just had! All of the design mode elements are familiar, and the code uses the same onEvent blocks they were expecting\n- Assure students that we’ll uncover what most of this code does throughout the unit, and they don’t have to understand every little piece of it right now \n"
           }
         ]
       },
@@ -3674,9 +3690,9 @@
     },
     {
       "key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Ensure that students can recognize the lines of code where each of these events are happening in their code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _Can you identify the line where the button press happens?_\n- _Can you identify where all of our data is collected into a variable?_\n- _Can you identify the line where our prediction happens?_\n\nHave students talk with a partner first before having a full-class discussion. Students will likely be unsure about some of their answers - encourage them to think of these as predictions rather than definite answers."
       },
       "seeding_key": {
         "activity_section.key": "0fc4769c-7b1e-4427-aac2-99dd3813744b",
@@ -3685,7 +3701,7 @@
     },
     {
       "key": "5b736490-fd93-4fdb-b2d1-4a0804d757b4",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": " **Discussion Goal:** Help students identify the following information:\n\n- The button press happens on line 2 with the yellow [`onEvent`(#fff176)](/docs/applab/onEvent/) block\n- The data is collected on lines 3 through 6 with the [`addPair`(#BB77C7)](/docs/applab/addPair/) blocks and the yellow [`getText`(#fff176)](/docs/applab/getText/) blocks\n- The prediction happens on line 8 with the green [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block"
       },
@@ -3696,7 +3712,7 @@
     },
     {
       "key": "6712ead7-42d3-4d1f-ad8c-5334555b6826",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. As they progress, they will update the style of their app using Themes and will add a “Welcome Screen” to the app for when a user first loads the app.\n"
       },
@@ -3707,7 +3723,7 @@
     },
     {
       "key": "9ec5f310-adc2-4c42-9103-db43a0f8ae61",
-      "position": 10,
+      "position": 12,
       "properties": {
         "progression_name": "Customize Your App"
       },
@@ -3718,7 +3734,7 @@
     },
     {
       "key": "0a56918e-1c87-4a73-a20f-c70392c253a3",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "**Circulate:** As students complete these levels, they will continue automatically to keep customizing their apps. Here are some tips for how to support students in each level:\n\n- **Level 3:** Students will update the text on their app so it is easier for a user to understand. Instead of the one or two word description from the pre-generated design elements, students will use the same questions they saw in the survey.\n- **Level 4:** Students will choose a theme to update the design of their app. For now, just have them choose a theme. Later on, they can continue to customize their app with Design Mode\n- **Level 5:** Students add a home screen to their app. The instructions for this level may be difficult to keep track of - encourage students to “check off” each step as they complete it. They can also use the animated example on the level as a guide for how to complete this task.\n- **Level 6:** Students add a button from the home screen to the predict screen, and add an event to connect the two screens together. Support students in reading through the instructions and “checking off” each piece as they go along. They can also click the “Show Me How” lines in the instructions for screenshots of what each step can look like."
       },
@@ -3729,7 +3745,7 @@
     },
     {
       "key": "9a1eafc2-dbaa-45ed-a881-acf22b64df3f",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
         "progression_name": "Choice Levels: Customize Your App"
@@ -3755,17 +3771,6 @@
       "seeding_key": {
         "activity_section.key": "15cf30d4-0683-4735-ba2d-0c6fd1ed7a34",
         "lesson_activity.key": "4f210793-1d0f-4344-8bbc-c2e311bc7111"
-      }
-    },
-    {
-      "key": "229d1329-3184-4f16-9714-88e6579a7f3b",
-      "position": 1,
-      "properties": {
-        "progression_name": "Old Levels"
-      },
-      "seeding_key": {
-        "activity_section.key": "229d1329-3184-4f16-9714-88e6579a7f3b",
-        "lesson_activity.key": "e4f2ec6a-e050-4868-8146-ebb78bdb4360"
       }
     },
     {
@@ -4473,10 +4478,32 @@
       }
     },
     {
-      "key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
+      "key": "5912736f-4890-4cbf-bbd6-b8693f741a57",
       "position": 3,
       "properties": {
-        "description": "As we can see, the basic version of our machine learning apps could use improvements and we have a great list here. Today, we’ll learn how to improve the user experience for our apps. We’ll start by looking at an app that uses numerical data and see how this changes the user interface for our app.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first level has students explore an enhanced version of this same app, with many of the improvements implemented. As the class explores, highlight any improvements that matched their suggestions. Emphasize that this app does one thing we haven't seen before: it changes screens based on the animal that is predicted."
+      },
+      "seeding_key": {
+        "activity_section.key": "5912736f-4890-4cbf-bbd6-b8693f741a57",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "57426922-97e2-4404-984f-91c161d24150",
+      "position": 4,
+      "properties": {
+        "progression_name": "Example App: Zoo Classification"
+      },
+      "seeding_key": {
+        "activity_section.key": "57426922-97e2-4404-984f-91c161d24150",
+        "lesson_activity.key": "f0e3a38a-278e-43ca-ba19-841683ff38de"
+      }
+    },
+    {
+      "key": "b71118a1-520e-491a-8fb1-6715e1a546c7",
+      "position": 5,
+      "properties": {
+        "description": "As we can see, there are a lot of ways to improve our app - and you all predicted many of the improvements we see here. Some improvements aren't only with the design - even adding additional information can make an app more helpful to its users. Today we'll learn more about how we can make our apps easier to use with the help of a Model Card.",
         "remarks": true
       },
       "seeding_key": {
@@ -4486,15 +4513,9 @@
     },
     {
       "key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I improve how a user interacts with a machine learning app?",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**LESSON UPDATE:** Include example app that also has changing screens based on prediction! That way it motivates the rest of the lesson where we add these screens with if-statements"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use a Model Card to improve my app?"
       },
       "seeding_key": {
         "activity_section.key": "1919635e-4946-4b6a-9f6e-95d77d32f428",
@@ -4505,9 +4526,15 @@
       "key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. In this first sequence of levels, students will see how numerical data affects the user interface and how to update elements on the screen.",
-        "name": "Pet Recommender (20 mins)",
-        "progression_name": "Pet Recommender"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. In this first sequence of levels, students will see how to use a Model Card to update their app.",
+        "name": "Model Cards in Apps (15 mins)",
+        "progression_name": "Pet Recommender: Import Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Purposefully Mysterious:** This app is deliberately mysterious and requires a lot of guessing to understand. This is purposeful, since we will work to improve this app in the next few levels. If students ask questions or express uncertainty about how the app is working: validate their instincts, but avoid revealing too much about the app - instead, encourage them to keep these thoughts in mind as the lesson continues.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a",
@@ -4518,13 +4545,7 @@
       "key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** _How can you tell the difference between categorical features and numerical features in the app?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Purposefully Mysterious:** This app is deliberately mysterious and requires a lot of guessing to understand. This is purposeful, since we will work to improve this app in the next few levels. If students ask questions or express uncertainty about how the app is working: validate their instincts, but avoid revealing too much about the app - instead, encourage them to keep these thoughts in mind as the lesson continues.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** _Some of the features use dropdowns and others use text boxes. What do you think is the difference between these two types of features?_"
       },
       "seeding_key": {
         "activity_section.key": "a2cae783-cde6-48a2-8798-f7d7c41687fd",
@@ -4535,7 +4556,7 @@
       "key": "65e07780-ed3e-4d02-af2b-1031bc850cd7",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students should notice that numerical features appear as text boxes and categorical features appear as dropdowns. Follow up and ask students why they think this is. Guide the conversation towards the definitions for categorical and numerical data - categorical data can be put into groups which makes a dropdown useful, and numerical data can be represented as a range of numbers which makes an input box useful.",
+        "description": "**Discussion Goal:** Guide students to notice that the text boxes require numbers, and the dropdown boxes use words. Once this point is made, transition to the next slide with the definitions for Categorical and Numerical data.\n\n**Vocabulary:** Show students the vocabulary for the lesson, which includes the new term for Numerical data.\n- **Categorical Data:** data that can be separated into groups\n- **Numerical Data:** data that can be counted or measured",
         "tips": [
           {
             "type": "teachingTip",
@@ -4576,7 +4597,13 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, which displays the model card. Have students read the labels and features to better understand how the app is working. If students guessed any of these in the earlier discussion, circle back and validate those answers from before.",
-        "progression_name": "Pet Recommender"
+        "progression_name": "Pet Recommender: Model Card",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Printing Model Cards:** You may decide to print the model card as well so students can read it on paper. If possible, the model card is designed to be printed two-sided so it appears as a single sheet of paper that you can flip back and forth.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8",
@@ -4587,13 +4614,7 @@
       "key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _How can you tell the difference between categorical features and numerical features in the model card?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Printing Model Cards:** You may decide to print the model card as well so students can read it on paper. If possible, the model card is designed to be printed two-sided so it appears as a single sheet of paper that you can flip back and forth.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** _How can you tell the difference between categorical features and numerical features in the model card?_"
       },
       "seeding_key": {
         "activity_section.key": "57502ab3-ab06-4215-b39a-4a0a36d7afd1",
@@ -4628,13 +4649,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level, where they can still access the model card for this app and use it to update the user interface.",
-        "progression_name": "Pet Recommender",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**LESSON PLAN NOTE:** Update this text to avoid welcome screen language. Instead, say we're going to change to a new screen depending on the prediction result.\n\nTHEN - update the levels to match the Vacation levels with if statements\n\nFINALLY - add an assessment level where students need to import a model, then use the model card to update the text on the screen"
-          }
-        ]
+        "progression_name": "Pet Recommender"
       },
       "seeding_key": {
         "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32",
@@ -4649,7 +4664,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Updating Labels Only**: [model card isn't an exact match to actual model. The goal is to emphasize how the model card can be used to add more detailed information to an app. Don't need to update other aspects of the code]"
+            "markdown": "**Updating Labels Only**: Students should only be updating the design of their app - they don't need to update the code, which still uses the shorter one-or-two letter abbreviations from the original app. This is because it's common to use much shorter abbreviations with data, and use longer explanations in places like the model card. If a student updates the [`addPair()`(#BB77C7)](/docs/applab/addPair/) section of their code, it may cause errors in their app."
           }
         ]
       },
@@ -4663,6 +4678,8 @@
       "position": 12,
       "properties": {
         "description": "You may have noticed that in this app, the prediction appears on the home screen. But in the app we tested, we went to a whole new screen based on the result! In order to have our app change screens, we’ll need to check the result of our prediction. This means our code will need to use a new type of block called an **if-statement**.",
+        "duration": "20",
+        "name": "If-Statements in Apps",
         "remarks": true
       },
       "seeding_key": {
@@ -4674,7 +4691,13 @@
       "key": "347cd55b-38f4-47a2-9ba5-a6c3a295a34c",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Conditionals video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Conditionals video in the slide deck.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "347cd55b-38f4-47a2-9ba5-a6c3a295a34c",
@@ -4722,7 +4745,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "[Use this level as an assessment]"
+            "markdown": "This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-)"
           }
         ]
       },
@@ -4732,10 +4755,26 @@
       }
     },
     {
-      "key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
+      "key": "ad5d831f-ae3c-4100-a461-fa74d734a689",
       "position": 18,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Pet Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Pet Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Deja Vu?** Students may notice that the choice levels look familiar in this lesson - they're the same levels that students could choose from in Lesson 7. This is intentional, since it gives students a chance to learn a different piece of code than they learned previously. For students who have explored each option already, encourage them to apply their knowledge to this new app."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ad5d831f-ae3c-4100-a461-fa74d734a689",
+        "lesson_activity.key": "7098aa79-268d-444e-bbe6-227afbd95401"
+      }
+    },
+    {
+      "key": "fb5ed861-1ad9-400f-9cd9-9ec63129a613",
+      "position": 19,
+      "properties": {
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -8288,6 +8327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoe survey"
+        ],
         "progression": "Shoe Recommendation Survey"
       },
       "named_level": false,
@@ -8805,10 +8847,33 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example App: Zoo Classification"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-models in applab-zoo model embed"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "57426922-97e2-4404-984f-91c161d24150"
+      },
+      "level_keys": [
+        "ml-models in applab-zoo model embed"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ml-use model card-example1A-2021"
         ],
-        "progression": "Pet Recommender"
+        "progression": "Pet Recommender: Import Model"
       },
       "named_level": false,
       "bonus": false,
@@ -8826,15 +8891,15 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 2,
+      "chapter": 30,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ml-use model card-pet model card-2021"
         ],
-        "progression": "Pet Recommender"
+        "progression": "Pet Recommender: Model Card"
       },
       "named_level": false,
       "bonus": false,
@@ -8852,8 +8917,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
+      "chapter": 31,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8878,8 +8943,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 4,
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8904,8 +8969,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8930,8 +8995,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
+      "chapter": 34,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -8956,8 +9021,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 7,
+      "chapter": 35,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8982,8 +9047,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 8,
+      "chapter": 36,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -9008,11 +9073,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 9,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice-2021"
+        ],
         "progression": "Challenge"
       },
       "named_level": false,
@@ -9031,7 +9099,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9057,7 +9125,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9083,7 +9151,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9109,7 +9177,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9135,7 +9203,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9161,7 +9229,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9187,7 +9255,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9213,7 +9281,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9239,7 +9307,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -9265,7 +9333,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9291,7 +9359,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9317,7 +9385,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9343,7 +9411,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9369,7 +9437,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9395,7 +9463,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9421,7 +9489,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9447,7 +9515,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9473,7 +9541,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9499,7 +9567,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9525,7 +9593,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9551,7 +9619,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9577,7 +9645,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9603,7 +9671,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9629,7 +9697,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9655,7 +9723,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9681,7 +9749,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9707,7 +9775,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9733,7 +9801,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9759,7 +9827,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9785,7 +9853,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10134,6 +10202,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "31f96b84-479f-4201-a049-ab140b03cfd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-models in applab-zoo model embed",
+        "script_level.level_keys": [
+          "ml-models in applab-zoo model embed"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "57426922-97e2-4404-984f-91c161d24150"
       }
     },
     {
@@ -10935,7 +11015,7 @@
       "key": "finding_patterns_in_data",
       "properties": {
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "finding_patterns_in_data"
@@ -10952,6 +11032,18 @@
       },
       "seeding_key": {
         "resource.key": "fruit-veggie-cards"
+      }
+    },
+    {
+      "name": "If-Statements in App Lab",
+      "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
+      "key": "if-statements_in_app_lab",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if-statements_in_app_lab"
       }
     },
     {
@@ -11216,19 +11308,6 @@
       }
     },
     {
-      "name": "Supervised and Unsupervised Scenarios",
-      "url": "https://docs.google.com/presentation/d/1FDxdhwYLJ2E2AEou1V9RZu8J90Wa78DpNH7yyPJaqt4/edit",
-      "key": "supervised-and-unsupervised-scenarios",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "supervised-and-unsupervised-scenarios"
-      }
-    },
-    {
       "name": "Supervised / Unsupervised",
       "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/edit",
       "key": "supervised_unsupervised",
@@ -11302,6 +11381,31 @@
       }
     },
     {
+      "name": "Types of Machine Learning",
+      "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+      "key": "types_of_machine_learning",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "types_of_machine_learning"
+      }
+    },
+    {
+      "name": "Types of Machine Learning",
+      "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
+      "key": "types_of_machine_learning_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_machine_learning_1"
+      }
+    },
+    {
       "name": "Unplugged KNN",
       "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
       "key": "unplugged_knn",
@@ -11352,13 +11456,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson2",
-        "resource.key": "supervised-and-unsupervised-scenarios"
+        "resource.key": "supervised_unsupervised"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson2",
-        "resource.key": "supervised_unsupervised"
+        "resource.key": "types_of_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson2",
+        "resource.key": "types_of_machine_learning_1"
       }
     },
     {
@@ -11473,6 +11583,12 @@
       "seeding_key": {
         "lesson.key": "lesson10",
         "resource.key": "app_lab_if-statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "resource.key": "if-statements_in_app_lab"
       }
     },
     {
@@ -11773,7 +11889,7 @@
     {
       "key": "unsupervised_learning",
       "word": "Unsupervised Learning",
-      "definition": "When a model trains itself to learn",
+      "definition": "Finding patterns in data that doesn't have any labels",
       "properties": {
       },
       "seeding_key": {
