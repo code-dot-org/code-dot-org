@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Initialize a new `Painter` at (0, 0) facing South with 0 units of paint.\r\n\r\nNavigate The Neighborhood and paint the path shown below.\r\n\r\nUse any constructors, `if` statements, `while` loops, action commands, and information gathering commands in your toolkit.",
+    "long_instructions": "Initialize a new `Painter` at (0, 0) facing South with 0 units of paint.\r\n\r\nNavigate The Neighborhood and paint the path shown below.\r\n\r\nUse any constructors, `if` statements, `while` loops, action commands, and information gathering commands in your toolkit.\r\n\r\n![](https://images.code.org/f720b2041526eea6884d2279b8956306-image-1625660169097.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -134,7 +134,7 @@
       [
         {
           "tileType": 1,
-          "value": 4,
+          "value": 10,
           "assetId": 303
         },
         {
@@ -221,38 +221,38 @@
         },
         {
           "tileType": 1,
-          "value": 4,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 10,
           "assetId": 303
         },
         {
           "tileType": 1,
           "value": 0,
           "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 4,
-          "assetId": 303
         }
       ],
       [
@@ -422,8 +422,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 10,
+          "assetId": 303
         },
         {
           "tileType": 0,
@@ -506,7 +506,27 @@
       [
         {
           "tileType": 1,
-          "value": 4,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 10,
           "assetId": 303
         },
         {
@@ -531,11 +551,6 @@
         },
         {
           "tileType": 1,
-          "value": 4,
-          "assetId": 303
-        },
-        {
-          "tileType": 1,
           "value": 0,
           "assetId": 0
         },
@@ -548,21 +563,6 @@
           "tileType": 1,
           "value": 0,
           "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 4,
-          "assetId": 303
         }
       ],
       [
@@ -758,16 +758,16 @@
         "isVisible": true
       }
     },
+    "display_name": "Navigate the Food Trucks",
     "encrypted_examples": [
 
-    ],
-    "display_name": "Navigate the Food Trucks"
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-06T19:47:28.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-06 20:49:13 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-06 21:03:04 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-06 20:49:13 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-06 21:03:04 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 12:03:14 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 12:16:20 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

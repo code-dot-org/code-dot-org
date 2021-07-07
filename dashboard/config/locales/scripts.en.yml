@@ -22640,14 +22640,50 @@ en:
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
         csa5-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Creating Tables of Data
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+            lesson-2:
+              name: Traversing a 2D Array by Rows
+            lesson-3:
+              name: Traversing a 2D Array by Columns
+            lesson-4:
+              name: Using Enhanced for Loops
+            lesson-5:
+              name: Evaluating 2D Arrays
+            lesson-6:
+              name: Applying Standard Algorithms
+            lesson-7:
+              name: Reversing Elements
+            lesson-8:
+              name: Shifting Elements
+            lesson-9:
+              name: Finding Duplicates
+            lesson-10:
+              name: Searching for Elements
+            lesson-11:
+              name: A Sustainable Neighborhood Project - Day 1
+            lesson-12:
+              name: A Sustainable Neighborhood Project - Day 2
+            lesson-13:
+              name: A Sustainable Neighborhood Project - Day 3
+            lesson-14:
+              name: FRQ Day
+            lesson-15:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa5-pilot
-          title: ''
+          title: Giving Objects Organization
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
+          student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
         csa6-pilot:
           lessons: {}
           lesson_groups: {}
@@ -23727,7 +23763,11 @@ en:
           description: ''
           student_description: '(Need to change name) Interactive Poster project in an "About Me" format for HoC - V1 '
         poembot:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Mood Study - HoC Activity
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poembot
           title: Poembot
