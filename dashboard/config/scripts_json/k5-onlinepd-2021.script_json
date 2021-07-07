@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 20:07:22 UTC",
+    "serialized_at": "2021-07-07 22:06:50 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -623,7 +623,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "progression": "Getting Started"
       },
@@ -631,14 +631,14 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-GettingStarted3-2021"
+        "OPD-K5 GettingStarted4_2021"
       ]
     },
     {
@@ -4076,9 +4076,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-GettingStarted3-2021",
+        "level.key": "OPD-K5 GettingStarted4_2021",
         "script_level.level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
