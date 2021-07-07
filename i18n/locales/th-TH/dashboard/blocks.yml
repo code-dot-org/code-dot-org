@@ -1122,6 +1122,18 @@ th:
         text: x พิกัดของ {SPRITE}
       Mikelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
+      Outbreak_beginCongregating:
+        text: สัตว์ประหลาดเริ่มอยู่กันอย่างแออัด
+      Outbreak_beginQuarantining:
+        text: สัตว์ประหลาดเริ่มกักตัวหลังจากล้มป่วย
+      Outbreak_beginSocialDistancing:
+        text: สัตว์ประหลาดเริ่มรักษาระยะห่างทางสังคม
+      Outbreak_beginWandering:
+        text: สัตว์ประหลาดเริ่มเดินทางไปทั่ว
+      Outbreak_beginWearingMasks:
+        text: สัตว์ประหลาดเริ่มสวมหน้ากาก
+      Outbreak_stopMoving:
+        text: สัตว์ประหลาดหยุดเคลื่อนไหว
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:
