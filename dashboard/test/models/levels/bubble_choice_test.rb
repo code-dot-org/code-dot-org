@@ -350,4 +350,14 @@ DSL
     bubble_choice = create :bubble_choice_level, name: 'bubble_choices_level', sublevels: [artist]
     assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
   end
+
+  test 'parent_levels will retrieve all parent levels' do
+    parents = []
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1, @sublevel2])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel2])
+
+    assert_equal [@bubble_choice, parents[0], parents[1]], BubbleChoice.parent_levels(@sublevel1.name)
+    assert_equal [@bubble_choice, parents[0], parents[2]], BubbleChoice.parent_levels(@sublevel2.name)
+  end
 end
