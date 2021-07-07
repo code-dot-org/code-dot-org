@@ -131,11 +131,6 @@ Dance.prototype.init = function(config) {
     this.studioApp_.init(config);
     this.studioAppInitPromiseResolve();
 
-    // Manually trigger a 'resize' after the relevant React components have mounted
-    // to ensure consistent sizing/scaling and prevent overflow after instructions
-    // have rendered.
-    this.studioApp_.resizeVisualization();
-
     const finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
