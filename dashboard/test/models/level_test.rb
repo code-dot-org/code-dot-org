@@ -1184,6 +1184,64 @@ class LevelTest < ActiveSupport::TestCase
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
 
+  test "get_level_for_progress returns the level if there are no sublevels or contained levels" do
+    level = create :level
+    script_level = create :script_level, levels: [level]
+    student = create :student
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal level, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with the best result if no sublevels have keepWorking feedback" do
+    student = create :student
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel2, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback" do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+    create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel1, level_for_progress
+  end
+
+  test "get_level_for_progress returns the first contained level if the level has contained levels" do
+    student = create :student
+
+    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
+    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
+
+    level = create :level, name: 'level 1', level_num: 'custom'
+    level.contained_level_names = [contained_level_1.name, contained_level_2.name]
+    script_level = create :script_level, levels: [level]
+
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal contained_level_1, level_for_progress
+  end
+
   test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
     summary = @custom_level.summarize_for_lesson_show(false)
     refute summary.key?('teacherMarkdown')
