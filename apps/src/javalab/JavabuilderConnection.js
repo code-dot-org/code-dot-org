@@ -5,15 +5,8 @@ const queryString = require('query-string');
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(
-    channelId,
-    javabuilderUrl,
-    onMessage,
-    miniApp,
-    serverLevelId,
-    options
-  ) {
-    this.channelId = channelId;
+  constructor(javabuilderUrl, onMessage, miniApp, serverLevelId, options) {
+    this.channelId = dashboard.project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
