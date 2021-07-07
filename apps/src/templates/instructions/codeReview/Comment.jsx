@@ -2,15 +2,16 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-// shape includes comment, commenter, project ID, project version, is from teacher?
 export default class Comment extends Component {
   static propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    comment: PropTypes.string.isRequired,
     timestampString: PropTypes.string.isRequired,
-    isResolved: PropTypes.bool.isRequired,
-    isFromTeacher: PropTypes.bool.isRequired,
-    isFromProjectOwner: PropTypes.bool.isRequired,
-    isFromOlderVersionOfProject: PropTypes.bool.isRequired
+    isResolved: PropTypes.bool,
+    isFromTeacher: PropTypes.bool,
+    isFromProjectOwner: PropTypes.bool,
+    isFromOlderVersionOfProject: PropTypes.bool
   };
 
   state = {
@@ -31,6 +32,7 @@ export default class Comment extends Component {
 
   render() {
     const {
+      comment,
       timestampString,
       isResolved,
       isFromProjectOwner,
@@ -54,13 +56,14 @@ export default class Comment extends Component {
               this.setState({showEllipsisMenu: !this.state.showEllipsisMenu})
             }
           />
-          {!isResolved && <span className="fa fa-check" style={styles.check} />}
+          {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
           {this.state.showEllipsisMenu && (
             <div>Placeholder for ellipsis menu</div>
           )}
         </div>
         <div
+          id={'code-review-comment-body'}
           style={{
             ...styles.comment,
             ...(isFromProjectOwner && styles.projectOwnerComment),
@@ -68,10 +71,7 @@ export default class Comment extends Component {
               styles.olderVersionCommentBackgroundColor)
           }}
         >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          {comment}
         </div>
       </div>
     );
