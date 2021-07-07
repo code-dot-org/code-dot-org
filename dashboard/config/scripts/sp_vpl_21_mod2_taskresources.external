@@ -1,0 +1,14 @@
+name 'SP-VPL-21-mod2-TaskResources'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Find a resource
+
+#### 1. In a new tab, navigate to the Course overview page. 
+#### 2. Click the blue "Teacher resources" button. 
+#### 3. Select on resource to explore.
+
+
+
+MARKDOWN
