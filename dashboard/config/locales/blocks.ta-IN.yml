@@ -838,18 +838,47 @@ ta:
             '"right"': வலது
             '"space"': வெளி
       craft_ifPath:
+        text: |-
+          பாதை என்றால் {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": மாருதி
       craft_ifStandingOn:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_ifStandingOnLimit:
+        text: |-
+          நின்று கொண்டிருந்தால் {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": மண்
       craft_moveForward:
         text: முன்னோக்கி நகர்த்த
+      craft_placeBlock:
+        text: இடம் {blockType}
+      craft_placePrismarine:
+        text: பிரிஸ்மரைன் வைக்கவும்
       craft_placeTorch:
         text: இடம் மின்வளக்கு
+      craft_repeatUntilConduit:
+        text: |-
+          வழித்தடம் முடியும் வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          இலக்கு வரை மீண்டும் செய்யவும்
+          {STATEMENT}
+      craft_spawnEntity:
+        text: ஸ்பான் {ENTITY}
+      craft_turn:
+        text: திரும்பவும்{DIR}
+        options:
+          DIR:
+            right: சரி ↻
+            left: இடது  ↺
