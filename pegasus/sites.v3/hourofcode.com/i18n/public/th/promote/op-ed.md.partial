@@ -6,11 +6,11 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# เขียนข้อคิดเห็นเพื่อสนับสนุนสัปดาห์วิชาการวิทยาการคอมพิวเตอร์
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### ต่อไปนี้คือตัวอย่างข้อคิดเห็นที่สนับสนุนสัปดาห์วิชาการวิทยาการคอมพิวเตอร์และเป้าหมายของการจัดงานนี้ ที่ฝ่ายกฎหมายประจำรัฐและประจำพื้นที่ ผู้นำธุรกิจและบุคคลอื่นสามารถนำไปใช้ได้
 
-### เข้าไปที่ [advocacy.code.org]({{ urls/advocacy }}) เพื่อดูรายละเอียดเฉพาะที่เกี่ยวข้องกับวิทยาการคอมพิวเตอร์ประจำในแต่ละรัฐ
+### เข้าไปที่ [advocacy.code.org]({{ urls/advocacy }}) เพื่อดูรายละเอียดเฉพาะที่เกี่ยวข้องกับวิทยาการคอมพิวเตอร์ของแต่ละรัฐ
 
 * * *
 
@@ -18,32 +18,32 @@ nav: promote_nav
 
 #### โดย [NAME] และ [พิจารณาเขียนบทความชิ้นนี้ร่วมกับนักการศึกษา ผู้อำนวยการหรือผู้นำธุรกิจ]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. คอมพิวเตอร์เป็นหนึ่งส่วนประกอบที่สำคัญของโครงสร้างพื้นฐานของเรา ตั้งแต่โรงไฟฟ้าไปจนถึงไฟจราจร หรือแม้แต่ระบบงานภายในตลาดการเงินของเรา และคอมพิวเตอร์ทั้งหมดนี้มีหนึ่งอย่างที่เหมือนกัน นั่นคือ ซอฟต์แวร์ที่เป็นตัวบอกให้คอมพิวเตอร์ทำสิ่งต่างๆ
+คอมพิวเตอร์มีอยู่ทุกที่ They’re in our pockets. They’re on our walls. อยู่ภายในรถ คอมพิวเตอร์เป็นหนึ่งส่วนประกอบที่สำคัญของโครงสร้างพื้นฐานของเรา ตั้งแต่โรงไฟฟ้าไปจนถึงไฟจราจร หรือแม้แต่ระบบงานภายในตลาดการเงินของเรา และคอมพิวเตอร์ทั้งหมดนี้มีหนึ่งอย่างที่เหมือนกัน นั่นคือ ซอฟต์แวร์ที่บอกให้คอมพิวเตอร์ทำสิ่งต่างๆ
 
 แต่ใครกันล่ะที่เป็นคนเขียนซอฟต์แวร์นี้
 
 เมื่อดูจากโลกยุคปัจจุบันที่เปลี่ยนผ่านได้อย่างรวดเร็วด้วยเทคโนโลยี คุณอาจคาดหวังว่าจะมีนักเรียนจำนวนมากเป็นประวัติการณ์ที่กำลังเรียนวิทยาการคอมพิวเตอร์ในระดับชั้น K-12 คุณคิดผิดนะ เพราะความจริงคือ ตอนนี้เมื่อเทียบกับเมื่อ 10 ปีที่แล้ว มีนักเรียนไม่มากนักหรอกที่ศึกษาเรื่องวิทยาการคอมพิวเตอร์ และมีโรงเรียนไม่กี่แห่งหรอกที่สอนเรื่องนี้
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. แม้แต่ในขณะนี้ที่มีอัตราการว่างงานสูง งานหลายพันตำแหน่งซึ่งหลายตำแหน่งใน **[แทรกรัฐ/เมือง]** ยังว่างอยู่เพราะไม่มีผู้สมัครที่มีทักษะที่เหมาะสมตรงกับงาน
 
-Why is this? And how can we address it?
+ทำไมเป็นแบบนี้ เราจะแก้ปัญหานี้ได้อย่างไร
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+ต้นตอของปัญหานี้มาจากโรงเรียนระดับมัธยมต้นและมัธยมปลาย 9 ใน 10 โรงเรียนของเราไม่สอนการเขียนโปรแกรมคอมพิวเตอร์ ใน **[เขตการศึกษา]** เมื่อปีที่แล้ว มีนักเรียนเพียง **[NUMBER]** คนเท่านั้นทีี่สอบวิชาวิทยาการคอมพิวเตอร์ภายใต้โครงการเพื่อการเตรียมความพร้อมเพื่อเข้าศึกษาต่อในระดับมหาวิทยาลัย (College-Level Advanced Placement (AP)) ซึ่งคิดเป็นเพียง **[%]** ของนักเรียนทั้งหมดที่เข้าร่วมโครงการ AP ในรัฐของเรา เราไม่ได้ดำเนินการที่มากพอเพื่อเตรียมพร้อมหรือส่งเสริมให้นักเรียนก้าวสู่อาชีพเหล่านี้ที่มีความสำคัญและให้ผลตอบแทนสูง
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+นวัติกรรมด้านคอมพิวเตอร์หลัก ๆ เกือบทั้งหมดถือกำเนิดมาจากประเทศนี้ แต่เราเสี่ยงที่จะสูญเสียตำแหน่งนี้หากเรายังไม่เริ่มทำอะไรสักอย่าง
 
-We need to make some changes.
+เราต้องเปลี่ยนแปลงบางอย่าง
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[ตัวเลือกสำหรับรัฐที่อาจนำเนื้อหานี้ไปใช้ได้]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. การเปลี่ยนแปลงนี้จะส่งผลกระทบที่เห็นเด่นชัด In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-We should also work with students at a young age to spark their interest in computer science and coding. นอกจากจะทราบวิธีใช้แอปและเล่นวิดีโอเกมแล้ว นักเรียนควรทราบวิธีสร้างแอปหรือวิดีโอเกมนั้นด้วย Children can learn the basics of coding as early as the second grade.
+We should also work with students at a young age to spark their interest in computer science and coding. นอกจากจะทราบวิธีใช้แอปและเล่นวิดีโอเกมแล้ว นักเรียนควรทราบวิธีสร้างแอปหรือวิดีโอเกมนั้นด้วย เด็กสามารถเรียนรู้พื้นฐานของการเขียนโค้ดได้ตั้งแต่เกรดสองหรือ ป. 2 
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+เราต้องเปิดรับสมัครครูวิทยาการคอมพิวเตอค์ให้มากขึ้น และส่งเสริมให้เกิดการพัฒนาระดับมืออาชีพภายในวิชาการแขนงนี้ ตอนนี้มีแหล่งข้อมูลออนไลน์มากมายที่ช่วยให้ผู้สอนเข้าถึงและก้าวทันเทคโนโลยีล่าสุดสำหรับนักเรียนของตน
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. และวิทยาการคอมพิวเตอร์ได้ทวีความสำคัญในฐานะที่เป็นความรู้พื้นฐานสำหรับศตวรรษที่ 21 แล้วใครจะทำงานเหล่านี้หากนักเรียนของเราไม่มีโอกาสได้เรียนรู้ทักษะต่างๆ ที่จำเป็น
+ตามข้อมูลสถิิติของกรมแรงงาน พบว่า ในปี 2020 งานในแขนง STEM จะมีทั้งสิ้น 9.2 ล้านงาน โดยครึ่งหนึ่งหรือประมาณ 4.6 ล้านตำแหน่งงานจะเป็นเรื่องของการใช้คอมพิวเตอร์หรือเทคโนโลยีสารสนเทศ และวิทยาการคอมพิวเตอร์ได้ทวีความสำคัญในฐานะที่เป็นความรู้พื้นฐานสำหรับศตวรรษที่ 21 แล้วใครจะทำงานเหล่านี้หากนักเรียนของเราไม่มีโอกาสได้เรียนรู้ทักษะต่างๆ ที่จำเป็น
 
-สัปดาห์นี้ {{ campaign_date/full }} คือสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. ทุกคนควรเรียนรู้วิธีเขียนโค้ด คลิกที่ https://hourofcode.com/{{ country }} เพื่อดูรายละเอียดเพิ่มเติมและเริ่มต้น และร่วมสนับสนุนเราที่พยายามแนะนำวิทยาการคอมพิวเตอร์ให้กับอีกหลายๆ โรงเรียนใน **[STATE]**
+สัปดาห์นี้ {{ campaign_date/full }} คือสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. ทุกคนควรเรียนรู้วิธีเขียนโค้ด คลิกที่ https://hourofcode.com/{{ country }} เพื่อดูรายละเอียดเพิ่มเติมและเริ่มต้น และช่วยสนับสนุนเราที่พยายามแนะนำวิทยาการคอมพิวเตอร์ให้กับอีกหลาย ๆ โรงเรียนใน **[STATE]**
 
 {{ signup_button }}

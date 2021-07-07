@@ -22,25 +22,25 @@ title: Hour of Code Press Release for Elected Officials
 
 **GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+ชุมชนต่าง ๆ ช่วยกันปลูกจิตสำนึกในเรื่องความสำคัญของการศึกษาวิทยาการคอมพิวเตอร์โดยเข้าร่วมสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ <br /> <br />
 
 **DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. โดยนักเรียนกว่า 700 คนจากทุกชั้นได้มีส่วนร่วมในกิจกรรมชั่วโมงเขียนโค้ดอย่างน้อยหนึ่งกิจกรรม ผู้ปกครองและอาสาสมัครจากชุมชนต่างให้ความช่วยเหลือและพาบุตรหลานมาร่วมพูดคุยและหาคำตอบว่าทำไมวิทยาการคอมพิวเตอร์จึงมีความสำคัญต่อเด็กนักเรียนเหล่านี้” <br />
+[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. ตัวอย่างเช่น:**]  
+“โรงเรียน Daniels Run Elementary ได้งดการเรียนการสอนเพื่อจัดกิจกรรมชั่วโมงเขียนโค้ดในโรงเรียนเพื่อแนะนำให้นักเรียนรู้จักกับวิทยาการคอมพิวเตอร์ โดยนักเรียนกว่า 700 คนจากทุกชั้นได้มีส่วนร่วมในกิจกรรมชั่วโมงเขียนโค้ดอย่างน้อยหนึ่งกิจกรรม ผู้ปกครองและอาสาสมัครจากชุมชนต่างให้ความช่วยเหลือและพาบุตรหลานมาร่วมพูดคุยและหาคำตอบว่าทำไมวิทยาการคอมพิวเตอร์จึงมีความสำคัญต่อเด็กนักเรียนเหล่านี้” <br />
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. กิจกรรมชั่วโมงเขียนโค้ดคือประตูที่เปิดกว้างให้นักเรียนทุกคนเข้าถึงการศึกษาเรื่องวิทยาการคอมพิวเตอร์คุณภาพสูง <br />
+[**ตัวอย่างเนื้อหาในเอกสาร:**]  
+คอมพิวเตอร์มีอยู่ทุกที่ แต่มีโรงเรียนไม่กี่แห่งที่เปิดสอนวิทยาการคอมพิวเตอร์มานานกว่า 10 ปี เด็กนักเรียนหญิงและนักเรียนผิวสีที่เรียนวิชานี้มีอยู่น้อยมาก แต่ตอนนี้เรามีข่าวดี เพราะเรากำลังเปลี่ยนแปลงเรื่องนี้เพื่อสิ่งที่ดีกว่า กิจกรรมชั่วโมงเขียนโค้ดคือประตูที่เปิดกว้างให้นักเรียนทุกคนเข้าถึงการศึกษาเรื่องวิทยาการคอมพิวเตอร์คุณภาพสูง <br />
 
 นักเรียนกว่า 100 ล้านคนทั่วโลกได้เข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดแล้ว ซึ่งต้องขอขอบคุณกิจกรรมชั่วโมงเขียนโค้ด ที่ทำให้วิทยาการคอมพิวเตอร์ปรากฏบนหน้าแรกของ Google, MSN, Yahoo!, และ Disney คนดังหลายคน เช่น อดีตประธานาธิบดีโอบามา นักร้องดังอย่าง Shakira และนักแสดงชาย Ashton Kutcher ต่างเปิดโลกกิจกรรมชั่วโมงเขียนโค้ดผ่านวิดีโอ และอีกกว่า 100 หุ้นส่วนได้หันมาสนับสนุนความเคลื่อนไหวนี้ <br />
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “นักเรียนทุกคนควรมีโอกาสเรียนรู้วิชาวิทยาการคอมพิวเตอร์เพื่อเข้าถึงอาชีพที่ดีที่สุดของศตวรรษที่ 21” <br />
 
 [**แทรกข้อมูลเพิ่มเติมเกี่ยวกับกิจกรรมของคุณ และ/หรือองค์กรของคุณ**] <br />
 
 [**แทรกคำพูดจากองค์กรอื่นหรือจากคนอื่นที่เคยเข้าร่วมกิจกรรมนี้**] <br />
 
-หากต้องการรายละเอียดเพิ่มเติมเกี่ยวกับ[**กิจกรรม/โปรแกรม/และอื่นๆ**] โปรดเข้าไปที่ [**แทรกเว็บไซต์**] หรือติดต่อ [**แทรกข้อมูลติดต่อ**]
+หากต้องการรายละเอียดเพิ่มเติมเกี่ยวกับ[**กิจกรรม/โปรแกรม/และอื่น ๆ**] โปรดเข้าไปที่ [**แทรกเว็บไซต์**] หรือติดต่อ [**แทรกข้อมูลติดต่อ**]
 
 {{ signup_button }}

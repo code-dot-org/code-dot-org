@@ -563,8 +563,8 @@ ms:
   signup_thank_you_message: Kami telah menghantar e-mel pengesahan dengan maklumat
     untuk membantu anda bermula.
   social_hoc2018_code_org_what_create: 'Code.org: Apakah yang akan anda cipta?'
-  social_hoc2018_creativity_in_are_you: 'The #HourOfCode is about creativity. I’m
-    in! Are you?'
+  social_hoc2018_creativity_in_are_you: "#HourOfCode ialah tentang kreativiti. Saya
+    ikut masuk! Anda?"
   social_hoc2018_dance_party: 'Jam Kod: Majlis Tari-Menari'
   social_hoc2018_dance_what_create: Menampilkan Katy Perry, Madonna, J. Balvin, Sia,
     Keith Urban, Ciara, dan 25 yang lain lagi!
@@ -577,17 +577,17 @@ ms:
     cipta?
   social_hoc2018_hoc_here: Jam Kod sudah berada di sini!
   social_hoc2018_join: Hour of Code akan datang
-  social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
-    Write code to journey through Minecraft biomes.
-  social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
-    explore and build underwater worlds with code.
+  social_hoc2018_mc: Minecraft kembali untuk Jam Kod dan anda ialah wiranya! Tuliskan
+    kod untuk perjalanan merentasi biom Minecraft.
+  social_hoc2018_mc_creativity: Gunakan kreativiti dan kemahiran menyelesaikan masalah
+    anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod.
   social_hoc2018_what_create: Apakah yang akan anda cipta?
   social_hoc2018_global_movement: Jam Kod ialah pergerakan global yang mencapai puluhan
     juta pelajar. Tutorial selama sejam tersedia dalam 45+ bahasa untuk semua peringkat
     umur.
   map_title: Peta Hour of Code
   map_header: 'Acara # Hour of Code di seluruh dunia'
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} acara didaftarkan pada %{year}"
   see_all_events: Lihat kesemua senarai acara
   map_header_company: "# oleh syarikat penganjur"
   map_header_country: "# dalam %{country}"
@@ -610,10 +610,10 @@ ms:
     bahasa.
   twitter_default_text: 'Saya menyertai #HourOfCode tahun ini, bagaimana dengan anda?
     @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: "#HourOfCode tahun ini ialah tentang kreativiti. Saya ikut masuk!
+    Anda? (Terima kasih %{random_donor} kerana menyokong @codeorg)"
+  twitter_donor_text_2019: "#HourOfCode tahun ini ialah tentang #CSforGood. Saya ikut
+    masuk! Anda? (Terima kasih %{random_donor} kerana menyokong @codeorg)"
   hoc_faq_title: Soalan Lazim
   hoc_faq_what_is_hoc_q: Apakah Hour of Code?
   hoc_faq_what_is_hoc_a: Acara Jam Kod bermula sebagai pengenalan kepada sains komputer
@@ -894,8 +894,8 @@ ms:
     daripada kursus sekolah menengah, universiti dan tenaga kerja.
   stats_females_more: Semasa Hour of Code, wanita-wanita merangkumi <b>50% daripada
     semua peserta</b>!
-  stats_females_more_markdown: During the Hour of Code, female students make up **50%
-    of all participants**!
+  stats_females_more_markdown: Semasa Jam Kod, pelajar perempuan merangkumi **50%
+    daripada semua peserta**!
   stats_nina: '"Setiap hari menghasilkan keputusan yang sama&mdash; Penglibatan 100%."-Nina
     Nichols Peery, guru'
   stats_student: '"Saya tahu ini adalah peluang <b>sekali dalam seumur hidup</b>."-Mariana
@@ -941,11 +941,11 @@ ms:
   videos_hoc_2014: Hour of Code ada di Sini - Sesiapa sahaja Boleh Belajar
   videos_obama_cs: Pendapat Presiden Obama tentang sains komputer
   videos_anybody_can_learn: Sesiapa sahaja boleh belajat (1 minit)
-  videos_creativity: What is Creativity?
-  videos_creativity_series: What is Creativity? View Full Series.
+  videos_creativity: Apakah Kreativiti?
+  videos_creativity_series: Apakah Kreativiti? Tonton Siri Penuh.
   title_country_resources: Sumber-sumber spesifik negara
-  title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
-  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
+  title_hoc_advisory_committee: Jam Kod dan Jawatankuasa Penasihat CSEdWeek
+  title_hoc_review_committee: Jam Kod dan Jawatankuasa Penilaian CSEdWeek
   title_how_to_promote: Sebarkan berita ini
   title_how_to_districts: Panduan Cara Melaksanakan Jam Kod untuk Daerah
   title_how_to_events: Panduan Cara Acara Jam Kod
@@ -955,11 +955,11 @@ ms:
   title_how_to_volunteers: Panduan cara untuk sukarelawan Jam Kod
   title_how_to_parents: Panduan cara untuk ibu bapa
   title_how_to: Panduan Cara
-  title_international_partners: Contact International Partners
+  title_international_partners: Hubungi Rakan Kongsi Antarabangsa
   title_press_release: Siaran Akhbar Mengenai Hour of Code untuk Pegawai-pegawai yang
     Terlantik
-  title_op_ed: Sampel Rencana Pengarang yang Menyokong Minggu Pendidikan Sains Komputer
-    dan Acara Hour of Code
+  title_op_ed: Contoh Pendapat di dalam Halaman Editorial yang Menyokong Minggu Pendidikan
+    Sains Komputer dan Acara Jam Kod
   title_press_kit: Kenyataan akhbar
   title_proclamation: Sampel Resolusi Menyokong Minggu Pendidikan Sains Komputer dan
     Acara Hour of Code
@@ -988,7 +988,7 @@ ms:
   highlights_header: Sorotan Acara Jam Kod
   highlights_description: Beberapa detik kegemaran kami daripada kempen Jam Kod.
   highlights_previous: Sorotan dari tahun sebelumnya
-  highlights_see_more: See more highlights
+  highlights_see_more: Lihat lebih banyak sorotan
   highlights_readmore: Lihat lebih lanjut
   highlights_watchvideo: Sila tontoni video
   highlights_facebook: Kongsikan di Facebook
@@ -1016,7 +1016,7 @@ ms:
   highlights_constant_athletes_short_heading: Mendorong diri sendiri
   footer_copyright_message: Hak Cipta 2015 Code.org. Semua hak terpelihara.
   footer_trademark_message: Hour of Code™ adalah tanda perniagaan bagi Code.org.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: Dibina di atas GitHub daripada Microsoft
   footer_menu_partners: Rakan kongsi
   footer_menu_contact: Hubungi kami
   footer_menu_support: Sokongan
@@ -1040,7 +1040,7 @@ ms:
     untuk pelajar-pelajar dari mana-mana umur! Beberapa aktiviti turut menawarkan
     suatu simulator supaya anda boleh bermula tanpa mempunyai sebarang perkakasan.
   tutorial_dance2019_name: Majlis Tari-Menari 2019
-  tutorial_danceparty_name: Dance Party
+  tutorial_danceparty_name: Majlis Tari-Menari
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Mengekod permainan sukan anda sendiri
   tutorial_moana_name: 'Moana: Cari jalan dengan Kod'
@@ -1119,7 +1119,7 @@ ms:
   tutorial_buildpong_name: Bina Pong dengan AI
   tutorial_tynkerdrones_name: Program Drones dan Robot
   tutorial_carla_name: Pengaturcaraan dengan Carla
-  tutorial_zulama_name: Zulama MakeQuest Video Game Activity
+  tutorial_zulama_name: Aktiviti Permainan Video Zulama MakeQuest
   tutorial_capost_name: Bina Kad Pos Digital dengan HTML dan CSS
   tutorial_marco_name: Jalankan Marco!
   tutorial_codestersflappybike_name: Flappy Bike
@@ -1384,7 +1384,7 @@ ms:
     JS
   tutorial_techlinq_name: Menggunakan C# LINQ - Suatu Gambaran Praktikal
   tutorial_gpbcatapult_name: Membina suatu Lastik Katapult
-  tutorial_quorumastro_name: Koding dalam Astronomi
+  tutorial_quorumastro_name: Pengekodan dalam Astronomi
   tutorial_alicewonder_name: Alice dalam Tanah Keajaiban
   tutorial_rginter_name: RoboGarden - Pertengahan
   tutorial_cssgrid_name: Taman Grid
@@ -1481,27 +1481,27 @@ ms:
   tutorial_bcpy2_name: Dunia Python 2
   tutorial_bcjs1_name: Dunia JavaScript
   tutorial_bcjs2_name: Dunia JavaScript 2
-  tutorial_3dbearmars_name: The Mars Pioneers
-  tutorial_alexaskill_name: 'Alexa Blueprints: Create an Alexa Skill'
-  tutorial_bitsboxyak_name: Yak Attack! Make a Card with Typed Code
-  tutorial_blockscadbargraphs_name: Bar Graphs
-  tutorial_blockscadbirdhouses_name: Birdhouses
-  tutorial_blockscadclock_name: Analog Clock
-  tutorial_blockscaddinner_name: Dinner Robot
-  tutorial_blockscadicecream_name: Ice Cream Machine
-  tutorial_blockscadpizza_name: Pizza Printer
-  tutorial_blockscadsugar_name: Sugar Cubes
-  tutorial_bsgridlight_name: 'GridLight: Hello World'
-  tutorial_bpartscratch_name: 'Art & Music: Color (Scratch)'
-  tutorial_bpartvid_name: 'Art & Music: Color (Vidcode)'
-  tutorial_bpenglishscratch_name: 'English: Biography (Scratch)'
-  tutorial_bpenglishvid_name: 'English: Biography (Vidcode)'
-  tutorial_bphealthscratch_name: 'Health: DNA (Scratch)'
-  tutorial_bphealthvid_name: 'Health: DNA (Vidcode)'
-  tutorial_bpmathscratch_name: 'Math: Multiplication (Scratch)'
-  tutorial_bpmathvid_name: 'Math: Multiplication (Vidcode)'
-  tutorial_bpmlkscratch_name: 'Social Studies: Martin Luther King Jr. (Scratch)'
-  tutorial_bpmlkvid_name: 'Social Studies: Martin Luther King Jr. (Vidcode)'
+  tutorial_3dbearmars_name: Perintis Planet Marikh
+  tutorial_alexaskill_name: 'Merangka Tindak Alexa: Cipta Kemahiran Alexa'
+  tutorial_bitsboxyak_name: Serangan Yak! Buat Kad dengan Kod Ditaip
+  tutorial_blockscadbargraphs_name: Graf Bar
+  tutorial_blockscadbirdhouses_name: Rumah Burung
+  tutorial_blockscadclock_name: Jam Analog
+  tutorial_blockscaddinner_name: Robot Makan Malam
+  tutorial_blockscadicecream_name: Mesin Aiskrim
+  tutorial_blockscadpizza_name: Pencetak Piza
+  tutorial_blockscadsugar_name: Kiub Gula
+  tutorial_bsgridlight_name: 'Lampu Grid: Helo Dunia'
+  tutorial_bpartscratch_name: 'Seni & Muzik: Warna (Scratch)'
+  tutorial_bpartvid_name: 'Seni & Muzik: Warna (Vidcode)'
+  tutorial_bpenglishscratch_name: 'Bahasa Inggeris: Biografi (Scratch)'
+  tutorial_bpenglishvid_name: 'Bahasa Inggeris: Biografi (Vidcode)'
+  tutorial_bphealthscratch_name: 'Kesihatan: DNA (Scratch)'
+  tutorial_bphealthvid_name: 'Kesihatan: DNA (Vidcode)'
+  tutorial_bpmathscratch_name: 'Matematik: Pendaraban (Scratch)'
+  tutorial_bpmathvid_name: 'Matematik: Pendaraban (Vidcode)'
+  tutorial_bpmlkscratch_name: 'Pengajian Sosial: Martin Luther King Jr. (Scratch)'
+  tutorial_bpmlkvid_name: 'Pengajian Sosial: Martin Luther King Jr. (Vidcode)'
   tutorial_bpsafetyscratch_name: 'Kewarganegaraan Digital: Keselamatan Dalam Talian
     (Scratch)'
   tutorial_bpsafetyvid_name: 'Kewarganegaraan Digital: Keselamatan Dalam Talian (Vidcode)'
@@ -1536,61 +1536,62 @@ ms:
   tutorial_codestersecard_name: Mengekod eCard Berinteraktif
   tutorial_codesterslogo_name: Mereka Bentuk Logo Anda Sendiri
   tutorial_codesterstshirt_name: Mengekod Tanda Nama Anda
-  tutorial_codewards_name: Rescue the underwater city!
-  tutorial_olympics_name: C.A.T.S. go for Robot Olympics
-  tutorial_codinismhero_name: Programming Hero
-  tutorial_discovery_name: An Unusual Discovery
-  tutorial_csfirstname_name: Animate a Name
-  tutorial_obstaclecourse_name: Navigating an Obstacle Course with CodeSnaps
-  tutorial_edisonmove_name: 'Edison and EdPy: Get Edison moving'
-  tutorial_edisonspider_name: Edison and the spiralling spider trap
-  tutorial_edisonspotlight_name: Perform in the spotlight with Edison
-  tutorial_firiapython_name: Learn Python with the micro:bit
-  tutorial_gamefrootsquid_name: Code your own colossal squid game
-  tutorial_duckpiano_name: Make a Duck Piano
-  tutorial_gpsound_name: Make a Sound Recorder
-  tutorial_groklearningpython_name: 'Python + Biology: Build an animal classifier!'
-  tutorial_htmltimetravel_name: 'CSS Animations: Travel Through Time'
-  tutorial_hp_flappy_name: Build a Flappy Birds clone with hyperPad
+  tutorial_codewards_name: Selamatkan bandar di bawah lautan!
+  tutorial_olympics_name: C.A.T.S. pergi untuk Sukan Olimpik Robot
+  tutorial_codinismhero_name: Wira Pengaturcaraan
+  tutorial_discovery_name: Penemuan Luar Biasa
+  tutorial_csfirstname_name: Animasikan Nama
+  tutorial_obstaclecourse_name: Menavigasi Balapan Berhalang dengan CodeSnaps
+  tutorial_edisonmove_name: 'Edison dan EdPy: Buatkan Edison bergerak'
+  tutorial_edisonspider_name: Edison dan perangkap labah-labah yang bergulung-gulung
+  tutorial_edisonspotlight_name: Buat persembahan di bawah lampu sorot bersama Edison
+  tutorial_firiapython_name: Pelajari mengenai Ular Sawa dengan mikro:bit
+  tutorial_gamefrootsquid_name: Mengekod permainan sotong raksasa anda sendiri
+  tutorial_duckpiano_name: Buat Piano Itik
+  tutorial_gpsound_name: Buat Perakam Bunyi
+  tutorial_groklearningpython_name: 'Ular Sawa + Biologi: Bina pengelas haiwan!'
+  tutorial_htmltimetravel_name: 'Animasi CSS: Pengembaraan Melalui Masa'
+  tutorial_hp_flappy_name: Bina klon Burung Kibasan dengan Pelapik hiper
   tutorial_appytappin_name: appy Tappin'
-  tutorial_icipher_name: iCipher
-  tutorial_iguess_name: 'iGuess Beasts: QR Code Activity'
-  tutorial_imake_name: iMake Algorithms
-  tutorial_imorse_name: iMorse - Cryptography with Morse Code & Sphero
-  tutorial_kanohp_name: 'Harry Potter: Learn to Code and Make Magic '
-  tutorial_khanwebpages_name: Making Webpages
-  tutorial_kibobowl_name: Measure and Predict with KIBO Robot Bowling
-  tutorial_kibodance_name: Teach Your KIBO Robot to Dance!
-  tutorial_buildcharacters_name: Build Your Own Kodable Fuzz
-  tutorial_designgames_name: Create Games with Javascript
-  tutorial_makelevels_name: Make Your Own Kodable Mazes
-  tutorial_wizard_name: Code Wizard Castle
-  tutorial_mbscratchcards_name: Scratch cards for micro:bit
-  tutorial_mbswiftplaygrounds_name: 'Swift Playgrounds: Intro to the micro:bit'
-  tutorial_mbbuttons_name: 'Introducing the BBC micro:bit: Animation and Buttons'
-  tutorial_meteor_name: Make a Falling Meteors Game for the BBC micro:bit
-  tutorial_ballbounce_name: Ball Bounce Mobile App
-  tutorial_mitcodi_name: Codi the Bee
-  tutorial_mitdoodle_name: Digital Doodle Mobile App
-  tutorial_talktome_name: Talk to Me Mobile App
-  tutorial_mobilecspmap_name: Map Tour App
-  tutorial_ozorandom_name: Ozobot Random Story Generator
-  tutorial_ozotroll_name: Evo the Troll
-  tutorial_peblioart_name: 'Interactive Art: Bringing Art to Life with Code'
-  tutorial_astropi_name: 'Astro Pi: Mission Zero'
-  tutorial_rgart_name: RoboGarden STEAM - Art
-  tutorial_rgengineer_name: RoboGarden STEAM - Engineering
-  tutorial_rgmath_name: RoboGarden STEAM - Math
-  tutorial_rgscience_name: RoboGarden STEAM - Science
-  tutorial_rgtech_name: RoboGarden STEAM - Technology
-  tutorial_robotmagic3d_name: " Animate a 3D Logo"
-  tutorial_robotmagicflappy_name: 3D Flappy Bird
-  tutorial_scratchadventure_name: Animate an Adventure Game
-  tutorial_scratchtalk_name: Create Animations That Talk
-  tutorial_scratchjrstory_name: 'We Can Create a Story Together! '
-  tutorial_scratchjrtwinkle_name: Twinkle, Twinkle Little Star Class Collaboration
-  tutorial_spherocomm_name: Communication
-  tutorial_spherocommunity_name: Your Community
+  tutorial_icipher_name: iSifer
+  tutorial_iguess_name: 'iTeka Binatang: Aktiviti Kod QR'
+  tutorial_imake_name: iBuat Algoritma
+  tutorial_imorse_name: iMorse - Kriptografi bersama Kod Morse & Sphero
+  tutorial_kanohp_name: 'Harry Potter: Pelajari Mengekod dan Melakukan Magik '
+  tutorial_khanwebpages_name: Membuat Laman Web
+  tutorial_kibobowl_name: Ukur dan Ramalkan bersama Boling Robot KIBO
+  tutorial_kibodance_name: Ajar Robot KIBO Anda Menari!
+  tutorial_buildcharacters_name: Bina Dengungan Kodable Anda Sendiri
+  tutorial_designgames_name: Cipta Permainan dengan Javascript
+  tutorial_makelevels_name: Buat Pagar Sesat Kodable Anda Sendiri
+  tutorial_wizard_name: Mengekod Istana Ahli Sihir
+  tutorial_mbscratchcards_name: Kad gores untuk mikro:bit
+  tutorial_mbswiftplaygrounds_name: 'Tempat Permainan Burung Layang-layang: Pengenalan
+    kepada mikro:bit'
+  tutorial_mbbuttons_name: 'Memperkenalkan mikro:bit BBC: Animasi dan Butang'
+  tutorial_meteor_name: Buat Permainan Tahi Bintang untuk mikro:bit BBC
+  tutorial_ballbounce_name: Aplikasi Mudah Alih Lantunan Bola
+  tutorial_mitcodi_name: Codi Si Lebah
+  tutorial_mitdoodle_name: Aplikasi Mudah Alih Contengan Digital
+  tutorial_talktome_name: Aplikasi Mudah Alih Bercakap dengan Saya
+  tutorial_mobilecspmap_name: Aplikasi Lawatan Peta
+  tutorial_ozorandom_name: Penjana Cerita Secara Rawak Ozobot
+  tutorial_ozotroll_name: Evo Si Momok
+  tutorial_peblioart_name: 'Seni Berinteraktif: Menghidupkan Seni dengan Kod'
+  tutorial_astropi_name: 'Astro Pi: Misi Sifar'
+  tutorial_rgart_name: RoboGarden STEAM - Seni
+  tutorial_rgengineer_name: Kejuruteraan RoboGarden STEAM - Kejuruteraan
+  tutorial_rgmath_name: RoboGarden STEAM - Matematik
+  tutorial_rgscience_name: RoboGarden STEAM - Sains
+  tutorial_rgtech_name: RoboGarden STEAM - Teknologi
+  tutorial_robotmagic3d_name: " Animasikan Logo 3D"
+  tutorial_robotmagicflappy_name: Burung Kibasan 3D
+  tutorial_scratchadventure_name: Animasikan Permainan Pengembaraan
+  tutorial_scratchtalk_name: Cipta Animasi yang Bercakap
+  tutorial_scratchjrstory_name: 'Kita Boleh Mencipta Cerita Bersama! '
+  tutorial_scratchjrtwinkle_name: Kerjasama Kelas Kelip, Kelip Bintang Kecil
+  tutorial_spherocomm_name: Komunikasi
+  tutorial_spherocommunity_name: Komuniti Anda
   tutorial_spherofunctions_name: Fun Fun Functions
   tutorial_spheroinfrared_name: 'BOLT: Infrared'
   tutorial_spherolightsensor_name: 'BOLT: Light Sensor'
@@ -1863,8 +1864,8 @@ ms:
     CoffeeScript, bahasa pengaturcaraan dunia sebenar. '
   tutorial_codesters_shortdescription: Buat permainan, animasi, dan karya seni anda
     sendiri menggunakan Python.
-  tutorial_qrm_shortdescription: Sertai Mary dalam pengaturcaraan minggu pertama dalam
-    makmal biologi ketika dia belajar Kuorum.
+  tutorial_qrm_shortdescription: Sertai Mary dalam pengaturcaraan minggu pertamanya
+    di dalam makmal biologi semasa dia belajar Quorum.
   tutorial_texas-instruments_shortdescription: Belajar koding asas menggunakan kalkulator
     TI-84™ Plus.
   tutorial_cajava_shortdescription: Ketahui tentang bentuk, koordinat dan warna dengan
@@ -2432,8 +2433,8 @@ ms:
     perpustakaan LINQ dalam C#
   tutorial_gpbcatapult_shortdescription: Membuat permainan anda sendiri seperti Angry
     Birds.
-  tutorial_quorumastro_shortdescription: Belajar tentang koding dan astronomi dalam
-    tutorial dalam talian yang boleh diakses ini.
+  tutorial_quorumastro_shortdescription: Pelajari tentang pengekodan dan astronomi
+    melalui tutorial dalam talian yang boleh diakses.
   tutorial_alicewonder_shortdescription: Mimbimbing Alice dalam tanah keajaiban menggunakan
     JavaScript.
   tutorial_rginter_shortdescription: Di RoboGardon, kita mempercayai dalam memberikan
@@ -3341,10 +3342,10 @@ ms:
     setiap hari syarikat - kami seret dan juntai kit menjadikannya mudah untuk belajar!  Cuba
     bangunan permainan bola keranjang, tarian choreographing, atau mereka bentuk kad
     untuk animasi! '
-  tutorial_qrm_longdescription: Sertai Mary dalam pembelajaran Korum Bahasa pengaturcaraan
-    sebagai sebahagian daripada perjalanan cahaya hati dan menghiburkan dalam biologi.
-    Aktiviti-aktiviti adalah pelajar berpandukan, dengan contoh-contoh dalam talian,
-    dan boleh diakses kepada orang buta dan cacat penglihatan.
+  tutorial_qrm_longdescription: Sertai Mary dalam pembelajaran bahasa pengaturcaraan
+    Quorum sebagai sebahagian daripada perjalanan yang girang dan menghiburkan dalam
+    biologi. Aktivitinya adalah berpandukan pelajar, dengan contoh dalam talian dan
+    boleh diakses oleh individu buta dan cacat penglihatan.
   tutorial_texas-instruments_longdescription: 'Aktiviti 10 Minutes of Code boleh digunakan
     dalam kelas sebagai suatu cara untuk memercikkan minat pelajar dalam koding dengan
     teknologi TI yang dibawa oleh mereka dalam beg sandang mereka setiap hari. Belajar
@@ -4566,11 +4567,12 @@ ms:
     how to use it, step by step.
   tutorial_gpbcatapult_longdescription: Participants will build a catapult to launch
     a ball from one side of the stage to the other, as in the game Angry Birds.
-  tutorial_quorumastro_longdescription: Learn about coding using themes from computational
-    astronomy in this accessible online tutorial. In it, students will discover how
-    to control telescopes while also practicing with the Quorum programming language's
-    computer graphics engine. By the final lesson, students will create a graphical
-    and accessible map of the stars to find items in the universe.
+  tutorial_quorumastro_longdescription: Pelajari tentang pengekodan dengan menggunakan
+    tema daripada astronomi berkomputer melalui tutorial dalam talian yang boleh diakses.
+    Di dalamnya, pelajar akan mengetahui cara mengawal teleskop sambil berlatih dengan
+    enjin grafik komputer bahasa pengaturcaraan Quorum juga. Apabila sampai kepada
+    pelajaran terakhir, pelajar akan mencipta peta bintang grafik dan boleh diakses
+    untuk mencari item di alam semesta.
   tutorial_alicewonder_longdescription: Alice dalam Tanah Keajaiban merupakan suatu
     susun suai yang berpandu sendiri direka bentuk bagi kanak-kanak yang berumur 6+
     tanpa pengalaman pengaturcaraan awal. Anda akan membimbing Alice menggunakan fungsi
@@ -7995,8 +7997,8 @@ ms:
   tutorial_techlinq_string_platforms: All modern browsers, Android tablet, iPad, Windows
     phone, Android phone, iPhone
   tutorial_gpbcatapult_string_platforms: All modern browsers
-  tutorial_quorumastro_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone, Screen reader
+  tutorial_quorumastro_string_platforms: Semua pelayar, tablet Android, iPad, telefon
+    Windows, telefon Android, iPhone, Pembaca skrin yang moden
   tutorial_alicewonder_string_platforms: All modern browsers
   tutorial_rginter_string_platforms: Chrome, Firefox, Android tablet
   tutorial_cssgrid_string_platforms: All modern browsers
@@ -10592,8 +10594,8 @@ ms:
   tutorial_codehsgeno_string_platforms: All modern browsers
   tutorial_hyperpadpong_string_platforms: iPad
   tutorial_tynkerland_string_platforms: All modern browsers, iPad
-  tutorial_trinketgirl_string_platforms: All modern browsers, Android tablet, iPad,
-    Windows phone, Android phone, iPhone, Screen reader
+  tutorial_trinketgirl_string_platforms: Semua pelayar, tablet Android, iPad, telefon
+    Windows, telefon Android, iPhone, Pembaca skrin yang moden
   tutorial_rpimosquito_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_tynkermars_string_platforms: All modern browsers, iPad
   tutorial_cityx_string_platforms: Android tablet, iPad, Android phone, iPhone

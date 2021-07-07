@@ -10,7 +10,7 @@ nav: promote_nav
 
 # โปรโมทกิจกรรมชั่วโมงเขียนโค้ด
 
-### ค้นหาแหล่งข้อมูลทั้งหมดที่คุณจำเป็นต้องใช้เพื่อชูความน่าสนใจของกิจกรรมชั่วโมงเขียนโค้ดของคุณ แต่ไม่รู้ว่าจะเริ่มจากตรงไหนใช่ไหม แนะนำให้เริ่มต้นด้วย[วิธีดำเนินการเพื่อจัดกิจกรรมชั่วโมงเขียนโค้ด]({{ how_to_url }})ของเรา!
+### ค้นหาแหล่งข้อมูลทั้งหมดที่คุณจำเป็นต้องใช้เพื่อประชาสัมพันธ์กิจกรรมชั่วโมงเขียนโค้ดของคุณเพื่อดึงความสนใจ หากไม่รู้ว่าจะเริ่มจากตรงไหน แนะนำให้คลิกที่[วิธีดำเนินการเพื่อจัดกิจกรรมชั่วโมงเขียนโค้ด]({{ how_to_url }})ของเรา!
 
 * * *
 
@@ -20,7 +20,7 @@ nav: promote_nav
 
 ## ติดโปสเตอร์เหล่านี้ที่โรงเรียน
 
-โปสเตอร์ชุดใหม่เป็นภาพของ Malala, Stephen Curry, Shakira และอีกมากมาย! โดยปีนี้ โปสเตอร์แต่ละชุดจะมีโปสเตอร์ 6 แผ่นและสติ๊กเกอร์ "ฉันลองกิจกรรมชั่วโมงเขียนโค้ดแล้ว" อีก 126 อัน ของมีจำกัด แนะนำให้รีบ[สั่งโปสเตอร์ของคุณ](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)โดยเร็ว หากจะพิมพ์โปสเตอร์ของคุณเอง ให้คลิกที่ภาพด้านล่างเพื่อดูและบันทึกเวอร์ชั่นฉบับพิมพ์
+โปสเตอร์ชุดใหม่เป็นภาพของ Malala, Stephen Curry, Shakira และอีกมากมาย! โดยปีนี้ โปสเตอร์แต่ละชุดจะมีโปสเตอร์ 6 แผ่นและสติ๊กเกอร์ "ฉันเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดแล้ว" อีก 126 อัน ของมีจำนวนจำกัด แนะนำให้รีบ[สั่งโปสเตอร์ของคุณ](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)โดยเร็ว หากจะพิมพ์โปสเตอร์ของคุณเอง ให้คลิกที่ภาพด้านล่างเพื่อดูและบันทึกเวอร์ชั่นฉบับพิมพ์
 
 {{ promote_new_posters }}
 
@@ -86,9 +86,9 @@ nav: promote_nav
 
 **Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. นักเรียนมากกว่า 100 ล้านคนได้ลองกิจกรรมชั่วโมงเขียนโค้ดแล้ว
 
-ด้วย Hour of Code วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+ต้องขอบคุณ Hour of Code ที่ทำให้วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
@@ -106,7 +106,7 @@ Get started at http://hourofcode.com/{{ country }} <br />
 
 **Subject line:** Can we help you host an Hour of Code?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. โอกาสนี้เด็ก ๆ ทุกคนจะได้เรียนรู้ว่าเทคโนโลยีทำงานรอบ ๆ ตัวเราได้อย่างไร
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
@@ -122,7 +122,7 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 ### Tell parents about your school's event:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**ชื่อเรื่อง:** นักเรียนของเรากำลังเปลี่ยนอนาคตด้วยกิจกรรมชั่วโมงเขียนโค้ด
 
 Dear Parents,
 
@@ -148,13 +148,13 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. ข่าวดีคือ พวกเรากำลังจะเปลี่ยนแปลงสิ่งนี้
 
-ด้วย Hour of Code วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดกิจกรรมชั่วโมงเขียนโค้ดแล้ว แม้แต่ประธานาธิบดี Obama ก็ได้เขียนโปรแกรมบรรทัดแรกของเขาเป็นส่วนหนึ่งของการรณรงค์นี้
+ต้องขอบคุณ Hour of Code ที่ทำให้วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดกิจกรรมชั่วโมงเขียนโค้ดแล้ว แม้แต่อดีตประธานาธิบดีโอบามาก็ได้เขียนโปรแกรมบรรทัดแรกของเขา เพื่อให้เป็นส่วนหนึ่งของการรณรงค์นี้
 
-ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [SCHOOL NAME] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: Hour of Code ในระหว่างสัปดาห์การศึกษาเรื่องวิทยาศาสตร์คอมพิวเตอร์ (3-9 ธันวาคม)
+ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [SCHOOL NAME] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: ชั่วโมงเขียนโค้ดในระหว่างสัปดาห์การศึกษาเรื่องวิทยาการคอมพิวเตอร์ (3-9 ธันวาคม)
 
-ฉันเขียนมาเพื่อเชิญชวนคุณให้เข้าร่วมการประชุมเริ่มต้นของเรา และมาดูเด็กๆเริ่มกิจกรรมในวันที่ [DATE]
+เราขอเชิญชวนคุณให้เข้าร่วมการประชุมเริ่มต้นของเรา และมาดูเด็ก ๆ ทำกิจกรรมนี้ในวันที่ [DATE]
 
-กิจกรรมชั่วโมงเขียนโค้ดที่จัดขึ้นโดยองค์กรไม่แสวงหาผลกำไร Code.org และอีกกว่า 100 องค์กร เป็นการเคลื่อนไหวระดับโลกที่เชื่อว่านักเรียนในวันนี้พร้อมแล้วที่จะเรียนรู้ทักษะที่สำคัญต่อความสำเร็จในศตวรรษที่ 21 โปรดร่วมกับเรา
+กิจกรรมชั่วโมงเขียนโค้ดที่จัดขึ้นโดยองค์กรไม่แสวงหาผลกำไร รวมถึง Code.org และอีกกว่า 100 องค์กร เป็นการเคลื่อนไหวระดับโลกที่เชื่อว่านักเรียนในวันนี้พร้อมแล้วที่จะเรียนรู้ทักษะที่สำคัญต่อความสำเร็จในศตวรรษที่ 21 โปรดร่วมกับเรา
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 

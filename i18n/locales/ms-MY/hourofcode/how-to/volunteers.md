@@ -2,9 +2,9 @@
 title: Panduan Cara Melakukan Jam Kod untuk Sukarelawan
 ---
 
-# How to volunteer with a school or classroom
+# Cara menjadi sukarelawan di sekolah atau kelas
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### Ribuan guru mencari sukarelawan untuk memberikan inspirasi kepada pelajar mereka. Lakukan perbezaan hari ini!
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})
 
@@ -12,45 +12,45 @@ title: Panduan Cara Melakukan Jam Kod untuk Sukarelawan
 
 Pemikiran pengkomputeran membantu memupuk kemahiran, logik dan kreativiti penyelesaian masalah. Dan teknologi mengubah setiap industri di dalam planet ini. Pelajar hari ini sepatutnya mempelajari cara mencipta teknologi, bukan sekadar menggunakannya.
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+Acara Jam Kod ialah pengenalan kepada sains komputer yang direka bentuk untuk menjadikan "kod" lebih mudah difahami, untuk menunjukkan sesiapa sahaja boleh mempelajari asasnya dan meluaskan penyertaan di dalam bidang sains komputer. Anda boleh membantu meningkatkan kesedaran mengenai pergerakan sains komputer dan menjadi sukarelawan untuk memberikan inspirasi kepada lebih ramai pelajar bagi mencuba sains komputer, terutamanya wanita muda dan pelajar daripada kumpulan kaum dan etnik yang terpinggir mengikut sejarah.
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
+- [Siapakah yang boleh menjadi sukarelawan?](#who-can-volunteer)
+- [Mengapakah menjadi sukarelawan?](#why-volunteer)
+- [Bagaimanakah sukarelawan dipilih?](#selection)
+- [Bagaimanakah jika saya mahu menjadi sukarelawan dengan sekolah tertentu?](#choose-a-school)
+- [Cara membuat persiapan](#how-to-prepare)
+- [Apabila anda menganjurkan acara](#hosting-an-event)
+- [Sebarkan berita tentang Jam Kod](#promote-hour-of-code)
 - [Lebih banyak cara menyokong Jam Kod](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [Soalan Lazim Sukarelawan](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Sama ada anda menjadi sukarelawan secara maya, bersemuka, atau dengan syarikat anda, usaha anda boleh memberikan kesan yang besar kepada cara pelajar melihat sains komputer dan potensi mereka sendiri. Sila lihat pada [kit alatan sukarelawan kami sekiranya anda masih mempunyai soalan]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## Siapakah yang boleh menjadi sukarelawan?
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+Sesiapa yang berminat tentang pendidikan sains komputer dan kepelbagaian yang semakin meningkat di dalam teknologi boleh menjadi sukarelawan! Kami ingin melihat sukarelawan daripada pelbagai latar belakang yang turut serta. Jam Kod menampilkan pelbagai jenis aktiviti untuk semua peringkat umur dan tahap kemahiran, oleh itu anda tidak perlu menjadi pakar pengaturcaraan untuk menjadi sukarelawan!
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+Anda boleh menjadi penceramah undangan di dalam kelas, atau membantu guru menjalankan aktiviti. [Daftar sekarang](https://code.org/volunteer) untuk memberikan inspirasi kepada pelajar supaya mereka terus mempelajari sains komputer.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Mengapakah menjadi sukarelawan?
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+Sains komputer ialah bidang penentu dalam abad ke-21, walau bagaimanapun sebilangan besar sekolah masih tidak mengajarkannya. Satu Jam Kod mungkin akses paling banyak yang diterima oleh pelajar ini untuk sains komputer pada tahun tertentu. Dengan menjadi sukarelawan, anda boleh memudahkan guru membawa CS ke dalam kelas mereka.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+Cuba lihat beberapa testimoni daripada mereka yang pernah menjadi sukarelawan:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.” 
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
-- “Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
+- "Antara cerita terbaik pengalaman saya ialah keseluruhan peserta kelas saya adalah wanita dan terdiri daripada berbilang bangsa. Ini menunjukkan petanda baik bagi masa depan industri kita kerana memiliki peluang membantu dan menggembirakan kanak-kanak ini." 
+- “Terutamanya seronok kerana dapat menggalakkan remaja perempuan di dalam bidang teknologi. Terasa seperti saya membantu generasi seterusnya di kawasan setempat saya.” 
+- “Saya AMAT SUKA melihat betapa terujanya kanak-kanak itu. Satu perkara yang mengagumkan ialah guru menyedari bahawa sebilangan pelajar yang kurang berjaya di dalam akademik, menjadi begitu cemerlang semasa mereka berfikir seperti pembangun dan membantu yang lain - memberikan mereka ruang membina keyakinan.” 
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})
 
@@ -58,61 +58,61 @@ Check out some testimonials from past volunteers:
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## Bagaimanakah sukarelawan dipilih?
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+Guru boleh mencari sukarelawan pada [peta sukarelawan](http://code.org/volunteer/local) kami. Jika anda berada dekat dengan kelas mereka, guru akan menilai profil anda di dalam peta, oleh itu cuba lengkapkan seberapa banyak yang mungkin untuk meningkatkan peluang anda dihubungi pihak guru.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+Apabila terpilih, pihak guru akan menghubungi anda melalui platform sukarelawan (kami tidak akan berkongsi alamat e-mel anda dengan guru). Bekerja dengan mereka untuk menentukan cara anda boleh menyumbang kepada acara mereka dan sekiranya anda akan mengunjungi kelas secara bersemuka atau menjadi sukarelawan secara maya.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+Jika anda menerima terlalu banyak permintaan daripada guru, anda sentiasa boleh mengemas kini keutamaan anda atau berhenti melanggan dengan mengklik pautan yang disediakan di bahagian bawah mana-mana permintaan e-mel daripada guru.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## Bagaimanakah jika saya mahu menjadi sukarelawan dengan sekolah tertentu?
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+Anda tidak perlu menggunakan peta sukarelawan kami untuk menjadi sukarelawan! Sebenarnya, kami menyarankan anda menghubungi guru dan pentadbir secara langsung sekiranya terdapat kelas yang anda boleh menjadi sukarelawan.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - Jika anda tidak dapat menemui sekolah yang menganjurkan Jam Kod, anda boleh membantu menjalankan acara anda sendiri secara sukarela dengan syarikat anda. Lihat [Panduan Cara untuk Syarikat](https://hourofcode.com/us/how-to/companies) kami bertujuan mempelajari lebih banyak dan mendapat inspirasi.
+Untuk memulakan: - Jika anda ibu bapa atau penjaga, sila hantarkan [e-mel ini](https://hourofcode.com/us/promote/resources#help-schools) kepada guru anak anda, menawarkan diri anda untuk membantu mereka menjalankan Jam Kod. - Jika anda terfikir mengenai sekolah lain, sila kunjungi laman web mereka untuk mencari individu yang wajar untuk dihubungi seperti pengetua atau naib pengetua, pengajar teknologi atau sains komputer, atau malah PTSA sekolah. Anda juga boleh bekerjasama dengan organisasi seperti Boys & Girls Clubs of America, Junior Acievement, cawangan YMCA dan banyak lagi untuk menganjur bersama sesuatu acara. - Jika anda tidak dapat menemui sekolah yang menganjurkan Jam Kod, anda boleh membantu menjalankan acara anda sendiri secara sukarela dengan syarikat anda. Lihat [Panduan Cara untuk Syarikat](https://hourofcode.com/us/how-to/companies) kami bertujuan mempelajari lebih banyak dan mendapatkan inspirasi.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Cara membuat persiapan
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+Sama ada anda menghadiri acara Jam Kod dari jauh atau secara bersemuka, anda akan memperoleh pengalaman yang lebih lancar sekiranya anda membuat persediaan ini terlebih dahulu.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### Bertemu dengan Penganjur
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+Jika anda menjadi sukarelawan di dalam kelas, bincangkan logistik ini lebih awal dengan guru:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology? 
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early. 
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity. 
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together. 
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time. 
+- Peranan anda di dalam acara itu. Jika anda bekerja dalam bidang teknologi, anda mungkin diminta berkongsi pengalaman atau kisah peribadi anda: Bagaimanakah anda boleh terlibat dalam kerjaya bidang teknologi? Mengapakah sains komputer penting kepada anda? Apakah perkara laian yang anda lakukan sebagai sebahagian daripada pekerjaan anda dan bagaimanakah kaitannya dengan teknologi? 
+- Jika anda akan menjadi sukarelawan secara bersemuka, pastikan anda memahami garis panduan kesihatan dan keselamatan setempat dan sekolah. Bergantung pada prosedurnya, anda mungkin perlu tiba lebih awal. 
+- Bergantung pada jenis sukarelawan sama ada secara maya atau bersemuka kerana ini boleh menentukan bilangan kehadiran dan tahap kapasiti anda. 
+- Jika anda menjadi sukarelawan secara maya, sila bekerja dengan guru bagi menentukan platform persidangan video terbaik untuk digunakan dan cuba mengendalikan ujian ke atas acara tersebut bersama-sama. 
+- Jika guru mempunyai aktiviti Jam Kod yang telah ditentukan untuk acara tersebut, pastikan anda tahu supaya boleh [menerokanya](https://hourofcode.com/us/learn) dengan lebih awal. 
 
-### Think about your participants
+### Fikirkan tentang peserta anda
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate. 
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code. 
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- Sila ambil tahu mengenai pelajar yang akan sertai anda dan perkara yang mungkin mempengaruhi mereka. Sebagai sukarelawan, anda boleh membantu mereka menyedari bahawa pengkomputeran ada di mana-mana sahaja dan mereka juga boleh menjadi saintis komputer. Ambil tahu mengenai umur, latar belakang dan identiti jantina mereka dan persiapkan diri anda dengan topik yang mungkin menarik minat mereka. Berikut ialah panduan tambahan mengenai cara memberikan inspirasi kepada [wanita muda](http://code.org/girls) menyertainya. 
+- Buatkan pelajar anda teruja! Bekerja dengan guru untuk memilih [video inspirasi](https://hourofcode.com/us/promote/resources#videos) yang boleh membantu menumpukan kelas dan membuatkan mereka teruja untuk melakukan Jam Kod. 
+- Jika anda ialah sukarelawan maya, sila pertimbangkan untuk membuat beberapa slaid sebagai sebahagian daripada pembentangan anda bagi membantu menarik minat pelajar.
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+Perlukan lebih banyak sumber? [Lihat petua lain ini](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## Apabila anda menganjurkan acara
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+Jika anda anda menjadi penganjur acara dengan kelas, sila gunakan contoh agenda untuk membimbing anda. Sahkan jadual yang telah dipersetujui untuk hari ini dan bincangkan apa-apa perkara utama dengan guru terlebih dahulu. Jika anda mengunjungi kelas secara fizikal, pastikan anda daftar masuk ke sekolah dan menyapa guru pada hari acara anda berlangsung.
 
 Jika anda mempertimbang untuk menganjurkan acara Jam Kod di rumah atau di dalam komuniti, kami menyarankan supaya anda melihat beberapa Panduan Cara mendalam kami untuk [ibu bapa](https://hourofcode.com/us/how-to/parents) dan [organisasi atau syarikat](https://hourofcode.com/us/how-to/companies).
 
@@ -120,7 +120,7 @@ Jika anda mempertimbang untuk menganjurkan acara Jam Kod di rumah atau di dalam 
 
 ### 2. Tentukan tarikh, format dan lokasi untuk acara anda
 
-Work with the school or teacher to discuss what makes the most sense. Kami telah melihat acara yang dilangsungkan secara [maya](https://hourofcode.com/us/how-to/virtual) atau bersemuka, di pejabat syarikat atau diadakan di dalam komuniti dan untuk pelajar daripada semua peringkat umur! Anda juga boleh melihat pada [rakan kongsi korporat](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) dan [penderma](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) yang lain telah melakukannya pada masa lalu untuk beberapa idea yang memberikan inspirasi.
+Bekerja dengan sekolah atau guru untuk membincangkan perkara yang paling rasional. Kami telah melihat acara yang dilangsungkan secara [maya](https://hourofcode.com/us/how-to/virtual) atau bersemuka, di pejabat syarikat atau diadakan di dalam komuniti dan untuk pelajar daripada semua peringkat umur! Anda juga boleh melihat pada [rakan kongsi korporat](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) dan [penderma](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) yang lain telah melakukannya pada masa lalu untuk beberapa idea yang memberikan inspirasi.
 
 <br />
 
@@ -128,14 +128,14 @@ Work with the school or teacher to discuss what makes the most sense. Kami telah
 
 |Masa | Item Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minit | Menunjukkan [video inspirasi](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minit | Perkenalkan diri anda dan ketahui lebih lanjut tentang pelajar: Di manakah anda bekerja, apakah yang anda lakukan dan apakah yang paling anda suka tentang pekerjaan anda? Apakah atau siapakah yang memberikan inspirasi kepada anda? Bagaimanakah anda mula berminat dalam bidang sains komputer? Adakah anda mempunyai mentor? Sila tanya pelajar soalan dan tinggalkan masa untuk sesi Soalan & Lazim. |  
-|30-60 minit | Kod! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minit | Terima kasih kepada semua individu dan kongsikan kata perpisahan yang memberikan inspirasi. Berikan mana-mana item promosi syarikat anda ([pelekatnya](#celebrate) hebat)! | | <br />
+|30-60 minit | Kod! Jika acara anda dilakukan secara bersemuka, ini ialah masa untuk menjawab soalan dan membimbing pelajar menyelesaikan teka-teki yang sukar. Cuba jangan terus memberikan penyelesaian kepada pelajar, sebaliknya, cuba menanyakan mereka soalan supaya mereka boleh menjawab sendiri perkara yang menyebabkan kesilapan dan menggalakkan mereka bertanya antara satu sama lain jika mereka mempunyai soalan. Jika anda menjadi sukarelawan secara maya, bekerja dengan pihak guru untuk mendapatkan pendekatan terbaik. Mungkin lebih rasional untuk kembali pada akhir sesi bertujuan melihat tahap kemajuan yang telah dicapai oleh pelajar. | | |1-3 minit | Terima kasih kepada semua individu dan kongsikan kata perpisahan yang memberikan inspirasi. Berikan mana-mana item promosi syarikat anda ([pelekatnya](#celebrate) hebat)! | | <br />
 
 #### Idea lain untuk ditambahkan kepada acara anda
 
 - Terangkan cara teknologi memberikan kesan kepada kehidupan kita, bersama contoh yang akan diberikan perhatian oleh pelajar daripada pelbagai latar belakang - bercakap tentang teknologi yang menyelamatkan nyawa, membantu dan menghubungkan ramai individu. 
 - Jika anda ialah syarikat teknologi, demo yang menyeronokkan dan produk berinovatif menjadi matlamat syarikat anda untuk diiusahakan. Jika anda bukan syarikat teknologi, bincangkan cara syarikat anda menggunakan teknologi untuk menyelesaikan masalah dan mencapai matlamat.
 - Sila jemput jurutera perisian dari syarikat anda untuk bercakap tentang sebab mereka memutuskan untuk mengambil pengajian sains komputer dan projek yang sedang diusahakan oleh mereka.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- Jika anda mempunyai sekumpulan kakitangan yang akan memudahkan acara anda atau menjadi sukarelawan dengan sekolah setempat, pertimbangkan untuk membuat tempahan [kemeja-t tersuai](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) untuk kumpulan anda.
 
 ### 3. Rancangkan keperluan teknologi anda
 
@@ -172,7 +172,7 @@ Sebaik sahaja anda mempunyai rancangan hala tuju yang kukuh untuk acara yang aka
 
 Selepas pelajar atau tetamu telah melengkapkan acara Jam Kod mereka, sudah tiba masanya untuk meraikan kejayaan mereka. Berikut ialah beberapa idea untuk membuatkan acara anda lebih menyeronokkan:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
+- [Kongsikan sijil]({{ urls/certificates }}) untuk peserta dan pelajar.
 - [Cetakkan pelekat "Saya telah melaksanakan Jam Kod!"]({{ promote/resources_stickers }}) atau dapatkan hadiah lain dan item promosi syarikat di dalam [Amazon Store Code.org](https://code.org/shop). 
 - Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
@@ -180,7 +180,7 @@ Selepas pelajar atau tetamu telah melengkapkan acara Jam Kod mereka, sudah tiba 
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## Sebarkan berita tentang Jam Kod
 
 Satu cara paling baik untuk membantu ialah menyebarkan berita dan mempromosikan acara Jam Kod.
 
@@ -202,7 +202,7 @@ Bantu meningkatkan kesedaran mengenai pergerakan sains komputer dengan kandungan
 #### Statistik
 
 - Adakah anda tahu hanya 45% daripada sekolah di Amerika Syarikat yang mengajar sains komputer? Berikan peluang kepada setiap pelajar untuk mempelajari #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- Di Amerika Syarikat, hanya 26% daripada profesional perisian ialah wanita. Perkenalkan lebih ramai wanita muda kepada sains komputer dengan #HourOfCode https://hourofcode.com/ 
 - 67% daripada pekerjaan pengkomputeran di Amerika Syarikat bukan di dalam sektor teknologi. Bantu memasukkan sains komputer di dalam kurikulum standard dengan #HourOfCode https://hourofcode.com/ 
 
 #### Cipta acara anda sendiri
@@ -238,29 +238,29 @@ Untuk lebih banyak cadangan mengenai cara menyokong Code.org dan Jam Kod, sila l
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## Soalan Lazim Melakukan Sukarelawan
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Saya masih belum dihubungi oleh pihak guru. Bagaimanakah saya masih boleh menjadi sukarelawan?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+Cuba mencari sekolah tempatan dan menghubungi pengetua/guru/pejabat depan dan bertanya cara anda boleh membantu.  
 
 
-### What age group is the Hour of Code activity appropriate for?
+### Berapa lama masa diambil untuk kunjungan ke kelas berakhir?
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+Kunjungan ke kelas secara bersemuka kebiasaannya mengambil masa selama 60-90 minit manakala kunjungan ke kelas maya pula kebiasaannya berlangsung selama 20-30 minit.  
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+### Apakah kumpulan peringkat umur yang sesuai untuk melakukan aktiviti Jam Kod?
+
+Code.org dan rakan kongsi kami mereka bentuk semua aktiviti Jam Kod untuk menarik minat pelajar semua peringkat gred (K-12) daripada pelbagai latar belakang. Semua individu - malah orang dewasa - boleh merasakan keseronokan semasa bermain!  
+
+
+### Bagaimanakah saya boleh dipilih sebagai sukarelawan teknikal atau penceramah undangan?
+
+Guru akan mencari sukarelawan pada [peta sukarelawan](http://code.org/volunteer/local) kami. Cuba sediakan profil anda selengkap yang mungkin untuk meningkatkan peluang guru memilih anda. Jika anda mempunyai keutamaan mengenai cara anda ingin menjadi sukarelawan, seperti menjadi penceramah undangan atau sebagai sokongan teknikal, sila nyatakannya di dalam huraian profil anda.   
+
+
+Apabila terpilih, pihak guru akan menghubungi anda melalui platform sukarelawan (e-mel anda tidak akan dikongsikan dengan guru). Jika anda menerima terlalu banyak permintaan daripada guru, anda sentiasa boleh mengemas kini keutamaan anda dengan mengklik pautan untuk mengedit maklumat anda atau berhenti melanggan, seperti yang disediakan di bahagian bawah mana-mana e-mel daripada guru.   
 
 
 [<button>Daftarkan diri untuk menjadi sukarelawan</button>]({{ urls/volunteer }})

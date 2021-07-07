@@ -1,10 +1,10 @@
 ---
-title: Contact International Partners
+title: Hubungi Rakan Kongsi Antarabangsa
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Hubungi Rakan Kongsi Antarabangsa
 
 Code.org bekerjasama dengan banyak organisasi di seluruh dunia untuk merealisasikan Jam Kod sebagai pergerakan antarabangsa yang sebenar. Adakah anda tahu bahawa pada tahun 2017, 60% daripada kesemua acara Jam Kod berlaku di luar Amerika Syarikat?
 
