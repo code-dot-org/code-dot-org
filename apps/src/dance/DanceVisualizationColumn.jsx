@@ -154,7 +154,7 @@ const styles = {
     overflow: 'hidden'
   },
   loadingContainer: {
-    // The value of display will be controlled externally by StudioApp.
+    // The value of display is controlled by StudioApp.
     display: 'none',
     alignItems: 'center',
     justifyContent: 'center'
