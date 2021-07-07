@@ -31,6 +31,8 @@ mr:
             सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स
             तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या
             मित्रमैत्रिणींशी तो शेअर करू शकाल.
+          description_short: अॅना आणि एल्साबरोबर बर्फाची जादू आणि सौंदर्य शोधण्याची
+            मजा घेण्यासाठी कोडचा वापर करूया.
           lessons:
             Artist:
               name: आर्टीस्ट
@@ -177,6 +179,12 @@ mr:
           lessons:
             Sports:
               name: क्रीडा
+        csp5-support:
+          description: "#### **हा अभ्यासक्रम आता सपोर्ट नसलेल्या अभ्यासक्रमाच्या आवृत्तीवर
+            आधारित आहे. कृपया आमचे सर्वांत नवीन अभ्यासक्रम पाहण्यासाठी आमच्या अभ्यासक्रम
+            आढावा (<https://studio.code.org/courses>) पेजला भेट द्या.**\n\nयुनिट 5
+            शिकवण्याची तयारी करणाऱ्या CSP शिक्षकांसाठी व्यावसायिक अध्ययन अभ्यासक्रमासाठी
+            ऑनलाईन पाठिंब्यांचा हा संच आहे. "
         coursee-ramp:
           lessons:
             Conditionals:
@@ -190,28 +198,49 @@ mr:
             Conditionals:
               name: कंडीशनल्स
         coursea-2017:
+          title: अभ्यासक्रम A
+          assignment_family_title: अभ्यासक्रम A
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         courseb-2017:
+          title: अभ्यासक्रम B
+          assignment_family_title: अभ्यासक्रम B
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय. (अभ्यासक्रम
+            A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         coursec-2017:
+          title: अभ्यासक्रम C
+          assignment_family_title: अभ्यासक्रम C
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         coursed-2017:
+          title: अभ्यासक्रम D
+          assignment_family_title: अभ्यासक्रम D
+          description_short: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण करा, मग पुढे
+            जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
           lessons:
             Nested Loops:
               name: नेस्टेड लूप्स
         coursee-2017:
+          title: अभ्यासक्रम E
+          assignment_family_title: अभ्यासक्रम E
+          description_short: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन पूर्ण करा आणि
+            नंतर पुढे जाऊन फंक्शन्स करा.
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
         coursef-2017:
+          title: अभ्यासक्रम F
+          assignment_family_title: अभ्यासक्रम F
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
@@ -291,19 +320,32 @@ mr:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        coursea-2018:
+          assignment_family_title: अभ्यासक्रम A
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
         express-2018:
           lessons:
             Nested Loops:
               name: नेस्टेड लूप्स
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+        courseb-2018:
+          assignment_family_title: अभ्यासक्रम B
+        coursed-2018:
+          assignment_family_title: अभ्यासक्रम D
+        coursec-2018:
+          assignment_family_title: अभ्यासक्रम C
         coursee-2018:
+          assignment_family_title: अभ्यासक्रम E
           lessons:
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
             Minecraft Hour of Code:
               name: माईनक्राफ्ट अवर ऑफ कोड
         coursef-2018:
+          assignment_family_title: अभ्यासक्रम F
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
@@ -348,6 +390,8 @@ mr:
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या
             पुढे जा.
         coursef-2019:
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
@@ -401,6 +445,7 @@ mr:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         coursea-2019:
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -536,6 +581,7 @@ mr:
             Conditionals:
               name: कंडीशनल्स
         coursea-2020:
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -564,6 +610,8 @@ mr:
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
         coursef-2020:
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
@@ -603,6 +651,16 @@ mr:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: अभ्यासक्रम A
+            Course B:
+              name: अभ्यासक्रम B
+            Course E:
+              name: अभ्यासक्रम E
+            Course F:
+              name: अभ्यासक्रम F
         ml-playground:
           lessons:
             AI for Oceans:
@@ -617,6 +675,7 @@ mr:
             csp_conditionals:
               display_name: कंडीशनल्स
         coursea-2021:
+          description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -655,6 +714,8 @@ mr:
             csf_nested_loops:
               display_name: कंडीशनल्स
         coursef-2021:
+          description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
+            आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
             AI for Oceans:
               key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
