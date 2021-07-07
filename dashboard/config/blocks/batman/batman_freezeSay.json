@@ -1,0 +1,38 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "freezeSay",
+    "blockText": "Mr. Freeze say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I'm Mr. Freeze!",
+            "\"I'm Mr. Freeze!\""
+          ],
+          [
+            "Stay Cool!",
+            "\"Stay Cool!\""
+          ],
+          [
+            "Everyone, chill!",
+            "\"Everyone, chill!\""
+          ],
+          [
+            "Cool party!",
+            "\"Cool party!\""
+          ],
+          [
+            "Allow me to break the ice.",
+            "\"Allow me to break the ice.\""
+          ],
+          [
+            "Tonight’s forecast… a freeze is coming!",
+            "\"Tonight’s forecast… a freeze is coming!\""
+          ]
+        ]
+      }
+    ]
+  }
+}
