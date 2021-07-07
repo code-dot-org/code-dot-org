@@ -120,7 +120,7 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
-    csf: scriptData.csf,
+    csf: !!scriptData.csf,
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,

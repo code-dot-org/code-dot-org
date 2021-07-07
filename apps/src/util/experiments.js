@@ -35,6 +35,9 @@ experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
 experiments.POEM_BOT = 'poemBot';
 
+// backend "pilot" experiment, stored on window.appOptions.experiments
+experiments.KEEP_WORKING = 'teacher-feedback-review-state';
+
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.
