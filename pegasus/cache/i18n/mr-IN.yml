@@ -29,6 +29,7 @@ mr-IN:
   get_started: सुरुवात
   participant_student: विध्यार्थी
   enter_country: जर तुम्ही अमेरिकेबाहेरील असाल तर तुमच्या देशाचे नाव
+  just_did_accelerated: मी आत्ताच वेगवान अभ्यासक्रम पूर्ण केला - तो इथे पहा! @codeorg
   studiobar_dance_title: डांस पार्टी
   studiobar_flappy_title: फ्लॅपी कोड
   studiobar_frozen_body: अॅना आणि एल्साबरोबर हिवाळ्यातील एक अद्भुत प्रदेश तयार करा.
@@ -93,6 +94,7 @@ mr-IN:
   dashboard_action_delete_no: नाही
   dashboard_sections_close: Band
   dashboard_students_name: नाव
+  dashboard_pre-express: 'वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम: '
   dashboard_student: विध्यार्थी
   hoc2014_try_frozen: फ्रोझनमधील अॅना आणि एल्सासह आर्टीस्ट
   frozen_name: अॅना आणि एल्साबरोबर कोड लिहा
@@ -101,18 +103,79 @@ mr-IN:
   hourofcode_name: क्लासिक मेझ
   infinity_name: इन्फीनिटी प्ले लॅब
   artist_name: आर्टीस्ट
+  coursea-draft_name: अभ्यासक्रम A
+  coursea_name: अभ्यासक्रम A
+  courseb-draft_name: अभ्यासक्रम B
+  courseb_name: अभ्यासक्रम B
+  coursec-draft_name: अभ्यासक्रम C
+  coursec_name: अभ्यासक्रम C
+  coursed-draft_name: अभ्यासक्रम D
+  coursed_name: अभ्यासक्रम D
+  coursee-draft_name: अभ्यासक्रम E
+  coursee_name: अभ्यासक्रम E
+  coursef-draft_name: अभ्यासक्रम F
+  coursef_name: अभ्यासक्रम F
+  coursea-2017_name: अभ्यासक्रम A (2017)
+  coursec-2017_name: अभ्यासक्रम C (2017)
+  coursed-2017_name: अभ्यासक्रम D (2017)
+  coursee-2017_name: अभ्यासक्रम  E (2017)
+  coursef-2017_name: अभ्यासक्रम F (2017)
+  pre-express-2018_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2018)
+  pre-express-2019_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2019)
+  pre-express-2020_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2020)
+  accelerated_name: वेगवान अभ्यासक्रम
+  pre-express_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम
+  20-hour_name: वेगवान अभ्यासक्रम
   classicmaze_name: क्लासिक मेझ
   hoc-encryption_name: सुलभ एनक्रीप्शन
   text-compression_name: टेक्स्ट कॉम्प्रेशन
   basketball_name: बास्केटबॉलचा गेम तयार करा
   frozen_gradelevel: वय वर्षे 8-108
   artist_gradelevel: वय वर्षे 8-108
+  frozen_shortdescription: अॅना आणि एल्साबरोबर बर्फाची जादू आणि सौंदर्य शोधण्याची
+    मजा घेण्यासाठी कोडचा वापर करूया.
   starwars_shortdescription: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत
     तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
   playlab_shortdescription: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
   infinity_shortdescription: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार
     करण्यासाठी प्ले लॅब वापरा.
   artist_shortdescription: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
+  coursea_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+  courseb_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय. (अभ्यासक्रम
+    A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursed_shortdescription_congrats: 'अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण करा,
+    मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.  '
+  coursee_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन पूर्ण
+    करा आणि नंतर पुढे जाऊन फंक्शन्स करा.
+  coursef_shortdescription_congrats: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना
+    शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+  coursea-2017_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+  courseb-2017_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+    (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursed-2017_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
+    करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
+  coursee-2017_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
+    पूर्ण करा आणि नंतर पुढे जाऊन फंक्शन्स करा.
+  coursef-2017_shortdescription_congrats: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व
+    संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+  coursea-2018_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+  courseb-2018_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+    (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursed-2018_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
+    करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
+  coursee-2018_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
+    पूर्ण करा आणि नंतर पुढे जाऊन फंक्शन्स करा.
+  coursef-2018_shortdescription_congrats: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व
+    संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+  coursea-2019_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+  courseb-2019_shortdescription_congrats: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
+    (अभ्यासक्रम A प्रमाणेच पण मोठ्या विद्यार्थ्यांसाठी अधिक विविधतेसह.)
+  coursed-2019_shortdescription_congrats: अभ्यासक्रम C मधल्या संकल्पना पटकन पूर्ण
+    करा, मग पुढे जाऊन अल्गोरिदम्स, नेस्टेड लूप्स, कंडीशनल्स आणि इतर गोष्टी करा.
+  coursee-2019_shortdescription_congrats: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन
+    पूर्ण करा आणि नंतर पुढे जाऊन फंक्शन्स करा.
+  coursef-2019_shortdescription_congrats: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व
+    संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
   frozen_longdescription: अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर
     सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स तयार
     कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या मित्रमैत्रिणींशी
@@ -158,6 +221,8 @@ mr-IN:
   hoc_overview_start_tutorial: सुरुवात
   hoc_overview_view_teacher_guide: शिक्षक मार्गदर्शक पहा
   hoc2018_creativity_create: बनवा
+  hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.org
+    अभ्यासक्रमांसह </a> आणखी पुढे जा
   hoc2018_mc_page_title: माईनक्राफ्ट  कोड मार्गदर्शनाचा तास
   hoc2018_mc_details: वेगवेगळ्या भाष, अद्ययावत ब्राऊझर आणि गोळ्या,  दर्जा २
   hoc2018_mc_aquatic_title: माईनक्राफ्ट प्रवास जलचर
