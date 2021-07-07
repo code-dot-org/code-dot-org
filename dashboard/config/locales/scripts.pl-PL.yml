@@ -5683,6 +5683,8 @@ pl:
             Planning:
               key: Planowanie
               name: Planowanie
+        vpl-csp-2021:
+          name: vpl-csp-2021
         self-paced-pl-csd2-2021:
           lessons:
             lesson-3:
@@ -5702,3 +5704,8 @@ pl:
         csa3-exemplars:
           name: csa3-przykłady
           title: Jednostka 3 - Rozszerzanie danych programu [Exemplars]
+        ai-lab:
+          name: ai-lab
+        poster-experiment:
+          name: plakat-eksperyment
+          title: Tablica historii (V1 - Eksperyment)
