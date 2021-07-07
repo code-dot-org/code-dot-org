@@ -1,9 +1,25 @@
 import React, {Component} from 'react';
+//import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 
+// const commentShape = {
+//   id: PropTypes.number.isRequired,
+//   name: PropTypes.string.isRequired,
+//   comment: PropTypes.string.isRequired,
+//   timestampString: PropTypes.string.isRequired,
+//   isResolved: PropTypes.bool,
+//   isFromTeacher: PropTypes.bool,
+//   isFromProjectOwner: PropTypes.bool,
+//   isFromOlderVersionOfProject: PropTypes.bool
+// };
+
 export default class ReviewTab extends Component {
+  // static propTypes = {
+  //   comments: PropTypes.arrayOf(commentShape)
+  // };
+
   state = {
     readyForReview: false
   };
@@ -58,6 +74,8 @@ const styles = {
 const demoComments = [
   {
     name: 'Another Student',
+    comment:
+      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: false,
@@ -66,6 +84,8 @@ const demoComments = [
   },
   {
     name: 'Older Version',
+    comment:
+      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: true,
     isFromTeacher: false,
@@ -74,6 +94,8 @@ const demoComments = [
   },
   {
     name: 'Resolved Comment',
+    comment:
+      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: true,
     isFromTeacher: false,
@@ -82,6 +104,8 @@ const demoComments = [
   },
   {
     name: 'Mr. Teacher',
+    comment:
+      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: true,
@@ -90,6 +114,8 @@ const demoComments = [
   },
   {
     name: 'Project Owner',
+    comment:
+      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: false,
