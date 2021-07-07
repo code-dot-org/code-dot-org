@@ -12,7 +12,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           MOVE1:
             MOVES.Roll: ボディロール
@@ -53,7 +53,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           MOVE:
             MOVES.Roll: ボディロール
@@ -99,7 +99,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           PROPERTY:
             '"scale"': 大きさ
@@ -113,7 +113,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           MOVE:
             MOVES.XBend: 曲げる
@@ -246,7 +246,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -267,7 +267,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           FORMAT:
             '"diamond"': ダイヤモンド
@@ -283,7 +283,7 @@ ja:
             '"DOG"': 犬
             '"DUCK"': アヒル
             '"FROG"': カエル
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
@@ -311,7 +311,7 @@ ja:
             '"DOG"': 犬
             '"DUCK"': アヒル
             '"FROG"': カエル
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
@@ -356,7 +356,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           LAYOUT:
             '"diamond"': ダイヤモンド
@@ -405,7 +405,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           SPEED:
             '1': ノーマル
@@ -438,7 +438,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           PROPERTY:
             '"scale"': 大きさ
@@ -459,7 +459,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           PROPERTY:
             '"scale"': 大きさ
@@ -475,7 +475,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
       Dancelab_setTintEachInline:
         text: "{THIS} の色合いを {VAL} に設定"
@@ -485,7 +485,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
       Dancelab_setTintInline:
         text: "{SPRITE} の色合いを {VAL} にセット"
@@ -503,7 +503,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           VISIBILITY:
             'true': 見える
@@ -527,7 +527,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           PROPERTY:
             '"scale"': 大きさ
@@ -556,7 +556,7 @@ ja:
             '"ALIEN"': すべてのエイリアン
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"ROBOT"': すべてのロボット
           PROPERTY:
             '"scale"': 大きさ
@@ -760,6 +760,7 @@ ja:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': グリッド
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 地下鉄
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
             undefined: なし
@@ -1053,6 +1054,7 @@ ja:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 地下鉄
       Mikelab_setProp:
         options:
           PROPERTY:

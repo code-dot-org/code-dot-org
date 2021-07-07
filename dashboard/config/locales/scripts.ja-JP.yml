@@ -346,6 +346,8 @@ ja:
               name: 作詞作曲
             The Big Event:
               name: ビッグイベント
+        cspunit4draft:
+          description_short: データ
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -449,6 +451,8 @@ ja:
           lessons:
             Peer Review:
               name: ピア ・ レビュー
+        CSDU5-Draft:
+          description_short: データ
         MikeTest:
           lessons:
             Artist Functions:
@@ -1843,6 +1847,8 @@ ja:
           lesson_groups:
             csf_variables:
               display_name: 変数（へんすう）
+            csf_data:
+              display_name: データ
             csf_for_loops:
               display_name: ループ用
             csf_internet:
@@ -2173,6 +2179,8 @@ ja:
               display_name: くりかえし
             csf_events:
               display_name: イベント
+            csf_data:
+              display_name: データ
             end_of_course_project:
               display_name: コース最後のプロジェクト
           lessons:
@@ -3004,6 +3012,8 @@ ja:
               display_name: くりかえし
             csf_events:
               display_name: イベント
+            csf_data:
+              display_name: データ
             end_of_course_project:
               display_name: コース最後のプロジェクト
           lessons:
@@ -3197,6 +3207,8 @@ ja:
               display_name: デジタル シティズンシップ
             csf_variables:
               display_name: 変数（へんすう）
+            csf_data:
+              display_name: データ
             csf_for_loops:
               display_name: ループ用
             end_of_course_project:
@@ -3368,7 +3380,7 @@ ja:
         jess-test-script:
           lessons:
             Tools:
-              name: Tools
+              name: ツール
             Debugging:
               name: Debugging
         csd2-virtual:
@@ -3784,6 +3796,8 @@ ja:
               display_name: くりかえし
             csf_events:
               display_name: イベント
+            csf_data:
+              display_name: データ
             end_of_course_project:
               display_name: コース最後のプロジェクト
           student_description: シーケンス、ループ、イベントを含むプログラムを作成します。イニシャルをバイナリに変換し、さまざまな問題解決手法を調査し、ネット上のいじめに対処する方法を学びます。コースの最後に、独自のゲームやストーリーを作成して共有しましょう！
