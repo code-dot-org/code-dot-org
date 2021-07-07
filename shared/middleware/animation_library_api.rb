@@ -101,7 +101,7 @@ class AnimationLibraryApi < Sinatra::Base
     manifest_extension = (app_type == 'spritelab' && locale != 'en_us') ? "#{locale}.json" : 'json'
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object("manifests/#{manifest_filename}.#{manifest_extension}").
+      object("animation-manifests/manifests/#{manifest_filename}.#{manifest_extension}").
       get
     content_type result.content_type
     cache_for 3600
