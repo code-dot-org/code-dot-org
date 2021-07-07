@@ -178,33 +178,14 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Returns the sublevel for a user that has the highest best_result.
-  # @param [User]
-  # @param [Script]
-  # @return [Level]
-  def best_result_sublevel(user, script)
-    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
-    ul&.level
-  end
-
-  def keep_working_sublevel(user, script)
-    # get latest feedback on sublevels where keepWorking is true
-    level_ids = sublevels.map(&:id)
-    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
-
-    if latest_feedbacks.any?
-      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
-      return keep_working_feedback&.level
-    end
-  end
-
   # Determine which sublevel's status to display in our progress bubble.
   # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
   # progress for sublevel that has the best result
   def get_sublevel_for_progress(student, script)
     keep_working_level = keep_working_sublevel(student, script)
-    best_result_level = best_result_sublevel(student, script)
-    return keep_working_level || best_result_level
+    return keep_working_level if keep_working_level.present?
+
+    return best_result_sublevel(student, script)
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
@@ -257,5 +238,27 @@ class BubbleChoice < DSLDefined
     end
 
     save!
+  end
+  
+  private
+
+  # Returns the sublevel for a user that has the highest best_result.
+  # @param [User]
+  # @param [Script]
+  # @return [Level]
+  def best_result_sublevel(user, script)
+    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
+    ul&.level
+  end
+
+  def keep_working_sublevel(user, script)
+    # get latest feedback on sublevels where keepWorking is true
+    level_ids = sublevels.map(&:id)
+    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
+
+    if latest_feedbacks.any?
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      return keep_working_feedback&.level
+    end
   end
 end
