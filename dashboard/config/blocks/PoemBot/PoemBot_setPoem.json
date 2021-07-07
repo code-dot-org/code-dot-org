@@ -1,0 +1,27 @@
+{
+  "category": "",
+  "config": {
+    "func": "setPoem",
+    "blockText": "set poem {BG_EFFECT}",
+    "args": [
+      {
+        "name": "BG_EFFECT",
+        "options": [
+          [
+            "I Wandered Lonely as a Cloud",
+            "\"wordsworth\""
+          ],
+          [
+            "rainbow",
+            "\"rainbow\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}
