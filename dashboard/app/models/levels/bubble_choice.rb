@@ -227,6 +227,9 @@ class BubbleChoice < DSLDefined
   end
 
   def setup_sublevels(sublevel_names)
+    reload
+    self.child_levels = []
+
     sublevel_names.each_with_index do |sublevel_name, i|
       sublevel = Level.find_by_name!(sublevel_name)
       ParentLevelsChildLevel.find_or_create_by!(
@@ -236,5 +239,7 @@ class BubbleChoice < DSLDefined
         position: i + 1
       )
     end
+
+    save!
   end
 end
