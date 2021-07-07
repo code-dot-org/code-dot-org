@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 18:38:17 UTC",
+    "serialized_at": "2021-07-07 21:49:17 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa5-pilot"
@@ -318,6 +318,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa5-pilot"
       }
+    },
+    {
+      "key": "ce65b65f-6520-4229-8f67-d008b8ec27b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -539,6 +551,16 @@
       "seeding_key": {
         "activity_section.key": "11fa8eb4-fbee-4029-8a61-8e13515fbdb3",
         "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "23ea9086-3557-43a9-bbdf-7522183f5ab8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "23ea9086-3557-43a9-bbdf-7522183f5ab8",
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1"
       }
     }
   ],

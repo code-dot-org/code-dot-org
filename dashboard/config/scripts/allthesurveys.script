@@ -37,3 +37,14 @@ level 'csp-post-survey-2017-levelgroup_2018', assessment: true
 lesson 'Place for testing crazy stuff', display_name: 'Place for testing crazy stuff', has_lesson_plan: false
 level 'Levelgroup-for-testing-stuff', assessment: true
 
+lesson 'CSD pre-survey 2021', display_name: 'CSD pre-survey 2021', has_lesson_plan: false
+level 'csd-pre-survey-levelgroup_2021', assessment: true
+
+lesson 'CSD U2 U3 post-survey 2021', display_name: 'CSD U2 U3 post-survey 2021', has_lesson_plan: false
+level 'csd-post-survey-intro-2019_pilot_2021', assessment: true
+level 'csd-post-survey-2017-levelgroup_2018_2019_pilot_2021', assessment: true
+
+lesson 'CSD U4 U5 U6 post-survey 2021', display_name: 'CSD U4 U5 U6 post-survey 2021', has_lesson_plan: false
+level 'csd-post-survey-intro-2019_2021', assessment: true
+level 'csd-post-survey-levelgroup_2021', assessment: true
+

@@ -7780,7 +7780,14 @@ en:
               name: CSD post course survey 2019 staging
             Place for testing crazy stuff:
               name: Place for testing crazy stuff
+            CSD pre-survey 2021:
+              name: CSD pre-survey 2021
+            CSD U2 U3 post-survey 2021:
+              name: CSD U2 U3 post-survey 2021
+            CSD U4 U5 U6 post-survey 2021:
+              name: CSD U4 U5 U6 post-survey 2021
           student_description: ''
+          name: allthesurveys
         k1hoc2017:
           title: K-1 Hour of Code 2017
           description_audience: ''
@@ -22647,6 +22654,8 @@ en:
               description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             lesson-2:
               name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Traversing a 2D Array by Columns
             lesson-4:
@@ -24191,6 +24200,26 @@ en:
           lesson_groups: {}
           name: poster-experiment
           title: Story Board (V1 - Experiment)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        tesspltest:
+          lessons:
+            lesson-1:
+              name: Lesson1
+            lesson-2:
+              name: Lesson 2
+          lesson_groups: {}
+          name: tesspltest
+          title: Testing PL Course Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+        tesspl2:
+          lessons: {}
+          lesson_groups: {}
+          name: tesspl2
+          title: Tess PL 2
           description_audience: ''
           description_short: ''
           description: ''

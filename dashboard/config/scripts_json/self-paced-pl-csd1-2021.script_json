@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-04 02:52:56 UTC",
+    "serialized_at": "2021-07-07 19:42:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
@@ -117,6 +117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid"
+        ]
       },
       "named_level": false,
       "bonus": false,
