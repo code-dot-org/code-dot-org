@@ -1,5 +1,10 @@
+import {MAX_VISUALIZATION_WIDTH} from '@cdo/apps/StudioApp';
+
 /** @const {number} */
-export const GAME_WIDTH = 400;
+export const MAX_GAME_WIDTH = MAX_VISUALIZATION_WIDTH;
+
+/** @const {number} */
+export const MIN_GAME_WIDTH = 200;
 
 /** @const {number} */
 export const GAME_HEIGHT = 400;
