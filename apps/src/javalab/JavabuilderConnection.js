@@ -1,6 +1,8 @@
 /* globals dashboard */
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+import {getStore} from '../redux';
+import {setIsRunning} from './javalabRedux';
 const queryString = require('query-string');
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
@@ -102,7 +104,14 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
-    this.miniApp?.onClose?.();
+    if (this.miniApp && this.miniApp.onClose) {
+      // miniApp on close should handle setting isRunning state as it
+      // may not align with actual program execution
+      this.miniApp.onClose();
+    } else {
+      // Set isRunning to false
+      getStore().dispatch(setIsRunning(false));
+    }
   }
 
   onError(error) {
