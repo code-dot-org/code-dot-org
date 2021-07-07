@@ -105,8 +105,6 @@ export function loadScriptProgress(scriptId, sectionId) {
         sectionProgress.unitDataByUnit[scriptId].lessons
       )
     };
-    console.log('maureen actual param');
-    console.log(JSON.stringify(sectionProgress));
     getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
     getStore().dispatch(finishRefreshingProgress());
