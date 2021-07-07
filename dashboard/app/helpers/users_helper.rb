@@ -140,12 +140,14 @@ module UsersHelper
   #   }
   def script_progress_for_users(users, script)
     user_levels = User.user_levels_by_user_by_level(users, script)
+    teacher_feedbacks = teacher_feedbacks_by_student_by_level(users, script)
     paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
     progress_by_user = users.inject({}) do |progress, user|
       progress[user.id] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels[user.id],
+        teacher_feedback_by_level: teacher_feedbacks[user.id],
         paired_user_levels: paired_user_levels_by_user[user.id],
         include_timestamp: true
       )
@@ -156,6 +158,34 @@ module UsersHelper
     end
 
     [progress_by_user, timestamp_by_user]
+  end
+
+  # Retrieve all teacher feedback for the designated set of users in the given
+  # script, with a single query.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash] TeacherFeedbacks by user id by level id
+  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
+  # {
+  #   1: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   2: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   3: {}
+  # }
+  private def teacher_feedbacks_by_student_by_level(users, script)
+    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    TeacherFeedback.
+      get_latest_feedbacks_received(users.map(&:id), nil, script.id).
+      group_by(&:student_id).
+      inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
+        memo[student_id] = teacher_feedbacks.index_by(&:level_id)
+        memo
+      end
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
@@ -173,12 +203,14 @@ module UsersHelper
 
     unless exclude_level_progress
       user_levels_by_level = user.user_levels_by_level(script)
+      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], script)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
       user_data[:completed] = Policies::ScriptActivity.completed?(user, script)
       user_data[:progress] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels_by_level,
+        teacher_feedback_by_level: teacher_feedback_by_level[user.id],
         paired_user_levels: paired_user_levels
       )
     end
@@ -203,6 +235,7 @@ module UsersHelper
     script:,
     user:,
     user_levels_by_level:,
+    teacher_feedback_by_level:,
     paired_user_levels:,
     include_timestamp: false
   )
@@ -215,14 +248,16 @@ module UsersHelper
 
         # For contained levels, progress is stored with the contained level id but feedback is stored with
         # the level id, which is why we need a different level id to get feedback for contained levels.
-        level_id_for_feedback =  level.contained_levels.any? ? level.id : level_for_progress.id
+        level_id_for_feedback = level.contained_levels.any? ? level.id : level_for_progress.id
+
+        feedback = teacher_feedback_by_level.try(:[], level_id_for_feedback)
         level_progress = get_level_progress(
-          level_id_for_feedback, user.id, ul, sl, paired_user_levels, include_timestamp
+          user.id, ul, feedback, sl, paired_user_levels, include_timestamp
         )
 
         if level.is_a?(BubbleChoice) # we have a parent level
           bubble_choice_progress = get_bubble_choice_progress(
-            level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp
+            level, user, user_levels_by_level, teacher_feedback_by_level, sl, paired_user_levels, include_timestamp
           )
           if bubble_choice_progress.present?
             progress.merge!(bubble_choice_progress.compact)
@@ -252,15 +287,13 @@ module UsersHelper
 
   # Summarizes a user's progress on a particular level
   private def get_level_progress(
-    level_id_for_feedback,
     user_id,
     user_level,
+    feedback,
     script_level,
     paired_user_levels,
     include_timestamp
   )
-    feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level_id_for_feedback, script_level.script.id).first
-
     # if we don't have a user level, that means the user doesn't have any
     # progress on this level, so the client interprets a nil value as not_tried.
     # however, the default state of a lockable level is locked, so if the
@@ -295,6 +328,7 @@ module UsersHelper
     level,
     user,
     user_levels_by_level,
+    teacher_feedback_by_level,
     script_level,
     paired_user_levels,
     include_timestamp
@@ -304,7 +338,8 @@ module UsersHelper
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
-      sublevel_progress = get_level_progress(sublevel.id, user.id, ul, script_level, paired_user_levels, include_timestamp)
+      feedback = teacher_feedback_by_level.try(:[], sublevel.id)
+      sublevel_progress = get_level_progress(user.id, ul, feedback, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress
