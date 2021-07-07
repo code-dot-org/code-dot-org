@@ -34,13 +34,6 @@ class UnitGroup < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
-  FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-    CSA = 'csa'.freeze,
-    TEST = 'ui-test-course'.freeze
-  ].freeze
-
   def skip_name_format_validation
     !!plc_course
   end
@@ -272,7 +265,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.family_names
-    (CourseVersion.course_offering_keys('UnitGroup') + FAMILY_NAMES).uniq.sort
+    CourseVersion.course_offering_keys('UnitGroup')
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
