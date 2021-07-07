@@ -199,7 +199,7 @@ class BubbleChoice < DSLDefined
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
-    joins(:child_levels).where(child_levels_levels: {name: level_name}).to_a
+    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
   end
 
   def supports_markdown?
