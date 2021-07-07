@@ -51,7 +51,7 @@
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
 <% db_secrets.each do |secret| -%>
-        - {AuthScheme: SECRETS, SecretARN: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
 <%end -%>
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
