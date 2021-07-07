@@ -13,7 +13,7 @@ def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
                      free_reduced_lunch_percent urm_percent accepted_at accepted race community_type two_or_more_races)]
-  Pd::Application::Teacher2122Application.find_each do |app|
+  Pd::Application::TeacherApplication.find_each do |app|
     stats = app.get_latest_school_stats(app.school_id)
     pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
     frl_percent = stats&.frl_eligible_percent
