@@ -668,7 +668,9 @@
         "courseF_variables_madlib_finish": "# Hoàn thiện câu chuyện khoảng trống\n\n*Bạn chắc hẳn đã bắt đầu xây dựng chương trình câu chuyện khoảng trống của mình. Nếu chưa, hãy quay lại [cấp độ trước đó](../sublevel/5).*\n\n\nGiờ đây, bạn có thể thêm bất kỳ nội dung nào bạn thích vào mã lệnh của mình. Hãy hỏi người dùng một vài từ và sử dụng từng từ trong câu chuyện mà bạn hiển thị trên màn hình. Bạn có thể tăng tính tương tác của chương trình bằng cách thay đổi hành vi của nhân vật với mỗi sự kiện hoặc bằng cách thêm âm thanh và hình nền. Nếu bạn muốn lấy ý tưởng mới, hãy nhấp chuột vào bóng đèn ở bên trái.",
         "courseF_variables_predict": "Bạn thử đoán xem! Hãy nghiên cứu mã lệnh.",
         "ramp_artist_loops6v1_2021": "Cầu thang này thật lớn, nhưng chỉ cần vài dòng mã lệnh nếu bạn sử dụng vòng lặp!\n\nHãy sử dụng vòng lặp để hoàn thành bài tập.",
-        "simcustom_2021": "# Tùy chỉnh\n\nĐây là một phiên bản mô phỏng khác. Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây. Cứ thoải mái tùy chỉnh mô phỏng theo ý mình nhé!"
+        "simcustom_2021": "# Tùy chỉnh\n\nĐây là một phiên bản mô phỏng khác. Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây. Cứ thoải mái tùy chỉnh mô phỏng theo ý mình nhé!",
+        "iceage_hello1": "Sid (nhân vật 1) muốn tập hợp mọi người cho một chuyến thám hiểm mới. Bạn có thể giúp anh ấy nói \"Xin chào!\" bằng cách kéo khối `xin chào` ra và kết nối nó và dưới sự kiện `khi chạy` không?\nĐừng quên gõ \"Xin chào\" bên trong nhé!",
+        "iceage_hello2": "Manny (nhân vật 2) tìm thấy Sid (nhân vật 1) và muốn mời anh ta tham gia cuộc phiêu lưu. Hãy giúp họ chào nhau bằng cách sử dụng khối `nhân vật ___ nói` hai lần."
       }
     }
   }

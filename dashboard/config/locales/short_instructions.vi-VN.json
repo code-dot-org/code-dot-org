@@ -681,7 +681,9 @@
         "courseF_variables_madlib": "Hãy tạo một câu chuyện khoảng trống có tính tương tác!",
         "courseF_variables_madlib_finish": "Hoàn thiện câu chuyện khoảng trống tùy chỉnh.",
         "ramp_artist_loops6v1_2021": "Sử dụng vòng lặp để vẽ cầu thang.",
-        "simcustom_2021": "Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây."
+        "simcustom_2021": "Hãy thử thay đổi trang phục nhân vật hoặc mã lệnh dưới đây.",
+        "iceage_hello1": "Giúp Sid nói \"Xin chào!\" bằng cách kéo khối `nói` ra và kết nối nó vào dưới sự kiện `khi chạy` ",
+        "iceage_hello2": "Giúp Manny và Sid chào hỏi nhau bằng cách dùng khối `nhân vật ___ nói` hai lần."
       }
     }
   }

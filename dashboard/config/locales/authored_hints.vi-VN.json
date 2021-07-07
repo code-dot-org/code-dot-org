@@ -2344,6 +2344,9 @@
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_b": "Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử một cái khác!"
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "Bạn chỉ cần thêm một khối để giải quyết thử thách này. Kéo khối `nói` ra từ thanh công cụ và nối nó vào khối sự kiện `khi chạy` đã có sẵn trong vùng làm việc. Sau đó, gõ \"Xin chào!\" vào trong."
         }
       }
     }
