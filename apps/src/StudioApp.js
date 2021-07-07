@@ -92,7 +92,7 @@ var copyrightStrings;
 const MIN_WIDTH = 1200;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 export const MAX_VISUALIZATION_WIDTH = 400;
-const MIN_VISUALIZATION_WIDTH = 200;
+export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
