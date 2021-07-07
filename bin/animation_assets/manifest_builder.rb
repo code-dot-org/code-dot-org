@@ -74,10 +74,10 @@ class ManifestBuilder
     EOS
 
     if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading manifests/spritelabCostumeLibrary.json to S3"
+      info "Uploading animation-manifests/manifests/spritelabCostumeLibrary.json to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.json",
+        "animation-manifests/manifests/spritelabCostumeLibrary.json",
         generate_json(animation_metadata, alias_map, category_map),
         acl: 'public-read',
         no_random: true,
@@ -213,10 +213,10 @@ The animation has been skipped.
       normalized_category_map[key.tr(' ', '_')] = value
     end
 
-    info "Uploading manifests/spritelabCostumeLibrary.#{locale}.json to S3"
+    info "Uploading animation-manifests/manifests/spritelabCostumeLibrary.#{locale}.json to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
-      "manifests/spritelabCostumeLibrary.#{locale}.json",
+      "animation-manifests/manifests/spritelabCostumeLibrary.#{locale}.json",
       generate_json(animation_metadata, alias_map, normalized_category_map),
       acl: 'public-read',
       no_random: true,
