@@ -76,3 +76,13 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+        MaxIdleConnectionsPercent: 0
+        SessionPinningFilters: [EXCLUDE_VARIABLE_SETS]
+  DBProxyReadOnlyEndpoint:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${DBProxy}-ReadOnly"
+      DBProxyName: !Ref DBProxy
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+      TargetRole: READ_ONLY
