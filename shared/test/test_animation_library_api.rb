@@ -52,7 +52,7 @@ class AnimationLibraryTest < Minitest::Test
         get_object: {body: contents, content_type: 'json'}
       }
     )
-    get '/api/v1/animation-library/animation-manifests/manifests/test_manifests.png'
+    get '/api/v1/animation-library/manifest/spritelab/en_us'
     assert last_response.ok?
     assert_equal contents, last_response.body
   ensure
