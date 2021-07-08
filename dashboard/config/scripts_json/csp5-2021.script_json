@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-03 16:28:12 UTC",
+    "serialized_at": "2021-07-08 03:15:36 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -2754,7 +2754,7 @@
       "key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
       "position": 6,
       "properties": {
-        "description": "In this level, students use the reduce pattern to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade",
+        "description": "In these levels, students use the reduce and filter patterns to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade.\n* **Level 8:** Write code to calculate and display the percent of each type of Air Quality Index day.",
         "name": "App Practice",
         "progression_name": "App Practice"
       },

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-07 16:38:07 UTC",
+    "serialized_at": "2021-07-08 17:14:08 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -707,11 +707,24 @@
       }
     },
     {
-      "key": "b325b976-c83a-4004-82fe-4a5aab007679",
+      "key": "eb0af750-0abf-4a1e-8415-15075dcc23ce",
       "position": 2,
       "properties": {
-        "duration": 35,
         "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce",
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "b325b976-c83a-4004-82fe-4a5aab007679",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity 2"
       },
       "seeding_key": {
         "lesson_activity.key": "b325b976-c83a-4004-82fe-4a5aab007679",
@@ -722,7 +735,7 @@
     },
     {
       "key": "bb13c729-faf9-4042-aa43-22b9dc984a2b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -736,7 +749,7 @@
     },
     {
       "key": "1aff2dff-8eef-47d1-8932-5736db3f442c",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Levels"
       },
@@ -3191,7 +3204,7 @@
       "key": "c3d91a7d-140d-4d22-b8df-7f14a181cb02",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _When you go to a new restaurant and are deciding what to order, what features do you use to help you decide what to order?_\r\n\r\nHave students journal individually, then share with a neighbor before having several students share with the class",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we compared fruits based on how sweet they were and how easy they were to eat. What is another feature we could have used to compare foods?_\n\nHave students journal individually, then share with a neighbor before having several students share with the class",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3203,7 +3216,7 @@
       "key": "ec3b701e-ff02-4512-bfde-2245509d8d44",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** This can be a brief discussion that helps prime students for today’s activity. Students may mention that they look for their favorite ingredients, or avoid things they’re allergic to, or listen to a friend for a recommendation. As they describe their process, try to reinforce vocabulary from the unit: students are looking for certain features to help them decide how they will label a dish - like or dislike."
+        "description": " **Discussion Goal:** This prompt is meant to bridge yesterday's activity to today's lesson. Have some students share out, but keep this discussion brief so students can move into the widget portion of the warm up."
       },
       "seeding_key": {
         "activity_section.key": "ec3b701e-ff02-4512-bfde-2245509d8d44",
@@ -3211,33 +3224,262 @@
       }
     },
     {
-      "key": "c603a7f2-e723-4962-b7b7-0f116d36f168",
+      "key": "7964c482-3678-4078-bb93-3cf86168e107",
       "position": 3,
       "properties": {
-        "description": "This is a common thing restaurants think about - when a new customer comes in, how can we recommend something they will like? Today, we’re going to explore how survey data can help answer this question. We’re also going to look at a new widget called AI Lab that uses Machine Learning to help us analyze the data.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first level has a Fruit Explorer widget, which recreates some of the experience students had yesterday classifying fruits and veggies by hand."
       },
       "seeding_key": {
-        "activity_section.key": "c603a7f2-e723-4962-b7b7-0f116d36f168",
+        "activity_section.key": "7964c482-3678-4078-bb93-3cf86168e107",
         "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
       }
     },
     {
-      "key": "aab4a5a5-df7d-4972-9bd2-5e4e0710d936",
+      "key": "b56be402-0105-49ea-9bc7-f37830adcba9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can we use machine learning to make recommendations?"
+        "progression_name": "Fruit and Veggie Explorer"
       },
       "seeding_key": {
-        "activity_section.key": "aab4a5a5-df7d-4972-9bd2-5e4e0710d936",
+        "activity_section.key": "b56be402-0105-49ea-9bc7-f37830adcba9",
         "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "c5cc84e1-a897-401e-9b74-5875e86cfb1e",
+      "position": 5,
+      "properties": {
+        "description": "**Model:** Read through the directions on the level and demonstrate how the widget works. As you explore the available features, refer back to the discussion especially if some student responses appear in the widget.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Exploring, Not Mastering:** This widget has a lot going on and students aren't expected to master how to use it. The complexity of the widget is part of the point - as the lesson continues, students will see how AI Lab can simplify this process of exploring and analyzing data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c5cc84e1-a897-401e-9b74-5875e86cfb1e",
+        "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "415af00f-6a96-4e77-a653-fa73f9c98f42",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the dropdowns to adjust the features, draw a line that creates a model that correctly classifies at least 80% of the fruits and 80% of the veggies. An example is provided of what this can look like.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Overlapping Points:** Sometimes a model will _look_ like it's 100% accurate, but may not display as 100% accurate. This is because some points may overlap when they're drawn on the graph. This isn't always easy for students to see, since hovering over the points will only show one of the points. If students are struggling with this, have them watch the graphing process carefully to see the points overlap with each other."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "415af00f-6a96-4e77-a653-fa73f9c98f42",
+        "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "f6c5c657-b58f-4f49-b4f0-1e574fc3f5db",
+      "position": 7,
+      "properties": {
+        "description": "**Share Out:** Ask students to quickly share out the features they used to create accurate models. Students should be able to find many different combinations of features and many possible lines that can create accurate models."
+      },
+      "seeding_key": {
+        "activity_section.key": "f6c5c657-b58f-4f49-b4f0-1e574fc3f5db",
+        "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "5072ea69-20b7-4448-bf31-683f299b002a",
+      "position": 8,
+      "properties": {
+        "description": "This activity shows how, just adding a few more features and a few additional foods to our data, it becomes much more complex for us to create the same types of models as yesterday. Sometimes this process can become overwhelming as we try to keep track of all of our data and all of our features. Today, we'll learn how machines can make this process easier for us using a new tool called AI Lab",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5072ea69-20b7-4448-bf31-683f299b002a",
+        "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "c25f7497-5153-4390-8d55-5d13ece1e67e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can you use AI Lab to create an accurate machine learning model?"
+      },
+      "seeding_key": {
+        "activity_section.key": "c25f7497-5153-4390-8d55-5d13ece1e67e",
+        "lesson_activity.key": "bd1eadde-d1de-4768-9d1c-469066dbd63a"
+      }
+    },
+    {
+      "key": "f7aa7957-e4c2-4689-9833-7c662adbe9dd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the the slide with the grid of 100 images"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7aa7957-e4c2-4689-9833-7c662adbe9dd",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "bc67b296-4aa8-47ed-8c4c-c7932d70f125",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** _We're going to practice using AI Lab to classify shapes. Based on these images, what are some features you think we can use in AI Lab to train a machine learning model?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc67b296-4aa8-47ed-8c4c-c7932d70f125",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "2e54a02f-7555-44c9-928e-13c6277c6f2d",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Encourage students to notice different properties of the shapes. Some of them may be geometric, like number of sides or angle measurements. Also encourage students to identify visual features that a machine learning model might pick up on, like the border color or fill color."
+      },
+      "seeding_key": {
+        "activity_section.key": "2e54a02f-7555-44c9-928e-13c6277c6f2d",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "2c748892-2a46-4f85-89f1-2bbe8def620c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r introduction_to_ai_lab/aiml/2021] video as a class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c748892-2a46-4f85-89f1-2bbe8def620c",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "9f9523b7-1489-438d-97fb-b5f9e3bbdf8b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which has the shapes dataset preloaded. Point out the features that are included in the dataset especially if they match the predictions from the earlier discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees ____, it tends to be a ____ shape. Do _not_ press the Train button yet!\"\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What types of patterns did AI Bot notice?\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n**Do This:** Using the hot spots in data as a guide, select one or two features then press the Train button to train a model.\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "9f9523b7-1489-438d-97fb-b5f9e3bbdf8b",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "745310a2-7ff7-4e99-8dd4-aa21f61a71d1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/aiml/2021] video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training-a-model-with-features/aiml/2021] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Follow the instructions on the activity guide to train multiple models from the same dataset and compare accuracy. Students will use the Try Again button to return to the previous screen and select new models.\n\nOnce students have completed the table, regroup for a class discussion",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "745310a2-7ff7-4e99-8dd4-aa21f61a71d1",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _The model with 'border color, fill color' is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would still be accurate?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "2f4a5303-7f00-4845-9256-7bb51e20c7f2",
+      "position": 8,
+      "properties": {
+        "description": "**Discussion Goal:** Guide students to realize that just because this dataset has patterns with how the shapes are drawn doesn't mean it will represent shapes in the real world. Students can also verify this by testing the data in AI Lab - it shouldn't feel intuitive that our model can predict a shape just from its size and colors, especially if we tried showing it a wider variety of shapes. Remind students of the video, where high accuracy only means that the model can reproduce patterns in the data and that we - as humans -  have control over deciding what features are important.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**[maybe] Human Responsibility in AI:** Focusing on our role in selecting data and features for machine learning models foreshadows future lessons where students consider whether it is appropriate to include demographic features, such as race or gender, in machine learning models. Trying to classify a shape based on an unrelated property like its color can be analogous to trying to make a decision where unrelated features like race or gender are taken into consideration. This shouldn't be a focus in this discussion, but it can be helpful to refer back to this moment in later lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2f4a5303-7f00-4845-9256-7bb51e20c7f2",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "12f9f574-62eb-48ee-a6c9-263693d17527",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Training with all of the features created a model that was less accurate than some of the other models. Why do you think that is?_\n\n**Discussion Goal:** This phenomenon occurs because AI Lab is finding patterns in places Students may have a hard time articulating this particular phenomenon, but the underlying ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert:** This prompt and the following remarks are directly addressing the misconception that that training with all of the features will lead to the most accurate model. Breaking students of this habit now will lead to  more fruitful investigations in future levels as students iterate and experiment in AI Lab to find the best models."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12f9f574-62eb-48ee-a6c9-263693d17527",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "a7159d1b-064b-4c01-804d-54f6d8aea333",
+      "position": 10,
+      "properties": {
+        "description": "Sometimes its easy to think that more features will lead to better results, but that isn't always true. Sometimes additional data can confuse a machine learning model, where AI Bot may be trying to find patterns that aren't actually there.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Do Models Get Confused?** If you have time, consider using the details panel to explore which shape AI Bot classified incorrectly and referring back to the grid of shapes. For example, AI Bot will usually misclassify the small, brown, red-bordered square and instead label it as a triangle.\n\n\\\n![](https://images.code.org/507a2647afa16ebc1fb3343e2164f650-Capture.PNG)\n\n![](https://images.code.org/6d83d797f14c4d91c5ef4b0e63e9c838-Capture.PNG)\n\n\nIf you look at the grid of shapes, you can see that many of the triangles are also small or have red outlines, and very few squares are brown. This is probably why AI Bot decided to classify the shape as a triangle, even considering the number of sides it has."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a7159d1b-064b-4c01-804d-54f6d8aea333",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
+      }
+    },
+    {
+      "key": "a69aba93-5f1e-404f-b2e3-28fcc0592415",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the following slide, which has another shapes dataset for students to explore.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Continue to the next level in Code Studio, where students are presented with another Shapes dataset. Have students try to create a model with 100% accuracy.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Students can only continue past this level if they are able to train a model that is 100% accurate. Consider checking that students completed this level as a way to show fluency with training a model in AI Lab."
+          },
+          {
+            "type": "contentCorner",
+            "markdown": "LEFT OFF HERE"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a69aba93-5f1e-404f-b2e3-28fcc0592415",
+        "lesson_activity.key": "eb0af750-0abf-4a1e-8415-15075dcc23ce"
       }
     },
     {
       "key": "03e9d78d-9686-4412-83c9-c1be163a2e47",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video demonstrating how to choose features in AI Lab, train a model, view its accuracy, and test out the model. Students will follow this process for their own data.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of Training a Model with Features activity guide to each student.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and go to the second level. This is the first time students are seeing AI Lab, which takes students through the process of training a Machine Learning model. In this first dataset, students will learn how to use AI Lab to select columns to use as features when training a dataset.\r\n\r\n\r\n#### Dataset #1: Tacos"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of Training a Model with Features activity guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and go to the second level. This is the first time students are seeing AI Lab, which takes students through the process of training a Machine Learning model. In this first dataset, students will learn how to use AI Lab to select columns to use as features when training a dataset.\n\n\n#### Dataset #1: Tacos\n"
       },
       "seeding_key": {
         "activity_section.key": "03e9d78d-9686-4412-83c9-c1be163a2e47",
@@ -8379,6 +8621,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Fruit and Veggie Explorer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro ai lab- fruit veggie widget"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "b56be402-0105-49ea-9bc7-f37830adcba9"
+      },
+      "level_keys": [
+        "ml-intro ai lab- fruit veggie widget"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ml-intro ai lab-shapes v1"
         ],
@@ -8400,8 +8665,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 2,
+      "chapter": 12,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8426,8 +8691,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 3,
+      "chapter": 13,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8452,8 +8717,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 4,
+      "chapter": 14,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8478,7 +8743,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8504,7 +8769,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8530,7 +8795,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8556,7 +8821,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8582,7 +8847,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8608,7 +8873,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -8634,7 +8899,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8660,7 +8925,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8686,7 +8951,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8712,7 +8977,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8738,7 +9003,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8764,7 +9029,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8790,7 +9055,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8816,7 +9081,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8842,11 +9107,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo model embed"
+        ],
         "progression": "Example App: Zoo Classification"
       },
       "named_level": false,
@@ -8865,7 +9133,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8891,7 +9159,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8917,7 +9185,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8943,7 +9211,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8969,7 +9237,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8995,7 +9263,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -9021,7 +9289,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9047,7 +9315,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9073,7 +9341,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9099,7 +9367,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9125,7 +9393,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9151,7 +9419,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9177,7 +9445,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9203,7 +9471,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9229,7 +9497,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9255,7 +9523,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9281,7 +9549,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9307,7 +9575,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -9333,7 +9601,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9359,7 +9627,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9385,7 +9653,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9411,7 +9679,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9437,7 +9705,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9463,7 +9731,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9489,7 +9757,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9515,7 +9783,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9541,7 +9809,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9567,7 +9835,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9593,7 +9861,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9619,7 +9887,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9645,7 +9913,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9671,7 +9939,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9697,7 +9965,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9723,7 +9991,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9749,7 +10017,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9775,7 +10043,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9801,7 +10069,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9827,7 +10095,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9853,7 +10121,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9986,6 +10254,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
         "activity_section.key": "280ddf58-b0ce-4ca6-ad91-b55243b6b638"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro ai lab- fruit veggie widget",
+        "script_level.level_keys": [
+          "ml-intro ai lab- fruit veggie widget"
+        ],
+        "lesson.key": "lesson5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "b56be402-0105-49ea-9bc7-f37830adcba9"
       }
     },
     {
@@ -11106,6 +11386,18 @@
       }
     },
     {
+      "name": "Introduction to AI Lab",
+      "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
+      "key": "introduction_to_ai_lab",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
       "name": "Isaac's Survey Data - Student Resource",
       "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy",
       "key": "isaac_s_survey_data_-_student_resource",
@@ -11369,6 +11661,18 @@
       }
     },
     {
+      "name": "Training and Testing in AI Lab",
+      "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
+      "key": "training_and_testing_in_ai_lab",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "training_and_testing_in_ai_lab"
+      }
+    },
+    {
       "name": "Troubleshoot Models",
       "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/edit",
       "key": "troubleshoot_models",
@@ -11553,6 +11857,18 @@
       "seeding_key": {
         "lesson.key": "lesson5",
         "resource.key": "intro_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "training_and_testing_in_ai_lab"
       }
     },
     {
