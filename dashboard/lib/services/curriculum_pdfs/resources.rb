@@ -110,6 +110,25 @@ module Services
           path = File.join(directory, filename)
 
           PDF.generate_from_html(page_content, path)
+
+          # we've been having some issues with these title page PDFs not
+          # existing on the filesystem when it comes time to make the rollup.
+          # It's not yet clear whether that's because this step is failing to
+          # generate or because the file is getting vanished after generation.
+          # Adding some logging here to help diagnose.
+          unless $?.success?
+            ChatClient.log(
+              "PDF generation exited with status code #{$?.exitstatus.inspect}",
+              color: 'red'
+            )
+          end
+          unless File.exist?(path)
+            ChatClient.log(
+              "File #{path.inspect} does not exist after generation",
+              color: 'red'
+            )
+          end
+
           return path
         end
 
