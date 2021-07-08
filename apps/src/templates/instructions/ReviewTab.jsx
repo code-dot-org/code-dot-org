@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
-import {demoComments} from './codeReview/commentShape';
+import {commentShape} from './codeReview/commentShape';
 import CommentEditor from './codeReview/CommentEditor';
 
 export default class ReviewTab extends Component {
-  // Once we have real comments
-  // static propTypes = {
-  //   comments: PropTypes.arrayOf(commentShape)
-  // };
+  static propTypes = {
+    comments: PropTypes.arrayOf(commentShape)
+  };
 
   state = {
     readyForReview: false
@@ -34,10 +33,12 @@ export default class ReviewTab extends Component {
   }
 
   render() {
+    const {comments} = this.props;
+
     return (
       <div style={styles.reviewsContainer}>
         {this.renderReadyForReviewCheckbox()}
-        {demoComments.map(comment => {
+        {comments.map(comment => {
           return (
             <Comment
               comment={comment}

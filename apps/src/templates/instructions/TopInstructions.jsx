@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
+import {getStore} from '@cdo/apps/redux';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
@@ -136,7 +137,8 @@ class TopInstructions extends Component {
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
-      token: null
+      token: null,
+      codeReviewComments: []
     };
 
     this.instructions = null;
@@ -155,7 +157,8 @@ class TopInstructions extends Component {
       user,
       serverLevelId,
       serverScriptId,
-      dynamicInstructions
+      dynamicInstructions,
+      displayReviewTab
     } = this.props;
     const {studentId} = this.state;
 
@@ -188,6 +191,18 @@ class TopInstructions extends Component {
               });
               this.incrementFeedbackVisitCount();
             }
+          })
+      );
+    }
+
+    if (displayReviewTab) {
+      const channelId = getStore().getState().pageConstants.channelId;
+
+      promises.push(
+        topInstructionsDataApi
+          .getCodeReviewCommentsForProject(channelId, 'yyy')
+          .done(comments => {
+            this.setState({codeReviewComments: comments});
           })
       );
     }
@@ -552,6 +567,7 @@ class TopInstructions extends Component {
 
     const {
       feedbacks,
+      codeReviewComments,
       teacherViewingStudentWork,
       rubric,
       tabSelected,
@@ -691,7 +707,10 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab ref={ref => (this.reviewTab = ref)} />
+              <ReviewTab
+                ref={ref => (this.reviewTab = ref)}
+                comments={codeReviewComments}
+              />
             )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
