@@ -1,0 +1,18 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "batwomanSay",
+    "blockText": "Batwoman say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Batwoman!",
+            "\"I am Batwoman!\""
+          ]
+        ]
+      }
+    ]
+  }
+}
