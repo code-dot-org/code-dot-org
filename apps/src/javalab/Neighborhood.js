@@ -2,6 +2,8 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
 import {NeighborhoodSignalType} from './constants';
+import {getStore} from '../redux';
+import {setIsRunning} from './javalabRedux';
 const timeoutList = require('@cdo/apps/lib/util/timeoutList');
 
 const PAUSE_BETWEEN_SIGNALS = 200;
@@ -53,7 +55,9 @@ export default class Neighborhood {
     if (this.signals.length > this.nextSignalIndex) {
       const signal = this.signals[this.nextSignalIndex];
       if (signal.value === NeighborhoodSignalType.DONE) {
-        // we are done processing commands and can stop checking for signals
+        // we are done processing commands and can stop checking for signals.
+        // Set isRunning to false and return
+        getStore().dispatch(setIsRunning(false));
         return;
       }
       const timeForSignal =
