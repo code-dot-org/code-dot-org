@@ -4,10 +4,10 @@ import {expect} from '../../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
-const DEFAULT_PROPS = {
+const DEFAULT_COMMENT = {
   id: 1,
   name: 'Charlie Brown',
-  comment:
+  commentText:
     "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
   timestampString: '2021/01/01 at 9:30 AM',
   isResolved: false,
@@ -18,8 +18,8 @@ const DEFAULT_PROPS = {
 
 describe('Code Review Comment', () => {
   const renderWrapper = (overrideProps = {}) => {
-    const combinedProps = {...DEFAULT_PROPS, ...overrideProps};
-    return shallow(<Comment {...combinedProps} />);
+    const combinedComment = {...DEFAULT_COMMENT, ...overrideProps};
+    return shallow(<Comment comment={combinedComment} />);
   };
 
   const renderAndCheckBackgroundColor = (
