@@ -12,7 +12,7 @@ const DEFAULT_COMMENT = {
   timestampString: '2021/01/01 at 9:30 AM',
   isResolved: false,
   isFromTeacher: false,
-  isFromProjectOwner: false,
+  isFromCurrentUser: false,
   isFromOlderVersionOfProject: false
 };
 
@@ -43,9 +43,9 @@ describe('Code Review Comment', () => {
     renderAndCheckBackgroundColor(color.lighter_gray);
   });
 
-  it('body has a blue background when from project owner', () => {
+  it('body has a blue background when from current user', () => {
     renderAndCheckBackgroundColor(color.lightest_cyan, {
-      isFromProjectOwner: true
+      isFromCurrentUser: true
     });
   });
 
