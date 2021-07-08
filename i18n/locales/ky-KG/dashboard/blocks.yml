@@ -1,3 +1,4 @@
+---
 ky:
   data:
     blocks:
@@ -479,6 +480,18 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': көк желе
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': жаан
+      PoemBot_setPoem:
+        options:
+          BG_EFFECT:
+            '"rainbow"': көк желе
       RyanLab_moveForward:
         text: алдыга жылдыр
       RyanLab_turnLeft:
