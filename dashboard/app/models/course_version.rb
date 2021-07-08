@@ -32,6 +32,8 @@ class CourseVersion < ApplicationRecord
     with: KEY_RE,
     message: "must contain only digits, letters, or dashes; got \"%{value}\"."
 
+  UNVERSIONED = 'unversioned'.freeze
+
   def units
     content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
