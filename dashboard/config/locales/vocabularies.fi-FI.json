@@ -1,0 +1,56 @@
+{
+  "fi-FI": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Muuttuja"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Määritä"
+        },
+        "drop/courseb/2021": {
+          "word": "Pudota"
+        },
+        "drop/coursea/2021": {
+          "word": "Pudota"
+        },
+        "binary/coursec/2021": {
+          "word": "Binääri"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "conditionals/express/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "function/express/2021": {
+          "word": "Funktio"
+        },
+        "variable/express/2021": {
+          "word": "Muuttuja"
+        },
+        "define/express/2021": {
+          "word": "Määritä"
+        },
+        "drop/pre-express/2021": {
+          "word": "Pudota"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funktio"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "define/coursee/2021": {
+          "word": "Määritä"
+        }
+      }
+    }
+  }
+}
