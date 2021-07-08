@@ -50,7 +50,7 @@ ms:
   puzzle: "Teka-teki"
   trophies: "Piala"
   courses: 'kursus-kursus'
-  unplugged_activity: 'Cabut aktiviti'
+  unplugged_activity: 'Aktiviti Nirplag'
   of: "dari"
   more: "LAGI"
   less: "KURANG"
@@ -138,6 +138,7 @@ ms:
     invite_sent: 'Jemputan dihantar'
     added_teacher: '%{name} ditambah sebagai guru anda'
     registered: "Anda telah berdaftar untuk %{section_name}."
+    already_exists: 'Anda telah menyertai bahagian %{section_name}.'
     error:
       signed_in: 'Sila daftar keluar sebelum teruskan'
       username_not_found: 'Pengguna %{username} tidak dijumpai'
@@ -146,6 +147,7 @@ ms:
       section_not_found: "Tidak dapat mencari bahagian dengan kod '%{section_code}'."
       blank_code: "Sila masukkan kod bahagian"
       cant_join_own_section: "Maaf, anda tidak dapat menyertai bahagian anda sendiri."
+      restricted_section: "Kami tidak dapat memasukkan anda ke dalam bahagian %{section_code} kerana ia dikunci. Sila hubungi guru anda untuk bantuan."
     mail:
       student_disassociated:
         subject: "Code.org pemberitahuan: %{student_name} ini tidak lagi dianggap sebagai pelajar anda."
@@ -187,10 +189,15 @@ ms:
       signin: 'Log masuk'
       signup: 'Buat akaun'
       create: 'Buat'
+      artist: 'Artis'
+      artist_k1: 'Artis (Prapembaca)'
       bounce: 'Lantunan'
       dance: 'Majlis Tari-Menari'
       flappy: 'Flappy'
+      frozen: 'Frozen'
       infinity: 'Infiniti'
+      sports: 'Sukan'
+      starwars: 'Star Wars'
     popup:
       progress: 'Kemajuan anda'
       lines: 'Total baris kod: %{lines}'
@@ -286,11 +293,12 @@ ms:
   try_reloading: 'Cuba memuat semula halaman'
   next_stage: 'Selesai! Teruskan ke tahap seterusnya'
   download_pdf: 'Bukan Plan Pembelajaran'
+  lesson_plan: 'Rancangan Pelajaran'
   view_lesson_plan: 'Lihat Rancangan Pelajaran'
   share_code:
     title: "Klik 'Mainkan' untuk lihat program saya berfungsi"
     bounce_og_title: "Semak permainan Lantun saya"
-    flappy_og_title: "Semak permainan Flappy saya"
+    flappy_og_title: "Lihat Permainan Flappy saya"
     og_description: "Saya menulis kod sendiri dengan Code.org"
   builder:
     created: "Anda mencipta skrip baru."
@@ -309,19 +317,41 @@ ms:
     dance-2019:
       title: 'Majlis Tari-Menari'
     hoc:
-      body: 'Cuba asas-asas sains komputer. Ramai yang telah mencuba.'
+      title: 'Pagar Sesat Klasik'
+      body: 'Cuba asas sains komputer. Jutaan individu telah mencubanya.'
     flappy:
       title: 'Kod Flappy'
-      body: 'ingin menulis permainan anda sendiri dalam masa kurang dari 10 minit? Cuba tutorial kod Flappy kami!'
+      body: 'Anda mahu menulis permainan anda sendiri dalam masa kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!'
     20-hour:
       title: 'Kursus Dipercepatkan'
       body: 'Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.'
       body_short: 'Mempelajari asas sains komputer dalam versi kursus 2-4 yang dipercepatkan.'
+    hoc2014:
+      try_frozen: 'Artis bersama Anna dan Elsa, daripada Frozen'
+    hoc-encryption:
+      title: "Penyulitan Mudah"
+      body: "Pelajar akan mempelajari teknik mencipta dan merengkah mesej yang disulitkan."
+    frozen:
+      title: "Frozen"
+    starwars:
+      title: "Star Wars"
+    infinity:
+      title: "Makmal Mainan Infiniti"
+      body: "Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity."
+    hero:
+      body: "Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod."
+    sports:
+      title: "Sukan"
+      body: "Membuat permainan bola keranjang atau mencampur dan memadankan merentasi sukan."
+    text-compression:
+      title: "Pemampatan Teks"
+      body: "Dalam pelajaran ini, pelajar akan menggunakan Widget Pemampatan Teks untuk memampatkan teks dengan menggantikan corak dengan simbol."
     unplugged:
       title: "Pelajaran Nirplag"
       body_short: "Jika anda tidak mempunyai komputer, cuba pelajaran nirplag di dalam kelas anda."
     unplugged_conditionals:
       title: "Bersyarat"
+      body: "Mempelajari tentang algoritma dan pernyataan bersyarat dalam aktiviti “nirplag” ini dengan menggunakan dek kad."
   landing:
     help_support: "Bantuan dan sokongan"
   multi:
@@ -364,6 +394,11 @@ ms:
       report_abuse_form:
         abuse_type:
           other: 'Lain-lain'
+  hoc_download:
+    minecraft_name: 'Jam Kod Minecraft'
+    starwars_blocks_name: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (Blok)'
+    starwars_javascript_name: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (JavaScript)'
+  view_teacher_guide: 'Lihat panduan guru'
   pd:
     form_labels:
       email: 'E-mel'

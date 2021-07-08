@@ -1,0 +1,89 @@
+{
+  "vi-VN": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Hành vi"
+        },
+        "variable/coursef/2021": {
+          "word": "Biến"
+        },
+        "internet/coursef/2021": {
+          "word": "internet"
+        },
+        "define/coursef/2021": {
+          "word": "Định nghĩa"
+        },
+        "drop/courseb/2021": {
+          "word": "Thả"
+        },
+        "programming/courseb/2021": {
+          "word": "Lập trình"
+        },
+        "drop/coursea/2021": {
+          "word": "Thả"
+        },
+        "programming/coursea/2021": {
+          "word": "Lập trình"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Chuỗi tuần tự"
+        },
+        "programming/coursec/2021": {
+          "word": "Lập trình"
+        },
+        "binary/coursec/2021": {
+          "word": "Nhị phân"
+        },
+        "programming/coursed/2021": {
+          "word": "Lập trình"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Điều kiện"
+        },
+        "sequencing/express/2021": {
+          "word": "Chuỗi tuần tự"
+        },
+        "programming/express/2021": {
+          "word": "Lập trình"
+        },
+        "behavior/express/2021": {
+          "word": "Hành vi"
+        },
+        "conditionals/express/2021": {
+          "word": "Điều kiện"
+        },
+        "function/express/2021": {
+          "word": "Hàm"
+        },
+        "variable/express/2021": {
+          "word": "Biến"
+        },
+        "define/express/2021": {
+          "word": "Định nghĩa"
+        },
+        "drop/pre-express/2021": {
+          "word": "Thả"
+        },
+        "programming/pre-express/2021": {
+          "word": "Lập trình"
+        },
+        "behavior/coursee/2021": {
+          "word": "Hành vi"
+        },
+        "copyright/coursee/2021": {
+          "word": "Bản quyền"
+        },
+        "function/coursee/2021": {
+          "word": "Hàm"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Điều kiện"
+        },
+        "define/coursee/2021": {
+          "word": "Định nghĩa"
+        }
+      }
+    }
+  }
+}

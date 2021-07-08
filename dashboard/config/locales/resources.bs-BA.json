@@ -1,0 +1,200 @@
+{
+  "bs-BA": {
+    "data": {
+      "resources": {
+        "exploring_apps/coursef/2021": {
+          "name": "Istraživanje aplikacija"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Istraživanje aplikacija"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Pomakni, Pomakni"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Pomakni, Pomakni"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Pomakni, Pomakni"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Pomakni, pomakni"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stivi i veliki projekat"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Zapetljavanje"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Zapetljavanje"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Zapetljavanje"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Zapetljavanje"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Veliki Događaj"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Veliki Događaj"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Veliki Događaj"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Vesele Mape"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Veliki Događaj"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Veliki Događaj"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Veliki Događaj"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Veliki Događaj"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Veliki Događaj"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Veliki Događaj"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binarne narukvice"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binarne narukvice"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binarne narukvice"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binarne narukvice"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binarne narukvice"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Prijenos programiranja"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Uvjeti s Kartama"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Uvjeti s Kartama"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Uvjeti s Kartama"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Uvjeti s Kartama"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Uvjeti s Kartama"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "variables_video/express/2021": {
+          "name": "Varijable"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programiranje u Paru"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Vodič za Implementaciju"
+        }
+      }
+    }
+  }
+}

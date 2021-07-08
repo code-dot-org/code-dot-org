@@ -1,0 +1,38 @@
+{
+  "mr-IN": {
+    "data": {
+      "vocabularies": {
+        "define/coursef/2021": {
+          "word": "नेमुन द्या"
+        },
+        "drop/courseb/2021": {
+          "word": "ड्रॉप"
+        },
+        "drop/coursea/2021": {
+          "word": "ड्रॉप"
+        },
+        "conditionals/coursed/2021": {
+          "word": "कंडीशनल्स "
+        },
+        "conditionals/express/2021": {
+          "word": "कंडीशनल्स "
+        },
+        "define/express/2021": {
+          "word": "नेमुन द्या"
+        },
+        "drop/pre-express/2021": {
+          "word": "ड्रॉप"
+        },
+        "copyright/coursee/2021": {
+          "word": "कॉपीराइट"
+        },
+        "conditionals/coursee/2021": {
+          "word": "कंडीशनल्स "
+        },
+        "define/coursee/2021": {
+          "word": "नेमुन द्या"
+        }
+      }
+    }
+  }
+}

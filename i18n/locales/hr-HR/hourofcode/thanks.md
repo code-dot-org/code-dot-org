@@ -1,8 +1,8 @@
 ---
-title: Hvala na prijavi za domaćina Sata Kodiranja!
+title: Hvala na prijavi za domaćina Sata kodiranja!
 ---
 
-# Hvala na prijavi za domaćina Sata Kodiranja!
+# Hvala na prijavi za domaćina Sata kodiranja!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

@@ -2636,6 +2636,273 @@
           "end game": {
             "name": "konec hry"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "moje funkce"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "malá květina"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "KVĚTY LOGIKY 2"
+          },
+          "LOGIC FLOWER": {
+            "name": "KVĚT LOGIKY"
+          },
+          "LOGIC FLOWERS": {
+            "name": "KVĚTY LOGIKY"
+          },
+          "draw a star": {
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "points": "body",
+              "length": "délka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnici"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "points": "body",
+              "length": "délka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnici"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "points": "body",
+              "length": "délka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnici"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "resetovat hru"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "postav most"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "vyčisti cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "postav krátký most"
+          },
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkce 1"
+          },
+          "function 2": {
+            "name": "funkce 2"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "nakreslit čtverec"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "proveď něco"
+          }
         }
       }
     }

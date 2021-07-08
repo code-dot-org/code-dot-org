@@ -1,0 +1,206 @@
+{
+  "sv-SE": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "'För' loop skoj"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "'För' loop skoj"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "'För' loop skoj"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "'För' loop skoj"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "'För' loop skoj"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementations Guide"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Flytta det, flytta den"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Flytta det, flytta den"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Flytta det, flytta den"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Flytta den, flytta den"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Par-programmering"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Att bli snurrig"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Att bli snurrig"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Att bli snurrig"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Att bli snurrig"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Den stora händelsen"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Den stora händelsen"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Den stora händelsen"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Implementations Guide"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Par-programmering"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Glada kartor"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Den stora händelsen"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Den stora händelsen"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Den stora händelsen"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Implementations Guide"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mina Robotic- vänner"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mina Robotic- vänner"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mina Robotic- vänner"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mina Robotic- vänner"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mina Robotic- vänner"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Par-programmering"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Den stora händelsen"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Den stora händelsen"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Den stora händelsen"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binära armband"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Binära armband"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Binära armband"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Binära armband"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Binära armband"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Implementations Guide"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Par-programmering"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Stafettprogrammering"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Villkorssatser med kort"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Villkorssatser med kort"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Villkorssatser med kort"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Villkorssatser med kort"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Villkorssatser med kort"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Implementations Guide"
+        },
+        "pair_programming/express/2021": {
+          "name": "Par-programmering"
+        },
+        "variables_video/express/2021": {
+          "name": "variabler"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Par-programmering"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementations Guide"
+        }
+      }
+    }
+  }
+}

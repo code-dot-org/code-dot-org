@@ -1,0 +1,32 @@
+{
+  "ta-IN": {
+    "data": {
+      "resources": {
+        "unplugged-video-internet/coursef/2021": {
+          "name": "இணையம்"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "வரைதாள் செய்நிரல்"
+        },
+        "variables_video/express/2021": {
+          "name": "மாறிலிகள்"
+        }
+      }
+    }
+  }
+}

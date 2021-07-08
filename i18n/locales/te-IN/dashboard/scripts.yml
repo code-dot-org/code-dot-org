@@ -1,3 +1,4 @@
+---
 te:
   data:
     script:
@@ -20,7 +21,6 @@ te:
             Events:
               name: ఈవెంట్లు
         dance:
-          title: డాన్స్ పార్టీ
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
