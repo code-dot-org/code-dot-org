@@ -2,7 +2,6 @@
 es:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" con Abeja'
       Accelerometer Events: Sucesos del acelerómetro
       Adding Images: Añadiendo los Imágenes
       Adding Screens: Añadiendo las Pantallas
@@ -70,7 +69,7 @@ es:
       Experiment with Web Lab: Experimento con el Laboratorio Web
       Exploration: Exploración
       'Exploration: For Loops': 'Exploración: Bucles "For"'
-      'Exploration: Rikki''s Poster': 'Exploración: El Póster de Rikki'
+      'Exploration: Rikki''s Poster': 'Investigación: El cartel de Rikki'
       'Exploration: Sample Apps': 'Exploración: Ejemplos de Aplicaciones'
       'Exploration: Sample Programs': 'Exploración: Ejemplos de Programas'
       'Exploration: Sample Project': 'Exploración: Ejemplos de Proyectos'
@@ -264,7 +263,76 @@ es:
       'Video: Conditionals: If and If/Else Statements': 'Vídeo: Condicionales: Sentencias
         "If" e "If/Else"'
       'Video: Dance Party Events': 'Vídeo: Fiesta de Baile - Eventos'
+      'Video: Dance Party Measures': 'Vídeo: Fiesta de Baile - Métrica'
+      'Video: Dance Party Party On!': 'Vídeo: ¡Fiesta de Baile - Fiesta!'
+      'Video: Dance Party Properties': 'Vídeo: Fiesta de Baile -  Propiedades'
+      'Video: Dance Party Warm Up': 'Vídeo: Fiesta de Baile - Calentamiento '
+      'Video: De-bugging with the Step Button': 'Vídeo: Depuración con el Botón Step'
+      'Video: Debugging with Scrat ': 'Vídeo: Depuración con Scrat '
+      'Video: Debugging with the Step Button': 'Vídeo:  Depuración con el Botón Step'
+      'Video: Events': 'Vídeo: Eventos'
+      'Video: Follow The Digital Trail': 'Vídeo: Sigue el Rastro Digital'
       'Video: For Loops': 'Vídeo: Bucles "for"'
+      'Video: Getting Loopy': 'Video: Getting Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Vídeo: Mapas Felices - Actividad
+        Desconectada'
+      'Video: Harvesting with Conditionals': 'Vídeo: Cosechar con Condicionales'
+      'Video: How to Create a Simple Function': 'Vídeo: Cómo Crear una Función Simple'
+      'Video: How to Make a Sprite': 'Vídeo: Cómo Hacer un Sprite'
+      'Video: Ice Age Loops': 'Vídeo: Bucles en la Edad de Hielo'
+      'Video: Impacts on Society': 'Vídeo: Impactos en la Sociedad'
+      'Video: Introducing Sprite Lab': 'Vídeo: Presentación del Laboratorio de Sprites'
+      'Video: Introduction to Play Lab': 'Vídeo: Introducción al Laboratorio de Juegos'
+      'Video: Loops in Artist': 'Vídeo: Bucles en Artista'
+      'Video: Loops with the Artist': 'Vídeo: Bucles con el Artista'
+      'Video: Lots of Sprites': 'Vídeo: Muchos Sprites'
+      'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducción al Laberinto
+        - Programación con Bloques'
+      'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducción al Laberinto
+        - Programación con Bloques '
+      'Video: Maze Intro: Programming with Blocks': 'Vídeo: Introducción al Laberinto:
+        Programación con Bloques'
+      'Video: Measures': 'Vídeo: Medidas'
+      'Video: Minecraft - Congratulations': 'Vídeo: Minecraft - Felicidades'
+      'Video: Minecraft - Functions': 'Vídeo: Minecraft - Funciones'
+      'Video: Minecraft - Repeat Loops': 'Vídeo: Minecraft - Bucles de Repetición'
+      'Video: Minecraft - The Agent': 'Vídeo: Minecraft - El Agente'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Vídeo: Minecraft: Viaje Acuático
+        - Condicionales'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Viaje
+        Acuático - Felicidades'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Viaje Acuático
+        - Introducción'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Viaje Acuático
+        - Repetir Hasta'
+      'Video: Nested Loops': 'Vídeo: Bucles Anidados'
+      'Video: Nested Loops with the Bee': 'Vídeo: Bucles Anidados con la Abeja'
+      'Video: Pair Programming': 'Vídeo: Programación en Pareja'
+      'Video: Pair Programming ': 'Vídeo: Programación en Pareja'
+      'Video: Programming with Blocks': 'Vídeo: Programación con Bloques'
+      'Video: Programming with Rey and BB-8': 'Vídeo: Programación con Rey y BB-8'
+      'Video: Properties': 'Vídeo: Propiedades'
+      'Video: Repeat Blocks': 'Vídeo: Bloques Repetir'
+      'Video: Repeat Blocks with BB-8': 'Vídeo: Bloques Repetir con BB-8'
+      'Video: Repeat Blocks with the Artist': 'Vídeo: Bloques Repetir con el Artista'
+      'Video: Repeat Until Blocks': 'Vídeo: Bloques Repetir Hasta '
+      'Video: Repeat Until Statements': 'Vídeo: Sentencias Repetir Hasta'
+      'Video: Sprites in Action': 'Vídeo: Sprites en Acción'
+      'Video: Star Wars Project': 'Vídeo: Proyecto Star Wars'
+      'Video: Text and Prompts': 'Vídeo: Texto y Avisos'
+      'Video: The Artist in Code Studio': 'Vídeo: El Artista en Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Vídeo: El Gran Evento - Actividad
+        Desconectada'
+      'Video: The Collector': 'Vídeo: El Coleccionista'
+      'Video: The Harvester': 'Vídeo: La Cosechadora'
+      'Video: Training Data & Bias': 'Vídeo: Datos de Entrenamiento y Sesgo'
+      'Video: Unplugged Variables in Envelopes': 'Vídeo: Variables Desconectadas en
+        Envolventes'
+      'Video: Using the Repeat Block': 'Vídeo: Utilizando el Bloque Repetir'
+      'Video: Variables in Artist': 'Vídeo: Variables en Artista'
+      'Video: Warm Up': 'Vídeo: Calentamiento'
+      'Video: While Loops with the Farmer': 'Vídeo: Bucles "While" con la Granjera'
+      'Video: Wrap-up': 'Vídeo: Recapitulación'
       Warm Up: Calentamiento
       Website Project: Proyecto de Sitio Web
       Welcome to Monster Town: Bienvenido a Monster Town
