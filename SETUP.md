@@ -106,6 +106,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
       <summary>Troubleshoot: pdftk errors</summary>
 
       * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
+      * pdftk can also be installed via gem: `sudo gem install pdftk`
     </details>
     <details>
       <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
@@ -162,7 +163,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
       If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
     </details>
 
-1. Install the Java 8 JDK: `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+1. Install the Java 8 JDK: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
