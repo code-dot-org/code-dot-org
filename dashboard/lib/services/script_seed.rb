@@ -359,7 +359,7 @@ module Services
           seed_context.levels.append(level)
         end
 
-        raise 'No level found' if level.nil?
+        raise "No level found: #{seeding_key}" if level.nil?
 
         script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]
         raise "No ScriptLevel found while seeding script: #{seed_context.script.name}" if script_level.nil?
