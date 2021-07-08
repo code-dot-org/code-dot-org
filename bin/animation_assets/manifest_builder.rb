@@ -12,6 +12,7 @@ DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
 DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/gamelab/animationLibrary.json".freeze
 SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
+SPRITELAB_MANIFEST = "animation-manifests/manifests/spritelabCostumeLibrary.json"
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -77,7 +78,7 @@ class ManifestBuilder
       info "Uploading animation-manifests/manifests/spritelabCostumeLibrary.json to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
-        "animation-manifests/manifests/spritelabCostumeLibrary.json",
+        SPRITELAB_MANIFEST,
         generate_json(animation_metadata, alias_map, category_map),
         acl: 'public-read',
         no_random: true,
