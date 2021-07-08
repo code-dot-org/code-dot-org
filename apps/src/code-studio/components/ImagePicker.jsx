@@ -12,8 +12,8 @@ const extensionFilter = {
   image: '.jpg, .jpeg, .jfif, .gif, .png',
   audio: '.mp3',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx',
-  // All valid extensions (used if type filter is not specified)
-  all: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .pdf, .doc, .docx'
+  // Default set of valid extensions (used if type filter is not specified)
+  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .pdf, .doc, .docx'
 };
 
 /**
@@ -49,9 +49,10 @@ export default class ImagePicker extends React.Component {
 
   getBody = (disableAudio, levelName, isStartMode) => {
     if (!this.props.assetChosen || this.state.mode === ImageMode.FILE) {
-      const allowedExtensions = this.props.customAllowedExtensions
-        ? this.props.customAllowedExtensions
-        : extensionFilter[this.props.typeFilter || 'all'];
+      const allowedExtensions =
+        this.props.customAllowedExtensions ||
+        extensionFilter[this.props.typeFilter] ||
+        extensionFilter.default;
       return (
         <AssetManager
           assetChosen={this.props.assetChosen}
