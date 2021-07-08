@@ -16,11 +16,9 @@
     - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
     = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
 
-  #theater{class: ('collapse' if @level.csa_view_mode != 'theater')}
-    .field
-      = f.label :preload_assets_theater, 'Preload Assets'
-      = render partial: 'levels/editors/fields/preload_assets_theater', locals: {f: f}
-
+#theater{class: ('collapse' if @level.csa_view_mode != 'theater')}
+  .field
+    = render partial: 'levels/editors/fields/preload_assets', locals: {f: f}
 
 -# This element exists instead of the _encrypted_examples element as a temporary workaround in order
 -# to facilitate level urls instead of project urls in the example solutions. This is needed because
@@ -64,9 +62,15 @@
 :javascript
   function toggleFields(val) {
     const neighborhoodFields = document.getElementById('neighborhood');
+    const theaterFields = document.getElementById('theater');
     if (val.toLowerCase() === 'neighborhood') {
       neighborhoodFields.classList.remove('collapse');
     } else {
       neighborhoodFields.classList.add('collapse');
+    }
+    if (val.toLowerCase() === 'theater') {
+      theaterFields.classList.remove('collapse');
+    } else {
+      theaterFields.classList.add('collapse');
     }
   }
