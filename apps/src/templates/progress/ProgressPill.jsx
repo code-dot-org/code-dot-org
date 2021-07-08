@@ -42,7 +42,10 @@ class ProgressPill extends React.Component {
       onSingleLevelClick
     } = this.props;
 
-    if (levels.length > 1 || disabled || onSingleLevelClick) {
+    const pillLinksToLevel =
+      !disabled && !onSingleLevelClick && levels.length === 1;
+
+    if (!pillLinksToLevel) {
       return;
     }
 

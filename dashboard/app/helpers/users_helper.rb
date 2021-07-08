@@ -262,7 +262,7 @@ module UsersHelper
           if bubble_choice_progress.present?
             progress.merge!(bubble_choice_progress.compact)
 
-            sum_time_spent = bubble_choice_progress&.values&.reduce(0) do |sum, sublevel_progress|
+            sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
             level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
