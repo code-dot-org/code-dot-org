@@ -1,3 +1,4 @@
+---
 km:
   data:
     blocks:
@@ -479,6 +480,18 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': ឥន្ទធនូ
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': ភ្លៀង
+      PoemBot_setPoem:
+        options:
+          BG_EFFECT:
+            '"rainbow"': ឥន្ទធនូ
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ
       RyanLab_turnLeft:
