@@ -7,7 +7,7 @@ const commentShape = PropTypes.shape({
   timestampString: PropTypes.string.isRequired,
   isResolved: PropTypes.bool,
   isFromTeacher: PropTypes.bool,
-  isFromProjectOwner: PropTypes.bool,
+  isFromCurrentUser: PropTypes.bool,
   isFromOlderVersionOfProject: PropTypes.bool
 });
 
@@ -21,7 +21,7 @@ const demoComments = [
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: false,
-    isFromProjectOwner: false,
+    isFromCurrentUser: false,
     isFromOlderVersionOfProject: false
   },
   {
@@ -32,7 +32,7 @@ const demoComments = [
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: true,
     isFromTeacher: false,
-    isFromProjectOwner: false,
+    isFromCurrentUser: false,
     isFromOlderVersionOfProject: true
   },
   {
@@ -43,7 +43,7 @@ const demoComments = [
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: true,
     isFromTeacher: false,
-    isFromProjectOwner: false,
+    isFromCurrentUser: false,
     isFromOlderVersionOfProject: false
   },
   {
@@ -54,18 +54,18 @@ const demoComments = [
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: true,
-    isFromProjectOwner: false,
+    isFromCurrentUser: false,
     isFromOlderVersionOfProject: false
   },
   {
     id: 5,
-    name: 'Project Owner',
+    name: 'Current User',
     commentText:
       "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
     timestampString: '2020/01/01 at 9:30 AM',
     isResolved: false,
     isFromTeacher: false,
-    isFromProjectOwner: true,
+    isFromCurrentUser: true,
     isFromOlderVersionOfProject: false
   }
 ];

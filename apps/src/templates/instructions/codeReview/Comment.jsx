@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
+import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
 
 export default class Comment extends Component {
@@ -13,7 +14,11 @@ export default class Comment extends Component {
   };
 
   renderName = () => {
-    const {name, isFromTeacher} = this.props.comment;
+    const {name, isFromTeacher, isFromCurrentUser} = this.props.comment;
+
+    if (isFromCurrentUser) {
+      return <span style={styles.name}>{msg.you()}</span>;
+    }
 
     const teacherCommentSuffix = ` (${javalabMsg.onlyVisibleToYou()})`;
     return (
@@ -31,7 +36,7 @@ export default class Comment extends Component {
       commentText,
       timestampString,
       isResolved,
-      isFromProjectOwner,
+      isFromCurrentUser,
       isFromOlderVersionOfProject
     } = this.props.comment;
 
@@ -62,7 +67,7 @@ export default class Comment extends Component {
           id={'code-review-comment-body'}
           style={{
             ...styles.comment,
-            ...(isFromProjectOwner && styles.projectOwnerComment),
+            ...(isFromCurrentUser && styles.currentUserComment),
             ...(isFromOlderVersionOfProject &&
               styles.olderVersionCommentBackgroundColor)
           }}
@@ -104,7 +109,7 @@ const styles = {
   commentContainer: {
     margin: '0 0 25px 0'
   },
-  projectOwnerComment: {
+  currentUserComment: {
     backgroundColor: color.lightest_cyan
   },
   olderVersionCommentTextColor: {color: color.light_gray},
