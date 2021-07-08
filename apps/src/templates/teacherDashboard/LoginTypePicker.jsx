@@ -11,7 +11,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2} from '../../lib/ui/Headings';
 import BaseDialog from '../BaseDialog.jsx';
-import DialogFooter from './DialogFooter';
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
@@ -42,33 +41,37 @@ class LoginTypePicker extends Component {
 
   render() {
     const {providers, setLoginType, handleCancel, disabled} = this.props;
-    const withGoogle = true;
-    //providers && providers.includes(OAuthSectionTypes.google_classroom);
+    const withGoogle =
+      providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
 
-    // update dialog style to remain consistent with other dialogs in the user flow
-    // for creating a section.
+    // Dialog styles listed below.
     const dialogStyle = {
-      padding: '20px'
+      padding: '20px',
+      overflowY: 'hidden'
     };
-
-    // anchor email address policy note to footer just above 'Cancel' button
-    const emailPolicyNoteStyle = {
-      top: '0px',
-      zIndex: '600'
+    const dialogHeaderStyle = {
+      position: 'sticky',
+      top: 0,
+      backgroundColor: '#fff',
+      overflowY: 'hidden'
     };
-
-    //AAAAAAAAAA
-    const testStyle = {
-      position: 'absolute',
-      top: '20px',
-      width: '90%',
-      backgroundColor: '#ffffff',
-      zIndex: 5
+    const thirdPartyProviderUpsellStyle = {
+      marginBottom: '10px'
+    };
+    const dialogFooterStyle = {
+      position: 'sticky',
+      bottom: 0,
+      backgroundColor: '#fff'
+    };
+    const dialogFooterEmailPolicyNoteStyle = {
+      marginBottom: '20px',
+      paddingTop: '20px',
+      borderBottom: '1px solid #000'
     };
 
     return (
@@ -81,24 +84,26 @@ class LoginTypePicker extends Component {
         fixedWidth={styleConstants['content-width']}
         hideBackdrop={false}
       >
-        <div style={testStyle}>
+        <div style={dialogHeaderStyle}>
           <Heading1>{i18n.newSectionUpdated()}</Heading1>
           <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
         </div>
-        <CardContainer>
-          {withGoogle && (
-            <GoogleClassroomCard onClick={this.openImportDialog} />
-          )}
-          {withMicrosoft && (
-            <MicrosoftClassroomCard onClick={this.openImportDialog} />
-          )}
-          {withClever && <CleverCard onClick={this.openImportDialog} />}
-          <PictureLoginCard onClick={setLoginType} />
-          <WordLoginCard onClick={setLoginType} />
-          <EmailLoginCard onClick={setLoginType} />
-        </CardContainer>
+        <div>
+          <CardContainer>
+            {withGoogle && (
+              <GoogleClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withMicrosoft && (
+              <MicrosoftClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withClever && <CleverCard onClick={this.openImportDialog} />}
+            <PictureLoginCard onClick={setLoginType} />
+            <WordLoginCard onClick={setLoginType} />
+            <EmailLoginCard onClick={setLoginType} />
+          </CardContainer>
+        </div>
         {!hasThirdParty && (
-          <div>
+          <div style={thirdPartyProviderUpsellStyle}>
             {i18n.thirdPartyProviderUpsell() + ' '}
             <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
               {i18n.learnHow()}
@@ -106,14 +111,14 @@ class LoginTypePicker extends Component {
             {' ' + i18n.connectAccountThirdPartyProviders()}
           </div>
         )}
-        <div style={emailPolicyNoteStyle}>
-          <b>{i18n.note()}</b>
-          {' ' + i18n.emailAddressPolicy() + ' '}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-            {i18n.moreInfo()}
-          </a>
-        </div>
-        <DialogFooter>
+        <div style={dialogFooterStyle}>
+          <div style={dialogFooterEmailPolicyNoteStyle}>
+            <b>{i18n.note()}</b>
+            {' ' + i18n.emailAddressPolicy() + ' '}
+            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+              {i18n.moreInfo()}
+            </a>
+          </div>
           <Button
             __useDeprecatedTag
             onClick={handleCancel}
@@ -122,7 +127,7 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
-        </DialogFooter>
+        </div>
       </BaseDialog>
     );
   }
