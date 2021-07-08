@@ -1,0 +1,16 @@
+name 'SP-VPL-21-mod2-progress-c4u'
+title 'Check for understanding'
+description ''
+question 'Which student needs to revisit and continue working on levels within Lesson 3?'
+wrong 'Student A'
+right 'Student B'
+
+markdown <<MARKDOWN
+![](https://images.code.org/62798c213bbfe7afd3786cda81a84a31-image-1625365863124.06.34 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Shapes that are outlined but not filled mean the student viewed the level but did not make significant changes to the provided code. This indicates that the student likely did not complete the assigned task. 
+
+Visit the <a href="https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress" target="blank" > *viewing student progress*</a> support article to learn more about tracking student progress. 
+MARKDOWN

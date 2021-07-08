@@ -13,9 +13,9 @@ import FeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/Fee
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {
   teacherFeedbackShape,
-  rubricShape,
-  ReviewStates
+  rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 
@@ -24,8 +24,6 @@ const ErrorType = {
   Load: 'Load',
   Save: 'Save'
 };
-
-const keepWorkingExperiment = 'teacher-feedback-review-state';
 
 export class TeacherFeedback extends Component {
   static propTypes = {
@@ -171,9 +169,7 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForTeacher() {
-    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
-    // window.appOptions.experiments, which is queried by experiments.js
-    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
+    const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
     const latestFeedback = this.state.latestFeedback;
 
     return (

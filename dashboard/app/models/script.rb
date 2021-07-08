@@ -141,7 +141,9 @@ class Script < ApplicationRecord
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.unit_directory
@@ -213,12 +215,12 @@ class Script < ApplicationRecord
     tts
     deprecated
     is_course
-    background
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
     is_migrated
     seeded_from
+    is_maker_unit
   )
 
   def self.twenty_hour_unit
@@ -254,7 +256,7 @@ class Script < ApplicationRecord
   end
 
   def self.maker_units
-    visible_units.select {|s| s.family_name == 'csd6'}
+    visible_units.select(&:is_maker_unit?)
   end
 
   def self.text_to_speech_unit_ids
@@ -1498,12 +1500,12 @@ class Script < ApplicationRecord
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
+      is_maker_unit: is_maker_unit?,
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
       deprecated: deprecated?,
       is_course: is_course?,
-      background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1548,6 +1550,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1722,7 +1725,6 @@ class Script < ApplicationRecord
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
-      :background,
       :weekly_instructional_minutes,
     ]
     boolean_keys = [
@@ -1733,7 +1735,8 @@ class Script < ApplicationRecord
       :is_course,
       :show_calendar,
       :is_migrated,
-      :include_student_lesson_plans
+      :include_student_lesson_plans,
+      :is_maker_unit
     ]
     not_defaulted_keys = [
       :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
@@ -1869,6 +1872,11 @@ class Script < ApplicationRecord
       performanceLevel4: "rubric_performance_level_4"
     }
 
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed"
+    }
+
     feedback = {}
 
     level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
@@ -1897,7 +1905,9 @@ class Script < ApplicationRecord
           performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
           performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r")
+          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
+          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
+          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
         }
       end
     end

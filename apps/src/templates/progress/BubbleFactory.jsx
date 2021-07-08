@@ -10,7 +10,7 @@ import TooltipWithIcon from './TooltipWithIcon';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
-import './bubbleStyles.scss';
+import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
 export const BubbleShape = makeEnum('circle', 'diamond', 'pill');
@@ -114,18 +114,36 @@ function getTooltipTextForLevel(level) {
   return tooltipText;
 }
 
-export function BubbleTooltip({level, children}) {
+export function BasicTooltip({icon, text, includeAssessmentIcon, children}) {
   const tooltipId = uniqueId();
   return (
     <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
       {children}
       <TooltipWithIcon
         tooltipId={tooltipId}
-        icon={getIconForLevel(level)}
-        text={getTooltipTextForLevel(level)}
-        includeAssessmentIcon={isLevelAssessment(level)}
+        icon={icon}
+        text={text}
+        includeAssessmentIcon={includeAssessmentIcon}
       />
     </div>
+  );
+}
+BasicTooltip.propTypes = {
+  icon: PropTypes.string,
+  text: PropTypes.string,
+  includeAssessmentIcon: PropTypes.bool,
+  children: PropTypes.element
+};
+
+export function BubbleTooltip({level, children}) {
+  return (
+    <BasicTooltip
+      icon={getIconForLevel(level)}
+      text={getTooltipTextForLevel(level)}
+      includeAssessmentIcon={isLevelAssessment(level)}
+    >
+      {children}
+    </BasicTooltip>
   );
 }
 BubbleTooltip.propTypes = {
