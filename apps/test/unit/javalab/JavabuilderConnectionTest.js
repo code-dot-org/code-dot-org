@@ -3,8 +3,17 @@ import {expect} from '../../util/reconfiguredChai';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import {WebSocketMessageType} from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('JavabuilderConnection', () => {
+  beforeEach(() => {
+    sinon.stub(project, 'getCurrentId');
+  });
+
+  afterEach(() => {
+    project.getCurrentId.restore();
+  });
+
   describe('onMessage', () => {
     it('passes the parsed event data to the exception handler', () => {
       const data = {
@@ -16,7 +25,7 @@ describe('JavabuilderConnection', () => {
       };
       const onOutputMessage = sinon.stub();
       const handleException = sinon.stub(ExceptionHandler, 'handleException');
-      const connection = new JavabuilderConnection(null, null, onOutputMessage);
+      const connection = new JavabuilderConnection(null, onOutputMessage);
       connection.onMessage(event);
       expect(handleException).to.have.been.calledWith(data, onOutputMessage);
     });
@@ -30,7 +39,7 @@ describe('JavabuilderConnection', () => {
         data: JSON.stringify(data)
       };
       const onOutputMessage = sinon.stub();
-      const connection = new JavabuilderConnection(null, null, onOutputMessage);
+      const connection = new JavabuilderConnection(null, onOutputMessage);
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
     });
