@@ -78,27 +78,27 @@ export default class Comment extends Component {
   }
 }
 
-// TODO: dedupe ellipsis and check styles
+const sharedIconStyles = {
+  float: 'right',
+  fontSize: '24px',
+  lineHeight: '18px',
+  margin: '0 0 0 5px'
+};
+
 const styles = {
   name: {
-    fontWeight: 'bold'
+    fontFamily: '"Gotham 5r"'
   },
   teacherNameSuffix: {
     fontStyle: 'italic'
   },
   ellipsisMenu: {
-    float: 'right',
-    fontSize: '24px',
-    lineHeight: '18px',
-    margin: '0 0 0 5px',
+    ...sharedIconStyles,
     cursor: 'pointer'
   },
   check: {
-    color: color.green,
-    float: 'right',
-    fontSize: '24px',
-    lineHeight: '18px',
-    margin: '0 0 0 5px'
+    ...sharedIconStyles,
+    color: color.green
   },
   comment: {
     clear: 'both',
