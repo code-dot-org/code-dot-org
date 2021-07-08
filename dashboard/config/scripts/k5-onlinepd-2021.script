@@ -18,7 +18,7 @@ level 'OPD-K5 GettingStarted1_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted3_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted2', progression: 'Getting Started'
-level 'OPD-K5-GettingStarted3-2021', progression: 'Getting Started'
+level 'OPD-K5 GettingStarted4_2021', progression: 'Getting Started'
 level 'OPD-K5 GettingStarted_Reflection', progression: 'Getting Started'
 
 lesson 'CS Teaching and Student Practices', display_name: 'Teaching Practices and Strategies', has_lesson_plan: false

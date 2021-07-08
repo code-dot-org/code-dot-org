@@ -1,0 +1,116 @@
+{
+  "fr-FR": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "comportement"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "input/coursef/2021": {
+          "word": "Entrée"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Apprentissage Automatique"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "PaqLes uets"
+        },
+        "define/coursef/2021": {
+          "word": "Définis"
+        },
+        "debugging/courseb/2021": {
+          "word": "Le Débogage"
+        },
+        "drop/courseb/2021": {
+          "word": "Grand écart"
+        },
+        "programming/courseb/2021": {
+          "word": "Programmation"
+        },
+        "debugging/coursea/2021": {
+          "word": "Le Débogage"
+        },
+        "drop/coursea/2021": {
+          "word": "Grand écart"
+        },
+        "programming/coursea/2021": {
+          "word": "Programmation"
+        },
+        "debugging/coursec/2021": {
+          "word": "Le Débogage"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Séquençage"
+        },
+        "programming/coursec/2021": {
+          "word": "Programmation"
+        },
+        "binary/coursec/2021": {
+          "word": "Binaire"
+        },
+        "debugging/coursed/2021": {
+          "word": "Le Débogage"
+        },
+        "programming/coursed/2021": {
+          "word": "Programmation"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Instructions conditionnelles"
+        },
+        "debugging/express/2021": {
+          "word": "Le Débogage"
+        },
+        "sequencing/express/2021": {
+          "word": "Séquençage"
+        },
+        "programming/express/2021": {
+          "word": "Programmation"
+        },
+        "behavior/express/2021": {
+          "word": "comportement"
+        },
+        "conditionals/express/2021": {
+          "word": "Instructions conditionnelles"
+        },
+        "function/express/2021": {
+          "word": "Fonction"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Définis"
+        },
+        "drop/pre-express/2021": {
+          "word": "Grand écart"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Le Débogage"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programmation"
+        },
+        "behavior/coursee/2021": {
+          "word": "comportement"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Fonction"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Instructions conditionnelles"
+        },
+        "define/coursee/2021": {
+          "word": "Définis"
+        }
+      }
+    }
+  }
+}

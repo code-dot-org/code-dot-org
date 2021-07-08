@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: วิธีจัดกิจกรรมชั่วโมงเขียนโค้ด - บริษัท
 ---
 
 {{ signup_button }}
@@ -25,7 +25,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 
-# วิธีจัดงาน Hour of Code กับนักเรียน
+# จะจัดกิจกรรมชั่วโมงเขียนโค้ดร่วมกับนักเรียนได้อย่างไร
 
 ## 1. Promote your Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.

@@ -1,0 +1,26 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "catwomanSay",
+    "blockText": "Catwoman say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Catwoman!",
+            "\"I am Catwoman!\""
+          ],
+          [
+            "Never quit!",
+            "\"Never quit!\""
+          ],
+          [
+            "Live Fast.",
+            "\"Live Fast.\""
+          ]
+        ]
+      }
+    ]
+  }
+}

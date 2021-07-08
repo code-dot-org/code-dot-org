@@ -3,10 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-
-> ##**Curriculum Value:** Teachers in Classrooms
-We believe students learn best with the help of an empowered teacher. **We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.** Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches. Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs. 
-
 # Lesson structure 
 
 ## Warm up
@@ -27,4 +23,6 @@ We believe students learn best with the help of an empowered teacher. **We desig
 
 #### Most CS Discoveries lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan. 
 
+> ##**Curriculum Value:** Teachers in Classrooms
+We believe students learn best with the help of an empowered teacher. **We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.** Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches. Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs. 
 MARKDOWN

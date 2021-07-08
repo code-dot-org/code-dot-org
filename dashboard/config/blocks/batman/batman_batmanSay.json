@@ -1,0 +1,34 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "batmanSay",
+    "blockText": "Batman say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Batman!",
+            "\"I am Batman!\""
+          ],
+          [
+            "Being kind is never wasted.",
+            "\"Being kind is never wasted.\""
+          ],
+          [
+            "When you know better, you do better.",
+            "\"When you know better, you do better.\""
+          ],
+          [
+            "You always pass failure on the way to success.",
+            "\"You always pass failure on the way to success.\""
+          ],
+          [
+            "Make each day your masterpiece.",
+            "\"Make each day your masterpiece.\""
+          ]
+        ]
+      }
+    ]
+  }
+}

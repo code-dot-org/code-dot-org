@@ -1,7 +1,6 @@
 zh-TW:
   data:
     progressions:
-      '"If/Else" with the Bee': '與小蜜蜂一起 “If/Else”'
       Accelerometer Events: 加速計事件
       Adding Images: 增加圖像
       Adding Screens: 新增畫面
@@ -107,8 +106,8 @@ zh-TW:
       'Mini-Project: Alien Dance Moves': '小專案: 外星人的舞步'
       'Mini-Project: Alien Dance Party': '小專案: 外星人跳舞派對'
       'Mini-Project: Royal Battle': '小專案: 皇家對戰'
-      'Mini-Project: Snowflake #1': '小專案: 雪花一號'
-      'Mini-Project: Snowflake #2': '小專案: 雪花二號'
+      "Mini-Project: Snowflake #1": "小專案: 雪花一號"
+      "Mini-Project: Snowflake #2": "小專案: 雪花二號"
       'Mini-Project: Swimming Fish': '小專案: 游泳的魚兒'
       'Mini-Project: Swimming Fish (continued)': "小專案: 游泳的魚兒(續)\n"
       'Mini-Project: Virtual Pet': '小專案: 虛擬寵物'

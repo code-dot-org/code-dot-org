@@ -321,6 +321,14 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': кемпірқосақ
+      PoemBot_setPoem:
+        options:
+          BG_EFFECT:
+            '"rainbow"': кемпірқосақ
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:

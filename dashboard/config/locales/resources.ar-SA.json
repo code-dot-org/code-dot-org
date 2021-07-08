@@ -1,0 +1,296 @@
+{
+  "ar-SA": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "استكشاف التطبيقات"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "استكشاف التطبيقات"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "الرسوم المتحركة في العمل"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "حلقة التكرار المسلّية"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "حلقة التكرار المسلّية"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "حلقة التكرار المسلّية"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "حلقة التكرار المسلّية"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "حلقة التكرار المسلّية"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "تشغيل المحاكاة"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "الانترنت"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "الإنترنت"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "الإنترنت"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "منتدى المعلم"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "حرّكها، حرّكها"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "حرّكها، حرّكها"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "حرّكها، حرّكها"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "حركها ! حركها"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "ستيفي والمشروع الضخم"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "حشرات البق المختفية عن الأنظار"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "القبض على المعتوهون"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "القبض على المعتوهون"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "القبض على المعتوهون"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "القبض على المعتوهون"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "الحدث الكبير"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "الحدث الكبير"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "الحدث الكبير"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "منتدى المعلم"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "الخرائط السعيدة"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "الحدث الكبير"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "الحدث الكبير"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "الحدث الكبير"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "منتدى المعلم"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "أصدقائي من الروبوت"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "أصدقائي من الروبوت"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "أصدقائي من الروبوت"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "أصدقائي من الروبوت"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "أصدقائي من الروبوت"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "الحدث الكبير"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "الحدث الكبير"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "الحدث الكبير"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "أساور الثنائية"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "أساور الثنائية"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "أساور الثنائية"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "أساور الثنائية"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "أساور الثنائية"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "منتدى المعلم"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "برمجة ورقة الرسم البياني"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "برمجة السباق"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "الشروط مع البطاقات"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "الشروط مع البطاقات"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "الشروط مع البطاقات"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "الشروط مع البطاقات"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "الشروط مع البطاقات"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "منتدى المعلم"
+        },
+        "pair_programming/express/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "الرسوم المتحركة في العمل"
+        },
+        "variables_video/express/2021": {
+          "name": "المتغيرات"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "منتدى المعلم"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "البرمجة الزوجية"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "منتدى المعلم"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "التصميم من أجل الوصول"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "دليل التنفيذ"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "منتدى المعلم"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "وثائق مختبر الرسوم المتحركة"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "es-MX": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Comportamiento"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "input/coursef/2021": {
+          "word": "Entrada"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Aprendizaje automático"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "Paquetes"
+        },
+        "define/coursef/2021": {
+          "word": "Definir"
+        },
+        "debugging/courseb/2021": {
+          "word": "Depuración"
+        },
+        "drop/courseb/2021": {
+          "word": "Caída"
+        },
+        "programming/courseb/2021": {
+          "word": "Programación"
+        },
+        "debugging/coursea/2021": {
+          "word": "Depuración"
+        },
+        "drop/coursea/2021": {
+          "word": "Caída"
+        },
+        "programming/coursea/2021": {
+          "word": "Programación"
+        },
+        "debugging/coursec/2021": {
+          "word": "Depuración"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Secuencias"
+        },
+        "programming/coursec/2021": {
+          "word": "Programación"
+        },
+        "binary/coursec/2021": {
+          "word": "Binario"
+        },
+        "debugging/coursed/2021": {
+          "word": "Depuración"
+        },
+        "programming/coursed/2021": {
+          "word": "Programación"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Condicionales"
+        },
+        "debugging/express/2021": {
+          "word": "Depuración"
+        },
+        "sequencing/express/2021": {
+          "word": "Secuencias"
+        },
+        "programming/express/2021": {
+          "word": "Programación"
+        },
+        "behavior/express/2021": {
+          "word": "Comportamiento"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionales"
+        },
+        "function/express/2021": {
+          "word": "Función"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Definir"
+        },
+        "drop/pre-express/2021": {
+          "word": "Caída"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Depuración"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programación"
+        },
+        "behavior/coursee/2021": {
+          "word": "Comportamiento"
+        },
+        "copyright/coursee/2021": {
+          "word": "Derechos de autor"
+        },
+        "function/coursee/2021": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionales"
+        },
+        "define/coursee/2021": {
+          "word": "Definir"
+        }
+      }
+    }
+  }
+}

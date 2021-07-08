@@ -1384,6 +1384,202 @@
           "end game": {
             "name": "afslut spil"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "min funktion"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "parameters": {
+              "points": "point",
+              "length": "længde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en cirkel"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "længde",
+              "repeat": "gentag"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "længde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "længde"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "tegn en stjerne"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          },
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "tegn en firkant"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gør noget"
+          }
         }
       }
     }
