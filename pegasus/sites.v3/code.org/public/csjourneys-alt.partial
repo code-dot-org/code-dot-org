@@ -77,14 +77,14 @@ social:
 </div>
 <div style="clear: both; margin-bottom:25px"></div>
 
-<div class="col-50" style="padding-bottom:15px">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Careers with CS photo">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Take your class on a CS adventure</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for live, virtual field trips, discussions, and demonstrations with NASA, Amazon and others! <i>Code.org teacher account required.</i></div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for live, virtual field trips, discussions, and demonstrations with NASA, Amazon and others!</div>
         <br>
         <br>
         <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank"><button>View opportunities</button></a>
@@ -92,16 +92,28 @@ social:
 </div>
 </div>
 
-<div class="col-50" style="padding-bottom:15px">
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/coming-soon.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Classroom speakers">
+    <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hear from a diverse group of professionals using CS to do amazing things</strong></h3>
+        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Young, diverse professionals are available to talk about their CS journeys and answer students’ questions.</div>
+        <br>
+        <a class="linktag" id="guest-speakers" href="/csjourneys/classchats-alt" target="_blank"><button>Learn more</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="career-explore" href="careers-with-cs#explore" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Explore Careers">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>View more career exploration and inspiration resources</strong></h3>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>View career exploration and inspiration resources</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our Career Exploration hub for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
-          <a class="linktag" id="career-k5" href="/careers-in-tech" target="_blank"><button>For grades K-5</button></a>
-          <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank"><button>For grades 6-12</button></a>
+          <a class="linktag" id="career-k5" href="/careers-in-tech" target="_blank">For grades K-5</a>
+          <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank">For grades 6-12</a>
   </div>
 </div>
 </div>
@@ -198,7 +210,7 @@ social:
 <div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="next-steps" href="/csjourneys/nextsteps" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Next Steps Discussions for high school students">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/next-steps-tile.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Next Steps Discussions for high school students">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Next Steps Discussions for High School Students</strong></h3>
@@ -215,7 +227,7 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>More resources for empowering students</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Make your students aware of awesome opportunities to apply for internships and scholarships, plug in with support networks, and participate in hackathons and summer programs.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students feel a strong sense of ownership over their own journeys. Point them to opportunities that empower them to take the next step, including mentorships, scholarships, and summer programs.</div>
           <a class="linktag" id="beyond-resources" href="/beyond" target="_blank"><button>View resources</button></a>
   </div>
 </div>

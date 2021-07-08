@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 15:57:00 UTC",
+    "serialized_at": "2021-07-08 01:57:12 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -253,6 +253,29 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set-up a class section"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "3ba4b9a4-e5b1-4082-abca-c90773193680"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-StudentLogIn"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -277,8 +300,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -303,8 +326,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -329,8 +352,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
@@ -355,11 +378,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-dashboard-c4u"
+        ],
         "progression": "Track student progress and provide feedback"
       },
       "named_level": false,
@@ -378,7 +404,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -404,7 +430,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -430,7 +456,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -456,7 +482,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -482,7 +508,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -508,7 +534,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -534,7 +560,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -560,7 +586,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -586,7 +612,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -612,7 +638,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -638,7 +664,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -664,7 +690,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -690,7 +716,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -734,6 +760,18 @@
         "level.key": "SP-VPL-21-mod2-ClassSection-vid",
         "script_level.level_keys": [
           "SP-VPL-21-mod2-ClassSection-vid"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd2-2021",
+        "activity_section.key": "3ba4b9a4-e5b1-4082-abca-c90773193680"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-StudentLogIn",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",

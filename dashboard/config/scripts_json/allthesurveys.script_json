@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:20 UTC",
+    "serialized_at": "2021-07-08 03:03:00 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "allthesurveys"
@@ -203,6 +203,81 @@
       },
       "seeding_key": {
         "lesson.key": "Place for testing crazy stuff",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSD pre-survey 2021",
+      "name": "CSD pre-survey 2021",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSD U2 U3 post-survey 2021",
+      "name": "CSD U2 U3 post-survey 2021",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD U2 U3 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSD U4 U5 U6 post-survey 2021",
+      "name": "CSD U4 U5 U6 post-survey 2021",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD U4 U5 U6 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSP pre-survey 2021",
+      "name": "CSP pre-survey 2021",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSP post-survey 2020",
+      "name": "CSP post-survey 2020",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP post-survey 2020",
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }
@@ -503,6 +578,174 @@
       "level_keys": [
         "Levelgroup-for-testing-stuff"
       ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSD pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-pre-survey-levelgroup_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_pilot_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_pilot_2021"
+        ],
+        "lesson.key": "CSD U2 U3 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-post-survey-intro-2019_pilot_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        ],
+        "lesson.key": "CSD U2 U3 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ],
+        "lesson.key": "CSD U4 U5 U6 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-post-survey-intro-2019_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSD U4 U5 U6 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSP pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csp-pre-survey-levelgroup_2021"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup-2020"
+        ],
+        "lesson.key": "CSP post-survey 2020",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csp-post-survey-levelgroup-2020"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -634,6 +877,83 @@
           "Levelgroup-for-testing-stuff"
         ],
         "lesson.key": "Place for testing crazy stuff",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-levelgroup_2021",
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSD pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-intro-2019_pilot_2021",
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_pilot_2021"
+        ],
+        "lesson.key": "CSD U2 U3 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021",
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        ],
+        "lesson.key": "CSD U2 U3 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-intro-2019_2021",
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ],
+        "lesson.key": "CSD U4 U5 U6 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2021",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSD U4 U5 U6 post-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pre-survey-levelgroup_2021",
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ],
+        "lesson.key": "CSP pre-survey 2021",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-levelgroup-2020",
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup-2020"
+        ],
+        "lesson.key": "CSP post-survey 2020",
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }
