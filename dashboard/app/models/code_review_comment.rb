@@ -23,6 +23,16 @@ class CodeReviewComment < ApplicationRecord
   acts_as_paranoid
 
   belongs_to :commenter, class_name: 'User'
+  belongs_to :project_owner, class_name: 'User'
 
   validates :comment, presence: true
+  validates :project_owner_id, presence: true
+
+  # Note: this should be moved to the reviewable_projects model once it exists
+  # Something like reviewable_project.user_can_review?(potential_reviewer)
+  def self.user_can_review_project?(project_owner, potential_reviewer)
+    project_owner == potential_reviewer ||
+      project_owner.student_of?(potential_reviewer) ||
+      (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+  end
 end
