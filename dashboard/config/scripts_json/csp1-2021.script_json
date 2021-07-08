@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 16:48:10 UTC",
+    "serialized_at": "2021-07-08 18:59:25 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -3845,15 +3845,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3861,7 +3858,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "csp-pre-survey-levelgroup_2021"
+        "survey_placeholder_levelgroup"
       ]
     },
     {
@@ -4958,9 +4955,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_2021",
+        "level.key": "survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",

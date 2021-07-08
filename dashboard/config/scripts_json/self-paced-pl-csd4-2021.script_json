@@ -8,29 +8,108 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 17:07:11 UTC",
+    "serialized_at": "2021-07-08 01:12:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Guidance for teaching CS Discoveries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Guidance for teaching CS Discoveries",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Engagement and learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b",
+        "lesson_activity.key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Engagement and learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-EngagementAndLearning"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-EngagementAndLearning",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b"
+      }
+    }
   ],
   "resources": [
 
