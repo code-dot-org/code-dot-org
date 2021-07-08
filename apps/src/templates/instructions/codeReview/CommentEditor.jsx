@@ -34,19 +34,19 @@ export default class CommentEditor extends Component {
           {this.state.isEditing && (
             <Button
               key="cancel"
-              text={'cancel'}
+              text={'Cancel'}
               onClick={() => this.setState({isEditing: false, comment: ''})}
               color="gray"
-              style={styles.buttons.all}
+              style={{...styles.buttons.all, ...styles.buttons.cancel}}
             />
           )}
           {this.state.isEditing && (
             <Button
-              key="confirm"
-              text={'confirm'}
+              key="submit"
+              text={'Submit'}
               onClick={() => {}}
               color="orange"
-              style={{...styles.buttons.all, ...styles.buttons.confirmation}}
+              style={{...styles.buttons.all, ...styles.buttons.submit}}
             />
           )}
         </div>
@@ -55,18 +55,28 @@ export default class CommentEditor extends Component {
   }
 }
 
-const GUTTER = 20;
 const styles = {
   buttons: {
-    all: {boxShadow: 'none'},
-    confirmation: {borderColor: color.orange}
+    all: {
+      boxShadow: 'none',
+      fontSize: '14px',
+      padding: '5px 16px'
+    },
+    submit: {
+      fontFamily: '"Gotham 5r"',
+      borderColor: color.orange
+    },
+    cancel: {
+      fontFamily: '"Gotham 4r"',
+      borderColor: color.lightest_gray
+    }
   },
   footer: {
     display: 'flex',
     alignItems: 'center',
-    padding: `${GUTTER / 2}px 0`
+    padding: '10px 0'
   },
   container: {
-    padding: `0 ${GUTTER}px`
+    padding: '0 10px'
   }
 };
