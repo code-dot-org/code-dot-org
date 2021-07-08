@@ -50,8 +50,7 @@ class BubbleChoice < DSLDefined
   def sublevels
     levels_child_levels.
       includes(:child_level).
-      where(kind: ParentLevelsChildLevel::SUBLEVEL).
-      order('position ASC').
+      sublevel.
       map(&:child_level)
   end
 
@@ -231,19 +230,28 @@ class BubbleChoice < DSLDefined
   end
 
   def setup_sublevels(sublevel_names)
-    reload
-    self.child_levels = []
+    # if our existing sublevels already match the given names, do nothing
+    return if sublevels.map(&:name) == sublevel_names
 
-    sublevel_names.each_with_index do |sublevel_name, i|
-      sublevel = Level.find_by_name!(sublevel_name)
-      ParentLevelsChildLevel.find_or_create_by!(
-        parent_level: self,
-        child_level: sublevel,
-        kind: ParentLevelsChildLevel::SUBLEVEL,
-        position: i + 1
-      )
+    # otherwise, update sublevels to match; destroy any existing relations to
+    # levels NOT in the given names, and create/update relations to the levels
+    # we want.
+    new_sublevels = Level.where(name: sublevel_names)
+
+    levels_child_levels.
+      sublevel.
+      where.not(child_level: new_sublevels).
+      destroy_all
+
+    new_sublevels.each_with_index do |new_sublevel, i|
+      relation = levels_child_levels.
+        where(child_level: new_sublevel).
+        first_or_initialize
+      relation.kind = ParentLevelsChildLevel::SUBLEVEL
+      relation.position = i + 1
+      relation.save!
     end
 
-    save!
+    reload
   end
 end

@@ -45,8 +45,14 @@ class Level < ApplicationRecord
   has_many :levels_parent_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :child_level_id
   has_many :parent_levels, through: :levels_parent_levels, inverse_of: :child_levels
 
-  has_many :levels_child_levels, -> {order('position ASC')}, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
-  has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels
+  has_many :levels_child_levels, class_name: 'ParentLevelsChildLevel', foreign_key: :parent_level_id
+  has_many :child_levels, through: :levels_child_levels, inverse_of: :parent_levels do
+    ParentLevelsChildLevel::VALID_KINDS.each do |kind|
+      define_method(kind) do
+        where(parent_levels_child_levels: {kind: kind})
+      end
+    end
+  end
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
