@@ -1245,6 +1245,271 @@
               "length": "நீளம்"
             }
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a circle": {
+            "name": "ஒரு வட்டத்தை வரையவும்"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a circle": {
+            "name": "ஒரு வட்டத்தை வரையவும்"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a circle": {
+            "name": "ஒரு வட்டத்தை வரையவும்"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a circle": {
+            "name": "ஒரு வட்டத்தை வரையவும்"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          },
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "விளையாட்டை முடிவுசெய்"
+          }
         }
       }
     }

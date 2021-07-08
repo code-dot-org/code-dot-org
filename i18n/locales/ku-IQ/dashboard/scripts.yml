@@ -1,3 +1,4 @@
+---
 ku:
   data:
     script:
@@ -10,20 +11,10 @@ ku:
           title: Ders 1
           description_audience: تەمەنی ٤-٦
           lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
-            'Artist: Shapes':
-              name: 'هونەر: شێوە'
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
           lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
             Conditionals:
               name: مەرجیەکان
             Graph Paper Programming:
@@ -34,12 +25,6 @@ ku:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
-        Course4pre:
-          lessons:
-            'Artist: Loops':
-              name: 'هونەرمەند: خولانەوەکان'
-            'Artist: Sequence':
-              name: 'هونەر: ریز'
         usability:
           lessons:
             Variables:
@@ -121,32 +106,14 @@ ku:
               name: هاوشێوەسازی ئینتەرنێت
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         asUnplugged:
@@ -177,12 +144,6 @@ ku:
               name: گرێکان
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         grade3:
@@ -268,7 +229,7 @@ ku:
             Functions:
               name: فرمانەکان
             'null':
-              name: 'بەتاڵ'
+              name: بەتاڵ
         artist-and-bb8:
           lessons:
             Bounce:
@@ -391,7 +352,7 @@ ku:
         andrea-test:
           lessons:
             'null':
-              name: 'بەتاڵ'
+              name: بەتاڵ
         coursec-2019:
           lesson_groups:
             csf_loops:

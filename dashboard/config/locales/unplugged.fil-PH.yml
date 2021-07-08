@@ -443,52 +443,6 @@ fil:
           ng isang mas malaki na programa. Ang araling ito ay makakatulong sa iyong
           mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama ng mga
           piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
-      swipeRightPassThrough:
-        title: Sesyon ng mga Sitwasyon sa Pagsungko
-        desc: "# Sesyon ng mga Sitwasyon sa Pagsungko\r\n\r\n## Swipe Right for CS\r\nPara
-          sa sesyong ito, gagamit tayo ng isang kagamitan na tinatawag na \"Swipe
-          Right for CS\", kung saan ito ay ginawa ng ating mga kasamahan sa MIT. Sa
-          Swipe Right for CS, makakabasa ng mga iilang profile ng mga estudyante at
-          tingnan ang mga partikular na mga pahayag na maaari mong gamitin para makumbinsi
-          mo sila na mag-enroll sa iyong Mga Prinsipyo sa CS na kurso.\r\n\r\n###
-          Paano ito Gumagana\r\nHabang naglalaro ng Swipe Right for CS na laro, makakakita
-          ka ng isang serye ng mga pahayag na maaari mong sabihin sa bawat estudyante.
-          Ikaw ay mag-swipe pakanan sa mga pahayag na naisip mo na epektibo sa pagkumbinsi
-          sa mga estudyante na mag-enroll sa kurso at mag-swipe pakaliwa sa mga pahayag
-          na naisip mo na hindi epektibo. Sa loob ng sesyon, tatalakayin natin bilang
-          isang grupo ang iyong mga naisip sa mga tipo ng mga pahayag na pinaka-epektibo
-          para makuha ang isang estudyante na mag-enrol sa CS at ikaw rin ay magkakaroon
-          ng pagkakataon na makita kung paano ang ibang mga tao sa iyong workshop
-          nag-swipe sa bawat isa sa mga argumento. \r\n\r\n\r\nKapag pinindot mo ang
-          \"continue below\", ipapadala ka namin sa isang laro, at ipasa ang Code.org
-          na email address na ginamit mo sa pag-login."
-      swipeRightPassThrough-test123:
-        title: Sesyon ng mga Sitwasyon sa Pagsungko
-        desc: "# Sesyon ng mga Sitwasyon sa Pagsungko\r\n\r\n## Swipe Right for CS\r\nPara
-          sa sesyong ito, gagamit tayo ng isang kagamitan na tinatawag na \"Swipe
-          Right for CS\", kung saan ito ay ginawa ng ating mga kasamahan sa MIT. Sa
-          Swipe Right for CS, makakabasa ng mga iilang profile ng mga estudyante at
-          tingnan ang mga partikular na mga pahayag na maaari mong gamitin para makumbinsi
-          mo sila na mag-enroll sa iyong Mga Prinsipyo sa CS na kurso.\r\n\r\n###
-          Paano ito Gumagana\r\nHabang naglalaro ng Swipe Right for CS na laro, makakakita
-          ka ng isang serye ng mga pahayag na maaari mong sabihin sa bawat estudyante.
-          Ikaw ay mag-swipe pakanan sa mga pahayag na naisip mo na epektibo sa pagkumbinsi
-          sa mga estudyante na mag-enroll sa kurso at mag-swipe pakaliwa sa mga pahayag
-          na naisip mo na hindi epektibo. Sa loob ng sesyon, tatalakayin natin bilang
-          isang grupo ang iyong mga naisip sa mga tipo ng mga pahayag na pinaka-epektibo
-          para makuha ang isang estudyante na mag-enrol sa CS at ikaw rin ay magkakaroon
-          ng pagkakataon na makita kung paano ang ibang mga tao sa iyong workshop
-          nag-swipe sa bawat isa sa mga argumento. \r\n\r\n\r\nKapag pinindot mo ang
-          \"continue below\", ipapadala ka namin sa isang laro, at ipasa ang Code.org
-          na email address na ginamit mo sa pag-login."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
-        desc: "# Brad Repro Bug 000\r\n## Sinubukang gawin ang bug na inulat ni Brooke\r\nna
-          proseso gaya ng sumunod:\r\n1. nagsimula sa isang `unplugged` na antas.
-          Naglagay ng mga impormasyon. Pinindot ang save and publish.\r\n2. \"Nasira\"
-          ang antas\r\n3. Gumawa ng `markdown` na antas na may kaparehong nilalaman
-          at parehong pangalan. Nilagyan ng tsek ang kahon para i-encrypt ito. Pinindot
-          ang save at publish"
       courseB_unplugged_MRF_2018:
         title: Ang Robot Kong Mga Kaibigan
       PlantASeed_2018:

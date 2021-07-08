@@ -284,7 +284,7 @@
           "dance_callout_11_b": "Nowy blok!"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Poszukaj tutaj bloków „wszystkie kaczki”"
+          "dance_party_11_5_groups": "Poszukaj tutaj bloków 'wszystkie kaczki'"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Ta niewielka instrukcja każe komputerowi wykonać ten WIELKI kawałek kodu z tak taką nazwą w obszarze roboczym."
@@ -1728,6 +1728,38 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Przeciągnij  bloki z przybornika do swojego obszaru roboczego."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "W tej łamigłówce masz dostęp tylko do jednego z tych bloków. "
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Pamiętaj, aby sprawdzić czy KAŻDA chmurka ma KWIATEK. Plastrów miodu nie musisz sprawdzać w ogóle.",
+          "4_5_Bee_Conditionals_2_2": "Potrzebujesz pomocy? Kliknij tutaj, aby obejrzeć WIDEO z podpowiedzią!"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "To jest Twój limit bloków. Mówi Ci, ile takich bloków zostało do wykorzystania."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po połączeniu wszystkich bloków naciśnij \"Uruchom\", aby uruchomić program."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "To jest przybornik. Tutaj znajdziesz dodatkowe bloki, aby ukończyć swoje łamigłówki."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Możesz przeciągać bloki dodatkowe do przybornika, aby je odrzucić.",
+          "stone_block_2": "Szare bloki nie mogą być usunięte."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Te bloki nie mają na sobie liczb. Możesz użyć tylu, ile chcesz!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Zacznij używając tego bloku, aby pomóc utworzyć pierwszy kwadrat."
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
         }
       }
     }

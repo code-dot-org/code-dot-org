@@ -218,7 +218,7 @@ th:
         C2_maze_intro: บทนำเขาวงกต
         C2_artist_intro: แนะนำศิลปิน
         C2_zuck_repeat_loop: ลูปเขาวงกต
-        C2_artist_loops: ศิลปิน Loops
+        C2_artist_loops: ศิลปินกับลูป
         C2_artist_debugging: การดีบั๊ก (Debugging) ศิลปิน
         C2_bee_loops: ผึ้ง Loops
         C2_bee_debugging: การดีบั๊ก (Debugging) ผึ้ง
@@ -230,7 +230,7 @@ th:
         C2_paper_airplanes: เครื่องบินกระดาษ
         C3_maze_level_4: ลูปเขาวงกต
         C3_artist_intro: แนะนำศิลปิน
-        C3_artist_functions: ฟังก์ชั่น ศิลปิน
+        C3_artist_functions: ศิลปินกับฟังก์ชัน
         C3_bee_functions: ฟังก์ชั่น ผึ้ง
         C3_bee_conditionals: ผึ้ง Conditionals
         C3_maze_conditionals: เขาวงกต Conditionals
@@ -244,6 +244,7 @@ th:
         C4_intro: บทเกริ่นนำ
         C4_loops_zombie: ลูป
         C4_bee_conditional: ผึ้ง Conditionals
+        C4_variables_artist: ตัวแปร - ศิลปิน
         C4_variables_playlab: ตัวแปร - เพลย์แลป
         C4_for_loops: การวนรอบ
         C4_for_loops_bee: การวนรอบ
@@ -254,7 +255,7 @@ th:
         C4_unplugged_algorithms: อัลกอริทึมกับแทนแกรม
         C4_unplugged_forloops: การวนรอบ
         CSF_a_b_artist_loops: ลูปกับศิลปิน
-        CSF_artist_angles: เรื่องของมุม กับศิลปิน
+        CSF_artist_angles: เรื่องของมุมกับศิลปิน
         CSF_collector_k1_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
         CSF_collector_text_blocks: 'พื้นฐานด้านวิทยาการคอมพิวเตอร์: นักสะสม'
         CSF_debugging_k1_blocks: การแก้ไขจุดบกพร่อง
@@ -265,24 +266,26 @@ th:
         CSF_stevie_big_project: สตีวี่และโครงการใหญ่
         CSF_unspotted_bugs: บั๊กที่รอดหูรอดตาไป
         CSF_zuck_loops_short: ลูปทำซ้ำ (Repeat Loop)
+        frozen_intro: บทเกริ่นนำชั่วโมงของการเขียนโค้ด
         frozen_loops: ลูปเบื้องต้น
-        frozen_functions: ฟังก์ชั่นเบื้องต้น
+        frozen_functions: ฟังก์ชันเบื้องต้น
         playlab_intro: เพลย์แลปเบื้องต้น
         playlab_events: อีเวนท์เพลย์แลป
         playlab_repeat_forever: เพลย์แลป ทำซ้ำตลอดไป
         infinity_playlab_intro: เพลย์แลป - บทเกริ่นนำ
         infinity_playlab_events: อีเวนท์-เพลย์แลป
         infinity_playlab_repeat_forever: เพลย์แลป ทำซ้ำตลอดไป
-        csp_applab_functions: ฟังก์ชั่นเบื้องต้น
+        csp_applab_functions: ฟังก์ชันเบื้องต้น
         csp_applab_functions_parameters: ฟังก์ชันกับพารามิเตอร์
         csp_applab_loops: ลูป
-        starwars_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ'
+        csp_cs_is_changing_everything: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง
+        starwars_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - บทเกริ่นนำ'
         starwars_typing: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - จาวาสคริปต์'
         starwars_events: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์'
-        starwars_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย'
-        starwars_blocks_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - แนะนำ'
+        starwars_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดี'
+        starwars_blocks_intro: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - บทเกริ่นนำ'
         starwars_blocks_events: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - อีเว้นหรือเหตุการณ์'
-        starwars_blocks_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดีด้วย'
+        starwars_blocks_congrats: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด - ขอแสดงความยินดี'
         mc_intro: Minecraft - บทนำ
         mc_repeat: Minecraft - ซ้ำ
         mc_if_statements: Minecraft - ข้อความที่มีคำว่า หากมี
@@ -311,6 +314,7 @@ th:
         CSF_scrat_loops_K1: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_scrat_loops_CF: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_loops_AB: ลูป
+        CSF_StarWars_ProjectIntro: แนะนำโปรเจ็กต์สตาร์วอร์ส
         mc_2018_intro: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องบทนำ'
         MC_2018_loops: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องทำซ้ำจนกระทั่ง'
         mc_2018_conditionals: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องเงื่อนไขต่างๆ'
@@ -326,6 +330,8 @@ th:
         hoc_dance_events_2019: Dance Party 2019 - กิจกรรม
         hoc_dance_measures_2019: Dance Party 2019 - ประเมิน
         hoc_dance_properties_2019: Dance Party 2019 - คุณสมบัติ
+        playlab_2021: เพลย์แลปเบื้องต้น
+        playlab_2021_reader: เพลย์แลปเบื้องต้น
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

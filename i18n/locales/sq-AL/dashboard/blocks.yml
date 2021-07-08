@@ -412,20 +412,14 @@ sq:
         options:
           DIR:
             "'ahead'": përpara
-            "'right'": në të djathtë
-            "'left'": në të majtë
       craft_ifStandingOn:
         text: |-
           nëse je ngritur {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": korali blu
-            "'redCoralBlock'": korali i kuq
             "'sand'": rërë
-            "'wool_blue'": ujë i thellë
             "'planksOak'": dru lisi
-            "'seaLantern'": fari i detit
       craft_ifStandingOnLimit:
         text: |-
           nëse je ngritur {TYPE}
@@ -433,38 +427,10 @@ sq:
         options:
           TYPE:
             "'sand'": rërë
-            "'darkPrismarine'": primarine e errët
-            "'seaLantern'": fari i detit
       craft_moveForward:
         text: lëviz përpara
       craft_placeBlock:
         text: vendos {blockType}
-        options:
-          blockType:
-            '"strippedOak"': lis i zhveshur
-            '"strippedDarkOak"': lis i i errët i zhveshur
-            '"stoneBricks"': tulla guri
-            '"mossyStoneBricks"': tulla guri me myshk
-            '"crackedStoneBricks"': tulla guri të thyera
-            '"blueCoralBlock"': blloku i koraleve blu
-            '"pinkCoralBlock"': blloku i koraleve të kuqe
-            '"magentaCoralBlock"': blloku i koraleve të purpurta
-            '"redCoralBlock"': blloku i koraleve të kuqe
-            '"yellowCoralBlock"': blloku i koraleve të verdha
-            '"blueDeadCoralBlock"': blloku i vdekur i koraleve blu
-            '"pinkDeadCoralBlock"': blloku i vdekur i koraleve rozë
-            '"magentaDeadCoralBlock"': blloku i vdekur i koraleve të purpurta
-            '"readDeadCoralBlock"': blloku i vdekur i koraleve të kuqe
-            '"yellowDeadCoralBlock"': blloku i vdekur i koralve të verdha
-            '"prismarine"': prismarine
-            '"darkPrismarine"': primarine e errët
-            '"seaLantern"': fari i detit
-            '"packedIce"': akull i paketuar
-            '"blueIce"': akull blu
-            '"blackConcrete"': beton i zi
-            '"seaGrass"': bar deti
-            '"kelp"': leshterik
-            '"polishedGranite"': granit i lëmuar
       craft_placePrismarine:
         text: vendos prismarinen
       craft_placeTorch:
@@ -481,12 +447,8 @@ sq:
         text: vezë peshku {ENTITY}
         options:
           ENTITY:
-            '"cod"': merluc
             '"dolphin"': delfin
-            '"salmon"': salmon
-            '"seaTurtle"': breshkë deti
             '"squid"': kallamar
-            '"tropicalFish"': peshk tropikal
       craft_turn:
         text: kthehu {DIR}
         options:

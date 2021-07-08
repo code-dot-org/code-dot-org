@@ -82,7 +82,9 @@
         "frozen square loop 3x": "Hajde da napravimo tri kvadrata, okrečući nakon svakog kvadrata. Obavezno okreni za 120 stepeni prije svakog kvadrata.",
         "frozen square snowflake": "Možeš li napraviti pahulju snijega koristeći \"Ponavljaj\" blok za pravljenje kvadrata 10 puta, a onda upotrijebiti \"Okreni\" blok da bi se između crtanja svakog od oblika okrenulo za 36 stepeni?",
         "courseD_bee_nestedLoops8_2021": "Sakupi nektar iz svakog cvijeta i napravi med u svakom saću meda. Upotrijebi ugniježdenu petlju. ",
-        "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?"
+        "courseF_bee2": "Možeš li upotrijebiti petlju da sakupiš sav nektar?",
+        "CourseD_Dance_2020_05_2021": "_Sada smo napredovali!_\n\nDodajte još jedan blok od <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"takta\"</title></block></xml> u svoj radni prostor. Neka plesač započne novi pokret nakon 6 taktova.",
+        "courseD_maze_nestedLoops4_2021": "Dovedi me do suncokreta!"
       }
     }
   }

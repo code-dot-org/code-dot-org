@@ -8,17 +8,10 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           MOVE1:
             MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
@@ -47,36 +40,20 @@ vi:
         text: sau {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': nhịp
             '"seconds"': giây
       Dancelab_changeColorBy:
         text: thay đổi {METHOD} {COLOR} theo {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': sắc độ
-            '"saturation"': độ bão hòa
-            '"brightness"': độ sáng
       Dancelab_changeMoveEachLR:
         text: "{GROUP} {MOVE} {DIR} mãi mãi"
         options:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': tất cả kỳ lân
           MOVE:
-            '"next"': "(Tiếp theo)"
-            '"prev"': "(Trước)"
-            '"rand"': "(Ngẫu nhiên)"
             MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
@@ -92,9 +69,6 @@ vi:
         text: "{SPRITE} {MOVE} {DIR} mãi mãi"
         options:
           MOVE:
-            '"next"': "(Tiếp theo)"
-            '"prev"': "(Trước)"
-            '"rand"': "(Ngẫu nhiên)"
             MOVES.Roll: Cuộn người
             MOVES.ClapHigh: Vỗ tay cao
             MOVES.Dab: Đáp
@@ -113,52 +87,31 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
       Dancelab_changePropEachBy:
         text: thay đổi {GROUP} {PROPERTY} đi {VAL}
         options:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
       Dancelab_doMoveEachLR:
         text: "{GROUP} {MOVE} {DIR} một lần"
         options:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           MOVE:
-            '"rand"': "(Ngẫu nhiên)"
             MOVES.XBend: Uốn cong
             MOVES.Roll: Cuộn người
             MOVES.XClapSide: Vỗ tay
@@ -186,7 +139,6 @@ vi:
         text: "{SPRITE} {MOVE} {DIR} một lần"
         options:
           MOVE:
-            '"rand"': "(Ngẫu nhiên)"
             MOVES.XBend: Uốn cong
             MOVES.Roll: Cuộn người
             MOVES.XClapSide: Vỗ tay
@@ -216,7 +168,6 @@ vi:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': nhịp
             '"seconds"': giây
       Dancelab_everySecondsRange:
         text: 'mỗi {N} {UNIT} từ {START} đến {STOP} '
@@ -226,10 +177,6 @@ vi:
             seconds: Giây
       Dancelab_everyVerseChorus:
         text: 'mỗi {UNIT} '
-        options:
-          UNIT:
-            '"verse"': khổ
-            '"chorus"': điệp khúc
       Dancelab_getEnergy:
         text: có {RANGE}
         options:
@@ -244,15 +191,10 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
       Dancelab_getTime:
         text: Hết {UNIT}
         options:
           UNIT:
-            '"measures"': nhịp
             '"seconds"': giây
       Dancelab_ifDanceIs:
         text: |-
@@ -277,12 +219,7 @@ vi:
            {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': nhịp
             '"seconds"': giây
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
         options:
@@ -303,17 +240,10 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           LOCATION:
             "{x: 200, y: 100}": trên
             "{x: 200, y: 300}": dưới
@@ -331,31 +261,13 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           FORMAT:
-            '"border"': đường biên
-            '"inner"': hình vuông bên trong
             '"diamond"': kim cương
-            '"circle"': vòng tròn
             '"grid"': lưới
-            '"top"': hàng trên cùng
-            '"row"': hàng
-            '"bottom"': hàng dưới cùng
-            '"left"': cột trái
-            '"column"': cột
-            '"right"': cột phải
-            '"x"': criss-cross
-            '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_makeAnonymousDanceSprite:
         text: tạo một {COSTUME} mới tại {LOCATION}
@@ -371,8 +283,7 @@ vi:
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': kỳ lân
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": trên
             "{x: 200, y: 300}": dưới
@@ -392,16 +303,15 @@ vi:
           COSTUME:
             '"ALIEN"': Người ngoài hành tinh
             '"BEAR"': Gấu
-            '"CAT"': Mèo
-            '"DOG"': Chó
-            '"DUCK"': Vịt
+            '"CAT"': con mèo
+            '"DOG"': con chó
+            '"DUCK"': vịt
             '"FROG"': Ếch
-            '"MOOSE"': Nai sừng tấm
+            '"MOOSE"': tất cả nai sừng tấm
             '"PINEAPPLE"': Trái dứa
             '"ROBOT"': robot
             '"SHARK"': Cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': kỳ lân
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": trên
             "{x: 200, y: 300}": dưới
@@ -439,32 +349,14 @@ vi:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Người ngoài hành tinh
-            '"BEAR"': Gấu
-            '"CAT"': Mèo
-            '"DOG"': Chó
-            '"DUCK"': Vịt
-            '"FROG"': Ếch
-            '"MOOSE"': Nai sừng tấm
-            '"PINEAPPLE"': Trái dứa
-            '"ROBOT"': Robot
-            '"SHARK"': Cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
+            '"ALIEN"': người ngoài hành tinh
+            '"CAT"': mèo
+            '"DOG"': tất cả chó
+            '"MOOSE"': tất cả nai sừng tấm
+            '"ROBOT"': tất cả robot
           LAYOUT:
-            '"border"': đường biên
-            '"inner"': hình vuông bên trong
             '"diamond"': kim cương
-            '"circle"': vòng tròn
             '"grid"': lưới
-            '"top"': hàng trên cùng
-            '"row"': hàng
-            '"bottom"': hàng dưới cùng
-            '"left"': cột trái
-            '"column"': cột
-            '"right"': cột phải
-            '"x"': criss-cross
-            '"plus"': cộng
             '"random"': ngẫu nhiên
       Dancelab_mixColors:
         text: trộn {COLOR1} và {COLOR2}
@@ -485,73 +377,11 @@ vi:
         options:
           EFFECT:
             '"none"': Không có
-            '"circles"': Đường hầm
-            '"color_cycle"': Màu sắc
-            '"diamonds"': Kim cương
-            '"disco_ball"': Bóng Disco
-            '"fireworks"': พลุ
-            '"swirl"': Thôi miên
-            '"kaleidoscope"': Kính vạn hoa
-            '"lasers"': Sàn nhảy laser
-            '"splatter"': Tiếng lộp độp của sơn
-            '"rainbow"': Cầu vồng
-            '"snowflakes"': Tuyết
-            '"text"': Tên bài hát
-            '"galaxy"': Không gian
-            '"sparkles"': Lấp lánh
-            '"spiral"': Xoắn ốc
-            '"disco"': Hình vuông
-            '"stars"': Sao
-          PALETTE:
-            '"rave"': Đen và trắng
-            '"cool"': Mát mẻ
-            '"electronic"': ไฟฟ้า
-            '"iceCream"': ไอศกรีม
-            '"default"': Sáng
-            '"neon"': Đèn Neon
-            '"tropical"': Nhiệt đới
-            '"vintage"': Vintage
-            '"warm"': Đỏ
       Dancelab_setBackgroundEffectWithPalette:
         text: thiết lập hiệu ứng nền {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Không có
-            '"rand"': "(Ngẫu nhiên)"
-            '"circles"': Đường hầm
-            '"quads"': Góc
-            '"color_cycle"': Màu sắc
-            '"diamonds"': Kim cương
-            '"disco_ball"': Bóng Disco
-            '"fireworks"': พลุ
-            '"flowers"': ดอกไม้
-            '"growing_stars"': Ngôi sao lớn dần
-            '"swirl"': Thôi miên
-            '"kaleidoscope"': Kính vạn hoa
-            '"lasers"': Sàn nhảy laser
-            '"splatter"': Tiếng lộp độp của sơn
-            '"rainbow"': Cầu vồng
-            '"ripples_random"': Gợn sóng ngẫu nhiên
-            '"ripples"': Gợn sóng
-            '"snowflakes"': Tuyết
-            '"text"': Tên bài hát
-            '"squiggles"': Nét nguệch ngoạc
-            '"galaxy"': Không gian
-            '"sparkles"': Lấp lánh
-            '"spiral"': Xoắn ốc
-            '"disco"': Hình vuông
-            '"stars"': Sao
-            '"music_wave"': Sóng
-          PALETTE:
-            '"rave"': Đen và trắng
-            '"cool"': Mát mẻ
-            '"electronic"': ไฟฟ้า
-            '"iceCream"': ไอศกรีม
-            '"default"': Sáng
-            '"neon"': Đèn Neon
-            '"tropical"': Nhiệt đới
-            '"vintage"': Vintage
-            '"warm"': Đỏ
       Dancelab_setDanceSpeed:
         text: thay đổi tốc độ nhảy của {SPRITE} thành {SPEED}
         options:
@@ -567,17 +397,10 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           SPEED:
             '1': bình thường
             '2': nhanh
@@ -589,42 +412,11 @@ vi:
         options:
           EFFECT:
             '"none"': Không có
-            '"bubbles"': Bong bóng
-            '"confetti"': Pháo hoa giấy
-            '"hearts_red"': Trái tim
-            '"music_notes"': Nốt nhạc
-            '"pineapples"': Trái dứa
-            '"pizzas"': Pizza
-            '"smiling_poop"': Cục phân
-            '"rain"': Mưa
-            '"floating_rainbows"': Cầu vồng
-            '"smile_face"': Nụ cười
-            '"spotlight"': Tiêu điểm
-            '"color_lights"': Ánh đèn sân khấu
-            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: thiết lập hiệu ứng tiền cảnh {EFFECT}
         options:
           EFFECT:
             '"none"': Không có
-            '"rand"': "(Ngẫu nhiên)"
-            '"bubbles"': Bong bóng
-            '"hearts_colorful"': Trái tim sặc sỡ
-            '"confetti"': Pháo hoa giấy
-            '"emojis"': Emoji
-            '"hearts_red"': Trái tim
-            '"music_notes"': Nốt nhạc
-            '"paint_drip"': Sơn nhỏ giọt
-            '"pineapples"': Trái dứa
-            '"pizzas"': Pizza
-            '"smiling_poop"': Cục phân
-            '"rain"': Mưa
-            '"floating_rainbows"': Cầu vồng
-            '"smile_face"': Nụ cười
-            '"spotlight"': Tiêu điểm
-            '"color_lights"': Ánh đèn sân khấu
-            '"exploding_stars"': Lóe sáng
-            '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'thiết lập {PROPERTY} {SPRITE} thành {VAL} '
         options:
@@ -632,34 +424,20 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
       Dancelab_setPropEach:
         text: thiết lập {PROPERTY} {GROUP} thành {VAL}
         options:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
       Dancelab_setPropRandom:
         text: ngẫu nhiên hóa {PROPERTY} {SPRITE}
         options:
@@ -667,35 +445,20 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
       Dancelab_setPropRandomEach:
         text: chọn ngẫu nhiên {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
       Dancelab_setTint:
         text: thiết lập sắc thái {SPRITE} thành {VAL}
       Dancelab_setTintEach:
@@ -704,34 +467,20 @@ vi:
           THIS:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
       Dancelab_setTintEachInline:
         text: thiết lập màu {THIS} thành {VAL}
         options:
           THIS:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
       Dancelab_setTintInline:
         text: thiết lập sắc thái {SPRITE} thành {VAL}
       Dancelab_setVisible:
@@ -746,17 +495,10 @@ vi:
           THIS:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           VISIBILITY:
             'true': có thể nhìn thấy
             'false': không thể nhìn thấy
@@ -767,10 +509,6 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
           RANGE:
             '"bass"': âm trầm
             '"mid"': âm trung
@@ -781,25 +519,14 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"tint"': sắc thái
           RANGE:
             '"bass"': âm trầm
             '"mid"': âm trung
@@ -811,11 +538,6 @@ vi:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
           RANGE:
             '"bass"': âm trầm
             '"mid"': âm trung
@@ -826,26 +548,14 @@ vi:
           GROUP:
             sprites: tất cả
             '"ALIEN"': người ngoài hành tinh
-            '"BEAR"': gấu
             '"CAT"': mèo
             '"DOG"': tất cả chó
-            '"DUCK"': tất cả vịt
-            '"FROG"': tất cả ếch
             '"MOOSE"': tất cả nai sừng tấm
-            '"PINEAPPLE"': tất cả trái dứa
             '"ROBOT"': tất cả robot
-            '"SHARK"': tất cả cá mập
-            '"SLOTH"': con lười
-            '"UNICORN"': Kỳ lân
           PROPERTY:
             '"scale"': kích cỡ
             '"width"': chiều rộng
             '"height"': chiều cao
-            '"rotation"': xoay
-            '"x"': vị trí ngang
-            '"y"': vị trí dọc
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
           RANGE:
             '"bass"': âm trầm
             '"mid"': âm trung
@@ -854,38 +564,8 @@ vi:
         text: dịch {STRING}
         options:
           STRING:
-            '"music_wave"': Sóng
-            '"ripples"': Gợn sóng
-            '"ripples_random"': Gợn sóng ngẫu nhiên
-            '"quads"': Góc
-            '"flowers"': ดอกไม้
-            '"popsicles"': Kem que
-            '"squiggles"': Nét nguệch ngoạc
-            '"growing_stars"': Ngôi sao lớn dần
-            '"emojis"': Emoji
-            '"hearts_colorful"': Trái tim
-            '"paint_drio"': Sơn nhỏ giọt
-            '"exploding_stars"': Lóe sáng
-            '"row_top"': hàng trên cùng
-            '"row_bottom"': hàng dưới cùng
-            '"column_left"': cột trái
-            '"column_right"': cột phải
             '"diamond"': kim cương
-            '"mural"': Tranh tường
-            '"safari"': Khu hoang dã
-            '"network"': Mạng lưới
-            '"highway"': Đường cao tốc
-            '"stream"': Dòng suối
-            '"tile"': Gạch ngói
-            '"shadow"': Bóng tối
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -903,34 +583,9 @@ vi:
             '"left"': trái
             '"down"': xuống
             '"right"': phải
-            '"space"': không gian
-            '"enter"': nhập
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
+            '"space"': vũ trụ
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -964,10 +619,8 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
             '"speed"': tốc độ
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} chạm {SPRITE2} 123_321"
@@ -995,17 +648,14 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
             '"speed"': tốc độ
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
-            '"this"': điều này
+            '"other"': khác
       gamelab_getTime:
         options:
           UNIT:
@@ -1020,31 +670,8 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} đang chạm vào các cạnh"
       gamelab_jumpTo:
@@ -1061,40 +688,10 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
-            '"z"': z
       gamelab_locationAt:
         text: 'vị trí x: {X} y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Phía Bắc
-            '"East"': Phía Đông
-            '"South"': Phía Nam
-            '"West"': Phía Tây
       gamelab_locationMouse:
         text: vị trí chuột
       gamelab_locationOf:
@@ -1115,12 +712,6 @@ vi:
         text: di chuyển {SPRITE} {DISTANCE} pixel về phía trước
       gamelab_moveInDirection:
         text: Di chuyển {SPRITE} {DISTANCE} Pixel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Phía Bắc
-            '"East"': Phía Đông
-            '"South"': Phía Nam
-            '"West"': Phía Tây
       gamelab_moveToward:
         text: di chuyển {SPRITE} pixel {DISTANCE} hướng {TARGET}
       gamelab_newSpritePointer:
@@ -1131,12 +722,6 @@ vi:
         text: Âm thanh chơi {SOUND}
       gamelab_pointInDirection:
         text: điểm {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Phía Bắc
-            '"East"': Phía Đông
-            '"South"': Phía Nam
-            '"West"': Phía Tây
       gamelab_printText:
         text: in {TEXT}
       gamelab_randColor:
@@ -1174,8 +759,6 @@ vi:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': lưới
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': cầu
               vồng
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': khoa
-              học viễn tưởng
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sao
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dưới
               nước
@@ -1196,10 +779,8 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
             '"speed"': tốc độ
       gamelab_setProp_dropdown:
         options:
@@ -1253,10 +834,6 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: khi nhấn mũi tên trái
       gamelab_whenRightArrow:
@@ -1276,10 +853,6 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: trong khi nhấn mũi tên trái
       gamelab_whileRightArrow:
@@ -1312,10 +885,8 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1334,28 +905,22 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_groupChangeAnim:
         text: thay đổi {SELECT} {COSTUME} thành {COSTUME2}
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupChangePropBy:
         text: thay đổi {PROPERTY} của {SELECT} {COSTUME} bởi {VAL}
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_groupCreateNewSprite:
         text: tạo một {COSTUME} mới tại {LOCATION}
         options:
@@ -1374,7 +939,6 @@ vi:
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupDisplace:
         text: tất cả {COSTUME} khối {COSTUME2} từ di chuyển
       Mikelab_groupEdgesDisplace:
@@ -1382,51 +946,39 @@ vi:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}của {PROPERTY}"
         options:
-          SELECT:
-            '"average"': trung bình
-            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_groupRemoveAllBehaviors:
         text: dừng {SELECT} {COSTUME} hành vi
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} [COSTUME]123_321 điểm[1] {BEHAVIOR}"
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupRemoveTint:
         text: loại bỏ màu sắc từ {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupSetProp:
         text: thiết lập {PROPERTY} của {SELECT} {COSTUME} để {VAL}
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_groupSetTint:
         text: thay đổi màu sắc của {SELECT} {COSTUME} để {COLOR}
         options:
           SELECT:
             '"all"': tất cả
-            '"this"': điều này
       Mikelab_groupWhenClickedOn:
         text: khi {COSTUME} nhấp
       Mikelab_groupWhenXTouchesY:
@@ -1509,10 +1061,8 @@ vi:
         options:
           PROPERTY:
             '"scale"': kích cỡ
-            '"rotation"': xoay
             '"x"': hoành độ
             '"y"': tung độ
-            '"direction"': phương hướng chuyển động
       Mikelab_setupSim:
         text: |-
           thiết lập mô phỏng với
@@ -1567,10 +1117,6 @@ vi:
         text: khi nhấp chuột
       Mikelab_whenYesNoClicked:
         text: khi {KEY} nhấp
-        options:
-          KEY:
-            '"yes"': Vâng
-            '"no"': Không
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1582,6 +1128,18 @@ vi:
         text: x tọa độ {SPRITE}
       Mikelab_yLocationOf:
         text: tọa độ y của {SPRITE}
+      Outbreak_beginCongregating:
+        text: quái vật bắt đầu tụ tập
+      Outbreak_beginQuarantining:
+        text: quái vật bắt đầu cách ly khi bị ốm
+      Outbreak_beginSocialDistancing:
+        text: quái vật bắt đầu giãn cách xã hội
+      Outbreak_beginWandering:
+        text: quái vật bắt đầu lang thang
+      Outbreak_beginWearingMasks:
+        text: quái vật bắt đầu đeo khẩu trang
+      Outbreak_stopMoving:
+        text: quái vật ngừng di chuyển
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:
@@ -1619,8 +1177,6 @@ vi:
         options:
           FORMAT:
             '"grid"': lưới
-            '"border"': đường biên
-            '"row"': hàng
             '"random"': ngẫu nhiên
       aalab_someGraduallyStartIntervention:
         options:
@@ -1657,7 +1213,6 @@ vi:
           VAL:
             '0': tắt
             '1': trên
-            '"toggle"': bật/tắt
       binary_drawString:
         text: vẽ chuỗi {STR}
       binary_goTo:
@@ -1683,31 +1238,21 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
-          nếu có đường dẫn {DIR}
+          nếu đường đi {DIR}
           {STATEMENT}
         options:
           DIR:
             "'ahead'": phía trước
-            "'right'": sang bên phải
-            "'left'": sang bên trái
       craft_ifStandingOn:
         text: |-
           nếu đứng trên {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": san hô màu xanh
-            "'redCoralBlock'": san hô màu đỏ
             "'sand'": cát
-            "'wool_blue'": vùng nước sâu
             "'planksOak'": ván cây sồi
-            "'seaLantern'": ngọn đèn biển
       craft_ifStandingOnLimit:
         text: |-
           nếu đứng trên {TYPE}
@@ -1715,47 +1260,19 @@ vi:
         options:
           TYPE:
             "'sand'": cát
-            "'darkPrismarine'": prismarine màu tối
-            "'seaLantern'": ngọn đèn biển
       craft_log:
         text: đăng nhập thư {MESSAGE}
       craft_moveForward:
         text: đi thẳng
       craft_placeBlock:
         text: đặt {blockType}
-        options:
-          blockType:
-            '"strippedOak"': gỗ sồi được tước
-            '"strippedDarkOak"': gỗ sồi màu sẫm đã được tước
-            '"stoneBricks"': gạch đá
-            '"mossyStoneBricks"': gạch đá phủ đầy rêu
-            '"crackedStoneBricks"': gạch đá bị nứt
-            '"blueCoralBlock"': khối san hô màu xanh
-            '"pinkCoralBlock"': khối san hô màu hồng
-            '"magentaCoralBlock"': khối san hô đỏ tươi
-            '"redCoralBlock"': khối san hô màu đỏ
-            '"yellowCoralBlock"': khối san hô màu vàng
-            '"blueDeadCoralBlock"': khối san hô chết màu xanh
-            '"pinkDeadCoralBlock"': khối san hô chết màu hồng
-            '"magentaDeadCoralBlock"': khối san hô chết màu đỏ tươi
-            '"readDeadCoralBlock"': khối san hô chết màu đỏ
-            '"yellowDeadCoralBlock"': khối san hô chết màu vàng
-            '"prismarine"': prismarine
-            '"darkPrismarine"': prismarine màu tối
-            '"seaLantern"': ngọn đèn biển
-            '"packedIce"': khối băng được đóng gói
-            '"blueIce"': khối băng màu xanh
-            '"blackConcrete"': khối bê tông màu đen
-            '"seaGrass"': cỏ biển
-            '"kelp"': rong biển
-            '"polishedGranite"': đá granit được đánh bóng
       craft_placePrismarine:
         text: đặt prismarine
       craft_placeTorch:
         text: đặt đuốc
       craft_repeatUntilConduit:
         text: |-
-          lặp lại cho đến khi hoàn thành ống dẫn
+          lặp lại đến khi đường dẫn hoàn thành
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
@@ -1765,12 +1282,8 @@ vi:
         text: đẻ trứng {ENTITY}
         options:
           ENTITY:
-            '"cod"': cá tuyết
             '"dolphin"': cá heo
-            '"salmon"': cá hồi
-            '"seaTurtle"': rùa biển
             '"squid"': mực ống
-            '"tropicalFish"': cá nhiệt đới
       craft_turn:
         text: rẽ {DIR}
         options:

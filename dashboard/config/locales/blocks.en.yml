@@ -1864,6 +1864,8 @@ en:
         text: set poem title {TITLE}
       PoemBot_showPoem:
         text: show poem
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:

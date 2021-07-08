@@ -18,6 +18,7 @@ nn:
       Game/Score: Spel/Poengsum
       Games/Score: Spel/Poengsum
       Groups: Grupper
+      Location: Stad
       Locations: Stadar
       Logic: Logikk
       Loops: Løkker

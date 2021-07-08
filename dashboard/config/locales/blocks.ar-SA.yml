@@ -10,17 +10,10 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           MOVE1:
             MOVES.Roll: الدحرجة
             MOVES.ClapHigh: التصفيق بصوت عالٍ
@@ -51,36 +44,20 @@ ar:
         text: بعد {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': الإجراءات
             '"seconds"': ثوان
       Dancelab_changeColorBy:
         text: غيّر {COLOR} {METHOD} بمقدار {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': درجة اللون
-            '"saturation"': التشبّع اللوني
-            '"brightness"': السطوع
       Dancelab_changeMoveEachLR:
         text: "{GROUP} تجري {MOVE} {DIR} للأبد"
         options:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': كل وحيدات القرن
           MOVE:
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
             MOVES.Roll: الدحرجة
             MOVES.ClapHigh: التصفيق بصوت عالٍ
             MOVES.Dab: التربيت
@@ -97,9 +74,6 @@ ar:
         text: "{SPRITE} تجري {MOVE} {DIR} للأبد"
         options:
           MOVE:
-            '"next"': "(التالي)"
-            '"prev"': "(السابق)"
-            '"rand"': "(عشوائي)"
             MOVES.Roll: الدحرجة
             MOVES.ClapHigh: التصفيق بصوت عالٍ
             MOVES.Dab: التربيت
@@ -119,52 +93,31 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
       Dancelab_changePropEachBy:
         text: تغيير {GROUP} {PROPERTY} من قبل {VAL}
         options:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
       Dancelab_doMoveEachLR:
         text: "{GROUP} تجري {MOVE} {DIR} مرة واحدة"
         options:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           MOVE:
-            '"rand"': "(عشوائي)"
             MOVES.XBend: ثنى
             MOVES.Roll: الدحرجة
             MOVES.XClapSide: صفق
@@ -193,7 +146,6 @@ ar:
         text: "{SPRITE} تجري {MOVE} {DIR} مرة واحدة"
         options:
           MOVE:
-            '"rand"': "(عشوائي)"
             MOVES.XBend: ثنى
             MOVES.Roll: الدحرجة
             MOVES.XClapSide: صفق
@@ -226,7 +178,6 @@ ar:
         text: 'كل {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': الإجراءات
             '"seconds"': ثوان
       Dancelab_everySecondsRange:
         text: 'كل {N} {UNIT} من {START} إلى {STOP} '
@@ -236,10 +187,6 @@ ar:
             seconds: ثوان
       Dancelab_everyVerseChorus:
         text: 'كل {UNIT} '
-        options:
-          UNIT:
-            '"verse"': بيت شعر
-            '"chorus"': لازِمَة
       Dancelab_getEnergy:
         text: احصل على {RANGE}
         options:
@@ -254,15 +201,10 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
       Dancelab_getTime:
         text: "{UNIT} المنقضي"
         options:
           UNIT:
-            '"measures"': الإجراءات
             '"seconds"': ثوان
       Dancelab_ifDanceIs:
         text: |-
@@ -288,12 +230,7 @@ ar:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': الإجراءات
             '"seconds"': ثوان
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} انتقل إلى {LOCATION}"
         options:
@@ -314,17 +251,10 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           LOCATION:
             "{x: 200, y: 100}": أعلى
             "{x: 200, y: 300}": أسفل
@@ -342,31 +272,13 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           FORMAT:
-            '"border"': الحدود
-            '"inner"': مربع داخلي
             '"diamond"': ماسة
-            '"circle"': دائرة
             '"grid"': شبكة
-            '"top"': الصف العلوي
-            '"row"': صف
-            '"bottom"': الصف السفلي
-            '"left"': العمود الأيسر
-            '"column"': عمود
-            '"right"': العمود الأيمن
-            '"x"': متقاطع
-            '"plus"': زائد
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
         text: قم بإنشاء {COSTUME} جديد في {LOCATION}
@@ -382,7 +294,6 @@ ar:
             '"PINEAPPLE"': أناناس
             '"ROBOT"': روبوت
             '"SHARK"': سمكة قرش
-            '"SLOTH"': كسلان
             '"UNICORN"': وحيد القرن
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -401,17 +312,16 @@ ar:
           يُسمى {NAME} في {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': كائن فضائي
+            '"ALIEN"': كائن فضائى
             '"BEAR"': دب
-            '"CAT"': قطة
+            '"CAT"': قطه
             '"DOG"': كلب
             '"DUCK"': بطة
             '"FROG"': ضفدع
-            '"MOOSE"': غزال موظ
+            '"MOOSE"': كل الغزلان
             '"PINEAPPLE"': أناناس
             '"ROBOT"': روبوت
             '"SHARK"': سمكة قرش
-            '"SLOTH"': كسلان
             '"UNICORN"': وحيد القرن
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -450,32 +360,14 @@ ar:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': كائنات فضائية
-            '"BEAR"': دببة
-            '"CAT"': قطط
-            '"DOG"': كلاب
-            '"DUCK"': بط
-            '"FROG"': ضفادع
-            '"MOOSE"': غزال موظ
-            '"PINEAPPLE"': أناناس
-            '"ROBOT"': روبوتات
-            '"SHARK"': أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
+            '"ALIEN"': كل الكائنات الفضائية
+            '"CAT"': كل القطط
+            '"DOG"': كل الكلاب
+            '"MOOSE"': كل الغزلان
+            '"ROBOT"': كل الروبوتات
           LAYOUT:
-            '"border"': الحدود
-            '"inner"': مربع داخلي
             '"diamond"': ماسة
-            '"circle"': دائرة
             '"grid"': شبكة
-            '"top"': الصف العلوي
-            '"row"': صف
-            '"bottom"': الصف السفلي
-            '"left"': العمود الأيسر
-            '"column"': عمود
-            '"right"': العمود الأيمن
-            '"x"': متقاطع
-            '"plus"': زائد
             '"random"': عشوائي
       Dancelab_mixColors:
         text: امزج {COLOR1} و{COLOR2}
@@ -498,73 +390,11 @@ ar:
         options:
           EFFECT:
             '"none"': لا شيء
-            '"circles"': دوائر
-            '"color_cycle"': ألوان
-            '"diamonds"': الماس
-            '"disco_ball"': كرة ديسكو
-            '"fireworks"': مفرقعات
-            '"swirl"': هيبنو
-            '"kaleidoscope"': رسم مختلف الألوان
-            '"lasers"': أرضية رقص بالليزر
-            '"splatter"': رشاش الطلاء
-            '"rainbow"': ألوان
-            '"snowflakes"': ثلج
-            '"text"': أسماء الأغاني
-            '"galaxy"': الفضاء
-            '"sparkles"': بريق
-            '"spiral"': حلزوني
-            '"disco"': مربعات
-            '"stars"': نجوم
-          PALETTE:
-            '"rave"': أسود وأبيض
-            '"cool"': رائع
-            '"electronic"': إلكتروني
-            '"iceCream"': آيس كريم
-            '"default"': ضوء
-            '"neon"': نيون
-            '"tropical"': استوائي
-            '"vintage"': الأحمر بدرجاته
-            '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
         text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': لا شيء
-            '"rand"': "(عشوائي)"
-            '"circles"': دوائر
-            '"quads"': زوايا
-            '"color_cycle"': ألوان
-            '"diamonds"': الماس
-            '"disco_ball"': كرة ديسكو
-            '"fireworks"': مفرقعات
-            '"flowers"': زهور
-            '"growing_stars"': النجوم المتنامية
-            '"swirl"': هيبنو
-            '"kaleidoscope"': رسم مختلف الألوان
-            '"lasers"': أرضية رقص بالليزر
-            '"splatter"': رشاش الطلاء
-            '"rainbow"': ألوان
-            '"ripples_random"': تموجات عشوائية
-            '"ripples"': تموجات
-            '"snowflakes"': ثلج
-            '"text"': أسماء الأغاني
-            '"squiggles"': سكويغلز
-            '"galaxy"': الفضاء
-            '"sparkles"': بريق
-            '"spiral"': حلزوني
-            '"disco"': مربعات
-            '"stars"': نجوم
-            '"music_wave"': أمواج
-          PALETTE:
-            '"rave"': أسود وأبيض
-            '"cool"': رائع
-            '"electronic"': إلكتروني
-            '"iceCream"': آيس كريم
-            '"default"': ضوء
-            '"neon"': نيون
-            '"tropical"': استوائي
-            '"vintage"': الأحمر بدرجاته
-            '"warm"': الأحمر بدرجاته
       Dancelab_setDanceSpeed:
         text: غيّر سرعة الرقص {SPRITE} إلى {SPEED}
         options:
@@ -580,17 +410,10 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           SPEED:
             '1': عادي
             '2': سريع
@@ -602,42 +425,11 @@ ar:
         options:
           EFFECT:
             '"none"': لا شيء
-            '"bubbles"': فقاعات
-            '"confetti"': نثار
-            '"hearts_red"': قلوب
-            '"music_notes"': نغمات موسيقية
-            '"pineapples"': أناناس
-            '"pizzas"': بيتزا
-            '"smiling_poop"': مفرقعات
-            '"rain"': مطر
-            '"floating_rainbows"': أقواس قزح
-            '"smile_face"': ابتسامات
-            '"spotlight"': ضوء كشاف
-            '"color_lights"': أضواء المسرح
-            '"raining_tacos"': شطائر التاكو
       Dancelab_setForegroundEffectExtended:
         text: عيّن التأثيرات الأمامية {EFFECT}
         options:
           EFFECT:
             '"none"': لا شيء
-            '"rand"': "(عشوائي)"
-            '"bubbles"': فقاعات
-            '"hearts_colorful"': قلوب ملونة
-            '"confetti"': نثار
-            '"emojis"': الرموز التعبيرية
-            '"hearts_red"': قلوب
-            '"music_notes"': نغمات موسيقية
-            '"paint_drip"': الطلاء بالتنقيط
-            '"pineapples"': أناناس
-            '"pizzas"': بيتزا
-            '"smiling_poop"': مفرقعات
-            '"rain"': مطر
-            '"floating_rainbows"': أقواس قزح
-            '"smile_face"': ابتسامات
-            '"spotlight"': ضوء كشاف
-            '"color_lights"': أضواء المسرح
-            '"exploding_stars"': النجمي
-            '"raining_tacos"': شطائر التاكو
       Dancelab_setProp:
         text: 'قم بتعيين {SPRITE} {PROPERTY} إلى {VAL} '
         options:
@@ -645,34 +437,20 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
       Dancelab_setPropEach:
         text: عيّن {GROUP} {PROPERTY} على {VAL}
         options:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
       Dancelab_setPropRandom:
         text: رتّب {SPRITE} {PROPERTY} عشوائيًا
         options:
@@ -680,35 +458,20 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
       Dancelab_setPropRandomEach:
         text: قم بالترتيب العشوائي {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
       Dancelab_setTint:
         text: عيّن اللون الخفيف {SPRITE} على {VAL}
       Dancelab_setTintEach:
@@ -717,34 +480,20 @@ ar:
           THIS:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
       Dancelab_setTintEachInline:
         text: تعيين {THIS} لون {VAL}
         options:
           THIS:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
       Dancelab_setTintInline:
         text: عيّن اللون الخفيف {SPRITE} على {VAL}
       Dancelab_setVisible:
@@ -759,17 +508,10 @@ ar:
           THIS:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           VISIBILITY:
             'true': مرئى
             'false': غير مرئي
@@ -780,10 +522,6 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
           RANGE:
             '"bass"': جهير
             '"mid"': أوسط
@@ -794,25 +532,14 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"tint"': لون خفيف
           RANGE:
             '"bass"': جهير
             '"mid"': أوسط
@@ -824,11 +551,6 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': بشكل عمودي
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
           RANGE:
             '"bass"': جهير
             '"mid"': أوسط
@@ -839,26 +561,14 @@ ar:
           GROUP:
             sprites: الكل
             '"ALIEN"': كل الكائنات الفضائية
-            '"BEAR"': كل الدببة
             '"CAT"': كل القطط
             '"DOG"': كل الكلاب
-            '"DUCK"': كل البط
-            '"FROG"': كل الضفادع
             '"MOOSE"': كل الغزلان
-            '"PINEAPPLE"': كل الأناناس
             '"ROBOT"': كل الروبوتات
-            '"SHARK"': كل أسماك القرش
-            '"SLOTH"': الكسلان
-            '"UNICORN"': وحيدات القرن
           PROPERTY:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-            '"rotation"': الدوران
-            '"x"': وضع أفقي
-            '"y"': الموضع الرأسي
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
           RANGE:
             '"bass"': جهير
             '"mid"': أوسط
@@ -867,39 +577,9 @@ ar:
         text: ترجمة {STRING}
         options:
           STRING:
-            '"music_wave"': أمواج
-            '"ripples"': تموجات
-            '"ripples_random"': تموجات عشوائية
-            '"quads"': زوايا
-            '"flowers"': زهور
-            '"popsicles"': المصاصات
-            '"squiggles"': سكويغلز
-            '"growing_stars"': النجوم المتنامية
-            '"emojis"': الرموز التعبيرية
-            '"hearts_colorful"': قلوب
-            '"paint_drio"': الطلاء بالتنقيط
-            '"exploding_stars"': النجمي
-            '"row_top"': الصف العلوي
-            '"row_bottom"': الصف السفلي
-            '"column_left"': العمود الأيسر
-            '"column_right"': العمود الأيمن
             '"diamond"': ماسة
-            '"mural"': جدارية
-            '"safari"': سفاري
-            '"network"': شبكة
-            '"highway"': طريق
-            '"stream"': جدول
-            '"tile"': قرميدة
-            '"shadow"': ظل
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': ص
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -917,35 +597,10 @@ ar:
             '"left"': اليسار
             '"down"': الأسفل
             '"right"': اليمين
-            '"space"': فضاء
-            '"enter"': يدخل
-            '"a"': أ
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
+            '"space"': الفضاء
             '"i"': i
-            '"j"': ي
-            '"k"': ك
-            '"l"': أنا
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': ف
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': ص
-            '"z"': z
-            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -979,10 +634,8 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
             '"speed"': السرعة
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} اللمسات {SPRITE2}"
@@ -1009,17 +662,13 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
             '"speed"': السرعة
       gamelab_getThisSprite:
         text: "{CHOICE} العفريت"
         options:
           CHOICE:
-            '"this"': هذا
             '"other"': أخرى
       gamelab_getTime:
         options:
@@ -1035,32 +684,9 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-            '"a"': أ
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': ي
-            '"k"': ك
-            '"l"': أنا
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': ف
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': ص
-            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} هو لمس الحواف"
       gamelab_jumpTo:
@@ -1077,41 +703,11 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-            '"a"': أ
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
             '"i"': i
-            '"j"': ي
-            '"k"': ك
-            '"l"': أنا
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': ف
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
             '"x"': x
             '"y"': ص
-            '"z"': z
       gamelab_locationAt:
         text: 'الموقع x: {X} Y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': شرق
-            '"South"': جنوب
-            '"West"': غرب
       gamelab_locationMouse:
         text: موقع الماوس
       gamelab_locationOf:
@@ -1132,12 +728,6 @@ ar:
         text: نقل {SPRITE} {DISTANCE} بكسل إلى الامام
       gamelab_moveInDirection:
         text: نقل {SPRITE} {DISTANCE} العنصورات {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': شرق
-            '"South"': جنوب
-            '"West"': غرب
       gamelab_moveToward:
         text: نقل {SPRITE} العنصورات {DISTANCE} نحو {TARGET}
       gamelab_newSpritePointer:
@@ -1148,12 +738,6 @@ ar:
         text: بلاي ساوند {SOUND}
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': شرق
-            '"South"': جنوب
-            '"West"': غرب
       gamelab_printText:
         text: طباعة {TEXT}
       gamelab_randColor:
@@ -1186,8 +770,6 @@ ar:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبكة
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': قوس
               قزح
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': الخيال
-              العلمي
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': نجوم
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت
               الماء
@@ -1207,10 +789,8 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
             '"speed"': السرعة
       gamelab_setProp_dropdown:
         options:
@@ -1264,10 +844,6 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-            '"a"': أ
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whenLeftArrow:
         text: عند الضغط على السهم الأيسر
       gamelab_whenRightArrow:
@@ -1287,10 +863,6 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-            '"a"': أ
-            '"w"': w
-            '"s"': s
-            '"d"': d
       gamelab_whileLeftArrow:
         text: طالما السهم لليسار مضغوط
       gamelab_whileRightArrow:
@@ -1322,10 +894,8 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1346,28 +916,22 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
         text: قم بتغيير {SELECT} {COSTUME} في {COSTUME2}
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupChangePropBy:
         text: تغيير {PROPERTY} من {SELECT} {COSTUME} من قبل {VAL}
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
         text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
@@ -1386,7 +950,6 @@ ar:
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupDisplace:
         text: جميع {COSTUME} كتله {COSTUME2} من الانتقال
       Mikelab_groupEdgesDisplace:
@@ -1394,51 +957,39 @@ ar:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}في {PROPERTY}"
         options:
-          SELECT:
-            '"average"': معدل
-            '"this"': هذا
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_groupRemoveAllBehaviors:
         text: وقف {SELECT} {COSTUME} السلوكيات
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} توقف {BEHAVIOR}"
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupRemoveTint:
         text: أزاله اللون من {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupSetProp:
         text: تعيين {PROPERTY} من {SELECT} {COSTUME} ل {VAL}
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_groupSetTint:
         text: تغيير لون {SELECT} {COSTUME} ل {COLOR}
         options:
           SELECT:
             '"all"': الكل
-            '"this"': هذا
       Mikelab_groupWhenClickedOn:
         text: عند النقر على {COSTUME}
       Mikelab_groupWhenXTouchesY:
@@ -1521,10 +1072,8 @@ ar:
         options:
           PROPERTY:
             '"scale"': الحجم
-            '"rotation"': الدوران
             '"x"': الموقع س
             '"y"': الموقع ص
-            '"direction"': اتجاه الحركة
       Mikelab_setupSim:
         text: |-
           محاكاة الاعداد مع
@@ -1579,10 +1128,6 @@ ar:
         text: عند النقر على الماوس
       Mikelab_whenYesNoClicked:
         text: عند النقر على {KEY}
-        options:
-          KEY:
-            '"yes"': نعم
-            '"no"': لا
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1631,8 +1176,6 @@ ar:
         options:
           FORMAT:
             '"grid"': شبكة
-            '"border"': الحدود
-            '"row"': صف
             '"random"': عشوائي
       aalab_someGraduallyStartIntervention:
         options:
@@ -1669,7 +1212,6 @@ ar:
           VAL:
             '0': إيقاف
             '1': على
-            '"toggle"': تبديل
       binary_drawString:
         text: رسم سلسلة {STR}
       binary_goTo:
@@ -1695,10 +1237,6 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-            '"a"': أ
-            '"w"': w
-            '"s"': s
-            '"d"': d
       craft_ifPath:
         text: |-
           إذا كان المسار {DIR}
@@ -1706,20 +1244,14 @@ ar:
         options:
           DIR:
             "'ahead'": في الأمام
-            "'right'": إلى اليمين
-            "'left'": إلى اليسار
       craft_ifStandingOn:
         text: |-
           إذا كنت تقف فوق {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": المرجان الأزرق
-            "'redCoralBlock'": المرجان الأحمر
             "'sand'": رمل
-            "'wool_blue'": المياه العميقة
             "'planksOak'": ألواح خشب البلوط
-            "'seaLantern'": فانوس البحر
       craft_ifStandingOnLimit:
         text: |-
           إذا كنت تقف فوق {TYPE}
@@ -1727,40 +1259,12 @@ ar:
         options:
           TYPE:
             "'sand'": رمل
-            "'darkPrismarine'": كتلة prismarine الداكنة
-            "'seaLantern'": فانوس البحر
       craft_log:
         text: رسالة التسجيل {MESSAGE}
       craft_moveForward:
         text: تحريك إلى الأمام
       craft_placeBlock:
         text: ضع {blockType}
-        options:
-          blockType:
-            '"strippedOak"': البلوط المُعرّى
-            '"strippedDarkOak"': البلوط الداكن المُعرّى
-            '"stoneBricks"': أحجار الطوب
-            '"mossyStoneBricks"': أحجار الطوب المطحلبة
-            '"crackedStoneBricks"': أحجار الطوب المتصدعة
-            '"blueCoralBlock"': كتلة المرجان الأزرق
-            '"pinkCoralBlock"': كتلة المرجان الوردي
-            '"magentaCoralBlock"': كتلة المرجان الأرجواني
-            '"redCoralBlock"': كتلة المرجان الأحمر
-            '"yellowCoralBlock"': كتلة المرجان الأصفر
-            '"blueDeadCoralBlock"': كتلة المرجان الأزرق الميت
-            '"pinkDeadCoralBlock"': كتلة المرجان الوردي الميت
-            '"magentaDeadCoralBlock"': كتلة المرجان الأرجواني الميت
-            '"readDeadCoralBlock"': كتلة المرجان الأحمر الميت
-            '"yellowDeadCoralBlock"': كتلة المرجان الأصفر الميت
-            '"prismarine"': كتلة prismarine
-            '"darkPrismarine"': كتلة prismarine الداكنة
-            '"seaLantern"': فانوس البحر
-            '"packedIce"': الجليد المكدّس
-            '"blueIce"': الجليد الأزرق
-            '"blackConcrete"': الخرسان الأسود
-            '"seaGrass"': عشب البحر
-            '"kelp"': قشّ البحر
-            '"polishedGranite"': الجرانيت المصقول
       craft_placePrismarine:
         text: ضع كتلة prismarine
       craft_placeTorch:
@@ -1777,12 +1281,8 @@ ar:
         text: بيض السمك {ENTITY}
         options:
           ENTITY:
-            '"cod"': سمك القد
             '"dolphin"': الدولفين
-            '"salmon"': السلمون
-            '"seaTurtle"': سلحفاة البحر
             '"squid"': الحبار
-            '"tropicalFish"': الأسماك الاستوائية
       craft_turn:
         text: دوّر {DIR}
         options:

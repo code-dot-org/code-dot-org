@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Panduan Cara Melakukan Jam Kod untuk Acara Maya
 ---
 
 {{ signup_button }}
@@ -20,7 +20,7 @@ While the Hour of Code is traditionally held in classrooms throughout the globe,
 Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
+<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Sebaik sahaja anda telah berhubung dengan sukarelawan, anda boleh memberikan rujukan <a href="http://hourofcode.com/us/how-to/volunteers">Panduan Cara Sukarelawan Jam Kod</a> sebagai panduan untuk menentukan topik yang berpotensi, soalan perbincangan dan banyak lagi.</li> 
 <li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
 <li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
 </ul>
@@ -43,7 +43,7 @@ If your class is expected to do their activity immediately after kickoff, you mi
 
 **Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. Anda boleh menyokongnya dengan beberapa tutorial yang disarankan serta <a href="https://hourofcode.com/us/how-to/parents">Panduan Cara Untuk Ibu Bapa</a> yang berguna ini.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
@@ -62,7 +62,7 @@ Similar to how you started the event, come together afterwards to celebrate! Her
 - Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
 - Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
 - <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your virtual Hour of Code on social media. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

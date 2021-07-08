@@ -1,8 +1,8 @@
 ---
-title: Panduan Bagaimana untuk ibu bapa
+title: Panduan cara untuk ibu bapa
 ---
 
-# How to do an Hour of Code with your child
+# Cara melakukan Jam Kod dengan anak anda
 Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
 You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
@@ -43,7 +43,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 <h3>More than one child at home?</h3>
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. Mereka akan melihat bahawa sains komputer ialah mengenai sosial dan kerjasama.
 
 <h3>Get the kids excited! </h3>
 This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
@@ -68,9 +68,9 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
-- "Teknologi tidak selalunya akan menjadi apa yang kita mahukan."
-- "Belajar untuk memprogram adalah sama seperti belajar suatu bahasa yang baru; anda tidak akan fasih secara serta merta."
+- “Saya tidak tahu. Mari kita fikirkan penyelesaiannya bersama.”
+- "Teknologi tidak selalu berfungsi seperti yang kita mahukan."
+- "Belajar mengatur cara ialah seperti mempelajari bahasa baharu; anda tidak akan menjadi fasih dengan serta-merta."
 
 Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
 
@@ -81,10 +81,10 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>Apakah pula selepas Hour of Code?</h2>
+<h2>Apakah yang seterusnya selepas Jam Kod?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+Sains komputer tidak seharusnya diakhiri dengan Jam Kod! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
