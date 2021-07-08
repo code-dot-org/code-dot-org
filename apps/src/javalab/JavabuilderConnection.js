@@ -104,10 +104,11 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
-    if (this.miniApp && this.miniApp.onClose) {
+    if (this.miniApp) {
       // miniApp on close should handle setting isRunning state as it
-      // may not align with actual program execution
-      this.miniApp.onClose();
+      // may not align with actual program execution. If mini app does
+      // not have on close we won't toggle back automatically.
+      this.miniApp.onClose?.();
     } else {
       // Set isRunning to false
       getStore().dispatch(setIsRunning(false));
