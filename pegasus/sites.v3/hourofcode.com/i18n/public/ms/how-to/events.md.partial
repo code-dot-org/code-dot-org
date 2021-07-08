@@ -1,67 +1,67 @@
 ---
-title: Panduan Bagaimana bagi Acara Hour of Code
+title: Panduan Cara Acara Jam Kod
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Cara menganjurkan perhimpunan atau acara Jam Kod
 
-### Get your entire school or community involved in an Hour of Code!
+### Melibatkan seluruh sekolah atau komuniti anda di dalam Jam Kod!
 
 * * *
 
-## 1. Sedia untuk acara anda
+## 1. Bersedia untuk acara anda
 
-- Menentukan tempat, tarikh, dan masa.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Tentukan tempat, tarikh dan masa.
+- Hantarkan [surat](https://hourofcode.com/promote/resources#sample-emails) kepada datuk bandar tempatan anda, ahli Kongres, gabenor, atau individu perniagaan yang berpengaruh dan menjemput mereka untuk mengadakan ceramah. Lihat [panduan cara menggunakan alat digital]({{ localized_files/elected_official }}) kami apabila menganjurkan pegawai terpilih semasa Jam Kod untuk maklumat lebih lanjut.
+- Jemput pihak media/akhbar. iaitu stesen berita tempatan, surat khabar, blogger pendidikan/teknologi. Lihat [kumpulan risalah akhbar ]({{ promote/press_kit_url }}) kami untuk bantuan.
 
 ## 2. Semasa acara anda
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Mulakan acara anda dengan satu daripada [video inspirasi]({{ promote/videos }}) kami.
+- Berikan pengenalan gambaran keseluruhan kepentingan sains komputer dengan menggunakan [statistik dan infografik]({{ promote/stats_url }}) ini.   
       
     
-- ** Idea acara lain **: 
-    - Menjemput seorang pemimpin industri tempatan untuk membincangkan kerja-kerja beliau yang terlibat dengan sains komputer.
-    - Menjemput seorang ahli politik tempatan dan mengizinkan pelajar untuk mengajar beliau mengenai bagaimana untuk kod.
-    - Mengizinkan sekumpulan pelajar menunjukkan suatu aktiviti tercabut.
-    - Mengizinkan sekumpulan pelajar mengajar tuan pengetua atau sekumpulan guru mengenai bagaimana untuk kod.
-    - Jika sekolah anda telah mengajar sains komputer, pamerkan projek demo pelajar.
+- ** Idea acara yang lain **: 
+    - Menjemput pemimpin industri tempatan untuk membincangkan usaha beliau yang melibatkan sains komputer.
+    - Menjemput ahli politik tempatan dan meminta pelajar mengajar beliau cara mengekod.
+    - Meminta sekumpulan pelajar membuat demonstrasi aktiviti nirplag.
+    - Meminta sekumpulan pelajar mengajar pengetua atau sekumpulan guru cara mengekod.
+    - Jika sekolah anda telah mengajar sains komputer, minta pelajar mengadakan demonstrasi projek.
 
-## 3. Kongsikan bagaimana acara berlangsung
+## 3. Kongsikan perkembangannya
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Menganjurkan sebuah Malam Kod Keluarga dengan Hour of Code dan menjemput para ibu bapa untuk turut menyertainya
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Kongsikan gambar acara anda di dalam Facebook dan Twitter, serta gunakan tanda pagar **#HourOfCode**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Menganjurkan acara Malam Kod Keluarga dengan Jam Kod dan menjemput ibu bapa untuk menyertainya
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Mempertimbang untuk menganjurkan acara K-5 pada waktu malam dan menjemput ibu bapa menyertai pelajar mereka untuk sains komputer selama sejam. Ini ialah cara yang sangat baik untuk menarik minat komuniti yang lebih besar dan menggalakkan sokongan ibu bapa untuk sains komputer di sekolah anda. Rakan kongsi kita di majlis Malam Kod Keluarga telah mencipta kit acara semua dalam satu dengan senarai semak perancangan, skrip penyampai ucapan, e-mel jemputan, poster, slaid powerpoint dan banyak lagi untuk menjalankan acara anda sendiri. [Klik di sini untuk memuat turun Kit Acara](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Contoh rancangan untuk perhimpunan atau acara sekolah
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Acara:** Perhimpunan pelancaran Minggu Pendidikan Sains Komputer Seluruh Sekolah
 
-## Jadual Masa Acara
+**Tarikh:** {{ campaign_date/start_short }} (bermula Minggu Pendidikan Sains Komputer)
 
-| Masa             | Peristiwa                                                                                                                                                                    |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                           |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                        |
-| 10:15 - 10:30 am | Tetamu khas berucap tentang latar belakang mereka dan bagaimana teknologi dan sains komputer memainkan peranan penting dalam kehidupan seharian mereka.                      |
-| 10:30 - 10:40 am | Pelajar melaksanakan sebuah demo Hour of Code untuk sekolah. Pintal menyeronokkan: mengizinkan mereka untuk mengajar tuan pengetua, ahli politik, atau pelejar-pelajar lain! |
-| 10:40 - 11:00 am | Pelajar mendemonstrasikan sebuah aktiviti tercabut dan bagaimana sains komputer boleh diajar tanpa menggunakan komputer.                                                     |
-| 11:00 - 11:05 am | Guru yang telah membantu dalam acara yang melibatkan seluruh sekolah memberikan kata-kata penutup.                                                                           |
+**Masa:** Semasa hari persekolahan. Acara pertengahan pagi lebih diutamakan. Kira-kira 1 jam.
+
+**Lokasi:** Dewan perhimpunan sekolah (misalnya teater, gimnasium, kafeteria)
+
+## Jadual Acara
+
+| Masa             | Tindakan                                                                                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Mulakan acara anda dengan satu daripada [video inspirasi]({{ promote/videos }}) kami.                                                                   |
+| 10:05 - 10:15 am | Pengetua memberikan ucapan pengenalan gambaran keseluruhan kepentingan sains komputer. Gunakan [statistik dan infografik]({{ promote/stats_url }}) ini. |
+| 10:15 - 10:30 am | Tetamu istimewa bercakap tentang latar belakang mereka dan cara teknologi dan sains komputer memainkan peranan penting dalam kehidupan harian mereka.   |
+| 10:30 - 10:40 am | Pelajar melakukan demo Jam Kod untuk sekolah. Sungguh melucukan: meminta mereka mengajar pengetua, ahli politik, atau pelajar lain!                     |
+| 10:40 - 11:00 am | Pelajar melakukan demo aktiviti nirplag dan cara sains komputer boleh diajar tanpa menggunakan komputer.                                                |
+| 11:00 - 11:05 am | Guru yang membantu mengembangkan acara ke seluruh sekolah memberikan ucapan penutup.                                                                    |
 
 {{ signup_button }}
