@@ -7,18 +7,18 @@ in:
         options:
           GROUP:
             sprites: crwdns2071156:0crwdne2071156:0
-            '"ALIEN"': crwdns2071158:0crwdne2071158:0
-            '"BEAR"': crwdns2071160:0crwdne2071160:0
-            '"CAT"': crwdns2071162:0crwdne2071162:0
-            '"DOG"': crwdns2071164:0crwdne2071164:0
-            '"DUCK"': crwdns2071166:0crwdne2071166:0
-            '"FROG"': crwdns2071168:0crwdne2071168:0
-            '"MOOSE"': crwdns2071170:0crwdne2071170:0
-            '"PINEAPPLE"': crwdns2071172:0crwdne2071172:0
-            '"ROBOT"': crwdns2071174:0crwdne2071174:0
-            '"SHARK"': crwdns2071176:0crwdne2071176:0
-            '"SLOTH"': crwdns2071178:0crwdne2071178:0
-            '"UNICORN"': crwdns2071180:0crwdne2071180:0
+            '"ALIEN"': crwdns2657310:0crwdne2657310:0
+            '"BEAR"': crwdns2657312:0crwdne2657312:0
+            '"CAT"': crwdns2657314:0crwdne2657314:0
+            '"DOG"': crwdns2657316:0crwdne2657316:0
+            '"DUCK"': crwdns2657318:0crwdne2657318:0
+            '"FROG"': crwdns2657320:0crwdne2657320:0
+            '"MOOSE"': crwdns2657322:0crwdne2657322:0
+            '"PINEAPPLE"': crwdns2657324:0crwdne2657324:0
+            '"ROBOT"': crwdns2657326:0crwdne2657326:0
+            '"SHARK"': crwdns2657328:0crwdne2657328:0
+            '"SLOTH"': crwdns2657330:0crwdne2657330:0
+            '"UNICORN"': crwdns2657332:0crwdne2657332:0
           MOVE1:
             MOVES.Roll: crwdns2071182:0crwdne2071182:0
             MOVES.ClapHigh: crwdns2071184:0crwdne2071184:0
@@ -49,36 +49,36 @@ in:
         text: crwdns168789:0[TIMESTAMP]crwdnd168789:0[0]crwdnd168789:0[UNIT]crwdnd168789:0[1]crwdne168789:0
         options:
           UNIT:
-            '"measures"': crwdns169224:0crwdne169224:0
-            '"seconds"': crwdns169225:0crwdne169225:0
+            '"measures"': crwdns2657334:0crwdne2657334:0
+            '"seconds"': crwdns2657336:0crwdne2657336:0
       Dancelab_changeColorBy:
         text: crwdns168790:0[COLOR]crwdnd168790:0[0]crwdnd168790:0[METHOD]crwdnd168790:0[1]crwdnd168790:0[AMOUNT]crwdnd168790:0[2]crwdne168790:0
         options:
           METHOD:
-            '"hue"': crwdns168791:0crwdne168791:0
-            '"saturation"': crwdns168792:0crwdne168792:0
-            '"brightness"': crwdns168793:0crwdne168793:0
+            '"hue"': crwdns2657338:0crwdne2657338:0
+            '"saturation"': crwdns2657340:0crwdne2657340:0
+            '"brightness"': crwdns2657342:0crwdne2657342:0
       Dancelab_changeMoveEachLR:
         text: crwdns194620:0[GROUP]crwdnd194620:0[0]crwdnd194620:0[MOVE]crwdnd194620:0[1]crwdnd194620:0[DIR]crwdnd194620:0[2]crwdne194620:0
         options:
           GROUP:
             sprites: crwdns194621:0crwdne194621:0
-            '"ALIEN"': crwdns194865:0crwdne194865:0
-            '"BEAR"': crwdns194867:0crwdne194867:0
-            '"CAT"': crwdns194869:0crwdne194869:0
-            '"DOG"': crwdns194871:0crwdne194871:0
-            '"DUCK"': crwdns194873:0crwdne194873:0
-            '"FROG"': crwdns194875:0crwdne194875:0
-            '"MOOSE"': crwdns194877:0crwdne194877:0
-            '"PINEAPPLE"': crwdns194879:0crwdne194879:0
-            '"ROBOT"': crwdns194881:0crwdne194881:0
-            '"SHARK"': crwdns194883:0crwdne194883:0
-            '"SLOTH"': crwdns2071230:0crwdne2071230:0
-            '"UNICORN"': crwdns305128:0crwdne305128:0
+            '"ALIEN"': crwdns2657344:0crwdne2657344:0
+            '"BEAR"': crwdns2657346:0crwdne2657346:0
+            '"CAT"': crwdns2657348:0crwdne2657348:0
+            '"DOG"': crwdns2657350:0crwdne2657350:0
+            '"DUCK"': crwdns2657352:0crwdne2657352:0
+            '"FROG"': crwdns2657354:0crwdne2657354:0
+            '"MOOSE"': crwdns2657356:0crwdne2657356:0
+            '"PINEAPPLE"': crwdns2657358:0crwdne2657358:0
+            '"ROBOT"': crwdns2657360:0crwdne2657360:0
+            '"SHARK"': crwdns2657362:0crwdne2657362:0
+            '"SLOTH"': crwdns2657364:0crwdne2657364:0
+            '"UNICORN"': crwdns2657366:0crwdne2657366:0
           MOVE:
-            '"next"': crwdns194639:0crwdne194639:0
-            '"prev"': crwdns194640:0crwdne194640:0
-            '"rand"': crwdns194641:0crwdne194641:0
+            '"next"': crwdns2657368:0crwdne2657368:0
+            '"prev"': crwdns2657370:0crwdne2657370:0
+            '"rand"': crwdns2657372:0crwdne2657372:0
             MOVES.Roll: crwdns194901:0crwdne194901:0
             MOVES.ClapHigh: crwdns194885:0crwdne194885:0
             MOVES.Dab: crwdns194889:0crwdne194889:0
@@ -98,9 +98,9 @@ in:
         text: crwdns194644:0[SPRITE]crwdnd194644:0[0]crwdnd194644:0[MOVE]crwdnd194644:0[1]crwdnd194644:0[DIR]crwdnd194644:0[2]crwdne194644:0
         options:
           MOVE:
-            '"next"': crwdns194657:0crwdne194657:0
-            '"prev"': crwdns194658:0crwdne194658:0
-            '"rand"': crwdns194659:0crwdne194659:0
+            '"next"': crwdns2657374:0crwdne2657374:0
+            '"prev"': crwdns2657376:0crwdne2657376:0
+            '"rand"': crwdns2657378:0crwdne2657378:0
             MOVES.Roll: crwdns194925:0crwdne194925:0
             MOVES.ClapHigh: crwdns194909:0crwdne194909:0
             MOVES.Dab: crwdns194913:0crwdne194913:0
@@ -120,55 +120,55 @@ in:
         text: crwdns168820:0[SPRITE]crwdnd168820:0[0]crwdnd168820:0[PROPERTY]crwdnd168820:0[1]crwdnd168820:0[VAL]crwdnd168820:0[2]crwdne168820:0
         options:
           PROPERTY:
-            '"scale"': crwdns168821:0crwdne168821:0
-            '"width"': crwdns194933:0crwdne194933:0
-            '"height"': crwdns194935:0crwdne194935:0
-            '"rotation"': crwdns168822:0crwdne168822:0
-            '"x"': crwdns168823:0crwdne168823:0
-            '"y"': crwdns168824:0crwdne168824:0
+            '"scale"': crwdns2657380:0crwdne2657380:0
+            '"width"': crwdns2657382:0crwdne2657382:0
+            '"height"': crwdns2657384:0crwdne2657384:0
+            '"rotation"': crwdns2657386:0crwdne2657386:0
+            '"x"': crwdns2657388:0crwdne2657388:0
+            '"y"': crwdns2657390:0crwdne2657390:0
       Dancelab_changePropEachBy:
         text: crwdns2066118:0[GROUP]crwdnd2066118:0[0]crwdnd2066118:0[PROPERTY]crwdnd2066118:0[1]crwdnd2066118:0[VAL]crwdnd2066118:0[2]crwdne2066118:0
         options:
           GROUP:
             sprites: crwdns2066120:0crwdne2066120:0
-            '"ALIEN"': crwdns2066122:0crwdne2066122:0
-            '"BEAR"': crwdns2066124:0crwdne2066124:0
-            '"CAT"': crwdns2066126:0crwdne2066126:0
-            '"DOG"': crwdns2066128:0crwdne2066128:0
-            '"DUCK"': crwdns2066130:0crwdne2066130:0
-            '"FROG"': crwdns2066132:0crwdne2066132:0
-            '"MOOSE"': crwdns2066134:0crwdne2066134:0
-            '"PINEAPPLE"': crwdns2066136:0crwdne2066136:0
-            '"ROBOT"': crwdns2066138:0crwdne2066138:0
-            '"SHARK"': crwdns2066140:0crwdne2066140:0
-            '"SLOTH"': crwdns2071232:0crwdne2071232:0
-            '"UNICORN"': crwdns2066142:0crwdne2066142:0
+            '"ALIEN"': crwdns2657392:0crwdne2657392:0
+            '"BEAR"': crwdns2657394:0crwdne2657394:0
+            '"CAT"': crwdns2657396:0crwdne2657396:0
+            '"DOG"': crwdns2657398:0crwdne2657398:0
+            '"DUCK"': crwdns2657400:0crwdne2657400:0
+            '"FROG"': crwdns2657402:0crwdne2657402:0
+            '"MOOSE"': crwdns2657404:0crwdne2657404:0
+            '"PINEAPPLE"': crwdns2657406:0crwdne2657406:0
+            '"ROBOT"': crwdns2657408:0crwdne2657408:0
+            '"SHARK"': crwdns2657410:0crwdne2657410:0
+            '"SLOTH"': crwdns2657412:0crwdne2657412:0
+            '"UNICORN"': crwdns2657414:0crwdne2657414:0
           PROPERTY:
-            '"scale"': crwdns2066144:0crwdne2066144:0
-            '"width"': crwdns2066146:0crwdne2066146:0
-            '"height"': crwdns2066148:0crwdne2066148:0
-            '"rotation"': crwdns2066150:0crwdne2066150:0
-            '"x"': crwdns2066152:0crwdne2066152:0
-            '"y"': crwdns2066154:0crwdne2066154:0
+            '"scale"': crwdns2657416:0crwdne2657416:0
+            '"width"': crwdns2657418:0crwdne2657418:0
+            '"height"': crwdns2657420:0crwdne2657420:0
+            '"rotation"': crwdns2657422:0crwdne2657422:0
+            '"x"': crwdns2657424:0crwdne2657424:0
+            '"y"': crwdns2657426:0crwdne2657426:0
       Dancelab_doMoveEachLR:
         text: crwdns194679:0[GROUP]crwdnd194679:0[0]crwdnd194679:0[MOVE]crwdnd194679:0[1]crwdnd194679:0[DIR]crwdnd194679:0[2]crwdne194679:0
         options:
           GROUP:
             sprites: crwdns194680:0crwdne194680:0
-            '"ALIEN"': crwdns194937:0crwdne194937:0
-            '"BEAR"': crwdns194939:0crwdne194939:0
-            '"CAT"': crwdns194941:0crwdne194941:0
-            '"DOG"': crwdns194943:0crwdne194943:0
-            '"DUCK"': crwdns194945:0crwdne194945:0
-            '"FROG"': crwdns194947:0crwdne194947:0
-            '"MOOSE"': crwdns194949:0crwdne194949:0
-            '"PINEAPPLE"': crwdns194951:0crwdne194951:0
-            '"ROBOT"': crwdns194953:0crwdne194953:0
-            '"SHARK"': crwdns194955:0crwdne194955:0
-            '"SLOTH"': crwdns2071234:0crwdne2071234:0
-            '"UNICORN"': crwdns305130:0crwdne305130:0
+            '"ALIEN"': crwdns2657428:0crwdne2657428:0
+            '"BEAR"': crwdns2657430:0crwdne2657430:0
+            '"CAT"': crwdns2657432:0crwdne2657432:0
+            '"DOG"': crwdns2657434:0crwdne2657434:0
+            '"DUCK"': crwdns2657436:0crwdne2657436:0
+            '"FROG"': crwdns2657438:0crwdne2657438:0
+            '"MOOSE"': crwdns2657440:0crwdne2657440:0
+            '"PINEAPPLE"': crwdns2657442:0crwdne2657442:0
+            '"ROBOT"': crwdns2657444:0crwdne2657444:0
+            '"SHARK"': crwdns2657446:0crwdne2657446:0
+            '"SLOTH"': crwdns2657448:0crwdne2657448:0
+            '"UNICORN"': crwdns2657450:0crwdne2657450:0
           MOVE:
-            '"rand"': crwdns333294:0crwdne333294:0
+            '"rand"': crwdns2657452:0crwdne2657452:0
             MOVES.XBend: crwdns333296:0crwdne333296:0
             MOVES.Roll: crwdns194973:0crwdne194973:0
             MOVES.XClapSide: crwdns333298:0crwdne333298:0
@@ -200,7 +200,7 @@ in:
         text: crwdns194719:0[SPRITE]crwdnd194719:0[0]crwdnd194719:0[MOVE]crwdnd194719:0[1]crwdnd194719:0[DIR]crwdnd194719:0[2]crwdne194719:0
         options:
           MOVE:
-            '"rand"': crwdns333320:0crwdne333320:0
+            '"rand"': crwdns2657454:0crwdne2657454:0
             MOVES.XBend: crwdns333322:0crwdne333322:0
             MOVES.Roll: crwdns194997:0crwdne194997:0
             MOVES.XClapSide: crwdns333324:0crwdne333324:0
@@ -236,8 +236,8 @@ in:
         text: crwdns168841:0[N]crwdnd168841:0[0]crwdnd168841:0[UNIT]crwdnd168841:0[1]crwdne168841:0
         options:
           UNIT:
-            '"measures"': crwdns168842:0crwdne168842:0
-            '"seconds"': crwdns168843:0crwdne168843:0
+            '"measures"': crwdns2657456:0crwdne2657456:0
+            '"seconds"': crwdns2657458:0crwdne2657458:0
       Dancelab_everySecondsRange:
         text: crwdns168844:0[N]crwdnd168844:0[0]crwdnd168844:0[UNIT]crwdnd168844:0[1]crwdnd168844:0[START]crwdnd168844:0[2]crwdnd168844:0[STOP]crwdnd168844:0[3]crwdne168844:0
         options:
@@ -248,32 +248,32 @@ in:
         text: crwdns169258:0[UNIT]crwdnd169258:0[0]crwdne169258:0
         options:
           UNIT:
-            '"verse"': crwdns169259:0crwdne169259:0
-            '"chorus"': crwdns169260:0crwdne169260:0
+            '"verse"': crwdns2657460:0crwdne2657460:0
+            '"chorus"': crwdns2657462:0crwdne2657462:0
       Dancelab_getEnergy:
         text: crwdns168848:0[RANGE]crwdnd168848:0[0]crwdne168848:0
         options:
           RANGE:
-            '"low"': crwdns168849:0crwdne168849:0
-            '"mid"': crwdns168850:0crwdne168850:0
-            '"high"': crwdns168851:0crwdne168851:0
+            '"low"': crwdns2657464:0crwdne2657464:0
+            '"mid"': crwdns2657466:0crwdne2657466:0
+            '"high"': crwdns2657468:0crwdne2657468:0
       Dancelab_getProp:
         text: crwdns168852:0[SPRITE]crwdnd168852:0[0]crwdnd168852:0[PROPERTY]crwdnd168852:0[1]crwdne168852:0
         options:
           PROPERTY:
-            '"scale"': crwdns168853:0crwdne168853:0
-            '"width"': crwdns195005:0crwdne195005:0
-            '"height"': crwdns195007:0crwdne195007:0
-            '"rotation"': crwdns168854:0crwdne168854:0
-            '"x"': crwdns168855:0crwdne168855:0
-            '"y"': crwdns168856:0crwdne168856:0
-            '"tint"': crwdns168858:0crwdne168858:0
+            '"scale"': crwdns2657470:0crwdne2657470:0
+            '"width"': crwdns2657472:0crwdne2657472:0
+            '"height"': crwdns2657474:0crwdne2657474:0
+            '"rotation"': crwdns2657476:0crwdne2657476:0
+            '"x"': crwdns2657478:0crwdne2657478:0
+            '"y"': crwdns2657480:0crwdne2657480:0
+            '"tint"': crwdns2657482:0crwdne2657482:0
       Dancelab_getTime:
         text: crwdns168859:0[UNIT]crwdnd168859:0[0]crwdne168859:0
         options:
           UNIT:
-            '"measures"': crwdns168860:0crwdne168860:0
-            '"seconds"': crwdns168861:0crwdne168861:0
+            '"measures"': crwdns2657484:0crwdne2657484:0
+            '"seconds"': crwdns2657486:0crwdne2657486:0
       Dancelab_ifDanceIs:
         text: crwdns195009:0[SPRITE]crwdnd195009:0[0]crwdnd195009:0[DANCE]crwdnd195009:0[1]crwdnd195009:0[DO1]crwdnd195009:0[2]crwdnd195009:0[DO2]crwdnd195009:0[3]crwdne195009:0
         options:
@@ -294,12 +294,12 @@ in:
         text: crwdns330860:0[UNIT]crwdnd330860:0[0]crwdnd330860:0[OP]crwdnd330860:0[1]crwdnd330860:0[N]crwdnd330860:0[2]crwdnd330860:0[DO1]crwdnd330860:0[3]crwdnd330860:0[DO2]crwdnd330860:0[4]crwdne330860:0
         options:
           UNIT:
-            '"measures"': crwdns330862:0crwdne330862:0
-            '"seconds"': crwdns330864:0crwdne330864:0
+            '"measures"': crwdns2657488:0crwdne2657488:0
+            '"seconds"': crwdns2657490:0crwdne2657490:0
           OP:
-            '">"': crwdns330866:0crwdne330866:0
-            '"<"': crwdns330868:0crwdne330868:0
-            '"="': crwdns330870:0crwdne330870:0
+            '">"': crwdns2657492:0crwdne2657492:0
+            '"<"': crwdns2657494:0crwdne2657494:0
+            '"="': crwdns2657496:0crwdne2657496:0
       Dancelab_jumpTo:
         text: crwdns168864:0[SPRITE]crwdnd168864:0[0]crwdnd168864:0[LOCATION]crwdnd168864:0[1]crwdne168864:0
         options:
@@ -319,18 +319,18 @@ in:
         options:
           GROUP:
             sprites: crwdns2066158:0crwdne2066158:0
-            '"ALIEN"': crwdns2066160:0crwdne2066160:0
-            '"BEAR"': crwdns2066162:0crwdne2066162:0
-            '"CAT"': crwdns2066164:0crwdne2066164:0
-            '"DOG"': crwdns2066166:0crwdne2066166:0
-            '"DUCK"': crwdns2066168:0crwdne2066168:0
-            '"FROG"': crwdns2066170:0crwdne2066170:0
-            '"MOOSE"': crwdns2066172:0crwdne2066172:0
-            '"PINEAPPLE"': crwdns2066174:0crwdne2066174:0
-            '"ROBOT"': crwdns2066176:0crwdne2066176:0
-            '"SHARK"': crwdns2066178:0crwdne2066178:0
-            '"SLOTH"': crwdns2071236:0crwdne2071236:0
-            '"UNICORN"': crwdns2066180:0crwdne2066180:0
+            '"ALIEN"': crwdns2657498:0crwdne2657498:0
+            '"BEAR"': crwdns2657500:0crwdne2657500:0
+            '"CAT"': crwdns2657502:0crwdne2657502:0
+            '"DOG"': crwdns2657504:0crwdne2657504:0
+            '"DUCK"': crwdns2657506:0crwdne2657506:0
+            '"FROG"': crwdns2657508:0crwdne2657508:0
+            '"MOOSE"': crwdns2657510:0crwdne2657510:0
+            '"PINEAPPLE"': crwdns2657512:0crwdne2657512:0
+            '"ROBOT"': crwdns2657514:0crwdne2657514:0
+            '"SHARK"': crwdns2657516:0crwdne2657516:0
+            '"SLOTH"': crwdns2657518:0crwdne2657518:0
+            '"UNICORN"': crwdns2657520:0crwdne2657520:0
           LOCATION:
             "{x: 200, y: 100}": crwdns2066182:0crwdne2066182:0
             "{x: 200, y: 300}": crwdns2066184:0crwdne2066184:0
@@ -347,49 +347,49 @@ in:
         options:
           GROUP:
             sprites: crwdns168866:0crwdne168866:0
-            '"ALIEN"': crwdns195055:0crwdne195055:0
-            '"BEAR"': crwdns195057:0crwdne195057:0
-            '"CAT"': crwdns195059:0crwdne195059:0
-            '"DOG"': crwdns195061:0crwdne195061:0
-            '"DUCK"': crwdns195063:0crwdne195063:0
-            '"FROG"': crwdns195065:0crwdne195065:0
-            '"MOOSE"': crwdns195067:0crwdne195067:0
-            '"PINEAPPLE"': crwdns195069:0crwdne195069:0
-            '"ROBOT"': crwdns195071:0crwdne195071:0
-            '"SHARK"': crwdns195073:0crwdne195073:0
-            '"SLOTH"': crwdns2071238:0crwdne2071238:0
-            '"UNICORN"': crwdns331000:0crwdne331000:0
+            '"ALIEN"': crwdns2657522:0crwdne2657522:0
+            '"BEAR"': crwdns2657524:0crwdne2657524:0
+            '"CAT"': crwdns2657526:0crwdne2657526:0
+            '"DOG"': crwdns2657528:0crwdne2657528:0
+            '"DUCK"': crwdns2657530:0crwdne2657530:0
+            '"FROG"': crwdns2657532:0crwdne2657532:0
+            '"MOOSE"': crwdns2657534:0crwdne2657534:0
+            '"PINEAPPLE"': crwdns2657536:0crwdne2657536:0
+            '"ROBOT"': crwdns2657538:0crwdne2657538:0
+            '"SHARK"': crwdns2657540:0crwdne2657540:0
+            '"SLOTH"': crwdns2657542:0crwdne2657542:0
+            '"UNICORN"': crwdns2657544:0crwdne2657544:0
           FORMAT:
-            '"border"': crwdns330872:0crwdne330872:0
-            '"inner"': crwdns330874:0crwdne330874:0
-            '"diamond"': crwdns2289943:0crwdne2289943:0
-            '"circle"': crwdns245468:0crwdne245468:0
-            '"grid"': crwdns168870:0crwdne168870:0
-            '"top"': crwdns2289945:0crwdne2289945:0
-            '"row"': crwdns168871:0crwdne168871:0
-            '"bottom"': crwdns2289947:0crwdne2289947:0
-            '"left"': crwdns2289949:0crwdne2289949:0
-            '"column"': crwdns168872:0crwdne168872:0
-            '"right"': crwdns2289951:0crwdne2289951:0
-            '"x"': crwdns330876:0crwdne330876:0
-            '"plus"': crwdns330878:0crwdne330878:0
-            '"random"': crwdns245470:0crwdne245470:0
+            '"border"': crwdns2657546:0crwdne2657546:0
+            '"inner"': crwdns2657548:0crwdne2657548:0
+            '"diamond"': crwdns2657550:0crwdne2657550:0
+            '"circle"': crwdns2657552:0crwdne2657552:0
+            '"grid"': crwdns2657554:0crwdne2657554:0
+            '"top"': crwdns2657556:0crwdne2657556:0
+            '"row"': crwdns2657558:0crwdne2657558:0
+            '"bottom"': crwdns2657560:0crwdne2657560:0
+            '"left"': crwdns2657562:0crwdne2657562:0
+            '"column"': crwdns2657564:0crwdne2657564:0
+            '"right"': crwdns2657566:0crwdne2657566:0
+            '"x"': crwdns2657568:0crwdne2657568:0
+            '"plus"': crwdns2657570:0crwdne2657570:0
+            '"random"': crwdns2657572:0crwdne2657572:0
       Dancelab_makeAnonymousDanceSprite:
         text: crwdns2063134:0[COSTUME]crwdnd2063134:0[0]crwdnd2063134:0[LOCATION]crwdnd2063134:0[1]crwdne2063134:0
         options:
           COSTUME:
-            '"ALIEN"': crwdns2063136:0crwdne2063136:0
-            '"BEAR"': crwdns2063138:0crwdne2063138:0
-            '"CAT"': crwdns2063140:0crwdne2063140:0
-            '"DOG"': crwdns2063142:0crwdne2063142:0
-            '"DUCK"': crwdns2063144:0crwdne2063144:0
-            '"FROG"': crwdns2063146:0crwdne2063146:0
-            '"MOOSE"': crwdns2063148:0crwdne2063148:0
-            '"PINEAPPLE"': crwdns2063150:0crwdne2063150:0
-            '"ROBOT"': crwdns2063152:0crwdne2063152:0
-            '"SHARK"': crwdns2063154:0crwdne2063154:0
-            '"SLOTH"': crwdns2068874:0crwdne2068874:0
-            '"UNICORN"': crwdns2063156:0crwdne2063156:0
+            '"ALIEN"': crwdns2657574:0crwdne2657574:0
+            '"BEAR"': crwdns2657576:0crwdne2657576:0
+            '"CAT"': crwdns2657578:0crwdne2657578:0
+            '"DOG"': crwdns2657580:0crwdne2657580:0
+            '"DUCK"': crwdns2657582:0crwdne2657582:0
+            '"FROG"': crwdns2657584:0crwdne2657584:0
+            '"MOOSE"': crwdns2657586:0crwdne2657586:0
+            '"PINEAPPLE"': crwdns2657588:0crwdne2657588:0
+            '"ROBOT"': crwdns2657590:0crwdne2657590:0
+            '"SHARK"': crwdns2657592:0crwdne2657592:0
+            '"SLOTH"': crwdns2657594:0crwdne2657594:0
+            '"UNICORN"': crwdns2657596:0crwdne2657596:0
           LOCATION:
             "{x: 200, y: 100}": crwdns2063158:0crwdne2063158:0
             "{x: 200, y: 300}": crwdns2063160:0crwdne2063160:0
@@ -405,18 +405,18 @@ in:
         text: crwdns168877:0[COSTUME]crwdnd168877:0[0]crwdnd168877:0[NAME]crwdnd168877:0[1]crwdnd168877:0[LOCATION]crwdnd168877:0[2]crwdne168877:0
         options:
           COSTUME:
-            '"ALIEN"': crwdns195075:0crwdne195075:0
-            '"BEAR"': crwdns195077:0crwdne195077:0
-            '"CAT"': crwdns195079:0crwdne195079:0
-            '"DOG"': crwdns195081:0crwdne195081:0
-            '"DUCK"': crwdns195083:0crwdne195083:0
-            '"FROG"': crwdns195085:0crwdne195085:0
-            '"MOOSE"': crwdns195087:0crwdne195087:0
-            '"PINEAPPLE"': crwdns195089:0crwdne195089:0
-            '"ROBOT"': crwdns195091:0crwdne195091:0
-            '"SHARK"': crwdns195093:0crwdne195093:0
-            '"SLOTH"': crwdns2071240:0crwdne2071240:0
-            '"UNICORN"': crwdns195095:0crwdne195095:0
+            '"ALIEN"': crwdns2657598:0crwdne2657598:0
+            '"BEAR"': crwdns2657600:0crwdne2657600:0
+            '"CAT"': crwdns2657602:0crwdne2657602:0
+            '"DOG"': crwdns2657604:0crwdne2657604:0
+            '"DUCK"': crwdns2657606:0crwdne2657606:0
+            '"FROG"': crwdns2657608:0crwdne2657608:0
+            '"MOOSE"': crwdns2657610:0crwdne2657610:0
+            '"PINEAPPLE"': crwdns2657612:0crwdne2657612:0
+            '"ROBOT"': crwdns2657614:0crwdne2657614:0
+            '"SHARK"': crwdns2657616:0crwdne2657616:0
+            '"SLOTH"': crwdns2657618:0crwdne2657618:0
+            '"UNICORN"': crwdns2657620:0crwdne2657620:0
           LOCATION:
             "{x: 200, y: 100}": crwdns195097:0crwdne195097:0
             "{x: 200, y: 300}": crwdns195099:0crwdne195099:0
@@ -452,33 +452,33 @@ in:
             '19': crwdns331018:0crwdne331018:0
             '20': crwdns331020:0crwdne331020:0
           COSTUME:
-            '"ALIEN"': crwdns245492:0crwdne245492:0
-            '"BEAR"': crwdns245494:0crwdne245494:0
-            '"CAT"': crwdns245496:0crwdne245496:0
-            '"DOG"': crwdns245498:0crwdne245498:0
-            '"DUCK"': crwdns245500:0crwdne245500:0
-            '"FROG"': crwdns245502:0crwdne245502:0
-            '"MOOSE"': crwdns245504:0crwdne245504:0
-            '"PINEAPPLE"': crwdns245506:0crwdne245506:0
-            '"ROBOT"': crwdns245508:0crwdne245508:0
-            '"SHARK"': crwdns245510:0crwdne245510:0
-            '"SLOTH"': crwdns2071356:0crwdne2071356:0
-            '"UNICORN"': crwdns245512:0crwdne245512:0
+            '"ALIEN"': crwdns2657622:0crwdne2657622:0
+            '"BEAR"': crwdns2657624:0crwdne2657624:0
+            '"CAT"': crwdns2657626:0crwdne2657626:0
+            '"DOG"': crwdns2657628:0crwdne2657628:0
+            '"DUCK"': crwdns2657630:0crwdne2657630:0
+            '"FROG"': crwdns2657632:0crwdne2657632:0
+            '"MOOSE"': crwdns2657634:0crwdne2657634:0
+            '"PINEAPPLE"': crwdns2657636:0crwdne2657636:0
+            '"ROBOT"': crwdns2657638:0crwdne2657638:0
+            '"SHARK"': crwdns2657640:0crwdne2657640:0
+            '"SLOTH"': crwdns2657642:0crwdne2657642:0
+            '"UNICORN"': crwdns2657644:0crwdne2657644:0
           LAYOUT:
-            '"border"': crwdns331022:0crwdne331022:0
-            '"inner"': crwdns331024:0crwdne331024:0
-            '"diamond"': crwdns2289835:0crwdne2289835:0
-            '"circle"': crwdns245514:0crwdne245514:0
-            '"grid"': crwdns245516:0crwdne245516:0
-            '"top"': crwdns2289837:0crwdne2289837:0
-            '"row"': crwdns245518:0crwdne245518:0
-            '"bottom"': crwdns2289839:0crwdne2289839:0
-            '"left"': crwdns2289841:0crwdne2289841:0
-            '"column"': crwdns245520:0crwdne245520:0
-            '"right"': crwdns2289843:0crwdne2289843:0
-            '"x"': crwdns331026:0crwdne331026:0
-            '"plus"': crwdns331028:0crwdne331028:0
-            '"random"': crwdns245522:0crwdne245522:0
+            '"border"': crwdns2657646:0crwdne2657646:0
+            '"inner"': crwdns2657648:0crwdne2657648:0
+            '"diamond"': crwdns2657650:0crwdne2657650:0
+            '"circle"': crwdns2657652:0crwdne2657652:0
+            '"grid"': crwdns2657654:0crwdne2657654:0
+            '"top"': crwdns2657656:0crwdne2657656:0
+            '"row"': crwdns2657658:0crwdne2657658:0
+            '"bottom"': crwdns2657660:0crwdne2657660:0
+            '"left"': crwdns2657662:0crwdne2657662:0
+            '"column"': crwdns2657664:0crwdne2657664:0
+            '"right"': crwdns2657666:0crwdne2657666:0
+            '"x"': crwdns2657668:0crwdne2657668:0
+            '"plus"': crwdns2657670:0crwdne2657670:0
+            '"random"': crwdns2657672:0crwdne2657672:0
       Dancelab_mixColors:
         text: crwdns168900:0[COLOR1]crwdnd168900:0[0]crwdnd168900:0[COLOR2]crwdnd168900:0[1]crwdne168900:0
       Dancelab_nMeasures:
@@ -497,74 +497,74 @@ in:
         text: crwdns168923:0[EFFECT]crwdnd168923:0[0]crwdnd168923:0[PALETTE]crwdnd168923:0[1]crwdne168923:0
         options:
           EFFECT:
-            '"none"': crwdns168924:0crwdne168924:0
-            '"circles"': crwdns391106:0crwdne391106:0
-            '"color_cycle"': crwdns331030:0crwdne331030:0
-            '"diamonds"': crwdns168927:0crwdne168927:0
-            '"disco_ball"': crwdns391108:0crwdne391108:0
-            '"fireworks"': crwdns391110:0crwdne391110:0
-            '"swirl"': crwdns305134:0crwdne305134:0
-            '"kaleidoscope"': crwdns391112:0crwdne391112:0
-            '"lasers"': crwdns391114:0crwdne391114:0
-            '"splatter"': crwdns305132:0crwdne305132:0
-            '"rainbow"': crwdns168926:0crwdne168926:0
-            '"snowflakes"': crwdns331032:0crwdne331032:0
-            '"text"': crwdns391116:0crwdne391116:0
-            '"galaxy"': crwdns391118:0crwdne391118:0
-            '"sparkles"': crwdns391120:0crwdne391120:0
-            '"spiral"': crwdns305136:0crwdne305136:0
-            '"disco"': crwdns168925:0crwdne168925:0
-            '"stars"': crwdns391122:0crwdne391122:0
+            '"none"': crwdns2657674:0crwdne2657674:0
+            '"circles"': crwdns2657678:0crwdne2657678:0
+            '"color_cycle"': crwdns2657680:0crwdne2657680:0
+            '"diamonds"': crwdns2657682:0crwdne2657682:0
+            '"disco_ball"': crwdns2657684:0crwdne2657684:0
+            '"fireworks"': crwdns2657686:0crwdne2657686:0
+            '"swirl"': crwdns2657688:0crwdne2657688:0
+            '"kaleidoscope"': crwdns2657690:0crwdne2657690:0
+            '"lasers"': crwdns2657692:0crwdne2657692:0
+            '"splatter"': crwdns2657694:0crwdne2657694:0
+            '"rainbow"': crwdns2657696:0crwdne2657696:0
+            '"snowflakes"': crwdns2657698:0crwdne2657698:0
+            '"text"': crwdns2657700:0crwdne2657700:0
+            '"galaxy"': crwdns2657702:0crwdne2657702:0
+            '"sparkles"': crwdns2657704:0crwdne2657704:0
+            '"spiral"': crwdns2657706:0crwdne2657706:0
+            '"disco"': crwdns2657708:0crwdne2657708:0
+            '"stars"': crwdns2657710:0crwdne2657710:0
           PALETTE:
-            '"rave"': crwdns391124:0crwdne391124:0
-            '"cool"': crwdns391126:0crwdne391126:0
-            '"electronic"': crwdns391128:0crwdne391128:0
-            '"iceCream"': crwdns391130:0crwdne391130:0
-            '"default"': crwdns391132:0crwdne391132:0
-            '"neon"': crwdns391134:0crwdne391134:0
-            '"tropical"': crwdns391136:0crwdne391136:0
-            '"vintage"': crwdns391138:0crwdne391138:0
-            '"warm"': crwdns391140:0crwdne391140:0
+            '"rave"': crwdns2657712:0crwdne2657712:0
+            '"cool"': crwdns2657714:0crwdne2657714:0
+            '"electronic"': crwdns2657716:0crwdne2657716:0
+            '"iceCream"': crwdns2657718:0crwdne2657718:0
+            '"default"': crwdns2657720:0crwdne2657720:0
+            '"neon"': crwdns2657722:0crwdne2657722:0
+            '"tropical"': crwdns2657724:0crwdne2657724:0
+            '"vintage"': crwdns2657726:0crwdne2657726:0
+            '"warm"': crwdns2657728:0crwdne2657728:0
       Dancelab_setBackgroundEffectWithPalette:
         text: crwdns390430:0[PALETTE]crwdnd390430:0[0]crwdnd390430:0[EFFECT]crwdnd390430:0[1]crwdne390430:0
         options:
           EFFECT:
-            '"none"': crwdns390432:0crwdne390432:0
-            '"rand"': crwdns390434:0crwdne390434:0
-            '"circles"': crwdns390436:0crwdne390436:0
-            '"quads"': crwdns2289484:0crwdne2289484:0
-            '"color_cycle"': crwdns390438:0crwdne390438:0
-            '"diamonds"': crwdns390440:0crwdne390440:0
-            '"disco_ball"': crwdns390442:0crwdne390442:0
-            '"fireworks"': crwdns390444:0crwdne390444:0
-            '"flowers"': crwdns2069142:0crwdne2069142:0
-            '"growing_stars"': crwdns2071242:0crwdne2071242:0
-            '"swirl"': crwdns390446:0crwdne390446:0
-            '"kaleidoscope"': crwdns390448:0crwdne390448:0
-            '"lasers"': crwdns390450:0crwdne390450:0
-            '"splatter"': crwdns390452:0crwdne390452:0
-            '"rainbow"': crwdns390454:0crwdne390454:0
-            '"ripples_random"': crwdns2071244:0crwdne2071244:0
-            '"ripples"': crwdns2071246:0crwdne2071246:0
-            '"snowflakes"': crwdns390456:0crwdne390456:0
-            '"text"': crwdns390458:0crwdne390458:0
-            '"squiggles"': crwdns2071248:0crwdne2071248:0
-            '"galaxy"': crwdns390460:0crwdne390460:0
-            '"sparkles"': crwdns390462:0crwdne390462:0
-            '"spiral"': crwdns390464:0crwdne390464:0
-            '"disco"': crwdns390466:0crwdne390466:0
-            '"stars"': crwdns390468:0crwdne390468:0
-            '"music_wave"': crwdns2069138:0crwdne2069138:0
+            '"none"': crwdns2657730:0crwdne2657730:0
+            '"rand"': crwdns2657732:0crwdne2657732:0
+            '"circles"': crwdns2657734:0crwdne2657734:0
+            '"quads"': crwdns2657736:0crwdne2657736:0
+            '"color_cycle"': crwdns2657738:0crwdne2657738:0
+            '"diamonds"': crwdns2657740:0crwdne2657740:0
+            '"disco_ball"': crwdns2657742:0crwdne2657742:0
+            '"fireworks"': crwdns2657744:0crwdne2657744:0
+            '"flowers"': crwdns2657746:0crwdne2657746:0
+            '"growing_stars"': crwdns2657748:0crwdne2657748:0
+            '"swirl"': crwdns2657750:0crwdne2657750:0
+            '"kaleidoscope"': crwdns2657752:0crwdne2657752:0
+            '"lasers"': crwdns2657754:0crwdne2657754:0
+            '"splatter"': crwdns2657756:0crwdne2657756:0
+            '"rainbow"': crwdns2657758:0crwdne2657758:0
+            '"ripples_random"': crwdns2657760:0crwdne2657760:0
+            '"ripples"': crwdns2657762:0crwdne2657762:0
+            '"snowflakes"': crwdns2657764:0crwdne2657764:0
+            '"text"': crwdns2657766:0crwdne2657766:0
+            '"squiggles"': crwdns2657768:0crwdne2657768:0
+            '"galaxy"': crwdns2657770:0crwdne2657770:0
+            '"sparkles"': crwdns2657772:0crwdne2657772:0
+            '"spiral"': crwdns2657774:0crwdne2657774:0
+            '"disco"': crwdns2657776:0crwdne2657776:0
+            '"stars"': crwdns2657778:0crwdne2657778:0
+            '"music_wave"': crwdns2657780:0crwdne2657780:0
           PALETTE:
-            '"rave"': crwdns390470:0crwdne390470:0
-            '"cool"': crwdns390472:0crwdne390472:0
-            '"electronic"': crwdns390474:0crwdne390474:0
-            '"iceCream"': crwdns390476:0crwdne390476:0
-            '"default"': crwdns390478:0crwdne390478:0
-            '"neon"': crwdns390480:0crwdne390480:0
-            '"tropical"': crwdns390482:0crwdne390482:0
-            '"vintage"': crwdns390484:0crwdne390484:0
-            '"warm"': crwdns390486:0crwdne390486:0
+            '"rave"': crwdns2657782:0crwdne2657782:0
+            '"cool"': crwdns2657784:0crwdne2657784:0
+            '"electronic"': crwdns2657786:0crwdne2657786:0
+            '"iceCream"': crwdns2657788:0crwdne2657788:0
+            '"default"': crwdns2657790:0crwdne2657790:0
+            '"neon"': crwdns2657792:0crwdne2657792:0
+            '"tropical"': crwdns2657794:0crwdne2657794:0
+            '"vintage"': crwdns2657796:0crwdne2657796:0
+            '"warm"': crwdns2657798:0crwdne2657798:0
       Dancelab_setDanceSpeed:
         text: crwdns168928:0[SPRITE]crwdnd168928:0[0]crwdnd168928:0[SPEED]crwdnd168928:0[1]crwdne168928:0
         options:
@@ -579,18 +579,18 @@ in:
         options:
           GROUP:
             sprites: crwdns330882:0crwdne330882:0
-            '"ALIEN"': crwdns330884:0crwdne330884:0
-            '"BEAR"': crwdns330886:0crwdne330886:0
-            '"CAT"': crwdns330888:0crwdne330888:0
-            '"DOG"': crwdns330890:0crwdne330890:0
-            '"DUCK"': crwdns330892:0crwdne330892:0
-            '"FROG"': crwdns330894:0crwdne330894:0
-            '"MOOSE"': crwdns330896:0crwdne330896:0
-            '"PINEAPPLE"': crwdns330898:0crwdne330898:0
-            '"ROBOT"': crwdns330900:0crwdne330900:0
-            '"SHARK"': crwdns330902:0crwdne330902:0
-            '"SLOTH"': crwdns2071250:0crwdne2071250:0
-            '"UNICORN"': crwdns331038:0crwdne331038:0
+            '"ALIEN"': crwdns2657800:0crwdne2657800:0
+            '"BEAR"': crwdns2657802:0crwdne2657802:0
+            '"CAT"': crwdns2657804:0crwdne2657804:0
+            '"DOG"': crwdns2657806:0crwdne2657806:0
+            '"DUCK"': crwdns2657808:0crwdne2657808:0
+            '"FROG"': crwdns2657810:0crwdne2657810:0
+            '"MOOSE"': crwdns2657812:0crwdne2657812:0
+            '"PINEAPPLE"': crwdns2657814:0crwdne2657814:0
+            '"ROBOT"': crwdns2657816:0crwdne2657816:0
+            '"SHARK"': crwdns2657818:0crwdne2657818:0
+            '"SLOTH"': crwdns2657820:0crwdne2657820:0
+            '"UNICORN"': crwdns2657822:0crwdne2657822:0
           SPEED:
             '1': crwdns330904:0crwdne330904:0
             '2': crwdns330906:0crwdne330906:0
@@ -601,114 +601,114 @@ in:
         text: crwdns169242:0[EFFECT]crwdnd169242:0[0]crwdne169242:0
         options:
           EFFECT:
-            '"none"': crwdns169243:0crwdne169243:0
-            '"bubbles"': crwdns391142:0crwdne391142:0
-            '"confetti"': crwdns391144:0crwdne391144:0
-            '"hearts_red"': crwdns391146:0crwdne391146:0
-            '"music_notes"': crwdns391148:0crwdne391148:0
-            '"pineapples"': crwdns391150:0crwdne391150:0
-            '"pizzas"': crwdns391152:0crwdne391152:0
-            '"smiling_poop"': crwdns391154:0crwdne391154:0
-            '"rain"': crwdns194799:0crwdne194799:0
-            '"floating_rainbows"': crwdns391156:0crwdne391156:0
-            '"smile_face"': crwdns391158:0crwdne391158:0
-            '"spotlight"': crwdns305140:0crwdne305140:0
-            '"color_lights"': crwdns391160:0crwdne391160:0
-            '"raining_tacos"': crwdns194800:0crwdne194800:0
+            '"none"': crwdns2657824:0crwdne2657824:0
+            '"bubbles"': crwdns2657828:0crwdne2657828:0
+            '"confetti"': crwdns2657830:0crwdne2657830:0
+            '"hearts_red"': crwdns2657832:0crwdne2657832:0
+            '"music_notes"': crwdns2657834:0crwdne2657834:0
+            '"pineapples"': crwdns2657836:0crwdne2657836:0
+            '"pizzas"': crwdns2657838:0crwdne2657838:0
+            '"smiling_poop"': crwdns2657840:0crwdne2657840:0
+            '"rain"': crwdns2657842:0crwdne2657842:0
+            '"floating_rainbows"': crwdns2657844:0crwdne2657844:0
+            '"smile_face"': crwdns2657846:0crwdne2657846:0
+            '"spotlight"': crwdns2657848:0crwdne2657848:0
+            '"color_lights"': crwdns2657850:0crwdne2657850:0
+            '"raining_tacos"': crwdns2657852:0crwdne2657852:0
       Dancelab_setForegroundEffectExtended:
         text: crwdns390488:0[EFFECT]crwdnd390488:0[0]crwdne390488:0
         options:
           EFFECT:
-            '"none"': crwdns390490:0crwdne390490:0
-            '"rand"': crwdns390492:0crwdne390492:0
-            '"bubbles"': crwdns390494:0crwdne390494:0
-            '"hearts_colorful"': crwdns2071252:0crwdne2071252:0
-            '"confetti"': crwdns390496:0crwdne390496:0
-            '"emojis"': crwdns2071254:0crwdne2071254:0
-            '"hearts_red"': crwdns390498:0crwdne390498:0
-            '"music_notes"': crwdns390500:0crwdne390500:0
-            '"paint_drip"': crwdns2071256:0crwdne2071256:0
-            '"pineapples"': crwdns390502:0crwdne390502:0
-            '"pizzas"': crwdns390504:0crwdne390504:0
-            '"smiling_poop"': crwdns390506:0crwdne390506:0
-            '"rain"': crwdns390508:0crwdne390508:0
-            '"floating_rainbows"': crwdns390510:0crwdne390510:0
-            '"smile_face"': crwdns390512:0crwdne390512:0
-            '"spotlight"': crwdns390514:0crwdne390514:0
-            '"color_lights"': crwdns390516:0crwdne390516:0
-            '"exploding_stars"': crwdns2071258:0crwdne2071258:0
-            '"raining_tacos"': crwdns390518:0crwdne390518:0
+            '"none"': crwdns2657854:0crwdne2657854:0
+            '"rand"': crwdns2657856:0crwdne2657856:0
+            '"bubbles"': crwdns2657858:0crwdne2657858:0
+            '"hearts_colorful"': crwdns2657860:0crwdne2657860:0
+            '"confetti"': crwdns2657862:0crwdne2657862:0
+            '"emojis"': crwdns2657864:0crwdne2657864:0
+            '"hearts_red"': crwdns2657866:0crwdne2657866:0
+            '"music_notes"': crwdns2657868:0crwdne2657868:0
+            '"paint_drip"': crwdns2657870:0crwdne2657870:0
+            '"pineapples"': crwdns2657872:0crwdne2657872:0
+            '"pizzas"': crwdns2657874:0crwdne2657874:0
+            '"smiling_poop"': crwdns2657876:0crwdne2657876:0
+            '"rain"': crwdns2657878:0crwdne2657878:0
+            '"floating_rainbows"': crwdns2657880:0crwdne2657880:0
+            '"smile_face"': crwdns2657882:0crwdne2657882:0
+            '"spotlight"': crwdns2657884:0crwdne2657884:0
+            '"color_lights"': crwdns2657886:0crwdne2657886:0
+            '"exploding_stars"': crwdns2657888:0crwdne2657888:0
+            '"raining_tacos"': crwdns2657890:0crwdne2657890:0
       Dancelab_setProp:
         text: crwdns168933:0[SPRITE]crwdnd168933:0[0]crwdnd168933:0[PROPERTY]crwdnd168933:0[1]crwdnd168933:0[VAL]crwdnd168933:0[2]crwdne168933:0
         options:
           PROPERTY:
-            '"scale"': crwdns168934:0crwdne168934:0
-            '"width"': crwdns195117:0crwdne195117:0
-            '"height"': crwdns195119:0crwdne195119:0
-            '"rotation"': crwdns168935:0crwdne168935:0
-            '"x"': crwdns168936:0crwdne168936:0
-            '"y"': crwdns168937:0crwdne168937:0
+            '"scale"': crwdns2657892:0crwdne2657892:0
+            '"width"': crwdns2657894:0crwdne2657894:0
+            '"height"': crwdns2657896:0crwdne2657896:0
+            '"rotation"': crwdns2657898:0crwdne2657898:0
+            '"x"': crwdns2657900:0crwdne2657900:0
+            '"y"': crwdns2657902:0crwdne2657902:0
       Dancelab_setPropEach:
         text: crwdns245524:0[GROUP]crwdnd245524:0[0]crwdnd245524:0[PROPERTY]crwdnd245524:0[1]crwdnd245524:0[VAL]crwdnd245524:0[2]crwdne245524:0
         options:
           GROUP:
             sprites: crwdns245526:0crwdne245526:0
-            '"ALIEN"': crwdns245528:0crwdne245528:0
-            '"BEAR"': crwdns245530:0crwdne245530:0
-            '"CAT"': crwdns245532:0crwdne245532:0
-            '"DOG"': crwdns245534:0crwdne245534:0
-            '"DUCK"': crwdns245536:0crwdne245536:0
-            '"FROG"': crwdns245538:0crwdne245538:0
-            '"MOOSE"': crwdns245540:0crwdne245540:0
-            '"PINEAPPLE"': crwdns245542:0crwdne245542:0
-            '"ROBOT"': crwdns245544:0crwdne245544:0
-            '"SHARK"': crwdns245546:0crwdne245546:0
-            '"SLOTH"': crwdns2071260:0crwdne2071260:0
-            '"UNICORN"': crwdns331040:0crwdne331040:0
+            '"ALIEN"': crwdns2657904:0crwdne2657904:0
+            '"BEAR"': crwdns2657906:0crwdne2657906:0
+            '"CAT"': crwdns2657908:0crwdne2657908:0
+            '"DOG"': crwdns2657910:0crwdne2657910:0
+            '"DUCK"': crwdns2657912:0crwdne2657912:0
+            '"FROG"': crwdns2657914:0crwdne2657914:0
+            '"MOOSE"': crwdns2657916:0crwdne2657916:0
+            '"PINEAPPLE"': crwdns2657918:0crwdne2657918:0
+            '"ROBOT"': crwdns2657920:0crwdne2657920:0
+            '"SHARK"': crwdns2657922:0crwdne2657922:0
+            '"SLOTH"': crwdns2657924:0crwdne2657924:0
+            '"UNICORN"': crwdns2657926:0crwdne2657926:0
           PROPERTY:
-            '"scale"': crwdns245548:0crwdne245548:0
-            '"width"': crwdns245550:0crwdne245550:0
-            '"height"': crwdns245552:0crwdne245552:0
-            '"rotation"': crwdns245554:0crwdne245554:0
-            '"x"': crwdns245556:0crwdne245556:0
-            '"y"': crwdns245558:0crwdne245558:0
-            '"tint"': crwdns2068916:0crwdne2068916:0
+            '"scale"': crwdns2657928:0crwdne2657928:0
+            '"width"': crwdns2657930:0crwdne2657930:0
+            '"height"': crwdns2657932:0crwdne2657932:0
+            '"rotation"': crwdns2657934:0crwdne2657934:0
+            '"x"': crwdns2657936:0crwdne2657936:0
+            '"y"': crwdns2657938:0crwdne2657938:0
+            '"tint"': crwdns2657940:0crwdne2657940:0
       Dancelab_setPropRandom:
         text: crwdns241340:0[SPRITE]crwdnd241340:0[0]crwdnd241340:0[PROPERTY]crwdnd241340:0[1]crwdne241340:0
         options:
           PROPERTY:
-            '"scale"': crwdns241342:0crwdne241342:0
-            '"width"': crwdns241344:0crwdne241344:0
-            '"height"': crwdns241346:0crwdne241346:0
-            '"rotation"': crwdns241348:0crwdne241348:0
-            '"x"': crwdns241350:0crwdne241350:0
-            '"y"': crwdns241352:0crwdne241352:0
-            '"tint"': crwdns331042:0crwdne331042:0
+            '"scale"': crwdns2657942:0crwdne2657942:0
+            '"width"': crwdns2657944:0crwdne2657944:0
+            '"height"': crwdns2657946:0crwdne2657946:0
+            '"rotation"': crwdns2657948:0crwdne2657948:0
+            '"x"': crwdns2657950:0crwdne2657950:0
+            '"y"': crwdns2657952:0crwdne2657952:0
+            '"tint"': crwdns2657954:0crwdne2657954:0
       Dancelab_setPropRandomEach:
         text: crwdns2066202:0[GROUP]crwdnd2066202:0[0]crwdnd2066202:0[PROPERTY]crwdnd2066202:0[1]crwdne2066202:0
         options:
           GROUP:
             sprites: crwdns2066204:0crwdne2066204:0
-            '"ALIEN"': crwdns2066206:0crwdne2066206:0
-            '"BEAR"': crwdns2066208:0crwdne2066208:0
-            '"CAT"': crwdns2066210:0crwdne2066210:0
-            '"DOG"': crwdns2066212:0crwdne2066212:0
-            '"DUCK"': crwdns2066214:0crwdne2066214:0
-            '"FROG"': crwdns2066216:0crwdne2066216:0
-            '"MOOSE"': crwdns2066218:0crwdne2066218:0
-            '"PINEAPPLE"': crwdns2066220:0crwdne2066220:0
-            '"ROBOT"': crwdns2066222:0crwdne2066222:0
-            '"SHARK"': crwdns2066224:0crwdne2066224:0
-            '"SLOTH"': crwdns2068918:0crwdne2068918:0
-            '"UNICORN"': crwdns2066226:0crwdne2066226:0
+            '"ALIEN"': crwdns2657956:0crwdne2657956:0
+            '"BEAR"': crwdns2657958:0crwdne2657958:0
+            '"CAT"': crwdns2657960:0crwdne2657960:0
+            '"DOG"': crwdns2657962:0crwdne2657962:0
+            '"DUCK"': crwdns2657964:0crwdne2657964:0
+            '"FROG"': crwdns2657966:0crwdne2657966:0
+            '"MOOSE"': crwdns2657968:0crwdne2657968:0
+            '"PINEAPPLE"': crwdns2657970:0crwdne2657970:0
+            '"ROBOT"': crwdns2657972:0crwdne2657972:0
+            '"SHARK"': crwdns2657974:0crwdne2657974:0
+            '"SLOTH"': crwdns2657976:0crwdne2657976:0
+            '"UNICORN"': crwdns2657978:0crwdne2657978:0
           PROPERTY:
-            '"scale"': crwdns2066228:0crwdne2066228:0
-            '"width"': crwdns2066230:0crwdne2066230:0
-            '"height"': crwdns2066232:0crwdne2066232:0
-            '"rotation"': crwdns2066234:0crwdne2066234:0
-            '"x"': crwdns2066236:0crwdne2066236:0
-            '"y"': crwdns2066238:0crwdne2066238:0
-            '"tint"': crwdns2066240:0crwdne2066240:0
+            '"scale"': crwdns2657980:0crwdne2657980:0
+            '"width"': crwdns2657982:0crwdne2657982:0
+            '"height"': crwdns2657984:0crwdne2657984:0
+            '"rotation"': crwdns2657986:0crwdne2657986:0
+            '"x"': crwdns2657988:0crwdne2657988:0
+            '"y"': crwdns2657990:0crwdne2657990:0
+            '"tint"': crwdns2657992:0crwdne2657992:0
       Dancelab_setTint:
         text: crwdns195121:0[SPRITE]crwdnd195121:0[0]crwdnd195121:0[VAL]crwdnd195121:0[1]crwdne195121:0
       Dancelab_setTintEach:
@@ -716,35 +716,35 @@ in:
         options:
           THIS:
             sprites: crwdns305146:0crwdne305146:0
-            '"ALIEN"': crwdns305148:0crwdne305148:0
-            '"BEAR"': crwdns305150:0crwdne305150:0
-            '"CAT"': crwdns305152:0crwdne305152:0
-            '"DOG"': crwdns305154:0crwdne305154:0
-            '"DUCK"': crwdns305156:0crwdne305156:0
-            '"FROG"': crwdns305158:0crwdne305158:0
-            '"MOOSE"': crwdns305160:0crwdne305160:0
-            '"PINEAPPLE"': crwdns305162:0crwdne305162:0
-            '"ROBOT"': crwdns305164:0crwdne305164:0
-            '"SHARK"': crwdns305166:0crwdne305166:0
-            '"SLOTH"': crwdns2071262:0crwdne2071262:0
-            '"UNICORN"': crwdns2066242:0crwdne2066242:0
+            '"ALIEN"': crwdns2657994:0crwdne2657994:0
+            '"BEAR"': crwdns2657996:0crwdne2657996:0
+            '"CAT"': crwdns2657998:0crwdne2657998:0
+            '"DOG"': crwdns2658000:0crwdne2658000:0
+            '"DUCK"': crwdns2658002:0crwdne2658002:0
+            '"FROG"': crwdns2658004:0crwdne2658004:0
+            '"MOOSE"': crwdns2658006:0crwdne2658006:0
+            '"PINEAPPLE"': crwdns2658008:0crwdne2658008:0
+            '"ROBOT"': crwdns2658010:0crwdne2658010:0
+            '"SHARK"': crwdns2658012:0crwdne2658012:0
+            '"SLOTH"': crwdns2658014:0crwdne2658014:0
+            '"UNICORN"': crwdns2658016:0crwdne2658016:0
       Dancelab_setTintEachInline:
         text: crwdns2063178:0[THIS]crwdnd2063178:0[0]crwdnd2063178:0[VAL]crwdnd2063178:0[1]crwdne2063178:0
         options:
           THIS:
             sprites: crwdns2063180:0crwdne2063180:0
-            '"ALIEN"': crwdns2063182:0crwdne2063182:0
-            '"BEAR"': crwdns2063184:0crwdne2063184:0
-            '"CAT"': crwdns2063186:0crwdne2063186:0
-            '"DOG"': crwdns2063188:0crwdne2063188:0
-            '"DUCK"': crwdns2063190:0crwdne2063190:0
-            '"FROG"': crwdns2063192:0crwdne2063192:0
-            '"MOOSE"': crwdns2063194:0crwdne2063194:0
-            '"PINEAPPLE"': crwdns2063196:0crwdne2063196:0
-            '"ROBOT"': crwdns2063198:0crwdne2063198:0
-            '"SHARK"': crwdns2063200:0crwdne2063200:0
-            '"SLOTH"': crwdns2071264:0crwdne2071264:0
-            '"UNICORN"': crwdns2066244:0crwdne2066244:0
+            '"ALIEN"': crwdns2658018:0crwdne2658018:0
+            '"BEAR"': crwdns2658020:0crwdne2658020:0
+            '"CAT"': crwdns2658022:0crwdne2658022:0
+            '"DOG"': crwdns2658024:0crwdne2658024:0
+            '"DUCK"': crwdns2658026:0crwdne2658026:0
+            '"FROG"': crwdns2658028:0crwdne2658028:0
+            '"MOOSE"': crwdns2658030:0crwdne2658030:0
+            '"PINEAPPLE"': crwdns2658032:0crwdne2658032:0
+            '"ROBOT"': crwdns2658034:0crwdne2658034:0
+            '"SHARK"': crwdns2658036:0crwdne2658036:0
+            '"SLOTH"': crwdns2658038:0crwdne2658038:0
+            '"UNICORN"': crwdns2658040:0crwdne2658040:0
       Dancelab_setTintInline:
         text: crwdns362808:0[SPRITE]crwdnd362808:0[0]crwdnd362808:0[VAL]crwdnd362808:0[1]crwdne362808:0
       Dancelab_setVisible:
@@ -758,18 +758,18 @@ in:
         options:
           THIS:
             sprites: crwdns168942:0crwdne168942:0
-            '"ALIEN"': crwdns305174:0crwdne305174:0
-            '"BEAR"': crwdns305176:0crwdne305176:0
-            '"CAT"': crwdns305178:0crwdne305178:0
-            '"DOG"': crwdns305180:0crwdne305180:0
-            '"DUCK"': crwdns305182:0crwdne305182:0
-            '"FROG"': crwdns305184:0crwdne305184:0
-            '"MOOSE"': crwdns305186:0crwdne305186:0
-            '"PINEAPPLE"': crwdns305188:0crwdne305188:0
-            '"ROBOT"': crwdns305190:0crwdne305190:0
-            '"SHARK"': crwdns305192:0crwdne305192:0
-            '"SLOTH"': crwdns2071266:0crwdne2071266:0
-            '"UNICORN"': crwdns331044:0crwdne331044:0
+            '"ALIEN"': crwdns2658042:0crwdne2658042:0
+            '"BEAR"': crwdns2658044:0crwdne2658044:0
+            '"CAT"': crwdns2658046:0crwdne2658046:0
+            '"DOG"': crwdns2658048:0crwdne2658048:0
+            '"DUCK"': crwdns2658050:0crwdne2658050:0
+            '"FROG"': crwdns2658052:0crwdne2658052:0
+            '"MOOSE"': crwdns2658054:0crwdne2658054:0
+            '"PINEAPPLE"': crwdns2658056:0crwdne2658056:0
+            '"ROBOT"': crwdns2658058:0crwdne2658058:0
+            '"SHARK"': crwdns2658060:0crwdne2658060:0
+            '"SLOTH"': crwdns2658062:0crwdne2658062:0
+            '"UNICORN"': crwdns2658064:0crwdne2658064:0
           VISIBILITY:
             'true': crwdns168946:0crwdne168946:0
             'false': crwdns168947:0crwdne168947:0
@@ -777,184 +777,184 @@ in:
         text: crwdns168960:0[SPRITE]crwdnd168960:0[0]crwdnd168960:0[PROPERTY]crwdnd168960:0[1]crwdnd168960:0[RANGE]crwdnd168960:0[2]crwdne168960:0
         options:
           PROPERTY:
-            '"scale"': crwdns168961:0crwdne168961:0
-            '"width"': crwdns195123:0crwdne195123:0
-            '"height"': crwdns195125:0crwdne195125:0
-            '"rotation"': crwdns168962:0crwdne168962:0
-            '"x"': crwdns168963:0crwdne168963:0
-            '"y"': crwdns168964:0crwdne168964:0
-            '"tint"': crwdns168966:0crwdne168966:0
+            '"scale"': crwdns2658066:0crwdne2658066:0
+            '"width"': crwdns2658068:0crwdne2658068:0
+            '"height"': crwdns2658070:0crwdne2658070:0
+            '"rotation"': crwdns2658072:0crwdne2658072:0
+            '"x"': crwdns2658074:0crwdne2658074:0
+            '"y"': crwdns2658076:0crwdne2658076:0
+            '"tint"': crwdns2658078:0crwdne2658078:0
           RANGE:
-            '"bass"': crwdns168967:0crwdne168967:0
-            '"mid"': crwdns168968:0crwdne168968:0
-            '"treble"': crwdns168969:0crwdne168969:0
+            '"bass"': crwdns2658080:0crwdne2658080:0
+            '"mid"': crwdns2658082:0crwdne2658082:0
+            '"treble"': crwdns2658084:0crwdne2658084:0
       Dancelab_startMappingEach:
         text: crwdns2066246:0[GROUP]crwdnd2066246:0[0]crwdnd2066246:0[PROPERTY]crwdnd2066246:0[1]crwdnd2066246:0[RANGE]crwdnd2066246:0[2]crwdne2066246:0
         options:
           GROUP:
             sprites: crwdns2066248:0crwdne2066248:0
-            '"ALIEN"': crwdns2066250:0crwdne2066250:0
-            '"BEAR"': crwdns2066252:0crwdne2066252:0
-            '"CAT"': crwdns2066254:0crwdne2066254:0
-            '"DOG"': crwdns2066256:0crwdne2066256:0
-            '"DUCK"': crwdns2066258:0crwdne2066258:0
-            '"FROG"': crwdns2066260:0crwdne2066260:0
-            '"MOOSE"': crwdns2066262:0crwdne2066262:0
-            '"PINEAPPLE"': crwdns2066264:0crwdne2066264:0
-            '"ROBOT"': crwdns2066266:0crwdne2066266:0
-            '"SHARK"': crwdns2066268:0crwdne2066268:0
-            '"SLOTH"': crwdns2071268:0crwdne2071268:0
-            '"UNICORN"': crwdns2066270:0crwdne2066270:0
+            '"ALIEN"': crwdns2658086:0crwdne2658086:0
+            '"BEAR"': crwdns2658088:0crwdne2658088:0
+            '"CAT"': crwdns2658090:0crwdne2658090:0
+            '"DOG"': crwdns2658092:0crwdne2658092:0
+            '"DUCK"': crwdns2658094:0crwdne2658094:0
+            '"FROG"': crwdns2658096:0crwdne2658096:0
+            '"MOOSE"': crwdns2658098:0crwdne2658098:0
+            '"PINEAPPLE"': crwdns2658100:0crwdne2658100:0
+            '"ROBOT"': crwdns2658102:0crwdne2658102:0
+            '"SHARK"': crwdns2658104:0crwdne2658104:0
+            '"SLOTH"': crwdns2658106:0crwdne2658106:0
+            '"UNICORN"': crwdns2658108:0crwdne2658108:0
           PROPERTY:
-            '"scale"': crwdns2066272:0crwdne2066272:0
-            '"width"': crwdns2066274:0crwdne2066274:0
-            '"height"': crwdns2066276:0crwdne2066276:0
-            '"rotation"': crwdns2066278:0crwdne2066278:0
-            '"x"': crwdns2066280:0crwdne2066280:0
-            '"y"': crwdns2066282:0crwdne2066282:0
-            '"tint"': crwdns2066284:0crwdne2066284:0
+            '"scale"': crwdns2658110:0crwdne2658110:0
+            '"width"': crwdns2658112:0crwdne2658112:0
+            '"height"': crwdns2658114:0crwdne2658114:0
+            '"rotation"': crwdns2658116:0crwdne2658116:0
+            '"x"': crwdns2658118:0crwdne2658118:0
+            '"y"': crwdns2658120:0crwdne2658120:0
+            '"tint"': crwdns2658122:0crwdne2658122:0
           RANGE:
-            '"bass"': crwdns2066286:0crwdne2066286:0
-            '"mid"': crwdns2066288:0crwdne2066288:0
-            '"treble"': crwdns2066290:0crwdne2066290:0
+            '"bass"': crwdns2658124:0crwdne2658124:0
+            '"mid"': crwdns2658126:0crwdne2658126:0
+            '"treble"': crwdns2658128:0crwdne2658128:0
       Dancelab_stopMapping:
         text: crwdns168973:0[SPRITE]crwdnd168973:0[0]crwdnd168973:0[PROPERTY]crwdnd168973:0[1]crwdnd168973:0[RANGE]crwdnd168973:0[2]crwdne168973:0
         options:
           PROPERTY:
-            '"scale"': crwdns168974:0crwdne168974:0
-            '"width"': crwdns195127:0crwdne195127:0
-            '"height"': crwdns195129:0crwdne195129:0
-            '"rotation"': crwdns168975:0crwdne168975:0
-            '"x"': crwdns168976:0crwdne168976:0
-            '"y"': crwdns168977:0crwdne168977:0
-            '"direction"': crwdns168978:0crwdne168978:0
-            '"tint"': crwdns168979:0crwdne168979:0
+            '"scale"': crwdns2658130:0crwdne2658130:0
+            '"width"': crwdns2658132:0crwdne2658132:0
+            '"height"': crwdns2658134:0crwdne2658134:0
+            '"rotation"': crwdns2658136:0crwdne2658136:0
+            '"x"': crwdns2658138:0crwdne2658138:0
+            '"y"': crwdns2658140:0crwdne2658140:0
+            '"direction"': crwdns2658142:0crwdne2658142:0
+            '"tint"': crwdns2658144:0crwdne2658144:0
           RANGE:
-            '"bass"': crwdns168981:0crwdne168981:0
-            '"mid"': crwdns168982:0crwdne168982:0
-            '"treble"': crwdns168983:0crwdne168983:0
+            '"bass"': crwdns2658146:0crwdne2658146:0
+            '"mid"': crwdns2658148:0crwdne2658148:0
+            '"treble"': crwdns2658150:0crwdne2658150:0
       Dancelab_stopMappingEach:
         text: crwdns2066292:0[GROUP]crwdnd2066292:0[0]crwdnd2066292:0[PROPERTY]crwdnd2066292:0[1]crwdnd2066292:0[RANGE]crwdnd2066292:0[2]crwdne2066292:0
         options:
           GROUP:
             sprites: crwdns2066294:0crwdne2066294:0
-            '"ALIEN"': crwdns2066296:0crwdne2066296:0
-            '"BEAR"': crwdns2066298:0crwdne2066298:0
-            '"CAT"': crwdns2066300:0crwdne2066300:0
-            '"DOG"': crwdns2066302:0crwdne2066302:0
-            '"DUCK"': crwdns2066304:0crwdne2066304:0
-            '"FROG"': crwdns2066306:0crwdne2066306:0
-            '"MOOSE"': crwdns2066308:0crwdne2066308:0
-            '"PINEAPPLE"': crwdns2066310:0crwdne2066310:0
-            '"ROBOT"': crwdns2066312:0crwdne2066312:0
-            '"SHARK"': crwdns2066314:0crwdne2066314:0
-            '"SLOTH"': crwdns2071270:0crwdne2071270:0
-            '"UNICORN"': crwdns2066316:0crwdne2066316:0
+            '"ALIEN"': crwdns2658152:0crwdne2658152:0
+            '"BEAR"': crwdns2658154:0crwdne2658154:0
+            '"CAT"': crwdns2658156:0crwdne2658156:0
+            '"DOG"': crwdns2658158:0crwdne2658158:0
+            '"DUCK"': crwdns2658160:0crwdne2658160:0
+            '"FROG"': crwdns2658162:0crwdne2658162:0
+            '"MOOSE"': crwdns2658164:0crwdne2658164:0
+            '"PINEAPPLE"': crwdns2658166:0crwdne2658166:0
+            '"ROBOT"': crwdns2658168:0crwdne2658168:0
+            '"SHARK"': crwdns2658170:0crwdne2658170:0
+            '"SLOTH"': crwdns2658172:0crwdne2658172:0
+            '"UNICORN"': crwdns2658174:0crwdne2658174:0
           PROPERTY:
-            '"scale"': crwdns2066318:0crwdne2066318:0
-            '"width"': crwdns2066320:0crwdne2066320:0
-            '"height"': crwdns2066322:0crwdne2066322:0
-            '"rotation"': crwdns2066324:0crwdne2066324:0
-            '"x"': crwdns2066326:0crwdne2066326:0
-            '"y"': crwdns2066328:0crwdne2066328:0
-            '"direction"': crwdns2066330:0crwdne2066330:0
-            '"tint"': crwdns2066332:0crwdne2066332:0
+            '"scale"': crwdns2658176:0crwdne2658176:0
+            '"width"': crwdns2658178:0crwdne2658178:0
+            '"height"': crwdns2658180:0crwdne2658180:0
+            '"rotation"': crwdns2658182:0crwdne2658182:0
+            '"x"': crwdns2658184:0crwdne2658184:0
+            '"y"': crwdns2658186:0crwdne2658186:0
+            '"direction"': crwdns2658188:0crwdne2658188:0
+            '"tint"': crwdns2658190:0crwdne2658190:0
           RANGE:
-            '"bass"': crwdns2066334:0crwdne2066334:0
-            '"mid"': crwdns2066336:0crwdne2066336:0
-            '"treble"': crwdns2066338:0crwdne2066338:0
+            '"bass"': crwdns2658192:0crwdne2658192:0
+            '"mid"': crwdns2658194:0crwdne2658194:0
+            '"treble"': crwdns2658196:0crwdne2658196:0
       Dancelab_translateStrings:
         text: crwdns2069144:0[STRING]crwdnd2069144:0[0]crwdne2069144:0
         options:
           STRING:
-            '"music_wave"': crwdns2069146:0crwdne2069146:0
-            '"ripples"': crwdns2069148:0crwdne2069148:0
-            '"ripples_random"': crwdns2069150:0crwdne2069150:0
-            '"quads"': crwdns2069152:0crwdne2069152:0
-            '"flowers"': crwdns2069154:0crwdne2069154:0
-            '"popsicles"': crwdns2069156:0crwdne2069156:0
-            '"squiggles"': crwdns2069158:0crwdne2069158:0
-            '"growing_stars"': crwdns2069160:0crwdne2069160:0
-            '"emojis"': crwdns2069162:0crwdne2069162:0
-            '"hearts_colorful"': crwdns2069164:0crwdne2069164:0
-            '"paint_drio"': crwdns2069166:0crwdne2069166:0
-            '"exploding_stars"': crwdns2069168:0crwdne2069168:0
-            '"row_top"': crwdns2069170:0crwdne2069170:0
-            '"row_bottom"': crwdns2069172:0crwdne2069172:0
-            '"column_left"': crwdns2069174:0crwdne2069174:0
-            '"column_right"': crwdns2069176:0crwdne2069176:0
-            '"diamond"': crwdns2069178:0crwdne2069178:0
-            '"mural"': crwdns2071272:0crwdne2071272:0
-            '"safari"': crwdns2071274:0crwdne2071274:0
-            '"network"': crwdns2071276:0crwdne2071276:0
-            '"highway"': crwdns2071278:0crwdne2071278:0
-            '"stream"': crwdns2071280:0crwdne2071280:0
-            '"tile"': crwdns2071282:0crwdne2071282:0
-            '"shadow"': crwdns2071284:0crwdne2071284:0
-            '"s"': crwdns2069194:0crwdne2069194:0
-            '"t"': crwdns2069196:0crwdne2069196:0
-            '"u"': crwdns2069198:0crwdne2069198:0
-            '"v"': crwdns2069200:0crwdne2069200:0
-            '"w"': crwdns2069202:0crwdne2069202:0
-            '"x"': crwdns2069204:0crwdne2069204:0
-            '"y"': crwdns2069206:0crwdne2069206:0
-            '"z"': crwdns2069208:0crwdne2069208:0
-            '"0"': crwdns2069210:0crwdne2069210:0
-            '"1"': crwdns2069212:0crwdne2069212:0
-            '"2"': crwdns2069214:0crwdne2069214:0
-            '"3"': crwdns2069216:0crwdne2069216:0
-            '"4"': crwdns2069218:0crwdne2069218:0
-            '"5"': crwdns2069220:0crwdne2069220:0
-            '"6"': crwdns2069222:0crwdne2069222:0
-            '"7"': crwdns2069224:0crwdne2069224:0
-            '"8"': crwdns2069226:0crwdne2069226:0
-            '"9"': crwdns2069228:0crwdne2069228:0
+            '"music_wave"': crwdns2658198:0crwdne2658198:0
+            '"ripples"': crwdns2658200:0crwdne2658200:0
+            '"ripples_random"': crwdns2658202:0crwdne2658202:0
+            '"quads"': crwdns2658204:0crwdne2658204:0
+            '"flowers"': crwdns2658206:0crwdne2658206:0
+            '"popsicles"': crwdns2658208:0crwdne2658208:0
+            '"squiggles"': crwdns2658210:0crwdne2658210:0
+            '"growing_stars"': crwdns2658212:0crwdne2658212:0
+            '"emojis"': crwdns2658214:0crwdne2658214:0
+            '"hearts_colorful"': crwdns2658216:0crwdne2658216:0
+            '"paint_drio"': crwdns2658218:0crwdne2658218:0
+            '"exploding_stars"': crwdns2658220:0crwdne2658220:0
+            '"row_top"': crwdns2658222:0crwdne2658222:0
+            '"row_bottom"': crwdns2658224:0crwdne2658224:0
+            '"column_left"': crwdns2658226:0crwdne2658226:0
+            '"column_right"': crwdns2658228:0crwdne2658228:0
+            '"diamond"': crwdns2658230:0crwdne2658230:0
+            '"mural"': crwdns2658232:0crwdne2658232:0
+            '"safari"': crwdns2658234:0crwdne2658234:0
+            '"network"': crwdns2658236:0crwdne2658236:0
+            '"highway"': crwdns2658238:0crwdne2658238:0
+            '"stream"': crwdns2658240:0crwdne2658240:0
+            '"tile"': crwdns2658242:0crwdne2658242:0
+            '"shadow"': crwdns2658244:0crwdne2658244:0
+            '"s"': crwdns2658246:0crwdne2658246:0
+            '"t"': crwdns2658248:0crwdne2658248:0
+            '"u"': crwdns2658250:0crwdne2658250:0
+            '"v"': crwdns2658252:0crwdne2658252:0
+            '"w"': crwdns2658254:0crwdne2658254:0
+            '"x"': crwdns2658256:0crwdne2658256:0
+            '"y"': crwdns2658258:0crwdne2658258:0
+            '"z"': crwdns2658260:0crwdne2658260:0
+            '"0"': crwdns2658262:0crwdne2658262:0
+            '"1"': crwdns2658264:0crwdne2658264:0
+            '"2"': crwdns2658266:0crwdne2658266:0
+            '"3"': crwdns2658268:0crwdne2658268:0
+            '"4"': crwdns2658270:0crwdne2658270:0
+            '"5"': crwdns2658272:0crwdne2658272:0
+            '"6"': crwdns2658274:0crwdne2658274:0
+            '"7"': crwdns2658276:0crwdne2658276:0
+            '"8"': crwdns2658278:0crwdne2658278:0
+            '"9"': crwdns2658280:0crwdne2658280:0
       Dancelab_whenKey:
         text: crwdns168985:0[KEY]crwdnd168985:0[0]crwdne168985:0
         options:
           KEY:
-            '"up"': crwdns168986:0crwdne168986:0
-            '"left"': crwdns168988:0crwdne168988:0
-            '"down"': crwdns168987:0crwdne168987:0
-            '"right"': crwdns168989:0crwdne168989:0
-            '"space"': crwdns168990:0crwdne168990:0
-            '"enter"': crwdns305194:0crwdne305194:0
-            '"a"': crwdns168991:0crwdne168991:0
-            '"b"': crwdns305196:0crwdne305196:0
-            '"c"': crwdns305198:0crwdne305198:0
-            '"d"': crwdns168994:0crwdne168994:0
-            '"e"': crwdns305200:0crwdne305200:0
-            '"f"': crwdns305202:0crwdne305202:0
-            '"g"': crwdns305204:0crwdne305204:0
-            '"h"': crwdns305206:0crwdne305206:0
-            '"i"': crwdns305208:0crwdne305208:0
-            '"j"': crwdns305210:0crwdne305210:0
-            '"k"': crwdns305212:0crwdne305212:0
-            '"l"': crwdns305214:0crwdne305214:0
-            '"m"': crwdns305216:0crwdne305216:0
-            '"n"': crwdns334786:0crwdne334786:0
-            '"o"': crwdns305218:0crwdne305218:0
-            '"p"': crwdns305220:0crwdne305220:0
-            '"q"': crwdns305222:0crwdne305222:0
-            '"r"': crwdns305224:0crwdne305224:0
-            '"s"': crwdns168993:0crwdne168993:0
-            '"t"': crwdns305226:0crwdne305226:0
-            '"u"': crwdns305228:0crwdne305228:0
-            '"v"': crwdns305230:0crwdne305230:0
-            '"w"': crwdns168992:0crwdne168992:0
-            '"x"': crwdns305232:0crwdne305232:0
-            '"y"': crwdns334788:0crwdne334788:0
-            '"z"': crwdns305234:0crwdne305234:0
-            '"0"': crwdns305236:0crwdne305236:0
-            '"1"': crwdns305238:0crwdne305238:0
-            '"2"': crwdns305240:0crwdne305240:0
-            '"3"': crwdns305242:0crwdne305242:0
-            '"4"': crwdns305244:0crwdne305244:0
-            '"5"': crwdns305246:0crwdne305246:0
-            '"6"': crwdns305248:0crwdne305248:0
-            '"7"': crwdns305250:0crwdne305250:0
-            '"8"': crwdns305252:0crwdne305252:0
-            '"9"': crwdns305254:0crwdne305254:0
+            '"up"': crwdns2658282:0crwdne2658282:0
+            '"left"': crwdns2658284:0crwdne2658284:0
+            '"down"': crwdns2658286:0crwdne2658286:0
+            '"right"': crwdns2658288:0crwdne2658288:0
+            '"space"': crwdns2658290:0crwdne2658290:0
+            '"enter"': crwdns2658292:0crwdne2658292:0
+            '"a"': crwdns2658294:0crwdne2658294:0
+            '"b"': crwdns2658296:0crwdne2658296:0
+            '"c"': crwdns2658298:0crwdne2658298:0
+            '"d"': crwdns2658300:0crwdne2658300:0
+            '"e"': crwdns2658302:0crwdne2658302:0
+            '"f"': crwdns2658304:0crwdne2658304:0
+            '"g"': crwdns2658306:0crwdne2658306:0
+            '"h"': crwdns2658308:0crwdne2658308:0
+            '"i"': crwdns2658310:0crwdne2658310:0
+            '"j"': crwdns2658312:0crwdne2658312:0
+            '"k"': crwdns2658314:0crwdne2658314:0
+            '"l"': crwdns2658316:0crwdne2658316:0
+            '"m"': crwdns2658318:0crwdne2658318:0
+            '"n"': crwdns2658320:0crwdne2658320:0
+            '"o"': crwdns2658322:0crwdne2658322:0
+            '"p"': crwdns2658324:0crwdne2658324:0
+            '"q"': crwdns2658326:0crwdne2658326:0
+            '"r"': crwdns2658328:0crwdne2658328:0
+            '"s"': crwdns2658330:0crwdne2658330:0
+            '"t"': crwdns2658332:0crwdne2658332:0
+            '"u"': crwdns2658334:0crwdne2658334:0
+            '"v"': crwdns2658336:0crwdne2658336:0
+            '"w"': crwdns2658338:0crwdne2658338:0
+            '"x"': crwdns2658340:0crwdne2658340:0
+            '"y"': crwdns2658342:0crwdne2658342:0
+            '"z"': crwdns2658344:0crwdne2658344:0
+            '"0"': crwdns2658346:0crwdne2658346:0
+            '"1"': crwdns2658348:0crwdne2658348:0
+            '"2"': crwdns2658350:0crwdne2658350:0
+            '"3"': crwdns2658352:0crwdne2658352:0
+            '"4"': crwdns2658354:0crwdne2658354:0
+            '"5"': crwdns2658356:0crwdne2658356:0
+            '"6"': crwdns2658358:0crwdne2658358:0
+            '"7"': crwdns2658360:0crwdne2658360:0
+            '"8"': crwdns2658362:0crwdne2658362:0
+            '"9"': crwdns2658364:0crwdne2658364:0
       Dancelab_whenPeak:
         text: crwdns168995:0[RANGE]crwdnd168995:0[0]crwdne168995:0
         options:
@@ -970,25 +970,25 @@ in:
         text: crwdns182419:0[SONG]crwdnd182419:0[0]crwdne182419:0
         options:
           SONG:
-            '"macklemore90"': crwdns194802:0crwdne194802:0
-            '"hammer"': crwdns182421:0crwdne182421:0
-            '"peas"': crwdns182422:0crwdne182422:0
+            '"macklemore90"': crwdns2658366:0crwdne2658366:0
+            '"hammer"': crwdns2658368:0crwdne2658368:0
+            '"peas"': crwdns2658370:0crwdne2658370:0
       gamelab_addBehaviorSimple:
         text: crwdns169012:0[SPRITE]crwdnd169012:0[0]crwdnd169012:0[BEHAVIOR]crwdnd169012:0[1]crwdne169012:0
       gamelab_addTarget:
         text: crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdnd2478908:0[OPT]crwdnd2478908:0[2]crwdne2478908:0
         options:
           OPT:
-            '"follow"': crwdns2486172:0crwdne2486172:0
-            '"avoid"': crwdns2486174:0crwdne2486174:0
+            '"follow"': crwdns2658372:0crwdne2658372:0
+            '"avoid"': crwdns2658374:0crwdne2658374:0
       gamelab_allSpritesWithAnimation:
         text: crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0
       gamelab_atTime:
         text: crwdns2463896:0[N]crwdnd2463896:0[0]crwdnd2463896:0[UNIT]crwdnd2463896:0[1]crwdne2463896:0
         options:
           UNIT:
-            '"seconds"': crwdns2463898:0crwdne2463898:0
-            '"frames"': crwdns2463900:0crwdne2463900:0
+            '"seconds"': crwdns2658376:0crwdne2658376:0
+            '"frames"': crwdns2658378:0crwdne2658378:0
       gamelab_avoidingTargets:
         text: crwdns2486176:0crwdne2486176:0
       gamelab_beginCollectingData:
@@ -999,18 +999,18 @@ in:
         text: crwdns169023:0[SPRITE]crwdnd169023:0[0]crwdnd169023:0[PROPERTY]crwdnd169023:0[1]crwdnd169023:0[VAL]crwdnd169023:0[2]crwdne169023:0
         options:
           PROPERTY:
-            '"scale"': crwdns169024:0crwdne169024:0
-            '"rotation"': crwdns169025:0crwdne169025:0
-            '"x"': crwdns169026:0crwdne169026:0
-            '"y"': crwdns169027:0crwdne169027:0
-            '"direction"': crwdns169028:0crwdne169028:0
-            '"speed"': crwdns2484866:0crwdne2484866:0
+            '"scale"': crwdns2658380:0crwdne2658380:0
+            '"rotation"': crwdns2658382:0crwdne2658382:0
+            '"x"': crwdns2658384:0crwdne2658384:0
+            '"y"': crwdns2658386:0crwdne2658386:0
+            '"direction"': crwdns2658388:0crwdne2658388:0
+            '"speed"': crwdns2658390:0crwdne2658390:0
       gamelab_checkTouching:
         text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
         options:
           CONDITION:
-            '"when"': crwdns400996:0crwdne400996:0
-            '"while"': crwdns400998:0crwdne400998:0
+            '"when"': crwdns2658392:0crwdne2658392:0
+            '"while"': crwdns2658394:0crwdne2658394:0
       gamelab_clickedOn:
         text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
       gamelab_clickedSpritePointer:
@@ -1039,25 +1039,25 @@ in:
         text: crwdns169044:0[SPRITE]crwdnd169044:0[0]crwdnd169044:0[PROPERTY]crwdnd169044:0[1]crwdne169044:0
         options:
           PROPERTY:
-            '"scale"': crwdns169045:0crwdne169045:0
-            '"rotation"': crwdns169046:0crwdne169046:0
-            '"x"': crwdns169047:0crwdne169047:0
-            '"y"': crwdns169048:0crwdne169048:0
-            '"direction"': crwdns169049:0crwdne169049:0
-            '"tint"': crwdns169050:0crwdne169050:0
-            '"speed"': crwdns2478914:0crwdne2478914:0
+            '"scale"': crwdns2658396:0crwdne2658396:0
+            '"rotation"': crwdns2658398:0crwdne2658398:0
+            '"x"': crwdns2658400:0crwdne2658400:0
+            '"y"': crwdns2658402:0crwdne2658402:0
+            '"direction"': crwdns2658404:0crwdne2658404:0
+            '"tint"': crwdns2658406:0crwdne2658406:0
+            '"speed"': crwdns2658408:0crwdne2658408:0
       gamelab_getThisSprite:
         text: crwdns401002:0[CHOICE]crwdnd401002:0[0]crwdne401002:0
         options:
           CHOICE:
-            '"this"': crwdns401004:0crwdne401004:0
-            '"other"': crwdns401006:0crwdne401006:0
+            '"this"': crwdns2658410:0crwdne2658410:0
+            '"other"': crwdns2658412:0crwdne2658412:0
       gamelab_getTime:
         text: crwdns2462250:0[UNIT]crwdnd2462250:0[0]crwdne2462250:0
         options:
           UNIT:
-            '"seconds"': crwdns2462252:0crwdne2462252:0
-            '"frames"': crwdns2462254:0crwdne2462254:0
+            '"seconds"': crwdns2658414:0crwdne2658414:0
+            '"frames"': crwdns2658416:0crwdne2658416:0
       gamelab_hideHaiku:
         text: crwdns2483930:0crwdne2483930:0
       gamelab_hideTitleScreen:
@@ -1070,37 +1070,37 @@ in:
         text: crwdns2463902:0[KEY]crwdnd2463902:0[0]crwdne2463902:0
         options:
           KEY:
-            '"up"': crwdns2463904:0crwdne2463904:0
-            '"down"': crwdns2463906:0crwdne2463906:0
-            '"left"': crwdns2463908:0crwdne2463908:0
-            '"right"': crwdns2463910:0crwdne2463910:0
-            '"space"': crwdns2463912:0crwdne2463912:0
-            '"a"': crwdns2463914:0crwdne2463914:0
-            '"b"': crwdns2463916:0crwdne2463916:0
-            '"c"': crwdns2463918:0crwdne2463918:0
-            '"d"': crwdns2463920:0crwdne2463920:0
-            '"e"': crwdns2463922:0crwdne2463922:0
-            '"f"': crwdns2463924:0crwdne2463924:0
-            '"g"': crwdns2463926:0crwdne2463926:0
-            '"h"': crwdns2463928:0crwdne2463928:0
-            '"i"': crwdns2463930:0crwdne2463930:0
-            '"j"': crwdns2463932:0crwdne2463932:0
-            '"k"': crwdns2463934:0crwdne2463934:0
-            '"l"': crwdns2463936:0crwdne2463936:0
-            '"m"': crwdns2463938:0crwdne2463938:0
-            '"n"': crwdns2463940:0crwdne2463940:0
-            '"o"': crwdns2463942:0crwdne2463942:0
-            '"p"': crwdns2463944:0crwdne2463944:0
-            '"q"': crwdns2463946:0crwdne2463946:0
-            '"r"': crwdns2463948:0crwdne2463948:0
-            '"s"': crwdns2463950:0crwdne2463950:0
-            '"t"': crwdns2463952:0crwdne2463952:0
-            '"u"': crwdns2463954:0crwdne2463954:0
-            '"v"': crwdns2463956:0crwdne2463956:0
-            '"w"': crwdns2463958:0crwdne2463958:0
-            '"x"': crwdns2463960:0crwdne2463960:0
-            '"y"': crwdns2463962:0crwdne2463962:0
-            '"z"': crwdns2463964:0crwdne2463964:0
+            '"up"': crwdns2658418:0crwdne2658418:0
+            '"down"': crwdns2658420:0crwdne2658420:0
+            '"left"': crwdns2658422:0crwdne2658422:0
+            '"right"': crwdns2658424:0crwdne2658424:0
+            '"space"': crwdns2658426:0crwdne2658426:0
+            '"a"': crwdns2658428:0crwdne2658428:0
+            '"b"': crwdns2658430:0crwdne2658430:0
+            '"c"': crwdns2658432:0crwdne2658432:0
+            '"d"': crwdns2658434:0crwdne2658434:0
+            '"e"': crwdns2658436:0crwdne2658436:0
+            '"f"': crwdns2658438:0crwdne2658438:0
+            '"g"': crwdns2658440:0crwdne2658440:0
+            '"h"': crwdns2658442:0crwdne2658442:0
+            '"i"': crwdns2658444:0crwdne2658444:0
+            '"j"': crwdns2658446:0crwdne2658446:0
+            '"k"': crwdns2658448:0crwdne2658448:0
+            '"l"': crwdns2658450:0crwdne2658450:0
+            '"m"': crwdns2658452:0crwdne2658452:0
+            '"n"': crwdns2658454:0crwdne2658454:0
+            '"o"': crwdns2658456:0crwdne2658456:0
+            '"p"': crwdns2658458:0crwdne2658458:0
+            '"q"': crwdns2658460:0crwdne2658460:0
+            '"r"': crwdns2658462:0crwdne2658462:0
+            '"s"': crwdns2658464:0crwdne2658464:0
+            '"t"': crwdns2658466:0crwdne2658466:0
+            '"u"': crwdns2658468:0crwdne2658468:0
+            '"v"': crwdns2658470:0crwdne2658470:0
+            '"w"': crwdns2658472:0crwdne2658472:0
+            '"x"': crwdns2658474:0crwdne2658474:0
+            '"y"': crwdns2658476:0crwdne2658476:0
+            '"z"': crwdns2658478:0crwdne2658478:0
       gamelab_isTouchingEdges:
         text: crwdns169056:0[SPRITE]crwdnd169056:0[0]crwdne169056:0
       gamelab_isTouchingSprite:
@@ -1111,50 +1111,50 @@ in:
         text: crwdns401008:0[CONDITION]crwdnd401008:0[0]crwdnd401008:0[KEY]crwdnd401008:0[1]crwdne401008:0
         options:
           CONDITION:
-            '"when"': crwdns401010:0crwdne401010:0
-            '"while"': crwdns401012:0crwdne401012:0
+            '"when"': crwdns2658480:0crwdne2658480:0
+            '"while"': crwdns2658482:0crwdne2658482:0
           KEY:
-            '"up"': crwdns401014:0crwdne401014:0
-            '"down"': crwdns401016:0crwdne401016:0
-            '"left"': crwdns401018:0crwdne401018:0
-            '"right"': crwdns401020:0crwdne401020:0
-            '"space"': crwdns401022:0crwdne401022:0
-            '"a"': crwdns401024:0crwdne401024:0
-            '"b"': crwdns401026:0crwdne401026:0
-            '"c"': crwdns401028:0crwdne401028:0
-            '"d"': crwdns401030:0crwdne401030:0
-            '"e"': crwdns401032:0crwdne401032:0
-            '"f"': crwdns401034:0crwdne401034:0
-            '"g"': crwdns401036:0crwdne401036:0
-            '"h"': crwdns401038:0crwdne401038:0
-            '"i"': crwdns401040:0crwdne401040:0
-            '"j"': crwdns401042:0crwdne401042:0
-            '"k"': crwdns401044:0crwdne401044:0
-            '"l"': crwdns401046:0crwdne401046:0
-            '"m"': crwdns401048:0crwdne401048:0
-            '"n"': crwdns401050:0crwdne401050:0
-            '"o"': crwdns401052:0crwdne401052:0
-            '"p"': crwdns401054:0crwdne401054:0
-            '"q"': crwdns401056:0crwdne401056:0
-            '"r"': crwdns401058:0crwdne401058:0
-            '"s"': crwdns401060:0crwdne401060:0
-            '"t"': crwdns401062:0crwdne401062:0
-            '"u"': crwdns401064:0crwdne401064:0
-            '"v"': crwdns401066:0crwdne401066:0
-            '"w"': crwdns401068:0crwdne401068:0
-            '"x"': crwdns401070:0crwdne401070:0
-            '"y"': crwdns401072:0crwdne401072:0
-            '"z"': crwdns401074:0crwdne401074:0
+            '"up"': crwdns2658484:0crwdne2658484:0
+            '"down"': crwdns2658486:0crwdne2658486:0
+            '"left"': crwdns2658488:0crwdne2658488:0
+            '"right"': crwdns2658490:0crwdne2658490:0
+            '"space"': crwdns2658492:0crwdne2658492:0
+            '"a"': crwdns2658494:0crwdne2658494:0
+            '"b"': crwdns2658496:0crwdne2658496:0
+            '"c"': crwdns2658498:0crwdne2658498:0
+            '"d"': crwdns2658500:0crwdne2658500:0
+            '"e"': crwdns2658502:0crwdne2658502:0
+            '"f"': crwdns2658504:0crwdne2658504:0
+            '"g"': crwdns2658506:0crwdne2658506:0
+            '"h"': crwdns2658508:0crwdne2658508:0
+            '"i"': crwdns2658510:0crwdne2658510:0
+            '"j"': crwdns2658512:0crwdne2658512:0
+            '"k"': crwdns2658514:0crwdne2658514:0
+            '"l"': crwdns2658516:0crwdne2658516:0
+            '"m"': crwdns2658518:0crwdne2658518:0
+            '"n"': crwdns2658520:0crwdne2658520:0
+            '"o"': crwdns2658522:0crwdne2658522:0
+            '"p"': crwdns2658524:0crwdne2658524:0
+            '"q"': crwdns2658526:0crwdne2658526:0
+            '"r"': crwdns2658528:0crwdne2658528:0
+            '"s"': crwdns2658530:0crwdne2658530:0
+            '"t"': crwdns2658532:0crwdne2658532:0
+            '"u"': crwdns2658534:0crwdne2658534:0
+            '"v"': crwdns2658536:0crwdne2658536:0
+            '"w"': crwdns2658538:0crwdne2658538:0
+            '"x"': crwdns2658540:0crwdne2658540:0
+            '"y"': crwdns2658542:0crwdne2658542:0
+            '"z"': crwdns2658544:0crwdne2658544:0
       gamelab_locationAt:
         text: crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0
       gamelab_locationModifier:
         text: crwdns2466710:0[DISTANCE]crwdnd2466710:0[0]crwdnd2466710:0[DIRECTION]crwdnd2466710:0[1]crwdnd2466710:0[LOCATION]crwdnd2466710:0[2]crwdne2466710:0
         options:
           DIRECTION:
-            '"North"': crwdns2466712:0crwdne2466712:0
-            '"East"': crwdns2466714:0crwdne2466714:0
-            '"South"': crwdns2466716:0crwdne2466716:0
-            '"West"': crwdns2466718:0crwdne2466718:0
+            '"North"': crwdns2658546:0crwdne2658546:0
+            '"East"': crwdns2658548:0crwdne2658548:0
+            '"South"': crwdns2658550:0crwdne2658550:0
+            '"West"': crwdns2658552:0crwdne2658552:0
       gamelab_locationMouse:
         text: crwdns169076:0crwdne169076:0
       gamelab_locationOf:
@@ -1169,8 +1169,8 @@ in:
         text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
         options:
           DIRECTION:
-            '"right"': crwdns169086:0crwdne169086:0
-            '"left"': crwdns169087:0crwdne169087:0
+            '"right"': crwdns2658554:0crwdne2658554:0
+            '"left"': crwdns2658556:0crwdne2658556:0
       gamelab_mouseLocation:
         text: crwdns169090:0crwdne169090:0
       gamelab_moveBackward:
@@ -1181,10 +1181,10 @@ in:
         text: crwdns169093:0[SPRITE]crwdnd169093:0[0]crwdnd169093:0[DISTANCE]crwdnd169093:0[1]crwdnd169093:0[DIRECTION]crwdnd169093:0[2]crwdne169093:0
         options:
           DIRECTION:
-            '"North"': crwdns169094:0crwdne169094:0
-            '"East"': crwdns169095:0crwdne169095:0
-            '"South"': crwdns169096:0crwdne169096:0
-            '"West"': crwdns169097:0crwdne169097:0
+            '"North"': crwdns2658558:0crwdne2658558:0
+            '"East"': crwdns2658560:0crwdne2658560:0
+            '"South"': crwdns2658562:0crwdne2658562:0
+            '"West"': crwdns2658564:0crwdne2658564:0
       gamelab_moveToward:
         text: crwdns169100:0[SPRITE]crwdnd169100:0[0]crwdnd169100:0[DISTANCE]crwdnd169100:0[1]crwdnd169100:0[TARGET]crwdnd169100:0[2]crwdne169100:0
       gamelab_newSpritePointer:
@@ -1199,10 +1199,10 @@ in:
         text: crwdns169102:0[SPRITE]crwdnd169102:0[0]crwdnd169102:0[DIRECTION]crwdnd169102:0[1]crwdne169102:0
         options:
           DIRECTION:
-            '"North"': crwdns169103:0crwdne169103:0
-            '"East"': crwdns169104:0crwdne169104:0
-            '"South"': crwdns169105:0crwdne169105:0
-            '"West"': crwdns169106:0crwdne169106:0
+            '"North"': crwdns2658566:0crwdne2658566:0
+            '"East"': crwdns2658568:0crwdne2658568:0
+            '"South"': crwdns2658570:0crwdne2658570:0
+            '"West"': crwdns2658572:0crwdne2658572:0
       gamelab_printHaiku:
         text: crwdns2483932:0[BREAK]crwdnd2483932:0[0]crwdnd2483932:0[TITLE]crwdnd2483932:0[1]crwdnd2483932:0[AUTHOR]crwdnd2483932:0[2]crwdnd2483932:0[LINE1]crwdnd2483932:0[3]crwdnd2483932:0[LINE2]crwdnd2483932:0[4]crwdnd2483932:0[LINE3]crwdnd2483932:0[5]crwdne2483932:0
       gamelab_printText:
@@ -1229,35 +1229,35 @@ in:
         text: crwdns401082:0[IMG]crwdnd401082:0[0]crwdne401082:0
         options:
           IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': crwdns774672:0crwdne774672:0
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns401084:0crwdne401084:0
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns401086:0crwdne401086:0
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': crwdns774674:0crwdne774674:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': crwdns774676:0crwdne774676:0
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns401088:0crwdne401088:0
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns401090:0crwdne401090:0
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns401092:0crwdne401092:0
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns401094:0crwdne401094:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': crwdns774678:0crwdne774678:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': crwdns774680:0crwdne774680:0
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns401096:0crwdne401096:0
-            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns401098:0crwdne401098:0
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns401100:0crwdne401100:0
-            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns401102:0crwdne401102:0
-            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns401104:0crwdne401104:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': crwdns774682:0crwdne774682:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': crwdns774684:0crwdne774684:0
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns401106:0crwdne401106:0
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns401108:0crwdne401108:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': crwdns774686:0crwdne774686:0
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns401110:0crwdne401110:0
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns401112:0crwdne401112:0
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns401114:0crwdne401114:0
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns401116:0crwdne401116:0
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns401118:0crwdne401118:0
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns401120:0crwdne401120:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': crwdns774688:0crwdne774688:0
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': crwdns774690:0crwdne774690:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': crwdns2658574:0crwdne2658574:0
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns2658576:0crwdne2658576:0
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns2658578:0crwdne2658578:0
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': crwdns2658580:0crwdne2658580:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': crwdns2658582:0crwdne2658582:0
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns2658584:0crwdne2658584:0
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns2658586:0crwdne2658586:0
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns2658588:0crwdne2658588:0
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns2658590:0crwdne2658590:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': crwdns2658592:0crwdne2658592:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': crwdns2658594:0crwdne2658594:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns2658596:0crwdne2658596:0
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns2658598:0crwdne2658598:0
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns2658600:0crwdne2658600:0
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns2658602:0crwdne2658602:0
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns2658604:0crwdne2658604:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': crwdns2658606:0crwdne2658606:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': crwdns2658608:0crwdne2658608:0
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns2658610:0crwdne2658610:0
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns2658612:0crwdne2658612:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': crwdns2658614:0crwdne2658614:0
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns2658616:0crwdne2658616:0
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns2658618:0crwdne2658618:0
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns2658620:0crwdne2658620:0
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns2658622:0crwdne2658622:0
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns2658624:0crwdne2658624:0
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns2658626:0crwdne2658626:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': crwdns2658628:0crwdne2658628:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': crwdns2658630:0crwdne2658630:0
             undefined: crwdns401122:0crwdne401122:0
       gamelab_setBackgroundImageAs:
         text: crwdns2471988:0[IMG]crwdnd2471988:0[0]crwdne2471988:0
@@ -1277,17 +1277,17 @@ in:
         text: crwdns169130:0[SPRITE]crwdnd169130:0[0]crwdnd169130:0[PROPERTY]crwdnd169130:0[1]crwdnd169130:0[VAL]crwdnd169130:0[2]crwdne169130:0
         options:
           PROPERTY:
-            '"scale"': crwdns169131:0crwdne169131:0
-            '"rotation"': crwdns169132:0crwdne169132:0
-            '"x"': crwdns169133:0crwdne169133:0
-            '"y"': crwdns169134:0crwdne169134:0
-            '"direction"': crwdns169135:0crwdne169135:0
-            '"speed"': crwdns2478928:0crwdne2478928:0
+            '"scale"': crwdns2658632:0crwdne2658632:0
+            '"rotation"': crwdns2658634:0crwdne2658634:0
+            '"x"': crwdns2658636:0crwdne2658636:0
+            '"y"': crwdns2658638:0crwdne2658638:0
+            '"direction"': crwdns2658640:0crwdne2658640:0
+            '"speed"': crwdns2658642:0crwdne2658642:0
       gamelab_setProp_dropdown:
         text: crwdns2486180:0[SPRITE]crwdnd2486180:0[0]crwdnd2486180:0[PROPERTY]crwdnd2486180:0[1]crwdnd2486180:0[SIZE]crwdnd2486180:0[2]crwdne2486180:0
         options:
           PROPERTY:
-            '"scale"': crwdns2486182:0crwdne2486182:0
+            '"scale"': crwdns2658644:0crwdne2658644:0
           SIZE:
             '25': crwdns2486184:0crwdne2486184:0
             '50': crwdns2486186:0crwdne2486186:0
@@ -1297,9 +1297,9 @@ in:
         text: crwdns169137:0[SPRITE]crwdnd169137:0[0]crwdnd169137:0[PROPERTY]crwdnd169137:0[1]crwdnd169137:0[N]crwdnd169137:0[2]crwdne169137:0
         options:
           PROPERTY:
-            '"scale"': crwdns169138:0crwdne169138:0
-            '"width"': crwdns169139:0crwdne169139:0
-            '"height"': crwdns169140:0crwdne169140:0
+            '"scale"': crwdns2658646:0crwdne2658646:0
+            '"width"': crwdns2658648:0crwdne2658648:0
+            '"height"': crwdns2658650:0crwdne2658650:0
       gamelab_setTint:
         text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
       gamelab_setupScoreboard:
@@ -1312,8 +1312,12 @@ in:
         text: crwdns401126:0[CONDITION]crwdnd401126:0[0]crwdnd401126:0[SPRITE]crwdnd401126:0[1]crwdne401126:0
         options:
           CONDITION:
-            '"when"': crwdns401128:0crwdne401128:0
-            '"while"': crwdns401130:0crwdne401130:0
+            '"when"': crwdns2658652:0crwdne2658652:0
+            '"while"': crwdns2658654:0crwdne2658654:0
+      gamelab_spriteSay:
+        text: crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0
+      gamelab_spriteSayTime:
+        text: crwdns2590328:0[SPRITE]crwdnd2590328:0[0]crwdnd2590328:0[TEXT1]crwdnd2590328:0[1]crwdnd2590328:0[NUM]crwdnd2590328:0[2]crwdne2590328:0
       gamelab_startAvoiding:
         text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
       gamelab_startFollowing:
@@ -1336,8 +1340,8 @@ in:
         text: crwdns169172:0[SPRITE]crwdnd169172:0[0]crwdnd169172:0[DIRECTION]crwdnd169172:0[1]crwdnd169172:0[N]crwdnd169172:0[2]crwdne169172:0
         options:
           DIRECTION:
-            '"right"': crwdns169173:0crwdne169173:0
-            '"left"': crwdns169174:0crwdne169174:0
+            '"right"': crwdns2658656:0crwdne2658656:0
+            '"left"': crwdns2658658:0crwdne2658658:0
       gamelab_updateTitleWithColor:
         text: crwdns2335481:0[BREAK]crwdnd2335481:0[0]crwdnd2335481:0[TITLE]crwdnd2335481:0[1]crwdnd2335481:0[COLOR]crwdnd2335481:0[2]crwdne2335481:0
       gamelab_whenAllPromptsAnswered:
@@ -1348,15 +1352,15 @@ in:
         text: crwdns169177:0[KEY]crwdnd169177:0[0]crwdne169177:0
         options:
           KEY:
-            '"up"': crwdns169178:0crwdne169178:0
-            '"down"': crwdns169179:0crwdne169179:0
-            '"left"': crwdns169180:0crwdne169180:0
-            '"right"': crwdns169181:0crwdne169181:0
-            '"space"': crwdns169182:0crwdne169182:0
-            '"a"': crwdns169183:0crwdne169183:0
-            '"w"': crwdns169184:0crwdne169184:0
-            '"s"': crwdns169185:0crwdne169185:0
-            '"d"': crwdns169186:0crwdne169186:0
+            '"up"': crwdns2658660:0crwdne2658660:0
+            '"down"': crwdns2658662:0crwdne2658662:0
+            '"left"': crwdns2658664:0crwdne2658664:0
+            '"right"': crwdns2658666:0crwdne2658666:0
+            '"space"': crwdns2658668:0crwdne2658668:0
+            '"a"': crwdns2658670:0crwdne2658670:0
+            '"w"': crwdns2658672:0crwdne2658672:0
+            '"s"': crwdns2658674:0crwdne2658674:0
+            '"d"': crwdns2658676:0crwdne2658676:0
       gamelab_whenLeftArrow:
         text: crwdns169187:0crwdne169187:0
       gamelab_whenPromptAnswered:
@@ -1375,15 +1379,15 @@ in:
         text: crwdns169202:0[KEY]crwdnd169202:0[0]crwdne169202:0
         options:
           KEY:
-            '"up"': crwdns169203:0crwdne169203:0
-            '"down"': crwdns169204:0crwdne169204:0
-            '"left"': crwdns169205:0crwdne169205:0
-            '"right"': crwdns169206:0crwdne169206:0
-            '"space"': crwdns169207:0crwdne169207:0
-            '"a"': crwdns169208:0crwdne169208:0
-            '"w"': crwdns169209:0crwdne169209:0
-            '"s"': crwdns169210:0crwdne169210:0
-            '"d"': crwdns169211:0crwdne169211:0
+            '"up"': crwdns2658678:0crwdne2658678:0
+            '"down"': crwdns2658680:0crwdne2658680:0
+            '"left"': crwdns2658682:0crwdne2658682:0
+            '"right"': crwdns2658684:0crwdne2658684:0
+            '"space"': crwdns2658686:0crwdne2658686:0
+            '"a"': crwdns2658688:0crwdne2658688:0
+            '"w"': crwdns2658690:0crwdne2658690:0
+            '"s"': crwdns2658692:0crwdne2658692:0
+            '"d"': crwdns2658694:0crwdne2658694:0
       gamelab_whileLeftArrow:
         text: crwdns169212:0crwdne169212:0
       gamelab_whileRightArrow:
@@ -1430,11 +1434,11 @@ in:
         text: crwdns170127:0[PROPERTY]crwdnd170127:0[0]crwdnd170127:0[SPRITE]crwdnd170127:0[1]crwdnd170127:0[VAL]crwdnd170127:0[2]crwdne170127:0
         options:
           PROPERTY:
-            '"scale"': crwdns170128:0crwdne170128:0
-            '"rotation"': crwdns170129:0crwdne170129:0
-            '"x"': crwdns170130:0crwdne170130:0
-            '"y"': crwdns170131:0crwdne170131:0
-            '"direction"': crwdns170132:0crwdne170132:0
+            '"scale"': crwdns2658696:0crwdne2658696:0
+            '"rotation"': crwdns2658698:0crwdne2658698:0
+            '"x"': crwdns2658700:0crwdne2658700:0
+            '"y"': crwdns2658702:0crwdne2658702:0
+            '"direction"': crwdns2658704:0crwdne2658704:0
       Mikelab_checkAnim:
         text: crwdns182424:0[SPRITE]crwdnd182424:0[0]crwdnd182424:0[COSTUME]crwdnd182424:0[1]crwdne182424:0
       Mikelab_createNewSprite:
@@ -1465,29 +1469,29 @@ in:
         text: crwdns170136:0[SPRITE]crwdnd170136:0[0]crwdnd170136:0[PROPERTY]crwdnd170136:0[1]crwdne170136:0
         options:
           PROPERTY:
-            '"scale"': crwdns170137:0crwdne170137:0
-            '"rotation"': crwdns170138:0crwdne170138:0
-            '"x"': crwdns170139:0crwdne170139:0
-            '"y"': crwdns170140:0crwdne170140:0
-            '"direction"': crwdns170141:0crwdne170141:0
+            '"scale"': crwdns2658706:0crwdne2658706:0
+            '"rotation"': crwdns2658708:0crwdne2658708:0
+            '"x"': crwdns2658710:0crwdne2658710:0
+            '"y"': crwdns2658712:0crwdne2658712:0
+            '"direction"': crwdns2658714:0crwdne2658714:0
       Mikelab_groupChangeAnim:
         text: crwdns391164:0[SELECT]crwdnd391164:0[0]crwdnd391164:0[COSTUME]crwdnd391164:0[1]crwdnd391164:0[COSTUME2]crwdnd391164:0[2]crwdne391164:0
         options:
           SELECT:
-            '"all"': crwdns391166:0crwdne391166:0
-            '"this"': crwdns391168:0crwdne391168:0
+            '"all"': crwdns2658716:0crwdne2658716:0
+            '"this"': crwdns2658718:0crwdne2658718:0
       Mikelab_groupChangePropBy:
         text: crwdns391170:0[PROPERTY]crwdnd391170:0[0]crwdnd391170:0[SELECT]crwdnd391170:0[1]crwdnd391170:0[COSTUME]crwdnd391170:0[2]crwdnd391170:0[VAL]crwdnd391170:0[3]crwdne391170:0
         options:
           SELECT:
-            '"all"': crwdns391172:0crwdne391172:0
-            '"this"': crwdns391174:0crwdne391174:0
+            '"all"': crwdns2658720:0crwdne2658720:0
+            '"this"': crwdns2658722:0crwdne2658722:0
           PROPERTY:
-            '"scale"': crwdns391176:0crwdne391176:0
-            '"rotation"': crwdns391178:0crwdne391178:0
-            '"x"': crwdns391180:0crwdne391180:0
-            '"y"': crwdns391182:0crwdne391182:0
-            '"direction"': crwdns391184:0crwdne391184:0
+            '"scale"': crwdns2658724:0crwdne2658724:0
+            '"rotation"': crwdns2658726:0crwdne2658726:0
+            '"x"': crwdns2658728:0crwdne2658728:0
+            '"y"': crwdns2658730:0crwdne2658730:0
+            '"direction"': crwdns2658732:0crwdne2658732:0
       Mikelab_groupCreateNewSprite:
         text: crwdns391186:0[COSTUME]crwdnd391186:0[0]crwdnd391186:0[LOCATION]crwdnd391186:0[1]crwdne391186:0
         options:
@@ -1506,8 +1510,8 @@ in:
         text: crwdns391208:0[SELECT]crwdnd391208:0[0]crwdnd391208:0[COSTUME]crwdnd391208:0[1]crwdne391208:0
         options:
           SELECT:
-            '"all"': crwdns391210:0crwdne391210:0
-            '"this"': crwdns391212:0crwdne391212:0
+            '"all"': crwdns2658734:0crwdne2658734:0
+            '"this"': crwdns2658736:0crwdne2658736:0
       Mikelab_groupDisplace:
         text: crwdns391214:0[COSTUME]crwdnd391214:0[0]crwdnd391214:0[COSTUME2]crwdnd391214:0[1]crwdne391214:0
       Mikelab_groupEdgesDisplace:
@@ -1516,50 +1520,50 @@ in:
         text: crwdns391218:0[SELECT]crwdnd391218:0[0]crwdnd391218:0[COSTUME]crwdnd391218:0[1]crwdnd391218:0[PROPERTY]crwdnd391218:0[2]crwdne391218:0
         options:
           SELECT:
-            '"average"': crwdns391220:0crwdne391220:0
-            '"this"': crwdns391222:0crwdne391222:0
+            '"average"': crwdns2658738:0crwdne2658738:0
+            '"this"': crwdns2658740:0crwdne2658740:0
           PROPERTY:
-            '"scale"': crwdns391224:0crwdne391224:0
-            '"rotation"': crwdns391226:0crwdne391226:0
-            '"x"': crwdns391228:0crwdne391228:0
-            '"y"': crwdns391230:0crwdne391230:0
-            '"direction"': crwdns391232:0crwdne391232:0
+            '"scale"': crwdns2658742:0crwdne2658742:0
+            '"rotation"': crwdns2658744:0crwdne2658744:0
+            '"x"': crwdns2658746:0crwdne2658746:0
+            '"y"': crwdns2658748:0crwdne2658748:0
+            '"direction"': crwdns2658750:0crwdne2658750:0
       Mikelab_groupRemoveAllBehaviors:
         text: crwdns391234:0[SELECT]crwdnd391234:0[0]crwdnd391234:0[COSTUME]crwdnd391234:0[1]crwdne391234:0
         options:
           SELECT:
-            '"all"': crwdns391236:0crwdne391236:0
-            '"this"': crwdns391238:0crwdne391238:0
+            '"all"': crwdns2658752:0crwdne2658752:0
+            '"this"': crwdns2658754:0crwdne2658754:0
       Mikelab_groupRemoveBehaviorSimple:
         text: crwdns391240:0[SELECT]crwdnd391240:0[0]crwdnd391240:0[COSTUME]crwdnd391240:0[1]crwdnd391240:0[BEHAVIOR]crwdnd391240:0[2]crwdne391240:0
         options:
           SELECT:
-            '"all"': crwdns391242:0crwdne391242:0
-            '"this"': crwdns391244:0crwdne391244:0
+            '"all"': crwdns2658756:0crwdne2658756:0
+            '"this"': crwdns2658758:0crwdne2658758:0
       Mikelab_groupRemoveTint:
         text: crwdns391246:0[SELECT]crwdnd391246:0[0]crwdnd391246:0[COSTUME]crwdnd391246:0[1]crwdne391246:0
         options:
           SELECT:
-            '"all"': crwdns391248:0crwdne391248:0
-            '"this"': crwdns391250:0crwdne391250:0
+            '"all"': crwdns2658760:0crwdne2658760:0
+            '"this"': crwdns2658762:0crwdne2658762:0
       Mikelab_groupSetProp:
         text: crwdns391252:0[PROPERTY]crwdnd391252:0[0]crwdnd391252:0[SELECT]crwdnd391252:0[1]crwdnd391252:0[COSTUME]crwdnd391252:0[2]crwdnd391252:0[VAL]crwdnd391252:0[3]crwdne391252:0
         options:
           SELECT:
-            '"all"': crwdns391254:0crwdne391254:0
-            '"this"': crwdns391256:0crwdne391256:0
+            '"all"': crwdns2658764:0crwdne2658764:0
+            '"this"': crwdns2658766:0crwdne2658766:0
           PROPERTY:
-            '"scale"': crwdns391258:0crwdne391258:0
-            '"rotation"': crwdns391260:0crwdne391260:0
-            '"x"': crwdns391262:0crwdne391262:0
-            '"y"': crwdns391264:0crwdne391264:0
-            '"direction"': crwdns391266:0crwdne391266:0
+            '"scale"': crwdns2658768:0crwdne2658768:0
+            '"rotation"': crwdns2658770:0crwdne2658770:0
+            '"x"': crwdns2658772:0crwdne2658772:0
+            '"y"': crwdns2658774:0crwdne2658774:0
+            '"direction"': crwdns2658776:0crwdne2658776:0
       Mikelab_groupSetTint:
         text: crwdns391268:0[SELECT]crwdnd391268:0[0]crwdnd391268:0[COSTUME]crwdnd391268:0[1]crwdnd391268:0[COLOR]crwdnd391268:0[2]crwdne391268:0
         options:
           SELECT:
-            '"all"': crwdns391270:0crwdne391270:0
-            '"this"': crwdns391272:0crwdne391272:0
+            '"all"': crwdns2658778:0crwdne2658778:0
+            '"this"': crwdns2658780:0crwdne2658780:0
       Mikelab_groupWhenClickedOn:
         text: crwdns391274:0[COSTUME]crwdnd391274:0[0]crwdne391274:0
       Mikelab_groupWhenXTouchesY:
@@ -1618,6 +1622,17 @@ in:
         text: crwdns195131:0[X]crwdnd195131:0[0]crwdnd195131:0[Y]crwdnd195131:0[1]crwdne195131:0
       Mikelab_location_picker:
         text: crwdns170144:0[LOCATION]crwdnd170144:0[0]crwdne170144:0
+      Mikelab_poemTextJoin:
+        text: crwdns2588306:0[TEXT1]crwdnd2588306:0[0]crwdnd2588306:0[VAR]crwdnd2588306:0[1]crwdnd2588306:0[TEXT2]crwdnd2588306:0[2]crwdne2588306:0
+        options:
+          TEXT1:
+            '"Balancing on the "': crwdns2658782:0crwdne2658782:0
+            '"A chubby cat "': crwdns2658784:0crwdne2658784:0
+            '"The "': crwdns2658786:0crwdne2658786:0
+          TEXT2:
+            '" fence"': crwdns2658788:0crwdne2658788:0
+            '""': crwdns2658790:0crwdne2658790:0
+            '" breeze blows"': crwdns2658792:0crwdne2658792:0
       Mikelab_randomColor:
         text: crwdns195133:0crwdne195133:0
       Mikelab_removeAllBehaviors:
@@ -1636,34 +1651,34 @@ in:
         text: crwdns195137:0[BG]crwdnd195137:0[0]crwdne195137:0
         options:
           BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns195139:0crwdne195139:0
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns195141:0crwdne195141:0
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns195143:0crwdne195143:0
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns195145:0crwdne195145:0
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns195147:0crwdne195147:0
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns195149:0crwdne195149:0
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns195151:0crwdne195151:0
-            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns195153:0crwdne195153:0
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns195155:0crwdne195155:0
-            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns195157:0crwdne195157:0
-            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns195159:0crwdne195159:0
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns195161:0crwdne195161:0
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns195163:0crwdne195163:0
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns195165:0crwdne195165:0
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns195167:0crwdne195167:0
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns195169:0crwdne195169:0
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns195171:0crwdne195171:0
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns195173:0crwdne195173:0
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns195175:0crwdne195175:0
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns2658794:0crwdne2658794:0
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns2658796:0crwdne2658796:0
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns2658798:0crwdne2658798:0
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns2658800:0crwdne2658800:0
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns2658802:0crwdne2658802:0
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns2658804:0crwdne2658804:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns2658806:0crwdne2658806:0
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns2658808:0crwdne2658808:0
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns2658810:0crwdne2658810:0
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns2658812:0crwdne2658812:0
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns2658814:0crwdne2658814:0
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns2658816:0crwdne2658816:0
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns2658818:0crwdne2658818:0
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns2658820:0crwdne2658820:0
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns2658822:0crwdne2658822:0
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns2658824:0crwdne2658824:0
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns2658826:0crwdne2658826:0
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns2658828:0crwdne2658828:0
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns2658830:0crwdne2658830:0
       Mikelab_setProp:
         text: crwdns182428:0[PROPERTY]crwdnd182428:0[0]crwdnd182428:0[SPRITE]crwdnd182428:0[1]crwdnd182428:0[VAL]crwdnd182428:0[2]crwdne182428:0
         options:
           PROPERTY:
-            '"scale"': crwdns182429:0crwdne182429:0
-            '"rotation"': crwdns182430:0crwdne182430:0
-            '"x"': crwdns182431:0crwdne182431:0
-            '"y"': crwdns182432:0crwdne182432:0
-            '"direction"': crwdns182433:0crwdne182433:0
+            '"scale"': crwdns2658832:0crwdne2658832:0
+            '"rotation"': crwdns2658834:0crwdne2658834:0
+            '"x"': crwdns2658836:0crwdne2658836:0
+            '"y"': crwdns2658838:0crwdne2658838:0
+            '"direction"': crwdns2658840:0crwdne2658840:0
       Mikelab_setTint:
         text: crwdns195177:0[SPRITE]crwdnd195177:0[0]crwdnd195177:0[COLOR]crwdnd195177:0[1]crwdne195177:0
       Mikelab_setupLevel:
@@ -1676,14 +1691,14 @@ in:
         text: crwdns195179:0[LABEL]crwdnd195179:0[0]crwdnd195179:0[TEXTCOLOR]crwdnd195179:0[1]crwdnd195179:0[COLOR]crwdnd195179:0[2]crwdnd195179:0[VALUE]crwdnd195179:0[3]crwdnd195179:0[CORNER]crwdnd195179:0[4]crwdne195179:0
         options:
           CORNER:
-            '"right"': crwdns195181:0crwdne195181:0
-            '"left"': crwdns195183:0crwdne195183:0
+            '"right"': crwdns2658842:0crwdne2658842:0
+            '"left"': crwdns2658844:0crwdne2658844:0
       Mikelab_showText:
         text: crwdns195185:0[TEXT]crwdnd195185:0[0]crwdnd195185:0[PREPOSITION]crwdnd195185:0[1]crwdnd195185:0[SPRITE]crwdnd195185:0[2]crwdne195185:0
         options:
           PREPOSITION:
-            '"above"': crwdns195187:0crwdne195187:0
-            '"below"': crwdns195189:0crwdne195189:0
+            '"above"': crwdns2658846:0crwdne2658846:0
+            '"below"': crwdns2658848:0crwdne2658848:0
       Mikelab_sprite:
         text: crwdns391308:0[COSTUME]crwdnd391308:0[0]crwdnd391308:0[LOCATION]crwdnd391308:0[1]crwdne391308:0
         options:
@@ -1704,28 +1719,28 @@ in:
         text: crwdns195193:0[KEY]crwdnd195193:0[0]crwdne195193:0
         options:
           KEY:
-            '"up"': crwdns195195:0crwdne195195:0
-            '"down"': crwdns195197:0crwdne195197:0
-            '"left"': crwdns195199:0crwdne195199:0
-            '"right"': crwdns195201:0crwdne195201:0
-            '"space"': crwdns195203:0crwdne195203:0
-            '"w"': crwdns195205:0crwdne195205:0
-            '"a"': crwdns195207:0crwdne195207:0
-            '"s"': crwdns195209:0crwdne195209:0
-            '"d"': crwdns195211:0crwdne195211:0
+            '"up"': crwdns2658850:0crwdne2658850:0
+            '"down"': crwdns2658852:0crwdne2658852:0
+            '"left"': crwdns2658854:0crwdne2658854:0
+            '"right"': crwdns2658856:0crwdne2658856:0
+            '"space"': crwdns2658858:0crwdne2658858:0
+            '"w"': crwdns2658860:0crwdne2658860:0
+            '"a"': crwdns2658862:0crwdne2658862:0
+            '"s"': crwdns2658864:0crwdne2658864:0
+            '"d"': crwdns2658866:0crwdne2658866:0
       Mikelab_whenKeyReleased:
         text: crwdns195213:0[KEY]crwdnd195213:0[0]crwdne195213:0
         options:
           KEY:
-            '"up"': crwdns195215:0crwdne195215:0
-            '"down"': crwdns195217:0crwdne195217:0
-            '"left"': crwdns195219:0crwdne195219:0
-            '"right"': crwdns195221:0crwdne195221:0
-            '"space"': crwdns195223:0crwdne195223:0
-            '"w"': crwdns195225:0crwdne195225:0
-            '"a"': crwdns195227:0crwdne195227:0
-            '"s"': crwdns195229:0crwdne195229:0
-            '"d"': crwdns195231:0crwdne195231:0
+            '"up"': crwdns2658868:0crwdne2658868:0
+            '"down"': crwdns2658870:0crwdne2658870:0
+            '"left"': crwdns2658872:0crwdne2658872:0
+            '"right"': crwdns2658874:0crwdne2658874:0
+            '"space"': crwdns2658876:0crwdne2658876:0
+            '"w"': crwdns2658878:0crwdne2658878:0
+            '"a"': crwdns2658880:0crwdne2658880:0
+            '"s"': crwdns2658882:0crwdne2658882:0
+            '"d"': crwdns2658884:0crwdne2658884:0
       Mikelab_whenMouseClicked:
         text: crwdns195233:0crwdne195233:0
       Mikelab_whenMouseReleased:
@@ -1736,19 +1751,19 @@ in:
         text: crwdns2066444:0[KEY]crwdnd2066444:0[0]crwdne2066444:0
         options:
           KEY:
-            '"yes"': crwdns2066446:0crwdne2066446:0
-            '"no"': crwdns2066448:0crwdne2066448:0
+            '"yes"': crwdns2658886:0crwdne2658886:0
+            '"no"': crwdns2658888:0crwdne2658888:0
       Mikelab_whileClicked:
         text: crwdns195237:0[SPRITE]crwdnd195237:0[0]crwdne195237:0
       Mikelab_whileKeyPressed:
         text: crwdns195239:0[KEY]crwdnd195239:0[0]crwdne195239:0
         options:
           KEY:
-            '"up"': crwdns195241:0crwdne195241:0
-            '"down"': crwdns195243:0crwdne195243:0
-            '"left"': crwdns195245:0crwdne195245:0
-            '"right"': crwdns195247:0crwdne195247:0
-            '"space"': crwdns195249:0crwdne195249:0
+            '"up"': crwdns2658890:0crwdne2658890:0
+            '"down"': crwdns2658892:0crwdne2658892:0
+            '"left"': crwdns2658894:0crwdne2658894:0
+            '"right"': crwdns2658896:0crwdne2658896:0
+            '"space"': crwdns2658898:0crwdne2658898:0
       Mikelab_whileTouchingAny:
         text: crwdns182437:0[SPRITE]crwdnd182437:0[0]crwdnd182437:0[STATEMENT]crwdnd182437:0[1]crwdne182437:0
       Mikelab_worldSeconds:
@@ -1781,6 +1796,16 @@ in:
         text: crwdns2546978:0[COUNT]crwdnd2546978:0[0]crwdne2546978:0
       Outbreak_stopMoving:
         text: crwdns2546980:0crwdne2546980:0
+      PoemBot_addLine:
+        text: crwdns2688416:0[LINE]crwdnd2688416:0[0]crwdne2688416:0
+      PoemBot_randomWord:
+        text: crwdns2688418:0crwdne2688418:0
+      PoemBot_setAuthor:
+        text: crwdns2688420:0[AUTHOR]crwdnd2688420:0[0]crwdne2688420:0
+      PoemBot_setTitle:
+        text: crwdns2688422:0[TITLE]crwdnd2688422:0[0]crwdne2688422:0
+      PoemBot_showPoem:
+        text: crwdns2688424:0crwdne2688424:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:
@@ -1815,15 +1840,21 @@ in:
         text: crwdns169256:0[PROPERTY]crwdnd169256:0[0]crwdnd169256:0[VALUE]crwdnd169256:0[1]crwdnd169256:0[STATEMENT]crwdnd169256:0[2]crwdne169256:0
         options:
           PROPERTY:
-            "'shapeColor'": crwdns169257:0crwdne169257:0
+            "'shapeColor'": crwdns2688274:0crwdne2688274:0
       aalab_layoutSprites:
         text: crwdns2486212:0[FORMAT]crwdnd2486212:0[0]crwdne2486212:0
         options:
           FORMAT:
-            '"grid"': crwdns2486214:0crwdne2486214:0
-            '"border"': crwdns2486216:0crwdne2486216:0
-            '"row"': crwdns2486218:0crwdne2486218:0
-            '"random"': crwdns2486220:0crwdne2486220:0
+            '"grid"': crwdns2658902:0crwdne2658902:0
+            '"border"': crwdns2658904:0crwdne2658904:0
+            '"row"': crwdns2658906:0crwdne2658906:0
+            '"random"': crwdns2658908:0crwdne2658908:0
+      aalab_levelFailure:
+        text: crwdns2590582:0[STATE]crwdnd2590582:0[0]crwdnd2590582:0[KEY]crwdnd2590582:0[1]crwdne2590582:0
+        options:
+          STATE:
+            '0': crwdns2590584:0crwdne2590584:0
+            '3': crwdns2590586:0crwdne2590586:0
       aalab_setSpeed:
         text: crwdns2486222:0[VAL]crwdnd2486222:0[0]crwdne2486222:0
       aalab_setupSim:
@@ -1837,16 +1868,16 @@ in:
             '0.5': crwdns2486232:0crwdne2486232:0
             '0.25': crwdns2486234:0crwdne2486234:0
           RATE:
-            '"immediately"': crwdns2486236:0crwdne2486236:0
-            '"quickly"': crwdns2486238:0crwdne2486238:0
-            '"gradually"': crwdns2486240:0crwdne2486240:0
-            '"slowly"': crwdns2486242:0crwdne2486242:0
+            '"immediately"': crwdns2658910:0crwdne2658910:0
+            '"quickly"': crwdns2658912:0crwdne2658912:0
+            '"gradually"': crwdns2658914:0crwdne2658914:0
+            '"slowly"': crwdns2658916:0crwdne2658916:0
           BEHAVIOR:
-            '"wandering"': crwdns2486244:0crwdne2486244:0
-            '"congregating"': crwdns2486246:0crwdne2486246:0
-            '"quarantining"': crwdns2486248:0crwdne2486248:0
-            '"avoiding"': crwdns2486250:0crwdne2486250:0
-            '"none"': crwdns2486252:0crwdne2486252:0
+            '"wandering"': crwdns2658918:0crwdne2658918:0
+            '"congregating"': crwdns2658920:0crwdne2658920:0
+            '"quarantining"': crwdns2658922:0crwdne2658922:0
+            '"avoiding"': crwdns2658924:0crwdne2658924:0
+            '"none"': crwdns2658926:0crwdne2658926:0
       aalab_someStartIntervention:
         text: crwdns2486254:0[PORTION]crwdnd2486254:0[0]crwdnd2486254:0[BEHAVIOR]crwdnd2486254:0[1]crwdne2486254:0
         options:
@@ -1856,20 +1887,40 @@ in:
             '0.5': crwdns2486260:0crwdne2486260:0
             '0.25': crwdns2486262:0crwdne2486262:0
           BEHAVIOR:
-            '"wandering"': crwdns2486264:0crwdne2486264:0
-            '"congregating"': crwdns2486266:0crwdne2486266:0
-            '"quarantining"': crwdns2486268:0crwdne2486268:0
-            '"avoiding"': crwdns2486270:0crwdne2486270:0
-            '"none"': crwdns2486272:0crwdne2486272:0
+            '"wandering"': crwdns2658928:0crwdne2658928:0
+            '"congregating"': crwdns2658930:0crwdne2658930:0
+            '"quarantining"': crwdns2658932:0crwdne2658932:0
+            '"avoiding"': crwdns2658934:0crwdne2658934:0
+            '"none"': crwdns2658936:0crwdne2658936:0
+      aalab_spriteSayChoices:
+        text: crwdns2658938:0[SPRITE]crwdnd2658938:0[0]crwdnd2658938:0[SPEECH]crwdnd2658938:0[1]crwdne2658938:0
+        options:
+          SPEECH:
+            '"I have spoken."': crwdns2658940:0crwdne2658940:0
+            '"Bounty hunting is a complicated profession."': crwdns2658942:0crwdne2658942:0
+            '"I will initiate self-destruct."': crwdns2658944:0crwdne2658944:0
+            '"This is the way."': crwdns2658946:0crwdne2658946:0
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': crwdns2658948:0crwdne2658948:0
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': crwdns2658950:0crwdne2658950:0
+            '"Sometimes life is scary and dark. That is why we must find the light."': crwdns2658952:0crwdne2658952:0
+            '"Everything small is just a smaller version of something big."': crwdns2658954:0crwdne2658954:0
+            '"Suckin’ at something is the first step to being sorta good at something."': crwdns2658956:0crwdne2658956:0
+            '"Life happens wherever you are, whether you make it or not."': crwdns2658958:0crwdne2658958:0
+            '"You can’t knock me down!"': crwdns2658960:0crwdne2658960:0
+            '"Roar!"': crwdns2658962:0crwdne2658962:0
+            '"My first girlfriend turned into the moon."': crwdns2658964:0crwdne2658964:0
+            '"True humility is the only antidote to shame."': crwdns2658966:0crwdne2658966:0
+            '"You are stronger and wiser and freer than you have ever been."': crwdns2658968:0crwdne2658968:0
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': crwdns2658970:0crwdne2658970:0
       aalab_startIntervention:
         text: crwdns2486274:0[BEHAVIOR]crwdnd2486274:0[0]crwdne2486274:0
         options:
           BEHAVIOR:
             wandering: crwdns2486276:0crwdne2486276:0
-            '"congregating"': crwdns2486278:0crwdne2486278:0
-            '"quarantining"': crwdns2486280:0crwdne2486280:0
-            '"avoiding"': crwdns2486282:0crwdne2486282:0
-            '"none"': crwdns2486284:0crwdne2486284:0
+            '"congregating"': crwdns2658972:0crwdne2658972:0
+            '"quarantining"': crwdns2658974:0crwdne2658974:0
+            '"avoiding"': crwdns2658976:0crwdne2658976:0
+            '"none"': crwdns2658978:0crwdne2658978:0
       binary_drawBin:
         text: crwdns391332:0[BIN]crwdnd391332:0[0]crwdne391332:0
       binary_drawBinScreen:
@@ -1882,7 +1933,7 @@ in:
           VAL:
             '0': crwdns391340:0crwdne391340:0
             '1': crwdns391342:0crwdne391342:0
-            '"toggle"': crwdns391344:0crwdne391344:0
+            '"toggle"': crwdns2658980:0crwdne2658980:0
       binary_drawString:
         text: crwdns391346:0[STR]crwdnd391346:0[0]crwdne391346:0
       binary_goTo:
@@ -1895,47 +1946,47 @@ in:
         text: crwdns391354:0[DIR]crwdnd391354:0[0]crwdne391354:0
         options:
           DIR:
-            '"up"': crwdns391356:0crwdne391356:0
-            '"down"': crwdns391358:0crwdne391358:0
-            '"left"': crwdns391360:0crwdne391360:0
-            '"right"': crwdns391362:0crwdne391362:0
+            '"up"': crwdns2658982:0crwdne2658982:0
+            '"down"': crwdns2658984:0crwdne2658984:0
+            '"left"': crwdns2658986:0crwdne2658986:0
+            '"right"': crwdns2658988:0crwdne2658988:0
       binary_whenKey:
         text: crwdns391364:0[KEY]crwdnd391364:0[0]crwdne391364:0
         options:
           KEY:
-            '"up"': crwdns391366:0crwdne391366:0
-            '"down"': crwdns391368:0crwdne391368:0
-            '"left"': crwdns391370:0crwdne391370:0
-            '"right"': crwdns391372:0crwdne391372:0
-            '"space"': crwdns391374:0crwdne391374:0
-            '"a"': crwdns391376:0crwdne391376:0
-            '"w"': crwdns391378:0crwdne391378:0
-            '"s"': crwdns391380:0crwdne391380:0
-            '"d"': crwdns391382:0crwdne391382:0
+            '"up"': crwdns2658990:0crwdne2658990:0
+            '"down"': crwdns2658992:0crwdne2658992:0
+            '"left"': crwdns2658994:0crwdne2658994:0
+            '"right"': crwdns2658996:0crwdne2658996:0
+            '"space"': crwdns2658998:0crwdne2658998:0
+            '"a"': crwdns2659000:0crwdne2659000:0
+            '"w"': crwdns2659002:0crwdne2659002:0
+            '"s"': crwdns2659004:0crwdne2659004:0
+            '"d"': crwdns2659006:0crwdne2659006:0
       craft_ifPath:
         text: crwdns194807:0[DIR]crwdnd194807:0[0]crwdnd194807:0[STATEMENT]crwdnd194807:0[1]crwdne194807:0
         options:
           DIR:
-            "'ahead'": crwdns194808:0crwdne194808:0
-            "'right'": crwdns194809:0crwdne194809:0
-            "'left'": crwdns194810:0crwdne194810:0
+            "'ahead'": crwdns2688276:0crwdne2688276:0
+            "'right'": crwdns2688278:0crwdne2688278:0
+            "'left'": crwdns2688280:0crwdne2688280:0
       craft_ifStandingOn:
         text: crwdns194811:0[TYPE]crwdnd194811:0[0]crwdnd194811:0[STATEMENT]crwdnd194811:0[1]crwdne194811:0
         options:
           TYPE:
-            "'blueCoralBlock'": crwdns194812:0crwdne194812:0
-            "'redCoralBlock'": crwdns194813:0crwdne194813:0
-            "'sand'": crwdns194814:0crwdne194814:0
-            "'wool_blue'": crwdns194815:0crwdne194815:0
-            "'planksOak'": crwdns194816:0crwdne194816:0
-            "'seaLantern'": crwdns194817:0crwdne194817:0
+            "'blueCoralBlock'": crwdns2688282:0crwdne2688282:0
+            "'redCoralBlock'": crwdns2688284:0crwdne2688284:0
+            "'sand'": crwdns2688286:0crwdne2688286:0
+            "'wool_blue'": crwdns2688288:0crwdne2688288:0
+            "'planksOak'": crwdns2688290:0crwdne2688290:0
+            "'seaLantern'": crwdns2688292:0crwdne2688292:0
       craft_ifStandingOnLimit:
         text: crwdns271572:0[TYPE]crwdnd271572:0[0]crwdnd271572:0[STATEMENT]crwdnd271572:0[1]crwdne271572:0
         options:
           TYPE:
-            "'sand'": crwdns271574:0crwdne271574:0
-            "'darkPrismarine'": crwdns271576:0crwdne271576:0
-            "'seaLantern'": crwdns271578:0crwdne271578:0
+            "'sand'": crwdns2688294:0crwdne2688294:0
+            "'darkPrismarine'": crwdns2688296:0crwdne2688296:0
+            "'seaLantern'": crwdns2688298:0crwdne2688298:0
       craft_log:
         text: crwdns182438:0[MESSAGE]crwdnd182438:0[0]crwdne182438:0
       craft_moveForward:
@@ -1944,31 +1995,31 @@ in:
         text: crwdns195464:0[blockType]crwdnd195464:0[0]crwdne195464:0
         options:
           blockType:
-            '"strippedOak"': crwdns241366:0crwdne241366:0
-            '"strippedDarkOak"': crwdns241368:0crwdne241368:0
-            '"stoneBricks"': crwdns241370:0crwdne241370:0
-            '"mossyStoneBricks"': crwdns241372:0crwdne241372:0
-            '"crackedStoneBricks"': crwdns241374:0crwdne241374:0
-            '"chiseledStoneBricks"': crwdns2471994:0crwdne2471994:0
-            '"blueCoralBlock"': crwdns241378:0crwdne241378:0
-            '"pinkCoralBlock"': crwdns241380:0crwdne241380:0
-            '"magentaCoralBlock"': crwdns241382:0crwdne241382:0
-            '"redCoralBlock"': crwdns241384:0crwdne241384:0
-            '"yellowCoralBlock"': crwdns241386:0crwdne241386:0
-            '"blueDeadCoralBlock"': crwdns241388:0crwdne241388:0
-            '"pinkDeadCoralBlock"': crwdns241390:0crwdne241390:0
-            '"magentaDeadCoralBlock"': crwdns241392:0crwdne241392:0
-            '"readDeadCoralBlock"': crwdns241394:0crwdne241394:0
-            '"yellowDeadCoralBlock"': crwdns241396:0crwdne241396:0
-            '"prismarine"': crwdns241398:0crwdne241398:0
-            '"darkPrismarine"': crwdns241400:0crwdne241400:0
-            '"seaLantern"': crwdns241402:0crwdne241402:0
-            '"packedIce"': crwdns241404:0crwdne241404:0
-            '"blueIce"': crwdns241406:0crwdne241406:0
-            '"blackConcrete"': crwdns241408:0crwdne241408:0
-            '"seaGrass"': crwdns241420:0crwdne241420:0
-            '"kelp"': crwdns241422:0crwdne241422:0
-            '"polishedGranite"': crwdns241424:0crwdne241424:0
+            '"strippedOak"': crwdns2659032:0crwdne2659032:0
+            '"strippedDarkOak"': crwdns2659034:0crwdne2659034:0
+            '"stoneBricks"': crwdns2659036:0crwdne2659036:0
+            '"mossyStoneBricks"': crwdns2659038:0crwdne2659038:0
+            '"crackedStoneBricks"': crwdns2659040:0crwdne2659040:0
+            '"chiseledStoneBricks"': crwdns2659042:0crwdne2659042:0
+            '"blueCoralBlock"': crwdns2659044:0crwdne2659044:0
+            '"pinkCoralBlock"': crwdns2659046:0crwdne2659046:0
+            '"magentaCoralBlock"': crwdns2659048:0crwdne2659048:0
+            '"redCoralBlock"': crwdns2659050:0crwdne2659050:0
+            '"yellowCoralBlock"': crwdns2659052:0crwdne2659052:0
+            '"blueDeadCoralBlock"': crwdns2659054:0crwdne2659054:0
+            '"pinkDeadCoralBlock"': crwdns2659056:0crwdne2659056:0
+            '"magentaDeadCoralBlock"': crwdns2659058:0crwdne2659058:0
+            '"readDeadCoralBlock"': crwdns2659060:0crwdne2659060:0
+            '"yellowDeadCoralBlock"': crwdns2659062:0crwdne2659062:0
+            '"prismarine"': crwdns2659064:0crwdne2659064:0
+            '"darkPrismarine"': crwdns2659066:0crwdne2659066:0
+            '"seaLantern"': crwdns2659068:0crwdne2659068:0
+            '"packedIce"': crwdns2659070:0crwdne2659070:0
+            '"blueIce"': crwdns2659072:0crwdne2659072:0
+            '"blackConcrete"': crwdns2659074:0crwdne2659074:0
+            '"seaGrass"': crwdns2659076:0crwdne2659076:0
+            '"kelp"': crwdns2659078:0crwdne2659078:0
+            '"polishedGranite"': crwdns2659080:0crwdne2659080:0
       craft_placePrismarine:
         text: crwdns271580:0crwdne271580:0
       craft_placeTorch:
@@ -1981,12 +2032,12 @@ in:
         text: crwdns245562:0[ENTITY]crwdnd245562:0[0]crwdne245562:0
         options:
           ENTITY:
-            '"cod"': crwdns271582:0crwdne271582:0
-            '"dolphin"': crwdns271584:0crwdne271584:0
-            '"salmon"': crwdns271586:0crwdne271586:0
-            '"seaTurtle"': crwdns271588:0crwdne271588:0
-            '"squid"': crwdns271590:0crwdne271590:0
-            '"tropicalFish"': crwdns271592:0crwdne271592:0
+            '"cod"': crwdns2659082:0crwdne2659082:0
+            '"dolphin"': crwdns2659084:0crwdne2659084:0
+            '"salmon"': crwdns2659086:0crwdne2659086:0
+            '"seaTurtle"': crwdns2659088:0crwdne2659088:0
+            '"squid"': crwdns2659090:0crwdne2659090:0
+            '"tropicalFish"': crwdns2659092:0crwdne2659092:0
       craft_turn:
         text: crwdns194820:0[DIR]crwdnd194820:0[0]crwdne194820:0
         options:

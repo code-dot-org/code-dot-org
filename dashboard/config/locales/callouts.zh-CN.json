@@ -1935,6 +1935,240 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "向程序里增加这个模块！"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "将此模块添加到程序中。",
+          "arrow_buttons": "按方向按钮控制舞者。"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "向程序里增加这个模块！"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "添加新事件到程序中。"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "新模块！"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "新模块！"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "新模块！",
+          "new_block_4": "新模块！"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "使用此模块记录你的或老师的代码是如何起作用的。"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "这是一个\"重复\"循环！点击它进入工作区，并为其添加您想要一遍遍运行的代码。"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "代理人可以在水上悬停，但是玩家不能！"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "您无法将这些方块扔掉，但是您可以编辑它们！"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "我们已将一些方块放在这儿，好方便你开始"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "此代码将开始建造你的房子。你能完成吗？"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "点击“运行”，试试你的程序",
+          "craft_drag_block_callout": "拖动一个“向前移动”模块并接到其他模块下方"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "将方块放在这里可以重复行动"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "此代码会检查熔岩，你能添加一条向前移动的命令吗？"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "开采这块铁矿！"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "点击这里为你的项目添加新服装！"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "点击这里为你的项目添加新服装！"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "你可以在这里放慢你的程序。"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "尝试一次一个模块地遍历代码。"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "要解决这个迷题，会用到`当前面有路时`模块。"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
+          "stone_block_2": "灰色的块是石头做的, 不能扔掉。"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "点这里！"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "用来创建函数的模块已经移动到了工具箱的这个标签里。"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "通过在底部添加更多代码来保持这个程序运行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "通过在底部添加更多代码来保持这个程序运行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_collector": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_pet": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "尝试将when改为while。"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "此处新模块！"
+        },
+        "courseF_events_key": {
+          "whenKey": "使用在这里找到的新事件模块。"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "这段代码的顺序不正确。"
+        },
+        "courseF_events_time": {
+          "events_category": "点击这里打开事件类别。"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "仔细看下面的代码。"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "点击这里打开行为类别。"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "点击这里打开精灵图类别。"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "点击这里打开位置类别。"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "在这里寻找一个新模块。"
+        },
+        "courseF_text_answer": {
+          "answered_block": "在这里寻找一个新模块！"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "你回答问题时背景颜色改变了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "你完成了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "在这里寻找两个新模块！",
+          "text_answer_finish": "标题屏幕显示了3秒钟吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "在这里寻找新模块！"
+        },
+        "courseF_text_events": {
+          "events_category": "点击这里打开事件类别。"
+        },
+        "courseF_text_print": {
+          "print_block": "在这里找到打印模块！",
+          "text_print_finish": "你的信息打印在上面了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "在这里找到提示模块！"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "仔细看下面的代码。"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         }
       }
     }

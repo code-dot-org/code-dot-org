@@ -4276,8 +4276,8 @@
           "hint1": "คลิกปุ่ม `+` บนบล็อกเหตุการณ์ เติมจุดว่างในบล็อก `เปลี่ยนคอสตูม` ด้วยบล็อก `หัวเรื่อง` ที่อยู่ด้านใน\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "ในการใส่หน้ากากอนามัยให้มอนสเตอร์ ให้ใช้บล็อก `เปลี่ยนคอสตูม` ด้วยเหตุการณ์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nอย่าลืมลากมาใส่ในบล็อก `คลิก` สีแดงเล็กๆ ด้วย!",
-          "hint2": "โค้ดใหม่สำหรับเลเวลนี้ควรมีลักษณะดังนี้:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "ในการใส่หน้ากากอนามัยให้มอนสเตอร์ ให้ใช้บล็อก `เปลี่ยนคอสตูม` ด้วยเหตุการณ์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nอย่าลืมลากมาใส่ในบล็อก `คลิก` สีแดงเล็กๆ ด้วย!",
+          "hint2": "โค้ดใหม่สำหรับเลเวลนี้ควรมีลักษณะดังนี้:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
           "challenge": "## กำลังมองหาความท้าทายเพิ่มเติมหรือไม่?\n\nคุณสามารถทำให้มอนสเตอร์เคลื่อนที่เร็วขึ้นหรือช้าลงได้ด้วย\n\n1.  คลิก `แก้ไข` ในบล็อกนี้ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  เพิ่มหรือลดจำนวนในบล็อกนี้: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nหากต้องการทำให้มอนสเตอร์เคลื่อนที่ช้าลง ให้เลือกตัวเลขทศนิยมเช่น `0.5` หรือ `0.25` ทำให้เคลื่อนที่เร็วขึ้นให้เลือกเลขใดก็ได้ที่มากกว่า 1"
@@ -4287,11 +4287,1022 @@
         },
         "outbreak6": {
           "hint2": "อย่าลืมย้ายบล็อก \"การกระทำ\" อื่นๆ ไปที่ด้านในของบล็อก `ถ้ามีโอกาส`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "คุณจะต้องเพิ่มเหตุการณ์ `เมื่อสัมผัส` อีก 3 รายการเพื่อตรวจสอบการผสมผสานที่เป็นไปได้ทั้งหมดของ `สัมผัส` ระหว่างสไปรท์ที่มีสุขภาพดีและที่ติดเชื้อ\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hint1": "คุณจะต้องเพิ่มเหตุการณ์ `เมื่อสัมผัส` อีก 3 รายการเพื่อตรวจสอบการผสมผสานที่เป็นไปได้ทั้งหมดของ `สัมผัส` ระหว่างสไปรท์ที่มีสุขภาพดีและที่ติดเชื้อ\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## วัคซีน\n\nคุณสามารถจำลองการให้วัคซีนกับมอนสเตอร์ได้เมื่อคุณคลิกที่ตัวมอนสเตอร์ ในการดำเนินการนี้ ให้ใช้บล็อก `เปลี่ยนคอสตูม` กับเหตุการณ์นี้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## วัคซีน\n\nคุณสามารถจำลองการให้วัคซีนกับมอนสเตอร์ได้เมื่อคุณคลิกที่ตัวมอนสเตอร์ ในการดำเนินการนี้ ให้ใช้บล็อก `เปลี่ยนคอสตูม` กับเหตุการณ์นี้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "รู้สึกติดขัด? คุณสามารถรีเซ็ตโค้ดของคุณได้ตลอดเวลาโดยคลิกที่ `ประวัติเวอร์ชัน` ด้านล่างจากนั้นเลือก \"เริ่มใหม่\""
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   ต้องมีนักเต้นอยู่บนหน้าจอ\n\n_เลเวลนี้จะสิ้นสุดลงหลังผ่านไป 4 ห้องเพลง_",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\n-   เลือกเล่นเพลงที่ต่างออกไป\n-   เคลื่อนย้ายนักเต้นของคุณไปยังตำแหน่งใหม่\n-   สร้างนักเต้นมากกว่าหนึ่งคน"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   นักเต้นจะต้องขยับท่วงท่า\n-   คุณต้องกดปุ่มลูกศร\n\n\\_เลเวลนี้จะจบลงหลังจากผ่านไป 4 ห้องดนตรี",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\nใช้บล็อก <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> มากกว่าหนึ่งบล็อก"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   นักเต้นทั้งสองคนจะต้องขยับท่วงท่า\n-   คุณต้องกดปุ่มลูกศร\n\n_เลเวลนี้จะจบลงหลังจากผ่านไป 4 ห้องดนตรี_",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\n-   ทำให้นักเต้นตอบสนองต่อลูกศรปุ่มซ้ายและปุ่มขวา"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   นักเต้นต้องสลับไปเต้นท่าใหม่หลังผ่านไป 4 ห้องดนตรี\n\n_เลเวลจะสิ้นสุดลงหลังผ่านไป 7 ห้องดนตรี_"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   หลังผ่านไป 6 ห้องดนตรี นักเต้นต้องเต้นท่าอื่นที่ต่างจากท่าที่ใช้หลังผ่านไป 4 ห้องดนตรี\n\n_เลเวลจะสิ้นสุดลงหลังผ่านไป 11 ห้องดนตรี_",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\n-   เปลี่ยนพื้นหลังเมื่อใดก็ตามที่นักเต้นเปลี่ยนท่า"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   สร้างนักเต้นนำหนึ่งคนและนักเต้นประกอบอีกหนึ่งกลุ่มภายในห้องดนตรี 4 ห้องแรกของเพลง\n\n\\_เลเวลนี้จะจบลงหลังจากผ่านไป 7 ห้องดนตรี",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\n-   สร้างนักเต้นประกอบหลายให้มีหลายกลุ่ม"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เปลี่ยนขนาดนักเต้นอย่างน้อยหนึ่งคนหลังเสียงดนตรีเริ่มขึ้น\n\n\\_เลเวลนี้จะจบลงหลังจากผ่านไป 6 ห้องดนตรี",
+          "challenges": "**ตัวเลือกความท้าทาย**\n\n-   ทดลองเปลี่ยนคุณสมบัติอื่นๆ เช่น ความกว้าง หรือการหมุน"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เปลี่ยนระดับอ่อนสีของนักเต้นอย่างน้อยหนึ่งคน\n\n\\_เลเวลนี้จะจบลงหลังจากผ่านไป 6 ห้องดนตรี",
+          "tint_hint": "สังเกตหรือไม่ว่านักเต้นไม่เปลี่ยนสีไปตามที่คุณเลือก? ซึ่งเป็นเพราะ **ระดับอ่อนสี** ผสมสีที่คุณเลือกเข้ากับสีของนักเต้น"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เพียงกดปุ่ม \"สำเร็จ\"!",
+          "repeat_every_ideas": "**ต้องการไอเดียหรือเปล่า?**\n\n-   เปลี่ยนขนาดของนักเต้นซ้ำหลายครัั้งเพื่อทำให้เติบโตขึ้น\n-   เปลี่ยนการหมุนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เกิดการหมุน\n-   เปลี่ยนตำแหน่งแนวตั้งหรือแนวนอนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เคลื่อนที่ไปบนหน้าจอ\n\n_คุณสามารถใช้จำนวนติดลบเพื่อสร้างเอฟเฟกต์ตรงกันข้ามได้อีกด้วย!_",
+          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "บล็อกสำรองอยู่ในหมวดหมู่ “นักเต้น”"
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "เห็น **ตะเกียงใต้ทะเล** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? หรือไม่ คุณจะใช้มันเป็นเงื่อนไขเพื่อผ่านสิ่งก่อสร้างใต้สมุทรไปได้อย่างไร"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "คุณสามารถใช้บล็อก `ถ้ามีเส้นทาง (if path)` เพื่อช่วยคุณให้สามารถหันไปทางขวาได้"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "เห็นบล็อกปะการังสีแดงและสีฟ้าไหม? คุณสามารถใช้เป็นเครื่องนำทางเพื่อหันขวาและหันซ้ายผ่านแนวปะการังไปได้"
+        },
+        "CourseF_outbreak1": {
+          "step1": "ใช้บล็อกเหล่านี้เพื่อสร้างสไปรท์ของคุณ:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nบล็อกนี้อยู่ในหมวด **สไปรท์** ของกล่องเครื่องมือ",
+          "step2": "เปลี่ยนขนาดของสไปรท์ด้วยบล็อกนี้: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nพบได้ในหมวด **ดำเนินการ** ของกล่องเครื่องมือ",
+          "step3": "ทำให้สไปรท์ทั้งหมดเริ่มเคลื่อนที่ด้วย: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nบล็อกนี้อยู่ในหมวด **ดำเนินการ** ของกล่องเครื่องมือ"
+        },
+        "CourseF_outbreak2": {
+          "hint1": "คลิกปุ่ม `+` บนบล็อกเหตุการณ์ เติมจุดว่างในบล็อก `เปลี่ยนคอสตูม` ด้วยบล็อก `หัวเรื่อง` ที่อยู่ด้านใน\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "ในการใส่หน้ากากอนามัยให้มอนสเตอร์ ให้ใช้บล็อก `เปลี่ยนคอสตูม` ด้วยเหตุการณ์ `เมื่อคลิก`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nอย่าลืมลากมาใส่ในบล็อก `คลิก` สีแดงเล็กๆ ด้วย!",
+          "hint2": "โค้ดใหม่สำหรับเลเวลนี้ควรมีลักษณะดังนี้:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## กำลังมองหาความท้าทายเพิ่มเติมหรือไม่?\n\nคุณสามารถทำให้มอนสเตอร์เคลื่อนที่เร็วขึ้นหรือช้าลงได้ด้วย\n\n1.  คลิก `แก้ไข` ในบล็อกนี้ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  เพิ่มหรือลดจำนวนในบล็อกนี้: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nหากต้องการทำให้มอนสเตอร์เคลื่อนที่ช้าลง ให้เลือกตัวเลขทศนิยมเช่น `0.5` หรือ `0.25` ทำให้เคลื่อนที่เร็วขึ้นให้เลือกเลขใดก็ได้ที่มากกว่า 1"
+        },
+        "CourseF_outbreak6": {
+          "hint2": "อย่าลืมย้ายบล็อก \"การกระทำ\" อื่นๆ ไปที่ด้านในของบล็อก `ถ้ามีโอกาส`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "คุณจะต้องเพิ่มเหตุการณ์ `เมื่อสัมผัส` อีก 3 รายการเพื่อตรวจสอบการผสมผสานที่เป็นไปได้ทั้งหมดของ `สัมผัส` ระหว่างสไปรท์ที่มีสุขภาพดีและที่ติดเชื้อ\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## วัคซีน\n\nคุณสามารถจำลองการให้วัคซีนกับมอนสเตอร์ได้เมื่อคุณคลิกที่ตัวมอนสเตอร์ ในการดำเนินการนี้ ให้ใช้บล็อก `เปลี่ยนคอสตูม` กับเหตุการณ์นี้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "รู้สึกติดขัด? คุณสามารถรีเซ็ตโค้ดของคุณได้ตลอดเวลาโดยคลิกที่ `ประวัติเวอร์ชัน` ด้านล่างจากนั้นเลือก \"เริ่มใหม่\""
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "ถ้าคุณเรียกใช้งานฟังก์ชั่นอย่างถูกต้อง นี่คือเส้นทางที่คุณจะเดินทางไป",
+          "Function_intro_Ryan_a": "คุณสามารถเรียกฟังก์ชั่นได้หลายครั้งในโปรแกรมของคุณ ลองเรียกใช้งานดูสักสองครั้งเพื่อพิชิตปริศนาด่านนี้ให้สาเร็จ"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "ลากบล็อก `ไปข้างหน้า`หนึ่งบล็อกจากกล่องเครื่องมือไปยังพื้นที่ทำงานแล้ว ต่อเข้ากับข้างใต้ของบล็อก`เมื่อเรียกใช้งาน` ให้เรียบร้อย",
+          "MC_HOC_2017_01_RETRY_b": "อย่าลืมคลิกปุ่ม \" เริ่ม \" เพื่อเรียกใช้งานคำสั่งต่างๆ ให้เอเจนท์ทำ",
+          "MC_HOC_2017_01_RETRY_c": "เมื่อเอเจนท์ทำตามคำสั่งทั้งหมดแล้ว ก็ถึงเวลาที่คุณจะพาผู้เล่นเคลื่อนไหวไปที่ใดๆ โดยการใช้แป้นลูกศรได้!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "พาเอเจนท์เดินไปข้างหน้าสองช่องเพื่อให้ไปยืนบนแป้นกด  ซึ่งจะไปเปิดประตูให้กับผู้เล่นของคุณ",
+          "MC_HOC_2017_02_Cole_b": "กดปุ่ม  \" เริ่ม \"\n\nคุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง",
+          "MC_HOC_2017_02_Cole_c": "เมื่อเอเจนท์เปิดประตูได้สำเร็จ คุณสามารถใช้แป้นลูกศรเพื่อพาผู้เล่นของคุณไปยังแผนที่ได้!",
+          "MC_HOC_2017_02_Cole_d": "ตรวจสอบให้แน่ใจว่าเอเจนท์ใช้เส้นทางที่กำหนดไว้ให้บนแผนที่!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "เมื่อคุณพาเอเจนท์ให้ไปอยู่ที่แป้นกดแล้ว คุณสามารถใช้แป้นลูกศรของคุณเพื่อพาผู้เล่นให้เดินไปที่เข็มทิศได้!",
+          "MC_HOC_2017_03_Cole_b": "มีความรู้สึกไหมว่า โค้ดนั้นมีความยาวไม่น้อยทีเดียว?  ลองใช้ลูป`ทำซ้ำ`เข้ามาช่วยและดูว่าคุณสามารถคิดหาวิธีที่จะทำให้โค้ดสั้นลงได้ไหม!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "ใช้บล็อก `หันขวา` เพื่อเปลี่ยนทิศทางของเอเจนท์ ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "เอเจนท์จำเป็นต้องไปถึงแค่เพียงแป้นกดอันแรกเท่านั้น เพื่อให้อเล็กซ์ หรือ สตีฟผ่านเข้าไปเอาขวานมาได้"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์ต้องเดิน `ไปข้างหน้า` 7 ก้าว (ครั้ง) คุณจะใช้ลูป `ทำซ้ำ` มาช่วยให้มันเป็นจริงได้อย่างไร?",
+          "MC_HOC_2017_04_Cole_c": "กดปุ่ม  \" เริ่ม \"\n\nคุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง",
+          "MC_HOC_2017_04_Cole_b": "เมื่อเอเจนท์มาอยู่บนแป้นกดเรียบร้อยแล้ว เอเจนท์ก็สามารถเปิดประตูให้กับผู้เล่นของคุณ"
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "คุณรู้หรือไม่ว่า คุณสามารถวางโค้ดได้มากกว่า 1 ชื้นไว้ภายในลูป? ลองวางบล็อก ไปข้างหน้า**และ** วางไม้กระดาน.. ไว้ภายในบล็อก `ทำซ้ำ` เพื่อพิชิตปริศนาด่านนี้",
+          "MC_HOC_2017_05_Cole_b": "พาเอเจนท์ข้ามแม่น้าไป ในขณะเดียวกันก็สร้างสะพานพร้อมกันไปด้วย"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "จะต้องใช้ลูปสักกี่ครั้ง? หรือ_ควร_ที่จะใช้สักกี่ครั้ง ถึงจะทำงานได้?",
+          "MC_HOC_2017_06_Cole_b": "ช่วยเอเจนท์สร้างสะพานข้ามแม่น้าให้ไปถึงอีกฝั่งหนึ่งให้ได้ "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "สิ่งที่คุณต้องทำ ก็คือให้เอเจนท์เคลียร์เส้นทางไปยังรถเหมืองให้ได้",
+          "MC_HOC_2017_07_Cole_a": "หากต้องการพิชิตด่านนี้ให้ได้ ต้องคิดให้ออกว่าจะเรียกใช้ฟังก์ชั่น `เคลียร์เส้นทาง` ให้เรียกใช้งานซ้า ๆ กันให้เท่ากับจำนวนที่คุณต้องการเรียกใช้บล็อก `เคลียร์เส้นทาง` สีเขียวจากกล่องเครื่องมือ",
+          "MC_HOC_2017_07_Cole_b": "ลองเรียกใช้งานบล็อกฟังก์ชั่นผสมกับบล็อกอื่น ๆ ในกล่องเครื่องมือเพื่อพิชิตด่านนี้ให้ได้"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "ไม่รู้ว่าจะไปทางไหนดี? ลองมองหาส่วนที่มีเส้นทางวาดเป็นจุดๆ ให้อยู่แล้วสิ!",
+          "MC_HOC_2017_10_Cole_a": "ใช้ฟังก์ชั่น เพื่อเอาชนะด่านนี้ได้ง่ายขึ้น"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "กดปุ่ม  \" เริ่ม \"\n\nคุณสามารถเรียกใช้งานโค้ดของคุณแม้ว่าโค้ดนั้นจะยังทำงานไม่ถูกต้องก็ตาม  เริ่มหรือตั้งค่าโค้ดของคุณใหม่ซ้ำแล้วซ้ำเล่า จนกว่าคุณจะคิดออกว่าอะไรที่ทำให้โค้ดของคุณทำงานไม่ถูกต้อง",
+          "MC_HOC_2017_08_RY_b": "มีวิธีการมากมายที่จะเอาชนะในด่านนี้ได้ สองดูสักสองสามวิธีสิ",
+          "MC_HOC_2017_08_RY_c": "ลองเขียนโค้ดให้เดินไล่ไปตามเส้นประเป็นทางแบบง่าย ๆ ให้ข้ามผ่านลาวาไปได้"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "ลองให้เอเจนท์สร้างรางสำหรับรถเหมืองเพื่อช่วยให้คุณสามารถสำรวจโลกได้!"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "มีเส้นทางสองสามแบบให้คุณเลือก เส้นทางไหนสั้นที่สุด?",
+          "mc_8_b": "ใช้ลูป `ทำซ้ำ`เพื่อทำให้โค้ดของคุณง่ายขึ้น",
+          "mc_8_c": "จุดมุ่งหมายของคุณคือเข้าไปให้ถึงประตูบ้านที่อยู่บนสุดของจอภาพ"
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_b": "คำสั่ง`ทำลายบล็อก` จะตัดต้นไม้ที่อยู่ตรงหน้าคุณลง"
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "คุณสามารถตัดต้นไม้ลงในลำดับใดก็ได้ เส้นทางใดจะใช้บล็อกจำนวนน้อยที่สุด?  ",
+          "mc_4_b": "คำสั่ง`ทำลายบล็อก` จะตัดต้นไม้ที่อยู่ตรงหน้าคุณลง"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "คลิกลูกศรคว่ำลงที่อยู่บนบล็อก `วาง` เพื่อเลือกว่าคุณต้องการนำวัสดุอะไรมาวาง",
+          "mc_6_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม",
+          "mc_6_c": "คุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกภายในลูป `ทำซ้ำ`"
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "บล็อก`ไปข้างหน้า`อยู่บนสุดของกล่องเครื่องมือ  ",
+          "mc_1_b": "ให้แน่ใจว่าบล็อก `ไปข้างหน้า` ต่อติดกับบล็อก `เมื่อเรียกใช้งาน`  "
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "ใช้บล็อก `วาง` เป็นบล็อกแรกตามมาด้วยบล็อก `ไปข้างหน้า`",
+          "mc_5_b": "ให้แน่ใจว่าคุณได้วางบล็อกทั้งสองบล็อกไว้ภายในลูป `ทำซ้ำ` เพื่อที่จะเรียกใช้งานโค้ดได้มากกว่าหนึ่งครั้ง",
+          "mc_5_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "ให้ใช้บล็อก `ปลูกพืช` เพื่อปลูกพืชผลลงบนบริเวณที่คุณยืนอยู่",
+          "mc_7_b": "แถบทั้งสองของที่ดินที่เป็นสีน้ำตาลเข้มซึ่งขนาบสายน้ำอยู่นั้นต้องเต็มไปด้วยพืชผล",
+          "mc_7_c": "คุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกภายในลูป `ทำซ้ำ`"
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "ให้ใช้ `วางราง` เพื่อวางรางลงบนตารางส่เหลี่ยมที่คุณยืนอยู่",
+          "mc_13_b": "ใช้ลูป `ทำซ้ำ` เพื่อทำให้โค้ดของคุณสั้นลง"
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "บล็อก `ตัดขน` จัดการตัดขนแกะที่อยู่ตรงหน้า คุณมีแกะอยู่ตรงหน้าหรือเปล่า?  ",
+          "mc_3_b": "ถ้าคุณต้องการเปลี่ยนด้านที่คุณต้องการหันหน้าไป ให้ใช้บล็อก`หัน`มาช่วย  ",
+          "mc_3_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "โค้ดทั้งหมดได้มีการวางไว้ให้เรียบร้อยแล้วเพื่อเช็คดูและจัดการกับลาวา สิ่งที่คัณต้องทำก็คือเพิ่มบล็อกเข้าไปเพื่อเดินไปข้างหน้า",
+          "mc_11_b": "คำสั่งเพื่อ`ไปข้างหน้า` ควรอยู่ภายในบล็อกข้อความ `ถ้า` หรืออยู่ภายหลัง?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "บริเวณที่เป็นจุดแต้มด้วยสีแดงเป็นบริเวณที่มีสินแร่หินสีแดงฝังอยู่",
+          "mc_12_b": "คุณสามารถใช้ลูป `ทำซ้ำ`เพื่อให้โค้ดของคุณสั้นลงได้ไหม?",
+          "mc_12_c": "ให้ใช้ข้อความ `ถ้า` เพื่อเช็คดูว่ามีลาวาไหม หากมีก็จะถมด้วยหินกรวด "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "บล็อกแหล่งแร่เหล็กเป็นบริเวณที่ส่งประกายที่ตั้งอยู่ด้านหลังคบไฟ! คุณจะไปที่นั่นได้ย่างไร?",
+          "mc_10_b": "เมื่อคุณได้มายืนอยูที่ขอบของแอ่งลาวา ให้ใช้บล็อก `วางหินกรวดข้างหน้า` เพื่อทำทางที่ปลอดภัย เมื่อทำเสร็จแล้วคุณก็สามารถเดินข้ามไปได้!",
+          "mc_10_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "คุณหันหน้าไปถูกทางหรืิเปล่า? ในการ`ทำลายบล็อก`นั้นจะทำลายบล็อกที่อยู่ข้างหน้าของคุณ",
+          "mc_9_b": "รอยด่างบนกำแพงนั้นเป็นถ่านหิน ให้ใช้ `ทำลายบล็อก`กับรอยด่างเหล่านี้เพื่อขุดเอาถ่านหิน",
+          "mc_9_c": "ให้ใช้บล็อก `วางคบไฟ`เพื่อวางคบไฟไว้ตรงที่คุณยืนอยู่"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
+          "courseA_artist_loops3_b": "คุณต้องใช้บล็อกแบบนี้เพื่อแก้ปริศนา\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "คิดไม่ออก..วิธีที่จะวาดเนินเขาหรือเปล่า?  ลองเล่นกับบล็อกต่างๆ ดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอะไร",
+          "courseA_artist_loops6_b": "คุณต้องใช้บล็อก 2 บล็อกที่วาดไปสองทิศทางเพื่อแก้ปริศนานี้"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
+          "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง",
+          "courseA_artist_loops8_b": "คุณจะวนลูปโค้ดที่คุณได้รับมาอย่างไร",
+          "courseA_artist_loops8_c": "โค้ดทำอะไรได้บ้าง\nมันควรจะทำอะไร?\nมันบอกอะไรแก่คุณ?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด",
+          "courseA_collector_loops5_b": "ลองแยกปัญหาออกเป็น 2 ส่วน ส่วนที่เคลื่อนไหวไปทางด้านข้างและส่วนที่เคลื่อนไหวไปทางด้านล่าง",
+          "courseA_collector_loops5_c": "คุณจะต้องเริ่มต้นด้วยลูปที่พาลอเรลไปทางทิศตะวันตกและเก็บรวบรวมสมบัติไปตลอดทาง"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "หากคุณมีปัญหาในการแก้ปริศนานี้ให้ ลองเขียนสิ่งที่คุณคิดลงบนกระดาษและมองหารูปแบบดู",
+          "courseA_collector_loops8_b": "ลองแยกปริศนานี้ออกเป็นปัญหาสามส่วน และใช้บล็อกลูปสำหรับการเคลื่อนไหวแต่ละทิศทาง",
+          "courseA_collector_loops8_c": "จำไว้ว่าคุณสามารถเขียนโค้ดทีละหนึ่งชิ้นแล้วกด \" เริ่ม\" เพื่อดูว่าคุณควรจะทำอะไรต่อไป"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "ถ้าคุณไม่สามารถหาได้ว่า จุดที่ดีที่สุดที่จะใช้ลูปอยู่ที่ใด ให้ลองเขียนโค้ดออกมาทีละขั้นตอนและมองหารูปแบบ "
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_b": "คุณไม่จำเป็นต้องใช้ ลูป ถ้าคุณแค่ทำบางอย่างแค่เพียงครั้งเดียวเท่านั้น"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "ไม่ต้องกังวลที่จะกดปุ่ม `เริ่ม` เพื่อดูว่าจะเกิดอะไรขึ้น!",
+          "courseA_harvester_loops4_b": "ดูว่าข้าวโพดมีกี่ฝัก? แล้วดูว่าโค้ดของคุณจะทำซ้ำกี่ครั้ง?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "กดปุ่ม `เริ่ม` และดูว่าเกิดอะไรขึ้น!",
+          "courseA_harvester_loops5b_b": "ลูปของคุณมีการทำซ้ำด้วยจำนวนครั้งที่ถูกต้องหรือไม่?",
+          "courseA_harvester_loops5b_c": "เดินไปตามเส้นทางที่ให้มานี้ ทิศทางหนึ่งและก็เปลี่ยนไปอีกทิศทางหนึ่ง"
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน",
+          "courseA_harvester_loops6_b": "นี่คือเส้นทางที่คุณควรใช้ เพื่อเก็บข้าวโพดทั้งหมด"
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "แบ่งปริศนานี้ออกเป็นสามส่วนที่แตกต่างกัน ส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมแรก ส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมที่สอง และส่วนหนึ่งสำหรับการเดินไปจนถึงหัวมุมสุดท้าย",
+          "courseA_harvester_loops9_b": "อย่ากลัวที่จะเรียกใช้งานโค้ดแต่ละส่วนของคุณ และดูว่าจะเกิดอะไรขึ้น!",
+          "courseA_harvester_loops9_c": "เดินไปตามเส้นทางนี้เพื่อไปเก็บข้าวโพดให้หมด"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน",
+          "courseA_harvester_seq10_c": "ลองใช้เส้นทางนี้ในการเก็บข้าวโพดทั้งหมด"
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "ใช้บล็อกอันนี้เพื่อให้เกษตรกรเก็บข้าวโพด\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "ใช้บล็อกนี้ในการเก็บข้าวโพดเมื่อเกษตรกรเดินไปเจอฝักข้าวโพด!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "เกษตรกรต้องเดินไปทางทิศตะวันออกสามครั้งเพื่อไปให้ถึงฝักข้าวโพด ให้ใช้บล็อกนี้\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
+          "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "หากคุณคิดไม่ออก ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ มันอาจจะช่วยให้คุณหาเส้นทางที่ถูกต้องได้"
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะจะถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
+          "courseA_harvester_seq7_b": "มีปัญหาอะไรไหมครับ? นี่คือเส้นทางที่เกษตรกรควรใช้"
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "เรียกใช้งานโค้ดสักสองสามครั้งเพื่อดูว่าเกิดอะไรขึ้น สังเกตุดูว่าเกษตรกรหยุดตรงไหน?",
+          "courseA_harvester_seq9_b": "อย่าลืมเก็บข้าวโพดให้หมดด้วย คุณต้องใช้บล็อกเก็บข้าวโพดทั้งหมดรวมกัน **3** บล็อก",
+          "courseA_harvester_seq9_c": "คุณควรใช้เส้นทางนี้เพื่อเก็บข้าวโพดทั้งหมด"
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน",
+          "courseA_maze_seq10_b": "คุณต้องเคลื่อนไหวไปถึงสามทิศทางที่ต่างกันเพื่อแก้ปริศนาข้อนี้"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
+          "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
+          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "โค้ดที่คุณเขียนเสร็จควรประกอบด้วยบล็อกที่ช่วยในการเคลื่อนไหวจำนวน 3 บล็อกด้วยกัน",
+          "courseA_maze_seq6_b": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "โค้ดที่คุณเขียนเสร็จควรประกอบด้วยบล็อกที่ช่วยในการเคลื่อนไหวจำนวน 3 บล็อกด้วยกัน",
+          "courseA_maze_seq6_b": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "ถ้าหากคุณติดขัด ลองวาดเป็นภาพลงบนกระดาษเพื่อดูว่าจะให้เจ้านกเคลื่อนที่อย่างไร"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "ถ้าหากคุณติดขัด ลองวาดเป็นภาพลงบนกระดาษเพื่อดูว่าจะให้เจ้านกเคลื่อนที่อย่างไร"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "ลองนับจำนวนช่องว่างใช้นิ้วของคุณ จำไว้ว่าต้องไม่นับรวมเอาที่ที่คุณเริ่มต้น!"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "ให้แวดเดิล เจ้านกเพนกวินปรากฎตัวเมื่อคุณคลิกที่รอบิน เจ้านกสีแดง\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "ทำให้บู เจ้าผีน้อยปรากฎตัวขึ้นเมื่อคุณคลิกเจ้าแวดเดิล!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "ทำให้เจ้าอสูรขนปุย เจย์เด็น ปรากฎตัวขึ้น เมื่อคุณคลิกบู เจ้าผีน้อย!",
+          "courseA_playlab_events_challenge1_d": "ทำให้เจ้าหุ่นยนต์สปีฟ ปรากฎตัวขึ้น เมื่อคุณคลิกที่เจ้าอสูรขนปุย!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "2": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_c": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_b": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกในลูปทำซ้ำ"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_b": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
+          "courseB_iceage_loops10_b": "ลองพูดขั้นตอนออกมาดังๆ หรือจดขั้นตอนเหล่านั้นลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
+          "courseB_iceage_loops10_c": "ปริศนานี้ยาวมาก! ลองให้เจ้ากระรอกเขี้ยวดาบสแกรทเดินตามเส้นทางดู"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
+          "courseB_iceage_loops2_b": "หากคุณเกิดติดขัดไม่รู้ว่าจะไปต่ออย่างไร ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ",
+          "courseB_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "ลองเขียนขั้นตอนต่าง ๆที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้เพื่อไปให้ถึงลูกโอ็คลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
+          "courseB_iceage_loops4_b": "อย่ากลัวที่จะเรียกใช้งานโค้ดของคุณ และดูว่าจะเกิดอะไรขึ้น!",
+          "courseB_iceage_loops4_c": "ที่เห็นอยู่นี่ เป็นแนวทางที่เจ้ากระรอกเขี้ยวกดาบสแกรทน่าจะใช้"
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!"
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "หากคุณติด คิดไม่ออก ให้ลองเขียนขั้นตอนต่าง ๆ ลงบนกระดาษ คุณเห็นรูปแบบไหมครับ?",
+          "courseB_iceage_loops7_b": "นี่เป็นหนทางที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้ เพื่อไปให้ถึงลูกโอ็คนั่น"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_b": "ลูปแรกควรทำซ้ำ **3** ครั้ง ลูปที่สองควรทำซ้ำ **5** ลูปที่สามควรทำซ้ำ **4** และลูปสุดท้ายควรทำซ้ำ **4** ครั้ง",
+          "courseB_iceage_loops8_c": "ใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทให้เดินไปตามทางเส้นนี้"
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "มีปัญหาอะไรไหมครับ? ลองแบ่งปริศนานี้เป็นชิ้นเล็กๆ และไม่ต้องกลัวที่จะลองเรียกใช้งานโค้ดของคุณในขณะที่คุณยังเขียนโค้ดไม่สมบูรณ์!",
+          "courseB_iceage_loops9_b": "โค้ดที่คุณเขียนเสร็จ ควรจะมีลูปใช้งานอยู่จำนวน **4** ลูป",
+          "courseB_iceage_loops9_c": "เจ้ากระรอกเขี้ยวดาบควรลองใช้เส้นทางนี้ดู เพื่อไปให้ถึงลูกโอ๊ค"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "โค้ดที่ถูกต้องควรประกอบด้วยบล็อกที่ทำให้มีการเคลื่อนไหวจำนวนสามบล็อก"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "ไม่มีความจำเป็นสำหรับคุณในการแก้ปริศนานี้ ที่จะต้องเพิ่มบล็อกใหม่เข้าไปหรือลบบล็อกที่มีอยู่ในพื้่นที่ทำงานออก"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้ แล้วหาวิธีไปเอาอีกกองหนึ่ง"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "คุณต้องมีการเคลื่อนไหวไปใน 3 ทิศทางเพื่อแก้ปริศนาด่านนี้",
+          "courseB_starWars_prog3_b": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
+          "courseB_starWars_prog5_b": "บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป",
+          "courseB_starWars_prog5_c": "แกะรอยเส้นทางโดยใช้นิ้วของคุณลากผ่านไป นับจำนวนเศษโลหะไปด้วย",
+          "courseB_starWars_prog5_da": "ดูสิ่งที่เกิดขึ้น หากว่าคุณใช้วิธีการแก้ปัญหาเดียวกัน เป็นปริศนาขั้นบันได:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
+          "courseB_starWars_prog7_b": "บีบี-8 จะคว้าเศษซากโลหะตอนที่เขากลิ้งผ่านและทับมันไป",
+          "courseB_starWars_prog7_c": "ลองวาดรูปแบบขั้นบันไดให้ทับซ้อนไปบนปริศนานี้ ดูว่ามันครอบคลุมเศษซากโลหะทั้งหมดหรือไม่?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "ไม่เป็นไร ที่คุณจะย้อนกลับไปใช้เส้นทางที่คุณได้เคลื่อนที่ผ่านไปแล้วอีกครั้งหนึ่ง",
+          "courseB_starWars_prog8_b": "ลองใช้บล็อก `ทำซ้ำ`เพื่อดูว่าเกิดอะไรขึ้นกับโค้ดที่คุณใส่เอาไว้ข้างในบล็อกนั้น"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม",
+          "courseB_starWars_prog9_b": "มีวิธีการแก้ปริศนานี้ได้ หลากหลายวิธี",
+          "courseB_starWars_prog9_c": "คุณสามารถใช้ลูป `ทำซ้ำ`ได้ที่นี่หรือไม่"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "ต่อบล็อกนี้สองบล็อกเข้ากับบล็อก `เมื่อเรียกใช้งาน`:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>",
+          "courseC_PlayLab_events2_b": "ให้ใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยูบนบล็อกที่สองของ `นักแสดง__ พูดว่า` เพื่อเปลี่ยนสิ่งที่นักแสดงพูด:"
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.",
+          "courseC_PlayLab_events3_b": "มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "จอร์จต้องขยับไปทางขวา 100 พิกเซลเพื่อไปให้ถึงแมว",
+          "courseC_PlayLab_events4_a": "เพื่อแก้ปริศนานี้ คุณจะต้องต่อบล็อก `นักแสดง__พูด` เข้ากับอีเวนท์ `เมื่อนักแสดง_สัมผัส...`"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "คุณจะต้องคลิกที่รายการเลือกแบบดึงลง(drop down menu) ในบล็อก `นักแสดง... พูดว่า` เพื่อค้นหาข้อความ ที่นักแสดงบอกว่า \"มีอะไรใหม่บ้างมั้ย? \"",
+          "courseC_PlayLab_events5_b": "คลิกที่อ๊อกเทเวียเมื่อคุณเรียกใช้งานโปรแกรมของคุณเพื่อตรวจสอบว่าการทำงานถูกต้องไหม!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_b": "ใช้เมนูแบบดร็อปดาว์นลงบนบล็อก `ย้ายนักแสดงที่ 1` เพื่อเปลี่ยนทิศทางที่ แวดเดิลเคลื่อนที่",
+          "courseC_PlayLab_events6_c": "เมื่อคุณเสร็จแล้ว คุณควรจะสามารถย้าย แวดเดิลไปรอบๆ โดยใช้ปุ่มลูกศรบนคอมพิวเตอร์ของคุณ"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "ใช้บล็อกทั้งสอง `ให้นักแสดง 2 ขยับ ขึ้นข้างบน 400 พิกเซล` และ ให้นักแสดง 2 ขยับ ลงข้างล่าง 400 พิกเซล ไว้ภายในลูป `ทำซ้ำตลอดไป` เพื่อแก้ปริศนาด่านนี้ ",
+          "courseC_PlayLab_events7_b": "ลูป `ทำซ้ำตลอดไป` ไม่จำเป็นต้องเชื่อมต่อกับบล็อกอีเวนท์อื่นๆ มันจะทำงานด้วยตัวของมันเอง"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_b": "บล็อก `นักแสดง.... พูดว่า`และ`เล่นเสียง....` ในกล่องเครื่องมือจะช่วยคุณได้!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "บล็อก ' ได้คะแนน ' จะช่วยคุณแก้ปริศนานี้",
+          "courseC_PlayLab_events9_b": "ตรวจสอบให้แน่ใจว่าบล็อกใหม่ของคุณ `นักแสดงที่.. สัมผัส` เป็น นักแสดงที่ 1และนักแสดงที่ 3.",
+          "courseC_PlayLab_events9_c": "คุณสามารถมีอีเวนท์ได้มากกว่าหนึ่งอีเวนท์สำหรับ `เมื่อนักแสดง.. สัมผัส` ในพื้นที่ทำงานของคุณในเวลาเดียวกัน, ดังนั้นคุณจึงไม่ต้องลบอันแรกออกไป!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "ใช้บล็อก `ตั้งพื้นหลังเป็น__` และบล็อก`ตั้งค่านักแสดงเป็นความเร็ว ____` เพื่อใช้แก้ปริศนานี้",
+          "courseC_PlayLab_eventsA_b": "จำเป็นอย่างยิ่งที่คุณจะต้องลากบล็อกอีเวนท์`เมื่อเรียกใช้งาน` ลงไปไว้ที่พื้นที่ทำงานเพื่อใช้แก้ปริศนานี้"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "นี่คือบล็อกที่คุณต้องใช้:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_b": "ใช้บล็อกนี้เพื่อวาดโดยใช้สติกเกอร์\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "ภายในลูปของคุณ คุณจะต้องการกระโดดออกไปที่ 200 ลงไปที่ 200 ตำแหน่ง แล้ววาดสติกเกอร์นก แล้วหันไป 30 องศา",
+          "courseC_artist_loops2a_b": "คลิกตัวเลขที่ด้านบนของบล็อกลูป `ทำซ้ำ`เพื่อเปลี่ยนจำนวนครั้งของการวนซ้ำ"
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "คุณจะต้องการที่จะเพิ่มบล็อกเพียงหนึ่งบล็อกภายในลูปของคุณ หลังจากวาดสติกเกอร์นก.",
+          "courseC_artist_loops3a_b": "ใช้เมนูแบบดรอปดาว์นที่อยู่บนบล็อก `วาดสติ๊กเกอร์` เพื่อค้นหาสติ๊กเกอร์ค้างคาว"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "ใช้บล็อกนี้เพื่อกระโดดไปข้างหน้า:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nอย่าลืมเปลี่ยนระยะทาง"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "ใช้บล็อกนี้สำหรับตั้งค่ารูปแบบของเส้นต่างๆ:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
+          "courseC_artist_loops5b_b": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น คุณจะต้องเดินถอยหลังไปด้วยระยะทางเดียวกับที่คุณเดินไปข้างหน้า"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซล โดยอยู่ระหว่างสติกเกอร์แต่ละอัน"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า",
+          "courseC_artist_prog3_b": "ต้องการทำให้โค้ดสั้นลงหรือไม่ ลองใช้บล็อกลูปในปริศนานี้ดู"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "เพื่อให้เสร็จสิ้นการวาดจรวด เพียงแค่คุณวาดรูปสามเหลี่ยมไว้ด้านบน!",
+          "courseC_artist_prog4_b": "คุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อก ' หัน... ไป... องศา' เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!",
+          "courseC_artist_prog4_c": "เมื่อต้องการวาดรูปสามเหลี่ยมคุณจะต้อง:\n\\-ย้ายไปข้างหน้า\n\\-เลี้ยวซ้าย ๑๒๐ องศา\n\\-ย้ายไปข้างหน้า\n\\-เลี้ยวซ้าย ๑๒๐ องศา\n\\-ย้ายไปข้างหน้า"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม",
+          "courseC_artist_prog5_c": "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกเพื่อเปลี่ยนขนาดให้เป็นไปตามที่คุณต้องการ!"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "ศิลปินได้หันหน้าไปในทิศทางที่ถูกต้องแล้ว เพื่อที่จะวาดเส้นแรกของเขา",
+          "courseC_artist_prog6_b": "เพชรเม็ดนี้เป็นเพียงสี่เหลี่ยมจตุรัสที่ตั้งอยู่บนมุมของมันเองเท่านั้น",
+          "courseC_artist_prog6_c": "เนื่องจากรูปทรงเพชรนี้ก็คือสี่เหลี่ยมจตุรัสนั่นเอง อย่าลืมหัน 90 องศาในแต่ละมุมด้วย"
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "ทุกมุมไม่ 45 ก็ 90 องศา",
+          "courseC_artist_prog7_b": "มันทำงานขั้นตอนแรกไหม?\\\nขั้นตอนที่สองทำงานไหม?\\\nผิดตรงไหน?",
+          "courseC_artist_prog7_c": "คุณสามารถใช้เมนูดรอปดาวน์บนบล็อก ' เลี้ยว' เพื่อเลือกดูมุมที่คุณต้องการใช้!\nคุณสามารถใช้รายการเลือกแบบดึงลง(drop down menu) ที่อยุ่บนบล็อกหันไป เพื่อเลือกดูขนาดองศาของมุมที่คุณต้องการใช้!",
+          "courseC_artist_prog7_d": "คุณต้องการ:\n\\-ย้ายไปข้างหน้า\n\\-เลี้ยวขวา 45 องศา\n\\-ย้ายไปข้างหน้า\n\\-เลี้ยวขวา 90 องศา\n\\-ย้ายไปข้างหน้า\n\\-เลี้ยวขวา 45 องศา\n\nทำซ้ำรูปแบบนี้ 2 ครั้ง!",
+          "courseC_artist_prog7_e": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
+          "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ",
+          "courseC_collector_prog4_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_b": "ถ้าคุณแก้ไขข้อผิดพลาดหนึ่งและโปรแกรมยังคงไม่ทำงาน ให้ใช้ขั้นตอนข้างต้นเพื่อค้นหาบั๊กเพิ่มเติม",
+          "courseC_collector_prog5_c": "หากคุณเกิดติดขัดขึ้นมา ลองเขียนขั้นตอนลงบนกระดาษ",
+          "courseC_collector_prog5_d": "เดินตามเส้นทางไปเพื่อเก็บรวบรวมสมบัติ"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "เจอสิ่งที่ผิดไหม?\n\nลองใช้ปุ่ม  \"ขั้นตอน\" เพื่อค้นหาข้อผิดพลาดโดยการเรียกใช้งานโค้ดของคุณทีละบรรทัด"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "มีโค้ดที่ดีอยู่แล้วจำนวนมากในพื้นที่ทำงาน คุณไม่จำเป็นต้องลบอันไหนออกไป เพื่อแก้ปริศนาด่านนี้  ",
+          "courseC_collector_prog7_b": "ไม่เห็นบล็อกที่คุณต้องการที่จะทำให้นักผจญภัยเคลื่อนที่ไปในทิศทางที่ถูกต้องหรือเปล่า ไปดึงเอามาจากกล่องเครื่องมือก็ได้",
+          "courseC_collector_prog7_c": "มีปัญหาในการวางเส้นทางการเก็บรวบรวมสมบัติทั้งหมดหรือไม่ ลองเส้นทางนี้ดู!"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "บล็อกที่คุณต้องการเพิ่มเข้ามาเรียกว่า `กำหนดความเร็ว...`. "
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "ถ้ามีบางอย่างทำงานไม่ถูกต้องให้ตรวจสอบให้แน่ใจว่าบล็อกของคุณเชื่อมต่อกับอีเวนท์อย่างถูกต้องในพื้นที่ทำงาน"
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "เชื่อมต่อบล็อก `จบเกม` เข้ากับ `เมื่อชนสิ่งกีดขวาง` ในการแก้ปริศนานี้"
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "คุณจะต้องใช้บล็อก`ได้แต้ม`ก่อนที่จะสามารถผ่านด่านนี้ไปได้"
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "ลองเชื่อมต่อบล็อก `กระพือปีกถี่ ____` เข้ากับอีเวนท์ `เมื่อคลิก`"
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "คุณสามารถเปลี่ยนพื้นหลังโดยใช้บล็อก `กำหนดฉากเป็น__`\n "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "ลองต่อบล็อก `กำหนดฉาก__` อันที่สองกับอีเวนท์ `เมื่อผ่านสิ่งกีดขวาง` เพื่อที่จะผ่านด่านนี้ไป"
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "ต่อบล็อก `ตั้งค่า คะแนนเป็น 0` เข้ากับอีเวนท์ `เมื่อผ่านสิ่งกีดขวาง` เพื่อที่จะผ่านด่านนี้ไป"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน",
+          "courseC_harvester_loops2_b": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
+          "courseC_harvester_loops2_c": "ลูปหนึ่งจะทำซ้ำคำสั่ง `ย้ายไปข้างหน้า` และอีกลูปหนึ่งจะทำซ้ำคำสั่ง `เก็บฟักทอง`"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม",
+          "courseC_harvester_loops3_b": "สำหรับฟักทองลูกแรก คุณสามารถใช้โค้ดที่คล้ายกับของปริศนาสุดท้าย ซึ่งขึ้นอยู่กับว่าคุณต้องการที่จะหันไปทางไหนหลังจากนั้น",
+          "courseC_harvester_loops3_c": "ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้น คุณสามารถใส่ลูปอันหนึ่ง ภายในลูปอีกอันหนึ่ง! ที่เราเรียกมันว่า \\*\\* ลูปซ้อนลูป \\*\\*"
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "ใช้บล็อกใหม่ `เก็บข้าวโพด` ในการเก็บรวบรวมข้าวโพด",
+          "courseC_harvester_loops4_b": "คุณสามารถใช้บล็อกลูปทำซ้ำหลายครั้งในโค้ดของคุณ บางอันใช้เก็บข้าวโพดและบางอันใช้เก็บฟักทอง",
+          "courseC_harvester_loops4_c": "ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้น คุณสามารถใส่ลูปอันหนึ่ง ภายในลูปอีกอันหนึ่ง! ที่เราเรียกมันว่า \\*\\* ลูปซ้อนลูป \\*\\*"
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "ถ้าคุณเกิดติดขัดขึ้นมา ให้ลองวาดโปรแกรมทั้งหมด แล้วมองหารูปแบบการทำซ้ำ",
+          "courseC_harvester_loops5_b": "ขั้นบันไดนี้ดูคุ้นๆ จากปริศนาอื่นๆหรือไม่ การเคลื่อนไหวควรจะคล้ายกัน ขอให้จำไว้ว่าให้เก็บรวบรวมพืชผลไปตลอดเส้นทาง"
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกหลายๆ บล็อกไว้ในลูปทำซ้ำลูปเดียวได้",
+          "courseC_harvester_loops6_b": "อย่าลืมเลี้ยวเมื่อคุณเดินไปจนสุดแถวของข้าวโพดแล้ว"
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "คุณสามารถแก้ปริศนานี้ได้สองวิธี เก็บข้าวโพดหรือไม่ก็เก็บฟักทองก่อน",
+          "courseC_harvester_loops7_b": "คุณจะต้องใช้ลูป `ทำซ้ำ`หลายๆ ลูป เพื่อแก้ปริศนานี้"
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "รูปร่างของขั้นบันไดนี่ดูค้นตาจังจากปริศนาอันก่อน? ขั้นตอนของการเคลื่อนไหวน่าจะคล้ายคลึงกัน เพียงให้จำไว้ว่าคุณต้องเก็บพืชผลตามเส้นทางไปด้วย",
+          "courseC_harvester_loops8_b": "ถ้าคุณต้องการที่จะทำให้รหัสของคุณง่ายขึ้นไปอีก คุณสามารถใส่ลูป`ทำซ้ำ` ภายในลูป`ทำซ้ำ` อีกอันหนึ่ง! ที่เราเรียกมันว่า \\*\\* ลูปซ้อนลูป \\*\\*"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?\nมันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?\nตรงไหนที่ผิด?",
+          "courseC_maze_debugging1_b": "มีบล็อก 1 บล็อกที่คุณต้องเพิ่มเพื่อให้ปริศนานี้เสร็จสมบูรณ์"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "มีโค้ดที่มีคุณค่าในพื้นที่ทำงานเป็นจำนวนมาก อย่าเพียงแค่ลบออกทั้งหมดแล้วเริ่มต้นใหม่!",
+          "courseC_maze_debugging2_b": "ทุกอย่างทำงานด้วยดีหลังจากขั้นตอนแรกหรือไม่?\nมันยังคงทำงานอยู่หลังจากขั้นตอนที่สองหรือไม่?\nตรงไหนที่ผิด?",
+          "courseC_maze_debugging2_c": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "เมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน\n\nแล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ\n\nสุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "ใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานผ่านคำสั่งทีละครั้ง คุณคิดว่าจะช่วยให้คุณค้นหาบรรทัดที่ผิดได้หรือไม่"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_b": "อย่าลืมที่จะใช้ปุ่ม \"ขั้นตอน \" เพื่อเรียกใช้งานโปรแกรมทีละบรรทัด!",
+          "courseC_maze_debugging7_c": "หลังจากที่คุณค้นหาและแก้ไขข้อผิดพลาดแรกแล้วให้ตรวจสอบให้แน่ใจว่าได้ใช้กระบวนการตรวจแก้จุดบกพร่องหรือดีบั๊กอีกครั้งเพื่อค้นหาข้อผิดพลาดรายการถัดไป\n\nทำซ้ำกระบวนการดีบั๊กจนกว่าโปรแกรมจะทำงาน!"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nเมื่อต้องการลบบล็อกใดบล็อคหนึ่งออกจากตรงกลางของโค้ด ให้ลากบล็อกทั้งหมดไปยังส่วนอื่นของพื้นที่ทำงาน\n\nแล้วลากบล็อกที่คุณต้องการลบกลับไปยังกล่องเครื่องมือ\n\nสุดท้าย ให้ใส่บล็อกอื่นๆของคุณกลับเข้าที่"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "มีวิธีแก้ปริศนานี้สองวิธี",
+          "courseC_maze_programming6_b": "ตามนิ้วของคุณไป จากเจ้านกตัวนั้นไปยังเจ้าหมูนั่น ก้าวไหนบ้างที่คุณต้องใช้",
+          "courseC_maze_programming6_c": "จำไว้ว่า สิ่งที่คุณต้องทำคือการหันหน้าไปทางอื่นก่อน เพราะตอนนี้เจ้านกเริ่มต้นด้วยการหันหน้าชนกำแพง",
+          "courseC_maze_programming6_d": "รู้สีกว่าทางตันหรือเปล่า  ลองดูเส้นทางสีแดงทีให้ไว้สิ!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_b": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "รูปแบบนี้ดูเหมือนจะเป็นรูปแบบขั้นบันได-ขนาดยักษ์? มาดูซิว่าคุณสามารถใช้สิ่งที่คุณเรียนรู้จากปริศนาก่อนหน้านี้มาใช้ในการหันซ้ายหันขวาได้อย่างถูกต้องเพียงไร",
+          "courseC_starWars_loops10_b": "ถ้าคุณต้องการใช้โค้ดให้น้อยลง คุณสามารถวางบล็อกลูป `ทำซ้ำ` ไว้ภายในบล็อกลูป `ทำซ้ำ` อีกอันหนึ่ง โดยเราเรียกว่าเป็นการทำ**ลูปซ้อนลูป**",
+          "courseC_starWars_loops10_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "เมื่อ บีบี-8 กลิ้งทับเศษโลหะ มันจะเก็บเศษโลหะไปด้วยโดยอัตโนมัติ",
+          "courseC_starWars_loops1_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม",
+          "courseC_starWars_loops1_c": "คุณต้องเคลื่อนไหวด้วยบล็อก `ไปข้างหน้า` ห้าครั้งเพื่อแก้ไขปริศนาด่านนี้"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "คลิกที่ลูกศรเล็กๆที่อยู่ติดกับคำว่า \"ซ้าย\" บนบล็อกหัน จะช่วยให้คุณสามารถเปลี่ยนเป็น \"ขวา\" ได้",
+          "courseC_starWars_loops4_a": "ให้ใช้บล็อก `ทำซ้ำ` สองบล็อก",
+          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ `ไปข้างหน้า`"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "คลิกที่ลูกศรเล็กๆที่อยู่ติดกับคำว่า \"ซ้าย\" บนบล็อกหัน จะช่วยให้คุณสามารถเปลี่ยนเป็น \"ขวา\" ได้",
+          "courseC_starWars_loops4_a": "ให้ใช้บล็อก `ทำซ้ำ` สองบล็อก",
+          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ `ไปข้างหน้า`"
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "การที่จะเคลื่อนที่ไปด้านล่างได้นั้น คุณต้องหันก่อนแล้วเคลื่อนที่ไปข้างหน้า",
+          "courseC_starWars_loops5_a": "โซลูชั่นที่ดีที่สุด คือดารใช้บล็อกหันหนึ่งครั้ง ตามด้วยบล็อก `ไปข้างหน้า` หนึ่งบล็อก แล้วตามด้วยบล็อกหันอีกหนึ่งครั้ง จบด้วยลูปหนึ่งลูป"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "ลองเขียนขั้นตอนการเคลื่อนไหวทั้งหมดลงบนกระดาษและมองหารูปแบบดู",
+          "courseC_starWars_loops6_b": "ถ้าคุณต้องการใช้โค้ดให้น้อยลง คุณสามารถวางบล็อกลูป `ทำซ้ำ` ไว้ภายในบล็อกลูป `ทำซ้ำ` อีกอันหนึ่ง โดยเราเรียกว่าเป็นการทำ**ลูปซ้อนลูป**"
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "ลองเขียนขั้นตอนการเคลื่อนไหวทั้งหมดลงบนกระดาษและมองหารูปแบบดู",
+          "courseC_starWars_loops6_b": "ถ้าคุณต้องการใช้โค้ดให้น้อยลง คุณสามารถวางบล็อกลูป `ทำซ้ำ` ไว้ภายในบล็อกลูป `ทำซ้ำ` อีกอันหนึ่ง โดยเราเรียกว่าเป็นการทำ**ลูปซ้อนลูป**"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "รุปแบบมันจะดูยากกว่าที่เป็นอยู่จริง ให้คุณลองเริ่มด้วยแบบขั้นบันไดอย่างง่ายๆ ดูว่าเส้นทางมันครอบคลุมบริเวณที่เศษโลหะกองอยู่ไหม?",
+          "courseC_starWars_loops7_b": "ถ้าคุณมีปัญหากับปริศนานี้และคิดไม่ออก ลองเขียนแนวทางการเดินลงบนแผ่นกระดาษสักแผ่น แล้วมองหารูปแบบดู",
+          "courseC_starWars_loops7_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "รุปแบบมันจะดูยากกว่าที่เป็นอยู่จริง ให้คุณลองเริ่มด้วยแบบขั้นบันไดอย่างง่ายๆ ดูว่าเส้นทางมันครอบคลุมบริเวณที่เศษโลหะกองอยู่ไหม?",
+          "courseC_starWars_loops7_b": "ถ้าคุณมีปัญหากับปริศนานี้และคิดไม่ออก ลองเขียนแนวทางการเดินลงบนแผ่นกระดาษสักแผ่น แล้วมองหารูปแบบดู",
+          "courseC_starWars_loops7_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! เรียกใช้งานโค้ดเพื่อดูว่าเกิดอะไรขึ้น แม่ว่าคุณจะยังไม่สามารถแก้ปริศนาได้ก็ตาม"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_c": "คุณไม่จำเป็นต้องหันซ้ายเพื่อแก้ปริศนานี้ การเหันทั้งหมดของคุณสามารถหันไปทางขวาอย่างเดียว\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "วิธีที่ง่ายที่สุดในการวาดรูปนี้คือการวาดเส้นไปข้างหน้าและหันไปทางขวา",
+          "courseD_artist_nestedLoops1_b": "คุณสามารถวาดรูปสามเหลี่ยมนี้ด้วยลูป `ทำซ้ำ`โดยมีบล็อกสองบล็อกอยู่ภายใน บล็อกไหนที่คุณต้องการ?",
+          "courseD_artist_nestedLoops1_c": "ลองเขียนขั้นตอนลงบนกระดาษ และมองหารูปแบบที่สามารถทำให้ง่ายด้วยการใช้ลูป"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "คุณจะต้องวาดรูปสามเหลี่ยมรวม 6 รูป หลังจากเสร็จการวาดสามเหลี่ยมแต่ละรูปให้หัน 60 องศาและเริ่มต้นวาดรูปสามเหลี่ยมถัดไป",
+          "courseD_artist_nestedLoops1a_b": "ถ้าคุณสร้างสามเหลี่ยมของคุณด้วยลูป ศิลปินควรจะหันหน้าไปทางเดียวกันกับที่พวกเขาเริ่มต้น อันนี้จะทำให้ การหันไป 60 องศาง่ายขึ้นมาก"
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "ซ้อนลูปของคุณโดยล้อมรอบโค้ดสามเหลี่ยมของคุณด้วยลูป `ทำซ้ำ`อีกอันหนึ่ง",
+          "courseD_artist_nestedLoops2_b": "อย่าลืมใส่บล็อก`หัน.. ไป`ภายในลูป เพื่อให้ศิลปินหันหน้าไปหลังจากวาดรูปสามเหลี่ยมแต่ละรูป"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "ลองใช้บล็อก `กระโดดไปข้างหน้า` เพื่อย้ายจากด้านบนของบานหน้าต่างไปยังบานหน้าต่างที่คุณจะเริ่มต้นถัดไป \n\nถ้าบานหน้าต่างของคุณมีด้านแต่ละด้านยาว 20 พิกเซลและห่างกัน 20 พิกเซล ระยะทางไกลเท่าไรที่คุณจะต้องกระโดดข้ามไป?",
+          "courseD_artist_nestedLoops3_b": "อย่าลืมที่จะใช้ลูปที่ซ้อนกัน เพื่อให้แก้ปริศนานี้ได้อย่างรวดเร็ว ",
+          "courseD_artist_nestedLoops3_c": "เริ่มต้นโดยใช้ลูป `ทำซ้ำ` เพื่อสร้างสี่เหลี่ยมจตุรัสหนึ่งรูป จากนั้นทำซ้ำสี่เหลี่ยม 8 ครั้ง โดยกระโดดระหว่างทำสี่เหลี่ยม 40 พิกเซล "
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "เพื่อแก้ปัญหานี้ได้อย่างถูกต้อง, คุณจะต้องเคลื่อนที่ไป\\*\\* ก่อน \\*\\* ที่คุณจะหัน หรือไม่เช่นนั้นวงกลมของคุณจะถูกขยับผิดตำแหน่งออกไปเล็กน้อย!.",
+          "courseD_artist_nestedLoops4_a": "การทำวงกลม:\n\\-ทำซ้ำ 360 ครั้ง\n\\-วาดเส้นไปข้างหน้ายาว 1 พิกเซล\n\\-เลี้ยวซ้าย 1 องศา",
+          "courseD_artist_nestedLoops4_b": "อย่าลืมกระโดดไปข้างหน้า 50 พิกเซลระหว่างวงกลมแต่ละวง",
+          "courseD_artist_nestedLoops4_c": "ใช้ลูปที่ซ้อนกันเพื่อวาดวงกลมของคุณ 4 ครั้ง"
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "ทำเช่นนี้อย่างง่ายดาย:\n\n-   ทำซ้ำ 4 ครั้ง\n-   ทำวงกลม\n-   กระโดดไปข้างหน้า 50 พิกเซล\n-   เลี้ยวขวา 90 องศา",
+          "courseD_artist_nestedLoops5_b": "เมื่อต้องการทำวงกลม ให้ตั้งค่าลูปทำซ้ำให้ทำซ้ำ 360 ครั้ง ภายในลูป วาดเส้นไปข้างหน้า1พิกเซลและหันไป 1 องศา."
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_b": "ใช้ลูปที่ซ้อนกันซึ่งลูปภายในเป็นโค้ดสำหรับวาดสี่เหลี่ยม\n\n-   ทำซ้ำ 6 ครั้ง\n-   วาดสี่เหลี่ยม\n-   กระโดดไปข้างหน้า **50 พิกเซล**\n-   หมุน **60 องศา**"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_b": "ถ้าเกิดการติดขัดขึ้นมา ให้เริ่มด้วยการดูปริศนาสุดท้าย และเปลี่ยนให้แตกต่างไป"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "เริ่มต้นด้วยการใช้ลูปที่ซ้อนกันเช่นเดียวกับก่อนหน้านี้ แต่คราวนี้ให้สร้างด้วยสี่เหลี่ยมแทน"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nรูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำหกเหลี่ยม (ที่มีด้าน 50px) 15 ครั้งโดยใช้การหันไป 48 องศา",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nรูปนี้ถูกสร้างขึ้นโดยใช้ลูปซ้อนกันอันเดียวที่ทำซ้ำรูปห้าเหลี่ยมด้านเท่า (ที่มีด้าน 50 px) 15 ครั้งโดยใช้การหันไป 48 องศา"
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "เพื่อที่จะวาดรูปแปดหลี่ยมรูปหนึ่งนั้น ศิลปินต้องหันไปแต่ละครั้ง 45 องศาเป็นจำนวนทั้งสิ้น 8 ครั้ง",
+          "courseD_artist_nestedLoops_challenge2_b": "เพื่อที่จะวาดรูปสี่หลี่ยมจตุรัสรูปหนึ่งนั้น ศิลปินต้องหันไปแต่ละครั้ง 90 องศาเป็นจำนวนทั้งสิ้น 4 ครั้ง"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
+          "courseD_bee_conditionals2_a": "บางทีดอกไม้ก็จะอยู่ตรงนั้น บางทีก็ไม่อยู่ ถ้าคุณต้องการให้โค้ดของคุณทำงานได้ทั้งสองกรณ๊ ให้แน่ใจว่าคุณใช้ คำสั่ง `ถ้า(if)`",
+          "courseD_bee_conditionals2_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "ให้แน่ใจว่าคุณใช้ คำสั่ง`ถ้า(if)`เพื่อเช็คพื้นที่ว่างแต่ละอันว่ามีดอกไม้อยู่หรือไม่",
+          "courseD_bee_conditionals3_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
+          "courseD_bee_conditionals3_a": "ให้แน่ใจว่าคุณใช้ คำสั่ง`ถ้า(if)`เพื่อเช็คพื้นที่ว่างแต่ละอันว่ามีดอกไม้อยู่หรือไม่",
+          "courseD_bee_conditionals3_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม",
+          "courseD_bee_conditionals3_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "คุณถือเสมือนว่า ทุกพื้นที่นั้นหมือนกับว่ามีเมฆปกคลุมอยู่ แม้ว่าคุณจะสามารถมองเห็นเส้นทางทั้งหมดก็ตาม"
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
+          "courseD_bee_conditionals4_a": "คุณถือเสมือนว่า ทุกพื้นที่นั้นหมือนกับว่ามีเมฆปกคลุมอยู่ แม้ว่าคุณจะสามารถมองเห็นเส้นทางทั้งหมดก็ตาม",
+          "courseD_bee_conditionals4_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
+          "courseD_bee_conditionals5_a": "ให้คิดว่าทุกด้านของเส้นทางสี่เหลี่ยมผืนผ้าเป็นเส้นทางโดยตัวของมันเอง แล้วใช้ลูปซ้อนกันด้วยการใช้บล็อก `ทำซ้ำ` อยู่ด้านนอกและบล็อก\\` ขณะที่ยังมีทางข้างหน้า ' ลูปอยู่ข้างใน ให้ถามว่ามีวิถีทางกี่ทางที่ผึ้งต้องบินถ้าผึ้งต้องการบินไปมาทุกด้านที่มีดอกไม้?",
+          "courseD_bee_conditionals5_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "ให้แน่ใจว่า คุณใช้คำลั่ง `ถ้า(if)` เพื่อเช็คดูรวงผึ้งใต้เมฆแต่ละก้อน",
+          "courseD_bee_conditionals6_b": "ในกรณีนี้ คุณไม่จำเป็นต้องเช็คดูว่ามีดอกไม้อยู่ใต้เมฆหรือไม่"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้",
+          "courseD_bee_conditionals7_b": "ถ้าไม่มีดอกไม้ภายใต้ก้อนเมฆ ก็ต้องมีรวงผึ้ง ดังนั้นไม่จำเป็นเลยที่จะต้องคิดถึงกรณีที่เป็นที่ว่าง ที่ไม่มีทั้งดอกไม้หรือรวงผึ้ง"
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**ข้อควรจำ:** ปริศนานี้เปลี่ยนแปลงทุกครั้งที่ถูกเรียกใช้งาน\n\nคุณควรที่จะต้องใช้บล็อกเงื่อนไข  (`ถ้า(if)` หรือ `ถ้า/อย่างอื่น(if/else)`) เพื่อแก้ปัญหาที่ท้าทายนี้"
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "สำกรับปริศนาด่านนี้ แต่ละพื้นที่อาจจะมีดอกไม้ รวงผึ้ง หรือว่างเปล่า  ซึ่งหมายความว่า คุณสามารถใช้การทำซ้ำเงื่อนไขของคุณที่เป็น `ถ้า/ไม่เช่นนั้น (if/else)` ในแต่ละช่องที่ผึ้งบินผ่านไป"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "คุณต้องมองหาข้าวโพด 5 ครั้ง โดยใช้บล็อกลูปทำซ้ำ",
+          "courseD_farmer_condLoops1_b": "ให้แน่ใจว่าได้ใช้บล็อก `ถ้า นี่คือข้าวโพด` ไม่อย่างนั้นคุณอาจจะพยายามเก็บบางอย่างที่ไม่ได้ปลูกอยู่ตรงนั้น"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "วิธีการทำที่ดีที่สุด ด้วยการซ้อนคำสั่ง `ถ้า(if)` โดยการวางอันหนึ่งไว้ภายในอีกอันหนึ่ง  ",
+          "courseD_farmer_condLoops2_b": "สำหรับปริศนาอันนี้ คุณควรที่จะมี คำสั่ง`ถ้า นอกจากนั้น(if/else)` หนึ่งคำสั่งและคำสั่ง`ถ้า(if)` แบบธรรมดาๆอีกหนึ่งคำสั่ง",
+          "courseD_farmer_condLoops2_c": "คำสั่ง `ถ้า(if)` ของคุณมีลักษณะดังนี้\n\n\\-ถ้า นี่คือข้าวโพด\n      ทำ-เก็บข้าวโพด\n\\-นอกจากนั้น  ถ้า นี่คือผักสลัด\n       ทำ-เก็บผักสลัด\n\nถ้าไม่มีอะไรตรงนั้นคุณไม่ต้องเก็บอะไร"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "เมื่อต้องการเก็บรายการทั้งหมดให้ลองซ้อนคำสั่ง `ถ้า(if)` ลึกสามระดับ\nซึ่งหมายความว่าคุณควรใส่คำสั่ง`ถ้า(if)` หนึ่งคำสั่งภายใน`ถ้า(if)` ของอีกคำสั่งเหนึ่ง แล้วใส่ที่คำสั่งสาม '`ถ้า(if)` ภายในคำสั่งที่สอง",
+          "courseD_farmer_condLoops3_b": "สำหรับปริศนาอันนี้ คุณควรที่จะมี คำสั่ง`ถ้า นอกจากนั้น(if/else)` สองคำสั่งและคำสั่ง`ถ้า(if)` แบบธรรมดาๆอีกหนึ่งคำสั่ง"
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "ลูปข`ขณะที่....` จะรองรับกรณีที่ว่างเปล่าด้วยเช่นกัน! เมื่อไม่มีผักสลัด ก็จะไม่มีการเก็บแต่อย่างใดและปล่อยให้โค้ดดำเนินต่อไป"
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "มีลูปใหม่ `ทำซ้ำจนกว่านี่คือฟักทอง` คุณเห็นวิธีใช้มันในปริศนานี้หรือไม่?"
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_b": "ใช้บล็อก `ตักดินออก 1 ครั้ง` เมื่อคุณยืนอยู่บนกองดินเพื่อปรับหน้าดินให้เรียบ"
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
+          "courseB_iceage_loops10_b": "ลองพูดขั้นตอนออกมาดังๆ หรือจดขั้นตอนเหล่านั้นลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
+          "courseB_iceage_loops10_c": "ปริศนานี้ยาวมาก! ลองให้เจ้ากระรอกเขี้ยวดาบสแกรทเดินตามเส้นทางดู"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
+          "courseD_iceage_loops2_b": "หากคุณเกิดติดขัดไม่รู้ว่าจะไปต่ออย่างไร ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ",
+          "courseD_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_b": "ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน"
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "อย่ากลัวที่จะเรียกใช้งานโค้ดของคุณ และดูว่าจะเกิดอะไรขึ้น!",
+          "courseD_iceage_loops4_b": "ลองเขียนขั้นตอนต่าง ๆที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้เพื่อไปให้ถึงลูกโอ็คลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
+          "courseD_iceage_loops4_c": "ที่เห็นอยู่นี่ เป็นแนวทางที่เจ้ากระรอกเขี้ยวกดาบสแกรทน่าจะใช้"
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "โค้ดของคุณที่เสร็จสมบูรณ์จะประกอบไปด้วยบล็อก `ไปข้างหน้า` จำนวน**สาม**บล็อก",
+          "courseD_iceage_loops6_b": "คุณต้องเพิ่มลูปทำซ้ำเข้าไปอีก**หนึ่ง**ลูป!"
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "หากคุณติด คิดไม่ออก ให้ลองเขียนขั้นตอนต่าง ๆ ลงบนกระดาษ คุณเห็นรูปแบบไหมครับ?",
+          "courseB_iceage_loops7_b": "นี่เป็นหนทางที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้ เพื่อไปให้ถึงลูกโอ็คนั่น"
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "บล็อก `หัน` ไปถูกต้องไหม? มีอะไรอีกไหมที่คุณต้องเปลี่ยน?",
+          "courseD_iceage_loops8_b": "ลูปแรกควรทำซ้ำ **3** ครั้ง ลูปที่สองควรทำซ้ำ **5** ลูปที่สามควรทำซ้ำ **4** และลูปสุดท้ายควรทำซ้ำ **4** ครั้ง",
+          "courseD_iceage_loops8_c": "ใช้ลูปเพื่อช่วยเจ้ากระรอกเขี้ยวดาบสแกรทให้เดินไปตามทางเส้นนี้"
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "มีปัญหาอะไรไหมครับ? ลองแบ่งปริศนานี้เป็นชิ้นเล็กๆ และไม่ต้องกลัวที่จะลองเรียกใช้งานโค้ดของคุณในขณะที่คุณยังเขียนโค้ดไม่สมบูรณ์!",
+          "courseD_iceage_loops9_b": "โค้ดที่คุณเขียนเสร็จ ควรจะมีลูปใช้งานอยู่จำนวน **4** ลูป",
+          "courseD_iceage_loops9_c": "เจ้ากระรอกเขี้ยวดาบควรลองใช้เส้นทางนี้ดู เพื่อไปให้ถึงลูกโอ๊ค"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_b": "ถ้ามองไม่เห็นรูปแบบที่ชัดเจน ก็ให้ลองเขียนโค้ดออกมาดูก่อน และดูว่ามีอะไรที่มีการทำซ้ำแล้วซ้ำอีก ก่อนที่คุณจะเอาลูปมาใช้งาน"
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "มองหาขั้นตอนที่เป็นรูปแบบบันไดในเขาวงกตนี้ เพื่อค้นหาที่ที่สามารถนำเอาลูปซ้อนลูปมาใช้"
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกได้รับการคลิกเอามาต่อเข้าด้วยกันแล้วคลิก \"เริ่ม\" อีกครั้ง",
+          "courseC_maze_programming1_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "การใช้บล็อก `ไปข้างหน้า` นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก`เมื่อเรียกใช้งาน`",
+          "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดสามบล็อกถูกคลิกเอามาต่อเข้ากันกับบล็อก `เมื่อเรียกใช้งาน`"
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_c": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "มีลำดับขั้นตินใด ที่คุณสามารถลูปเพื่อจะทำให้โค้ดของคุณสั้นลง?",
+          "courseD_maze_until1_b": "ลองใช้ลูปซ้อนลูปเพื่อแก้ปริศนานี้"
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "-   รหัสของคุณทำอะไร?\n-   สิ่งที่มันควรจะทำ?\n-   มันบอกอะไรคุณบ้าง?",
+          "courseD_maze_until3_b": "ถ้าคุณทำแล้วติดขัด ให้ลองเขียนขั้นตอนลงบนแผ่นกระดาษ และมองหาส่วนที่โค้ดเริ่มทำซ้ำๆ กัน",
+          "courseD_maze_until3_c": "มีรูปแบบขั้นตอนที่คุณสามารถปฏิบัติตาม สำหรับปริศนานี้หรือไม่",
+          "courseD_maze_until3_d": "อย่าลืมที่จะใช้บล็อก `ทำซ้ำจนกว่า` เพื่อทำให้โค้ดของคุณสั้นลง"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "ใช้ปุ่ม \"ขั้นตอน\" เพื่อดูรหัสของคุณทำงานเป็นขั้นๆไป\n\n-   ทุกอย่างทำงานในขั้นแรกหรือไม่?\n-   ทุกอย่างทำงานในขั้นที่สองหรือไม่?\n-   มันผิดพลาดตรงไหน?",
+          "courseD_maze_until4_b": "มีรูปแบบขั้นตอนที่คุณสามารถปฏิบัติตาม สำหรับปริศนานี้หรือไม่",
+          "courseD_maze_until4_c": "อย่าลืมที่จะใช้บล็อก `ทำซ้ำจนกว่า` เพื่อทำให้โค้ดของคุณสั้นลง"
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "หากต้องการใช้เพียงบล็อก `เดินไปข้างหน้า` เพียงบล็อกเดียว ก็ให้ใส่ไว้ภายในบล็อก `ทำซ้ำจนกว่าดอกทานตะวัน`"
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "หากต้องการใช้เพียงบล็อก `เดินไปข้างหน้า` เพียงบล็อกเดียว ก็ให้ใส่ไว้ภายในบล็อก `ทำซ้ำจนกว่าดอกทานตะวัน`"
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "โค้ดที่คุณเขียนไม่จำเป็นต้องยาวกว่าครั้งก่อน ไม่ใช่เพราะว่าเขาวงกตยาวขึ้น",
+          "courseD_maze_until7_b": "แม้ว่าจะมีการหันไปตอนนี้มากกว่าปริศนาสุดท้าย แต่โค้ดของคุณก็เกือบเหมือนกันเพราะการใช้บล็อก `ทำซ้ำจนกว่า`!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "จำไว้ว่าให้ใช้บล็อก`ทำซ้ำจนกว่า` เพื่อให้คุณไปให้ถึงดอกทานตะวัน!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "กรอบสี่เหลี่ยมจตุรัสแต่ละกรอบมีด้าน 100 พิกเซล นั่นหมายความว่าคุณจะต้องเคลื่อนที่ไปข้างหน้า 175 พิกเซลก่อนที่จะวาดกรอบแว่นอันที่สองของคุณ",
+          "courseE_artist_functions1_b": "โอเคที่จะวาดเส้นทับซ้อนกันเพื่อทำแว่นตาของคุณ"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "ถ้าเจ้านกไปไม่ถึงเจ้าหมูนั่น เช็คดูให้แน่ใจว่าบล็อกทั้งสองถูกคลิกต่อกันอย่างสมบูรณ์ แล้วคลิก \" เริ่ม \" อีกครั้งหนึ่ง",
+          "courseC_maze_programming1_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองทำบางอย่างดู และถ้ามันไม่ได้ผล ลองทำอย่างอื่นดู!"
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "คุณจะต้องเพิ่มบล็อกสองบล็อกภายใต้อีเวนท์`เมื่อนักแสดงที่ 1 สัมผัสนักแสดงที่ 2`"
         }
       }
     }

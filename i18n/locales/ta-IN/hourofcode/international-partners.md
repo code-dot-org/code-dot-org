@@ -2,7 +2,7 @@
 title: சர்வதேச பங்காளர்களை தொடர்பு கொள்
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # சர்வதேச பங்காளர்களை தொடர்பு கொள்
 
@@ -14,4 +14,4 @@ You, too, can play a leading role to get more people in your country involved! I
 
 {{ international_partners_table }}
 
-{{signup_button}}
+{{ signup_button }}

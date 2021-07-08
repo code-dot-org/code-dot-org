@@ -450,13 +450,16 @@
           "alternate": "Blok „střídat“ je v kategorii „Tanečníci“."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku."
+          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku.",
+          "Function_intro_Ryan_b": "Jestliže zavoláte funkce správně, pak toto bude cesta, po které půjdete..."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku."
+          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku.",
+          "Function_intro_Ryan_b": "Jestliže zavoláte funkce správně, pak toto bude cesta, po které půjdete..."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku."
+          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku.",
+          "Function_intro_Ryan_b": "Jestliže zavoláte funkce správně, pak toto bude cesta, po které půjdete..."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak je můžeš využít, aby ses dostal skrz oceánský monument?"
@@ -485,17 +488,20 @@
         "MC_HOC_2017_02_Cole": {
           "MC_HOC_2017_02_Cole_a": "Posuňte agenta vpřed o dvě políčka a postavte ho na nášlapnou desku. Otevře tak hráči dveře.",
           "MC_HOC_2017_02_Cole_b": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami."
+          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami.",
+          "MC_HOC_2017_02_Cole_d": "Zajistěte, aby agent šel po cestě nastíněné na mapě!"
         },
         "MC_HOC_2017_02_Cole_2019": {
           "MC_HOC_2017_02_Cole_a": "Posuňte agenta vpřed o dvě políčka a postavte ho na nášlapnou desku. Otevře tak hráči dveře.",
           "MC_HOC_2017_02_Cole_b": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami."
+          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami.",
+          "MC_HOC_2017_02_Cole_d": "Zajistěte, aby agent šel po cestě nastíněné na mapě!"
         },
         "MC_HOC_2017_02_Cole_2020": {
           "MC_HOC_2017_02_Cole_a": "Posuňte agenta vpřed o dvě políčka a postavte ho na nášlapnou desku. Otevře tak hráči dveře.",
           "MC_HOC_2017_02_Cole_b": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami."
+          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami.",
+          "MC_HOC_2017_02_Cole_d": "Zajistěte, aby agent šel po cestě nastíněné na mapě!"
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "Když dostanete agenta na nášlapnou desku, můžete hráče nasměrovat ke kompasu pomocí kláves se šipkami.",
@@ -537,55 +543,70 @@
           "MC_HOC_2017_04_Cole_b": "Jakmile se agent dostane na nášlapnou desku, otevře hráči dveře."
         },
         "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky."
+          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky.",
+          "MC_HOC_2017_05_Cole_b": "Přimějte Agenta, aby překročil řeku a vybudoval most na Vaší cestě."
         },
         "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky."
+          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky.",
+          "MC_HOC_2017_05_Cole_b": "Přimějte Agenta, aby překročil řeku a vybudoval most na Vaší cestě."
         },
         "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky."
+          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky.",
+          "MC_HOC_2017_05_Cole_b": "Přimějte Agenta, aby překročil řeku a vybudoval most na Vaší cestě."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?"
+          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?",
+          "MC_HOC_2017_06_Cole_b": "Pomozte Agentovi vybudovat most přes celou vodu! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?"
+          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?",
+          "MC_HOC_2017_06_Cole_b": "Pomozte Agentovi vybudovat most přes celou vodu! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?"
+          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?",
+          "MC_HOC_2017_06_Cole_b": "Pomozte Agentovi vybudovat most přes celou vodu! "
         },
         "MC_HOC_2017_07_Cole": {
           "MC_HOC_2017_07_Cole_a": "K vyřešení této hádanky musíte přijít na to, co dělá funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.",
-          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku."
+          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.",
+          "MC_HOC_2017_07_Cole_c": "Jediné, co musí agent udělat, je vyčistit cestu k důlnímu vozíku."
         },
         "MC_HOC_2017_07_Cole_2019": {
           "MC_HOC_2017_07_Cole_a": "K vyřešení této hádanky musíte přijít na to, co dělá funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.",
-          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku."
+          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.",
+          "MC_HOC_2017_07_Cole_c": "Jediné, co musí agent udělat, je vyčistit cestu k důlnímu vozíku."
         },
         "MC_HOC_2017_07_Cole_2020": {
           "MC_HOC_2017_07_Cole_a": "K vyřešení této hádanky musíte přijít na to, co dělá funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.",
-          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku."
+          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku.",
+          "MC_HOC_2017_07_Cole_c": "Jediné, co musí agent udělat, je vyčistit cestu k důlnímu vozíku."
         },
         "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!"
+          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!",
+          "MC_HOC_2017_10_Cole_b": "Nevíte, kam jít? Podívejte se, zda se Vám podaří najít čárkovanou čáru!"
         },
         "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!"
+          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!",
+          "MC_HOC_2017_10_Cole_b": "Nevíte, kam jít? Podívejte se, zda se Vám podaří najít čárkovanou čáru!"
         },
         "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!"
+          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!",
+          "MC_HOC_2017_10_Cole_b": "Nevíte, kam jít? Podívejte se, zda se Vám podaří najít čárkovanou čáru!"
         },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_a": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!"
+          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!",
+          "MC_HOC_2017_08_RY_c": "Zkuste postupovat podle čárkované čáry a najít si krátkou cestu lávou."
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_a": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!"
+          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!",
+          "MC_HOC_2017_08_RY_c": "Zkuste postupovat podle čárkované čáry a najít si krátkou cestu lávou."
         },
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_a": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
-          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!"
+          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!",
+          "MC_HOC_2017_08_RY_c": "Zkuste postupovat podle čárkované čáry a najít si krátkou cestu lávou."
         },
         "MC_HOC_2017_FP20x20": {
           "MC_HOC_2017_13_Cole_a": "Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy."
@@ -1026,16 +1047,24 @@
           "courseB_maze_seq9_c": "Tuto hádanku lze vyřešit dvěma způsoby."
         },
         "courseB_starWars_prog9": {
-          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "courseB_starWars_prog9_b": "Tento hlavolam má mnoho způsobů vyřešení.",
+          "courseB_starWars_prog9_c": "Mohl by tady pomoci cyklus `opakuj`?"
         },
         "courseB_starWars_prog9_2018": {
-          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "courseB_starWars_prog9_b": "Tento hlavolam má mnoho způsobů vyřešení.",
+          "courseB_starWars_prog9_c": "Mohl by tady pomoci cyklus <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj`?"
         },
         "courseB_starWars_prog9_2019": {
-          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "courseB_starWars_prog9_b": "Tento hlavolam má mnoho způsobů vyřešení.",
+          "courseB_starWars_prog9_c": "Mohl by tady pomoci cyklus <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj`?"
         },
         "courseB_starWars_prog9_2020": {
-          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "courseB_starWars_prog9_b": "Tento hlavolam má mnoho způsobů vyřešení.",
+          "courseB_starWars_prog9_c": "Mohl by tady pomoci cyklus <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj`?"
         },
         "courseC19_playLab_EOC1": {
           "courseE_playLab_scaffold1_a": "Blokem `nastavit postavu 1 na ???` přidáš postavu na obrazovku.",
@@ -3189,7 +3218,8 @@
           "courseF_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz."
         },
         "courseF_bee_conditionals3": {
-          "courseF_bee_conditionals3_a": "Nezapomeň zkontrolovat každé pole pomocí příkazu `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. "
+          "courseF_bee_conditionals3_a": "Nezapomeň zkontrolovat každé pole pomocí příkazu `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. ",
+          "courseF_bee_conditionals3_b": "Cyklus `opakuj` bude užitečný k tomu, abyste mohli použít jen jeden blok`jestliže`."
         },
         "courseF_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "Můžeš brát každé pole tak, jako kdyby na něm byl mrak, ačkoliv můžeš vidět celou cestu.",
@@ -3264,7 +3294,7 @@
         "course3_maze_debugging_challenge2": {
           "courseC_maze_debugging_challenge2_a": "Jedním z řešení je přidat mezi otočení více kroků dopředu.",
           "courseC_maze_debugging_challenge2_b": "Pokud se někde zasekneš, buď můžeš vždy začít od začátku nebo můžeš odstranit všechny bloky a pokusit se o to sám!",
-          "courseC_maze_debugging_challenge2_c": "Existují dvě různé cesty, kterými se můžeš řídit s využitím bloku `posuň se vpřed` a čtyři bloky `otoč se`. Pokud najdeš způsob, jak použít blok `opakovat`, může jich být ještě více!"
+          "courseC_maze_debugging_challenge2_c": "Existují dvě různé cesty, kterými se můžeš řídit s využitím bloku `postup vpřed` a čtyři bloky `otoč se`. Pokud najdeš způsob, jak použít blok `opakovat`, může jich být ještě více!"
         },
         "course3_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_a": "Pokud zavoláš funkci ještě jednou, můžeš v posledním rohu vytvořit stejný vzhled. Můžeš také `skočit na...` jinou pozici nebo měnit celý výsledek podle svých představ!"
@@ -3302,7 +3332,7 @@
           "4-5_Bee_Debugging_1_a": "Pokud máš potíže se zjištěnmí, co není v pořádku, zkus spustit program, aby bylo vidět, kde se něco pokazí."
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Začni tím, že se soustředíš na sbírání DVOU drahokamů z každé z prvních dvou hromádek.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n\nVyužij následující bloky.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         },
         "outbreak5": {
           "solution2": "Váš nový kód by měl vypadat takto:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
@@ -3316,18 +3346,18 @@
           "hint1": "Klikněte v bloku události na tlačítko \"+\". Na prázdné místo v bloku \"změna kostýmu\" doplňte blok \"předmět\", který najdete uvnitř.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint2": "Nový kód pro tuto úroveň by měl vypadat takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>",
-          "hint1": "K nasazení roušky příšerce použijte blok \"změnit kostým\" s událostí \"při kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nNezapomeňte přetáhnout i malý červený blok \"kliknuto\"!"
+          "hint2": "Nový kód pro tuto úroveň by měl vypadat takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>",
+          "hint1": "K nasazení roušky příšerce použijte blok \"změnit kostým\" s událostí \"při kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nNezapomeňte přetáhnout i malý červený blok \"kliknuto\"!"
         },
         "outbreak4": {
           "challenge": "## Rádi byste dostali extra náročnou výzvu?\n\nMůžete taky nastavit, aby se příšerky pohybovaly rychleji nebo pomaleji.\n\n1.  Klikněte na \"Upravit\" v tomto bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Zvyšte nebo snižte číslo v tomto bloku: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPokud chcete, aby se příšerky pohybovaly pomaleji, zvolte desetinné číslo jako \"0.5\" nebo \"0.25\". Chcete-li pohyb příšerek zrychlit, zvolte libovolné číslo vyšší než 1."
         },
         "outbreak6": {
           "hint2": "Ostatní bloky \"akce\" musí být umístěné uvnitř bloku \"pokud pravděpodobnost\":\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Bude potřeba přidat další tři události \"při dotyku\", kterými ošetříte všechny možné kombinace setkání zdravých a nakažených postav.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hint1": "Bude potřeba přidat další tři události \"při dotyku\", kterými ošetříte všechny možné kombinace setkání zdravých a nakažených postav.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## Očkování\n\nMůžete simulovat podání očkování při kliknutí na příšerku. Uděláte to tak, že k následující události přidáte blok \"změnit kostým\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Očkování\n\nMůžete simulovat podání očkování při kliknutí na příšerku. Uděláte to tak, že k následující události přidáte blok \"změnit kostým\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Zasekli jste se? Svůj kód můžete kdykoli resetovat – klikněte na \"Historie verzí\" a zvolte \"Začít znovu\"."
         },
         "courseB_collector_loops_challenge2a": {
@@ -3351,18 +3381,18 @@
           "hint1": "Klikněte v bloku události na tlačítko \"+\". Na prázdné místo v bloku \"změna kostýmu\" doplňte blok \"předmět\", který najdete uvnitř.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "K nasazení roušky příšerce použijte blok \"změnit kostým\" s událostí \"při kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nNezapomeňte přetáhnout i malý červený blok \"kliknuto\"!",
-          "hint2": "Nový kód pro tuto úroveň by měl vypadat takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "K nasazení roušky příšerce použijte blok \"změnit kostým\" s událostí \"při kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nNezapomeňte přetáhnout i malý červený blok \"kliknuto\"!",
+          "hint2": "Nový kód pro tuto úroveň by měl vypadat takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Rádi byste dostali extra náročnou výzvu?\n\nMůžete taky nastavit, aby se příšerky pohybovaly rychleji nebo pomaleji.\n\n1.  Klikněte na \"Upravit\" v tomto bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Zvyšte nebo snižte číslo v tomto bloku: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPokud chcete, aby se příšerky pohybovaly pomaleji, zvolte desetinné číslo jako \"0.5\" nebo \"0.25\". Chcete-li pohyb příšerek zrychlit, zvolte libovolné číslo vyšší než 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Ostatní bloky \"akce\" musí být umístěné uvnitř bloku \"pokud pravděpodobnost\":\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Bude potřeba přidat další tři události \"při dotyku\", kterými ošetříte všechny možné kombinace setkání zdravých a nakažených postav.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Bude potřeba přidat další tři události \"při dotyku\", kterými ošetříte všechny možné kombinace setkání zdravých a nakažených postav.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Očkování\n\nMůžete simulovat podání očkování při kliknutí na příšerku. Uděláte to tak, že k následující události přidáte blok \"změnit kostým\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Očkování\n\nMůžete simulovat podání očkování při kliknutí na příšerku. Uděláte to tak, že k následující události přidáte blok \"změnit kostým\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Zasekli jste se? Svůj kód můžete kdykoli resetovat – klikněte na \"Historie verzí\" a zvolte \"Začít znovu\"."
         },
         "courseA_harvester_loops6_2021": {
@@ -3401,7 +3431,9 @@
           "courseB_iceage_loops3_b": "Abys kód zopakoval, přetáhni  `opakuj` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>cyklus, do kterého pak vlož blok, jaký chceš."
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+          "courseB_starWars_prog9_a": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "courseB_starWars_prog9_b": "Tento hlavolam má mnoho způsobů vyřešení.",
+          "courseB_starWars_prog9_c": "Mohl by tady pomoci cyklus <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> `opakuj`?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Blokem `nastavit postavu 1 na ???` přidáš postavu na obrazovku.",
@@ -3411,7 +3443,11 @@
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_a": "Klikni na rozbalovací nabídku u události `když šipka ____` a nastav správný směr pohybu.",
           "courseE_playLab_scaffold1_b": "Budeš potřebovat čtyři události `když šipka` a pod každou z nich bude blok na pohyb postavou.",
-          "courseE_playLab_scaffold1_c": "Až budeš mít hotovo, budeš moct ovládat postavu šipkami!"
+          "courseE_playLab_scaffold1_c": "Až budeš mít hotovo, budeš moct ovládat postavu šipkami!",
+          "playlab_up": "Chcete-li svého herce posunout vzhůru, můžete propojit tyto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Chcete-li svého herce posunout dolů, můžete propojit tyto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Chcete-li svého herce posunout doleva, můžete propojit tyto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Chcete-li svého herce posunout doprava, můžete propojit tyto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Blokem `bod` můžeš přidávat a odebírat body."
@@ -3757,6 +3793,603 @@
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_b": "Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej něco jiného."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Zajisti, aby se tanečník zobrazil na obrazovce.\n\n_Tato úroveň končí po 4 taktech._",
+          "challenges": "**Volitelné výzvy**\n\n-   Vyber si jinou písničku k přehrávání.\n-   Přesuň svého tanečníka na nové místo.\n-   Vytvoř více než jednoho tanečníka."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Tanečník musí provést pohyb.\n-   Musíš stisknout klávesu se šipkou.\n\n_Tato úroveň končí po 4 taktech._",
+          "challenges": "**Volitelná výzva**\n\n-   Použij více než jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Oba tanečníci musejí provést pohyb.\n-   Musíš stisknout klávesy se šipkami.\n\n_Tato úroveň končí po 4 taktech._",
+          "challenges": "**Volitelná výzva**\n\n-   Zajisti, aby tanečník reagoval na klávesy s levou a pravou šipkou."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Tanečník musí po 4 taktech přejít na nový pohyb.\n\n_Tato úroveň končí po 8 taktech._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Po 6 taktech musí tanečník tančit jiný tanec než po 4 taktech.\n\n_Tato úroveň končí po 12 taktech._",
+          "challenges": "**Volitelná výzva**\n\n-   Změň pozadí, kdykoli tanečníci změní pohyby."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Vytvoř jednoho hlavního tanečníka a skupinu doprovodných tanečníků.\n\n_Tato úroveň končí po 12 taktech._",
+          "challenges": "**Volitelná výzva**\n\n-   Vytvoř několik skupin doprovodných tanečníků."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Změň velikost alespoň jednoho tanečníka poté, co začne hrát hudba.\n\n_Tato úroveň končí po 6 taktech._",
+          "challenges": "**Volitelná výzva**\n\n-   Experimentuj se změnami různých vlastností (šířka, výška, otočení atd.)"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Změň odstín alespoň jednoho tanečníka.\n\n_Tato úroveň končí po 6 taktech._",
+          "tint_hint": "Všiml(a) sis, že se tanečníci nezmění přesně na vybranou barvu? Je to proto, že **odstíny** míchají vybranou barvu s barvou tanečníka."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Jak splním tuto úroveň?**\n\n-   Stačí zmáčknout tlačítko „Dokončit“!",
+          "repeat_every_ideas": "**Chceš nějaké nápady?**\n\n-   Opakovaně měň velikost tanečníka, aby se zvětšoval.\n-   Opakovaně měň otočení tanečníka, aby se otáčel.\n-   Opakovaně měň vodorovnou nebo svislou polohu tanečníka, aby se pohyboval po obrazovce.\n\n_Můžeš používat i záporná čísla a docílit tak opačného efektu!_",
+          "next_previous": "**Volitelná výzva**\n\n-   Můžeš také použít tento nový blok události k postupnému procházení seznamu tanečních pohybů nastavením pohybu na `(Náhodný)`, `(Další)` nebo `(Předchozí)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Blok „střídat“ je v kategorii „Tanečníci“."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Jak je můžeš využít, aby ses dostal skrz oceánský monument?"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Můžeš použít bloky \"pokud je cesta\", aby ti pomohly otočit se doprava."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Vidíš červené a modré korálové bloky? Použij je jako orientační body pro otočení doprava nebo doleva."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Jestliže zavoláte funkce správně, pak toto bude cesta, po které půjdete...",
+          "Function_intro_Ryan_a": "Funkci můžete ve svém programu zavolat vícekrát. Zkuste ji zavolat dvakrát, abyste vyřešili tuto hádanku."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Přetáhněte jeden blok „pohyb vpřed“ z panelu nástrojů do pracovního prostoru a přichyťte ho k bloku „při spuštění“.",
+          "MC_HOC_2017_01_RETRY_b": "Nezapomeňte kliknout na tlačítko „Spustit“, aby agent mohl provést kód.",
+          "MC_HOC_2017_01_RETRY_c": "Jakmile agent provede celý kód, můžete hráčem pohybovat pomocí kláves se šipkami."
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Posuňte agenta vpřed o dvě políčka a postavte ho na nášlapnou desku. Otevře tak hráči dveře.",
+          "MC_HOC_2017_02_Cole_b": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
+          "MC_HOC_2017_02_Cole_c": "Jakmile agent otevře dveře, nasměrujte hráče k mapě pomocí kláves se šipkami.",
+          "MC_HOC_2017_02_Cole_d": "Zajistěte, aby agent šel po cestě nastíněné na mapě!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Když dostanete agenta na nášlapnou desku, můžete hráče nasměrovat ke kompasu pomocí kláves se šipkami.",
+          "MC_HOC_2017_03_Cole_b": "Připadá vám kód příliš dlouhý? Zkuste použít cyklus „opakovat“ a uvidíte, jestli dokážete přijít na to, jak ho zkrátit."
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocí bloku „otočit vpravo“ změníte směr agenta.",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agent se musí dostat jen na první nášlapnou desku, aby uvolnil Alex nebo Stevovi cestu k sekeře."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent se musí sedmkrát „posunout vpřed“. Jak k tomu lze využít cyklus „opakovat“?",
+          "MC_HOC_2017_04_Cole_c": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
+          "MC_HOC_2017_04_Cole_b": "Jakmile se agent dostane na nášlapnou desku, otevře hráči dveře."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Věděli jste, že do cyklu můžete vložit více částí kódu? Zkuste do cyklu „opakovat“ vložit umístění prkna **a** posun vpřed pro dokončení této hádanky.",
+          "MC_HOC_2017_05_Cole_b": "Přimějte Agenta, aby překročil řeku a vybudoval most na Vaší cestě."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Kolikrát tento cyklus proběhne? Kolikrát by _měl_ proběhnout?",
+          "MC_HOC_2017_06_Cole_b": "Pomozte Agentovi vybudovat most přes celou vodu! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Jediné, co musí agent udělat, je vyčistit cestu k důlnímu vozíku.",
+          "MC_HOC_2017_07_Cole_a": "K vyřešení této hádanky musíte přijít na to, co dělá funkce „uvolnit cestu“ a zavolat ji tolikrát, kolikrát bude třeba, pomocí malého zeleného bloku „uvolnit cestu“ v panelu nástrojů.",
+          "MC_HOC_2017_07_Cole_b": "Zkuste zkombinovat bloky funkcí s ostatními bloky z panelu nástrojů. Pomůže vám to vyřešit tuto hádanku."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Nevíte, kam jít? Podívejte se, zda se Vám podaří najít čárkovanou čáru!",
+          "MC_HOC_2017_10_Cole_a": "Pomocí funkcí tuto hádanku vyřešíte snadněji!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Stiskněte tlačítko „Spustit“. \nKód můžete spustit, i když není správný. Spouštějte a resetujte neustále dokola svůj kód, dokud nepřijdete na to, kde je chyba.",
+          "MC_HOC_2017_08_RY_b": "Tuto hádanku lze vyřešit MNOHA způsoby. Pár jich vyzkoušejte!",
+          "MC_HOC_2017_08_RY_c": "Zkuste postupovat podle čárkované čáry a najít si krátkou cestu lávou."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Zkuste pomocí agenta postavit několik mostů, aby mohla Alex nebo Steve projít za kraj mapy."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Je tady na výběr z několika cest. Která je nejkratší?",
+          "mc_8_b": "Aby byl kód jednoduší, použij `opakuj` cykly.",
+          "mc_8_c": "Tvůj cíl je vchod do přístřešku v hodní části obrazovky."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Prvně musíš dostat ke stromu, k tomu bude třeba použít dva bloky `posuň se vpřed`.",
+          "mc_2_b": "Blokem `znič blok` pokácíš strom před sebou."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Stromy můžeš pokácet v jakémkoliv pořadí, ale zkus použít co nejméně příkazů.",
+          "mc_4_b": "Blokem `znič blok` pokácíš strom před sebou."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Kliknutím na `polož` blok si můžeš vybrat materiál.",
+          "mc_6_b": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a).",
+          "mc_6_c": "Do bloku `opakuj` můžeš dát více než jeden příkaz."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "Blok `posuň se vpřed` najdeš v levém bočním panelu nahoře.",
+          "mc_1_b": "Oba bloky `posuň se vpřed` je třeba připnout k bloku `při spuštění`."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Prvně použij příkaz `polož` a potom `posuň se vpřed`.",
+          "mc_5_b": "Ujisti se,  že jsou oba příkazy v `opakuj` cyklu, aby se kód spustil opakovaně.",
+          "mc_5_c": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "K zasazení plodiny přímo pod sebe použij blok `zasaď plodinu`.",
+          "mc_7_b": "Do obou řádek tmavě hnědé země u vody je třeba dát sazeničky. ",
+          "mc_7_c": "Do bloku `opakuj` můžeš dát více než jeden příkaz."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Polož koleje přímo pod sebe použitím `polož koleje`.",
+          "mc_13_b": "Můžeš kód zjednodušit použitím cyklů `opakuj`?"
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Příkazem `ostříhej` dosáhneš pouze na ovci, která je přímo před tebou. Jsi dost blízko?",
+          "mc_3_b": "Když se potřebuješ otočit, použij příkaz `otoč se`.",
+          "mc_3_c": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Kód na zkontrolování jestli je pod bloky láva už je připravený. Jen je potřeba přidat přesunutí vpřed.",
+          "mc_11_b": "Otázka je, jestli dát `posuň se vpřed` příkaz dovnitř podmínky `když`, nebo až za ní?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Bloky s červenými fleky jsou rudit.",
+          "mc_12_b": "Můžeš kód zjednodušit použitím cyklů `opakuj`?",
+          "mc_12_c": "Zkontroluj, jestli se na políčku nachází láva pomocí `když`, potom umísti kamení."
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Ty flekaté bloky u té pochodně jsou železo! Jak se tam dostaneš?",
+          "mc_10_b": "Až se dostaneš na kraj lávy, udělej si bezpečnou cestu použitím `polož kamení před tebou`. Potom můžeš projít!",
+          "mc_10_c": "Neboj se dělat chyby! Spusť kód, abys viděl(a), co se stane, i když jsi úlohu zatím ještě úplně nerozluštil(a)."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Stojíš správně? Blok `znič blok` vytěží jen blok, který je přímo před tebou.",
+          "mc_9_b": "Ty černé fleky jsou uhlí! Když na uhlí použiješ `znič blok`, vytěžíš ho.",
+          "mc_9_c": "K umístění pochodně na políčko pod sebou použij `umísti pochodeň` blok."
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Zkus použít  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\ncyklus!"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Nemůžeš přijít na to, co je špatně? Zkus kód spustit několikrát a uvidíš, co se stane."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq5_c": "Tuto hádanku lze vyřešit dvěma způsoby."
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_c": "Tuto hádanku lze vyřešit dvěma způsoby."
+        },
+        "courseB_starWars_prog1": {
+          "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
+          "courseB_starWars_prog1_b": "Abyste vyřešili tento hlavolam, budete se muset přesunout na Východ. O kolik se budete muset přesunout?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2018": {
+          "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
+          "courseB_starWars_prog1_b": "Abyste vyřešili tento hlavolam, budete se muset přesunout na Východ. O kolik se budete muset přesunout?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2019": {
+          "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
+          "courseB_starWars_prog1_b": "Abyste vyřešili tento hlavolam, budete se muset přesunout na Východ. O kolik se budete muset přesunout?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2020": {
+          "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
+          "courseB_starWars_prog1_b": "Abyste vyřešili tento hlavolam, budete se muset přesunout na Východ. O kolik se budete muset přesunout?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
+          "courseB_starWars_prog1_b": "Abyste vyřešili tento hlavolam, budete se muset přesunout na Východ. O kolik se budete muset přesunout?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2": {
+          "courseB_starWars_prog2_a": "Rozdělte tento problém na dvě části. Vezměte jednu hromadu kovového šrotu a poté zjistěte, jak získat tu druhou."
+        },
+        "courseB_starWars_prog2_2018": {
+          "courseB_starWars_prog2_a": "Rozdělte tento problém na dvě části. Vezměte jednu hromadu kovového šrotu a poté zjistěte, jak získat tu druhou."
+        },
+        "courseB_starWars_prog2_2019": {
+          "courseB_starWars_prog2_a": "Rozdělte tento problém na dvě části. Vezměte jednu hromadu kovového šrotu a poté zjistěte, jak získat tu druhou."
+        },
+        "courseB_starWars_prog2_2020": {
+          "courseB_starWars_prog2_a": "Rozdělte tento problém na dvě části. Vezměte jednu hromadu kovového šrotu a poté zjistěte, jak získat tu druhou."
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "Rozdělte tento problém na dvě části. Vezměte jednu hromadu kovového šrotu a poté zjistěte, jak získat tu druhou."
+        },
+        "courseB_starWars_prog3": {
+          "courseB_starWars_prog3_a": "Abyste vyřešili tento hlavolam, budete se muset pohybovat třemi způsoby.",
+          "courseB_starWars_prog3_b": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále."
+        },
+        "courseB_starWars_prog3_2018": {
+          "courseB_starWars_prog3_a": "Abyste vyřešili tento hlavolam, budete se muset pohybovat třemi způsoby.",
+          "courseB_starWars_prog3_b": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále."
+        },
+        "courseB_starWars_prog3_2019": {
+          "courseB_starWars_prog3_a": "Abyste vyřešili tento hlavolam, budete se muset pohybovat třemi způsoby.",
+          "courseB_starWars_prog3_b": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále."
+        },
+        "courseB_starWars_prog3_2020": {
+          "courseB_starWars_prog3_a": "Abyste vyřešili tento hlavolam, budete se muset pohybovat třemi způsoby.",
+          "courseB_starWars_prog3_b": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Abyste vyřešili tento hlavolam, budete se muset pohybovat třemi způsoby.",
+          "courseB_starWars_prog3_b": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále."
+        },
+        "courseB_starWars_prog4": {
+          "courseB_starWars_prog4_a": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále.",
+          "courseB_starWars_prog4_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2018": {
+          "courseB_starWars_prog4_a": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále.",
+          "courseB_starWars_prog4_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2019": {
+          "courseB_starWars_prog4_a": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále.",
+          "courseB_starWars_prog4_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2020": {
+          "courseB_starWars_prog4_a": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále.",
+          "courseB_starWars_prog4_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Budujte kusy kódu po jednom. Spouštějte je, abyste se dozvěděli, kam se odtud dostat dále.",
+          "courseB_starWars_prog4_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5": {
+          "courseB_starWars_prog5_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog5_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog5_c": "Sledujte tento vzor svým prstem. Jak se budete postupně pohybovat, počítejte kusy kovu.",
+          "courseB_starWars_prog5_da": "Podívejte se, co se stane, když použijete stejné řešení jako v hlavolamu s chůzí po schodech:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2018": {
+          "courseB_starWars_prog5_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog5_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog5_c": "Sledujte tento vzor svým prstem. Jak se budete postupně pohybovat, počítejte kusy kovu.",
+          "courseB_starWars_prog5_da": "Podívejte se, co se stane, když použijete stejné řešení jako v hlavolamu s chůzí po schodech:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2019": {
+          "courseB_starWars_prog5_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog5_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog5_c": "Sledujte tento vzor svým prstem. Jak se budete postupně pohybovat, počítejte kusy kovu.",
+          "courseB_starWars_prog5_da": "Podívejte se, co se stane, když použijete stejné řešení jako v hlavolamu s chůzí po schodech:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2020": {
+          "courseB_starWars_prog5_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog5_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog5_c": "Sledujte tento vzor svým prstem. Jak se budete postupně pohybovat, počítejte kusy kovu.",
+          "courseB_starWars_prog5_da": "Podívejte se, co se stane, když použijete stejné řešení jako v hlavolamu s chůzí po schodech:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog5_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog5_c": "Sledujte tento vzor svým prstem. Jak se budete postupně pohybovat, počítejte kusy kovu.",
+          "courseB_starWars_prog5_da": "Podívejte se, co se stane, když použijete stejné řešení jako v hlavolamu s chůzí po schodech:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6": {
+          "courseB_starWars_prog6_a": "Tento vzor je pouhý schod se dvěma pohyby na jeden směr!",
+          "courseB_starWars_prog6_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2018": {
+          "courseB_starWars_prog6_a": "Tento vzor je pouhý schod se dvěma pohyby na jeden směr!",
+          "courseB_starWars_prog6_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2019": {
+          "courseB_starWars_prog6_a": "Tento vzor je pouhý schod se dvěma pohyby na jeden směr!",
+          "courseB_starWars_prog6_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2020": {
+          "courseB_starWars_prog6_a": "Tento vzor je pouhý schod se dvěma pohyby na jeden směr!",
+          "courseB_starWars_prog6_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "Tento vzor je pouhý schod se dvěma pohyby na jeden směr!",
+          "courseB_starWars_prog6_b": "Pro kratší kód zkuste použít blok `opakuj`.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7": {
+          "courseB_starWars_prog7_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog7_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog7_c": "Zkuste nakreslit vzor velkého schodu přes tento hlavolam. Pokrývá všechen šrot?"
+        },
+        "courseB_starWars_prog7_2018": {
+          "courseB_starWars_prog7_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog7_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog7_c": "Zkuste nakreslit vzor velkého schodu přes tento hlavolam. Pokrývá všechen šrot?"
+        },
+        "courseB_starWars_prog7_2019": {
+          "courseB_starWars_prog7_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog7_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog7_c": "Zkuste nakreslit vzor velkého schodu přes tento hlavolam. Pokrývá všechen šrot?"
+        },
+        "courseB_starWars_prog7_2020": {
+          "courseB_starWars_prog7_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog7_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog7_c": "Zkuste nakreslit vzor velkého schodu přes tento hlavolam. Pokrývá všechen šrot?"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "Nevypadá tento vzor podobně jako v posledním hlavolamu?",
+          "courseB_starWars_prog7_b": "BB-8 uchopí kovový šrot, zatímco se přes něj bude převalovat.",
+          "courseB_starWars_prog7_c": "Zkuste nakreslit vzor velkého schodu přes tento hlavolam. Pokrývá všechen šrot?"
+        },
+        "courseB_starWars_prog8": {
+          "courseB_starWars_prog8_a": "Je v pořádku znovu si projít nějakou množinu míst, kterou jste už procestovali.",
+          "courseB_starWars_prog8_b": "Zkuste použít blok `opakuj`, abyste zjistili, co se stane s kódem, který dáte dovnitř.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2018": {
+          "courseB_starWars_prog8_a": "Je v pořádku znovu si projít nějakou množinu míst, kterou jste už procestovali.",
+          "courseB_starWars_prog8_b": "Zkuste použít blok `opakuj`, abyste zjistili, co se stane s kódem, který dáte dovnitř.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2019": {
+          "courseB_starWars_prog8_a": "Je v pořádku znovu si projít nějakou množinu míst, kterou jste už procestovali.",
+          "courseB_starWars_prog8_b": "Zkuste použít blok `opakuj`, abyste zjistili, co se stane s kódem, který dáte dovnitř.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2020": {
+          "courseB_starWars_prog8_a": "Je v pořádku znovu si projít nějakou množinu míst, kterou jste už procestovali.",
+          "courseB_starWars_prog8_b": "Zkuste použít blok `opakuj`, abyste zjistili, co se stane s kódem, který dáte dovnitř.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "Je v pořádku znovu si projít nějakou množinu míst, kterou jste už procestovali.",
+          "courseB_starWars_prog8_b": "Zkuste použít blok `opakuj`, abyste zjistili, co se stane s kódem, který dáte dovnitř.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, a poté do něj vlož blok, který chceš opakovat."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "Kliknutím na malou šipku poblíž nápisu „vlevo“ na otáčecím bloku ji můžete změnit na „vpravo“.",
+          "courseC_starWars_loops4_a": "Použijte dva bloky `opakuj`.",
+          "courseC_starWars_loops4_b": "Každý cyklus `opakuj` bude mít uvnitř jen jeden příkaz: `postup vpřed`."
+        },
+        "courseC_starWars_loops5": {
+          "courseC_starWars_loops5_b": "Chcete-li přejít dolů, musíte se otočit a pak přejít vpřed.",
+          "courseC_starWars_loops5_a": "Nejlepší řešení užívá otočku, potom jeden „pohyb vpřed“, potom další otočku a potom cyklus."
+        },
+        "courseC_starWars_loops5_copy": {
+          "courseC_starWars_loops5_b": "Chcete-li přejít dolů, musíte se otočit a pak přejít vpřed.",
+          "courseC_starWars_loops5_a": "Nejlepší řešení užívá otočku, potom jeden „pohyb vpřed“, potom další otočku a potom cyklus."
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "Chcete-li přejít dolů, musíte se otočit a pak přejít vpřed.",
+          "courseC_starWars_loops5_a": "Nejlepší řešení užívá otočku, potom jeden „pohyb vpřed“, potom další otočku a potom cyklus."
+        },
+        "courseD_artist_5_2021": {
+          "1": "Jestli měníš tvary, nezapomeň, že budeš muset změnit také jejich úhly!"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Zkuste použít blok \\`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.\n\nPokud jsou vaše čtverce vysoké 20 pixelů a jsou od sebe vzdálené 20 pixelů, jak daleko musíte skočit?"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "Někdy tam květina bude a někdy nebude. Pokud chceš spustit svůj kód v obou případech, nezapomeň použít `když` příkaz."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "Nezapomeň zkontrolovat každé pole pomocí příkazu `když` a zjisti tak, jestli se na poli nachází květina nebo tam není nic. ",
+          "courseD_bee_conditionals3_c": "Neboj se dělat chyby! Zkus používat bloky a spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "Můžeš brát každé pole tak, jako kdyby na něm byl mrak, ačkoliv můžeš vidět celou cestu.",
+          "courseD_bee_conditionals4_b": "Použij `když` příkaz uvnitř svého cyklu a zkontroluj každé pole a ujisti se, jestli na něm není nektar."
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "Když použiješ blok `pokud na květině`, můžeš toto vyřešit použitím vnořených cyklů. Napiš program pro levou a spodní cestu, pak všechno dvakrát zopakuj!",
+          "courseD_bee_conditionals5_c": "Abys pokračoval po cestě, musíš říct včele `posuň se vpřed`. Jak se posunuje, hledá včela květinu. Ví, že `pokud na květině`, její pokyn zní: `získej nektar`."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "Použij  `když` příkaz, abys zkontroloval, jestli se pod mrakem ukrývá včelí plástev.",
+          "courseD_bee_conditionals6_b": "V tomto případě nemusíš hledat pod mrakama květiny.",
+          "courseD_bee_conditionals6_c": "Je možné použít cyklus, který by tvůj kód zjednodušil?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_b": "Pokud pod mrakem není květina, pak tam určitě musí být včelí plást, není možné, aby tam nebylo nic."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "\\*\\* Pamatujte: \\*\\* Tato hádanka se mění pokaždé, když je spuštěna.\n\nK vyřešení problému by to chtělo použít podmíněný blok (`if` nebo`if / else`).",
+          "courseD_bee_conditionals8_b": "Nenechte se napálit, nemůžete zkontrolovat prázdná pole, nektar _a_ med jen s jednou podmínkou.\n\nZkontrolujte nektar a med na konci své cesty."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř poběží, dokud zbývá nějaký nektar.  Zkus tento vzor:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n\n<title name=\"ARG1\">nectarRemaining</title>\n<title name=\"OP\">&gt;</title>\n<title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n</block></xml>"
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "Ve svém kódu bys měl(a) mít obě tyto události:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "Budeš muset hodit míč, když hra začne, když hodíš koš a když ruka balón mine. "
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "Můžeš zrychlit míč nebo ruku tak, že tyto bloky připojíš k události `při spuštění`.",
+          "courseD_bounce_events12s_b": "Zkus dát každému hodu 2 body a změnit logo týmu na tým ze svého města!"
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "Aby hra fungovala, musíš přidat blok `posuň se vlevo` k události `když šipka vlevo`:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Nezapomeň stisknout \"Spustit\" a dostat ruku ke koši, abys úlohu vyřešil(a)."
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "Aby to fungovalo, budeš potřebovat naprogramovat dvě `posuň se` události:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "Nemusíš pohnout rukou, abys úlohu vyřešil(a).",
+          "courseD_bounce_events5s_b": "Ujisti se, že jsi do svého pracovního prostoru přidal(a) tento kód:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "Máš událost, která vypadá takto?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Pokud jsi napsal(a) kód správně, nebudeš muset pro výhru pohnout rukou."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "Pokud chceš, můžeš přidat zvuky na více míst!"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Použij tlačítko \"Krok\", abys viděl(a), jestli je v prvním kroku všechno správně.\n\nCo druhý krok?\n\nKde to nefunguje?",
+          "courseD_collector_debugging1_c": "Nezapomeň použít blok `sbírej`, abys sesbíral poklad, když se k němu posuneš."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Použij tlačítko \"Krok\", abys viděl(a), jestli je v prvním kroku všechno správně.\n\nCo druhý krok?\n\nKde to nefunguje?",
+          "courseD_collector_debugging2a_c": "Co se děje?\n\nCo se má stát?\n\nCo ti to říká?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "Je místo, kde Laurel dělá něco, co nedává smysl? Co se stane poté, když tyto bloky změníš?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "Zkus použít proces ladění několikrát za sebou. \n\nCo způsobuje první problém?\n\nKdyž je problém opravený, co je špatně?",
+          "courseD_collector_debugging4_b": "Jestli je pro tebe těžké vymyslet, jak udělat schodovitý vzor, zkus ho obtáhnout prstem a říkat si při tom pokyny nahlas. \n\nNezapomeň ukázat směr otoček!"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "Co to dělá?\n\nCo to má dělat?\n\nCo ti to říká?",
+          "courseD_collector_debugging5a_b": "Jakmile máš sesbíraný první řádek pokladu, co ve tvém kódu zbývá?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "Zkus projít kód použitím tlačítka \"Krok\". Je v prvním kroku všechno správně?\n\nCo ve druhém?\n\nKde už to správně není?",
+          "courseD_collector_debugging6_b": "Vypadá to, že všechny bloky, které potřebuješ, jsou v pracovním prostoru. Zkus kliknout na \"Začít znovu\", když se v tom začneš ztrácet."
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "Využij cyklus `pokud je cesta vpřed` nebo blok `když je cesta vpřed / jinak`, abys posunul farmářku dále přes spirálu.",
+          "courseD_farmer_condLoops6_b": "Po většinu sklizně musíš kontrolovat jen kukuřici. Úplně na konci programu sesbírej dýni."
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_b": "Zkus využít `pokud je cesta vpřed`, aby se zahradnice pohybovala po správný počet kroků."
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_b": "Použij blok `odstraň 1`, když stojíš na hromádce hlíny, abys ji odstranil."
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Dávej pozor na probořený led! Scrat jím propadne do vody!"
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Dávej pozor na probořený led! Scrat jím propadne!"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "Rozděl si úlohu na dva kusy, první před rohem a druhý po něm.",
+          "courseD_iceage_loops2_b": "Když si nebudeš vědět rady, zkus si kroky říkat nahlas."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Použij tento nový blok!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "Abys kód zopakoval(a), přetáhni cyklus `opakuj`, do něhož pak vložíš blok, který chceš opakovat."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_b": "Zkus zapsat kroky, které musí Scrat podniknout, aby získal žalud. Vidíš nějaký vzor?"
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "Tvůj kód bude mít **tři** bloky `posuň se vpřed`."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "Jsou správně bloky `otoč se`? Co jiného můžeš změnit?"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Můžeš zatočit doprava nebo doleva z Ruďákova pohledu. Jestli jsi nasměrovaný doprava, po zatočení doprava budeš směřovat dolů.",
+          "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
+          "courseC_maze_programming5_b": "Pamatuj si, že otočky jsou z Ruďákovy perspektivy.",
+          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Pokud se pták nemůže dostat k praseti, ujisti se, že jsi všechny bloky pořádně spojil a znovu klikni na tlačítko \"Spustit\".",
+          "courseC_maze_programming1_b": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "Jestli chceš použít  `posuň se vpřed` blok, přetáhni ho z panelu ven na pracovní plochu a spoj ho s blokem `při spuštění`.",
+          "courseC_maze_programming2_b": "Ujisti se, že jsou všechny 3 bloky pořádně u sebe a připojené k bloku `při spuštění`."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nK vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.\n\nDále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.\n\nNakonec vrať bloky z pravé strany zpátky na své místo."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
+          "courseC_maze_programming5_b": "Nezapomeň, že všechny směry a zatáčky musíš zadávat z Ruďákova pohledu.",
+          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
+          "courseC_maze_programming5_b": "Nezapomeň, že všechny směry a zatáčky musíš zadávat z Ruďákova pohledu.",
+          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_b": "Pokud si nevíš rady, zkus si kroky napsat na papír a hledat místa, kde se opakují."
+        },
+        "courseD_scrat_ramp6": {
+          "courseC_maze_programming6a_a": "Pomocí bloku `opakuj` dostanete Scrat do pohybu!"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "Namísto příkazu `opakuj`,aby farmářka věděla, kolikrát má hlínu sebrat, použij blok  `dokud tady je hromádka`."
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "Můžeš zasadit svůj `dokud` blok do bloku `opakuj` a tím svůj kód zkrátit."
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "Kolem všech bloků budeš stále muset použít blok  `opakuj`  a říct tak farmářce, kolikrát má jít dopředu, a že má sebrat salát."
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "Stále budeš muset použít blok `opakuj dokud`  jako první.  Až se dostaneš k salátu,  použij blok `dokud`."
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "Opět budeš muset vložit bloky `opakuj dokud nenastane` a `opakuj pokud` do bloku `opakuj x krát` a tuhle úlohu budeš mít vyřešenou!"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "Řešení této úlohy bude hodně podobné předchozímu řešení, jen se farmářka musí otáčet opačným směrem."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "Použij `když/jinak` blok a pomoz farmářce se rozhodnout, jestli má zahnout vlevo nebo vpravo."
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "Použij `když/jinak` blok a pomoz farmářce se rozhodnout, jestli má zahnout vlevo nebo vpravo."
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "Zkuste změnit štítek proměnné v bloku `when answered` (`při zodpovězení`). Protože výzev je více, použijte výzvu pro _poslední_ výzvu, která bude zodpovězena.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

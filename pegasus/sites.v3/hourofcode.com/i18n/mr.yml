@@ -29,7 +29,7 @@ mr:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
+  hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
 
@@ -52,7 +52,7 @@ mr:
   hoc2019_header_line2_mobile: जग बदलून टाका.
   social_hoc2019_every_sudent: 'प्रत्येका विद्यार्थ्यामध्ये जग बदलून टाकण्याची शक्ती
     असते. त्यांना सुरुवात करण्यास मदत करा. #CSforGood'
-  social_hoc2019_learn_computer_science: 'कॉम्प्युटर सायंस शिका. जग बदलून टाका. #CSforGood
+  social_hoc2019_learn_computer_science: 'संगणक शास्त्र शिका. जग बदलून टाका. #CSforGood
     #HourOfCode'
   social_hoc_is_coming: कोडचा तास येत आहे!
   social_hoc2019_hoc_is_about_csforgood: "#HourOfCode हा #CSforGood साठी आहे. कॉम्प्युटर
@@ -62,71 +62,67 @@ mr:
   social_hoc2019_dance: 'यात आहेत: केटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पॅनिक अॅट
     द डिस्को आणि इतर!'
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  oceans_landing_description: मशीन लर्निंगबद्दल आणि AI च्या नैतिक वापराबद्दल शिका.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
+  oceans_landing_specs: 25+ भाषांमध्ये उपलब्ध | इयत्ता 3+
+  oceans_landing_explanation: नैतिक समस्या आणि जगातील समस्या सोडवण्यासाठी AI कसे वापरता
+    येईल हे जाणून घेताना संगणक शास्त्रात कोडींगशिवाय इतर बरेच काही आहे! कृत्रिम बुद्धिमत्ता
+    (AI), मशीन लर्निंग, डेटा ट्रेनिंग आणि पूर्वग्रह याबद्दल शिका. AI बद्दल अधिक शिकवण्यासाठी
+    या नवीन प्रवासातील  Code.org च्या पहिल्या पावलाचा आनंद घ्या. जेव्हा तुम्ही महासागरासाठी
+    AI ही कृती वापराल तेव्हा तुम्ही खऱ्या मशीन लर्निंग मॉडेल्सचे ट्रेनिंग कराल. <a
+    href='#behind-the-scenes'>अधिक जाणून घ्या</a>.
+  oceans_landing_explanation_markdown: नैतिक समस्या आणि जगातील समस्या सोडवण्यासाठी
+    AI कसे वापरता येईल हे जाणून घेताना संगणक शास्त्रात कोडींगशिवाय इतर बरेच काही आहे!
+    कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, डेटा ट्रेनिंग आणि पूर्वग्रह याबद्दल शिका.
+    AI बद्दल अधिक शिकवण्यासाठी या नवीन प्रवासातील  Code.org च्या पहिल्या पावलाचा आनंद
+    घ्या. जेव्हा तुम्ही महासागरासाठी AI ही कृती वापराल तेव्हा तुम्ही खऱ्या मशीन लर्निंग
+    मॉडेल्सचे ट्रेनिंग कराल. [अधिक जाणून घ्या](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_teacher_resources_desc: तुम्हाला AI, मशीन लर्निंग, ट्रेनिंग डेटा
+    आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह या गोष्टी शिकवण्यासाठी मदत करण्याकरता
+    धड्याचे प्लॅन्स आणि कृती.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
+  oceans_landing_cs_for_good: चांगल्या गोष्टींसाठी संगणक शास्त्र
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
+  oceans_landing_videos: 'AI आणि मशीन लर्निंगबद्दलचे व्हिडीओज '
+  oceans_behind_the_scenes: 'महासागरांसाठी AI: पडद्यामागे '
+  oceans_behind_the_scenes_1: पातळ्या 2-4  <a href="https://www.tensorflow.org/" >टेन्सरफ्लो
+    </a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    मोबाईलनेट</a> प्रोजेक्टने पुरवलेले आधीच ट्रेन केलेले मॉडेल वापरतात. मोबाईलनेट
+    मॉडेल हे <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">कन्व्होल्युशनल
+    न्युरल नेटवर्क</a> असून ते "फुगा" किंवा "स्ट्रॉबेरी" अशा शब्दांनी हँड अनोटेट केलेल्या
+    1 कोटी 40 लाखांहून जास्त इमेजेसच्या <a href="http://www.image-net.org/">इमेजनेट
+    </a> या डेटासेटवर ट्रेन केलेले आहे.
+  oceans_behind_the_scenes_1_markdown: पातळ्या 2-4   [TensorFlow](https://www.tensorflow.org/)
+    [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    प्रोजेक्टने पुरवलेले आधीच ट्रेन केलेले मॉडेल वापरतात. मोबाईलनेट मॉडेल हे [कन्व्होल्युशनल
+    न्युरल नेटवर्क] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    असून ते "फुगा" किंवा "स्ट्रॉबेरी" अशा शब्दांनी हँड अनोटेट केलेल्या 1 कोटी 40 लाखांहून
+    जास्त इमेजेसच्या  [ImageNet](http://www.image-net.org/) या डेटासेटवर ट्रेन केलेले
+    आहे.या कृतीमध्ये विद्यार्थ्याने निर्माण केलेला लेबल असलेला ट्रेनिंग डेटा वापरून
+    हे मॉडेल कस्टमाईझ करण्यासाठी, आम्ही [ट्रान्सफर लर्निंग](https://en.wikipedia.org/wiki/Transfer_learning)
+    हे तंत्र वापरतो.   ट्रेनिंग डेटासेटमधली प्रत्येक इमेज, तिला लागू असण्याची सर्वांत
+    जास्त शक्यता असलेल्या अनोटेशन्सची यादी मिळवण्यासाठी मोबाईलनेटला पिक्सेल्स म्हणून
+    फीड केली जाते. नंतर, नवीन इमेजसाठी, आम्ही ती  मोबाईलनेटला फीड करतो आणि मिळणाऱ्या
+    अनोटेशन्सच्या यादीची ट्रेनिंग डेटासेटसाठी मिळणाऱ्या यादीशी तुलना करतो. आम्ही नवीन
+    इमेजचे ट्रेनिंग सेटमध्ये सर्वांत जास्त सारखे निकाल देणाऱ्या लेबलनेच वर्गीकरण करतो
+    (उदा. “मासा” किंवा “मासा नाही”).
+  oceans_behind_the_scenes_2: 'पातळ्या 6-8  <a href="https://en.wikipedia.org/wiki/Support-vector_machine">सपोर्ट-व्हेक्टर
+    मशीन</a> (SVM) वापरतात. आम्ही माशाच्या प्रत्येक अवयवाकडे बघतो (उदा. डोळे, तोंड,
+    शरीर) आणि प्रत्येक माशासाठी या अवयवांसाठी सगळा मेटाडेटा (उदा. दातांची संख्या,
+    शरीराचा आकार) संख्यांच्या व्हेक्टरमध्ये एकत्र करतो. SVM ला ट्रेन करण्यासाठी आम्ही
+    हे व्हेक्टर्स वापरतो. ट्रेनिंग डेटानुसार, SVM सर्व संभाव्य माशांच्या "स्पेस"चे
+    दोन भाग करते, जे आपण शिकण्याचा प्रयत्न करत असलेल्या वर्गांशी संबंधित असतात (उदा.
+    "निळा" किंवा "निळा नाही").   '
+  oceans_behind_the_scenes_2_markdown: पातळ्या 6-8   [सपोर्ट-व्हेक्टर मशीन](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM) वापरतात. आम्ही माशाच्या प्रत्येक अवयवाकडे बघतो (उदा. डोळे, तोंड, शरीर) आणि
+    प्रत्येक माशासाठी या अवयवांसाठी सगळा मेटाडेटा (उदा. दातांची संख्या, शरीराचा आकार)
+    संख्यांच्या व्हेक्टरमध्ये एकत्र करतो. SVM ला ट्रेन करण्यासाठी आम्ही हे व्हेक्टर्स
+    वापरतो. ट्रेनिंग डेटानुसार, SVM सर्व संभाव्य माशांच्या "स्पेस"चे दोन भाग करते,
+    जे आपण शिकण्याचा प्रयत्न करत असलेल्या वर्गांशी संबंधित असतात (उदा. "निळा" किंवा
+    "निळा नाही").
+  social_hoc2019_oceans_title: 'महासागरांसाठी AI: #चांगल्यागोष्टींसाठीसंगणकशास्त्र'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
@@ -138,66 +134,66 @@ mr:
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: खास पाहुण्यांबरोबर संगणक शास्त्राच्या मूलभूत संकल्पना शिका!
+    सर्व वयोगटातील आणि सर्व प्रकारच्या क्षमता असणाऱ्या, संगणक नसलेल्या मुलांसह सर्व
+    विद्यार्थ्यांचे आमच्या व्हर्च्युअल कार्यशाळेत स्वागत आहे. अवर ऑफ कोडच्या लाईव्ह
+    एपिसोडद्वारे घरीच शिकणे सुरू ठेवा.
   hoc_live_join_us: आमच्यात सामील व्हा
   hoc_live_learn_more: अधिक जाणून घ्या
   hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
-    learning, training data, and bias, while exploring ethical issues and how AI can
-    be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  hoc_overview_oceans_tutorial_desc: कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग
+    डेटा आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी
+    AI चा कसा वापर करता येईल, हे शिका.
+  ai_video_title_what_is_ai: AI म्हणजे काय?
+  ai_video_title_algorithm_bias: अल्गोरीदम्समधील पूर्वग्रहाशी लढा देणे
+  ai_video_title_phone_knows_dog: तुमच्या फोनला कसे कळते की हा कुत्रा आहे?
+  ai_video_title_what_is_ml: मशीन लर्निंग म्हणजे काय?
+  ai_video_title_ml_big_small_prickly: 'मशीन लर्निंग: मोठ्या, लहान आणि कठीण समस्या
+    सोडवणे'
+  ai_video_title_ethics_of_ai: AI ची नीतीमत्ता
+  ai_video_title_ml_human_bias: मशीन लर्निंग आणि मानवी पूर्वग्रह
+  ai_video_title_seeing_ai: 'AI पाहणे: दृश्य जग अधिक अॅक्सेसिबल बनवणे  '
+  activity: कृती
   name: Name
-  description: Description
+  description: वर्णन
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_header: AI शिकवा आणि त्याबद्दल शिका
+  ai_resource_minecraft: 'माईनक्राफ्ट AI चांगल्या गोष्टींसाठी '
+  ai_resource_minecraft_desc: 'धड्याचा प्लॅन, व्हिडीओज, संगणक शास्त्र अभ्यासक्रम आणि
+    शिक्षक प्रशिक्षण यासह विनामूल्य स्रोतांना प्रवेश मिळवा. (माईनक्राफ्ट: शैक्षणिक
+    आवृत्ती आवश्यक)     '
+  ai_resource_ml_for_kids: लहान मुलांसाठी मशीन लर्निंग
+  ai_resource_ml_for_kids_desc: 'मशीन लर्निंग मॉडेलला मजकूर, संख्या किंवा इंजेस वापरून
+    ट्रेन करा आणि स्क्रचमध्ये गेम तयार करण्यासाठी ते वापरा. '
+  ai_resource_ibm_ml_for_kids: 'IBM: लहान मुलांसाठी मशीन लर्निंग'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
-  ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_ecs: 'ECS: कृत्रिम बुद्धिमत्ता (AI) '
+  ai_resource_ecs_desc: 'एक्सप्लोरींग कॉम्प्युटर सायन्स (ECS) अभ्यासक्रमासाठी नवीन
+    पर्यायी अभ्यासक्रम घटक. '
+  ai_resource_elements_ai: AI चे घटक
+  ai_resource_elements_ai_desc: " Reaktor आणि हेलसिंकी विद्यापीठाने तयार केलेल्या
+    विनामूल्य ऑनलाईन अभ्यासक्रमांची मालिका."
+  ai_resource_cognimates: 'कॉग्निमेट्स '
+  ai_resource_cognimates_desc: 'गेम्स, प्रोग्रॅमिंग रोबोज आणि ट्रेनिंगसाठी AI शिक्षण
+    प्लॅटफॉर्म '
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_header: AI आणि MI आधारित कृती
+  ai_activity_seeing_ai: AI पाहणे
+  ai_activity_seeing_ai_desc: तुमच्या आजूबाजूच्या जगाचे वर्णन विविध भाषांमध्ये सांगणारे
+    एक मोफत अॅप.
+  ai_activity_quick_draw: लवकर, चित्र काढा!
+  ai_activity_quick_draw_desc: 'न्युरल नेटवर्कला डूडलिंग ओळखता येते का? '
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_teachable_desc: कॉम्प्युटरला तुमच्या स्वत:च्या इमेजेस, आवाज आणि पोझ
+    ओळखण्यासाठी प्रशिक्षित करा.
+  ai_activity_experiments: गुगलसह AI प्रयोग
+  ai_activity_experiments_desc: 'चित्रे, रेखाटने, भाषा, संगीत आणि इतर गोष्टींद्वारे
+    मशीन लर्निंग समजून घ्यायला सुरुवात करा. '
+  ai_activity_zooniverse: झुनीव्हर्स - स्नॅपशॉट माऊंटन झेब्रा
+  ai_activity_zooniverse_desc: इमेजेसमधील विविध प्राणी ओळखून संकटग्रस्त केप माऊंटन
+    झेब्राचे संरक्षण करण्यासाठी मदत करा
   codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
     कोर्सेस</a> सोबत आणखी शिका
   codeorg_homepage_hoc2018_dance_heading: तुमची स्वतःची <span class=”highlight-word”>डांस
@@ -3197,11 +3193,12 @@ mr:
   tutorial_tynkerd_longdescription: Design a custom hero and play as that character
     through this multi-level adventure game. You'll need to use your coding skills
     to solve puzzles, fight bugs, and save the motherboard!
-  tutorial_cdmy_longdescription: Codecademy is an interactive platform for learning
-    STEM skills that are critical for today's jobs. Join millions of Codecademy students
-    and learn the basics of coding and computer science by taking our fun Hour of
-    Code courses. By the end of each course, you'll have a real project that you can
-    show off to your friends and family.
+  tutorial_cdmy_longdescription: कोडअकॅडमी हा  सध्याच्या काळातील नोकऱ्यांसाठी आवश्यक
+    असलेली STEM ( विज्ञान, तंत्रज्ञान, इंग्रजी, गणित) कौशल्ये शिकण्यासाठीचा एक परस्परसंवादी
+    प्लॅटफॉर्म आहे. कोडअकॅडमीच्या लक्षावधी विद्यार्थ्यांमध्ये सहभागी व्हा आणि आमचे
+    गंमतीशीर कोड ऑफ अवर अभ्यासक्रम करून कोडींग तसेच संगणक शास्त्रातील मूलभूत गोष्टी
+    शिका. प्रत्येक अभ्यासक्रमाच्या शेवटी, तुम्हाला एका खरा प्रोजेक्ट करायला मिळेल,
+    जो तुम्ही तुमच्या मित्रमैत्रिणींना आणि कुटुंबियांना दाखवू शकता.
   tutorial_codestersdance_longdescription: 'पायथन शिकण्यासाठी विद्यार्थी शब्द सरकवून
     वापरण्याचे साधन (ड्रॅग-टू-टेक्स्ट टूलकीट) वापरून प्रोग्रामिंग करायला सुरुवात करतात.
     विद्यार्थी सराव कृतींचा संच पूर्ण करतात ज्यात ते प्रोग्रामिंग आज्ञा (कमांड्स)
@@ -3924,14 +3921,14 @@ mr:
     द्वारा शिका. ह्या खेळकर, स्वनिर्देशित शिकवण्यावजा व्याख्यानान्मध्ये मार्क जुकेरबर्ग,
     बिल गेट्स, अॅन्ग्री बर्ड्स अणि झाडे वि. पिशाच्चे आहेत. पुन: पुन्हा काम करणारी
     चक्री रचना (लूप), सशर्त रचना आणि मुलभूत अल्गोरिदम शिका. ३७ भाषांमध्ये उपलब्ध.'
-  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
-    animation projects. Note that headphones are recommended for this course. We will
-    use some existing sprites that support animations and show the code we need to
-    add to animate our characters. We'll also go over how to create our very own animation
-    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
-    for animation effects (similar to a flip-book animation) and the code behind it.
-    All instruction is contained within the Itch environment so there is no need to
-    be switching screens to follow along with the project.
+  tutorial_itchstop_longdescription: आपले स्वत:चे स्टॉप फ्रेम अॅनिमेशन प्रोजेक्ट्स
+    तयार करण्यासाठी आपण  Itch वापरणार आहोत. या अभ्यासक्रमासाठी हेडफोन्स आवश्यक आहेत,
+    याची नोंद घ्या. आपण अॅनिमेशनला सपोर्ट करणाऱ्या काही आकर्षक स्प्राईट्स वापरणार
+    आहोत आणि आपल्याला आपली पात्रे  अॅनिमेट करण्यासाठी लागणारा कोड दाखवणार आहोत. आपण
+    आपले स्वत:चे अॅनिमेशन इफेक्ट्स आणि चित्रे कशी तयार करायची, हेसुद्धा पाहणार आहोत.
+    अॅनिमेशन इफेक्टसाठी (फ्लिप-बुकसारखे  अॅनिमेशन) स्क्रॅचमधला स्प्राईट्स पोशाख वारंवार
+    कसा बदलायचा आणि त्यामागचा कोड आपण शिकणार आहोत. सर्व सूचना Itch मध्येच दिलेल्या
+    आहेत त्यामुळे प्रोजेक्ट करताना स्क्रीन बदलण्याची गरज नाही.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5212,30 +5209,30 @@ mr:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: 'तुम्हाला माहिती आहे का की क्लासिक अॅस्टेरॉईड्स
+    आणि ल्युनार लँडर गेम्सच्या  मागचा कोड तुम्हाला वाटतो त्यापेक्षा सोपा आहे? तुम्हाला
+    माहिती आहे का या दोन्ही गेम्समध्ये अचूक भौतिकशास्त्र आहे? या कृतीमध्ये तुम्ही
+    एक न चालणारा अॅस्टेरॉईड्स गेम दुरुस्त करणार आहात, ज्यामध्ये यान फक्त सरळ रेषेत
+    हालचाल करते. नंतर तुम्ही या खेळाला गुरुत्वाकर्षण जोडाल आणि हे यान चंद्रावर उतरवण्याचा
+    प्रयत्न कराल! क्रोमबुक्सवर आणि इतर डिव्हायसेसवर चालते! '
+  tutorial_stempong_longdescription: तुम्हाला माहिती आहे का की Bonk.io या लोकप्रिय
+    गेमच्या आणि क्लासिक पॉन्ग गेमच्या मागचा कोड तुम्हाला वाटतो त्यापेक्षा सोपा आहे?
+    तुम्हाला माहिती आहे का या दोन्ही गेम्समध्ये अचूक भौतिकशास्त्र आहे? या कृतीमध्ये
+    तुम्ही एक पॉन्ग गेमचे एक न चालणारे व्हर्जन दुरुस्त करणार आहात म्हणजे वस्तू जशा
+    उसळायला हव्यात तशा उसळतील. नंतर तुम्ही Bonk.io क्लोन करण्यासाठी त्याला गुरुत्वाकर्षण
+    जोडाल. क्रोमबुक्सवर आणि इतर डिव्हायसेसवर चालते!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'तुमच्या पत्त्यांच्या कॅटमधून एक पत्ता निवडा
+    आणि  जगभर फिरण्यासाठी त्याचा कोड समजून घ्या. नियमांचा अंदाज बांधण्यासाठी तुमचे
+    अंतर्ज्ञान वापरा आणि स्वत:च्या चुकांमधून शिका. कॉम्प्युट इट आणि सायलेंट टिचरच्या
+    टीमने त्याच मूलभूत तत्त्वांच्या आधारे काळजीपूर्वक बनवलेला: तपशीलवार स्पष्टीकरणांऐवजी
+    चुकांमधून शिका पद्धत, सुलभ प्रगती, कोड टाईप करणे आवश्यक नाही, अगदी नवशिक्यांसाठी
+    अॅक्सेसिबिलीटी.  '
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.
@@ -10006,9 +10003,10 @@ mr:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: Computer science is about so much more than
-    coding! Learn about AI, machine learning, training data, and bias, while exploring
-    ethical issues and how AI can be used to address world problems.
+  tutorial_ai-oceans_longdescription: संगणक शास्त्र म्हणजे कोडींग व्यतिरिक्त कितीतरी
+    गोष्टी! कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग डेटा आणि नैतिक समस्यांचा
+    विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी AI चा कसा वापर करता येईल,
+    याबद्दल शिका.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: मराठी
   tutorial_googlehero_language: English, Spanish

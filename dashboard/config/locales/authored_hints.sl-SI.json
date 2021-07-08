@@ -316,7 +316,7 @@
           "courseD_bee_conditionals_challenge1_a": "Najdi pot, ki doseže vsako rožico in satovje, ne da bi se čebelica zaletela v drevo. Najboljša pot je v obliki spirale.\n\n**To uganko lahko rešiš brez obračanja v levo.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Tako kot bloki \"če v cvetu\", bo tudi koda znotraj \"dokler nektar > 0\" delovala le, če je čebelica na cvetu. Glavne razlike so v tem, da se koda v notranjosti ponavlja, dokler ne zmanjka nektarja. Poskusite ta vzorec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Tako kot bloki \"če v cvetu\", bo tudi koda znotraj \"dokler nektar > 0\" delovala le, če je čebelica na cvetu. Glavne razlike so v tem, da se koda v notranjosti ponavlja, dokler ne zmanjka nektarja. Poskusite ta vzorec:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Izvirna koda bi delovala odlično - če bi bil v vsakem kupu samo en kos zaklada!"
@@ -345,7 +345,7 @@
           "courseE_artist_functions_challenge1_a": "Če pokličeš funkcijo še enkrat, lahko narišeš isti vzorec v preostalem kotu. Lahko dodaš tudi \"Skoči do\" drugih pozicij ali spremeniš vse, kar želiš!"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Začni tako, da se osredotočiš na zbiranje DVA dragulja iz vsakega od prvih dveh kupov.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUporabi te bloke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "Začni tako, da se osredotočiš na zbiranje DVA dragulja iz vsakega od prvih dveh kupov.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nUporabi te bloke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Gumb \"Zaženi\" ti lahko zelo pomaga v tem izzivu."

@@ -2,7 +2,7 @@
 title: கம்ப்யூட்டர் சயின்ஸ் கல்வி வாரம் மற்றும் Hour of Code க்கு ஆதரவான செய்தித்தாள் பக்க மாதிரி
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # Write an op-ed in support of Computer Science Education Week
 
@@ -44,4 +44,4 @@ According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million 
 
 This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
-{{signup_button}}
+{{ signup_button }}

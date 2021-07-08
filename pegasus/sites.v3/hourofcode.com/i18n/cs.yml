@@ -38,9 +38,9 @@ cs:
     Vybudujme budoucnost, jakou si přejeme. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: Hodina programování (#HourOfCode) je o Počítačové
     vědě pro dobro (#CSforGood). Učte se dnes, vybudujte zářnější zítřek.
-  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2020_global_movement: Hodina programování je celosvětové hnutí, do kterého
+    se zapojily desítky milionů student. Hodinové výukové kurzy jsou k dispozici ve
+    více než 45 jazycích a pro všechny věkové kategorie.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
   hoc2020_ai_subheader: "„Hodina programování 2020“ přichází!"
@@ -54,8 +54,8 @@ cs:
   hoc2019_header_line2_mobile: Změňte svět!
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
+  social_hoc2019_learn_computer_science: 'Uč se počítačovou vědu. Změň svět. #CSforGood
+    #HourOfCode'
   social_hoc_is_coming: The Hour of Code is coming!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
@@ -145,10 +145,10 @@ cs:
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: Uč se základní koncepce počítačových věd po boku speciálních
+    hostů! Studenti všech věkových kategorií a schopností, včetně studentů nemajících
+    počítače, jsou vítáni v naší virtuální dílně. Pokračujte v učení z domova  prostřednictvím
+    našich epizod Hodiny programování v přímém přenosu.
   hoc_live_join_us: Připojte se k nám
   hoc_live_learn_more: Learn more
   hoc_overview_oceans_tutorial_header: Umělá inteligence pro oceány
@@ -245,7 +245,7 @@ cs:
     žáků z více než 180 zemí světa. Kdokoliv může zorganizovat svoji akci v rámci
     Hodiny kódu. Jsou k dispozici jednohodinové výukové programy. Nejsou požadované
     žádné předchozí zkušenosti. <strong>Určeno pro věk od 4 do 104.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: Globální hnutí ve více než 180 zemích
   front_watch_video: Podívejte se na nové video
   front_watch_regular_video: Podívejte se na video
   front_volunteers: Hledáme technické dobrovolníky
@@ -470,13 +470,14 @@ cs:
   front_join_us_learn_more: Learn more
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  signup_registration_not_required: Jestliže se chcete zúčastnit, nemusíte se registrovat!
+    Aktivity hodiny programování jsou k dispozici po celý rok. <a href='%{hoc_activities_url}'>Zkuste
+    nějakou aktivitu</a> nebo si přečtěte našeho<a href='%{howto_guide_url}'>Návodného
+    průvodce</a> naplánováním akce pro Vaši třídu.
+  signup_registration_not_required_markdown: Jestliže se chcete zúčastnit, nemusíte
+    se registrovat! Aktivity hodiny programování jsou k dispozici po celý rok. [Zkuste
+    nějakou aktivitu](%{hoc_activities_url}) nebo si přečtěte našeho [Návodného průvodce](%{howto_guide_url})
+    naplánováním akce pro Vaši třídu.
   signup_registration_closed: A tak jako každý rok v prosinci se může i letos vaše
     třída přidat k milionům studentů po celém světě a oslavit Týden vzdělávání v informatice
     účastí na Hodině kódu. Registraci na tuto každoroční oslavu otevíráme už v říjnu.
@@ -553,9 +554,9 @@ cs:
   social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
     explore and build underwater worlds with code.
   social_hoc2018_what_create: Co vytvoříš?
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: Hodina programování je celosvětové hnutí, do kterého
+    se zapojily desítky milionů student. Hodinové výukové kurzy jsou k dispozici ve
+    více než 45 jazycích a pro všechny věkové kategorie.
   map_title: Mapa Hodiny kódu
   map_header: "# akcí Hodiny kódu na celém světě"
   map_header_count_year: "%{event_count} events registered in %{year}"
@@ -571,7 +572,7 @@ cs:
   map_warning: Mapa Hodiny kódu zobrazuje pouze prvních 200 000 registrovaných událostí.
     Všechny registrované události s platnou adresou lze zobrazit na <a href='%{events_url}'>
     stránce událostí.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: Kompletní seznam událostí lze zobrazit na [stránce událostí.](%{events_url})
   meta_tag_og_title: Hodina kódu se blíží
   meta_tag_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků z více než 180 zemí mluvících 30 jazyky, lidé ve věku od
@@ -590,13 +591,14 @@ cs:
   hoc_faq_what_is_hoc_a: Hodina kódu je hodinovým úvodem do informatiky, který má
     za cíl přiblížit programování a ukázat, že každý se může naučit jeho základy.
     <a href='%{codeorg_url}'> Podívejte se na kurzy</a>.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: Hodina programování začala jako hodinový úvod do
+    počítačové vědy navržený tak, aby demystifikoval „programování“, aby ukázal, že
+    základy se může naučit každý, a aby se rozšířila účast studentů na poli počítačových
+    věd. Od té doby se z toho stalo celosvětové úsilí oslavit počítačové vědy, počínaje
+    hodinovými programovacími aktivitami, avšak s tím, že dále se pokračuje komunitními
+    projety všeho druhu. Podívejte se na [výukové kurzy a aktivity](%{tutorials}).
+    Tuto kampaň podporuje přes [400 partnerů](%{partners}) a 200&nbsp;000 vzdělavatelů
+    po celém světě.
   hoc_faq_last_year: Vyzkoušejte kurzy
   hoc_faq_when_is_hoc_q: Kdy začne akce Hodina kódu?
   hoc_faq_when_is_hoc_a: Hodinu kódu může uspořádat kdykoliv a kdokoliv. Cílem kampaně
@@ -689,9 +691,9 @@ cs:
   hoc_faq_international_a: Kdokoliv může organizovat Hodinu kódu kdekoliv na světě.
     Minulý rok se pro Hodinu kódu spojili studenti celého světa. Více naleznete <a
     href='/promote'>zde</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: Pořádat hodinu programování může každý kdekoli
+    na světě. Poslední rok studenti na celém světě spojili na Hodinu programování.
+    Více si můžete zjistit [tady](%{promote}).
   hoc_faq_tutorial_q: Jak mohu udělat výukový kurz pro akci Hodina kódu?
   hoc_faq_tutorial_a: Pokud máte zájem se stát partnerem ve výuce, podívejte se na<a
     href='/tutorial-guidelines'>naše pokyny a instrukce</a>. Rádi bychom pořádali
@@ -734,10 +736,11 @@ cs:
     mohou používat aplikaci ScratchJR pro iPad. Pokud se podíváte na cvičení <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
     můžete najít další cvičení, která na iPad fungují (od Code.org, Tynker, Lightbot
     nebo CodeSpark).
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch nelze spouštět na tabletech. Jestliže jsou Vaši
+    studenti mladí, mohou používat aplikaci ScratchJR pro iPad (pro ty, kdo už umí
+    číst). Když se podíváte na výukové kurzy na [%{partner_url}/learn](%{codeorg_url}/learn),
+    najdete tam další výukové kurzy, které fungují na iPads - od Code.org, Tynker,
+    Lightbot, nebo CodeSpark.
   hoc_faq_count_hoc_q: Jak počítáte hodiny kódu?
   hoc_faq_map_q: Proč nevidím svoji tečku na mapě?
   hoc_faq_map_a: Je nám líto, že nevidíte vaší událost v mapě Hodiny kódu. Kvůli desítkám
@@ -786,7 +789,7 @@ cs:
   hoc_faq_more_questions_q: Máte ještě další otázky?
   hoc_faq_more_questions_a: Zkuste najít odpověď na našem <a href='http://support.code.org'>fóru
     pro podporu</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: Pokuste se najít odpověď v našem [fóru podpory](http://support.code.org).
   hoc_faq_keep_learning_q: Jak mohu pokračovat se svým učením po hodině kódu?
   hoc_faq_keep_learning_a: Kdykoliv a kdokoliv může pořádat Hodinu kódu. Kurzy zůstávají
     po celý rok. Můžete očekávat, že všechny naše kurzy a výuky budou k dispozici
@@ -804,11 +807,11 @@ cs:
     kde můžete předem vytisknout certifikáty pro celou třídu. Dále můžete vytisknout
     [speciální certifikáty](%{codeorg_url}/certificates?course=mc) pro studenty vykonávající
     výukový kurz Minecraft.
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or
-    name?
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
+  hoc_faq_logo_q: Jsou nějaká omezení toho, jak mohu používat logo nebo název Hodiny
+    programování?
+  hoc_faq_logo_a: "„Hodina programování“ je chráněnou obchodní známkou. Nechceme zamezit
+    jejímu užívání, ale chceme zajistit, aby toto užívání zůstalo v určitých mezích.
+    Viz prosím <a href='%{logo_url}'>tyto směrnice užívání</a>."
   hoc_faq_logo_a_markdown: "„Hodina programování“ je chráněnou obchodní známkou. Nechceme
     zamezit tomuto užívání, ale chceme zajistit, aby toto užívání zůstalo v určitých
     mezích. Viz prosím [tyto směrnice užívání](%{logo_url})."
@@ -823,8 +826,8 @@ cs:
   stats_hoc: 'Hodina Kódu: 5 dnů'
   stats_global: Přes 100M studentů zkusilo Hodinu kódu
   stats_girls_more: Informatiku si vyzkoušelo více dívek než za posledních 70 let
-  stats_females: Participation of female students in computer science is only 20-25%
-    of high school courses, university courses, and the workforce.
+  stats_females: Účast studentek na docházce do výuky počítačových věd při středoškolských
+    a vysokoškolských kurzech a vzdělávání pracovní síly je jen 20-25 %.
   stats_females_more: During the Hour of Code, female students make up <b>50% of all
     participants</b>!
   stats_females_more_markdown: During the Hour of Code, female students make up **50%
@@ -912,9 +915,9 @@ cs:
   event: událost
   events: akce
   highlights_title: Highlights
-  highlights_header: Hour of Code Highlights
-  highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  highlights_previous: Highlights from previous years
+  highlights_header: Hlavní body Hodiny programování
+  highlights_description: Několik našich oblíbených momentů z kampaně Hodina programování.
+  highlights_previous: Hlavní body z předchozích let
   highlights_see_more: See more highlights
   highlights_readmore: Read more
   highlights_watchvideo: Podívejte se na video
@@ -922,8 +925,9 @@ cs:
   highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted
     an Hour of Code with the entire staff at The Honest Company.
   highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
-  highlights_constant_obama_heading: President Obama is the first president to write
-    a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_heading: Prezident Obama je prvním prezidentem, který
+    kdy napsal řádek kódu, když pořádal historickou Hodinu programování pro studenty
+    v Bílém domě.
   highlights_constant_obama_short_heading: Coder in Chief
   highlights_constant_malala_heading: '"Every girl deserves to take part in creating
     the technology that''ll change our world, and change who runs it."'
@@ -5560,11 +5564,11 @@ cs:
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
-    the students will become engineers, learning the steps of the Engineering Design
-    Process. They will create models out of craft and recycled materials, then they
-    will test the sturdiness of their models by dropping them from ankle height. This
-    is an unplugged activity; KIBO robots are optional.
+  tutorial_kibodrop_longdescription: Konstruktérství je o vytrvalosti a dřině. Dnes
+    se studenti stanou konstruktéry. Naučí se jednotlivé kroky procesu konstrukčního
+    návrhu. Budou vytvářet modely z řemeslných a recyklovaných materiálů a testovat
+    jejich odolnost jejich upouštěním z výšky kotníku. Toto je offline aktivita; Roboti
+    KIBO nejsou nezbytní.
   tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
     of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
     for the bot to follow.

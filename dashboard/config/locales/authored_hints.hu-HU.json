@@ -336,7 +336,7 @@
           "challenges": "**Választható feladat**\n\n-   Érd el, hogy valamely táncos reagáljon a bal és jobb nyílgomb megnyomására."
         },
         "Dance_2019_04": {
-          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint 8 ütem után ér véget._"
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint a 7. ütem után ér véget._"
         },
         "Dance_2019_05": {
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.\n\n_A szint 12 ütem után ér véget._",
@@ -361,10 +361,10 @@
         },
         "Dance_Party_01": {
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.\n\n_Ez a szint 4 ütem után ér véget._",
-          "challenges": "**Választható feladatok**\n\n-   Válassz másik dalt a lejátszáshoz.\n-   Válassz másikat, ami úgy néz ki, mint egy jávorszarvas!\n-   Nevezd át a táncosodat."
+          "challenges": "**Választható feladatok**\n\n-   Válassz másik dalt a lejátszáshoz.\n-   Nevezd át a táncosodat."
         },
         "Dance_Party_02": {
-          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint 8 ütem után ér véget._"
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint a 7. ütem után ér véget._"
         },
         "Dance_Party_03": {
           "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.\n\n_A szint 12 ütem után ér véget._"
@@ -1852,7 +1852,7 @@
           "Course_4_Artist_Inspire_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\">\n            <title name=\"VAR\">sides</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">4</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">length</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">200</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">sides</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">sides</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">sides</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                            <value name=\"TIMES\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">sides</title>\n                              </block>\n                            </value>\n                            <statement name=\"DO\">\n                              <block type=\"draw_move\" inline=\"true\">\n                                <title name=\"DIR\">moveForward</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_turn\" inline=\"true\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                        <title name=\"OP\">DIVIDE</title>\n                                        <value name=\"A\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">360</title>\n                                          </block>\n                                        </value>\n                                        <value name=\"B\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">sides</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </next>\n                              </block>\n                            </statement>\n                            <next>\n                              <block type=\"jump\" inline=\"true\">\n                                <title name=\"DIR\">jumpForward</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                    <title name=\"OP\">DIVIDE</title>\n                                    <value name=\"A\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">length</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"B\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">2</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_turn\" inline=\"true\">\n                                    <title name=\"DIR\">turnLeft</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                        <title name=\"OP\">DIVIDE</title>\n                                        <value name=\"A\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">360</title>\n                                          </block>\n                                        </value>\n                                        <value name=\"B\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">sides</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                    <title name=\"OP\">DIVIDE</title>\n                                    <value name=\"A\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">360</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"B\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">sides</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "Course 4 SCF 1a": {
-          "Course_4_SCF_1a_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\" uservisible=\"false\" y=\"14\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\" uservisible=\"false\">\n        <title name=\"VAR\">left</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\" uservisible=\"false\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\" uservisible=\"false\">\n            <title name=\"VAR\">right</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\" uservisible=\"false\">\n                <title name=\"NUM\">0</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">21</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_if\">\n                <title name=\"DIR\">isPathLeft</title>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"get nectar\">\n                    <arg name=\"dir\"></arg>\n                    <arg name=\"counter\"></arg>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">left</title>\n                      </block>\n                    </value>\n                    <value name=\"ARG1\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_if\">\n                                <title name=\"DIR\">isPathRight</title>\n                                <statement name=\"DO\">\n                                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                    <mutation name=\"get nectar\">\n                                    <arg name=\"dir\"></arg>\n                                    <arg name=\"counter\"></arg>\n                                    </mutation>\n                                    <value name=\"ARG0\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">right</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"ARG1\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">counter</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n    <arg name=\"dir\"></arg>\n    <arg name=\"counter\"></arg>\n    </mutation>\n    <title name=\"NAME\">get nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_if\" inline=\"false\">\n      <mutation else=\"1\"></mutation>\n        <value name=\"IF0\">\n          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n            <title name=\"OP\">EQ</title>\n            <value name=\"A\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">dir</title>\n              </block>\n            </value>\n            <value name=\"B\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">left</title>\n              </block>\n            </value>\n          </block>\n        </value>\n        <statement name=\"DO0\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                <block type=\"maze_nectar\"></block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"controls_if\" inline=\"false\">\n                      <mutation else=\"1\"></mutation>\n                        <value name=\"IF0\">\n                          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n                            <title name=\"OP\">EQ</title>\n                            <value name=\"A\">\n                              <block type=\"parameters_get\">\n                                <title name=\"VAR\">dir</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">left</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <statement name=\"DO0\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </statement>\n                        <statement name=\"ELSE\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                          </block>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
+          "Course_4_SCF_1a_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">21</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_if\">\n                <title name=\"DIR\">isPathLeft</title>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"get nectar\">\n                    <arg name=\"dir\"></arg>\n                    <arg name=\"counter\"></arg>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">left</title>\n                      </block>\n                    </value>\n                    <value name=\"ARG1\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_if\">\n                                <title name=\"DIR\">isPathRight</title>\n                                <statement name=\"DO\">\n                                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                    <mutation name=\"get nectar\">\n                                    <arg name=\"dir\"></arg>\n                                    <arg name=\"counter\"></arg>\n                                    </mutation>\n                                    <value name=\"ARG0\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">right</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"ARG1\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">counter</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n    <arg name=\"dir\"></arg>\n    <arg name=\"counter\"></arg>\n    </mutation>\n    <title name=\"NAME\">get nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_if\" inline=\"false\">\n      <mutation else=\"1\"></mutation>\n        <value name=\"IF0\">\n          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n            <title name=\"OP\">EQ</title>\n            <value name=\"A\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">dir</title>\n              </block>\n            </value>\n            <value name=\"B\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">left</title>\n              </block>\n            </value>\n          </block>\n        </value>\n        <statement name=\"DO0\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                <block type=\"maze_nectar\"></block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"controls_if\" inline=\"false\">\n                      <mutation else=\"1\"></mutation>\n                        <value name=\"IF0\">\n                          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n                            <title name=\"OP\">EQ</title>\n                            <value name=\"A\">\n                              <block type=\"parameters_get\">\n                                <title name=\"VAR\">dir</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">left</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <statement name=\"DO0\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </statement>\n                        <statement name=\"ELSE\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                          </block>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "Course 4 SCF 1b": {
           "Course_4_SCF_1b_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"make honey up and over\"></mutation>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <next>\n                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                            <value name=\"TIMES\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <statement name=\"DO\">\n                              <block type=\"maze_move\">\n                                <title name=\"DIR\">moveForward</title>\n                              </block>\n                            </statement>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n  <mutation></mutation>\n    <title name=\"NAME\">make honey up and over</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_move\">\n        <title name=\"DIR\">moveForward</title>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_honey\">\n                    <next>\n                      <block type=\"maze_honey\">\n                        <next>\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveBackward</title>\n                            <next>\n                              <block type=\"maze_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <next>\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveBackward</title>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
@@ -3024,6 +3024,684 @@
         },
         "courseD_maze_ramp7": {
           "courseD_maze_ramp7_b": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   Gondoskodj róla, hogy egy táncos megjelenjen a képernyőn.\n\n_Ez a szint 4 ütem után ér véget._",
+          "challenges": "**Választható feladatok**\n\n-   Válassz másik lejátszandó dalt.\n-   Mozgasd a táncosodat egy új helyre.\n-   Hozz létre egynél több táncost."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   A táncosnak végre kell hajtania egy mozdulatot.\n-   Meg kell nyomnod egy nyíl gombot.\n\n_Ez a szint 4 ütem után ér véget._",
+          "challenges": "**Választható feladat**\n\n-   Használj egynél több <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> blokkot."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   Mindkét táncosnak végre kell hajtania egy mozdulatot.\n-   Meg kell nyomnod a nyíl gombokat.\n\n_Ez a szint 4 ütem után ér véget._",
+          "challenges": "**Választható feladat**\n\n-   Érd el, hogy valamely táncos reagáljon a bal és jobb nyílgomb megnyomására."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   A táncosnak 4 ütem után új mozdulatra kell váltania.\n\n_A szint a 7. ütem után ér véget._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Hogyan csinálhatom meg ezt a szintet?**\n\n-   6 ütem után a táncosodnak másfajta táncot kell járnia, mint amit 4 ütem után járt.\n\n_A szint 12 ütem után ér véget._",
+          "challenges": "**Választható feladat**\n\n-   Változtasd meg a hátteret minden alkalommal, amikor a táncosok mozdulatot váltanak."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   Hozz létre egy vezető táncost, és egy csoport háttértáncost.\n\n_Ez a szint 7 ütem után ér véget._",
+          "challenges": "**Választható feladat**\n\n-   Hozz létre több csoport háttértáncost."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   Változtasd meg legalább egy táncos méretét miután a zene elindul.\n\n_Ez a szint 6 ütem után ér véget._",
+          "challenges": "**Választható feladat**\n\n-   Kísérletezz más tulajdonságok (szélesség, magasság, forgás stb.) módosításával"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   Változtasd meg legalább egy táncos színárnyalatát.\n\n_Ez a szint 6 ütem után ér véget._",
+          "tint_hint": "Észrevetted, hogy a táncosaid nem pontosan a kiválasztott színre változnak? Ennek az az oka, hogy a **színárnyalatok** a kiválasztott színt a táncos színeivel keverik össze."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Hogyan teljesíthetem ezt a szintet?**\n\n-   Csak nyomd meg a „Befejezés” gombot!",
+          "repeat_every_ideas": "**Ötletekre van szükséged?**\n\n-   Változtasd meg többször is egy táncos méretét, mintha nőne.\n-   Változtasd meg többször is egy táncos elfordulását, hogy forogjon.\n-   Változtasd meg többször is egy táncos vízszintes és függőleges helyzetét, hogy mozogjon a képernyőn.\n\n_Negatív számokat is használhatsz ellentétes hatás eléréséhez!_",
+          "next_previous": "**Választható feladat**\n\n-   Ezt az új eseményblokkot arra is felhasználhatod, hogy végighaladj a táncmozdulatok egy listáján, ha a mozgást úgy állítod be, hogy `(Véletlenszerű)`, `(Következő)`, vagy `(Előző)` legyen.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "A \"váltakozik\" blokk a \"Táncosok\" kategóriában található."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Látod a **Tengeri lámpásokat** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hogyan tudsz feltételt használni velük kapcsolatban, hogy átjuss a Víz alatti templomon?"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Micsoda gyönyörű korallzátony! A kék korall jelzi a **jobb** utat, de nehogy **balszerencsét** hozzon az itt hagyott vörös korall!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "A programodon belül többször is meghívhatsz egy függvényt.  A kirakós megoldásához próbáld kétszer meghívni."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Húzz egy \"mozgás előre\" blokkot az eszköztárból a munkaterületre, és illeszd a helyére az \"amikor fut\" blokk mögé.",
+          "MC_HOC_2017_01_RETRY_b": "Ne feledd megnyomni a \"Futtatás\" gombot az Agent kódjának futtatásához.",
+          "MC_HOC_2017_01_RETRY_c": "Miután az Agent futtatta az összes kódját, a játékost a nyílgombokkal mozgathatod."
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Vidd előre az Agentet két hellyel, hogy a nyomólapra kerüljön. Ezzel kinyitod az ajtót a játékosnak.",
+          "MC_HOC_2017_02_Cole_b": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
+          "MC_HOC_2017_02_Cole_c": "Miután az Agent kinyitotta az ajtót, a nyílgombokkal mozgathatod a játékost a térképen."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Miután az Agentet a nyomólapra vitted, a nyílgombokkal a játékost az iránytűhöz irányíthatod.",
+          "MC_HOC_2017_03_Cole_b": "Úgy érzed, túl sokáig tart a kódolás?  Próbáld ki az \"ismétlés\" ciklust, és találd ki, hogyan rövidítheted le a folyamatot!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Az Agent irányának módosításához használd a \"fordulás jobbra\" blokkot ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Az Agentnek csak az első nyomólapra kell eljutnia ahhoz, hogy keresztülengedje a baltához Alexet vagy Steve-et."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Az Agentnek 7-szer kell \"mozgás előre\" parancsot végrehajtania.  Hogyan használhatsz egy \"ismétlés\" ciklust ennek programozásához?",
+          "MC_HOC_2017_04_Cole_c": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
+          "MC_HOC_2017_04_Cole_b": "Amikor az Agent eljut a nyomólapra, kinyitja az ajtót a játékos előtt."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Tudtad, hogy egy ciklusba több kóddarabot is helyezhetsz?  A kirakós megoldásához próbálj egy deszkát elhelyezni **és** előremenni egy \"ismétlés\" ciklusban."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hányszor fut ez a ciklus?  És hányszor _kellene_ futnia?"
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "A kirakós megoldásához találd ki, hogy mit csinál az \"út szabaddá tétele\" függvény, és hívd meg annyiszor, amennyiszer szükséges az eszköztár kis zöld \"út szabaddá tétele\" blokkjával.",
+          "MC_HOC_2017_07_Cole_b": "A kirakós megoldásához próbáld keverni a függvénykblokkokat az eszköztár más blokkjaival."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "A kirakós megoldásának megkönnyítéséhez használd a függvényeket!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Nyomd meg a \"Futtatás\" gombot. \nA kódot akkor is futtathatod, ha nem helyes.  Futtasd és állítsd vissza a kódot újra és újra, amíg rá nem jössz a hibájára.",
+          "MC_HOC_2017_08_RY_b": "Ezt a kirakóst RENGETEG módon meg lehet oldani.  Próbálj ki néhányat!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Próbálj az Agenttel hidakat építtetni, hogy Alex vagy Steve túl tudjanak jutni a térkép szélein."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Underground Iron_2021": {
+          "mc_10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "Nem jössz rá, hogyan rajzolj vonalat? Próbáld csatlakoztatni a blokkot a <xml><block type=\"when_run\"/></xml>  blokkhoz, és nézd meg, mi történik.",
+          "courseA_artist_loops2_b": "Használd a <xml><block type=\"simple_move_right\"/></xml> blokkot, hogy megoldd a feladványt."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "Kövesd az ujjaddal a programot, hogy lásd, hol a hiba.",
+          "courseA_artist_loops3_b": "Ilyen blokkot használj, hogy megoldd ezt a feladványt.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején.",
+          "courseA_artist_loops4_b": "Mivel csak egy <xml><block type=\"simple_move_right\"/></xml> blokkot használhatsz, próbáld meg beletenni egy <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> ciklusba."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "Használd azt, amit eddig tanultál a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkokról, hogy megoldd ezt a feladványt!",
+          "courseA_artist_loops5_b": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején.",
+          "courseA_artist_loops5_c": "Mivel csak egy <xml><block type=\"simple_move_right\"/></xml> blokkot használhatsz, próbáld meg beletenni egy \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nciklusba."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "Nem tudod, hogyan csinálj hegyet? Próbálj játszani a blokkokkal egy kicsit, és meglátod, hogy melyik mit rajzol.",
+          "courseA_artist_loops6_b": "Két blokkra van szükséged, ami két különböző irányba mutat - így tudod megoldani ezt a feladványt."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát.",
+          "courseA_artist_loops7_b": "Először egyetlen hullámhoz írj kódot, aztán ismételd meg, hogy kirajzolja a másik kettőt is.",
+          "courseA_artist_loops7_c": "Emlékezz rá, hogy egynél több blokkot is tehetsz egy <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> ciklusba."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "Próbáld lefuttatni a kódot, hogy lásd, mit írtunk le eddig.",
+          "courseA_artist_loops8_b": "Hogyan tudnád ciklusba tenni a kódot, amit megadtunk neked?",
+          "courseA_artist_loops8_c": "Mit csinál a kód?\\\nMit kellene csinálnia?\\\nMit mondd ez a számodra?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "Adj egy másik blokkot a megadott kódhoz, hogy megrajzold a lépcső folytatását.",
+          "courseA_artist_loops9_b": "A blokk, amit megadsz, a\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\n ciklus belsejébe kell, hogy kerüljön.",
+          "courseA_artist_loops9_c": "Ha nem tudod kitalálni, hogy hová tegyél ciklust, próbáld leírni a kódot lépésről lépésre és keress mintákat, ismétlődéseket."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "<xml>  <block type=\"simple_move_up_left\"/></xml> - az ilyen blokkokkal a művész ferde vonalakat tud rajzolni!",
+          "courseA_artist_loops_challenge2_b": "Mikor elkészültél egy sátorral, használd az \"Ugorj\" parancsot kétszer, hogy el tudd kezdeni a következő sátrat!",
+          "courseA_artist_loops_challenge2_c": "A blokkjaidat tedd be egy ciklusba, hogy megoldd a feladványt."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Miután egy olyan területre értél, ahol kincs van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Egy egyszerű megoldás lehet, ha keletre mész 2-szer, aztán felveszed a kincset."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "El kell mozdulnod, mielőtt kincset gyűjtenél.",
+          "courseA_collector_loops2_b": "Miután egy olyan területre értél, ahol kincs van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Próbáld ezt használni\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklus!",
+          "courseA_collector_loops3_b": "Emlékezz rá, hogy egynél több blokkot is tehetsz egy <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklusba."
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Ha ki akarod javítani, hogy Laurel meddig jusson el, cseréld ki az ciklusban a számot.",
+          "courseA_collector_loops4_b": "Ne felejtsd el, hogy Laurelnek lefelé kell sétálnia, és be kell gyűjtenie a kincset, miután befejezte a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklust!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Ha nem tudod kitalálni, mi a helyes út, próbálj használni egy darab papírt, hogy kitaláld, melyik nyilakra lesz szükséged a megoldáshoz.",
+          "courseA_collector_loops5_b": "Próbáld két részre osztani a feladványt, először oldalra, aztán lefelé mozogva.",
+          "courseA_collector_loops5_c": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklussal kezdd, hogy Laurel nyugat felé mozduljon és összegyűjtse a kincset."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseA_collector_loops6_b": "A legrövidebb megoldásban 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklus van, egyik a másik után."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Ha nem tudod kitalálni, mi jön ezután, próbáld meg futtatni a kódot, hogy lásd, meddig jut el Laurel."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra és találd meg a mintát.",
+          "courseA_collector_loops8_b": "Próbáld 3 részre osztani ezt a feladványt, és mindegyikhez írj egy ciklust.",
+          "courseA_collector_loops8_c": "Emlékezz arra, hogy a kód egy darabját is elkészítheted, aztán nyomd meg a \"Futtatás\" gombot, hogy kitaláld, hogyan is kell tovább lépned."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Ha nem jössz rá elsőre, hogy hol használj ciklusokat, próbáld meg lépésről-lépésre, és látni fogod az ismétlődést. ",
+          "courseA_collector_loops9_b": "Próbálj tenni 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ciklust egy másik ciklusba, ezzel le tudod rövidíteni a kódodat!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Próbáld megváltoztatni a számot minden ciklusban, ha valami hibásnak tűnik.",
+          "courseA_collector_loops_challenge1_b": "Nem kell ciklust használnod, ha csak egyszer akarsz valamit végrehajtani.",
+          "courseA_collector_loops_challenge1_c": "Kezdetben 6 gyémánt van a barlang jobb oldalán, de amikor majd elindulsz dél felé, csak ötöt kell összegyűjtened. Tudod, hogy miért?",
+          "courseA_collector_loops_challenge1_d": "A kezdésként megadott program az utolsó 2 gyémántot nem gyűjti be. Próbáld hozzáadni a kód legvégéhez ezt:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Próbáld meg ezt az utat bejárni.",
+          "courseA_collector_loops_challenge2kp_a": "Tudsz ciklust használni, hogy megoldd ezt a feladványt?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Ha elakadnál, próbáld meg 2 részben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik."
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_b": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra."
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "Ha problémád lenne, először próbáld meg leírni a lépéseket egy darab papírra.",
+          "courseA_maze_seq10_b": "3 különböző irányba kell menned, hogy megoldd ezt a feladványt."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "Ha nem tiszta az út előtted, használd az ujjaidat, hogy megszámold, hány lépésből juthat el a madár a malacig.",
+          "courseA_maze_seq13_b": "Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni, és futtasd a kódot, hogy lásd, mi történik."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>\n  <block type=\"when_run\"/>\n</xml> alatt",
+          "courseA_maze_seq1_b": "A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!",
+          "courseA_maze_seq5_b": "2 blokkra van szükséged, ami 2 irányba mutat."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "A végső kódodnak 3 mozgásos blokkból kell állnia.",
+          "courseA_maze_seq6_b": "Ha elakadnál, próbáld meg 2 részben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik."
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "A végső kódodnak 3 mozgásos blokkból kell állnia.",
+          "courseA_maze_seq6_b": "Ha elakadnál, próbáld meg 2 részben megoldani a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik."
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "Van 1 blokk, amit hozzá kell adnod, hogy a madár eljusson a malacig.",
+          "courseA_maze_seq7_b": "Ha nem tudod kitalálni, mit kell tenned, próbáld meg lerajzolni a feladványt papírra, és használd az ujjaidat, hogy megtaláld, merre is kell menned."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Ha elakadtál, próbáld meg lerajzolni a képet egy lapra, hogy lásd, a madárnak merre is kellene mennie."
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "Ha elakadtál, próbáld meg lerajzolni a képet egy lapra, hogy lásd, a madárnak merre is kellene mennie."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Két megoldása van ennek a feladványnak."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Próbáld megszámolni az ujjaiddal a lépéseket. Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "Keress egy blokkot, amivel a kutya tud mondani valamit.",
+          "courseA_playLab_events2_b": "Ez a kód kell, hogy teljesítsd a feladványt:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Fogd meg a <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> blokkot és csatold a <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> blokk aljához",
+          "courseA_playLab_events3_b": "Emlékezz rá, hogy használhatod a balra nyíl billentyűt a Jorge mozgásához, miután megírtad a programodat. Amikor a zászló zöldre változik, már végeztél is!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "Ez az esemény blokk, amire szükséged van ahhoz, hogy Jorge jobbra mozduljon:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "Erre a kódra van szükséged, hogy teljesítsd a feladványt:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "Itt vannak az események blokkok, amikre szükséged van, hogy Jorge felfelé és lefelé mozogjon:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nés \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Tudtad, hogy megváltoztathatod az esemény nyílra kattintva az irányt? \n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "Itt van az az esemény blokk, amit használni kellene, hogy Jorge csináljon valamit, ha rákattintasz:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "Ezzel a blokkal tudod megváltoztatni a hátteret:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "Itt van a blokk, amit használnod kell egy véletlen hang lejátszásához:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Használd ezt a blokkot, hogy irányítsd, mi történjen, amikor a szereplők összeütköznek.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Waddles, a pingvin előbújik, ha Robinra kattintasz.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Boo, a szellem akkor jelenik meg, ha rákattintasz Waddlesre!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Jayden, a bolyhos szörny akkor jön elő, ha rákattintasz Boo-ra!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Spiff, a Robot megjelenik, ha rákattintasz a szörnyre!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Végül hívd elő Wendelt, a varázslót, Spiffre kattintva!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "A madarat ráveheted, hogy énekeljen.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "A robot berregni fog.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "A morcos szörny morogni fog.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Ha azt akarod, hogy a ciklus négynél többször lefusson, változtasd meg a számot a blokk tetején."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_c": "Nem tudod kitalálni, hogy hová tegyél ciklust? Próbáld lépésről-lépésre megírni a kódot, és keress benne ismétlődést, mintát."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "El kell mozdulnod, mielőtt kincset gyűjtenél."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_b": "Ha ki akarod javítani, hogy Laurel meddig jusson el, cseréld ki az ciklusban a számot."
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Ha valami nem sikerül elsőre, próbáld meg a hibajavítást. Ne add fel!",
+          "courseB_collector_loops_challenge2a_b": "Nézd meg ezt a lehetséges útvonalat, ami kivezet a labirintusból. Látsz olyan utasításokat, amelyek egy mintát követnek, és berakhatók egy ismétlésbe?",
+          "courseB_collector_loops_challenge2a_c": "Hogy összegyűjtsd az összes kincset vagy két <xml> <block type=\"collector_collect\"/></xml> blokkot kell tenned egy ciklus belsejébe, vagy tedd egyet tegyél egy `ismételd` blokkba."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Használd ezt az új blokkot!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "A kód ismétléséhez, fogd az ismétlés <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>ciklust, és tedd bele a blokkot amit szeretnél."
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_b": "BB-8 felszedi a fémdarabot, amint fölé gördül."
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_b": "BB-8 felszedi a fémdarabot, amint fölé gördül."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "Ez az első blokk, amire szükséged lesz:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "Használd ezt a blokkot, hogy matricát rajzolj!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_b": "Kattints a számra az 'ismételd' ciklus tetején, hogy megváltoztasd azt, hogy hányszor ismételjen a ciklus."
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "Használd ezt a blokkot, hogy előre ugorj:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nNe felejtsd el beállítani a mértékét!"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "Használd ezt a blokkot, hogy beállítsd a vonalad mintázatát:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "Hogy a fenti mintához hasonlót csinálj, ugyanannyit kell visszafelé menned, mint amennyit előre mész. "
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "Ha használod a 'lépj előre 100 pixelt' blokkot, automatikusan rajzolok egy vonalat.",
+          "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a 'fordulj jobbra 90 fokot' blokkot!"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
+          "courseC_artist_prog3_b": "Akarsz egy rövidebb kódot? Próbáld ki a ciklust ebben a feladatban!"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Hogy befejezd a rakétát, csak rajzolj egy háromszöget a tetejére!",
+          "courseC_artist_prog4_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog4_c": "Hogy egy háromszöget megrajzold, a következőt tedd:\n\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
+          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog5_c": "Használhatod a blokkok legördülő menüit, így megváltoztathatod a tulajdonságaikat.",
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "A művész már a megfelelő irányban áll, hogy elkezdje megrajzolni az első vonalat.",
+          "courseC_artist_prog6_b": "A gyémánt valójában egy négyzet, ami az egyik sarkán áll.",
+          "courseC_artist_prog6_c": "Mivel a gyémánt is egy négyzet, a sarkoknál ugyancsak 90 fokot kell fordulni."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
+          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
+          "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!",
+          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Megrajzolhatod úgy, hogy egy téglalapot készítesz, aminek a közepére egy vonalat húzol, de rajzolhatsz két négyzetet is egymás mellé."
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Az első vonal után fordulj balra, utána jöhet a második vonal.",
+          "courseC_artist_prog_challenge2_b": "A második vonal után fordulj jobbra, és húzdf meg a harmadik vonalat."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Ha olyan helyen állsz, ahol kincs van, használd a <xml><block type=\"collector_collect\"/></xml> blokkot, hogy felszedd.",
+          "courseC_collector_prog1_b": "A legegyszerább megoldáshoz lépj egyet előre, és gyűjtsd be a kincset."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "Négy <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blokkot használhatsz, vagy beleteheted egy <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blokkba, így a programod rövidebb lesz.",
+          "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "A program csak azokat a blokkokat hajtja végre, amiket a <xml><block type=\"when_run\"/></xml> blokkhoz csatoltál.",
+          "courseC_collector_prog3_b": "Próbáld a \"Lépés\" gombbal soronként lefuttatni a kódot. Látod már, hogy hol megy félre a dolog?",
+          "courseC_collector_prog3_c": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_collector_prog4_c": "Próbáld követni ezt az útvonalat."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
+          "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
+          "courseC_collector_prog5_c": "Ha elakadsz, próbáld meg egy papírra leírni a lépéseket.",
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
+          "courseC_collector_prog6_b": "Elakadtál? Próbáld ezt az ösvényt követni a kincsek összegyűjtéséhez."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "Már több remek kód ott van a munkaterületen. Nem kell törölnöd őket, hogy megoldd a feladványt.",
+          "courseC_collector_prog7_b": "Nem látod azt a blokkot a munkaterületen, amire szükséged van ahhoz, hogy a kincskeresőnk a megfelelő irányba forduljon? Húzz ki egyet az eszköztárból!",
+          "courseC_collector_prog7_c": "Gondban vagy, hogy milyen úton indulj el a kincsekért? Próbáld ezt az utat!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Egynél több `begyűjtés` blokkot is használhatsz minden egyes helyen.",
+          "courseC_collector_prog_challenge1_b": "Elvesztél? Próbáld követni ezt az ösvényt, hogy megoldd a feladványt!"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging1_b": "Egy blokkot hozzá kell adnod, hogy teljesítsd a feladatot."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "Több értékes kód található a munkaterületen. Nézd át, és próbáld meg javítani a kódot, ahelyett, hogy egyből kitörölnéd az egészet!",
+          "courseC_maze_debugging2_b": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "Ahhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Használd a \"Lépés\" gombot, hogy egyesével lefuttasd a parancsokat. Ez segít neked megtalálni a hibás sort?",
+          "courseC_maze_debugging4_b": "Az egyik elfordulás miatt a motkány rossz irányba fordul. Kitalálod, hogy melyik az?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Több hasznos kód már ott van a munkaterületen. Ne töröld ki mindet!\n\nHasználd a \"Lépés\" gombot, hogy végigmenj rajtuk, és rájöjj, hol romlik el a dolog!",
+          "courseC_maze_debugging5_c": "Megváltoztathatod az irányát az elfordulásnak, ha lenyitod a blokk menüjét.",
+          "courseC_maze_debugging5_b": "Mondd ki akár hangosan, hogy mit csináljon a motkány! Ez ugyanaz, mint amit a kódban látsz? Hol a hiba?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Mit kellene tennie a motkánynak?\n-   Mit csinál a motkány?\n-   Mit mond mindez neked?",
+          "courseC_maze_debugging6_b": "Ha megtaláltad és kijavítottad az első hibát, menj végig a hibakeresési lépéseken újra, és találd meg a második hibát.\n\nIsmételd ezt addig, amíg a programod tökéletes lesz!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Minden működik az első lépésnél?\n-   Mi a helyzet a második után?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging7_b": "Ne feledkezz meg a \"Lépés\" gomb használatáról, így a programot soronként tudod lefuttatni!",
+          "courseC_maze_debugging7_c": "Miután megtaláltad és kijavítottad az első hibát, használd magabiztosan a hibakeresési lépéset, hogy megtaláld a következő hibát.\n\nIsmételd ezt addig, amíg a programod működni fog!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Balra vagy jobbra? Tőled függ!",
+          "courseC_maze_debugging_challenge1_b": "A motkány útvonala valójában egy téglalap! Ugyanúgy kell fordulnia minden alkalommal.",
+          "courseC_maze_debugging_challenge1_c": "Ha elakadtál, bármikor újra kezdheted, és próbálkozhatsz egy másik módszerrel!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Ha elakadtál, próbáld kijavítani a kódban a hibát. Hol lehet a hiba?",
+          "courseC_maze_debugging_challenge2_c": "Két különböző utat követhetsz csak előrefelé haladva és elfordulva négyszer. Ha megtalálod az egyik utat a ciklushoz, meg fogod találni a másikat is!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Hogy használni tudd az <xml><block type=\"maze_moveForward\"/></xml> blokkot, húzd az eszköztárból a <xml><block type=\"when_run\"/></xml> után, és csatold össze őket.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindegyik blokkot tökéletesen hozzácsatoltad a másikoz, és kattints újra a \"Futtatás\" gombra!"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Először próbáld futtatni a kódot, hogy lásd, hol romlik el a dolog.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Ne felejtsd el, hogy amikor elfordulsz, akkor a _madár szemszögéből_ nézd az elfordulást. Ha jobbra fordulsz, a madár lefelé indul el.",
+          "courseC_maze_programming4_b": "Kövesd az utat:\n\n-   lépj előre\n-   fordulj el a megfelelő irányba\n-   lépj előre\n-   fordulj a másik irányba, hogy újra a megfelelő irányba nézz\n-   lépj előre"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "A madárnak el kell fordulnia, hogy a feladványt teljesítsd. Kitalálod, hogy merre?",
+          "courseC_maze_programming5_c": "A megoldásnak két `előrelépni` blokkot kell tartalmaznia, egy elfordulást és még két `előrelépni` blokkot."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Két úton is megoldhatod ezt a feladványt!",
+          "courseC_maze_programming6_b": "Az ujjaddal lépkedj az utat a madártól a malacig. Merre lépkedtél, merre fordultál?",
+          "courseC_maze_programming6_c": "Vedd figyelembe, hogy először el kell fordulnod, különben a madár nekimegy a falnak.",
+          "courseC_maze_programming6_d": "Elakadtál? Nézd meg ezt az utat!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Ne felejtsd el, hogy használhatod a `lépés` gombot, amivel blokkról blokkra vizsgálhatod végig a kódot a hibák után kutatva.",
+          "courseC_maze_programming7_b": "Ha problémád van, hogy kitaláld a megoldást, próbáld meg leírni a mozdulatokat egy darab papírra."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "Ne felejtsd el, hogy használhatod a \"lépés\" gombot, hogy a kódot soronként átvizsgálva megtaláld a hibát.",
+          "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Több út is van, hogy eljussunk a malacig. Használd az ujjadat, hogy megtaláld az utat, és írj hozzá programot!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_\"Ha visszafelé küldesz, légy nagyon óvatos, hogy megfelelő irányba álljak!\"_",
+          "courseC_maze_programming_challenge2_b": "A legrövidebb megoldás mindössze 5 blokkból felépíthető, és ezt a blokkot használja:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "Nem úgy néz ki ez a minta, mint egy hatalmas lépcső? Látod, már használhatod is azokat, amiket az előző feladatok megoldása során tanultál!",
+          "courseC_starWars_loops10_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**.",
+          "courseC_starWars_loops10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
+          "courseC_starWars_loops1_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod.",
+          "courseC_starWars_loops1_c": "Használd az `előrelépni` blokkot ötször, és teljesíted a feladatot."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops5_2021": {
+          "courseC_starWars_loops5_a": "A legjobb megoldás egy egyszerű `előrelépni` blokkot használ, aztán elfordul és egy ismétléssel ötöt lép előre."
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "Hogy lefelé menj, el kell fordulnod, és utána előrelépni.",
+          "courseC_starWars_loops5_a": "A legjobb megoldáshoz el kell fordulni, aztán egyszerűen `előrelépni`, majd jön egy másik elfordulás, és egy ismétléssel ötöt lépj előre."
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
+          "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "Használd a legördülő menüt a 'fordulj' blokkban, hogy kiválaszd a szükséges irányt.",
+          "courseD_artist_project1_b": "Emlékezz rá, hogy a 'menj előre' blokk vonalat rajzol, míg az 'ugrás előre' nem rajzol vonalat."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_a": "Használd a legördülő menüt a 'fordulj' blokkban, hogy kiválaszd a szükséges irányt."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Próbáld meg az \"ugrás előre\" blokkot, hogy egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?"
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "Használd a legördülő menüt a 'fordulj' blokkban, hogy kiválaszd a szükséges irányt.",
+          "courseD_artist_project1_b": "Emlékezz rá, hogy a 'menj előre' blokk vonalat rajzol, míg az 'ugrás előre' nem rajzol vonalat."
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "Ez a lépcső 76 fokos fordulatot használ és négyszer ismétlődik.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Ezek a minták nagyon hasonlóak más feladványok lépcsőfokaihoz, de ezek más szöget használnak."
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "Emlékezz rá, hogy a 'menj előre' blokk vonalat rajzol, míg az 'ugrás előre' nem rajzol vonalat.",
+          "courseD_artist_project2_b": "Az első rajzolás és mozgatás után megismételheted a kódot, ha egy ciklusba beleteszed."
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "Ez a rajz négy lépcsőfokot rajzol meg, aztán egy \"fordulj jobbra ennyivel 180 fok' blokk következik, és ezt az egészet egy 'ismétled 2 alkalommal' blokkba kell tenni.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "Használd a legördülő menüt a 'fordulj' blokkban, hogy kiválaszd a szükséges irányt.",
+          "courseD_artist_project3_b": "Próbálkozz beágyazott ciklusokkal!\n\nHasználd az általad létrehozott kódot, hogy rajzolj egy alakzatot, és tedd bele egy másik ciklus belsejébe. A ciklus vége elé adj hozzá még egy blokkot, amellyel Elsa elfordul.  \n\n-   Próbálj 72 fokot fordulni 5-ször\n-   Vagy 60 fokot fordulni 6-szor"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "Különböző számokkal különböző alakzatokat kaphatsz. Mit szólsz ahhoz, ha 18-szor fordulsz 20 fokot?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "Itt az ötszöges hópehely, meg egy háromszöges, a kettő között pedig 36 fokot elfordultunk:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nItt egy csomó hatszög, négyzetekkel:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Hogy ezt kipróbáld, készítsd el az első hópelyhet, aztán fordulj el, és rajzold meg a másodikat."
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "Itt van két különböző hosszúságú hópehely, rajzold meg egyiket a másik után (30 fokot fordulj, miután megrajzoltad az elsőt).\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "Vonalak 2 hatszögből és 4 háromszögből:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Nem működik? Próbáld a \"Lépés\" gombbal, hogy soronként lépegetve lásd, hogy mi történik!",
+          "courseD_bee_nestedLoops1_b": "Előbb a négyzet egyik oldalához írj kódot. Aztán ezt a kódot be is teheted egy ciklusba, hogy összegyűjtsd az összes nektárt.",
+          "courseD_bee_nestedLoops1_c": "Emlékezz arra, hogy a `gyűjts nektárt` blokkot kell használnod, ha olyan négyzeten vagy, ahol virág található."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Nem működik? Próbáld a \"Lépés\" gombbal, hogy soronként lépegetve lásd, hogy mi történik!",
+          "courseD_bee_nestedLoops1_c": "Emlékezz arra, hogy a `gyűjts nektárt` blokkot kell használnod, ha olyan négyzeten vagy, ahol virág található."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Hogy megoldd ezt a feladatot, egy 'ismételd' ciklust kell beágyaznod egy másikba.",
+          "courseD_bee_nestedLoops2_b": "Nem jössz rá, hová tedd a ciklust? Próbáld leírni a kódot egy papírra lépésenként, és észreveheted az ismétlődéseket.",
+          "courseD_bee_nestedLoops2_c": "Emlékezz rá, hogy egy ciklusba egynél több blokkot is beletehetsz."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "A 'gyűjts nektárt' blokkot kell ismételned egy másik 'ismételd' blokkon belül, amiben használnod kell az 'előrelépni' blokkot is.",
+          "courseD_bee_nestedLoops7_b": "Mindhárom 'ismételd' blokkra szükséged lesz, hogy megoldd ezt a feladványt.",
+          "courseD_bee_nestedLoops7_c": "A következők szerint készítsd el a kódot:\n\n-   ismételd 4 alkalommal\n    -   ismételd 3 alkalommal\n        -   ismételd 12 alkalommal\n            -   gyűjts nektárt\n        -   előrelépni\n    -   fordulj jobbra"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "Ne felejtsd el, hogy használhatod az 'ismételd' blokkal egyetlen parancsot és hosszabb mintákat is ismételhetsz. Még egy 'ismétled' blokkot is betehetsz egy 'ismétled' blokkba.",
+          "courseD_bee_nested_loops_challenge2_b": "Hogy mind a 4 gyémántot megszerezd, először használj egy ciklust, amivel elhagyod a középső részt. Fordulj balra vagy jobbra, aztán egy beágyazott ciklussal menj az első kincstől a másodikig. Ha ezt elégszer ismétleled, a gyűjtő bejárja az _egész barlangot_!",
+          "courseD_bee_nested_loops_challenge2_c": "A legrövidebb program, amivel elérhető az összes kincs, csupán egyetlen 'begyűjtés' blokkot használ és két fordulást. ",
+          "courseD_bee_nested_loops_challenge2_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "Egy ciklus segíthet egyszerűsíteni a kódodat."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "Próbáld követni ezt az útvonalat, hogy az összes kukoricát elérd! ",
+          "courseD_harvester_nested_loops_challenge1_b": "Hogy egynél több kukoricát gyűjts, használd a 'felszed kukorica' blokkot többször.",
+          "courseD_harvester_nested_loops_challenge1_c": "Egy kis ismétlést kell tenned a fő ciklusodba, hogy megoldd ezt a feladatot!"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "Hogy megoldd ezt a feladatot, be kell ágyaznod egy 'ismételd' blokkot egy másik 'ismételd' blokkba. ",
+          "courseD_maze_nestedLoops3_b": "Kitalálod, hová tedd a ciklusokat? Próbáld meg lépésenként megírni a kódot, és figyelj a mintára!",
+          "courseD_maze_nestedLoops3_c": "Próbáld úgy megírni a kódot, hogy egyenesen előrelépegetsz, aztán elfordulsz. Ezt pedig akár ismételheted is, hogy eljuss a napraforgóig."
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "Próbáld meg ezt az útvonalat használni, hogy kijuss a labirintusból.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_b": "Ha nehezen látod át, mit is kellene a ciklusba tenni, akkor próbáld meg egyben elkészíteni az egész kódot, és észre fogod venni, melyik kódok ismétlődnek benne, ezeket pedig már beteheted egy ciklusba.",
+          "courseD_maze_nestedLoops4_c": "Próbálj meg egy 'ismétled' ciklust tenni egy másikba, hogy csökkentsd a kód hosszát."
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "Keress egy lépcsőszerű mintát ebben a labirintusban, hogy megtaláld, mit tegyél egy beágyazott ciklusba.",
+          "courseD_maze_nestedLoops5_b": "Kitalálod, hová tedd a ciklusokat? Próbáld meg lépésenként megírni a kódot, és figyelj a mintára!"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "Ha elakadsz, próbáld meg papíron megírni a kódot, ciklusok nélkül, és keress benne ismétlődést.",
+          "courseD_maze_nestedLoops6_b": "Egy 'ismételd' blokkot beletehetsz egy másikba, ezzel csökkentheted a használt blokkok számát.",
+          "courseD_maze_nestedLoops6_c": "Ennek a rejtvénynek a megoldásához két egymásba ágyazott 'ismételd' ciklusra van szükség."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy minden blokkot megfelelően összekapcsoltál-e, aztán kattints a \"Futtatás\" gombra.",
+          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindhárom blokkot megfelelően csatlakoztattad-e egymáshoz, és csatlakoztattad-e a \"Futtatáskor\" blokkhoz."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!",
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!",
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "A négyzetek oldali 100 pixelesek, ez azt jelenti, hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.",
+          "courseE_artist_functions1_b": "Rajzolhatsz egymást fedő vonalakat, hogy elkészítsd a szemüveged."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "A programodnak kell:\n\n-   függvényt használni\n-   előrehaladni 100 + 75 pixelt\n-   függvényt használni"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }

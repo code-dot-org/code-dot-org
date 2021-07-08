@@ -391,8 +391,8 @@
           "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
-          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
           "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
@@ -402,11 +402,134 @@
         },
         "outbreak6": {
           "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._",
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._",
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._",
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._",
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._",
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
+        "CourseF_outbreak1": {
+          "step1": "Använd dessa block för att skapa dina sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
+          "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
+          "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
+        },
+        "CourseF_outbreak2": {
+          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
+        },
+        "CourseF_outbreak6": {
+          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?"
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
         }
       }
     }

@@ -27,6 +27,7 @@ ms:
         Bounce: Lantunan
         ArtistEC: Pelukis
         TextMatch: Padanan Teks
+        Custom: Artis
     trophy:
       name:
         Bronze: Gangsa
@@ -83,11 +84,12 @@ ms:
         maze_karel_2_1: 'Cuba gunakan blok untuk membantu saya alihkan kesemua longgokan dan penuhkan ke dalam lubang di tanah. Cuba gunakan gelung berbanding menggunakan terlalu banyak blok. Hint: anda boleh simpan gelung dalam gelung lain.'
         maze_karel_2_8: Guna fungsi baru ini, "Elak daripada lembu dan buangkan 1", untuk membantu saya membuang semua timbunan.
         maze_karel_debug_while: Bagaimanakah anda mengubah program ini untuk membantu saya mengisi lubang?
+        studio_k1_6: Mencipta cerita anda sendiri! Gerakkan kucing dan anjing dan buatkan kedua-duanya mengatakan sesuatu.
         turtle_ec_1_10: 'Anda berjaya! Sekarang, lukis apa sahaja yang anda mahu. Antara idea yang menyeronokkan: rajah kayu, snowman atau lingkaran. Juga, cuba blok baru "set lebar". selamat bergembira!'
     video:
       name:
         maze_intro: Maze Intro
-        artist_intro: Intro artis
+        artist_intro: Pengenalan Artis
         farmer_intro: Intro petani
         loop_times: Mengulangi masa blok
         loop_until: Ulangi sehingga blok
@@ -111,26 +113,61 @@ ms:
         C1_artist_intro: Intro artis
         C2_maze_intro: Maze Intro
         C2_artist_intro: Intro artis
-        C2_artist_loops: Pusingan Artis
-        C2_artist_debugging: Pelukis Debugging
+        C2_artist_loops: Gelung Artis
+        C2_artist_debugging: Penyahpepijatan Artis
         C2_bee_conditionals: Lebah Bersyarat
         C2_graph_paper: Pengaturcaraan kertas graf
         C2_conditionals_with_cards: Bersyarat
         C2_relay_programming: Pengaturcaraan penyampai
         C3_artist_intro: Intro artis
-        C3_artist_functions: Fungsi-fungsi Artis
+        C3_artist_functions: Fungsi Artis
         C3_bee_conditionals: Lebah Bersyarat
+        C3_artist_nested_loops: Gelung Bersarang
+        C3_bee_nested_loops: Gelung Bersarang
         C3_bounce: Lantunan
         C3_computational_thinking: Pengiraan pemikiran
         C3_dice_race: Perlumbaan Dadu
         C3_internet: Internet
         C4_loops_zombie: Gelung
         C4_bee_conditional: Lebah Bersyarat
+        C4_variables_artist: Pemboleh Ubah - Artis
+        C4_math_artist: Mengatur Cara Artis dengan Matematik
         C4_function_parameters: Fungsi-fungsi dengan parameter
         C4_conditionals: Bersyarat
+        CSF_a_b_artist_loops: Gelung di dalam Artis
+        CSF_artist_angles: Sudut di dalam Artis
+        frozen_intro: Pengenalan Jam Kod
+        frozen_loops: Pengenalan kepada Gelung
+        frozen_functions: Pengenalan kepada Fungsi
+        infinity_playlab_intro: Makmal Mainan - Pengenalan
+        infinity_playlab_events: Makmal Mainan - Acara
+        infinity_playlab_repeat_forever: Makmal Mainan - Berulang Selamanya
+        csp_applab_functions: Pengenalan kepada Fungsi
         csp_applab_functions_parameters: Fungsi-fungsi dengan parameter
         csp_applab_loops: Gelung
+        csp_cs_is_changing_everything: Sains Komputer Mengubah Segalanya
+        starwars_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Pengenalan'
+        starwars_typing: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - JavaScript'
+        starwars_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Acara'
+        starwars_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Tahniah'
+        starwars_blocks_intro: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Pengenalan'
+        starwars_blocks_events: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Acara'
+        starwars_blocks_congrats: 'Star Wars: Membina Galaksi dengan Menggunakan Kod - Tahniah'
+        mc_2016_intro: Jam Kod Minecraft - Pengenalan
+        mc_2016_loops: Jam Kod Minecraft - Gelung
+        mc_2016_events: Jam Kod Minecraft - Acara
+        mc_2016_spawn: Jam Kod Minecraft - Penciptaan dan Penempatan
+        mc_2016_congrats: Jam Kod Minecraft - Tahniah
+        mc_2017_agent_intro: Jam Kod Minecraft - Agen
+        mc_2017_repeat: Jam Kod Minecraft - Gelung Berulang
+        mc_2017_functions: Jam Kod Minecraft - Fungsi
+        mc_2017_congratulations: Jam Kod Minecraft - Tahniah
+        mc_2017_puzzle_1: Jam Kod Minecraft - Agen
+        mc_2017_puzzle_3: Jam Kod Minecraft - Gelung Berulang
+        mc_2017_puzzle_8: Jam Kod Minecraft - Fungsi
+        mc_2017_puzzle_12: Jam Kod Minecraft - Permainan Bebas
         CSF_loops_AB: Gelung
+        CSF_StarWars_ProjectIntro: Pengenalan kepada Projek Star Wars
         hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
         hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
         csd_applab_parameters: Fungsi-fungsi dengan parameter
@@ -139,3 +176,4 @@ ms:
         hoc_dance_events_2019: Majlis Tari-Menari 2019 - Acara
         hoc_dance_measures_2019: Majlis Tari-Menari 2019 - Corak Berirama
         hoc_dance_properties_2019: Majlis Tari-Menari 2019 - Sifat
+        csf_lots_of_sprites: 'Makmal Peperi: Banyak Peperi'

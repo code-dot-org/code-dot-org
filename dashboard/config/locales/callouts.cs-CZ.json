@@ -575,6 +575,159 @@
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Přidej do svého programu tento blok!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Přidej tento blok do svého programu.",
+          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Přidej do svého programu tento blok!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Přidejte do svého programu novou událost."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nový blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nový blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nový blok!",
+          "new_block_4": "Nový blok!"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Vytěž toto železo!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp3_2021": {
+          "stone_block_2": "Šedé bloky není možné zahodit."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Kliknutím sem můžete otevřít kategorii Chování."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Kliknutím sem otevřete kategorii Sprajty."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Kliknutím sem můžete otevřít kategorii Místa."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Tady hledejte nový blok."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
         }
       }
     }

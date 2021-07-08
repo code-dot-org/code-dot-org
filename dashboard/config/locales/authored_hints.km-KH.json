@@ -134,7 +134,7 @@
           "2-3_Bee_Functions_6_a": "អ្នកមិនចាំបាច់ប្រើប្រាស់ការធ្វើច្រើនដងជាមួយអនុគមន៍នោះទេ ។ ព្យាយាមរផ្លសា់ទី ប្រើអនុគមន៍ រួចហើយផ្លាស់ទីនិងប្រើប្រាស់អនុគមន៍ម្តងទៀត ។"
         },
         "2-3 Bee Functions 8": {
-          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "2-3 Bee Functions 9": {
           "2-3_Bee_Functions_8_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !",
@@ -531,7 +531,7 @@
           "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_bee_functions6": {
-          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
+          "courseE_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)",
           "courseE_bee_functions6_b": "ប្លុក`ផ្លាស់ទី`ក្នុងករណីនេះអាចជួយរំកិលខាងក្នុងអនុគមន៍, ប៉ុន្តែអ្នកមិនត្រូវការវានៅទីនោះទាំងអស់ទេ។"
         },
         "courseE_bee_functions7": {
@@ -548,7 +548,7 @@
           "courseE_bee_functions_challenge1_b": "ចងចាំថាត្រូវបង្កើតលេខកូដរបស់អ្នកនៅខាងក្នុងនៃប្លុកមុខងារបៃតង។"
         },
         "courseF_bee_functions6": {
-          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n \\!\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
+          "courseF_bee_functions6_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត។ មិនយូទេអ្នកនឹងបានជោគជ័យ!\n\n !\\[] (<https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif>)"
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "ប្រសិនបើចំណោទនេះមើលទៅពិបាក សូមសាកល្បងបង្កើតអនុគមន៍ររបស់អ្នកបន្តិចម្តងៗ ។\n\nហើយព្យាយាមបន្ថែមប្លុកមួយចំនួន ។ បន្ថែមបន្តទៀត ហើយព្យាយាមម្តងទៀត ។ មិនយូទេអ្នកនឹងបានជោគជ័យ !"
@@ -860,7 +860,7 @@
           "courseD_bee_debugging_challenge1_c": "បន្ទាប់ពីឃ្មុំធ្វើឱ្យវាស្ថិតនៅជួរខាងក្រោម សូមឱ្យវាធ្វើម្តងទៀតនូវពាក្យបញ្ជាទាំងនេះ:\n\n-   ធ្វើឡើងវិញ ២ ដង:\n    -   ទៅមុខ\n    -   ធ្វើទឹកឃ្មុំ ៣\n-   រំកិលថយក្រោយ"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1391,7 +1391,7 @@
         },
         "courseD_collector_debugging_challenge2": {
           "courseD_collector_debugging_challenge2_a": "ចាប់ផ្តើមដោយការប្រមូលត្បូង **ពីរ** ពីគំនរ​​ **ពីរ**​ មុនគេ​នៃគំនរនីមួយៗ។\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nប្រើប្លុកទាំងនេះ។\n\n[បិទខ្ទប់] [១]",
-          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "បន្ទាប់មក ប្រមូលត្បូងដែលនៅសល់ក្នុងជួរនេះ។\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nបន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "ចុងបញ្ចប់ ប្រមូលកំណប់ដែលនៅសល់។ បន្ថែមប្លុកទាំងនេះទៅក្នុងកម្មវិធីរបស់អ្នក។\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
           "courseD_collector_debugging_challenge2_d": "នេះគឺជាដំណោះស្រាយពេញលេញសម្រាប់បញ្ហានេះ។\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -2229,21 +2229,21 @@
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_artist_functions9_2019": {
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_artist_functions9_2020": {
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseD_farmer_while2": {
@@ -2310,7 +2310,7 @@
           "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
           "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
-          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n \\-ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
           "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
         },
         "courseE_bee_functions4": {
@@ -4060,6 +4060,830 @@
         "courseD_maze_until9": {
           "courseD_maze_until8_a": "ការប្រើ `ប្រសិនបើ ផ្លូវខាងមុខ` នឹងជួយអ្នកឆ្ពោះទៅមុខនៅពេលណាដែលអាចធ្វើទៅបាន ដែលវានឹងជួយអ្នកឱ្យចៀសវាងនូវផ្លូវដែលមានភាពតានតឹង",
           "courseD_maze_until8_b": "តើទិសដៅអ្វីដែលអ្នកគួរតែបើកបើគ្មានផ្លូវឆ្ពោះទៅមុខ?"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\n-   រើសបទផ្សេងយកមកចាក់។\n-   ផ្លាស់ទីអ្នករបាំរបស់អ្នកទៅកន្លែងផ្សេង។\n-   បង្កើតអ្នករបាំអោយបានលើសពីម្នាក់។"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   អ្នករបាំត្រូវតែរាំបានមួយក្បាច់។\n-   អ្នកត្រូវតែចុចប៊ូតុងសញ្ញាព្រួញណាមួួយ។\n\n_វគ្គនេះនឹងបញ្ចប់ក្នុង៤រង្វាស់។_",
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\nប្រើប្លុក <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> អោយបានលើសពីមួយ។"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   អ្នករបាំទាំងពីរនាក់ត្រូវបញ្ចេញក្បាច់រាំមួយក្បាច់ម្នាក់។\n-   អ្នកត្រូវចុចប៊ូតុងសញ្ញាព្រួញ។\n\n_វគ្គនេះនឹងបញ្ចប់ក្នុងរយៈពេល 6 រង្វាស់ភ្លេង។_",
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\n-   ចូរធ្វើអោយអ្នករបាំណាមួយធ្វើចលនាតបទៅនឹងប៊ូតុងសញ្ញាព្រួញឆ្វេងនិងស្ដាំ."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\n-   ចូរធ្វើអោយមានការផ្លាស់ប្ដូរផ្ទៃខាងក្រោយពេលណាអ្នករបាំប្ដូរក្បាច់ម្ដងៗ។"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   ត្រូវបង្កើតអ្នករបាំឯកមួយជាមួយនឹងអ្នករាំអមឆាកមួយក្រុមនៅក្នុង៤រង្វាស់ដំបូងនៃបទចម្រៀង។\n\n_វគ្គនេះនឹងចប់ក្នុង៧រង្វាស់។_",
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\n-   ចូរបង្កើតអ្នករាំអមឆាកអោយបានច្រើនក្រុមបន្ថែម។"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   អ្នកត្រូវប្ដូរទំហំនៃអ្នករបាំយ៉ាងហោចណាស់អោយបានម្នាក់។\n\n_វគ្គនេះនឹងបញ្ចប់ក្នុង៦រង្វាស់។_",
+          "challenges": "**លំហាត់មិនចាំបាច់**\n\n-   ចូរធ្វើការពិសោធន៍ដោយផ្លាស់ប្ដូរលក្ខណៈផ្សេងៗទៀតដូចជាប្រវែង ឬទិសដៅរង្វិលជុំរបស់អ្នករបាំ។"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   អ្នកត្រូវប្ដូរពណ៌នៃអ្នករបាំយ៉ាងហោចណាស់អោយបានម្នាក់។\n\n_វគ្គនេះនឹងបញ្ចប់ក្នុង៦រង្វាស់។_",
+          "tint_hint": "តើអ្នកបានចាប់អារម្មណ៍ទេថាអ្នករបាំរបស់អ្នកមិនបានប្ដូរពណ៌ទៅជាពណ៌ដែលអ្នកជ្រើសរើសទាំស្រុងនោះ? នេះដោយសារ **tints** គ្រាន់តែលាយពណ៌ដែលអ្នកជ្រើសរើសនោះជាមួយនឹងពណ៌ដែលមាននៅលើខ្លួនអ្នករបាំស្រាប់តែប៉ុណ្ណោះ។"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**តើធ្វើយ៉ាងម៉េចទើបអាចឆ្លងកាត់វគ្គនេះបាន?**\n\n-   គ្រាន់តែចុចប៊ូតុង \"Finish\" ទៅវារួចបាត់ទៅហើយ!",
+          "repeat_every_ideas": "**ពិបាករកគំនិតថ្មីមែនទេ?**\n\n-   អ្នកអាចធ្វើអោយទំហំអ្នករបាំកាន់តែធំឡើងៗ\n-   ឬក៏អ្នកអាចប្ដូរទិសដៅរបស់អ្នករបាំរបស់អ្នក ធ្វើអោយពួកគេបង្វិលជុំក៏បាន។\n\n_អ្នកក៏អាចប្រើចំនួនអវិជ្ជមានដើម្បីធ្វើអោយមានលក្ខណៈផ្ទុយវិញបានដែរ!_",
+          "next_previous": "**លំហាត់មិនចាំបាច់**\n\n-   អ្នកក៏អាចប្រើប្លុកព្រឹត្តិការណ៍នេះដើម្បីអោយអ្នករបាំអ្នកផ្លាស់ប្ដូរក្បាច់ទៅតាមបញ្ជីក្បាច់រាំបានដែរ ដោយគ្រាន់តែប្ដូរក្បាច់ដាក់ទៅជាពាក្យរើសដោយចៃដន្យ`(Random)` ក្បាច់បន្ទាប់ `(Next)` ឬក្បាច់ពីមុន`(Previous)`។\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "ប្លុកដែលអាចជំនួសមាននៅក្នុងប្លុក \"អ្នករាំ\"។"
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "ទាញប្លុក`move forward`មួយពីប្រអប់ឧបករណ៍ទៅក្នុងកន្លែងសរសេរកូដ រួចដាក់វា\nនៅក្នុងប្លុក`when run`។",
+          "MC_HOC_2017_01_RETRY_b": "កុំភ្លេចចុចប៊ូតុង\"ដំណើរការ\" ដើម្បីដំណើរការកូដរបស់ជំនួយការ។",
+          "MC_HOC_2017_01_RETRY_c": "នៅពេលដែលជំនួយការដំណើរការកូដទាំងអស់ អ្នកនឹងអាចរំកិលតួអង្គជាមួយគ្រាប់ចុចដែលមានសញ្ញាព្រួញបាន!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "រំកិលជំនួយការទៅមុខពីរជំហ៊ានដើម្បីទៅសង្កត់បន្ទះក្តារ។ ពេលនោះទ្វារហ្នឹងបើកសំរាប់តួអង្គ។",
+          "MC_HOC_2017_02_Cole_b": "ចុចប៊ូតុង \"ដំណើរការ\"!\n\nអ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។",
+          "MC_HOC_2017_02_Cole_c": "នៅពេលដែលជំនួយការបើកទ្វារ ប្រើគ្រាប់ចុចដែលមានសញ្ញាព្រួញដើម្បីរំកិលតួអង្គទៅកាន់ផែនទី!",
+          "MC_HOC_2017_02_Cole_d": "ត្រូវប្រាកដថាជំនួយការដើរផ្លូវត្រូវតាមផែនទី!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "នៅពេលដែលជំនួយការបានសង្កត់បន្ទះក្តារ អ្នកអាចប្រើគ្រាប់ចុចដែលសញ្ញាព្រួញដេើម្បីឲតួអង្គដើរទៅរកត្រីវិស័យ!",
+          "MC_HOC_2017_03_Cole_b": "តើអ្នកមានអារម្មណ៍ថាកូដវែងទេ? សាកល្បងប្រើរង្វិលជុំ`repeat`រួចសង្កេតមើលថាតើអ្នកអាចធ្វើឲវាខ្លីបានដែរឬទេ!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "ប្រើប្លុក`turn right`ដើម្បីប្តូរទិសដៅរបស់ជំនួយការ ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "ជំនួយការត្រូវសង្កត់បន្ទះក្តារដំបូងដើម្បី Alex ឬ Steve សំដៅទៅកាន់ពូថៅ។"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "ជំនួយការត្រូវ`move forward`៧ដង។ តើអាចប្រើរង្វិលជុំ `repeat`យ៉ាងដូចម្តេចដើម្បីឲវាដំណើរការបាន?",
+          "MC_HOC_2017_04_Cole_c": "ចុចប៊ូតុង \"ដំណើរការ\"!\n\nអ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។",
+          "MC_HOC_2017_04_Cole_b": "នៅពេលដែលជំនួយការសង្កត់បន្ទះក្តារបាន វានឹងទៅបើកទ្វារឲតួអង្គ។"
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "តើអ្នកបានដឹងទេថាអ្នកអាចដាក់កូដលើសពីមួយក្នុងរង្វិលជុំ? សាកល្បងដើរទៅមុខ **ហើយ**ដាក់ក្តារនៅក្នុង`repeat`ដើម្បីចញ្ចប់រូបផ្គុំមួយនេះ។",
+          "MC_HOC_2017_05_Cole_b": "អោយជំនួយការឆ្លងកាត់ទន្លេ រួចសង់ស្ពាន។"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "តើរង្វិលជុំនេះដំណើរការប៉ុន្មានដង? តើវា**គួរតែ**ដំណើរការប៉ុន្មានដង?",
+          "MC_HOC_2017_06_Cole_b": "ជួយជំនួយការសាងសង់ស្ពានមួយដើម្បីឆ្លងទន្លេ! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "អ្វីដែលអ្នកត្រូវធ្វើគឺឲជំនួយការសំអាតផ្លូវសំរាប់រទេះដឹករ៉ែ។",
+          "MC_HOC_2017_07_Cole_a": "ដើម្បីដោះស្រាយរូបផ្គុំនេះ ចូរស្វែងរកនូវមុខងារ`clear path`រួចយកវាមកប្រើតាមតាមតម្រូវការដោយប្រើប្លុក`clear path`ពណ៌បៃតងនៅក្នុងប្រអប់ឧបករណ៍។",
+          "MC_HOC_2017_07_Cole_b": "សាកល្បងដាក់បញ្ចូលគ្នានូវប្លុកមុខងារនិងប្លុកដ៏ទៃទៀតនៅក្នុងប្រអប់ឧបករណ៍ដើម្បីជួយអ្នកក្នុងការដោះស្រាយរូបផ្គុំ។"
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "អត់ដឹងផ្លូវដើម្បីទៅ? មើលថាតើអ្នកអាចរកឃើញបន្ទាត់ចុចចុចទេ!",
+          "MC_HOC_2017_10_Cole_a": "ប្រើមុខងារដើម្បីដោះស្រាយរូបផ្គុំមួយនេះដោយងាយ!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "ចុចប៊ូតុង \"ដំណើរការ\"!\n\nអ្នកអាចដំណើរការកូដទោះបីជាវាខុសក៏ដោយ។ ដំណើរការវា រួចសរសេរកូដឡើងវិញម្តងហើយម្តងទៀតរហូតដល់អ្នកស្វែងរកឃើញចំនុចដែលខុស។",
+          "MC_HOC_2017_08_RY_b": "វាមានវិធីជាច្រើនក្នុងការដោះស្រាយរូបផ្គុំមួយនេះ។ ចូរសាកល្បង២ ៣វិធី!",
+          "MC_HOC_2017_08_RY_c": "សំរាប់ផ្លូវឆ្លងកាត់កំអែភ្នុំភ្លើងធម្មតាមួយចូរព្យាយាមដើរតាមបន្ទាត់ចុចចុច។"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "ព្យាយាមឲជំនួយការសាងសង់ផ្លូវដែកមួយចំនួនដូច្នេះអ្នកអាចស្វែងយល់ពីពិភពលោក!"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_c": "ប្លុកទាំងអស់របស់អ្នកនឹងត្រូវនៅខាងក្នុងរង្វិលជុំដដែលៗមួយដើម្បីបញ្ចប់ចំនោទបញ្ហានេះ។"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "ក្រោយពីអ្នកផ្លាស់ទីទៅចតុកោណកែងមួយដែលមានកំណប់ ប្រើប្លុកនេះដើម្បីរើសវាឡើង។\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "ដំណោះស្រាយសាមញ្ញមួយគួរតែដើម្បីផ្លាស់ទីទៅទិសខាងកើត២ដង បន្ទាប់មកយកកំណប់នោះ។"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "អ្នកនឹងត្រូវផ្លាស់ទីជាមុនសិន មុនពេលអ្នកអាចប្រមូលកំណប់ណាមួយ។",
+          "courseA_collector_loops2_b": "ក្រោយពីអ្នកផ្លាស់ទីទៅចតុកោណកែងមួយដែលមានកំណប់ ប្រើប្លុកនេះដើម្បីរើសវាឡើង។\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_b": "ចងចាំថាអ្នកអាចដាក់ច្រើនជាង១ប្លុកខាងក្នុងមួយ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> រង្វិលជុំដដែលៗ។"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "ដើម្បីផ្លាស់ប្តូរចំងាយដែលឡូរេលទៅដល់ ផ្លាស់ប្តូរលេខចំនួនដងក្នុងរង្វិលជុំដដែលៗ។",
+          "courseA_collector_loops4_b": "កំុភ្លេចថាឡូរេលត្រូវការដើរចុះក្រោមនិងប្រមូលកំណប់ក្រោយពីបញ្ចប់ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> រង្វិលជុំដដែលៗនោះ!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "ប្រសិនអ្នកមិនអាចរកចម្លើយភ្លាមៗទេ ព្យាយាមប្រើប្រាស់ក្រដាស់មួយសន្លឹកដើម្បីរកចុងព្រួញណាដែលអ្នកនឹងត្រូវការ និងរកមើលទំរង់ដំណោះស្រាយមួយ។",
+          "courseA_collector_loops5_b": "ព្យាយាមបំបែកបញ្ហាជា២ចំនែក ផ្លាស់ទីទៅខាងផ្លូវ និងបន្ទាប់មកមកក្រោម។",
+          "courseA_collector_loops5_c": "អ្នកនឹងចាប់ផ្តើមជាមួយ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> រង្វិលជុំដដែលៗមួយដែលផ្លាស់ទីឡូរេលទៅទិសខាងលិចនិងប្រមូលកំណប់។"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "មិនអាចរកកំហុសឃើញមែនទេ? ព្យាយាមធ្វើការដំណើរការកូដអោយបានច្រើនដងដើម្បីសង្កេតមើលមានអ្វីកើតឡើងខ្លះ?",
+          "courseA_collector_loops6_b": "ដំណោះស្រាយខ្លីជាងគេមាន២<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> រវិលជំុដដែលៗ មួយបន្ទាប់ពីមួយ។"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "ប្រសិនអ្នកមិនអាចដឹងអ្វីដែលកើតឡើងបន្ទាប់ទេ ព្យាយាមធ្វើការដំណើរការកូដដើម្បីមើលថាឡូរេលនឹងទៅដល់ណា?"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "ប្រសិនអ្នកកំពុងមានបញ្ហាក្នុងការរកចម្លើយនៃចំនោទនេះ​​ ព្យាយាមសរសេរជំហានផ្លាស់ទីរបស់អ្នកលើក្រដាស់មួយសន្លឹក និងសង្កេតរកទំរង់ផ្លាស់ទី។",
+          "courseA_collector_loops8_b": "ព្យាយាមបំបែកបញ្ហានេះទៅជា៣បញ្ហាដាច់ៗគ្នា និងសរសេររំវិលជំុដដែលៗទៅបញ្ហានីមួយៗ។",
+          "courseA_collector_loops8_c": "ចងចាំថាអ្នកអាចសរសេរកូដម្តងមួយ បន្ទាប់មកចុច​\"ដំណើរការ\"ដើម្បីរកមើលថាអ្នកត្រូវការទៅទៀតចេញពីកន្លែងនោះ។"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "ប្រសិនអ្នកមិនអាចរកទីកន្លែងដែលល្អដើម្បីប្រើរំវិលជំុដដែលៗទេ ព្យាយាមធ្វើកូដម្តងមួយជំហានៗ និងសង្កេតរកទំរង់កូដមួយ។",
+          "courseA_collector_loops9_b": "ព្យាយាមដាក់២ ​<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>រវិលជំុដដែលៗរបស់អ្នកខាងក្នុងរវិលជំុដដែលៗមួយទៀតដើម្បីធ្វើអោយកូដរបស់អ្នកខ្លីជាងមុន!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "ព្យាយាមផ្លាស់ប្តូរលេខក្នុងរង្វិលជុំដដែលៗនីមួយៗបើសិនមានអ្វីមើលទៅមិនត្រឹមត្រូវ។",
+          "courseA_collector_loops_challenge1_b": "អ្នកមិនត្រូវការប្រើរង្វិលជុំដដែលៗទេបើសិនបើអ្នកធ្វើអ្វីៗតែមួយដង។"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "ព្យាយាមផ្លូវនេះដើម្បីនាំអ្នកទៅរកដំណោះស្រាយមួយ។",
+          "courseA_collector_loops_challenge2kp_a": "តើអ្នកអាចប្រើរវិលជំុដដែលៗដើម្បីដោះស្រាយបញ្ហានេះទេ?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_b": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហា ព្យាយាមសរសេរនូវជំហាននៅលើក្រដាសជាមុនសិន",
+          "courseA_maze_seq10_b": "អ្នកនឹងត្រូវទៅទិសដៅចំនួន៣ដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "ប្រសិនបើផ្លូវដែលអ្នកត្រូវការមិនច្បាស់ ប្រើម្រាមដៃរបស់អ្នកដើម្បីដានផ្លូវរបស់អ្នកពីតួអង្គបក្សីទៅតួអង្គជ្រូក",
+          "courseA_maze_seq13_b": "កុំខ្លាចក្នុងការធ្វើខុស! ​ព្យាយាមបន្ថែមប្លុកហើយដំណើរការកូដដើម្បីដឹងថានឹងមានអ្វីកើតឡើង"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "ប្រសិនបើអ្នកកំពុងមានបញ្ហាក្នុងការនាំតួអង្គបក្សីផ្លាស់ទី ត្រូវប្រាកដថាប្លុកត្រូវបានរៀបតាមលំដាប់លំដោយ [ប្លុកនៅក្នុងប្លុក] [0]",
+          "courseA_maze_seq1_b": "តួអង្គបក្សីតម្រូវអោយផ្លាស់ទីទៅខាងលិចចំនួន ៣ ដងដើម្បីទៅដល់តួអង្គជ្រូក។ ចូរប្រើប្លុកនេះ <xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "ព្យាយាមសរសេរនូវជំហានទាំងអស់នៅលើក្រដាសដើម្បីរកដំណោះស្រាយ",
+          "courseA_maze_seq5_b": "អ្នកនឹងត្រូវការពីរប្លុក  ដៅនៅក្នុងទិសដៅពីរ"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "កូដចុងក្រោយរបស់អ្នកគួរតែមានប្លុកផ្លាស់ទី៣",
+          "courseA_maze_seq6_b": "ប្រសិនបើអ្នកធ្វើមិនចេញ ព្យាយាមដោះស្រាយល្បែងផ្គុំរូបនៅក្នុងពីរផ្នែក។ផ្នែកទីមួយមុនកាច់ជ្រុង ហើយផ្នែកទីពីរក្រោយកាច់ជ្រុង"
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "មានប្លុកមួយដែលអ្នកត្រូវបន្ថែមដើម្បីផ្លាស់ទីតួអង្គបក្សីទៅកាន់តួអង្គជ្រូក",
+          "courseA_maze_seq7_b": "ប្រសិនបើអ្នកមិនអាចដោះស្រាយនូវអ្វីដែលត្រូវធ្វើ ព្យាយាមគូរល្បែងផ្គុំលើក្រដាសហើយប្រើម្រាមដៃរបស់អ្នកដើម្បីស្វែងរកផ្លូវមួយណាដែលត្រូវដើរ"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "ប្រសិនបើអ្នកគិតមិនចេញ ព្យាយាមគូររូបលើក្រដាសដើម្បីឃើញពីរបៀបដែលតួអង្គបក្សីគួរបំលាស់ទី"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "ប្រសិនបើអ្នកគិតមិនចេញ ព្យាយាមគូររូបលើក្រដាសដើម្បីឃើញពីរបៀបដែលតួអង្គបក្សីគួរបំលាស់ទី"
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "ព្យាយាមរាប់ចន្លោះជាមួយម្រាមដៃរបស់អ្នក។ ត្រូវចាំថាមិនចាំបាច់រាប់ចន្លោះដែលអ្នកចាប់ផ្ដើមទេ!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "ចូររកប្លុកដែលធ្វើអោយឆ្កែនិយាយស្តីអ្វីមួយ។"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_b": "ព្យាយាមដំណើរការលេខកូដជាមុនសិនដើម្បីដឹងពីកន្លែងដែលវិចិត្រករបញ្ចប់។"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_b": "សិល្បករនឹងចង់ផ្លាស់ទីទៅខាងត្បូងដើម្បីគូរបន្ទាត់នេះ។"
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "ប្លុកលោតអនុញ្ញាតឱ្យអ្នកឆ្ពោះទៅមុខដោយមិនចាំបាច់គូសបន្ទាត់។",
+          "courseB_artist_loops4_b": "អ្នកនឹងត្រូវបន្ថែមប្លុកនៅខាងក្នុងនៃរង្វិលជុំម្តងទៀតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_artist_loops4_c": "កុំភ្លេចផ្លាស់ប្តូរចំនួនដងដែលរង្វិលជុំធ្វើឡើងវិញ។"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "ព្យាយាមសរសេរចលនានៅលើក្រដាសហើយរកមើលលំនាំ។"
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "បញ្ហាប្រឈមនេះប្រើ \\*\\* ៤ \\*\\*  loops,រង្វិលជុំម្តងមួយៗ!",
+          "courseB_artist_loops7_b": "កត់សម្គាល់ថារាល់រង្វិលជុំបង្កើតលំនាំជណ្តើរដែលមានទិសដៅខុសគ្នា។\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "រង្វិលជុំគួរតែធ្វើដូចនេះ:\n\n-   រង្វិលជុំ ១\n    -   ត្រូវ\n    -   ចុះក្រោម\n\n-   រង្វិលជុំ ២\n    -   ត្រូវ\n    -   ឡើងលើ\n\n-   រង្វិលជុំ ៣\n    -   ឆ្វេង\n    -   ឡើងលើ\n\n-   រង្វិលជុំ ៤\n    -   ឆ្វេង\n    -   ចុះក្រោម"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "តើអ្នកគួរធ្វើគំរូម្តងទៀតប៉ុន្មានដងដើម្បីធ្វើជណ្តើរ?",
+          "courseB_artist_loops8_b": "ព្យាយាមរត់កូដដែលអ្នកបានផ្តល់ឱ្យដើម្បីមើលថាតើវាធ្វើអ្វី។"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "ចងចាំថាប្លុកលោតអាចត្រូវបានប្រើដើម្បីផ្លាស់ទីដោយមិនគូរបន្ទាត់។",
+          "courseB_artist_loops9_b": "អ្នកអាចនឹងត្រូវប្រើWប្លុកដើម្បីដោះស្រាយបញ្ហានេះ។"
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "ប្លុកដូចនេះ: [blockly block] [0] នឹងអនុញ្ញាតឱ្យសិល្បកររបស់អ្នកផ្លាស់ប្តូរនៅកន្លែងលេងល្បែងមួយ!",
+          "courseB_artist_loops_challenge1_b": "នៅពេលដែលអ្នកបញ្ចប់គ្រាប់ឡុកឡាក់មួយ \"លោត\" ទៅបន្ទាប់!",
+          "courseB_artist_loops_challenge1_c": "អ្នកនឹងត្រូវការ `ផ្លាស់ទី move ឬ` លោត \\`លើខ្សែតែមួយចំនួនពីរដង។"
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "លេខកូដដើម្បីគូរ X ត្រូវបានផ្តល់ឱ្យអ្នករួចហើយ។ អ្វីដែលអ្នកត្រូវធ្វើគឺធ្វើឡើងវិញ X និង \\`លោតទៅកន្លែងបន្ទាប់។",
+          "courseB_artist_loops_challenge2_b": "អ្នកអាចប្រើប្លុក `លោត` ដើម្បីផ្លាស់ទីទៅកន្លែងផ្សេងទៀតដោយមិនចាំបាច់គូរ។"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "ប្រសិនបើអ្នកមិនអាចរកកន្លែងដាក់រង្វិលជុំម្តងទៀតសរសេរកូដជាជំហាន ៗ ហើយរកមើលលំនាំ។",
+          "courseB_collector_loops10_b": "ព្យាយាមសរសេរចលនាចុះនៅលើក្រដាសហើយរកមើលលំនាំ។"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "[blockly block] [0] អាចត្រូវបានប្រើដើម្បីប្រមូលទ្រព្យសម្បត្តិនៅពេលអ្នកកំពុងឈរនៅខាងលើ។"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "អ្នកនឹងត្រូវផ្លាស់ទីជាមុនសិន មុនពេលអ្នកអាចប្រមូលកំណប់ណាមួយ។",
+          "courseB_collector_loops2_b": "នៅពេលអ្នកឈានដល់ចំនុចមួយដែលមានកំណប់ទ្រព្យសូមប្រើប្លុក [blockly block] [0] ដើម្បីយកវា។"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "ព្យាយាមប្រើ [blockly block] [0] ដើម្បីប្រមូលទ្រព្យសម្បត្តិរបស់អ្នក។",
+          "courseB_collector_prog3_b": "ចងចាំថាអ្នកអាចដាក់ច្រើនជាងមួយប្លុកនៅក្នុងរង្វិលជុំម្តងទៀត។"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "ព្យាយាមប្រើប៊ូតុងជំហានដើម្បីរកកន្លែងដែលមានបញ្ហា។",
+          "courseB_collector_loops4_b": "ដើម្បីផ្លាស់ប្តូរចំងាយដែលឡូរេលទៅដល់ ផ្លាស់ប្តូរលេខចំនួនដងក្នុងរង្វិលជុំដដែលៗ។"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "ប្រើរង្វិលជុំដដែលៗឲ្យលើសពីមួយដង ដើម្បីសម្រេចការងារ។",
+          "courseB_collector_loops5_b": "ព្យាយាមដំណើរការកូដពីរបីដង ដើម្បីមើលថាមានអ្វីកើតឡើង។"
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "មិនអាចដោះស្រាយបានទេថាតើកន្លែងណាដែលចាប់ផ្តើមមានបញ្ហា? ប្រើប៊ូតុង \"ជំហាន\" ដើម្បីដំណើរការកម្មវិធីរបស់អ្នកមួយដងក្នុងមួយដង។",
+          "courseB_collector_loops6_b": "អ្នកអាចផ្លាស់ប្តូរចំនួនដងនៃរង្វិលជុំម្តងទៀតដំណើរការដោយចុចលើលេខ \"3\" ហើយជ្រើសរើសលេខផ្សេងទៀត។",
+          "courseB_collector_loops6_d": "ប្រសិនបើអ្នកច្រឡំ, ព្យាយាមបំបែករូបផ្គុំនេះជា ៣ ចំណែក។"
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "ប្រសិនបើអ្នកមានការលំបាកជាមួយនឹងល្បែងផ្គុំរូបសូមព្យាយាមគូរវានៅលើក្រដាសដើម្បីជួយអ្នករកមើល។",
+          "courseB_collector_loops7_b": "អ្នកនឹងត្រូវការរង្វិលជុំ ៣ ដងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះហើយកុំភ្លេចកំណប់បន្ថែមនៅចុងបញ្ចប់!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "ប្រសិនបើអ្នកមិនអាចរកកន្លែងត្រូវដាក់រង្វិលជុំម្តងទៀតសរសេរកូដជាជំហាន ៗ ហើយរកមើលលំនាំ។"
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "តើវាពិបាកពេកទេ? បំបែកវាជា ៣ បញ្ហាតូចដើម្បីងាយស្រួល។",
+          "courseB_collector_loops9_b": "អ្នកនឹងត្រូវការរង្វិលជុំចំនួន 3 ម្តងទៀតបន្ទាប់ពីមួយផ្សេងទៀតសម្រាប់ដំណោះស្រាយនេះ។"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "ចាប់ផ្តើមដោយការភ្ជាប់ពាក្យបញ្ជាដូចខាងក្រោម៖\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "ផ្លាស់ទីខាងកើតពីរដងរវាងផ្លូវនីមួយៗ។\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>",
+          "courseB_collector_loops_challenge1_d": "សាកល្បងវា!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "ប្រសិនបើមានអ្វីខុស ព្យាយាមកែលម្អវាទៅ។ កុំបោះបង់!",
+          "courseB_collector_loops_challenge2a_b": "សូមមើលជម្រើសមួយនេះ ដើម្បីអាចចូលទៅកាន់ផ្នែកនៃហ្គេម។​ តើអ្នកអាចមើលឃើញពីគម្រូដែលអ្នកនឹងអាចលេងម្តងទៀតទេ?",
+          "courseB_collector_loops_challenge2a_c": "ដើម្បីទាញយកកំណប់ទាំងអស់​ អ្នកនឹងត្រូវដាក់បន្ថែម <xml> <block type=\"collector_collect\"/></xml>  ចំនួនពីរនៅក្នុងloopរបស់អ្នក ឬក៏ដាក់ប្លុកនៅខាងក្នុង `repeat` ប្លុក តែម្តង។​"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_b": "អ្នកអាចនឹងត្រូវប្រើប្លុក <xml><block type=\"maze_moveEast\"/></xml> ដើម្បីដោះស្រាយបញ្ហានេះ។"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមគូសផ្លូវនៅលើក្រដាស។",
+          "courseB_maze_seq5_b": "មានវិធី ២ យ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ!"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "លេខកូដចុងក្រោយរបស់អ្នកគួរតែមានចលនាបី។",
+          "courseB_maze_seq6_b": "ប្រសិនបើអ្នកជាប់គាំង ព្យាយាមដោះស្រាយបញ្ហាជាពីរផ្នែក មួយនៅចំហៀង និង មួយទៀតពីលើចុះក្រោម។",
+          "courseB_maze_seq5_c": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_b": "ព្យាយាមដំណើរការកូដ ដែលបានផ្តល់ឲ្យ ហើយពិនិត្យមើលកន្លែងដែលអ្នកទៅ​ដល់ចុងក្រោយ។"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "ព្យាយាមបន្ថែមប្លុកម្តងមួយ រហូតដល់អ្នកដោះស្រាយបញ្ហាហើយ។",
+          "courseB_maze_seq8_b": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។",
+          "courseB_maze_seq8_c": "មិនដឹងទៅផ្លូវណាមែនទេ? សាកល្បងផ្លូវនេះ!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "ព្យាយាមសរសេរ រាល់ជំហាននៅលើសន្លឹកក្រដាសមួយជាមុនសិន។",
+          "courseB_maze_seq9_b": "បង្កើតកម្មវិធីរបស់អ្នកនៅពេលតែមួយនិងសាកល្បងនៅពេលអ្នកកសាង។",
+          "courseB_maze_seq9_c": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។",
+          "courseB_maze_seq9_d": "ទាល់? សាកល្បងផ្លូវនេះវិញ!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "ពេលនេះផ្លូវដែលខ្លីជាងគេប្រហែលប្រើការមិនបានទេ។",
+          "courseB_maze_seq_challenge1_b": "ព្យាយាមប្រើប្រាស់ <xml><block type=\"maze_moveWest\"/></xml> ប្លុកដើម្បីចាប់ផ្ដើម។"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "អ្នកមិនចាំបាច់បន្ថែម ឬបន្ថយប្លុក ដើម្បដោះស្រាយបញ្ហានេះទេ។",
+          "courseB_maze_seq_challenge2_b": "រៀបចំប្លុកសារជាថ្មីហើយដើរតាមផ្លូវរាងជណ្ដើរ"
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "នេះជាប្លុកដែលធ្វើអោយឌីសានិយាយអ្វីមួយ៖\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "នេះជាប្លុកដែលអ្នកគួរប្រើដើម្បីបន្ថែមព្រឹត្តិការណ៍៖\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការដើម្បីប្តូរអារម្មណ៍របស់Daisy:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "នេះគឺជាព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងឆ្វេង៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្វេង។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "នេះគឺជាប្លុកព្រឹត្តិការណ៍ដែលគ្រប់គ្រងព្រួញខាងស្តាំ៖\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "នេះគឺជាប្លុកដែលធ្វើឱ្យអ្នកជិះសេះផ្លាស់ប្តូរទៅខាងឆ្ងាយ។\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "អ្នកនឹងត្រូវការប្លុកព្រឹត្តិការណ៍ទាំងនេះ៖\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "ប្រើព្រួញទម្លាក់ចុះនៅលើ `ពេលដែលព្រួញចុចប៊ូតុងព្រួញចុច` ដើម្បីជ្រើសរើសទិសដៅផ្សេងៗ។\n\n\\[] [0]",
+          "courseB_playlab_events6_c": "យកទង់ជាតិទាំងអស់នេអដើម្បីឆ្លងកាត់!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "នេះគឺជាបណ្តុំដែលអ្នកត្រូវការចាក់សម្លេង។\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "នេះគឺជាប្លុកដែលអ្នកត្រូវការដើម្បីធ្វើឱ្យអ្នកជិះសេះបាត់ខ្លួន:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "ធ្វើឱ្យសត្វផ្សេងទៀតរំកិលចុះក្រោមនៅពេលអ្នកចុច `▼` ។\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "ផ្លាស់ប្តូរល្បឿនរបស់សត្វដោយប្រើប្លុកនេះ៖\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "តើមនុស្សគ្រប់គ្នានឹងនិយាយអ្វីខ្លះនៅពេលការប្រណាំងបានបញ្ចប់? ធ្វើឱ្យពួកគេនិយាយជាមួយព្រឹត្តិការណ៍នេះ៖\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "សត្វនីមួយៗនៅក្នុងហ្គេមគួរតែបាត់នៅពេលចុច។ វាក៏គួរតែត្រលប់មកវិញដែរបន្ទាប់ពីមួយឬពីរវិនាទី!",
+          "courseB_playlab_events_challenge2_b": "ប្រើប្លុកព្រឹត្តិការណ៍ផ្សេងៗដើម្បីធ្វើឱ្យសត្វដទៃទៀតបាត់!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events_challenge2_c": "ប្រើពាក្យបញ្ជាបន្ថែមដើម្បីចាក់សំឡេងឬពិន្ទុនៅពេលអ្នកចុចលើសត្វ!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "បញ្ចូលគ្នា!\n\nធ្វើឱ្យសត្វខ្លះផ្តល់ពិន្ទុច្រើនជាងអ្នកដទៃ។\nប្រើសំឡេងខុសគ្នា។\nផ្លាស់ប្តូរអារម្មណ៍របស់សត្វ!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "ព្យាយាមបន្ថែមប្លុកមួយក្នុងពេលតែមួយបន្ទាប់មកចុច \"រត់\" ដើម្បីមើលថាមានអ្វីកើតឡើង។",
+          "courseB_starWars_prog1_b": "អ្នកនឹងចង់ផ្លាស់ទីទៅខាងកើតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។ តើអ្នកត្រូវការផ្លាស់ទីឆ្ងាយប៉ុណ្ណា?\n\n[blockly block] [0]"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "បំបែកបញ្ហានេះជាពីរផ្នែក។ យកដែកសំណល់អេតចាយមួយដុំបន្ទាប់មករកវិធីដើម្បីទៅយកមួយផ្សេងទៀត។"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "អ្នកនឹងត្រូវប្ដូរ៣ទិសដៅដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ",
+          "courseB_starWars_prog3_b": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "បង្កើតលេខកូដមួយក្នុងពេលតែមួយ។ រត់វាដើម្បីរកកន្លែងដែលត្រូវទៅពីទីនោះ។",
+          "courseB_starWars_prog4_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
+          "courseB_starWars_prog5_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
+          "courseB_starWars_prog5_c": "តាមដានលំនាំនេះដោយម្រាមដៃរបស់អ្នក។ រាប់បំណែកនៃលោហៈនៅពេលអ្នកផ្លាស់ទី។",
+          "courseB_starWars_prog5_da": "រកមើលតើមានអ្វីកើតឡើងប្រសិនបើអ្នកប្រើដំណោះស្រាយដូចគ្នានឹងជណ្តើររូបផ្គុំ។\n\n\\[] [0]"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "លំនាំនេះគ្រាន់តែជាជំហានមួយដែលមានចលនាពីរក្នុងមួយទិសដៅប៉ុណ្ណោះ!",
+          "courseB_starWars_prog6_b": "ព្យាយាមប្រើ `ដដែលៗ`សម្រាប់លេខកូដខ្លីជាងនេះ។\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "តើលំនាំនេះមិនដូចរូបផ្គុំចុងក្រោយទេដែរឬ?",
+          "courseB_starWars_prog7_b": "BB-8 នឹងចាប់យកscrap metalនៅពេលគាត់ក្រឡុកលើវា។",
+          "courseB_starWars_prog7_c": "សាកល្បងគូរជំហ៊ានជណ្តើរធំ ៗ លើរូបផ្គុំនេះ។ តើវាគ្របដណ្ដប់លើដែកអេតចាយទាំងអស់ទេ?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "អ្នកអាចត្រលប់ក្រោយទៅកាន់កំណត់នៃប្រលោះដែលអ្នកបានឆ្លងកាត់រួចហើយ។",
+          "courseB_starWars_prog8_b": "ព្យាយាមប្រើប្លុក `ធ្វើឡើងវិញ` ដើម្បីមើលដំណើរការលើកូដដែលអ្នកបានដាក់ចូល។\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_b": "មានវិធីពីរយ៉ាងដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "The `ឈុតតារាសម្តែង ១ ដល់ ??? រូបភាព`ប្លុកអាចត្រូវបានប្រើដើម្បីបន្ថែមតារាសម្តែងទៅឆាក។",
+          "courseE_playLab_scaffold1_b": "ដាក់បណ្តុំ `តារាសម្តែងដែលស្ថិតនៅក្រោម` ពេលដំណើរការ \\`ដើម្បីធ្វើអោយតារាសម្តែងរបស់អ្នកលេចមុខនៅពេលចាប់ផ្តើមកម្មវិធី។",
+          "courseE_playLab_scaffold1_c": "ប្រើ `ឈុត ??? ផ្ទៃខាងក្រោយ`ដើម្បីជ្រើសផ្ទៃខាងក្រោយសម្រាប់ឈុតរបស់អ្នក។"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "អ្នកគួរតែមានបួន `ពេលព្រួញ` រារាំងព្រឹត្តិការណ៍ដោយមានទិសដៅដើម្បីរំកិលនៅពីក្រោមនីមួយៗ។",
+          "courseE_playLab_scaffold1_c": "នៅពេលអ្នករួចរាល់អ្នកគួរតែអាចផ្លាស់ទីវីរបុរសរបស់អ្នកដោយប្រើគ្រាប់ចុចព្រួញ!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "ប្រើ `ពិន្ទុ` ដើម្បីបន្ថែមចំណុចហើយ `ដកចំនុច` ដើម្បីដកមួយ។"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "នេះគឺជាប្លុកដំបូងដែលអ្នកនឹងត្រូវការ:\n\n[បិទប្លុក] [0]",
+          "courseC_artist_loops1a_b": "ប្រើបណ្តុំនេះដើម្បីគូរតែម!\n\n[បិទប្លុក] [0]"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_b": "ចុចលើលេខនៅផ្នែកខាងលើនៃរង្វិលជុំ `ដដែលៗ` ដើម្បីផ្លាស់ប្តូរចំនួនដងដែលវាធ្វើម្តងទៀត"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "ប្រើប្លុកនេះដើម្បីលោតទៅមុខ៖\n\n[បិទប្លុក] [0]\n\nកុំភ្លេចផ្លាស់ប្តូរឆ្ងាយ!"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "ប្រើប្លុកនេះដើម្បីកំណត់លំនាំនៃបន្ទាត់របស់អ្នក៖\n\n[បិទប្លុក] [0]",
+          "courseC_artist_loops5b_b": "ដើម្បីធ្វើឱ្យការរចនាដូចអ្វីដែលបានរៀបរាប់ខាងលើអ្នកនឹងចង់ផ្លាស់ប្តូរចំនួនថយក្រោយដូចគ្នានឹងអ្នកឈានទៅមុខដែរ។"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*\"ប្រសិនជាអ្នកប្រីប្លក់ <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ខ្ញុំនឹងគូរបន្ទាត់មួយ។\"*",
+          "courseC_artist_prog2_b": "មានបញ្ហាក្នុងការបត់ខាងជ្រុងទេ? ប្រីប្លក់ <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> ។ "
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "ដេីម្បីបង្កេីតបង្អួចនេះ គ្រាន់តែគូរការ៉េដែលមានជ្រុង ១០០ ភិកសេល។ \n\n-   បម្លាស់ទីទៅមុខ \n-   បត់ \n-   បម្លាស់ទីទៅមុខ \n-   បត់ \n-   បម្លាស់ទីទៅមុខ \n-   បត់ ",
+          "courseC_artist_prog3_b": "តេីអ្នកចង់អោយកូដអ្នកខ្លីជាងហ្នឹងទេ សាកល្បងប្រេី រង្វិលជុំ ក្នុងបញ្ហានេះ ។ "
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "ដេីម្បីបញ្ចប់កាំជ្រួញ គ្រាន់តែគូររូបត្រីកោណនៅពីលេី ! ",
+          "courseC_artist_prog4_b": "អ្នកអាចប្រេីមីនុយទម្លាក់ចុះដែលស្ថិតនៅលេី ប្លក `ប្តូរ` ដេីម្បីមេីលថាមុំណាដែលអ្នកត្រូវការ! ",
+          "courseC_artist_prog4_c": "ដេីម្បីគូរត្រីកោណ អ្នកនឺងចាំបាច់ : \n\n-   ផ្លាស់ទីទៅមុខ \n-   កាច់ឆ្វេង ១២០ ដីក្រេ\n-   ផ្លាស់ទីទៅមុខ \n-   កាច់ឆ្វេង ១២០ ដីក្រេ\n-   ផ្លាស់ទីទៅមុខ "
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "រំកិលចុះតិចៗរហូតទាល់តែអ្នកអាចដំណេីរការកូដរបស់អ្នកម្តងមួយជួរ ដេីម្បីពិនិត្យមេីលថាកន្លែងណាដែលមានកំហុសឆ្គង។",
+          "courseC_artist_prog5_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។",
+          "courseC_artist_prog5_d": "រាល់ការបត់ គួរតែជាមុំ ៩០ ដឺក្រេពីខាងស្តាំ។"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "ជាងគំនូរគឺបាននៅចំមុខកន្លែងត្រឹមត្រូវដេីម្បីគូរខ្សែរទីមួយរបស់គាត់។ ",
+          "courseC_artist_prog6_b": "រូបត្បូងនេះគឺគ្រាន់តែជារូបការ៉េដែលឈរនៅជ្រុងខាងកៀន។",
+          "courseC_artist_prog6_c": "ដោយសារត្បូងនេះក៏ជារូបការ៉េ ត្រូវប្រាកដថាកាច់ ៩០ ដឺក្ររនៅជ្រុងខាងកៀន។ "
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "គ្រប់មុំទាំងអស់គឺអាចជាមុំ ៤៥ ឬ​ ៩០ ដឺក្រ៕",
+          "courseC_artist_prog7_b": "តេីវាដំណេីរនៅជំហានទីមួយទេ?\\\nហេីយចុះជំហានទីពីរ?\\\nតេីកន្លែងណាដែលមានកំហុសឆ្គង?",
+          "courseC_artist_prog7_c": "អ្នកអាចប្រេីមីនុយទម្លាក់ចុះដែលស្ថិតនៅលេីប្លកបត់ដេីម្បីមេីលថាមុំណាដែលអ្នកត្រូវការ! ",
+          "courseC_artist_prog7_d": "អ្នកនឺងចាំបាច់ : \n\n-   ផ្លាស់ទីទៅមុខ \n-   កាច់ស្តាំ ៤៥ ដីក្រេ\n-   ផ្លាស់ទីទៅមុខ \n-   កាច់ស្តាំ ៩០ ដីក្រេ\n-   ផ្លាស់ទីទៅមុខ \n-   កាច់ស្តាំ ៤៥ ដីក្រេ\n\nធ្វេីតាមលំនាំនេះចំនួន ២ ដង​! ",
+          "courseC_artist_prog7_e": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "អ្នកអាចគូរជាចតុកោណកែងជាមួយខ្សែរបន្ទាត់នៅកណ្តាល រឺ រូបការ៉េពីរផ្សេងគ្នា! "
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "បន្ទាប់ពីអ្នកគូរខ្សែរបន្ទាត់ដំបូងរួច កាច់ឆ្វេងមុននឹងអ្នកគូរខ្សែរបន្ទាត់ទីពីរ។",
+          "courseC_artist_prog_challenge2_b": "បន្ទាប់ពីអ្នកគូរខ្សែរបន្ទាត់ទីពីររួច កាច់ស្តាំមុននឹងអ្នកគូរខ្សែរបន្ទាត់ទីបី។"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "ពេលដែលអ្នកឈរនៅទីតាំងជាមួយកំណប់ សូមប្រើប្លុក <xml><block type=\"collector_collect\"/></xml> ដើម្បីលើកវាឡើង។",
+          "courseC_collector_prog1_b": "ដំណោះស្រាយដែលសាមញ្ញបំផុតគឺផ្លាស់ទីទៅខាងមុខ​ រួចប្រមូលកំណប់។"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "អ្នកអាចប្រើបួន <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> ប្លុក ឬក៏ ប្រើ <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ប្លុកដើម្បីបង្កើតរបស់ប្រូក្រាមខ្លីជាងមុន។",
+          "courseC_collector_prog2_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "ប្រូក្រាមនឹងដំណើរការតែប្លុកទាំងឡាយណាដែលត្រូវបានភ្ជាប់ទៅនឹងប្លុក <xml><block type=\"when_run\"/></xml>។",
+          "courseC_collector_prog3_b": "ព្យាយាមប្រើប៊ូតុង \"ជំហាន\" ដើម្បីដំណើរការកូដរបស់អ្នកម្ដងមួយជួរ។ តើអ្នកឃើញកន្លែងដែលកូដមានបញ្ហាដែរឬទេ?",
+          "courseC_collector_prog3_c": "បើសិនជាអ្នកមានបញ្ហាក្នុងការយល់ពីហ្គេមនេះ, សូមព្យាយាមដោយសរសេរចំណាំអំពីចលនាបំលាស់នីមួយៗទៅលើក្រដាស។"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "ប្រសិនបើអ្នកជាប់គាំង សូមព្យាយាមសរសេរគ្រប់ជំហាននីមួយៗនៅលើក្រដាសមួយសន្លឹក។",
+          "courseC_collector_prog4_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។",
+          "courseC_collector_prog4_c": "សាកល្បងជម្រើសនេះសម្រាប់រកផ្លូវមួយ។"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "“ តើវាដំណើរការឬទេនៅជំហានដំបូង?\nតើវាដំណើរការឬទេនៅជំហ៊ានទីពីរ? \nតើត្រង់កន្លែងណាដែលមានបញ្ហា?”",
+          "courseC_collector_prog5_b": "បើអ្នកកែរតម្រូវកំហុសមួយហើយ ប្រូក្រាមនៅតែមិនដំណើរការ សូមប្រើជំហានផ្សេងៗខាងលើដើម្បីស្វែងរកកំហុសផ្សេងទៀត។",
+          "courseC_collector_prog5_c": "ប្រសិនបើអ្នកជាប់គាំង សូមព្យាយាមសរសេរគ្រប់ជំហាននីមួយៗនៅលើក្រដាសមួយសន្លឹក។",
+          "courseC_collector_prog5_d": "ដើរទៅតាមផ្លូវដើម្បីប្រមូលកំណប់។"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "តើអ្នកដឹងថាមានបញ្ហានៅត្រង់ណាដែរឬទេ?  \n\nសាកល្បងប្រើប៊ូតុង \"ជំហាន\" ដើម្បីស្វែងរកកំហុសដោយដំណើរកូដជាជួរៗ។",
+          "courseC_collector_prog6_b": "គាំងជាប់មែនទេ? សាកល្បងផ្លូវនេះវិញដើម្បីប្រមូលកំណប់។"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   តេីអ្នីគ្រប់យ៉ាងដំណេីរការបន្ទាប់ពីជំហានទីមួយទេ ?\n-   តេីវានួវតែដំណេីរការបន្ទាប់ពីជំហានទីពីរទេ ?\n-   តេីវាខុសកន្លែងណាទៅ ?",
+          "courseC_maze_debugging1_b": "មានប្លក់មួយដែលអ្នកត្រូវការបន្ថែមដេីម្បីបញ្ចប់បញ្ហានេះ ។ "
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "មានកូដដែលមានតម្លៃជាច្រេីននៅក្នុងកន្លែងអនុវត្ត ។ កុំលុបវាទាំងអស់ ហេីយចាប់ផ្តេីមសារជាថ្មី ! ",
+          "courseC_maze_debugging2_b": "-   តេីអ្នីគ្រប់យ៉ាងដំណេីរការបន្ទាប់ពីជំហានទីមួយទេ ?\n-   តេីវានួវតែដំណេីរការបន្ទាប់ពីជំហានទីពីរទេ ?\n-   តេីវាខុសកន្លែងណាទៅ ?",
+          "courseC_maze_debugging2_c": "មិនអាចរកកំហុសឃើញមែនទេ? ព្យាយាមធ្វើការដំណើរការកូដអោយបានច្រើនដងដើម្បីសង្កេតមើលមានអ្វីកើតឡើងខ្លះ?"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "ដេីម្បីលុបប្លក់ចេញពីផ្នែកកណ្តាលនៃកូដអ្នក ទាញប្លក់ទាំងអស់ចេញទៅផ្នែកម្ខាងទៀតនៃកន្លែងអនុវត្ត ។ \n\nទាញប្លក់ដែលអ្នកចង់លុបទៅកាន់ន្លែងអនុវត្ត ។ \n\nទីបញ្ចប់ ដាក់ប្លក់ផ្សេងទៀតត្រលប់កាន់កន្លែងរបស់វា ។ ",
+          "courseC_maze_debugging3_b": "មិនអាចរកកំហុសឃើញមែនទេ? ព្យាយាមធ្វើការដំណើរការកូដអោយបានច្រើនដងដើម្បីសង្កេតមើលមានអ្វីកើតឡើងខ្លះ?"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "ប្រេីប៉ុតុង \"ជំហាន\" ដេីម្បីដំណេីរការការណែនាំម្តងមួយៗ ។ តេីវាបានជួយអ្នកស្វែងរកបន្ទាត់ដែលមានកំហុសទេ​? ",
+          "courseC_maze_debugging4_b": "មានការបត់មួយដែលធ្វេីអោយស្រ្កាតទៅផ្លូវខុស ។ តេីអ្នកជួយពិចារណាផងថាជាមួយណា ? "
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "មានប្លក់ដែលមានប្រយោជន័ជាច្រេីននៅក្នុងកន្លែងអនុវត្ត ។ កុំលុបវាទាំងអស់ ! \n\nប្រេីប៉ុតុង \"ជំហាន\" ដេីម្បីរកមេីល និង គិតថាកូដមានកំហុសកន្លែងណា ។ ",
+          "courseC_maze_debugging5_b": "ព្យាយាមនិយាយចេញអោយខ្លាំងនូវអ្ចីដែលស្រ្កាតគួរធ្វេី។ តេីវាជាកូដដែលដូថគ្នានឹងកន្លែងអនុវត្តទេ? តេីវាខុសកន្លែងណា?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   តេីស្រ្កាតត្រូវគួរធ្វេីយ៉ាងណា ?\n-   តេីស្រ្កាតត្រូវធ្វេីអ្វី ?\n-   តេីវាបានប្រាប់អ្វីដល់អ្នក ?",
+          "courseC_maze_debugging6_b": "ពេលដែលអ្នកបានរកឃេីញ និង កែកំហុសហេីយ ចូលទៅតាមដំណេីរការបំបាត់កំហុសម្តងទៀតដេីម្បីរកកំហុសទីពីរ ។ "
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   តេីអ្វីគ្រប់យ៉ាងដំណេីរនៅជំហានទីមួយទេ?\n-   ហេីយចុះជំហានទីពីរ?\n-   តេីកន្លែងណាដែលមានកំហុសឆ្គង?",
+          "courseC_maze_debugging7_b": "កុំភ្លេចប្រេីប៉ុតុង \"ជំហាន\" ដេីម្បីដំណេីរការប្រូក្រាមម្តងមួយជូរៗ ។ ",
+          "courseC_maze_debugging7_c": "ពេលដែលអ្នករកឃេីញ និង កែកំហុសទីមួយហេីយ ត្រូវប្រាកដថាប្រីប្រាស់ដំណេីរការបំបាត់កំហុសម្តងដំណេីរការបំបាត់កំហុសម្តងដេីម្បីរកកំហុសបន្ទាប់។ \n\nធ្វេីដំណេីរការបំបាត់កំហុសម្តងទៀតរហូតទាល់តែប្រូក្រាមដំណេីការ! "
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "ឆ្វេងឬស្ដាំ? ស្រេច​តែលើ​អ្នក!",
+          "courseC_maze_debugging_challenge1_b": "ផ្លូវដើររបស់សត្វកំប្រុក មានរាងជាចតុកោណកែង! វាត្រូវការងាកក្នុងទិសដៅតែមួយរាល់ពេល។",
+          "courseC_maze_debugging_challenge1_c": "ប្រសិនបើអ្នកកំពុងជាប់គាំង អ្នកអាចចាប់ផ្តើមម្តងទៀតហើយរកវិធីថ្មី!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "ប្រសិនបើអ្នកកំពុងជាប់គាំង សូមព្យាយាមកែនូវកំហុសនៃកូដ។ តើវាខុសត្រង់ណា?",
+          "courseC_maze_debugging_challenge2_c": "មានផ្លូវពីរផ្សេងគ្នាដែលអ្នកអាចទៅតាមដោយគ្រាន់តែដើរទៅមុខ និងងាកបួនដង។ ប្រសិនបើអ្នករកឃើញវិធីមួយដើម្បីប្រើរង្វិលជុំ វាអាចមានច្រើនទៀត!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "ត្រវប្រាកដថាប្លុកទាំងអស់ត្រូវបានភ្ជាប់ជាមួយគ្នា បន្ទាប់មកចុចពាក្យ \"រត់\" ម្តងទៀត។​"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "ដើម្បីប្រើប្លុក <xml><block type=\"maze_moveForward\"/></xml>, ទាញវាចេញពីប្រអប់ឧបករណ៍ រួចខ្ទាស់វាជាប់ទៅនឹង <xml><block type=\"when_run\"/></xml> ប្លុក។",
+          "courseC_maze_programming2_b": "ត្រវប្រាកដថាប្លុកទាំងអស់ត្រូវបានភ្ជាប់ជាមួយគ្នា បន្ទាប់មកចុចពាក្យ \"រត់\" ម្តងទៀត។​"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "ព្យាយាមដំណើរការកូដជាមុនសិនដើម្បីមើលឃើញកន្លែងណាដែលមានបញ្ហា។",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\nដេីម្បីលុបប្លុកចេញពីផ្នែកកណ្តាលនៃកូដអ្នក អូសប្លុកទាំងអស់ចេញទៅផ្នែកម្ខាងទៀតនៃកន្លែងអនុវត្ត ។ \n\nទាញប្លុកដែលអ្នកចង់លុបត្រលប់ទៅកាន់ប្រអប់ឧបករណ៍។ \n\nចុងក្រោយ ដាក់ប្លុកផ្សេងទៀតត្រលប់ទៅកាន់កន្លែងរបស់វា ។ "
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "ត្រូ​វចងចាំថានៅពេលដែលអ្នកបង្វែរខ្លួន នោះមានន័យថាអ្នកកំពុងតែបង្វែរពីត្រនិចនៃសញ្ញា _បក្សី_។​​ ប្រសិនបើអ្នកបង្វែរទៅស្តាំ សញ្ញាបក្សីនោះនឹងចង្អុលទៅក្រោម។​​ ",
+          "courseC_maze_programming4_b": "ដើម្បីឲ្យស្របតាមផ្លូវ:\n\\-ឆ្ពោះទៅមុខ\n\\-បង្វែរផ្លូវមួយទៀត\n\\-ឆ្ពោះទៅមុខ\n\\-ត្រឡប់ក្រោយទៅផ្លូវមួយផ្សេងទៀត\n\\-ឆ្ពោះទៅមុខ"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "ព្យាយាមប្រើប៊ូតុង \"step\" ដើម្បីដំណើរការកូដរបស់អ្នកពីមួយជួរទៅមួយជួរ។ តើអ្នកអាចរកឃើញអ្វីដែលអ្នកត្រូវធ្វើបន្ទាប់បានទេ?",
+          "courseC_maze_programming5_b": "សត្វបក្សីនឹងត្រូវដំណើរការមួយជុំដើម្បីបញ្ចប់ហ្គេមនេះ។ តើអ្នកអាចរកនឹកឃើញវិធីមួយណាបានដែរឬទេ?",
+          "courseC_maze_programming5_c": "ដំណោះស្រាយនឹងមានប្លុក `ផ្លាស់ទៅមុខ` ចំនួនពីរ, បែរ ចំនួនមួយ, ហើយនិងប្លុក `ផ្លាស់ទៅមុខ` ចំនួនពីរទៀត។"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយបញ្ហានេះ!",
+          "courseC_maze_programming6_b": "តាមម្រាមរបស់អ្នកដែលវៀសពីបស្សីទៅសត្វជ្រូក តើជំហានមួយណាដែលអ្នកបានដើរ?",
+          "courseC_maze_programming6_c": "ត្រូវចាំថាអ្នកត្រូវតែបែរមុខជាមុនសិន ដោយសារតែបក្សីចាប់ផ្ដើមដោយបែរមុខទៅជញ្ជាំង។",
+          "courseC_maze_programming6_d": "អារម្មណ៍គាំងមែន? ក្រឡេកមើលផ្នែកនេះ!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "កុំភ្លេចប្រើប៊ូតុង \"ជំហ៊ាន\" ដើម្បីចូលទៅកាន់ប្លុកនីមួយៗ និងស្វែងរកកំហុស។",
+          "courseC_maze_programming7_b": "បើសិនជាអ្នកមានបញ្ហាក្នុងការយល់ពីហ្គេមនេះ, សូមព្យាយាមដោយសរសេរចំណាំអំពីចលនាបំលាស់នីមួយៗទៅលើក្រដាស។"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "ចូរចាំថាអ្នកអាចប្រើប៊ូតុង \"ជំហ៊ាន\" ដើម្បីរកមើលកូដរបស់អ្នកនៅតាមជួរនីមួយៗ ប្រសិនបើអ្នកជាប់គាំង។",
+          "courseC_maze_programming8_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "មានវីធីជាច្រើនដើម្បីទៅដល់សត្វជ្រូក។ ប្រើម្រាមដៃរបស់អ្នកដើម្បីស្វែងរកផ្លូវហើយបន្ទាប់មកដាក់ប្រូក្រាមវា!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_\"បើអ្នកបញ្ជូនខ្ញុំត្រលប់ក្រោយ សូមមេត្តាប្រុងប្រយ័ត្នឲ្យខ្ញុំបែរទៅឲ្យត្រូវផ្លូវ!\"_",
+          "courseC_maze_programming_challenge2_b": "ដំណោះស្រាយខ្លីបំផុតគឺប្រើប្រាស់ត្រឹមតែ៥ប្លុកតែប៉ុណ្ណោះ, ក៏ប៉ុន្តែប្រើប្លុកនេះៈ\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_c": "អ្នកនឹងត្រូវប្រើ `រំកិលទៅមុខ` ចំនួនប្រាំដងដើម្បីដោះស្រាយចំណោទមួយនេះ។"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_a": "ប្រើប្លុក `ធ្វើម្ដងទៀត` ចំនួនពីរ។"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_a": "ប្រើប្លុក `ធ្វើម្ដងទៀត` ចំនួនពីរ។"
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_c": "សូមក្រលេកទៅមើលវិធីនេះ។\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_c": "សូមក្រលេកទៅមើលវិធីនេះ។\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "ប្រើម៉ឺនុយទម្លាក់ចុះនៅលើប្លុកវេនដើម្បីជ្រើសរើសមុំដែលអ្នកត្រូវការ!",
+          "courseD_artist_project1_b": "ចងចាំថា `ឆ្ពោះទៅមុខ` គូរបន្ទាត់ខណៈ `លោតទៅមុខ` មិនអាច។"
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_a": "ប្រើម៉ឺនុយទម្លាក់ចុះនៅលើប្លុកវេនដើម្បីជ្រើសរើសមុំដែលអ្នកត្រូវការ!"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_b": "ប្រសិនបើអ្នកបង្កើតត្រីកោណជាមួយនឹងរង្វិល ជុំ​អ្នកគូរគួរតែគូរដូចគ្នានឹងការចាប់ផ្តើម​ហើយវានឹងមិនធ្វើឲ្យ៦០ដឺក្រេរនោះបង្វែរបានដោយងាយ។​",
+          "courseD_artist_nestedLoops1a_c": "ប្រសិនបើអ្នកបានពណ៌ សូមអ្នកប្រើបណ្តុំនៃពណ៌ដែលមាននៅក្នុងកូដរបស់អ្នក។​ អ្នកមិនចាំបាច់ផ្ជាប់កូល័រទាំងនោះនៅក្នុងប្រអប់រូបភាពនោះទេ។​"
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "សង់រង្វិលជុំរបស់អ្នកដោយដាក់កូដត្រីកោណរបស់អ្នកជុំវិញវាជាមួយនឹងរង្វិលជុំផ្សេងមួយទៀត។​"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "ព្យាយាមប្រើប្លុក \\`លោតទៅមុខ 'ដើម្បីយកពីកំពូលនៃការ៉េមួយទៅកន្លែងដែលអ្នកនឹងចាប់ផ្ដើមបន្ទាប់។\nប្រសិនបើការ៉េរបស់អ្នកមានកម្ពស់ ២០ ភីកសែលហើយវាដាច់ពីគ្នាចម្ងាយ ២០ ភីកសែល តើអ្នកត្រូវលោតទៅឆ្ងាយប៉ុណ្ណា?"
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "ប្រើម៉ឺនុយទម្លាក់ចុះនៅលើប្លុកវេនដើម្បីជ្រើសរើសមុំដែលអ្នកត្រូវការ!",
+          "courseD_artist_project1_b": "ចងចាំថា `ឆ្ពោះទៅមុខ` គូរបន្ទាត់ខណៈ `លោតទៅមុខ` មិនអាច។"
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "ជំហានជណ្តើរនេះប្រើវេន ៧៦ ដឺក្រេនិងធ្វើម្តងទៀត ៤ ដង។\n\n<img src = \"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width = \"200px\" />",
+          "courseD_artist_project1a_b": "លំនាំទាំងនេះគឺដូចជាជំហានជណ្តើរពីល្បែងផ្គុំរូបផ្សេងទៀតប៉ុន្តែប្រើមុំខុសគ្នា។"
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "ចងចាំថា `ឆ្ពោះទៅមុខ` គូរបន្ទាត់ខណៈ `លោតទៅមុខ` មិនអាច។",
+          "courseD_artist_project2_b": "បន្ទាប់ពីអ្នកគូរនិងផ្លាស់ទីលើកដំបូងអ្នកអាចសរសេរលេខកូដម្តងទៀតដោយបន្ថែមរង្វិលជុំជុំវិញខាងក្រៅ។"
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "គំនូរនេះត្រូវបានធ្វើឡើងដោយដាក់ជណ្តើរចំនួន ៤ ជណ្តើរនិងប្លុកវេន ១៨០ ដឺក្រេនៅខាងក្នុងនៃប្លុក \\`ម្តងទៀត ២ ដង។\n\n<img src = \"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width = \"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "ប្រើម៉ឺនុយទម្លាក់ចុះនៅលើប្លុកវេនដើម្បីជ្រើសរើសមុំដែលអ្នកត្រូវការ!",
+          "courseD_artist_project3_b": "សាកល្បងរង្វិលជុំខាងក្នុង!\n\nប្រើលេខកូដដែលអ្នកបានបង្កើតដើម្បីគូរបន្ទាត់រាងហើយដាក់វានៅខាងក្នុងនៃរង្វិលជុំផ្សេងទៀត។ នៅខាងក្រោមមុនពេលរង្វិលជុំខាងក្រៅបញ្ចប់បន្ថែមបណ្តុំដែលនឹងបង្វែរអេលសា។\n\n-   សាកល្បង ៧២ ដឺក្រេប្រសិនបើអ្នកកំពុងធ្វើរង្វិលជុំខាងក្រៅ ៥ ដង\n-   សាកល្បង ៦០ ដឺក្រេប្រសិនបើអ្នកកំពុងធ្វើរង្វិលជុំខាងក្រៅ ៦ ដង"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "អ្នកអាចជ្រើសរើសបរិមាណផ្សេងៗដើម្បីបង្វិលរាងរបស់អ្នក! ចុះប្រហែល ១៨ ដងដែលមានវេន ២០ ដឺក្រេ?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "នេះជាព្រិលផ្កាថ្មប៉ារ៉ាហ្គាយដែលមានវេន ៣៦ ដឺក្រេមុនពេលផ្កាព្រិលត្រីកោណ៖\n\n<img src = \"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width = \"200px\" />\n\nនេះជាសំណុំឆកោនជាមួយការេ៖\n\n<img src = \"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width = \"200px\" />",
+          "courseD_artist_project4_b": "ដើម្បីសាកល្បងនេះគូរផ្កាព្រិលដំបូងរបស់អ្នកបន្ទាប់មកបត់បន្ទាប់មកគូរផ្ទាំងទឹកកកទីពីរ។"
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "នេះគឺជាផ្កាព្រិលដែលមានប្រវែងពីរខុសគ្នាដែលត្រូវបានគូរម្តងមួយៗ (មានវេន ៣០ ដឺក្រេ។\n\n<img src = \"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width = \"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "បន្ទាត់ ២ ឆកោននិងត្រីកោណ ៤៖\n\n<img src = \"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width = \"200px\" />"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "អ្នកនឹងត្រូវការប្រើ អុីវ ប្លុកដើម្បីឆាកទៅមើលថាតើវាមានផ្កានៅខាងក្រោមពពកមុននឹងអ្នកព្យាយាមយកពូជលម្អងវា។"
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "អ្នកនឹងត្រូវការប្រើ អុីវ ប្លុកដើម្បីឆាកទៅមើលថាតើវាមានផ្កានៅខាងក្រោមពពកមុននឹងអ្នកព្យាយាមយកពូជលម្អងវា។"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_b": "អ្នកអាចប្រើរង្វិលជុំម្តងទៀតឬរង្វិលជុំផ្សេងទៀតដើម្បីរក្សាឃ្មុំហើរចេញទៅ។ ប្រើអ្វីក៏ដោយឲ្យតែអ្នកចូលចិត្ត!"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "មិនដំណើរការ? ព្យាយាមប្រើប៊ូតុង \"ជំហាន\" ដើម្បីមើលថាមានអ្វីកើតឡើងជាជួរ។",
+          "courseD_bee_nestedLoops1_b": "ព្យាយាមសរសេរកូដសម្រាប់មួយចំហៀងនៃការ៉េជាមុន។ តើអ្នកអាចរង្វិលជុំនេះដើម្បីទទួលបានទឹកដមទាំងអស់បានទេ?",
+          "courseD_bee_nestedLoops1_c": "ចងចាំថាត្រូវប្រើប្លុក `ទទួលទឹកដម` ផ្កានៅពេលអ្នកនៅលើការ៉េដែលមានផ្កា។"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "មិនដំណើរការ? ព្យាយាមប្រើប៊ូតុង \"ជំហាន\" ដើម្បីមើលថាមានអ្វីកើតឡើងជាជួរ។",
+          "courseD_bee_nestedLoops1_c": "ចងចាំថាត្រូវប្រើប្លុក `ទទួលទឹកដម` ផ្កានៅពេលអ្នកនៅលើការ៉េដែលមានផ្កា។"
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "ដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះអ្នកត្រូវដាក់ `រង្វិលជុំមួយ` នៅខាងក្នុងមួយទៀត។",
+          "courseD_bee_nestedLoops2_b": "មិនអាចដោះស្រាយកន្លែងដែលត្រូវដាក់រង្វិលជុំបានទេ? ព្យាយាមសរសេរកូដនៅលើក្រដាសជាជំហាន ៗ ហើយរកមើលគំរូ។",
+          "courseD_bee_nestedLoops2_c": "ចងចាំថាអ្នកអាចដាក់ច្រើនជាងមួយប្លុកនៅខាងក្នុងនៃរង្វិលជុំ។"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "អ្នកត្រូវធ្វើម្តងទៀត `ទទួលទឹកដម` ពីខាងក្នុងនៃ `ដដែលៗ` ដែលមានប្លុក “ ឆ្ពោះទៅមុខ ”  នៅខាងក្នុងផងដែរ។",
+          "courseD_bee_nestedLoops7_b": "អ្នកត្រូវប្រើទាំងបីនៃប្លុកដែលនិយាយឡើងវិញដើម្បីរកដំណោះស្រាយនេះ។",
+          "courseD_bee_nestedLoops7_c": "សំបុកប្លុកបីជ្រៅដូចនេះ៖\n\n-   ធ្វើម្តងទៀត ៤\n    -   ធ្វើម្តងទៀត ៣\n        -   ធ្វើម្តងទៀត 12\n            -   ទទួលទឹកដម\n        -   ទៅមុខ\n    -   បត់​ស្តាំ"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "កុំភ្លេចថាអ្នកអាច `ធ្វើម្តងទៀត` នូវពាក្យបញ្ជាតែមួយឬគំរូវែងជាងនេះ។ អ្នកក៏អាច `ធ្វើម្តងទៀត` នូវប្លុកមួយដែលធ្វើម្តងទៀត!",
+          "courseD_bee_nested_loops_challenge2_b": "ដើម្បីទទួលបានត្បូងទាំងបួនដំបូងត្រូវប្រើរង្វិលជុំដើម្បីផ្លាស់ទីឆ្ងាយពីកណ្តាល។ បត់ឆ្វេងឬស្តាំបន្ទាប់មកប្រើរង្វិលជុំនៅខាងចុងដើម្បីផ្លាស់ទីពីគំនរទីមួយទៅកំណប់ទីពីរ។ ប្រសិនបើអ្នកធ្វើរង្វិលជុំដែលបានដាក់ម្តងទៀតឱ្យបានគ្រប់គ្រាន់អ្នកប្រមូលនឹងផ្លាស់ទីជុំវិញរូង!",
+          "courseD_bee_nested_loops_challenge2_c": "កម្មវិធីខ្លីបំផុតដែលឈានដល់កំណប់ទាំងអស់ប្រើតែប្លុកប្រមូលមួយនិងវេនពីរប៉ុណ្ណោះ។",
+          "courseD_bee_nested_loops_challenge2_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n-   pick corn\n-   else\n-   if at lettuce\n    \\\\t- pick lettuce\n\nIf there is nothing there, you won't pick anything!"
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "អ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ៤ដង ដើម្បីទៅដល់គំនរ។ តើអ្នកអាចប្រើ ' ធ្វើម្ដងទៀត ' ដើម្បីរង្វិលជុំដដែលៗបានឬទេ?",
+          "courseD_farmer_while1_b": "ប្រើប្លុក \"ដកចេញមួយ\" នៅពេលអ្នកឈរនៅលើគំនរដី ដើម្បីដកវាចេញ។"
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "អ្នកត្រូវផ្លាស់ទីតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅដល់រណ្ដៅ។",
+          "courseD_farmer_while2_b": "អ្នកនឹងត្រូវការប្លុក \"បំពេញមួយ\" ចំនួនប្រាំមួយដង។ តើអ្នកអាចប្រើការរង្វិលជុំដដែលៗមួយ ដើម្បីធ្វើអោយវាកាន់តែងាយជាងមុនឬទេ?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "រង្វិលជុំដដែលៗ អាចជួយអ្នកធ្វើអោយកូដកាន់តែងាយ។",
+          "courseD_farmer_while3_b": "អ្នកមិនគួរត្រូវការប្លុក \"បង្វិល\" ដើម្បីទៅដល់គំនរទេ។"
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "ជំនួសដោយការប្រើប្រាស់ រង្វិលជុំ \"ឡើងវិញុ\", ប្រើរង្វិលជុំ៉ \"នៅពេល\" ដើម្បីបន្ដជីករហូតដល់ពេលគំនរនោះបាត់។ ",
+          "courseD_farmer_conditionals4_b": "នេះមើលទៅពិតជាប្រហាក់ប្រហែលគ្នាណាស់ជាមួយបញ្ហាមុននេះ ចំណុចដែលខុសគ្នាតែមួយគត់គឺ តើរង្វិលជុំមួយណាដែលអ្នកត្រូវការ។"
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "សាកល្បងដាក់ រង្វិលជុំ \"ខណៈពេល\" នៅក្នុងរង្វិលជុំ \"ម្ដងទៀត\"។",
+          "courseD_farmer_conditionals5a_b": "កសិករត្រូវការផ្លាស់ទីទៅមុខ សរុបចំនួន៥ដង ដើម្បីទៅដល់ចុងបញ្ចប់នៃជួរ។ តើកសិករត្រូវការធ្វើអ្វីទៀត?",
+          "courseD_farmer_conditionals5a_c": "ដើរទៅមុខ៥ដង។ នៅពេលអ្នកដើរទៅមុខ យកគំនរដីចេញដោយប្រើប្លុក \"ខណៈពេលដែលមានគំនរ\"។"
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "ត្រូវប្រាកដថាអ្នកកំពុងប្រើរង្វិលជុំ `ខណៈពេល` ដើម្បីគណនាចំនួនដងដើម្បីបំពេញរន្ធនីមួយៗ។",
+          "courseD_farmer_conditionals6_b": "កត់សំគាល់ថាកសិករត្រូវការឆ្ពោះទៅមុខនិងចុះក្រោមជាច្រើនដងតាមលំនាំជណ្តើរ។"
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "សាកល្បងដើរតាមផ្លូវនេះដើម្បីទៅដល់ពោតទាំងអស់!",
+          "courseD_harvester_nested_loops_challenge1_b": "ដើម្បីប្រមូលពោតច្រើនជាងមួយដុំអ្នកត្រូវប្រើ `រើសពោត` លើសពីមួយដង។",
+          "courseD_harvester_nested_loops_challenge1_c": "អ្នកនឹងត្រូវដាក់រង្វិលជុំតូចមួយនៃរង្វិលជុំសំខាន់របស់អ្នកដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ!"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "ព្យាយាមប្រើប៊ូតុង \"step\" ដើម្បីដំណើរការកូដរបស់អ្នកពីមួយជួរទៅមួយជួរ។ តើអ្នកអាចរកឃើញអ្វីដែលអ្នកត្រូវធ្វើបន្ទាប់បានទេ?",
+          "courseC_maze_programming5_c": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "ដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះអ្នកនឹងត្រូវការ \"សំបុក\" `រង្វិលជុំ` ម្តងទៀតនៅខាងក្នុងនៃ `រង្វិលជុំ` ម្តងទៀត។",
+          "courseD_maze_nestedLoops3_b": "មិនអាចដោះស្រាយកន្លែងដែលត្រូវដាក់រង្វិលជុំបានទេ? ព្យាយាមសរសេរកូដម្តងមួយជំហាន ៗ ហើយរកមើលលំនាំ។",
+          "courseD_maze_nestedLoops3_c": "ព្យាយាមសរសេរលេខកូដសម្រាប់ផ្លូវតែមួយនិងវេន។ តើអ្នកអាចធ្វើវាម្តងទៀតដើម្បីទៅដល់ផ្កាឈូករ័ត្នបានទេ?"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "ព្យាយាមប្រើផ្លូវនេះឆ្លងកាត់ផ្ទាំងសំពត់ស។\n\n\\[] [0]",
+          "courseD_maze_nestedLoops4_b": "ប្រសិនបើលំនាំរង្វិលជុំពិបាកនឹងមើលសូមសាកល្បងសរសេរវាជាមុនសិនហើយមើលលេខកូដណាដែលធ្វើម្តងទៀតមុនពេលអ្នកដាក់រង្វិលជុំចូល។",
+          "courseD_maze_nestedLoops4_c": "សូមព្យាយាមប្រើរង្វិលជុំមួយនៅផ្នែកមួយទៀតដើម្បីកាត់បន្ថយចំនួនកូដដែលអ្នកត្រូវការ។"
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "រកមើលគំរូជណ្តើរក្នុងរទេះនេះដើម្បីរកកន្លែងដែលអាចប្រើរង្វិលជុំនៅខាងចុង។",
+          "courseD_maze_nestedLoops5_b": "មិនអាចដោះស្រាយកន្លែងដែលត្រូវដាក់រង្វិលជុំបានទេ? ព្យាយាមសរសេរកូដម្តងមួយជំហាន ៗ ហើយរកមើលលំនាំ។"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "ប្រសិនបើអ្នកជាប់គាំងសូមព្យាយាមសរសេរកូដចេញនៅលើក្រដាសដោយគ្មានរង្វិលជុំជាមុនហើយរកមើលលំនាំ។",
+          "courseD_maze_nestedLoops6_b": "រង្វិលជុំសំបុក `ធ្វើម្តងទៀត` អាចជួយកាត់បន្ថយចំនួនប្លុកដែលបានប្រើ។",
+          "courseD_maze_nestedLoops6_c": "វានឹងត្រូវការ `រង្វិលជុំ` ធ្វើដដែលៗពីរឈុតដើម្បីដោះស្រាយល្បែងផ្គុំរូបនេះ។"
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "ប្រសិនបេីសត្វចាបហេីរមិនដល់សត្វជ្រូកទេ ត្រូវប្រាកដថាប្លក់ទាំងបីបានចុចពេញលេញទាំងអស់ បន្ទាប់មកចុច \"រត់\" ម្តងទៀត។ ",
+          "courseC_maze_programming1_b": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "ដើម្បីប្រើប្រាស់ប្លុក `ឆ្ពោះទៅមុខ` អ្នកត្រូវអូសវាចេញពីប្រអប់ឧបករណ៍ទៅដាក់ចូលកន្លែងធ្វើការហើយភ្ជាប់វាទៅប្លុក `ពេលដំណើរការ` ។",
+          "courseC_maze_programming2_b": "ត្រូវប្រាកដថាប្លក់ទាំងបីបានចុចពេញលេញទាំងអស់ ហេីយតំណភ្ជាប់ទៅនឹងប្លក់ `ពេលរត់` ។ "
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nដើម្បីលុបប្លុកចេញពីពាក់កណ្តាលនៃកូដរបស់អ្នក អ្នកត្រូវអូសប្លុកទាំងអស់ដែលនៅពីក្រោមវាទៅខាងស្តាំ​ ហើយទុកឱ្យពួកគេអង្គុយនៅកន្លែងធ្វើការមួយរយៈ។  \n\nចុចលើប្លុកដែលអ្នកចង់លុប​ ហើយអូសវាត្រលប់ទៅប្រអប់ឧបករណ៍វិញ។\n\nជាចុងក្រោយ អ្នកត្រូវដាក់ប្លុកផ្សេងទៀតត្រឡប់ទៅកន្លែងកម្មសិទ្ធិរបស់ពួកគេវិញ។"
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "ព្យាយាមប្រើប៊ូតុង \"step\" ដើម្បីដំណើរការកូដរបស់អ្នកពីមួយជួរទៅមួយជួរ។ តើអ្នកអាចរកឃើញអ្វីដែលអ្នកត្រូវធ្វើបន្ទាប់បានទេ?",
+          "courseC_maze_programming5_b": "ចំណាំថាការបត់គឺតាមការមេីលឃេីញរបស់សត្វចាប។ ",
+          "courseC_maze_programming5_c": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "ព្យាយាមប្រើប៊ូតុង \"step\" ដើម្បីដំណើរការកូដរបស់អ្នកពីមួយជួរទៅមួយជួរ។ តើអ្នកអាចរកឃើញអ្វីដែលអ្នកត្រូវធ្វើបន្ទាប់បានទេ?",
+          "courseC_maze_programming5_b": "ចំណាំថាការបត់គឺតាមការមេីលឃេីញរបស់សត្វចាប។ ",
+          "courseC_maze_programming5_c": "កុំមានភាពភ័យខ្លាចក្នុងការធ្វើខុស! ព្យាយាមបន្ថែមប្លុក និងដំណើរការកូដ ដើម្បីមើលថាមានអ្វីកើតឡើង បើទោះបីជាអ្នកមិនទាន់គិតថាអ្នកបានដោះស្រាយបញ្ហានេះក៏ដោយ។"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "គំនូរនេះគឺដូចជាគំនូរចុងក្រោយដែរ, ប៉ុន្តែអនុគមន៍ `draw line` ឥឡូវកំពុងគូររូបខុសគ្នា។",
+          "courseD_artist_functions10_a": "ដើម្បីជៀសវាងការប្រើប្រាស់ប្លុក `move forward` ច្រើនដង, បង្កើតអនុគមន៍\n `draw hexagon`ហើយហៅវាច្រើនដង។",
+          "courseD_artist_functions10_c": "តើអ្នកឃើញកន្លែងដែលគំនូរនេះអាចប្រើអនុគមន៍មួយដែលហៅថា `line of hexagons`ទេ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "ការ៉េនីមួយៗមានជ្រុង១០០ ភីកសែល នោះមានន័យថាអ្នកនឹងត្រូវផ្លាស់ទីទៅមុខ ១៧៥ ភីកសែលមុនពេលគូរការ៉េទីពីររបស់អ្នក។",
+          "courseE_artist_functions1_b": "វាមិនអីទេក្នុងការគូរបន្ទាត់ត្រួតគ្នាដើម្បីធ្វើវ៉ែនតារបស់អ្នកនោះ។",
+          "courseE_artist_functions1_c": "សម្រាប់សរសេរកូដខ្លីជាង, សាកល្បងប្រើ `repeat` loop ដើម្បីគូរស៊ុមការ៉េនៃវ៉ែនតា។"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n\n-   ប្រើមុខងារ\n-   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n-   ប្រើមុខងារ"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "អនុគមន៍ដែលអ្នកសរសេរមិនគួរមានកម្មវិធីទាំងមូលរបស់អ្នកទេ, គ្រាន់តែផ្នែកដែលគូរការ៉េមានជ្រុង ១០០ ភីកសែល។",
+          "courseD_artist_functions2_c": "ប្រើប្លុក`draw a square`ពណ៌បៃតង ដើម្បី \"ហៅ\" អនុគមន៍របស់អ្នក ក្រោមប្លុក `when run` ។ បើមិនដូច្នោះទេកូដនឹងមិនដំណើរការទេ។\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "កម្មវិធីរបស់អ្នកគួរ:\n\n-   ប្រើមុខងារ\n-   ផ្លាស់ទីទៅមុខ ១០០ + ៧៥ ភីកសែល\n-   ប្រើមុខងារ"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "ដើម្បីដោះស្រាយបញ្ហានេះ, អ្នកគ្រាន់តែត្រូវការបន្ថែមរង្វិលជុំដដែលៗ ដែលធ្វើឡើងវិញ\nនូវកូដចាប់ផ្តើម ៨ ដង។\n\nប្រសិនបើអ្នកមិនចាំកូដចាប់ផ្តើមទេ, ចុច \"ចាប់ផ្តើម\" នៅជ្រុងខាងស្តាំខាងលើនៃកន្លែងអនុវត្ត។",
+          "courseD_artist_functions3_b": "រង្វិលជុំដដែលៗរបស់អ្នក គួរតែមានបណ្តុំកូដ3នៅខាងក្នុង។"
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "សាកល្បងប្រើអនុគមន៍មួយ!",
+          "courseD_artist_functions4_b": "ទាញប្លុកអនុគមន៍ `គូរផ្កាយ` ចេញពីប្រអប់ឧបករណ៍ ដើម្បីចាប់ផ្តើមបង្កើតអនុគមន៍របស់អ្នក។ អនុគមន៍គួរតែមានកូដដូចគ្នានឹង puzzle ពីមុន, ដោយឥឡូវ​នេះអ្នកកំពុងគូរលំនាំផ្កាយដូចគ្នា។",
+          "courseD_artist_functions4_c": "ប្រើប្លុក `គូរផ្កាយ` ពណ៌បៃតង ដើម្បីហៅអនុគមន៍នេះក្នុងប្រូក្រាមសំខាន់របស់អ្នក។ កុំភ្លេចលោតទៅមុខរវាងផ្កាយនីមួយៗ!"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "កុំបោះបង់! ចងចាំនូវអ្វីដែលអ្នកបានរៀន។",
+          "courseD_artist_functions5_b": "អនុគមន៍ធ្វើឱ្យមានភាពងាយស្រួល ក្នុងការហៅកូដដែលបានរក្សាទុកគ្រប់ពេល, មិនត្រឹមតែពីខាងក្នុងរង្វិលជុំដដែលៗទេ!"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "កុំបោះបង់! ចងចាំនូវអ្វីដែលអ្នកបានរៀន។",
+          "courseD_artist_functions5_b": "អនុគមន៍ធ្វើឱ្យមានភាពងាយស្រួល ក្នុងការហៅកូដដែលបានរក្សាទុកគ្រប់ពេល, មិនត្រឹមតែពីខាងក្នុងរង្វិលជុំដដែលៗទេ!",
+          "courseD_artist_functions5_c": "ចាប់ផ្តើមដោយទាញកូដ មានរាងផ្កាយទៅក្នុងអនុគមន៍ `គូរផ្កាយ`, បន្ទាប់មកប្រើអនុគមន៍នេះដើម្បីគូរផ្កាយ៣!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "សាកល្បងបង្កើតអនុគមន៍របស់អ្នកជាមុនសិន បន្ទាប់មកបន្ថែមបង្អួចមួយក្នុងពេលតែមួយ។"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "អ្នកគ្រាន់តែត្រូវការប្លុក `move forward` មួយប៉ុណ្ណោះ, ប៉ុន្តែអ្នកនឹងត្រូវការប្លុក  `jump forward` និង/ ឬ `jump backward` ពីរបី !",
+          "courseD_artist_functions8_a": "ចាប់ផ្តើមដោយបង្កើតអនុគមន៍សម្រាប់បង្កើតការ៉េ, បន្ទាប់មកសាកល្បងបង្កើតអនុគមន៍ សម្រាប់បង្កើតបន្ទាត់នៃការ៉េមួយ។\n\nតើអ្នកប្រើអនុគមន៍ `draw a line of squares` ដើម្បីបង្កើតរូបភាពនេះយ៉ាងដូចម្តេច?",
+          "courseD_artist_functions8_d": "ដើម្បីបង្កើតជាបន្ទាត់ការ៉េ,\n\n-   ធ្វើឡើងវិញ ៣ ដង\n-   គូរការ៉េដែលមានប្រវែង \\*\\* ៥០ ភីកសែល \\*\\*\n-   លោតទៅមុខ \\*\\* ១០០ ភីកសែល \\*\\*",
+          "courseD_artist_functions8_b": "គិតថាជួរនីមួយៗនៅក្នុងរូបភាពនេះជានៃបន្ទាត់ការ៉េ ៣ ។ តើមាននៃបន្ទាត់ការ៉េប៉ុន្មានជួរ ហើយតើអ្នកចាប់ផ្តើមគូរវានៅទីណា?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "តើអ្នកអាចមើលឃើញកន្លែងទាំងបួនដែលបន្ទាត់ `line of triangles` អាចត្រូវបានប្រើនៅក្នុងគំនូរនេះទេ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "បញ្ហានេះអាចបែកជាបីផ្នែក:\n\n\\-បង្កើតអនុគមន៍ `draw a triangle`\n\\-បង្កើតអនុគមន៍  `draw a line of triangles`\n\\-ប្រើអនុគមន៍`draw a line of triangles` បួនដងដើម្បីបញ្ចប់គំនូរ",
+          "courseD_artist_functions9_b": "គំនូរនេះត្រូវបានបង្កើតឡើងដោយគូរបន្ទាត់ត្រីកោណ ៤ ដង និងងាក ៦០ ឬ ១២០ ដឺក្រេ មុនពេលអ្នកគូរបន្ទាត់ត្រីកោណបន្ទាប់។",
+          "courseD_artist_functions9_c": "ដើម្បីគូរបន្ទាត់ត្រីកោណមួយ:\n\n -ធ្វើឡើងវិញ៤ ដង\n\\-គូរត្រីកោណមួយ\n\\-លោតទៅមុខ ៥០ ភីកសែល",
+          "courseD_artist_functions9_d": "ដើម្បីគូរពេជ្រ:\n\n\\-ធ្វើឡើងវិញ 2ដង\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក ៦០ ដឺក្រេ\n\\-គូរបន្ទាត់ត្រីកោណមួយ\n\\-ងាក 120 ដឺក្រេ"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "ប្រសិនបើអ្នកហៅអនុគមន៍ម្តងទៀត, អ្នកអាចបង្កើតការរចនាដូចគ្នានៅជ្រុងចុងក្រោយ។",
+          "courseE_artist_functions_challenge1_b": "អ្នកក៏អាច 'លោត'ទៅរកទីតាំងផ្សេងទៀតឬផ្លាស់ប្តូរការរចនាទាំងមូលតាមដែរអ្នកចង់បាន!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nប្លុក `jump to` នេះអនុញ្ញាតឱ្យអ្នកផ្លាស់ទីសិល្បករzombieទៅទំហំភីកសែលណាមួយនៅលើចត្រង្គក្រឡា, នៅពេលណាដែលអ្នកចង់បាន។ វាដំណើរការដោយ ការផ្លាស់ប្តូរសិល្បករzombieនូវមួយចំនួន\nនៃភីកសែលទៅខាងស្តាំនិងមួយចំនួននៃភីកសែលចុះក្រោម។ រាប់ពីជ្រុងខាងឆ្វេងខាងលើ,\nមានន័យថាវាមិនជាបញ្ហាដែលកន្លែងសិល្បករzombie នៅ _មុន_ពេលពាក្យបញ្ជាត្រូវបានរត់!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "ប្រអប់ឧបករណ៍ត្រូវបានរៀបចំខុសគ្នាបន្តិចបន្តួចនៅពេលនេះ! ចុចលើប្រភេទផ្សេងៗគ្នាដើម្បីមើលថាតើប្លុកមួយណាដែលអ្នកមាន។",
+          "courseE_farmer_functions1_b": "អ្នកគ្រាន់តែត្រូវការយកល្ពៅមួយប៉ុន្តែតើអ្នកអាចប្រើរង្វិលជុំដើម្បីទៅដល់វាបានទេ?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_b": "ប្រើប្លុក `ធ្វើម្តងទៀតរហូតដល់` ដើម្បីទៅល្ពៅ!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_b": "មិនមានពោតនៅលើផ្លូវតភ្ជាប់ទេដូច្នេះអ្នកអាចផ្លាស់ទីតាមវាហើយបត់។",
+          "courseE_farmer_functions2b_c": "អ្នកនឹងត្រូវការប្លុកពីរ`ម្តងទៀតដាច់ដោយឡែកពីគ្នារហូតដល់ប្លុក`ដើម្បីទទួលបានផលទាំងអស់។"
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "ជំនួសឱ្យការប្រើ `repeat` loop ដើម្បីប្រាប់កសិករថាតើត្រូវចាក់ដីចំនួនប៉ុន្មានដង, ឥឡូវនេះអ្នកអាចប្រើ ប្លុក `while there is a pile` ។",
+          "courseE_farmer_ramp12_b": "អ្នកត្រូវដើរទៅមុខតែម្ដងប៉ុណ្ណោះ ដើម្បីទៅ​ដល់ភាពកខ្វក់។"
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "ប្រើប្លុក `if/else` ដើម្បីជួយកសិករសម្រេចចិត្តថាតើគាត់ត្រូវការបត់ឆ្វេងឬស្តាំ។"
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "ប្រើប្លុក `if/else` ដើម្បីជួយកសិករសម្រេចចិត្តថាតើគាត់ត្រូវការបត់ឆ្វេងឬស្តាំ។"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_d": "\\*\\* ដំណោះស្រាយ៖ \\*\\*\n\n[បិទប្លុក] [0]"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "គ្រប់ព្រិត្តិការណ៍ `ពេល___ព្រួញ` នីងត្រូវមានពាក្យបញ្ជា បន្លាស់ទីអ្នកសំដែងទី១ ផ្សែងគ្នាៗភ្ជាប់ទៅនឹងវាដេីម្បីដោះស្រាយបញ្ហានេះ។"
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "អ្នកនឹងត្រូវការបន្ថែមប្លក់ពីរនៅខាងក្រោមព្រិត្តិការណ៍ `ពេលអ្នកសំដែងទី១ ប៉ះអ្នកសំដែងទី២`។",
+          "iceage_sound_and_points_b": "អ្នកនឹងត្រូវការទាំងប្លក់ `ទទួលពិន្ទុ` និង `លេង\\_\\_\\_\\_សំលេង\\` ដេីម្បីឆ្លងកាត់វគ្គនេះ។ "
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "អ្នកគួរតែត្រួវការបន្ថែមប្លក់តែពីរទៀតដេីម្បីនាំរូបផ្គុំទៅកន្លែងរបស់វា។ ",
+          "iceage_warn_ice_age_b": "បន្ថែមប្លក់ថ្មីទាំងពីរនៅខាងក្រោមព្រិត្តិការណ៍ `ពេលរត់` ដេីម្បីអោយពួកគេកេីតមានភ្លាមៗបន្ទាប់ពីប្រូក្រាមចាប់ផ្តេីម។ "
         }
       }
     }

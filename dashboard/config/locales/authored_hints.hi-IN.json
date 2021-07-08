@@ -51,7 +51,7 @@
           "Course_4_SCF_1_e": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a line of hexagons\"></mutation>\n            <next>\n              <block type=\"procedures_callnoreturn\">\n              <mutation name=\"shift down/forward\"></mutation>\n                <next>\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a line of hexagons\"></mutation>\n                    <next>\n                      <block type=\"procedures_callnoreturn\">\n                      <mutation name=\"shift down/backward\"></mutation>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a hexagon</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_move\" inline=\"true\">\n            <title name=\"DIR\">moveForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnRight</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/backward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">440</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a line of hexagons</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a hexagon\"></mutation>\n            <next>\n              <block type=\"jump\" inline=\"true\">\n                <title name=\"DIR\">jumpForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">120</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/forward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">320</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "Course 4 SCF 1a": {
-          "Course_4_SCF_1a_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\" uservisible=\"false\" y=\"14\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\" uservisible=\"false\">\n        <title name=\"VAR\">left</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\" uservisible=\"false\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\" uservisible=\"false\">\n            <title name=\"VAR\">right</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\" uservisible=\"false\">\n                <title name=\"NUM\">0</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">21</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_if\">\n                <title name=\"DIR\">isPathLeft</title>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"get nectar\">\n                    <arg name=\"dir\"></arg>\n                    <arg name=\"counter\"></arg>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">left</title>\n                      </block>\n                    </value>\n                    <value name=\"ARG1\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_if\">\n                                <title name=\"DIR\">isPathRight</title>\n                                <statement name=\"DO\">\n                                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                    <mutation name=\"get nectar\">\n                                    <arg name=\"dir\"></arg>\n                                    <arg name=\"counter\"></arg>\n                                    </mutation>\n                                    <value name=\"ARG0\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">right</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"ARG1\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">counter</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n    <arg name=\"dir\"></arg>\n    <arg name=\"counter\"></arg>\n    </mutation>\n    <title name=\"NAME\">get nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_if\" inline=\"false\">\n      <mutation else=\"1\"></mutation>\n        <value name=\"IF0\">\n          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n            <title name=\"OP\">EQ</title>\n            <value name=\"A\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">dir</title>\n              </block>\n            </value>\n            <value name=\"B\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">left</title>\n              </block>\n            </value>\n          </block>\n        </value>\n        <statement name=\"DO0\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                <block type=\"maze_nectar\"></block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"controls_if\" inline=\"false\">\n                      <mutation else=\"1\"></mutation>\n                        <value name=\"IF0\">\n                          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n                            <title name=\"OP\">EQ</title>\n                            <value name=\"A\">\n                              <block type=\"parameters_get\">\n                                <title name=\"VAR\">dir</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">left</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <statement name=\"DO0\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </statement>\n                        <statement name=\"ELSE\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                          </block>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
+          "Course_4_SCF_1a_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">21</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"maze_if\">\n                <title name=\"DIR\">isPathLeft</title>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                    <mutation name=\"get nectar\">\n                    <arg name=\"dir\"></arg>\n                    <arg name=\"counter\"></arg>\n                    </mutation>\n                    <value name=\"ARG0\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">left</title>\n                      </block>\n                    </value>\n                    <value name=\"ARG1\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnRight</title>\n                    <next>\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_if\">\n                                <title name=\"DIR\">isPathRight</title>\n                                <statement name=\"DO\">\n                                  <block type=\"procedures_callnoreturn\" inline=\"false\">\n                                    <mutation name=\"get nectar\">\n                                    <arg name=\"dir\"></arg>\n                                    <arg name=\"counter\"></arg>\n                                    </mutation>\n                                    <value name=\"ARG0\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">right</title>\n                                      </block>\n                                    </value>\n                                    <value name=\"ARG1\">\n                                      <block type=\"variables_get\">\n                                        <title name=\"VAR\">counter</title>\n                                      </block>\n                                    </value>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation>\n    <arg name=\"dir\"></arg>\n    <arg name=\"counter\"></arg>\n    </mutation>\n    <title name=\"NAME\">get nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_if\" inline=\"false\">\n      <mutation else=\"1\"></mutation>\n        <value name=\"IF0\">\n          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n            <title name=\"OP\">EQ</title>\n            <value name=\"A\">\n              <block type=\"parameters_get\">\n                <title name=\"VAR\">dir</title>\n              </block>\n            </value>\n            <value name=\"B\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">left</title>\n              </block>\n            </value>\n          </block>\n        </value>\n        <statement name=\"DO0\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"parameters_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                <block type=\"maze_nectar\"></block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">3</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveBackward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"controls_if\" inline=\"false\">\n                      <mutation else=\"1\"></mutation>\n                        <value name=\"IF0\">\n                          <block type=\"logic_compare\" inline=\"true\" movable=\"false\">\n                            <title name=\"OP\">EQ</title>\n                            <value name=\"A\">\n                              <block type=\"parameters_get\">\n                                <title name=\"VAR\">dir</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">left</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <statement name=\"DO0\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </statement>\n                        <statement name=\"ELSE\">\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                          </block>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "Course 4 SCF 1b": {
           "Course_4_SCF_1b_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"make honey up and over\"></mutation>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n                <next>\n                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                    <value name=\"TIMES\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <next>\n                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                            <value name=\"TIMES\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <statement name=\"DO\">\n                              <block type=\"maze_move\">\n                                <title name=\"DIR\">moveForward</title>\n                              </block>\n                            </statement>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n  <mutation></mutation>\n    <title name=\"NAME\">make honey up and over</title>\n    <statement name=\"STACK\">\n      <block type=\"maze_move\">\n        <title name=\"DIR\">moveForward</title>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_honey\">\n                    <next>\n                      <block type=\"maze_honey\">\n                        <next>\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveBackward</title>\n                            <next>\n                              <block type=\"maze_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <next>\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveBackward</title>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
@@ -6693,6 +6693,1398 @@
         "outbreak7": {
           "whenclicked": "## वैक्सीन्स\n\nआपके मॉन्स्टर्स पर क्लिक करने पर उन्हें एक वैक्सीन देने के लिए आप सिम्युलेट कर सकते हैं। यह करने के लिए, इस इवेंट के साथ ‘चेंज कॉस्ट्यूम’ ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "बीमार महसूस हो रहा है? आप नीचे ‘वर्जन हिस्ट्री’ को क्लिक करने और इसके बाद  “स्टार्ट ओवर” को चुनने के द्वारा हमेशा अपने कोड को रीसेट कर सकते हैं।"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\\*\\* मैं इस लेवल को कैसे पास करूं? \\*\\*\n\n-   आपके स्क्रीन पर एक डांसर दिखना चाहिए \n\n\\_ यह  लेवल 4 उपायों के बाद ख़त्म होता है",
+          "challenges": "**ऐच्छिक चुनौतियां**\n\n-   चलाने के लिए कोई और गीत चुनें।\n-   अपने किरदार को किसी और जगह पर ले जाएं।\n-   एक से ज़्यादा डांसर बनाएं।"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   डांसर को कोई मूव करनी ज़रूरी है।\n-   आपको एक तीर का बटन दबाना है।\n\n_यह स्तर 4 संगीत प्रविधियों के बाद खत्म होगा।_",
+          "challenges": "**ऐच्छिक चुनौती**\n\n-   एक से ज़्यादा <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> ब्लॉक इस्तेमाल करें।"
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   दोनों डासरों को एक मूव करनी होगी।\n-   आपको तीर के बटन दबाने हैं।\n\n_यह स्तर 4 संगीत प्रविधियों के बाद खत्म होगा।_",
+          "challenges": "**ऐच्छिक चुनौती**\n\n-   एक डांसर से बाएँ और दाएँ तीर के बटन दबाने पर कुछ कराएं।"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "\"**मैं यह स्तर कैसे पास करूं?**\n\n-   डांसर को 4 संगीत प्रविधियों के बाद नए मूव के लिए अदला-बदली करने की आवश्यकता है।\n\n_स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_\""
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "\"**मैं यह स्तर कैसे पास करूं?**\n\n-   6 संगीत प्रविधियों के बाद, आपके डांसर को 4 संगीत प्रविधियों के बाद वाले डांस से अलग डांसर करने की आवश्यकता होती है।\n\n_स्तर 11 संगीत प्रविधियों के बाद समाप्त होता है।_\"",
+          "challenges": "**ऐच्छिक चुनौती**\n\n-   जब भी डांसर मूव बदलें तब बैकग्राउंड को भी बदलें।"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   एक मुख्य डांसर और पीछे डांस करने वाले डांसरों का एक समूह बनाएं।\n\n_यह स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_",
+          "challenges": "**ऐच्छिक चुनौती**\n\n-   पीछे डांस करने वाले डांसरों के कई समूह बनाएं।"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   संगीत शुरू होने के बाद कम से कम एक डांसर का आकर बदलें।\n\n_यह स्तर 6 संगीत प्रविधियों के बाद समाप्त होता है।_",
+          "challenges": "**वैकल्पिक चुनौती** - अन्य विशेषताओं (चौड़ाई, ऊंचाई, आवर्तन) को बदलकर प्रयोग करें"
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   कम से कम एक डांसर का रंग बदलें।\n\n_यह स्तर 6 संगीत प्रविधियों के बाद समाप्त होता है।_",
+          "tint_hint": "क्या आपने देखा कि आपके डांसर का रंग ठीक वैसा नहीं हुआ जैसा आपने चुना था? इसकी वजह यह है कि **tints** से आपका चुना हुआ रंग डांसर के रंग में मिल जाता है।"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**मैं यह स्तर कैसे पास करूं?**\n\n-   बस “Finish\" का बटन दबा दें!",
+          "repeat_every_ideas": "**कुछ नए आइडिया चाहिए?**\n\n-   किसी डांसर का आकार लगातार बदल कर उसे बड़ा करें।\n-   किसी डांसर के घूमने की प्रॉपर्टी को लगातार बदल कर उसे गोल घुमाएं।\n-   किसी डांसर की क्षैतिज या लम्बवत स्थिति को लगातार बदल कर उसे स्क्रीनपर चलाएं।\n\n_उल्टा परिणाम पाने के लिए आप ऋणात्मक संख्याओं का इस्तेमाल भी कर सकते हैं!_",
+          "next_previous": "**ऐच्छिक चुनौती**\n\n-   आप मूव को `(Random)`, `(Next)`, या `(Previous)` पर सेट करके और इस नए इवेंट ब्लॉक का इस्तेमाल करके कई डांस मूव एक के बाद एक करा सकते हैं।\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "वैकल्पिक ब्लॉक \"डांसर्स\" श्रेणी में हैं।"
+        },
+        "CourseF_outbreak1": {
+          "step1": "अपने स्प्राइट्स बनाने के लिए इन ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nयह ब्लॉक टूलबॉक्स की **स्प्राइट्स** कैटेगरी में मिलता है।",
+          "step2": "इस ब्लॉक के साथ स्प्राइट्स का साइज बदलें: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nयह टूलबॉक्स की **एक्शंस** कैटेगरी में मिलता है।",
+          "step3": "इसके साथ सभी स्प्राइट को घुमाना शुरू करें: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nयह ब्लॉक टूलबॉक्स की **एक्शंस** कैटेगरी में मिलता है।"
+        },
+        "CourseF_outbreak2": {
+          "hint1": "इवेंट ब्लॉक पर ‘+’ बटन को क्लिक करें। ‘चेंज कॉस्ट्यूम’ ब्लॉक में खाली स्थान को अंदर मिलने वाले ‘सब्जेक्ट’ ब्लॉक से भरें।\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "मॉन्स्टर्स को मास्क देने के लिए, एक ‘वेन क्लिक्ड’ इवेंट के साथ ‘चेंज कॉस्ट्यूम’ ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nछोटे रेड ‘क्लिक्ड’ ब्लॉक को भी ड्रैग करना निश्चित करें!",
+          "hint2": "इस लेवल के लिए नया कोड ऐसा दिखना चाहिएः\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## एक अतिरिक्त चुनौती को खोज रहे हैं?\n\nमॉन्स्टर्स को आप तेज या धीरे भी मूव करा सकते हैं।\n\n1.  इस ब्लॉक में ‘एडिट’ को क्लिक करें <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  इस ब्लॉक में नंबर को बढ़ाएं या घटाएं: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nमॉन्स्टर्स को धीरे मूव करने वाला बनाने के लिए, ‘0.5’ या ‘0.25’ जैसा एक डेसिमल नंबर चुनें। उन्हें तेज मूव करने वाला बनाने के लिए, 1 से अधिक किसी भी नंबर को चुनें।"
+        },
+        "CourseF_outbreak6": {
+          "hint2": "अन्य “एक्शन” ब्लॉक्स को ‘इफ चांस’ ब्लॉक के अंदर मूव करना निश्चित करें:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "तंदुरुस्त और संक्रमित स्प्राइट्स के बीच ‘टचेज’ के सभी संभव कॉम्बिनेशंस को चेक करने के लिए आपको 3 और ‘वेन टचेज’ इवेंट्स जोड़ने की जरूरत होगी।\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## वैक्सीन्स\n\nआपके मॉन्स्टर्स पर क्लिक करने पर उन्हें एक वैक्सीन देने के लिए आप सिम्युलेट कर सकते हैं। यह करने के लिए, इस इवेंट के साथ ‘चेंज कॉस्ट्यूम’ ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "बीमार महसूस हो रहा है? आप नीचे ‘वर्जन हिस्ट्री’ को क्लिक करने और इसके बाद  “स्टार्ट ओवर” को चुनने के द्वारा हमेशा अपने कोड को रीसेट कर सकते हैं।"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "कुछे रास्ते हैं, जिन्हें आप ले सकते हैं। कौन-सा सबसे छोटा है?",
+          "mc_8_b": "अपने कोड को सरल बनाने के लिए `दोहराएं` लूप्स का उपयोग करें।",
+          "mc_8_c": "आपका लक्ष्य स्क्रीन के सबसे ऊपर स्थित घर के दरवाजे पर जाना है।"
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "आपको पेड़ के सामने खड़े होने के लिए दो बार `आगे की ओर मूव करें` की जरूरत है।",
+          "mc_2_b": "`नष्ट करें ब्लॉक` कमांड आपके सामने के पेड़ काटती है।"
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "आप किसी भी क्रम में पेड़ों को काट सकते हैं। कौन-सा तरीका सबसे कम संख्या में ब्लॉक्स लेता है?",
+          "mc_4_b": "`नष्ट करें ब्लॉक` कमांड आपके सामने के पेड़ काटती है।"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "आप क्या रखना चाहते हैं, उसे चुनने के लिए `रखें` ब्लॉक पर स्थित तीर पर क्लिक करें।",
+          "mc_6_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
+          "mc_6_c": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "`आगे की ओर मूव करें` ब्लॉक टूलबॉक्स के ऊपर स्थित है।",
+          "mc_1_b": "सुनिश्चित करें कि `आगे की ओर मूव करें` ब्लॉक्स `जब चलाया जाए` ब्लॉक के लिए इस्तेमाल किए गए हैं।"
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "पहले `रखें` ब्लॉक का और फिर `मूव करें` ब्लॉक का उपयोग करें।",
+          "mc_5_b": "सुनिश्चित करें कि कोड को एक से अधिक बार चलाने के लिए दोनों ब्लॉक्स `दोहराएं` लूप के अंदर हैं।",
+          "mc_5_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "जहां आप खड़ें हैं, उस स्थान में फसल रोपने के लिए `फसल रोपें` ब्लॉक का उपयोग करें।",
+          "mc_7_b": "पानी के पास गहरी भूरी जमीन की दोनों पट्टियों को फसलों से भरने की जरूरत है।",
+          "mc_7_c": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "जिस वर्ग पर आप खड़े हैं, उस पर रेल की पटरी बिछाने के लिए `रेल की पटरी रखें` का उपयोग करें।",
+          "mc_13_b": "अपने कोड को और छोटा बनाने के लिए `दोहराएं` लूप्स का उपयोग करें।"
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "`ऊन कतरें` ब्लॉक आपके सामने भेड़ को प्राप्त करता है। क्या आप भेड़ के सामने हैं?",
+          "mc_3_b": "यदि आपको अपने सामने का रास्ता बदलने की जरूरत है, तो `मुड़ें` ब्लॉक का उपयोग करें।",
+          "mc_3_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "सारा कोड लावा को देखने और इससे निपटने के लिए स्थापित किया गया है। आपको बस मूव करने के लिए ब्लॉक जोड़ने की जरूरत है।",
+          "mc_11_b": "क्या आपकी `आगे की ओर मूव करें` कमांड `इफ` स्टेटमेंट या बाद में अंदर जाती है?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "लाल धब्बों वाले स्थान वे हैं, जहां आप लाल पत्थर पाएंगे।",
+          "mc_12_b": "क्या आप अपने कोड को और छोटा बनाने के लिए `दोहराएं` लूप का उपयोग कर सकते हैं?",
+          "mc_12_c": "लावा के लिए स्थान देखने हेतु `इफ` स्टेटमेंट का उपयोग करें, फिर फर्शी पत्थर रखें।"
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "आयरन ब्लॉक्स टॉर्च के पीछे के धब्बेदार स्थान हैं! आप वहां पहुंचने के लिए कैसे जाएंगे?",
+          "mc_10_b": "जब आप लावा के किनारे पर खड़े हों, तो सुरक्षित रास्ता बनाने के लिए `आगे फर्शी पत्थर रखें` का उपयोग करें। फिर, आप इसके ऊपर चल सकते हैं!",
+          "mc_10_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "क्या आप सही रास्ते के सामने हैं? `नष्ट करें ब्लॉक` आपके सामने के ब्लॉक का खनन करता है।",
+          "mc_9_b": "दीवार में काले धब्बे कोयला हैं! कोयले का खनन करने के लिए इन पर `नष्ट करें ब्लॉक` का उपयोग करें।",
+          "mc_9_c": "जहां आप खड़ें हैं, उस स्थान में टॉर्च रखने के लिए `टॉर्च रखें` का उपयोग करें।"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "क्या आप पता नहीं लगा पा रहे हैं कि लाइन कैसे खींचनी है?  यह देखने के लिए <xml><block type=\"when_run\"/></xml> ब्लॉक में ब्लॉक्स जोड़ना शुरू करें कि क्या होता है।",
+          "courseA_artist_loops2_b": "इस पहेली को हल करने के लिए इस ब्लॉक <xml><block type=\"simple_move_right\"/></xml> का उपयोग करें।"
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम खोजें कि यह कहां गलत होता है।",
+          "courseA_artist_loops3_b": "इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
+          "courseA_artist_loops4_b": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।"
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश करें, जो आपने <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक्स के बारे में सीखा है!",
+          "courseA_artist_loops5_b": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
+          "courseA_artist_loops5_c": "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml> ब्लॉक का उपयोग कर सकते हैं, इसे \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप के अंदर रखने की कोशिश करें।"
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से प्रत्येक क्या चित्रित करता है।",
+          "courseA_artist_loops6_b": "इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स की जरूरत होगी।"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
+          "courseA_artist_loops7_b": "पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित करने के लिए उसे दोहराएं।",
+          "courseA_artist_loops7_c": "याद रखें कि आप <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए क्या लिखा गया है।",
+          "courseA_artist_loops8_b": "आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?",
+          "courseA_artist_loops8_c": "कोड क्या करता है?\\\nयह क्या करने के लिए बनाया गया है?\\\nयह आपको क्या बताता है?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में दूसरा ब्लॉक जोड़ें।",
+          "courseA_artist_loops9_b": "जो ब्लॉक आप जोड़ते हैं, वह \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूप के अंदर जाना चाहिए।",
+          "courseA_artist_loops9_c": "यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "इस <xml>  <block type=\"simple_move_up_left\"/></xml> तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!",
+          "courseA_artist_loops_challenge2_b": "जब आप एक टेंट पूरा कर लें, तो अगला तक जाने के लिए दो बार ऊपर `कूदें`!",
+          "courseA_artist_loops_challenge2_c": "इस पहेली को खत्म करने के लिए आपके सभी ब्लॉक्स को लूप के अंदर होने की जरूरत होगी।"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "एक आसान समाधान 2 बार पूर्व की ओर मूव करना, फिर खजाना प्राप्त करना होगा।"
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको मूव करना होगा।",
+          "courseA_collector_loops2_b": "जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_b": "याद रखें, आप <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप के अंदर 1 से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने की संख्या को बदलें।",
+          "courseA_collector_loops4_b": "यह न भूलें कि लॉरेल को <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप पूरा करने के बाद नीचे जाकर खजाना एकत्र करने की जरूरत है!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "यदि आप तुरंत जवाब का पता नहीं लगा सकते, तो यह पता लगाने के लिए कागज़ का उपयोग करने की कोशिश करें कि आपको कौन-से तीरों की जरूरत होगी और पैटर्न खोजें।",
+          "courseA_collector_loops5_b": "एक तरफ़ और फिर नीचे मूव करते हुए, समस्या को 2 भागों में बांटने की कोशिश करें।",
+          "courseA_collector_loops5_c": "आप <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप के साथ शुरू करना चाहेंगे, जो लॉरेल को पश्चिम की ओर मूव करके खजाना एकत्र करता है।"
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।",
+          "courseA_collector_loops6_b": "सबसे छोटे समाधान में 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप्स हैं, एक के बाद दूसरी।"
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "यदि आप पता नहीं लगा पा रहे हैं कि आगे क्या होगा, तो यह देखने के लिए कोड चलाने की कोशिश करें कि लॉरेल कहां पहुंचती है।"
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "यदि आपको इस पहेली का पता लगाने में मुश्किल हो रही है, तो मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।",
+          "courseA_collector_loops8_b": "इस पहेली को 3 अलग-अलग समस्याओं में बांटने और प्रत्येक के लिए लूप्स लिखने की कोशिश करें।",
+          "courseA_collector_loops8_c": "याद रखें कि आप उसी समय कोड को कागज़ पर लिख सकते हैं, फिर यह पता लगाने के लिए \"चलाएं\" को दबा सकते हैं कि वहां से आपको कहां जाने की जरूरत है।"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "यदि आप लूप्स का उपयोग करने के लिए बेहतर स्थानों का पता नहीं लगा पाते हैं, तो इसे कदम-दर-कदम कोड करने की कोशिश करें और पैटर्न खोजें। ",
+          "courseA_collector_loops9_b": "अपने कोड को और छोटा बनाने के लिए दूसरे लूप के अंदर अपने <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप्स में से 2 को रखने की कोशिश करें!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "यदि कुछ गलत प्रतीत होता है तो प्रत्येक लूप में नंबर बदलने की कोशिश करें।",
+          "courseA_collector_loops_challenge1_b": "यदि आप केवल एक बार कुछ कर रहे हैं तो आपको लूप का उपयोग करने की जरूरत नहीं है।",
+          "courseA_collector_loops_challenge1_c": "जब आप शुरू करते हैं तो गुफा के दाईं ओर 6 रतन हैं, लेकिन आपको दक्षिण की ओर मूव करते हुए केवल 5 बार खजाना प्राप्त करने की जरूरत है। क्या आपको पता है क्यों?",
+          "courseA_collector_loops_challenge1_d": "शुरूआती प्रोग्राम अंतिम 2 रतन एकत्र नहीं करता। बिल्कुल अंत में यह कोड जोड़ने की कोशिश करें:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "समाधान पाने के लिए इस रास्ते को आजमाएं।",
+          "courseA_collector_loops_challenge2kp_a": "क्या आप इस पहेली को हल करने के लिए लूप्स का उपयोग कर सकते हैं?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश करें, एक भाग कोने से पहले और एक भाग कोने के बाद।"
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "यदि आप अटक जाएं, तो कागज़ पर स्टेप्स लिखने और दोहराने वाले पैटर्नों की खोज करने की कोशिश करें।"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_b": "समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश करें!"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "यदि आपको मुश्किल हो रही है, तो पहले स्टेप्स को कागज़ पर लिखने की कोशिश करें।"
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "यदि आपको मुश्किल हो रही है, तो पहले स्टेप्स को कागज़ पर लिखने की कोशिश करें।",
+          "courseA_maze_seq10_b": "इस पहेली को हल करने के लिए आपको 3 दिशाओं में जाने की जरूरत होगी।"
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "जो रास्ता आपको चाहिए, यदि वह अस्पष्ट है, तो पक्षी से सूअर तक अपने रास्ते को खोजने के लिए अपनी उंगली का उपयोग करें।",
+          "courseA_maze_seq13_b": "गलती होने से न डरें! ब्लॉक्स जोड़ने और यह देखने के लिए कोड चलाने की कोशिश करें कि क्या होगा।",
+          "courseA_maze_seq13_c": "ये <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml> ब्लॉक्स सूअर के अधिक पास मूव करने में आपकी मदद करेंगे।"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "यदि आपको पक्षी को मूव कराने में मुश्किल हो रही है, तो सुनिश्चित करें कि ब्लॉक्स <xml>\n  <block type=\"when_run\"/>\n</xml> के नीचे अनियोजित रखे हैं",
+          "courseA_maze_seq1_b": "पक्षी को सूअर के पास जाने के लिए उसे 3 बार पश्चिमकी ओर मूव करना होगा। इस ब्लॉक का उपयोग करें:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश करें!"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश करें!",
+          "courseA_maze_seq5_b": "आपको 2 दिशाओं में संकेत करते हुए, 2 ब्लॉक्स की जरूरत होगी।"
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "आपके अंतिम कोड में 3 गतिविधि ब्लॉक होने चाहिएं।",
+          "courseA_maze_seq6_b": "यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश करें, एक भाग कोने से पहले और एक भाग कोने के बाद।"
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "आपके अंतिम कोड में 3 गतिविधि ब्लॉक होने चाहिएं।",
+          "courseA_maze_seq6_b": "यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश करें, एक भाग कोने से पहले और एक भाग कोने के बाद।"
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "1 ब्लॉक है, जिसकी आपको पक्षी को सूअर तक मूव करने के लिए जोड़ने की जरूरत है।",
+          "courseA_maze_seq7_b": "यदि आप पता नहीं लगा पाते हैं कि क्या करना है, कागज़ पर पहेली को चित्रित करने की कोशिश करें और यह पता लगाने के लिए किस तरफ मूव करना है, अपनी उंगली का उपयोग करें।"
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "यदि आप अटक जाएं, तो यह देखने के लिए काग़ज पर चित्र बनाने की कोशिश करें कि पक्षी को कैसे मूव करना चाहिए।"
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "यदि आप अटक जाएं, तो यह देखने के लिए काग़ज पर चित्र बनाने की कोशिश करें कि पक्षी को कैसे मूव करना चाहिए।"
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "इस पहेली के दो समाधान हैं।"
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "अपनी उंगली से खाली स्थान गिनने की कोशिश करें। याद रखें कि वह खाली स्थान न गिनें, जहां से आप शुरू करते हैं!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "वह ब्लॉक खोजें, जिससे कुत्ता कुछ कह पाए।",
+          "courseA_playLab_events2_b": "यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए है:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "इस ब्लॉक <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> को बाहर खींचें और इसे <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> नीचे की ओर काटें",
+          "courseA_playLab_events3_b": "जब आप अपना प्रोग्राम लिख चुके हों तो जॉर्ज को झंडे तक मूव करने के लिए बाएं तीर वाली कुंजी का उपयोग करना याद रखें। जब झंडा हरा हो जाए, आपने पूरा कर लिया!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "यहां वह इवेंट ब्लॉक दिया गया है, जिसकी जरूरत आपको जॉर्ज को दाईं ओर मूव करने के लिए होगी:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए होगी:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "यहां वे इवेंट ब्लॉक्स दिए गए हैं, जिनका उपयोग आपको जॉर्ज को ऊपर और नीचे मूव करने के लिए करना होगा:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nऔर\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "क्या आपको पता है कि आप ब्लॉक में तस्वीर पर क्लिक करके और नई कुंजी चुनकर इवेंट तीर के लिए कुंजी बदल सकते हैं?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "यहां वह इवेंट ब्लॉक दिया गया है, जिसका उपयोग आप क्लिक किए जाने पर जॉर्ज से कुछ करवाने के लिए करेंगे:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप पृष्ठभूमि बदलने के लिए करेंगे:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप बेतरतीब ध्वनि प्ले करने के लिए करेंगे:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "जब आप रॉबिन पर क्लिक करें तो वैड्लेस द पेंगुइन को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "जब आप वैड्डलेस पर क्लिक करें तो बू द घोस्ट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "जब आप बू पर क्लिक करें तो जेडन द फज्जी मोन्स्टर को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "जब आप दैत्य पर क्लिक करें को स्पिफ द रोबोट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "अंत में, जब आप स्पिफ पर क्लिक करें तो वेंडल द विज़ार्ड को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "आप पक्षी को गाना गाने के लिए सक्रिय कर सकते हैं।\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "आप रोबोट से बीप की आवाज़ निकालने के लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए, तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।",
+          "courseB_artist_loops2_b": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि कलाकार कहां पहुंचता है।"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_b": "कलाकार यह लाइन खींचने के लिए दक्षिण की ओर मूव करना चाहेगा।"
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "कूदना ब्लॉक आपको लाइन खींचे बिना आगे मूव करने देता है।",
+          "courseB_artist_loops4_b": "इस पहेली को हल करने के लिए आपको दोहराने वाले लूप के दर एक ब्लॉक जोड़ने की जरूरत होगी।",
+          "courseB_artist_loops4_c": "लूप के दोहराए जाने की संख्या को बदलना न भूलें।"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "मूव्स को कागज़ पर लिखने की कोशिश करें और पैटर्न खोजें।"
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "यह चुनौती **4** लूप्स का उपयोग करती है, दूसरे के तुरंत बाद एक!",
+          "courseB_artist_loops7_b": "देखें कि प्रत्येक लूप सीढ़ी का पैटर्न बनाता है, जो अलग दिशा में जाती है।\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "लूप्स ऐसा करेंगे:\n\n-   लूप 1\n\n    -   दाएं\n    -   नीचे\n\n-   लूप 2\n\n    -   दाएं\n    -   ऊपर\n\n-   लूप 3\n\n    -   बाएं\n    -   ऊपर\n\n-   लूप 4\n    -   बाएं\n    -   नीचे"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "आप सीढ़ी बनाने के लिए पैटर्न को कितनी बार दोहराएंगे?",
+          "courseB_artist_loops8_b": "यह देखने के लिए आपको दिए कोड को चलाने की कोशिश करें कि यह क्या करता है।"
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "याद रखें कि कूदना ब्लॉक्स का उपयोग लाइन खींचे बिना मूव करने के लिए किया जा सकता है।",
+          "courseB_artist_loops9_b": "इस पहेली को हल करने के लिए आप W ब्लॉक का उपयोग करना चाहेंगे।",
+          "courseB_artist_loops9_c": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "इस <xml>  <block type=\"simple_move_up_right\"/></xml> तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!",
+          "courseB_artist_loops_challenge1_b": "जब एक पासा समाप्त करते हैं, तो अगले पर `कूदें`!",
+          "courseB_artist_loops_challenge1_c": "आपको कुछ समान लाइनों पर दो बार `मूव करने` या `कूदने` की जरूरत होगी।"
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "X चित्रित करने के लिए आपको पहले ही कोड दे दिया गया है। आपको बस X को दोहराना है और अगले स्थान पर `कूदना` है।",
+          "courseB_artist_loops_challenge2_b": "आप बिना चित्रित किए अन्य खाली स्थानों पर मून करने के लिए `कूदना` ब्लॉक्स का उपयोग कर सकते हैं।"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "यदि आप पता नहीं लगा सकते कि `दोहराएं` लूप्स को कहां रखना है, तो कदम-दर-कदम कोड लिखें और पैटर्न खोजें।",
+          "courseB_collector_loops10_b": "मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> ब्लॉक का उपयोग खजाने को चुनने के लिए किया जा सकता है, जब आप इसके बिल्कुल ऊपर खड़े हों।"
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको मूव करना होगा।",
+          "courseB_collector_loops2_b": "जब आप खजाने के साथ किसी स्थान पर पहुंच जाएं, तो इसे उठाने के लिए \\<<xml><block type=\"collector_collect\"/></xml> ब्लॉक का उपयोग करें।"
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_b": "याद रखें कि आप दोहराने वाले लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "यह पता लगाने के लिए स्टेप बटन का उपयोग करने की कोशिश करें कि चीजें कहां गलत हो रही हैं।",
+          "courseB_collector_loops4_b": "लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने की संख्या को बदलें।"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "काम पूरा करने के लिए एक से अधिक लूप का उपयोग करें।",
+          "courseB_collector_loops5_b": "यह देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।"
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "क्या आप पता नहीं लगा पा रहे हैं कि चीज़ें कहां गलत होना शुरू हुई हैं? अपने प्रोग्राम एक बार में एक ब्लॉक को दोहराने के लिए \"स्टेप\" बटन का उपयोग करें।",
+          "courseB_collector_loops6_b": "आप \"3\" पर क्लिक करके और अलग संख्या चुनकर दोहराने वाले लूप को चलाने की संख्या बदल सकते हैं।",
+          "courseB_collector_loops6_d": "यदि आप उलझन में हैं, तो इस पहेली को 3 भागों में बांटने की कोशिश करें।"
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "यदि आपको पहेली को हल करने में मुश्किल हो रही है, तो इसे समझने में आपकी मदद के लिए इसे कागज़ पर चित्रित करने की कोशिश करें।",
+          "courseB_collector_loops7_b": "आपको इस पहेली को हल करने के लिए 3 दोहराने वाले लूप्स की जरूरत होगी और अंत में अतिरिक्त खजाने को न भूलें!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "यदि आप पता नहीं लगा सकते कि दोहराने वाले लूप्स को कहां रखना है, तो कदम-दर-कदम कोड लिखें और पैटर्न खोजें।"
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "क्या यह बहुत मुश्किल लगता है?  इसे अधिक आसान बनाने के लिए 3 छोटी समस्याओं में बांटें।",
+          "courseB_collector_loops9_b": "इस समाधान के लिए आपको 3 दोहराने वाले लूप्स की जरूरत होगी, दूसरे के बाद एक।"
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_c": "प्रत्येक रास्ते के बीच दो बार पूर्व की ओर मूव करें।\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nआप ऐसा केवल 14 ब्लॉक्स के साथ कर सकते हैं। समाधान देखने के लिए एक और संकेत के लिए क्लिक करें।"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "यदि कुछ गलत होता है, तो इसे डीबग करने की कोशिश करें। हार न मानें!",
+          "courseB_collector_loops_challenge2a_b": "भूलभुलैया को पार करने के लिए इस विकल्प को देखें। क्या आपको कोई ऐसा पैटर्न दिखाई दे रहा है, जिसे आप दोहरा सकते हों?",
+          "courseB_collector_loops_challenge2a_c": "सारा खजाना एकत्र करने के लिए, आपको अपने लूप के अंदर दो  <xml> <block type=\"collector_collect\"/></xml> ब्लॉक्स जोड़ने या इसके अपने `दोहराएं` ब्लॉक के अंदर ब्लॉक रखने की जरूरत होगी।"
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_b": "इस पहेली को हल करने के लिए आप <xml><block type=\"maze_moveEast\"/></xml>  ब्लॉक का उपयोग करना चाहेंगे।"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "यदि आप अटक जाते हैं, तो रास्ते को कागज़ पर चित्रित करने की कोशिश करें।",
+          "courseB_maze_seq5_b": "इस पहेली को हल करने के 2 तरीके हैं!"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "आपके अंतिम कोड में तीन गतिविधि ब्लॉक होने चाहिएं।",
+          "courseB_maze_seq6_b": "यदि आप अटक जाते हैं, तो पहेली को दो भागों में हल करने की कोशिश करें, एक तिरछे और एक ऊपर-नीचे।",
+          "courseB_maze_seq5_c": "इस पहेली को हल करने के दो तरीके हैं।"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_b": "आपको दिए कोड को चलाने की कोशिश करें और देखें कि आप कहां पहुंचते हैं।"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "जब तक आप पहेली हल न कर लें, एक बार में एक ब्लॉक जोड़ने की कोशिश करें।",
+          "courseB_maze_seq8_c": "क्या आपको पता नहीं है कि किस रास्ते पर जाना है? इस रास्ते को आजमाएं!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "पहले कागज़ पर सभी स्टेप्स को लिखने की कोशिश करें।",
+          "courseB_maze_seq9_b": "अपना प्रोग्राम एक बार में एक ब्लॉक बनाएं और जैसे-जैसे आप बनाएं, तो टेस्ट करें।",
+          "courseB_maze_seq9_c": "इस पहेली को हल करने के दो तरीके हैं।",
+          "courseB_maze_seq9_d": "क्या आप अटक गए हैं?  इस रास्ते को आजमाएं!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "इस बार सबसे छोटा रास्ता शायद काम नहीं करेगा।"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "इस पहेली को हल करने के लिए आपको ब्लॉक्स जोड़ने या हटाने की जरूरत नहीं है।",
+          "courseB_maze_seq_challenge2_b": "ब्लॉक्स को दुबारा क्रम में लगाएं और सीढ़ियों के पैटर्न वाला रास्ता लें।"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_b": "विभिन्न दिशाएं चुनने के लिए हरे `जब ___ तीर को दबाया गया हो` इवेंट ब्लॉक्स पर ड्रॉप डाउन तीरों का उपयोग करें।\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "पास करने के लिए सभी झंडों तक पहुंचें!"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "जब आप ▼ को दबाएं तो अन्य जानवरों को नीचे मूव हों। \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "जब क्लिक किया जाए तो गेम में प्रत्येक जानवर गायब हो जाएगा। यह एक या दो सेकंड के बाद वापस भी आ जाएगा!",
+          "courseB_playlab_events_challenge2_d": "इसे मिलाएं!\n\nकुछ जानवरों को अन्य के मुकाबले अधिक अंक दिलवाएं।\nअलग-अलग ध्वनियों का उपयोग करें।\nजानवरों के मूड बदलें!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "एक बार में ब्लॉक्स जोड़ने की कोशिश करें, फिर यह देखने के लिए कि क्या हुआ, \"रन\" पर क्लिक करें।",
+          "courseB_starWars_prog1_b": "आप इस पहेली को हल करने के लिए पूर्व की ओर मूव करना चाहेंगे। आपको कितनी दूर मूव करने की जरूरत है?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "इस समस्या को दो भागों में बांटें। लोहे के चूरे का एक-एक ढेर प्राप्त करें, फिर यह पता करें कि दूसरे तक कैसे पहुंचना है।"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "इस पहेली को हल करने के लिए आपको 3 तरीके से मूव करने की जरूरत होगी।",
+          "courseB_starWars_prog3_b": "एक बार में कोड के एक पीस का निर्माण करें। यह पता लगाने के लिए इसे संचालित करें कि वहां से कहां जाना है।"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "एक बार में कोड के एक पीस का निर्माण करें। यह पता लगाने के लिए इसे संचालित करें कि वहां से कहां जाना है।"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "क्या यह पैटर्न पिछली पहेली की तरह छोटा दिखाई नहीं देता?",
+          "courseB_starWars_prog5_b": "BB-8 लोहे के चूरे को खींचेगा, जब वह इस पर लुढ़केगा।",
+          "courseB_starWars_prog5_c": "अपनी उंगली से इस पैटर्न को ट्रेस करें। जब आप मूव करें तो मेटल के टुकड़ों को गिनें।",
+          "courseB_starWars_prog5_da": "देखें कि क्या होता है, यदि आप सीढ़ी-स्टेप पहेली वाला हल ही उपयोग करते हैं:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "यह पैटर्न प्रति दिशा दो मूव्स वाला सीढ़ी स्टेप है!"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "क्या यह पैटर्न पिछली पहेली की तरह छोटा दिखाई नहीं देता?",
+          "courseB_starWars_prog7_b": "BB-8 लोहे के चूरे को खींचेगा, जब वह इस पर लुढ़केगा।",
+          "courseB_starWars_prog7_c": "इस पहेली के ऊपर बड़ा सीढ़ी स्टेप पैटर्न चित्रित करने की कोशिश करें। क्या यह सारे लोहे के चूरे को ढकता है?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "खाली स्थानों के सेट पर वापस जाना ठीक है, जहां आप पहले ही जा चुके हैं।",
+          "courseB_starWars_prog8_b": "यह देखने के लिए `दोहराएं` ब्लॉक का उपयोग करने की कोशिश करें कि उस कोड के साथ क्या होता है, जिसे आप अंदर रखते हैं।\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseB_starWars_prog9_b": "इस पहेली को हल करने के कई तरीके हैं।"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "`अभिनेता 1 को ??? चित्र पर सेट करें` ब्लॉक का उपयोग स्टेज पर अभिनेता जोड़ने के लिए किया जा सकता है।",
+          "courseE_playLab_scaffold1_b": "प्रोग्राम के शुरू में अपने अभिनेता को प्रकट करने के लिए `जब चलाया जाए` के अंतर्गत `अभिनेता सेट करें` ब्लॉक रखें।",
+          "courseE_playLab_scaffold1_c": "अपने दृश्य में पृष्ठभूमि चुनने के लिए `??? पृष्ठभूमि सेट करें` का उपयोग करें।"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "प्रत्येक को नीचे मूव करने की दिशा के साथ, आपके पास चार `जब तीर` इवेंट ब्लॉक्स होने चाहिएं।",
+          "courseE_playLab_scaffold1_c": "जब आप पूरा कर लें, तो आप तीर वाली कुंजियों के साथ अपने हीरो को इधर-उधर मूव करने में सक्षम होंगे!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "अंक जोड़ने के लिए `अंक स्कोर करें` और एक घटाने के लिए `अंक हटाएं` का उपयोग करें।"
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "इन दो ब्लॉक्स को `जब चलाया जाए` ब्लॉक में जोड़ें:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "कौन-सा अभिनेता बोलता है, इसमें बदलाव करने के लिए दूसरे `अभिनेता __ कहता है` ब्लॉक पर ड्रॉपडाउन मेन्यु का उपयोग करें।"
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "इस पहेली को हल करने के लिए आपको जॉर्ज को लगभग 25 पिक्सल तक दाएं की ओर मूव करने की जरूरत है।",
+          "courseC_PlayLab_events3_b": "क्या टूलबॉक्स में कोई ऐसा ब्लॉक है, जो अभिनेता को मूव करने वाला प्रतीत होता हो?",
+          "courseC_PlayLab_events3_c": "इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "जब \"चलाएं\" बटन पर क्लिक किया जाता है, तो ऑलिव द कैट तक पहुंचने के लिए जॉर्ज को **100** पिक्सल दाएं मूव करने की जरूरत है।",
+          "courseC_PlayLab_events4_a": "इस पहेली को हल करने के लिए आपको `अभिनेता __ कहता है` ब्लॉक को `जब अभिनेता छूता है` इवेंट के साथ जोड़ने की जरूरत होगी।"
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "\"नया क्या है?” टेक्सट ढूंढने के लिए आपको `अभिनेता बोल` ब्लॉक में ड्रॉपडाउन मेन्यु पर क्लिक करने की जरूरत होगी।",
+          "courseC_PlayLab_events5_b": "जब आप यह देखने के लिए अपना प्रोग्राम चलाएं कि यह काम कर रहा है तो ऑक्टविया पर क्लिक करें!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "प्रत्येक हरे `जब तीर हो` ब्लॉक के नीचे एक गतिविधि होनी चाहिए।",
+          "courseC_PlayLab_events6_b": "वैड्डलेस के मूव करने की दिशा को बदलने के लिए `अभिनेता 1 को मूव करें` ब्लॉक पर ड्रॉप डाउन मेन्यू का उपयोग करें।",
+          "courseC_PlayLab_events6_c": "जब आप पूरा कर लें, तो आप अपने कंप्यूटर पर तीर वाली कुंजियों का उपयोग करते हुए वैड्डलेस को इधर-उधर मूव करने में सक्षम होंगे!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "इस पहेली को हल करने के लिए `हमेशा दोहराएं` लूप के अंदर  `अभिनेता 2 को 400 पिक्सल्स तक ऊपर मूव करें` ब्लॉक `अभिनेता 2 को 400 पिक्सल्स तक नीचे मूव करें` ब्लॉक दोनों का उपयोग करें।",
+          "courseC_PlayLab_events7_b": "`हमेशा दोहराएं` लूप को किसी अन्य इवेंट ब्लॉक्स से जोड़ने की जरूरत नहीं होती; यह अपने आप चलेगा।"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "इसे सही ढंग से घटित होने देने के लिए आपको ब्लॉक्स को `जब अभिनेता छूता है` ब्लॉक से जोड़ने की जरूरत होगी।",
+          "courseC_PlayLab_events8_b": "टूलबॉक्स में `अभिनेता बोल है` और `ध्वनि प्ले करें` ब्लॉक्स आपकी मदद करेंगे!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "इस पहेली को हल करने में `अंक हासिल करें` ब्लॉक आपकी मदद करेगा।",
+          "courseC_PlayLab_events9_b": "सुनिश्चित करें कि आपका नया `जब अभिनेता छूता है` ब्लॉक अभिनेता **1** और अभिनेता **3** कहता है।",
+          "courseC_PlayLab_events9_c": "आपके पास एक ही समय पर अपने वर्कस्पेस में एक से अधिक `जब अभिनेता छूता है` इवेंट हो सकती हैं, ताकि आपको पहले को मिटाने की जरूरत न पड़े!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "इस पहेली को हल करने के लिए `पृष्ठभूमि सेट करें` ब्लॉक और `अभिनेता की गति ____ तक तय करें` ब्लॉक का उपयोग करें।",
+          "courseC_PlayLab_eventsA_b": "इस पहेली को हल करने के लिए आपको वर्कस्पेस में विशेषरूप से `जब चलाया जाए` इवेंट ब्लॉक खींचने की जरूरत होगी।"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea3": "_क्या आपको कोई सुझाव चाहिए?_\n\n**पिनबॉल** - तीर वाली कुंजियों का उपयोग करते हुए एक चरित्र को मूव करवाएं (`जब ऊपर वाला तीर हो`, `जब नीचे वाला तीर हो` ब्लॉक्स का उपयोग करें), फिर बेतरतीब ध्वनियां प्ले करें, जब यह स्क्रीन पर अन्य चरित्रों के साथ टकराए।"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "आप अभिनेताओं को गेम स्पेस पर अलग-अलग स्थानों पर मूव करने के लिए इस ब्लॉक का उपयोग कर सकते हैं।\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "`अभिनेता 1 को मध्य बाईं पोजीशन पर सेट करें` का उपयोग करने की कोशिश करें, जब यह अन्य अभिनेताओं में से किसी एक को छूता है। इससे गेम रीसेट हो जाएगी ताकि खिलाड़ी कोशिश करना जारी रख सके !",
+          "courseC_PlayLab_events_challenge_c": "आप गेम को और आसान या अधिक चुनौतीपूर्ण बनाने के लिए विभिन्न अभिनेताओं की गति को बदलने का प्रयास भी करना चाह सकते हैं!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "यह पहला ब्लॉक, जिसकी आपको जरूरत है, वह है:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_b": "इसे दोहराने की संख्या को बदलने के लिए `दोहराएं` लूप के सबसे ऊपर दिए नंबर पर क्लिक करें।"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_b": "उपरोक्त जैसा डिज़ाइन बनाने के लिए, आप उसी मात्रा में पीछे की ओर मूव करना चाहेंगे, जैसे आप आगे की ओर मूव करते हैं।"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "उपरोक्त जैसा डिज़ाइन बनाने के लिए, प्रत्येक स्टिकर के बीच 75 पिक्सल से कम आगे की ओर कूदें।"
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "एक गोले में 360 डिग्री हैं। डिग्री को आपके दोहराने की संख्या से अपनी बारी से गुणा करें। क्या यह 360 के बराबर है?\nयह देखने के लिए सुझाए गए आवर्तन देखें कि यह काम करता है!"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*\"यदि आप <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block ब्लॉक का उपयोग करते हैं, तो मैं एक लाइन खींच दूंगा।\"*",
+          "courseC_artist_prog2_b": "क्या कोने में मुड़ने में मुश्किल हो रही है? <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> ब्लॉक का उपयोग करें।"
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "यह खिड़की बनाने के लिए, बस 100 पिक्सल भुजाओं वाला वर्ग खींचें।\n\n-   आगे की ओर मूव करें\n-   मुड़ें\n-   आगे की ओर मूव करें\n-   मुड़ें\n-   आगे की ओर मूव करें\n-   मुड़ें\n-   आगे की ओर मूव करें",
+          "courseC_artist_prog3_b": "क्या आप कोड को अधिक छोटा बनाना चाहते हैं? इस पहेली में लूप का उपयोग करने का प्रयास करें।"
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "रॉकेट पूरा करने के लिए, बस ऊपर त्रिकोण खींचें!",
+          "courseC_artist_prog4_b": "यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग कर सकते हैं!",
+          "courseC_artist_prog4_c": "त्रिकोण खींचने के लिए, आप यह करना चाहेंगे:\n\n-   आगे की ओर मूव करें\n-   120 डिग्री बाएं मुड़ें\n-   आगे की ओर मूव करें\n-   120 डिग्री बाएं मुड़ें\n-   आगे की ओर मूव करें"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "पूरा रास्ता स्लाइडर की गति धीमी करें, जब तक कि आप यह देखने के लिए चीज़ें कहां गलत हो जाती हैं, अपने कोड को लाइन-दर-लाइन चला न लें।",
+          "courseC_artist_prog5_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseC_artist_prog5_d": "प्रत्येक मोड़ दाईं ओर 90 डिग्री होना चाहिए।"
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "कलाकार अपनी पहली लाइन खींचने के लिए पहले से ही सही रास्ते के सामने है।",
+          "courseC_artist_prog6_b": "यह हीरा वास्तव में केवल एक वर्ग है, जो अपने कोने पर खड़ा है।",
+          "courseC_artist_prog6_c": "चूंकि यह हीरा एक वर्ग भी है, कोनों पर 90 डिग्री मुड़ना सुनिश्चित करें।"
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "प्रत्येक कोण या तो 45 डिग्री का है या 90 डिग्री का है।",
+          "courseC_artist_prog7_b": "क्या यह पहले स्टेप पर काम करता है?\\\n दूसरे स्टेप के बारे में क्या कहेंगे?\\\nयह कहां गलत हो जाता है?",
+          "courseC_artist_prog7_c": "यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप मुड़ें ब्लॉक्स पर ड्रॉपडाउन मेन्यु का उपयोग कर सकते हैं!",
+          "courseC_artist_prog7_d": "आप यह करना चाहेंगे:\n\n-   आगे की ओर मूव करें\n-   45 डिग्री दाएं मुड़ें\n-   आगे की ओर मूव करें\n-   90 डिग्री दाएं मुड़ें\n-   आगे की ओर मूव करें\n-   45 डिग्री दाएं मुड़ें\n\nइस पैटर्न को 2 बार दोहराएं!",
+          "courseC_artist_prog7_e": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "आप मध्य में या दो अलग-अलग वर्गों में लाइन के साथ इसे आयत के तौर पर खींच सकते हैं!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "जब आप पहली लाइन खींच लें, तो अपनी दूसरी लाइन खींचने से पहले बाएं मुड़ें।",
+          "courseC_artist_prog_challenge2_b": "जब आप दूसरी लाइन खींच लें, तो अपनी तीसरी लाइन खींचने से पहले दाएं मुड़ें।"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "लूप्स का उपयोग करें ताकि आपके पास `एकत्र करें` ब्लॉक खत्म न हो जाएं!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "जब आप खजाने के साथ स्थान पर खड़े हों, तो इसे उठाने के लिए <xml><block type=\"collector_collect\"/></xml> ब्लॉक का उपयोग करें।",
+          "courseC_collector_prog1_b": "सबसे आसान समाधान एक बार आगे की ओर मूव करके, फिर खजाना एकत्र करना होगा।"
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "आप अपने प्रोग्राम को और छोटा बनाने के लिए चार <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> ब्लॉक्स का उपयोग कर सकते हैं या <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक का उपयोग कर सकते हैं।",
+          "courseC_collector_prog2_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "प्रोग्राम केवल वही ब्लॉक्स चलाएगा, जो <xml><block type=\"when_run\"/></xml> ब्लॉक से जुड़े हुए हैं।",
+          "courseC_collector_prog3_b": "एक बार में अपने कोड की एक लाइन चलाने के लिए \"स्टेप\" बटन का उपयोग करने की कोशिश करें। क्या आपको दिखाई दे रहा है कि कोड कहां गलत है?",
+          "courseC_collector_prog3_c": "यदि आपको इस पहेली का पता लगाने में मुश्किल हो रही है, तो मूव्स को कागज़ पर लिखने की कोशिश करें।"
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "यदि आप अटक जाते हैं, तो स्टेप्स को कागज़ पर लिखने की कोशिश करें।",
+          "courseC_collector_prog4_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseC_collector_prog4_c": "रास्ते के लिए यह विकल्प आजमाएं।"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"क्या यह पहले स्टेप पर काम करता है?\nक्या यह दूसरे स्टेप पर काम करता है? \nचीज़ें कहां गलत हो रही हैं?”",
+          "courseC_collector_prog5_b": "यदि आपने एक बग ठीक किया है और प्रोग्राम अभी भी काम नहीं करता, तो और बग ढूंढने के लिए उपरोक्त स्टेप्स का उपयोग करें।",
+          "courseC_collector_prog5_c": "यदि आप अटक जाते हैं, तो स्टेप्स को कागज़ पर लिखने की कोशिश करें।",
+          "courseC_collector_prog5_d": "खजाना एकत्र करने के लिए रास्ते का अनुसरण करें।"
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "क्या आप पता लगा सकते हैं कि क्या गलत हो रहा है?  \n\nअपने कोड को एक-एक लाइन से चलाकर त्रुटियां ढूंढने के लिए \"स्टेप\" बटन का उपयोग करने की कोशिश करें।",
+          "courseC_collector_prog6_b": "अटक गए हैं?  खजाना एकत्र करने के लिए इस रास्ते का अनुसरण करें।"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "वर्कस्पेस में पहले से ही बहुत अच्छा कोड है।  इस पहेली को हल करने के लिए आपको इनमें से किसी को भी मिटाने की जरूरत नहीं है।",
+          "courseC_collector_prog7_b": "क्या आपको वह ब्लॉक दिखाई नहीं दे रहा, जिसकी जरूरत आपको एडवेंचर्र को सही दिशा में मूव करने के लिए है?  टूलबॉक्स में से एक खींचें।",
+          "courseC_collector_prog7_c": "क्या आपको सारा खजाना एकत्र करने के लिए रूट देखने में मुश्किल हो रही है?  यह रास्ता आजमाएं!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "आप अतिरिक्त खजाना एकत्र करने के लिए कई बार `एकत्र करें` ब्लॉक का उपयोग कर सकते हैं।"
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "आप हर स्थान पर एक से अधिक `एकत्र करें` ब्लॉक उपयोग कर सकते हैं।",
+          "courseC_collector_prog_challenge1_b": "क्या आप रास्ता भूल गए हैं?  पहेली को हल करने के लिए यह रास्ता आजमाएं!"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "आपको जो ब्लॉक जोड़ने की जरूरत है, उसे `गति तय करें` कहा जाता है।",
+          "courseC_flappy_events2_b": "इस पहेली को हल करने के लिए `गति तय करें` ब्लॉक को `जब चलाया जाए` ब्लॉक से जोड़ें।"
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "यदि कुछ सही ढंग से काम नहीं कर रहा है, तो सुनिश्चित करें कि आपके ब्लॉक्स वर्कस्पेस में सही इवेंट्स से जुड़े हुए नहीं हैं।"
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "इस पहेली को हल करने के लिए `गेम खत्म करें` ब्लॉक को `जब किसी बाधा से टकराएं` के साथ जोड़ें।"
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "इस स्तर को पास करने के लिए आपको `अंक हासिल करें` ब्लॉक का उपयोग करने की जरूरत होगी।"
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "`____ मात्रा में हिलाएं` ब्लॉक को `जब क्लिक किया जाए` इवेंट \nसे जोड़ने की कोशिश करें।"
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "आप `दृश्य सेट करें` ब्लॉक का उपयोग करते हुए पृष्ठभूमि को बदल सकते हैं।"
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "इस स्तर को पास करने के लिए `जब बाधा से गुजरें` इवेंट के नीचे दूसरे `दृश्य सेट करें` ब्लॉक से जोड़ने की कोशिश करें।"
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "इस स्तर को पास करने के लिए `स्कोर 0 सेट करें` ब्लॉक को `जब किसी बाधा से टकराएं` इवेंट से जोड़ें।"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "जब आप कद्दू की ओर मूव कर लें, तो इसे एकत्र करने के लिए <xml><block type=\"harvester_pumpkin\"/></xml> का उपयोग करें।",
+          "courseC_harvester_loops1_b": "आप एक सक्वेयर से एक से अधिक कद्दू लेने के लिए  <xml><block type=\"harvester_pumpkin\"/></xml> ब्लॉक के साथ लूप का उपयोग कर सकते हैं।"
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "यदि आप अटक जाएं, तो कागज़ पर स्टेप्स लिखने और दोहराने वाले पैटर्नों की खोज करने की कोशिश करें।",
+          "courseC_harvester_loops2_b": "आपको एक के बाद एक `दोहराएं` लूप की जरूरत होगी।",
+          "courseC_harvester_loops2_c": "एक लूप `आगे की ओर मूव करें` कमांड को दोहराएहा, और दूसरा `कद्दू लें` कमांड को दोहराएगा।"
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा,ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseC_harvester_loops3_b": "पहले कद्दुओं के लिए, आप पिछली पहेली से काफी मिलते-जुलते कोड का उपयोग कर सकते हैं। उसके बाद आपको किस तरफ मुड़ने की जरूरत होगी?",
+          "courseC_harvester_loops3_c": "यदि आप अपने कोड को आसान बनाना चाहते हैं, तो आप वास्तव में एक लूप को दूसरे के अंदर रख सकते हैं! इसे **नेस्टड लूप** कहा जाता है।"
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "कॉर्न एकत्र करने के लिए नए `कॉर्न लें` ब्लॉक का उपयोग करें।",
+          "courseC_harvester_loops4_b": "आप अपने कोड में कई दोहराने वाले लूप्स का उपयोग कर सकते हैं, कुछ का कॉर्न लेने के लिए और कुछ का कद्दू लेने के लिए।",
+          "courseC_harvester_loops4_c": "यदि आप अपने कोड को आसान बनाना चाहते हैं, तो आप वास्तव में एक लूप को दूसरे के अंदर रख सकते हैं! इसे **नेस्टड लूप** कहा जाता है।"
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "यदि आप अटक जाएं, तो पूरे प्रोग्राम को चित्रित करने और फिर दोहराने वाले पैटर्नों की खोज करने की कोशिश करें।",
+          "courseC_harvester_loops5_b": "क्या यह सीढी स्टेप अन्य पहेलियों से परिचित दिखाई देता है? गतिविधियां एक जैसी होनी चाहिएं, बस इस दौरान फसलें एकत्र करना याद रखें।"
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "याद रखें कि आप एक दोहराने वाले लूप में कई ब्लॉक्स रख सकते हैं।",
+          "courseC_harvester_loops6_b": "कॉर्न की पंक्ति के अंत में मुड़ना न भूलें।"
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "आप दो तरीकों से इस पहेली को हल कर सकते हैं, या तो पहले कॉर्न या कद्दू प्राप्त करें।",
+          "courseC_harvester_loops7_b": "इस पहेली को हल करने के लिए आपको कई `दोहराएं` लूप्स की जरूरत होगी।"
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "क्या यह सीढी स्टेप पिछली पहेली से परिचित दिखाई देता है? गतिविधियां एक जैसी होनी चाहिएं, बस इस दौरान फसलें एकत्र करना याद रखें।",
+          "courseC_harvester_loops8_b": "यदि आप अपने कोड को और आसान बनाना चाहते हैं, तो आप वास्तव में एक `दोहराएं` लूप को दूसरे के अंदर रख सकते हैं! इसे **नेस्टड लूप** कहा जाता है।"
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "लूप्स के बिना यह बहुत ज्यादा मुश्किल है!",
+          "courseC_harvester_loops_challenge1_b": "आप `आगे की ओर मूव करें` और `कॉर्न लें` को जितनी बार जरूरत हो, दोहरा सकते हैं, फिर प्रत्येक कोने पर `दाएं मुड़` सकते हैं।",
+          "courseC_harvester_loops_challenge1_c": "बीच में कॉर्न एकत्र करने का बेहतर तरीका है, `दोहराएं` ब्लॉक को दूसरे `दोहराएं` ब्लॉक के अंदर रखना।\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "इसे हल करने का एक रास्ता मोड़दार प्रतीत होता है। दूसरा रास्ता घुमावदार लगता है! इस तरह की पहेली को हल करने के बहुत से अलग-अलग समाधान हैं। स्थायी रहें!",
+          "courseC_harvester_loops_challenge2_b": "आप `आगे की ओर मूव करें` और `लेट्स लें` को जितनी बार जरूरत हो, दोहरा सकते हैं, फिर प्रत्येक कोने पर मुड़ सकते हैं।",
+          "courseC_harvester_loops_challenge2_c": "पहेली पूरी करने के लिए इस मोड़दार पैटर्न को केवल 20 ब्लॉक्स के साथ दो बार दोहराया जा सकता है!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "इस घुमावदार पैटर्न को केवल 18 ब्लॉक्स के साथ कोडबद्ध किया जा सकता है!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   क्या सब कुछ पहले स्टेप के बाद काम करता है?\n-   क्या यह दूसरे के बाद भी काम करता है?\n-   यह कहां गलत हो जाता है?",
+          "courseC_maze_debugging1_b": "1 ब्लॉक है, जिसे आपको इस पहेली को पूरा करने के लिए जोड़ने की जरूरत है।"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "वर्कस्पेस में बहुत-सा मूल्यवान कोड है।  इस पूरे को न मिटाएं और शुरू करें!",
+          "courseC_maze_debugging2_b": "-   क्या सब कुछ पहले स्टेप के बाद काम करता है?\n-   क्या यह दूसरे के बाद भी काम करता है?\n-   यह कहां गलत हो जाता है?",
+          "courseC_maze_debugging2_c": "क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "अपने कोड के मध्य से ब्लॉक को मिटाने के लिए, सभी ब्लॉक्स को वर्कस्पेस के दूसरे भाग तक खींचें।\n\nजिस ब्लॉक को आप मिटाना चाहते हैं, उसे वापस टूलबॉक्स तक खींचें।\n\nअंत में, अपने अन्य ब्लॉक्स को वापस वहां रखें, जहां से वे संबंधित हैं।\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "एक बार में एक निर्देश चलाने के लिए \"स्टेप\" बटन का उपयोग करें  क्या वह उस लाइन को ढूंढने में आपकी मदद करता है, जहां चीज़ें गलत हो जाती हैं?",
+          "courseC_maze_debugging4_b": "एक मोड़ स्क्रैट को गलत दिशा में ले जा रहा है। क्या आप पता लगा सकते हैं कि वह कौन-सा है?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "वर्कस्पेस में पहले से ही बहुत से उपयोगी ब्लॉक्स हैं।  उन सभी को न मिटाएं! \n\nपूरा करने के लिए \"स्टेप\" बटन का उपयोग करें और पता लगाएं कि चीज़ें कहां गलत हो जाती हैं।",
+          "courseC_maze_debugging5_b": "यह कहने का प्रयास करें कि स्क्रैट को आवाज़ के लिए क्या करना चाहिए।   क्या यह वर्कस्पेस में मौजूद कोड के समान है?  क्या गलत हो जाता है?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   स्क्रैट क्या करने के लिए बनाया गया है? \n-   स्क्रैट क्या करता है?  \n-   यह आपको क्या बताता है?",
+          "courseC_maze_debugging6_b": "जब आप पहला बग ढूंढकर उसे ठीक कर लें, तो दूसरे को ढूंढने के लिए डीबगिंग प्रक्रिया को दुबारा पूरा करें।\n\nतब तक प्रक्रिया को दोहराएं, जब तक कि प्रोग्राम काम न करने लगे!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   क्या सब कुछ पहले स्टेप पर काम करता है?\n-   दूसरे स्टेप के बारे में क्या कहेंगे?\n-   यह कहां गलत हो जाता है?",
+          "courseC_maze_debugging7_b": "लाइन दर लाइन प्रोग्राम चलाने के लिए \"स्टेप\" बटन का उपयोग करना न भूलें!",
+          "courseC_maze_debugging7_c": "जब आप पहला बग ढूंढकर उसे ठीक कर लें, तो अगले को ढूंढने के लिए डीबगिंग प्रक्रिया का दुबारा उपयोग करना सुनिश्चित करें।\n\nतब तक डीबगिंग प्रक्रिया को दोहराएं, जब तक कि प्रोग्राम काम न करने लगे!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "दाएं या बाएं? यह आपकी मर्जी है!",
+          "courseC_maze_debugging_challenge1_b": "स्क्रैट का रास्ता आयत के आकार में है! उसे हर बार एक ही तरफ मुड़ने की जरूरत है।",
+          "courseC_maze_debugging_challenge1_c": "यदि आप अटक रहे हैं, तो आप हमेशा शुरूआत करके नया तरीका ढूंढ सकते हैं!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "यदि आप अटक रहे हैं, तो कोड को डीबग करने की कोशिश करें। यह कहां गलत है?",
+          "courseC_maze_debugging_challenge2_c": "दो अलग रास्ते हैं, जिनका अनुसरण आप बस आगे की ओर मूव करके और चार बार मुड़कर कर सकते हैं। यदि आप लूप का उपयोग करने का एक तरीका ढूंढ लें, तो और भी हो मिल सकते हैं!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "इस रास्ते के बारे में दो अलग हिस्सों की तरह सोचें। हर एक में पैटर्न है, जिसे आप दोहरा सकते हैं।",
+          "courseC_maze_loops_challenge1_b": "क्या आप याद कर सकते हैं कि सीढी के पैटर्न को दोहराने के लिए लूप्स का उपयोग कैसे करना है?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक साथ कटे हैं, फिर दुबारा \"चलाएं\" पर क्लिक करें।"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> ब्लॉक का उपयोग करने के लिए, इसे टूलबॉक्स में से बाहर खींचें और इसे <xml><block type=\"when_run\"/></xml> ब्लॉक के साथ जोड़ दें।",
+          "courseC_maze_programming2_b": "सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक साथ कटे हैं, फिर दुबारा \"चलाएं\" पर क्लिक करें।"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "पहले यह देखने के लिए कोड चलाने की कोशिश करें कि यह कहां गलत होता है।",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nअपने कोड के मध्य से ब्लॉक को मिटाने के लिए, सभी ब्लॉक्स को वर्कस्पेस के दूसरे भाग तक खींचें।\n\nजिस ब्लॉक को आप मिटाना चाहते हैं, उसे वापस टूलबॉक्स तक खींचें।\n\nअंत में, अपने अन्य ब्लॉक को वापस वहां रखें, जहां से वह संबंधित है।"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "याद रखें कि जब आप मुड़ते हैं, तो आप the _bird's_ point of view से मुड़ रहे होते हैं।  यदि आप दाएं मुड़ते हैं, तो पक्षी नीचे संकेत करेगा।",
+          "courseC_maze_programming4_b": "रास्ते का अनुसरण करने के लिए:\n\n-   आगे की ओर मूव करें\n-   एक तरफ मुड़ें\n-   आगे की ओर मूव करें\n-   दूसरी तरफ से वापस मुड़ें\n-   आगे की ओर मूव करें"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "लाइन दर लाइन अपना कोड चलाने के लिए \"स्टेप” बटन का उपयोग करने का प्रयास करें। क्या आप पता लगा सकते हैं कि आपको आगे क्या करने की जरूरत है?",
+          "courseC_maze_programming5_b": "इस पहेली को पूरा करने के लिए पक्षी को एक घुमाव की जरूरत होगी। क्या आप पता लगा सकते हैं कि किस तरफ?",
+          "courseC_maze_programming5_c": "समाधान में दो `आगे की ओर मूव करें` ब्लॉक्स होंगे, एक घुमाव, और दो और `आगे की ओर मूव करें` ब्लॉक।"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "इस पहेली को हल करने के दो तरीके हैं!",
+          "courseC_maze_programming6_b": "अपनी उंगली को पक्षी से सूअर तक ले जाएं, आपने कौन-से पड़ाव लिए थे?",
+          "courseC_maze_programming6_c": "याद रखें कि पहले आपको मुड़ना है, क्योंकि पक्षी दीवार की तरफ जाना शुरू करता है।",
+          "courseC_maze_programming6_d": "क्या फंसे हुए महसूस कर रहे हैं?  यह रास्ता देखें!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "एक से दूसरा ब्लॉक पूरा करने और त्रुटियां देखने के लिए \"स्टेप\" बटन का उपयोग करना न भूलें।",
+          "courseC_maze_programming7_b": "यदि आपको इस पहेली का पता लगाने में मुश्किल हो रही है, तो मूव्स को कागज़ पर लिखने की कोशिश करें।"
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "याद रखें कि यदि आप अटक जाएं तो अपने कोड को एक-एक लाइन से देखने के लिए आप \"स्टेप\" बटन का उपयोग कर सकते हैं।",
+          "courseC_maze_programming8_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "सूअर तक पहुंचने के कई रास्ते हैं। रास्ता ढूंढने के लिए अपनी उंगली का उपयोग करें और फिर इसे प्रोग्राम करें!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_\"यदि आप मुझे पीछे की ओर भेजते हैं, तो अतिरिक्त सावधानी बरतें कि मैं सही तरफ मुड़ जाऊं!\"_",
+          "courseC_maze_programming_challenge2_b": "सबसे छोटा समाधान केवल 5 ब्लॉक्स का उपयोग करता है, लेकिन यह इस ब्लॉक का उपयोग करता है:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "क्या यह पैटर्न सीढी के स्टेप्स के बहुत बड़े सेट की तरह नहीं लग रहा? देखें कि क्या आप उसका उपयोग कर सकते हैं, जिसे आपने सभी मोड़ प्राप्त करने के लिए पिछली पहेलियों से सीखा था।",
+          "courseC_starWars_loops10_b": "यदि आप कम कोड का उपयोग करना चाहते हैं, तो आप दूसरे के अंदर एक `दोहराएं` लूप डाल सकते हैं!\\\nइसे **नेस्टड लूप** कहा जाता है।",
+          "courseC_starWars_loops10_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "जब BB-8 लोहे के चूरे पर उलटता है तो वह अपने आप इसे उठा लेता है।",
+          "courseC_starWars_loops1_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseC_starWars_loops1_c": "इस पहेली को हल करने के लिए आप पांच बार `आगे की ओर मूव` करना चाहेंगे।"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "कोड को दोहराने के लिए, `दोहराएं` लूप को बाहर खींचें, फिर जो ब्लॉक आप चाहते हैं, उसे इसके अंदर रखें।"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "कोड को दोहराने के लिए, `दोहराएं` लूप को बाहर खींचें, फिर जो ब्लॉक आप चाहते हैं, उसे इसके अंदर रखें।"
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "मोड़ें ब्लॉक पर \"बाएं\" के पास वाले छोटे तीर पर क्लिक करने पर आप इसे  \"दाएं” में बदल पाएंगे।",
+          "courseC_starWars_loops4_a": "दो `दोहराएं` ब्लॉक्स का उपयोग करें।",
+          "courseC_starWars_loops4_b": "प्रत्येक `दोहराएं` लूप में इसके अंदर केवल एक कमांड होगी: `आगे की ओर मूव करें।`"
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "मोड़ें ब्लॉक पर \"बाएं\" के पास वाले छोटे तीर पर क्लिक करने पर आप इसे  \"दाएं” में बदल पाएंगे।",
+          "courseC_starWars_loops4_a": "दो `दोहराएं` ब्लॉक्स का उपयोग करें।",
+          "courseC_starWars_loops4_b": "प्रत्येक `दोहराएं` लूप में इसके अंदर केवल एक कमांड होगी: `आगे की ओर मूव करें।`"
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "नीचे मूव करने के लिए, आपको मुड़ना होगा और फिर आगे की ओर मूव करना होगा।",
+          "courseC_starWars_loops5_a": "सबसे अच्छा समाधान एक घुमाव का, फिर एक बार `आगे की ओर मूव करें` का, दूसरे घुमाव का, फिर लूप का उपयोग करना है।"
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "सभी मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।",
+          "courseC_starWars_loops6_b": "यदि आप कम कोड का उपयोग करना चाहते हैं, तो आप दूसरे के अंदर एक `दोहराएं` लूप डाल सकते हैं!\\\nइसे **नेस्टड लूप** कहा जाता है।"
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "सभी मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।",
+          "courseC_starWars_loops6_b": "यदि आप कम कोड का उपयोग करना चाहते हैं, तो आप दूसरे के अंदर एक `दोहराएं` लूप डाल सकते हैं!\\\nइसे **नेस्टड लूप** कहा जाता है।"
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "यह पैटर्न जितना मुश्किल दिखाई देता है, उतना मुश्किल है नहीं! साधारण सीढ़ी स्टेप से शुरू करें। क्या यह सारा लोहे का चूरा कवर करता है?",
+          "courseC_starWars_loops7_b": "यदि आपको इस पहेली में मुश्किल हो रही है, तो सभी मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।",
+          "courseC_starWars_loops7_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "यह पैटर्न जितना मुश्किल दिखाई देता है, उतना मुश्किल है नहीं! साधारण सीढ़ी स्टेप से शुरू करें। क्या यह सारा लोहे का चूरा कवर करता है?",
+          "courseC_starWars_loops7_b": "यदि आपको इस पहेली में मुश्किल हो रही है, तो सभी मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।",
+          "courseC_starWars_loops7_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होता है, कोड चलाएं, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "इस समस्या के बारे में छोटे भागों में सोचने की कोशिश करें। पूरा समय लें। आपके लिए इसे पहली बार में ही हल जरूरी नहीं है!",
+          "course_starWars_loops8_b": "आधा समय इस समस्या को सीढी के स्टेप के तौर पर सोचें। आपने पहले उसे कैसे हल किया था?",
+          "course_starWars_loops8_c": "इस रास्ते पर एक नज़र डालें।\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "इस समस्या के बारे में छोटे भागों में सोचने की कोशिश करें। पूरा समय लें। आपके लिए इसे पहली बार में ही हल जरूरी नहीं है!",
+          "course_starWars_loops8_b": "आधा समय इस समस्या को सीढी के स्टेप के तौर पर सोचें। आपने पहले उसे कैसे हल किया था?",
+          "course_starWars_loops8_c": "इस रास्ते पर एक नज़र डालें।\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।",
+          "course_starWars_loops9_c": "इस पहेली को हल करने के लिए आपको बाएं मुड़ने की जरूरत नहीं है। आपके सभी मोड़ दाईं ओर हो सकते हैं।\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "अपनी जरूरत के कोण को चुनने के लिए आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग करें!",
+          "courseD_artist_project1_b": "याद रखें कि `आगे की ओर मूव करें` एक लाइन खींचता है, जबकि `आगे की ओर कूदें` नहीं।"
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_a": "अपनी जरूरत के कोण को चुनने के लिए आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग करें!"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "इसे चित्रित करने का सबसे आसान तरीका आगे की ओर मूव करना और दाएं मोड़ों का उपयोग करना है।",
+          "courseD_artist_nestedLoops1_b": "आप इस त्रिकोण को अंदर दो ब्लॉक्स वाली `दोहराएं` लूप के साथ खींच सकते हैं। आपको कौन-से ब्लॉक्स की जरूरत है?",
+          "courseD_artist_nestedLoops1_c": "चरणों को कागज़ पर लिखने और ऐसे पैटर्न खोजने का प्रयास करें, जिन्हें लूप्स के साथ सरल बनाया जा सके।"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "आपको कुल 6 त्रिकोण खींचने की जरूरत होगी। प्रत्येक त्रिकोण समाप्त करने के बाद, 60 डिग्री घुमाएं और अगला त्रिकोण शुरू करने के लिए मूव करें।\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "यदि आप लूप के साथ अपना त्रिकोण बनाते हैं, तो कलाकार को शुरू करते ही उसी रास्ते के सामने होना चाहिए। यह 60 डिग्री के मोड़ों को काफी आसान बना देगा।",
+          "courseD_artist_nestedLoops1a_c": "यदि आप रंग चाहते हैं, तो अपने कोड में `रंग सेट करें` ब्लॉक का उपयोग करें। आपको टेम्प्लेट चित्र में रंगों का मिलान करने की जरूरत नहीं है।"
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "अपनी लूप्स को दूसरी `दोहराएं` लूप के साथ अपने त्रिकोण कोड से घेरकर नेस्ट करें।",
+          "courseD_artist_nestedLoops2_b": "लूप के अंदर `मुड़ें` ब्लॉक रखना याद रखें ताकि कलाकार प्रत्येक त्रिकोण के बाद मुड़ जाए।"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "एक वर्ग के ऊपर से उस स्थान तक जाने के लिए `आगे की ओर कूदें` ब्लॉक का उपयोग करने का प्रयास करें, जहां आप अगला शुरू करेंगे।\n\nयदि आपके वर्ग 20 पिक्सल लंबे हैं और वे 20 पिक्सल की दूरी पर हैं, तो आपको कितनी दूर कूदने की जरूरत है?",
+          "courseD_artist_nestedLoops3_b": "इस पहेली को जल्दी से हल करने के लिए नेस्टड लूप का उपयोग करना न भूलें। ",
+          "courseD_artist_nestedLoops3_c": "एक वर्ग बनाने के लिए `दोहराएं` लूप का उपयोग करके शुरुआत करें।  इसके बाद, 40 पिक्सल बीच में कूदते हुए, 8 बार उस वर्ग को दोहराएं। "
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "इसे ठीक से हल करने के लिए, आपको मुड़ने से **पहले** मूव करने की जरूरत होगी, नहीं तो आपके चक्कर बेहद मामूली मात्रा तक अलग हो जाएंगे!",
+          "courseD_artist_nestedLoops4_a": "चक्कर बनाने के लिए:\n\n-   360 बार दोहराएं    \n-   1 पिक्सल आगे की ओर मूव करें    \n-   1 डिग्री बाएं मुड़ें",
+          "courseD_artist_nestedLoops4_b": "चक्करों के बीच 50 पिक्सल तक आगे की ओर कूदना न भूलें।",
+          "courseD_artist_nestedLoops4_c": "अपने चक्कर 4 बार चित्रित करने के लिए नेस्टड लूप का उपयोग करें।"
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "इसे आसानी से करने के लिए:\n\n-   4 बार दोहराएं    \n-   चक्कर बनाएं    \n-   50 पिक्सल आगे की ओर कूदें    \n-   90 डिग्री दाएं मुड़ें",
+          "courseD_artist_nestedLoops5_b": "चक्कर बनाने के लिए आपको दोहराएं लूप को 360 बार दोहराने की जरूरत होगी। लूप के अंदर, 1 पिक्सल आगे की ओर मूव करें और 1 डिग्री तक मुड़ें।"
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_a": "आपको यहां नेस्टड लूप्स का उपयोग करने की जरूरत होगी। सबसे पहले, वर्ग चित्रित करने के लिए लूप का उपयोग करें। यदि अंदरूनी लूप वर्ग खींचती है तो बाहरी लूप क्या करेगी?",
+          "courseD_artist_nestedLoops7_b": "नेस्टड लूप का उपयोग करें, जहां अंदरूनी लूप, वर्ग के लिए कोड है।\n\n-   6 बार दोहराएं    -   वर्ग बनाएं    \n-   **50 पिक्सल** आगे की ओर कूदें    \n-   **60 डिग्री** मुड़ें"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_a": "अपनी ड्राइंग में षट्कोण प्राप्त करने के लिए, आपको उनमें से प्रत्येक के बीच **45 डिग्री** मुड़ने की जरूरत होगी। क्यों? क्योंकि 360 डिग्री को (पूरा मुड़ना) को 8 (षट्कोणों की संख्या) से भाग देने पर 45 डिग्री आता है।",
+          "courseD_artist_nestedLoops8_b": "यदि आप अटक गए हैं, तो पिछली पहेली को देखना शुरू करें, फिर उन चीज़ों को बदलें, जो अलग हैं।",
+          "courseD_artist_nestedLoops8_c": "नेस्टड लूप का उपयोग करें:-   8 बार दोहराएं    \n\n-   षट्कोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें    \n-   45 डिग्री दाएं मुड़ें"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "नेस्टड लूप का उपयोग करते हुए शुरुआत करें, जैसे आपने पहले किया था, लेकिन इस बार, इसे वर्गों के साथ बनाएं।",
+          "courseD_artist_nestedLoops9_b": "पहले सेट के अंत में नेस्टड लूप्स का दूसरा सेट जोड़ें, लेकिन इस बार त्रिकोणों का उपयोग करें।",
+          "courseD_artist_nestedLoops9_c": "दो नेस्टड लूप्स का उपयोग करें:\n\n-   8 बार दोहराएं    \n-   वर्ग खींचें    \n-   50 पिक्सल आगे की ओर कूदें    \n-   45 डिग्री तक दाएं मुड़ें\n-   8 बार दोहराएं    \n-   त्रिकोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें    \n-   45 डिग्री तक दाएं मुड़ें"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nयह चित्र एकल नेस्टड लूप का उपयोग करते हुए बनाया गया था, जो 48 डिग्री मोड़ का उपयोग करते हुए 15 बार षट्कोण ( 50px भुजाओं के साथ) को दोहराती है।",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nयह चित्र अन्य स्तरों के लिए उसी कोड का उपयोग करते हुए बनाया गया था, जो आपने पहले किया था, लेकिन चक्करों के साथ (360 बार दोहराएं: 1 आगे की ओर मूव करें, 1 डिग्री मुड़ें)।",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nयह चित्र एकल नेस्टड लूप का उपयोग करते हुए बनाया गया था, जो 48 डिग्री मोड़ का उपयोग करते हुए 15 बार पंचभुज ( 50px भुजाओं के साथ) को दोहराती है।"
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "रंग को नीले में बदलकर शुरुआत करें, फिर 50 पिक्सल की भुजाओं और 45 डिग्री बाएं मोड़ों वाला अष्टभुज बनाएं।",
+          "courseD_artist_nestedLoops_challenge1_b": "रंग को हरे में बदलने के लिए कोड जोड़ें, और 50 पिक्सल की भुजाओं और 120 डिग्री बाएं मोड़ों वाला त्रिकोण बनाएं।",
+          "courseD_artist_nestedLoops_challenge1_c": "जब आप दोनों आकृतियां चित्रित कर लें, आपको 90 डिग्री दाएं मुड़ने से पहले 50 पिक्सल तक आगे की ओर कूदने की जरूरत होगी।",
+          "courseD_artist_nestedLoops_challenge1_d": "इसे समाप्त करने के लिए अपना पूरा कोड `4 बार दोहराएं` लूप के अंदर रखें।"
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "नियमित अष्टभुज खींचने के लिए, कलाकार को 8 बार 45 डिग्री मुड़ने की जरूरत है।",
+          "courseD_artist_nestedLoops_challenge2_b": "वर्ग खींचने के लिए, कलाकार को 4 बार 90 डिग्री मुड़ने की जरूरत है।"
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "अपनी जरूरत के कोण को चुनने के लिए आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग करें!",
+          "courseD_artist_project1_b": "याद रखें कि `आगे की ओर मूव करें` एक लाइन खींचता है, जबकि `आगे की ओर कूदें` नहीं।"
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "यह सीढ़ी स्टेप 76 डिग्री के मोड़ का उपयोग करता है और 4 बार दोहराता है।\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "ये पैटर्न काफी हद तक अन्य पहेलियों के सीढ़ी स्टेप्स जैसे हैं, लेकिन अलग कोण का उपयोग करते हैं।"
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "याद रखें कि `आगे की ओर मूव करें` एक लाइन खींचता है, जबकि `आगे की ओर कूदें` नहीं।",
+          "courseD_artist_project2_b": "आपके पहली बार चित्रित और मूव करने के बाद, आप बाहर की तरफ लूप जोड़कर कोड दोहरा सकते हैं।"
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "यह ड्राइंग 4 सीढ़ियों की लूप `180 डिग्री दाएं मुड़ें` ब्लॉक को `2 बार दोहराएं` ब्लॉक के अंदर नेस्ट करके बनाई गई थी।\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "अपनी जरूरत के कोण को चुनने के लिए आप `मुड़ें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग करें!",
+          "courseD_artist_project3_b": "नेस्टड लूप्स आजमाएं!\n\nउस कोड का उपयोग करें, जो आपने आकृतियों की लाइन खींचने के लिए बनाया है और इसे दूसरी लूप के अंदर नेस्ट करें।   नीचे, बाहरी लूप के समाप्त होने से पहले, वह ब्लॉक जोड़ें, जो एल्सा को मोड़ देगा। \n\n-   यदि आप बाहरी लूप को 5 बार दोहरा रहे हैं तो 72 डिग्री का प्रयास करें\n-   यदि आप बाहरी लूप को 6 बार दोहरा रहे हैं तो 60 डिग्री का प्रयास करें"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "आप अपनी आकृति को घुमाने के लिए अलग-अलग मात्राएं चुन सकते हैं! बीच में 20 डिग्री के मोड़ के साथ 18 बार के बारे में क्या विचार है?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "त्रिकोण हिम-पक्षी से पहले 36 डिग्री के मोड़ वाला बहुभुज हिम-पक्षी है:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nयह वर्गों वाले षट्कोणों का सेट है:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "इसे आजमाने के लिए, अपना पहला हिम-पक्षी चित्रित करें, फिर दूसरा हिम-पक्षी चित्रित करें।"
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "ये दो अलग-अलग लंबाई के हिम-पक्षी हैं, एक के बाद दूसरा चित्रित करें (बीच में 30 डिग्री के मोड़ के साथ।)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "2 षट्कोणों और 4 त्रिकोणों की लाइनें:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "इससे पहले कि आप मधुरस प्राप्त करने का प्रयास करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या बादल के नीचे फूल है।"
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "इससे पहले कि आप मधुरस प्राप्त करने का प्रयास करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या बादल के नीचे फूल है।"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "कभी वहां फूल होगा, कभी नहीं।  यदि आप अपने कोड को दोनों स्थितियों में चलाना चाहते हैं, तो `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।",
+          "courseD_bee_conditionals2_c": "आपको मधु के छत्तों को देखने की जरूरत नहीं है, बादलों की नीचे केवल फूल या खाली स्थान होंगे।"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "क्या शुरुआत करने में मदद की जरूरत है?  वीडियो देखें!",
+          "courseD_bee_conditionals2_a": "कभी वहां फूल होगा, कभी नहीं।  यदि आप अपने कोड को दोनों स्थितियों में चलाना चाहते हैं, तो `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।",
+          "courseD_bee_conditionals2_b": "इस पहेली का रास्ता बनाने के लिए आप `दोहराएं` लूप या `जब आगे रास्ता हो` का उपयोग कर सकते हैं।",
+          "courseD_bee_conditionals2_c": "आपको मधु के छत्तों को देखने की जरूरत नहीं है, बादलों की नीचे केवल फूल या खाली स्थान होंगे।",
+          "courseD_bee_conditionals2_hintVid2": "इस पहेली को हल करने में मदद के लिए यह वीडियो देखें।"
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "यह देखने के लिए कि इसमें फूल है या कुछ नहीं है, प्रत्येक स्थान को देखने के लिए `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।",
+          "courseD_bee_conditionals3_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा,ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "क्या शुरुआत करने में मदद की जरूरत है?  वीडियो देखें!",
+          "courseD_bee_conditionals3_a": "यह देखने के लिए कि इसमें फूल है या कुछ नहीं है, प्रत्येक स्थान को देखने के लिए `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।",
+          "courseD_bee_conditionals3_b": "आप मधुमक्खी को आगे की ओर मूव करते रहने के लिए `दोहराएं` लूप या `व्हाइल` लूप का उपयोग कर सकते हैं। उसी का उपयोग करें, जो भी आपको पसंद हो!",
+          "courseD_bee_conditionals3_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा,ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।",
+          "courseD_bee_conditionals3_hintVid2": "इस पहेली को हल करने में मदद के लिए यह वीडियो देखें।"
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "आप तब भी प्रत्येक स्थान से इस तरह व्यवहार कर सकते हैं कि मानो इस पर बादल हो, चाहे आप पूरा रास्ता देख सकते हों।",
+          "courseD_bee_conditionals4_b": "मधुरस के प्रत्येक स्थान को देखने के लिए अपनी लूप के अंदर `इफ` स्टेटमेंट का उपयोग करें।"
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "क्या शुरुआत करने में मदद की जरूरत है?  वीडियो देखें!",
+          "courseD_bee_conditionals4_a": "आप तब भी प्रत्येक स्थान से इस तरह व्यवहार कर सकते हैं कि मानो इस पर बादल हो, चाहे आप पूरा रास्ता देख सकते हों।",
+          "courseD_bee_conditionals4_b": "मधुरस के प्रत्येक स्थान को देखने के लिए अपनी लूप के अंदर `इफ` स्टेटमेंट का उपयोग करें।",
+          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> block ब्लॉक का उपयोग करते हुए, आपको आगे की ओर मूव करके फूल को देखें। यदि वहां फूल है, तो मधुमक्खी को क्या करना चाहिए?",
+          "courseD_bee_conditionals4_hintVid2": "इस पहेली को हल करने में मदद के लिए यह वीडियो देखें।"
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "क्या शुरुआत करने में मदद की जरूरत है?  वीडियो देखें!",
+          "courseD_bee_conditionals5_a": "आयताकार रास्ते की प्रत्येक भुजा को भी एक रास्ता मानें। बाहर की तरफ `दोहराएं` ब्लॉक के साथ नेस्टड लूप और अंदर `जब आगे रास्ता हो` लूप स्थापित करें। नीचे की ओर जाने के लिए मधुमक्खी को कितने रास्तों की जरूरत है, यदि मधुमक्खी को फूल के साथ हर तरफ नीचे की तरफ जाने की जरूरत है?",
+          "courseD_bee_conditionals5_c": "फूलों वाली आयत की 3 भुजाएं हैं, इसलिए कोड को `3 बार दोहराएं` की जरूरत है। प्रत्येक बार दोहराने में, मधुमक्खी को `जब आगे रास्ता हो` रास्ते को रखने की जरूरत होगी। नीचे की ओर रास्ता जारी रखने के लिए, मधुमक्खी को `आगे की ओर मूव करें` की जरूरत होगी। जब रास्ते पर हों, तो मधुमक्खी को फूल को देखने की जरूरत होती है। `यदि वहां फूल हो`, मधुमक्खी को `मधुरस प्राप्त करें` करना चाहिए।",
+          "courseD_bee_conditionals5_b": "`जब आगे रास्ता हो` ब्लॉक के अंदर आपको आगे की ओर मूव करके फूल देखने की जरूरत होगी। आप कैसे देखेंगे कि वहां फूल है या नहीं? यदि वहां फूल हो तो आप क्या करेंगे?",
+          "courseD_bee_conditionals5_hintVid2": "इस पहेली को हल करने में मदद के लिए यह वीडियो देखें।"
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "प्रत्येक बादल के नीचे मधु के छत्ते को देखने के लिए `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।",
+          "courseD_bee_conditionals6_b": "इस स्थिति में, आपको बादलों के नीचे फूलों को देखने की जरूरत नहीं है।",
+          "courseD_bee_conditionals6_c": "क्या ऐसी लूप है, जिसे आप अपने कोड को अधिक सरल बनाने के लिए उपयोग कर सकते हैं?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**यााद रखें:** यह पहेली हर बार चलाने पर बदल जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक (`इफ/एल्स`) का उपयोग करना चाहेंगे।",
+          "courseD_bee_conditionals7_b": "यदि बादल के नीचे फूल नहीं है, तो वहां मधु का छत्ता होना आवश्यक है, ताकि आपको खाली स्थान के केस के बारे में सोचने की जरूरत न पड़े।"
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**यााद रखें:** यह पहेली हर बार चलाने पर बदल जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक (`इफ/एल्स`) का उपयोग करना चाहेंगे।"
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**याद रखें:** यह पहेली हर बार चलाने पर बदल जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक ( `इफ` या `इफ/एल्स`) का उपयोग करना चाहेंगे।",
+          "courseD_bee_conditionals8_b": "यह पहेली पेचीदा है, क्योंकि आप केवल एक एकल सापेक्ष के साथ खाली वर्ग, मधुरस, _और_ शहद नहीं देख सकते।\n\nअपने रास्ते के अंत में केवल मधुरस और शहद देखें।"
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "क्या आप ऐसा रास्ता ढूंढ सकते हैं, जो बिना किन्हीं पेड़ों से टकराए प्रत्येक फूल और मधु के छत्ते के पास पहुंचता हो? सबसे अच्छा रास्ता घुमावदार है।",
+          "courseD_bee_conditionals_challenge1_b": "इस पहेली में, प्रत्येक स्थान के पास फूल, मधु का छत्ता हो सकता है या कुछ नहीं भी हो सकता है।  इसका अर्थ है कि आप प्रत्येक वर्ग में  अपने नियमबद्ध `इफ/एल्स` को दोहरा सकते हैं।"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "बिल्कुल वैसे, जैसे `जब मधुरस > 0` के अंदर कोड, `यदि फूल पर` ब्लॉक्स केवल तभी चलेगा, यदि मधुमक्खी फूल पर हो।   इतना अंतर है कि अंदर का कोड बार-बार चलेगा, जब तक मधुरस नहीं बचेगा।  यह पैटर्न आजमाएं:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "काम नहीं कर रहा है?  यह देखने के लिए लाइन दर लाइन क्या होता है, \"स्टेप\" बटन का उपयोग करने का प्रयास करें।",
+          "courseD_bee_nestedLoops1_b": "पहले वर्ग की एक भुजा के लिए कोड लिखने का प्रयास करें। क्या आप सारा मधुरस प्राप्त करने के लिए इसे लूप कर सकते हैं?",
+          "courseD_bee_nestedLoops1_c": "जब आप फूल वाले वर्ग पर हों तो `मधुरस प्राप्त करें` ब्लॉक का उपयोग करना याद रखें।"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "काम नहीं कर रहा है?  यह देखने के लिए लाइन दर लाइन क्या होता है, \"स्टेप\" बटन का उपयोग करने का प्रयास करें।",
+          "courseD_bee_nestedLoops1_c": "जब आप फूल वाले वर्ग पर हों तो `मधुरस प्राप्त करें` ब्लॉक का उपयोग करना याद रखें।"
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "इस पहेली को हल करने के लिए, आपको दूसरी के अंदर एक `दोहराएं` लूप को नेस्ट करने की जरूरत होगी।",
+          "courseD_bee_nestedLoops2_b": "क्या आप पता नहीं लगा पा रहे हैं कि लूप्स को कहां रखना है, तो कागज़ पर कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
+          "courseD_bee_nestedLoops2_c": "याद रखें कि आप लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।"
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "आपको दूसरी `दोहराएं` के अंदर `मधुरस प्राप्त करें` को दोहराने की जरूरत होगी, जिसके अंदर भी `आगे की ओर मूव करें` ब्लॉक है।",
+          "courseD_bee_nestedLoops7_b": "इस पहेली को हल करने के लिए आपको उपलब्ध सभी तीन `दोहराएं` ब्लॉक्स का उपयोग करने की जरूरत होगी।",
+          "courseD_bee_nestedLoops7_c": "अपने ब्लॉक्स को तीन डीप नेस्ट करें, इस प्रकार:\n\n-   दोहराएं 4 \n    -   दोहराएं 3\n        -   दोहराएं 12\n            -   मधुरस प्राप्त करें\n        -   आगे की ओर मूव करें\n    -   दाएं मुड़ें"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "यह देखने के लिए पहले स्टेप में सब ठीक है, \"स्टेप\" बटन का उपयोग करें\n\nसेकंड के बारे में क्या कहेंगे?\n\nयह कहां गलत हो जाता है?",
+          "courseD_collector_debugging1_c": "जब आप खजाने की ओर मूव कर लें तो इसे लेने के लिए `एकत्र करें` ब्लॉक का उपयोग करना याद रखें।"
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "यह देखने के लिए पहले स्टेप में सब ठीक है, \"स्टेप\" बटन का उपयोग करें\n\nसेकंड के बारे में क्या कहेंगे?\n\nयह कहां गलत हो जाता है?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "क्या कोई ऐसा स्थान है, जहां लॉरेल कुछ ऐसा करती है, जिसका कोई अर्थ नहीं निकलता? जब आप उन ब्लॉक्स को बदलते हैं तो क्या होता है?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "लगातार कई बार डीबगिंग प्रक्रियाओं का उपयोग करने के प्रयास करें।\n\nपहली समस्या का क्या कारण है?\n\nजब वह समस्या ठीक हो जाती है, तो क्या गलत होता है?",
+          "courseD_collector_debugging4_b": "यदि आपको यह पता लगाने में मुश्किल हो रही है कि सीढ़ी स्टेप पैटर्न कैसे बनाना है, तो इसे अपनी उंगली से खींचने और फिर कमांड्स को ज़ोर से बोलने का प्रयास करें।\n\nमोड़ों की दिशा दिखाना न भूलें!"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "\"स्टेप\" बटन का उपयोग करते हुए कोड चलाने के प्रयास करें।  \n\nक्या पहले स्टेप में सब कुछ ठीक है?\n\nसेकंड के बारे में क्या कहेंगे? चीज़ें कहां गलत हो जाती हैं?"
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "यह न भूलें कि आप एकल कमांड या लंबे पैटर्न को `दोहरा` सकते हैं। यहां तक कि आप `दोहराएं` ब्लॉक को भी `दोहरा` सकते हैं!",
+          "courseD_bee_nested_loops_challenge2_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "आपको दोहराएं लूप का उपयोग करते हुए, 5 बार कॉर्न खोजने की जरूरत होगी।",
+          "courseD_farmer_condLoops1_b": "`यदि कॉर्न पर` ब्लॉक का उपयोग करना सुनिश्चित करें या आप कुछ ऐसा लेने का प्रयास कर सकते हैं, जो वहां नहीं है!"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "ऐसा करने का सबसे अच्छा तरीका `इफ` स्टेटमेंट्स को एक को दूसरी के अंदर रखकर नेस्ट करना है।",
+          "courseD_farmer_condLoops2_b": "इस पहेली के लिए, आपके पास एक `इफ/एल्स` स्टेटमेंट और एक प्लेन `इफ` स्टेटमेंट होनी चाहिए।",
+          "courseD_farmer_condLoops2_c": "आपकी `इफ` स्टेटमेंट इससे काफी मिलती-जुलती हो सकती है:\n\n-   यदि कॉर्न पर है\n    -   कॉर्न लें\n-   नहीं तो\n    -   यदि लेट्स पर है\n        -   लेट्स लें\n\nयदि वहां कुछ नहीं है, तो आप कुछ नहीं लेंगे!"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "सभी वस्तुओं को लेने के लिए, तीन डीप `इफ` स्टेटमेंट्स को नेस्ट करने का प्रयास करें।\n\nइसका अर्थ है कि आपको दूसरी के अंदर एक `इफ` स्टेटमेंट रखनी चाहिए, फिर दूसरी के अंदर तीसरी `इफ` स्टेटमेंट रखें।",
+          "courseD_farmer_condLoops3_b": "इस पहेली के लिए, आपके पास दो `इफ/एल्स` स्टेटमेंट्स और एक प्लेन `इफ` स्टेटमेंट होनी चाहिए।"
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "किसी को नहीं पता कि हर अंकुर में से लेट्स के कितने हेड उग जाएंगे।\n\nतब तक लेना जारी रखने के लिए `जब वहां लेट्स हो` लूप का उपयोग करें, जब तक प्रत्येक पीस एकत्र न कर लिया जाए।",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`व्हाइल` लूप खाली स्थानों को भी संभाल लेगी। चूंकि वहां लेट्स नहीं है, यह इसे नहीं लेगी और कोड को आगे बढ़ने देगी।",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "आप सभी फसलों को परखने के लिए `जब आगे रास्ता हो` लूप या `दोहराएं` लूप का उपयोग कर सकते हैं।"
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "एक नई लूप है: `कद्दू पर पहुंचने तक दोहराएं`। क्या आप देख सकते हैं कि इस पहेली में इसका उपयोग कैसे करना है?",
+          "courseD_farmer_condLoops5_b": "प्रत्येक स्थान पर एक से अधिक कॉर्न या लेट्स का पौधा हो सकता है। उन सभी को एकत्र करने के लिए `व्हाइल` लूप का उपयोग करें!"
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "ध्यान दें कि सभी फसलों को प्राप्त करने का सबसे आसान रास्ता अभी भी घुमावदार है।\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "इस चुनौती में \"स्टेप\" बटन काफी उपयोगी हो सकता है।",
+          "courseD_farmer_condLoops_challenge1_b": "सामान्य तौर पर आप केवल `कद्दू लें` उपयोग करेंगे, यदि आप कद्दू पर हैं। यदि आप कद्दू पर हैं तो आपको और क्या करने की जरूरत होगी?"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "प्रत्येक स्थान में प्रत्येक सब्जी की मात्रा बदल सकती है। `व्हाइल` लूप उपयोगी हो सकती है!"
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "आपको ढेर तक जाने के लिए चार बार आगे मूव करने की जरूरत होगी। क्या आप इसके लिए `दोहराएं` लूप का उपयोग कर सकते हैं?",
+          "courseD_farmer_while1_b": "जब आप मिट्टी के ढेर पर खड़े हों तो इसे हटाने के लिए `1 हटाएं` ब्लॉक का उपयोग करें।"
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "आपको सुराख के पास जाने के लिए केवल एक बार मूव करने की जरूरत होगी।",
+          "courseD_farmer_while2_b": "आपको छह बार `1 भरें` ब्लॉक की जरूरत होगी। क्या आप इसे अधिक आसान बनाने के लिए लूप का उपयोग कर सकते हैं?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "एक लूप यहां आपके कोड को सरल बनाने में आपकी मदद कर सकती है।",
+          "courseD_farmer_while3_b": "आपको ढेर के पास जाने के लिए किसी `मुड़ें` ब्लॉक्स की जरूरत नहीं होगी।"
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "`दोहराएं` लूप का उपयोग करने की बजाय, ढेर लगने तक खोदते रहने के लिए `व्हाइल` लूप का उपयोग करें।",
+          "courseD_farmer_conditionals4_b": "यह एक पिछली पहेली से काफी मिलती-जुलती प्रतीत होती है, केवल इतना अंतर है कि इसके लिए आपको किस लूप की जरूरत है।"
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "`दोहराएं` लूप की बजाय `व्हाइल` लूप को नेस्ट करने का प्रयास करें।",
+          "courseD_farmer_conditionals5a_b": "किसान को पंक्ति के अंत तक जाने के लिए कुल पांच बार आगे की ओर मूव करने की जरूरत है। किसान को और क्या करने की जरूरत है?",
+          "courseD_farmer_conditionals5a_c": "5 बार आगे की ओर मूव करें। हर बार जब आप आगे की ओर मूव करते हैं, तो `जब वहां ढेर हो` ब्लॉक का उपयोग करके मिट्टी के ढेर को हटाएं।"
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "सुनिश्चित करें कि आप यह पता लगाने के लिए `व्हाइल` लूप का उपयोग कर रहे हैं कि प्रत्येक सुराख को कितनी बार भरना है।",
+          "courseD_farmer_conditionals6_b": "ध्यान दें कि किसान को सीढ़ी-स्टेप पैटर्न में कई बार आगे की ओर मूव करने और नीचे जाने की जरूरत है।",
+          "courseD_farmer_conditionals6_c": "सीढ़ी स्टेप पैटर्न निम्नलिखित ब्लॉक्स का उपयोग करता है\n\n-   आगे की ओर मूव करें\n-   सुराख भरें\n-   दाएं मुड़ें\n-   आगे की और मूव करें\n-   सुराख भरें\n-   बाएं मुड़ें\n\nआपको इस सीढ़ी स्टेप पैटर्न को कितनी बार उपयोग करने की जरूरत है?\n\nसुनिश्चित करें कि आप सुराख को भरने के लिए `जब वहां सुराख हो` का उपयोग कर रहे हैं।"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "`जब आगे रास्ता हो` ब्लॉक से आप आगे जाना जारी रख सकते हैं, चाहे आपको पता न हो कि रास्ते में कितने वर्ग हैं।",
+          "courseD_farmer_conditionals8_b": "दोहराएं लूप के अंदर `जब आगे रास्ता हो` लूप रखने से आपको इस पहेली में मदद मिल सकती है।",
+          "courseD_farmer_conditionals8_c": "प्रत्येक रास्ते के अंत में आपको क्या करने की जरूरत है?"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "आपको एक से अधिक `व्हाइल` लूप का उपयोग करने की जरूरत पड़ने वाली है।",
+          "courseD_farmer_conditionals8_b": "प्रत्येक सुराख रास्ते के अंत में है, इसलिए `जब वहां सुराख हो` का उपयोग करने से पहले `जब आगे रास्ता हो` का उपयोग करें।",
+          "courseD_farmer_conditionals8_c": "ध्यान दें कि आपको `जब आगे रास्ता हो`, `जब वहां सुराख हो` कोड को छह बार दोहराने की जरूरत है।"
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "प्रत्येक सुराख या ढेर रास्ते के अंत से एक स्थान **पीछे की ओर** स्थित है।",
+          "courseD_farmer_while_challenge1_b": "यदि आप `व्हाइल` लूप का उपयोग करते हैं, तो आप किसान को ढेर हटाने या सुराख भरने के लिए कह सकते हैं, चाहे वहां न हो। इसका अर्थ है कि आप उसे किसी भी मिट्टी को हटाने या किसी भी सुराख को भरने के लिए प्रोग्राम कर सकते हैं, चाहे वह कहीं भी हो।",
+          "courseD_farmer_conditionals8_c": "इस किसी भी `दोहराएं` लूप्स का उपयोग किए बिना हल करना संभव है। ऐसा करने के लिए, आपको चार `व्हाइल` लूप्स का उपयोग करने की जरूरत होगी।"
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "सारे कॉर्न तक पहुंचने के लिए इस रास्ते का अनुसरण करने का प्रयास करें!",
+          "courseD_harvester_nested_loops_challenge1_b": "कॉर्न के एक से अधिक दाने एकत्र करने के लिए, आपको एक से अधिक बार `कॉर्न लें` का उपयोग करने की जरूरत है।",
+          "courseD_harvester_nested_loops_challenge1_c": "इस पहेली को हल करने के लिए आपको मुख्य लूप के अंदर एक छोटी लूप रखने की जरूरत होगी।"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "आप पक्षी के दृष्टिकोण से दाएं या बाएं मुड़ सकते हैं। यदि आप दाईं तरफ के सामने हैं, तो दाएं मुड़ने से आप नीचे जा सकते हैं।",
+          "courseC_maze_programming4_b": "रास्ते का अनुसरण करने के लिए, आगे की ओर मूव करें और एक तरफ मुड़ें, फिर दुबारा मूव करें और विपरीत रास्ते पर मुड़ें। सूअर तक पहुंचने के लिए एक और बार आगे की ओर मूव करें।"
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "लाइन दर लाइन अपना कोड चलाने के लिए \"स्टेप” बटन का उपयोग करने का प्रयास करें। क्या आप पता लगा सकते हैं कि आपको आगे क्या करने की जरूरत है?",
+          "courseC_maze_programming5_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "इस पहेली को हल करने के लिए, आपको दूसरी `दोहराएं` लूप के अंदर एक `दोहराएं` लूप को \"नेस्ट\" करने की जरूरत होगी।",
+          "courseD_maze_nestedLoops3_b": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।",
+          "courseD_maze_nestedLoops3_c": "रास्ते के सीधे भाग और मोड़ के लिए कोड लिखने का प्रयास करें। क्या आप सूर्यमुखी के फूल के पास जाने के लिए इसे दोहरा सकते हैं?"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "पूरी पहेली में इस रास्ते का उपयोग करने का प्रयास करें।\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_b": "यदि लूप पैटर्न को देखना मुश्किल है, तो पहले इसे पूरे को कोड करने का प्रयास करें और लूप्स को अंदर को रखने से पहले देखें कि कौन-सा कोड बार-बार दोहराया जाता है।",
+          "courseD_maze_nestedLoops4_c": "जितनी आपको जरूरत है, कोड की उतनी मात्रा काटने के लिए एक `दोहराएं` लूप को दूसरी के अंदर उपयोग करने का प्रयास करें।"
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "यह पता करने के लिए इस पहेली में सीढ़ी-स्टेप पैटर्न खोजें कि नेस्टड लूप का उपयोग कहां किया जा सकता है।",
+          "courseD_maze_nestedLoops5_b": "क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "यदि आप अटक जाते हैं, तो पहले बिना लूप्स के कोड को कागज़ पर लिखने का प्रयास करें और पैटर्न खोजें।",
+          "courseD_maze_nestedLoops6_b": "`दोहराएं` लूप्स को नेस्ट करने से यह उपयोग किए ब्लॉक्स की संख्या कम करने में मदद कर सकता है।",
+          "courseD_maze_nestedLoops6_c": "यह इस पहेली को हल करने के लिए नेस्टड लूप्स के दो सेट लेगा।"
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "यदि पक्षी, सूअर के पास नहीं जा रहा है, तो सुनिश्चित करें कि सभी तीन ब्लॉक्स पर एक साथ पूरी तरह से क्लिक किया गया है, फिर दुबारा \"चलाएं\" पर क्लिक करें।",
+          "courseC_maze_programming1_b": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "`आगे की ओर मूव करें` ब्लॉक का उपयोग करने के लिए, इसे टूलबॉक्स में से वर्कस्पेस में खींचें और इसे `जब चलाया जाए` ब्लॉक से कनेक्ट करें।",
+          "courseC_maze_programming2_b": "सुनिश्चित करें कि सभी 3 ब्लॉक्स पर एक साथ क्लिक किया गया है और ये `जब चलाया जाए` ब्लॉक से जुड़े हैं।"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nअपने कोड के मध्य से ब्लॉक को मिटाने के लिए, सभी ब्लॉक्स को दाएं से दूर इसके नीचे खींचें और उन्हें कुछ देर तक वर्कस्पेस में रखें।\n\nजिस ब्लॉक को आप मिटाना चाहते हैं, उस पर क्लिक करें और उसे वापस टूलबॉक्स तक खींचें।\n\nअंत में, अपने अन्य ब्लॉक्स को वापस उसी स्थान में रखें, जहां से वे संबंधित है।"
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "लाइन दर लाइन अपना कोड चलाने के लिए \"स्टेप” बटन का उपयोग करने का प्रयास करें। क्या आप पता लगा सकते हैं कि आपको आगे क्या करने की जरूरत है?",
+          "courseC_maze_programming5_b": "याद रखें कि मोड़ पक्षी के दृष्टिकोण से हैं।",
+          "courseC_maze_programming5_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "लाइन दर लाइन अपना कोड चलाने के लिए \"स्टेप” बटन का उपयोग करने का प्रयास करें। क्या आप पता लगा सकते हैं कि आपको आगे क्या करने की जरूरत है?",
+          "courseC_maze_programming5_b": "याद रखें कि मोड़ पक्षी के दृष्टिकोण से हैं।",
+          "courseC_maze_programming5_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा, ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपको लगता है कि आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "क्या ऐसे कोई अनुक्रम हैं, जिन्हें आप अपने कोड को और छोटा बनाने के लिए लूप कर सकते हैं?",
+          "courseD_maze_until1_b": "इस पहेली को हल करने के लिए नेस्टड लूप का उपयोग करने का प्रयास करें।"
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "-   आपका कोड क्या करता है?  \n-   यह क्या करने के लिए बनाया गया है?  \n-   यह आपको क्या बताता है?",
+          "courseD_maze_until3_b": "यदि आप अटक रहे हैं, तो कागज़ पर स्टेप लिखने और ऐसे स्थान खोजने का प्रयास करें, जहां वे दोहराए जाते हैं।",
+          "courseD_maze_until3_c": "क्या कोई सीढ़ी स्टेप पैटर्न है, जिसका अनुसरण आप इस पहेली के लिए कर सकते हैं?",
+          "courseD_maze_until3_d": "अपने कोड को और छोटा बनाने के लिए `तक दोहराएं` ब्लॉक का उपयोग करना न भूलें।"
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "एक-एक लाइन में अपना कोड बनाने के लिए \"स्टेप\" बटन का उपयोग करें।\n\n-   क्या पहले स्टेप पर सब कुछ काम करता है?\n-   क्या दूसरे स्टेप पर सब कुछ काम करता है?\n-   यह कहां गलत हो जाता है?",
+          "courseD_maze_until4_b": "क्या कोई सीढ़ी स्टेप पैटर्न है, जिसका अनुसरण आप इस पहेली के लिए कर सकते हैं?",
+          "courseD_maze_until4_c": "अपने कोड को और छोटा बनाने के लिए `तक दोहराएं` ब्लॉक का उपयोग करना न भूलें।"
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "केवल एक `आगे की ओर मूव करें` का उपयोग करने के लिए, इसे `सूर्यमुखी के फूल तक दोहराएं` ब्लॉक के अंदर रखें।"
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "केवल एक `आगे की ओर मूव करें` का उपयोग करने के लिए, इसे `सूर्यमुखी के फूल तक दोहराएं` ब्लॉक के अंदर रखें।"
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "आपको पिछली बार के मुकाबले अब अपने कोड की जरूरत नहीं है, क्योंकि पहेली को है!",
+          "courseD_maze_until7_b": "हालांकि यहां पिछली पहेली के मुकाबले अधिक मोड़ हैं, `तक दोहराएं` ब्लॉक के कारण आपका कोड लगभग एक जैसा हो सकता है!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "आपको सूर्यमुखी के फूल के पास ले जाने के लिए `तक दोहराएं` ब्लॉक का उपयोग करना याद रखें!"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "यह ड्राइंग पिछली ड्राइंग के काफी मिलती-जुलती है, लेकिन `लाइन खींचे` फंक्शन अब अलग आकृति चित्रित कर रहा है।",
+          "courseD_artist_functions10_a": "बहुत-से `आगे की ओर मूव करें` ब्लॉक्स का उपयोग करने से बचने के लिए, `षट्कोण खींचें` फंक्शन बनाएं और उसे कई बार बोलें।",
+          "courseD_artist_functions10_c": "क्या आपको दिखाई दे रहा है कि यह ड्राइंग `षट्कोणों की लाइन` नामक फंक्शन को कहां उपयोग कर सकती है?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "प्रत्येक वर्ग की 100 पिक्सल की भुजाएं हैं, जिसका अर्थ है कि आपको अपना दूसरा वर्ग खींचने से पहले 175 पिक्सल आगे की ओर मूव करना होगा।",
+          "courseE_artist_functions1_b": "अपने गिलास बनाने के लिए आप एक ही बार में लाइनें खींच सकते हैं।",
+          "courseE_artist_functions1_c": "अधिक छोटे कोड के लिए, गिलासों के वर्ग फ्रेम खींचने हेतु `दोहराएं` लूप का उपयोग करने का प्रयास करें।"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "जो फंक्शन आप लिखें, उसमें आपका पूरा प्रोग्राम शामिल नहीं होना चाहिए, केवल आंशिक होना चाहिए, जो 100 पिक्सल की भुजाओं वाला वर्ग खींचता हो",
+          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "आपके प्रोग्राम को यह करना चाहिए:\n\n-   फंक्शन का उपयोग\n-   100 + 75 पिक्सल आगे की ओर मूव करना\n-   फंक्शन का उपयोग"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "इस पहेली को हल करने के लिए, आपको केवल ऐसी लूप जोड़ने की जरूरत है, जो 8 बार शुरुआती कोड को दोहराती हो।यदि आपको याद नहीं है कि शुरुआती कोड क्या था, वर्कस्पेस के ऊपरी दाएं कोने में \"शुरू करें\" पर क्लिक करें।",
+          "courseD_artist_functions3_b": "आपकी लूप के अंदर सभी 3 शुरुआती कोड ब्लॉक्स होने चाहिएं।"
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "फंक्शन का उपयोग करने का प्रयास करें!",
+          "courseD_artist_functions4_b": "अपना फंक्शन बनाना शुरू करने के लिए टूलबॉक्स में से `तारा चित्रित करें` फंक्शन ब्लॉक को खींचें। इसमें पिछली पहेली वाला कोड ही होन चाहिए, क्योंकि आप वही तारा पैटर्न चित्रित कर रहे हैं।",
+          "courseD_artist_functions4_c": "अपने मुख्य प्रोग्राम में इस फंक्शन को बोलने के लिए हरा `तारा चित्रित करें` ब्लॉक उपयोग करें। प्रत्येक तारे के बीच आगे की ओर कूदना न भूलें!"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "हार न मानें!  जो आप सीख रहे हैं, उसे याद करें।",
+          "courseD_artist_functions5_b": "फंक्शन सुरक्षित किए कोड को किसी भी समय बोलने को आसान बनाते हैं, केवल लूप के बाहर से नहीं!"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "हार न मानें!  जो आप सीख रहे हैं, उसे याद करें।",
+          "courseD_artist_functions5_b": "फंक्शन सुरक्षित किए कोड को किसी भी समय बोलने को आसान बनाते हैं, केवल लूप के बाहर से नहीं!",
+          "courseD_artist_functions5_c": "`तारा चित्रित करें` फंक्शन में तारे की आकृति के लिए कोड को खींचने से शुरू करें, फिर तीन तारे चित्रित करने के लिए इस फंक्शन का उपयोग करें!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "पहले अपना फंक्शन बनाने और फिर एक ही बार में खिड़कियां जोड़ने का प्रयास करें।"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "आपको केवल एक `आगे की ओर जाएं` ब्लॉक की जरूरत है, लेकिन आपको कुछ `आगे की ओर कूदें` और/या `पीछे की ओर कूदें` ब्लॉक्स की जरूरत होगी!",
+          "courseD_artist_functions8_a": "वर्ग के लिए फंक्शन बनाकर शुरुआत करें, फिर वर्गों की लाइनों के लिए फंक्शन बनाने का प्रयास करें।\nयह चित्र बनाने के लिए आप `वर्गों की लाइन खींचें` फंक्शन का उपयोग कैसे करेंगे?",
+          "courseD_artist_functions8_d": "वर्गों की लाइन बनाने के लिए,\n\n-   3 बार दोहराएं    \n-   **50 पिक्सल** भुजा की लंबाई वाला वर्ग खींचें    \n-   **100 पिक्सल** आगे की ओर कूदें",
+          "courseD_artist_functions8_b": "इस तस्वीर में प्रत्येक पंक्ति की कल्पना 3 वर्गों की लाइन के तौर पर करें। वहां वर्गों की कितनी लाइनें है और आप उनमें से प्रत्येक को कहां खींचना शुरू करेंगे?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "क्या आप उन सभी चार स्थानों का पता लगा सकते हैं, जहां इस ड्राइंग में `त्रिकोणों की लाइन` का उपयोग किया जा सके?![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "इस पहेली को तीन भागों में विभाजित किया जा सकता है:\n\n-   `त्रिकोण खींचें` फंक्शन बनाएं\n-   `त्रिकोणों की लाइन खींचें` फंक्शन बनाएं\n-   ड्राइंग पूरी करने के लिए अपने `त्रिकोणों की लाइन खींचें` फंक्शन का चार बार उपयोग करें",
+          "courseD_artist_functions9_b": "यह ड्राइंग 4 बार त्रिकोणों की लाइन खींचने और आपके द्वारा अगली त्रिकोण की लाइन खींचने से पहले 60 या 120 डिग्री मुड़ने से बनी है।",
+          "courseD_artist_functions9_c": "त्रिकोणों की लाइन खींचने के लिए:\n\n-   4 बार दोहराएं    \n-   त्रिकोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें",
+          "courseD_artist_functions9_d": "हीरा चित्रित करने के लिए:\n\n-   2 बार दोहराएं    \n-   त्रिकोणों की लाइन खींचें    \n-   60 डिग्री मुड़ें    \n-   त्रिकोणों की लाइन खींचें    \n-   120 डिग्री मुड़ें"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "यदि आप एक बार और फंक्शन बोलते हैं, तो आप अंतिम कोने में वही डिज़ाइन बना सकते हैं।",
+          "courseE_artist_functions_challenge1_b": "आप अन्य पोजीशनों पर `कूद` भी सकते हैं या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nइस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से ब्लॉक्स हैं।",
+          "courseE_farmer_functions1_b": "आपको केवल एक कद्दू लेने की जरूरत है, लेकिन क्या आप इस तक जाने के लिए लूप का उपयोग कर सकते हैं?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_b": "कद्दू प्राप्त करने के लिए `तक दोहराएं` ब्लॉक का उपयोग करें!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_b": "जुड़ने वाले रास्ते पर कोई कॉर्न नहीं है, इसलिए आप इसके साथ मूव करके मुड़ सकते हैं।",
+          "courseE_farmer_functions2b_c": "सारी फसलें प्राप्त करने के लिए आपको दो अलग-अलग `तक दोहराएं` ब्लॉक्स की जरूरत होगी।"
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "किसान को यह बताने के लिए कि कितनी बार बेलचे से मिट्टी हटानी है, `दोहराएं` लूप का उपयोग करने की बजाय, अब आप `जब वहां ढेर हो` ब्लॉक का उपयोग कर सकते हैं।  ",
+          "courseE_farmer_ramp12_b": "आपको मिट्टी के पास जाने के लिए केवल एक बार आगे की ओर मूव करने की जरूरत है।"
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।"
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।"
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "ड्राइंग में चित्र `अल्फा सेट करें` और ब्रुश के आकार के तौर पर `काउंटर` / 10 का उपयोग करते हुए बना है।",
+          "courseF_artist_for10_b": "ड्राइंग में चित्र 61 डिग्री के मोड़ का उपयोग करता है।"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "क्या आप कुछ ऐसा चित्रित कर सकते हैं:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "आपकी `फॉर` लूप 15 से 300 गुणा 15 तक गिनेगी।",
+          "courseF_artist_for6_b": "इस `फॉर` लूप के अंदर `आगे की ओर मूव करें` और `मुड़ें` ब्लॉक रखें।",
+          "courseF_artist_for6_c": "आपको `मुड़ें` ब्लॉक में डिग्रियों की संख्या को बदलना होगा।"
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "इस पहेली में पेन पतला है। आपको शुरुआत करने से पहले इसे `1` पर सेट करने की जरूरत होगी।",
+          "courseF_artist_for7_b": "ध्यान दें कि यह सर्पिल रेखा बाएं की बजाए दाएं मुड़ती है!",
+          "courseF_artist_for7_c": "इस पहेली में `फॉर` लूप 15 से 300 गुणा 2 तक जाती है।",
+          "courseF_artist_for7_d": "यह चित्र केवल 89 डिग्रियां मुड़ने से बना है।"
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "अपने कोड में बाकी सब वैसा ही रखें, केवल मोड़ कोण को बदलने की जरूरत है।",
+          "courseF_artist_for8_b": "यदि आप चाहें, तो आप अपनी सर्पिल रेखा के लिए अलग रंग चुन सकते हैं!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "यदि आप अपनी `फॉर` लूप के अंदर `अल्फा सेट करें` ब्लॉक रखते हैं, और इसे बदलने के लिए `काउंटर` वेरिएबल का उपयोग करते हैं, तो आप इस जैसा डिज़ाइन बना सकते हैं।",
+          "courseF_artist_for9_b": "`अल्फा सेट करें` ब्लॉक रंग की अपारदर्शिता को बदल देता है। जितना छोटा मूल्य होगा, रंग उतना ही पारदर्शी होगा।"
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "`पेन चौड़ाई` 1 है। पहले वर्ग की 50 पिक्सल की भुजाएं हैं, और प्रत्येक वर्ग पिछले के मुकाबले 50 पिक्सल अधिक चौड़ा है।",
+          "courseF_artist_for_challenge1_b": "ब्रुश पर अपारदर्शिता हमेशा `काउंटर`/2 होती है।",
+          "courseF_artist_for_challenge1_c": "जब आप प्रत्येक वर्ग बना लें, तो पीछे की ओर कूदना, मुड़ना, दुबारा कूदना, फिर वापस मुड़ना न भूलें!",
+          "courseF_artist_for_challenge1_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "`फॉर` लूप 5 से 250 गुणा 2 तक जाती है।",
+          "courseF_artist_for_challenge2_a": "रंग बदलाव `लाल, हरे, नीले के साथ रंग सेट करें` ब्लॉक से होता है।  लाल को निरंतर 255 पर सेट है, हरे का मूल्य हमेशा `काउंटर` होता है और नीला हमेशा `255 - काउंटर` होता है।",
+          "courseF_artist_for_challenge2_b": "इसके लिए आपकी कल्पना से भी अधिक सरल है।  बस फॉर लूप के अंदर रंग सेट करें, आगे की ओर मूव करें, फिर मुड़ें।",
+          "courseF_artist_for_challenge2_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>        \n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "इस स्तर के साथ आनंद लें! देखें कि छोटे-मोटे बदलाव आपके कोड के लिए क्या कर सकते हैं।",
+          "courseF_artist_variables10_b": "आप कई चीज़ें आजमा सकते हैं, और अपने कोड को कई बार चला सकते हैं।"
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "`लंबाई सेट करें` ब्लॉक का उपयोग करते हुए अपना कोड शुरू करें। लंबाई वेरिएबल को 150 पर सेट करें।",
+          "courseF_artist_variables7_b": "आप त्रिकोण के लिए अपने कोड को और सरल बनाने के लिए `दोहराएं` लूप का उपयोग कर सकते हैं।",
+          "courseF_artist_variables7_c": "आप त्रिकोण के कोने बनाने के लिए 120 डिग्री बाएं मुड़ना चाहेंगे।"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "`लंबाई सेट करें` ब्लॉक  के साथ त्रिकोण के लिए अपना कोड शुरू करना याद रखें और इसे 150 पिक्सल पर शुरू करें।",
+          "courseF_artist_variables8_c": "अपना त्रिकोण खींचने के लिए `दोहराएं` लूप का उपयोग करना सुनिश्चित करें।"
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "इस पहेली के लिए, आपको बस यह बदलने की जरूरत है कि लूप कितनी बार दोहराई जाती है।"
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "क्या आप स्टेप्स की संख्या के बीच पैटर्न ढूंढ सकते हैं, जिसे आपको लेने और मधुरस एकत्र करने के लिए जरूरत है?",
+          "courseF_bee_for10_b": "फूलों के पहले सेट में **14 फूल** हैं। यह पहला सेट प्राप्त करने के लिए, मधुमक्खी को **7 वर्ग** (या 2 से भाग किए 14 वर्ग।) नीचे की तरफ जाना होगा। अगले सेट में कितने फूल हैं और मधुमक्खी को वहां तक पहुंचने के लिए कितने वर्ग जाना होगा?",
+          "courseF_bee_for10_c": "पहेली में, फूलों के पहले सेट में **14** फूल हैं, दूसरे सेट में **10** फूल हैं, तीसरे सेट में **6** फूल हैं, और चौथे सेट में **2** फूल हैं।\n\nइस ड्राइंग में, ध्यान दें कि **7** लाल वर्ग हैं, **5** संतरी वर्ग हैं, **3** हरे वर्ग हैं, और **1** नीला ब्लॉक है।\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nसंख्याएं किस प्रकार से संबद्ध हैं?",
+          "courseF_bee_for10_d": "आपको 2 दोहराव प्राप्त करने की जरूरत होगी, एक गणित ब्लॉक का उपयोग करेगा।"
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "15 के मुकाबले 12 कितना कम है?\\\n12 के मुकाबले 9 कितना कम है?\n\nक्या आपको कोई पैटर्न दिखाई दे रहा है?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "सारा मधुरस एकत्र करने के लिए आपको अपनी ‘दोहराएं’ लूप में दो ब्लॉक्स की जरूरत होगी।"
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "यदि आप उलझन में हैं, तो एक बार एक फूल पर काम करें और बार-बार परीक्षण करें।",
+          "courseF_bee_for2_b": "प्रत्येक लूप के बीच में आगे की ओर मूव करना याद रखें, ताकि आप प्रत्येक फूल के पास पहुंच सकें।"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "इस पहेली को हल करने के लिए `फॉर` लूप का उपयोग करें, जो 1 की वृद्धि के साथ 1 से 7 तक जाती है।",
+          "courseF_bee_for4_b": "आपकी `फॉर` लूप के अंदर, आप मधुरस एकत्र करने के लिए `आगे की ओर मूव करें` कमांड और एक लूप प्राप्त करना चाहेंगे।",
+          "courseF_bee_for4_c": "पर्याप्त मधुरस प्राप्त करने के लिए अपनी नेस्टड `दोहराएं` लूप के अंदर `काउंटर` वेरिएबल का उपयोग करना सुनिश्चित करें!"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "इस बार, आपके `आगे की ओर मूव करें` ब्लॉक को और आपके `मधुरस प्राप्त करें` ब्लॉक को अलग `दोहराएं` लूप्स में होने की जरूरत होगी, दोनों एक ही `फॉर` लूप के अंदर।",
+          "courseF_bee_for5_b": "प्रत्येक लूप में `काउंटर` वेरिएबल का उपयोग करें ताकि मधुमक्खी प्रत्येक फूल के बीच अलग-अलग दूरी पर मूव करे।",
+          "courseF_bee_for5_c": "गलती होने से न डरें! यह देखने के लिए कि क्या होगा,ब्लॉक्स जोड़ने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं किया है।"
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "अपनी `दोहराएं` लूप के अंदर `काउंटर` वेरिएबल का उपयोग करना न भूलें।",
+          "courseF_bee_for6_b": "आपकी `फॉर` लूप के अंदर, आप मधुरस एकत्र करने के लिए `आगे की ओर मूव करें` कमांड और एक लूप प्राप्त करना चाहेंगे।",
+          "courseF_bee_for6_c": "आपकी लूप **5 से 1 तक** की गिनती करेगी।"
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "आपकी `फॉर` लूप को 1 से 7 गुणा 2 तक गिनने की जरूरत होगी।",
+          "courseF_bee_for7_b": "आपकी `फॉर` लूप के अंदर, आप मधुरस एकत्र करने के लिए `आगे की ओर मूव करें` कमांड और एक लूप प्राप्त करना चाहेंगे।",
+          "courseF_bee_for7_c": "अपनी `दोहराएं` लूप में `काउंटर` वेरिएबल का उपयोग करना याद रखें।"
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "यदि आपकी लूप गणना कर रही है, तो हर बार आपकी काउंटर वेरिएबल में वृद्धि जोड़ी जाती है।\n\nमधुरस की अगली मात्रा प्राप्त करने के लिए आपको प्रत्येक संख्या में क्या जोड़ने की जरूरत है?",
+          "courseF_bee_for8_b": "इस पहेली में, आपको फूलों तक जाने के लिए सीढ़ी स्टेप पैटर्न में मूव करने की जरूरत होगी।",
+          "courseF_bee_for8_c": "आपकी लूप थोड़ी वृद्धि के साथ _3 से 15 तक_ गिनेगी। यह क्या है?"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "काउंटर वेरिएबल के साथ थोड़ा गणित करने का प्रयास करें।\n\nमधुरस की जितनी मात्रा आपको एकत्र करने की जरूरत है, उसके बराबर प्रत्येक फूल पर काउंटर के लिए आपको क्या करने की जरूरत है?",
+          "courseF_bee_for9_c": "ऐसा प्रतीत होता है कि यदि आप पहेली को हल करना चाहते हैं तो आपको प्रत्येक लूप की पुनरावृत्ति के शुरू में मधुमक्खी को जोड़ने की जरूरत होगी।",
+          "courseF_bee_for9_b": "**याद रखें:** यदि आपकी लूप गणना कर रही है, तो हर बार आपकी `काउंटर` वेरिएबल में वृद्धि जोड़ी जाती है।"
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "गतिविधि के लिए इस विकल्प पर एक नज़र डालें।\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "दो `फॉर` लूप्स का उपयोग करने के प्रयास करें: एक ऊपर चढ़ने और मधुरस प्राप्त करने और दूसरी नीचे उतरने और शहद बनाने के लिए।",
+          "courseF_bee_for_challenge2_c": "ध्यान दें कि एक `फॉर` लूप को अंदर कई नियमित लूप्स की जरूरत हैं, जो वृद्धि वाला सीढ़ी पैटर्न बनाने के लिए `काउंटर` बार दोहराती हों।\n\nअन्य `फॉर` लूप को `काउंटर` मात्रा में शहद बनाने के लिए केवल एक नियमित लूप की जरूरत है।",
+          "courseF_bee_for_challenge2_d": "**समाधान:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "इस पहेली को हल करने के लिए प्रत्येक `जब ___ तीर` इवेंट्स को इसके साथ अलग `अभिनेता 1 को मूव करें` कमांड कनेक्ट करने की जरूरत होगी। "
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "आपको `जब अभिनेता 1 अभिनेता 2 को छूता है` इवेंट के नीचे दो ब्लॉक्स जोड़ने की जरूरत होगी।",
+          "iceage_sound_and_points_b": "इस स्तर को पास करने के लिए आपको `अंक प्राप्त करें` ब्लॉक और 'ध्वनि \\_\\_\\_\\_ प्ले करें\\` ब्लॉक दोनों की जरूरत होगी।"
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "इस पहेली को वहां प्राप्त करने के लिए, जहां यह होनी चाहिए, आपको केवल दो ब्लॉक्स जोड़ने होंगे। ",
+          "iceage_warn_ice_age_b": "प्रोग्राम शुरू होने के बाद तुरंत उन्हें सक्रिय करने के लिए `जब चलाया जाए` इवेंट के नीचे दोनों नए ब्लॉक्स जोड़ें।"
         }
       }
     }

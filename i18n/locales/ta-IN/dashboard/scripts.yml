@@ -1,3 +1,4 @@
+---
 ta:
   data:
     script:
@@ -8,53 +9,64 @@ ta:
       name:
         course1:
           title: கோர்ஸ் 1
-          description: தொடங்கும் கோர்ஸ் 1-அதிகாலை படிப்பான்கள். மாணவர்கள் அவற்றை மற்றவர்களுடன் கூட்டிணை, சிக்கலைத் தீர்ப்பதற்கான திறன் மேம்பாடு மற்றும் மூலம் முடிப்பீர்கள் உறுதி காட்டுவீர்கள் கற்க உதவும் கணினி நிரல்களையும் உருவாக்கலாம். இறுதிக்குள் இந்த பாடத்திட்டம், மாணவர்கள் உருவாக்க அவர்களின் மிகவும் சொந்த விருப்ப விளையாட்டு அல்லது அவர்கள் பகிர முடியும் கதை. தரங்களாக K-1 பரிந்துரைக்கப்படும்.
-          description_short: தொடங்கும் தொடர் கோவை 1-அதிகாலை படிப்பான்கள்.
           description_audience: வயது 4-6
-          lessons:
-            'Artist: Loops':
-              name: 'கலைஞர்: சுழற்சிகளும்'
-            'Artist: Sequence':
-              name: 'கலைஞர்: வரிசை முறை'
-            'Artist: Shapes':
-              name: 'கலைஞர்: வடிவங்கள்'
-            'Bee: Loops':
-              name: 'அதுபோல: Loops'
-            'Bee: Sequence':
-              name: 'அதுபோல: வரிசை முறை'
-          student_description: தொடங்கும் கோர்ஸ் 1-அதிகாலை படிப்பான்கள். மாணவர்கள் அவற்றை மற்றவர்களுடன் கூட்டிணை, சிக்கலைத் தீர்ப்பதற்கான திறன் மேம்பாடு மற்றும் மூலம் முடிப்பீர்கள் உறுதி காட்டுவீர்கள் கற்க உதவும் கணினி நிரல்களையும் உருவாக்கலாம். இறுதிக்குள் இந்த பாடத்திட்டம், மாணவர்கள் உருவாக்க அவர்களின் மிகவும் சொந்த விருப்ப விளையாட்டு அல்லது அவர்கள் பகிர முடியும் கதை. தரங்களாக K-1 பரிந்துரைக்கப்படும்.
         course2:
           lessons:
-            'Artist: Loops':
-              name: 'கலைஞர்: சுழற்சிகளும்'
-            'Artist: Sequence':
-              name: 'கலைஞர்: வரிசை முறை'
-            'Bee: Loops':
-              name: 'அதுபோல: Loops'
+            Conditionals:
+              name: நிபந்தனைகள்
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
         course3:
           lessons:
+            Artist:
+              name: கலைஞர்
             Computational Thinking:
               name: கணினிபூர்வமான சிந்தனை
             Songwriting:
               name: பாடல் எழுதுதல்
-        course4:
-          description_audience: வயது 9-18
-        Course4pre:
+        playlab:
+          description: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை உருவாக்கவும்!
+          description_short: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை உருவாக்கவும்!
+          student_description: ஒரு கதையை உருவாக்கவும் அல்லது பிளே லேப் மூலம் ஒரு விளையாட்டை உருவாக்கவும்!
+        artist:
+          title: கலைஞர்
+          description: கலைஞருடன் குளிர் படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!
+          description_short: கலைஞருடன் குளிர் படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!
           lessons:
-            'Artist: Loops':
-              name: 'கலைஞர்: சுழற்சிகளும்'
-            'Artist: Sequence':
-              name: 'கலைஞர்: வரிசை முறை'
+            Artist:
+              name: கலைஞர்
+          student_description: கலைஞருடன் குளிர் படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!
+        hourofcode:
+          title: கிளாசிக் மேஸி
+        frozen:
+          title: அண்ணா மற்றும் எல்சாவுடன் குறியீடு
+          description: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது அவர்களுடன் சேர குறியீட்டைப் பயன்படுத்துவோம். நீங்கள் பனி சறுக்குவது போல ஸ்னோஃப்ளேக்ஸ் மற்றும் வடிவங்களை உருவாக்கி, குளிர்கால அதிசய நிலத்தை உருவாக்குவீர்கள், பின்னர் நீங்கள் உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளலாம்!
+          description_short: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது அவர்களுடன் சேர குறியீட்டைப் பயன்படுத்துவோம்.
+          lessons:
+            Artist:
+              name: கலைஞர்
+          student_description: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது அவர்களுடன் சேர குறியீட்டைப் பயன்படுத்துவோம். நீங்கள் பனி சறுக்குவது போல ஸ்னோஃப்ளேக்ஸ் மற்றும் வடிவங்களை உருவாக்கி, குளிர்கால அதிசய நிலத்தை உருவாக்குவீர்கள், பின்னர் நீங்கள் உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளலாம்!
+        course4:
+          lessons:
+            Artist:
+              name: கலைஞர்
+            'Artist: Variables':
+              name: 'கலைஞர்: மாறிகள்'
         usability:
           lessons:
             Variables:
               name: மாறிலிகள்
+        algebra:
+          lessons:
+            'Eval: Conditionals':
+              name: நிபந்தனைகள்
         infinity:
+          description: டிஸ்னி முடிவிலி எழுத்துக்கள் நடித்த கதை அல்லது விளையாட்டை உருவாக்க பிளே லேப் பயன்படுத்தவும்.
+          description_short: டிஸ்னி முடிவிலி எழுத்துக்கள் நடித்த கதை அல்லது விளையாட்டை உருவாக்க பிளே லேப் பயன்படுத்தவும்.
           lessons:
             Infinity:
               name: முடிவிலி
+          student_description: டிஸ்னி முடிவிலி எழுத்துக்கள் நடித்த கதை அல்லது விளையாட்டை உருவாக்க பிளே லேப் பயன்படுத்தவும்.
         netsim:
           title: இணைய மாதிரி
         20-hour:
@@ -65,6 +77,8 @@ ta:
               name: வழிமுறைகள்
             Computational Thinking:
               name: கணினிபூர்வமான சிந்தனை
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
             Graph Paper Programming:
@@ -94,29 +108,43 @@ ta:
             The Maze:
               name: புதிர்பாதை
         edit-code:
-          title: குறியீட்டை திருத்து
-          description: குறியீட்டை திருத்து
-          description_short: குறியீட்டை திருத்து
           lessons:
             The Artist:
               name: கலைஞர்
             The Maze:
               name: புதிர்பாதை
-          student_description: குறியீட்டை திருத்து
         events:
           title: நிகழ்வுகள்
           description: நிகழ்வுகள்
           description_short: நிகழ்வுகள்
           student_description: நிகழ்வுகள்
+        flappy:
+          title: பிளாப்பி கோட்
+          description: உங்கள் சொந்த விளையாட்டை 10 நிமிடங்களுக்குள் எழுத வேண்டுமா? எங்கள் Flappy Code டுடோரியலை முயற்சிக்கவும்!
+          lessons:
+            Flappy Code:
+              name: பிளாப்பி கோட்
+          student_description: உங்கள் சொந்த விளையாட்டை 10 நிமிடங்களுக்குள் எழுத வேண்டுமா? எங்கள் Flappy Code டுடோரியலை முயற்சிக்கவும்!
         step:
           title: அடி
           lessons:
             Step:
               name: அடி
-        cspunit2:
+        cspunit1:
           lessons:
-            The Internet:
-              name: இணையம்
+            Text Compression:
+              name: உரை சுருக்க
+        text-compression:
+          title: உரை சுருக்க
+          lessons:
+            Text Compression:
+              name: உரை சுருக்க
+        allthethings:
+          lessons:
+            Artist:
+              name: கலைஞர்
+            Text Compression:
+              name: உரை சுருக்க
         cspfacilitator:
           lessons:
             Internet Simulator:
@@ -127,14 +155,38 @@ ta:
               name: வரைதாள் செய்நிரல்
             Songwriting:
               name: பாடல் எழுதுதல்
+        starwars:
+          description: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+          description_short: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+          student_description: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+        starwarsblocks:
+          description: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+          description_short: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+          student_description: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில் உள்ள ஒரு விண்மீன் மண்டலத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கவும்
+        mc:
+          title: Minecraft Hour of Code
+        oceans:
+          title: பெருங்கடல்களுக்கான AI
         csp1-2017:
           lessons:
             The Internet:
               name: இணையம்
+        csp2-2017:
+          lessons:
+            Text Compression:
+              name: உரை சுருக்க
+        csp4-2017:
+          lessons:
+            Simple Encryption:
+              name: எளிய குறியாக்கம்
         CSDU3-Draft:
           lessons:
             Functions:
               name: செயல்பாடுகள்
+        MikeTest:
+          lessons:
+            Artist Functions:
+              name: கலைஞர் செயல்பாடுகள்
         gradeKinder:
           lessons:
             Events:
@@ -151,34 +203,76 @@ ta:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
+        grade5:
+          lessons:
+            'Artist: Variables':
+              name: 'கலைஞர்: மாறிகள்'
         csd3-2017:
           lessons:
             Functions:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
         k5concepts:
           lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
             Events:
               name: நிகழ்வுகள்
             Functions:
               name: செயல்பாடுகள்
             Loops:
               name: சுழற்சிகள்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
             Variables:
               name: மாறிலிகள்
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: எளிய குறியாக்கம்
         csd2-2017:
           lessons:
             Lists:
               name: பட்டியல்கள்
+        flappy-impact-study:
+          lessons:
+            Flappy Code:
+              name: பிளாப்பி கோட்
+        coursea-draft:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        courseb-draft:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        coursed-draft:
+          lessons:
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+        coursee-draft:
+          lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
         coursef-draft:
           lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+        sports:
+          lessons:
+            Sports:
+              name: விளையாட்டு
         csd6-draft:
           lessons:
             Lists:
               name: பட்டியல்கள்
+        coursee-ramp:
+          lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
         csd6-2017:
           lessons:
             Lists:
@@ -187,6 +281,8 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
         csd3-old:
@@ -201,24 +297,124 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
             'null':
-              name: 'வெறுமை'
+              name: வெறுமை
+        coursea-2017:
+          title: பாடநெறி அ
+          assignment_family_title: பாடநெறி அ
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        courseb-2017:
+          title: பாடநெறி ஆ
+          assignment_family_title: பாடநெறி ஆ
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம். (பாடநெறி A ஐப் போன்றது, ஆனால் பழைய மாணவர்களுக்கு பலவகைகளுடன்.)
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        coursec-2017:
+          title: பாடநெறி இ
+          assignment_family_title: பாடநெறி இ
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        coursed-2017:
+          title: பாடநெறி ஈ
+          assignment_family_title: பாடநெறி ஈ
+          lessons:
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
         coursee-2017:
+          title: பாடநெறி உ
+          assignment_family_title: பாடநெறி உ
           lessons:
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+        coursef-2017:
+          title: பாடநெறி ஊ
+          assignment_family_title: பாடநெறி ஊ
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         express-2017:
           lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+        pre-express-2017:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        e-f-ramp:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+            Conditionals:
+              name: நிபந்தனைகள்
+        new-d:
+          lessons:
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        new-express:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        new-e:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Conditionals:
+              name: நிபந்தனைகள்
         new-f:
           lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+        pwc:
+          lessons:
+            Simple Encryption:
+              name: எளிய குறியாக்கம்
+        hero:
+          description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
+          lessons:
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
+          student_description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
+        course-e-2018:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+            Conditionals:
+              name: நிபந்தனைகள்
         course-f-2018:
           lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         csd6-old:
@@ -229,52 +425,96 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
         csd3-2018:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
         csd2-2018:
           lessons:
             Lists:
               name: பட்டியல்கள்
+        coursea-2018:
+          assignment_family_title: பாடநெறி அ
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
         express-2018:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+        courseb-2018:
+          assignment_family_title: பாடநெறி ஆ
         coursed-2018:
+          assignment_family_title: பாடநெறி ஈ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+        coursec-2018:
+          assignment_family_title: பாடநெறி இ
         coursee-2018:
+          assignment_family_title: பாடநெறி உ
           lessons:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
+            Functions in Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
             Internet:
               name: இணையம்
+            Minecraft Hour of Code:
+              name: Minecraft Hour of Code
         coursef-2018:
+          assignment_family_title: பாடநெறி ஊ
           lessons:
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
         csp1-2018:
           lessons:
             The Internet:
               name: இணையம்
+        csp2-2018:
+          lessons:
+            Text Compression:
+              name: உரை சுருக்க
+        csp4-2018:
+          lessons:
+            Simple Encryption:
+              name: எளிய குறியாக்கம்
+        frozen-2018:
+          lessons:
+            Artist:
+              name: கலைஞர்
+        frozen-2018-test:
+          lessons:
+            Artist:
+              name: கலைஞர்
         dance:
           lessons:
             Dance Party:
               name: நடன விருந்து
+        frozen-2018-test-b:
+          lessons:
+            Artist:
+              name: கலைஞர்
         dance--draft:
           lessons:
             Dance Party:
@@ -287,13 +527,22 @@ ta:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
+        dance-extras:
+          description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
+          student_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
         coursef-2019:
           lesson_groups:
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
             The Artist:
               name: கலைஞர்
             Internet:
@@ -308,6 +557,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
@@ -315,40 +566,65 @@ ta:
               name: நடன விருந்து
         coursee-2019:
           lesson_groups:
+            csf_nested_loops:
+              display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
           lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
+            Functions in Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
             Songwriting:
               name: பாடல் எழுதுதல்
         express-2019:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
             csf_functions:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            Functions in Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
             Dance Party:
               name: நடன விருந்து
         andrea-test:
           lessons:
             'null':
-              name: 'வெறுமை'
+              name: வெறுமை
+        dance-extras-gallery:
+          title: ஆடிக்கொண்டே இரு
+          description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
+          student_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
         coursec-2019:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         coursea-2019:
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         courseb-2019:
           lesson_groups:
             csf_loops:
@@ -369,34 +645,56 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
         csp4-pilot:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp1-2019:
           lessons:
             The Internet:
               name: இணையம்
+        csp2-2019:
+          lessons:
+            Text Compression:
+              name: உரை சுருக்க
+        csp4-2019:
+          lessons:
+            Simple Encryption:
+              name: எளிய குறியாக்கம்
+        time4csdemo:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp5-pilot-staging:
@@ -409,24 +707,32 @@ ta:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         express-2018-vn:
@@ -447,6 +753,8 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
         csl-vn:
@@ -455,6 +763,12 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+        peru-2019:
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops:
+              name: உள்ளமை சுழல்கள்
         dance-2019:
           lessons:
             Dance Party:
@@ -463,38 +777,69 @@ ta:
           lessons:
             Loops:
               name: சுழற்சிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Events:
               name: நிகழ்வுகள்
             Functions:
               name: செயல்பாடுகள்
             Variables:
               name: மாறிலிகள்
+        dance-extras-2019:
+          description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
+          student_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால் செல்லுங்கள்.
         csp4-preview:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
+        time4cs-original-unit-1:
+          lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
         time4cs-control-unit-2:
           lesson_groups:
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
+            csf_nested_loops:
+              display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
+        time4cs-experiment-unit-2:
+          lessons:
+            Functions with Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
             csf_events:
               display_name: நிகழ்வுகள்
+          lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
             csf_events:
               display_name: நிகழ்வுகள்
+          lessons:
+            Conditionals:
+              name: நிபந்தனைகள்
         csp4-2020:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp5-2020:
@@ -507,11 +852,14 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
             Text:
               name: உரை
         coursea-2020:
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
@@ -535,6 +883,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
@@ -542,22 +892,32 @@ ta:
               name: நடன விருந்து
         coursee-2020:
           lesson_groups:
+            csf_nested_loops:
+              display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
           lessons:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
+            Functions in Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
         coursef-2020:
           lesson_groups:
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
             Internet:
               name: இணையம்
+            AI for Oceans:
+              name: பெருங்கடல்களுக்கான AI
         express-2020:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
             csf_functions:
               display_name: செயல்பாடுகள்
             csf_variables:
@@ -565,12 +925,21 @@ ta:
           lessons:
             Dance Party:
               name: நடன விருந்து
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Functions with Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
+            For Loops with Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
         pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+          lessons:
+            Loops in Artist:
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         csp5-virtual:
           lessons:
             Variables:
@@ -591,6 +960,8 @@ ta:
               name: சுழற்சிகள்
             Events:
               name: நிகழ்வுகள்
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
             Variables:
@@ -601,32 +972,30 @@ ta:
               name: மாறிலிகள்
             Text:
               name: உரை
+            Conditionals:
+              name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
-        virustest:
-          title: ஒரு தீவிர நோய் பரவலை உருவகப்படுத்துதல்
-          description_short: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை உருவாக்க ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்.'
-        outbreak:
+        curriculum-sandbox-levels:
           lessons:
-            Virus Simulation for Code Bytes:
-              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
-          lesson_groups:
-            outbreak:
-              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
-          title: ' தீவிர நோய் பரவலை உருவகப்படுத்துபவர் '
-          description_short: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
-          description: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
-          name: தீவிர நோய் பரவல்
-          student_description: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
+            Course A:
+              name: பாடநெறி அ
+            Course B:
+              name: பாடநெறி ஆ
+            Course E:
+              name: பாடநெறி உ
+            Course F:
+              name: பாடநெறி ஊ
+            minitoolbox_2021:
+              name: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: பெருங்கடல்களுக்கான AI
         2021drafting:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
           lesson_groups:
             lessonGroup-3:
               display_name: மாறிலிகள்
-            outbreak:
-              display_name: ' தீவிர நோய் பரவலை உருவகப்படுத்துபவர் '
         csd3-2021:
           lessons:
             Variables:
@@ -635,6 +1004,9 @@ ta:
             Text:
               key: உரை
               name: உரை
+            Conditionals:
+              key: நிபந்தனைகள்
+              name: நிபந்தனைகள்
             Functions:
               key: செயல்பாடுகள்
               name: செயல்பாடுகள்
@@ -642,6 +1014,8 @@ ta:
           lesson_groups:
             csp_variables:
               display_name: மாறிலிகள்
+            csp_conditionals:
+              display_name: நிபந்தனைகள்
             csp_functions:
               display_name: செயல்பாடுகள்
         csp5-2021:
@@ -651,12 +1025,16 @@ ta:
             csp_loops:
               display_name: சுழற்சிகள்
         coursea-2021:
+          description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
         courseb-2021:
+          lessons:
+            Loops in Artist:
+              key: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
@@ -675,22 +1053,39 @@ ta:
             Dance Party:
               key: நடன விருந்து
               name: நடன விருந்து
+            Loops in Artist:
+              key: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
           lesson_groups:
             csf_events:
               display_name: நிகழ்வுகள்
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
         coursee-2021:
           lessons:
+            Conditionals:
+              key: நிபந்தனைகள்
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
+            Functions in Artist:
+              name: கலைஞருடன் செயல்பாடுகள்
           lesson_groups:
+            ramp_up:
+              display_name: உள்ளமை சுழல்கள்
+            csf_nested_loops:
+              display_name: நிபந்தனைகள்
             csf_functions:
               display_name: செயல்பாடுகள்
         coursef-2021:
           lessons:
+            AI for Oceans:
+              key: பெருங்கடல்களுக்கான AI
+              name: கடல்களுக்கான AI
             Internet:
               name: இணையம்
+            For Loops in Artist:
+              name: கலைஞருடன் சுழல்களுக்கு
           lesson_groups:
             lessonGroup-8:
               display_name: மாறிலிகள்
@@ -701,11 +1096,19 @@ ta:
             Dance Party:
               key: நடன விருந்து
               name: நடன விருந்து
+            Functions with Artist:
+              key: கலைஞருடன் செயல்பாடுகள்
+              name: கலைஞருடன் செயல்பாடுகள்
+            For Loops with Artist:
+              key: கலைஞருடன் சுழல்களுக்கு
+              name: கலைஞருடன் சுழல்களுக்கு
             lesson-1:
               name: நடன விருந்து
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
+            csf_conditionals:
+              display_name: நிபந்தனைகள்
             csf_functions:
               display_name: செயல்பாடுகள்
             csf_variables:
@@ -719,20 +1122,11 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
         csf-2021-pilot:
-          lessons:
-            Virus Simulation for Code Bytes:
-              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
           lesson_groups:
-            outbreak:
-              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
             lessonGroup-3:
               display_name: மாறிலிகள்
             variables:
               display_name: மாறிலிகள்
-        contagion-pilot:
-          description_short: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
-          description: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
-          student_description: 'வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்'
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -741,6 +1135,9 @@ ta:
             Events:
               key: நிகழ்வுகள்
               name: நிகழ்வுகள்
+            Conditionals:
+              key: நிபந்தனைகள்
+              name: நிபந்தனைகள்
             Functions:
               key: செயல்பாடுகள்
               name: செயல்பாடுகள்

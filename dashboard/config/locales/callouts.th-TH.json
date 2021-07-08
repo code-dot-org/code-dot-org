@@ -338,6 +338,90 @@
         },
         "outbreak7": {
           "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ",
+          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "บล็อกใหม่!",
+          "new_block_4": "บล็อกใหม่!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
+          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "ระเบิดเหล็กนี้!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
         }
       }
     }

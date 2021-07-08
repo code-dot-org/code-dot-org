@@ -8,20 +8,8 @@ fa:
       name:
         course1:
           title: دوره 1
-          description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک بگذارند. توصیه شده برای اول دبستانیها (ک1).
-          description_short: دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده است.
           description_audience: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
           lessons:
-            'Artist: Loops':
-              name: 'هنرمند: حلقه ها'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            'Artist: Shapes':
-              name: 'هنرمند: شکل ها'
-            'Bee: Loops':
-              name: 'زنبور عسل: حلقه ها'
-            'Bee: Sequence':
-              name: 'زنبور عسل: دنباله'
             Building a Foundation:
               name: ساختن بنیان
             Getting Loopy:
@@ -30,44 +18,15 @@ fa:
               name: با خیال راحت سفرکردن
             Happy Maps:
               name: نقشه های شاد
-            'Jigsaw: Learn to drag and drop':
-              name: 'پازل: یاد بگیر که بکشی و رها کنی'
-            'Maze: Debugging':
-              name: 'هزارتو: اشکال زدایی'
-            'Maze: Loops':
-              name: 'هزارتو: حلقه ها'
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
             Move it, Move it:
               name: تکانش بده، تکانش بده
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Spelling Bee:
-              name: زنبور عسل هجی کن
-            'Studio: Create a Story':
-              name: 'آزمایشگاه بازی: یک داستان بنویس'
             The Big Event:
               name: رویداد بزرگ
-          student_description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک بگذارند. توصیه شده برای اول دبستانیها (ک1).
         course2:
           title: دوره 2
-          description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
-          description_short: دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی شده است.
           lessons:
-            'Artist: Debugging':
-              name: 'هنرمند: اشکال زدایی'
-            'Artist: Loops':
-              name: 'هنرمند: حلقه ها'
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
-            'Bee: Debugging':
-              name: 'زنبور عسل: اشکال زدایی'
-            'Bee: Loops':
-              name: 'زنبور عسل: حلقه ها'
             Binary Bracelets:
               name: دستبند دودویی
             Conditionals:
@@ -78,42 +37,20 @@ fa:
               name: سر گیجه گرفتن
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
-            'Maze: Loops':
-              name: 'هزارتو: حلقه ها'
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
             'Real-life Algorithms: Paper Planes':
               name: 'الگوریتم های زندگی واقعی: موشک های کاغذی'
             Relay programming:
               name: برنامه نویسی دست به دست
-            'Studio: Create a Story':
-              name: 'آزمایشگاه بازی: یک داستان بنویس'
             The Big Event:
               name: رویداد بزرگ
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
-          student_description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
         course3:
           title: دورۀ 3
-          description_short: دوره 3 ادامه دوره 2 است.
           description_audience: سنین 8 به بالا (پس از دوره 2)
           lessons:
             Artist:
               name: هنرمند
-            'Artist: Functions':
-              name: 'هنرمند: توابع'
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
-            'Artist: Patterns':
-              name: 'هنرمند: الگوها'
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
-            'Bee: Debugging':
-              name: 'زنبور عسل: اشکال زدایی'
-            'Bee: Functions':
-              name: 'زنبور عسل: توابع'
-            'Bee: Nested Loops':
-              name: 'زنبور عسل: حلقه های تو در تو'
             Bounce:
               name: پریدن
             Computational Thinking:
@@ -124,22 +61,14 @@ fa:
               name: مسابقۀ تاس انداختن
             Digital Citizenship:
               name: شهروندی دیجیتالی
-            'Farmer: While Loops':
-              name: 'کشاورز: حلقه‌های "در حالیکه"'
             Functional Suncatchers:
               name: نورگیرهای کاربردی
             Internet:
               name: اینترنت
             Maze:
               name: پیچ و خم
-            'Maze: Conditionals':
-              name: 'هزارتو: شرطی ها'
             Songwriting:
               name: ترانه سرایی
-            'Studio: Create a Game':
-              name: 'آزمایشگاه بازی: یک بازی بساز'
-            'Studio: Create a Story':
-              name: 'آزمایشگاه بازی: یک داستان بنویس'
         playlab:
           title: آزمایشگاه بازی
           description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
@@ -158,12 +87,9 @@ fa:
           student_description: با نقاش چند عکس و طرح باحال بکش!
         hourofcode:
           title: هزارتوی کلاسیک
-          description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
           lessons:
             Maze:
               name: پیچ و خم
-          student_description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
         frozen:
           title: کدنویسی با آنا و السا
           description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
@@ -174,110 +100,25 @@ fa:
           student_description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
         course4:
           title: دوره 4
-          description_short: دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره های 2 و 3 را گرفته باشند.
-          description_audience: سنین 10 به بالا (پس از دوره 3)
           lessons:
             Artist:
               name: هنرمند
-            Artist Binary:
-              name: دودویی هنرمند
-            'Artist: For Loops':
-              name: 'هنرمند: برای حلقه ها'
-            'Artist: Functions':
-              name: 'هنرمند: توابع'
-            'Artist: Functions with Parameters':
-              name: 'هنرمند: توابع با پارامترها'
             'Artist: Variables':
               name: 'هنرمند: متغیرها'
-            'Bee: For Loops':
-              name: 'زنبور عسل: برای حلقه ها'
-            'Bee: Functions with Parameters':
-              name: 'زنبور عسل: توابع با پارامترها'
-            Extreme Challenge - Comprehensive:
-              name: چالش شدید - جامع
-            Maze and Bee:
-              name: هزارتو و زنبور عسل
-            'Play Lab: For Loops':
-              name: 'آزمایشگاه بازی: برای حلقه ها'
-            'Play Lab: Functions with Parameters':
-              name: 'آزمایشگاه بازی: توابع با پارامترها'
-            'Play Lab: Variables':
-              name: 'آزمایشگاه بازی: متغیرها'
-            Super Challenge - For Loops:
-              name: چالش های فوق العاده - به صورت حلقه
-            Super Challenge - Functions and Parameters:
-              name: چالش فوق العاده - توابع و پارامترها
-            Super Challenge - Variables:
-              name: چالش های فوق العاده - متغیر
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            'Unplugged: Envelope Variables':
-              name: 'بدون دستگاه: متغیرهای پاکت'
-            'Unplugged: For Loop Fun':
-              name: 'بدون دستگاه: بازی حلقه های "برای"'
-            'Unplugged: Madlibs':
-              name: 'بدون دستگاه: جای خالی را پُرکن'
-            'Unplugged: Songwriting with Parameters':
-              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
-            'Unplugged: Tangrams':
-              name: 'بدون دستگاه: تنگرام'
-        Course4pre:
-          title: پیش نیاز دوره 4
-          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
-          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
-          lessons:
-            'Artist: Functions':
-              name: 'هنرمند: توابع'
-            'Artist: Loops':
-              name: 'هنرمند: حلقه ها'
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
-            'Artist: Sequence':
-              name: 'هنرمند: دنباله'
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
-            'Bee: Debugging':
-              name: 'زنبور عسل: اشکال زدایی'
-            'Bee: Nested Loops':
-              name: 'زنبور عسل: حلقه های تو در تو'
-            'Farmer: While Loops':
-              name: 'کشاورز: حلقه‌های "در حالیکه"'
-            'Maze: Sequence':
-              name: 'هزارتو: دنباله'
-          student_description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
         usability:
-          title: امتحان قابل استفاده بودن
-          description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
           lessons:
             Binary:
               name: دو دویی
             For Loops:
               name: حلقه های "برای"
-            Functions and Functions with Parameters:
-              name: توابع و توابع با پارامترها
-            Intro:
-              name: مقدمه
             Variables:
               name: متغیرها
-          student_description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
         algebra:
           title: علوم کامپیوتر در جبر
-          description: یادگیری برنامه نویسی تابعی از طریق جبر
-          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
           lessons:
             'Eval: Conditionals':
               name: شرطی ها
-            'Eval: Strings and Images':
-              name: رشته ها و تصاویر
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
-            'Unplugged: The Design Recipe':
-              name: 'بدون دستگاه: دستور العمل طرح'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
-          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
         infinity:
-          title: آزمایشگاه بازی بی نهایت دیزنی
           description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
           description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
           lessons:
@@ -285,25 +126,9 @@ fa:
               name: بی نهایت
           student_description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
         algebrademo:
-          title: نسخه ی نمایشی جبر
-          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
-          description_short: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
           lessons:
-            Defining Simple Functions:
-              name: تعریف توابع ساده
-            Defining Variables:
-              name: تعریف متغیرها
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Making Pictures:
-              name: ساخت تصاویر
             The Design Recipe:
               name: دستور العمل طراحی
-          student_description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
-        K5PD:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         netsim:
           title: شبیه ساز اینترنت
         20-hour:
@@ -352,9 +177,6 @@ fa:
               name: خلاصه
           student_description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
         edit-code:
-          title: ویرایش کد
-          description: ویرایش کد
-          description_short: ویرایش کد
           lessons:
             Play Lab:
               name: آزمایشگاه بازی
@@ -362,7 +184,6 @@ fa:
               name: هنرمند
             The Maze:
               name: مارپیچ
-          student_description: ویرایش کد
         events:
           title: رویدادها
           description: رویدادها
@@ -370,13 +191,10 @@ fa:
           lessons:
             Bounce:
               name: پریدن
-            Studio:
-              name: استودیو
           student_description: رویدادها
         flappy:
           title: کدنویسی Flappy
           description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!
-          description_short: نوشتن بازی Flappy خود را در کمتر از 10 دقیقه!
           lessons:
             Flappy Code:
               name: کدنویسی Flappy
@@ -388,58 +206,10 @@ fa:
               name: جورچین
         step:
           title: مرحله
-          description: آموزش مرحله
-          description_short: آموزش مرحله
           lessons:
             Step:
               name: مرحله
-          student_description: آموزش مرحله
-        Hour of Code:
-          title: ساعت کد نویسی سال 2013
-          description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
-          lessons:
-            Hour of Code 2013:
-              name: ساعت کد نویسی سال 2013
-          student_description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
-        cspunit1:
-          description_short: برنامه نویسی
-        algebraPD:
-          lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        algPDmiami:
-          lessons:
-            Booleans:
-              name: بولی ها
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Strings and Images:
-              name: رشته ها و تصاویر
-        CSPPD:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        CSPLessonSamples:
-          lessons:
-            Lesson 14:
-              name: درس 14
-            Lesson 15:
-              name: درس 15
-        ECSPD:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-            What is ECS?:
-              name: ECS چیست؟
-        sciencePD:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         cspunit3:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -447,129 +217,43 @@ fa:
               name: حلقه ها ی While
         algebraPD3:
           lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Strings and Images:
-              name: رشته ها و تصاویر
             The Design Recipe:
               name: دستور العمل طراحی
-        ECSPD-NexTech:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-            What is ECS?:
-              name: ECS چیست؟
-        ECSPD-iZone:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-            What is ECS?:
-              name: ECS چیست؟
-        algebraPD-NexTech:
-          lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        algebraPD-iZone:
-          lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        sciencePD-NexTech:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        sciencePD-iZone:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         sciencePD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-        cspunit2:
-          description_short: برنامه نویسی
-          lessons:
-            The Internet:
-              name: اینترنت
         algebraPD2a:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            Booleans:
-              name: بولی ها
-            Defining Variables:
-              name: تعریف متغیرها
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
             Free Play:
               name: بازی رایگان
-            Strings and Images:
-              name: رشته ها و تصاویر
             The Design Recipe:
               name: دستور العمل طراحی
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         allthethings:
           lessons:
             Artist:
               name: هنرمند
-            Bee:
-              name: زنبور عسل
             Bounce:
               name: پریدن
             Flappy:
               name: فلاپی
             Jigsaw:
               name: جورچین
-            Match:
-              name: مسابقه
             Maze:
               name: پیچ و خم
             Minecraft:
               name: ماینکرفت
-            Multi:
-              name: چند
-            Studio:
-              name: استودیو
-        algebraPD2b:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          lessons:
-            Booleans:
-              name: بولی ها
-            Defining Functions:
-              name: تعریف توابع
-            Defining Variables:
-              name: تعریف متغیرها
-            'Eval: Conditionals':
-              name: 'ارزیابی: شرطی ها'
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Strings and Images:
-              name: رشته ها و تصاویر
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         cspfacilitator:
           lessons:
             App Lab:
               name: آزمایشگاه نرم افزار
             Internet Simulator:
               name: شبیه ساز اینترنت
-            Welcome!:
-              name: خوش آمدی!
         K5-OnlinePD:
           lessons:
             Computer Science Fundamentals:
               name: مقدمات علم کامپیوتر
         ECSPD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -577,50 +261,25 @@ fa:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            Welcome!:
-              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         algebraPD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             The Design Recipe:
               name: دستور العمل طراحی
-            Welcome!:
-              name: خوش آمدی!
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         science-PD2:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         sciencePD2b-iZone:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         ECSPD2-iZone:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -628,14 +287,9 @@ fa:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            Welcome!:
-              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         ECSPD2-NexTech:
-          description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
-          description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
             0: |-
               Unit 1, Days 1-2
@@ -643,11 +297,8 @@ fa:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            Welcome!:
-              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
-          student_description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -670,117 +321,29 @@ fa:
               name: رویداد بزرگ
         ScienceP3OLPT2:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         Special Fun:
           description_audience: سنین 10 به بالا (پس از دوره 3)
         SpecialSeries:
           description_audience: سنین 10 به بالا (پس از دوره 3)
-        iceage:
-          title: آزمایشگاه بازی عصر یخبندان
-          description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
-          description_short: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
-          lessons:
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
-          student_description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
         cspunit3temp:
-          description_short: برنامه نویسی
           lessons:
             While Loops:
               name: حلقه ها ی While
-        gumball:
-          title: آزمایشگاه بازی Gumball
-          lessons:
-            Gumball Play Lab:
-              name: آزمایشگاه بازی Gumball
-        starwars:
-          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
-          lessons:
-            Hour of Code 2015:
-              name: ساعت کدنویسی 2015
-        starwarsblocks:
-          title: 'جنگ ستارگان: یک کهکشان با کد بسازید'
-          lessons:
-            Hour of Code 2015:
-              name: ساعت کدنویسی 2015
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
-          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید
-          lessons:
-            Hour of Code 2015:
-              name: ساعت کدنویسی 2015
+          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
-        cspunit5:
-          description_short: برنامه نویسی
-        cspunit4:
-          description_short: برنامه نویسی
-        AlgebraA:
-          description: یادگیری برنامه نویسی تابعی از طریق جبر
-          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
-          lessons:
-            'Calc: Defining Variables':
-              name: 'حساب: تعریف متغیرها'
-            'Calc: Evaluation Blocks':
-              name: 'حساب: ارزیابی بلوکها'
-            'Eval: Strings and Images':
-              name: 'ارزیابی: رشته ها و تصاویر'
-            'Eval: Writing Contracts':
-              name: 'ارزبابی: نوشتن قراردادها'
-            'Unplugged: Contracts':
-              name: 'بدون دستگاه: قراردادها'
-            'Unplugged: The Design Recipe':
-              name: 'بدون دستگاه: دستور العمل طرح'
-          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
-        AlgebraB:
-          title: 'علوم کامپیوتر در جبر'
-          description: یادگیری برنامه نویسی تابعی از طریق جبر
-          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
-          lessons:
-            'Eval: Boolean Operators':
-              name: 'ارزیابی: عملگرهای بولی'
-            'Eval: Conditionals':
-              name: 'ارزیابی: شرطی ها'
-            'Play Lab: Animation (Big Game)':
-              name: 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
-            'Play Lab: Boolean (Big Game)':
-              name: 'آزمایشگاه بازی: بولی (بازی بزرگ)'
-            'Play Lab: Booleans':
-              name: 'آزمایشگاه بازی: بولی'
-            'Play Lab: Collision Detection (Big Game)':
-              name: 'آزمایشگاه بازی: تشخیص برخورد (بازی بزرگ)'
-            'Play Lab: Defining Variables (Big Game)':
-              name: 'آزمایشگاه بازی: تعریف متغیرها (بازی بزرگ)'
-            'Unplugged: Booleans':
-              name: 'بدون دستگاه: بولی ها'
-            'Unplugged: Collision Detection and the Distance Formula':
-              name: 'بدون دستگاه: تشخیص برخورد و فرمول فاصله'
-            'Unplugged: Conditionals and Piecewise Functions':
-              name: 'بدون دستگاه: شرطی ها و توابع چند ضابطه ای'
-            'Unplugged: Video Games and Coordinate Planes':
-              name: 'بدون دستگاه: بازی های ویدئویی و هواپیمای مختصات'
-          student_description: یادگیری برنامه نویسی تابعی از طریق جبر
-        algebraPD1:
-          title: CS در جبر قسمت 1
-          lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         csp1-2017:
           lessons:
             The Internet:
               name: اینترنت
         csp3-2017:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -793,24 +356,10 @@ fa:
           lessons:
             Functions:
               name: توابع
-        2016_sciencePD_phase1:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         TEMP CSD Unit 3:
           description_short: برنامه نویسی
         CSF_Secret_Sample:
           description_audience: سنین 8 به بالا (پس از دوره 2)
-        algebraFacilitator:
-          lessons:
-            Evaluation Blocks:
-              name: بلوک های ارزیابی
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
-        sciencePD1:
-          lessons:
-            Introduction to PD:
-              name: آشنايي با پیشرفت حرفه ای
         cspunit1-support:
           lesson_groups:
             required:
@@ -833,16 +382,10 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'زنبور عسل: شرطی ها'
         gradeKinder:
           lessons:
             Events:
               name: رویدادها
-            'Jigsaw: Learn to drag and drop':
-              name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
               name: حلقه‌ها
             Programming:
@@ -859,34 +402,16 @@ fa:
           lessons:
             Events:
               name: رویدادها
-            'Jigsaw: Learn to drag and drop':
-              name: 'پازل: یاد بگیر که بکشی و رها کنی'
             Loops:
               name: حلقه‌ها
             Programming:
               name: برنامه نویسی
         grade5:
           lessons:
-            'Artist: For Loops':
-              name: 'هنرمند: برای حلقه ها'
-            'Artist: Functions with Parameters':
-              name: 'هنرمند: توابع با پارامترها'
             'Artist: Variables':
               name: 'هنرمند: متغیرها'
-            'Bee: For Loops':
-              name: 'زنبور عسل: برای حلقه ها'
-            'Bee: Functions with Parameters':
-              name: 'زنبور عسل: توابع با پارامترها'
             Digital Citizenship:
               name: شهروندی دیجیتالی
-            'Play Lab: Variables':
-              name: 'آزمایشگاه بازی: متغیرها'
-            'Unplugged: Envelope Variables':
-              name: 'بدون دستگاه: متغیرهای پاکت'
-            'Unplugged: For Loop Fun':
-              name: 'بدون دستگاه: بازی حلقه های "برای"'
-            'Unplugged: Songwriting with Parameters':
-              name: 'بدون دستگاه: ترانه سرایی با پارامترها'
         ecs-unit1:
           lessons:
             0: |-
@@ -895,26 +420,19 @@ fa:
             1: |-
               Unit 1, Days 1-2
               What Is a Computer?
-            Welcome!:
-              name: خوش آمدی!
             Wrap-up:
               name: خلاصه
         grade3:
           lessons:
-            'Artist: Nested Loops':
-              name: 'هنرمند: حلقه های تو در تو'
             Bee Debugging:
               name: اشکال زدایی زنبور عسل
             Bounce:
               name: پریدن
-            'Farmer: While Loops':
-              name: 'کشاورز: حلقه‌های "در حالیکه"'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
         csd3-2017:
-          description_short: برنامه نویسی
           lessons:
             Functions:
               name: توابع
@@ -958,8 +476,6 @@ fa:
           lessons:
             The Design Recipe:
               name: دستور العمل طراحی
-            Welcome!:
-              name: خوش آمدی!
         csp-online-test:
           lesson_groups:
             required:
@@ -1012,10 +528,6 @@ fa:
               name: شرطی ها با کارتها
             Digital Citizenship:
               name: شهروندی دیجیتالی
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            Artist Binary:
-              name: دودویی هنرمند
             Nested Loops:
               name: حلقه های تو در تو
             Introduction:
@@ -1044,28 +556,12 @@ fa:
               name: ترانه نویسی با پارامترها
             Introduction:
               name: مقدمه
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
-        classic-hoc-impact-study:
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
-          lessons:
-            Hour of Code 2013:
-              name: ساعت کد نویسی سال 2013
-        hoc-impact-study:
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
-          lessons:
-            Hour of Code 2013:
-              name: ساعت کد نویسی سال 2013
         2016_sciencePD-phase2b:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         2016_sciencePD_phase2b:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         csp3-support:
@@ -1078,14 +574,10 @@ fa:
               display_name: بررسی اجمالی
         sciencepd4:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         science-pd-ol-pt-5:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         csf2harvey:
@@ -1094,8 +586,6 @@ fa:
               name: دو دویی
         sciencepd5:
           lessons:
-            Welcome!:
-              name: خوش آمدی!
             Wrap-Up:
               name: جمع و جور کن
         csp5-support:
@@ -1166,12 +656,8 @@ fa:
           lessons:
             Introduction:
               name: مقدمه
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
         artist-and-bb8:
           lessons:
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
             Bounce:
               name: پریدن
         coursea-2017:
@@ -1192,8 +678,6 @@ fa:
               name: حلقه های تو در تو
         coursee-2017:
           lessons:
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -1280,14 +764,11 @@ fa:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Spelling Bee:
-              name: زنبور عسل هجی کن
         subgoal-labels-opt-in:
           lessons:
             Thanks:
               name: متشکرم
         csp3-research-mxghyt:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1313,10 +794,6 @@ fa:
               name: شرطی ها با کارتها
             Digital Citizenship:
               name: شهروندی دیجیتالی
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            Artist Binary:
-              name: دودویی هنرمند
             Building a Foundation:
               name: ساختن بنیان
         new-express:
@@ -1341,8 +818,6 @@ fa:
           lessons:
             Building a Foundation:
               name: ساختن بنیان
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -1357,9 +832,6 @@ fa:
           title: 'ماینکرافت: سفر قهرمانان'
           description_short: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
           description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
-          lessons:
-            'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
           student_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           lessons:
@@ -1381,8 +853,6 @@ fa:
               name: ساختن بنیان
             Introduction:
               name: مقدمه
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -1396,7 +866,6 @@ fa:
             For Loops:
               name: حلقه های "برای"
         csd3-1819draft:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1405,7 +874,6 @@ fa:
             Functions:
               name: توابع
         csd3-2018:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1449,8 +917,6 @@ fa:
               name: دستبند دودویی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1481,8 +947,6 @@ fa:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
             Relay Programming:
@@ -1525,8 +989,6 @@ fa:
               name: ساختن بنیان
             Introduction:
               name: مقدمه
-            Ice Age Play Lab:
-              name: آزمایشگاه بازی عصر یخبندان
             Envelope Variables:
               name: متغیرهای پاکت
             For Loop Fun:
@@ -1540,7 +1002,6 @@ fa:
             The Internet:
               name: اینترنت
         csp3-2018:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1620,8 +1081,6 @@ fa:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'الگوریتم های زندگی واقعی: یک بذر بکار'
-            Spelling Bee:
-              name: زنبور عسل هجی کن
             Move It, Move It:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
@@ -1714,8 +1173,6 @@ fa:
               name: شهروندی دیجیتالی
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Dance Party:
               name: جشن و رقص
         coursee-2019:
@@ -1764,10 +1221,6 @@ fa:
               name: برای تفریح حلقه ای
             Binary Bracelets:
               name: دستبند دودویی
-            'Unplugged: Binary':
-              name: 'بدون دستگاه: دودویی'
-            Artist Binary:
-              name: دودویی هنرمند
             Internet:
               name: اینترنت
             Crowdsourcing:
@@ -1839,8 +1292,6 @@ fa:
               name: حرکت کن، حرکت کن
             Your Digital Footprint:
               name: ردپای دیجیتالی شما
-            Spelling Bee:
-              name: زنبور عسل هجی کن
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1850,7 +1301,6 @@ fa:
             Lists:
               name: فهرست‌ها
         csd3-2019:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -1877,7 +1327,6 @@ fa:
             The Internet:
               name: اینترنت
         csp3-2019:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -1984,7 +1433,6 @@ fa:
             Lists:
               name: فهرست‌ها
         csd3-pilot:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -2155,7 +1603,6 @@ fa:
             Functions with Parameters:
               name: معادله با پارامترها
         csd3-2020:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -2229,8 +1676,6 @@ fa:
               name: شرطی ها با کارتها
             'Unplugged: Binary':
               name: تصاویر دوتایی
-            Artist Binary:
-              name: دودویی هنرمند
             Digital Citizenship:
               name: شهروندی دیجیتالی
             Dance Party:
@@ -2284,11 +1729,7 @@ fa:
               display_name: حلقه‌ها
             csf_events:
               display_name: رویدادها
-          lessons:
-            Spelling Bee:
-              name: زنبور عسل هجی کن
         csp3-virtual:
-          description_short: برنامه نویسی
           lessons:
             Creating Functions:
               name: ساختن تابع ها
@@ -2327,7 +1768,6 @@ fa:
             For Loops:
               name: حلقه های "برای"
         csd3-virtual:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               name: متغیرها
@@ -2337,12 +1777,6 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
-        ml-playground:
-          lessons:
-            lesson14:
-              name: درس 14
-            lesson15:
-              name: درس 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -2350,7 +1784,6 @@ fa:
             lessonGroup-3:
               display_name: متغیرها
         csd3-2021:
-          description_short: "برنامه نویسی"
           lessons:
             Variables:
               key: متغیرها
@@ -2438,11 +1871,7 @@ fa:
               key: شرطی ها با کارتها
               name: شرطی ها با کارتها
             'Unplugged: Binary':
-              key: 'بدون دستگاه: دودویی'
               name: تصاویر دوتایی
-            Artist Binary:
-              key: دودویی هنرمند
-              name: دودویی هنرمند
           lesson_groups:
             csf_events:
               display_name: رویدادها
@@ -2529,18 +1958,8 @@ fa:
               display_name: متغیرها
             variables:
               display_name: متغیرها
-        ai-unit-pilot:
-          lessons:
-            lesson14:
-              name: درس 14
-            lesson15:
-              name: درس 15
-            lesson17:
-              name: درس 15
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: مقدمه
             Loops:
               key: حلقه‌ها
               name: حلقه‌ها
@@ -2564,12 +1983,12 @@ fa:
               display_name: مقدمه
             Introduction:
               display_name: مقدمه
-        aiml-2021:
-          lessons:
-            lesson15:
-              name: درس 15
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
               key: مقدمات علم کامپیوتر
               name: مقدمات علم کامپیوتر
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-3:
+              name: برنامه‌ها و منابع درس

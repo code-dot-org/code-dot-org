@@ -77,16 +77,25 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_aquarium": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
+          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
         },
         "courseF_apps_card": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "blocking movement": "blokování pohybu"
         },
         "courseF_apps_chatbot": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "blocking movement": "blokování pohybu",
+          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
+          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
         },
         "courseF_apps_collector": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "flying west and looping": "let na západ a zacyklení",
+          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
+          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
         },
         "courseF_apps_madlib": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
@@ -95,10 +104,12 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_editable_card": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "blocking movement": "blokování pohybu"
         },
         "courseF_editable_chatbot": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
+          "blocking movement": "blokování pohybu"
         },
         "courseF_editable_madlib": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
@@ -140,6 +151,15 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "simcustom_2021": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "courseE_aboutme_1_2021": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         }
       }

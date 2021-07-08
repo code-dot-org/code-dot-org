@@ -541,8 +541,6 @@ ro:
           de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
           De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
           informatică și rolul esențial pe care îl joacă algoritmii.
-      test-uid-passthrough:
-        title: "[șir gol]"
       PlantASeed_2019:
         title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
@@ -571,3 +569,6 @@ ro:
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
           de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
           și ”Dacă trag o carte neagră, tu obții un punct.”'
+      SP-VPL-CSD-21-CourseNavigation:
+        title: "[șir gol]"
+        desc: "[șir gol]"

@@ -766,6 +766,145 @@
         "outbreak7": {
           "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Κολλήσατε; Μπορείτε πάντα να επαναφέρετε τον κώδικά σας κάνοντας κλικ στο \"Ιστορικό εκδοχών\" που ακολουθεί και έπειτα επιλέγοντας \"Εκκίνηση Ξανά\"."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Βεβαιωθείτε ότι εμφανίζεται στην οθόνη ένας χορευτής.\n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
+          "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Οι χορευτές πρέπει να εκτελέσουν μια κίνηση.\n-   Θα πρέπει να πατήσετε τα πλήκτρα βέλους.\n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα.\\_",
+          "challenges": "\\*\\* Προαιρετική Δοκιμασία \\*\\* \n\n-   Κάντε τον χορευτή να ανταποκριθεί στα πλήκτρα βέλους αριστερά και δεξιά."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Ο χορευτής πρέπει να κάνει μια νέα κίνηση μετά από 4 μέτρα.\n\n_Αυτό το επίπεδο τελειώνει μετά από 8 μέτρα._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Μετά από 6 μέτρα, ο χορευτής σας πρέπει να κάνει ένα χορό διαφορετικό από εκείνον που έκανε μετά από 4 μέτρα.\n\n_Αυτό το επίπεδο τελειώνει μετά από 12 μέτρα._",
+          "challenges": "**Προαιρετικές Δοκιμασίες**\n\n-   Αλλάξτε το φόντο, όταν οι χορευτές αλλάζουν κινήσεις."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?**\n\n-   Δημιουργήστε έναν κορυφαίο χορευτή και μια ομάδα χορευτών υποστήριξης\n\n_Αυτό το επίπεδο τελειώνει μετά από 7 μέτρα._",
+          "challenges": "**Προαιρετική Δοκιμασία**\n\n-   Δημιουργία πολλών ομάδων χορευτών υποστήριξης."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Αλλάξτε το μέγεθος τουλάχιστον ενός χορευτή τουλάχιστον αφότου ξεκινήσει η μουσική.\n\n_Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα._",
+          "challenges": "**Προαιρετική Δοκιμασία**\n\n-   Πειραματιστείτε με την αλλαγή άλλων ιδιοτήτων (πλάτος, ύψος, περιστροφή, κλπ.)."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Αλλάξτε την απόχρωση τουλάχιστον ενός χορευτή.\n\n_Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα._",
+          "tint_hint": "Παρατηρήσατε ότι οι χορευτές σας δεν αλλάζουν προς το ακριβές χρώμα που θα επιλέξετε; Αυτό οφείλεται στο γεγονός ότι οι **αποχρώσεις** ανακατεύουν το χρώμα που θα επιλέξετε με τα χρώματα του χορευτή."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Απλά πατήστε το κουμπί «Τέλος»!",
+          "repeat_every_ideas": "**Χρειάζεστε ιδέες?**\n\n-   Αλλάζετε επανειλημμένα το μέγεθος ενός χορευτή για να το κάνετε να αυξηθεί.\n-   Αλλάζετε επανειλημμένα την περιστροφή ενός χορευτή για να τον κάνετε να στροβιλιστεί.\n-   Αλλάζετε επανειλημμένα την οριζόντια ή κάθετη θέση ενός χορευτή για να τον μετακινήσετε κατά μήκος της οθόνης.\n\n _Μπορείτε επίσης να χρησιμοποιήσετε αρνητικούς αριθμούς για να δημιουργήσετε το αντίθετο αποτέλεσμα!_",
+          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Το εναλλακτικό μπλοκ βρίσκεται στην κατηγορία «Χορευτές»."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Δείτε τα **Θαλάσσια Φανάρια** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Πώς μπορείτε να χρησιμοποιήσετε μια συνθήκη υπό όρους με αυτά για να περάσετε μέσα από το Μνημείο Ωκεανού;"
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Τι πανέμορφος κοραλλιογενής ύφαλος! Το μπλε κοράλλι είναι ο **σωστός** δρόμος που πρέπει να ακολουθήσετε. Βεβαιωθείτε ότι το κόκκινο κοράλλι δεν είναι **αριστερά**!"
+        },
+        "CourseF_outbreak1": {
+          "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
+          "step2": "Αλλάξτε το μέγεθος των χαρακτήρων με αυτό το κομμάτι παζλ: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nΒρίσκεται στην κατηγορία **Ενέργειες** στην εργαλειοθήκη.",
+          "step3": "Κάντε όλους του χαρακτήρες να ξεκινούν να περιφέρονται με αυτό: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Ενέργειες** της εργαλειοθήκης."
+        },
+        "CourseF_outbreak2": {
+          "hint1": "Κάντε κλικ στο \"+\" στο κομμάτι πάζλ γεγονός. Γεμίστε το άδειο σημείο στο \"αλλαγή εμφάνισης\" κομμάτι παζλ με το κομμάτι πάζλ \"υποκείμενο\" που βρίσκεται μέσα.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3": {
+          "hint1": "Για να δώσετε μάσκες σε τέρατα, χρησιμοποιήστε το κομμάτι παζλ \"αλλαγή εμφάνισης\" με ένα γεγονός \"όταν κάνω κλικ επάνω τους\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nΒεβαιωθείτε ότι σύρατε το μικρό κόκκινο κομμάτι πάζλ \"που έχουμε κάνει κλικ επάνω του\" επίσης!",
+          "hint2": "Ο νέος κώδικας για αυτό το επίπεδο θα πρέπει να μοιάζει κάτι σαν και το παρακάτω:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## Ψάχνετε για μια επιπρόσθετη πρόκληση;\n\nΜπορείτε επίσης να κάνετε τα  τέρατα να κινούνται γρηγορότερα ή πιο αργά.\n\n1.  Πατήστε \"Επεξεργασία\" σε αυτό το κομμάτι παζλ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Αυξήστε ή μειώστε τον αριθμό σε αυτό το κομμάτι παζλ\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nΓια να κάνετε τα τέρατα να κινούνται πιο αργά, επιλέξτε ένα δεκαδικό ψηφίο όπως \"0,5\" ή \"0,25\". Για να τα κάνετε να κινούνται γρηγορότερα, επιλέξτε έναν οποιοδήποτε αριθμό μεγαλύτερο του 1."
+        },
+        "CourseF_outbreak6": {
+          "hint2": "Βεβαιωθείτε ότι μετακινήσατε τα άλλα κομμάτια παζλ στο εσωτερικό του κομματιού παζλ \"αν πιθανότητα\":\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": "Θα χρειαστεί να προσθέσετε 3 περισσότερα γεγονότα \"όταν ακουμπάει\" για να ελέγξετε όλους τους δυνατούς συνδυασμούς \"αγγιγμάτων\" ανάμεσα σε υγιή και μολυσμένους χαρακτήρες.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>[0]"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "Κολλήσατε; Μπορείτε πάντα να επαναφέρετε τον κώδικά σας κάνοντας κλικ στο \"Ιστορικό εκδοχών\" που ακολουθεί και έπειτα επιλέγοντας \"Εκκίνηση Ξανά\"."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_a": "Μπορείς να καλέσεις μια συνάρτηση πολλές φορές μέσα στο πρόγραμμά σου!  Δοκίμασε να την καλέσεις δύο φορές για να λύσεις αυτό το παζλ."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Σύρε ένα μπλοκ \"προχώρησε μπροστά\" από την εργαλειοθήκη σου στο χώρο εργασίας και τοποθέτησέ τον κάτω από το μπλοκ \"όταν τρέχει\".",
+          "MC_HOC_2017_01_RETRY_b": "Μην ξεχάσεις να κάνεις κλικ στο κουμπί \"Εκτέλεση\" για εκτέλεση του κώδικα για τον Agent.",
+          "MC_HOC_2017_01_RETRY_c": "Μόλις ο Agent εκτελέσει το σύνολο του κώδικα, θα μπορείς να μετακινήσεις τον παίκτη με τα πλήκτρα βέλους!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Μετακίνησε τον Agent μπροστά δύο φορές για να σταθεί στην πλάκα πίεσης.  Με αυτόν τον τρόπο θα ανοίξει η πόρτα για τον παίκτη σου.",
+          "MC_HOC_2017_02_Cole_b": "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος.",
+          "MC_HOC_2017_02_Cole_c": "Μόλις ο Agent ανοίξει την πόρτα, χρησιμοποίησε τα πλήκτρα βέλους για να μετακινήσεις τον παίκτη στο χάρτη!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Μόλις τοποθετήσεις τον Agent στην πλάκα πίεσης, μπορείς να χρησιμοποιήσεις τα πλήκτρα βέλους για να περπατήσει ο παίκτης στην πυξίδα!",
+          "MC_HOC_2017_03_Cole_b": "Μήπως σου φαίνεται υπερβολικά μεγάλος ο κώδικας;  Δοκίμασε να χρησιμοποιήσεις ένα βρόχο \"επανάλαβε\" και δες αν μπορείς να βρεις τον τρόπο να κάνεις τον κώδικα πιο σύντομο!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Χρησιμοποίησε το μπλοκ \"στρίψε αριστερά\" για να αλλάξεις την κατεύθυνση του Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Ο Agent χρειάζεται να φτάσει μόνο στην πρώτη πλάκα πίεσης για να προχωρήσει η Alex ή ο Steve και να φτάσει στο τσεκούρι."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ο Agent χρειάζεται να προχωρήσει μπροστά 7 φορές.  Μπορείς να το καταφέρεις αυτό χρησιμοποιώντας ένα βρόχο \"επανάλαβε\";",
+          "MC_HOC_2017_04_Cole_c": "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος.",
+          "MC_HOC_2017_04_Cole_b": "Μόλις ο Agent φτάσει στην πλάκα πίεσης, θα ανοίξει η πόρτα για τον παίκτη."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Γνώριζες ότι μπορείς να τοποθετήσεις περισσότερα από ένα κομμάτια κώδικα μέσα σε ένα βρόχο;  Δοκίμασε να τοποθετήσεις σανίδα **και** να προχωρήσεις μπροστά χρησιμοποιώντας ένα βρόχο \"επανάλαβε\" για να λύσεις αυτό το παζλ."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Πόσες φορές εκτελείται αυτός ο βρόχος;  Πόσες φορές _θα έπρεπε_ να εκτελείται;"
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_a": "Για να λύσεις αυτό το παζλ, ανακάλυψε τι κάνει η συνάρτηση \"άνοιξε δρόμο\" και κάλεσέ την όσες φορές χρειάζεσαι χρησιμοποιώντας το μικρό πράσινο μπλοκ \"άνοιξε δρόμο\" από την εργαλειοθήκη.",
+          "MC_HOC_2017_07_Cole_b": "Δοκίμασε να συνδυάσεις μπλοκ συναρτήσεων με άλλα μπλοκ από την εργαλειοθήκη σου για να μπορέσεις να λύσεις αυτό το παζλ."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Χρησιμοποίησε συναρτήσεις για να λύσεις αυτό το παζλ πιο εύκολα!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Πάτησε \"Εκτέλεση\"! \nΜπορείς να εκτελέσεις τον κώδικά σου ακόμα και αν δεν είναι σωστός.  Εκτέλεσε και επανάφερε τον κώδικά σου ξανά και ξανά μέχρι να ανακαλύψεις το λάθος.",
+          "MC_HOC_2017_08_RY_b": "Υπάρχουν ΠΟΛΛΟΙ τρόποι για να λύσεις αυτό το παζλ.  Δοκίμασε μερικούς!"
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Δοκίμασε να χρησιμοποιήσεις τον Agent για να χτίσεις μερικές γέφυρες, ώστε η Alex και ο Steve να μπορούν να περιπλανηθούν πέρα από τις άκρες του χάρτη."
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Υπάρχουν δύο τρόποι να λύσεις αυτόν τον γρίφο!"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Δοκιμάστε να χρησιμοποιήσετε το μπλοκ «άλμα προς τα εμπρός» για να μεταφερθείτε από την κορυφή ενός τετραγώνου στο σημείο που θα ξεκινήσετε το επόμενο. Αν τα τετράγωνά σας έχουν ύψος 20 pixels και απέχουν 20 pixels το ένα από το άλλο, πόσο μακριά χρειάζεται να πηδήξετε;"
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**Θυμίσου:** Αυτός ο γρίφος αλλάζει κάθε φορά που εκτελείται. \n\nΘα χρειαστεί να χρησιμοποιήσεις ένα τουβλάκι επιλογής (\"αν\" ή \"αν/αλλιώς\") για να τον λύσεις."
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Τα τετράγωνα έχουν 100 pixels πλευρές το καθένα, που σημαίνει ότι θα πρέπει να μετακινηθείτε προς τα εμπρός 175 pixels πριν σχεδιάσετε το δεύτερο τετράγωνο.",
+          "courseE_artist_functions1_b": "Είναι αποδεκτό να σχεδιάσετε επικαλυπτόμενες γραμμές για να σχεδιάσετε τα γυαλιά σας."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
     }

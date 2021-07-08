@@ -2,7 +2,7 @@
 title: முழுப் பள்ளி பங்கேற்பு
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # Get your whole school to participate
 

@@ -5098,3 +5098,618 @@ sk-SK:
           Ktoré podrobnosti boli samy o sebe neškodné, ale v kombinácii s ďalšími
           podrobnosťami odhalili súkromné ​​ \n   informácie? \n* Ako ovplyvnia tieto
           poznatky vaše rozhodovanie, čo zverejňovať online? "
+      BigEvent-Unplugged_2021:
+        markdown: |-
+          Veľká udalosť
+
+          V informatike sú udalosti akcie, ktoré počítač monitoruje. V tejto lekcii budeš reagovať inak v závislosti od toho, ktoré tlačidlo stlačíš.
+      BinaryBracelets-Unplugged_2021:
+        markdown: |-
+          # Binárne náramky
+
+          Vytvor si náramok, ktorý predstavuje tvoje meno v systéme, ktorému rozumejú počítače!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |-
+          # Podmienky s kartami
+
+          Zahraj si kartovú hru a vytvor pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, dostaneš bod ty".
+      CourseF_outbreak_story2:
+        markdown: |-
+          #  Nákaza: Myslite ako vedec
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simulácie sú skvelým spôsobom, ako sa naučiť veci, ktoré sa v reálnom svete ťažko pozorujú. Pomáhajú vedcom vyriešiť problémy a testovať nové nápady bezpečným a efektívnym spôsobom. Simulácia vám ukáže, ako by mohla nákaza vírusom v mestečku Monster Town vyzerať.
+
+          ## Obnoviť a znova prehrať!
+          Aj keď si sami napíšete kód, je nemožné presne vedieť, čo sa stane po stlačení tlačidla Spustiť. Príšery sa pohybujú náhodne, takže neviete, či sa vírus šíri rýchlo alebo pomaly. Kedykoľvek zmeníte kód, nezabudnite simuláciu spustiť viackrát. Veci sa nestanú dvakrát rovnako!
+
+          ## Zhromažďovanie údajov
+          Zapisujte si svoje pozorovania počas spustenia simulácie. Môžete spočítať počet príšer, ktoré ochorejú, alebo pomocou časovača zistiť, ako rýchlo sa veci dejú. Napríklad ako dlho zvyčajne trvá, kým ochorejú všetky príšery, ak žiadna z nich nenosí masku?
+
+          ## Vytváranie predpovedí
+          Ak rozumiete svojmu modelu, môžete ho použiť na predpovede. Môžete dokonca zmeniť priebeh svojej simulácie a hádať, čo sa stane inak. Napríklad:
+          * Čo by sa stalo, keby tam bolo dvakrát toľko príšer?
+          * Čo by sa stalo, keby sa príšery pohybovali polovičnou rýchlosťou
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Je Monster Town ako skutočný svet?
+          Miera, do ktorej môže byť akýkoľvek model realistický, podlieha obmedzeniam.
+          * Čo má vaša simulácia napadnutia spoločné s napadnutím vírusov v reálnom svete?
+          * Aké sú rozdiely?
+          Po dokončení tejto aktivity diskutujte o týchto otázkach s učiteľmi alebo so svojou rodinou!
+
+          ## Čo ešte môžeme vymodelovať?
+          V mestečku Monster Town ste už vytvorili funkčný model ohniska nákazy. Čo vaša simulácia nedokáže urobiť alebo ukážte, čo by ste si želali, aby dokázala? Ak chcete pokračovať, stlačte tlačidlo Pokračovať a naučte sa modelovať ešte viac:
+          * Zvyšovať počet príšer v simulácii
+          * Pomáhať príšerám zotaviť sa z vírusu
+          * Pravdepodobnosť, imunita, vakcíny atď.!
+
+          Môžete tiež zdieľať svoj simulačný model s ostatnými alebo zdieľať správu o tom, čo si myslíte, že môžeme urobiť, aby sme pomohli udržať zdravie ostatných, keď sa do mesta dostane vírus.
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Dizajn, ktorý je dostupný
+
+          * Vo svete informatiky **dostupnosť** znamená tvorbu technológií pre ľudí so znevýhodnením.
+          * Znevýhodnenie môže byť fyzické, zrakové, sluchové a mnohé ďalšie.
+          * Existujú rôzne typy znevýhodnenia a všetky majú vplyv na to, ako ľudia so znevýhodnením používajú technológie, napr. **smartfónové aplikácie**.
+          * Keď tvoríte aplikáciu, ktorá je dostupná pre ľudí so znevýhodnením, vlastne ju vylepšujete aj pre všetkých ostatných!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |-
+          # Digitálne zdieľanie
+
+          V tejto lekcii sa zamyslíš nad výzvami a výhodami rešpektovania vlastníctva a autorských práv, najmä v digitálnom prostredí.
+      ForLoopFun-Unplugged_2021:
+        markdown: |-
+          # Zábava s cyklami "for"
+
+          Vieme, že cykly nám umožňujú robiť veci dookola, ale teraz sa naučíme, ako používať cykly so zabudovanou extra štruktúrou.
+      GettingLoopy-Unplugged_2021:
+        markdown: |-
+          # Cykly sa zacykľujú
+
+          Táto lekcia je úvodom do programovacieho konceptu cyklov prostredníctvom tanca.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |-
+          # Programovanie na štvorčekovom papieri
+
+          Napíš algoritmy, podľa ktorých môžu tvoji spolužiaci nakresliť obrázky.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Veselé mapy
+
+          Vytvor algoritmus, aby sa postava presunula cez bludisko.
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Vytvorte si v učebni vlastný internet len pomocou kúskov papiera.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Move It, Move It
+
+          Použi mapu a zadaj príkazy na dosiahnutie cieľa.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Moji zacyklení robotickí kamaráti
+
+          Skráť si svoje programy pomocou cyklov!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Moji robotickí kamaráti
+
+          Nauč sa programovať písaním kódu pre svojich kamarátov!
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Sila slov
+
+          ## Čo by sme mali spraviť, keď niekto na internete použije zlomyseľný, útočný, alebo nenávistný jazyk?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Súkromné a osobné informácie
+
+          ## Ktoré tvoje osobné informácie je v poriadku zdieľať online?
+      RelayProgramming-Unplugged_2021:
+        markdown: |-
+          # Štafetové programovanie
+
+          Rozdeľte sa do tímov a spolu napíšte program, ktorý nakreslí obrázky.
+      Songwriting-Unplugged_2021:
+        markdown: "# Písanie piesní\n\nNa príklade použitia refrénu v piesni sa študenti
+          naučia definovanie a vyvolanie funkcií. "
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# Tá správna Appka\n\n* Všetci dnes používame počítače, obzvlášť
+          smartfóny. \n* Smartfónové aplikácie alebo \"appky\" pomáhajú ľuďom napríklad
+          hovoriť s priateľmi, počúvať hudbu, nakupovať alebo len browsovať internet.\n*
+          Pre programátorov je dôležité poznať potreby druhých a zohľadniť ich pri
+          návrhu aplikácií!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      courseAB_EOC_2021:
+        display_name: Záverečný projekt
+      courseB_EOC_2021:
+        display_name: Záverečný projekt
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - text: Umelec nakreslí trojuholník s tromi rovnakými stranami.
+          feedback: Nesprávne. Umelec nakreslí štvorec.
+        - text: Umelec nakreslí jednu čiaru.
+          feedback: Nesprávne. Umelec nakreslí štvorec.
+        - text: Umelec nakreslí štvorec.
+          correct: true
+          feedback: Správne!
+        - {}
+        questions:
+        - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+            krát 3 je 12!
+        - text: '12'
+          correct: true
+          feedback: Správne!
+        - text: '15'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+            krát 3 je 12!
+        - text: '20'
+          feedback: Nesprávne. Farmárka pozbiera 4 tekvice v každom z 3 opakovaní.  4
+            krát 3 je 12!
+        questions:
+        - text: Pozri sa pozorne na tento kód. Koľko tekvíc farmárka pozbiera po kliknutí
+            na "Spustiť"?
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - text: Scrat sa dostane k žaluďu. V tomto kóde nie sú žiadne chyby.
+          feedback: Nesprávne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane k žaluďu pretože sa otočí nesprávnym smerom.
+          correct: true
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - text: Scrat sa nedostane až k žaluďu, pretože je použitých málo bokov `posuň
+            sa dopredu`.
+          correct: true
+          feedback: Správne. Ako prvé Scrat zle odbočí, potom sa neposunie dostatočne
+            ďaleko vpred aby sa dostal až k žaluďu.
+        - feedback: V tomto kóde sú dve chyby. Ako prvé Scrat zle odbočí, potom sa
+            neposunie dostatočne ďaleko vpred aby sa dostal až k žaluďu.
+        questions:
+        - text: Hľadaj chyby v kóde. Dostane sa Scrat až k žaluďu alebo narazí na
+            problém?
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - text: Vtáčik skončí jeden krok pred prasiatkom.
+          feedback: Nesprávne. Tento kód dostane vtáčika rovno k prasiatku.
+        - text: Vták sa dostane až k prasiatku.
+          correct: true
+          feedback: Správne!
+        - text: Vták narazí do TNT.
+          feedback: Nesprávne. Tento kód dostane vtáčika rovno k prasiatku.
+        - feedback: Nesprávne. Tento kód dostane vtáčika rovno k prasiatku.
+        questions:
+        - text: Prezri si nasledujúci kód veľmi pozorne. Čo sa stane, keď stlačíš
+            "Spustiť"?
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - text: BB-8 sa nepohne.
+          feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
+        - text: BB-8 sa posunie iba o jeden krok
+          feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
+        - text: BB-8 sa pohne 5 krát a pozbiera všetok šrot
+          correct: true
+          feedback: Správne!
+        - feedback: Nesprávne. Opakovací blok posunie BB-8 dopredu 5-krát.
+        questions:
+        - text: Čo si myslíš, že sa stane po kliknutí na "Spustiť"?
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - text: BB-8 zájde v prvom opakovaní príliš ďaleko.
+          feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
+            ale potrebuje sa posunúť o 3.
+        - text: BB-8 v prvom opakovaní nedôjde dostatočne ďaleko na to, aby pozbieral
+            všetok kovový šrot.
+          correct: true
+          feedback: Správne!
+        - text: BB-8 pozbiera všetok šrot bez akýchkoľvek problémov.
+          feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
+            ale potrebuje sa posunúť o 3.
+        - feedback: Nesprávne. Prvé opakovanie umožní BB-8 posunúť sa len o dva kroky,
+            ale potrebuje sa posunúť o 3.
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_EOC_2021:
+        description: Práve si na poslednej úlohe kurzu D! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Správne!
+        - text: B
+          feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+            ho 4-krát zopakuje.
+        - text: C
+          feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+            ho 4-krát zopakuje.
+        - feedback: Nesprávne. Vnútorný cyklus nakreslí päťuholník a ten vonkajší
+            ho 4-krát zopakuje.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dobre si prezri tento kód. Ktorý z obrázkov sa nakreslí po stlačení
+            "Spustiť"?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
+            na to, čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
+            ním kvet.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
+            čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, ak je pod oblakom kvet.
+        - feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        questions:
+        - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
+            nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: 'Včela sa posunie nad oblak a bude sa snažiť zobrať nektár, bez ohľadu
+            na to, čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, len ak je pod oblakom kvet.
+        - text: Včela sa posunie nad oblak a pokúsi sa zobrať nektár len ak je pod
+            ním kvet.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela sa posunie nad oblak a neurobí nič viac, bez ohľadu na to,
+            čo je pod oblakom. '
+          feedback: Nesprávne. Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať
+            nektár, ak je pod oblakom kvet.
+        - text: Neviem.
+          feedback: Blok `ak pri kvete` spôsobí, že včela sa pokúsi získať nektár,
+            len ak je pod oblakom kvet.
+        questions:
+        - text: Tento oblak zacláňa vo výhľade. Môže pod ním byť kvet. Ak je pod oblakom
+            kvet, včela pozbiera nektár. Ak tam kvet nie je, včela by nemala robiť
+            nič. Dobre si prezri tento kód.  Čo myslíš, že sa stane, keď stlačíš "Spustiť"?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: Včela získa nektár pri každom kvete a pri každom pláste vyrobí med.
+          correct: true
+          feedback: Správne!
+        - text: Včela sa pokúsi získať nektár z kvetu aj z plástu.
+          feedback: Nesprávne. Blok `ak na kvete` umožní včele získať nektár z každého
+            kvetu a vyrobiť med na každom pláste.
+        - text: Včela sa pokúsi vyrobiť med na kvete aj na pláste.
+          feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele získať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
+        - feedback: Nesprávne. Nesprávne. Blok `ak na kvete` umožní včele získať nektár
+            z každého kvetu a vyrobiť med na každom pláste.
+        questions:
+        - text: 'Pozri si pozorne tento kód.  Čo myslíš, že sa stane, keď stlačíš
+            "Spustiť"? Pamätaj: pod každým oblakom bude vždy len *jeden* plást, alebo
+            *jeden* kvet.'
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: Včela sa pohne dopredu a vezme 1 nektár.
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
+            vo vnorenom cykle, čím vyrieši úlohu.
+        - text: Včela zozbiera len 2 nektáre.
+          feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
+            vo vnorenom cykle, čím vyrieši úlohu.
+        - text: Včela zozbiera všetok nektár.
+          correct: true
+          feedback: Správne!
+        - feedback: Nesprávne. Včela zopakuje aktivitu pohybu vpred a zbierania nektáru
+            vo vnorenom cykle, čím vyrieši úlohu.
+        questions:
+        - text: Pozri sa pozorne na tieto vnorené cykly.  Čo sa stane, keď klikneš
+            "Spustiť"?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
+        - text: '8'
+          correct: true
+          feedback: Správne!
+        - text: '10'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
+        - text: '12'
+          feedback: Nesprávne. Včela získa 2 nektáre v cykle posuň sa dopredu, potom
+            2 nektáre v cykle posuň sa dole. To všetko je vnútri iného cyklu, ktorý
+            sa zopakuje dvakrát. 4 krát 2 je 8!
+        questions:
+        - text: Pozri sa pozorne na tento kód. Koľko medu včela vyrobí, keď klikneš
+            "Spustiť"?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: Záhradníčka pozbiera všetky plodiny.
+          feedback: Nesprávne. Kód na zber tekvice tu nie je.
+        - text: Záhradníčka po ceste nepozbiera žiadne plodiny.
+          feedback: Nesprávne. S týmto kódom bude záhradníčka chodiť hore dole a bude
+            zbierať všetok šalát a kukuricu, na ktoré narazí, ale nebude zbierať tekvicu.
+        - text: Záhradníčka pozbiera všetky plodiny okrem tekvice.
+          correct: true
+          feedback: Správne!
+        - feedback: Nesprávne. S týmto kódom bude záhradníčka chodiť hore dole a bude
+            zbierať všetok šalát a kukuricu, na ktoré narazí, ale nebude zbierať tekvicu.
+        markdown: |
+          V tejto úlohe je výhonok rastliny buď kukurica alebo šalát.
+          <br/>
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Nič. Tento kód zanechá rovnú zem.
+          feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
+        - text: Tento kód sa hromady ani nedotkne.
+          correct: true
+          feedback: Správne!
+        - text: Tento kód sa jám ani nedotkne.
+        - feedback: Nesprávne. Chýba kód na odstránenie hliny z hromady.
+        questions:
+        - text: Dobre si prezri tento kód. Čo zostane na konci úlohy?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Nestane sa nič.
+          feedback: Nesprávne. Farmárka bude odstraňovať hlinu, pokiaľ tam je hromada
+            a zastaví, keď hromada zmizne
+        - text: Farmárka bude donekonečna odstraňovať hlinu.
+          feedback: Nesprávne. Farmárka bude odstraňovať hlinu, pokiaľ tam je hromada
+            a zastaví, keď hromada zmizne
+        - text: Farmárka bude odstraňovať hlinu, pokiaľ tam je hromada, a zastaví,
+            keď hromada zmizne.
+          correct: true
+          feedback: Správne!
+        - feedback: Nesprávne. Farmárka bude odstraňovať hlinu, pokiaľ tam je hromada
+            a zastaví, keď hromada zmizne
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
+          correct: true
+          feedback: Správne!
+        - text: Zombík sa dostane k slnečnici.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
+          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        - feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
+            hore dole.
+        questions:
+        - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: Vtáčik sa nepohne.
+        - text: Vták sa dostane až k prasiatku.
+          correct: true
+          feedback: Správne!
+        - text: Vtáčik sa posunie dopredu a narazí do TNT.
+          feedback: Nesprávne. Tento kód prinúti vtáčika posunúť sa dopredu, pokiaľ
+            je cesta bezpečná, a potom sa otočí vľavo. Stále to robí, až kým nedosiahne
+            prasiatko!
+        - feedback: Tento kód bude vtáka posúvať dopredu tak dlho, kým je pred ním
+            cesta a potom ho otočí doľava. Toto bude robiť, až kým sa nedostane ku
+            prasiatku!
+        questions:
+        - text: Pozri sa pozorne na tento kód. Čo si myslíš, že sa stane, keď klikneš
+            "Spustiť"?
+      courseE_EOC_2021:
+        description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
+      courseE_EOC_examples_2021:
+        description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Nestane sa nič.
+        - {}
+        - correct: true
+          feedback: Správne!
+        - {}
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: Záhradníčka pozbiera dve tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        - text: Záhradníčka pozbiera všetky tekvice.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        - text: Záhradníčka pozbiera šalát.
+          correct: true
+          feedback: Správne!
+        - text: Záhradníčka pozbiera kukuricu.
+          feedback: Nesprávne. Záhradníčka ide rovno až na koniec cesty, potom sa
+            otočí a pôjde späť až dokiaľ nezoberie šalát.
+        questions:
+        - text: Pozri si funkcie zadefinované nižšie.  Čo pozbiera záhradníčka?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
+        - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
+        questions:
+        - text: Čo sa stane ak stlačíš "Spustiť"?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Nič. Program funkciu nevolá.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
+        - text: Umelec nakreslí len jeden štvorec.
+          feedback: Nesprávne. Funkcia sa v programe v skutočnosti volá dvakrát.
+        - text: Umelec nakreslí 2 štvorce, ktoré sa prekrývajú.
+        - text: Umelec nakreslí 2 štvorce, medzi ktorými bude malá medzera.
+          correct: true
+        questions:
+        - text: Čo sa stane ak stlačíš "Spustiť"?
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Nestane sa nič.
+        - {}
+        - correct: true
+          feedback: Správne!
+        - {}
+        questions:
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+      courseF_EOC_2021:
+        description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
+        display_name: Záverečný projekt
+      courseF_EOC_examples_2021:
+        description: 'Sme na konci kurzu F! Vyber si, aký projekt vytvoríš. '
+        display_name: Záverečný projekt
+      courseF_EOC_samples_2021:
+        display_name: Záverečný projekt
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - text: Umelec nakreslí trojuholník s dĺžkou strán 50 pixelov.
+          correct: true
+          feedback: Správne!
+        - text: Umelec nakreslí 50-stranný mnohouholník s dĺžkou strán 3 pixely.
+        - text: Umelec nakreslí tri strany s 50 stupňovými otočeniami.
+        - feedback: Premenná `dĺžka` je nastavená na 50 a používa sa v bloku `posuň
+            dopredu o`, takže umelec nakreslí trojuholník so stranami dlhými 50 pixelov.
+        questions:
+        - text: Nastavili sme premennú "dĺžka" na 50. Čo sa stane, keď klikneš "Spustiť"?
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+        - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
+            jedného.
+          correct: true
+          feedback: Správne!
+        - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
+        - {}
+        markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
+        questions:
+        - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - text: Umelec vyrieši túto úlohu správne.
+        - text: Umelec nakreslí 4 štvorce akoby  vzor okna.
+          correct: true
+          feedback: Správne!
+        - text: Umelec nakreslí len jeden rad štvorcov.
+          feedback: Nesprávne. Program nezavolá funkciu „nakresli rad mnohouholníkov“.
+        - text: Umelec nakreslí 4 štvorce postavené jeden na druhom.
+        questions:
+        - text: Čo sa stane, keď stlačíš tlačidlo "Spustiť"?
+      csf_be_a_super_digital_citizen_2021:
+        markdown: |-
+          #  Skvelý digitálny občan
+
+          ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+      csf_digital_trails_2021:
+        markdown: |-
+          # Nasleduj digitálnu stopu
+
+          ## Aké informácie je v poriadku mať vo svojej digitálnej stope?
+      csf_password_power-up_2021:
+        markdown: |-
+          # Posilni svoje heslo
+
+          ## Tipy pre heslá na zapamätanie
+
+          * Začni s ľahko zapamätateľnou **frázou**.
+          * Len tvoji **rodičia** by mali poznať tvoje heslo.
+          * Nikdy nepoužívaj ako heslo svoje **osobné** údaje.
+          * Vytváraj si heslá, ktoré máju aspoň **osem** znakov.
+          * Vo svojom hesle použi písmená, číslice a **znaky**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness_2021:
+        markdown: |
+          # STOP zlomyseľnosti
+
+          ## Čo urobiť ak je k vám niekto zlomyseľný v online svete?
+
+          * **S**túp preč.
+          * **T**oto všetko povedz nejakému dospelákovi.
+          * **O**verené stránky najprv.
+          * **P**očkaj a popremýšľaj.
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: "# Moje online susedstvo\n\n##  Ako sa bezpečne presúvať na miesta
+          v online svete? "
+      express_EOC_2021:
+        description: Práve si na poslednej úlohe kurzu E! Vyber si projekt, ktorý
+          chceš vytvoriť.
+        display_name: Záverečný projekt
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.
+          feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
+            nie je a to spôsobuje chybu.
+        - text: Laurel sa pokúsi zobrať drahokam na mieste, kde žiadny nie je a to
+            spôsobí chybu.
+          correct: true
+          feedback: Správne!
+        - text: Laurel pozbiera všetky drahokamy.
+          feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
+            nie je a to spôsobuje chybu.
+        - feedback: Nesprávne. Laurel sa pokúša zobrať drahokam na mieste, kde žiadny
+            nie je a to spôsobuje chybu.
+        questions:
+        - text: Pozorne si prezri tento kód. Čo si myslíš, že sa stane po spustení
+            programu?

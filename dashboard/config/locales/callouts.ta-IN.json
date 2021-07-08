@@ -38,6 +38,16 @@
         },
         "outbreak7": {
           "costumes_callout": "புதிய உடையை உருவாக்க கிளிக் செய்க"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "இந்த ப்ளாக்கை உங்கள் நிரலுக்குள் சேர்க்கவும்!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "தொகுதி விரிவாக்கத்தை இங்கே கிளிக் செய்க.",
+          "pointerlocation": "ஒரு பொருள் தொகுதியை இங்கே இழுக்கவும்."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "புதிய உடையை உருவாக்க கிளிக் செய்க"
         }
       }
     }

@@ -3,133 +3,40 @@ az:
   data:
     script:
       category:
-        csd_category_name: KE Kəşflər ('17-'18)
-        csd_2018_category_name: KE Kəşflər ('18-'19)
-        csd_2019_category_name: KE Kəşflər ('19-'20)
-        csd_2020_category_name: KE Kəşflər ('20-'21)
         csf_category_name: Kompüter Elmlərinin əsasları
-        csf_2018_category_name: Kompüter Elminin Əsasları ('18-'19)
-        csf_2019_category_name: Kompüter Elminin Əsasları ('19-'20)
-        csf_2020_category_name: Kompüter Elminin Əsasları ('20-'21)
-        csf_2021_category_name: Kompüter Elminin Əsasları ('21-'22)
-        csf_international_category_name: Kompüter Elminin Əsasları Beynəlxalq
-        csp_category_name: KE Prinsipləri ('15-'16)
-        csp_2018_category_name: KE Prinsipləri ('18-'19)
-        csp_2019_category_name: KE Prinsipləri ('19-'20)
-        csp_2020_category_name: KE Prinsipləri ('20-'21)
-        csp_2021_category_name: KE Prinsipləri ('21-'22)
-        cspexams_category_name: Kompüter Elmlərinin Prinsipləri Praktik Test
-        csp17_category_name: KE Prinsipləri ('17-'18)
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
-        research_studies_category_name: "Tədqiqat işləri \nğ"
-        twenty_hour_category_name: 20-Saat
-        tts_category_name: Mətndən nitqə
         other_category_name: Digər
       name:
         course1:
           title: Kurs 1
-          description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter
-            proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll
-            etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi öyrənəcəklər.
-            Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud hekayə düzəldib,
-            onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
-          description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
           description_audience: 4+ yaş (oxumağı bacarmayanlar)
           lessons:
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Artist: Shapes':
-              name: 'Rəssam: Fiqurlar'
-            'Bee: Loops':
-              name: 'Arı: Dövrlər'
-            'Bee: Sequence':
-              name: 'Arı: Ardıcıllıq'
             Building a Foundation:
               name: Təməl qurmaq
             Happy Maps:
               name: Şən xəritələr
-            'Maze: Debugging':
-              name: 'Labirint: Sazlama'
-            'Maze: Loops':
-              name: 'Labirint: Dövrlər'
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
             Move it, Move it:
               name: Hərəkət et
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
-          student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr
-            kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri
-            həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi
-            öyrənəcəklər. Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud
-            hekayə düzəldib, onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar
-            üçün tövsiyyə olunur.
         course2:
           title: Kurs 2
-          description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma təcrübəsi
-            olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri həll
-            etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv oyun
-            və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə olunur.
-          description_short: Kurs 2 oxumağı bacaran şagirdlər üçün hazırlanıb.
-          description_audience: 6+ yaş (oxuma tələb olunur)
           lessons:
-            'Artist: Debugging':
-              name: 'Rəssam: Sazlama'
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Bee: Loops':
-              name: 'Arı: Dövrlər'
             Conditionals:
               name: Şərti ifadələr
             Flappy:
               name: Flappy
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
-            'Maze: Loops':
-              name: 'Labirint: Dövrlər'
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
             Relay programming:
               name: Estafet proqramlaşdırması
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
-          student_description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma
-            təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri
-            həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv
-            oyun və ya əhvalatlar tərtib edəcəklər. 2-5-ci siniflər üçün tövsiyyə
-            olunur.
         course3:
           title: Kurs 3
-          description_short: Kurs 3 Kurs 2-nin davamıdır.
           description_audience: 8+ yaş (Kurs 2-dən sonra)
           lessons:
             Artist:
               name: Rəssam
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Artist: Patterns':
-              name: 'Rəssam: Şablonlar'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Bee: Functions':
-              name: 'Arı: Funksiyalar'
             Bounce:
               name: Tullan
             Computational Thinking:
@@ -138,20 +45,14 @@ az:
               name: Zər Yarışı
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
-            'Farmer: While Loops':
-              name: 'Fermer: "Hələ ki" dövrləri'
             Functional Suncatchers:
               name: Funksional muncuqlar
             Internet:
               name: İnternet
             Maze:
               name: Labirint
-            'Maze: Conditionals':
-              name: 'Labirint: Şərti ifadələr'
             Songwriting:
               name: Mahnı yazma
-            'Studio: Create a Story':
-              name: 'Oyun labı: Bir əhvalat düzəldin'
         playlab:
           title: Oyun labı
           description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
@@ -170,8 +71,6 @@ az:
           student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           title: Ənənəvi labirint
-          description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
-            öyrənməyə cəhd edin!
           lessons:
             Maze:
               name: Labirint
@@ -192,84 +91,34 @@ az:
             bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!
         course4:
           title: Kurs 4
-          description_short: Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.
-          description_audience: 10+ yaş (Kurs 3-dən sonra)
           lessons:
             Artist:
               name: Rəssam
-            Artist Binary:
-              name: 'Rəssam: ikilik sistem'
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Functions with Parameters':
-              name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
-            'Bee: For Loops':
-              name: 'Arı: For Dövrləri'
-            Maze and Bee:
-              name: Labirint və arı
-        Course4pre:
-          title: Kurs 4 üçün lazımi şərtlər
-          lessons:
-            'Artist: Functions':
-              name: 'Rəssam: Funksiyalar'
-            'Artist: Loops':
-              name: 'Rəssam: Dövrlər'
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
-            'Artist: Sequence':
-              name: 'Rəssam: Ardıcıllıq'
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
-            'Bee: Debugging':
-              name: Arı Sazlama
-            'Farmer: While Loops':
-              name: 'Fermer: "Hələ ki" dövrləri'
-            'Maze: Sequence':
-              name: 'Labirint: Ardıcıllıq'
         usability:
           lessons:
             Binary:
               name: İkilik
-            Intro:
-              name: Giriş
             Variables:
               name: dəyişənlər
         algebra:
           lessons:
-            'Eval: Boolean Operators':
-              name: Məntiqi operatorlar
             'Eval: Conditionals':
               name: Şərti ifadələr
-            'Eval: Strings and Images':
-              name: Sətir və Şəkillər
-            'Play Lab: Animation (Big Game)':
-              name: Böyük Oyun - Animasiya
-            'Play Lab: Boolean (Big Game)':
-              name: Böyük Oyun - Bool tipləri
-            'Play Lab: Defining Functions':
-              name: Raket yüksəkliyi
-            'Play Lab: Defining Variables (Big Game)':
-              name: Böyük oyun- dəyişənlər
         infinity:
           lessons:
             Infinity:
               name: Sonsuz sayda
         K5PD:
           lessons:
-            'Programming Concept: Loops':
-              name: 'Proqramlaşdırma Konsepsiyası: Dovrlər'
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
         20-hour:
-          title: İnformatikaya sürətləndirilmiş giriş kursu
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
             əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar)
             olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda
             əyləncəlidir.
-          description_short: Bu 20 saatlıq kurs informatika və proqramlaşdırmanın
-            2-4-cü kurslardakı əsas anlayışlarını təqdim edir.
           description_audience: 10+ yaş (Kurs 3-dən sonra)
           lessons:
             Abstraction:
@@ -317,9 +166,6 @@ az:
             olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda
             əyləncəlidir.
         edit-code:
-          title: Koda düzəliş et
-          description: Koda düzəliş et
-          description_short: Koda düzəliş et
           lessons:
             Play Lab:
               name: Oyun labı
@@ -327,7 +173,6 @@ az:
               name: Rəssam
             The Maze:
               name: Labirint
-          student_description: Koda düzəliş et
         events:
           title: Hadisələr
           description: Hadisələr
@@ -339,8 +184,6 @@ az:
               name: Hesablama
             Eval:
               name: Qiymət
-            Studio:
-              name: Studiya
           student_description: Hadisələr
         flappy:
           title: Qanadlı Kod
@@ -361,100 +204,18 @@ az:
           lessons:
             Step:
               name: addım
-        Hour of Code:
-          title: Kod Saatı 2013
-          description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
-            öyrənməyə cəhd edin!
-          lessons:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
-        CodeStudioPuzzleChallenge:
-          lessons:
-            Puzzles:
-              name: Tapmacalar
-        Tutorial Video - Code Studio Puzzle Challenge:
-          lessons:
-            Puzzles:
-              name: Tapmacalar
         cspunit1:
           lessons:
-            Number Systems:
-              name: Say sistemləri
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
+            Binary Numbers:
+              name: İkilik rəqəmlər
         algebraPD:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
-        algPDmiami:
-          lessons:
-            Strings and Images:
-              name: Sətir və Şəkillər
-            Your Game - Animation:
-              name: Sənin oyunun - Animasiya
-            Your Game - Booleans:
-              name: Sizin Oyun - Bul tipləri
-        CSPPD:
-          lessons:
-            Impact of Computer Science:
-              name: Kompüter elminin təsiri
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-            What is CSP?:
-              name: "CSP -content security policy. \nMəzmun təhlükəsizlik siyasəti "
-        CSPLessonSamples:
-          lessons:
-            Lesson 14:
-              name: Dərs 14
-            Lesson 15:
-              name: Dərs 15
-        ECSPD:
-          lessons:
-            Impact of Computer Science:
-              name: Kompüter elminin təsiri
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-            What is ECS?:
-              name: 'ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner
-                Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
-                işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
-                təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
-
-'
         algebraPD3:
           lessons:
-            Strings and Images:
-              name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
-            The Big Game:
-              name: Böyük Oyun
-        ECSPD-NexTech:
-          lessons:
-            Impact of Computer Science:
-              name: Kompüter elminin təsiri
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-            What is ECS?:
-              name: 'ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner
-                Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
-                işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
-                təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
-
-'
-        ECSPD-iZone:
-          lessons:
-            Impact of Computer Science:
-              name: Kompüter elminin təsiri
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-            What is ECS?:
-              name: 'ECS- Amazon Elastic Container Service - Amazon Elastik Konteyner
-                Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
-                işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
-                təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
-
-'
         algebraPD-NexTech:
           lessons:
             Teacher Dashboard:
@@ -465,34 +226,18 @@ az:
               name: Müəllimin idarəetmə paneli
         sciencePD2:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
-        cspunit2:
-          lessons:
-            Encryption Algorithms:
-              name: Açar Sözləri və Parollar
-            The Internet:
-              name: İnternet
         algebraPD2a:
           lessons:
-            Big Game - Animation:
-              name: Böyük Oyun - Animasiya
-            Big Game - Booleans:
-              name: Böyük Oyun - But tipləri
-            Strings and Images:
-              name: Sətir və Şəkillər
+            Free Play:
+              name: Azad Oyna
         allthethings:
           lessons:
             Artist:
               name: Rəssam
-            Bee:
-              name: Arı
             Bounce:
               name: Tullan
-            Farmer:
-              name: Fermer
             Flappy:
               name: Flappy
             Jigsaw:
@@ -501,90 +246,48 @@ az:
               name: Labirint
             Minecraft:
               name: Minecraft
-            Star wars:
-              name: Ulduz Müharibələri
-            Studio:
-              name: Studiya
         algebraPD2b:
           lessons:
-            Strings and Images:
-              name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
         cspfacilitator:
           lessons:
             App Lab:
               name: Proqram Labı
-            Welcome!:
-              name: Xoş gəldiniz!
         K5-OnlinePD:
           lessons:
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
+            Planning:
+              name: Planlama
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         algebraPD2:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
-            Welcome!:
-              name: Xoş gəldiniz!
         sciencePD2b:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         science-PD2:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         sciencePD2b-iZone:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
-        CSPPD2:
-          lessons:
-            Wrap Up and Next Steps:
-              name: Yekun və sonrakı addımlar
         asUnplugged:
           lessons:
             Building a Foundation:
@@ -599,22 +302,8 @@ az:
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             Songwriting:
               name: Mahnı yazma
-        ECSPD3-Unit2:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-        ECSPD3-Unit3:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-        ECSPD3-Unit4:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
         ScienceP3OLPT2:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         Special Fun:
@@ -622,41 +311,28 @@ az:
         SpecialSeries:
           description_audience: 10+ yaş (Kurs 3-dən sonra)
         starwars:
-          title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (JavaScript)'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
-          lessons:
-            Hour of Code 2015:
-              name: Kod Saatı 2015
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
         starwarsblocks:
-          title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (Blockly)'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
           description_short: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
-          lessons:
-            Hour of Code 2015:
-              name: Kod Saatı 2015
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
         mc:
           title: Maynkraft Kod Saatı
           description: Kod bloklarından istifadə edərək Stiv və ya Aleksə bu Maynkraft
-            dünyasında bir macəra yaşadın
+            dünyasında bir macəra yaşadın.
           description_short: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
-          lessons:
-            Hour of Code 2015:
-              name: Kod Saatı 2015
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə
             bu Maynkraft dünyasında bir macəra yaşadın.
         ScienceP3OLPT3:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         algebraPD1:
@@ -665,10 +341,8 @@ az:
               name: Müəllimin idarəetmə paneli
         csp1-2017:
           lessons:
-            Number Systems:
-              name: Say sistemləri
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
+            Binary Numbers:
+              name: İkilik rəqəmlər
             The Internet:
               name: İnternet
         CSDU3-Draft:
@@ -689,21 +363,10 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
-          lessons:
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         allthehiddenthings:
           lessons:
             Game Lab:
@@ -718,14 +381,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
-        kinderTest:
-          lessons:
-            'Bee: Conditionals':
-              name: 'Arı: Şərti ifadələr'
         gradeKinder:
           lessons:
             Events:
@@ -736,12 +391,8 @@ az:
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         grade4:
           lessons:
-            Build a Star Wars Game!:
-              name: Ulduz Müharibələri oyunu düzəldin!
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
-            'New Artist: Functions':
-              name: 'Yeni - Rəssam: Funksiyalar'
             Songwriting:
               name: Mahnı yazma
         grade1:
@@ -752,56 +403,24 @@ az:
               name: dövrlər
         grade5:
           lessons:
-            'Artist: Functions with Parameters':
-              name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
-            'Bee: For Loops':
-              name: 'Arı: For Dövrləri'
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-up:
               name: Yekun
-        ecs-unit2:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-        ecs-unit3:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
-        ecs-unit4:
-          lessons:
-            Teaching Strategies:
-              name: Öyrətmə strategiyası
         grade3:
           lessons:
-            'Artist: Nested Loops':
-              name: 'Rəssam: İç-içə dövrlər'
             Bee Debugging:
               name: Arı Sazlama
             Bounce:
               name: Tullan
-            'Farmer: While Loops':
-              name: 'Fermer: "Hələ ki" dövrləri'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         csd3-2017:
           lessons:
             Functions:
@@ -834,24 +453,14 @@ az:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
-            Welcome!:
-              name: Xoş gəldiniz!
         csp-online-test:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         csp1-support:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         basketball:
           lessons:
             Bounce:
@@ -864,10 +473,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -888,14 +493,9 @@ az:
           lessons:
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
-            Artist Binary:
-              name: 'Rəssam: ikilik sistem'
             Introduction:
               name: Giriş
         coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
@@ -908,95 +508,51 @@ az:
             Conditionals:
               name: Şərti ifadələr
         coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
             Introduction:
               name: Giriş
-        classic-hoc-impact-study:
-          description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
-            öyrənməyə cəhd edin!
-          lessons:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
-        hoc-impact-study:
-          description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
-            öyrənməyə cəhd edin!
-          lessons:
-            Hour of Code 2013:
-              name: Kod Saatı 2013
         sports:
           lessons:
             Sports:
               name: İdman
         2016_sciencePD-phase2b:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         2016_sciencePD_phase2b:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csp3-support:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         csp4-support:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
         sciencepd4:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         science-pd-ol-pt-5:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Binary:
               name: İkilik
         sciencepd5:
           lessons:
-            Welcome!:
-              name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         csp5-support:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
-            practice:
-              display_name: Öyrədici proqramlar
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Məzmun
         csd6-draft:
           lessons:
             Lists:
@@ -1043,6 +599,10 @@ az:
               name: Şərti ifadələr
             Functions:
               name: Funksiyalar
+        csd5-2017:
+          lessons:
+            Keeping Data Secret:
+              name: Məlumatlar Gizli Saxlanır
         csd3-old:
           lessons:
             Functions:
@@ -1109,8 +669,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
@@ -1118,72 +676,47 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp2-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp3-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp4-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp5-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd1-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd6-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd5-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd4-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd3-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd2-dlp:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         express-2017:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Introduction:
               name: Giriş
@@ -1199,8 +732,6 @@ az:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
-            'Programming: Star Wars':
-              name: 'Proqramlaşdırma: Ulduz Müharibələri'
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -1223,14 +754,9 @@ az:
               name: Giriş
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
-            Artist Binary:
-              name: 'Rəssam: ikilik sistem'
             Building a Foundation:
               name: Təməl qurmaq
         new-express:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Introduction:
               name: Giriş
@@ -1380,109 +906,77 @@ az:
               name: Giriş
         csp1-2018:
           lessons:
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
-            Number Systems:
-              name: Say sistemləri
+            Binary Numbers:
+              name: İkilik rəqəmlər
             The Internet:
               name: İnternet
+        csd5-2018:
+          lessons:
+            Keeping Data Secret:
+              name: Məlumatlar Gizli Saxlanır
         csd1-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd2-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd3-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd4-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd5-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd6-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp1-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp2-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp3-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp4-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp5-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp-create-dlp-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csd-novice-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
-            Friday:
-              name: Cümə
-            Monday:
-              name: Bazar ertəsi
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
@@ -1490,19 +984,13 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
-            Monday:
-              name: Bazar ertəsi
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
@@ -1512,8 +1000,6 @@ az:
               name: Stevie və Böyük Layihə
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
-            'Programming: Star Wars':
-              name: 'Proqramlaşdırma: Ulduz Müharibələri'
             Move It, Move It:
               name: Hərəkət et
             'Persistence & Frustration: Stevie and the Big Project':
@@ -1522,8 +1008,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         frozen-2018:
           lessons:
             Artist:
@@ -1630,8 +1114,6 @@ az:
           lessons:
             Relay Programming:
               name: Estafet proqramlaşdırması
-            Artist Binary:
-              name: 'Rəssam: ikilik sistem'
             Internet:
               name: İnternet
             Dance Party:
@@ -1640,8 +1122,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             'null':
               name: boş
@@ -1706,6 +1186,10 @@ az:
               name: Şərti ifadələr
             Functions:
               name: Funksiyalar
+        csd5-2019:
+          lessons:
+            Keeping Data Secret:
+              name: Məlumatlar Gizli Saxlanır
         csd6-2019:
           lessons:
             Functions with Parameters:
@@ -1725,10 +1209,8 @@ az:
               name: Anketlər
         csp1-2019:
           lessons:
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
-            Number Systems:
-              name: Say sistemləri
+            Binary Numbers:
+              name: İkilik rəqəmlər
             The Internet:
               name: İnternet
         csp1-pilot:
@@ -1736,10 +1218,8 @@ az:
             required:
               display_name: Yekun
           lessons:
-            Number Systems:
-              name: Say sistemləri
-            Sending Binary Messages:
-              name: İkilik mesajların göndərilməsi
+            Binary Numbers:
+              name: İkilik rəqəmlər
         time4csdemo:
           lessons:
             Building a Foundation:
@@ -1824,8 +1304,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
@@ -1833,8 +1311,6 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
           lessons:
             Wrap Up:
               name: Yekun
@@ -1852,8 +1328,6 @@ az:
               name: Funksiyalar
         csp3-pilot:
           lesson_groups:
-            content:
-              display_name: Məzmun
             required:
               display_name: Yekun
         csl-vn:
@@ -1866,66 +1340,44 @@ az:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
               display_name: Yekun
-            content:
-              display_name: Məzmun
         csp2-pilot:
           lesson_groups:
-            content:
-              display_name: Məzmun
             required:
               display_name: Yekun
         peru-2019:
@@ -1934,8 +1386,6 @@ az:
               name: Giriş
         csp6-pilot:
           lesson_groups:
-            content:
-              display_name: Məzmun
             required:
               display_name: Yekun
         dance-2019:
@@ -1946,6 +1396,8 @@ az:
           lessons:
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
+            Planning:
+              name: Planlama
             Loops:
               name: dövrlər
             Conditionals:
@@ -2020,6 +1472,10 @@ az:
               display_name: Siyahılar
             csp_loops:
               display_name: dövrlər
+        csd5-2020:
+          lessons:
+            Keeping Data Secret:
+              name: Məlumatlar Gizli Saxlanır
         csd6-2020:
           lessons:
             Functions with Parameters:
@@ -2045,6 +1501,8 @@ az:
           lessons:
             'Programming: Happy Maps':
               name: Şən xəritələr
+            Safety in My Online Neighborhood:
+              description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
         courseb-2020:
           lesson_groups:
             csf_digcit:
@@ -2091,8 +1549,6 @@ az:
               name: Rəqəmsal vətəndaşlıq
             Dance Party:
               name: Rəqs şənliyi
-            Be A Super Digital Citizen:
-              name: Super bir rəqəmsal vətəndaş olun
         coursee-2020:
           lesson_groups:
             csf_digcit:
@@ -2130,10 +1586,10 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
-        csp-march-virtual:
+        csp1-2020:
           lessons:
-            Wrap up:
-              name: Yekun
+            Binary Numbers:
+              name: İkilik rəqəmlər
         jess-test-script:
           lessons:
             Tools:
@@ -2143,9 +1599,6 @@ az:
             Variables:
               name: dəyişənlər
         virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: Məzmun
           lessons:
             Functions:
               name: Funksiyalar
@@ -2177,41 +1630,22 @@ az:
               name: Şərti ifadələr
             Functions:
               name: Funksiyalar
-          lesson_groups:
-            csd3_1:
-              display_name: Məzmun
-            csd3_2:
-              display_name: Məzmun
-            cspSurvey:
-              display_name: Məzmun
         ui-test-script-in-course-2017:
           lessons:
             Lesson:
               name: Dərs
-          lesson_groups:
-            lg_1:
-              display_name: Məzmun
         ui-test-script-in-course-2019:
           lessons:
             Lesson:
               name: Dərs
-          lesson_groups:
-            lg_1:
-              display_name: Məzmun
         ui-test-versioned-script-2017:
           lessons:
             Lesson:
               name: Dərs
-          lesson_groups:
-            lg_1:
-              display_name: Məzmun
         ui-test-versioned-script-2019:
           lessons:
             Lesson:
               name: Dərs
-          lesson_groups:
-            lg_1:
-              display_name: Məzmun
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -2224,12 +1658,6 @@ az:
               name: F Kursu
             csf:
               name: Kompüter Elmlərinin əsasları
-        ml-playground:
-          lessons:
-            lesson14:
-              name: Dərs 14
-            lesson15:
-              name: Dərs 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -2250,11 +1678,21 @@ az:
             Functions:
               key: Funksiyalar
               name: Funksiyalar
+        csd5-2021:
+          lessons:
+            Keeping Data Secret:
+              key: Məlumatlar Gizli Saxlanır
+              name: Məlumatlar Gizli Saxlanır
         csd6-2021:
           lessons:
             Functions with Parameters:
               key: Parametrli funksiyalar
               name: Parametrli funksiyalar
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: İkilik rəqəmlər
+              name: İkilik rəqəmlər
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2271,6 +1709,8 @@ az:
               display_name: dövrlər
         coursea-2021:
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
             'Programming: Happy Maps':
               name: Şən xəritələr
           lesson_groups:
@@ -2317,10 +1757,6 @@ az:
               name: Rəqs şənliyi
             'Unplugged: Binary':
               name: İkilik təsvirlər
-            Artist Binary:
-              key: 'Rəssam: ikilik sistem'
-            Be A Super Digital Citizen:
-              key: Super bir rəqəmsal vətəndaş olun
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2340,8 +1776,6 @@ az:
               key: Şərti ifadələr
             'Functions: Songwriting':
               name: Mahnı yazma
-            lesson-4:
-              name: Super bir rəqəmsal vətəndaş olun
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -2395,28 +1829,17 @@ az:
               display_name: dəyişənlər
             variables:
               display_name: dəyişənlər
-        ai-unit-pilot:
+        csd5-preview-2021:
           lessons:
-            lesson14:
-              name: Dərs 14
-            lesson15:
-              name: Dərs 15
-            lesson17:
-              name: Dərs 15
+            Keeping Data Secret:
+              key: Məlumatlar Gizli Saxlanır
+              name: Məlumatlar Gizli Saxlanır
         csa1-pilot:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Məzmun
             lessonGroup-4:
               display_name: Yoxla
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Məzmun
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Giriş
             Loops:
               key: dövrlər
               name: dövrlər
@@ -2437,12 +1860,21 @@ az:
               display_name: Giriş
             Introduction:
               display_name: Giriş
-        aiml-2021:
-          lessons:
-            lesson15:
-              name: Dərs 15
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
               key: Kompüter Elmləri Əsasları.
               name: Kompüter Elmləri Əsasları.
+            Planning:
+              key: Planlama
+              name: Planlama
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-3:
+              name: Dərs Planları və Resurslar
+            lesson-9:
+              name: Müəllimlərin icması
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Resurslar

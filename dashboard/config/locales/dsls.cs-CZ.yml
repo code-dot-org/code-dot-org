@@ -2983,7 +2983,8 @@ cs-CZ:
         - text: Umělec nakreslí čtverec.
           correct: true
           feedback: Správně!
-        - {}
+        - text: Umělec nakreslí pětiúhelník.
+          feedback: Nesprávně. Umělec nakreslí čtverec.
         questions:
         - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
             na "Spustit"?
@@ -3003,7 +3004,7 @@ cs-CZ:
         - {}
         - correct: true
         - correct: true
-        - {}
+        - text: Scrat se nepohne z prvního bloku.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2021:
@@ -3015,7 +3016,8 @@ cs-CZ:
           feedback: Správně!
         - text: Ptáček narazí do TNT.
           feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
-        - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+        - text: Ptáček narazí do stěny.
+          feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
         questions:
         - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
             na "Spustit"?
@@ -3026,7 +3028,7 @@ cs-CZ:
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
-        - {}
+        - text: BB-8 se pohne jen o tři políčka.
         questions:
         - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict2_2021:
@@ -3040,7 +3042,8 @@ cs-CZ:
         - text: BB-8 sesbírá všechen kovový šrot bez problémů.
           feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 se po prvním cyklu přesune v nesprávném směru.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         questions:
         - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
@@ -3073,7 +3076,7 @@ cs-CZ:
         - correct: true
         - {}
         questions:
-        - {}
+        - text: Přečtěte si kód a pak udělejte předpověď.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -3103,12 +3106,21 @@ cs-CZ:
         - {}
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Obě letadla se pohnou o jedno pole podél mřížky a poté se zastaví.
+          feedback: Nesprávně. Tyto sprajty mají „chování“, které bude pokračovat,
+            dokud jim nebude řečeno, aby se zastavily.
+        - text: Obě letadla se začnou pohybovat a nezastaví se.
+          correct: true
+          feedback: Správně! Tato chování letadlům řeknou, aby se začala pohybovat
+            a pokračovala.
+        - text: Jedno letadlo se pohne jako první a to druhé se pohne později.
+          feedback: Nesprávně. Každý blok kódu v Laboratoři sprajtů bude spuštěn okamžitě
+            po dalším.
+        - text: Letadla havarují.
+          feedback: Nesprávně. Letadla nejsou umístěna způsobem, při kterém by se
+            dotýkala.
         questions:
-        - {}
+        - text: Přečtěte si kód a pak udělejte předpověď.
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -3133,8 +3145,459 @@ cs-CZ:
         - text: Laurel posbírá všechen poklad.
           feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
             způsobí chybu.
-        - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+        - text: Laurel pomocí tohoto kódu posbírá 1 kousek pokladu.
+          feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
             způsobí chybu.
         questions:
         - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
             spustí?
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Podmínky s kartami
+
+          Zahraj si karetní hru a vytvoř pravidla jako "Když si vytáhnu červenou kartu, získám bod" nebo "Když si vytáhnu černou kartu, ty získáš bod."
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Programování na papíře
+
+          Napiš algoritmy, které mohou tvoji spolužáci využít na kreslení obrázků.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Šťastné mapy
+
+          Vytvoř algoritmus, který dostane postavu přes bludiště.
+      OPD-K5 CS Courses:
+        markdown: "# Plánování > Začínáme na Code.org\n\n\n## Krok 1: Vyberte si kurz\nVšechny
+          naše kurzy -- od předškoláků po vysokoškoláky -- jsou uvedeny v našem **[katalogu
+          kurzů](https://studio.code.org/courses)**. Jestliže chcete najít lekce základů
+          počítačových věd, které jste praktikovali, jděte na naši **[základní stránku](https://code.org/educate/curriculum/elementary-school)**
+          a přesuňte se dolů do části „Kurzy“. Všechny naše kurzy jsou bezplatné.
+          Chatujte s kolegy ve své škole a určete, jak lze osnovy kurzu integrovat
+          do množství různých předmětů.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Krok 2: Založte si svou třídní sekci\nZaložte si třídní sekci, abyste mohli
+          sledovat, jaký pokrok studenti udělali, tisknout svým studentům přihlašovací
+          karty, vést jim účty a tisknout certifikáty, které si po skončení kurzu
+          mohou vzít domů. Kliknutím na tento odkaz můžete **[sledovat stručné video,](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          které Vám ukáže, jak založit Vaši první třídu počítačových věd na Code.org.
+          Tyto kroky najdete také v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Krok 3: Přidělte kurz své sekci\nKlikněte do kurzu, který vyučujete -- měla
+          by se Vám zobrazit obrazovka podobná níže uvedené. Pak můžete kliknout na
+          „Přidělit kurz“ a přidělit ten kurz jedné z Vašich sekcí. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Krok 4: Zahajte výuku! \nVše, co potřebujete k uvedení koncepcí počítačové
+          vědy do Vaší třídy, je jedna jediná lekce. Až u svých studentů zaznamenáte
+          nadšení pro počítačovou vědu, přikročte dále k zavedení denních plánů lekcí,
+          které budou pro Vaše studenty vodítkem, offline aktivit, které můžete dělat
+          bez počítače a fór na kontakt s ostatními učiteli.\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Začínáme na Code.org\n\n\n## Krok 1: Vyberte si kurz\nVšechny
+          naše kurzy -- od předškoláků po vysokoškoláky -- jsou uvedeny v našem **<a
+          href=\"https://studio.code.org/courses\" target=\"blank\" \n\nrel=\"noopener
+          noreferrer\">katalogu kurzů</a>**. Všechny naše kurzy jsou k dispozici bezplatně.
+          Chatujte s kolegy ve Vaší škole a společně určete, jak lze osnovy ve vaší
+          škole integrovat s různými předměty.\n\n<table style=\"width:100%; border-style:none;\">\n
+          \ <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b>Kurz A</b><br/>\n      <i>Mateřská škola</i>\n
+          \   </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        Kurz B<br/>\n        <i>První třída</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        Kurz C<br/>\n        <i>Druhá třída</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        Kurz D<br/>\n        <i>Třetí třída</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        Kurz E<br/>\n        <i>Čtvrtá třída</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        Kurz F<br/>\n        <i>Pátá třída</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 lekcí, ~12 hodin na
+          dokončení</td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">12 lekcí, ~12 hodin na dokončení</td>\n    <td
+          style=\"background-color:#d2da0e; color:black; border-style:none; vertical-align:
+          text-top;\"\">18 lekcí, ~18 hodin na dokončení</td>\n    <td style=\"background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lekcí,
+          ~18 hodin na dokončení</td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lekcí, ~18-20 hodin
+          na dokončení</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lekcí, ~20-22 hodin
+          na dokončení</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Koncepce</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Digitální občanství</li>\n        <li>Posloupnosti</li>\n
+          \       <li>Cykly</li>\n        <li>Události</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Digitální občanství</li>\n        <li>Posloupnosti</li>\n        <li>Cykly</li>\n
+          \       <li>Vliv výpočetní techniky</li>\n        <li>Události</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Digitální občanství</li>\n        <li>Posloupnosti</li>\n        <li>Binární</li>\n
+          \       <li>Cykly</li>\n        <li>Události</li>\n        <li>Data</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Posloupnosti</li>\n        <li>Události</li>\n        <li>Cykly</li>\n
+          \       <li>Podmínky</li>\n        <li>Binární</li>\n        <li>Digitální
+          občanství</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Sprajty</li>\n        <li>Digitální
+          občanství</li>\n        <li>Dopad počítačových věd</li>\n        <li>Vnořené
+          cykly</li>\n        <li>Funkce</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#c9c1e9;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Proměnné</li>\n        <li>Data</li>\n
+          \       <li>Cykly „For“</li>\n        <li>Internet</li>\n        <li>Sprajty</li>\n
+          \       <li>Digitální občanství</li>\n        </ul>\n    </td>\n  <tr>\n
+          \ \t<td style=\"background-color:#f9cb9c\">\n     <a href=\"https://studio.code.org/s/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Zobrazit
+          kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>Plány
+          lekcí</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Zobrazit kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Plány lekcí</button>\n
+          \     </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Zobrazit kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Plány lekcí</button>\n
+          \     </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Zobrazit kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Plány lekcí</button>\n
+          \     </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a
+          href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Zobrazit kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Plány lekcí</button>\n
+          \     </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Zobrazit kurz</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Plány lekcí</button>\n
+          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## Krok 2: Založte
+          si svou třídní sekci\nZaložte si třídní sekci, abyste mohli sledovat, jaký
+          pokrok studenti udělali, tisknout svým studentům přihlašovací karty, vést
+          jim účty a tisknout certifikáty, které si po skončení kurzu mohou vzít domů.
+          Kliknutím na tento odkaz můžete **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">sledovat stručné video,</a>**
+          které Vám ukáže, jak založit Vaši první třídu počítačových věd na Code.org.
+          Tyto kroky najdete také v **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">tomto článku podpory</a>**.\n\n***\n##
+          Krok 3: Přidělte kurz své sekci\nKlikněte na kurz, který vyučujete. Pak
+          můžete kliknout na „Přidělit kurz“ a přidělit tento kurz jedné ze svých
+          sekcí.\n***\n## Krok 4: Zahajte výuku! \nVše, co potřebujete k uvedení koncepcí
+          počítačové vědy do Vaší třídy, je jedna jediná lekce. Až u svých studentů
+          zaznamenáte nadšení pro počítačovou vědu, přikročte dále k zavedení denních
+          plánů lekcí, které budou pro Vaše studenty vodítkem, offline aktivit, které
+          můžete dělat bez počítače a fór na kontakt s ostatními učiteli.\n"
+      OPD-K5 CS Courses_dani:
+        markdown: "# Plánování > Začínáme na Code.org\n\n\n## Krok 1: Vyberte si kurz\nVšechny
+          naše kurzy -- od předškoláků po vysokoškoláky -- jsou uvedeny v našem **[katalogu
+          kurzů](https://studio.code.org/courses)**. Jestliže chcete najít lekce základů
+          počítačových věd, které jste praktikovali, jděte na naši **[základní stránku](https://code.org/educate/curriculum/elementary-school)**
+          a přesuňte se dolů do části „Kurzy“. Všechny naše kurzy jsou bezplatné.
+          Chatujte s kolegy ve své škole a určete, jak lze osnovy kurzu integrovat
+          do množství různých předmětů.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Krok 2: Založte si svou třídní sekci\nZaložte si třídní sekci, abyste mohli
+          sledovat, jaký pokrok studenti udělali, tisknout svým studentům přihlašovací
+          karty, vést jim účty a tisknout certifikáty, které si po skončení kurzu
+          mohou vzít domů. Kliknutím na tento odkaz můžete **[sledovat stručné video,](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          které Vám ukáže, jak založit Vaši první třídu počítačových věd na Code.org.
+          Tyto kroky najdete také v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Krok 3: Přidělte kurz své sekci\nKlikněte do kurzu, který vyučujete -- měla
+          by se Vám zobrazit obrazovka podobná níže uvedené. Pak můžete kliknout na
+          „Přidělit kurz“ a přidělit ten kurz jedné z Vašich sekcí. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Krok 4: Zahajte výuku! \nVše, co potřebujete k uvedení koncepcí počítačové
+          vědy do Vaší třídy, je jedna jediná lekce. Až u svých studentů zaznamenáte
+          nadšení pro počítačovou vědu, přikročte dále k zavedení denních plánů lekcí,
+          které budou pro Vaše studenty vodítkem, offline aktivit, které můžete dělat
+          bez počítače a fór na kontakt s ostatními učiteli.\n"
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Štafetové programování
+
+          Rozdělte se do týmů a spolupracujte, abyste napsali programy, které malují obrázky.
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Postupujte podle algoritmu
+
+          Hrajte hru a zamýšlejte se nad tím, jakých příkazů je potřeba k získání správného výsledku.
+      courseAB_EOC_2021:
+        description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
+      courseB_EOC_2021:
+        description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
+      courseD_EOC_2020:
+        display_name: Projekt na zakončení kurzu
+      courseD_EOC_2021:
+        display_name: Projekt na zakončení kurzu
+      courseD_EOC_examples_2021:
+        display_name: Příklady projektů
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+          feedback: Správně!
+        - text: B
+        - text: C
+        - text: Žádná z uvedených možností.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
+            stiskneš "Spustit"?
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - text: Včela se posune k mraku, ať se děje, co se děje.
+        - text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
+            květina.
+          correct: true
+          feedback: Správně!
+        - text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+        - text: 'Včela nedosáhne na oblak. '
+        questions:
+        - text: Mrak ti blokuje výhled. Mohla by pod ním být ukrytá květina. Pokud
+            je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
+            není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
+            že se stane, když klikneš na tlačítko "Spustit"?
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+          correct: true
+          feedback: Správně!
+        - text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+          feedback: 'Nesprávně. Blok `pokud na květině` umožní včele získat nektar
+            na každé květině a med z každé plástve. '
+        - text: Včela se pokusí získat med z květin i ze včelích pláství.
+          feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
+        - text: Včela se bude snažit získávat med a nektar z květin i z pláství.
+          feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
+        questions:
+        - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
+            zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
+            plástev nebo *jedna* květina.
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - text: Včela se posune vpřed a získá nektar pouze jednou.
+        - text: Včela získá nektar jen ze dvou květů.
+        - text: Včela získá nektar ze všech květů.
+          correct: true
+          feedback: Správně!
+        - text: Včela se otočí nesprávným směrem.
+        questions:
+        - text: Zaměř se na vnořené cykly v kódu. Co se stane, když stiskneš "Spustit"?
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+        - text: '8'
+          correct: true
+          feedback: Správně!
+        - text: '10'
+          feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+        - text: '12'
+          feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+        questions:
+        - text: Zaměř se na následující kód. Kolik medu včela vyrobí, když klikneš
+            na "Spustit"?
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - text: Zahradnice sesbírá všechnu úrodu.
+          feedback: Nesprávně. Není tam žádný kód pro sesbírání dýně.
+        - text: Zahradnice nesesbírá na cestě, po které půjde, žádné plodiny.
+          feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+        - text: Zahradnice sesbírá všechny plodiny kromě dýně.
+          correct: true
+          feedback: Správně!
+        - text: Sklízečka bude sbírat jen dýně.
+          feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+        markdown: |
+          Výhonky v této úloze budou buď kukuřice, nebo salát.
+          <br/>
+        questions:
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - text: Nic. Kód zanechá srovnanou zem.
+          feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+        - text: Kód nechá hromádky úplně nedotčené.
+          correct: true
+          feedback: Správně!
+        - text: Kód nechá díry úplně nedotčené.
+          feedback: Nepsrávně. Cyklus `dokud` zvládne cyklus jakékoli velikosti, ale
+            není tam žádný kód, který by odstranil hlínu z hromady.
+        - text: Tento kód ponechá poslední díru nedotčenou.
+          feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+        questions:
+        - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - text: Nic se nestane.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka nikdy nepřestane odstraňovat hlínu.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        - text: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane.
+          correct: true
+          feedback: Správně!
+        - text: Farmář odstraní hlínu jen jednou.
+          feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - text: 'Zombie mine správnou cestu a bude navždy chodit tam a zpět. '
+          correct: true
+          feedback: Správně!
+        - text: Zombie se dostane ke slunečnici.
+          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
+        - feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
+            a zpět. '
+        - text: Zombie se zarazí na konci cesty vpřed.
+          feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
+            tam a zpět. '
+        questions:
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - text: Pták se nebude vůbec hýbat.
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
+            otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+        - text: Ptáček se dostane k prasátku.
+          correct: true
+          feedback: Správně!
+        - text: 'Pták se posune vpřed a narazí do TNT. '
+          feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
+            pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+        - text: Pták se otáčí nesprávným směrem.
+        questions:
+        - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Příklady projektů
+
+          Chystáte se začít svůj konečný projekt. Než začnete, stravte určitou dobu tím, že se podíváte na příklady projektů.
+
+
+          | Náhodná rychlost na odraz (košíková) | Množení přepadových jednotek (Hvězdné války) |
+          |---|---|
+          | [![Náhodná rychlost na odraz (košíková)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Náhodná rychlost na odraz (košíková)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Množení přepadových jednotek (Hvězdné války)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Množení přepadových jednotek (Hvězdné války)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Míč mění při odrazu rychlost! | Vyhněte se přepadovým oddílům, nebo se budou množit! |
+
+
+          | Panic! na diskotéce (Taneční večírek) | Plážová scéna (Umělec) |
+          |---|---|
+          | [![Vzor (Umělec)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Vzor (Umělec)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Vločkové květiny (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Vločkové květiny (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Vaši záložní tanečníci a tanečnice si přehazují pohyby! | Zkuste do této scény přidat další barvu a pozadí! |
+
+      courseE_EOC_2020:
+        display_name: Projekt na zakončení kurzu
+      courseE_EOC_2021:
+        display_name: Projekt na zakončení kurzu
+      courseE_EOC_examples_2021:
+        display_name: Projekt na zakončení kurzu
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - text: Nic se nestane.
+          feedback: Nesprávně. Vetřelec se začne pohybovat nahoru a dolů po obrazovce.
+        - text: Vetřelec bude patrolovat zprava doleva.
+          feedback: Nesprávně. Vetřelec se začne pohybovat nahoru a dolů po obrazovce.
+        - text: Vetřelec se začne pohybovat po obrazovce nahoru a dolů.
+          correct: true
+          feedback: Správně!
+        - text: Vetřelec zmizí z horní části obrazovky.
+          feedback: Nesprávně. Modrý vetřelec se začne pohybovat nahoru a dolů po
+            obrazovce.
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - text: Zahradnice posbírá dvě dýně.
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
+          feedback: Správně!
+        - text: Farmářka sklidí kukuřici.
+        questions:
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - text: Nic se nestane.
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        - text: Stepní běžec se přesune nahoru na obrazovku
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        - text: Stepní běžec se začne převalovat
+          correct: true
+          feedback: Správně!
+        - text: 'Stepní běžec bude blikat: zapnutý, vypnutý.'
+          feedback: Nesprávně. Stepní běžec se začne převalovat
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      courseExpress_EOC_2020:
+        display_name: Projekt na zakončení kurzu
+      courseF_EOC_2020:
+        display_name: Projekt na zakončení kurzu
+      courseF_EOC_2021:
+        display_name: Projekt na zakončení kurzu
+      courseF_EOC_examples_2021:
+        display_name: Projekt na zakončení kurzu
+      courseF_EOC_samples_2021:
+        display_name: Projekt na zakončení kurzu
+      courseF_intro_apps:
+        description: Vítejte v Základech počítačových věd! Tyto projekty byly vytvořeny
+          s Laboratoří sprajtů. Nyní je vyzkoušejte, abyste viděli, co všechno je
+          možné. Ke konci tohoto kurzu budete schopni dělat své vlastní projekty jako
+          je tento... a další!
+        display_name: Aplikace Laboratoře sprajtů
+        teacher_markdown: |
+          # Přehled úrovní výběru
+          Úrovně výběru poskytují nabídku přídavných úrovní, které mohou studenti absolvovat. Studenti musí absolvovat alespoň jednu ze zde uvedených podúrovní, ale vypracovat jich mohou tolik, kolik budou (nebo budete) chtít.
+
+          The choices here take students to sample apps that they can explore. Tato aktivita je určena ke koordinaci s pracovním listem „Zkoumání aplikací“, nacházejícím se v [plánu lekcí](.././).
+      courseF_sprites_practice:
+        display_name: Procvičování sprajtů
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+          feedback: Správně!
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Mé online sousedství
+
+          ## Jak se bezpečně pohybovat online?
+      express_EOC_2021:
+        display_name: Projekt na zakončení kurzu
+      express_EOC_examples_2021:
+        display_name: Příklady projektů
