@@ -8,20 +8,36 @@ az:
       Red: Qırmızı
       actor: personaj
       age: yaş
+      animal1score: heyvan1xal
+      animal1speed: heyvan1sürət
+      animal2score: heyvan2xal
+      animal2speed: 'heyvan2sürət
+
+'
       answer: cavab
+      armlength: qoluzunluğu
       binary: ikilik
       birds: quşlar
       bit: bit
       blue1: mavi1
       blue2: mavi2
+      bodylength: bədənuzunluğu
+      buttonHeight: düyməHündürlüyü
+      buttonWidth: düyməEni
+      cat_score: pişik_xalı
+      cat_speed: pişik_sürəti
       cats: pişiklər
       choice: seçim
       circ: dövrə
+      codeName: kodAdı
       counter: sayğac
       direction: istiqamət
       dogs: itlər
+      dragons: əjdahalar
+      enemy_speed: düşmən_sürəti
       energy: enerji
       firstName: Ad
+      footlength: ayaquzunluğu
       gather: toplamaq
       green1: yaşıl1
       green2: yaşıl2
@@ -32,8 +48,11 @@ az:
       left: sola
       length: uzunluq
       level: səviyyə
+      meal: yemək
+      myName: mənimAdım
       name: ad
       nectar: nektar
+      nectars: nektar
       planet: planet
       points: xallar
       random: təsadüfi
@@ -43,10 +62,16 @@ az:
       repetitions: təkrarlar
       right: sağa
       score: xal
+      score1: xal1
+      score2: xal2
+      screenHeight: ekranHündürlüyü
+      screenWidth: ekranGenişliyi
       shout: bağırmaq
       sides: tərəflər
       size: ölçü
       speed: sürət
+      startX: başlaX
+      startY: başlaY
       variable: dəyişən
       wizard: sehrbaz
       x: x
