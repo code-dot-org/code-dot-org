@@ -1,17 +1,10 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import {commentShape} from './commentShape';
 
 export default class Comment extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired,
-    timestampString: PropTypes.string.isRequired,
-    isResolved: PropTypes.bool,
-    isFromTeacher: PropTypes.bool,
-    isFromProjectOwner: PropTypes.bool,
-    isFromOlderVersionOfProject: PropTypes.bool
+    comment: commentShape.isRequired
   };
 
   state = {
@@ -19,11 +12,13 @@ export default class Comment extends Component {
   };
 
   renderName = () => {
+    const {name, isFromTeacher} = this.props.comment;
+
     const teacherCommentSuffix = ' (only visible to you)';
     return (
       <span>
-        <span style={styles.name}>{this.props.name}</span>
-        {this.props.isFromTeacher && (
+        <span style={styles.name}>{name}</span>
+        {isFromTeacher && (
           <span style={styles.teacherNameSuffix}>{teacherCommentSuffix}</span>
         )}
       </span>
@@ -32,12 +27,12 @@ export default class Comment extends Component {
 
   render() {
     const {
-      comment,
+      commentText,
       timestampString,
       isResolved,
       isFromProjectOwner,
       isFromOlderVersionOfProject
-    } = this.props;
+    } = this.props.comment;
 
     return (
       <div
@@ -71,7 +66,7 @@ export default class Comment extends Component {
               styles.olderVersionCommentBackgroundColor)
           }}
         >
-          {comment}
+          {commentText}
         </div>
       </div>
     );

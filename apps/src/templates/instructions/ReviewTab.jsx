@@ -2,20 +2,11 @@ import React, {Component} from 'react';
 //import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
+import {demoComments} from './codeReview/commentShape';
 import CommentEditor from './codeReview/CommentEditor';
 
-// const commentShape = {
-//   id: PropTypes.number.isRequired,
-//   name: PropTypes.string.isRequired,
-//   comment: PropTypes.string.isRequired,
-//   timestampString: PropTypes.string.isRequired,
-//   isResolved: PropTypes.bool,
-//   isFromTeacher: PropTypes.bool,
-//   isFromProjectOwner: PropTypes.bool,
-//   isFromOlderVersionOfProject: PropTypes.bool
-// };
-
 export default class ReviewTab extends Component {
+  // Once we have real comments
   // static propTypes = {
   //   comments: PropTypes.arrayOf(commentShape)
   // };
@@ -46,8 +37,13 @@ export default class ReviewTab extends Component {
     return (
       <div style={styles.reviewsContainer}>
         {this.renderReadyForReviewCheckbox()}
-        {demoComments.map(commentProps => {
-          return <Comment {...commentProps} />;
+        {demoComments.map(comment => {
+          return (
+            <Comment
+              comment={comment}
+              key={`code-review-comment-${comment.id}`}
+            />
+          );
         })}
         <CommentEditor />
       </div>
@@ -70,56 +66,3 @@ const styles = {
     margin: '10px 0'
   }
 };
-
-const demoComments = [
-  {
-    name: 'Another Student',
-    comment:
-      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-    timestampString: '2020/01/01 at 9:30 AM',
-    isResolved: false,
-    isFromTeacher: false,
-    isFromProjectOwner: false,
-    isFromOlderVersionOfProject: false
-  },
-  {
-    name: 'Older Version',
-    comment:
-      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-    timestampString: '2020/01/01 at 9:30 AM',
-    isResolved: true,
-    isFromTeacher: false,
-    isFromProjectOwner: false,
-    isFromOlderVersionOfProject: true
-  },
-  {
-    name: 'Resolved Comment',
-    comment:
-      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-    timestampString: '2020/01/01 at 9:30 AM',
-    isResolved: true,
-    isFromTeacher: false,
-    isFromProjectOwner: false,
-    isFromOlderVersionOfProject: false
-  },
-  {
-    name: 'Mr. Teacher',
-    comment:
-      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-    timestampString: '2020/01/01 at 9:30 AM',
-    isResolved: false,
-    isFromTeacher: true,
-    isFromProjectOwner: false,
-    isFromOlderVersionOfProject: false
-  },
-  {
-    name: 'Project Owner',
-    comment:
-      "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-    timestampString: '2020/01/01 at 9:30 AM',
-    isResolved: false,
-    isFromTeacher: false,
-    isFromProjectOwner: true,
-    isFromOlderVersionOfProject: false
-  }
-];
