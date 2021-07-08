@@ -61,6 +61,7 @@ tr:
       name: adı
       nectar: nektar
       padYOffset: padYOffset
+      planet: gezegen
       player_score: player_score
       points: Puanlar
       punchLine: punchLine
