@@ -141,7 +141,9 @@ class Script < ApplicationRecord
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.unit_directory
@@ -1548,6 +1550,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
