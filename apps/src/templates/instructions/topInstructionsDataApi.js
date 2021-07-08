@@ -37,3 +37,14 @@ export function incrementVisitCount(latestFeedbackId, token) {
     headers: {'X-CSRF-Token': token}
   });
 }
+
+export function getCodeReviewCommentsForProject(channelId, projectVersion) {
+  return $.ajax({
+    url: `/code_review_comments/project_comments`,
+    method: 'GET',
+    data: {
+      channel_id: channelId,
+      project_version: projectVersion
+    }
+  });
+}

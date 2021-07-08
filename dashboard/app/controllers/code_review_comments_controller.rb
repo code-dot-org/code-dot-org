@@ -45,28 +45,42 @@ class CodeReviewCommentsController < ApplicationController
   def project_comments
     authorize! :project_comments, CodeReviewComment.new, @project_owner
 
+    # To do: get project version passed as param
     @project_comments = CodeReviewComment.where(
-      storage_app_id: @storage_app_id,
-      project_version: params[:project_version]
-    )
+      storage_app_id: @storage_app_id
+    ).order(created_at: :desc)
 
-    render json: @project_comments
+    serialized_comments = @project_comments.map do |comment|
+      {
+        id: comment.id,
+        name: comment.commenter&.name,
+        commentText: comment.comment,
+        timestampString: comment.created_at,
+        isResolved: !!comment.is_resolved,
+        isFromTeacher: !!comment.is_from_teacher,
+        isFromCurrentUser: !!(comment.commenter == current_user),
+        isFromOlderVersionOfProject: false
+      }
+    end
+
+    render json: serialized_comments
   end
 
   private
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
+    puts params
     @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 
-  # TO DO: modify permit_params to handle other parameters (eg, section ID)
-  def code_review_comments_params
-    params.permit(
-      :project_version,
-      :comment,
-      :is_resolved
-    )
-  end
+  # # TO DO: modify permit_params to handle other parameters (eg, section ID)
+  # def code_review_comments_params
+  #   params.permit(
+  #     :project_version,
+  #     :comment,
+  #     :is_resolved
+  #   )
+  # end
 end
