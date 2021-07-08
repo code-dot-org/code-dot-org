@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 19:42:39 UTC",
+    "serialized_at": "2021-07-08 01:08:16 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
@@ -138,6 +138,28 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021",
+        "activity_section.key": "6c6ab391-027f-4777-bd36-0816ca9bb7fa"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -168,6 +190,18 @@
         "level.key": "SP-VPL-21-mod1-welcome-vid",
         "script_level.level_keys": [
           "SP-VPL-21-mod1-welcome-vid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021",
+        "activity_section.key": "6c6ab391-027f-4777-bd36-0816ca9bb7fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",

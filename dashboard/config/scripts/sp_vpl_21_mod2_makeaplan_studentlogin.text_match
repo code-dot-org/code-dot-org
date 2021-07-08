@@ -1,0 +1,15 @@
+name 'SP-VPL_21-mod2-MakeAPlan-StudentLogIn'
+title 'Make a plan: Student log ins'
+content1 'Thinking through how you want your students to access the course is an important part of planning for your first class. '
+
+
+markdown <<MARKDOWN
+## Make a plan for how you will have students log into your Code.org course. 
+
+#### Consider the following when making your plan:
+
+* Do your students already have Code.org accounts? 
+* What type of log in will your students use? 
+* How will students join your class? 
+* Will you have printed instructions? Will the instructions be posted somewhere? 
+MARKDOWN

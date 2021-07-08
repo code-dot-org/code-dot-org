@@ -7786,6 +7786,10 @@ en:
               name: CSD U2 U3 post-survey 2021
             CSD U4 U5 U6 post-survey 2021:
               name: CSD U4 U5 U6 post-survey 2021
+            CSP pre-survey 2021:
+              name: CSP pre-survey 2021
+            CSP post-survey 2020:
+              name: CSP post-survey 2020
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -22654,8 +22658,8 @@ en:
               description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             lesson-2:
               name: Traversing a 2D Array by Rows
-              description_student: 
-              description_teacher: 
+              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
             lesson-3:
               name: Traversing a 2D Array by Columns
             lesson-4:
@@ -23452,16 +23456,28 @@ en:
           description_short: ''
           description: "This unit is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
         self-paced-pl-csd3-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Overview of CS Discoveries
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Overview of CS Discoveries
           name: self-paced-pl-csd3-2021
           title: 'Module 3: Overview of CS Discoveries'
           description_audience: ''
           description_short: ''
           description: "This unit will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this content will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum \n* Become familiar with the programming environments used within CS Discoveries \n* Consider how to best implement CS Discoveries based on your context \n\n**Suggested Time:** 30 minutes"
         self-paced-pl-csd4-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Guidance for teaching CS Discoveries
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Guidance for teaching CS Discoveries
           name: self-paced-pl-csd4-2021
           title: 'Module 4: Guidance for Teaching CS Discoveries'
           description_audience: ''
