@@ -51,10 +51,6 @@ export class TeacherFeedback extends Component {
 
     const {latestFeedback} = this.props;
 
-    this.isAwaitingTeacherReview =
-      latestFeedback?.review_state === ReviewStates.keepWorking &&
-      latestFeedback?.student_updated_since_feedback;
-
     this.state = {
       comment: latestFeedback?.comment || '',
       performance: latestFeedback?.performance || null,
@@ -89,12 +85,16 @@ export class TeacherFeedback extends Component {
   // because the teacher could repeatedly leave feedback for the student to
   // keep working, which would have the same review_state value, but should be treated
   // as independent feedbacks.
-  onReviewStateChange = (oldState, newState, isChanged) => {
+  onReviewStateChange = newState => {
+    const oldState = this.getLatestReviewState();
+
     this.setState({
       reviewState: newState,
-      reviewStateUpdated: isChanged
+      reviewStateUpdated: oldState !== newState
     });
+  };
 
+  recordReviewStateUpdated() {
     firehoseClient.putRecord(
       {
         study: 'teacher_feedback',
@@ -104,13 +104,13 @@ export class TeacherFeedback extends Component {
           student_id: this.studentId,
           script_id: this.props.serverScriptId,
           level_id: this.props.serverLevelId,
-          old_state: oldState,
-          new_state: newState
+          old_state: this.getLatestReviewState(),
+          new_state: this.state.reviewState
         })
       },
       {includeUserId: true}
     );
-  };
+  }
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
@@ -143,6 +143,9 @@ export class TeacherFeedback extends Component {
       headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
+        if (this.state.reviewStateUpdated) {
+          this.recordReviewStateUpdated();
+        }
         this.setState({
           latestFeedback: data,
           reviewStateUpdated: false,
@@ -184,18 +187,27 @@ export class TeacherFeedback extends Component {
     );
   }
 
+  getLatestReviewState() {
+    const {latestFeedback} = this.state;
+    const isAwaitingTeacherReview =
+      latestFeedback?.review_state === ReviewStates.keepWorking &&
+      latestFeedback?.student_updated_since_feedback;
+    const reviewState = isAwaitingTeacherReview
+      ? ReviewStates.awaitingReview
+      : latestFeedback?.review_state;
+    return reviewState || null;
+  }
+
   renderCommentAreaHeaderForTeacher() {
     const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
-    const latestFeedback = this.state.latestFeedback;
 
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
         {keepWorkingEnabled && (
           <EditableReviewState
-            latestReviewState={latestFeedback?.review_state || null}
-            isAwaitingTeacherReview={this.isAwaitingTeacherReview}
-            setReviewState={this.onReviewStateChange}
+            latestReviewState={this.getLatestReviewState()}
+            onReviewStateChange={this.onReviewStateChange}
           />
         )}
       </div>
@@ -203,15 +215,10 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForStudent() {
-    const latestFeedback = this.state.latestFeedback;
-
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <ReadOnlyReviewState
-          latestReviewState={latestFeedback?.review_state || null}
-          isAwaitingTeacherReview={this.isAwaitingTeacherReview}
-        />
+        <ReadOnlyReviewState latestReviewState={this.getLatestReviewState()} />
       </div>
     );
   }
