@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 22:23:09 UTC",
+    "serialized_at": "2021-07-08 20:45:55 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poembot"
@@ -66,7 +66,8 @@
       "position": 1,
       "properties": {
         "description": "In this set of levels, students learn how to make sprites, position them in the playspace, set their size property, and assign them behaviors. ",
-        "name": "Mood Study"
+        "name": "Mood Study",
+        "progression_name": "Choose a Poem"
       },
       "seeding_key": {
         "activity_section.key": "a8170e21-abb6-4308-ab7f-17a05e0929fc",
@@ -83,6 +84,17 @@
         "activity_section.key": "5ee27f74-b768-4c9e-9573-c7c9edf03a00",
         "lesson_activity.key": "981f5b0f-63c5-4215-90d7-d256e9839e85"
       }
+    },
+    {
+      "key": "9c84bf48-f73f-4df4-83f6-7f8c9ca7fa70",
+      "position": 3,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c84bf48-f73f-4df4-83f6-7f8c9ca7fa70",
+        "lesson_activity.key": "981f5b0f-63c5-4215-90d7-d256e9839e85"
+      }
     }
   ],
   "script_levels": [
@@ -92,6 +104,55 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Choose a Poem"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_addPoem"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "a8170e21-abb6-4308-ab7f-17a05e0929fc"
+      },
+      "level_keys": [
+        "poembot_addPoem"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Choose a Poem"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_addEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "a8170e21-abb6-4308-ab7f-17a05e0929fc"
+      },
+      "level_keys": [
+        "poembot_addEffects"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poembot_sprites_make"
+        ],
         "progression": "Sprites & Behaviors"
       },
       "named_level": false,
@@ -110,11 +171,14 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_positioning"
+        ],
         "progression": "Sprites & Behaviors"
       },
       "named_level": false,
@@ -133,11 +197,14 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_moreSprites"
+        ],
         "progression": "Sprites & Behaviors"
       },
       "named_level": false,
@@ -156,11 +223,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_properties"
+        ],
         "progression": "Sprites & Behaviors"
       },
       "named_level": false,
@@ -179,11 +249,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poembot_sprites_behaviors"
+        ],
         "progression": "Sprites & Behaviors"
       },
       "named_level": false,
@@ -200,9 +273,56 @@
       "level_keys": [
         "poembot_sprites_behaviors"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_hoc_freePlay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "9c84bf48-f73f-4df4-83f6-7f8c9ca7fa70"
+      },
+      "level_keys": [
+        "poembot_hoc_freePlay"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poembot_addPoem",
+        "script_level.level_keys": [
+          "poembot_addPoem"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "a8170e21-abb6-4308-ab7f-17a05e0929fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_addEffects",
+        "script_level.level_keys": [
+          "poembot_addEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "a8170e21-abb6-4308-ab7f-17a05e0929fc"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "poembot_sprites_make",
@@ -261,6 +381,18 @@
         "lesson_group.key": "",
         "script.name": "poembot",
         "activity_section.key": "5ee27f74-b768-4c9e-9573-c7c9edf03a00"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_hoc_freePlay",
+        "script_level.level_keys": [
+          "poembot_hoc_freePlay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poembot",
+        "activity_section.key": "9c84bf48-f73f-4df4-83f6-7f8c9ca7fa70"
       }
     }
   ],
