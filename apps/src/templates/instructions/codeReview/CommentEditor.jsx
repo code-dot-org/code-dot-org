@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import msg from '@cdo/locale';
+import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
@@ -20,7 +22,7 @@ export default class CommentEditor extends Component {
       <div>
         <textarea
           style={{width: '100%', boxSizing: 'border-box'}}
-          placeholder={'Add a comment...'}
+          placeholder={`${javalabMsg.addAComment()}...`}
           onChange={this.commentChanged}
           value={this.state.comment}
         />
@@ -34,7 +36,7 @@ export default class CommentEditor extends Component {
           {this.state.isEditing && (
             <Button
               key="cancel"
-              text={'Cancel'}
+              text={msg.cancel()}
               onClick={() => this.setState({isEditing: false, comment: ''})}
               color="gray"
               style={{...styles.buttons.all, ...styles.buttons.cancel}}
@@ -43,7 +45,7 @@ export default class CommentEditor extends Component {
           {this.state.isEditing && (
             <Button
               key="submit"
-              text={'Submit'}
+              text={msg.submit()}
               onClick={() => {}}
               color="orange"
               style={{...styles.buttons.all, ...styles.buttons.submit}}
