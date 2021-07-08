@@ -646,7 +646,7 @@ class UnitGroup < ApplicationRecord
   # Returns an array of version year strings, starting with 2017 and ending 1 year
   # from the current year.
   def self.get_version_year_options
-    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+    [CourseVersion::UNVERSIONED] + (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 
   def pilot?
