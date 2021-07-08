@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {commentShape} from './commentShape';
 
@@ -14,7 +15,7 @@ export default class Comment extends Component {
   renderName = () => {
     const {name, isFromTeacher} = this.props.comment;
 
-    const teacherCommentSuffix = ' (only visible to you)';
+    const teacherCommentSuffix = ` (${javalabMsg.onlyVisibleToYou()})`;
     return (
       <span>
         <span style={styles.name}>{name}</span>
