@@ -11,29 +11,108 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 17:04:21 UTC",
+    "serialized_at": "2021-07-08 01:19:35 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview of CS Discoveries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Overview of CS Discoveries",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3a7b3e5f-b759-4135-96fa-55228480d628",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a7b3e5f-b759-4135-96fa-55228480d628",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "75d3b0ab-c6cc-4736-947a-012863734a58",
+      "position": 1,
+      "properties": {
+        "progression_name": "Equity"
+      },
+      "seeding_key": {
+        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58",
+        "lesson_activity.key": "3a7b3e5f-b759-4135-96fa-55228480d628"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Equity"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CV-Equity"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-CV-Equity"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-CV-Equity",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CV-Equity"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+      }
+    }
   ],
   "resources": [
 

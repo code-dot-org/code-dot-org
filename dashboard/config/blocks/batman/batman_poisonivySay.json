@@ -1,0 +1,18 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "poisonivySay",
+    "blockText": "Poison Ivy say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Poison Ivy!",
+            "\"I am Poison Ivy!\""
+          ]
+        ]
+      }
+    ]
+  }
+}
