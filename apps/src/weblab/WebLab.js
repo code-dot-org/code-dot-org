@@ -6,6 +6,7 @@ import weblabI18n from '@cdo/weblab/locale';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {
+  DisallowedHtmlWarningDialog,
   FatalErrorDialog,
   ResetSuccessDialog,
   UploadErrorDialog
@@ -596,6 +597,26 @@ WebLab.prototype.openFatalErrorDialog = function(
   );
 };
 
+WebLab.prototype.openDisallowedHtmlDialog = function(
+  filename,
+  disallowedTags,
+  onClose
+) {
+  const handleClose = () => {
+    this.closeDialog();
+    onClose();
+  };
+
+  actions.openDialog(
+    <DisallowedHtmlWarningDialog
+      isOpen
+      filename={filename}
+      disallowedTags={disallowedTags}
+      handleClose={handleClose}
+    />
+  );
+};
+
 WebLab.prototype.openUploadErrorDialog = function() {
   actions.openDialog(
     <UploadErrorDialog isOpen handleClose={this.closeDialog} />
@@ -669,6 +690,7 @@ WebLab.prototype.brambleApi = function() {
     onBrambleMountable: this.onBrambleMountable.bind(this),
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
+    openDisallowedHtmlDialog: this.openDisallowedHtmlDialog.bind(this),
     openFatalErrorDialog: this.openFatalErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
