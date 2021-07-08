@@ -75,14 +75,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher_application,
+        :pd_teacher1819_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -124,14 +124,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher_application,
+        :pd_teacher1819_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -172,14 +172,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher_application,
+        :pd_teacher1819_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -196,14 +196,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher_application,
+        :pd_teacher1819_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 
@@ -220,14 +220,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher_application,
+        :pd_teacher1819_application,
         course: 'csd',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted_not_notified'
+      application.status = 'accepted'
       application.save!
       application.lock!
 

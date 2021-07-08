@@ -141,7 +141,9 @@ class Script < ApplicationRecord
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.unit_directory
@@ -298,6 +300,12 @@ class Script < ApplicationRecord
         Script.all.to_a
       end
       all_scripts.freeze
+    end
+
+    def family_names
+      Rails.cache.fetch('script/family_names', force: !Script.should_cache?) do
+        (CourseVersion.course_offering_keys('Script') + ScriptConstants::FAMILY_NAMES).uniq.sort
+      end
     end
 
     private
@@ -508,7 +516,7 @@ class Script < ApplicationRecord
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
   def self.get_from_cache(id_or_name)
-    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
+    if CourseOffering.get_from_cache(id_or_name).present?
       raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
@@ -1548,6 +1556,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 

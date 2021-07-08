@@ -44,6 +44,18 @@ class ScriptTest < ActiveSupport::TestCase
     @@course_cached ||= UnitGroup.course_cache_to_cache
     UnitGroup.course_cache
 
+    CourseVersion.stubs(:should_cache?).returns true
+    CourseVersion.course_offering_keys('Script')
+
+    CourseOffering.all.pluck(:key).each do |key|
+      CourseOffering.get_from_cache(key)
+    end
+
+    Script.all.pluck(:id, :name).each do |sid, name|
+      CourseOffering.get_from_cache(sid)
+      CourseOffering.get_from_cache(name)
+    end
+
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
     # Best we can do is ensure that no queries are executed on the active connection.
@@ -465,6 +477,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
+    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
