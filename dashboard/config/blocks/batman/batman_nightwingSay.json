@@ -1,7 +1,7 @@
 {
   "category": "Batman Speech",
   "config": {
-    "func": "jokerSay",
+    "func": "nightwingSay",
     "blockText": "{IMG}say {SPEECH}",
     "args": [
       {
@@ -9,7 +9,7 @@
         "dummy": true,
         "inline": true,
         "customOptions": {
-          "assetUrl": "media/spritelab/joker.png",
+          "assetUrl": "media/spritelab/nightwing.png",
           "width": 32,
           "height": 32
         }
@@ -18,8 +18,8 @@
         "name": "SPEECH",
         "options": [
           [
-            "I'm the Joker!",
-            "\"I'm the Joker!\""
+            "I am Nightwing!",
+            "\"I am Nightwing!\""
           ]
         ]
       }
