@@ -5,6 +5,7 @@ ja:
       Green: 緑
       Red: 赤
       actor: キャラ
+      birds: 鳥
       cats: すべてのネコ
       color: 色
       counter: カウンタ変数
@@ -16,6 +17,7 @@ ja:
       length: 長さ
       name: 名前
       nectar: 花のミツ
+      planet: 惑星
       points: ポイント
       random: ランダム に
       repeat: くりかえし

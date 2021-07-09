@@ -8,49 +8,49 @@ title: Garis Panduan Aktiviti
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Garis panduan untuk mencipta dan menghantar tutorial dan pelajaran untuk Hour of Code™ (Jam Kod) dan Minggu Pendidikan Sains Komputer
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org menganjurkan pelbagai aktiviti, pelajaran dan video Hour of Code™ (Jam Kod) dalam laman web Code.org dan Jam Kod. Senarai semasa berada di [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Mahu menghantar tutorial pandu diri, pelajaran dipimpin guru, atau aktiviti robotik/pembuat yang menerangkan prinsip sains komputer? Sertailah pergerakan global ini dan bantu peserta di seluruh dunia memulakan dengan jam kod atau pergi lebih jauh dengan aktiviti pelbagai pelajaran, sepanjang hari, atau seminggu.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**Setelah membaca garis panduan, anda boleh menghantar aktiviti anda melalui [halaman Penghantaran Aktiviti Hour of Code™ (Jam Kod)](https://forms.gle/z8ARSLcJCFdNPVJS8) kami. Anda boleh menghantar aktiviti pada bila-bila masa, tetapi tarikh akhir kemasukan dalam mana-mana tahun kalendar yang tertentu ialah pada 1 Oktober. (Sebagai contoh, apa-apa aktiviti yang diterima selepas 1 Oktober, {{ campaign_date/year }} tidak akan disenaraikan untuk {{ campaign_date/year }} Jam Kod.) Tarikh akhir untuk menghantar semakan kualitatif awal [(butiran di bawah)](#earlyreview) ialah pada 16 Ogos.** Jika anda mempunyai apa-apa soalan tentang penghantaran aktiviti anda, sila hubungi kami di support@code.org.
 
-A few tips:
+Beberapa petua:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Hantar lebih daripada satu aktiviti**: Jika anda telah membina aktiviti untuk pelbagai tahap, peringkat umur yang berbeza, atau kategori lain, kami akan menyenaraikan aktiviti anda secara berasingan supaya setiap guru boleh mencari aktiviti yang sesuai untuk kelas mereka. Hantarkan setiap tutorial atau aktiviti secara individu. Apabila dilihat bilangan penghantaran sejak beberapa tahun kebelakangan ini, kami akan mempunyai masa untuk menyemak **sehingga 5 aktiviti** untuk setiap rakan kongsi. Selepas itu, kami akan berusaha sebaik mungkin untuk menyemak sebanyak yang mungkin sebelum acara Jam Kod bermula.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Di luar pelajaran individu yang baru bermula**: Di samping pelajaran untuk guru dan pelajar yang mempelajari sains komputer buat pertama kalinya, kami menyenaraikan pengalaman pembelajaran untuk kelas celik sains komputer yang mahu melangkah lebih jauh! Bantu kami dengan menghantar pelajaran untuk kelas yang sudah selesa dengan asas sains komputer.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Bidang subjek**: Mempunyai idea pelajaran hebat yang mengintegrasikan Sains Komputer ke dalam Matematik? Sejarah? Seni Bahasa? Sains? Seni? Atau subjek lain? Kami telah menerima banyak permintaan daripada guru yang mahu menghubungkan Jam Kod dengan bidang subjek mereka. Guru boleh menyaring untuk jenis kelas mereka (kumpulan gred atau bidang subjek), oleh itu kami memerlukan bantuan anda mengisi jurang yang wujud bagi menawarkan aktiviti kelas atau rancangan pelajaran yang mengaitkan CS dengan setiap bidang subjek utama untuk kumpulan gred berbeza. Kami juga terus mengadakan kategori "Sains Komputer" untuk guru yang mencari aktiviti CS yang generik.
 
 <a id="top"></a>
 
-## Index:
+## Indeks:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Guidelines for submitting for an early qualitative review](#earlyreview)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Perkara yang boleh dihantar](#whatsubmit)
+- [Garis panduan umum untuk mencipta aktiviti Hour of Code™ (Jam Kod)](#guidelines)
+- [Cara Menghantar](#submit)
+- [Cara aktiviti akan dinilaikan](#inclusion)
+- [Garis panduan menghantar untuk semakan kualitatif awal](#earlyreview)
+- [Cadangan untuk mereka bentuk aktiviti anda](#design)
+- [Garis Panduan Tanda Dagangan](#tm)
+- [Piksel Penjejak](#pixel)
+- [Mempromosikan aktiviti, CSEdWeek dan Jam Kod anda](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Perkara yang boleh dihantar
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Teka-teki atau permainan pandu diri ([contoh](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Aktiviti ini direka bentuk untuk pelajar mengarah diri melalui tutorial. Mereka tidak memerlukan banyak arahan daripada guru atau kerja penyediaan guru.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Guru Mengendalikan pelajaran ([contoh](https://studio.code.org/s/course1/lessons/2/levels/1), [templat](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Kini, ratusan ribu pendidik telah mencuba Jam Kod, banyak kelas bersedia untuk aktiviti lebih kreatif yang mengajar asas sains komputer. Untuk membantu guru yang lebih canggih mendapatkan inspirasi, kami mengumpul dan menguruskan pelajaran dan rancangan aktiviti "dipimpin guru" untuk veteran Jam Kod.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Satu jenis aktiviti yang akan kami paparkan untuk guru yang berpengalaman ialah projek penciptaan "sandbox terbuka". Aktiviti yang menggalakkan pelajar membina aplikasi, permainan, laman web atau projek lain mereka sendiri. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
 
 Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
 
@@ -165,7 +165,7 @@ What you’ll need:
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Cara aktiviti akan dinilaikan
 
 A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
@@ -200,7 +200,7 @@ Teachers and students will be able to search through and filter our list of acti
 
 <a id="earlyreview"></a>
 
-## Guidelines for submitting for an early qualitative review
+## Garis panduan menghantar untuk semakan kualitatif awal
 
 Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
 
@@ -250,7 +250,7 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Garis Panduan Tanda Dagangan
 
 Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
 
@@ -263,7 +263,7 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Piksel Penjejak
 
 In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 

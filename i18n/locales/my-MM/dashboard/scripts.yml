@@ -1,3 +1,4 @@
+---
 my:
   data:
     script:
@@ -113,8 +114,6 @@ my:
           description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
           description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
           lessons:
-            'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           student_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
@@ -393,3 +392,11 @@ my:
             Computer Science Fundamentals:
               key: ကွန်ပျူတာသိပ္ပံအခြေခံ။
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: ဆရာ/မ များအဖွဲ့အစည်း
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: အရင်းအမြစ်များ

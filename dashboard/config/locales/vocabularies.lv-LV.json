@@ -1,0 +1,44 @@
+{
+  "lv-LV": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Mainīgais"
+        },
+        "internet/coursef/2021": {
+          "word": "Internets"
+        },
+        "define/coursef/2021": {
+          "word": "Definēt"
+        },
+        "binary/coursec/2021": {
+          "word": "Binārie"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Sazarojumi"
+        },
+        "conditionals/express/2021": {
+          "word": "Sazarojumi"
+        },
+        "function/express/2021": {
+          "word": "Funkcija"
+        },
+        "variable/express/2021": {
+          "word": "Mainīgais"
+        },
+        "define/express/2021": {
+          "word": "Definēt"
+        },
+        "function/coursee/2021": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Sazarojumi"
+        },
+        "define/coursee/2021": {
+          "word": "Definēt"
+        }
+      }
+    }
+  }
+}

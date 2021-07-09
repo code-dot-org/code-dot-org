@@ -1,0 +1,56 @@
+{
+  "no-NO": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Variabel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internett"
+        },
+        "define/coursef/2021": {
+          "word": "Definer"
+        },
+        "drop/courseb/2021": {
+          "word": "Fall"
+        },
+        "drop/coursea/2021": {
+          "word": "Fall"
+        },
+        "binary/coursec/2021": {
+          "word": "Binær"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Betingelser"
+        },
+        "conditionals/express/2021": {
+          "word": "Betingelser"
+        },
+        "function/express/2021": {
+          "word": "Funksjon"
+        },
+        "variable/express/2021": {
+          "word": "Variabel"
+        },
+        "define/express/2021": {
+          "word": "Definer"
+        },
+        "drop/pre-express/2021": {
+          "word": "Fall"
+        },
+        "copyright/coursee/2021": {
+          "word": "Opphavsrett"
+        },
+        "function/coursee/2021": {
+          "word": "Funksjon"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Betingelser"
+        },
+        "define/coursee/2021": {
+          "word": "Definer"
+        }
+      }
+    }
+  }
+}

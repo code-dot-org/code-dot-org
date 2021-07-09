@@ -166,6 +166,24 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Use the drop-down to replace \"???\" with a number"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "We've put some blocks here to get you started"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Hit \"Run\" to try your program"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repeat actions by placing blocks in here"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Mine this iron!"
         }
       }
     }

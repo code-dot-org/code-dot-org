@@ -1,0 +1,134 @@
+{
+  "az-AZ": {
+    "data": {
+      "resources": {
+        "unplugged-video-internet/coursef/2021": {
+          "name": "İnternet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "İnternet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "İnternet"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Hərəkət et"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Hərəkət et"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Hərəkət et"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Hərəkət et"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie və Böyük Layihə"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Şən xəritələr"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Millimetrlik kağızda proqramlaşdırma"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "pair_programming/express/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "variables_video/express/2021": {
+          "name": "dəyişənlər"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Müəllim Forumu"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Müəllim Forumu"
+        }
+      }
+    }
+  }
+}

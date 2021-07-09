@@ -1,0 +1,104 @@
+{
+  "is-IS": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Breyta"
+        },
+        "input/coursef/2021": {
+          "word": "Inntak"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Vélarnám"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Skilgreina"
+        },
+        "debugging/courseb/2021": {
+          "word": "Villuleit"
+        },
+        "drop/courseb/2021": {
+          "word": "Droppa"
+        },
+        "programming/courseb/2021": {
+          "word": "Forritun"
+        },
+        "debugging/coursea/2021": {
+          "word": "Villuleit"
+        },
+        "drop/coursea/2021": {
+          "word": "Droppa"
+        },
+        "programming/coursea/2021": {
+          "word": "Forritun"
+        },
+        "debugging/coursec/2021": {
+          "word": "Villuleit"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Skipanaröð"
+        },
+        "programming/coursec/2021": {
+          "word": "Forritun"
+        },
+        "binary/coursec/2021": {
+          "word": "Tvíundir"
+        },
+        "debugging/coursed/2021": {
+          "word": "Villuleit"
+        },
+        "programming/coursed/2021": {
+          "word": "Forritun"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Skilyrði"
+        },
+        "debugging/express/2021": {
+          "word": "Villuleit"
+        },
+        "sequencing/express/2021": {
+          "word": "Skipanaröð"
+        },
+        "programming/express/2021": {
+          "word": "Forritun"
+        },
+        "conditionals/express/2021": {
+          "word": "Skilyrði"
+        },
+        "function/express/2021": {
+          "word": "Aðgerð"
+        },
+        "variable/express/2021": {
+          "word": "Breyta"
+        },
+        "define/express/2021": {
+          "word": "Skilgreina"
+        },
+        "drop/pre-express/2021": {
+          "word": "Droppa"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Villuleit"
+        },
+        "programming/pre-express/2021": {
+          "word": "Forritun"
+        },
+        "copyright/coursee/2021": {
+          "word": "Höfundarréttur"
+        },
+        "function/coursee/2021": {
+          "word": "Aðgerð"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Skilyrði"
+        },
+        "define/coursee/2021": {
+          "word": "Skilgreina"
+        }
+      }
+    }
+  }
+}

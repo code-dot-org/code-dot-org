@@ -1734,6 +1734,264 @@
           "end game": {
             "name": "einde spel"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "mijn functie"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "teken een ster",
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "parameters": {
+              "points": "punten",
+              "length": "lengte"
+            }
+          },
+          "draw a circle": {
+            "name": "teken een cirkel",
+            "description": "teken een cirkel met gegeven straal",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte",
+              "repeat": "herhaal"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "teken een ster",
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "parameters": {
+              "points": "punten",
+              "length": "lengte"
+            }
+          },
+          "draw a circle": {
+            "name": "teken een cirkel",
+            "description": "teken een cirkel met gegeven straal",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte",
+              "repeat": "herhaal"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "teken een ster",
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "parameters": {
+              "points": "punten",
+              "length": "lengte"
+            }
+          },
+          "draw a circle": {
+            "name": "teken een cirkel",
+            "description": "teken een cirkel met gegeven straal",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte",
+              "repeat": "herhaal"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bouw brug"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "pad leegmaken"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "repareer lang pad"
+          },
+          "fix short path": {
+            "name": "repareer kort pad"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "bouw korte brug"
+          },
+          "build long bridge": {
+            "name": "bouw lange brug"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "functie 1"
+          },
+          "function 2": {
+            "name": "functie 2"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          },
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "do iets"
+          }
         }
       }
     }

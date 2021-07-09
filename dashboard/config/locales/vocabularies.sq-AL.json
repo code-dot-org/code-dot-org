@@ -1,0 +1,56 @@
+{
+  "sq-AL": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Sjellja"
+        },
+        "variable/coursef/2021": {
+          "word": "Variabël"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Përcakto"
+        },
+        "binary/coursec/2021": {
+          "word": "Binare"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Kushtet"
+        },
+        "behavior/express/2021": {
+          "word": "Sjellja"
+        },
+        "conditionals/express/2021": {
+          "word": "Kushtet"
+        },
+        "function/express/2021": {
+          "word": "Funksion"
+        },
+        "variable/express/2021": {
+          "word": "Variabël"
+        },
+        "define/express/2021": {
+          "word": "Përcakto"
+        },
+        "behavior/coursee/2021": {
+          "word": "Sjellja"
+        },
+        "copyright/coursee/2021": {
+          "word": "E drejta e autorit"
+        },
+        "function/coursee/2021": {
+          "word": "Funksion"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Kushtet"
+        },
+        "define/coursee/2021": {
+          "word": "Përcakto"
+        }
+      }
+    }
+  }
+}

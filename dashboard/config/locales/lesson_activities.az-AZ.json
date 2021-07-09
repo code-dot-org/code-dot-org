@@ -1,0 +1,983 @@
+{
+  "az-AZ": {
+    "data": {
+      "lesson_activities": {
+        "d242b6cc-881c-4f49-acb9-e03383340b0c": {
+          "name": "Əsas Aktivlik"
+        },
+        "e9c5315a-ef0d-488f-b4c2-87096019782b": {
+          "name": "Yekun"
+        },
+        "2280825d-5ed7-404f-93b8-ea1fac41b4a4": {
+          "name": "Əsas Aktivlik"
+        },
+        "156c9efe-8298-4b5e-9fdc-51dc2879f769": {
+          "name": "Yekun"
+        },
+        "eac41bb2-4c60-4d27-b19b-d83afc4c5fa8": {
+          "name": "Əsas Aktivlik"
+        },
+        "a7e3ac02-6a46-4eaf-a50f-d09e000205bb": {
+          "name": "Yekun"
+        },
+        "29053d1d-251c-4b6a-8212-fbb9ecedad6b": {
+          "name": "Əsas Aktivlik"
+        },
+        "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
+          "name": "Yekun"
+        },
+        "86dafe20-4778-4665-94eb-cf837951259b": {
+          "name": "Əlavə təlim"
+        },
+        "a9ccd961-d02e-484a-9d5f-e16bcfce3f58": {
+          "name": "Əsas Aktivlik"
+        },
+        "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
+          "name": "Yekun"
+        },
+        "0a159287-c2ef-4cfc-b1a3-f9147a79e747": {
+          "name": "Əsas Aktivlik"
+        },
+        "6d9977ca-4924-456e-bb2e-ec1ea79a1d81": {
+          "name": "Yekun"
+        },
+        "dd059082-7eee-4f7a-a287-a79748174d64": {
+          "name": "Əsas Aktivlik"
+        },
+        "0fdc25c1-5137-42cf-8c8d-470a1cddc96f": {
+          "name": "Yekun"
+        },
+        "5326608a-942c-45d8-8527-4844f5f0c3b0": {
+          "name": "Əsas Aktivlik"
+        },
+        "8b23d2e3-e4ae-475a-9d08-ab476ae5c9b1": {
+          "name": "Yekun"
+        },
+        "5689bfc0-5bcb-4eff-9bc9-5718b2aaf53a": {
+          "name": "Əsas Aktivlik"
+        },
+        "b416985a-5994-4e14-a68a-c3486e41c008": {
+          "name": "Yekun"
+        },
+        "f77093dc-7c10-4fac-b5a3-510056ad6c61": {
+          "name": "Əsas Aktivlik"
+        },
+        "c5b98b60-7365-4fa7-a36b-b12750624895": {
+          "name": "Yekun"
+        },
+        "8c27f2d2-6cbf-44b8-9696-c81310ee4338": {
+          "name": "Əsas Aktivlik"
+        },
+        "bc176762-51ee-4ed4-baeb-ddb9a0554139": {
+          "name": "Yekun"
+        },
+        "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9": {
+          "name": "Əsas Aktivlik"
+        },
+        "757244a2-8803-4a75-af32-3b24bebec03a": {
+          "name": "Yekun"
+        },
+        "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
+          "name": "Yoxlama"
+        },
+        "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
+          "name": "Əlavə təlim"
+        },
+        "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
+          "name": "Əsas Aktivlik"
+        },
+        "18e03ebe-58a5-4a29-a9a6-f06d7a9abd30": {
+          "name": "Yekun"
+        },
+        "1360b113-804c-4697-8c6d-a184de310850": {
+          "name": "Əsas Aktivlik"
+        },
+        "4b190612-457d-44e9-beab-8997c88be0a1": {
+          "name": "Yekun"
+        },
+        "eba207ca-a259-40be-93b5-0a9c0c906b80": {
+          "name": "Fəaliyyət"
+        },
+        "7e800d16-2b68-4b95-9071-327a7a9ce611": {
+          "name": "Yekun"
+        },
+        "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
+          "name": "Əlavə təlim"
+        },
+        "d01a520e-a4bb-4422-80ae-fc1fe2157446": {
+          "name": "Əsas Aktivlik"
+        },
+        "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b": {
+          "name": "Yekun"
+        },
+        "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4": {
+          "name": "Əsas Aktivlik"
+        },
+        "3f386349-319f-49fa-a87b-4de41f39f1d4": {
+          "name": "Yekun"
+        },
+        "5e959966-cfc9-4300-a563-9427222987c8": {
+          "name": "Əlavə təlim"
+        },
+        "d51df268-72e1-4472-8d8e-e3c44c3ba133": {
+          "name": "Əsas Aktivlik"
+        },
+        "0aa21975-4a9b-4130-84ed-799e4602fb8e": {
+          "name": "Yekun"
+        },
+        "19c350ea-4420-4a94-a91e-f7d798799cc4": {
+          "name": "Yoxlama"
+        },
+        "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
+          "name": "Əlavə təlim"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Baxış: Paylaşmaq üçün OK-dir?"
+        },
+        "add79bbe-c639-4e83-9191-993c430f08e9": {
+          "name": "Əlavə təlim"
+        },
+        "4782266a-9011-4f00-8335-bced225a346d": {
+          "name": "Əsas Aktivlik"
+        },
+        "339d5151-756f-4b66-b647-0f86a1dce7f9": {
+          "name": "Yekun"
+        },
+        "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
+          "name": "Əlavə təlim"
+        },
+        "248075ed-be23-4145-bbe5-f629eb3df448": {
+          "name": "Əsas Aktivlik"
+        },
+        "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
+          "name": "Yekun"
+        },
+        "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
+          "name": "Əlavə təlim"
+        },
+        "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
+          "name": "Əsas Aktivlik"
+        },
+        "8a245dd2-d857-40ab-8120-ef2bd8777377": {
+          "name": "Yekun"
+        },
+        "25e921a3-616c-4b8d-accb-c360ef37c266": {
+          "name": "Əlavə təlim"
+        },
+        "1a0d4eb7-44ac-4f69-8562-7d55a8324950": {
+          "name": "Əsas Aktivlik"
+        },
+        "715995ae-a584-4451-9240-29bbfb084ce2": {
+          "name": "Yekun"
+        },
+        "288af6d5-c632-4696-a9d4-64bdf7cefdc9": {
+          "name": "Əsas Aktivlik"
+        },
+        "240e1172-8a94-4e2b-931b-2d87bef6f364": {
+          "name": "Yoxlama"
+        },
+        "ee775447-c327-4e95-a523-663a02856cad": {
+          "name": "Yekun"
+        },
+        "4a617b6e-9d56-472c-8a50-31052d127232": {
+          "name": "Əlavə təlim"
+        },
+        "287b6295-2274-4349-a7c3-fab998a09e1c": {
+          "name": "Əsas Aktivlik"
+        },
+        "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
+          "name": "Yekun"
+        },
+        "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
+          "name": "Əlavə təlim"
+        },
+        "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
+          "name": "Əsas Aktivlik"
+        },
+        "8227e109-9b6a-448c-a107-e70498299438": {
+          "name": "Əsas Aktivlik"
+        },
+        "ad9b2654-4506-4741-9f53-5699cb20615d": {
+          "name": "Yekun"
+        },
+        "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
+          "name": "Fəaliyyət"
+        },
+        "736970ba-195f-4800-b755-e89e87e58590": {
+          "name": "Yekun"
+        },
+        "6b4566b2-8785-4170-bfaf-3f2575da50a0": {
+          "name": "Əsas Aktivlik"
+        },
+        "19f85d4a-d5ea-4069-8f68-bcaab2a90119": {
+          "name": "Yekun"
+        },
+        "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
+          "name": "Yoxlama"
+        },
+        "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
+          "name": "Əlavə təlim"
+        },
+        "b170b2ef-82f1-4067-aadc-add8074acb80": {
+          "name": "Əsas Aktivlik"
+        },
+        "61306f7a-d493-40e5-a6ed-68d2b0e97624": {
+          "name": "Yekun"
+        },
+        "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
+          "name": "Əlavə təlim"
+        },
+        "381e6872-ab89-4df5-81a1-36e77c90b9a5": {
+          "name": "Əsas Aktivlik"
+        },
+        "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
+          "name": "Yekun"
+        },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "İzləyin: Onlayn Qonşuluğum"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Oxuyun: Təhlükəsizlik, Qaydalar! "
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Kəşf edin: İnternet Səyahəti"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Pauza & Düşünmə Vaxtı"
+        },
+        "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
+          "name": "Əlavə təlim"
+        },
+        "86881655-9660-42ab-92ea-aa38d08cdeff": {
+          "name": "Əsas Aktivlik"
+        },
+        "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
+          "name": "Yekun"
+        },
+        "9ef71984-8749-46e9-ada3-889815c8f1b9": {
+          "name": "Əlavə təlim"
+        },
+        "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e": {
+          "name": "Əsas Aktivlik"
+        },
+        "3290a55e-fedd-4672-8b81-dfac2115a13b": {
+          "name": "Yekun"
+        },
+        "0915a618-f1c1-47be-b8fb-80664fa62e50": {
+          "name": "Əlavə təlim"
+        },
+        "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
+          "name": "Əsas Aktivlik"
+        },
+        "3f38c955-4e54-4c3b-a446-92f78ed8c109": {
+          "name": "Yekun"
+        },
+        "519099ff-6a78-427c-91d6-4ef9a2cba286": {
+          "name": "Əlavə təlim"
+        },
+        "774eb8ca-0c20-467c-9f25-0d454403dfc3": {
+          "name": "Əsas Aktivlik"
+        },
+        "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
+          "name": "Yekun"
+        },
+        "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
+          "name": "Əlavə təlim"
+        },
+        "fe01455d-0a26-4c9c-9031-25490a38f95e": {
+          "name": "Əsas Aktivlik"
+        },
+        "f589d41f-0064-4e89-bc57-b6815763792f": {
+          "name": "Yekun"
+        },
+        "9e4b93ba-099d-4c47-b962-d47f961599bb": {
+          "name": "Əsas Aktivlik"
+        },
+        "bf1be38a-3e18-4158-8364-0de3124ff833": {
+          "name": "Yekun"
+        },
+        "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
+          "name": "Əlavə təlim"
+        },
+        "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
+          "name": "Əsas Aktivlik"
+        },
+        "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
+          "name": "Əlavə təlim"
+        },
+        "9513331c-917a-4e11-a63a-9c53ef1e708c": {
+          "name": "Əsas Aktivlik"
+        },
+        "f706eaa2-1f56-468e-b034-b8b4ddb9eddb": {
+          "name": "Yekun"
+        },
+        "dc4d4171-f55a-4ed3-a799-469b6932d7d7": {
+          "name": "Əsas Aktivlik"
+        },
+        "450f879a-a14d-4d47-93fd-2916bbf46caa": {
+          "name": "Yekun"
+        },
+        "9a383162-e9c7-47d0-be4d-582abaef1ae8": {
+          "name": "Əsas Aktivlik"
+        },
+        "10660ca3-5263-479f-a685-3e067185468a": {
+          "name": "Yekun"
+        },
+        "32810ead-80cc-47b1-863f-ea8d023aaa94": {
+          "name": "Əlavə təlim"
+        },
+        "c92853be-b1ed-4b05-afe9-79928330a3a3": {
+          "name": "Əsas Aktivlik"
+        },
+        "75370025-0071-498b-8e43-3e57a3ce5a78": {
+          "name": "Yekun"
+        },
+        "98f951f7-63b2-4d62-82c9-d472b3505b68": {
+          "name": "Əlavə təlim"
+        },
+        "71a032af-54cc-494d-8449-f02ce20f8aad": {
+          "name": "Əsas Aktivlik"
+        },
+        "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
+          "name": "Yekun"
+        },
+        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
+          "name": "Əlavə təlim"
+        },
+        "9d9055c3-143a-452e-9703-ef90cd9a9469": {
+          "name": "Səviyyələr"
+        },
+        "15bbd3a3-247c-4e2a-be79-52d802f01920": {
+          "name": "Fəaliyyət"
+        },
+        "10dd8520-1410-493c-bd48-5233e4bf2965": {
+          "name": "Yekun"
+        },
+        "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
+          "name": "Əsas Aktivlik"
+        },
+        "d582f103-5fb1-4236-80df-100080cc01b9": {
+          "name": "Yekun"
+        },
+        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
+          "name": "Əlavə təlim"
+        },
+        "62f7dfaa-f865-461e-a17f-6d5c09893246": {
+          "name": "Əsas Aktivlik"
+        },
+        "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
+          "name": "Yekun"
+        },
+        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
+          "name": "Əlavə təlim"
+        },
+        "e0fe20d3-be99-4212-83f8-21599085fcad": {
+          "name": "Əsas Aktivlik"
+        },
+        "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
+          "name": "Yekun"
+        },
+        "440ff812-8ffc-4ac3-a6c8-1ed73872fcdd": {
+          "name": "Əsas Aktivlik"
+        },
+        "5f64e89f-e102-47ee-b219-5e637db83913": {
+          "name": "Yekun"
+        },
+        "27034f13-f0bf-41c0-a198-385c740be6ab": {
+          "name": "Əlavə təlim"
+        },
+        "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
+          "name": "Fəaliyyət"
+        },
+        "899be5b5-0668-4472-909d-46a1e44e98e2": {
+          "name": "Yekun"
+        },
+        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
+          "name": "Əlavə təlim"
+        },
+        "e36b6776-3c22-498e-94ef-44fae2c28065": {
+          "name": "Əsas Aktivlik"
+        },
+        "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
+          "name": "Yekun"
+        },
+        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
+          "name": "Əlavə təlim"
+        },
+        "84af3892-0fdd-462d-8815-99e6e2edf15f": {
+          "name": "Əsas Aktivlik"
+        },
+        "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
+          "name": "Yekun"
+        },
+        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
+          "name": "Əlavə təlim"
+        },
+        "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
+          "name": "Əsas Aktivlik"
+        },
+        "533abcef-ea93-4b33-902c-7b70e22ffe31": {
+          "name": "Yekun"
+        },
+        "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
+          "name": "Əsas Aktivlik"
+        },
+        "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
+          "name": "Yekun"
+        },
+        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
+          "name": "Əlavə təlim"
+        },
+        "7ec11452-1367-44ef-afe4-c8cf354bb183": {
+          "name": "Əsas Aktivlik"
+        },
+        "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
+          "name": "Yekun"
+        },
+        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
+          "name": "Əlavə təlim"
+        },
+        "b0a66dc2-0e44-413c-8364-97799728aa5f": {
+          "name": "Əsas Aktivlik"
+        },
+        "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
+          "name": "Yekun"
+        },
+        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
+          "name": "Əlavə təlim"
+        },
+        "e0ae16fd-eea3-47f4-8fa4-3355e57f9894": {
+          "name": "Əsas Aktivlik"
+        },
+        "81828841-d023-4593-896d-b4ce1481da6f": {
+          "name": "Yekun"
+        },
+        "e7277b3e-9177-451e-bef9-1e53d41b6131": {
+          "name": "Yekun"
+        },
+        "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
+          "name": "Yoxlama"
+        },
+        "af629d31-87ab-476d-a2d3-6da008802f3c": {
+          "name": "Əlavə təlim"
+        },
+        "f96503b6-c295-4deb-8e47-c3440041a689": {
+          "name": "Əsas Aktivlik"
+        },
+        "90d3854b-a2c4-44ec-924a-f66d2087098c": {
+          "name": "Yekun"
+        },
+        "e735098e-abab-465e-949c-a7e92e771b84": {
+          "name": "Əlavə təlim"
+        },
+        "f5985094-20d7-4316-a052-e7b18a78572e": {
+          "name": "Səviyyələr"
+        },
+        "523e695a-12e0-443c-bad6-8e816c672adb": {
+          "name": "Əsas Aktivlik"
+        },
+        "67be50b8-f120-4f1d-ad22-06b84dba994c": {
+          "name": "Yekun"
+        },
+        "c401b0f4-97af-418d-b58b-a58493c7570c": {
+          "name": "Əlavə təlim"
+        },
+        "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
+          "name": "Əsas Aktivlik"
+        },
+        "09c54a0a-44a3-43f6-b468-9bbf2b718717": {
+          "name": "Yekun"
+        },
+        "8b62bbe8-a1c9-4288-bb21-9f7a31e96b1e": {
+          "name": "Əsas Aktivlik"
+        },
+        "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
+          "name": "Yekun"
+        },
+        "da433c13-5e0a-48fe-a697-d2288e831912": {
+          "name": "Əlavə təlim"
+        },
+        "d05decb3-7f64-4886-8da0-088e7d73216d": {
+          "name": "Əsas Aktivlik"
+        },
+        "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
+          "name": "Yekun"
+        },
+        "04f6a743-e334-43ba-a72c-2b68a8163c0a": {
+          "name": "Əsas Aktivlik"
+        },
+        "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
+          "name": "Yekun"
+        },
+        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
+          "name": "Əlavə təlim"
+        },
+        "2ffe8a66-a950-4b74-91e5-5149b2808279": {
+          "name": "Əsas Aktivlik"
+        },
+        "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
+          "name": "Yekun"
+        },
+        "e96a358f-201b-4474-8950-90dd94426aff": {
+          "name": "Yekun"
+        },
+        "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
+          "name": "Əsas Aktivlik"
+        },
+        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
+          "name": "Əlavə təlim"
+        },
+        "9dc5163b-b8e6-4034-8bfc-a3a56f9ea906": {
+          "name": "Əsas Aktivlik"
+        },
+        "ecc6986d-3d86-4f87-96e2-9cf3e8ebe4c8": {
+          "name": "Yekun"
+        },
+        "91b9cf1d-59e2-45e5-93e2-9f916e748dac": {
+          "name": "Əsas Aktivlik"
+        },
+        "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
+          "name": "Yekun"
+        },
+        "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
+          "name": "Əsas Aktivlik"
+        },
+        "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
+          "name": "Yekun"
+        },
+        "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
+          "name": "Yoxlama"
+        },
+        "22ad368d-3a00-4720-a21a-72985c642b8d": {
+          "name": "Əlavə təlim"
+        },
+        "c351a38f-ac03-4bc3-b2f1-8b5f06903317": {
+          "name": "Əsas Aktivlik"
+        },
+        "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
+          "name": "Yekun"
+        },
+        "f72b0518-8373-4e23-9798-b4973072e86e": {
+          "name": "Əlavə təlim"
+        },
+        "8448f988-ef04-4c9e-ad7e-6b78991f20e7": {
+          "name": "Əsas Aktivlik"
+        },
+        "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
+          "name": "Yekun"
+        },
+        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
+          "name": "Əlavə təlim"
+        },
+        "0f1a16f5-93c2-44c5-913c-85ee15b41454": {
+          "name": "Əsas Aktivlik"
+        },
+        "eca2ac69-486f-493b-a1a0-70294bc8573a": {
+          "name": "Yekun"
+        },
+        "5c23c0c6-f91c-4f07-bdd7-baa4e4b3d715": {
+          "name": "Əsas Aktivlik"
+        },
+        "96a24d88-fba0-4caf-ae83-05431cff5aea": {
+          "name": "Yekun"
+        },
+        "ab17495a-39d9-4a16-8158-cdccde270c58": {
+          "name": "Əsas Aktivlik"
+        },
+        "dc2d4163-9868-4d28-be8c-fc39a5aaec58": {
+          "name": "Yekun"
+        },
+        "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c": {
+          "name": "Əsas Aktivlik"
+        },
+        "160b0f38-c5d3-4b28-b797-981888824dcf": {
+          "name": "Yekun"
+        },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Əlavə təlim"
+        },
+        "a26761fc-1bdc-4474-a043-307dbef1453a": {
+          "name": "Əsas Aktivlik"
+        },
+        "4a54982d-83d3-4040-b499-46d8dc535774": {
+          "name": "Yekun"
+        },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Əlavə təlim"
+        },
+        "813fd866-1517-4302-b080-b035a842ae06": {
+          "name": "Əsas Aktivlik"
+        },
+        "43620129-a609-440d-80aa-b76ac08ef87e": {
+          "name": "Yekun"
+        },
+        "cf315c97-3c5a-49bf-a6ca-71bbab3a73ca": {
+          "name": "Əsas Aktivlik"
+        },
+        "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
+          "name": "Yekun"
+        },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Əlavə təlim"
+        },
+        "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6": {
+          "name": "Əsas Aktivlik"
+        },
+        "3ba524d7-98f9-4c54-a616-1ffb77d3f190": {
+          "name": "Yekun"
+        },
+        "9e0e1792-f9b4-4a5b-a282-e297ccf9d497": {
+          "name": "Əsas Aktivlik"
+        },
+        "6c03cbfc-a38d-4aba-9cab-7e7520800342": {
+          "name": "Yekun"
+        },
+        "184d2f0c-1709-4440-95bc-9030c4ff73ed": {
+          "name": "Əsas Aktivlik"
+        },
+        "70774562-2a5b-4a27-80d4-d731fc280abf": {
+          "name": "Yekun"
+        },
+        "30742072-e383-4bf2-b103-2d9c6209706c": {
+          "name": "Əsas Aktivlik"
+        },
+        "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
+          "name": "Yekun"
+        },
+        "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
+          "name": "Yekun"
+        },
+        "f1bf8e7e-997a-4d4b-b37f-5b38e2f0047f": {
+          "name": "Əsas Aktivlik"
+        },
+        "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
+          "name": "Yekun"
+        },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Əlavə təlim"
+        },
+        "3582d645-06f9-4bac-8787-2530ccff7f71": {
+          "name": "Əsas Aktivlik"
+        },
+        "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
+          "name": "Yekun"
+        },
+        "4a006482-722c-43cd-81cd-cfc8b1180f80": {
+          "name": "Əsas Aktivlik"
+        },
+        "3206b220-9995-40b3-ac06-29cdc44b3f03": {
+          "name": "Yekun"
+        },
+        "08d1726a-8015-44e3-85de-32f581681241": {
+          "name": "Əsas Aktivlik"
+        },
+        "d682de82-34c6-4a16-bff5-b40e2abf88c1": {
+          "name": "Yekun"
+        },
+        "4043e8c0-b143-40dc-a8f5-9c8de6b1cc32": {
+          "name": "Əsas Aktivlik"
+        },
+        "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
+          "name": "Yekun"
+        },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Əlavə təlim"
+        },
+        "fd8ff4dc-206c-4e0d-a30e-fd0480efaafe": {
+          "name": "Əsas Aktivlik"
+        },
+        "00f7b6d4-a585-4d87-ba85-2c780734b876": {
+          "name": "Yekun"
+        },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Əlavə təlim"
+        },
+        "daa8b2ed-7ca7-4691-a728-672a7d1ccf90": {
+          "name": "Əsas Aktivlik"
+        },
+        "4c8f291e-8892-44b6-aa97-925faa5554eb": {
+          "name": "Yekun"
+        },
+        "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673": {
+          "name": "Əsas Aktivlik"
+        },
+        "6b43b84e-bffc-427b-8b1f-983968a21f29": {
+          "name": "Yekun"
+        },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Əlavə təlim"
+        },
+        "c2bcd776-9900-4043-99e5-939545175088": {
+          "name": "Əsas Aktivlik"
+        },
+        "13c6871a-b886-4e22-b079-7b4ee6ff6ba4": {
+          "name": "Yekun"
+        },
+        "1b28c789-cdfc-4565-bf6e-9b522f835bee": {
+          "name": "Əsas Aktivlik"
+        },
+        "318a7a4f-83f0-4b32-a712-d74801897a6e": {
+          "name": "Yekun"
+        },
+        "f058e007-0df3-419f-ac78-81469311034f": {
+          "name": "Əsas Aktivlik"
+        },
+        "aad10a4b-0819-4302-88b7-8b6e3e067c47": {
+          "name": "Yekun"
+        },
+        "cb1cdc21-6fa8-4d95-8989-2eb6542f9018": {
+          "name": "Əsas Aktivlik"
+        },
+        "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
+          "name": "Yekun"
+        },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Əlavə təlim"
+        },
+        "c3bb8f31-8ec7-461d-bee1-685bc9287527": {
+          "name": "Əsas Aktivlik"
+        },
+        "87223e22-2a4b-4de5-8e15-b14dbaddccc5": {
+          "name": "Yekun"
+        },
+        "5af971e3-1f0b-40a9-bc25-b2451160aecc": {
+          "name": "Əsas Aktivlik"
+        },
+        "d004bd95-f6d5-4659-94ea-00877e3ff3a6": {
+          "name": "Yekun"
+        },
+        "dce03060-72a3-4d6d-a355-fa84b4a3f8dc": {
+          "name": "Əsas Aktivlik"
+        },
+        "8286ea48-0cef-4af7-af6a-007181aa482c": {
+          "name": "Yekun"
+        },
+        "8cf2e681-004c-4624-90f3-80c1e22ec90f": {
+          "name": "Əsas Aktivlik"
+        },
+        "9b90e959-3c5f-4200-af67-56b2a54fa720": {
+          "name": "Yekun"
+        },
+        "1fe3f83f-c34b-4592-9bb6-d29c832a838e": {
+          "name": "Əsas Aktivlik"
+        },
+        "f43312b4-a6ca-47a5-be92-1e6f77b43ff8": {
+          "name": "Yekun"
+        },
+        "cfadb05d-8467-41a8-9b69-9ce179c53375": {
+          "name": "Əsas Aktivlik"
+        },
+        "8ea04c5a-f6d5-45de-b07c-e39b2b94b799": {
+          "name": "Yekun"
+        },
+        "50ece396-6470-4834-8f7f-a09ea19db492": {
+          "name": "Əsas Aktivlik"
+        },
+        "ad1dcf3b-f77c-42da-a554-438231d3393a": {
+          "name": "Yekun"
+        },
+        "c1ef15c8-3724-45e8-b3a3-238ecb91993b": {
+          "name": "Əsas Aktivlik"
+        },
+        "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
+          "name": "Yekun"
+        },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Əlavə təlim"
+        },
+        "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
+          "name": "Əsas Aktivlik"
+        },
+        "514be718-37b6-4bca-9bea-138eac8ae77c": {
+          "name": "Yekun"
+        },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Əlavə təlim"
+        },
+        "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
+          "name": "Əsas Aktivlik"
+        },
+        "0396f06e-4a9e-443d-859c-dc77fa229769": {
+          "name": "Yekun"
+        },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Əlavə təlim"
+        },
+        "b9c2620d-f076-4551-a849-08ba4ad04850": {
+          "name": "Əsas Aktivlik"
+        },
+        "0e6c0fdb-f006-457d-9ded-d3719ac7180e": {
+          "name": "Yekun"
+        },
+        "077ed20b-2456-412f-b744-33221b7412ac": {
+          "name": "Əsas Aktivlik"
+        },
+        "3ca1441d-2369-43e8-b182-8fde56916045": {
+          "name": "Yekun"
+        },
+        "0a77a438-3684-4874-b963-e5a75723888a": {
+          "name": "Əsas Aktivlik"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Əlavə təlim"
+        },
+        "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
+          "name": "Əsas Aktivlik"
+        },
+        "089afb18-d132-46ab-88ca-2af47333e237": {
+          "name": "Əsas Aktivlik"
+        },
+        "98e73710-a395-4b96-90ac-de9c5a8060e8": {
+          "name": "Yekun"
+        },
+        "e651df8b-1577-4888-8321-37a135e4df24": {
+          "name": "Əsas Aktivlik"
+        },
+        "bcb796e6-f8d8-456a-8e44-e22eb94ed098": {
+          "name": "Yekun"
+        },
+        "602649f9-a35f-49ab-bddf-09ebdf771f17": {
+          "name": "Əsas Aktivlik"
+        },
+        "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
+          "name": "Yekun"
+        },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Əlavə təlim"
+        },
+        "def2e87e-02de-40be-b652-89117499f7a0": {
+          "name": "Əsas Aktivlik"
+        },
+        "291b174a-b478-463d-aff6-af66feda095a": {
+          "name": "Yekun"
+        },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Əlavə təlim"
+        },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Əsas Aktivlik"
+        },
+        "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
+          "name": "Yekun"
+        },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Əsas Aktivlik"
+        },
+        "6db6a634-e996-4369-9bc6-b32a570beaff": {
+          "name": "Yekun"
+        },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Əsas Aktivlik"
+        },
+        "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
+          "name": "Yekun"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Əlavə təlim"
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Əlavə təlim"
+        },
+        "b0422816-99eb-45d4-ad51-c872770be86c": {
+          "name": "Səviyyələr"
+        },
+        "0177419f-4d26-4ccc-bcf3-ac4275a5fd17": {
+          "name": "Əsas Aktivlik"
+        },
+        "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
+          "name": "Yekun"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Əsas Aktivlik"
+        },
+        "d41159ef-433a-4547-a067-2695e41120ae": {
+          "name": "Yekun"
+        },
+        "27b493bd-61be-4305-b021-8b40d59ee55a": {
+          "name": "Əlavə təlim"
+        },
+        "d47466c2-3004-476e-a652-d45c8374b24d": {
+          "name": "Əsas Aktivlik"
+        },
+        "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
+          "name": "Yekun"
+        },
+        "d8e700f9-bc93-424a-9ab3-3a06b63816b0": {
+          "name": "Əsas Aktivlik"
+        },
+        "aa8015a6-3a2c-401c-a8ff-4d0116ee1358": {
+          "name": "Yekun"
+        },
+        "6354e763-cca6-4b98-b56e-16609de67f85": {
+          "name": "Əlavə təlim"
+        },
+        "8fecfdd9-352e-4816-8964-e4fa6d36c0aa": {
+          "name": "Əsas Aktivlik"
+        },
+        "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
+          "name": "Yekun"
+        },
+        "b4ae143b-f79d-4ab9-9346-dca177438f61": {
+          "name": "Əsas Aktivlik"
+        },
+        "6aed97c6-89bd-4bc0-a4dd-ac23af33e065": {
+          "name": "Yekun"
+        },
+        "a0d784ef-8d53-486a-ac4c-eba8617be681": {
+          "name": "Yoxlama"
+        },
+        "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
+          "name": "Əlavə təlim"
+        },
+        "0da29d00-d95a-4538-ac89-116513fba104": {
+          "name": "Əsas Aktivlik"
+        },
+        "151ce93d-fb9d-4e64-89a5-6367fc58fb57": {
+          "name": "Yekun"
+        },
+        "3f3d661f-eb79-4d76-a889-dad31cd540f2": {
+          "name": "Əsas Aktivlik"
+        },
+        "6254961e-5863-4a98-8d8f-7ef4565c1f8f": {
+          "name": "Yekun"
+        },
+        "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
+          "name": "Əlavə təlim"
+        },
+        "c80d72fc-575e-4dc2-bfe7-444acb269cc9": {
+          "name": "Əsas Aktivlik"
+        },
+        "dc47da0d-484b-481e-bfaf-17f9de229688": {
+          "name": "Yekun"
+        },
+        "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
+          "name": "Əlavə təlim"
+        },
+        "9db395da-6afb-43e0-9115-6e0604f89208": {
+          "name": "Əsas Aktivlik"
+        },
+        "b320db90-d678-4814-9003-f7569a443c19": {
+          "name": "Yekun"
+        },
+        "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
+          "name": "Əlavə təlim"
+        },
+        "0d2d5e5c-1742-4883-a2d8-73284a6cd40e": {
+          "name": "Əsas Aktivlik"
+        },
+        "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a": {
+          "name": "Yekun"
+        },
+        "c79703f5-9051-4665-95b6-cfae7c304f6d": {
+          "name": "Əsas Aktivlik"
+        },
+        "b2227118-727d-4eff-be1c-fafe331297fd": {
+          "name": "Yekun"
+        },
+        "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
+          "name": "Əlavə təlim"
+        }
+      }
+    }
+  }
+}

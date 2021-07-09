@@ -1,0 +1,116 @@
+{
+  "zh-CN": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "行为"
+        },
+        "variable/coursef/2021": {
+          "word": "变量"
+        },
+        "input/coursef/2021": {
+          "word": "输入"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "机器学习"
+        },
+        "internet/coursef/2021": {
+          "word": "互联网"
+        },
+        "packets/coursef/2021": {
+          "word": "数据包"
+        },
+        "define/coursef/2021": {
+          "word": "定义"
+        },
+        "debugging/courseb/2021": {
+          "word": "调试"
+        },
+        "drop/courseb/2021": {
+          "word": "丢掉"
+        },
+        "programming/courseb/2021": {
+          "word": "编程"
+        },
+        "debugging/coursea/2021": {
+          "word": "调试"
+        },
+        "drop/coursea/2021": {
+          "word": "丢掉"
+        },
+        "programming/coursea/2021": {
+          "word": "编程"
+        },
+        "debugging/coursec/2021": {
+          "word": "调试"
+        },
+        "sequencing/coursec/2021": {
+          "word": "序列"
+        },
+        "programming/coursec/2021": {
+          "word": "编程"
+        },
+        "binary/coursec/2021": {
+          "word": "二进制"
+        },
+        "debugging/coursed/2021": {
+          "word": "调试"
+        },
+        "programming/coursed/2021": {
+          "word": "编程"
+        },
+        "conditionals/coursed/2021": {
+          "word": "条件语句"
+        },
+        "debugging/express/2021": {
+          "word": "调试"
+        },
+        "sequencing/express/2021": {
+          "word": "序列"
+        },
+        "programming/express/2021": {
+          "word": "编程"
+        },
+        "behavior/express/2021": {
+          "word": "行为"
+        },
+        "conditionals/express/2021": {
+          "word": "条件语句"
+        },
+        "function/express/2021": {
+          "word": "函数"
+        },
+        "variable/express/2021": {
+          "word": "变量"
+        },
+        "define/express/2021": {
+          "word": "定义"
+        },
+        "drop/pre-express/2021": {
+          "word": "丢掉"
+        },
+        "debugging/pre-express/2021": {
+          "word": "调试"
+        },
+        "programming/pre-express/2021": {
+          "word": "编程"
+        },
+        "behavior/coursee/2021": {
+          "word": "行为"
+        },
+        "copyright/coursee/2021": {
+          "word": "版权"
+        },
+        "function/coursee/2021": {
+          "word": "函数"
+        },
+        "conditionals/coursee/2021": {
+          "word": "条件语句"
+        },
+        "define/coursee/2021": {
+          "word": "定义"
+        }
+      }
+    }
+  }
+}

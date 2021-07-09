@@ -1,0 +1,53 @@
+{
+  "km-KH": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "ឥរិយាបទ"
+        },
+        "variable/coursef/2021": {
+          "word": "អថេរ"
+        },
+        "input/coursef/2021": {
+          "word": "ធាតុបញ្ចូល"
+        },
+        "define/coursef/2021": {
+          "word": "កំណត់"
+        },
+        "conditionals/coursed/2021": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "behavior/express/2021": {
+          "word": "ឥរិយាបទ"
+        },
+        "conditionals/express/2021": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "function/express/2021": {
+          "word": "អនុគមន៍"
+        },
+        "variable/express/2021": {
+          "word": "អថេរ"
+        },
+        "define/express/2021": {
+          "word": "កំណត់"
+        },
+        "behavior/coursee/2021": {
+          "word": "ឥរិយាបទ"
+        },
+        "copyright/coursee/2021": {
+          "word": "រក្សាសិទ្ធដោយ"
+        },
+        "function/coursee/2021": {
+          "word": "អនុគមន៍"
+        },
+        "conditionals/coursee/2021": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "define/coursee/2021": {
+          "word": "កំណត់"
+        }
+      }
+    }
+  }
+}
