@@ -300,6 +300,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
         }
       }
     };
+
+    // CDO Blockly takes assetUrl as an inject option, and it's used throughout
+    // apps, so we should also set it here.
+    blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
+
     // Shrink container to make room for the workspace header
     container.style.height = `calc(100% - ${
       styleConstants['workspace-headers-height']
