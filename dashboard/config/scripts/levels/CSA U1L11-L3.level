@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nUse your new methods to paint the mural shown below.\r\n\r\nUse any `if-else` statements, `while` loops, constructors, action commands, and information gathering commands in your toolbox.",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nUse your new methods to paint the mural shown below.\r\n\r\n![](https://images.code.org/84520207297751eb1380ab02478c9c45-image-1625837346137.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -350,13 +350,16 @@
         "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n\n\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-07-08T19:12:35.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-07-08 19:12:41 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:20:22 +0000\",\"changed\":[\"project_template_level_name\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:25:06 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:26:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-08 19:12:41 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:20:22 +0000\",\"changed\":[\"project_template_level_name\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:25:06 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 19:26:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-09 13:29:14 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

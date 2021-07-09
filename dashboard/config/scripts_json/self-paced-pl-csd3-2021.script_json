@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 20:41:42 UTC",
+    "serialized_at": "2021-07-09 01:37:09 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -157,6 +157,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-GameLab-vid"
+        ],
         "progression": "Game Lab"
       },
       "named_level": false,
@@ -180,6 +183,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-AppLab"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-AppLab-vid"
+        ],
         "progression": "App Lab"
       },
       "named_level": false,
@@ -221,6 +250,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021",
         "activity_section.key": "921fa381-66d2-47b7-a8b5-576a6d2df8b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-AppLab",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
       }
     },
     {

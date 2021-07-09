@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-08 21:25:57 UTC",
+    "serialized_at": "2021-07-09 18:54:41 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -3355,7 +3355,7 @@
       "key": "745310a2-7ff7-4e99-8dd4-aa21f61a71d1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features then press the Train button to train a model.\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/aiml/2021] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training-a-model-with-features/aiml/2021] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Follow the instructions on the activity guide to train multiple models from the same dataset and compare accuracy. Students will use the Try Again button to return to the previous screen and select new models.\n\nOnce students have completed the table, regroup for a class discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/aiml/2021] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training-a-model-with-features/aiml/2021] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
         "tips": [
           {
             "type": "teachingTip",
@@ -3372,7 +3372,7 @@
       "key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _The model with 'border color, fill color' is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would still be accurate?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?\n_"
       },
       "seeding_key": {
         "activity_section.key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
@@ -3400,7 +3400,7 @@
       "key": "12f9f574-62eb-48ee-a6c9-263693d17527",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Training with all of the features created a model that was less accurate than some of the other models. What do you think happened here?_\n\n**Discussion Goal:** Students may have a hard time articulating this particular phenomenon, and it's okay to keep this discussion short and not come to a firm conclusions. Instead, use this brief brainstorm to transition to the next slide where it will be easier to explain how this happened.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Training with all possible features created a model that was less accurate than just training on one feature. Why do you think this happened?_\n\n**Discussion Goal:** Students may have a hard time articulating this particular phenomenon, and it's okay to keep this discussion short and not come to a firm conclusions. Instead, use this brief brainstorm to transition to the next slide where it will be easier to explain how this happened.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3417,7 +3417,7 @@
       "key": "5d2a155f-b562-4a7f-b7ad-0d01a9d7ccc9",
       "position": 10,
       "properties": {
-        "description": "**Display:** Show the following slide, which has a picture of the shape that AI Bot identified incorrectly and a picture of the shape grid that was used to train AI Bot.\n\n**Discuss:** _Why did AI Bot think this small brown shape with a red border was a triangle?_\n\n**Discussion Goal:** Encourage students to refer to the training data and see patterns with each of these features individually. For example: \n- most small shapes in the training data were triangles with very few squares\n- most shapes with a red outline in the training data were triangles with very few squares\n- there aren't a lot of brown squares in the training data\n\nIf students don't notice these patterns explicitly, that's okay - you can summarize these observations in the remarks below."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide, which has a picture of the shape that AI Bot identified incorrectly and a picture of the shape grid that was used to train AI Bot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Looking at the training data, why did AI Bot think this small brown shape with a red border was a triangle?_\n\n**Discussion Goal:** Encourage students to refer to the training data and see patterns with each of these features individually. For example: \n- most small shapes in the training data were triangles with very few squares\n- most shapes with a red outline in the training data were triangles with very few squares\n- there aren't a lot of brown squares in the training data\n\nIf students don't notice these patterns explicitly, that's okay - you can summarize these observations in the remarks below."
       },
       "seeding_key": {
         "activity_section.key": "5d2a155f-b562-4a7f-b7ad-0d01a9d7ccc9",
@@ -3465,7 +3465,7 @@
       "key": "e7c76a73-c8e4-4f5f-8fe5-9b722806f2a6",
       "position": 14,
       "properties": {
-        "description": "**Do This:** Have students train a model to with at least 80% accuracy using the pizza data. They should record their results on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students train a model to with at least 80% accuracy using the pizza data. They should record their results on their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "e7c76a73-c8e4-4f5f-8fe5-9b722806f2a6",
@@ -3523,7 +3523,7 @@
       "key": "4338a4d2-4f5d-4580-a14a-0b45ec37c152",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Student answers may vary, but may focus on how the choice of data and features is something human's influence when creating a machine learning model. Students may also comment on our role in deciding to use a model even when it's highly accurate, such as with the shapes dataset from the first part of the lesson."
+        "description": " **Discussion Goal:** Student answers may vary, but may focus on how the choice of data and features is something humans influence when creating a machine learning model. Students may also comment on our role in deciding to use a model even when it's highly accurate, such as with the shapes dataset from the first part of the lesson."
       },
       "seeding_key": {
         "activity_section.key": "4338a4d2-4f5d-4580-a14a-0b45ec37c152",
@@ -3828,8 +3828,14 @@
       "key": "88f74dcb-f399-4aa1-aad1-36a60ede7443",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you are babysitting a young cousin and they run up to you from playing looking upset and asking for help. They show you that they skinned their knee and it isn’t bleeding, but it’s very pink. What would your reaction be?_\n\n_(1) Tell them to deal with it and go back to playing_\n\n_(2) Tell them to wait a minute while you go get some band-aids_\n\n_(3) Call 911 and ask for an ambulance_\n\nHave students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between option (1) and option (2).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What kind of injury would lead you to make a different choice?_\n\nHave students think individually first, then share with a partner before having a full-group discussion.",
-        "name": "Journal\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you are babysitting a young cousin and they run up to you from playing looking upset and asking for help. They show you that they skinned their knee and it isn’t bleeding, but it’s very pink. If you had to choose only one way to react, which would you pick?_\n\n_(1) Tell them to deal with it and go back to playing_\n\n_(2) Tell them to wait a minute while you go get some band-aids_\n\n_(3) Call 911 and ask for an ambulance_\n\nHave students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between option (1) and option (2).",
+        "name": "Journal\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Not A Realistic Choice:** Students may point out that this is not a realistic way to choose your reaction. There are plenty of other choices you could make, and the situation doesn't provide any additional context that might be important - for example, perhaps the location where they were playing has an important role in the decision they would make. These feelings are valid and can lead to a nuanced conversation about how difficult it is to make decisions without full context, especially for a machine. For now, encourage students to choose the best of the possible options while acknowledging that the realistic version of this choice can be much more complex."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "88f74dcb-f399-4aa1-aad1-36a60ede7443",
@@ -3840,7 +3846,7 @@
       "key": "a5414f81-1b1e-4d78-884c-413543986cfe",
       "position": 2,
       "properties": {
-        "description": " **Discussion Goal:** Students should describe how different situations call for different decisions. As students share, highlight the features that they are using to make these decisions - for example, whether or not there is blood or whether or not their cousin is crying. Allow several students to share their answers so a wide variety of ideas are heard. Use some of what you heard as examples in your remarks to transition to today’s activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What kind of injury would lead you to make a different choice?_\n\nHave students think individually first, then share with a partner before having a full-group discussion.\n\n **Discussion Goal:** Students should describe how different situations call for different decisions. As students share, highlight the features that they are using to make these decisions - for example, whether or not there is blood or whether or not their cousin is crying. Allow several students to share their answers so a wide variety of ideas are heard. Use some of what you heard as examples in your remarks to transition to today’s activities."
       },
       "seeding_key": {
         "activity_section.key": "a5414f81-1b1e-4d78-884c-413543986cfe",
@@ -3851,7 +3857,7 @@
       "key": "f75cbfc3-0127-4966-9113-b3a6ec329e29",
       "position": 3,
       "properties": {
-        "description": "Thank you all for sharing your ideas! I heard a lot of different features that helped you make a decision, but I also heard some people make different decisions even in the same situation. This same thing can happen with computers too - the decisions it makes can be different from the ones we expect. Sometimes those decisions can be unfair to some people or privilege other people. Today, we’ll look at how we can test a computer model to see what kinds of decisions its making and make sure it's decisions aren't excluding certain people.",
+        "description": "Thank you all for sharing your ideas! I heard a lot of different features that helped you make a decision, but I also heard some people make different decisions even in the same situation. This same thing can happen with computers too - the decisions it makes can be different from the ones we expect, even in very similar situations. Today, we’ll look at how we can test a computer model to see what kinds of decisions its making and make sure those decisions are fair.",
         "remarks": true
       },
       "seeding_key": {
@@ -3863,7 +3869,7 @@
       "key": "8e9f415f-6a7f-4e54-b39b-ee1071c48be5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How does human bias appear in machine learning?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can we evaluate machine learning models once they've been trained?"
       },
       "seeding_key": {
         "activity_section.key": "8e9f415f-6a7f-4e54-b39b-ee1071c48be5",
@@ -3875,7 +3881,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The second level contains an app that they will use for the first part of this lesson.",
-        "name": "Medical Priority App (20 mins)"
+        "duration": "20",
+        "name": "Medical Priority App"
       },
       "seeding_key": {
         "activity_section.key": "bfdaeb83-f367-42fc-935f-9d389f8b328d",
@@ -3897,7 +3904,7 @@
       "key": "4e25a9de-a0ff-451f-ac91-5cf47061bb90",
       "position": 3,
       "properties": {
-        "description": "**Display:** Show students the information about this app and read it aloud. Demonstrate how to use the app by entering different feature information then pressing predict and seeing the result. Clarify for students what the racial abbreviations mean:\n\n- BAM: Black / African American\n- W: White\n- A: Asian\n- AIAN: American Indian / Alaskan Native\n- NHPI: Native Hawaiian / Pacific Islander\n\nOnce students see how the app works, continue to the next slide with specific tasks to investigate\n\n\n#### Prompt 1"
+        "description": "**Display:** Show students the information about this app and read it aloud. Demonstrate how to use the app by entering different feature information then pressing predict and seeing the result. Clarify for students what the racial abbreviations mean:\n\n- BAM: Black / African American\n- W: White\n- A: Asian\n- AIAN: American Indian / Alaskan Native\n- NHPI: Native Hawaiian / Pacific Islander\n\nOnce students see how the app works, continue to the next slide with specific tasks to investigate"
       },
       "seeding_key": {
         "activity_section.key": "4e25a9de-a0ff-451f-ac91-5cf47061bb90",
@@ -3905,24 +3912,15 @@
       }
     },
     {
-      "key": "d4992505-46ae-4b20-8b3b-a7a826ce6a7b",
+      "key": "fda660a5-4319-46ba-a3d9-9f6a780c1aaf",
       "position": 4,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d4992505-46ae-4b20-8b3b-a7a826ce6a7b",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "fda660a5-4319-46ba-a3d9-9f6a780c1aaf",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** _Change the features of the app and test what happens when different people enter the hospital._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** _Change the features of the app and test what happens when different people enter the hospital._\n\n- _Find a person who will be admitted as “priority”._\n- _Find a person who will be admitted as “normal”_\n- _Find a person who will be admitted as “return later”_\n\n**Circulate:** Circulate around the room as students engage with the app. Ask them what features they’re selecting to try and get a “priority” recommendation, or a “return later” recommendation. Students will probably notice that certain features are more likely to lead to a priority recommendation, specifically: a patient that is bleeding, is short of breath, and has pain in their head or chest is highly likely to have a priority recommendation. Students may also notice that certain demographic information also seems to affect the recommendation, but it’s okay if they don’t bring this up.",
+        "name": "Prompt 1",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Notice and Wonder:** Students will probably notice that certain features are more likely to lead to a priority recommendation, specifically: a patient that is bleeding, is short of breath, and has pain in their head or chest is highly likely to have a priority recommendation. Students may also notice that certain demographic information also seems to affect the recommendation, but it’s okay if they don’t bring this up. If they do, give students space to reflect on whether or not this makes sense and let them come to their own conclusions for now.\n"
+            "markdown": "**What's My Priority?** Students may try to use their own demographic information in the app, but this is explicitly _not_ the purpose of this exercise. Remind students that we want to test this in a wide variety of scenarios, which means testing with a wide variety of people and not just people who match their age, gender, and race."
           }
         ]
       },
@@ -3933,9 +3931,9 @@
     },
     {
       "key": "0dc7ce71-207b-48f5-a9d6-04b7268ad0c3",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "- _Find a person who will be admitted as “priority”._\n- _Find a person who will be admitted as “normal”_\n- _Find a person who will be admitted as “return later”_\n\n**Circulate:** Circulate around the room as students engage with the app. Ask them what features they’re selecting to try and get a “priority” recommendation, or a “return later” recommendation.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Ask a few students to share what features led to priority recommendations, and if that recommendation seems to make sense."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Ask a few students to share what features led to priority recommendations, and if that recommendation seems to make sense."
       },
       "seeding_key": {
         "activity_section.key": "0dc7ce71-207b-48f5-a9d6-04b7268ad0c3",
@@ -3944,7 +3942,7 @@
     },
     {
       "key": "dee1b7a0-d555-4cc8-9997-b14fdd94efcd",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "Let’s check the result under very specific situations. We’ll split into 4 groups and each group can check a specific person:",
         "remarks": true
@@ -3956,9 +3954,9 @@
     },
     {
       "key": "16fba1da-2cad-4eb0-bae2-d612394d03f7",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "Assign students to different groups: A, B, C, or D.\n\n\n\n#### Prompt 2\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the table with the four different groups. Each column represents a different person that the group will test. Everyone in the same group should get the same result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Record the results somewhere prominent where students can see them."
+        "description": "Assign students to different groups: A, B, C, or D.\n\n#### Prompt 2\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the table with the four different groups. Each column represents a different person that the group will test. Everyone in the same group should get the same result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Record the results somewhere prominent where students can see them."
       },
       "seeding_key": {
         "activity_section.key": "16fba1da-2cad-4eb0-bae2-d612394d03f7",
@@ -3967,7 +3965,7 @@
     },
     {
       "key": "985029cd-f6a5-43d8-b799-0217b2d0c256",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": " **Discussion Goal:** Students should report out the following answers:\n\n- Group A: normal\n- Group B: priority\n- Group C: priority\n- Group D: priority\n\nRecord these answers at the front of the room.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Go to the next slide with Prompt 2A and read the directions aloud. Have students re-run the app on this new person. This shouldn't take very long - students will have to change at most 2 features about each person.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Draw a line through the previous answers and write the new ones next to them - however, make sure both answers are clearly visible for the next discussion."
       },
@@ -3978,7 +3976,7 @@
     },
     {
       "key": "52341240-1cae-453a-b2af-bba8e7a16185",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": " **Discussion Goal:** Students should discover the following answers:\n\n- Group A: normal --> priority\n- Group B: priority --> normal\n- Group C: priority --> return later\n- Group D: priority --> return later"
       },
@@ -3988,27 +3986,10 @@
       }
     },
     {
-      "key": "74fbdb1a-0d14-44f3-9fd3-ef4bf96de7ea",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\""
-      },
-      "seeding_key": {
-        "activity_section.key": "74fbdb1a-0d14-44f3-9fd3-ef4bf96de7ea",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
       "key": "36b1b2b2-9792-4e69-b622-f6f5e9b53970",
-      "position": 12,
+      "position": 10,
       "properties": {
-        "description": "aria-hidden=\"true\"></i>  **Discuss:** _All of the results changed. Do those changes seem like they make sense? Or do some of them seem surprising?_",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Lived Experience:** Students may have strong reactions to this prompt as it highlights how a decision is being made based on personal information rather than objective information. They may have their own stories and experiences where they’ve seen different decisions being made based on someone’s age or gender or skin tone. This personal connection is an important part of the lesson, and letting students share these stories can be a powerful bridge to the next activity.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _All of the results changed. Do those changes seem like they make sense? Or do some of them seem surprising?_"
       },
       "seeding_key": {
         "activity_section.key": "36b1b2b2-9792-4e69-b622-f6f5e9b53970",
@@ -4017,7 +3998,7 @@
     },
     {
       "key": "eed1cf8b-3469-4479-97a9-1cf76671f078",
-      "position": 13,
+      "position": 11,
       "properties": {
         "description": "Have students talk with a neighbor first before asking students to discuss as a full group. Give students space to share their own observations and reflect on each other’s responses, and try to avoid validating responses as “right” or “wrong”."
       },
@@ -4028,9 +4009,15 @@
     },
     {
       "key": "b679732a-c448-40a8-b6b4-9155593d41d7",
-      "position": 14,
+      "position": 12,
       "properties": {
-        "description": " **Discussion Goal:** Students may try to rationalize the changes to Group A and Group B as making medical sense. Students may struggle to justify the changes to Group C and Group D, since none of the medical information changed - only the personal information. Encourage students to consider what this means in the real world - for example, with Group D: a man with these symptoms can walk into a hospital and be seen as a priority, but a woman with the same symptoms would be told to return later."
+        "description": " **Discussion Goal:** Students may try to rationalize the changes to Group A and Group B as making medical sense. Students may struggle to justify the changes to Group C and Group D, since none of the medical information changed - only the personal information. Encourage students to consider what this means in the real world - for example, with Group D: a man with these symptoms can walk into a hospital and be seen as a priority, but a woman with the same symptoms would be told to return later.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Lived Experience:** Students may have strong reactions to this prompt as it highlights how a decision is being made based on personal information rather than objective information. They may have their own stories and experiences where they’ve seen different decisions being made based on someone’s age or gender or skin tone. This personal connection is an important part of the lesson, and letting students share these stories can be a powerful bridge to the next activity.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b679732a-c448-40a8-b6b4-9155593d41d7",
@@ -4039,33 +4026,10 @@
     },
     {
       "key": "df0d1304-5b05-434e-898c-9ba8acefda68",
-      "position": 15,
+      "position": 13,
       "properties": {
         "description": "It’s a good thing we were hired to investigate this app, because it looks like we’ve uncovered some disturbing trends in how it was designed. We’ve now seen a few situations where the app is making different decisions based on your personal information rather than the medical condition you’re in. For something as important as a hospital visit, this is unacceptable. This is an example of how machine learning can be biased",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "df0d1304-5b05-434e-898c-9ba8acefda68",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Training Data and Bias video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others"
-      },
-      "seeding_key": {
-        "activity_section.key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "736c4597-6b53-4eb3-a485-92a3f33b4d7e",
-      "position": 17,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** Show students the screenshot of the data from this dataset.",
-        "name": "Introducing Model Cards (5 mins)",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
@@ -4074,31 +4038,50 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "df0d1304-5b05-434e-898c-9ba8acefda68",
+        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
+      }
+    },
+    {
+      "key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**CHANGE THE PART BELOW**: This is clearly a problem, and it's one that people in the machine learning industry are trying to solve. Let's listen to one possible solution from a machine learning scientists named Deb Raji.\n\nDistribute activity guide that shows a Model Card. Have students create a model card for some of the apps they've seen so far (class predictor, shoe recommender?, etc). \n\nUse handout to create own model card, and to answer questions about the next few models with medical priority"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
+        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
+      }
+    },
+    {
+      "key": "736c4597-6b53-4eb3-a485-92a3f33b4d7e",
+      "position": 15,
+      "properties": {
+        "description": "Having a biased model is clearly a problem, and it's another reason our role as evaluators and testers of machine learning models are so important. This is also a problem that people in the machine learning community are trying to solve. Let's listen to one possible solution, then we'll talk about how we can use this idea when creating our own machine learning models.",
+        "duration": "15",
+        "name": "Analyzing Model Cards",
+        "remarks": true
+      },
+      "seeding_key": {
         "activity_section.key": "736c4597-6b53-4eb3-a485-92a3f33b4d7e",
         "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
       }
     },
     {
-      "key": "88332650-50b8-4bf1-a5a7-36a38fed4f9e",
-      "position": 18,
-      "properties": {
-        "description": "It turns out that if we look at the data used to create this model, we can see some problems. Not all groups are represented equally, especially American Indian and Native Hawaiian. Because there was so little data, and because all the examples were “return later”, this model might be trained to think that all people from these groups should be rejected.\n\nThere are many reasons the data could have ended up like this - the hospital where this data came from may not have a large population from these groups, or there could be issues with transportation or health benefits preventing these people from getting access to healthcare. Whatever the reason: it looks like we discovered a form of bias in our model, but only after we decided to investigate and after harm has already been done to these people. Let’s talk about ways we might be able to avoid this in the future with our own models.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "88332650-50b8-4bf1-a5a7-36a38fed4f9e",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
       "key": "3909b255-e93d-4970-bdf3-f8e50ddb3714",
-      "position": 19,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Video:** Have students watch the Model Card video in the slides. This video is part of a longer show - the clip in the slides is pre-set to only play the relevant clip from 18:33 - 19:26",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Pilot Teachers:** This part of the lesson introducing Model Cards has a lot of talking and flipping between video clips. When the curriculum fully launches, we plan to have a video that summarizes these points and introduces model cards. Since we don't have the video now, you can instead rely on this video snippet, these longer remarks, and the images on our slides. When presenting to students, you might think of this like _you_ are in a Code.org video as you talk about Model Cards! \n"
+            "type": "contentCorner",
+            "markdown": "**Model Cards:** Model Cards were initially proposed as part of the academic paper [Model Cards for Model Reporting](https://arxiv.org/pdf/1810.03993.pdf). One of the co-authors of this paper, Deb Raji, is featured in this video clip discussing Model Cards.\n\nSince the publication of this paper, additional efforts have been made to focus on accountability and documentation in machine learning. A good overview of these efforts can be found in the [About ML](https://www.partnershiponai.org/about-ml/) project, which includes real-world examples of Model Cards used in the machine learning industry."
           }
         ]
       },
@@ -4109,7 +4092,7 @@
     },
     {
       "key": "10bf030f-1a2a-4265-9bf7-940cc3dcfb1c",
-      "position": 20,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Model Card graphic."
       },
@@ -4120,7 +4103,7 @@
     },
     {
       "key": "0c36ff7b-cb84-4596-a6d2-6124bf50b548",
-      "position": 21,
+      "position": 18,
       "properties": {
         "description": "A Model Card is something that helps us see how a model was designed and how it is intended to be used. It’s kind of like a nutrition label for a model - it tells you the ingredients, it has a sample recipe, and it warns you of any allergens or ways that it shouldn’t be used. Our Model Cards will have something similar - it will summarize the label and features, how the model was designed to be used, and any warnings to help someone avoid misusing the model. Whenever we train a new model in AI Lab, we’ll also be creating a Model Card to go with it.",
         "remarks": true
@@ -4132,7 +4115,7 @@
     },
     {
       "key": "ce893c11-084d-43de-8a63-ccf154c87ba4",
-      "position": 22,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue in Code Studio to the next level, which displays a new Model Card.",
         "name": "Medical Model Cards (10 mins)"
@@ -4144,7 +4127,7 @@
     },
     {
       "key": "e6cfe656-09a6-47d0-8fce-aeb2b9af0c80",
-      "position": 23,
+      "position": 20,
       "properties": {
         "description": "Because we decided to reject our last app, we’re now looking to buy a new one. This is the model card for the new app - let’s look over the details and see if we can recommend using this app in our hospital.",
         "remarks": true
@@ -4156,7 +4139,7 @@
     },
     {
       "key": "4e17e42c-6609-469f-955c-e753795346f5",
-      "position": 24,
+      "position": 21,
       "properties": {
         "progression_name": "Medical Dataset Model Cards"
       },
@@ -4167,7 +4150,7 @@
     },
     {
       "key": "73abee59-8d95-4047-a037-6799278f6f53",
-      "position": 25,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What information can you see on the card? What stands out to you?_"
       },
@@ -4178,7 +4161,7 @@
     },
     {
       "key": "deb597f3-8b21-4b5c-9ca3-144fbe40d977",
-      "position": 26,
+      "position": 23,
       "properties": {
         "description": " **Discussion Goal:** This is a chance for students to synthesize the card and call out different information. Have students quickly call out something they find interesting, popcorning to different students to share something that catches their attention.\n"
       },
@@ -4189,7 +4172,7 @@
     },
     {
       "key": "00351660-f4ee-482b-a560-8cc4b1801d03",
-      "position": 27,
+      "position": 24,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Should a hospital use this model to help them decide how to prioritize patients? Why or why not?_"
       },
@@ -4200,7 +4183,7 @@
     },
     {
       "key": "9cac8c04-5e7b-4b06-bdf0-427b58df59c6",
-      "position": 28,
+      "position": 25,
       "properties": {
         "description": "**Discussion Goal:** Students should notice that this model is only 33% accurate which is unacceptable in a hospital.\n"
       },
@@ -4211,7 +4194,7 @@
     },
     {
       "key": "f339ad6c-b532-47aa-83d5-592cb8d29310",
-      "position": 29,
+      "position": 26,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Repeat the steps above for the next two levels - have students look at the model card and determine if the hospital should use it to help prioritize patients."
       },
@@ -4222,7 +4205,7 @@
     },
     {
       "key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f",
-      "position": 30,
+      "position": 27,
       "properties": {
         "progression_name": "Medical Dataset Model Cards"
       },
@@ -4233,7 +4216,7 @@
     },
     {
       "key": "d9bd0cec-a5aa-4658-a8a9-f4d533ec645a",
-      "position": 31,
+      "position": 28,
       "properties": {
         "description": " **Discussion Goal:**\n- For Model #2: students should notice that the features appear very specific. If they look at the Data Information section, they may notice that the model was trained in a rural hospital in Alaska. This means it probably won’t do very well outside of Alaska and in other more diverse areas.\n- For Model #3: students should notice that it is only trained on 10 rows of data (or 10 people in the hospital). Even though it has high accuracy, it probably doesn’t have enough data in a real-world scenario"
       },
@@ -4244,7 +4227,7 @@
     },
     {
       "key": "5db264c6-6941-468e-99eb-a19336d4dd02",
-      "position": 32,
+      "position": 29,
       "properties": {
         "description": "These model cards have been incredibly helpful in deciding whether or not to use a model even after it’s been trained. This is an important decision to make, since choosing bad models can lead to biased decisions, which can be unacceptable in certain cases like in a hospital or other decisions central to how we live our lives.",
         "remarks": true
@@ -4579,7 +4562,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. In this first sequence of levels, students will see how to use a Model Card to update their app.",
         "name": "Model Cards in Apps (15 mins)",
-        "progression_name": "Pet Recommender: Import Model",
+        "progression_name": "Pet Recommender",
         "tips": [
           {
             "type": "teachingTip",
@@ -4648,7 +4631,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, which displays the model card. Have students read the labels and features to better understand how the app is working. If students guessed any of these in the earlier discussion, circle back and validate those answers from before.",
-        "progression_name": "Pet Recommender: Model Card",
+        "progression_name": "Pet Recommender",
         "tips": [
           {
             "type": "teachingTip",
@@ -8430,6 +8413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "named_level": false,
@@ -8453,6 +8439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1"
+        ],
         "progression": "Recognizing Shapes"
       },
       "named_level": false,
@@ -8476,6 +8465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza-2021"
+        ],
         "progression": "Pizza Recommendations"
       },
       "named_level": false,
@@ -8499,6 +8491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices-2021"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "named_level": false,
@@ -8915,7 +8910,7 @@
         "level_keys": [
           "ml-use model card-example1A-2021"
         ],
-        "progression": "Pet Recommender: Import Model"
+        "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
@@ -8941,7 +8936,7 @@
         "level_keys": [
           "ml-use model card-pet model card-2021"
         ],
-        "progression": "Pet Recommender: Model Card"
+        "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
@@ -11006,6 +11001,18 @@
       }
     },
     {
+      "name": "Ethics & AI: Equal Access and Algorithmic Bias",
+      "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
+      "key": "ethics_ai_equal_access_and_algorithmic_bias",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
       "name": "Exemplar - Design an AI App",
       "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw",
       "key": "exemplar_-_design_an_ai_app",
@@ -11410,7 +11417,7 @@
       }
     },
     {
-      "name": "Training a Model with Features",
+      "name": "Training a Model in AI Lab",
       "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
       "key": "training-a-model-with-features",
       "properties": {
@@ -11731,6 +11738,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-18",
         "resource.key": "mini-project_create_an_ml_app"
       }
@@ -11997,7 +12010,7 @@
     {
       "key": "bias",
       "word": "Bias",
-      "definition": "Biased data favors some things and de-prioritizes or excludes others",
+      "definition": "When a decision favors some things and de-prioritizes or excludes others",
       "properties": {
       },
       "seeding_key": {
