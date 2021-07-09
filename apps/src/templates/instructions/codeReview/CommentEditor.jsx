@@ -1,10 +1,18 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import $ from 'jquery';
+import {getStore} from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default class CommentEditor extends Component {
+  static propTypes = {
+    onNewCommentSubmit: PropTypes.func.isRequired,
+    token: PropTypes.string.isRequired
+  };
+
   state = {
     comment: '',
     isEditing: false
@@ -14,6 +22,34 @@ export default class CommentEditor extends Component {
     this.setState({
       comment: event.target.value,
       isEditing: true
+    });
+  };
+
+  submitNewComment = () => {
+    console.log(getStore().getState().pageConstants.channelId);
+
+    $.ajax({
+      url: `/code_review_comments`,
+      type: 'POST',
+      headers: {'X-CSRF-Token': this.props.token},
+      data: {
+        channel_id: getStore().getState().pageConstants.channelId,
+        project_version: 'zzz',
+        comment: this.state.comment
+      }
+    }).done(result => {
+      const newComment = {
+        id: result.id,
+        name: result.name,
+        commentText: result.commentText,
+        timestampString: result.timestampString,
+        isResolved: result.isResolved,
+        isFromTeacher: result.isFromTeacher,
+        isFromCurrentUser: result.isFromCurrentUser,
+        isFromOlderVersionOfProject: result.isFromOlderVersionOfProject
+      };
+
+      this.props.onNewCommentSubmit(newComment);
     });
   };
 
@@ -46,7 +82,7 @@ export default class CommentEditor extends Component {
             <Button
               key="submit"
               text={msg.submit()}
-              onClick={() => {}}
+              onClick={this.submitNewComment}
               color="orange"
               style={{...styles.buttons.all, ...styles.buttons.submit}}
             />
