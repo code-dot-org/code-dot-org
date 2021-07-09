@@ -12,6 +12,7 @@ import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
 import JavalabButton from './JavalabButton';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 const FOOTER_BUFFER = 10;
 
@@ -35,7 +36,8 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string,
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
-    setIsRunning: PropTypes.func
+    setIsRunning: PropTypes.func,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
 
   state = {
@@ -134,6 +136,9 @@ class JavalabView extends React.Component {
         >
           <div style={styles.buttons}>
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+            {this.props.showProjectTemplateWorkspaceIcon && (
+              <ProjectTemplateWorkspaceIcon />
+            )}
             {!isEditingStartSources && (
               <JavalabButton
                 text={i18n.finish()}
@@ -266,7 +271,9 @@ export default connect(
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isRunning: state.javalab.isRunning
+    isRunning: state.javalab.isRunning,
+    showProjectTemplateWorkspaceIcon: !!state.pageConstants
+      .showProjectTemplateWorkspaceIcon
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
