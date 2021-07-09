@@ -77,25 +77,16 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_aquarium": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
-          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_card": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "blocking movement": "blokování pohybu"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_chatbot": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "blocking movement": "blokování pohybu",
-          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
-          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_collector": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "flying west and looping": "let na západ a zacyklení",
-          "moving with arrow keys2": "pohyb šipkovými klávesami 2",
-          "driving with arrow keys2": "ovládání šipkovými klávesami 2"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_apps_madlib": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
@@ -104,19 +95,16 @@
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_editable_card": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "blocking movement": "blokování pohybu"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_editable_chatbot": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "blocking movement": "blokování pohybu"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_editable_madlib": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_events_practice_reorder": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami",
-          "moving forward": "posuv vpřed"
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         },
         "courseF_text_choice_conversation": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
@@ -153,69 +141,6 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
-        },
-        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
-        },
-        "CourseE_Project_SpriteLab_examples_2021": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
-        },
-        "courseE_aboutme_1_2021": {
-          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
-        },
-        "courseF_events_choice_conflict": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_choice_conflict2": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_choice_penguin": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_choice_pufferfish": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_conflict": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_key": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_review": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_ship": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_stops": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_events_time": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_answer": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_choice_color": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_choice_title": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_concat": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_events": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_print": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_prompts": {
-          "moving forward": "posuv vpřed"
-        },
-        "courseF_text_review": {
-          "moving forward": "posuv vpřed"
         }
       }
     }

@@ -59,13 +59,13 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. जगातील प्रत्येक अॅपल स्टोअरने अवर ऑफ कोड होस्ट केला आहे. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-ना-नफा संस्था असलेल्या Code.org आणि इतर 100 पेक्षा जास्त जणांनी आयोजित केलेला अवर ऑफ कोड ही एक जागतिक चळवळ असून आजचे विद्यार्थी 21-व्या शतकातील यशासाठी महत्त्वाची कौशल्ये शिकण्यासाठी तयार आहेत, असा या चळवळीचा विश्वास आहे. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 

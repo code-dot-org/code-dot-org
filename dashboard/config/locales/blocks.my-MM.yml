@@ -212,10 +212,6 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': မိုးရွာသည်
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
