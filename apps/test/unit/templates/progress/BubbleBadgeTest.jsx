@@ -1,7 +1,6 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import BubbleBadge, {
-  BubbleBadgeWrapper,
   KeepWorkingBadge,
   AssessmentBadge,
   BadgeType
@@ -55,24 +54,28 @@ describe('BubbleBadge', () => {
     expect(dot).to.be.empty;
   });
 
-  describe('BubbleBadgeWrapper', () => {
-    it('positions the wrapper correctly if isDiamond is false', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={false}>{children}</BubbleBadgeWrapper>
-      );
-      expect(wrapper.props().style.top).to.equal(-7);
-      expect(wrapper.props().style.right).to.equal(-7);
-    });
+  it('positions the element correctly is bubbleShape is not a diamond', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleShape={BubbleShape.circle}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-7);
+    expect(wrapper.find('div').props().style.right).to.equal(-7);
+  });
 
-    it('positions the wrapper correctly if isDiamond is true', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={true}>{children}</BubbleBadgeWrapper>
-      );
-      expect(wrapper.props().style.top).to.equal(-13);
-      expect(wrapper.props().style.right).to.equal(-17);
-    });
+  it('positions the element correctly is bubbleShape is a diamond', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleShape={BubbleShape.diamond}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-13);
+    expect(wrapper.find('div').props().style.right).to.equal(-17);
   });
 
   describe('KeepWorkingBadge', () => {
