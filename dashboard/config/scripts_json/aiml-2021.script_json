@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-09 18:54:41 UTC",
+    "serialized_at": "2021-07-09 21:07:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -3881,7 +3881,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The second level contains an app that they will use for the first part of this lesson.",
-        "duration": "20",
+        "duration": "15",
         "name": "Medical Priority App"
       },
       "seeding_key": {
@@ -3944,8 +3944,8 @@
       "key": "dee1b7a0-d555-4cc8-9997-b14fdd94efcd",
       "position": 6,
       "properties": {
-        "description": "Let’s check the result under very specific situations. We’ll split into 4 groups and each group can check a specific person:",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**Display:** The hospital wants to check the result under very specific situations. The table in the slide shows four different groups. Each column represents a different person that the group will test.\n\nAssign students to different groups: A, B, C, or D. Each person will only test the person in their group. Everyone in the same group should get the same result.",
+        "name": "Prompt 2"
       },
       "seeding_key": {
         "activity_section.key": "dee1b7a0-d555-4cc8-9997-b14fdd94efcd",
@@ -3956,7 +3956,7 @@
       "key": "16fba1da-2cad-4eb0-bae2-d612394d03f7",
       "position": 7,
       "properties": {
-        "description": "Assign students to different groups: A, B, C, or D.\n\n#### Prompt 2\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the table with the four different groups. Each column represents a different person that the group will test. Everyone in the same group should get the same result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Record the results somewhere prominent where students can see them."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Record the results somewhere prominent where students can see them. Students should report out the following answers:\n\n- Group A: normal\n- Group B: priority\n- Group C: priority\n- Group D: priority"
       },
       "seeding_key": {
         "activity_section.key": "16fba1da-2cad-4eb0-bae2-d612394d03f7",
@@ -3967,7 +3967,7 @@
       "key": "985029cd-f6a5-43d8-b799-0217b2d0c256",
       "position": 8,
       "properties": {
-        "description": " **Discussion Goal:** Students should report out the following answers:\n\n- Group A: normal\n- Group B: priority\n- Group C: priority\n- Group D: priority\n\nRecord these answers at the front of the room.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Go to the next slide with Prompt 2A and read the directions aloud. Have students re-run the app on this new person. This shouldn't take very long - students will have to change at most 2 features about each person.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Draw a line through the previous answers and write the new ones next to them - however, make sure both answers are clearly visible for the next discussion."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Go to the next slide with Prompt 2A and read the directions aloud. Have students re-run the app on this new person. Students should only need to change one or two features to generate the new priority, so this shouldn't take very long. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Give students a few minutes to find their results, then ask a person from each group to share the results with the class. Draw a line through the previous answers and write the new ones next to them - however, make sure both answers are clearly visible for the next discussion. Students should discover the following answers:\n\n- Group A: normal --> priority\n- Group B: priority --> normal\n- Group C: priority --> return later\n- Group D: priority --> return later"
       },
       "seeding_key": {
         "activity_section.key": "985029cd-f6a5-43d8-b799-0217b2d0c256",
@@ -3975,19 +3975,8 @@
       }
     },
     {
-      "key": "52341240-1cae-453a-b2af-bba8e7a16185",
-      "position": 9,
-      "properties": {
-        "description": " **Discussion Goal:** Students should discover the following answers:\n\n- Group A: normal --> priority\n- Group B: priority --> normal\n- Group C: priority --> return later\n- Group D: priority --> return later"
-      },
-      "seeding_key": {
-        "activity_section.key": "52341240-1cae-453a-b2af-bba8e7a16185",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
       "key": "36b1b2b2-9792-4e69-b622-f6f5e9b53970",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _All of the results changed. Do those changes seem like they make sense? Or do some of them seem surprising?_"
       },
@@ -3998,7 +3987,7 @@
     },
     {
       "key": "eed1cf8b-3469-4479-97a9-1cf76671f078",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "Have students talk with a neighbor first before asking students to discuss as a full group. Give students space to share their own observations and reflect on each other’s responses, and try to avoid validating responses as “right” or “wrong”."
       },
@@ -4009,13 +3998,13 @@
     },
     {
       "key": "b679732a-c448-40a8-b6b4-9155593d41d7",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": " **Discussion Goal:** Students may try to rationalize the changes to Group A and Group B as making medical sense. Students may struggle to justify the changes to Group C and Group D, since none of the medical information changed - only the personal information. Encourage students to consider what this means in the real world - for example, with Group D: a man with these symptoms can walk into a hospital and be seen as a priority, but a woman with the same symptoms would be told to return later.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Lived Experience:** Students may have strong reactions to this prompt as it highlights how a decision is being made based on personal information rather than objective information. They may have their own stories and experiences where they’ve seen different decisions being made based on someone’s age or gender or skin tone. This personal connection is an important part of the lesson, and letting students share these stories can be a powerful bridge to the next activity.\n"
+            "markdown": "**Lived Experience:** Students may have strong reactions to this prompt as it highlights how a decision is being made based on personal information rather than objective information. They may have their own stories and experiences where they’ve seen different decisions being made based on someone’s age or gender or skin tone. This personal connection is an important part of the lesson, and letting students share these stories can be a powerful bridge to the next activity.\n\nWhen facilitating this discussion, a good mantra to keep in mind is: **assume there’s someone in the room who is your data point**. Sometimes a discussion can slip into focusing on data and numbers and hypotheticals without acknowledging that there may be students with firsthand experience with medical discrimination in the room. Consider how you would like to address this and create an inclusive space for discussion in your classroom."
           }
         ]
       },
@@ -4026,7 +4015,7 @@
     },
     {
       "key": "df0d1304-5b05-434e-898c-9ba8acefda68",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "It’s a good thing we were hired to investigate this app, because it looks like we’ve uncovered some disturbing trends in how it was designed. We’ve now seen a few situations where the app is making different decisions based on your personal information rather than the medical condition you’re in. For something as important as a hospital visit, this is unacceptable. This is an example of how machine learning can be biased",
         "remarks": true,
@@ -4044,15 +4033,9 @@
     },
     {
       "key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
-      "position": 14,
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**CHANGE THE PART BELOW**: This is clearly a problem, and it's one that people in the machine learning industry are trying to solve. Let's listen to one possible solution from a machine learning scientists named Deb Raji.\n\nDistribute activity guide that shows a Model Card. Have students create a model card for some of the apps they've seen so far (class predictor, shoe recommender?, etc). \n\nUse handout to create own model card, and to answer questions about the next few models with medical priority"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n"
       },
       "seeding_key": {
         "activity_section.key": "3bbbd5a7-a83b-425f-bd20-3fc571167798",
@@ -4061,10 +4044,10 @@
     },
     {
       "key": "736c4597-6b53-4eb3-a485-92a3f33b4d7e",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "Having a biased model is clearly a problem, and it's another reason our role as evaluators and testers of machine learning models are so important. This is also a problem that people in the machine learning community are trying to solve. Let's listen to one possible solution, then we'll talk about how we can use this idea when creating our own machine learning models.",
-        "duration": "15",
+        "duration": "20",
         "name": "Analyzing Model Cards",
         "remarks": true
       },
@@ -4075,7 +4058,7 @@
     },
     {
       "key": "3909b255-e93d-4970-bdf3-f8e50ddb3714",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Video:** Have students watch the Model Card video in the slides. This video is part of a longer show - the clip in the slides is pre-set to only play the relevant clip from 18:33 - 19:26",
         "tips": [
@@ -4091,10 +4074,22 @@
       }
     },
     {
+      "key": "2fe485db-e73c-4807-8ffd-8fb32df140e9",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r model_cards/aiml/2021] activity guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which shows the Book Recommender app from yesterday and a partially completed model card.",
+        "progression_name": "Book Recommender Model Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fe485db-e73c-4807-8ffd-8fb32df140e9",
+        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
+      }
+    },
+    {
       "key": "10bf030f-1a2a-4265-9bf7-940cc3dcfb1c",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Model Card graphic."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show students the directions for the first page of the activity guide. Students will help create a model card for the Book Recommendation app from yesterday\n\n**Circulate:** Check in with students as they fill in the model card. Encourage them to consider how the data was collected and which features were used as the basis for filling in the Intended Uses and Limitations sections. For limitations, students may notice that more data should be collected since only 120 students were surveyed, or they may notice that it was only collected in computer science classes and may not represent students from outside those classes."
       },
       "seeding_key": {
         "activity_section.key": "10bf030f-1a2a-4265-9bf7-940cc3dcfb1c",
@@ -4102,23 +4097,10 @@
       }
     },
     {
-      "key": "0c36ff7b-cb84-4596-a6d2-6124bf50b548",
+      "key": "ce893c11-084d-43de-8a63-ccf154c87ba4",
       "position": 18,
       "properties": {
-        "description": "A Model Card is something that helps us see how a model was designed and how it is intended to be used. It’s kind of like a nutrition label for a model - it tells you the ingredients, it has a sample recipe, and it warns you of any allergens or ways that it shouldn’t be used. Our Model Cards will have something similar - it will summarize the label and features, how the model was designed to be used, and any warnings to help someone avoid misusing the model. Whenever we train a new model in AI Lab, we’ll also be creating a Model Card to go with it.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0c36ff7b-cb84-4596-a6d2-6124bf50b548",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "ce893c11-084d-43de-8a63-ccf154c87ba4",
-      "position": 19,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue in Code Studio to the next level, which displays a new Model Card.",
-        "name": "Medical Model Cards (10 mins)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students turn to the back of their activity guide and display the slides with the overview:\n\n_Even though we discovered bias in our original model, there is still a need to help nurses and medical professionals in the ER. Several other companies have created medical priority models that can be used to replace the biased one that we discovered. They’ve also sent along the Model Cards for us to evaluate. Looking at these model cards, can we find a model that we would recommend to the hospital to help decide medical priority?_\n\n**Do This:** Have students continue to Levels 3-5 in Code Studio. Each level has a model card that students can evaluate. Students should progress through each level independently, evaluating each model card and recording their recommendation on their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "ce893c11-084d-43de-8a63-ccf154c87ba4",
@@ -4126,20 +4108,8 @@
       }
     },
     {
-      "key": "e6cfe656-09a6-47d0-8fce-aeb2b9af0c80",
-      "position": 20,
-      "properties": {
-        "description": "Because we decided to reject our last app, we’re now looking to buy a new one. This is the model card for the new app - let’s look over the details and see if we can recommend using this app in our hospital.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e6cfe656-09a6-47d0-8fce-aeb2b9af0c80",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
       "key": "4e17e42c-6609-469f-955c-e753795346f5",
-      "position": 21,
+      "position": 19,
       "properties": {
         "progression_name": "Medical Dataset Model Cards"
       },
@@ -4149,43 +4119,10 @@
       }
     },
     {
-      "key": "73abee59-8d95-4047-a037-6799278f6f53",
-      "position": 22,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What information can you see on the card? What stands out to you?_"
-      },
-      "seeding_key": {
-        "activity_section.key": "73abee59-8d95-4047-a037-6799278f6f53",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "deb597f3-8b21-4b5c-9ca3-144fbe40d977",
-      "position": 23,
-      "properties": {
-        "description": " **Discussion Goal:** This is a chance for students to synthesize the card and call out different information. Have students quickly call out something they find interesting, popcorning to different students to share something that catches their attention.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "deb597f3-8b21-4b5c-9ca3-144fbe40d977",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "00351660-f4ee-482b-a560-8cc4b1801d03",
-      "position": 24,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Should a hospital use this model to help them decide how to prioritize patients? Why or why not?_"
-      },
-      "seeding_key": {
-        "activity_section.key": "00351660-f4ee-482b-a560-8cc4b1801d03",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
       "key": "9cac8c04-5e7b-4b06-bdf0-427b58df59c6",
-      "position": 25,
+      "position": 20,
       "properties": {
-        "description": "**Discussion Goal:** Students should notice that this model is only 33% accurate which is unacceptable in a hospital.\n"
+        "description": "**Circulate:** Check in with students as they look through the model cards. Help students understand the format of the card and how the information can be used.  Each model is intended to have a flaw in them that makes it difficult to recommend, but it's okay if not every student notices these flaws when first reading the card. Instead, students will have a chance later to discuss their findings with partners and possibly change their minds.\n\n- **Level 3: ER Recommender V1** -  this model is only 33% accurate which makes it hard to recommend.\n- **Level 4: Northern Lights ER Priority** - this model has features that appear very specific. If students look at the Data Information section, they may notice that the model was trained in a rural hospital in Alaska. This means it probably won’t do very well outside of Alaska and in other more diverse areas.\n- **Level 5: AI Medical Recommender** - this model is only trained on 10 rows of data (or 10 people in the hospital). Even though it has high accuracy, it probably doesn’t have enough data in a real-world scenario"
       },
       "seeding_key": {
         "activity_section.key": "9cac8c04-5e7b-4b06-bdf0-427b58df59c6",
@@ -4193,47 +4130,13 @@
       }
     },
     {
-      "key": "f339ad6c-b532-47aa-83d5-592cb8d29310",
-      "position": 26,
+      "key": "4c3c69a8-c521-4f1e-9a77-211717c42af0",
+      "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Repeat the steps above for the next two levels - have students look at the model card and determine if the hospital should use it to help prioritize patients."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share their recommendations for each model. Encourage students to talk to each other and provide different justifications as to why a model should or shouldn't be recommended. Let students know there is a spot on the bottom of the activity guide to reflect, and they have permission to change their minds based on what they hear from their peers."
       },
       "seeding_key": {
-        "activity_section.key": "f339ad6c-b532-47aa-83d5-592cb8d29310",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f",
-      "position": 27,
-      "properties": {
-        "progression_name": "Medical Dataset Model Cards"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "d9bd0cec-a5aa-4658-a8a9-f4d533ec645a",
-      "position": 28,
-      "properties": {
-        "description": " **Discussion Goal:**\n- For Model #2: students should notice that the features appear very specific. If they look at the Data Information section, they may notice that the model was trained in a rural hospital in Alaska. This means it probably won’t do very well outside of Alaska and in other more diverse areas.\n- For Model #3: students should notice that it is only trained on 10 rows of data (or 10 people in the hospital). Even though it has high accuracy, it probably doesn’t have enough data in a real-world scenario"
-      },
-      "seeding_key": {
-        "activity_section.key": "d9bd0cec-a5aa-4658-a8a9-f4d533ec645a",
-        "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
-      }
-    },
-    {
-      "key": "5db264c6-6941-468e-99eb-a19336d4dd02",
-      "position": 29,
-      "properties": {
-        "description": "These model cards have been incredibly helpful in deciding whether or not to use a model even after it’s been trained. This is an important decision to make, since choosing bad models can lead to biased decisions, which can be unacceptable in certain cases like in a hospital or other decisions central to how we live our lives.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5db264c6-6941-468e-99eb-a19336d4dd02",
+        "activity_section.key": "4c3c69a8-c521-4f1e-9a77-211717c42af0",
         "lesson_activity.key": "29223996-2e3c-443c-aaf8-2cb97474ee10"
       }
     },
@@ -4241,22 +4144,17 @@
       "key": "5eca1d1e-5aa4-4bab-894f-7100a10401a8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What would you look for in a model card that would lead you to accept it at the hospital?_",
-        "name": "Journal\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _After listening to the explanations from other students in your class, did you change your mind about any of your recommendations above? Why or why not?_\n\nThis prompt is provided on the bottom of the activity guide that students were using in class. Students can respond based on the class discussion that occurred. It's okay for students to not change their minds, especially if they noticed several of the flaws in the models above while completing the activity.",
+        "name": "Journal\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** The activity guide from today can be collected as form of formative assessment. The reflection question can provide insight into how well students understand how model cards can be useful for evaluating models."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5eca1d1e-5aa4-4bab-894f-7100a10401a8",
-        "lesson_activity.key": "cd25831c-3d90-42e0-9da9-f23c7323c7ff"
-      }
-    },
-    {
-      "key": "2179083c-3862-4833-8d1b-9a08dd622794",
-      "position": 2,
-      "properties": {
-        "description": " **Discussion Goal:** Based on the activity, students will probably look for high accuracy, a diverse set of features, trained on lots of data, and making sure the data represents all stakeholders."
-      },
-      "seeding_key": {
-        "activity_section.key": "2179083c-3862-4833-8d1b-9a08dd622794",
         "lesson_activity.key": "cd25831c-3d90-42e0-9da9-f23c7323c7ff"
       }
     },
@@ -8725,6 +8623,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Book Recommender Model Card"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model cards-book recommender model card"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "2fe485db-e73c-4807-8ffd-8fb32df140e9"
+      },
+      "level_keys": [
+        "ml-model cards-book recommender model card"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "ml-model card-medical-1-2021"
         ],
@@ -8746,14 +8667,11 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 3,
-      "activity_section_position": 1,
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical-2-2021"
-        ],
         "progression": "Medical Dataset Model Cards"
       },
       "named_level": false,
@@ -8765,21 +8683,18 @@
         "lesson.key": "lesson7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
+        "activity_section.key": "4e17e42c-6609-469f-955c-e753795346f5"
       },
       "level_keys": [
         "ml-model card-medical-2-2021"
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
-      "activity_section_position": 2,
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical-3-2021"
-        ],
         "progression": "Medical Dataset Model Cards"
       },
       "named_level": false,
@@ -8791,14 +8706,14 @@
         "lesson.key": "lesson7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
+        "activity_section.key": "4e17e42c-6609-469f-955c-e753795346f5"
       },
       "level_keys": [
         "ml-model card-medical-3-2021"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8824,7 +8739,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8850,7 +8765,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8876,7 +8791,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8902,7 +8817,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8928,7 +8843,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8954,7 +8869,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8980,7 +8895,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9006,7 +8921,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -9032,7 +8947,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -9058,7 +8973,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9084,7 +8999,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9110,7 +9025,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9136,7 +9051,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9162,7 +9077,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9188,7 +9103,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9214,7 +9129,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9240,7 +9155,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9266,7 +9181,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9292,7 +9207,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9318,7 +9233,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9344,7 +9259,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -9370,7 +9285,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9396,7 +9311,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9422,7 +9337,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9448,7 +9363,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9474,7 +9389,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9500,7 +9415,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9526,7 +9441,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9552,7 +9467,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9578,7 +9493,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9604,7 +9519,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9630,7 +9545,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9656,7 +9571,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9682,7 +9597,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9708,7 +9623,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9734,7 +9649,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9760,7 +9675,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9786,7 +9701,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9812,7 +9727,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9838,7 +9753,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9864,7 +9779,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9890,7 +9805,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10171,6 +10086,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ml-model cards-book recommender model card",
+        "script_level.level_keys": [
+          "ml-model cards-book recommender model card"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021",
+        "activity_section.key": "2fe485db-e73c-4807-8ffd-8fb32df140e9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-model card-medical-1-2021",
         "script_level.level_keys": [
           "ml-model card-medical-1-2021"
@@ -10190,7 +10117,7 @@
         "lesson.key": "lesson7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
+        "activity_section.key": "4e17e42c-6609-469f-955c-e753795346f5"
       }
     },
     {
@@ -10202,7 +10129,7 @@
         "lesson.key": "lesson7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aiml-2021",
-        "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
+        "activity_section.key": "4e17e42c-6609-469f-955c-e753795346f5"
       }
     },
     {
@@ -11272,6 +11199,19 @@
       }
     },
     {
+      "name": "Model Cards",
+      "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
+      "key": "model_cards",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "model_cards"
+      }
+    },
+    {
       "name": "Our AI Code of Ethics [Template]",
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our-ai-code-of-ethics-template-slides",
@@ -11656,6 +11596,12 @@
       "seeding_key": {
         "lesson.key": "lesson7",
         "resource.key": "medical_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson7",
+        "resource.key": "model_cards"
       }
     },
     {
