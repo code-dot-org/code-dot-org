@@ -1339,6 +1339,18 @@ en:
             '"while"': while
       gamelab_spriteSay:
         text: "[SPRITE][0] say [SPEECH][1]"
+      gamelab_spriteSayChoices:
+        text: "[SPRITE][0] say [SPEECH][1]"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
       gamelab_spriteSayTime:
         text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
       gamelab_startAvoiding:
@@ -1854,10 +1866,34 @@ en:
         text: random word
       PoemBot_setAuthor:
         text: set poem author [AUTHOR][0]
+      PoemBot_setBackgroundEffect:
+        text: set background effect [BG_EFFECT][0]
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': rainbow
+      PoemBot_setForegroundEffect:
+        text: set foreground effect [FG_EFFECT][0]
+        options:
+          FG_EFFECT:
+            '"rain"': rain
+            '"bubbles"': bubbles
+      PoemBot_setPoem:
+        text: set poem [BG_EFFECT][0]
+        options:
+          BG_EFFECT:
+            '"wordsworth"': I Wandered Lonely as a Cloud
+            '"rainbow"': rainbow
       PoemBot_setTitle:
         text: set poem title [TITLE][0]
       PoemBot_showPoem:
         text: show poem
+      PoemBot_stringConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      PoemBot_stringValue:
+        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+      PoemBot_textConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
