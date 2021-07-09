@@ -56,7 +56,8 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :javabuilder_session
+      :javabuilder_session,
+      CodeReviewComment
     ]
     cannot :index, Level
 
@@ -80,6 +81,16 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
+      can :resolve, CodeReviewComment, project_owner_id: user.id
+      can :destroy, CodeReviewComment do |code_review_comment|
+        code_review_comment.project_owner.student_of?(user)
+      end
+      can :create, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :project_comments, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -310,10 +321,6 @@ class Ability
     if user.persisted?
       if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
         can :get_access_token, :javabuilder_session
-
-        # Temporarily allow management of CodeReviewComments by piloters --
-        # more nuanced permissioning up next
-        can :manage, CodeReviewComment
       end
     end
 

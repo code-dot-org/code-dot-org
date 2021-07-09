@@ -1,0 +1,18 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "harleySay",
+    "blockText": "Harley Quinn say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Harley Quinn!",
+            "\"I am Harley Quinn!\""
+          ]
+        ]
+      }
+    ]
+  }
+}

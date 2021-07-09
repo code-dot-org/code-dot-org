@@ -1,0 +1,18 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "jokerSay",
+    "blockText": "Joker say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I'm the Joker!",
+            "\"I'm the Joker!\""
+          ]
+        ]
+      }
+    ]
+  }
+}
