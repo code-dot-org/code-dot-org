@@ -8,13 +8,19 @@ import StylizedBaseDialog, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 
-export default function DisallowedHtmlWarningDialog(props) {
+export default function DisallowedHtmlWarningDialog({
+  isOpen,
+  filename,
+  disallowedTags,
+  handleClose,
+  ...props
+}) {
   const body = (
     <div>
       <SafeMarkdown
         markdown={weblabI18n.disallowedHtml({
-          filename: props.filename,
-          disallowedTags: props.disallowedTags.join(', ')
+          filename: filename,
+          disallowedTags: disallowedTags.join(', ')
         })}
       />
       <SupportArticleMarkdown />
@@ -23,15 +29,16 @@ export default function DisallowedHtmlWarningDialog(props) {
 
   return (
     <StylizedBaseDialog
-      isOpen={props.isOpen}
+      {...props}
+      isOpen={isOpen}
       title={commonI18n.warning()}
       body={body}
-      handleClose={props.handleClose}
+      handleClose={handleClose}
       renderFooter={() => (
         <FooterButton
           type="confirm"
           text={commonI18n.dialogOK()}
-          onClick={props.handleClose}
+          onClick={handleClose}
         />
       )}
     />
