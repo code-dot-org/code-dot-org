@@ -3,6 +3,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
+import CommentOptions from './commentOptions';
 
 export default class Comment extends Component {
   static propTypes = {
@@ -59,9 +60,7 @@ export default class Comment extends Component {
           />
           {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
-          {this.state.showEllipsisMenu && (
-            <div>Placeholder for ellipsis menu</div>
-          )}
+          {this.state.showEllipsisMenu && <CommentOptions />}
         </div>
         <div
           id={'code-review-comment-body'}
