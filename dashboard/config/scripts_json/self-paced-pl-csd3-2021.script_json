@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 01:19:35 UTC",
+    "serialized_at": "2021-07-09 01:37:09 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -46,6 +46,21 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Tools",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021"
+      }
     }
   ],
   "lesson_activities": [
@@ -57,6 +72,18 @@
       "seeding_key": {
         "lesson_activity.key": "3a7b3e5f-b759-4135-96fa-55228480d628",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021"
+      }
+    },
+    {
+      "key": "a1773d7f-4c39-4d44-b7e9-fdd693af3ea6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1773d7f-4c39-4d44-b7e9-fdd693af3ea6",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021"
       }
@@ -73,6 +100,28 @@
         "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58",
         "lesson_activity.key": "3a7b3e5f-b759-4135-96fa-55228480d628"
       }
+    },
+    {
+      "key": "921fa381-66d2-47b7-a8b5-576a6d2df8b4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Game Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "921fa381-66d2-47b7-a8b5-576a6d2df8b4",
+        "lesson_activity.key": "a1773d7f-4c39-4d44-b7e9-fdd693af3ea6"
+      }
+    },
+    {
+      "key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d",
+      "position": 2,
+      "properties": {
+        "progression_name": "App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d",
+        "lesson_activity.key": "a1773d7f-4c39-4d44-b7e9-fdd693af3ea6"
+      }
     }
   ],
   "script_levels": [
@@ -82,6 +131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CV-Equity"
+        ],
         "progression": "Equity"
       },
       "named_level": false,
@@ -98,6 +150,81 @@
       "level_keys": [
         "SP-VPL-21-mod3-CV-Equity"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-GameLab-vid"
+        ],
+        "progression": "Game Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-GameLab-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "921fa381-66d2-47b7-a8b5-576a6d2df8b4"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-GameLab-vid"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "App Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-AppLab"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-AppLab-vid"
+        ],
+        "progression": "App Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-AppLab-vid"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -111,6 +238,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021",
         "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-GameLab-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-GameLab-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "921fa381-66d2-47b7-a8b5-576a6d2df8b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-AppLab",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-AppLab-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-AppLab-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "6408ec85-1b14-4f41-b9b3-2fc4215bf75d"
       }
     }
   ],
