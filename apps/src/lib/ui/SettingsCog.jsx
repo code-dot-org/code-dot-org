@@ -134,12 +134,14 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
-          {this.areAIToolsEnabled() && <ManageModels onClick={this.manageModels} />}
+          {this.areAIToolsEnabled() && (
+            <ManageModels onClick={this.manageModels} />
+          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
         </PopUpMenu>
-        {aiEnabled && (
+        {this.areAIToolsEnabled() && (
           <ModelManagerDialog
             isOpen={this.state.managingModels}
             onClose={this.closeModelManager}
