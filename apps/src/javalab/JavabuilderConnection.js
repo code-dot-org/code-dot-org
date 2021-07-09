@@ -1,19 +1,12 @@
-/* globals dashboard */
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 const queryString = require('query-string');
+import project from '@cdo/apps/code-studio/initApp/project';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(
-    channelId,
-    javabuilderUrl,
-    onMessage,
-    miniApp,
-    serverLevelId,
-    options
-  ) {
-    this.channelId = channelId;
+  constructor(javabuilderUrl, onMessage, miniApp, serverLevelId, options) {
+    this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
@@ -28,9 +21,9 @@ export default class JavabuilderConnection {
       url: '/javabuilder/access_token',
       type: 'get',
       data: {
-        projectUrl: dashboard.project.getProjectSourcesUrl(),
+        projectUrl: project.getProjectSourcesUrl(),
         channelId: this.channelId,
-        projectVersion: dashboard.project.getCurrentSourceVersionId(),
+        projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
         options: this.options
       }

@@ -1,0 +1,18 @@
+{
+  "category": "Batman Speech",
+  "config": {
+    "func": "robinSay",
+    "blockText": "Robin say {SPEECH}",
+    "args": [
+      {
+        "name": "SPEECH",
+        "options": [
+          [
+            "I am Robin!",
+            "\"I am Robin!\""
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -234,13 +234,6 @@ function setPoem(key){
     poem.lines.push([{value: "A host, of golden daffodils;", type: 'literal'}]);
     poem.lines.push([{value: "Beside the lake, beneath the trees,", type: 'literal'}]);
     poem.lines.push([{value: "Fluttering and dancing in the breeze.", type: 'literal'}]);
-    poem.lines.push([{value: "", type: 'literal'}]);
-    poem.lines.push([{value: "Continuous as the stars that shine", type: 'literal'}]);
-    poem.lines.push([{value: "And twinkle on the milky way,", type: 'literal'}]);
-    poem.lines.push([{value: "They stretched in never-ending line", type: 'literal'}]);
-    poem.lines.push([{value: "Along the margin of a bay:", type: 'literal'}]);
-    poem.lines.push([{value: "Ten thousand saw I at a glance,", type: 'literal'}]);
-    poem.lines.push([{value: "Tossing their heads in sprightly dance.", type: 'literal'}]);
   }
 
 }

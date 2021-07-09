@@ -8,12 +8,12 @@
         "name": "BG_EFFECT",
         "options": [
           [
-            "I Wandered Lonely as a Cloud",
-            "\"wordsworth\""
+            "---",
+            "\"---\""
           ],
           [
-            "rainbow",
-            "\"rainbow\""
+            "I Wandered Lonely as a Cloud",
+            "\"wordsworth\""
           ]
         ]
       }
