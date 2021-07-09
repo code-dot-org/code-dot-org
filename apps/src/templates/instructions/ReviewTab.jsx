@@ -7,11 +7,24 @@ import CommentEditor from './codeReview/CommentEditor';
 
 export default class ReviewTab extends Component {
   static propTypes = {
-    comments: PropTypes.arrayOf(commentShape)
+    comments: PropTypes.arrayOf(commentShape).isRequired,
+    token: PropTypes.string.isRequired
   };
 
-  state = {
-    readyForReview: false
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      readyForReview: false,
+      comments: this.props.comments
+    };
+  }
+
+  onNewCommentSubmit = newComment => {
+    const comments = this.state.comments;
+    comments.push(newComment);
+
+    this.setState({comments: comments});
   };
 
   renderReadyForReviewCheckbox() {
@@ -33,7 +46,8 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {comments} = this.props;
+    const {token} = this.props;
+    const {comments} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
@@ -46,7 +60,10 @@ export default class ReviewTab extends Component {
             />
           );
         })}
-        <CommentEditor />
+        <CommentEditor
+          onNewCommentSubmit={this.onNewCommentSubmit}
+          token={token}
+        />
       </div>
     );
   }

@@ -201,8 +201,11 @@ class TopInstructions extends Component {
       promises.push(
         topInstructionsDataApi
           .getCodeReviewCommentsForProject(channelId, 'yyy')
-          .done(comments => {
-            this.setState({codeReviewComments: comments});
+          .done((data, _, request) => {
+            this.setState({
+              codeReviewComments: data,
+              token: request.getResponseHeader('csrf-token')
+            });
           })
       );
     }
@@ -710,6 +713,7 @@ class TopInstructions extends Component {
               <ReviewTab
                 ref={ref => (this.reviewTab = ref)}
                 comments={codeReviewComments}
+                token={token}
               />
             )}
             {this.isViewingAsTeacher &&

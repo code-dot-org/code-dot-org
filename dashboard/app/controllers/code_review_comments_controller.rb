@@ -14,9 +14,12 @@ class CodeReviewCommentsController < ApplicationController
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
+    # Need to wait to authorize until after we've figured out who owns the project that the comment
+    # is associated with.
     authorize! :create, @code_review_comment, @project_owner
+
     if @code_review_comment.save
-      return render json: @code_review_comment
+      return render json: serialize(@code_review_comment)
     else
       return head :bad_request
     end
@@ -45,22 +48,16 @@ class CodeReviewCommentsController < ApplicationController
   def project_comments
     authorize! :project_comments, CodeReviewComment.new, @project_owner
 
+    # Setting custom header here allows us to access the csrf-token and manually use for create
+    headers['csrf-token'] = form_authenticity_token
+
     # To do: get project version passed as param
     @project_comments = CodeReviewComment.where(
       storage_app_id: @storage_app_id
-    ).order(created_at: :desc)
+    ).order(:created_at)
 
     serialized_comments = @project_comments.map do |comment|
-      {
-        id: comment.id,
-        name: comment.commenter&.name,
-        commentText: comment.comment,
-        timestampString: comment.created_at,
-        isResolved: !!comment.is_resolved,
-        isFromTeacher: !!comment.is_from_teacher,
-        isFromCurrentUser: !!(comment.commenter == current_user),
-        isFromOlderVersionOfProject: false
-      }
+      serialize(comment)
     end
 
     render json: serialized_comments
@@ -75,12 +72,25 @@ class CodeReviewCommentsController < ApplicationController
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 
-  # # TO DO: modify permit_params to handle other parameters (eg, section ID)
-  # def code_review_comments_params
-  #   params.permit(
-  #     :project_version,
-  #     :comment,
-  #     :is_resolved
-  #   )
-  # end
+  # TO DO: modify permit_params to handle other parameters (eg, section ID)
+  def code_review_comments_params
+    params.permit(
+      :project_version,
+      :comment,
+      :is_resolved
+    )
+  end
+
+  def serialize(comment)
+    {
+      id: comment.id,
+      name: comment.commenter&.name,
+      commentText: comment.comment,
+      timestampString: comment.created_at,
+      isResolved: !!comment.is_resolved,
+      isFromTeacher: !!comment.is_from_teacher,
+      isFromCurrentUser: !!(comment.commenter == current_user),
+      isFromOlderVersionOfProject: false
+    }
+  end
 end
