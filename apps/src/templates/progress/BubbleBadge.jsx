@@ -34,7 +34,7 @@ function getBadge(badgeType) {
       return null;
   }
 }
-export function BubbleBadgeWrapper({isDiamond, children}) {
+function BubbleBadgeWrapper({isDiamond, children}) {
   const bubblePositioning = isDiamond
     ? styles.diamondBubblePosition
     : styles.bubblePosition;
