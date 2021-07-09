@@ -208,12 +208,10 @@ class ScriptsController < ApplicationController
   def get_unit
     unit_id = params[:id]
 
-    puts params[:action]
     script =
       params[:action] == "edit" ?
       Script.get_without_cache(unit_id, with_associated_models: true) :
       Script.get_from_cache(unit_id, raise_exceptions: false)
-    puts script
     return script if script
 
     if Script.family_names.include?(unit_id)
