@@ -2,21 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {SUPPORT_ARTICLE_URL} from '@cdo/apps/weblab/constants';
+import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 import {reload} from '@cdo/apps/utils';
 
 export default function FatalErrorDialog(props) {
   const body = (
     <div>
       <p>{props.errorMessage}</p>
-      <SafeMarkdown
-        markdown={weblabI18n.troubleshootingSupport({url: SUPPORT_ARTICLE_URL})}
-        openExternalLinksInNewTab
-      />
+      <SupportArticleMarkdown />
     </div>
   );
 

@@ -1,5 +1,7 @@
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+import {getStore} from '../redux';
+import {setIsRunning} from './javalabRedux';
 const queryString = require('query-string');
 import project from '@cdo/apps/code-studio/initApp/project';
 
@@ -95,7 +97,15 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
-    this.miniApp?.onClose?.();
+    if (this.miniApp) {
+      // miniApp on close should handle setting isRunning state as it
+      // may not align with actual program execution. If mini app does
+      // not have on close we won't toggle back automatically.
+      this.miniApp.onClose?.();
+    } else {
+      // Set isRunning to false
+      getStore().dispatch(setIsRunning(false));
+    }
   }
 
   onError(error) {
