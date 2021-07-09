@@ -1,6 +1,7 @@
 pt:
   data:
     progressions:
+      '"If/Else" with the Bee': '"If/Else" com a Abelha'
       Accelerometer Events: Eventos do Acelerômetro
       Adding Images: Adicionando Imagens
       Adding Screens: Adicionando Telas
@@ -103,8 +104,8 @@ pt:
       'Mini-Project: Alien Dance Moves': 'Mini-Projeto: Movimentos de dança alienígena'
       'Mini-Project: Alien Dance Party': 'Mini-Projeto: Festa de dança alienígena'
       'Mini-Project: Royal Battle': 'Mini-Projeto: Batalha Real'
-      "Mini-Project: Snowflake #1": "Mini-Projeto: Floco de Neve #1"
-      "Mini-Project: Snowflake #2": "Mini-Projeto: Floco de Neve #2"
+      'Mini-Project: Snowflake #1': 'Mini-Projeto: Floco de Neve #1'
+      'Mini-Project: Snowflake #2': 'Mini-Projeto: Floco de Neve #2'
       'Mini-Project: Swimming Fish': 'Mini-Projeto: Peixes Nadadores'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Projeto: Peixes Nadadores (Continuação)'
       'Mini-Project: Virtual Pet': 'Mini-Projeto: Pet Virtual'

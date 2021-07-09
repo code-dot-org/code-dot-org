@@ -1,6 +1,7 @@
 ko:
   data:
     progressions:
+      '"If/Else" with the Bee': '"If/Else" 와 벌'
       Accelerometer Events: 가속도계 이벤트
       Adding Images: 이미지 추가
       Adding Screens: 스크린 추가
@@ -100,8 +101,8 @@ ko:
       'Mini-Project: Alien Dance Moves': '미니 프로젝트: 에일리언 댄스 무브스'
       'Mini-Project: Alien Dance Party': '미니 프로젝트: 에일리언 댄스 파티'
       'Mini-Project: Royal Battle': '미니 프로젝트: 로열 배틀'
-      "Mini-Project: Snowflake #1": "미니 프로젝트: 눈송이 #1"
-      "Mini-Project: Snowflake #2": "미니 프로젝트: 눈송이 #2"
+      'Mini-Project: Snowflake #1': '미니 프로젝트: 눈송이 #1'
+      'Mini-Project: Snowflake #2': '미니 프로젝트: 눈송이 #2'
       'Mini-Project: Swimming Fish': '미니 프로젝트: 수영하는 물고기'
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
       'Mini-Project: User Input Programs': '챗봇 만들기'

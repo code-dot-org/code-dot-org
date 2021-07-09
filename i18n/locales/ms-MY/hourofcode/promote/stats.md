@@ -1,52 +1,52 @@
 ---
-title: Ringkasan penerbit dan statistik yang berguna
+title: Blurbs and useful stats
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Ringkasan penerbit dan statistik yang berguna
+# Blurbs and useful stats
 
-### Gunakan pemesejan berikut jika anda mencari cara mempromosikan Jam Kod di dalam buletin dan komunikasi anda.
+### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
 
 * * *
 
-## Gunakan ringkasan penerbit yang pendek ini di dalam buletin
+## Gunakan blurb pendek ini dalam surat khabar
 
-#### Bawa sains komputer ke sekolah anda. Mulakan dengan Jam Kod!
+#### Bring computer science to your school. Start with an Hour of Code!
 
-Dengan teknologi mengubah setiap industri di planet ini, pengetahuan pengkomputeran telah menjadi sebahagian daripada set kemahiran yang sempurna. Tetapi kurang daripada separuh bilangan semua sekolah yang mengajar sains komputer! Berita baiknya ialah, kami sedang dalam proses mengubahnya. Jika anda dengar tentang Jam Kod pada tahun lepas, anda mungkin tahu bahawa acara tersebut telah mencipta sejarah. Kini, 100 juta pelajar telah mengetahui sejauh mana sains komputer boleh diakses dan menyeronokkan dengan hanya melakukan satu Jam Kod.
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Tetapi kurang daripada separuh daripada semua sekolah mengajar sains komputer! Berita baiknya ialah, kita sedang berada di perjalanan untuk mengubah situasi ini. Jika anda pernah dengar tentang Hour of Code pada tahun lepas, kamu mungkin sudah tahu ia telah mencipta sejarah. 100 juta pelajar sekarang telah menemui betapa mudah diakses dan menyeronokkan sains komputer dengan hanya melaksanakan suatu Hour of Code.
 
-Jam Kod ialah pengenalan kepada sains komputer selama sejam, direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sesiapa sahaja boleh mempelajari asasnya. Ketahui lebih lanjut di <http://HourofCode.com>, anda sendiri boleh mencuba selama sejam, atau menganjurkan acara Jam Kod bertujuan memperkenalkan individu lain kepada dunia pengkomputeran!
+Hour of Code merupakan pengenalan yang sejam lamanya kepada sains komputer, direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sesiapa sahaja boleh belajar asasnya. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
-## Pemesejan untuk soalan lazim
+## Messaging for frequently asked questions
 
-#### Mengapakah sekolah anda menjalankan acara Jam Kod?
+#### Mengapakah sekolah anda melaksanakan suatu Hour of Code?
 
-Meskipun kita semua tahu bahawa adalah penting bagi pelajar mempelajari cara menavigasi dunia hari ini yang penuh dengan teknologi, ramai guru tidak berpengalaman di dalam sains komputer dan tidak tahu tempat untuk bermula. Acara ini merupakan peluang untuk kita semua melihat perkara sebenar mengenai sains komputer.
+Sementara kita semua tahu bahawa adalah penting bagi pelajar untuk mempelajari bagaimana untuk menavigasi dalam dunia kini yang penuh dengan teknologi, ramai guru tidak berpengalaman dalam sains komputer dan tidak tahu di mana untuk memulakannya. Acara ini merupakan suatu peluang bagi kita semua untuk melihat apakah sebenarnya sains komputer.
 
-Kami berharap ia akan mencetuskan minat dalam pelajar untuk terus belajar. Penyelidikan juga menunjukkan bahawa kanak-kanak boleh mengambil konsep pengaturcaraan sebelum mereka tahu cara membaca dan menulis. Sebenarnya, otak mereka lebih mudah menerima bahasa komputer pada usia muda, sama seperti bahasa asing. <br /> <br />
+Kita mengharapkan ia akan mencetuskan minat pelajar untuk terus belajar. Penyelidikan juga menunjukkan bahawa kanak-kanak boleh belajar konsep pengaturcaraan sebelum mereka tahu bagaimana untuk membaca dan menulis. Sebenarnya, otak mereka lebih mudah untuk menerima bahasa komputer pada usia yang muda, sama seperti bahasa asing. <br /> <br />
 
 #### Mengapakah perkara ini penting?
 
-Teknologi sedang mengubah setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat ialah dalam kerjaya—termasuklah kesenian dan seni reka—yang menilai kemahiran pengekodan. Tetapi 53 peratus sekolah di Amerika Syarikat tidak mengajar sains komputer. Kini, sudah tiba masanya untuk kita mengejar abad ke-21. Kami tahu bahawa tanpa mengambil kira perkara yang dilakukan oleh pelajar kita apabila mereka membesar, sama ada mereka memasuki jurusan perubatan, perniagaan, politik, atau kesenian, mengetahui cara membina teknologi akan memberikan keyakinan dan kelebihan daya saing kepada mereka. <br /> <br />
+Teknologi sedang mentransformasikan setiap industri di planet ini. Pada tahun 2015, sebanyak 7 juta peluang pekerjaan di Amerika Syarikat berada di kerjaya—termasuklah kesenian dan seni reka—yang menaksirkan kemahiran koding. But 53 percent of schools in the U.S. don't teach computer science. Sudah tiba masanya bagi kita untuk mengejar abad ke-21. Kita tahu bahawa tidak kira apa yang dilakukan oleh pelajar-pelajar kita apabila mereka membesar, sama ada mereka menceburi bidang perubatan, perniagaan, politik, atau kesenian, mengetahui bagaimana untuk membina teknologi akan memberi keyakinan dan kelebihan daya saing kepada mereka. <br /> <br />
 
-#### Petikan yang boleh digunakan sebagai bahan
+#### A quote you can use in materials
 
-"Jam Kod direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan bahawa sains komputer bukanlah sesuatu yang sukar difahami—sesiapa sahaja boleh mempelajari asasnya," kata Hadi Partovi, pengasas dan Ketua Pengawai Eksekutif Code.org. "Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Permintaan untuk pendidikan sains komputer yang berkaitan dengan abad ke-21 merentasi semua sempadan dan tidak mempunyai batasan." <br /> <br />
+"Hour of Code direka bentuk untuk menjadikan kod lebih mudah difahami dan menunjukkan sains komputer bukanlah sains yang sukar difahami—sesiapa sahaja boleh mempelajari asas-asasnya," kata Hadi Partovi, pengasas dan Ketua Pengawai Eksekutif Code.org. "Lebih daripada 100 juta pelajar dari seluruh dunia sudah telah mencuba suatu Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
 
 #### Mengenai Code.org
 
-Code.org ialah pertubuhan awam bukan untung 501c3 yang secara khusus mengembangkan penyertaan di dalam sains komputer dan meningkatkan penyertaan oleh wanita muda dan pelajar yang datang daripada kumpulan terpencil yang lain. Visinya ialah setiap pelajar di setiap sekolah mempunyai peluang untuk mempelajari pengaturcaraan komputer. Selepas pelancaran pada tahun 2013, Code.org telah menganjurkan kempen Jam Kod – yang telah memperkenalkan lebih daripada 100 juta pelajar kepada sains komputer sehingga masa kini – dan bekerjasama dengan 70 sekolah awam daerah di seluruh negara untuk mengembangkan atur cara sains komputer. Code.org disokong oleh sumbangan bersifat dermawan daripada syarikat, yayasan dan individu yang pemurah, termasuk Microsoft, Facebook, Infosys Foundation USA, Amazon dan lain-lain. Untuk maklumat lanjut, sila kunjungi: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Selepas dilancarkan pada tahun 2013, Code.org telah menganjurkan kempen Hour of Code – yang telah memperkenalkan lebih daripada 100 juta orang pelajar kepada sains komputer sehingga masa ini – dan bekerjasama dengan 70 buah sekolah awam daerah di seluruh negara untuk mengembangkan program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
-## Kongsikan ini di dalam media sosial dan e-mel
+## Share these on social media and in emails
 
 [![imej](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imej](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infografik
+## Infographics
 
 {{ stats_carousel }}
 

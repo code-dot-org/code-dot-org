@@ -1,12 +1,12 @@
 ---
-title: โปสเตอร์ชั่วโมงเขียนโค้ดเก่า
+title: โปสเตอร์ Hour of Code เก่า
 ---
 
 {{ signup_button }}
 
-# โปสเตอร์ชั่วโมงเขียนโค้ดเก่า
+# โปสเตอร์ Hour of Code เก่า
 
-### ไล่ดูโปสเตอร์เก่า ๆ ของเราก่อนสั่งพิมพ์และแปะไว้ในห้องเรียน! แต่ถ้าคุณกำลังมองหาโปสเตอร์ใหม่ล่าสุดอยู่ [คลิกที่นี่]({{ promote/promote_posters_url }})
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 
