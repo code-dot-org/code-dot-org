@@ -38,18 +38,25 @@ Feature: AI Lab
     And I see "#results"
     And I wait for 3 seconds
     And I see "#predict"
+    And I click selector "#details-button"
+    And I wait until ".editor-column" contains text "Details of results are being shown."
+    And I see "#results-details"
     And I click selector "#continue-button"
     And I wait until ".editor-column" contains text "Save the trained model for use in App Lab."
     And I close the instructions overlay if it exists
     And I see "#statement"
     And I see "#model-card-form"
-    Then element "#continue-button" has one of css properties "opacity" equal to "0.5"
-    And I type "Name" into "#model-name-input"
+    Then element "#continue-button" is disabled
+    And I press keys "Name test" for element "#model-name-input"
+    And I wait for 4 seconds
+    And I blur selector "#model-name-input"
+    And I click selector "#model-card-form"
+    And I wait for 10 seconds
     And I click selector "#continue-button"
     And I wait until ".editor-column" contains text "You've successfully trained and saved your model."
     And I wait for 4 seconds
     And I close the instructions overlay if it exists
     And I wait for 4 seconds
     And I see "#statement"
-    And I wait for 4 seconds
-    And I see ".ailab-image-hover"
+    And I see "#model-card"
+  
