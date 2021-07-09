@@ -632,6 +632,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: directs to script if script and family name match" do
+    courseg = create :script, name: 'courseg', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(courseg)
+    courseg_lesson_group_1 = create :lesson_group, script: courseg
+    courseg_lesson_1 = create :lesson, script: courseg, lesson_group: courseg_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
+    courseg_lesson_1_script_level = create :script_level, script: courseg, lesson: courseg_lesson_1, position: 1
+
+    get :show, params: {
+      script_id: courseg.name,
+      lesson_position: courseg_lesson_1.relative_position,
+      id: courseg_lesson_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
+  end
+
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_unit, chapter: 3
     assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
