@@ -95,7 +95,7 @@ export default class ProgressTableDetailCell extends React.Component {
             isConcept={level.isConceptLevel}
             title={level.bubbleText}
             url={url}
-            reviewState={levelProgress?.reviewState}
+            reviewState={levelProgress?.teacherFeedbackReviewState}
           />
         </div>
         {level.sublevels && this.renderSublevels(level)}
