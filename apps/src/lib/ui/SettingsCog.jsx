@@ -13,7 +13,6 @@ import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
-import experiments from '@cdo/apps/util/experiments';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 
 class SettingsCog extends Component {
@@ -28,15 +27,10 @@ class SettingsCog extends Component {
     open: false,
     confirmingEnableMaker: false,
     managingLibraries: false,
-    managingModels: false,
-    isAIEnabled: false
+    managingModels: false
   };
 
   targetPoint = {top: 0, left: 0};
-
-  componentDidMount() {
-    this.setState({isAIEnabled: experiments.isEnabled(experiments.APPLAB_ML)});
-  }
 
   open = () => this.setState({open: true});
   close = () => this.setState({open: false});
@@ -120,8 +114,6 @@ class SettingsCog extends Component {
       rootStyle.color = color.dark_charcoal;
     }
 
-    const aiEnabled = this.state.isAIEnabled && this.areAIToolsEnabled();
-
     return (
       <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
         <FontAwesome
@@ -142,7 +134,7 @@ class SettingsCog extends Component {
           {this.areLibrariesEnabled() && (
             <ManageLibraries onClick={this.manageLibraries} />
           )}
-          {aiEnabled && <ManageModels onClick={this.manageModels} />}
+          {this.areAIToolsEnabled() && <ManageModels onClick={this.manageModels} />}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
