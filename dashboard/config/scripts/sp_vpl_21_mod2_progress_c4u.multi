@@ -6,7 +6,9 @@ wrong 'Student A'
 right 'Student B'
 
 markdown <<MARKDOWN
-![](https://images.code.org/62798c213bbfe7afd3786cda81a84a31-image-1625365863124.06.34 PM.png)
+![](https://images.code.org/c92e6cd9ee2669a069e72e67b919af2e-image-1625773034493.36.58 PM.png)
+
+![](https://images.code.org/c6a02a8487c97a7c91abb0268c52fa94-image-1625772235783.png)
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
