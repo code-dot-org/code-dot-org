@@ -1049,42 +1049,37 @@ export var blocks = [
     docFunc: 'comment',
     category: 'Goals',
     noAutocomplete: true
+  },
+  {
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['name', 'id', 'data', 'callback'],
+    params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
+  },
+  {
+    func: 'declareAssign_object',
+    block: `var object = {"key": "value"};`,
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'getValue',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"'],
+    params: ['{"key": "value"}', '"key"'],
+    dontMarshal: true
+  },
+  {
+    func: 'addPair',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"', '"value"'],
+    params: ['object', '"key"', '"value"'],
+    dontMarshal: true
   }
 ];
-
-if (experiments.isEnabled(experiments.APPLAB_ML)) {
-  blocks.push(
-    {
-      func: 'getPrediction',
-      parent: api,
-      category: 'Data',
-      paletteParams: ['name', 'id', 'data', 'callback'],
-      params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
-    },
-    {
-      func: 'declareAssign_object',
-      block: `var object = {"key": "value"};`,
-      category: 'Variables',
-      noAutocomplete: true
-    },
-    {
-      func: 'getValue',
-      parent: dontMarshalApi,
-      category: 'Variables',
-      paletteParams: ['object', '"key"'],
-      params: ['{"key": "value"}', '"key"'],
-      dontMarshal: true
-    },
-    {
-      func: 'addPair',
-      parent: dontMarshalApi,
-      category: 'Variables',
-      paletteParams: ['object', '"key"', '"value"'],
-      params: ['object', '"key"', '"value"'],
-      dontMarshal: true
-    }
-  );
-}
 
 export const categories = {
   'UI controls': {
