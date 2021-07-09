@@ -19,7 +19,7 @@ export default function DisallowedHtmlWarningDialog({
     <div>
       <SafeMarkdown
         markdown={weblabI18n.disallowedHtml({
-          filename: filename,
+          filename,
           disallowedTags: disallowedTags.join(', ')
         })}
       />
