@@ -110,10 +110,11 @@ export default class CourseVersionPublishingEditor extends Component {
               </select>
               {!this.props.preventCourseVersionChange && (
                 <span>
-                  or
+                  or{' '}
                   <input
                     type="text"
                     value={this.state.newFamilyName}
+                    style={styles.smallInput}
                     onChange={this.handleNewFamilyNameChange}
                   />
                 </span>
@@ -244,6 +245,15 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0
+  },
+  smallInput: {
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0,
+    height: '100%'
   },
   dropdown: {
     margin: '0 6px'
