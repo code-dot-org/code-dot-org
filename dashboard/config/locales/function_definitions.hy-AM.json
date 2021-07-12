@@ -1418,6 +1418,93 @@
           "end game": {
             "name": "Ավարտել խաղ"
           }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "կետեր",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "կրկնել"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "draw a star",
+            "parameters": {
+              "points": "կետեր",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "կրկնել"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "անել ինչ որ բան"
+          }
         }
       }
     }

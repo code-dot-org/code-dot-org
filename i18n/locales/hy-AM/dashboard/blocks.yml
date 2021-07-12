@@ -318,6 +318,10 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': ծիածան
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:
