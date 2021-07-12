@@ -106,7 +106,7 @@ class ColumnInspector extends Component {
     return (
       currentColumnData && (
         <div
-          className="column-inspector"
+          id="column-inspector"
           style={{
             ...styles.panel,
             ...styles.rightPanel
