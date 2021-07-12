@@ -5,8 +5,8 @@ description 'Great job so far! Keep learning by exploring some of the optional l
 
 sublevels
 level 'storyboard_choices_properties'
+level 'storyboard_choices_costumes'
 level 'storyboard_choices_backgrounds'
 level 'storyboard_choices_sounds'
-level 'storyboard_choices_costumes'
 level 'storyboard_choices_sprites'
 level 'storyboard_choices_behaviors'

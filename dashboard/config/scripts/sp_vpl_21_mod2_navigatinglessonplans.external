@@ -1,0 +1,51 @@
+name 'SP-VPL-21-mod2-NavigatingLessonPlans'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigate to lesson plans
+
+### Steps to access lesson plans:
+
+##### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
+
+##### **Step 2:** Click on "CS Discoveries" in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
+
+(If you have not created class sections, navigate to the CS Discoveries curriculum from the "My Courses" section of the "My Dashboard" page.)
+
+##### **Step 3:** Navigate to the Unit you would like to view and click on the "Go to Unit" button.
+
+##### **Step 4:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
+
+
+<hr style="clear:both">
+
+
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTVhTiSAQydKUrGrGNaDQ_m7-IeAQ9dLo7MzlWWeJKQ5HdKI2Nrn9QOI2gV-hZTPgV7vbIa1zFrIcgS/pub?w=708&h=612" style="float: left; height: 400px; clear: both; margin: 0 20px 20px 0;">
+
+## Course overview page
+
+Description of course overview page
+
+<hr style="clear:both">
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTsMcAjhEPf8bUwJ6p1oIXmKaZu40kRwep8HfBRCyx5AN9WAWXmcCMx-vlmLW25V0cgcPcpbUNUIRrA/pub?w=750&h=703" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+
+## Unit overview page
+
+description of unit overview page
+
+<hr style="clear:both">
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRp9xZI8Ex6PMPLyUfZLmTvMAGN79K7IX0-W1FfjwWGvX4h9x31QqbeYR0kBEYQ7tsFfwuBPMBb0EfZ/pub?w=696&h=556" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+## Lesson plans
+
+description of lesson plans
+
+<div style="clear:both"/>
+
+
+MARKDOWN

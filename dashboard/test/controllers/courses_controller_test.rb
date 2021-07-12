@@ -71,6 +71,7 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     course_offering = create :course_offering, key: 'csd'
     create(:unit_group, name: 'csd-2018', published_state: SharedConstants::PUBLISHED_STATE.stable, course_version: create(:course_version, key: '2018', course_offering: course_offering))
@@ -164,6 +165,15 @@ class CoursesControllerTest < ActionController::TestCase
     create(:unit_group, name: 'csp-2018', published_state: SharedConstants::PUBLISHED_STATE.stable, course_version: create(:course_version, key: '2018', course_offering: course_offering))
 
     get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: shows course when family name matches course name" do
+    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(course)
+
+    get :show, params: {course_name: 'new-course'}
 
     assert_response :ok
   end
@@ -447,6 +457,29 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
     unit_group.reload
     refute_nil unit_group.course_version
+  end
+
+  test "update: cannot change course version for unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_group = create :unit_group
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+
+    assert_nil unit_group.course_version
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
+    unit_group.reload
+    refute_nil unit_group.course_version
+
+    course_version = unit_group.course_version.freeze
+    unit_group.resources = [create(:resource, course_version: unit_group.course_version)]
+    assert_raises do
+      post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'newcoursefamily', version_year: 2021}
+    end
+    unit_group.reload
+    refute_nil unit_group.course_version
+    assert_equal course_version, unit_group.course_version
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}

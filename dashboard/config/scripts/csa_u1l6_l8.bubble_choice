@@ -1,0 +1,8 @@
+name 'CSA U1L6-L8'
+display_name 'Painter Programming Challenge'
+description 'Choose a programming challenge to complete with the Painter!'
+
+sublevels
+level 'CSA U1L6-L8a'
+level 'CSA U1L6-L8b'
+level 'CSA U1L6-L8c'

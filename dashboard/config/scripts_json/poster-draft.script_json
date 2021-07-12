@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 14:35:53 UTC",
+    "serialized_at": "2021-07-07 20:02:44 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"
@@ -110,24 +110,24 @@
       }
     },
     {
-      "key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
-      "position": 2,
-      "properties": {
-        "progression_name": "Create Your Story Board"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
-        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
-      }
-    },
-    {
       "key": "f8457faf-7299-423b-b174-ae515ba3d66c",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Mini-Lessons"
       },
       "seeding_key": {
         "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c",
+        "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
+      }
+    },
+    {
+      "key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
+      "position": 3,
+      "properties": {
+        "progression_name": "Create Your Story Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797",
         "lesson_activity.key": "213463b5-75b7-4bf3-8505-dd49952e6e01"
       }
     },
@@ -187,32 +187,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "storyboard_locations"
-        ],
-        "progression": "Welcome to Sprite Lab!"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "storyboard_locations"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poster-draft",
-        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
-      },
-      "level_keys": [
-        "storyboard_locations"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "storyboard_print"
         ],
         "progression": "Welcome to Sprite Lab!"
@@ -230,6 +204,32 @@
       },
       "level_keys": [
         "storyboard_print"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "storyboard_locations"
+        ],
+        "progression": "Welcome to Sprite Lab!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "storyboard_locations"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      },
+      "level_keys": [
+        "storyboard_locations"
       ]
     },
     {
@@ -265,6 +265,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "storyboard_choices_menu"
+        ],
+        "progression": "Mini-Lessons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "storyboard_choices_menu"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c"
+      },
+      "level_keys": [
+        "storyboard_choices_menu"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "storyboard_project_start"
         ],
         "progression": "Create Your Story Board"
@@ -285,8 +311,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -311,8 +337,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -337,8 +363,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -360,32 +386,6 @@
       },
       "level_keys": [
         "storyboard_project_events"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "storyboard_choices_menu"
-        ],
-        "progression": "Mini-Lessons"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "storyboard_choices_menu"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poster-draft",
-        "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c"
-      },
-      "level_keys": [
-        "storyboard_choices_menu"
       ]
     },
     {
@@ -430,9 +430,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "storyboard_locations",
+        "level.key": "storyboard_print",
         "script_level.level_keys": [
-          "storyboard_locations"
+          "storyboard_print"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -442,9 +442,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "storyboard_print",
+        "level.key": "storyboard_locations",
         "script_level.level_keys": [
-          "storyboard_print"
+          "storyboard_locations"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -462,6 +462,18 @@
         "lesson_group.key": "",
         "script.name": "poster-draft",
         "activity_section.key": "088059e1-b0f8-4798-aa7c-36d31af8b4c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "storyboard_choices_menu",
+        "script_level.level_keys": [
+          "storyboard_choices_menu"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-draft",
+        "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c"
       }
     },
     {
@@ -510,18 +522,6 @@
         "lesson_group.key": "",
         "script.name": "poster-draft",
         "activity_section.key": "8e95ece4-6727-4cdf-bcf9-d2675d6ef797"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "storyboard_choices_menu",
-        "script_level.level_keys": [
-          "storyboard_choices_menu"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poster-draft",
-        "activity_section.key": "f8457faf-7299-423b-b174-ae515ba3d66c"
       }
     },
     {
