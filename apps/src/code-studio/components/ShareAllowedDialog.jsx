@@ -211,6 +211,7 @@ class ShareAllowedDialog extends React.Component {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
         iframeHeight: applabConstants.APP_HEIGHT + 140,
+        // Extra 32 pixels added to account for phone frame
         // Extra 40 pixels added to account for left and right padding divs (20 px each side)
         iframeWidth: applabConstants.APP_WIDTH + 32 + 40
       };
@@ -219,7 +220,8 @@ class ShareAllowedDialog extends React.Component {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
         iframeHeight: p5labConstants.APP_HEIGHT + 357,
-        iframeWidth: p5labConstants.APP_WIDTH + 32
+        // Extra 40 pixels added to account for left and right padding divs (20 px each side)
+        iframeWidth: p5labConstants.APP_WIDTH + 40
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
