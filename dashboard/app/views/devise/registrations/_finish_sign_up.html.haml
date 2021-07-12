@@ -26,7 +26,7 @@
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
     .row
-      .span3.signup-field-label
+      .span3.signup-field-label{:id => 'signup-select-user-type-label'}
         = f.label :user_type, t('signup_form.user_type_label')
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
