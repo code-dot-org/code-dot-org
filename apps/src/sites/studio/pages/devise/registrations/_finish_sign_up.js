@@ -37,6 +37,24 @@ $(document).ready(() => {
   init();
 
   function init() {
+    // TO-DELETE ONCE TESTED IN STAGING (start)
+    let inVariant = false;
+    const queryString = window.location.search.substring(1).split('&');
+    for (let i = 0; i < queryString.length; i++) {
+      if (queryString[i] === 'inSignUpUserTypeVariant=true') {
+        inVariant = true;
+      }
+    }
+    if (inVariant) {
+      // If in variant, toggle large buttons
+      document.getElementById('select-user-type-original').style =
+        'display:none';
+    } else {
+      // Otherwise (also the default), keep original dropdown
+      document.getElementById('select-user-type-variant').style =
+        'display:none';
+    }
+    // TO-DELETE ONCE TESTED IN STAGING (end)
     setUserType(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
