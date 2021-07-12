@@ -2,8 +2,18 @@
   "category": "Batman Speech",
   "config": {
     "func": "poisonivySay",
-    "blockText": "Poison Ivy say {SPEECH}",
+    "blockText": "{IMG}say {SPEECH}",
     "args": [
+      {
+        "name": "IMG",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/spritelab/poisonivy.png",
+          "width": 32,
+          "height": 32
+        }
+      },
       {
         "name": "SPEECH",
         "options": [

@@ -61,8 +61,8 @@ export const assignmentShape = PropTypes.shape({
   path: PropTypes.string.isRequired,
   script_name: PropTypes.string.isRequired,
   assignment_family_name: PropTypes.string.isRequired,
-  version_year: PropTypes.string.isRequired,
-  version_title: PropTypes.string.isRequired,
+  version_year: PropTypes.string,
+  version_title: PropTypes.string,
   is_stable: PropTypes.bool,
   supported_locales: PropTypes.arrayOf(PropTypes.string)
 });
@@ -88,7 +88,7 @@ export const assignmentFamilyShape = PropTypes.shape({
 export const assignmentVersionShape = PropTypes.shape({
   year: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  isStable: PropTypes.bool.isRequired,
+  isStable: PropTypes.bool,
   isRecommended: PropTypes.bool,
   isSelected: PropTypes.bool,
   locales: PropTypes.arrayOf(PropTypes.string).isRequired,
