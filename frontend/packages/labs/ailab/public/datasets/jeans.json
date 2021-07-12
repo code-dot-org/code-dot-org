@@ -54,23 +54,33 @@
     },
     {
       "type": "numerical",
-      "id": "Max width of back pocket",
+      "id": "Max width of front pocket",
       "description": "The width of the front pocket from its widest part."
     },
     {
       "type": "numerical",
-      "id": "Min width of back pocket",
+      "id": "Min width of front pocket",
       "description": "The width of the front pocket from its narrowest part."
     },
     {
       "type": "numerical",
+      "id": "Max width of back pocket",
+      "description": "The width of the back pocket from its widest part."
+    },
+    {
+      "type": "numerical",
+      "id": "Min width of back pocket",
+      "description": "The width of the back pocket from its narrowest part."
+    },
+    {
+      "type": "numerical",
       "id": "Max height of back pocket",
-      "description": "The height of the front pocket from its deepest part."
+      "description": "The height of the back pocket from its deepest part."
     },
     {
       "type": "numerical",
       "id": "Min height of back pocket",
-      "description": "The height of the front pocket from its shallowest part."
+      "description": "The height of the back pocket from its shallowest part."
     }
   ]
 }
