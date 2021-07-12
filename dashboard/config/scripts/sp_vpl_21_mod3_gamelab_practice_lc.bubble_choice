@@ -1,0 +1,8 @@
+name 'SP-VPL-21-mod3-GameLab-practice-lc'
+display_name 'Practice: Explore Game Lab activities'
+description 'The activities below are student activities from the CS Discoveries curriculum. **Choose one or more** to explore as a way to try out Game Lab.'
+
+sublevels
+level 'SP-VPL-21-mod3-CSDU2 - Type Anything_2021'
+level 'SP-VPL-21-mod3-CSD web classes freeplay_2021'
+
