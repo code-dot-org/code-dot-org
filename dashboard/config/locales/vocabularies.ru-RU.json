@@ -1,0 +1,113 @@
+{
+  "ru-RU": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Поведение"
+        },
+        "variable/coursef/2021": {
+          "word": "Переменная"
+        },
+        "input/coursef/2021": {
+          "word": "Ввод"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Машинное обучение"
+        },
+        "internet/coursef/2021": {
+          "word": "интернет"
+        },
+        "define/coursef/2021": {
+          "word": "Определить"
+        },
+        "debugging/courseb/2021": {
+          "word": "Отладка"
+        },
+        "drop/courseb/2021": {
+          "word": "Дроп"
+        },
+        "programming/courseb/2021": {
+          "word": "Программирование"
+        },
+        "debugging/coursea/2021": {
+          "word": "Отладка"
+        },
+        "drop/coursea/2021": {
+          "word": "Дроп"
+        },
+        "programming/coursea/2021": {
+          "word": "Программирование"
+        },
+        "debugging/coursec/2021": {
+          "word": "Отладка"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Последовательность действий"
+        },
+        "programming/coursec/2021": {
+          "word": "Программирование"
+        },
+        "binary/coursec/2021": {
+          "word": "Двоичный"
+        },
+        "debugging/coursed/2021": {
+          "word": "Отладка"
+        },
+        "programming/coursed/2021": {
+          "word": "Программирование"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Условные команды"
+        },
+        "debugging/express/2021": {
+          "word": "Отладка"
+        },
+        "sequencing/express/2021": {
+          "word": "Последовательность действий"
+        },
+        "programming/express/2021": {
+          "word": "Программирование"
+        },
+        "behavior/express/2021": {
+          "word": "Поведение"
+        },
+        "conditionals/express/2021": {
+          "word": "Условные команды"
+        },
+        "function/express/2021": {
+          "word": "Функция"
+        },
+        "variable/express/2021": {
+          "word": "Переменная"
+        },
+        "define/express/2021": {
+          "word": "Определить"
+        },
+        "drop/pre-express/2021": {
+          "word": "Дроп"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Отладка"
+        },
+        "programming/pre-express/2021": {
+          "word": "Программирование"
+        },
+        "behavior/coursee/2021": {
+          "word": "Поведение"
+        },
+        "copyright/coursee/2021": {
+          "word": "Авторские права"
+        },
+        "function/coursee/2021": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Условные команды"
+        },
+        "define/coursee/2021": {
+          "word": "Определить"
+        }
+      }
+    }
+  }
+}
