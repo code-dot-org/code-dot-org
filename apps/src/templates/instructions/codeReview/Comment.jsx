@@ -10,9 +10,14 @@ export default class Comment extends Component {
     comment: commentShape.isRequired
   };
 
-  state = {
-    showCommentOptions: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isShowingCommentOptions: false,
+      isResolved: this.props.comment.isResolved
+    };
+  }
 
   renderName = () => {
     const {name, isFromTeacher, isFromCurrentUser} = this.props.comment;
@@ -36,10 +41,11 @@ export default class Comment extends Component {
     const {
       commentText,
       timestampString,
-      isResolved,
       isFromCurrentUser,
       isFromOlderVersionOfProject
     } = this.props.comment;
+
+    const {isResolved, isShowingCommentOptions} = this.state;
 
     return (
       <div
@@ -56,11 +62,21 @@ export default class Comment extends Component {
             style={styles.ellipsisMenu}
             onClick={() =>
               this.setState({
-                showCommentOptions: !this.state.showCommentOptions
+                isShowingCommentOptions: !isShowingCommentOptions
               })
             }
           >
-            {this.state.showCommentOptions && <CommentOptions />}
+            {isShowingCommentOptions && (
+              <CommentOptions
+                isResolved={isResolved}
+                onResolveClick={() =>
+                  this.setState({
+                    isResolved: !isResolved,
+                    isShowingCommentOptions: false
+                  })
+                }
+              />
+            )}
           </div>
           {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
@@ -109,7 +125,7 @@ const styles = {
     padding: '10px 12px'
   },
   commentContainer: {
-    margin: '0 0 25px 0'
+    marginBottom: '25px'
   },
   currentUserComment: {
     backgroundColor: color.lightest_cyan
@@ -122,6 +138,7 @@ const styles = {
     margin: '0 5px'
   },
   commentHeaderContainer: {
-    margin: '0 0 5px 0'
+    marginBottom: '5px',
+    position: 'relative'
   }
 };
