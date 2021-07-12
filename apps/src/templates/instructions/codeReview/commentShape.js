@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+// Shape for data used to display code review comments
+// in Javalab.
 export const commentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,

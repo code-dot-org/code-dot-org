@@ -56,9 +56,7 @@ class CodeReviewCommentsController < ApplicationController
       storage_app_id: @storage_app_id
     ).order(:created_at)
 
-    serialized_comments = @project_comments.map do |comment|
-      serialize(comment)
-    end
+    serialized_comments = @project_comments.map {|comment| serialize(comment)}
 
     render json: serialized_comments
   end
@@ -67,7 +65,6 @@ class CodeReviewCommentsController < ApplicationController
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
-    puts params
     @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end

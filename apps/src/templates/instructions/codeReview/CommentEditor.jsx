@@ -13,44 +13,21 @@ export default class CommentEditor extends Component {
     token: PropTypes.string.isRequired
   };
 
-  state = {
-    comment: '',
-    isEditing: false
-  };
+  state = {comment: ''};
 
-  commentChanged = event => {
-    this.setState({
-      comment: event.target.value,
-      isEditing: true
-    });
-  };
+  commentChanged = event => this.setState({comment: event.target.value});
 
   submitNewComment = () => {
-    console.log(getStore().getState().pageConstants.channelId);
-
     $.ajax({
       url: `/code_review_comments`,
       type: 'POST',
       headers: {'X-CSRF-Token': this.props.token},
       data: {
         channel_id: getStore().getState().pageConstants.channelId,
-        project_version: 'zzz',
+        project_version: 'latest',
         comment: this.state.comment
       }
-    }).done(result => {
-      const newComment = {
-        id: result.id,
-        name: result.name,
-        commentText: result.commentText,
-        timestampString: result.timestampString,
-        isResolved: result.isResolved,
-        isFromTeacher: result.isFromTeacher,
-        isFromCurrentUser: result.isFromCurrentUser,
-        isFromOlderVersionOfProject: result.isFromOlderVersionOfProject
-      };
-
-      this.props.onNewCommentSubmit(newComment);
-    });
+    }).done(result => this.props.onNewCommentSubmit(result));
   };
 
   render() {
@@ -64,21 +41,19 @@ export default class CommentEditor extends Component {
         />
         <div
           style={{
-            ...styles.container,
-            ...styles.footer,
-            justifyContent: 'flex-end'
+            ...styles.buttonContainer
           }}
         >
-          {this.state.isEditing && (
+          {this.state.comment && (
             <Button
               key="cancel"
               text={msg.cancel()}
-              onClick={() => this.setState({isEditing: false, comment: ''})}
+              onClick={() => this.setState({comment: ''})}
               color="gray"
               style={{...styles.buttons.all, ...styles.buttons.cancel}}
             />
           )}
-          {this.state.isEditing && (
+          {this.state.comment && (
             <Button
               key="submit"
               text={msg.submit()}
@@ -109,12 +84,10 @@ const styles = {
       borderColor: color.lightest_gray
     }
   },
-  footer: {
+  buttonContainer: {
     display: 'flex',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '10px 0'
-  },
-  container: {
-    padding: '0 10px'
   }
 };
