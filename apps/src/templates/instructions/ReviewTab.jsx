@@ -7,7 +7,7 @@ import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 export default class ReviewTab extends Component {
   state = {
-    readyForReview: false,
+    isReadyForReview: false,
     comments: [],
     token: '',
     forceRecreateEditorKey: 0
@@ -44,15 +44,17 @@ export default class ReviewTab extends Component {
   };
 
   renderReadyForReviewCheckbox() {
-    const {readyForReview} = this.state;
+    const {isReadyForReview} = this.state;
 
     return (
       <div style={styles.checkboxContainer}>
         <label style={styles.label}>
           <input
             type="checkbox"
-            checked={readyForReview}
-            onChange={() => this.setState({readyForReview: !readyForReview})}
+            checked={isReadyForReview}
+            onChange={() =>
+              this.setState({isReadyForReview: !isReadyForReview})
+            }
             style={styles.checkbox}
           />
           {javalabMsg.enablePeerReview()}
