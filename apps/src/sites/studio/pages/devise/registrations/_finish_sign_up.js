@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -39,7 +38,9 @@ $(document).ready(() => {
 
   function init() {
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+    const queryString = window.location.search.substring(1).split('&');
+    const inVariant = queryString.includes('inSignUpUserTypeVariant=true');
+    if (inVariant) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style =
         'display:none';
@@ -47,6 +48,8 @@ $(document).ready(() => {
       // Otherwise (also the default), keep original dropdown
       document.getElementById('select-user-type-variant').style =
         'display:none';
+      document.getElementById('signup-select-user-type-label').style =
+        'width:220px';
     }
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
