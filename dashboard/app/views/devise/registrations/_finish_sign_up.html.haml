@@ -32,23 +32,19 @@
           %p.error= t('activerecord.errors.messages.blank')
       .span5
         %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
-          %b.user-type-name Student
-          %p.user-type-desc For learners who don't intend on teaching a course
+          %b.user-type-name= t('signup_form.user_type_student')
+          %p.user-type-desc= t('signup_form.user_type_student_desc')
           %ul.user-type-abilities-unordered-list
-            %li Join sections
-            %li View and complete assigned work
-            %li Learn at your own pace
-            %li Explore all of Code.org's courses and resources
+            %li= t('signup_form.user_type_student_ability_1')
+            %li= t('signup_form.user_type_student_ability_2')
         %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
-          %b.user-type-name Teacher
-          %p.user-type-desc For educators
+          %b.user-type-name= t('signup_form.user_type_teacher')
+          %p.user-type-desc= t('signup_form.user_type_teacher_desc')
           %ul.user-type-abilities-unordered-list
-            %li Create and manage sections
-            %li Join sections
-            %li Assign activities
-            %li View and provide feedback on student work
-            %li Access professional learning resources
-            %li Explore all of Code.org's courses and resources
+            %li= t('signup_form.user_type_teacher_ability_1')
+            %li= t('signup_form.user_type_teacher_ability_2')
+            %li= t('signup_form.user_type_teacher_ability_3')
+            %li= t('signup_form.user_type_teacher_ability_4')
       .span2
     .row#parent-email-container
       .span8#parent-email-section

@@ -1756,7 +1756,7 @@ a.download-video {
 
   .select-user-type-teacher-button, .select-user-type-student-button {
     min-width: 225px;
-    min-height: 300px;
+    min-height: 275px;
     position: relative;
     background-color: $selectUserTypeButtonBackgroundColor;
     color: $selectUserTypeButtonTextColor;
@@ -1781,17 +1781,6 @@ a.download-video {
       position: absolute;
       text-align: left;
       margin-right: 5px;
-    }
-  }
-
-  .select-user-type-teacher-button {
-    .user-type-abilities-unordered-list {
-      top: 80px;
-    }
-  }
-
-  .select-user-type-student-button {
-    .user-type-abilities-unordered-list {
       top: 100px;
     }
   }
