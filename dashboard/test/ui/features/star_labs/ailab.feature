@@ -12,7 +12,7 @@ Feature: AI Lab
     And I wait to see the dynamic instructions contain "dataDisplayLabel" key
     And I close the instructions overlay if it exists
     When I select table column "0"
-    And I see ".column-inspector"
+    And I see "#column-inspector"
     And I click selector "#select-label-button"
     And I see "#remove-statement-label"
     And I click selector "#continue-button"
@@ -20,8 +20,9 @@ Feature: AI Lab
     And I close the instructions overlay if it exists
     When I select table column "1"
     And I wait for 3 seconds
-    And I see ".column-inspector"
+    And I see "#column-inspector"
     And I click selector "#select-feature-button"
+    And I see "#remove-statement-feature"
     And I click selector "#continue-button"
     And I wait to see the dynamic instructions contain "trainModel" key
     And I close the instructions overlay if it exists
