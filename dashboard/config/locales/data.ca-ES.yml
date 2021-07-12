@@ -570,6 +570,8 @@ ca:
         CSF_loops_AB: Bucles
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        playlab_2021: Introducció a Play Lab
+        playlab_2021_reader: Introducció a Play Lab
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc
