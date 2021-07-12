@@ -69,6 +69,9 @@ module ScriptConstants
       EXPRESS_2021_NAME = 'express-2021'.freeze,
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
+    aiml_2021: [
+      AIML_2021_NAME = 'aiml-2021'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
