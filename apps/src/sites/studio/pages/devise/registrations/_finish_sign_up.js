@@ -117,9 +117,18 @@ $(document).ready(() => {
     }
   }
 
+  // Change user type event listener
+  // Keep if sign-up user type experiment favors variant (start)
   document.addEventListener('selectUserType', e => {
     setUserType(e.detail);
   });
+  // Keep if sign-up user type experiment favors variant (end)
+  // Keep if sign-up user type experiment favors original (start)
+  $('#user_user_type').change(function() {
+    var value = $(this).val();
+    setUserType(value);
+  });
+  // Keep if sign-up user type experiment favors original (end)
 
   function getUserType() {
     return $('#user_user_type').val();
