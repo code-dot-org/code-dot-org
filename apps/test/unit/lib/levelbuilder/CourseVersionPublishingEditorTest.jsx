@@ -110,6 +110,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
+        showIsCourseSelector
         isCourse
         preventCourseVersionChange
       />
