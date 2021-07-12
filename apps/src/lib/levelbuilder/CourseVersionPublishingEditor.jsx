@@ -9,13 +9,14 @@ export default class CourseVersionPublishingEditor extends Component {
     pilotExperiment: PropTypes.string,
     versionYear: PropTypes.string,
     familyName: PropTypes.string,
-    isCourse: PropTypes.bool,
     updatePilotExperiment: PropTypes.func.isRequired,
     updateFamilyName: PropTypes.func.isRequired,
     updateVersionYear: PropTypes.func.isRequired,
-    updateIsCourse: PropTypes.func,
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isCourse: PropTypes.bool,
+    updateIsCourse: PropTypes.func,
+    showIsCourseSelector: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
     preventCourseVersionChange: PropTypes.bool
@@ -56,7 +57,7 @@ export default class CourseVersionPublishingEditor extends Component {
   render() {
     return (
       <div>
-        {this.props.updateIsCourse && (
+        {this.props.showIsCourseSelector && (
           <label>
             Is a Standalone Unit
             <input
@@ -101,7 +102,7 @@ export default class CourseVersionPublishingEditor extends Component {
                 }
                 onChange={this.onFamilyNameSelect}
               >
-                {!this.props.isCourse && <option value="">(None)</option>}
+                <option value="">(None)</option>
                 {this.props.families.map(familyOption => (
                   <option key={familyOption} value={familyOption}>
                     {familyOption}

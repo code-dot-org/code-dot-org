@@ -622,7 +622,6 @@ class UnitEditor extends React.Component {
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
                     familyName={this.state.familyName}
-                    isCourse={this.state.isCourse}
                     updatePilotExperiment={pilotExperiment =>
                       this.setState({pilotExperiment})
                     }
@@ -630,9 +629,11 @@ class UnitEditor extends React.Component {
                     updateVersionYear={versionYear =>
                       this.setState({versionYear})
                     }
-                    updateIsCourse={this.handleStandaloneUnitChange}
                     families={this.props.unitFamilies}
                     versionYearOptions={this.props.versionYearOptions}
+                    isCourse={this.state.isCourse}
+                    updateIsCourse={this.handleStandaloneUnitChange}
+                    showIsCourseSelector
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})
