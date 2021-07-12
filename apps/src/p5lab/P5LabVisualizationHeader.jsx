@@ -36,6 +36,7 @@ class P5LabVisualizationHeader extends React.Component {
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
     } else if (mode === P5LabInterfaceMode.ANIMATION) {
+      Blockly.WidgetDiv.hide();
       firehoseClient.putRecord({
         study: 'animation-library',
         study_group: 'control-2020',
