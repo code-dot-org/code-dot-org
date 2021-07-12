@@ -2238,6 +2238,494 @@
               "length": "uzunlik"
             }
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "mening funksiyam"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a circle": {
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik",
+              "repeat": "takrorlash"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "sides": "tomonlar"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a circle": {
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik",
+              "repeat": "takrorlash"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a circle": {
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik",
+              "repeat": "takrorlash"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a circle": {
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik",
+              "repeat": "takrorlash"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ko'prik qurish"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "yo'lni tozalash"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "fix short path": {
+            "name": "qisqa yo'lni tuzatish"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "qisqa ko'prik qurish"
+          },
+          "build long bridge": {
+            "name": "uzun ko'prik qurish"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "olov chizish",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "o't (olov) chizish"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw hexagon": {
+            "name": "oltiburchakni chizish"
+          },
+          "draw line of hexagons": {
+            "name": "oltiburchak chizig'ini chizish"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "oyna chizish"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          },
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw line of triangles": {
+            "name": "uchburchaklar chizig'ini chizish"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "oltiburchakni chizish"
+          },
+          "draw line of hexagons": {
+            "name": "oltiburchak chizig'ini chizish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "ko'pburchaklar chizig'ini chizish"
+          },
+          "draw polygon": {
+            "name": "ko'pburchak chizish"
+          },
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          },
+          "pumpkin square": {
+            "name": "qovoq maydoni"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "pumpkin square": {
+            "name": "qovoq maydoni"
+          },
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get produce": {
+            "name": "mahsulot olish"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "check for corn": {
+            "name": "makkajo'xori borligini tekshirib ko'ring"
+          },
+          "corn rectangle": {
+            "name": "makkajo'xori to'rtburchagi"
+          },
+          "lettuce stairs": {
+            "name": "salat zinalar"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "o'yin oxiri"
+          }
         }
       }
     }

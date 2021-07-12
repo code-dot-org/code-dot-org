@@ -1,7 +1,6 @@
 uz:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" Asalari bilan'
       Accelerometer Events: Akselerometr hodisalari
       Adding Images: Rasm qo'shish
       Adding Screens: Ekran qo'shish
@@ -100,8 +99,8 @@ uz:
       'Mini-Project: Alien Dance Moves': 'Mini-loyiha: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-loyiha: Alien Dance Party'
       'Mini-Project: Royal Battle': 'Mini-loyiha: Royal Battle'
-      'Mini-Project: Snowflake #1': 'Mini-loyiha: Snowflake #1'
-      'Mini-Project: Snowflake #2': 'Mini-loyiha: Snowflake #2'
+      "Mini-Project: Snowflake #1": "Mini-loyiha: Snowflake #1"
+      "Mini-Project: Snowflake #2": "Mini-loyiha: Snowflake #2"
       'Mini-Project: Swimming Fish': 'Mini-loyiha: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-loyiha: Swimming Fish (continued)'
       'Mini-Project: User Input Programs': 'Chat-Bot yaratish'
