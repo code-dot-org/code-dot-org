@@ -51,4 +51,5 @@ Feature: AI Lab
     And I see "#statement"
     And I see "#model-card"
     And I see ".ailab-image-hover"
+    And I click selector "#continue-button"
   
