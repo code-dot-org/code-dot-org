@@ -380,6 +380,8 @@ class ScriptLevel < ApplicationRecord
       end
 
     ids = level_ids
+    active_id = oldest_active_level.id
+    inactive_ids = ids - [active_id]
 
     levels.each do |l|
       ids.concat(l.contained_levels.map(&:id))
@@ -387,7 +389,8 @@ class ScriptLevel < ApplicationRecord
 
     summary = {
       ids: ids.map(&:to_s),
-      activeId: oldest_active_level.id.to_s,
+      activeId: active_id.to_s,
+      inactiveIds: inactive_ids.map(&:to_s),
       position: position,
       kind: kind,
       icon: level.icon,

@@ -282,6 +282,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
             .map(level => ({
               position: level.position,
               activeId: level.activeId,
+              inactiveIds: level.inactiveIds,
               ids: level.ids.slice(),
               kind: level.kind,
               skin: level.skin,
