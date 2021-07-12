@@ -1,0 +1,56 @@
+{
+  "bs-BA": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Varijabla"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Definiši"
+        },
+        "drop/courseb/2021": {
+          "word": "Spuštanje"
+        },
+        "drop/coursea/2021": {
+          "word": "Spuštanje"
+        },
+        "binary/coursec/2021": {
+          "word": "Binarno"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Uvjeti"
+        },
+        "conditionals/express/2021": {
+          "word": "Uvjeti"
+        },
+        "function/express/2021": {
+          "word": "Funkcija"
+        },
+        "variable/express/2021": {
+          "word": "Varijabla"
+        },
+        "define/express/2021": {
+          "word": "Definiši"
+        },
+        "drop/pre-express/2021": {
+          "word": "Spuštanje"
+        },
+        "copyright/coursee/2021": {
+          "word": "Autorska prava"
+        },
+        "function/coursee/2021": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Uvjeti"
+        },
+        "define/coursee/2021": {
+          "word": "Definiši"
+        }
+      }
+    }
+  }
+}
