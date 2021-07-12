@@ -48,7 +48,11 @@ class BubbleChoice < DSLDefined
 
   # Returns all of the sublevels for this BubbleChoice level in order.
   def sublevels
-    Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
+    levels_child_levels.
+      includes(:child_level).
+      where(kind: ParentLevelsChildLevel::SUBLEVEL).
+      order('position ASC').
+      map(&:child_level)
   end
 
   def sublevel_at(index)
@@ -195,7 +199,7 @@ class BubbleChoice < DSLDefined
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
-    where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
   end
 
   def supports_markdown?
@@ -208,18 +212,38 @@ class BubbleChoice < DSLDefined
 
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     level = super(new_suffix, editor_experiment: editor_experiment)
-
-    new_sublevel_names = sublevels.map do |sublevel|
-      sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
+    level.levels_child_levels.each do |parent_levels_child_level|
+      sublevel = parent_levels_child_level.child_level
+      cloned_sublevel = sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+      parent_levels_child_level.child_level = cloned_sublevel
+      parent_levels_child_level.save!
     end
 
-    update_params = {
-      properties: {
-        sublevels: new_sublevel_names
-      }
-    }
-    level.update!(update_params)
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
+  end
+
+  def self.setup(data)
+    sublevel_names = data[:properties].delete(:sublevels)
+    level = super(data)
+    level.setup_sublevels(sublevel_names)
+    level
+  end
+
+  def setup_sublevels(sublevel_names)
+    reload
+    self.child_levels = []
+
+    sublevel_names.each_with_index do |sublevel_name, i|
+      sublevel = Level.find_by_name!(sublevel_name)
+      ParentLevelsChildLevel.find_or_create_by!(
+        parent_level: self,
+        child_level: sublevel,
+        kind: ParentLevelsChildLevel::SUBLEVEL,
+        position: i + 1
+      )
+    end
+
+    save!
   end
 end
