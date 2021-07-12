@@ -1357,6 +1357,325 @@
           "my function": {
             "name": "මගේ ශ්‍රිතය"
           }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "මගේ ශ්‍රිතය"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ශ්‍රිතය 1"
+          },
+          "function 2": {
+            "name": "ශ්‍රිතය 2"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          },
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "ක්‍රීඩාව අවසන් කරන්න"
+          }
         }
       }
     }
