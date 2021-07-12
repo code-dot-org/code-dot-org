@@ -74,7 +74,6 @@ class ScriptsController < ApplicationController
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-    raise 'Name cannot match family name' if CourseVersion.course_offering_keys('Script').include?(unit_params[:name])
     @script = Script.new(unit_params)
     if @script.save && @script.update_text(unit_params, params[:script_text], i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
@@ -130,7 +129,6 @@ class ScriptsController < ApplicationController
     end
 
     raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
-    raise 'Family name cannot match any script name' if Script.find_by_name(params[:family_name]).present?
 
     unit_text = params[:script_text]
     if @script.update_text(unit_params, unit_text, i18n_params, general_params)
