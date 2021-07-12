@@ -1645,26 +1645,6 @@ id-ID:
     dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua
     kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman
     dan keluarga.
-  coursea-2021_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
-    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
-    bagikan.
-  courseb-2021_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan
-    internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda
-    bagikan.
-  coursec-2021_shortdescription_congrats: Buat program dengan pengurutan, loop, dan
-    event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan
-    masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir
-    kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
-  coursed-2021_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop,
-    conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
-  coursee-2021_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional,
-    event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang
-    dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
-  coursef-2021_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis
-    loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah
-    dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua
-    kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman
-    dan keluarga.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
     tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
     video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
@@ -2264,7 +2244,7 @@ id-ID:
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
   user_header_gamelab: Game Lab
-  user_header_playlab: Lab Permainan
+  user_header_playlab: Play Lab/Lab Permainan
   user_header_dance: Pesta Tari
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft

@@ -2,8 +2,18 @@
   "category": "Batman Speech",
   "config": {
     "func": "batmanSay",
-    "blockText": "Batman say {SPEECH}",
+    "blockText": "{IMG}say {SPEECH}",
     "args": [
+      {
+        "name": "IMG",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/spritelab/batman.png",
+          "width": 32,
+          "height": 32
+        }
+      },
       {
         "name": "SPEECH",
         "options": [

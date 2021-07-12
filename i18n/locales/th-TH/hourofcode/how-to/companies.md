@@ -17,7 +17,7 @@ During the Hour of Code campaign, your company can help raise awareness of the c
 - [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Connect your company with a school](#connect-with-a-school)
 - [Host your own Hour of Code event](#host-hour-of-code)
-- [โปรโมทกิจกรรมชั่วโมงเขียนโค้ด](#promote-hour-of-code)
+- [โปรโมท Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
@@ -128,7 +128,7 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 <a id="promote-hour-of-code"></a>
 
-## โปรโมทกิจกรรมชั่วโมงเขียนโค้ด
+## โปรโมท Hour of Code
 
 One of the best ways to help is to spread the word and promote the Hour of Code.
 

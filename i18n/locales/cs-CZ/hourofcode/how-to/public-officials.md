@@ -4,61 +4,61 @@ title: Návod jak na to pro úředníky veřejné správy
 
 {{ signup_button }}
 
-# Jak zapojíte celé své společenství
+# How to involve your entire community
 
-### Ukažte svému státu, okresu nebo městu svou oddanost počítačové vědě
+### Show your state, district, or city your commitment to computer science
 
 * * *
 
 </br>
 
-## Budete na své Hodině programování hostit nějakého zvoleného funkcionáře?
+## Are you hosting an elected official at your Hour of Code?
 
-[Podívejte se na naši sadu](/files/elected-official.pdf) se všemi informacemi, které potřebujete k tomu, aby mohla být jejich návštěva a Vaše akce vynikající!
+[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 
 ![](/images/fit-800/hoc_govs.png)
 
-Zleva doprava: *Guvernéři z Arkansasu, Severní Karolíny a Arizony se zúčastní Hodiny programování.*
+From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
 
 ## Získejte, aby se každá škola zúčastnila, každý student se učil!
 
-### 1. Přečtěte si naši jednostránkovou zprávu
+### 1. Read our one-pager
 
-Podívejte se, [proč je vzdělávání v počítačové vědě důležité]({{ localized_files/hoc_one_pager }}) a jak můžete v tomto úsilí pomoci podporou Hodiny programování.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
-### 2. Rekrutujte místní školy a školní okrsky
+### 2. Recruit local schools and districts
 
-Jako výchozí bod použijte [tento e-mail]({{ promote/sample_emails }}) nebo [tuto anotaci]({{ promote/stats_u l }}) a podívejte se do tohoto [návodného průvodce]({{ urls/how_to_guide }}) pro školy a okresy.
+Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
 
-### 3. Pořádejte akci Hodina programování
+### 3. Host an Hour of Code event
 
-Podívejte se do našeho [návodného průvodce akcemi,]({{ urls/how_to_events }}) kde najdete vzorovou ukázku [mediální osvětové sady]({{ promote/press_kit_url }}) a další prostředky na plánování akcí. Pořádání akce je vynikající způsob, jak podpořit Hodinu programování a zvýšit účast.
+See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 
-### 4. Zúčastněte se nějaké akce na Týdnu vzdělávání v počítačové vědě ({{ campaign_date/short }})
+### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
 
-[Najděte si třídy a školy]({{ urls/events }}) ve Vašem školním okrsku, městě nebo státě, které se zapojily.
+[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
 
-### 5. Vydejte prohlášení nebo rezoluci
+### 5. Issue a proclamation or resolution
 
-Podívejte se na tuto [vzorovou rezoluci]({{ urls/proclamation }}) podporující Týden vzdělávání v počítačové vědě a jeho cíle, kterou by mohly používat státní i regionální zákonodárci.
+See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
-### 6. Sepište názorový úvodník
+### 6. Draft an op-ed
 
-Uvažte, že byste zveřejnili názorový úvodník ve místních novinách. Viz tento [příklad názorového úvodníku]({{ promote/op_ed }}) podporujícího Týden vzdělávání v počítačové vědě a jeho cíle.
+Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
 
-### 7. Šiřte osvětu
+### 7. Spread the word
 
-[Sdílejte video Hodiny programování na Facebooku](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) a [promluvte o své podpoře na Twitteru](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Sdílejte obrázky nebo i video Vás a ostatních dospělých, jak děláte Hodinu programování. Použijte hashtag **#HourOfCode**, aby to společnost Code.org (@code.org) mohla vidět a propagovat tuto podporu. Nebo použijte těchto vzorových Tweetů:
+[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
 
-- *Každý student, chlapec nebo dívka, by měl mít možnost učit se počítačovou vědu. Přidejte se k nám tím, že začnete jednou #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Dnes se hrdě připojujeme k hnutí Hodina programování. Jste v tom s námi? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 
-### 8. Vydejte tiskové prohlášení
+### 8. Issue a press release
 
-Jako návod [použijte tento vzor]({{ promote/official_press_release }}).
+[Use this sample]({{ promote/official_press_release }}) as a guide.
 
-### 9. Spojujte se lokálně
+### 9. Connect locally
 
-[Zjistěte si více o vzdělávání v počítačové vědě ve Vašem státě]({{ urls/advocacy }}). Podepište tam petici a budete dostávat aktualizace o úsilí Code.org o lobbování na místní, státní a federální úrovni.
+[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
 
 {{ signup_button }}

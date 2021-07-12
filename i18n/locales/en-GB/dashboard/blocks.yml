@@ -153,14 +153,6 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': rainbow
-      PoemBot_setPoem:
-        options:
-          BG_EFFECT:
-            '"rainbow"': rainbow
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
@@ -190,5 +182,9 @@ en-GB:
             "'sand'": sand
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        options:
+          blockType:
+            '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch

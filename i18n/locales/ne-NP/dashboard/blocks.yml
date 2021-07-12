@@ -1,4 +1,3 @@
----
 ne:
   data:
     blocks:
@@ -307,9 +306,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -318,9 +317,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
-            '"a"': क
+            '"a"': क 
             '"s"': द
-            '"d"': 'घ '
+            '"d"': "घ \n"
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -328,14 +327,6 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': इन्द्रणी
-      PoemBot_setPoem:
-        options:
-          BG_EFFECT:
-            '"rainbow"': इन्द्रणी
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

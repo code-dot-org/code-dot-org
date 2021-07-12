@@ -330,14 +330,6 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': arco da vella
-      PoemBot_setPoem:
-        options:
-          BG_EFFECT:
-            '"rainbow"': arco da vella
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
