@@ -164,6 +164,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit, assigns(:script)
   end
 
+  test "show get show if family name matches script name" do
+    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
+    CourseOffering.add_course_offering(unit)
+    get :show, params: {id: 'hoc-script'}
+
+    assert_response :success
+    assert_equal unit, assigns(:script)
+  end
+
   test "renders 404 when id is an invalid id" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 232323}
@@ -1200,7 +1209,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Script.expects(:get_from_cache).with(@migrated_unit.name).returns(@migrated_unit).once
+    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Script.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
