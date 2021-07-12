@@ -1145,7 +1145,6 @@ class Script < ApplicationRecord
       UnitGroup.find_by_name(destination_unit_group_name) :
       nil
     raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
-    raise 'Name cannot match family name' if CourseVersion.course_offering_keys('Script').include?(new_name)
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
@@ -1204,7 +1203,6 @@ class Script < ApplicationRecord
   #   created levels.
   def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
-    raise 'Name cannot match family name' if CourseVersion.course_offering_keys('Script').include?(new_name)
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
     new_properties = {
