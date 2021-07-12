@@ -5,6 +5,9 @@ export default class SpriteManagementDirectory extends React.Component {
     return (
       <div>
         <h1>Manage Sprite Lab Sprites</h1>
+        <h3>
+          <a href="/sprites/sprite_upload">Upload New Sprites</a>
+        </h3>
       </div>
     );
   }
