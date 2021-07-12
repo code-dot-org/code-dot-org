@@ -1757,3 +1757,438 @@ mr-IN:
         - {}
         questions:
         - {}
+      Dance_Party_extras_intro:
+        markdown: "# डान्स करत रहा!\n\nभाग 2 मध्ये, तुम्ही तुमचा स्वत:चा नवीन प्रोजेक्ट
+          तयार करणार आहात. इथे कोणतीही कोडी नाहीत- त्याऐवजी इथे काही प्रोजेक्ट्स आहेत,
+          ज्यामध्ये अधिक गुंतागुंतीच्या डान्स पार्टीज बनवण्याचे वेगवेगळे मार्ग दाखवलेले
+          आहेत. \n\nतुम्ही या पातळ्या _कोणत्याही क्रमाने_ करू शकता. मागच्या पातळीत
+          काय केले होते, ते मागे जाऊन पहा किंवा दोन प्रोजेक्ट्समधल्या संकल्पना एकत्र
+          करा. त्या सर्व करून पहा, तुमची आवडती निवडा आणि ती संकल्पना तुम्हाला समजण्यासाठी
+          ती तुमच्या प्रोजेक्टमध्ये जोडण्यावर वेळ खर्च करा.\n\n<div class=\"clearfix\"></div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nचला, एक रचना
+          करूया.\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nते कुठे गेले?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nडान्स क्रूज\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nक्वार्टर नोट्स\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nबास, मिड, ट्रेबल\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nवेग वाढवा, वेग
+          कमी करा.\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      Dance_Party_extras_intro_2019:
+        markdown: "# डान्स करत राहा!\n\nभाग 2 मध्ये, तुम्ही तुमचा स्वत:चा नवीन प्रोजेक्ट
+          तयार करणार आहात. इथे कोणतीही कोडी नाहीत- त्याऐवजी इथे काही प्रोजेक्ट्स आहेत,
+          ज्यामध्ये अधिक गुंतागुंतीच्या डान्स पार्टीज बनवण्याचे वेगवेगळे मार्ग दाखवलेले
+          आहेत. \n\nतुम्ही या पातळ्या _कोणत्याही क्रमाने_ करू शकता. मागच्या पातळीत
+          काय केले होते, ते मागे जाऊन पहा किंवा दोन प्रोजेक्ट्समधल्या संकल्पना एकत्र
+          करा. त्या सर्व करून पहा, तुमची आवडती निवडा आणि ती संकल्पना तुम्हाला समजण्यासाठी
+          ती तुमच्या प्रोजेक्टमध्ये जोडण्यावर वेळ खर्च करा.\n\n<div class=\"clearfix\"></div>\n\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nमागे आणि पुढे
+          \n</h2>\n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nअधिक बटणे\n</h2>\n\n<img
+          src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nरचन तयार करा\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nते कुठ गेले?\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nडान्स क्रूज\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nक्वार्टर नोट्स\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"8\">\n<h2>\nबास, मिड, ट्रेबल
+          \ \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nवेग वाढवा, वेग
+          कमी करा\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>"
+      OPD-K5 CS Courses:
+        markdown: "# नियोजन  > Code.org वर सुरुवात करणे\n\n\n## पायरी 1: एक अभ्यासक्रम
+          निवडणे \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या
+          विद्यार्थांपर्यंतच्या  -- यादी आमच्या **[अभ्यासक्रम कॅटलॉगमध्ये ](https://studio.code.org/courses)**
+          दिलेली आहे. तुम्ही ज्या संगणक शास्त्राच्या मूलभूत गोष्टींच्या धड्यांचा सराव
+          करत आहात, ते पाहण्यासाठी आमच्या  **[प्राथमिक पेज]  (https://code.org/educate/curriculum/elementary-school)
+          वर जा** आणि \"अभ्यासक्रम\" विभागापर्यंत खाली स्क्रोल करा. आमचे सर्व अभ्यासक्रम
+          विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे एकत्रीकरण करता
+          येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.  ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **[छोटासा व्हिडीओ पाहण्यासाठी](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही **[या मदतीच्या लेखामध्ये]
+          सुद्धा पायऱ्या पाहू शकता (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन करा  \nतुम्ही शिकवत असलेल्या
+          अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे एक स्क्रीन दिसेल.
+          नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि तो अभ्यासक्रम तुमच्या
+          एका विभागाला असाईन करा. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          पायरी 4: शिकवायला सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात
+          आणण्यासाठी फक्त एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये
+          उत्साह दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या
+          धड्याच्या प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर
+          शिक्षकांसाठी कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      OPD-K5 CS Courses_copy:
+        markdown: "# Code.org वर सुरुवात करा\n\n\n## Step 1: एक अभ्यासक्रम निवडणे
+          \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या विद्यार्थांपर्यंतच्या
+          \ -- यादी आमच्या  **<a href=\"https://studio.code.org/courses\" target=\"blank\"
+          rel=\"noopener noreferrer\">अभ्यासक्रम कॅटलॉगमध्ये </a>** दिलेली आहे. आमचे
+          सर्व अभ्यासक्रम विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे
+          एकत्रीकरण करता येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.\n\n<table
+          style=\"width:100%; border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>अभ्यासक्रम
+          A</b><br/>\n      <i>बालवाडी</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम B<br/>\n
+          \       <i>1ली इयत्ता </i>\n    </th>\n    <th style=\"background-color:#b8bf0d;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम C<br/>\n
+          \       <i>2री इयत्ता</i>\n    </th>\n    <th style=\"background-color:#53bac2;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम D<br/>\n
+          \       <i>3री इयत्ता</i>\n    </th>\n    <th style=\"background-color:#0094ca;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम E<br/>\n
+          \       <i>4थी इयत्ता </i>\n    </th>\n    <th style=\"background-color:#7664a0;
+          text-align:center; border-style:none;\"\"\">\n        अभ्यासक्रम F<br/>\n
+          \       <i>5वी इयत्ता</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 धडे , पूर्ण
+          करण्यासाठी ~12 तास</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 धडे , पूर्ण करण्यासाठी
+          ~12 तास</td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 धडे, पूर्ण करण्यासाठी ~18 तास</td>\n    <td
+          style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align:
+          text-top;\"\">18 धडे, पूर्ण करण्यासाठी ~18 तास</td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 धडे, पूर्ण
+          करण्यासाठी ~18-20 तास</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 धडे, ~ पूर्ण करण्यासाठी
+          20-22 तास</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">संकल्पना </td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>डिजिटल नागरिकत्व </li>\n        <li>सिक्वेन्सिंग</li>\n
+          \       <li>लूप्स</li>\n        <li>इव्हेंट्स</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>डिजिटल नागरिकत्व</li>\n        <li>सिक्वेन्सिंग</li>\n        <li>लूप्स</li>\n
+          \       <li>कॉम्प्युटिंगचे परिणाम</li>\n        <li>इव्हेंट्स</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>डिजिटल नागरिकत्व</li>\n        <li>सिक्वेन्सिंग</li>\n        <li>बायनरी</li>\n
+          \       <li>लूप्स</li>\n        <li>इव्हेंट्स</li>\n        <li>डेटा</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>सिक्वेन्सिंग</li>\n        <li>इव्हेंट्स</li>\n        <li>लूप्स</li>\n
+          \       <li>कंडीशनल्स</li>\n        <li>बायनरी</li>\n        <li>डिजिटल
+          नागरिकत्व</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>स्प्राईट्स</li>\n        <li>डिजिटल
+          नागरिकत्व</li>\n        <li>कॉम्प्युटिंगचे परिणाम </li>\n        <li>नेस्टेड
+          लूप्स </li>\n        <li>फंक्शन्स</li>\n      </ul>\n    </td>\n    <td
+          style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>व्हेरीएबल्स
+          </li>\n        <li>डेटा</li>\n        <li>फॉर लूप्स</li>\n        <li>इंटरनेट</li>\n
+          \       <li>स्प्राईट्स</li>\n        <li>डिजिटल नागरिकत्व</li>\n        </ul>\n
+          \   </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n     <a
+          href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>अभ्यासक्रम पहा</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>धड्यांचे
+          प्लॅन्स</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">छोटासा व्हिडीओ पाहण्यासाठी</a>**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही  **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">या मदतीच्या लेखामध्ये</a>**सुद्धा
+          पायऱ्या पाहू शकता .\n\n***\n## पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन
+          करा \nतुम्ही शिकवत असलेल्या अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे
+          एक स्क्रीन दिसेल. नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि
+          तो अभ्यासक्रम तुमच्या एका विभागाला असाईन करा. \n***\n## पायरी 4: शिकवायला
+          सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात आणण्यासाठी फक्त
+          एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये उत्साह
+          दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या धड्याच्या
+          प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर शिक्षकांसाठी
+          कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      OPD-K5 CS Courses_dani:
+        markdown: "# नियोजन  > Code.org वर सुरुवात करणे\n\n\n## पायरी 1: एक अभ्यासक्रम
+          निवडणे \nआमच्या सर्व अभ्यासक्रमांची -- पूर्व वाचकांपासून ते हायस्कूलच्या
+          विद्यार्थांपर्यंतच्या  -- यादी आमच्या **[अभ्यासक्रम कॅटलॉगमध्ये ](https://studio.code.org/courses)**
+          दिलेली आहे. तुम्ही ज्या संगणक शास्त्राच्या मूलभूत गोष्टींच्या धड्यांचा सराव
+          करत आहात, ते पाहण्यासाठी आमच्या  **[प्राथमिक पेज]  (https://code.org/educate/curriculum/elementary-school)
+          वर जा** आणि \"अभ्यासक्रम\" विभागापर्यंत खाली स्क्रोल करा. आमचे सर्व अभ्यासक्रम
+          विनामूल्य उपलब्ध आहेत. विविध विषयांबरोबर अभ्यासक्रमाचे कसे एकत्रीकरण करता
+          येईल हे ठरवण्यासाठी तुमच्या शाळेतील सहकाऱ्यांबरोबर बोला.  ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          पायरी 2: तुमच्या वर्गाचा विभाग तयार करा \nतुमच्या विद्यार्थ्यांची प्रगती
+          पाहण्यासाठी, तुमच्या विद्यार्थ्यांसाठी लॉगीन कार्ड्स छापण्यासाठी, त्यांची
+          खाती व्यवस्थापित करण्यासाठी आणि अभ्यासक्रम संपल्यावर त्यांना घरी घेऊन जाण्यासाठी
+          प्रमाणपत्रे छापण्यासाठी एक वर्गाचा विभाग तयार करा. **[छोटासा व्हिडीओ पाहण्यासाठी](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          या लिंकवर क्लिक करा, जिथे  Code.org वर तुमचा पहिला संगणक शास्त्राचा वर्ग
+          कसा तयार करायचा याचे प्रात्यक्षिक दिसेल. तुम्ही **[या मदतीच्या लेखामध्ये]
+          सुद्धा पायऱ्या पाहू शकता (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          पायरी 3: तुमच्या विभागाला अभ्यासक्रम असाईन करा  \nतुम्ही शिकवत असलेल्या
+          अभ्यासक्रमात क्लिक करा -- तुम्हाला खाली दाखवल्याप्रमाणे एक स्क्रीन दिसेल.
+          नंतर तुम्ही \"अभ्यासक्रम असाईन करा\" वर क्लिक करा आणि तो अभ्यासक्रम तुमच्या
+          एका विभागाला असाईन करा. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          पायरी 4: शिकवायला सुरुवात करा! \nसंगणक शास्त्रातील संकल्पना तुमच्या वर्गात
+          आणण्यासाठी फक्त एक धडा पुरेसा आहे. संगणक शास्त्राबद्दल तुमच्या विद्यार्थ्यांमध्ये
+          उत्साह दिसल्यावर, तुमच्या विद्यार्थ्यांना मार्गदर्शन करण्यासाठी दररोजच्या
+          धड्याच्या प्लॅनबरोबर, कॉम्प्युटर न लागणाऱ्या अनप्लग्ड कृतींबरोबर आणि इतर
+          शिक्षकांसाठी कनेक्ट करण्यासाठी फोरम्सबरोबर पुढे जा."
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
