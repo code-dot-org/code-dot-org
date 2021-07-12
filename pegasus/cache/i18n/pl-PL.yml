@@ -1323,6 +1323,7 @@ pl-PL:
   pre-express-2019_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2019)
   express-2020_name: Kurs ekspresowy (2020)
   pre-express-2020_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2020)
+  pre-express-2021_name: Przyspieszony kurs dla dzieci, które nie umieją czytać (2021)
   csd2_name: 'Jednostka 2: Tworzenie stron'
   csd3_name: 'Jednostka 3: Animacje i gry'
   accelerated_name: Przyspieszony kurs
@@ -1644,6 +1645,28 @@ pl-PL:
     drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
     udostępnić znajomym i rodzinie.
   coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
+    wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
+    oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
+    tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
+    znajomym i rodzinie.
+  coursea-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  courseb-2021_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa
+    w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
+    udostępnić.
+  coursec-2021_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji,
+    pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki
+    rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu
+    utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2021_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia
+    zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą
+    się o obywatelstwie cyfrowym.
+  coursee-2021_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów,
+    pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W
+    drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
+    udostępnić znajomym i rodzinie.
+  coursef-2021_shortdescription_congrats: Naucz się używać różnych rodzajów pętli,
     wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
     oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części
     tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić
@@ -2233,7 +2256,7 @@ pl-PL:
   user_header_applab: 'App Lab '
   user_header_artist: 'Artysta '
   user_header_gamelab: Laboratorium Gier (Game Lab)
-  user_header_playlab: Play Lab
+  user_header_playlab: Lab Gier
   user_header_dance: Potańcówka
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
