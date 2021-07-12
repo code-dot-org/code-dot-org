@@ -38,13 +38,8 @@ $(document).ready(() => {
 
   function init() {
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    let inVariant = false;
     const queryString = window.location.search.substring(1).split('&');
-    for (let i = 0; i < queryString.length; i++) {
-      if (queryString[i] === 'inSignUpUserTypeVariant=true') {
-        inVariant = true;
-      }
-    }
+    const inVariant = queryString.includes('inSignUpUserTypeVariant=true');
     if (inVariant) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style =
