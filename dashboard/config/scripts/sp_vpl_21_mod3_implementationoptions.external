@@ -1,0 +1,11 @@
+name 'SP-VPL-21-mod3-ImplementationOptions'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implementation options
+
+![](https://images.code.org/43aa2a9ae18717bf888c59bfe335d263-image-1625942302403.38.01 PM.png)
+
+### [Click here](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) to view the full implementation guide
+MARKDOWN
