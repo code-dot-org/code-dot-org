@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-12 03:56:45 UTC",
+    "serialized_at": "2021-07-12 22:16:27 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -268,7 +268,7 @@
     },
     {
       "key": "lesson9",
-      "name": "Similarity Models",
+      "name": "Numerical Models",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1247,8 +1247,21 @@
       }
     },
     {
-      "key": "53c33817-3d45-4c5d-8b57-d08d85ba4618",
+      "key": "b299c797-8e09-4e73-b8d0-c60a72233622",
       "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b299c797-8e09-4e73-b8d0-c60a72233622",
+        "lesson.key": "lesson14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aiml-2021"
+      }
+    },
+    {
+      "key": "53c33817-3d45-4c5d-8b57-d08d85ba4618",
+      "position": 5,
       "properties": {
         "name": "Lesson Feedback"
       },
@@ -3558,7 +3571,7 @@
       "key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?\n_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
       },
       "seeding_key": {
         "activity_section.key": "8d6f810e-deae-4b41-9f8e-88e47ac5123c",
@@ -4442,7 +4455,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/aiml/2021] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
         "duration": "5",
-        "name": "Model Cards in AI Lab"
+        "name": "Model Cards in AI Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"block boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2652f5b9-d8ef-4f63-ae42-6be7f985ca73",
@@ -5500,7 +5519,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students click on the people column. This column represents how many people were seen in the park on a given day. Have students answer the questions on their activity guide first before discussing as a group.\n\n**Circulate:** Check in with students and help them interpret the graphs. Encourage students to use sentence starters like \"When the number of people are... then the number of lions are...\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low number of people in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high number of people in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
-        "name": "Feature #2: people",
+        "name": "Feature #2: People",
         "tips": [
           {
             "type": "contentCorner",
@@ -5529,7 +5548,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the dayOfMonth column. This column represents what day of the month you went to the park. Have students answer the questions in their activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _What happens if you visit on a day early in the month? How many lions do you think you’ll see?_\n- _What happens if you visit on a day late in the month? How many lions do you think you’ll see?_",
-        "name": "Feature #3: dayOfMonth"
+        "name": "Feature #3: Day of the Month"
       },
       "seeding_key": {
         "activity_section.key": "d2bd5ccc-8a60-4c9d-9e10-6995ea9a90dd",
@@ -5551,7 +5570,8 @@
       "key": "8825c2d6-63b4-40ea-a120-a88308fccbc6",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the temperature column. This column represents the weather that day and how hot or cold it was. Have students answer the questions on their activity guide before discussing as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low temperature in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high temperature in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the temperature column. This column represents the weather that day and how hot or cold it was. Have students answer the questions on their activity guide before discussing as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low temperature in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high temperature in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
+        "name": "Feature #4: Temperature"
       },
       "seeding_key": {
         "activity_section.key": "8825c2d6-63b4-40ea-a120-a88308fccbc6",
@@ -6021,6 +6041,17 @@
       }
     },
     {
+      "key": "97b8496e-fe1b-4c94-98dd-f8d8c513a9d1",
+      "position": 1,
+      "properties": {
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+      },
+      "seeding_key": {
+        "activity_section.key": "97b8496e-fe1b-4c94-98dd-f8d8c513a9d1",
+        "lesson_activity.key": "b299c797-8e09-4e73-b8d0-c60a72233622"
+      }
+    },
+    {
       "key": "b5940f47-c906-497e-8f7b-4088cc34e403",
       "position": 1,
       "properties": {
@@ -6108,7 +6139,13 @@
       "key": "9aa9967c-8060-4416-a7f6-64d0d04ffa2e",
       "position": 4,
       "properties": {
-        "description": "**Step 2 - Train your Model:** Students will choose at least 2 features to train their model. They will record their choices on their project guide. \n\nThey should aim to get at least 70% accuracy to earn full credit on the rubric."
+        "description": "**Step 2 - Train your Model:** Students will choose at least 2 features to train their model. They will record their choices on their project guide. \n\nThey should aim to get at least 70% accuracy to earn full credit on the rubric.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Slight Changes in Accuracy:** Students may notice that if they train on the exact same features over and over again, they may get slightly different accuracy calculations each time. This is because, in this level, AI Bot is randomizing the 10% testing data rather than always using the last 10% of the dataset. This is typically how machine learning accuracy is calculated with real-world datasets, since it avoids issues where the end of the dataset may not represent the entire data.\n\nIf students ask about this, you can use a similar explanation as above - that AI Bot is randomizing the testing data each time. This also means students may get slight variations in their accuracy, but the model being created is still essentially the same."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9aa9967c-8060-4416-a7f6-64d0d04ffa2e",
@@ -6130,7 +6167,13 @@
       "key": "ff9cdb5f-9296-4a36-9fca-a7071ef517d0",
       "position": 6,
       "properties": {
-        "description": "**Step 4 - Create Your App:** Students will create their app in App Lab. Apps should have at least a theme and a welcome screen to earn full credit on the rubric."
+        "description": "**Step 4 - Create Your App:** Students will create their app in App Lab. Apps should have at least a theme and a welcome screen to earn full credit on the rubric.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ff9cdb5f-9296-4a36-9fca-a7071ef517d0",
@@ -7926,7 +7969,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students develop their app in App Lab. A rubric is provided to guide students through what their project should look like. At the very least, it need to have:\n\n- A design theme\n- A welcome screen\n- Descriptive feature and label text elements",
         "name": "Step 7: Develop Your App",
-        "progression_name": "Design an AI App - App Lab"
+        "progression_name": "Design an AI App - App Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "13cbe504-4319-49ec-8a8e-0278083f3c7b",
@@ -11042,7 +11091,7 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1SrfMDyQYbbY_5rgOTBniEPx3U2y4YCDC2nezFzDx46s/edit",
+      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
       "key": "design_an_ai_app",
       "properties": {
         "type": "Slides",
@@ -11414,7 +11463,8 @@
       "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit",
       "key": "problems_with_models_-_activity_guide",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "problems_with_models_-_activity_guide"
@@ -11482,7 +11532,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://www.google.com/url?q=https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
@@ -11928,6 +11978,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-23",
         "resource.key": "kim_s_survey_data_-_student_resource"
       }
@@ -12277,6 +12333,13 @@
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
         "programming_expression.key": "addPair"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "ifBlock"
       }
     }
   ],
