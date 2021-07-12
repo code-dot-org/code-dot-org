@@ -1,0 +1,77 @@
+{
+  "th-TH": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "ตัวแปร"
+        },
+        "internet/coursef/2021": {
+          "word": "อินเทอร์เน็ต"
+        },
+        "define/coursef/2021": {
+          "word": "กำหนด"
+        },
+        "debugging/courseb/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "drop/courseb/2021": {
+          "word": "ทิ้งตัว"
+        },
+        "debugging/coursea/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "drop/coursea/2021": {
+          "word": "ทิ้งตัว"
+        },
+        "debugging/coursec/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "sequencing/coursec/2021": {
+          "word": "การจัดลำดับ"
+        },
+        "debugging/coursed/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "conditionals/coursed/2021": {
+          "word": "เงื่อนไข "
+        },
+        "debugging/express/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "sequencing/express/2021": {
+          "word": "การจัดลำดับ"
+        },
+        "conditionals/express/2021": {
+          "word": "เงื่อนไข "
+        },
+        "function/express/2021": {
+          "word": "ฟังก์ชัน"
+        },
+        "variable/express/2021": {
+          "word": "ตัวแปร"
+        },
+        "define/express/2021": {
+          "word": "กำหนด"
+        },
+        "drop/pre-express/2021": {
+          "word": "ทิ้งตัว"
+        },
+        "debugging/pre-express/2021": {
+          "word": "การแก้ไขจุดบกพร่อง"
+        },
+        "copyright/coursee/2021": {
+          "word": "ลิขสิทธิ์"
+        },
+        "function/coursee/2021": {
+          "word": "ฟังก์ชัน"
+        },
+        "conditionals/coursee/2021": {
+          "word": "เงื่อนไข "
+        },
+        "define/coursee/2021": {
+          "word": "กำหนด"
+        }
+      }
+    }
+  }
+}
