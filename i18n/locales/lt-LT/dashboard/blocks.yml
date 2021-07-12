@@ -1,3 +1,4 @@
+---
 lt:
   data:
     blocks:
@@ -397,6 +398,10 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': vaivorykštė
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:
