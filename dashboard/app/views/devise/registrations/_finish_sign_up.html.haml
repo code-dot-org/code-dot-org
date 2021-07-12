@@ -31,6 +31,14 @@
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
       .span5
+        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
+          %b.user-type-name Student
+          %p.user-type-desc For learners who don't intend on teaching a course
+          %ul.user-type-abilities-unordered-list
+            %li Join sections
+            %li View and complete assigned work
+            %li Learn at your own pace
+            %li Explore all of Code.org's courses and resources
         %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
           %b.user-type-name Teacher
           %p.user-type-desc For educators
@@ -40,14 +48,6 @@
             %li Assign activities
             %li View and provide feedback on student work
             %li Access professional learning resources
-            %li Explore all of Code.org's courses and resources
-        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
-          %b.user-type-name Student
-          %p.user-type-desc For learners who don't intend on teaching a course
-          %ul.user-type-abilities-unordered-list
-            %li Join sections
-            %li View and complete assigned work
-            %li Learn at your own pace
             %li Explore all of Code.org's courses and resources
       .span2
     .row#parent-email-container

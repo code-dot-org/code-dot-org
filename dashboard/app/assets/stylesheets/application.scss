@@ -37,10 +37,13 @@ $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+$selectUserTypeButtonBorderColor: #666;
 $selectUserTypeButtonBackgroundColor: #fff;
 $selectUserTypeButtonTextColor: #000;
-$selectUserTypeButtonBackgroundColorHover: #00adbc;
-$selectUserTypeButtonTextColorHover: #fff;
+$selectUserTypeButtonBackgroundColorHover: #ddd;
+$selectUserTypeButtonTextColorHover: #000;
+$selectUserTypeButtonBackgroundColorSelected: #00adbc;
+$selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
 // Font-awesome 4.6.3
@@ -1758,6 +1761,7 @@ a.download-video {
     background-color: $selectUserTypeButtonBackgroundColor;
     color: $selectUserTypeButtonTextColor;
     border-radius: 15px;
+    border-color: $selectUserTypeButtonBorderColor;
 
     .user-type-name {
       position: absolute;
@@ -1798,8 +1802,13 @@ a.download-video {
   }
 
   .select-user-type-button-selected {
-    background-color: $selectUserTypeButtonBackgroundColorHover;
-    color: $selectUserTypeButtonTextColorHover;
+    background-color: $selectUserTypeButtonBackgroundColorSelected;
+    color: $selectUserTypeButtonTextColorSelected;
+  }
+
+  .select-user-type-button-selected:hover {
+    background-color: $selectUserTypeButtonBackgroundColorSelected;
+    color: $selectUserTypeButtonTextColorSelected;
   }
 
   .finish-signup {
