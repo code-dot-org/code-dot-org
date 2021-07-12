@@ -37,7 +37,7 @@ $(document).ready(() => {
   init();
 
   function init() {
-    // TO-DELETE ONCE TESTED IN STAGING (start)
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
     let inVariant = false;
     const queryString = window.location.search.substring(1).split('&');
     for (let i = 0; i < queryString.length; i++) {
@@ -54,7 +54,7 @@ $(document).ready(() => {
       document.getElementById('select-user-type-variant').style =
         'display:none';
     }
-    // TO-DELETE ONCE TESTED IN STAGING (end)
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
