@@ -7,12 +7,12 @@ layout: wide
 
 # Contact International Partners
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+කේත වේලාව සැබවින්ම ජාත්‍යන්තර ව්‍යාපාරයක් බවට පත් කිරීම සඳහා Code.org ලොව පුරා බොහෝ සංවිධාන සමඟ කටයුතු කරයි. 2017 දී, පැය ගණනක සිදුවීම් වලින් 60% ක්ම සිදුවී ඇත්තේ එක්සත් ජනපදයෙන් පිටත බව ඔබ දැන සිටියාද?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+ඔබේ රටේ වැඩි පිරිසක් සම්බන්ධ කර ගැනීම සඳහා ඔබටත් ප්‍රමුඛ කාර්යභාරයක් ඉටු කළ හැකිය! ඔබ පහත රටක සිටී නම්, ලැයිස්තුගත හවුල්කරු වෙත ගොස් ඔබේ දේශීය පැය කේතය සමඟ සම්බන්ධ වන්න.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
+ඔබේ රට මෙහි ලැයිස්තුගත කර නොමැතිද? පැය ජාත්‍යන්තර හවුල්කරුවෙකු වීමට අයදුම් කරන්න! <br /> <br />
 
-{{ international_partners_table }}
+{{ජාත්‍යන්තර_ හවුල්කරුවන්_වගුව }}
 
 {{ signup_button }}

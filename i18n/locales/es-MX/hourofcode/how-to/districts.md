@@ -6,7 +6,7 @@ title: Guía práctica de la Hora del Código para distritos
 
 # Cómo involucrar a todo el distrito escolar
 
-### Todas las escuelas de tu distrito pueden formar parte del evento de aprendizaje más grande de la historia.
+### Todas las escuelas de tu distrito escolar pueden formar parte del evento de aprendizaje más grande de la historia.
 
 * * *
 
