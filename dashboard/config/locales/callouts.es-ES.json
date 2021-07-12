@@ -2047,6 +2047,128 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Haga clic aquí para ampliar el bloque.",
+          "pointerlocation": "Arrastre un bloque de sujeto aquí."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Haz clic para crear un nuevo traje"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Aquí puedes ralentizar tu programa."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Sólo dispones de uno de estos bloques en este puzle."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Recuerda, revisa si CADA nube tiene una FLOR. No tienes que buscar panales.",
+          "4_5_Bee_Conditionals_2_2": "¿Necesitas ayuda? ¡Haz click aquí para ver un VIDEO de ayuda!"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Intenta recorrer tu código bloque a bloque."
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Comencemos usando este bloque para ayudar a crear el primer cuadrado."
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después de dibujar la primera plaza?"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_collector": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_pet": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Intenta cambiar cuando a mientras."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "¡Nuevos bloques aquí!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Utiliza el nuevo bloque de eventos que se encuentra aquí."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Este bloque está mal ordenado."
+        },
+        "courseF_events_time": {
+          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Haga clic aquí para abrir la categoría Comportamientos."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Haga clic aquí para abrir la categoría de Sprites."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Haga clic aquí para abrir la categoría de Ubicaciones."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Busca un nuevo bloque aquí."
+        },
+        "courseF_text_answer": {
+          "answered_block": "¡Busca un nuevo bloque aquí!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "¿Ha cambiado de color el fondo cuando has respondido a la pregunta? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "¿Ha terminado? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "¡Busca dos nuevos bloques aquí!",
+          "text_answer_finish": "¿Se ha mostrado una pantalla de título durante 3 segundos? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y pulsa \"Ejecutar\" de nuevo."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "¡Busque nuevos bloques aquí!"
+        },
+        "courseF_text_events": {
+          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+        },
+        "courseF_text_print": {
+          "print_block": "¡Encuentra el bloque de impresión aquí!",
+          "text_print_finish": "¿Se imprimió el mensaje anterior? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia tu código y pulsa \"Ejecutar\" de nuevo."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Encuentra aquí el bloque de avisos."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
         }
       }
     }

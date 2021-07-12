@@ -1,0 +1,344 @@
+{
+  "es-ES": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Presentamos el Laboratorio de sprites"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "Exploración de aplicaciones"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Presentamos el Laboratorio de sprites"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Exploración de aplicaciones"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "Creación de Sprites"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Sprites en acción"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Historias del espacio en blanco"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "Historias del espacio en blanco"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "Texto y Comentarios"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Diversión con bucles Para"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Diversión con bucles Para"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Diversión con bucles Para"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Diversión con bucles Para"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Diversión con bucles Para"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Ejecutar simulaciones"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Foro de profesores"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Muévelo, Muévelo"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Muévelo, Muévelo"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Muévelo, Muévelo"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Muévelo, muévelo"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programación de pares"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie y el Gran Proyecto"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Errores no detectados"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Bucleandose"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Bucleandose"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Bucleandose"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Bucleandose"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "El Gran Evento"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "El Gran Evento"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "El Gran Evento"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Foro de profesores"
+        },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Seguridad en mi Barrio en Línea: Diapositivas de la Lección"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Seguridad en mi Barrio en Línea: Mi Barrio en Línea"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Seguridad en mi Barrio en Línea: ¡Seguridad: Reglas!"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Seguridad en mi Barrio en Línea: Momento de Pausa y Reflexión"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programación de pares"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Meneos - Go Noodle"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Mapas Felices"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "Tarjetas de Mapas Felices"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Tarjetas de Mapas Felices"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Depuración con el Botón Paso"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "El Gran Evento"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "El Gran Evento"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "El Gran Evento"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Foro de profesores"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mis amigos robóticos"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mis amigos robóticos"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mis amigos robóticos"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mis amigos robóticos"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mis amigos robóticos"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programación de pares"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "El Gran Evento"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "El Gran Evento"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "El Gran Evento"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Pulseras Binarias"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Pulseras Binarias"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Pulseras Binarias"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Pulseras Binarias"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Pulseras Binarias"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Foro de profesores"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programación en papel cuadriculado"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programación de pares"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Programación de Relevos"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Condicionales con tarjetas"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Condicionales con tarjetas"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Condicionales con tarjetas"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Condicionales con tarjetas"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Condicionales con tarjetas"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Foro de profesores"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programación de pares"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        },
+        "making_sprites/express/2021": {
+          "name": "Creación de Sprites"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Sprites en acción"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "Texto y Comentarios"
+        },
+        "variables_video/express/2021": {
+          "name": "Variables"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Foro de profesores"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programación de pares"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Meneos - Go Noodle"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Foro de profesores"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Sigue el algoritmo"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Diseñar con la accesibilidad en mente"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Guía de implementación"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Guía del plan de estudios"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Foro de profesores"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentación del Laboratorio de sprites"
+        }
+      }
+    }
+  }
+}
