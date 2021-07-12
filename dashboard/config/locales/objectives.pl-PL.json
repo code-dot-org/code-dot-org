@@ -1,0 +1,14 @@
+{
+  "pl-PL": {
+    "data": {
+      "objectives": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Zadeklaruj zmienną"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Przypisz wartość zmiennej"
+        }
+      }
+    }
+  }
+}
