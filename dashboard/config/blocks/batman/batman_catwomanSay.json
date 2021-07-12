@@ -2,8 +2,18 @@
   "category": "Batman Speech",
   "config": {
     "func": "catwomanSay",
-    "blockText": "Catwoman say {SPEECH}",
+    "blockText": "{IMG}say {SPEECH}",
     "args": [
+      {
+        "name": "IMG",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/spritelab/catwoman.png",
+          "width": 32,
+          "height": 32
+        }
+      },
       {
         "name": "SPEECH",
         "options": [

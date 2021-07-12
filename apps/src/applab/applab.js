@@ -705,7 +705,7 @@ Applab.init = function(config) {
 
   config.dropletConfig = dropletConfig;
 
-  if (config.level.aiEnabled && experiments.isEnabled(experiments.APPLAB_ML)) {
+  if (config.level.aiEnabled) {
     config.dropletConfig = utils.deepMergeConcatArrays(
       config.dropletConfig,
       aiConfig

@@ -92,7 +92,7 @@ class Resource < ApplicationRecord
       id: id,
       key: key,
       name: get_localized_property(:name),
-      url: url,
+      url: get_localized_property(:url),
       download_url: download_url,
       audience: audience || 'All',
       type: type
@@ -121,7 +121,7 @@ class Resource < ApplicationRecord
       key: key,
       markdownKey: Services::GloballyUniqueIdentifiers.build_resource_key(self),
       name: get_localized_property(:name),
-      url: url
+      url: get_localized_property(:url)
     }
   end
 
