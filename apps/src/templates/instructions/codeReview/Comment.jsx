@@ -11,7 +11,7 @@ export default class Comment extends Component {
   };
 
   state = {
-    showEllipsisMenu: false
+    showCommentOptions: false
   };
 
   renderName = () => {
@@ -51,16 +51,19 @@ export default class Comment extends Component {
       >
         <div style={styles.commentHeaderContainer}>
           {this.renderName()}
-          <span
+          <div
             className="fa fa-ellipsis-h"
             style={styles.ellipsisMenu}
             onClick={() =>
-              this.setState({showEllipsisMenu: !this.state.showEllipsisMenu})
+              this.setState({
+                showCommentOptions: !this.state.showCommentOptions
+              })
             }
-          />
+          >
+            {this.state.showCommentOptions && <CommentOptions />}
+          </div>
           {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
-          {this.state.showEllipsisMenu && <CommentOptions />}
         </div>
         <div
           id={'code-review-comment-body'}
