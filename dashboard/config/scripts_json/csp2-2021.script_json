@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-09 18:17:44 UTC",
+    "serialized_at": "2021-07-09 19:15:56 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -35,18 +35,6 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "key": "lessonGroup-2",
-      "user_facing": true,
-      "position": 2,
-      "properties": {
-        "display_name": "Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp2-2021"
       }
     }
@@ -231,21 +219,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "key": "lesson-1",
-      "name": "CS Principles Post-Course Survey",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp2-2021"
       }
     }
