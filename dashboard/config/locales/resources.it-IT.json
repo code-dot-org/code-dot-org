@@ -1,0 +1,287 @@
+{
+  "it-IT": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Introduzione al Laboratorio dei Personaggi"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Introduzione al Laboratorio dei Personaggi"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentazione Sviluppo App"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Personaggi in azione"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Divertiti usando i cicli con contatore"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Divertiti usando i cicli con contatore"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Divertiti usando i cicli con contatore"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Divertiti usando i cicli con contatore"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Divertiti usando i cicli con contatore"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Simulazioni in corso"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentazione Sviluppo App"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Muovilo, muovilo"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Muovilo, muovilo"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Muovilo, muovilo"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Muovilo, Muovilo"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stefi e il grande progetto"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Quei fastidiosi insetti nascosti"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Diventare ripetitivi"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Diventare ripetitivi"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Diventare ripetitivi"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Diventare ripetitivi"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Il grande evento"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Il grande evento"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Il grande evento"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Mappe felici"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Il grande evento"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Il grande evento"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Il grande evento"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "I miei amici robotici"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "I miei amici robotici"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "I miei amici robotici"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "I miei amici robotici"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "I miei amici robotici"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Il grande evento"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Il grande evento"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Il grande evento"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Braccialetti binari"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Braccialetti binari"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Braccialetti binari"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Braccialetti binari"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Braccialetti binari"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programmazione su carta a quadretti"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Programmazione a staffetta"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Istruzioni condizionali con le carte da gioco"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Istruzioni condizionali con le carte da gioco"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Istruzioni condizionali con le carte da gioco"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Istruzioni condizionali con le carte da gioco"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Istruzioni condizionali con le carte da gioco"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Documentazione Sviluppo App"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Documentazione Sviluppo App"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Personaggi in azione"
+        },
+        "variables_video/express/2021": {
+          "name": "Variabili"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programmazione in coppia"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentazione Sviluppo App"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementation Guide"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Guida Curriculum"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Forum dell'insegnante"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentazione Sviluppo App"
+        }
+      }
+    }
+  }
+}
