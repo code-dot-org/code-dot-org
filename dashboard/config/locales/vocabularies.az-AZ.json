@@ -1,0 +1,137 @@
+{
+  "az-AZ": {
+    "data": {
+      "vocabularies": {
+        "user/coursef/2021": {
+          "word": "İstifadəçi"
+        },
+        "behavior/coursef/2021": {
+          "word": "Davranış"
+        },
+        "program/coursef/2021": {
+          "word": "Proqram"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Alqoritm"
+        },
+        "event/coursef/2021": {
+          "word": "Hadisə"
+        },
+        "variable/coursef/2021": {
+          "word": "Dəyişən"
+        },
+        "input/coursef/2021": {
+          "word": "Giriş"
+        },
+        "internet/coursef/2021": {
+          "word": "İnternet"
+        },
+        "define/coursef/2021": {
+          "word": "Təyin et"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Alqoritm"
+        },
+        "drop/courseb/2021": {
+          "word": "Burax"
+        },
+        "program/courseb/2021": {
+          "word": "Proqram"
+        },
+        "event/courseb/2021": {
+          "word": "Hadisə"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Alqoritm"
+        },
+        "program/coursea/2021": {
+          "word": "Proqram"
+        },
+        "drop/coursea/2021": {
+          "word": "Burax"
+        },
+        "event/coursea/2021": {
+          "word": "Hadisə"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Alqoritm"
+        },
+        "program/coursec/2021": {
+          "word": "Proqram"
+        },
+        "event/coursec/2021": {
+          "word": "Hadisə"
+        },
+        "binary/coursec/2021": {
+          "word": "İkilik"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Alqoritm"
+        },
+        "program/coursed/2021": {
+          "word": "Proqram"
+        },
+        "event/coursed/2021": {
+          "word": "Hadisə"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Şərti ifadələr"
+        },
+        "algorithm/express/2021": {
+          "word": "Alqoritm"
+        },
+        "program/express/2021": {
+          "word": "Proqram"
+        },
+        "behavior/express/2021": {
+          "word": "Davranış"
+        },
+        "event/express/2021": {
+          "word": "Hadisə"
+        },
+        "conditionals/express/2021": {
+          "word": "Şərti ifadələr"
+        },
+        "function/express/2021": {
+          "word": "Funksiya"
+        },
+        "variable/express/2021": {
+          "word": "Dəyişən"
+        },
+        "define/express/2021": {
+          "word": "Təyin et"
+        },
+        "drop/pre-express/2021": {
+          "word": "Burax"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Alqoritm"
+        },
+        "program/pre-express/2021": {
+          "word": "Proqram"
+        },
+        "event/pre-express/2021": {
+          "word": "Hadisə"
+        },
+        "behavior/coursee/2021": {
+          "word": "Davranış"
+        },
+        "event/coursee/2021": {
+          "word": "Hadisə"
+        },
+        "copyright/coursee/2021": {
+          "word": "Müəllif Haqqı"
+        },
+        "function/coursee/2021": {
+          "word": "Funksiya"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Şərti ifadələr"
+        },
+        "define/coursee/2021": {
+          "word": "Təyin et"
+        }
+      }
+    }
+  }
+}
