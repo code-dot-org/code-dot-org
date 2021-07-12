@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
@@ -7,7 +8,8 @@ import CommentOptions from './commentOptions';
 
 export default class Comment extends Component {
   static propTypes = {
-    comment: commentShape.isRequired
+    comment: commentShape.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   constructor(props) {
