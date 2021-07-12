@@ -361,11 +361,12 @@ const serializeLesson = (lesson, levelKeyList) => {
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
-      if (level.ids.length > 1) {
+      if (level.inactiveIds && level.inactiveIds.length > 0) {
         s.push('variants');
-        level.ids.forEach(id => {
-          const active = id === level.activeId;
-          const lines = serializeLevel(levelKeyList, id, level, active);
+        let lines = serializeLevel(levelKeyList, level.activeId, level);
+        s = s.concat(lines.map(line => `  ${line}`));
+        level.inactiveIds.forEach(id => {
+          lines = serializeLevel(levelKeyList, id, level, false);
           s = s.concat(lines.map(line => `  ${line}`));
         });
         s.push('endvariants');

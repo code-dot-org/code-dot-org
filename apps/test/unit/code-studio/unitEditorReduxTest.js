@@ -38,12 +38,14 @@ const getInitialState = () => ({
           levels: [
             {
               activeId: '2001',
+              inactiveIds: [],
               ids: ['2001'],
               kind: 'puzzle',
               position: 1
             },
             {
               activeId: '2002',
+              inactiveIds: [],
               ids: ['2002'],
               kind: 'puzzle',
               position: 2
@@ -161,6 +163,7 @@ describe('unitEditorRedux reducer tests', () => {
       const scriptLevel = initialState.lessonGroups[0].lessons[0].levels[1];
       scriptLevel.ids = ['2002', '2003'];
       scriptLevel.activeId = '2003';
+      scriptLevel.inactiveIds = ['2002'];
       let serializedLessonGroups = getSerializedLessonGroups(
         initialState.lessonGroups,
         initialState.levelKeyList
@@ -172,8 +175,8 @@ describe('unitEditorRedux reducer tests', () => {
           "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n" +
           "level 'Level One'\n" +
           'variants\n' +
-          "  level 'Level Two', active: false\n" +
           "  level 'Level Three'\n" +
+          "  level 'Level Two', active: false\n" +
           'endvariants\n\n' +
           "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
           "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
