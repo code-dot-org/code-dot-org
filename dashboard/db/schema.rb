@@ -400,6 +400,7 @@ ActiveRecord::Schema.define(version: 2021_08_20_182004) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_offering_id"
+    t.string "published_state"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
     t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
