@@ -6,7 +6,8 @@ import color from '@cdo/apps/util/color';
 class CommentOptions extends Component {
   static propTypes = {
     isResolved: PropTypes.bool.isRequired,
-    onResolveClick: PropTypes.func.isRequired
+    onResolveClick: PropTypes.func.isRequired,
+    onDeleteClick: PropTypes.func.isRequired
   };
 
   commentOptionTypes = {
@@ -23,7 +24,7 @@ class CommentOptions extends Component {
       text: 'Mark Uncomplete'
     },
     delete: {
-      onClick: () => {},
+      onClick: this.props.onDeleteClick,
       key: 'delete',
       iconClass: 'fa fa-fw fa-trash',
       text: 'Delete'

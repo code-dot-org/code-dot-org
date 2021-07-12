@@ -74,6 +74,7 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
+              onDelete={() => this.removeDeletedComment(comment.id)}
             />
           );
         })}
