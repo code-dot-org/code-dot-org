@@ -77,6 +77,7 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
+      course_version.published_state = content_root.published_state
       if content_root.prevent_course_version_change? && content_root.course_version != course_version
         raise "cannot change course version of #{content_root.name}"
       end
