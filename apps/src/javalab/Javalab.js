@@ -69,6 +69,7 @@ Javalab.prototype.init = function(config) {
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.usesAssets = true;
 
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
