@@ -70,6 +70,7 @@ class Level < ApplicationRecord
     reference_links
     name_suffix
     parent_level_id
+    contained_level_names
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
@@ -585,16 +586,6 @@ class Level < ApplicationRecord
     ["Applab", "Gamelab", "Weblab"].include?(type)
   end
 
-  # Returns an array of all the contained levels
-  # (based on the contained_level_names property)
-  def contained_levels
-    names = try('contained_level_names')
-    return [] unless names.present?
-    names.map do |contained_level_name|
-      Script.cache_find_level(contained_level_name)
-    end
-  end
-
   def display_as_unplugged?
     # Levelbuilders can select if External/
     # Markdown levels should display as Unplugged.
@@ -720,11 +711,8 @@ class Level < ApplicationRecord
       update_params[:project_template_level_name] = new_template_level.name
     end
 
-    unless contained_levels.empty?
-      update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
-      end
-    end
+    child_params_to_update = Levels::LevelsWithinLevels.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+    update_params.merge!(child_params_to_update)
 
     level.update!(update_params)
 
