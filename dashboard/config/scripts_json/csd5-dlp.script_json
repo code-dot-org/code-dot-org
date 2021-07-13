@@ -2,7 +2,6 @@
   "script": {
     "name": "csd5-dlp",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "professional_learning_course": "CS Discoveries Facilitator in Training",

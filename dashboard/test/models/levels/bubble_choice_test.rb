@@ -251,6 +251,27 @@ DSL
     assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
   end
 
+  test 'keep_working_sublevel returns sublevel where the latest feedback has keepWorking review state' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    assert_equal @sublevel1, @bubble_choice.keep_working_sublevel(student, script)
+  end
+
+  test 'keep_working_sublevel returns nil if no sublevels latest feedback have keepWorking review state' do
+    student = create :student
+    create :user_level, user: student, level: @sublevel1, script: @script_level.script, best_result: 100
+
+    assert_nil @bubble_choice.keep_working_sublevel(student, @script_level.script)
+  end
+
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
     sublevel1 = create :level, name: 'sublevel_1'
     sublevel2 = create :level, name: 'sublevel_2'
@@ -328,5 +349,30 @@ DSL
     artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
     bubble_choice = create :bubble_choice_level, name: 'bubble_choices_level', sublevels: [artist]
     assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
+  end
+
+  test 'parent_levels will retrieve all parent levels' do
+    parents = []
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1, @sublevel2])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel2])
+
+    assert_equal [@bubble_choice, parents[0], parents[1]], BubbleChoice.parent_levels(@sublevel1.name)
+    assert_equal [@bubble_choice, parents[0], parents[2]], BubbleChoice.parent_levels(@sublevel2.name)
+  end
+
+  test 'only actual sublevels are considered sublevels' do
+    sublevel = create :level
+    contained_level = create :level
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED,
+      position: 2
+    )
+    bubble_choice.reload
+    assert_equal [sublevel, contained_level], bubble_choice.child_levels.to_a
+    assert_equal [sublevel], bubble_choice.sublevels.to_a
   end
 end

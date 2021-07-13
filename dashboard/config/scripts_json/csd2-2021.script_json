@@ -2,7 +2,6 @@
   "script": {
     "name": "csd2-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:07 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 19:39:10 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1437,6 +1436,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "1840d382-40db-43dd-b6cd-4f002ec7eb04",
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2v2",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "key": "6e1384cd-1561-474c-bd34-f0b50f33d24a",
+      "position": 5,
+      "properties": {
+        "name": "End of Course Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e1384cd-1561-474c-bd34-f0b50f33d24a",
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
         "script.name": "csd2-2021"
@@ -5630,6 +5642,17 @@
       }
     },
     {
+      "key": "44996062-57e4-4aee-8a38-005efe260749",
+      "position": 1,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. "
+      },
+      "seeding_key": {
+        "activity_section.key": "44996062-57e4-4aee-8a38-005efe260749",
+        "lesson_activity.key": "6e1384cd-1561-474c-bd34-f0b50f33d24a"
+      }
+    },
+    {
       "key": "3887f06f-198d-411e-aee5-81cf9e5b2f90",
       "position": 1,
       "properties": {
@@ -8020,42 +8043,14 @@
       "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2021",
-        "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
-      },
-      "level_keys": [
-        "csd-post-survey-intro-2019_pilot_2021"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -8063,7 +8058,7 @@
         "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
       },
       "level_keys": [
-        "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     }
   ],
@@ -9162,21 +9157,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-post-survey-intro-2019_pilot_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2021",
-        "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021",
-        "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",

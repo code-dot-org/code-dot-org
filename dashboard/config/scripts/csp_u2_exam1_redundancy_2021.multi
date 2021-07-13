@@ -10,6 +10,16 @@ right ‘Redundant networks are more reliable’
 wrong ‘Adding additional connections reduces the fault-tolerance of the network’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** When a network contains redundant connections, the network can continue to function in the event of slow downs or disconnections in specific parts of the network.
+
+Students brainstormed and discussed the benefits of redundancy in networks at the end of [Lesson 4 - Routers and Redundancy](https://studio.code.org/s/csp2-2021/lessons/4). 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CSN-1.E.6: Redundancy within a system often requires additional resources but can provide the benefit of fault-tolerance.
+
+* CSN-1.E.7: The redundancy of routing between two points on the Internet increases the reliability of the Internet and helps it scale to more devices and more people.
+:::
 
 MARKDOWN
 

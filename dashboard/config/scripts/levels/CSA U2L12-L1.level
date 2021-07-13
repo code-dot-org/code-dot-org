@@ -2,20 +2,18 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Write your program for your Neighborhood Store Management Project.\r\n\r\nWrite your superclass and subclasses.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "project_template_level_name": "CSA U2 Project Template"
+    "project_template_level_name": "CSA U2 Project Template",
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/4l6Me3nh2vPRt6CuzZLDzQHS3PzbsenHiiv3UqAn05k=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-23T15:42:59.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-23 16:37:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:37:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:23:18 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:50:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

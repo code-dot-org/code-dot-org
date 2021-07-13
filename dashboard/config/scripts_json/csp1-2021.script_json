@@ -2,7 +2,6 @@
   "script": {
     "name": "csp1-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -18,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:14 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 18:59:25 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -3846,15 +3845,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3862,7 +3858,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "csp-pre-survey-levelgroup_2021"
+        "survey_placeholder_levelgroup"
       ]
     },
     {
@@ -4959,9 +4955,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_2021",
+        "level.key": "survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -5502,6 +5498,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csp1-2021/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp1-2021/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
       "name": "ASCII Reference Sheet",
       "url": "https://docs.google.com/document/d/15pgXcGUX7XbAAGBkHfXMMLFwDP5cTKKZ-zFIfFKu9FQ/edit",
       "key": "ascii-reference-sheet",
@@ -5595,6 +5613,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -5696,6 +5726,30 @@
       }
     },
     {
+      "name": "KEY U1L4 Flippy Do Pt 1 Activity Guide",
+      "url": "https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing",
+      "key": "key_u1l4_flippy_do_pt_1_activity_guide",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "name": "KEY U1L8 Black & White Images Activity Guide",
+      "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
+      "key": "key_u1l8_black_white_images_activity_guide",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
+      }
+    },
+    {
       "name": "Personal Innovations",
       "url": "https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/",
       "key": "personal-innovations-1",
@@ -5759,6 +5813,42 @@
       }
     },
     {
+      "name": "U1 High Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1wm-dWM_MyuWv_ANcY7wOwB30DfePpJUGVS_Iju73F40/edit?usp=sharing",
+      "key": "u1_high_score_sample_article_markup",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Poster ",
+      "url": "https://docs.google.com/presentation/d/1Z7w4PeNIK5MhhoBYZ6nf_I005BwGx0GjENTIGIi-WfA/edit?usp=sharing",
+      "key": "u1_high_score_sample_poster",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/19D-A1wmOP-RjrqiMrbJ4sZFN5SnsfQVRdyB4CePnqJw/edit?usp=sharing",
+      "key": "u1_high_score_sample_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
       "name": "Flippy Do",
       "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
       "key": "u1_l4_flippy_do",
@@ -5793,6 +5883,42 @@
       },
       "seeding_key": {
         "resource.key": "u1_l4_how_to_make_a_flippydo"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1JR2p0KS4HeBiwy5j5nAGMsIv6lRYwp8w6j6-he1JqQ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_article_markup",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Poster",
+      "url": "https://docs.google.com/presentation/d/1nWytpB3lOHq8U1ptGQ0r3IWg1jfH2fDxK88vNhq8d_E/edit?usp=sharing",
+      "key": "u1_mid_score_sample_poster",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/1jXio0Ws5iXv_pcZXqIJ13hrYrYxJN0PtIDUynEX9DZ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_rubric"
       }
     },
     {
@@ -5914,6 +6040,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Overflow and Rounding",
         "resource.key": "csp_unit_1_-_digital_information"
       }
@@ -5946,6 +6078,12 @@
       "seeding_key": {
         "lesson.key": "Black and White Images",
         "resource.key": "u1l7_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
       }
     },
     {
@@ -6046,6 +6184,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "resource.key": "u1_mid_score_sample_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 14: Assessment Day",
         "resource.key": "csp_unit_1_-_digital_information"
       }
@@ -6067,6 +6241,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
         "script.name": "csp1-2021"
       }
     }

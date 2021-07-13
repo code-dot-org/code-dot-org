@@ -13,7 +13,7 @@ require_relative '../../dashboard/config/environment'
 require 'pp'
 
 # The names of scripts we expect to see
-HIGH_SCALE_SCRIPT_NAMES = %w(
+HIGH_SCALE_UNIT_NAMES = %w(
   frozen
   gumball
   hourofcode
@@ -64,7 +64,7 @@ EOF
 
   # Set script-specific Gatekeeper flags.
   puts "Setting flags to #{mode}"
-  HIGH_SCALE_SCRIPT_NAMES.each do |script_name|
+  HIGH_SCALE_UNIT_NAMES.each do |script_name|
     case mode
     when 'red'
       Gatekeeper.set('shareEnabled', value: false, where: {script_name: script_name})

@@ -2,20 +2,18 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Import `Dessert.java` from your **Backpack**.\r\n\r\n1. Write a `toString()` method which outputs all attributes of a `Dessert` object in the following format:\r\n\r\n```\r\nflavor = \"tangerine\", quantity = 4, price = 4.50\r\n```\r\n\r\n2. Refactor the `printInfo()` method to use your `toString()`.\r\n\r\n3. In `MyFoodTruck.java`, create a `Dessert` object and print the values of its instance variables.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "project_template_level_name": "CSA U2L10 Template"
+    "project_template_level_name": "CSA U2L10 Template",
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/zBeS7t+lG6OdO8Dx7y7falix77E6zrAYHKJf1SLk0IE=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-23T14:59:12.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-23 16:35:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:35:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:21:48 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:50:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

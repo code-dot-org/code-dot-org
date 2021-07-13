@@ -7,7 +7,6 @@ class ScriptDSL < BaseDSL
     @skin = nil
     @current_scriptlevel = nil
     @video_key_for_next_level = nil
-    @hidden = true
     @login_required = false
     @hideable_lessons = false
     @student_detail_progress_view = false
@@ -31,8 +30,8 @@ class ScriptDSL < BaseDSL
     @tts = false
     @deprecated = false
     @is_course = false
-    @background = nil
     @is_migrated = false
+    @is_maker_unit = false
   end
 
   integer :id
@@ -41,7 +40,6 @@ class ScriptDSL < BaseDSL
   boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
-  boolean :hidden
   boolean :login_required
   boolean :hideable_lessons
   boolean :student_detail_progress_view
@@ -53,6 +51,7 @@ class ScriptDSL < BaseDSL
   boolean :deprecated
   boolean :is_course
   boolean :is_migrated
+  boolean :is_maker_unit
 
   string :wrapup_video
   string :announcements
@@ -63,7 +62,6 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
-  string :background
   string :published_state
 
   def teacher_resources(resources)
@@ -143,7 +141,6 @@ class ScriptDSL < BaseDSL
     lesson(nil)
     {
       id: @id,
-      hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_lessons: @hideable_lessons,
@@ -171,8 +168,8 @@ class ScriptDSL < BaseDSL
       deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
-      background: @background,
-      is_migrated: @is_migrated
+      is_migrated: @is_migrated,
+      is_maker_unit: @is_maker_unit
     }
   end
 
@@ -339,7 +336,6 @@ class ScriptDSL < BaseDSL
     s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
-    s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
@@ -363,7 +359,7 @@ class ScriptDSL < BaseDSL
     s << 'tts true' if script.tts
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
-    s << "background '#{script.background}'" if script.background
+    s << "is_maker_unit true" if script.is_maker_unit
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)

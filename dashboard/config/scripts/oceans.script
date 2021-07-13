@@ -1,6 +1,4 @@
-hidden false
 published_state 'preview'
-background 'oceans-blue'
 
 lesson 'Oceans', display_name: 'Oceans', has_lesson_plan: true
 level 'Oceans_Video_Machine_Learning'
