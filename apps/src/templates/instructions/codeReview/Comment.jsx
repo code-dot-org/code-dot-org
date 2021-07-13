@@ -21,6 +21,11 @@ export default class Comment extends Component {
     };
   }
 
+  onDelete = commentId => {
+    this.setState({isShowingCommentOptions: false});
+    this.props.onDelete(commentId);
+  };
+
   renderName = () => {
     const {name, isFromTeacher, isFromCurrentUser} = this.props.comment;
 
@@ -41,6 +46,7 @@ export default class Comment extends Component {
 
   render() {
     const {
+      id,
       commentText,
       timestampString,
       isFromCurrentUser,
@@ -77,6 +83,7 @@ export default class Comment extends Component {
                     isShowingCommentOptions: false
                   })
                 }
+                onDeleteClick={() => this.onDelete(id)}
               />
             )}
           </div>

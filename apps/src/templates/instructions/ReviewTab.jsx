@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {getStore} from '@cdo/apps/redux';
+import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
@@ -43,6 +44,13 @@ export default class ReviewTab extends Component {
       });
   };
 
+  onCommentDeleted = deletedCommentId => {
+    const comments = this.state.comments;
+    _.remove(comments, comment => comment.id === deletedCommentId);
+
+    this.setState({comments: comments});
+  };
+
   renderReadyForReviewCheckbox() {
     const {isReadyForReview} = this.state;
 
@@ -74,7 +82,7 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
-              onDelete={() => this.removeDeletedComment(comment.id)}
+              onDelete={() => this.onCommentDeleted(comment.id)}
             />
           );
         })}
