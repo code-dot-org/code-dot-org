@@ -46,11 +46,16 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "free_play": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:09 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:21:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:38:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:39:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:44:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:54:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\",\"markdown_instructions\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-06 17:25:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:09 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:21:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:38:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:39:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:44:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:54:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\",\"markdown_instructions\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-06 17:25:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>
