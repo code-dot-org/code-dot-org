@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-13 01:59:26 UTC",
+    "serialized_at": "2021-07-13 18:57:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -192,32 +192,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-mod3-CurriculumOverview"
-        ],
-        "progression": "Course Overview"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-mod3-CurriculumOverview"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd3-2021",
-        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
-      },
-      "level_keys": [
-        "SP-VPL-21-mod3-CurriculumOverview"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "SP-VPL-21-mod3-CV-Equity"
         ],
         "progression": "Course Overview"
@@ -235,6 +209,32 @@
       },
       "level_keys": [
         "SP-VPL-21-mod3-CV-Equity"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CurriculumOverview"
+        ],
+        "progression": "Course Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CurriculumOverview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-CurriculumOverview"
       ]
     },
     {
@@ -567,9 +567,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-CurriculumOverview",
+        "level.key": "SP-VPL-21-mod3-CV-Equity",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CurriculumOverview"
+          "SP-VPL-21-mod3-CV-Equity"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
@@ -579,9 +579,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod3-CV-Equity",
+        "level.key": "SP-VPL-21-mod3-CurriculumOverview",
         "script_level.level_keys": [
-          "SP-VPL-21-mod3-CV-Equity"
+          "SP-VPL-21-mod3-CurriculumOverview"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
