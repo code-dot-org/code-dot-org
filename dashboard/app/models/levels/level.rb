@@ -694,6 +694,7 @@ class Level < ApplicationRecord
     # specify :published to make should_write_custom_level_file? return true
     level_params = {name: new_name, parent_level_id: id, published: true}
     level_params[:editor_experiment] = editor_experiment if editor_experiment
+    level_params[:audit_log] = '[]'
     level.update!(level_params)
     level
   end
