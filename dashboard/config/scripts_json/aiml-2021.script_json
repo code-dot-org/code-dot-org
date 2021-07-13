@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-13 01:51:39 UTC",
+    "serialized_at": "2021-07-13 17:57:23 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
