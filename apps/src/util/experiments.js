@@ -34,6 +34,7 @@ experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
 experiments.POEM_BOT = 'poemBot';
+experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

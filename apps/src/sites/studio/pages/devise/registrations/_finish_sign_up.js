@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -38,9 +39,7 @@ $(document).ready(() => {
 
   function init() {
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    const queryString = window.location.search.substring(1).split('&');
-    const inVariant = queryString.includes('inSignUpUserTypeVariant=true');
-    if (inVariant) {
+    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style =
         'display:none';
