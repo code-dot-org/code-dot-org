@@ -771,7 +771,7 @@ class Script < ApplicationRecord
   def self.units_with_standards
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
       map {|unit| [unit.title_for_display, unit.name]}
   end
 
