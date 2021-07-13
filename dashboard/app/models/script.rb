@@ -1076,8 +1076,10 @@ class Script < ApplicationRecord
 
       unit.generate_plc_objects
 
-      CourseOffering.add_course_offering(unit)
-
+      if unit.is_course
+        CourseOffering.add_course_offering(unit)
+        unit.course_version.update!(published_state: unit.published_state)
+      end
       unit
     end
   end
