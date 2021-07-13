@@ -8,6 +8,7 @@
 module Levels
   module LevelsWithinLevels
     extend ActiveSupport::Concern
+
     included do
       # Because this parent-child relationship comes in different flavors, we
       # also want to provide some scopes to make interacting with subsets of
@@ -38,6 +39,9 @@ module Levels
         -> {extending ByKindExtension},
         through: :levels_child_levels,
         inverse_of: :parent_levels
+
+      before_validation :sanitize_contained_level_names
+      after_save :setup_contained_levels
     end
 
     # Returns all child levels of this level, which could include contained
@@ -54,6 +58,70 @@ module Levels
       child_descendant_levels = my_child_levels.
         map(&:all_descendant_levels).flatten
       my_child_levels + child_descendant_levels
+    end
+
+    # TODO: replace calls to this method in the codebase
+    def contained_levels
+      child_levels.contained
+    end
+
+    # Helper method for level cloning, called by `clone_with_suffix`; given a
+    # freshly-cloned level, create clones of all its children.
+    #
+    # Returns a hash of all parameters on that level that need to be updated in
+    # response.
+    def self.clone_child_levels(new_cloned_level, new_suffix, editor_experiment: nil)
+      update_params = {}
+      new_cloned_level.levels_child_levels.each do |parent_levels_child_level|
+        child_level = parent_levels_child_level.child_level
+        cloned_child_level = child_level.
+          clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+        parent_levels_child_level.child_level = cloned_child_level
+        parent_levels_child_level.save!
+      end
+
+      unless new_cloned_level.child_levels.contained.empty?
+        update_params[:contained_level_names] =
+          new_cloned_level.child_levels.contained.map(&:name)
+      end
+
+      return update_params
+    end
+
+    private
+
+    def sanitize_contained_level_names
+      contained_level_names = properties["contained_level_names"]
+      contained_level_names.try(:delete_if, &:blank?)
+      contained_level_names = nil unless contained_level_names.try(:present?)
+      properties["contained_level_names"] = contained_level_names
+    end
+
+    # Create ParentLevelsChildLevel many-to-many relationships based on the
+    # contents of this level's `contained_level_names` property.
+    def setup_contained_levels
+      # if our existing contained levels already match the given names, do
+      # nothing
+      return if child_levels.contained.map(&:name) == contained_level_names
+
+      # otherwise, update contained levels to match; destroy any existing
+      # relations to levels NOT in the given names, and create/update relations
+      # to the levels we want.
+      new_contained_levels = Level.where(name: contained_level_names)
+
+      levels_child_levels.
+        contained.
+        where.not(child_level: new_contained_levels).
+        destroy_all
+
+      new_contained_levels.each_with_index do |new_contained_level, i|
+        relation = levels_child_levels.
+          where(child_level: new_contained_level).
+          first_or_initialize
+        relation.kind = ParentLevelsChildLevel::CONTAINED
+        relation.position = i + 1
+        relation.save!
+      end
     end
   end
 end

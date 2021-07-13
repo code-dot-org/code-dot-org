@@ -47,11 +47,9 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns all of the sublevels for this BubbleChoice level in order.
+  # TODO: replace calls to this method in the codebase
   def sublevels
-    levels_child_levels.
-      includes(:child_level).
-      sublevel.
-      map(&:child_level)
+    child_levels.sublevel
   end
 
   def sublevel_at(index)
@@ -211,12 +209,6 @@ class BubbleChoice < DSLDefined
 
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     level = super(new_suffix, editor_experiment: editor_experiment)
-    level.levels_child_levels.each do |parent_levels_child_level|
-      sublevel = parent_levels_child_level.child_level
-      cloned_sublevel = sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      parent_levels_child_level.child_level = cloned_sublevel
-      parent_levels_child_level.save!
-    end
 
     level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
     level
