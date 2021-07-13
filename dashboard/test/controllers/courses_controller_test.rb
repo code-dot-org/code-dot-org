@@ -58,7 +58,7 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 9
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
 
   test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
 
@@ -163,6 +163,15 @@ class CoursesControllerTest < ActionController::TestCase
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: shows course when family name matches course name" do
+    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(course)
+
+    get :show, params: {course_name: 'new-course'}
 
     assert_response :ok
   end

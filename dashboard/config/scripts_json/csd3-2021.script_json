@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 23:47:39 UTC",
+    "serialized_at": "2021-07-08 19:41:18 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2021"
@@ -12920,42 +12920,14 @@
       "chapter": 231,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd3-2021",
-        "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a"
-      },
-      "level_keys": [
-        "csd-post-survey-intro-2019_pilot_2021"
-      ]
-    },
-    {
-      "chapter": 232,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -12963,7 +12935,7 @@
         "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a"
       },
       "level_keys": [
-        "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     }
   ],
@@ -15730,21 +15702,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-post-survey-intro-2019_pilot_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd3-2021",
-        "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021",
-        "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",

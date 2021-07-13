@@ -1,0 +1,51 @@
+name 'SP-VPL-21-mod3-LevelTypes'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Levels 
+
+<img src="https://images.code.org/fee3b12c1bc5874413af0ce621aa53b1-image-1626106561565.14.54 AM.png" style="float: right; height: 100px; clear: both; margin: 0 20px 20px 0;">
+
+##### When students are on the computer, plugged activities look like a series of bubbles, called **levels**, that students complete in order. You can read about the different types of levels found in CS Discoveries below.
+
+## Level types in a non-programming lesson:
+
+##### **Exploration:** These levels present students with sample programs that use the concepts they are about to learn. These are best completed in pairs or as whole-class discussion. 
+
+
+## Level types in a programming lesson:
+
+##### **Skill building:** These levels are usually targeted tasks that are focused on specific skill building rather than open ended creation. At the beginning of a lesson, these tasks are highly scaffolded, and this scaffolding falls away as students develop the target skills. Types of skill building levels:
+
+<details>
+<summary><strong>Predict levels</strong></summary>
+
+Predict levels prompt students to actively engage with working code before coding for themselves.   Students read working code, discuss with a partner, and predict what it will do before running the code themselves.  After running the code, students investigate the working code with partners or in a large group to make sense of how the code works.  Whole group discussions about the working code replace direct instruction about the concept being introduced.
+</details>
+
+<details>
+<summary><strong>Video levels</strong></summary>
+
+Videos provide direct instruction on certain topics throughout the curriculum. Relevant videos are embedded within the “Help and Tips” tab, so that students can access them at any time in the online progression. Each video includes discussion questions, and teachers are encouraged to review and discuss the videos as a class to help students synthesize what they have learned.
+</details>
+
+<details>
+<summary><strong>Programming levels</strong></summary>
+
+Programming are usually targeted tasks that are focused on specific skill building rather than open ended creation.  At the beginning of a lesson, these tasks are highly scaffolded, and this scaffolding falls away as students develop the target skills.
+</details>
+
+##### **Practice:**  These levels include multiple opportunities for students to practice the skills they have just acquired. Students choose from various activities, with the guidance of a teacher. These levels usually fall before an assessment and allow for differentiation in the ways and amount that students reinforce the target skills.
+
+##### **Assessment:**  
+
+##### **Challenge:**
+
+## Level types in a project lesson:
+
+##### **Project:**
+
+
+
+MARKDOWN
