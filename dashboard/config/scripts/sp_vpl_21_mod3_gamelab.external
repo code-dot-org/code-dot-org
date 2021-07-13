@@ -1,0 +1,25 @@
+name 'SP-VPL-21-mod3-GameLab'
+title 'title'
+description 'description here'
+video_key 'applab_intro_welcome'
+
+markdown <<MARKDOWN
+#Game Lab
+
+<img src="https://images.code.org/cb59f4252d97bd3513887291762c59bf-image-1625940906914.14.54 PM.png" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## What is Game Lab?
+
+#### **Game Lab is a programming environment for developing animations and games using JavaScript.**
+
+##### Students start by creating sprites - characters whose appearance, movement, and interactions can be controlled through code. A preloaded library of images and sounds and a full-featured pixel editor allow students to customize the look of their sprites. Then, using Game Lab, students learn fundamental programming constructs while being given the freedom to create their own virtual worlds. Students can program using either blocks or text and instantly switch between either mode. Game Lab allows for activities with a scoped toolbox of commands that focuses attention on the specific blocks and concepts being introduced in that lesson. In addition, embedded support tools help students track down errors in their code.  
+
+
+## Where is Game Lab used in the CS Discoveries curriculum?
+
+### **Unit 3: interactive Games and Animations**
+
+##### Add short description of how students use Game Lab in Unit 3. 
+
+
+MARKDOWN

@@ -37,26 +37,7 @@ module Services
             result = flatten(script_objects, ScriptCrowdinSerializer, :scripts)
 
             # Then we apply some postprocessing.
-            # We use URLs as keys for lessons in Crowdin, to make things easier for
-            # translators. For the actual translation files, though, we'd like to use
-            # more-standard keys.
-            if result.key?(:lessons)
-              rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
-                route_params = Rails.application.routes.recognize_path(lesson_url)
-                lesson = Lesson.joins(:script).
-                  find_by(
-                    "scripts.name": route_params[:script_id],
-                    relative_position: route_params[:position].to_i,
-                    has_lesson_plan: true
-                  )
-                unless lesson.present?
-                  STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
-                  next
-                end
-                [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
-              end
-              result[:lessons] = rekeyed_lessons.compact.to_h
-            end
+            postprocess(result)
 
             # Finally, write each resulting collection of strings out to a rails i18n
             # config file.
@@ -64,6 +45,44 @@ module Services
               dest = File.join(Rails.root, 'config/locales', "#{type}.#{locale}.json")
               data = {locale => {data: {type => strings}}}
               File.write(dest, JSON.pretty_generate(data))
+            end
+          end
+        end
+
+        # Perform any necessary postprocessing to the final translated strings,
+        # before writing them out to config files
+        def self.postprocess(result)
+          # We use URLs as keys for lessons in Crowdin, to make things easier for
+          # translators. For the actual translation files, though, we'd like to use
+          # more-standard keys.
+          if result.key?(:lessons)
+            rekeyed_lessons = result[:lessons].map do |lesson_url, lesson_data|
+              route_params = Rails.application.routes.recognize_path(lesson_url)
+              lesson = Lesson.joins(:script).
+                find_by(
+                  "scripts.name": route_params[:script_id],
+                  relative_position: route_params[:position].to_i,
+                  has_lesson_plan: true
+                )
+              unless lesson.present?
+                STDERR.puts "could not find lesson for url #{lesson_url.inspect}"
+                next
+              end
+              [Services::GloballyUniqueIdentifiers.build_lesson_key(lesson), lesson_data]
+            end
+            result[:lessons] = rekeyed_lessons.compact.to_h
+          end
+
+          # We also provide URLs to the translators for Resources only; because
+          # the sync has a side effect of applying Markdown formatting to
+          # everything it encounters, we want to make sure to un-Markdownify
+          # these URLs
+          if result.key?(:resources)
+            result[:resources].each do |_key, resource|
+              next unless resource[:url].present?
+              resource[:url].strip!
+              resource[:url].delete_prefix!('<')
+              resource[:url].delete_suffix!('>')
             end
           end
         end
