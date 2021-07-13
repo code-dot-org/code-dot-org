@@ -109,6 +109,22 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 3, seeded_unit_group.default_units.length
   end
 
+  test "can seed course version for unit group from hash" do
+    unit_group = create(:unit_group, name: 'my-unit-group', family_name: 'family', version_year: '2021', published_state: SharedConstants::PUBLISHED_STATE.stable)
+
+    serialization = unit_group.serialize
+    unit_group.destroy
+
+    seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
+    assert_equal 'my-unit-group', seeded_unit_group.name
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
+    course_version = seeded_unit_group.course_version
+    assert_not_nil course_version
+    assert_equal '2021', course_version.key
+    assert_equal 'family', course_version.course_offering&.key
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, course_version.published_state
+  end
+
   test "can seed unit group and create resources from hash" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
