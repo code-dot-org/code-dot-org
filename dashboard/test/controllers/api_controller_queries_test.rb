@@ -14,11 +14,12 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
       students.each do |student|
         create :user_level, user: student, level: script_level.level, script: script
       end
+      create :teacher_feedback, student: students.first, teacher: section.teacher, level: script_level.level, script: script
     end
 
     sign_in_as section.teacher
 
-    assert_queries 8 do
+    assert_queries 10 do
       get '/dashboardapi/section_level_progress', params: {
         section_id: section.id,
         script_id: script.id
