@@ -331,6 +331,7 @@ export const levelProgressFromServer = serverProgress => {
     locked: serverProgress.locked || false,
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
+    teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress)
   };
