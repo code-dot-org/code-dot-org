@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -37,6 +38,19 @@ $(document).ready(() => {
   init();
 
   function init() {
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
+    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+      // If in variant, toggle large buttons
+      document.getElementById('select-user-type-original').style =
+        'display:none';
+    } else {
+      // Otherwise (also the default), keep original dropdown
+      document.getElementById('select-user-type-variant').style =
+        'display:none';
+      document.getElementById('signup-select-user-type-label').style =
+        'width:220px';
+    }
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
@@ -99,16 +113,25 @@ $(document).ready(() => {
     }
   }
 
+  // Change user type event listener
+  // Keep if sign-up user type experiment favors variant (start)
+  document.addEventListener('selectUserType', e => {
+    setUserType(e.detail);
+  });
+  // Keep if sign-up user type experiment favors variant (end)
+  // Keep if sign-up user type experiment favors original (start)
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
   });
+  // Keep if sign-up user type experiment favors original (end)
 
   function getUserType() {
-    return $('#user_user_type')[0].value;
+    return $('#user_user_type').val();
   }
 
   function setUserType(userType) {
+    $('#user_user_type').val(userType);
     if (userType) {
       trackUserType(userType);
     }
