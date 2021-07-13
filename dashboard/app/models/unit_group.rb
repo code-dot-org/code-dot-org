@@ -121,7 +121,6 @@ class UnitGroup < ApplicationRecord
     course_version = unit_group.course_version
 
     if course_version
-      course_version.update!(published_state: unit_group.published_state)
       unit_group.resources = (hash['resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
       unit_group.student_resources = (hash['student_resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
     end
