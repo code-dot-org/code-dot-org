@@ -32,6 +32,8 @@ class CourseVersion < ApplicationRecord
     with: KEY_RE,
     message: "must contain only digits, letters, or dashes; got \"%{value}\"."
 
+  # Placeholder key for curriculum that will not be updated but want the
+  # features that come with a course version (resources, vocab, etc)
   UNVERSIONED = 'unversioned'.freeze
 
   def units
