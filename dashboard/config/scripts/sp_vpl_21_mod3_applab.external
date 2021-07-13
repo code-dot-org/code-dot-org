@@ -1,26 +1,30 @@
 name 'SP-VPL-21-mod3-AppLab'
-title 'title'
+title 'App Lab'
 description 'description here'
-video_key 'applab_intro_welcome'
+
 
 markdown <<MARKDOWN
-##App Lab is a programming environment where students can make simple apps using JavaScript. 
+# App Lab
 
-#####A drag-and-drop editor allows students to add and edit page elements without having to write the associated HTML and CSS. Working in either blocks or text, students define the behavior of these page elements using code. The scoped toolbox of commands focuses attention on the specific blocks or concepts being introduced in that lesson. The embedded support tools help students track down errors in their code. Thanks to these features, App Lab is particularly well-suited for quickly prototyping apps.
+## What is App Lab?
 
-<table style="width:100%;">
+<img src="https://images.code.org/5f11c5775f19b3021f64adaeeb8f0778-image-1625939320740.48.30 PM.png" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-  <tr >
-    <th style="border-style:solid; border-width: 1px; border-color:white; background-color:#00adbc;">Unit</th>
-    <th style="border-style:solid; border-width: 1px; border-color:white; background-color:#00adbc;">What students will do</th> 
-  </tr>
-  <tr>
-    <td style="border-style:solid; border-width: 1px; border-color:#00adbc; background-color:white;">Unit 4</td>
-    <td style="border-style:solid; border-width: 1px; border-color:#00adbc; background-color:white;">short description</td>
-  </tr>
-  <tr>
-     <td style="border-style:solid; border-width: 1px; border-color:#00adbc; background-color:white;">Unit 6</td>
-    <td style="border-style:solid; border-width: 1px; border-color:#00adbc; background-color:white;">short description</td>
-  </tr>
-</table>
+#### **App Lab is a programming environment where students can make simple apps using JavaScript.**
+
+##### App Lab is a programming environment for developing applications in JavaScript. A drag-and-drop editor allows students to add and edit page elements without having to write the associated HTML and CSS. Working in either blocks or text, students define the behavior of these page elements using code. The scoped toolbox of commands focuses attention on the specific blocks or concepts being introduced in that lesson. The embedded support tools help students track down errors in their code. Thanks to these features, App Lab is particularly well-suited for quickly prototyping apps. Try the tool at code.org/applab.
+
+## Where is App Lab used in the CS Discoveries curriculum?
+
+### **Unit 4: The Design Process**
+
+##### Add short description of how students use Game Lab in Unit 4. 
+
+### **Unit 6: Physical Computing**
+
+##### Add short description of how students use Game Lab in Unit 6. 
+
+### **Unit 7: AI and Machine Learning**
+
+##### Add short description of how students use Game Lab in Unit 7. 
 MARKDOWN
