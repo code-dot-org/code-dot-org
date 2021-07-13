@@ -2,40 +2,20 @@
 hr:
   data:
     blocks:
-      Dancelab_alternateMoves:
-        options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekunde
-      Dancelab_changeMoveEachLR:
-        options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_changePropEachBy:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
-      Dancelab_doMoveEachLR:
-        options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -44,7 +24,6 @@ hr:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_getTime:
         options:
@@ -62,18 +41,12 @@ hr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_jumpToEach:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": slučajno odabran
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           FORMAT:
             '"diamond"': dijamant
             '"random"': slučajno odabran
@@ -105,93 +78,50 @@ hr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          COSTUME:
-            '"CAT"': mačke
-            '"DOG"': psi
           LAYOUT:
             '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
-      Dancelab_setDanceSpeedEach:
-        options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_setPropEach:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_setPropRandomEach:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
-      Dancelab_setTintEach:
-        options:
-          THIS:
-            '"CAT"': mačke
-            '"DOG"': psi
-      Dancelab_setTintEachInline:
-        options:
-          THIS:
-            '"CAT"': mačke
-            '"DOG"': psi
-      Dancelab_setVisibleEach:
-        options:
-          THIS:
-            '"CAT"': mačke
-            '"DOG"': psi
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_startMappingEach:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_stopMappingEach:
         options:
-          GROUP:
-            '"CAT"': mačke
-            '"DOG"': psi
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       Dancelab_translateStrings:
         options:
@@ -206,7 +136,6 @@ hr:
             '"down"': dolje
             '"right"': desno
             '"space"': svemir
-            '"i"': i
             '"x"': x
       gamelab_atTime:
         options:
@@ -243,7 +172,6 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"i"': i
             '"x"': x
       gamelab_keyPressed:
         options:
@@ -256,7 +184,6 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
-            '"i"': i
             '"x"': x
       gamelab_mirrorSprite:
         options:
@@ -294,7 +221,6 @@ hr:
         options:
           PROPERTY:
             '"scale"': veličina
-            '"width"': širina
             '"height"': visina
       gamelab_spriteClicked:
         options:
@@ -415,28 +341,12 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': duga
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': kiša
-      PoemBot_setPoem:
-        options:
-          BG_EFFECT:
-            '"rainbow"': duga
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      Vector_where:
-        options:
-          PROPERTY:
-            "'shapeColor'": boja
       aalab_layoutSprites:
         options:
           FORMAT:

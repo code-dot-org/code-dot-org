@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-07 20:02:53 UTC",
+    "serialized_at": "2021-07-12 15:29:19 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-experiment"
@@ -263,7 +263,7 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "storyboard_project_events"
+          "storyboard_project_start"
         ],
         "progression": "Create Your Story Board"
       },
@@ -271,7 +271,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "storyboard_project_events"
+          "storyboard_project_start"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -279,39 +279,13 @@
         "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
       },
       "level_keys": [
-        "storyboard_project_events"
+        "storyboard_project_start"
       ]
     },
     {
       "chapter": 6,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "storyboard_project_sprites"
-        ],
-        "progression": "Create Your Story Board"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "storyboard_project_sprites"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poster-experiment",
-        "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
-      },
-      "level_keys": [
-        "storyboard_project_sprites"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -335,13 +309,13 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "storyboard_project_start"
+          "storyboard_project_sprites"
         ],
         "progression": "Create Your Story Board"
       },
@@ -349,7 +323,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "storyboard_project_start"
+          "storyboard_project_sprites"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -357,7 +331,33 @@
         "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
       },
       "level_keys": [
-        "storyboard_project_start"
+        "storyboard_project_sprites"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "storyboard_project_events"
+        ],
+        "progression": "Create Your Story Board"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "storyboard_project_events"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-experiment",
+        "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
+      },
+      "level_keys": [
+        "storyboard_project_events"
       ]
     },
     {
@@ -464,21 +464,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "storyboard_project_events",
+        "level.key": "storyboard_project_start",
         "script_level.level_keys": [
-          "storyboard_project_events"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "poster-experiment",
-        "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "storyboard_project_sprites",
-        "script_level.level_keys": [
-          "storyboard_project_sprites"
+          "storyboard_project_start"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -500,9 +488,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "storyboard_project_start",
+        "level.key": "storyboard_project_sprites",
         "script_level.level_keys": [
-          "storyboard_project_start"
+          "storyboard_project_sprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poster-experiment",
+        "activity_section.key": "25a1c255-8442-47e2-bb59-cf409d422dd2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "storyboard_project_events",
+        "script_level.level_keys": [
+          "storyboard_project_events"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

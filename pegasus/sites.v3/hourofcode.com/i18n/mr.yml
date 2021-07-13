@@ -11,25 +11,25 @@ mr:
   campaign_date_full: 4-10 डिसेंबर
   campaign_date_year: '2017'
   campaign_date_full_year: 7-13 डिसेंबर 2020
-  latam_campaign_date_start_short: 1 ऑक्टोबर
-  latam_campaign_date_start_long: 1 ऑक्टोबर
-  latam_campaign_date_short: 1 ऑक्टोबर - 18 डिसेंबर
-  latam_campaign_date_full: 1 ऑक्टोबर - 18 डिसेंबर
+  latam_campaign_date_start_short: Oct. 1
+  latam_campaign_date_start_long: October 1
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: 1 ऑक्टोबर 2020 - 18 डिसेंबर 2020
-  europe_campaign_date_start_short: 10 ऑक्टोबर
-  europe_campaign_date_start_long: 10 ऑक्टोबर
-  europe_campaign_date_short: 10-25 ऑक्टोबर
-  europe_campaign_date_full: 10-25 ऑक्टोबर
+  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
+  europe_campaign_date_start_short: Oct. 10
+  europe_campaign_date_start_long: October 10
+  europe_campaign_date_short: Oct. 10-25
+  europe_campaign_date_full: October 10-25
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: 10-25 ऑक्टोबर 2020
-  africa_campaign_date_start_short: 1 ऑक्टोबर
-  africa_campaign_date_start_long: 1 ऑक्टोबर
-  africa_campaign_date_short: 1-31 ऑक्टोबर
-  africa_campaign_date_full: 1-31 ऑक्टोबर
+  europe_campaign_date_full_year: October 10-25, 2020
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1-31
+  africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: " 1-31 ऑक्टोबर 2020"
-  hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
+  africa_campaign_date_full_year: October 1-31, 2020
+  hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
 
@@ -38,8 +38,8 @@ mr:
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     today, build a brighter tomorrow.'
-  social_hoc2020_global_movement: कोडचा तास ही एक जागतिक चळवळ असून ती कोट्यावधी विद्यार्थ्यांपर्यंत
-    पोहोचते. सर्व वयोगटांसाठी 45+ भाषांमध्ये एका तासाची ट्युटोरीयल्स उपलब्ध आहेत.
+  social_hoc2020_global_movement: कोडचा तास ही एक वैश्विक चळवळ असून ही कोट्यावधी विद्यार्थ्यांपर्यंत
+    पोहोचते. सर्व वयोगटांसाठी 45+ भाषांमध्ये एका तासाचे ट्यूटोरियल उपलब्ध आहेत.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
   hoc2020_ai_subheader: The Hour of Code 2020 is coming!
@@ -52,7 +52,7 @@ mr:
   hoc2019_header_line2_mobile: जग बदलून टाका.
   social_hoc2019_every_sudent: 'प्रत्येका विद्यार्थ्यामध्ये जग बदलून टाकण्याची शक्ती
     असते. त्यांना सुरुवात करण्यास मदत करा. #CSforGood'
-  social_hoc2019_learn_computer_science: 'संगणक शास्त्र शिका. जग बदलून टाका. #CSforGood
+  social_hoc2019_learn_computer_science: 'कॉम्प्युटर सायंस शिका. जग बदलून टाका. #CSforGood
     #HourOfCode'
   social_hoc_is_coming: कोडचा तास येत आहे!
   social_hoc2019_hoc_is_about_csforgood: "#HourOfCode हा #CSforGood साठी आहे. कॉम्प्युटर
@@ -62,67 +62,71 @@ mr:
   social_hoc2019_dance: 'यात आहेत: केटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पॅनिक अॅट
     द डिस्को आणि इतर!'
   oceans_landing_title: AI for Oceans
-  oceans_landing_description: मशीन लर्निंगबद्दल आणि AI च्या नैतिक वापराबद्दल शिका.
+  oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: 25+ भाषांमध्ये उपलब्ध | इयत्ता 3+
-  oceans_landing_explanation: नैतिक समस्या आणि जगातील समस्या सोडवण्यासाठी AI कसे वापरता
-    येईल हे जाणून घेताना संगणक शास्त्रात कोडींगशिवाय इतर बरेच काही आहे! कृत्रिम बुद्धिमत्ता
-    (AI), मशीन लर्निंग, डेटा ट्रेनिंग आणि पूर्वग्रह याबद्दल शिका. AI बद्दल अधिक शिकवण्यासाठी
-    या नवीन प्रवासातील  Code.org च्या पहिल्या पावलाचा आनंद घ्या. जेव्हा तुम्ही महासागरासाठी
-    AI ही कृती वापराल तेव्हा तुम्ही खऱ्या मशीन लर्निंग मॉडेल्सचे ट्रेनिंग कराल. <a
-    href='#behind-the-scenes'>अधिक जाणून घ्या</a>.
-  oceans_landing_explanation_markdown: नैतिक समस्या आणि जगातील समस्या सोडवण्यासाठी
-    AI कसे वापरता येईल हे जाणून घेताना संगणक शास्त्रात कोडींगशिवाय इतर बरेच काही आहे!
-    कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, डेटा ट्रेनिंग आणि पूर्वग्रह याबद्दल शिका.
-    AI बद्दल अधिक शिकवण्यासाठी या नवीन प्रवासातील  Code.org च्या पहिल्या पावलाचा आनंद
-    घ्या. जेव्हा तुम्ही महासागरासाठी AI ही कृती वापराल तेव्हा तुम्ही खऱ्या मशीन लर्निंग
-    मॉडेल्सचे ट्रेनिंग कराल. [अधिक जाणून घ्या](#behind-the-scenes).
+  oceans_landing_specs: Available in 25+ languages | Grades 3+
+  oceans_landing_explanation: Computer science is about so much more than coding!
+    Learn about artificial intelligence (AI), machine learning, training data, and
+    bias, while exploring ethical issues and how AI can be used to address world problems.
+    Enjoy Code.org's first step in a new journey to teach more about AI. When you
+    use the AI for Oceans activity you are training real machine learning models.
+    <a href='#behind-the-scenes'>Learn more</a>.
+  oceans_landing_explanation_markdown: Computer science is about so much more than
+    coding! Learn about artificial intelligence (AI), machine learning, training data,
+    and bias, while exploring ethical issues and how AI can be used to address world
+    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
+    When you use the AI for Oceans activity you are training real machine learning
+    models. [Learn more](#behind-the-scenes).
   oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: तुम्हाला AI, मशीन लर्निंग, ट्रेनिंग डेटा
-    आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह या गोष्टी शिकवण्यासाठी मदत करण्याकरता
-    धड्याचे प्लॅन्स आणि कृती.
+  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
+    AI, machine learning, training data, and bias, while exploring ethical issues.
   oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: चांगल्या गोष्टींसाठी संगणक शास्त्र
+  oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
-  oceans_landing_videos: 'AI आणि मशीन लर्निंगबद्दलचे व्हिडीओज '
-  oceans_behind_the_scenes: 'महासागरांसाठी AI: पडद्यामागे '
-  oceans_behind_the_scenes_1: पातळ्या 2-4  <a href="https://www.tensorflow.org/" >टेन्सरफ्लो
-    </a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    मोबाईलनेट</a> प्रोजेक्टने पुरवलेले आधीच ट्रेन केलेले मॉडेल वापरतात. मोबाईलनेट
-    मॉडेल हे <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">कन्व्होल्युशनल
-    न्युरल नेटवर्क</a> असून ते "फुगा" किंवा "स्ट्रॉबेरी" अशा शब्दांनी हँड अनोटेट केलेल्या
-    1 कोटी 40 लाखांहून जास्त इमेजेसच्या <a href="http://www.image-net.org/">इमेजनेट
-    </a> या डेटासेटवर ट्रेन केलेले आहे.
-  oceans_behind_the_scenes_1_markdown: पातळ्या 2-4   [TensorFlow](https://www.tensorflow.org/)
-    [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    प्रोजेक्टने पुरवलेले आधीच ट्रेन केलेले मॉडेल वापरतात. मोबाईलनेट मॉडेल हे [कन्व्होल्युशनल
-    न्युरल नेटवर्क] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    असून ते "फुगा" किंवा "स्ट्रॉबेरी" अशा शब्दांनी हँड अनोटेट केलेल्या 1 कोटी 40 लाखांहून
-    जास्त इमेजेसच्या  [ImageNet](http://www.image-net.org/) या डेटासेटवर ट्रेन केलेले
-    आहे.या कृतीमध्ये विद्यार्थ्याने निर्माण केलेला लेबल असलेला ट्रेनिंग डेटा वापरून
-    हे मॉडेल कस्टमाईझ करण्यासाठी, आम्ही [ट्रान्सफर लर्निंग](https://en.wikipedia.org/wiki/Transfer_learning)
-    हे तंत्र वापरतो.   ट्रेनिंग डेटासेटमधली प्रत्येक इमेज, तिला लागू असण्याची सर्वांत
-    जास्त शक्यता असलेल्या अनोटेशन्सची यादी मिळवण्यासाठी मोबाईलनेटला पिक्सेल्स म्हणून
-    फीड केली जाते. नंतर, नवीन इमेजसाठी, आम्ही ती  मोबाईलनेटला फीड करतो आणि मिळणाऱ्या
-    अनोटेशन्सच्या यादीची ट्रेनिंग डेटासेटसाठी मिळणाऱ्या यादीशी तुलना करतो. आम्ही नवीन
-    इमेजचे ट्रेनिंग सेटमध्ये सर्वांत जास्त सारखे निकाल देणाऱ्या लेबलनेच वर्गीकरण करतो
-    (उदा. “मासा” किंवा “मासा नाही”).
-  oceans_behind_the_scenes_2: 'पातळ्या 6-8  <a href="https://en.wikipedia.org/wiki/Support-vector_machine">सपोर्ट-व्हेक्टर
-    मशीन</a> (SVM) वापरतात. आम्ही माशाच्या प्रत्येक अवयवाकडे बघतो (उदा. डोळे, तोंड,
-    शरीर) आणि प्रत्येक माशासाठी या अवयवांसाठी सगळा मेटाडेटा (उदा. दातांची संख्या,
-    शरीराचा आकार) संख्यांच्या व्हेक्टरमध्ये एकत्र करतो. SVM ला ट्रेन करण्यासाठी आम्ही
-    हे व्हेक्टर्स वापरतो. ट्रेनिंग डेटानुसार, SVM सर्व संभाव्य माशांच्या "स्पेस"चे
-    दोन भाग करते, जे आपण शिकण्याचा प्रयत्न करत असलेल्या वर्गांशी संबंधित असतात (उदा.
-    "निळा" किंवा "निळा नाही").   '
-  oceans_behind_the_scenes_2_markdown: पातळ्या 6-8   [सपोर्ट-व्हेक्टर मशीन](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM) वापरतात. आम्ही माशाच्या प्रत्येक अवयवाकडे बघतो (उदा. डोळे, तोंड, शरीर) आणि
-    प्रत्येक माशासाठी या अवयवांसाठी सगळा मेटाडेटा (उदा. दातांची संख्या, शरीराचा आकार)
-    संख्यांच्या व्हेक्टरमध्ये एकत्र करतो. SVM ला ट्रेन करण्यासाठी आम्ही हे व्हेक्टर्स
-    वापरतो. ट्रेनिंग डेटानुसार, SVM सर्व संभाव्य माशांच्या "स्पेस"चे दोन भाग करते,
-    जे आपण शिकण्याचा प्रयत्न करत असलेल्या वर्गांशी संबंधित असतात (उदा. "निळा" किंवा
-    "निळा नाही").
-  social_hoc2019_oceans_title: 'महासागरांसाठी AI: #चांगल्यागोष्टींसाठीसंगणकशास्त्र'
+  oceans_landing_videos: Videos about AI and Machine Learning
+  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
+    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
+    a dataset of over 14 million images hand-annotated with words such as "balloon"
+    or "strawberry". In order to customize this model with the labeled training data
+    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
+    to obtain a list of annotations that are most likely to apply to it. Then, for
+    a new image, we feed it to MobileNet and compare its resulting list of annotations
+    to those from the training dataset. We classify the new image with the same label
+    (such as "fish" or "not fish") as the images from the training set with the most
+    similar results.
+  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
+    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
+    14 million images hand-annotated with words such as "balloon" or "strawberry".
+    In order to customize this model with the labeled training data the student generates
+    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
+    list of annotations that are most likely to apply to it. Then, for a new image,
+    we feed it to MobileNet and compare its resulting list of annotations to those
+    from the training dataset. We classify the new image with the same label (such
+    as "fish" or "not fish") as the images from the training set with the most similar
+    results.
+  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
+    body) and assemble all of the metadata for the components (such as number of teeth,
+    body shape) into a vector of numbers for each fish. We use these vectors to train
+    the SVM. Based on the training data, the SVM separates the "space" of all possible
+    fish into two parts, which correspond to the classes we are trying to learn (such
+    as "blue" or "not blue").
+  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
+    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
+    all of the metadata for the components (such as number of teeth, body shape) into
+    a vector of numbers for each fish. We use these vectors to train the SVM. Based
+    on the training data, the SVM separates the "space" of all possible fish into
+    two parts, which correspond to the classes we are trying to learn (such as "blue"
+    or "not blue").
+  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
   social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
@@ -134,66 +138,66 @@ mr:
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
-  hoc_live_learn_message: खास पाहुण्यांबरोबर संगणक शास्त्राच्या मूलभूत संकल्पना शिका!
-    सर्व वयोगटातील आणि सर्व प्रकारच्या क्षमता असणाऱ्या, संगणक नसलेल्या मुलांसह सर्व
-    विद्यार्थ्यांचे आमच्या व्हर्च्युअल कार्यशाळेत स्वागत आहे. अवर ऑफ कोडच्या लाईव्ह
-    एपिसोडद्वारे घरीच शिकणे सुरू ठेवा.
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: आमच्यात सामील व्हा
   hoc_live_learn_more: अधिक जाणून घ्या
   hoc_overview_oceans_tutorial_header: AI for Oceans
-  hoc_overview_oceans_tutorial_desc: कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग
-    डेटा आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी
-    AI चा कसा वापर करता येईल, हे शिका.
-  ai_video_title_what_is_ai: AI म्हणजे काय?
-  ai_video_title_algorithm_bias: अल्गोरीदम्समधील पूर्वग्रहाशी लढा देणे
-  ai_video_title_phone_knows_dog: तुमच्या फोनला कसे कळते की हा कुत्रा आहे?
-  ai_video_title_what_is_ml: मशीन लर्निंग म्हणजे काय?
-  ai_video_title_ml_big_small_prickly: 'मशीन लर्निंग: मोठ्या, लहान आणि कठीण समस्या
-    सोडवणे'
-  ai_video_title_ethics_of_ai: AI ची नीतीमत्ता
-  ai_video_title_ml_human_bias: मशीन लर्निंग आणि मानवी पूर्वग्रह
-  ai_video_title_seeing_ai: 'AI पाहणे: दृश्य जग अधिक अॅक्सेसिबल बनवणे  '
-  activity: कृती
+  hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
+    learning, training data, and bias, while exploring ethical issues and how AI can
+    be used to address world problems.
+  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_algorithm_bias: Fighting bias in algorithms
+  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
+    and Prickly'
+  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  activity: Activity
   name: Name
-  description: वर्णन
+  description: Description
   audience: Audience
-  ai_resource_header: AI शिकवा आणि त्याबद्दल शिका
-  ai_resource_minecraft: 'माईनक्राफ्ट AI चांगल्या गोष्टींसाठी '
-  ai_resource_minecraft_desc: 'धड्याचा प्लॅन, व्हिडीओज, संगणक शास्त्र अभ्यासक्रम आणि
-    शिक्षक प्रशिक्षण यासह विनामूल्य स्रोतांना प्रवेश मिळवा. (माईनक्राफ्ट: शैक्षणिक
-    आवृत्ती आवश्यक)     '
-  ai_resource_ml_for_kids: लहान मुलांसाठी मशीन लर्निंग
-  ai_resource_ml_for_kids_desc: 'मशीन लर्निंग मॉडेलला मजकूर, संख्या किंवा इंजेस वापरून
-    ट्रेन करा आणि स्क्रचमध्ये गेम तयार करण्यासाठी ते वापरा. '
-  ai_resource_ibm_ml_for_kids: 'IBM: लहान मुलांसाठी मशीन लर्निंग'
+  ai_resource_header: Teach and Learn about AI
+  ai_resource_minecraft: Minecraft AI for Good
+  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
+    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
+    Edition)'
+  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
+    or images, and use it to make games in Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: कृत्रिम बुद्धिमत्ता (AI) '
-  ai_resource_ecs_desc: 'एक्सप्लोरींग कॉम्प्युटर सायन्स (ECS) अभ्यासक्रमासाठी नवीन
-    पर्यायी अभ्यासक्रम घटक. '
-  ai_resource_elements_ai: AI चे घटक
-  ai_resource_elements_ai_desc: " Reaktor आणि हेलसिंकी विद्यापीठाने तयार केलेल्या
-    विनामूल्य ऑनलाईन अभ्यासक्रमांची मालिका."
-  ai_resource_cognimates: 'कॉग्निमेट्स '
-  ai_resource_cognimates_desc: 'गेम्स, प्रोग्रॅमिंग रोबोज आणि ट्रेनिंगसाठी AI शिक्षण
-    प्लॅटफॉर्म '
+  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
+  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
+    Science (ECS) curriculum.
+  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
+    and the University of Helsinki.
+  ai_resource_cognimates: Cognimates
+  ai_resource_cognimates_desc: An AI education platform for building games, programming
+    robots and training.
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: AI आणि MI आधारित कृती
-  ai_activity_seeing_ai: AI पाहणे
-  ai_activity_seeing_ai_desc: तुमच्या आजूबाजूच्या जगाचे वर्णन विविध भाषांमध्ये सांगणारे
-    एक मोफत अॅप.
-  ai_activity_quick_draw: लवकर, चित्र काढा!
-  ai_activity_quick_draw_desc: 'न्युरल नेटवर्कला डूडलिंग ओळखता येते का? '
+  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_seeing_ai: Seeing AI
+  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
+    of languages.
+  ai_activity_quick_draw: Quick, Draw!
+  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: कॉम्प्युटरला तुमच्या स्वत:च्या इमेजेस, आवाज आणि पोझ
-    ओळखण्यासाठी प्रशिक्षित करा.
-  ai_activity_experiments: गुगलसह AI प्रयोग
-  ai_activity_experiments_desc: 'चित्रे, रेखाटने, भाषा, संगीत आणि इतर गोष्टींद्वारे
-    मशीन लर्निंग समजून घ्यायला सुरुवात करा. '
-  ai_activity_zooniverse: झुनीव्हर्स - स्नॅपशॉट माऊंटन झेब्रा
-  ai_activity_zooniverse_desc: इमेजेसमधील विविध प्राणी ओळखून संकटग्रस्त केप माऊंटन
-    झेब्राचे संरक्षण करण्यासाठी मदत करा
+  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
+    and poses.
+  ai_activity_experiments: AI Experiments with Google
+  ai_activity_experiments_desc: Start exploring machine learning through pictures,
+    drawings, language, music, and more.
+  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
+    identifying the different animals in the images.
   codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
     कोर्सेस</a> सोबत आणखी शिका
   codeorg_homepage_hoc2018_dance_heading: तुमची स्वतःची <span class=”highlight-word”>डांस
@@ -206,8 +210,8 @@ mr:
   codeorg_homepage_hoc2018_musician_before: यात आहेत
   codeorg_homepage_hoc2018_musician_after: आणि इतर!
   codeorg_homepage_hoc2018_video: आमचा व्हिडिओ पहा
-  hourofcode_homepage_hoc2018_header_line1: अवर ऑफ कोड कार्यक्रम कोणीही, कुठेही आयोजित
-    करू शकते. 45 पेक्षा अधिक भाषांमध्ये एका तासाची ट्युटोरीयल्स उपलब्ध आहेत. कुठल्याही
+  hourofcode_homepage_hoc2018_header_line1: कोडचा तास कार्यक्रम कोणी ही, कुठे ही आयोजित
+    करू शकते. 45 पेक्षा अधिक भाषांमध्ये एका तासाचे ट्यूटोरियल्स उपलब्ध आहेत. कुठल्याही
     अनुभवाची गरज नाही.
   hourofcode_homepage_hoc2018_header_line2: वय 4 ते 104.
   hoc2018_tutorial_mchoc_description: कोडचा तासमध्ये माइनक्राफ्ट एका नवीन कामासोबत
@@ -231,11 +235,11 @@ mr:
   cookie_banner_more_information: Code.org चे गोपनीयता धोरण पाहा.
   cookie_banner_accept: माझी संमती आहे
   front_header_banner: आजवरच्या सर्वात मोठ्या शिकण्याच्या कार्यक्रमात या, %{campaign_date}
-  front_intro_default: अवर ऑफ कोड ही एक जागतिक चळवळ असून 180+ देशांमधील कोट्यावधी
-    विद्यार्थ्यांपर्यंत पोहोचते. अवर ऑफ कोड कार्यक्रम कोणीही, कुठेही आयोजित करू शकते.
-    45 पेक्षा अधिक भाषांमध्ये एका तासाचे ट्युटोरीयल्स उपलब्ध आहेत. कुठल्याही अनुभवाची
+  front_intro_default: The Hour of Code ही एक वैश्विक चळवळ असून 180+ देशांमधील कोट्यावधी
+    विद्यार्थ्यांपर्यंत पोहोचते. कोडचा तास कार्यक्रम कोणी ही, कुठे ही आयोजित करू शकते.
+    45 पेक्षा अधिक भाषांमध्ये एका तासाचे ट्यूटोरियल्स उपलब्ध आहेत. कुठल्याही अनुभवाची
     गरज नाही. <strong>वय 4 ते 104.</strong>
-  front_intro_default_2: 180+ देशांमधील एक जागतिक चळवळ.
+  front_intro_default_2: 180+ देशांमधील एक वैश्विक चळवळ.
   front_watch_video: नवीन व्हिडिओ पहा
   front_watch_regular_video: व्हिडिओ पहा
   front_volunteers: तांत्रिक स्वयंसेवक पाहिजेत
@@ -436,8 +440,8 @@ mr:
     शकतील किंवा विद्यार्थ्यांना वर्गात न येता सुद्धा प्रेरित करू शकतील.
   front_join_us_parent: तुम्ही पालक आहात का?
   front_join_us_ask_link: तुमच्या स्थानिक शाळेला
-  front_join_us_ask: अवर ऑफ कोड होस्ट करण्यासाठी.
-  front_join_us_parent_link: तुमच्या स्थानिक शाळेला कोडचा तास होस्ट करण्यास सांगा
+  front_join_us_ask: to host an Hour of Code.
+  front_join_us_parent_link: तुमच्या स्थानिक शाळेला कोडचा तास आयोजित करण्यास सांगा
   front_join_us_computer_science: कॉम्प्युटर सायंस फार आवडते?
   front_join_us_cs_volunteer: कॉम्प्युटर सायंसच्या शिक्षणाबद्दल मनापासून काही करावेसे
     वाटते?
@@ -467,13 +471,12 @@ mr:
   signup_closed: कोडचा ताससाठी नोंदणी आता बंद झालेली आहे. पुढच्या कोडचा ताससाठी साइन
     अप करण्यासाठी ऑक्टोबर महिन्यात पुन्हा प्रयत्न करा.
   signup_registration_not_required: भाग घेण्यासाठी तुम्हाला नोंदणी करण्याची गरज नाही!
-    अवर ऑफ कोडमधील उपक्रम वर्षभर उपलब्ध असतात. <a href=’%{hoc_activities_url}’>एखादी
+    कोडचा तासमधील कामे वर्षभर उपलब्ध असतात. <a href=’%{hoc_activities_url}’>एखादी
     कृती करून पाहा</a> किंवा आमची <a href=’%{howto_guide_url}’>"कसे करावे” मार्गदर्शिका</a>
     वाचून तुमच्या वर्गासाठी एक कार्यक्रम आयोजित करा.
-  signup_registration_not_required_markdown: भाग घेण्यासाठी तुम्हाला नोंदणी करण्याची
-    गरज नाही! अवर ऑफ कोडमधील कृती वर्षभर उपलब्ध असतात. [एखादी कृती करून पाहा] (%{hoc_activities_url})
-    किंवा आमची ["कसे करावे” मार्गदर्शिका] (%{howto_guide_url}) वाचून तुमच्या वर्गासाठी
-    एक कार्यक्रम आयोजित करा.
+  signup_registration_not_required_markdown: You don't need to register to participate!
+    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
+    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
   signup_registration_closed: तसेच दर वर्षी डिसेंबरमध्ये तुमचा संपूर्ण वर्ग जगभरातील
     कोट्यावधी विद्यार्थ्यांसोबत कॉम्प्युटर सायंस शिक्षण सप्ताह साजरा करताना कोडचा
     तासमध्ये भाग घेऊ शकतो. या वार्षिक सोहळ्यासाठी नोंदणी आम्ही ऑक्टोबरमध्ये सुरू करू.
@@ -534,7 +537,7 @@ mr:
     नीट भरलेल्या आहेत.
   signup_submit_and_continue_label: पाठवा आणि सुरू ठेवा
   signup_continue_label: सुरू ठेवा
-  signup_thank_you_header: अवर ऑफ कोड होस्ट करण्यासाठी साइन अप केल्याबद्दल धन्यवाद.
+  signup_thank_you_header: कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद.
   signup_thank_you_message: आम्ही तुम्हाला याच्या पुष्ट्यर्थ एक ईमेल पाठवला आहे ज्यात
     तुम्हाला सुरू करण्यासाठी माहिती दिलेली आहे.
   social_hoc2018_code_org_what_create: 'Code.org: तुम्ही काय बनवाल?'
@@ -556,8 +559,8 @@ mr:
   social_hoc2018_mc_creativity: कोडद्वारे पाण्याखालचे जग बनवून त्यात फिरण्यासाठी तुमची
     सर्जनशीलता आणि समस्या सोडवण्याचे कौशल्य वापरा.
   social_hoc2018_what_create: तुम्ही काय बनवाल?
-  social_hoc2018_global_movement: कोडचा तास ही एक जागतिक चळवळ असून ती कोट्यावधी विद्यार्थ्यांपर्यंत
-    पोहोचते. सर्व वयोगटांसाठी 45+ भाषांमध्ये एका तासाची ट्युटोरीयल्स उपलब्ध आहेत.
+  social_hoc2018_global_movement: कोडचा तास ही एक वैश्विक चळवळ असून ही कोट्यावधी विद्यार्थ्यांपर्यंत
+    पोहोचते. सर्व वयोगटांसाठी 45+ भाषांमध्ये एका तासाचे ट्यूटोरियल उपलब्ध आहेत.
   map_title: कोडचा तास नकाशा
   map_header: "# कोडचा तास 2017 साठी नोंदणी केलेल्या कार्यक्रमांची संख्या"
   map_header_count_year: "%{year} मध्ये %{event_count} कार्यक्रमांची नोंदणी झाली"
@@ -571,8 +574,8 @@ mr:
   map_legend_hoc_events: कोडचा तास कार्यक्रम
   map_legend_cs_tech_jam: विशेष कार्यक्रम
   map_warning: कार्यक्रमांची संपूर्ण यादी <a href='%{events_url}'>कार्यक्रमांच्या
-    पानावर</a> पाहाता येईल.
-  map_warning_markdown: कार्यक्रमांची संपूर्ण यादी [कार्यक्रमांच्या पेजवर] पाहता येईल.(%{events_url})
+    पानावर</a> पाहाता येईल
+  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: 'कोडचा तास: या चळवळीत सामील व्हा'
   meta_tag_og_description: कोडचा तास ही एक वैश्विक चळवळ असून 180+ देशांमधील कोट्यावधी
     विद्यार्थ्यांपर्यंत 45 पेक्षा अधिक भाषांमध्ये पोहोचते.
@@ -586,94 +589,90 @@ mr:
     आहे! तुम्ही? (धन्यवाद %{random_donor}, @codeorg यांना मदत केल्याबद्दल)'
   hoc_faq_title: वारंवार विचारले जाणारे प्रश्न
   hoc_faq_what_is_hoc_q: कोडचा तास काय आहे?
-  hoc_faq_what_is_hoc_a: अवर ऑफ कोडची सुरुवात संगणक शास्त्राची एका तासात ओळख या कार्यक्रमापासून
-    झाली होती, यात "कोड"वरील रहस्याचे आवरण दूर करण्याचा हेतू होता, जेणेकरून हे कळेल
-    की कोणीही मूलभूत तत्त्वे शिकू शकते आणि संगणक शास्त्राच्या क्षेत्रात अधिकाधिक लोक
-    भाग घेऊ शकतील. तेव्हापासून आता हा कार्यक्रम संगणक शास्त्र साजरे करण्यासाठीचा एक
-    जागतिक प्रयास झालेला आहे, याची सुरुवात 1 तासाच्या कोडिंगच्या कृतींनी होते, पण
-    यात निरनिराळ्या प्रकारचे सामुदायिक प्रयत्नसुद्धा सामील झालेले आहेत. <a href='%{tutorials}'>आमची
-    ट्युटोरीयल्स आणि कृती]</a>पाहा. ही तळागाळासाठीची चळवळ जगभरातील <a href='%{partners}'>400
-    पेक्षा जास्त भागीदार</a> आणि 2,00,000 शिक्षक मिळून चालवतात.
-  hoc_faq_what_is_hoc_a_markdown: अवर ऑफ कोडची सुरुवात संगणक शास्त्राची एका तासात
-    ओळख या कार्यक्रमापासून झाली होती, यात "कोड"वरील रहस्याचे आवरण दूर करण्याचा हेतू
-    होता, जेणेकरून हे कळेल की कोणीही मूलभूत तत्त्वे शिकू शकते आणि संगणक शास्त्राच्या
-    क्षेत्रात अधिकाधिक लोक भाग घेऊ शकतील. तेव्हापासून आता हा कार्यक्रम संगणक शास्त्र
-    साजरे करण्यासाठीचा एक जागतिक प्रयास झालेला आहे, याची सुरुवात 1 तासाच्या कोडिंगच्या
-    कृतींनी होते, पण यात निरनिराळ्या प्रकारचे सामुदायिक प्रयत्नसुद्धा सामील झालेले
-    आहेत. [आमची ट्यूटोरीयल्स आणि कृती](%{tutorials})  पाहा. ही तळागाळासाठीची चळवळ
-    जगभरातील [400 पेक्षा जास्त भागीदार] (%{partners}) आणि 2,00,000 शिक्षक मिळून चालवतात.
-  hoc_faq_last_year: ट्युटोरीयल्स वापरून पाहा
+  hoc_faq_what_is_hoc_a: कोडचा तासची सुरूवात कॉम्प्युटर सायंससाठी एका तासाची ओळख या
+    कार्यक्रमापासून झाली होती, यात "कोड"वरील रहस्याचे आवरण दूर करण्याचा हेतू होता
+    जेणेकरून हे कळेल की कोणीही मूलभूत तत्त्वे शिकू शकते आणि कॉम्प्युटर सायंसच्या क्षेत्रात
+    अधिकाधिक लोक भाग घेऊ शकतील. तेव्हापासून आता हा कार्यक्रम कॉम्प्युटर सायंसला साजरा
+    करण्यासाठी एक जागतिक प्रयास झालेला आहे, ज्याची सुरूवात 1 तासाच्या कोडिंगच्या कृतींनी
+    होते, पण यात निरनिराळ्या प्रकारची सामुदायिक कामे सुद्धा सामील झालेली आहेत. <a
+    href=’%{tutorials}’>ट्यूटोरियल आणि कृती</a> पाहा. ही तळागाळाची चळवळ जगभरातील <a
+    href=’%{partners}’>400 भागीदार</a> आणि 2,00,000 शिक्षक मिळून चालवतात.
+  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
+    to computer science, designed to demystify "code", to show that anybody can learn
+    the basics, and to broaden participation in the field of computer science. It
+    has since become a worldwide effort to celebrate computer science, starting with
+    1-hour coding activities but expanding to all sorts of community efforts. Check
+    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
+    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_last_year: ट्यूटोरियल्स वापरून पाहा
   hoc_faq_when_is_hoc_q: कोडचा तास केव्हा आहे?
-  hoc_faq_when_is_hoc_a: अवर ऑफ कोडचा कार्यक्रम दरवर्षी [संगणक शास्त्र शिक्षण सप्ताह]
-    (%{csedweek_url}) दरम्यान होतो. %{campaign_date_year} चा संगणक शास्त्र शिक्षण
-    सप्ताह %{campaign_date_full} रोजी होणार आहे, पण तुम्ही अवर ऑफ कोड संपूर्ण वर्षभर
-    आयोजित करू शकता. कॉम्प्युटिंगचे अग्रदूत [अॅडमिरल ग्रेस मरे हॉपर] (%{grace_hopper})
-    (9 डिसेंबर 1906) यांच्या वाढदिवसाच्या निमित्ताने संगणक शास्त्र शिक्षण सप्ताह दरवर्षी
-    आयोजित केला जातो.
-  hoc_faq_when_is_hoc_a_markdown: अवर ऑफ कोडचा कार्यक्रम दरवर्षी [संगणक शास्त्र शिक्षण
-    सप्ताह] (%{csedweek_url}) दरम्यान होतो. %{campaign_date_year} चा संगणक शास्त्र
-    शिक्षण सप्ताह %{campaign_date_full} रोजी होणार आहे, पण तुम्ही अवर ऑफ कोड संपूर्ण
-    वर्षभर आयोजित करू शकता. कॉम्प्युटिंगचे अग्रदूत [अॅडमिरल ग्रेस मरे हॉपर] (%{grace_hopper})
-    (9 डिसेंबर 1906) यांच्या वाढदिवसाच्या निमित्ताने संगणक शास्त्र शिक्षण सप्ताह दरवर्षी
-    आयोजित केला जातो.
-  hoc_faq_why_cs_q: संगणक शास्त्र कशासाठी?
-  hoc_faq_why_cs_a: "<i>प्रत्येक</i>विद्यार्थ्याला संगणक शास्त्र शिकण्याची संधी मिळाली
-    पाहिजे. त्यामुळे समस्या सोडवण्याचे कौशल्य, लॉजिक आणि कल्पकतेला खतपाणी घातले जाते.
-    लवकर सुरुवात केल्यास, विद्यार्थ्यांनी 21 व्या शतकातल्या कोणत्याही करीयरचा मार्ग
-    निवडला तरीही त्यातल्या यशाची पायाभरणी होईल. अधिक सांख्यिकी <a href='%{stats_url}'>येथे</a>
-    पहा."
-  hoc_faq_why_cs_a_markdown: _प्रत्येक_विद्यार्थ्याला संगणक शास्त्र शिकण्याची संधी
-    मिळाली पाहिजे. त्यामुळे समस्या सोडवण्याचे कौशल्य, लॉजिक आणि कल्पकतेला खतपाणी घातले
-    जाते. लवकर सुरुवात केल्यास, विद्यार्थ्यांनी 21 व्या शतकातल्या कोणत्याही करीयरचा
-    मार्ग निवडला तरीही त्यातल्या यशाची पायाभरणी होईल. अधिक सांख्यिकी पहा [here](%{stats_url}).
-  hoc_faq_how_participate_q: मला अवर ऑफ कोडमध्ये कसा भाग घेता येईल?
+  hoc_faq_when_is_hoc_a: कोडचा तास कार्यक्रम दर वर्षी <a href=’%{csedweek_url}’>कॉम्प्युटर
+    सायंस शिक्षण सप्ताह</a> दरम्यान होतो. %{campaign_date_year} चा कॉम्प्युटर सायंस
+    शिक्षण सप्ताह %{campaign_date_full} मध्ये होणार आहे, पण तुम्ही कोडचा तास संपूर्ण
+    वर्षभर आयोजित करू शकता. कॉम्प्युटिंगचे अग्रदूत <a href=’%{grace_hopper}’>अॅडमिरल
+    ग्रेस मरे हॉपर</a> यांच्या वाढदिवाच्या निमित्ताने कॉम्प्युटर सायंस शिक्षण सप्ताह
+    दर वर्षी आयोजित केला जातो (9 डिसेंबर 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
+    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
+    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
+    all year-round. Computer Science Education Week is held annually in recognition
+    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
+    (December 9, 1906).
+  hoc_faq_why_cs_q: कॉम्प्युटर सायंस कशासाठी?
+  hoc_faq_why_cs_a: "<i>प्रत्येका</i> विद्यार्थ्याला कॉम्प्युटर सायंस शिकण्याची संधी
+    मिळाली पाहिजे. याने समस्या सोडवण्याचे कौशल्य, लॉजिक आणि सर्जनशीलता या गुणांची
+    वाढ होते. लवकर सुरू केल्याने, विद्यार्थ्यांना 21 व्या शतकातील कुठल्याही प्रकारच्या
+    कामामध्ये यशस्वी होण्याची पायाभरणी होईल. अधिक आकडेवारी <a href=’%{stats_url}’>इथे</a>
+    पाहा."
+  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
+    computer science. It helps nurture problem-solving skills, logic and creativity.
+    By starting early, students will have a foundation for success in any 21st-century
+    career path. See more stats [here](%{stats_url}).
+  hoc_faq_how_participate_q: मला कोडचा तासमध्ये भाग कसा घेता येईल?
   hoc_faq_how_participate_a: आमच्या "कसे करावे” मार्गदर्शिकेच्या आधारे <a href=’/how-to’>इथे
     प्लॅनिंग सुरू करा</a>. तुम्ही तुमच्या शाळेत किंवा तुमच्या समुदायात कोडचा तास कार्यक्रम
     आयोजित करू शकता &mdash; जसे एखाद्या क्लबमध्ये, परोपकारी संस्थेमध्ये किंवा ऑफिसमध्ये.
     किंवा, %{campaign_date} च्या दिवशी स्वतः सुद्धा करून पाहू शकता.
-  hoc_faq_how_participate_a_markdown: आमच्या "कसे करावे” मार्गदर्शिकेच्या आधारे [इथे
-    प्लॅनिंग सुरू करा](%{howto}). तुम्ही तुमच्या शाळेत किंवा तुमच्या समुदायात अवर
-    ऑफ कोड कार्यक्रम आयोजित करू शकता — उदा. अभ्यासाव्यतिरिक्त छंदांच्या क्लबमध्ये,
-    ना-नफा संस्थेमध्ये किंवा ऑफिसमध्ये. किंवा %{campaign_date} च्या दिवशी स्वतः सुद्धा
-    करून पाहू शकता.
+  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
+    our how-to guide. You can organize an Hour of Code event at your school or in
+    your community — like in an extracurricular club, non-profit or at work. Or, just
+    try it yourself when %{campaign_date} arrives."
   hoc_faq_behind_hoc_q: कोडचा तास कोणाची चळवळ आहे?
   hoc_faq_behind_hoc_a: कोडचा तास, कोडचा तास आणि कॉम्प्युटर सायंस शिक्षण सप्ताह <a
     href='%{partner_url}'>सल्लागार आणि समालोचन समिती</a> द्वारे चालवला जातो, तसेच
     कोडचा तास कार्यक्रमाचे समर्थन भागीदारांची एक अभूतपूर्व युती करते &mdash; यात Microsoft,
     Apple, Amazon, बॉइज अँड गर्ल्स क्लब ऑफ अमेरिका आणि कॉलेज बोर्ड सामील आहेत.
-  hoc_faq_behind_hoc_a_markdown: अवर ऑफ कोड हा अवर ऑफ कोड आणि संगणक शास्त्र शिक्षण
-    सप्ताह [सल्लागार आणि आढावा समिती] (%{partner_url}) तसेच अवर ऑफ कोड कार्यक्रमाला
-    पाठींबा देण्यासाठी एकत्र आलेल्या अभूतपूर्व भागीदारांच्या एक युतीद्वारे - ज्यात
-    Microsoft, Apple, Amazon, बॉइज अँड गर्ल्स क्लब ऑफ अमेरिका आणि कॉलेज बोर्डसुद्धा
-    सामील  आहेत, चालवला जातो.
-  hoc_faq_host_q: मला कोडींगबद्दल काहीच माहिती नाही. तरीही मला हा कार्यक्रम होस्ट
-    करता येईल का?
-  hoc_faq_host_a: नक्कीच. अवर ऑफ कोडमधील कृती स्व-मार्गदर्शित आहेत. तुम्हाला फक्त
-    <a href='%{codeorg_url}/learn'>आमची सध्याची ट्युटोरीयल्स करून पाहावी</a> लागतील,
-    तुम्हाला पाहिजे असलेले ट्युटोरीयल निवडा आणि एक तासाची वेळ निवडा &mdash; उरलेली
-    सर्व कामे आमच्यावर सोडा. आमच्याकडे प्रत्येक वयासाठी आणि अनुभवाच्या प्रत्येक स्तरासाठी
-    पर्याय आहेत - ते बालवाडीपासून सुरू होतात. आमची <a href='/how-to'>"कसे करावे” मार्गदर्शिका</a>
-    वाचून तुमच्या कार्यक्रमाचे नियोजन सुरू करा.
-  hoc_faq_host_a_markdown: अर्थातच. अवर ऑफ कोडमधील सर्व कृती स्व-मार्गदर्शित आहेत.
-    तुम्हाला फक्त हे करायचे आहे की [आमची सध्याची ट्युटोरीयल्स करून बघा] (%{codeorg_url}/learn),
-    तुम्हाला पाहिजे असलेले ट्युटोरीयल निवडा आणि एक तासभराची वेळ निवडा  —  उरलेली सर्व
-    गोष्टींची काळजी आम्ही घेऊ. आमच्याकडे बालवाडीपासून प्रत्येक वयासाठी आणि अनुभवाच्या
-    प्रत्येक स्तरासाठी पर्यायसुद्धा आहेत. आमची [कसे करावे](%{howto}) मार्गदर्शिका
-    वाचून तुमच्या कार्यक्रमाचे नियोजन सुरू करा.
-  hoc_faq_devices_q: मी माझ्या विद्यार्थ्यांसाठी कोणती डिव्हायसेस वापरायला हवीत?
-  hoc_faq_devices_a: Code.org ट्युटोरीयल्स सर्व डिव्हायसेस आणि ब्राऊझर्सवर चालतात.
-    तुम्ही Code.org ट्युटोरीयल्सच्या तांत्रिक गरजांबद्दल अधिक माहिती [here](%{codeorg_url}/educate/it)
-    येथे पाहू शकता. Code.org व्यतिरिक्त इतर ट्युटोरीयल्सच्या तांत्रिक गरजा [%{partner_url}/learn](%{codeorg_url}/learn)
-    येथे त्या ट्युटोरीयलच्या विशिष्ट माहितीमध्ये कळू शकतात. जर तुमच्या शाळेत ट्युटोरीयल्स
-    घेणे शक्य नसेल तर आम्ही [अनप्लग्ड कृतीसुद्धा] (%{unplugged_url}) उपलब्ध करून दिल्या
-    आहेत, हे विसरू नका!
-  hoc_faq_devices_a_markdown: Code.org ट्युटोरीयल्स सर्व डिव्हायसेस आणि ब्राऊझर्सवर
-    चालतात. तुम्ही Code.org ट्युटोरीयल्सच्या तांत्रिक गरजांबद्दल अधिक माहिती [here](%{codeorg_url}/educate/it)
-    येथे पाहू शकता. Code.org व्यतिरिक्त इतर  ट्युटोरीयल्सच्या तांत्रिक गरजा [%{partner_url}/learn](%{codeorg_url}/learn)
-    येथे त्या ट्युटोरीयलच्या विशिष्ट माहितीमध्ये कळू शकतात. जर तुमच्या शाळेत ट्युटोरीयल्स
-    घेणे शक्य नसेल तर आम्ही  [अनप्लग्ड कृतीसुद्धा] (%{unplugged_url})  उपलब्ध करून
-    दिल्या आहेत, हे विसरू नका!
-  hoc_faq_need_computers_q: मला प्रत्येक सहभाग्यासाठी कॉम्प्युटर्स लागतील का?
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
+    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
+    as well as an unprecedented coalition of partners that have come together to support
+    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
+    America and the College Board.
+  hoc_faq_host_q: मला कोडिंगबद्दल काहीच माहिती नाही. तरीही मला हा कार्यक्रम आयोजित
+    करता येईल?
+  hoc_faq_host_a: नक्कीच. कोडचा तासमधील कामे स्व-मार्गदर्शित आहेत. तुम्हाला फक्त हे
+    करावा लागेल, की <a href=’%{codeorg_url}/learn’>आमचे सध्याचे ट्यूटोरियल्स करून
+    पाहा</a>, पाहिजे असलेला ट्यूटोरियल निवडा आणि एक तास भराची वेळ निवडा &mdash; उरलेली
+    सर्व कामे आमच्यावर सोडा. आमच्याकडे प्रत्येका वयासाठी आणि अनुभवाच्या प्रत्येका
+    स्तरासाठी पर्याय आहेत - ते बालवाडी पासून सुरू होतात. आमची <a href=’/how-to’>"कसे
+    करावे” मार्गदर्शिका</a> वाचून तुमच्या कार्यक्रमाची तयारी सुरू करा.
+  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
+    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
+    tutorial you want, and pick an hour — we take care of the rest. We also have options
+    for every age and experience-level, from kindergarten and up. Start planning your
+    event by reading our [how to guide](%{howto}).
+  hoc_faq_devices_q: मला माझ्या विद्यार्थ्यांसाठी कुठल्या डिव्हाइस वापरायला हव्यात?
+  hoc_faq_devices_a: Code.org चे ट्यूटोरियल्स सर्व डिव्हाइस आणि ब्राउझरवर चालतात.
+    Code.org च्या ट्यूटोरियल्ससाठी लागणाऱ्या तांत्रिक गरजांसाठी तुम्ही अधिक माहितीसाठी
+    <a href=’%{codeorg_url}/educate/it’>इथे</a> पाहू शकता. अशा ट्यूटोरियल्ससाठी जे
+    Code.org चे नाहीत, तुम्ही त्या ट्यूटोरियलच्या वर्णनामध्ये <a href=’%{codeorg_url}/learn’>%{partner_url}/learn</a>
+    इथे पाहू शकता. विसरू नका, जर तुमच्या शाळेत हे ट्यूटोरियल करणे शक्य नसेल, तर आमच्या
+    कडे <a href=’%{unplugged_url}’>अनप्लग कृती</a>सुद्धा आहेत!
+  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
+    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
+    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
+    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
+    if your school can't accommodate the tutorials!
+  hoc_faq_need_computers_q: मला प्रत्येका सहभागीसाठी कॉम्प्युटर लागेल का?
   hoc_faq_need_computers_a: नाही. आमचे कोडचा तासचे ट्यूटोरियल पीसीवर, स्मार्टफोनवर,
     टॅबलेट्सवर काम करतात, आणि काही ट्यूटोरियल्ससाठी तर कॉम्प्युटरची गरज सुद्धा पडत
     नाही! तुम्ही जिथे असाल तिथे, तुमच्यापाशी जे असेल ते वापरून यात सामील होऊ शकता.
@@ -687,71 +686,69 @@ mr:
     आमचे असेही <a href=’%{unplugged_url}’>ट्यूटोरियल्स आहेत ज्यांत कॉम्प्युटरची गरज
     पडत नाही</a>. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    नाही. आमची अवर ऑफ कोड ट्युटोरीयल्स पीसीज, स्मार्टफोन्स, टबलेट्सवर चालतात आणि काहींसाठी अजिबात कॉम्प्युटर लागत नाही! तुम्ही जिथे कुठे आहात तिथून आणि तुमच्याकडे जे काही आहे त्यासह तुम्ही सहभागी होऊ शकता.
+    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
 
-    _इथे काही पर्याय दिलेले आहेत:_
+    _Here are a few options:_
 
-    - **जोड्यांमध्ये काम करा .** [संशोधनाने असे दर्शवले आहे की](%{pair_programming_research}) विद्यार्थी  [पेअर प्रोग्रॅमिंग ](%{pair_programming_video}), कॉम्प्युटर शेअर करून आणि एकत्रितपणे काम करून सर्वांत चांगल्या पद्धतीने शिकतात. विद्यार्थ्यांना जोडीने काम करायला प्रोत्साहित करा.
-    - **प्रोजेक्टेड स्क्रीन वापरा.** जर तुमच्याकडे प्रोजेक्टर असेल आणि वेब-कनेक्टेड कॉम्प्युटरसाठी स्क्रीन असेल तर तुमचा संपूर्ण गट अवर ऑफ कोड एकत्र करू शकतो. व्हिडिओचा भाग एकत्र येऊन बघा आणि कोडी सोडवणे किंवा प्रश्नाची उत्तरे देणे आळीपाळीने करा.
-    - **अनप्लग्ड काम करा.** आमच्याकडे अजिबात [कॉम्प्युटर न लागणारी ट्युटोरीयल्स](%{unplugged_url}) सुद्धा आहेत.
+    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
+    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
+    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: मी <country> मध्ये आहे. मी आंतरराष्ट्रीय पातळीवर यात कसा
     भाग घेऊ?
   hoc_faq_international_a: कोडचा तास कार्यक्रम कोणी ही, जगभरात कुठे ही आयोजित करू
     शकते. गेल्या वर्षी जगभरातील विद्यार्थी कोडचा ताससाठी एकत्र जमले होते. <A href=’/promote’>इथे</a>
     अधिक जाणून घ्या.
-  hoc_faq_international_a_markdown: अवर ऑफ कोड कार्यक्रम जगभरात कोणीही कुठेही आयोजित
-    करू शकतो. मागच्या वर्षी, जगभरातील विद्यार्थी अवर ऑफ कोडसाठी एकत्र आले होते. अधिक
-    जाणून घ्या [here](%{promote}).
+  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
+    in the world. Last year, students worldwide joined together for the Hour of Code.
+    Find out more [here](%{promote}).
   hoc_faq_tutorial_q: मला कोडचा तासचे ट्यूटोरियल कसे निर्माण करता येईल?
-  hoc_faq_tutorial_a: जर तुम्हाला ट्युटोरीयल भागीदार होण्यात स्वारस्य असेल तर<a href='/tutorial-guidelines'>आमची
-    मार्गदर्शक तत्त्वे आणि सूचना</a> पहा. आम्हाला विविध प्रकारचे रंजक पर्याय उपलब्ध
-    करायचे आहेत, पण प्राथमिक ध्येय संगणक शास्त्राशी अपरिचित असणाऱ्या विद्यार्थ्यांचा
-    आणि शिक्षकांचा अनुभव अतिशय चांगला असेल, हे सुनिश्चित करणे, असे आहे.
-  hoc_faq_tutorial_a_markdown: जर तुम्हाला ट्युटोरीयल भागीदार होण्यात स्वारस्य असेल
-    तर [आमची मार्गदर्शक तत्त्वे आणि सूचना](%{tutorial_guidelines}) पहा. आम्हाला विविध
-    प्रकारचे रंजक पर्याय उपलब्ध करायचे आहेत, पण प्राथमिक ध्येय संगणक शास्त्राशी अपरिचित
-    असणाऱ्या विद्यार्थ्यांचा आणि शिक्षकांचा अनुभव अतिशय चांगला असेल, हे सुनिश्चित
-    करणे, असे आहे.
-  hoc_faq_account_q: विद्यार्थ्यांना स्वतःचे खाते वापरून लॉग ऑन करावे लागेल का?
-  hoc_faq_account_a: नाही. अवर ऑफ कोड करून पाहण्यासाठी विद्यार्थ्यांनी साईन अप करणे
-    किंवा लॉगिन करणे आवश्यक नाही. बहुतांशी <a href='%{codeorg_url}/learn/beyond'>पाठपुरावा
-    अभ्यासक्रमांमध्ये</a> विद्यार्थ्याची प्रगती सेव्ह करण्यासाठी खाते तयार करावे लागते.
-    तसेच, अवर ऑफ कोडसाठी साईन अप केल्यामुळे आपोआप कोड स्टुडीओ खाते तयार होत नाही.
-    जर तुम्हाला तुमच्या विद्यार्थ्यांसाठी खाती तयार करायची असतील, तर कृपया या <a href='https://youtu.be/_smelV_KISE'>सूचनांचे
-    </a> अनुसरण करा.
-  hoc_faq_account_a_markdown: अजिबात नाही. अवर ऑफ कोड करून पाहण्यासाठी विद्यार्थ्यांनी
-    साईन अप करणे किंवा लॉगिन करणे आवश्यक नाही. बहुतांशी [पाठपुरावा अभ्यासक्रमांमध्ये](%{codeorg_url}/learn/beyond))
-    विद्यार्थ्याची प्रगती सेव्ह करण्यासाठी खाते तयार करावे लागते. तसेच, अवर ऑफ कोडसाठी
-    साईन अप केल्यामुळे आपोआप कोड स्टुडीओ खाते तयार होत नाही. जर तुम्हाला तुमच्या विद्यार्थ्यांसाठी
-    खाती तयार करायची असतील, तर कृपया या सूचनांचे [instructions](https://youtu.be/_smelV_KISE)
-    अनुसरण करा.
-  hoc_faq_high_school_q: मी  हायस्कूलच्या विद्यार्थ्यांबरोबर करण्यासाठी कुठल्या कृती
+  hoc_faq_tutorial_a: जर तुम्हाला ट्यूटोरियल भागीदार व्हायचे असेल, तर <a href=’/tutorial-guidelines’>आमचे
+    दिशानिर्देश आणि सूचना पाहा</a>. आम्हाला अनेक प्रकारचे आकर्षक पर्याय द्यायला आवडेल,
+    पण मुख्य म्हणजे आम्हाला अशा विद्यार्थ्यांसाठी आणि शिक्षकांसाठी हा अनुभव उत्कृष्ट
+    करायचा आहे ज्यांच्यासाठी कॉम्प्युटर सायंसचे क्षेत्र नवीन आहे.
+  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
+    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
+    a variety of engaging options, but the primary goal is to optimize the experience
+    for students and teachers who are new to computer science.
+  hoc_faq_account_q: विद्यार्थ्यांना स्वतःचा अकाउंट वापरून लॉग ऑन करावे लागेल का?
+  hoc_faq_account_a: नाही. कोडचा तास करून पाहाण्यासाठी विद्यार्थ्यांना साइन अप किंवा
+    लॉग इन करण्याची गरज नाही. <A href=’%{codeorg_url}/learn/beyond’>नंतर केल्या जाणाऱ्या
+    बहुतांश अभ्यासक्रमांसाठी</a> विद्यार्थ्यांची प्रगती सेव्ह करण्यासाठी अकाउंट बनवावा
+    लागतो. तसेच, कोडचा ताससाठी साइन अप केल्याने कोड स्टूडियोचा अकाउंट आपोआप निर्माण
+    केला जात नाही. जर तुम्हाला तुमच्या विद्यार्थ्यांसाठी अकाउंट बनवायचे असतील, तर
+    कृपया या <a href=’https://youtu.be/_smeIV_KISE’>सूचनांचे</a> पालन करा.
+  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
+    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
+    require account creation to save student progress. Also, signing up for the Hour
+    of Code does NOT automatically create a Code Studio account. If you do want to
+    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_high_school_q: मला हाय स्कूलच्या विद्यार्थ्यांसोबत करण्यासाठी कुठल्या कृती
     निवडायला हव्यात?
-  hoc_faq_high_school_a: 'आमची स्टार वॉर्स आणि माईनक्राफ्ट ट्युटोरीयल्स- विशेषत: स्टार
-    वॉर्सचे जावा स्क्रिप्ट व्हर्जन आणि दोन्ही ट्युटोरीयल्सची फ्री प्ले व्हर्जन्स हायस्कूलमधल्या
-    विद्यार्थ्यांसाठी चांगली आहेत. दुसरा पर्याय म्हणजे आम्ही [%{partner_url}/learn](%{codeorg_url}/learn)
-    वरील नवशिक्यांच्या ट्युटोरीयल्समधील एक करून बघण्याची शिफारस करतो, उदा. अँग्री
-    बर्ड्स किंवा अॅना आणि एल्साबरोबर कोड लिहा. हायस्कूलमधील विद्यार्थी यातील एखादे
-    ट्युटोरीयल 30 मिनिटात पूर्ण करू शकला पाहिजे आणि नंतर Khan Academy किंवा CodeHS
-    सारखे जावा स्क्रिप्टमधले अधिक प्रगत ट्युटोरीयल करण्याचा प्रयत्न करू शकेल.'
-  hoc_faq_high_school_a_markdown: 'आमची स्टार वॉर्स आणि माईनक्राफ्ट ट्युटोरीयल्स-
-    विशेषत:  स्टार वॉर्सचे जावा स्क्रिप्ट व्हर्जन आणि दोन्ही ट्युटोरीयल्सची फ्री प्ले
-    व्हर्जन्स हायस्कूलमधल्या विद्यार्थ्यांसाठी चांगली आहेत. दुसरा पर्याय म्हणजे आम्ही
-    [%{partner_url}/learn](%{codeorg_url}/learn) वरील नवशिक्यांच्या ट्युटोरीयल्समधील
-    एक करून बघण्याची शिफारस करतो, उदा. अँग्री बर्ड्स किंवा अॅना आणि एल्साबरोबर कोड
-    लिहा. हायस्कूलमधील विद्यार्थी यातील एखादे ट्युटोरीयल 30 मिनिटात पूर्ण करू शकला
-    पाहिजे आणि नंतर Khan Academy किंवा CodeHS सारखे जावा स्क्रिप्टमधले अधिक प्रगत
-    ट्युटोरीयल करण्याचा प्रयत्न करू शकेल.'
+  hoc_faq_high_school_a: हाय स्कूलच्या विद्यार्थ्यांसाठी आमच्या स्टार वॉर्स आणि माइनक्राफ्ट
+    ट्यूटोरियल्स उत्तम आहेत, विशे, करून स्टार वॉर्सची जावास्क्रिप्ट आवृत्ती आणि दोन्ही
+    ट्यूटोरियल्ससाठी फ्री प्ले लेव्हल. किंवा, सुरू करण्यासाठी आम्ही <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    येथील नवशिक्यांचे ट्यूटोरियल्सपैकी एखादे करण्याची शिफारस करतो, जसे अँग्री बर्ड्स
+    किंवा अॅना आणि एल्सासोबतचे ट्यूटोरियल्स. हाय स्कूलचे विद्यार्थी यांच्यापैकी एक
+    ट्यूटोरियल 30 मिनिटांत पूर्ण करू शकतील आणि नंतर जावास्क्रिप्टमधील एखादे प्रगत
+    ट्यूटोरियल करण्याचा प्रयत्न करू शकतील, जसे खान अकॅडमी किंवा CodeHS.
+  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
+    for high schoolers, especially the Star Wars JavaScript version and the free play
+    level on both tutorials. Alternately, we recommend trying one of the beginner
+    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
+    tutorial with Angry Birds or with Anna and Elsa. A high school student should
+    be able to finish one of these in 30 minutes and can then try a more advanced
+    tutorial in JavaScript, such as Khan Academy or CodeHS.
   hoc_faq_scratch_q: मी कोडचा तास साठी Scratch निवडणार आहे, पण जर माझ्या विद्यार्थ्यांकडे
     लॅपटॉप ऐवजी आयपॅड असतील तर?
-  hoc_faq_scratch_a: स्क्रॅच टॅबलेट्सवर रन होत नाही. जर विद्यार्थी लहान असतील तर ते
-    ScratchJR iPad अॅप (सुरुवातीच्या वाचकांसाठी) वापरू शकतात. जर तुम्ही [%{partner_url}/learn](%{codeorg_url}/learn)
-    वरील ट्युटोरीयल्स पाहिलीत तर तुम्हाला Code.org, Tynker, Lightbot किंवा CodeSpark
-    वरील iPads चालणारी इतर ट्युटोरीयल्स दिसतील.
-  hoc_faq_scratch_a_markdown: 'स्क्रॅच टॅबलेट्सवर रन होत नाही. जर विद्यार्थी लहा नसतील
-    तर ते ScratchJR iPad अॅप (सुरुवातीच्या वाचकांसाठी) वापरू शकतात. जर तुम्ही  [%{partner_url}/learn](%{codeorg_url}/learn)
-    वरील ट्युटोरीयल्स पाहिलीत तर तुम्हाला Code.org, Tynker, Lightbot किंवा  CodeSpark
-    वरील iPads चालणारी इतर ट्युटोरीयल्स दिसतील. '
+  hoc_faq_scratch_a: Scratch टॅबलेट्सवर चालत नाही. जर तुमचे विद्यार्थी लहान असतील,
+    तर ते ScratchJr ची आयपॅडची अॅप वापरू शकतात (नवीनच वाचायला लागले आहेत अशा विद्यार्थ्यांसाठी).
+    जर तुम्ही <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> वरील ट्यूटोरियल
+    पाहाल, तर तुम्ही आयपॅडवर चालणारे इतर ट्यूटोरियल शोधू शकता - जसे Code.org, Tynker,
+    Lightbot किंवा CodeSpark चे ट्यूटोरियल.
+  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
+    young, they can use the ScratchJR iPad app (for early-readers). If you look at
+    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
+    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
   hoc_faq_count_hoc_q: कोडचा तासची मोजणी कशी केली जाते?
   hoc_faq_map_q: मला नकाशावर माझा ठिपका का दिसत नाही?
   hoc_faq_map_a: तुम्हाला तुमचा कोडचा तासचा कार्यक्रम नकाशावर दिसत नाही याबद्दल आम्ही
@@ -762,23 +759,23 @@ mr:
     त्या यादीमध्ये दिसेल. तसेच, कोडचा ताससाठी हजारोच्या संख्येने लोक साइन अप करीत
     असल्यामुळे, नकाशाला आणि कार्यक्रमांच्या यादीला अपडेट होण्यासाठी साधारण 48 तास
     लागतात. काही दिवसांनी पुन्हा तपासा!
-  hoc_faq_map_a_markdown: 'तुम्हाला अवर ऑफ कोड नकाशावर तुमचा कार्यक्रम दिसत नाही,
-    याबद्दल आम्ही दिलगीर आहोत. हजारो आयोजक साईन अप करत असल्यामुळे, नकाशा डेटा एकत्र
-    करतो आणि अनेक कार्यक्रमांसाठी एकच बिंदू दर्शवतात. जर तुम्ही नकाशाखाली [कार्यक्रमाच्या
-    पेजची](%{events_url}) लिंक क्लिक केलीत तर तुम्हाला राज्यानुसार सर्व कार्यक्रमांच्या
-    यादीकडे पाठवले जाईल आणि तिथे तुम्हाला तुमचा कार्यक्रम यादीत दिसेल. त्याशिवाय,
-    अवर ऑफ कोडसाठी हजारो लोक साईन अप करत असल्याने, नकाशा आणि कार्यक्रमांची यादी अपडेट
-    होण्यासाठी सामान्यपणे 48 तास लागतात. काही दिवसांनी पुन्हा पहा! '
-  hoc_faq_count_hoc_a: 'अवर ऑफ कोड ट्रॅकर म्हणजे वापराचे अचूक मोजमाप नाही. अवर ऑफ
-    कोडमधील सहभाग ट्रॅक करताना आम्ही विद्यार्थ्यांचे वेगवेगळे IDs मोजत नाही, कारण
-    विशेषत: आम्हाला विद्यार्थ्यांनी लॉग इन किंवा नोंदणी करणे आवश्यक नसते. परिणामी,
-    आम्ही एकाच वेळी विद्यार्थ्यांची कमाल संख्या आणि किमान संख्या मोजतो. <a href=''%{codeorg_url}/loc''>येथे</a>
-    सर्व तपशील पहा. '
-  hoc_faq_count_hoc_a_markdown: 'अवर ऑफ कोड ट्रॅकर म्हणजे वापराचे अचूक मोजमाप नाही.
-    अवर ऑफ कोडमधील सहभाग ट्रॅक करताना आम्ही विद्यार्थ्यांचे वेगवेगळे IDs मोजत नाही,
-    कारण विशेषत: आम्हाला विद्यार्थ्यांनी लॉग इन किंवा नोंदणी करणे आवश्यक नसते. परिणामी,
-    आम्ही एकाच वेळी विद्यार्थ्यांची कमाल संख्या आणि किमान संख्या मोजतो. येथे सर्व
-    तपशील पहा [here](%{codeorg_url}/loc).'
+  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
+    of Code map. Because of the tens of thousands of organizers who sign up, the map
+    aggregates the data and displays one point for several events. If you click the
+    [events page](%{events_url}) link below the map you will be directed to a list
+    of all events by state and can find your event listed there. Additionally, given
+    the thousands of people signing up for the Hour of Code, the map and event list
+    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_count_hoc_a: कोडचा तास ट्रॅकर हे वापराची अचूक आकडेवारी दाखवत नाही. कोडचा
+    तासमध्ये भाग घेणाऱ्यांची संख्या मोजताना आम्ही विविक्षित विद्यार्थी आयडी अचूकपणे
+    मोजत नाही, विशेषकरून याचे कारण म्हणजे आम्ही विद्यार्थ्यांना लॉग इन किंवा नोंदणी
+    करणे गरजेचे ठेवलेले नाही. त्यामुळे, आम्ही भाग घेणाऱ्यांची संख्या अधिक आणि कमी
+    दोन्ही मोजतो. याबद्दल सर्व तपशील <a href=’%{codeorg_url}/loc’>इथे</a> वाचा.
+  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
+    of usage. We do not count unique student IDs perfectly when tracking participation
+    in the Hour of Code, especially because we don't require students to log in or
+    register. As a result, we both over-count and under-count participants at the
+    same time. Read all the details [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: एका तासात कोणी किती शिकू शकेल?
   hoc_faq_one_hour_a: कोडचा तासचे उद्दिष्ट कोणालाही एका तासात कॉम्प्युटर सायंसमध्ये
     तज्ञ करण्याचे नाही. एका तासात फक्त एवढे कळू शकते की कॉम्प्युटर सायंस मजेशीर आणि
@@ -798,50 +795,48 @@ mr:
     ज्यांना आता कळायला लागले आहे की कॉम्प्युटर सायंस त्यांच्या विद्यार्थ्यांना पाहिजे
     आहे आणि त्यांचे शिक्षक ते शिकवण्यात समर्थ आहेत. <Br/><br/>सर्वात महत्त्वाची गोष्ट
     म्हणजे, सर्व भाग घेणाऱ्यांना या एका तासामध्ये हे कळते की ते हे करू शकतात.
-  hoc_faq_one_hour_a_markdown: |+
-    अवर ऑफ कोडचे ध्येय कोणालाही एका तासात तज्ज्ञ संगणक शास्त्रज्ञ बनवणे असे नाही. फक्त संगणक शास्त्र हे मजेशीर आणि कल्पक आहे हे, ते कोणतीही पार्श्वभूमी असलेल्या सर्व वयांसाठी, सर्व विद्यार्थ्यांसाठी  उपलब्ध आहे हे  समजण्यासाठी एक तास पुरेसा आहे. या मोहिमेच्या यशाचे मोजमाप विद्यार्थी संगणक शास्त्र किती शिकले हे नसून  - विविध लिंगांच्या आणि वांशिक तसेच सामाजिक-आर्थिक गटांच्या लोकांनी किती व्यापकपणे सहभाग घेतला आणि सर्व इयत्तांच्या पातळ्यांवरील संगणक शास्त्राच्या अभ्यासक्रमांसाठी वाढणारी नोंदणी आणि सहभाग आम्हाला दिसून येतो, यात आहे. सहभागी होणाऱ्या लक्षावधी शिक्षकांनी आणि विद्यार्थ्यांनी अवर ऑफ कोडच्या पलीकडे जायचे ठरवले आहे - आणि संपूर्ण दिवस किंवा संपूर्ण आठवडा किंवा त्याहीपेक्षा जास्त काळ शिकायचे ठरवले आहे आणि अनेक विद्यार्थ्यांनी संपूर्ण अभ्यासक्रमासाठी (किंवा अगदी कॉलेजमधला मुख्य विषय म्हणून) नोंदणी करायचे ठरवले आहे.
+  hoc_faq_one_hour_a_markdown: |-
+    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
 
-    विद्यार्थ्यांशिवाय दुसरा "शिकणारा" म्हणजे शिक्षक,  ज्यांना एका तासाच्या कार्यक्रमानंतर त्यांच्याकडे संगणक शास्त्रज्ञ म्हणून महाविद्यालयीन पदवी नसली तरीही ते संगणक शास्त्र शिकवू शकतील असा आत्मविश्वास येतो. हजारो शिक्षक पुढे संगणक शास्त्र शिकण्याचे ठरवतात, PD अटेंड करून किंवा पाठपुराव्याचे ऑनलाईन अभ्यासक्रम किंवा दोन्ही गोष्टी करून आणि हे शाळांच्या प्रशासकांनासुद्धा लागू होते, ज्यांच्या लक्षात येते की संगणक शास्त्र ही एक अशी गोष्ट आहे की जी त्यांच्या विद्यार्थ्यांना हवी आहे आणि त्यांचे शिक्षक त्यासाठी सक्षम आहेत.
+    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
 
-    आणि सर्वांत महत्त्वाचे म्हणजे या तासात सर्व विद्यार्थी हे शिकतात की आपण सगळेजण हे करू शकतात.
-
+    Above all, what all participants can learn in an hour is that we can do this.
   hoc_faq_more_questions_q: अजून काही प्रश्न विचारायचे आहेत?
-  hoc_faq_more_questions_a: आमच्या <a href='http://support.code.org'>सपोर्ट फोरम</a>
-    मध्ये उत्तर शोधण्याचा प्रयत्न करा.
-  hoc_faq_more_questions_a_markdown: आमच्या [सपोर्ट फोरम](http://support.code.org)
-    मध्ये उत्तर शोधण्याचा प्रयत्न करा.
+  hoc_faq_more_questions_a: आमच्या <a href='http://support.code.org'>मदत मंचावर</a>
+    उत्तर शोधून पाहा.
+  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: मला कोडचा तास नंतर शिक्षण कसे सुरू ठेवता येईल?
   hoc_faq_keep_learning_a: कोणी ही, कधी ही कोडचा तास आयोजित करू शकते. याचे ट्यूटोरियल्स
     वर्षभर उपलब्ध असतात. तुम्हाला आमचे ट्यूटोरियल्स आणि अभ्यासक्रम आमच्या साइटवर नेहेमी
     मिळू शकतील. कृपया कार्यक्रमासाठी "कसे करावे” मार्गदर्शिका आणि इतर संसाधनांसाठी
     <a href=’/promote’>आमची संसाधने</a> वर जा आणि तुमच्या कोडचा तास कार्यक्रम सफल
     करण्यात मदत करा.
-  hoc_faq_keep_learning_a_markdown: कोणीही कोणत्याही वेळी अवर ऑफ कोड इव्हेंट होस्ट
-    करू शकते. ट्युटोरीयल्स वर्षभर उपलब्ध असतात. आमची सर्व ट्युटोरीयल्स आणि अभ्यासक्रम
-    आमच्या साईटवर कायमचा असतील, अशी तुम्ही अपेक्षा करू शकता. तुमचा अवर ऑफ कोड कार्यक्रम
-    यशस्वी करण्यासाठी कृपया 'कार्यक्रम कसा करावा' मार्गदर्शिकेसाठी कृपया [आमची संसाधने](%{promote})
-    आणि इतर संसाधने पहा.
+  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
+    tutorials stay up year-round. You can expect all our tutorials and curriculum
+    to be available on our site in perpetuity. Please go to [our resources](%{promote})
+    for event how-to guides and other resources to help make your Hour of Code event
+    a success.
   hoc_faq_certificates_q: मला माझ्या विद्यार्थ्यांसाठी प्रमाणपत्रे कुठून प्रिंट करता
     येतील?
-  hoc_faq_certificates_a: आमच्या [प्रमाणपत्रे पृष्ठावर](%{codeorg_url}/certificates)
-    जा, जिथून तुम्ही तुमच्या संपूर्ण वर्गासाठी आधीच प्रमाणपत्रे प्रिंट करून ठेवू शकता.
-    माईनक्राफ्ट ट्युटोरीयल करणाऱ्या विद्यार्थ्यांसाठी तुम्ही [खास प्रमाणपत्रे](%{codeorg_url}/certificates?course=mc)
-    सुद्धा प्रिंट करू शकता.
-  hoc_faq_certificates_a_markdown: आमच्या [प्रमाणपत्रे पृष्ठावर](%{codeorg_url}/certificates)
-    जा, जिथून तुम्ही तुमच्या संपूर्ण वर्गासाठी आधीच प्रमाणपत्रे प्रिंट करून ठेवू शकता.
-    माईनक्राफ्ट ट्युटोरीयल करणाऱ्या विद्यार्थ्यांसाठी तुम्ही [खास प्रमाणपत्रे](%{codeorg_url}/certificates?course=mc)
-    सुद्धा प्रिंट करू शकता.
+  hoc_faq_certificates_a: तुम्ही <a href=’%{codeorg_url}/certificates’>प्रमाणपत्र
+    पान</a> वर जाऊन तुमच्या वर्गातील सर्व विद्यार्थ्यांसाठी आधी पासून प्रमाणपत्रे
+    प्रिंट करू शकता. माइनक्राफ्ट ट्यूटोरियल करणाऱ्या विद्यार्थ्यांसाठी तुम्ही <a href=’%{codeorg_url}/certificates?course=mc’>विशेष
+    प्रमाणपत्रे</a>सुद्धा प्रिंट करू शकता.
+  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
+    where you can print certificates for your entire class ahead of time. You can
+    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
+    students doing the Minecraft tutorial.
   hoc_faq_logo_q: माझ्या कोडचा तास लोगो किंवा नावाच्या वापरावर काही बंधने आहेत का?
   hoc_faq_logo_a: कोडचा तास हा एक ट्रेडमार्क आहे. आम्हाला याचा उपयोग नाही करू द्यायचा
     असे नाही, पण याचा उपयोग काही मर्यादांप्रमाणेच झाला पाहिजे याची आम्हाला खात्री
     करून घ्यायची असते. कृपया <a href=’%{logo_url}’>उपयोगासाठी मार्गदर्शक तत्त्वे</a>
     पाहा.
-  hoc_faq_logo_a_markdown: अवर ऑफ कोड ट्रेडमार्क करण्यात आलेला आहे. आम्हाला त्याच्या
-    वापरावर निर्बंध घालायचा नाही पण त्याचा वापर काही मर्यादेत असेल हे आम्हाला सुनिश्चित
-    करायचे आहे. कृपया [ही वापराची मार्गदर्शक तत्त्वे] (%{logo_url}) पहा.
+  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
+    usage, but we want to make sure its usage fits within a few limits. Please see
+    [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: 2013 च्या कोडचा तासची आकडेवारी
   stats_growth: 1.5 कोटी उपयोगकर्त्यांपर्यंत सर्वात जलद पोचला.
-  stats_i18n: विद्यार्थी 45 पेक्षा अधिक भाषांमध्ये शिक्षण घेत आहेत
+  stats_i18n: विद्यार्थ्यांनी 45 पेक्षा अधिक भाषांमधमये शिक्षण घेतले
   stats_tumblr: 'Tumblr: 3.5 वर्षे'
   stats_facebook: 'Facebook: 3 वर्षे'
   stats_twitter: 'Twitter: 2.5 वर्षे'
@@ -851,8 +846,9 @@ mr:
   stats_global: 10 कोटीपेक्षा अधिक विद्यार्थ्यांनी कोडचा तास केलेला आहे
   stats_girls_more: गेल्या 70 वर्षांमध्ये सर्वात अधिक मुलींनी कॉम्प्युटर सायंस करून
     पाहिले
-  stats_females: संगणक शास्त्रात हायस्कूल अभ्यासक्रमांमध्ये, विद्यापीठांच्या अभ्यासक्रमांमध्ये
-    आणि कार्यबळाच्या एकूण संख्येमध्ये विद्यार्थिनींचा सहभाग फक्त 20-25% आहे.
+  stats_females: हाय स्कूल अभ्यासक्रमांमध्ये, यूनिवर्सिटीच्या अभ्यासक्रमांमध्ये आणि
+    कामगारांच्या एकूण संख्येमध्ये कॉम्प्युटर सायंसमध्ये विद्यार्थी मुलींची सहभागिता
+    फक्त 20-25% आहे.
   stats_females_more: कोडचा तासच्या दरम्यान विद्यार्थी मुलींची संख्या <b>सर्व सहभागींच्या
     50% पर्यंत असते</b>!
   stats_females_more_markdown: During the Hour of Code, female students make up **50%
@@ -882,7 +878,7 @@ mr:
   resources_stickers: स्टिकर्स
   resources_how_to_guides: "\"कसे करावे” मार्गदर्शिका"
   resources_promote: जाहिरात करा
-  resources_nav_tutorials: ट्युटोरीयल्स वापरून पाहा
+  resources_nav_tutorials: ट्यूटोरियल्स वापरून पाहा
   resources_nav_promote: याचा प्रचार करा
   resources_nav_spread_word: सामील कसे व्हावे
   resources_banner_promote_text: जाहिरात करा
@@ -926,7 +922,7 @@ mr:
   title_stats: लघु वर्णने आणि आकडेवारी
   title_partners: भागीदार
   title_resources: संसाधने
-  title_past_posters: आधीच्या अवर ऑफ कोडची पोस्टर्स
+  title_past_posters: Past Hour of Code Posters
   title_signup_thanks: कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद!
   title_tutorial_guidelines: कामांसाठी मार्गर्शन
   title_whole_school: संपूर्ण शाळेचा सहभाग
@@ -945,8 +941,8 @@ mr:
   highlights_title: मुख्य अंश
   highlights_header: कोडचा तासच्या हायलाइट्स
   highlights_description: कोडचा तास माहिमेतील आमचे काही आवडते क्षण.
-  highlights_previous: आधीच्या वर्षांमधील ठळक घटना
-  highlights_see_more: अधिकठळक वैशिष्ट्ये पहा
+  highlights_previous: Highlights from previous years
+  highlights_see_more: See more highlights
   highlights_readmore: आणखी वाचा
   highlights_watchvideo: व्हिडिओ पहा
   highlights_facebook: Facebook वर शेयर करा
@@ -955,8 +951,8 @@ mr:
   highlights_constant_alba_short_heading: जेसिका अल्बा हिने कोडचा तासमध्ये शिक्षण
     घेतले
   highlights_constant_obama_heading: राष्ट्राध्यक्ष ओबामा कोडची ओळ लिहीणारे पहिले
-    राष्ट्राध्यक्ष झाले, त्यांनी व्हाइट हाउस येथे विद्यार्थ्यांसाठी एक ऐतिहासिक अवर
-    ऑफ कोड होस्ट केला.
+    राष्ट्राध्यक्ष झाले, त्यांनी व्हाइट हाउस येथे विद्यार्थ्यांसाठी एक ऐतिहासिक कोडचा
+    तास आयोजित केला.
   highlights_constant_obama_short_heading: कोडर इन चीफ
   highlights_constant_malala_heading: “प्रत्येक मुलगी अशा तंत्रज्ञानाच्या निर्माणात
     सहभागी होण्यास पात्र आहे जे आपले जग, तसेच जग कोण चालवते हे बदलून टाकणारे आहे."
@@ -974,7 +970,7 @@ mr:
   highlights_constant_athletes_short_heading: स्वतःला मेहनत करायला लावा
   footer_copyright_message: कॉपीराइट %{current_year} Code.org सर्वाधिकार सुरक्षित.
   footer_trademark_message: Hour of Code™ हा Code.org यांचा ट्रेडमार्क आहे.
-  footer_built_on_github: 'मायक्रोसॉफ्टच्या गिटहबवर तयार केलेले '
+  footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: भागीदार आणि सल्लागार
   footer_menu_contact: आमच्याशी संपर्क साधा
   footer_menu_support: मदत
@@ -986,11 +982,11 @@ mr:
     आणि शिक्षकांसह कोडचा तास सुरू करा.
   learn_banner_beyond: पुढे शिकायची इच्छा आहे?  <a id='learn_banner_beyond'>तासभरापेक्षा
     अधिक करा</a>
-  learn_banner_beyond_markdown: शिकत राहायचे आहे? [एका तासाच्या पलीकडे जा]%{url}
+  learn_banner_beyond_markdown: Want to keep learning? [Go beyond an hour](%{url})
   learn_banner_teachers: 'शिक्षक: <a id=''teacher_banner_host''>एक तास आयोजित करा</a>
     किंवा <a id=''teacher_banner_howto''>"कसे करावे” मार्गदर्शिका वाचा</a>'
-  learn_banner_teachers_markdown: 'शिक्षक: [तास होस्ट करा](%{host_url}) किंवा [कसा
-    करावा मार्गदर्शिका वाचा](%{howto_url})'
+  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
+    the How-To Guide](%{howto_url})'
   learn_robotics_banner_heading: रोबॉटिक्स आणि सर्किट
   learn_robotics_banner_blurb: रोबॉट्स किंवा भौतिक कॉम्प्युटिंगचे किट आहेत? खालील
     कृतींसोबत त्यांना वापरा आणि कुठल्याही वयोगटाच्या विद्यार्थ्यांसाठी एक स्पष्ट कोडचा
@@ -3201,12 +3197,11 @@ mr:
   tutorial_tynkerd_longdescription: Design a custom hero and play as that character
     through this multi-level adventure game. You'll need to use your coding skills
     to solve puzzles, fight bugs, and save the motherboard!
-  tutorial_cdmy_longdescription: कोडअकॅडमी हा  सध्याच्या काळातील नोकऱ्यांसाठी आवश्यक
-    असलेली STEM ( विज्ञान, तंत्रज्ञान, इंग्रजी, गणित) कौशल्ये शिकण्यासाठीचा एक परस्परसंवादी
-    प्लॅटफॉर्म आहे. कोडअकॅडमीच्या लक्षावधी विद्यार्थ्यांमध्ये सहभागी व्हा आणि आमचे
-    गंमतीशीर कोड ऑफ अवर अभ्यासक्रम करून कोडींग तसेच संगणक शास्त्रातील मूलभूत गोष्टी
-    शिका. प्रत्येक अभ्यासक्रमाच्या शेवटी, तुम्हाला एका खरा प्रोजेक्ट करायला मिळेल,
-    जो तुम्ही तुमच्या मित्रमैत्रिणींना आणि कुटुंबियांना दाखवू शकता.
+  tutorial_cdmy_longdescription: Codecademy is an interactive platform for learning
+    STEM skills that are critical for today's jobs. Join millions of Codecademy students
+    and learn the basics of coding and computer science by taking our fun Hour of
+    Code courses. By the end of each course, you'll have a real project that you can
+    show off to your friends and family.
   tutorial_codestersdance_longdescription: 'पायथन शिकण्यासाठी विद्यार्थी शब्द सरकवून
     वापरण्याचे साधन (ड्रॅग-टू-टेक्स्ट टूलकीट) वापरून प्रोग्रामिंग करायला सुरुवात करतात.
     विद्यार्थी सराव कृतींचा संच पूर्ण करतात ज्यात ते प्रोग्रामिंग आज्ञा (कमांड्स)
@@ -3929,14 +3924,14 @@ mr:
     द्वारा शिका. ह्या खेळकर, स्वनिर्देशित शिकवण्यावजा व्याख्यानान्मध्ये मार्क जुकेरबर्ग,
     बिल गेट्स, अॅन्ग्री बर्ड्स अणि झाडे वि. पिशाच्चे आहेत. पुन: पुन्हा काम करणारी
     चक्री रचना (लूप), सशर्त रचना आणि मुलभूत अल्गोरिदम शिका. ३७ भाषांमध्ये उपलब्ध.'
-  tutorial_itchstop_longdescription: आपले स्वत:चे स्टॉप फ्रेम अॅनिमेशन प्रोजेक्ट्स
-    तयार करण्यासाठी आपण  Itch वापरणार आहोत. या अभ्यासक्रमासाठी हेडफोन्स आवश्यक आहेत,
-    याची नोंद घ्या. आपण अॅनिमेशनला सपोर्ट करणाऱ्या काही आकर्षक स्प्राईट्स वापरणार
-    आहोत आणि आपल्याला आपली पात्रे  अॅनिमेट करण्यासाठी लागणारा कोड दाखवणार आहोत. आपण
-    आपले स्वत:चे अॅनिमेशन इफेक्ट्स आणि चित्रे कशी तयार करायची, हेसुद्धा पाहणार आहोत.
-    अॅनिमेशन इफेक्टसाठी (फ्लिप-बुकसारखे  अॅनिमेशन) स्क्रॅचमधला स्प्राईट्स पोशाख वारंवार
-    कसा बदलायचा आणि त्यामागचा कोड आपण शिकणार आहोत. सर्व सूचना Itch मध्येच दिलेल्या
-    आहेत त्यामुळे प्रोजेक्ट करताना स्क्रीन बदलण्याची गरज नाही.
+  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
+    animation projects. Note that headphones are recommended for this course. We will
+    use some existing sprites that support animations and show the code we need to
+    add to animate our characters. We'll also go over how to create our very own animation
+    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
+    for animation effects (similar to a flip-book animation) and the code behind it.
+    All instruction is contained within the Itch environment so there is no need to
+    be switching screens to follow along with the project.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5217,30 +5212,30 @@ mr:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: 'तुम्हाला माहिती आहे का की क्लासिक अॅस्टेरॉईड्स
-    आणि ल्युनार लँडर गेम्सच्या  मागचा कोड तुम्हाला वाटतो त्यापेक्षा सोपा आहे? तुम्हाला
-    माहिती आहे का या दोन्ही गेम्समध्ये अचूक भौतिकशास्त्र आहे? या कृतीमध्ये तुम्ही
-    एक न चालणारा अॅस्टेरॉईड्स गेम दुरुस्त करणार आहात, ज्यामध्ये यान फक्त सरळ रेषेत
-    हालचाल करते. नंतर तुम्ही या खेळाला गुरुत्वाकर्षण जोडाल आणि हे यान चंद्रावर उतरवण्याचा
-    प्रयत्न कराल! क्रोमबुक्सवर आणि इतर डिव्हायसेसवर चालते! '
-  tutorial_stempong_longdescription: तुम्हाला माहिती आहे का की Bonk.io या लोकप्रिय
-    गेमच्या आणि क्लासिक पॉन्ग गेमच्या मागचा कोड तुम्हाला वाटतो त्यापेक्षा सोपा आहे?
-    तुम्हाला माहिती आहे का या दोन्ही गेम्समध्ये अचूक भौतिकशास्त्र आहे? या कृतीमध्ये
-    तुम्ही एक पॉन्ग गेमचे एक न चालणारे व्हर्जन दुरुस्त करणार आहात म्हणजे वस्तू जशा
-    उसळायला हव्यात तशा उसळतील. नंतर तुम्ही Bonk.io क्लोन करण्यासाठी त्याला गुरुत्वाकर्षण
-    जोडाल. क्रोमबुक्सवर आणि इतर डिव्हायसेसवर चालते!
+  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
+    Asteroids and Lunar Lander games is simpler than you might think? Did you know
+    that both of these games have accurate physics? In this activity you will fix
+    a broken asteroids game where the ship only moves in a straight line. Then you
+    will add gravity to the game and try to land the ship on the moon! Works with
+    chromebooks and other devices!
+  tutorial_stempong_longdescription: Did you know that the code behind the popular
+    game Bonk.io and the classic Pong game is simpler than you might think? Did you
+    know that both of these games have accurate physics? In this activity you will
+    fix a broken version of the Pong game so that objects bounce like they should.
+    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
+    other devices!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'तुमच्या पत्त्यांच्या कॅटमधून एक पत्ता निवडा
-    आणि  जगभर फिरण्यासाठी त्याचा कोड समजून घ्या. नियमांचा अंदाज बांधण्यासाठी तुमचे
-    अंतर्ज्ञान वापरा आणि स्वत:च्या चुकांमधून शिका. कॉम्प्युट इट आणि सायलेंट टिचरच्या
-    टीमने त्याच मूलभूत तत्त्वांच्या आधारे काळजीपूर्वक बनवलेला: तपशीलवार स्पष्टीकरणांऐवजी
-    चुकांमधून शिका पद्धत, सुलभ प्रगती, कोड टाईप करणे आवश्यक नाही, अगदी नवशिक्यांसाठी
-    अॅक्सेसिबिलीटी.  '
+  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
+    its code in order to progress through the world. Use your intuitive abilities
+    to guess the rules and learn from your own mistakes. Made with care by the team
+    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
+    instead of verbose explanations, smooth progression, no code to type, accessibility
+    to absolute beginners.'
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.
@@ -5599,11 +5594,11 @@ mr:
   tutorial_nearpodalgorithms_longdescription: 'In this Nearpod lesson, students identify
     an algorithm as a set of step-by-step directions. Students learn to create, test,
     and fix an algorithm to complete a specific task. '
-  tutorial_kibodrop_longdescription: अभियांत्रिकी म्हणजे चिकाटी आणि हिंमत. आज विद्यार्थी
-    अभियंते होतील, इंजिनीअरींग डिझाईन प्रक्रियेच्या पायऱ्या शिकतील. ते क्राफ्ट आणि
-    रिसायकल केलेल्या मटेरीयल्सपासून मॉडेल्स तयार करतील, नंतर घोट्याइतक्या उंचीपासून
-    मॉडेल्स खाली सोडून त्यांचा मजबूतपणा तपासून पाहतील. ही एक अनप्लग्ड कृती आहे; KIBO
-    रोबोट्स ऐच्छिक आहेत.
+  tutorial_kibodrop_longdescription: Engineering is about persistence and grit. Today
+    the students will become engineers, learning the steps of the Engineering Design
+    Process. They will create models out of craft and recycled materials, then they
+    will test the sturdiness of their models by dropping them from ankle height. This
+    is an unplugged activity; KIBO robots are optional.
   tutorial_ozobotcolor1_longdescription: Students will learn the basic functionality
     of Ozobot, including how to calibrate the bot's sensors, and how to draw lines
     for the bot to follow.
@@ -10011,10 +10006,9 @@ mr:
   tutorial_kuborobo_longdescription: In this activity, students put their logic and
     sequencing skills to the test as they use the Tagtiles to program their KUBO robot
     to travel to various locations on a printed map.
-  tutorial_ai-oceans_longdescription: संगणक शास्त्र म्हणजे कोडींग व्यतिरिक्त कितीतरी
-    गोष्टी! कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग डेटा आणि नैतिक समस्यांचा
-    विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी AI चा कसा वापर करता येईल,
-    याबद्दल शिका.
+  tutorial_ai-oceans_longdescription: Computer science is about so much more than
+    coding! Learn about AI, machine learning, training data, and bias, while exploring
+    ethical issues and how AI can be used to address world problems.
   tutorial_scratchimagine_language: English, Spanish
   tutorial_codesterspsa_language: मराठी
   tutorial_googlehero_language: English, Spanish

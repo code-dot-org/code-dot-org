@@ -305,14 +305,6 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"rainbow"': রামধনু
-      PoemBot_setPoem:
-        options:
-          BG_EFFECT:
-            '"rainbow"': রামধনু
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:

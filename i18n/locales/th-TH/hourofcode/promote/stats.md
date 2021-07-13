@@ -1,52 +1,52 @@
 ---
-title: คำโฆษณาและสถิติที่มีประโยชน์
+title: Blurbs and useful stats
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# คำโฆษณาและสถิติที่มีประโยชน์
+# Blurbs and useful stats
 
-### ใช้ข้อความต่อไปนี้หากคุณกำลังมองหาวิธีโปรโมทกิจกรรมชั่วโมงเขียนโค้ดในจดหมายข่าวและช่องทางการสื่อสารต่าง ๆ ของคุณ
+### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
 
 * * *
 
-## ใช้คำโฆษณาสั้น ๆ นี้ในจดหมายข่าว
+## ใช้คำโฆษณาสั้นๆนี้ในจดหมายข่าว
 
-#### แนะนำวิทยาการคอมพิวเตอร์ภายในโรงเรียน เริ่มต้นด้วยกิจกรรมชั่วโมงเขียนโค้ด
+#### Bring computer science to your school. Start with an Hour of Code!
 
-เทคโนโลยีกำลังเปลี่ยนแปลงอุตสาหกรรมต่าง ๆ บนโลกใบนี้ การมีความรู้เรื่องการเขียนโปรแกรมคอมพิวเตอร์จึงกลายเป็นส่วนหนึ่งของชุดทักษะครอบจักรวาล แต่มีโรงเรียนน้อยกว่าครี่งหนึ่งของโรงเรียนทั้งหมดเท่านั้นที่สอนวิชาวิทยาการคอมพิวเตอร์! ข่าวดีคือ พวกเรากำลังจะเปลี่ยนแปลงสิ่งนี้ ถ้าคุณได้ยินเรื่องราวของกิจกรรมชั่วโมงเขียนโค้ดเมื่อปีที่แล้ว คุณอาจรู้ว่ามันได้สร้างประวัติศาสตร์ นักเรียน 100 ล้านคนได้ค้นพบแล้วว่าวิชาวิทยาการคอมพิวเตอร์เข้าถึงได้ง่ายและสนุกขนาดไหน ซึ่งทั้งหมดนี้ได้จากการเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดเพียงหนึ่งชั่วโมง
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. แต่โรงเรียนน้อยกว่าครี่งหนึ่งของโรงเรียนทั้งหมดสอนวิชาวิทยาการคอมพิวเตอร์! ข่าวดีคือ พวกเรากำลังจะเปลี่ยนแปลงสิ่งนี้ ถ้าคุณได้ยินเกี่ยวกับ Hour of Code ในปีที่แล้ว คุณอาจรู้ว่ามันได้สร้างประวัติศาสตร์ นักเรียน 100 ล้านคนได้ค้นพบแล้วว่าวิชาวิทยาการคอมพิวเตอร์เข้าถึงได้ง่ายและสนุกขนาดไหน โดยการทำ Hour of Code เพียงหนึ่งชั่วโมง
 
-กิจกรรมชั่วโมงเขียนโค้ดคือการแนะนำวิชาวิทยาการคอมพิวเตอร์ในหนึ่งชั่วโมง ออกแบบมาเพื่อทำให้การเขียนโค้ดกลายเป็นเรื่องง่าย ๆ และแสดงให้เห็นว่าไม่ว่าใครก็สามารถเรียนพื้นฐานของเรื่องนี้ได้ เรียนรู้เพิ่มเติมได้ที่ [http://HourOfCode.com](http://HourofCode.com) และใช้เวลาหนึ่งชั่วโมงเพื่อลองด้วยตัวคุณเอง หรือจัดกิจกรรมชั่วโมงเขียนโค้ดเพื่อแนะนำคนอื่น ๆ ให้รู้จักโลกแห่งการเขียนโปรแกรมคอมพิวเตอร์!
+Hour of Code คือการแนะนำวิชาวิทยาการคอมพิวเตอร์ในหนึ่งชั่วโมง ออกแบบมาเพื่อทำให้การเขียนโปรแกรมดูไม่ใช่เรื่องซับซ้อน และแสดงให้เห็นว่าไม่ว่าใครก็สามารถเรียนพื้นฐานของมันได้ Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
-## ข้อความสำหรับคำถามที่พบบ่อย
+## Messaging for frequently asked questions
 
-#### เหตุใดโรงเรียนของคุณจึงจัดกิิจกรรมชั่วโมงเขียนโค้ด
+#### Why is your school doing an Hour of Code?
 
-เราทุกคนทราบว่า นักเรียนจำเป็นต้องศึกษาวิธีท่องโลกปัจจุบันที่มีเทคโนโลยีอยู่ทุกทิศทุกทาง แต่ผู้สอนจำนวนมากไม่เคยรู้จักวิทยาการคอมพิวเตอร์และไม่ทราบว่าจะเริ่มต้น ณ จุดใด กิิจกรรมนี้คือการเปิดโอกาสให้เราทุกคนได้เห็นว่าวิทยาการคอมพิวเตอร์เป็นเรื่องของอะไร
+While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
 
-เราหวังว่ากิจกรรมนี้จะกระตุ้นให้นักเรียนศึกษาเรื่องนี้ต่อไป งานวิจัยยังชี้ให้เห็นว่า เด็กเล็กจะเข้าใจแนวคิดเรื่องการเขียนโปรแกรมได้ก่อนรู้จักวิธีอ่านและเขียนด้วยซ้ำ ซึ่งจริง ๆ แล้ว สมองของพวกเขาเปิดรับภาษาของคอมพิวเตอร์ได้ตั้งแต่วัยเด็ก เหมือนกับภาษาต่างประเทศ <br /> <br />
+We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
 
-#### เหตุใดวิทยาการคอมพิวเตอร์จึงมีความสำคัญ
+#### Why is this important?
 
-เทคโนโลยีกำลังเปลี่ยนแปลงอุตสาหกรรมทุกแขนงบนโลกใบนี้ ในปี 2015 ตำแหน่งงาน 7 ล้านตำแหน่งที่เปิดรับสมัครในสหรัฐฯ คือในสาขาวิชาต่าง ๆ รวมถึงศิลปะและงานออกแบบ ที่ให้คุณค่ากับทักษะการเขียนโค้ด แต่ 53% ของโรงเรียนในสหรัฐฯ กลับไม่ได้สอนวิชาวิทยาการคอมพิวเตอร์ นี่จึงเป็นเวลาที่เราต้องก้าวให้ทันศตวรรษที่ 21 สิ่งที่เราทราบคือ ไม่ว่านักเรียนจะทำอาชีพอะไรเมื่อโตขึ้น ไม่ว่าจะเป็นหมอ นักธุรกิจ เล่นการเมือง หรือทำงานศิลปะ แต่ถ้าพวกเขารู้จักวิธีสร้างเทคโนโลยี พวกเขาก็จะมีความเชื่อมั่นและเป็นที่ต้องการตัว <br /> <br />
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
 
-#### คำพูดที่คุณหยิบยกมาใช้ได้
+#### A quote you can use in materials
 
-"กิจกรรมชั่วโมงเขียนโค้ดจัดขึ้นมาเพื่อสร้างความกระจ่างในเรื่องโค้ด และแสดงให้เห็นว่าวิทยาการคอมพิวเตอร์ไม่ได้เรื่องยากอะไรมากมาย และใคร ๆ ก็สามารถเรียนรู้พื้นฐานได้" นี่คือคำกล่าวของ Hadi Partovi ผู้ก่อตั้งและซีอีโอ Code.org "นักเรียนกว่า 100 ล้านคนทั่วโลกได้ลองกิจกรรมชั่วโมงเขียนโค้ด มีความต้องการศึกษาเรื่องวิทยาการคอมพิวเตอร์ในศตวรรษที่ 21 กันทั่วทุกแห่งหน โดยไม่มีพรมแดนขวางกั้น" <br /> <br />
+"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
 
-#### เกี่ยวกับ Code.org
+#### About Code.org
 
-Code.org คือองค์กรไม่แสวงหากำไรตามมาตรา 501c3 แห่งประมวลรัษฎากรของสหรัฐฯ ที่มุ่งเพิ่มระดับการมีส่วนร่วมในวิทยาการคอมพิวเตอร์ และการมีส่วนร่วมในหมู่หญิงสาวและนักเรียนจากกลุ่มด้อยความสำคัญ วิสัยทัศน์ขององค์กรคือเปิดโอกาสให้นักเรียนทุกคนจากทุกโรงเรียนได้เรียนรู้วิธีการเขียนโปรแกรมคอมพิวเตอร์ หลังจากเปิดตัวในปี 2013, Code.org ได้จัดแคมเปญชั่วโมงเขียนโค้ดขึ้นมา – แคมเปญนี้คือการแนะนำนักเรียนกว่า 100 ล้านคนให้รู้จักกับวิทยาการคอมพิวเตอร์ ณ ปัจจุบัน – และยังได้จับมือกับเขตการศึกษาภาครัฐอีก 70 เขตทั่วประเทศเพื่อขยายโปรแกรมวิทยาการคอมพิวเตอร์ของตน Code.org ได้รับการสนับสนุนจากกลุ่มผู้บริจาคใจบุญไม่ว่าจะเป็นบริษัท มูลนิธิและบุคคลต่าง ๆ เช่น Microsoft, Facebook, Infosys Foundation USA, Amazon และอื่น ๆ หากต้องการรายละเอียดเพิ่มเติม โปรดคลิกที่: [code.org]({{ codeorg_link }})
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
-## แชร์เรื่องนี้บนโซเชียลมีเดียและในอีเมล
+## Share these on social media and in emails
 
 [![รูปภาพ](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![รูปภาพ](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## อินโฟกราฟิก
+## Infographics
 
 {{ stats_carousel }}
 

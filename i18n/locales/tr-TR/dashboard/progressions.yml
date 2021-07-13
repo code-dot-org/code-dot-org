@@ -1,6 +1,7 @@
 tr:
   data:
     progressions:
+      '"If/Else" with the Bee': 'Bee ile "If / Else"'
       Accelerometer Events: İvmeölçer olayları
       Adding Images: Görüntü Ekleme 
       Adding Screens: Ekran Ekleme
@@ -104,8 +105,8 @@ tr:
       'Mini-Project: Alien Dance Moves': 'Mini Proje: Uzaylı Dansı Hareketleri'
       'Mini-Project: Alien Dance Party': 'Mini Proje: Uzaylı Dans Partisi'
       'Mini-Project: Royal Battle': 'Mini Proje: Kraliyet Savaşı'
-      "Mini-Project: Snowflake #1": "Mini Proje: Kar Tanesi # 1"
-      "Mini-Project: Snowflake #2": "Mini Proje: Kar Tanesi #2"
+      'Mini-Project: Snowflake #1': 'Mini Proje: Kar Tanesi # 1'
+      'Mini-Project: Snowflake #2': 'Mini Proje: Kar Tanesi #2'
       'Mini-Project: Swimming Fish': 'Mini Proje: Yüzen Balık'
       'Mini-Project: Swimming Fish (continued)': 'Mini Proje: Yüzen Balık(devam)'
       'Mini-Project: Virtual Pet': 'Mini Proje: Sanal Hayvan'
