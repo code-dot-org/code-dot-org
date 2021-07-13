@@ -141,7 +141,9 @@ class Script < ApplicationRecord
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.unit_directory
@@ -213,7 +215,6 @@ class Script < ApplicationRecord
     tts
     deprecated
     is_course
-    background
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
@@ -299,6 +300,12 @@ class Script < ApplicationRecord
         Script.all.to_a
       end
       all_scripts.freeze
+    end
+
+    def family_names
+      Rails.cache.fetch('script/family_names', force: !Script.should_cache?) do
+        (CourseVersion.course_offering_keys('Script') + ScriptConstants::FAMILY_NAMES).uniq.sort
+      end
     end
 
     private
@@ -497,8 +504,6 @@ class Script < ApplicationRecord
     unit_model = with_associated_models ? Script.with_associated_models : Script
     unit = unit_model.find_by(find_by => id_or_name)
     return unit if unit
-
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   # Returns the unit with the specified id, or a unit with the specified
@@ -508,16 +513,21 @@ class Script < ApplicationRecord
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  def self.get_from_cache(id_or_name)
-    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
-      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
-    end
-
-    return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
-    cache_key = id_or_name.to_s
-    script_cache.fetch(cache_key) do
-      # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name)
+  def self.get_from_cache(id_or_name, raise_exceptions: true)
+    script =
+      if should_cache?
+        cache_key = id_or_name.to_s
+        script_cache.fetch(cache_key) do
+          # Populate cache on miss.
+          script_cache[cache_key] = get_without_cache(id_or_name)
+        end
+      else
+        get_without_cache(id_or_name, with_associated_models: false)
+      end
+    return script if script
+    if raise_exceptions
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}" if Script.family_names.include?(id_or_name)
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
     end
   end
 
@@ -1505,7 +1515,6 @@ class Script < ApplicationRecord
       tts: tts?,
       deprecated: deprecated?,
       is_course: is_course?,
-      background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1550,6 +1559,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1724,7 +1734,6 @@ class Script < ApplicationRecord
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
-      :background,
       :weekly_instructional_minutes,
     ]
     boolean_keys = [

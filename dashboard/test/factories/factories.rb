@@ -1383,7 +1383,8 @@ FactoryGirl.define do
   end
 
   factory :code_review_comment do
-    association :commenter, factory: :teacher
+    association :commenter, factory: :student
+    association :project_owner, factory: :student
 
     storage_app_id 1
     project_version 'a_project_version_string'

@@ -50,8 +50,7 @@ class TeacherFeedback < ApplicationRecord
     script_level = level.script_levels.find {|sl| sl.script_id == script_id}
     return script_level if script_level
 
-    # This will be somewhat expensive, but will only be executed for feedbacks
-    # which were are associated with a Bubble Choice sublevel.
+    # accomodate feedbacks associated with a Bubble Choice sublevel
     script_level = BubbleChoice.
       parent_levels(level.name).
       map(&:script_levels).

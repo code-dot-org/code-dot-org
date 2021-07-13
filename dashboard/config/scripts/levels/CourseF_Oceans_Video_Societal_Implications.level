@@ -13,7 +13,8 @@
     "skip_sound": true,
     "parent_level_id": 19647,
     "encrypted": "false",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "background": "oceans-blue"
   },
   "published": true,
   "notes": "",
