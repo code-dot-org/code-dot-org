@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import msg from '@cdo/locale';
+import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 
 class CommentOptions extends Component {
@@ -13,19 +15,19 @@ class CommentOptions extends Component {
   commentOptionTypes = {
     markComplete: {
       onClick: this.props.onResolveClick,
-      key: 'markComplete',
+      key: javalabMsg.markComplete(),
       iconClass: 'fa fa-fw fa-check',
       text: 'Mark Complete'
     },
-    markUncomplete: {
+    unmarkComplete: {
       onClick: this.props.onResolveClick,
-      key: 'markUncomplete',
+      key: javalabMsg.unmarkComplete(),
       iconClass: 'fa fa-fw fa-undo',
-      text: 'Mark Uncomplete'
+      text: 'Unmark Complete'
     },
     delete: {
       onClick: this.props.onDeleteClick,
-      key: 'delete',
+      key: msg.delete(),
       iconClass: 'fa fa-fw fa-trash',
       text: 'Delete'
     }
@@ -48,7 +50,7 @@ class CommentOptions extends Component {
     return (
       <div style={styles.commentOptionsContainer}>
         {this.props.isResolved &&
-          this.renderCommentOption(this.commentOptionTypes.markUncomplete)}
+          this.renderCommentOption(this.commentOptionTypes.unmarkComplete)}
         {!this.props.isResolved &&
           this.renderCommentOption(this.commentOptionTypes.markComplete)}
         {this.renderCommentOption(this.commentOptionTypes.delete)}
