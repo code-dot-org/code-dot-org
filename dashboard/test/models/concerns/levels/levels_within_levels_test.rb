@@ -78,4 +78,25 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
     assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
   end
+
+  test 'setup contained levels' do
+    level = create :level
+    assert_equal [], level.child_levels.contained
+
+    # can add
+    first_contained = create :level
+    level.update!(contained_level_names: [first_contained.name])
+    assert_equal [first_contained], level.child_levels.contained
+
+    # can reorder
+    second_contained = create :level
+    level.update!(contained_level_names: [first_contained.name, second_contained.name])
+    assert_equal [first_contained, second_contained], level.child_levels.contained
+    level.update!(contained_level_names: [second_contained.name, first_contained.name])
+    assert_equal [second_contained, first_contained], level.child_levels.contained
+
+    # can remove
+    level.update!(contained_level_names: [])
+    assert_equal [], level.reload.child_levels.contained
+  end
 end
