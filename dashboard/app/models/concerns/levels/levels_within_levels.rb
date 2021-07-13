@@ -114,12 +114,12 @@ module Levels
         where.not(child_level: new_contained_levels).
         destroy_all
 
-      new_contained_levels.each_with_index do |new_contained_level, i|
+      new_contained_levels.each do |new_contained_level|
         relation = levels_child_levels.
           where(child_level: new_contained_level).
           first_or_initialize
         relation.kind = ParentLevelsChildLevel::CONTAINED
-        relation.position = i + 1
+        relation.position = contained_level_names.index(new_contained_level.name)
         relation.save!
       end
     end
