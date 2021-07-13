@@ -17,10 +17,21 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('Code Review Tab', () => {
   const channelId = 'test123';
+  const existingComment = Factory.build('CodeReviewComment');
   let wrapper, server;
 
   beforeEach(() => {
     server = sinon.fakeServer.create();
+
+    server.respondWith(
+      'GET',
+      `/code_review_comments/project_comments?channel_id=${channelId}`,
+      [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify([existingComment])
+      ]
+    );
 
     stubRedux();
     registerReducers(commonReducers);
@@ -49,16 +60,6 @@ describe('Code Review Tab', () => {
   });
 
   it('renders a comment fetched on mount if one exists', () => {
-    server.respondWith(
-      'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}`,
-      [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify([Factory.build('CodeReviewComment')])
-      ]
-    );
-
     wrapper = shallow(<ReviewTab />);
     expect(wrapper.find(Comment).length).to.equal(0);
 
@@ -67,16 +68,6 @@ describe('Code Review Tab', () => {
   });
 
   it('submits request and shows new comment after one is created', () => {
-    server.respondWith(
-      'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}`,
-      [
-        200,
-        {'Content-Type': 'application/json'},
-        JSON.stringify([Factory.build('CodeReviewComment')])
-      ]
-    );
-
     const testCommentText = 'test comment text';
     const newlyCreatedComment = Factory.build('CodeReviewComment', {
       commentText: testCommentText
@@ -101,5 +92,14 @@ describe('Code Review Tab', () => {
         .at(1)
         .props().comment.commentText
     ).to.equal(testCommentText);
+  });
+
+  it('removes a comment when one is deleted', () => {
+    wrapper = shallow(<ReviewTab />);
+    server.respond();
+
+    expect(wrapper.find(Comment).length).to.equal(1);
+    wrapper.instance().onCommentDelete(existingComment.id);
+    expect(wrapper.find(Comment).length).to.equal(0);
   });
 });
