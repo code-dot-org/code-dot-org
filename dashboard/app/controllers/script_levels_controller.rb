@@ -226,11 +226,8 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
-    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if Script.family_names.include?(params[:script_id])
-
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -302,14 +299,14 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_unit_family_redirect_for_user . Since end users may be
-    # depending on this incorrect behavior, and we are trying to deprecate this
-    # codepath anyway, the current plan is to not fix this bug.
-    script = Script.family_names.include?(script_id) ?
-      Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
-      Script.get_from_cache(script_id)
-
+    script = Script.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Script.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
     raise ActiveRecord::RecordNotFound unless script
     script
   end
