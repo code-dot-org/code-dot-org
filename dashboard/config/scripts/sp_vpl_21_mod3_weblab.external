@@ -1,0 +1,22 @@
+name 'SP-VPL-21-mod3-WebLab'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Web Lab
+
+<img src="https://images.code.org/ee3c4e2a1bc13c71b549f238ad4352a7-image-1625938257659.30.25 PM.png" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## What is Web Lab?
+
+##### Web Lab is a browser-based text editor for building web pages in HTML and CSS. It features a text editor with many helpful tools for creating and debugging HTML and CSS code, including a live preview of the web page that updates in real time and the ability to publish the completed web page to its own unique URL. 
+
+
+## Where is Web Lab used in the CS Discoveries curriculum?
+
+### Unit 2: Web Development
+
+##### Add short description of how students use Game Lab in Unit 2. 
+
+
+MARKDOWN

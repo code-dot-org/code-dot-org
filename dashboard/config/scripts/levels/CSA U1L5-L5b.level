@@ -534,16 +534,14 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "display_name": "Navigate Inside a Wall"
+    "display_name": "Navigate Inside a Wall",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRflYqueA+AZw5HaL1GspYdY3zzFXMh6wp2OA\nyQG0+s3z\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-02T16:08:31.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-02 17:08:25 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:20:38 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:22:09 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:24:00 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:41:17 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-02 17:08:25 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:20:38 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:22:09 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:24:00 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-02 17:41:17 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:30:34 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -282,7 +282,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     script_level = create :script_level, script: script, lesson: lesson, levels: [parent_level]
 
     feedback = create :teacher_feedback, script: script, level: child_level
-    assert_queries(7) do
+    assert_queries(3) do
       assert_equal script_level, feedback.get_script_level
     end
   end

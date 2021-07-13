@@ -850,6 +850,8 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
+  get '/sprites', to: 'sprite_management#sprite_management_directory'
+
   get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
 
   # These really belong in the foorm namespace,
