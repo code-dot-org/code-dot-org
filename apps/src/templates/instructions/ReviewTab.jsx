@@ -44,7 +44,7 @@ export default class ReviewTab extends Component {
       });
   };
 
-  onCommentDeleted = deletedCommentId => {
+  onCommentDelete = deletedCommentId => {
     const comments = this.state.comments;
     _.remove(comments, comment => comment.id === deletedCommentId);
 
@@ -82,7 +82,7 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
-              onDelete={() => this.onCommentDeleted(comment.id)}
+              onDelete={() => this.onCommentDelete(comment.id)}
             />
           );
         })}
