@@ -161,8 +161,13 @@ class TrainModel extends Component {
                 ...styles.trainBotHead,
                 ...(this.state.headOpen && styles.trainBotOpen)
               }}
+              alt="A.I. Bot head"
             />
-            <img src={aiBotBody} style={styles.trainBotBody} />
+            <img
+              src={aiBotBody}
+              style={styles.trainBotBody}
+              alt="A.I. Bot body"
+            />
           </div>
         </div>
       </div>

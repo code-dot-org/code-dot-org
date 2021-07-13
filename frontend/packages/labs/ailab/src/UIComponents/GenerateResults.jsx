@@ -181,14 +181,23 @@ class GenerateResults extends Component {
           }}
         >
           <div className="ailab-image-hover" style={styles.trainBot}>
-            <img src={aiBotHead} style={styles.trainBotHead} />
-            <img src={aiBotBody} style={styles.trainBotBody} />
+            <img
+              src={aiBotHead}
+              style={styles.trainBotHead}
+              alt="A.I. Bot head"
+            />
+            <img
+              src={aiBotBody}
+              style={styles.trainBotBody}
+              alt="A.I. Bot body"
+            />
             <div
               style={{ width: 150, position: "absolute", top: 140, zIndex: -1 }}
             >
               <img
                 src={blueScanner}
                 style={{ width: "100%", opacity: tableOpacity }}
+                alt="A.I. Bot scanner beam"
               />
             </div>
           </div>
