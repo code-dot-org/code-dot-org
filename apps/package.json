@@ -34,6 +34,7 @@
     "storybook:test": "grunt storybookTest"
   },
   "resolutions": {
+    "react-dom": "16.14.0",
     "uglifyjs-webpack-plugin/uglify-js": "3.5.1"
   },
   "devDependencies": {
@@ -66,7 +67,7 @@
     "@storybook/addon-actions": "^4.1.16",
     "@storybook/addon-info": "^3.3.15",
     "@storybook/addon-options": "^4.1.16",
-    "@storybook/react": "^4.1.16",
+    "@storybook/react": "^6.3.4",
     "aws-sdk": "2.28.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
@@ -161,11 +162,11 @@
     "qtip2": "2.2.0",
     "radium": "^0.25.2",
     "raw-loader": "^0.5.1",
-    "react": "^16.13.0",
+    "react": "16.14.0",
     "react-bootstrap": "^0.33.1",
     "react-color": "^2.17.3",
     "react-datepicker": "1.6.0",
-    "react-dom": "^16.13.0",
+    "react-dom": "16.14.0",
     "react-google-charts": "2",
     "react-idle-timer": "^4.2.7",
     "react-inspector": "~5.1",
@@ -174,7 +175,7 @@
     "react-onclickoutside": "~5.11.1",
     "react-paginate": "^6.3.0",
     "react-pointable": "^1.1.1",
-    "react-redux": "~6.0",
+    "react-redux": "^7.2.4",
     "react-router": "3.2.6",
     "react-select": "^1.2.1",
     "react-sticky": "^6.0.3",
@@ -182,7 +183,6 @@
     "react-tooltip": "^4.2.3",
     "react-virtualized": "^9.18.5",
     "react-virtualized-select": "^3.0.1",
-    "react-with-context": "^2.0.0",
     "reactabular-table": "^8.14.0",
     "redux": "~4.0",
     "redux-logger": "^2.6.1",
