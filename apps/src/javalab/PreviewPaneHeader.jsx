@@ -44,7 +44,7 @@ export default function PreviewPaneHeader({
           headerHasFocus
           onClick={() =>
             assets.showAssetManager(null, null, null, {
-              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .gif, .png'
+              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png'
             })
           }
           iconClass="fa fa-upload"
