@@ -27,7 +27,10 @@ export default class CommentEditor extends Component {
         project_version: 'latest',
         comment: this.state.comment
       }
-    }).done(result => this.props.onNewCommentSubmit(result));
+    }).done(result => {
+      this.setState({comment: ''});
+      this.props.onNewCommentSubmit(result);
+    });
   };
 
   render() {
