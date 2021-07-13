@@ -26,28 +26,11 @@
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
     .row
-      .span3.signup-field-label{:id => 'signup-select-user-type-label'}
+      .span3.signup-field-label
         = f.label :user_type, t('signup_form.user_type_label')
         - if @user.errors[:user_type].present?
           %p.error= t('activerecord.errors.messages.blank')
-      -# Sign-up user type variant
-      .span5{:id => 'select-user-type-variant'}
-        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
-          %b.user-type-name= t('signup_form.user_type_student')
-          %p.user-type-desc= t('signup_form.user_type_student_desc')
-          %ul.user-type-abilities-unordered-list
-            %li= t('signup_form.user_type_student_ability_1')
-            %li= t('signup_form.user_type_student_ability_2')
-        %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
-          %b.user-type-name= t('signup_form.user_type_teacher')
-          %p.user-type-desc= t('signup_form.user_type_teacher_desc')
-          %ul.user-type-abilities-unordered-list
-            %li= t('signup_form.user_type_teacher_ability_1')
-            %li= t('signup_form.user_type_teacher_ability_2')
-            %li= t('signup_form.user_type_teacher_ability_3')
-            %li= t('signup_form.user_type_teacher_ability_4')
-      -# Sign-up user type original
-      .span5{:id => 'select-user-type-original'}
+      .span5
         = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
       .span2
     .row#parent-email-container
@@ -158,30 +141,6 @@
         = t('terms_interstitial.accept_tos', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
 
     %button.submit= t('signup_form.go_to_account')
-
-:javascript
-  const teacherButton = document.getElementById('select-user-type-teacher');
-  const studentButton = document.getElementById('select-user-type-student');
-  function selectUserTypeTeacher() {
-    // select 'student' as user type
-    var selectTeacherEvent = new CustomEvent('selectUserType', {
-      detail: 'teacher'
-    });
-    document.dispatchEvent(selectTeacherEvent);
-    // keep selected button styled the same as button:hover so it's clear what the current selection is
-    teacherButton.classList.add('select-user-type-button-selected');
-    studentButton.classList.remove('select-user-type-button-selected');
-  }
-  function selectUserTypeStudent() {
-    // select 'student' as user type
-    var selectStudentEvent = new CustomEvent('selectUserType', {
-      detail: 'student'
-    });
-    document.dispatchEvent(selectStudentEvent);
-    // keep selected button styled the same as button:hover so it's clear what the current selection is
-    studentButton.classList.add('select-user-type-button-selected');
-    teacherButton.classList.remove('select-user-type-button-selected');
-  }
 
 :ruby
   script_data = {
