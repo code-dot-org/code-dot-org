@@ -60,9 +60,13 @@ module Levels
       my_child_levels + child_descendant_levels
     end
 
-    # TODO: replace calls to this method in the codebase
+    # Helper method for retrieving contained levels; primarily exists to
+    # provide caching
     def contained_levels
-      child_levels.contained
+      cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
+      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+        child_levels.contained
+      end
     end
 
     # Helper method for level cloning, called by `clone_with_suffix`; given a
