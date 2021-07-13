@@ -12,7 +12,6 @@ import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
 import JavalabButton from './JavalabButton';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 const FOOTER_BUFFER = 10;
 
@@ -116,7 +115,8 @@ class JavalabView extends React.Component {
       onContinue,
       handleVersionHistory,
       isEditingStartSources,
-      isRunning
+      isRunning,
+      showProjectTemplateWorkspaceIcon
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -136,9 +136,6 @@ class JavalabView extends React.Component {
         >
           <div style={styles.buttons}>
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-            {this.props.showProjectTemplateWorkspaceIcon && (
-              <ProjectTemplateWorkspaceIcon />
-            )}
             {!isEditingStartSources && (
               <JavalabButton
                 text={i18n.finish()}
@@ -176,6 +173,9 @@ class JavalabView extends React.Component {
               <JavalabEditor
                 onCommitCode={onCommitCode}
                 handleVersionHistory={handleVersionHistory}
+                showProjectTemplateWorkspaceIcon={
+                  showProjectTemplateWorkspaceIcon
+                }
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
