@@ -2,7 +2,6 @@
   "script": {
     "name": "self-paced-pl-csd6-2021",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "is_migrated": true,
@@ -11,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 18:27:58 UTC",
+    "serialized_at": "2021-07-07 19:42:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd6-2021"

@@ -16,7 +16,8 @@ export default class CourseVersionPublishingEditor extends Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
-    updatePublishedState: PropTypes.func.isRequired
+    updatePublishedState: PropTypes.func.isRequired,
+    preventCourseVersionChange: PropTypes.bool
   };
 
   handlePublishedStateChange = event => {
@@ -36,6 +37,7 @@ export default class CourseVersionPublishingEditor extends Component {
             value={this.props.familyName}
             style={styles.dropdown}
             onChange={event => this.props.updateFamilyName(event.target.value)}
+            disabled={this.props.preventCourseVersionChange}
           >
             {!this.props.isCourse && <option value="">(None)</option>}
             {this.props.families.map(familyOption => (
@@ -58,6 +60,7 @@ export default class CourseVersionPublishingEditor extends Component {
             value={this.props.versionYear}
             style={styles.dropdown}
             onChange={event => this.props.updateVersionYear(event.target.value)}
+            disabled={this.props.preventCourseVersionChange}
           >
             <option value="">(None)</option>
             {this.props.versionYearOptions.map(year => (
@@ -90,6 +93,13 @@ export default class CourseVersionPublishingEditor extends Component {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td style={styles.tableBorder}>In-Development</td>
+                  <td style={styles.tableBorder}>
+                    Only levelbuilder can see this course. Used for creating new
+                    content you don't want anyone to access.
+                  </td>
+                </tr>
                 <tr>
                   <td style={styles.tableBorder}>Pilot</td>
                   <td style={styles.tableBorder}>

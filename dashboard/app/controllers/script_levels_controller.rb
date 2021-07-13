@@ -94,7 +94,7 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      if Script.family_names.include?(params[:script_id])
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -133,11 +133,11 @@ class ScriptLevelsController < ApplicationController
     extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
-    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+    override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script_level&.script)
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
+      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
     elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
@@ -157,7 +157,7 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
-    @body_classes = @script_level.script.background
+    @body_classes = @level.properties['background']
 
     present_level
   end
@@ -226,11 +226,8 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
-    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -302,14 +299,14 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_unit_family_redirect_for_user . Since end users may be
-    # depending on this incorrect behavior, and we are trying to deprecate this
-    # codepath anyway, the current plan is to not fix this bug.
-    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
-      Script.get_from_cache(script_id)
-
+    script = Script.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Script.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
     raise ActiveRecord::RecordNotFound unless script
     script
   end
@@ -535,7 +532,7 @@ class ScriptLevelsController < ApplicationController
 
   def set_redirect_override
     if params[:script_id] && params[:no_redirect]
-      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+      VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
   end
 

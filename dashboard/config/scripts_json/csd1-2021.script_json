@@ -2,7 +2,6 @@
   "script": {
     "name": "csd1-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:05 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 19:36:58 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -4600,15 +4599,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pre-survey-levelgroup_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pre-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -4616,7 +4612,7 @@
         "activity_section.key": "c6d73d7e-673c-4e52-acdb-5071f2b6ff01"
       },
       "level_keys": [
-        "csd-pre-survey-levelgroup_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     },
     {
@@ -5116,9 +5112,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csd-pre-survey-levelgroup_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-pre-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",

@@ -252,6 +252,20 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
       options: {days_before: 3}
   end
 
+  def teacher_virtual_order_form_reminder__csp
+    mail :teacher_virtual_order_form_reminder, Pd::Workshop::COURSE_CSP, Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      workshop_params: {
+        virtual: true
+      }
+  end
+
+  def teacher_virtual_order_form_reminder__csd
+    mail :teacher_virtual_order_form_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      workshop_params: {
+        virtual: true
+      }
+  end
+
   def teacher_follow_up__csf_intro_with_rp
     facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
     facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'

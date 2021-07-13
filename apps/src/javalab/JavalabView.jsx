@@ -6,7 +6,7 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
-import {appendOutputLog, setIsDarkMode} from './javalabRedux';
+import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
@@ -33,11 +33,12 @@ class JavalabView extends React.Component {
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
     channelId: PropTypes.string,
-    isEditingStartSources: PropTypes.bool
+    isEditingStartSources: PropTypes.bool,
+    isRunning: PropTypes.bool,
+    setIsRunning: PropTypes.func
   };
 
   state = {
-    isRunning: false,
     isTesting: false,
     rightContainerHeight: 800
   };
@@ -65,16 +66,13 @@ class JavalabView extends React.Component {
   // This controls the 'run' button state, but stopping program execution is not yet
   // implemented and will need to be added here.
   toggleRun = () => {
-    this.setState(
-      state => ({isRunning: !state.isRunning}),
-      () => {
-        if (this.state.isRunning) {
-          this.props.onRun();
-        } else {
-          // TODO: Stop program execution.
-        }
-      }
-    );
+    const toggledIsRunning = !this.props.isRunning;
+    this.props.setIsRunning(toggledIsRunning);
+    if (toggledIsRunning) {
+      this.props.onRun();
+    } else {
+      // TODO: Stop program execution.
+    }
   };
 
   // This controls the 'test' button state, but running/stopping tests
@@ -115,9 +113,10 @@ class JavalabView extends React.Component {
       onInputMessage,
       onContinue,
       handleVersionHistory,
-      isEditingStartSources
+      isEditingStartSources,
+      isRunning
     } = this.props;
-    const {isRunning, isTesting, rightContainerHeight} = this.state;
+    const {isTesting, rightContainerHeight} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -140,6 +139,7 @@ class JavalabView extends React.Component {
                 text={i18n.finish()}
                 onClick={onContinue}
                 style={styles.finish}
+                isDisabled={this.props.isReadOnlyWorkspace}
               />
             )}
           </div>
@@ -177,8 +177,8 @@ class JavalabView extends React.Component {
                 style={styles.consoleParent}
                 leftColumn={
                   <ControlButtons
-                    isDarkMode={isDarkMode}
                     isRunning={isRunning}
+                    isDarkMode={isDarkMode}
                     isTesting={isTesting}
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
@@ -265,10 +265,12 @@ export default connect(
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
-    isEditingStartSources: state.pageConstants.isEditingStartSources
+    isEditingStartSources: state.pageConstants.isEditingStartSources,
+    isRunning: state.javalab.isRunning
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
+    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning))
   })
 )(UnconnectedJavalabView);

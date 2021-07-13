@@ -622,6 +622,15 @@ en:
         playlab_2021: Introduction to Play Lab
         playlab_2021_reader: Introduction to Play Lab
         csp_defining_calling_functions: Defining and Calling Functions
+        csp_tutorial_datatab: Data Tab in App Lab
+        csp_tutorial_libraries: Libraries in App Lab
+        PL-Video-21: Welcome to Code.org's Professional Learning!
+        csp_tutorial_datavis1: Data Visualizer in App Lab - Part 1
+        csp_tutorial_datavis2: Data Visualizer in App Lab - Part 2
+        csd_ml_intro_ai_lab_july2021: Introduction to AI Lab
+        csd_ml_training_testing_ai_lan: Training and Testing in AI Lab
+        csd_ml_model_cards_july2021: Model Cards in AI Lab
+        csd_ml_numerical_ai_lab: Numerical Data in AI Lab
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
