@@ -12,13 +12,15 @@ const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
+const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
   isDarkMode: false,
   validation: {},
-  renderedEditorHeight: 400
+  renderedEditorHeight: 400,
+  isRunning: false
 };
 
 // Action Creators
@@ -91,6 +93,11 @@ export const setIsDarkMode = isDarkMode => {
 export const removeFile = filename => ({
   type: REMOVE_FILE,
   filename
+});
+
+export const setIsRunning = isRunning => ({
+  type: SET_IS_RUNNING,
+  isRunning
 });
 
 // Selectors
@@ -209,6 +216,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       renderedEditorHeight: action.height
+    };
+  }
+  if (action.type === SET_IS_RUNNING) {
+    return {
+      ...state,
+      isRunning: action.isRunning
     };
   }
   return state;

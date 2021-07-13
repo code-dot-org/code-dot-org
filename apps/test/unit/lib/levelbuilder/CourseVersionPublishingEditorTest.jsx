@@ -102,4 +102,25 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     expect(updatePilotExperiment).to.have.been.calledWith('');
   });
+
+  it('disables familyName and versionYear selectors if preventCourseVersionChange', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        preventCourseVersionChange
+      />
+    );
+    expect(
+      wrapper
+        .find('select')
+        .at(0)
+        .props().disabled
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('select')
+        .at(1)
+        .props().disabled
+    ).to.be.true;
+  });
 });

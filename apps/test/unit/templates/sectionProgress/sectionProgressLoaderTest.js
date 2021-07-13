@@ -387,7 +387,7 @@ describe('sectionProgressLoader.loadScript', () => {
         const expectedResult = {
           unitDataByUnit: {
             '0': {
-              csf: undefined,
+              csf: false,
               family_name: undefined,
               name: undefined,
               hasStandards: undefined,

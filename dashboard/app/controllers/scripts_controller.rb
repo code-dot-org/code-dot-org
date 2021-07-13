@@ -112,7 +112,7 @@ class ScriptsController < ApplicationController
       levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
-      script_families: ScriptConstants::FAMILY_NAMES,
+      script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
@@ -207,15 +207,20 @@ class ScriptsController < ApplicationController
 
   def get_unit
     unit_id = params[:id]
-    if ScriptConstants::FAMILY_NAMES.include?(unit_id)
+
+    script =
+      params[:action] == "edit" ?
+      Script.get_without_cache(unit_id, with_associated_models: true) :
+      Script.get_from_cache(unit_id, raise_exceptions: false)
+    return script if script
+
+    if Script.family_names.include?(unit_id)
       script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
       Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
-    elsif params[:action] == "edit"
-      return Script.get_without_cache(unit_id, with_associated_models: true)
-    else
-      return Script.get_from_cache(unit_id)
     end
+
+    return nil
   end
 
   def set_unit
@@ -263,7 +268,6 @@ class ScriptsController < ApplicationController
       :announcements,
       :pilot_experiment,
       :editor_experiment,
-      :background,
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],

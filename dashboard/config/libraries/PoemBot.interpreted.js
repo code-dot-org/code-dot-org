@@ -218,3 +218,35 @@ function setForegroundEffect(effectName) {
   }
 }
 /* END BLOCK DEFINITIONS */
+
+//Mike's setPoem prototype
+
+function setPoem(key){
+  if(key=="wordsworth"){
+    poem = {
+      title: "I Wandered Lonely as a Cloud",
+      author: "William Wordsworth",
+      lines: []
+    };
+    poem.lines.push([{value: "I wandered lonely as a cloud", type: 'literal'}]);
+    poem.lines.push([{value: "That floats on high o'er vales and hills,", type: 'literal'}]);
+    poem.lines.push([{value: "When all at once I saw a crowd,", type: 'literal'}]);
+    poem.lines.push([{value: "A host, of golden daffodils;", type: 'literal'}]);
+    poem.lines.push([{value: "Beside the lake, beneath the trees,", type: 'literal'}]);
+    poem.lines.push([{value: "Fluttering and dancing in the breeze.", type: 'literal'}]);
+  }
+    if(key=="dickinson"){
+    poem = {
+      title: "If I can Stop one Heart from Breaking",
+      author: "Emily Dickinson",
+      lines: []
+    };
+    poem.lines.push([{value: "If I can stop one heart from breaking,", type: 'literal'}]);
+    poem.lines.push([{value: "I shall not live in vain;", type: 'literal'}]);
+    poem.lines.push([{value: "If I can ease one life the aching,", type: 'literal'}]);
+    poem.lines.push([{value: "Or cool one pain,", type: 'literal'}]);
+    poem.lines.push([{value: "Or help one fainting robin", type: 'literal'}]);
+    poem.lines.push([{value: "Unto his nest again,", type: 'literal'}]);
+    poem.lines.push([{value: "I shall not live in vain.", type: 'literal'}]);
+  }
+}

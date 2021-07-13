@@ -2,6 +2,36 @@ import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
 
+const DISALLOWED_HTML_TAGS = ['script', 'a'];
+const VALID_HTML = `<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>Important paragraph.</p>
+  </body>
+</html>`;
+const INVALID_HTML = `<!DOCTYPE html>
+<html>
+  <body>
+    <script src="index.js">
+    </script>
+    Content outside diallowed tag <a href="/some.url">I will be deleted!</a>
+    <div>divs are allowed</div>
+  </body>
+</html>`;
+const FIXED_INVALID_HTML = `<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    Content outside diallowed tag 
+    <div>divs are allowed</div>
+  </body>
+</html>`;
+
 describe('CdoBramble', () => {
   const brambleUrl = 'https://bramble.org/index.html';
   const projectPath = '/project/123/';
@@ -15,7 +45,8 @@ describe('CdoBramble', () => {
       registerBeforeFirstWriteHook: () => {},
       deleteProjectFile: () => {},
       renameProjectFile: () => {},
-      changeProjectFile: () => {}
+      changeProjectFile: () => {},
+      openDisallowedHtmlDialog: () => {}
     };
     storeState = {
       maxProjectCapacity: 1000,
@@ -183,6 +214,118 @@ describe('CdoBramble', () => {
       cdoBramble.handleFileChange('index.html');
       expect(callbackSpy1).to.have.been.calledOnce;
       expect(callbackSpy2).to.have.been.calledOnce;
+    });
+  });
+
+  describe('detectDisallowedHtml', () => {
+    beforeEach(() => {
+      cdoBramble.disallowedHtmlTags = DISALLOWED_HTML_TAGS;
+    });
+
+    it('no-ops if reading file errored', () => {
+      const error = new Error('oh no');
+      sinon
+        .stub(cdoBramble, 'getFileData')
+        .callsFake((path, callback) => callback(error, null));
+      sinon.stub(cdoBramble, 'domFromString');
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.detectDisallowedHtml('/index.html', callbackSpy);
+
+      expect(callbackSpy).to.have.been.calledOnceWith(error);
+      expect(cdoBramble.domFromString).not.to.have.been.called;
+    });
+
+    it('invokes callback with disallowed content', () => {
+      sinon
+        .stub(cdoBramble, 'getFileData')
+        .callsFake((path, callback) => callback(null, INVALID_HTML));
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.detectDisallowedHtml('/index.html', callbackSpy);
+
+      expect(callbackSpy).to.have.been.calledOnceWith(null, {
+        newDom: FIXED_INVALID_HTML,
+        tags: DISALLOWED_HTML_TAGS
+      });
+    });
+
+    it('invokes callback with empty tags if no disallowed content is found', () => {
+      sinon
+        .stub(cdoBramble, 'getFileData')
+        .callsFake((path, callback) => callback(null, VALID_HTML));
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.detectDisallowedHtml('/index.html', callbackSpy);
+
+      expect(callbackSpy).to.have.been.calledOnceWith(null, {
+        newDom: VALID_HTML,
+        tags: []
+      });
+    });
+  });
+
+  describe('preprocessHtml', () => {
+    it('no-ops if detecting disallowed content errored', () => {
+      sinon
+        .stub(cdoBramble, 'detectDisallowedHtml')
+        .callsFake((path, callback) => callback(new Error(), {}));
+      sinon.stub(cdoBramble.api, 'openDisallowedHtmlDialog');
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.preprocessHtml('/index.html', callbackSpy);
+
+      expect(callbackSpy).to.have.been.calledOnce;
+      expect(cdoBramble.api.openDisallowedHtmlDialog).not.to.have.been.called;
+    });
+
+    it('no-ops if no disallowed tags are detected', () => {
+      sinon
+        .stub(cdoBramble, 'detectDisallowedHtml')
+        .callsFake((path, callback) => callback(null, {tags: []}));
+      sinon.stub(cdoBramble.api, 'openDisallowedHtmlDialog');
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.preprocessHtml('/index.html', callbackSpy);
+
+      expect(callbackSpy).to.have.been.calledOnce;
+      expect(cdoBramble.api.openDisallowedHtmlDialog).not.to.have.been.called;
+    });
+
+    it('writes HTML file without disallowed content when dialog is closed', () => {
+      const disallowedTags = ['script'];
+      const newDom = '<html></html>';
+      const fullPath = projectPath + 'index.html';
+
+      cdoBramble.brambleProxy = {
+        enableReadOnly: sinon.spy(),
+        disableReadOnly: sinon.spy()
+      };
+      sinon
+        .stub(cdoBramble, 'detectDisallowedHtml')
+        .callsFake((path, callback) =>
+          callback(null, {tags: disallowedTags, newDom})
+        );
+      sinon
+        .stub(cdoBramble.api, 'openDisallowedHtmlDialog')
+        .callsFake((filename, tags, onClose) => onClose());
+      sinon
+        .stub(cdoBramble, 'writeFileData')
+        .callsFake((path, data, callback) => callback());
+      const callbackSpy = sinon.spy();
+
+      cdoBramble.preprocessHtml(fullPath, callbackSpy);
+
+      expect(cdoBramble.brambleProxy.enableReadOnly).to.have.been.calledOnce;
+      expect(
+        cdoBramble.api.openDisallowedHtmlDialog
+      ).to.have.been.calledOnceWith('index.html', disallowedTags);
+      expect(cdoBramble.writeFileData).to.have.been.calledOnceWith(
+        fullPath,
+        newDom
+      );
+      expect(cdoBramble.brambleProxy.disableReadOnly).to.have.been.calledOnce;
+      expect(callbackSpy).to.have.been.calledOnce;
     });
   });
 
