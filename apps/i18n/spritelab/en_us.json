@@ -185,7 +185,10 @@
   "sayBlock": "Type something for the sprite to say in a `say` block. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "clickButNoSay": "You clicked a sprite but the sprite didn't say anything. Add a `say` block to your `when clicked` event. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "singleSpriteNotClicked": "Make sure that you click on a sprite and that you have the right events in your workspace. <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title></block></xml>",
-  "clickButNoSpeech": "You clicked a sprite but none of the sprites said anything. Add the `say` block to your `when clicked` event.",
-  "secondClickButNoSpeech": "You clicked on more than one sprite but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event.",
-  "thirdClickButNoSpeech": "You clicked on more than two sprites but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event."
+  "clickButNoSpeech": "You clicked a sprite but none of the sprites said anything. Add the `say` block to your `when clicked` event. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
+  "secondClickButNoSpeech": "You clicked on more than one sprite but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
+  "thirdClickButNoSpeech": "You clicked on more than two sprites but one of your clicks didn't cause a sprite to say anything. Add a `say` block under each `when clicked` event. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
+  "changeOrSetSize": "None of your sprites changed size.",
+  "changeOrSetCostume": "None of your sprites changed costumes.",
+  "changeBackground": "The background was not changed."
 }
