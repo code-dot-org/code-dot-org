@@ -78,7 +78,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   # end
 
   test "should get show of course1 level 1 twice" do
-    assert_cached_queries(0) do
+    assert_cached_queries(1) do
       get '/s/course1/lessons/3/levels/1'
     end
     assert_response :success
