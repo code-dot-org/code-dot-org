@@ -5,6 +5,7 @@ import ManageStudentsTable from './ManageStudentsTable';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import SyncOmniAuthSectionControlContainer from '@cdo/apps/lib/ui/SyncOmniAuthSectionControlContainer';
 
 class ManageStudents extends React.Component {
   static propTypes = {
@@ -25,6 +26,7 @@ class ManageStudents extends React.Component {
 
     return (
       <div>
+        <SyncOmniAuthSectionControlContainer />
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>
