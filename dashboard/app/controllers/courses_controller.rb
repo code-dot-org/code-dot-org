@@ -70,10 +70,7 @@ class CoursesController < ApplicationController
       # csp and csd are each "course families", each containing multiple "course versions".
       # When the url of a course family is requested, redirect to a specific course version.
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to_course = UnitGroup.all_courses.
-          select {|c| c.family_name == params[:course_name] && c.stable?}.
-          sort_by(&:version_year).
-          last
+      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
       redirect_to "#{course_path(redirect_to_course)}#{redirect_query_string}"
       return
     else
@@ -156,10 +153,7 @@ class CoursesController < ApplicationController
   def standards
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     if !unit_group.present? && UnitGroup.family_names.include?(params[:course_name])
-      redirect_to_course = UnitGroup.all_courses.
-        select {|c| c.family_name == params[:course_name] && c.stable?}.
-        sort_by(&:version_year).
-        last
+      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
       redirect_to standards_course_path(redirect_to_course)
       return
     end
