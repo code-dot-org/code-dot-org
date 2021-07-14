@@ -1,39 +1,20 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import $ from 'jquery';
-import {getStore} from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default class CommentEditor extends Component {
-  static propTypes = {
-    onNewCommentSubmit: PropTypes.func.isRequired,
-    token: PropTypes.string.isRequired
-  };
+  static propTypes = {onNewCommentSubmit: PropTypes.func.isRequired};
 
   state = {comment: ''};
 
   commentChanged = event => this.setState({comment: event.target.value});
 
-  submitNewComment = () => {
-    $.ajax({
-      url: `/code_review_comments`,
-      type: 'POST',
-      headers: {'X-CSRF-Token': this.props.token},
-      data: {
-        channel_id: getStore().getState().pageConstants.channelId,
-        project_version: 'latest',
-        comment: this.state.comment
-      }
-    }).done(result => {
-      this.setState({comment: ''});
-      this.props.onNewCommentSubmit(result);
-    });
-  };
-
   render() {
+    const {comment} = this.state;
+
     return (
       <div>
         <textarea
@@ -47,7 +28,7 @@ export default class CommentEditor extends Component {
             ...styles.buttonContainer
           }}
         >
-          {this.state.comment && (
+          {comment && (
             <Button
               key="cancel"
               text={msg.cancel()}
@@ -56,11 +37,11 @@ export default class CommentEditor extends Component {
               style={{...styles.buttons.all, ...styles.buttons.cancel}}
             />
           )}
-          {this.state.comment && (
+          {comment && (
             <Button
               key="submit"
               text={msg.submit()}
-              onClick={this.submitNewComment}
+              onClick={() => this.props.onNewCommentSubmit(comment)}
               color="orange"
               style={{...styles.buttons.all, ...styles.buttons.submit}}
             />
