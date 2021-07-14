@@ -4,7 +4,10 @@ export default class DefaultSpritesEditor extends React.Component {
   render() {
     return (
       <div>
-        <h1>Edit Default Sprites</h1>
+        <a href="/sprites">Back to Sprite Management</a>
+        <div>
+          <h1>Edit Default Sprites</h1>
+        </div>
       </div>
     );
   }
