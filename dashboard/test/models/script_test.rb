@@ -131,7 +131,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not_nil course_version
     assert_equal 'unversioned', course_version.key
     assert_equal 'family', course_version.course_offering&.key
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, course_version.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, course_version.get_published_state
   end
 
   test 'cannot rename a unit without a new_name' do
