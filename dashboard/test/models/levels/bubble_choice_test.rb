@@ -243,15 +243,16 @@ DSL
     refute sublevel_summary.last[:perfect]
   end
 
-  test 'best_result_sublevel returns sublevel with highest best_result for user' do
+  test 'get_sublevel_for_progress returns sublevel with highest best_result for user when there is no teacher feedback' do
     student = create :student
-    create :user_level, user: student, level: @sublevel2, best_result: 100
-    create :user_level, user: student, level: @sublevel1, best_result: 20
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
 
-    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
+    assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress(student, script)
   end
 
-  test 'keep_working_sublevel returns sublevel where the latest feedback has keepWorking review state' do
+  test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
     teacher = create :teacher
     student = create :student
     section = create :section, teacher: teacher
@@ -262,14 +263,12 @@ DSL
     create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
     create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
-    assert_equal @sublevel1, @bubble_choice.keep_working_sublevel(student, script)
+    assert_equal @sublevel1, @bubble_choice.get_sublevel_for_progress(student, script)
   end
 
-  test 'keep_working_sublevel returns nil if no sublevels latest feedback have keepWorking review state' do
+  test 'get_sublevel_for_progress returns nil if no sublevels have progress or feedback' do
     student = create :student
-    create :user_level, user: student, level: @sublevel1, script: @script_level.script, best_result: 100
-
-    assert_nil @bubble_choice.keep_working_sublevel(student, @script_level.script)
+    assert_nil @bubble_choice.get_sublevel_for_progress(student, @script_level.script)
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
