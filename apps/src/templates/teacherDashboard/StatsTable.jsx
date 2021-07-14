@@ -73,7 +73,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'completedLevels',
+        property: 'levelsPassed',
         header: {
           label: i18n.completedLevels(),
           props: {
@@ -94,7 +94,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'totalLines',
+        property: 'linesOfCode',
         header: {
           label: i18n.linesOfCode(),
           props: {
@@ -140,14 +140,21 @@ class StatsTable extends Component {
       this.onSort,
       sortableOptions
     );
+
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
+
+    const flattenedStudents = this.props.section.students.map(s => ({
+      name: s.name,
+      linesOfCode: s.progress.totalLinesOfCode,
+      levelsPassed: s.progress.levelsPassed
+    }));
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy
-    })(this.props.section.students);
+    })(flattenedStudents);
 
     return (
       <Table.Provider
