@@ -9,7 +9,10 @@ export const GET_SECTION = gql`
       id
       students {
         name
-        totalLines
+        progress {
+          totalLinesOfCode
+          levelsPassed
+        }
       }
     }
   }
