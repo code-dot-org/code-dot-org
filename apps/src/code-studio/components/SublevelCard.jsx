@@ -8,6 +8,8 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import queryString from 'query-string';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import _ from 'lodash';
+
 export default class SublevelCard extends React.Component {
   static propTypes = {
     isLessonExtra: PropTypes.bool,
@@ -90,8 +92,17 @@ export default class SublevelCard extends React.Component {
       );
     }
 
+    let mappedSublevel = sublevel;
+    if (mappedSublevel) {
+      mappedSublevel = _.mapKeys(sublevel, (value, key) => _.camelCase(key));
+    }
+
     return (
-      <ProgressBubble level={sublevel} disabled={false} hideToolTips={true} />
+      <ProgressBubble
+        level={mappedSublevel}
+        disabled={false}
+        hideToolTips={true}
+      />
     );
   };
 
