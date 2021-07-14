@@ -24,14 +24,6 @@ class StatsTable extends Component {
 
   state = {};
 
-  // studentsWithCompletedLevelCount = () => {
-  //   const {section, studentsCompletedLevelCount} = this.props;
-  //   return (section.students || []).map(student => ({
-  //     ...student,
-  //     completed_levels_count: studentsCompletedLevelCount[student.id] || 0
-  //   }));
-  // };
-
   nameFormatter = (name, {rowData}) => {
     const {section, scriptName} = this.props;
     const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
@@ -102,7 +94,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'linesOfCode',
+        property: 'totalLines',
         header: {
           label: i18n.linesOfCode(),
           props: {

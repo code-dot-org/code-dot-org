@@ -8,6 +8,7 @@ module Types
     field :gender, String, null: false
     field :user_type, String, null: false
     field :secret_words, String, null: true
+    field :total_lines, Integer, null: false
 
     field :has_ever_signed_in, Boolean, null: false
     def has_ever_signed_in
@@ -35,7 +36,6 @@ module Types
     # field :school, String, null: true
     # field :full_address, String, null: true
     # field :school_info_id, Integer, null: true
-    # field :total_lines, Integer, null: false
     # field :secret_picture_id, Integer, null: true
     # field :active, Boolean, null: false
     # field :hashed_email, String, null: true
