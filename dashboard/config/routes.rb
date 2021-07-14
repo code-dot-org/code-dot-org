@@ -884,8 +884,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :code_review_comments, only: [:create, :destroy] do
-    patch :resolve, on: :member
-    get :project_comments, on: :collection
+  # GraphQL routes
+  post "/graphql", to: "graphql#execute"
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
 end
