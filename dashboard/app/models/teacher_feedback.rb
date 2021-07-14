@@ -50,12 +50,13 @@ class TeacherFeedback < ApplicationRecord
     script_level = level.script_levels.find {|sl| sl.script_id == script_id}
     return script_level if script_level
 
-    # This will be somewhat expensive, but will only be executed for feedbacks
-    # which were are associated with a Bubble Choice sublevel.
-    bubble_choice_levels = script.levels.where(type: 'BubbleChoice').all
-    parent_level = bubble_choice_levels.find {|bc| bc.sublevels.include?(level)}
+    # accomodate feedbacks associated with a Bubble Choice sublevel
+    script_level = BubbleChoice.
+      parent_levels(level.name).
+      map(&:script_levels).
+      flatten.
+      find {|sl| sl.script_id == script_id}
 
-    script_level = parent_level.script_levels.find {|sl| sl.script_id == script_id}
     raise "no script level found for teacher feedback #{id}" unless script_level
     script_level
   end
@@ -70,7 +71,7 @@ class TeacherFeedback < ApplicationRecord
       student_id: student_id,
       level_id: level_id,
       script_id: script_id
-    }
+    }.compact
 
     where(query).
       latest_per_teacher.

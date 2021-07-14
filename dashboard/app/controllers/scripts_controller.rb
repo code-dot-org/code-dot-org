@@ -210,15 +210,20 @@ class ScriptsController < ApplicationController
 
   def get_unit
     unit_id = params[:id]
+
+    script =
+      params[:action] == "edit" ?
+      Script.get_without_cache(unit_id, with_associated_models: true) :
+      Script.get_from_cache(unit_id, raise_exceptions: false)
+    return script if script
+
     if Script.family_names.include?(unit_id)
       script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
       Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
       return script
-    elsif params[:action] == "edit"
-      return Script.get_without_cache(unit_id, with_associated_models: true)
-    else
-      return Script.get_from_cache(unit_id)
     end
+
+    return nil
   end
 
   def set_unit
