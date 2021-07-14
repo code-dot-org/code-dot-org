@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-14 18:30:50 UTC",
+    "serialized_at": "2021-07-14 20:14:17 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -34,7 +34,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Overview of CS Discoveries",
+      "name": "Overview of course content",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -49,7 +49,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Tools",
+      "name": "Overview of learning tools",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -64,7 +64,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Implementation Options",
+      "name": "Overview of implementation ",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -121,7 +121,7 @@
       "key": "75d3b0ab-c6cc-4736-947a-012863734a58",
       "position": 1,
       "properties": {
-        "progression_name": "Course Overview"
+        "progression_name": "Course overvew"
       },
       "seeding_key": {
         "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58",
@@ -165,7 +165,7 @@
       "key": "39354ecc-856a-4f21-8702-75032b3f28c5",
       "position": 1,
       "properties": {
-        "progression_name": "Implementation Options"
+        "progression_name": "Make an implementation plan"
       },
       "seeding_key": {
         "activity_section.key": "39354ecc-856a-4f21-8702-75032b3f28c5",
@@ -183,7 +183,7 @@
         "level_keys": [
           "SP-VPL-21-mod3-CV-Equity"
         ],
-        "progression": "Course Overview"
+        "progression": "Course overvew"
       },
       "named_level": false,
       "bonus": false,
@@ -209,7 +209,7 @@
         "level_keys": [
           "SP-VPL-21-mod3-CurriculumOverview"
         ],
-        "progression": "Course Overview"
+        "progression": "Course overvew"
       },
       "named_level": false,
       "bonus": false,
@@ -460,7 +460,7 @@
         "level_keys": [
           "SP-VPL-21-mod3-ImplementationOptions"
         ],
-        "progression": "Implementation Options"
+        "progression": "Make an implementation plan"
       },
       "named_level": false,
       "bonus": false,
@@ -475,6 +475,29 @@
       },
       "level_keys": [
         "SP-VPL-21-mod3-ImplementationOptions"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Make an implementation plan"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "39354ecc-856a-4f21-8702-75032b3f28c5"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan"
       ]
     }
   ],
@@ -616,6 +639,18 @@
         "level.key": "SP-VPL-21-mod3-ImplementationOptions",
         "script_level.level_keys": [
           "SP-VPL-21-mod3-ImplementationOptions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "39354ecc-856a-4f21-8702-75032b3f28c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",

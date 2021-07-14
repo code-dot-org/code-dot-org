@@ -5,7 +5,27 @@ description 'description here'
 markdown <<MARKDOWN
 # Implementation options
 
-![](https://images.code.org/43aa2a9ae18717bf888c59bfe335d263-image-1625942302403.38.01 PM.png)
 
-### [Click here](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) to view the full implementation guide
+
+#### CS Discoveries can be taught as a full-year course, a single semester course, or multiple courses split across grade levels. Consider the following when selecting the content you will teach. 
+
+ <img src="https://images.code.org/dbcf0614822298c76f4e7656684be948-image-1626288869086.38.01 PM.png" width="300px" style="float:right; margin: 0 0 40px 40px;">
+
+## What are the unit dependencies?
+
+##### Some units in CS Discoveries rely on concepts that are taught in previous units. Every unit relies on the Problem Solving Process, which is introduced in Chapter 1 of the first unit. Unit dependencies are highlighted on the CS Discoveries course overview page.  
+
+## Which standards will you cover? 
+
+##### CS Discoveries is mapped to the CSTA standards. <a href="https://studio.code.org/courses/csd-2021/standards" target="blank" >Click here</a> to view the list of standards addressed in each unit. 
+
+## How much instructional time do you have? 
+
+##### After selecting a unit, use the unit calender at the top of the Unit Overview page to adjust for your instructional minutes as you plan your course pacing. If you are short on time and want to cover more topics with your students, consider teaching the first chapter of multiple units.  
+
+<div style="clear:both"/>
+
+#### For more information, <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" >click here</a> to read the full CS Discoveries implementation guide.
+
+
 MARKDOWN
