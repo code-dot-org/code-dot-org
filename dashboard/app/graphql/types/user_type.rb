@@ -15,6 +15,11 @@ module Types
       !object.last_sign_in_at.nil?
     end
 
+    field :progress, Types::UserProgressType, null: false
+    def progress
+      Models::UserProgress.new(object)
+    end
+
     # field :studio_person_id, Integer, null: true
     # field :parent_email, String, null: true
     # field :encrypted_password, String, null: true
