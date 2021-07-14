@@ -35,7 +35,8 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string,
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
-    setIsRunning: PropTypes.func
+    setIsRunning: PropTypes.func,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
   };
 
   state = {
@@ -114,7 +115,8 @@ class JavalabView extends React.Component {
       onContinue,
       handleVersionHistory,
       isEditingStartSources,
-      isRunning
+      isRunning,
+      showProjectTemplateWorkspaceIcon
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -171,6 +173,9 @@ class JavalabView extends React.Component {
               <JavalabEditor
                 onCommitCode={onCommitCode}
                 handleVersionHistory={handleVersionHistory}
+                showProjectTemplateWorkspaceIcon={
+                  showProjectTemplateWorkspaceIcon
+                }
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
@@ -266,7 +271,9 @@ export default connect(
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isRunning: state.javalab.isRunning
+    isRunning: state.javalab.isRunning,
+    showProjectTemplateWorkspaceIcon: !!state.pageConstants
+      .showProjectTemplateWorkspaceIcon
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
