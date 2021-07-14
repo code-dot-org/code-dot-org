@@ -2366,6 +2366,18 @@ class ScriptTest < ActiveSupport::TestCase
     )
   end
 
+  test "units_with_standards doesn't include unversioned scripts" do
+    create :script, family_name: 'family', version_year: CourseVersion::UNVERSIONED
+    assert_equal(
+      [
+        [
+          @csf_unit_2019.localized_title, @csf_unit_2019.name
+        ]
+      ],
+      Script.units_with_standards
+    )
+  end
+
   test "has_standards_associations?" do
     assert @csf_unit_2019.has_standards_associations?
     refute @csp_unit.has_standards_associations?
