@@ -63,6 +63,7 @@ module Levels
     # Helper method for retrieving contained levels; primarily exists to
     # provide caching
     def contained_levels
+      return [] if contained_level_names.blank?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
       Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
         child_levels.contained
