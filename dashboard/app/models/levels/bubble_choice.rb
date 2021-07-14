@@ -239,7 +239,7 @@ class BubbleChoice < DSLDefined
 
     save!
   end
-  
+
   private
 
   # Returns the sublevel for a user that has the highest best_result.
