@@ -64,9 +64,12 @@ module Levels
     # provide caching
     def contained_levels
       return [] if contained_level_names.blank?
+      return child_levels.contained unless Script.should_cache?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
-      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
-        child_levels.contained
+      Rails.cache.fetch(cache_key) do
+        levels_child_levels.map do |lcl|
+          Script.cache_find_level(lcl.child_level_id)
+        end
       end
     end
 
