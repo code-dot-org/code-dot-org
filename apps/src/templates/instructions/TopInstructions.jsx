@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
-import {getStore} from '@cdo/apps/redux';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
@@ -137,8 +136,7 @@ class TopInstructions extends Component {
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
-      token: null,
-      codeReviewComments: []
+      token: null
     };
 
     this.instructions = null;
@@ -157,8 +155,7 @@ class TopInstructions extends Component {
       user,
       serverLevelId,
       serverScriptId,
-      dynamicInstructions,
-      displayReviewTab
+      dynamicInstructions
     } = this.props;
     const {studentId} = this.state;
 
@@ -195,20 +192,6 @@ class TopInstructions extends Component {
       );
     }
 
-    if (displayReviewTab) {
-      const channelId = getStore().getState().pageConstants.channelId;
-
-      promises.push(
-        topInstructionsDataApi
-          .getCodeReviewCommentsForProject(channelId, 'yyy')
-          .done((data, _, request) => {
-            this.setState({
-              codeReviewComments: data,
-              token: request.getResponseHeader('csrf-token')
-            });
-          })
-      );
-    }
     if (serverLevelId) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {
@@ -570,7 +553,6 @@ class TopInstructions extends Component {
 
     const {
       feedbacks,
-      codeReviewComments,
       teacherViewingStudentWork,
       rubric,
       tabSelected,
@@ -710,11 +692,7 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab
-                ref={ref => (this.reviewTab = ref)}
-                comments={codeReviewComments}
-                token={token}
-              />
+              <ReviewTab ref={ref => (this.reviewTab = ref)} />
             )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (

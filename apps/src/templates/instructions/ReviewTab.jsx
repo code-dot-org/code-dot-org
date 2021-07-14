@@ -1,23 +1,28 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
-import {commentShape} from './codeReview/commentShape';
 import CommentEditor from './codeReview/CommentEditor';
+import {getStore} from '@cdo/apps/redux';
+import * as topInstructionsDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 
 export default class ReviewTab extends Component {
-  static propTypes = {
-    comments: PropTypes.arrayOf(commentShape).isRequired,
-    token: PropTypes.string.isRequired
+  state = {
+    readyForReview: false,
+    comments: [],
+    token: ''
   };
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    const channelId = getStore().getState().pageConstants.channelId;
 
-    this.state = {
-      readyForReview: false,
-      comments: this.props.comments
-    };
+    topInstructionsDataApi
+      .getCodeReviewCommentsForProject(channelId, 'yyy')
+      .done((data, _, request) => {
+        this.setState({
+          comments: data,
+          token: request.getResponseHeader('csrf-token')
+        });
+      });
   }
 
   onNewCommentSubmit = newComment => {
@@ -28,7 +33,7 @@ export default class ReviewTab extends Component {
   };
 
   renderReadyForReviewCheckbox() {
-    const readyForReview = this.state.readyForReview;
+    const {readyForReview} = this.state;
 
     return (
       <div style={styles.checkboxContainer}>
@@ -46,8 +51,7 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {token} = this.props;
-    const {comments} = this.state;
+    const {token, comments} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
