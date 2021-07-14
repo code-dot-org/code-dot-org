@@ -155,9 +155,6 @@ class CoursesController < ApplicationController
 
   def standards
     unit_group = UnitGroup.get_from_cache(params[:course_name])
-    # puts "#{!unit_group.present?} && #{UnitGroup.family_names.include?(params[:course_name])}"
-    puts "params[:course_name]: #{params[:course_name]}"
-    puts "UnitGroup.family_names: #{UnitGroup.family_names}"
     if !unit_group.present? && UnitGroup.family_names.include?(params[:course_name])
       redirect_to_course = UnitGroup.all_courses.
         select {|c| c.family_name == params[:course_name] && c.stable?}.
