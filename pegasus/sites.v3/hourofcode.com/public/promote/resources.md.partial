@@ -91,7 +91,7 @@ This year, let's make it even bigger. I’m asking you to join the Hour of Code 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/{{ country }}
+Get started at http://hourofcode.com/{{ country_language }}
 <br>
 
 ***
