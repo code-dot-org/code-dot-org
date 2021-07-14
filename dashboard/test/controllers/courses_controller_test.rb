@@ -9,10 +9,10 @@ class CoursesControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    @in_development_unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.in_development, family_name: 'family', version_year: '2020'
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    @pilot_unit_group = create :unit_group, family_name: 'family', version_year: '2021', pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
@@ -79,6 +79,12 @@ class CoursesControllerTest < ActionController::TestCase
       end
     end
 
+    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 12
+
+    test_user_gets_response_for :index, response: :success, user: :admin, queries: 12
+
+    test_user_gets_response_for :index, response: :success, user: :user, queries: 12
+
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
       assert_cached_queries(6) do
@@ -105,27 +111,23 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 15
+
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
+
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    offering = create :course_offering, key: 'csp'
-    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
-    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
-    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
-    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    offering = create :course_offering, key: 'csd'
-    ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
-    ug2019 = create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
-    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
-    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
   end
@@ -210,7 +212,7 @@ class CoursesControllerTest < ActionController::TestCase
     student = create :student
     csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :follower, section: create(:section, unit_group: csp2017), student_user: student
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
 
     sign_in student
     get :show, params: {course_name: 'csp-2017'}
@@ -228,9 +230,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: shows course when family name matches course name" do
-    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(course)
-
+    create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {course_name: 'new-course'}
 
     assert_response :ok
@@ -391,7 +391,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: sets published_state on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course'
+    course = create :unit_group, name: 'course', family_name: 'family', version_year: '200'
     unit1 = create :script, name: 'unit1'
     unit2 = create :script, name: 'unit2'
 
@@ -412,7 +412,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: sets pilot_experiment on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course'
+    course = create :unit_group, name: 'course', family_name: 'family', version_year: '2000'
     unit1 = create :script, name: 'unit1'
     unit2 = create :script, name: 'unit2'
 
@@ -474,7 +474,6 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
-    CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
     unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
@@ -490,7 +489,6 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     unit_group = create :unit_group, family_name: 'my-family', version_year: '2000', name: 'csp-2017', published_state: SharedConstants::PUBLISHED_STATE.beta
-    CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
     unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
