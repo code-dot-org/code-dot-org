@@ -740,6 +740,11 @@ P5Lab.prototype.afterInject_ = function(config) {
   );
 
   if (this.isSpritelab) {
+    if (this.level.blocklyVariables) {
+      Blockly.addGlobalVariables(
+        this.level.blocklyVariables.split(',').map(varName => varName.trim())
+      );
+    }
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords(

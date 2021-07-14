@@ -200,6 +200,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  blocklyWrapper.addGlobalVariables = function(variableList) {
+    variableList.forEach(varName =>
+      Blockly.mainBlockSpace.getVariableMap().createVariable(varName)
+    );
+  };
+
   blocklyWrapper.addChangeListener = function(blockspace, handler) {
     blockspace.addChangeListener(handler);
   };
