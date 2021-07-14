@@ -5,7 +5,7 @@
         {
           "type": "html",
           "name": "Intro",
-          "html": "<p><h2>2021 CSD/CSP Facilitator in Training (FiT) Summer Post-Workshop Survey</h2>We are interested in learning about your experiences, strengths and needs as you enter the Facilitator Development Program.  Your responses will be shared with Code.org staff to help inform the planning of future facilitator onboarding activities.  Thank you for taking a few minutes to complete this survey!</p>"
+          "html": "<p><h1>2021 CSD/CSP Facilitator in Training (FiT) Summer Post-Workshop Survey</h1>We are interested in learning about your experiences, strengths and needs as you enter the Facilitator Development Program.  Your responses will be shared with Code.org staff to help inform the planning of future facilitator onboarding activities.  Thank you for taking a few minutes to complete this survey!</p>"
         },
         {
           "type": "radiogroup",
@@ -42,7 +42,7 @@
         {
           "type": "html",
           "name": "Day3Feedback",
-          "html": "<p><h4>Feedback on Day 3</h3>"
+          "html": "<p><h2>Feedback on Day 3</h2>"
         },
         {
           "type": "comment",
@@ -70,7 +70,7 @@
         {
           "type": "html",
           "name": "OverallFeedback",
-          "html": "<p><h4>Feedback on the Overall Event</h4><p>Consider your experience over the course of the 2.5-day FiT Workshop.</p>"
+          "html": "<p><h2>Feedback on the Overall Event</h2><p>Consider your experience over the course of the 2.5-day FiT Workshop.</p>"
         },
         {
           "type": "comment",
@@ -93,12 +93,12 @@
         {
           "type": "html",
           "name": "OverallFeedback",
-          "html": "<p><h4>We are interested in learning how confident and prepared you feel to lead Code.org workshops. Please respond to the following questions using the provided scale. </h4> "
+          "html": "<p><h2>We are interested in learning how confident and prepared you feel to lead Code.org workshops. Please respond to the following questions using the provided scale. </h2> "
         },
         {
           "type": "rating",
           "name": "iFeelMore",
-          "title": "I feel more prepared to lead Code.org's CS [course] Professional Learning workshops in 2021-22 than I did before this event.",
+          "title": "I feel more prepared to lead Code.org's {Course} Professional Learning workshops in 2021-22 than I did before this event.",
           "rateMax": 7,
           "minRateDescription": "Strongly Disagree",
           "maxRateDescription": "Strongly Agree"
@@ -138,7 +138,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<p><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></p><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating CSD or CSP workshops</p>"
+          "html": "<h4><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></h4><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating CSD or CSP workshops</p>"
         },
         {
           "type": "matrix",
