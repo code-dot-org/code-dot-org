@@ -140,7 +140,9 @@ export default class ModelManagerDialog extends React.Component {
           useUpdatedStyles
           style={styles.dialog}
         >
-          <h1 style={styles.header}>AI Trained Models</h1>
+          <h1 id="ai-trained-models-header" style={styles.header}>
+            AI Trained Model
+          </h1>
           {this.state.isModelListPending && (
             <div style={styles.spinner}>
               <Spinner />
@@ -168,6 +170,7 @@ export default class ModelManagerDialog extends React.Component {
                 )}
                 <br />
                 <Button
+                  id="import-model-button"
                   text={'Import'}
                   color={Button.ButtonColor.orange}
                   onClick={this.importMLModel}
