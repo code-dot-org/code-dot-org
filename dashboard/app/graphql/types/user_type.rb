@@ -10,6 +10,11 @@ module Types
     field :secret_words, String, null: true
     field :total_lines, Integer, null: false
 
+    field :secret_picture_path, String, null: true
+    def secret_picture_path
+      object.secret_picture&.path
+    end
+
     field :has_ever_signed_in, Boolean, null: false
     def has_ever_signed_in
       !object.last_sign_in_at.nil?
