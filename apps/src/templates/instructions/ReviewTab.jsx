@@ -9,7 +9,8 @@ export default class ReviewTab extends Component {
   state = {
     readyForReview: false,
     comments: [],
-    token: ''
+    token: '',
+    forceRecreateEditorKey: 0
   };
 
   componentDidMount() {
@@ -25,11 +26,25 @@ export default class ReviewTab extends Component {
       });
   }
 
-  onNewCommentSubmit = newComment => {
-    const comments = this.state.comments;
-    comments.push(newComment);
+  onNewCommentSubmit = newCommentText => {
+    $.ajax({
+      url: `/code_review_comments`,
+      type: 'POST',
+      headers: {'X-CSRF-Token': this.state.token},
+      data: {
+        channel_id: getStore().getState().pageConstants.channelId,
+        project_version: 'latest',
+        comment: newCommentText
+      }
+    }).done(newComment => {
+      const comments = this.state.comments;
+      comments.push(newComment);
 
-    this.setState({comments: comments});
+      this.setState({
+        comments: comments,
+        forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+      });
+    });
   };
 
   renderReadyForReviewCheckbox() {
@@ -51,7 +66,7 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {token, comments} = this.state;
+    const {comments, forceRecreateEditorKey} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
@@ -66,7 +81,7 @@ export default class ReviewTab extends Component {
         })}
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
-          token={token}
+          key={forceRecreateEditorKey}
         />
       </div>
     );
