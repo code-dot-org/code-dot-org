@@ -58,7 +58,7 @@ class CoursesController < ApplicationController
       # Attempt to redirect user if we think they ended up on the wrong course overview page.
       override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
       if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
-        redirect_to "/courses/#{redirect_unit_group.name}/?redirect_warning=true"
+        redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
         return
       end
 
@@ -74,7 +74,7 @@ class CoursesController < ApplicationController
           select {|c| c.family_name == params[:course_name] && c.stable?}.
           sort_by(&:version_year).
           last
-      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
+      redirect_to "#{course_path(redirect_to_course)}#{redirect_query_string}"
       return
     else
       raise ActiveRecord::RecordNotFound
@@ -160,7 +160,7 @@ class CoursesController < ApplicationController
         select {|c| c.family_name == params[:course_name] && c.stable?}.
         sort_by(&:version_year).
         last
-      redirect_to "/courses/#{redirect_to_course.name}/standards"
+      redirect_to standards_course_path(redirect_to_course)
       return
     end
     raise ActiveRecord::RecordNotFound unless unit_group
