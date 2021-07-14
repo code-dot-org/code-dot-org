@@ -1525,7 +1525,7 @@ class Census::StateCsOffering < ApplicationRecord
     [
       state_code,
       start_year,
-      update || 1,
+      update&.to_i || 1,
       extension
     ]
   end
