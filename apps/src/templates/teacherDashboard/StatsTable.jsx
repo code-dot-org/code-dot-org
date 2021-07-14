@@ -24,13 +24,13 @@ class StatsTable extends Component {
 
   state = {};
 
-  studentsWithCompletedLevelCount = () => {
-    const {section, studentsCompletedLevelCount} = this.props;
-    return (section.students || []).map(student => ({
-      ...student,
-      completed_levels_count: studentsCompletedLevelCount[student.id] || 0
-    }));
-  };
+  // studentsWithCompletedLevelCount = () => {
+  //   const {section, studentsCompletedLevelCount} = this.props;
+  //   return (section.students || []).map(student => ({
+  //     ...student,
+  //     completed_levels_count: studentsCompletedLevelCount[student.id] || 0
+  //   }));
+  // };
 
   nameFormatter = (name, {rowData}) => {
     const {section, scriptName} = this.props;
@@ -81,7 +81,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'completed_levels_count',
+        property: 'completedLevels',
         header: {
           label: i18n.completedLevels(),
           props: {
@@ -102,7 +102,7 @@ class StatsTable extends Component {
         }
       },
       {
-        property: 'total_lines',
+        property: 'linesOfCode',
         header: {
           label: i18n.linesOfCode(),
           props: {
@@ -155,7 +155,7 @@ class StatsTable extends Component {
       columns,
       sortingColumns,
       sort: orderBy
-    })(this.studentsWithCompletedLevelCount());
+    })(this.props.section.students);
 
     return (
       <Table.Provider
