@@ -6,9 +6,9 @@ theme: responsive
 [<img src="/shared/images/student_privacy_pledge.png" width="120" target="_blank">](http://studentprivacypledge.org/)
 
 # Privacy Policy
-Date of Last Revision: March 11, 2021
+Date of Last Revision: July 19, 2021
 
-You can review the previous Privacy Policy [here](/privacy-sep2020).
+You can review the previous Privacy Policy [here](/privacy-mar2021).
 
 ## About Code.org
 Code.org® is a US-based charitable nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science.
@@ -28,7 +28,7 @@ Our Privacy Policy is fueled by our commitment to the following Privacy Principl
 8. We hold our partners and service providers to privacy and security practices no less stringent than our own.
 
 ## Privacy Policy
-We are committed to creating a safe and secure environment for learners of all ages and other visitors on our websites located at [https://code.org](https://code.org/), [https://studio.code.org](https://studio.code.org/), [https://hourofcode.com](https://hourofcode.com/), [https://curriculum.code.org](https://curriculum.code.org/), [https://advocacy.code.org](https://advocacy.code.org/), [https://k12cs.org](https://k12cs.org/), and any other websites or online services (collectively, our “Services”) that link to this Privacy Policy.
+We are committed to creating a safe and secure environment for learners of all ages and other visitors on our websites located at [https://code.org](https://code.org/), [https://studio.code.org](https://studio.code.org/), [https://hourofcode.com](https://hourofcode.com/), [https://curriculum.code.org](https://curriculum.code.org/), [https://advocacy.code.org](https://advocacy.code.org/), [https://k12cs.org](https://k12cs.org/), [https://codeprojects.org](https://codeprojects.org), and any other websites or online services (collectively, our “Services”) that link to this Privacy Policy.
 
 Visitors and users of the Services and participants in our education programs are referred to in this Privacy Policy individually as “User” (or “you” depending on the context) and collectively as “Users.” Any User that creates a student account is referred to as “Student” even if they are using the Code.org Services outside of a school setting. Similarly, any User that creates a teacher account is referred to as “Teacher.”
 
@@ -150,6 +150,8 @@ As part of “App Lab,” “Game Lab,” or “Web Lab” (in-browser programmi
 
 ### Internet Simulator and Other Messages
 Code.org offers a tool called the [“Internet Simulator”](https://code.org/internetsimulator) for use in High School classrooms to model how the Internet functions. With this tool, Students participating in a Teacher-supervised classroom activity can send text-based messages to their Teacher and to other Students in their specific classroom section. Message contents are visible to the classroom Teacher and are not accessed or used by Code.org for any purpose other than in this educational tool. All messages are deleted after two hours of class inactivity, or upon a manual reset by the Teacher.
+
+In select courses, such as the Code.org CS A AP course, Teachers may optionally enable peer review groups within their classroom sections to allow students to provide feedback on other students’ projects.  The student feedback is visible only to the Teacher and to students within the group designated by the Teacher. The Teacher may disable the feature at any time and may also delete specific feedback.
 
 In addition, Teachers may provide written feedback to their Students on coursework. Users may also send messages to Code.org for customer-support requests.
 
