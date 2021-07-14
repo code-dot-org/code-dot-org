@@ -24,6 +24,50 @@ Parameters:
   ShardCount:
     Type: Number
     Default: 1
+  LogFields:
+    Type: CommaDelimitedList
+    # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
+    Default: >
+      timestamp,
+      c-ip,
+      time-to-first-byte,
+      sc-status,
+      sc-bytes,
+      cs-method,
+      cs-protocol,
+      cs-host,
+      cs-uri-stem,
+      cs-bytes,
+      x-edge-location,
+      x-edge-request-id,
+      x-host-header,
+      time-taken,
+      cs-protocol-version,
+      c-ip-version,
+      cs-user-agent,
+      cs-referer,
+      cs-cookie,
+      cs-uri-query,
+      x-edge-response-result-type,
+      x-forwarded-for,
+      ssl-protocol,
+      ssl-cipher,
+      x-edge-result-type,
+      fle-encrypted-fields,
+      fle-status,
+      sc-content-type,
+      sc-content-len,
+      sc-range-start,
+      sc-range-end,
+      c-port,
+      x-edge-detailed-result-type,
+      c-country,
+      cs-accept-encoding,
+      cs-accept,
+      cache-behavior-path-pattern,
+      cs-headers,
+      cs-header-names,
+      cs-headers-count
 Resources:
   AccessLogConfig:
     Type: AWS::CloudFront::RealtimeLogConfig
@@ -35,48 +79,7 @@ Resources:
           KinesisStreamConfig:
             RoleArn: !GetAtt AccessLogConfigRole.Arn
             StreamArn: !GetAtt AccessLogStream.Arn
-      Fields:
-        # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
-        - timestamp
-        - c-ip
-        - time-to-first-byte
-        - sc-status
-        - sc-bytes
-        - cs-method
-        - cs-protocol
-        - cs-host
-        - cs-uri-stem
-        - cs-bytes
-        - x-edge-location
-        - x-edge-request-id
-        - x-host-header
-        - time-taken
-        - cs-protocol-version
-        - c-ip-version
-        - cs-user-agent
-        - cs-referer
-        - cs-cookie
-        - cs-uri-query
-        - x-edge-response-result-type
-        - x-forwarded-for
-        - ssl-protocol
-        - ssl-cipher
-        - x-edge-result-type
-        - fle-encrypted-fields
-        - fle-status
-        - sc-content-type
-        - sc-content-len
-        - sc-range-start
-        - sc-range-end
-        - c-port
-        - x-edge-detailed-result-type
-        - c-country
-        - cs-accept-encoding
-        - cs-accept
-        - cache-behavior-path-pattern
-        - cs-headers
-        - cs-header-names
-        - cs-headers-count
+      Fields: !Ref LogFields
   AccessLogBucket:
     Type: AWS::S3::Bucket
     DependsOn: AccessLogPartitionPermission
@@ -169,6 +172,8 @@ Resources:
         Variables:
           DATABASE: !Ref AccessLogDatabase
           TABLE: !Ref AccessLogTable
+          LOG_FIELDS: !Join [',', !Ref LogFields]
+          CONFIG_ARN: !Ref AccessLogConfig
       Role: !GetAtt AccessLogRole.Arn
 
   AccessLogDatabase:
@@ -271,6 +276,14 @@ Resources:
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:catalog'
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${AccessLogDatabase}'
                   - !Sub 'arn:aws:glue:${AWS::Region}:${AWS::AccountId}:table/${AccessLogDatabase}/${AccessLogTable}'
+        - PolicyName: cloudfront
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cloudfront:GetRealtimeLogConfig
+                Resource: '*'
   AccessLogConfigRole:
     Type: AWS::IAM::Role
     Properties:
