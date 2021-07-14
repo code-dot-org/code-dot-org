@@ -19,14 +19,14 @@ import styleConstants from '../../styleConstants';
 const style = {
   root: {
     width: styleConstants['content-width'],
-    height: '80vh',
+    height: '50vh',
     left: 20,
     right: 20
   },
   scroll: {
     overflowX: 'hidden',
     overflowY: 'auto',
-    height: 'calc(80vh - 200px)'
+    height: 'calc(60vh - 250px)'
   },
   thirdPartyProviderUpsell: {
     marginBottom: '10px'
@@ -36,7 +36,6 @@ const style = {
     width: styleConstants['content-width'],
     height: '100px',
     left: 0,
-    bottom: '-65px',
     padding: '0px 20px 20px 20px',
     backgroundColor: '#fff',
     borderRadius: '5px'
@@ -79,8 +78,6 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    // Adjust max height of the dialog based on number of LoginCard types available to the user
-    style.root.maxHeight = hasThirdParty ? '500px' : '360px';
 
     return (
       <div style={style.root}>
