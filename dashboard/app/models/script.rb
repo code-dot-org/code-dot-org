@@ -60,7 +60,14 @@ class Script < ApplicationRecord
       [
         {
           script_levels: [
-            {levels: [:game, :concepts, :level_concept_difficulty]},
+            {
+              levels: [
+                :concepts,
+                :game,
+                :level_concept_difficulty,
+                :levels_child_levels
+              ]
+            },
             :lesson,
             :callouts
           ]
