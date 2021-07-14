@@ -597,7 +597,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) : nil
+    unit_name ? Script.new(redirect_to: unit_name) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -1800,15 +1800,14 @@ class Script < ApplicationRecord
     course_version || unit_group&.course_version
   end
 
-  # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
-  # If both are null, the script is in_development
-  def get_published_state
-    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
-  end
-
   # Use the unit group's pilot_experiment if one exists
   def get_pilot_experiment
     pilot_experiment || unit_group&.pilot_experiment
+  end
+
+  # Get the published state on the course version and default to in_development if it doesn't exist
+  def get_published_state
+    get_course_version&.published_state || SharedConstants::PUBLISHED_STATE.beta
   end
 
   # @return {String|nil} path to the course overview page for this unit if there

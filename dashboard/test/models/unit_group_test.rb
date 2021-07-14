@@ -104,7 +104,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
     assert_equal 'my-unit-group', seeded_unit_group.name
-    assert_equal 'stable', seeded_unit_group.published_state
+    assert_equal 'stable', seeded_unit_group.get_published_state
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
     assert_equal 3, seeded_unit_group.default_units.length
   end
@@ -117,12 +117,12 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
     assert_equal 'my-unit-group', seeded_unit_group.name
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, seeded_unit_group.get_published_state
     course_version = seeded_unit_group.course_version
     assert_not_nil course_version
     assert_equal '2021', course_version.key
     assert_equal 'family', course_version.course_offering&.key
-    assert_equal SharedConstants::PUBLISHED_STATE.stable, course_version.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, course_version.get_published_state
   end
 
   test "can seed unit group and create resources from hash" do

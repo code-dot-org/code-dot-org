@@ -351,7 +351,7 @@ class ScriptDSL < BaseDSL
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
-    s << "published_state '#{script.published_state}'" if script.published_state
+    s << "published_state '#{script.get_published_state}'" if script.get_published_state
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment

@@ -84,11 +84,11 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
+    plc_course || (get_published_state == SharedConstants::PUBLISHED_STATE.stable)
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    get_published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def self.file_path(name)
@@ -151,7 +151,7 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_units: summarize_alternate_units,
-        published_state: published_state,
+        published_state: get_published_state,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
@@ -336,7 +336,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def summarize(user = nil, for_edit: false)
@@ -347,7 +347,7 @@ class UnitGroup < ApplicationRecord
       assignment_family_title: localized_assignment_family_title,
       family_name: family_name,
       version_year: version_year,
-      published_state: published_state,
+      published_state: get_published_state,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
@@ -531,7 +531,7 @@ class UnitGroup < ApplicationRecord
 
     all_courses.select do |course|
       course.family_name == family_name &&
-        course.published_state == SharedConstants::PUBLISHED_STATE.stable
+        course.get_published_state == SharedConstants::PUBLISHED_STATE.stable
     end.sort_by(&:version_year).last
   end
 
@@ -710,5 +710,9 @@ class UnitGroup < ApplicationRecord
       select {|c| c.family_name == family_name && c.stable?}.
       sort_by(&:version_year).
       last
+  end
+
+  def get_published_state
+    course_version&.published_state || SharedConstants::PUBLISHED_STATE.beta
   end
 end
