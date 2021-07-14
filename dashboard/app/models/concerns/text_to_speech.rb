@@ -229,5 +229,10 @@ module TextToSpeech
       end
       self.authored_hints = JSON.dump(hints)
     end
+
+    # if this level is contained in another level, updating it should also
+    # trigger updates in its parents, since their content is likely at least
+    # partially based on this
+    parent_levels.contained.each(&:tts_update)
   end
 end
