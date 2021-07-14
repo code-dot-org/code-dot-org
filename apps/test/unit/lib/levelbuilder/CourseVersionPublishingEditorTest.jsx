@@ -10,12 +10,14 @@ describe('CourseVersionPublishedStateSelector', () => {
     updatePilotExperiment,
     updateFamilyName,
     updatePublishedState,
-    updateVersionYear;
+    updateVersionYear,
+    updateIsCourse;
 
   beforeEach(() => {
     updatePilotExperiment = sinon.spy();
     updateFamilyName = sinon.spy();
     updateVersionYear = sinon.spy();
+    updateIsCourse = sinon.spy();
     updatePublishedState = sinon.spy();
     defaultProps = {
       pilotExperiment: null,
@@ -24,6 +26,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePilotExperiment,
       updateFamilyName,
       updateVersionYear,
+      updateIsCourse,
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
@@ -42,7 +45,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
       PublishedState.pilot
     );
-    expect(wrapper.find('input').length).to.equal(1);
+    expect(wrapper.find('.pilotExperimentInput').length).to.equal(1);
   });
 
   it('pilot input field does not show if published state is not pilot', () => {
@@ -52,7 +55,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
       PublishedState.beta
     );
-    expect(wrapper.find('input').length).to.equal(0);
+    expect(wrapper.find('.pilotExperimentInput').length).to.equal(0);
   });
 
   it('updates pilotExperiment when publish state changed to in-development', () => {
@@ -107,20 +110,39 @@ describe('CourseVersionPublishedStateSelector', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
+        showIsCourseSelector
+        isCourse
         preventCourseVersionChange
       />
     );
-    expect(
-      wrapper
-        .find('select')
-        .at(0)
-        .props().disabled
-    ).to.be.true;
-    expect(
-      wrapper
-        .find('select')
-        .at(1)
-        .props().disabled
-    ).to.be.true;
+    expect(wrapper.find('.isCourseCheckbox').props().disabled).to.be.true;
+    expect(wrapper.find('.familyNameSelector').props().disabled).to.be.true;
+    expect(wrapper.find('.versionYearSelector').props().disabled).to.be.true;
+  });
+
+  it('hides family name and version year selectors if isCourse is false', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} isCourse={false} />
+    );
+    expect(wrapper.find('.familyNameSelector').length).to.equal(0);
+    expect(wrapper.find('.versionYearSelector').length).to.equal(0);
+  });
+
+  it('shows family name and version year selectors when isCourse is true', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} isCourse />
+    );
+    expect(wrapper.find('.familyNameSelector').length).to.equal(1);
+    expect(wrapper.find('.versionYearSelector').length).to.equal(1);
+  });
+
+  it('disables family name selector if inputting new family name', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} isCourse />
+    );
+    wrapper
+      .instance()
+      .handleNewFamilyNameChange({target: {value: 'new-family'}});
+    expect(wrapper.find('.familyNameSelector').props().disabled).to.be.true;
   });
 });
