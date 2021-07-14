@@ -233,23 +233,15 @@ class BubbleChoice < DSLDefined
     # if our existing sublevels already match the given names, do nothing
     return if sublevels.map(&:name) == sublevel_names
 
-    # otherwise, update sublevels to match; destroy any existing relations to
-    # levels NOT in the given names, and create/update relations to the levels
-    # we want.
-    new_sublevels = Level.where(name: sublevel_names)
-
-    levels_child_levels.
-      sublevel.
-      where.not(child_level: new_sublevels).
-      destroy_all
-
-    new_sublevels.each_with_index do |new_sublevel, i|
-      relation = levels_child_levels.
-        where(child_level: new_sublevel).
-        first_or_initialize
-      relation.kind = ParentLevelsChildLevel::SUBLEVEL
-      relation.position = i + 1
-      relation.save!
+    # otherwise, update sublevels to match
+    levels_child_levels.sublevel.destroy_all
+    Level.where(name: sublevel_names).each do |new_sublevel|
+      ParentLevelsChildLevel.create!(
+        child_level: new_sublevel,
+        kind: ParentLevelsChildLevel::SUBLEVEL,
+        parent_level: self,
+        position: sublevel_names.index(new_sublevel.name)
+      )
     end
 
     reload
