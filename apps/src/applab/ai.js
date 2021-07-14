@@ -74,7 +74,7 @@ function generateCodeDesignElements(modelId, modelData) {
   // Button to do the prediction.
   var predictButton = designMode.createElement('BUTTON', x, y);
   predictButton.textContent = 'Predict';
-  var predictButtonId = alphaNumModelName + '_predict';
+  var predictButtonId = alphaNumModelName + '_predict_button';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   predictButton.className = modelClass;
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {

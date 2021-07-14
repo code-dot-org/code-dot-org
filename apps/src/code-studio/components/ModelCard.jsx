@@ -44,7 +44,7 @@ export default class ModelCard extends React.Component {
     return (
       <div>
         {model && metadata && (
-          <div style={styles.container}>
+          <div id="model-card" style={styles.container}>
             <h3 style={styles.header}>{metadata.name}</h3>
             <div>
               <span style={styles.bold}>Id: </span>
