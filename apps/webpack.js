@@ -41,7 +41,7 @@ const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
@@ -121,7 +121,7 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.css$/, use: ['style-loader', 'css-loader']},
       {
         test: /\.scss$/,
         use: [
@@ -132,23 +132,23 @@ var baseConfig = {
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
       {test: /\.exported_js$/, loader: 'raw-loader'},
+      // {
+      //   test: /\.(png|jpg|jpeg|gif|svg)$/,
+      //   include: [
+      //     path.resolve(__dirname, 'static'),
+      //     path.resolve(__dirname, 'src'),
+      //     path.resolve(__dirname, 'test'),
+      //     path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images')
+      //   ],
+      //   // note that in the name template given below, a dash prefixing
+      //   // the hash is explicitly avoided. If rails tries to serve
+      //   // this file when asset digests are turned off, it will return a
+      //   // 404 because it thinks the hash is a digest and it won't
+      //   // be able to find the file without the hash. :( :(
+      //   loader: 'url-loaderlimit=1024&name=[name]wp[hash].[ext]'
+      // },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
-        include: [
-          path.resolve(__dirname, 'static'),
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test'),
-          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images')
-        ],
-        // note that in the name template given below, a dash prefixing
-        // the hash is explicitly avoided. If rails tries to serve
-        // this file when asset digests are turned off, it will return a
-        // 404 because it thinks the hash is a digest and it won't
-        // be able to find the file without the hash. :( :(
-        loader: 'url-loader?limit=1024&name=[name]wp[hash].[ext]'
-      },
-      {
-        test: /\.jsx?$/,
+        test: /\.[jt]sx?$/,
         enforce: 'pre',
         include: [
           path.resolve(__dirname, 'src'),
@@ -156,7 +156,7 @@ var baseConfig = {
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
-        query: {
+        options: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
@@ -168,7 +168,7 @@ var baseConfig = {
 
 if (envConstants.HOT) {
   baseConfig.module.loaders.push({
-    test: /\.jsx?$/,
+    test: /\.[jt]sx?$/,
     loader: 'react-hot-loader',
     include: [path.resolve(__dirname, 'src')]
   });
@@ -177,7 +177,7 @@ if (envConstants.HOT) {
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
   baseConfig.module.rules.push({
-    test: /\.jsx?$/,
+    test: /\.[jt]sx?$/,
     enforce: 'post',
     loader: 'istanbul-instrumenter-loader',
     include: path.resolve(__dirname, 'src'),
@@ -187,7 +187,7 @@ if (envConstants.COVERAGE) {
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')
     ],
-    query: {
+    options: {
       cacheDirectory: true,
       compact: false,
       esModules: true
@@ -195,7 +195,7 @@ if (envConstants.COVERAGE) {
   });
 }
 
-var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
+var devtool = process.env.DEV ? 'inline-cheap-source-map' : 'inline-source-map';
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
@@ -367,8 +367,8 @@ function create(options) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.IgnorePlugin(/^serialport$/)
+      // new webpack.optimize.OccurrenceOrderPlugin(true)
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
