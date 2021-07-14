@@ -53,4 +53,8 @@ Feature: AI Lab
     And I see "#model-card"
     And I see ".ailab-image-hover"
     And I click selector "#continue-button"
-  
+    And I see "#codeApp"
+    And I press the settings cog
+    And I press the settings cog menu item "Manage AI Models"
+    And element "#ai-trained-models-header" has text "AI Trained Model"
+    And I click "#import-model-button"
