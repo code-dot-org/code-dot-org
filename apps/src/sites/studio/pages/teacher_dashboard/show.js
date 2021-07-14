@@ -37,16 +37,10 @@ import currentUser, {
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql
-} from '@apollo/client';
+import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
+  uri: 'http://localhost-studio.code.org:3000/graphql',
   cache: new InMemoryCache()
 });
 
@@ -113,22 +107,6 @@ $(document).ready(function() {
   store.dispatch(
     setValidScripts(validScripts, studentScriptIds, validCourses, section)
   );
-
-  // client
-  //   .query({
-  //     query: gql`
-  //       query GetSectionStats($sectionId: ID!) {
-  //         sectionById(id: $sectionId) {
-  //           students {
-  //             completedLevels
-  //             linesOfCode
-  //           }
-  //         }
-  //       }
-  //     `,
-  //     variables: {sectionId: 1}
-  //   })
-  //   .then(result => console.log(result));
 
   ReactDOM.render(
     <ApolloProvider client={client}>
