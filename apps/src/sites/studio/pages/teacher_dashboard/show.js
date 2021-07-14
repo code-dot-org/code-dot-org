@@ -37,6 +37,19 @@ import currentUser, {
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/',
+  cache: new InMemoryCache()
+});
+
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
@@ -101,23 +114,41 @@ $(document).ready(function() {
     setValidScripts(validScripts, studentScriptIds, validCourses, section)
   );
 
+  // client
+  //   .query({
+  //     query: gql`
+  //       query GetSectionStats($sectionId: ID!) {
+  //         sectionById(id: $sectionId) {
+  //           students {
+  //             completedLevels
+  //             linesOfCode
+  //           }
+  //         }
+  //       }
+  //     `,
+  //     variables: {sectionId: 1}
+  //   })
+  //   .then(result => console.log(result));
+
   ReactDOM.render(
-    <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => (
-            <TeacherDashboard
-              {...props}
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={section.id}
-              sectionName={section.name}
-              studentCount={section.students.length}
-            />
-          )}
-        />
-      </Router>
-    </Provider>,
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <Router basename={baseUrl}>
+          <Route
+            path="/"
+            component={props => (
+              <TeacherDashboard
+                {...props}
+                studioUrlPrefix={scriptData.studioUrlPrefix}
+                sectionId={section.id}
+                sectionName={section.name}
+                studentCount={section.students.length}
+              />
+            )}
+          />
+        </Router>
+      </Provider>
+    </ApolloProvider>,
     document.getElementById('teacher-dashboard')
   );
 });

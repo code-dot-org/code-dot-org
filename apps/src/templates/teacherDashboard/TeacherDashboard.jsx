@@ -132,7 +132,7 @@ class TeacherDashboard extends Component {
           />
           <Route
             path={TeacherDashboardPath.stats}
-            component={props => <StatsTableWithData />}
+            component={props => <StatsTableWithData sectionId={sectionId} />}
           />
         </Switch>
       </div>
