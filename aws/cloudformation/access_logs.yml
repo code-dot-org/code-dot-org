@@ -101,6 +101,19 @@ Resources:
           - Event: 's3:ObjectCreated:*'
             Function: !GetAtt AccessLogPartition.Arn
             Filter: {S3Key: {Rules: [{Name: prefix, Value: !Ref BucketPrefix}]}}
+      IntelligentTieringConfigurations:
+        - Id: AccessLogStorage
+          Prefix: !Ref BucketPrefix
+          Status: Enabled
+          Tierings:
+            - {AccessTier: ARCHIVE_ACCESS, Days: 90}
+            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 180}
+      LifecycleConfiguration:
+        Rules:
+          - Prefix: !Ref BucketPrefix
+            Status: Enabled
+            Transitions:
+              - {StorageClass: INTELLIGENT_TIERING, TransitionInDays: 30}
   AccessLogPartition:
     Type: AWS::Lambda::Function
     Properties:
