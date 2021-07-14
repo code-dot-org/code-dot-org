@@ -1,4 +1,7 @@
+family_name 'text-compression'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: false
 level 'Text Compression', named: true
