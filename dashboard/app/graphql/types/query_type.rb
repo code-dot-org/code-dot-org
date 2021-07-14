@@ -1,17 +1,20 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
-    include GraphQL::Types::Relay::HasNodeField
-    include GraphQL::Types::Relay::HasNodesField
+    description "The query root of this schema"
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :signed_in_user, Types::UserType, null: true do
+      description "The currently signed in user. Returns null if the user is not signed in."
+    end
+    def signed_in_user
+      return context[:current_user]
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :section, Types::SectionType, null: false do
+      description "Gets a section by id"
+      argument :id, ID, required: true
+    end
+    def section(id:)
+      return Section.find(id)
     end
   end
 end
