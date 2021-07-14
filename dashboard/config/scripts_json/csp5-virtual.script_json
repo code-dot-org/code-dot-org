@@ -6,11 +6,13 @@
     "properties": {
       "student_detail_progress_view": true,
       "project_sharing": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:53 UTC",
+    "family_name": "csp5-virtual",
+    "serialized_at": "2021-07-06 22:26:02 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp5-virtual"
