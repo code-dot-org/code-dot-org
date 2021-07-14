@@ -298,6 +298,11 @@ class UsersHelperTest < ActionView::TestCase
     user_1 = create :user
     user_2 = create :user
 
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << user_1 # we query for feedback where student is currently in section
+    section.students << user_2
+
     # set up progress
     script = create :script
 
@@ -310,11 +315,20 @@ class UsersHelperTest < ActionView::TestCase
     level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
     create :script_level, script: script, levels: [level], lesson: lesson
 
+    # for user_1
     sublevel1_user_level = create :user_level, user: user_1, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level = create :user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300
 
     sublevel1_last_progress = UserLevel.find(sublevel1_user_level.id).updated_at.to_i
     sublevel2_last_progress = UserLevel.find(sublevel2_user_level.id).updated_at.to_i
+
+    # for user_2
+    sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
+    sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
+    create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    sublevel1_last_progress_2 = UserLevel.find(sublevel1_user_level_2.id).updated_at.to_i
+    sublevel2_last_progress_2 = UserLevel.find(sublevel2_user_level_2.id).updated_at.to_i
 
     expected_progress = [
       {
@@ -338,11 +352,32 @@ class UsersHelperTest < ActionView::TestCase
             time_spent: 480 # sum of time spent on sublevels
           }
         },
-        user_2.id => {}
+        user_2.id => {
+          sublevel1.id => {
+            status: LEVEL_STATUS.perfect,
+            result: ActivityConstants::BEST_PASS_RESULT,
+            last_progress_at: sublevel1_last_progress_2,
+            time_spent: 180
+          },
+          sublevel2.id => {
+            status: LEVEL_STATUS.passed,
+            result: 20,
+            last_progress_at: sublevel2_last_progress_2,
+            time_spent: 300,
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          },
+          level.id => {
+            status: LEVEL_STATUS.passed,
+            result: 20,
+            last_progress_at: sublevel2_last_progress_2,
+            time_spent: 480, # sum of time spent on sublevels
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          }
+        }
       },
       {
         user_1.id => sublevel1_last_progress,
-        user_2.id => nil
+        user_2.id => sublevel2_last_progress_2
       }
     ]
 
