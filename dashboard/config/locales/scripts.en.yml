@@ -24,6 +24,7 @@ en:
         csp_2021_category_name: CS Principles ('21-'22)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
+        aiml_2021_category_name: AI / ML
         full_course_category_name: Full Courses
         hoc_category_name: Hour of Code
         math_category_name: Math
@@ -20176,13 +20177,13 @@ en:
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
             lesson-1:
-              name: tess test
+              name: CS Principles Post-Course Survey
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
               description: "### Unit Philosophy and Pedagogy\n\n* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or \"layers\" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet's original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have \"invented the internet\" themselves! \n\n* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. \n\n### Major Assessment and Projects\n\nThe unit project asks students to design a policy position for an imaginary political candidate related to an \"Internet Dilemma.\" Students must analyze news stories about their topic to identify impacted groups, explain those groups' interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CSN-1: that computer systems and networks facilitate how data are transferred\n* IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 4.1 The Internet\n* 4.2 Fault Tolerance\n* 5.2 Digital Divide"
             lessonGroup-2:
-              display_name: Tess test
+              display_name: Survey
               big_questions: Big question
               description: helllo
           name: csp2-2021
@@ -22392,19 +22393,19 @@ en:
 
 '
             lesson-16:
-              name: 'Project: Personal Symbol - Day 1'
+              name: Asphalt Art Project - Day 1
               description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
               description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
-              name: 'Project: Personal Symbol - Day 2'
+              name: Asphalt Art Project - Day 2
               description_student: 'You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your asphalt art. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
               description_teacher: "Students planned uses for existing classes in the previous lesson and designed a new class to provide a needed behavior for creating their asphalt art. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their design. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program. \n"
             lesson-18:
-              name: 'Project: Personal Symbol - Day 3'
+              name: Asphalt Art Project - Day 3
               description_student: Using the feedback you received in the previous lesson, you finalize and submit your Asphalt Art Project. You share your final projects with your peers and celebrate your success!
               description_teacher: "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n"
             lesson-19:
@@ -22662,12 +22663,20 @@ en:
               description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
             lesson-3:
               name: Traversing a 2D Array by Columns
+              description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
+              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             lesson-4:
               name: Using Enhanced for Loops
+              description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
+              description_teacher: Students learn the structure of enhanced `for` loops to traverse 2D arrays. Students identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students use nested enhanced `for` loops to write methods to modify the color values of pixels and create effects on the images in their concert.
             lesson-5:
               name: Evaluating 2D Arrays
+              description_student: The Mayor asked the Project Mercury Pastries Food Truck to cater desserts at the upcoming concert. To help the owner, you implement new algorithms to prepare for the event. You explore executing a `return` statement inside a loop in comparison to outside a loop. You write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria.
+              description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             lesson-6:
               name: Applying Standard Algorithms
+              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
+              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
             lesson-7:
               name: Reversing Elements
             lesson-8:
@@ -23041,132 +23050,355 @@ en:
           lessons:
             lesson1:
               name: Introduction to Machine Learning
-              description_student: Students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish. In the first level, students train the robot to detect “fish” vs “not fish” and discover that more data leads to better accuracy. In the second level, students train A.I. Bot to detect certain colored fish or fish with a certain shape and discover that A.I. Bot might be basing its decision on unintended factors. In the last level, students train A.I. bot to detect expressions and discover that A.I. Bot may be using unrelated features to make decisions in a way that isn’t fair. The lesson ends by reaffirming how the Problem Solving Process is used in machine learning.
+              description_student: Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean
               description_teacher: |-
-                Students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish. In the first level, students train the robot to detect “fish” vs “not fish” and discover that more data leads to better accuracy. In the second level, students train A.I. Bot to detect certain colored fish or fish with a certain shape and discover that A.I. Bot might be basing its decision on unintended factors. In the last level, students train A.I. bot to detect expressions and discover that A.I. Bot may be using unrelated features to make decisions in a way that isn’t fair. The lesson ends by reaffirming how the Problem Solving Process is used in machine learning.
+                In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
 
                 **Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
             lesson2:
-              name: Supervised / Unsupervised
-              description_student: Students first consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, similar to a young child, as a type of unsupervised learning. Next, they play a game called "Green Glass Door" as an example of supervised learning, where they learn which words follow a certain pattern to go through a door in the game. Throughout the lesson, students are also introduced to the terms feature, label, and training which appear throughout the unit. Finally, students sort several scenarios into “supervised” or “unsupervised” learning, then watch a video about how neural networks can further simulate human learning.
-              description_teacher: "Students first consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, similar to a young child, as a type of unsupervised learning. Next, they play a game called \"Green Glass Door\" as an example of supervised learning, where they learn which words follow a certain pattern to go through a door in the game. Throughout the lesson, students are also introduced to the terms feature, label, and training which appear throughout the unit. Finally, students sort several scenarios into “supervised” or “unsupervised” learning, then watch a video about how neural networks can further simulate human learning.\r\n\r\n**Question of the Day:** How is machine learning similar to human learning?"
-            lesson3:
-              name: Decision Apps and Cross Tabs
-              description_student: Students examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. The first app makes decisions randomly, which is a poor model for helping someone decide what shoes to wear. The second app makes decisions in a set pattern called a decision tree, which is better but is not responsive to its users. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns. The lesson concludes by motivating the need for a computer to do this analysis and look for patterns in large amounts of data, which is the subject of the next lesson.
-              description_teacher: "Students examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. The first app makes decisions randomly, which is a poor model for helping someone decide what shoes to wear. The second app makes decisions in a set pattern called a decision tree, which is better but is not responsive to its users. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns. The lesson concludes by motivating the need for a computer to do this analysis and look for patterns in large amounts of data, which is the subject of the next lesson.\r\n\r\n**Question of the Day:** What strategies do computer models use to make decisions?"
-            lesson4:
-              name: Unplugged SVM
-              description_student: "**Question of the Day:** How do computers learn to classify data?"
-              description_teacher: "Students participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students are tasked with helping a computer learn to classify food as fruits or vegetables. They begin by graphing 20 different fruits on two axes comparing “sweetness” to “easy to eat”. After they finish, they then try to separate the data into groups - a fruit area, and a veggie area. We then test their division by offering new fruits and veggies to classify, purposefully offering examples that will challenge their classification. At the end of the lesson, students reflect on how this process helped them make decisions and how much more difficult this process becomes when there is more data involved.\r\n\r\n**Question of the Day:** How do computers learn to classify data?"
-            lesson5:
-              name: AI Lab - Categorical Intro
-              description_student: Students dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. Students pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’ve collected. Students go through each dataset, identifying the features of the data that they would like to use for their recommendations. Students also use data visualization tools to identify features with high relationships in the data, since not every feature may be useful or predictive for training a model. At the end of the lesson, students create a new model for a restaurant of their choosing and write a letter to the owner explaining how they can use their model to increase their restaurant business.
+              name: Types of Machine Learning
+              description_student: Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn.
               description_teacher: |-
-                Students dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. Students pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’ve collected. Students go through each dataset, identifying the features of the data that they would like to use for their recommendations. Students also use data visualization tools to identify features with high relationships in the data, since not every feature may be useful or predictive for training a model. At the end of the lesson, students create a new model for a restaurant of their choosing and write a letter to the owner explaining how they can use their model to increase their restaurant business.
+                In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+
+                **Question of the Day:** What are different types of machine learning?
+            lesson3:
+              name: Patterns in Data
+              description_student: Explore three different ways computers can make recommendations and how important data can be in making accurate decisions.
+              description_teacher: |-
+                In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+
+                **Question of the Day:** What strategies do computer models use to make decisions?
+            lesson4:
+              name: Classification Models
+              description_student: Learn how to create a machine learning model by helping a computer classify foods as fruits or veggies
+              description_teacher: |-
+                In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.
+
+                **Question of the Day:** How do computers learn to classify data?
+            lesson5:
+              name: Introduction to AI Lab
+              description_student: Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant.
+              description_teacher: |-
+                In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.
 
                 **Question of the Day:** How can we use machine learning to make recommendations?
             lesson6:
-              name: App Lab - Importing a Model
-              description_student: 'Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.'
-              description_teacher: "Students are introduced to importing their models into App Lab and linking their model to their screens. The lesson starts by having them test a Buzzfeed-style quiz app that, over the course of the lesson, they recreate: What is your ideal vacation spot? Students start by importing the model from App Lab, then adding a missing screen in design mode, then adding if-statements to change screens, and finally linking all of the screens based on the result of the prediction. They can then choose another Buzzfeed style quiz to use as a model and design an app, using the skills they learned in this lesson.\r\n\r\n**Question of the Day:** How can I create an app using machine learning?"
-            lesson7:
-              name: Medical Model Cards
-              description_student: In this lesson, students investigate a model for bias and are introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. The lesson starts with students investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. Students are guided through an activity to help them realize that the app is biased based on personal information such as age, race, and gender. Students examine how this could happen based on the initial data used to train the model, then they explore how a Model Card is a tool that can help uncover potential bias. They explore several example model cards, making recommendations on whether or not the model could be biased based on the data.
-              description_teacher: "In this lesson, students investigate a model for bias and are introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. The lesson starts with students investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. Students are guided through an activity to help them realize that the app is biased based on personal information such as age, race, and gender. Students examine how this could happen based on the initial data used to train the model, then they explore how a Model Card is a tool that can help uncover potential bias. They explore several example model cards, making recommendations on whether or not the model could be biased based on the data.\r\n\r\n**Question of the Day:** How does human bias appear in machine learning?"
-            lesson8:
-              name: AI Lab - Numerical Data
-              description_student: So far, students have only been creating machine learning models from categorical data - in this lesson, students are introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
+              name: Importing Models in App Lab
+              description_student: Learn how to import a model into App Lab to help create a Book Recommendation app for a middle school classroom.
               description_teacher: |-
-                So far, students have only been creating machine learning models from categorical data - in this lesson, students are introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
+                In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.
+
+                **Question of the Day:** How can I create an app using machine learning?
+            lesson7:
+              name: Model Cards
+              description_student: Help decide which model a hospital should use for it's emergency room prioritization system, and determine which models include unintended biases. You will also learn how Model Cards can help evaluate and analyze machine learning models.
+              description_teacher: |-
+                In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.
+
+                **Question of the Day:** How can we evaluate machine learning models once they've been trained?
+            lesson8:
+              name: Numerical Data in AI Lab
+              description_student: Use AI Lab and numerical data to make predictions about real-world scenarios
+              description_teacher: |-
+                In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
 
                 **Question of the Day:** How can we use AI Lab to predict numerical data?
             lesson9:
-              name: Unplugged KNN
-              description_student: In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.
-              description_teacher: "In this lesson, students take on the role of a modern middle school student surviving an unprecedented pandemic. They are one day granted responsibility for delivering the formula for a vaccine to a laboratory somewhere in their local area. To do so, they must use an intelligent personal assistant (IPA) named “Tom” to predict the safest route to the laboratory, which will require training Tom with a regression algorithm.\r\n\r\n**Question of the Day:** How do computers learn to make predictions with numerical data?"
-            lesson10:
-              name: App Lab - If Statements and Screens
-              description_student: Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
+              name: Numerical Models
+              description_student: Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety.
               description_teacher: |-
-                Students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. Students learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience. By the end of the lesson, students will have learned how to use a model card to make the app easier to understand, and design strategies and to make a more appealing user interface rather than a single-screen app.
+                In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
 
-                **Question of the Day:** How can I improve how a user interacts with a machine learning app?
-            lesson11:
-              name: App Lab - Custom Design Elts
-              description_student: Students explore how to customize the code of their app to make additional changes to the design of their app. Students start by exploring a single-screen app that is crowded with too many features. They practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
+                **Question of the Day:** How do computers learn to make predictions with numerical data?
+            lesson10:
+              name: Model Cards in App Lab
+              description_student: Learn how to use Model Cards to improve a machine learning app, and how to update the final screen based on the model prediction.
               description_teacher: |-
-                Students explore how to customize the code of their app to make additional changes to the design of their app. Students start by exploring a single-screen app that is crowded with too many features. They practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
+                In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.
+
+                **Question of the Day:** How can I use a Model Card to improve my app?
+            lesson11:
+              name: Customizing Apps
+              description_student: Learn how to edit the code for a machine learning app by helping to create a driver alert system, where each sensor is on a different screen of the app.
+              description_teacher: |-
+                In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
 
                 **Question of the Day:** How can I customize the code for a machine learning app?
             lesson12:
-              name: AI Lab - Choose Label and Save
-              description_student: Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also save their model for the first time and import it into App Lab, then customize the app based on their model.
-              description_teacher: "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also save their model for the first time and import it into App Lab, then customize the app based on their model.\r\n\r\n**Question of the Day:** How can I choose a label that creates an accurate machine learning model?"
+              name: Saving Models in AI Lab
+              description_student: Help train several models to help a zoo create educational apps for their customers. You will create Model Cards for each of your models, then import one of them into App Lab to create an app.
+              description_teacher: |-
+                Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab
+
+                **Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?
             lesson13:
               name: AI for Social Good
               description_student: 'Students learn how AI can be used for social good by reviewing several real-life examples. They then define a social issue they care about and create a user persona affected by that issue. The social issue and user persona are to be carried with students throughout the remainder of the unit as inspiration for further inquiry and creativity. '
               description_teacher: "Students learn how AI can be used for social good by reviewing several real-life examples. They then define a social issue they care about and create a user persona affected by that issue. The social issue and user persona are to be carried with students throughout the remainder of the unit as inspiration for further inquiry and creativity. \r\n\r\n**Question of the Day:** “How can AI be used to address social issues?” "
             lesson14:
               name: AI Code of Ethics
-              description_student: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
-              description_teacher: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+              description_student: What does it mean for artificial intelligence to be used ethically? In this lesson, you'll help create an AI Code of Ethics and research examples of artificial intelligence that are or are not following your code of ethics.
+              description_teacher: |-
+                In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+
+                **Question of the Day:** What are guidelines we can use to create ethical machine learning apps?
             lesson15:
               name: Planning Your App
               description_student: In this lesson, students return to the user personas and AI app solutions they created in the “AI for Social Good” lesson. With their new understanding of AI and machine learning, along with practical skills with AI Lab and App Lab, students design one of their apps (or entirely different apps, if they have since changed their minds) according to a set of criteria adapted from Google’s AI Impact Challenge.
               description_teacher: "In this lesson, students return to the user personas and AI app solutions they created in the “AI for Social Good” lesson. With their new understanding of AI and machine learning, along with practical skills with AI Lab and App Lab, students design one of their apps (or entirely different apps, if they have since changed their minds) according to a set of criteria adapted from Google’s AI Impact Challenge.\r\n\r\n**Question of the Day:** How do I bring my AI for social good app solution into reality?\r\n\r\n"
             lesson16:
-              name: Make an "AI for Social Good" App
+              name: Design an AI App
               description_student: To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
-              description_teacher: "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.\r\n\r\n**Question of the Day:** How can I use the Problem Solving Process to build an \"AI for Social Good\" App?"
+              description_teacher: |-
+                To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+
+                **Question of the Day:** How can I create an AI App the solves a problem in my community?
             lesson_groups: {}
             lesson-17:
               name: Innovations in AI
-              description_student: 
-              description_teacher: 
+              description_student: Research different examples of how Artificial Intelligence is being used to solve problems in the world.
+              description_teacher: In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
             lesson-18:
-              name: 'Mini-Project: Make an App with ML'
-              description_student: 
-              description_teacher: 
+              name: 'Mini-Project: Make a Machine Learning App'
+              description_student: Choose from several real-world datasets to train a model and create an app that uses machine learning
+              description_teacher: |-
+                In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+
+                **Question of the Day:** Can I use real-world data to create an app that uses machine learning?
             lesson-19:
-              name: Train Model from Bad Data
-              description_student: 
-              description_teacher: 
+              name: Troubleshooting Models
+              description_student: Help students from the other team analyze their survey data and determine why they are unable to get accurate models _or_ they are unable to create usable models when tested.
+              description_teacher: |-
+                This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.
+
+                **Question of the Day**:  What are strategies to make sure our data generates an accurate model?
             lesson-20:
-              name: Create App
-              description_student: 
-              description_teacher: 
+              name: Creating an App
+              description_student: The model is finally ready! Now it's time to import the model into App Lab and build the final Club Recommender app!
+              description_teacher: |-
+                This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?
             lesson-21:
-              name: Planning an ML Project
-              description_student: 
-              description_teacher: 
+              name: Issue Statements
+              description_student: Working with a team of students from another school, develop ideas for how machine learning can be used to address an issue in your community.
+              description_teacher: |+
+                This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can machine learning be used to address an issue in your community?
+
             lesson-22:
-              name: Designing Data Collection
-              description_student: 
-              description_teacher: 
+              name: Survey Planning
+              description_student: Help the other team of students develop questions that would be useful to create a machine learning app, then learn how to use Google Forms to create a survey to collect data.
+              description_teacher: |-
+                This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can I create a survey to gather data for a machine learning app?
             lesson-23:
-              name: Train Model from Good Data
+              name: Survey Data in AI Lab
+              description_student: Learn how to download survey data and use it in AI Lab to train a model. The skills in this lesson are important for completing the final lesson in this unit.
+              description_teacher: |-
+                This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.
+
+                **Question of the Day**:  How can I import data into AI Lab to train a machine learning model?
+            lesson-1:
+              name: Post-Unit Survey
               description_student: 
               description_teacher: 
           name: aiml-2021
           title: AI and Machine Learning Module
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also explore lesson plans on the [All Resources](./resources) page. Each lesson includes a link to its lesson plan.
+          student_description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            **For Teachers:** [Click here](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#heading=h.c7x6ho8ek6yz) to learn more about this unit and view lesson plans. You can also access lesson plans from this page if you create a Code.org teacher account.
           lesson_groups:
             lessonGroup-2:
-              display_name: Chapter 1 - Machine Learning
-              description: |-
-                Introduction to Machine Learning
-
-                Ends with Mini Project
+              display_name: Chapter 1 - Understanding Machine Learning
+              description: Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating "unplugged - AI Lab - App Lab" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.
+              big_questions: |-
+                - How does machine learning find patterns in data to make decisions?
+                - How can we avoid bias when training a machine learning model?
+                - How can machine learning be used to solve problems in our community?
             lessonGroup-3:
-              display_name: Chapter 2 - Design an ML App
+              display_name: Chapter 2 - Design a Machine Learning App
+              big_questions: "- How can machine learning be used to solve problems in our community?"
+              description: This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.
             lessonGroup-4:
-              display_name: Extra Lessons - Delete Later
+              display_name: Survey
         csd7-2021:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            Introduction to Machine Learning:
+              name: Introduction to Machine Learning
+              description_student: Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean
+              description_teacher: |-
+                In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
+
+                **Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
+            Types of Machine Learning:
+              name: Types of Machine Learning
+              description_student: Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn.
+              description_teacher: |-
+                In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
+
+                **Question of the Day:** What are different types of machine learning?
+            Innovations in AI:
+              name: Innovations in AI
+              description_student: Research different examples of how Artificial Intelligence is being used to solve problems in the world.
+              description_teacher: In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+            Patterns in Data:
+              name: Patterns in Data
+              description_student: Explore three different ways computers can make recommendations and how important data can be in making accurate decisions.
+              description_teacher: |-
+                In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+
+                **Question of the Day:** What strategies do computer models use to make decisions?
+            Classification Models:
+              name: Classification Models
+              description_student: Learn how to create a machine learning model by helping a computer classify foods as fruits or veggies
+              description_teacher: |-
+                In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.
+
+                **Question of the Day:** How do computers learn to classify data?
+            Introduction to AI Lab:
+              name: Introduction to AI Lab
+              description_student: Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant.
+              description_teacher: |-
+                In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.
+
+                **Question of the Day:** How can we use machine learning to make recommendations?
+            Importing Models in App Lab:
+              name: Importing Models in App Lab
+              description_student: Learn how to import a model into App Lab to help create a Book Recommendation app for a middle school classroom.
+              description_teacher: |-
+                In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.
+
+                **Question of the Day:** How can I create an app using machine learning?
+            Model Cards:
+              name: Model Cards
+              description_student: Help decide which model a hospital should use for it's emergency room prioritization system, and determine which models include unintended biases. You will also learn how Model Cards can help evaluate and analyze machine learning models.
+              description_teacher: |-
+                In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.
+
+                **Question of the Day:** How can we evaluate machine learning models once they've been trained?
+            Saving Models in AI Lab:
+              name: Saving Models in AI Lab
+              description_student: Help train several models to help a zoo create educational apps for their customers. You will create Model Cards for each of your models, then import one of them into App Lab to create an app.
+              description_teacher: |-
+                Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab
+
+                **Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?
+            Model Cards in App Lab:
+              name: Model Cards in App Lab
+              description_student: Learn how to use Model Cards to improve a machine learning app, and how to update the final screen based on the model prediction.
+              description_teacher: |-
+                In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.
+
+                **Question of the Day:** How can I use a Model Card to improve my app?
+            Similarity Models:
+              name: Numerical Models
+              description_student: Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety.
+              description_teacher: |-
+                In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
+
+                **Question of the Day:** How do computers learn to make predictions with numerical data?
+            Numerical Data in AI Lab:
+              name: Numerical Data in AI Lab
+              description_student: Use AI Lab and numerical data to make predictions about real-world scenarios
+              description_teacher: |-
+                In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.
+
+                **Question of the Day:** How can we use AI Lab to predict numerical data?
+            Customizing Apps:
+              name: Customizing Apps
+              description_student: Learn how to edit the code for a machine learning app by helping to create a driver alert system, where each sensor is on a different screen of the app.
+              description_teacher: |-
+                In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.
+
+                **Question of the Day:** How can I customize the code for a machine learning app?
+            AI Code of Ethics:
+              name: AI Code of Ethics
+              description_student: What does it mean for artificial intelligence to be used ethically? In this lesson, you'll help create an AI Code of Ethics and research examples of artificial intelligence that are or are not following your code of ethics.
+              description_teacher: |-
+                In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+
+                **Question of the Day:** What are guidelines we can use to create ethical machine learning apps?
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Mini-Project: Make a Machine Learning App'
+              description_student: Choose from several real-world datasets to train a model and create an app that uses machine learning
+              description_teacher: |-
+                In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.
+
+                **Question of the Day:** Can I use real-world data to create an app that uses machine learning?
+            Issue Statements:
+              name: Issue Statements
+              description_student: Working with a team of students from another school, develop ideas for how machine learning can be used to address an issue in your community.
+              description_teacher: |+
+                This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can machine learning be used to address an issue in your community?
+
+            Survey Planning:
+              name: Survey Planning
+              description_student: Help the other team of students develop questions that would be useful to create a machine learning app, then learn how to use Google Forms to create a survey to collect data.
+              description_teacher: |-
+                This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day:** How can I create a survey to gather data for a machine learning app?
+            Survey Data in AI Lab:
+              name: Survey Data in AI Lab
+              description_student: Learn how to download survey data and use it in AI Lab to train a model. The skills in this lesson are important for completing the final lesson in this unit.
+              description_teacher: |-
+                This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.
+
+                **Question of the Day**:  How can I import data into AI Lab to train a machine learning model?
+            Troubleshooting Models:
+              name: Troubleshooting Models
+              description_student: Help students from the other team analyze their survey data and determine why they are unable to get accurate models _or_ they are unable to create usable models when tested.
+              description_teacher: |-
+                This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.
+
+                **Question of the Day**:  What are strategies to make sure our data generates an accurate model?
+            Creating an App:
+              name: Creating an App
+              description_student: The model is finally ready! Now it's time to import the model into App Lab and build the final Club Recommender app!
+              description_teacher: |-
+                This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.
+
+                **Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?
+            Design an AI App:
+              name: Design an AI App
+              description_student: To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+              description_teacher: |-
+                To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+
+                **Question of the Day:** How can I create an AI App the solves a problem in my community?
+            lesson-1:
+              name: Post-Unit Survey
+            Post-Unit Survey:
+              name: Post-Unit Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1 - Understanding Machine Learning
+              big_questions: |-
+                - How does machine learning find patterns in data to make decisions?
+                - How can we avoid bias when training a machine learning model?
+                - How can machine learning be used to solve problems in our community?
+              description: Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating "unplugged - AI Lab - App Lab" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.
+            lessonGroup-3:
+              display_name: Chapter 2 - Design a Machine Learning App
+              big_questions: "- How can machine learning be used to solve problems in our community?"
+              description: This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.
+            lessonGroup-4:
+              display_name: Survey
           name: csd7-2021
           title: AI and Machine Learning
           description_audience: ''
@@ -23174,17 +23406,12 @@ en:
           description: |-
             Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            **Coming Soon! This unit will be available in July 2021!**
-
             **Implementation guidance for Unit 7**
 
             - Complete Unit 1 Chapter 1 and Unit 4 before starting this unit
             - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information
             - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
-          student_description: |-
-            Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
-
-            **Coming Soon! This unit will be available in July 2021!**
+          student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
         kodea-pd-2021:
           title: CSF Online PD - Kodea
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -23459,6 +23686,14 @@ en:
           lessons:
             lesson-1:
               name: Overview of CS Discoveries
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Implementation Options
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -23823,38 +24058,72 @@ en:
               description_teacher: 
             lesson-4:
               name: Conditionals and Debugging
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: More with Objects
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: While Loops and Practice
+              description_student: 
+              description_teacher: 
             lesson-7:
               name: More with Conditionals
+              description_student: 
+              description_teacher: 
             lesson-8:
               name: Introduction to Code Reviews
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Inheritance and Methods
+              description_student: 
+              description_teacher: 
             lesson-10:
               name: More Methods, More Features
+              description_student: 
+              description_teacher: 
             lesson-11:
               name: Painting Methods
+              description_student: 
+              description_teacher: 
             lesson-12:
               name: Spray Painter
+              description_student: 
+              description_teacher: 
             lesson-13:
               name: StampPainter
+              description_student: 
+              description_teacher: 
             lesson-14:
               name: Edge Cases
+              description_student: 
+              description_teacher: 
             lesson-15:
               name: Software Engineering Wrap Up
+              description_student: 
+              description_teacher: 
             lesson-16:
-              name: 'Project: Personal Symbol - Day 1'
+              name: Asphalt Art Project - Day 1
+              description_student: 
+              description_teacher: 
             lesson-17:
-              name: 'Project: Personal Symbol - Day 2'
+              name: Asphalt Art Project - Day 2
+              description_student: 
+              description_teacher: 
             lesson-18:
-              name: 'Project: Personal Symbol - Day 3'
+              name: Asphalt Art Project - Day 3
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: FRQ Day
+              description_student: 
+              description_teacher: 
             lesson-20:
               name: Assessment Day
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -24201,6 +24470,10 @@ en:
               name: AI Lab
               description_student: 
               description_teacher: 
+            lesson-2:
+              name: AI Lab Resources
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: ai-lab
           title: AI Lab
@@ -24236,6 +24509,42 @@ en:
           lesson_groups: {}
           name: tesspl2
           title: Tess PL 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sb-pt-cont:
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-pt-cont
+          title: Story Board (playtest control)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sb-pt-exp:
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-pt-exp
+          title: Story Board (playtest experiment)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dc-standalone:
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dc-standalone
+          title: Story Board (DC Standalone)
           description_audience: ''
           description_short: ''
           description: ''

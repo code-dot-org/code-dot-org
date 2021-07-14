@@ -2,9 +2,6 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Write the `PainterPlus` class.\r\n\r\nDon't forget to include the constructor for `PainterPlus`!\r\n\r\nIf you need a reference, take a look at the `Painter` class in the **Documentation**.",
     "mini_rubric": "false",
     "project_template_level_name": "CSA U1L9 Template",
@@ -531,13 +528,14 @@
           "assetId": 0
         }
       ]
-    ]
+    ],
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tO0nOYr2OrrDpdi13jL\naGdCXT5K+0Y3aahVbkhy6MDfKRdjxpLL1d3Qhz/YxNoxWMk=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-08T15:49:47.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-08 15:51:55 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-08 15:51:55 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:36:57 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

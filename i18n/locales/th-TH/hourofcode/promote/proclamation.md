@@ -4,55 +4,55 @@ title: Sample Resolution Supportive of Computer Science Education Week and Hour 
 
 {{ signup_button }}
 
-# ตัวอย่างคำประกาศสัปดาห์วิชาการวิทยาการคอมพิวเตอร์
+# Sample Computer Science Education Week resolution
 
-### ดูตัวอย่างภาษาที่ใช้ในประกาศสนับสนุนสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ และเป้าหมายของการจัดกิจกรรมที่ฝ่ายออกกฎหมายระดับหรือระดับท้องถิ่นนำไปใช้ได้
+### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
 
 * * *
 
-#### **ประกาศ**  
+#### **RESOLUTION**  
 
 
-#### สนับสนุนเป้าหมายและแนวคิดของ "สัปดาห์วิชาการวิทยาการคอมพิวเตอร์"
+#### Supporting the goals and ideals of "Computer Science Education Week"
 
-โดยสัปดาห์วิชาการวิทยาการคอมพิวเตอร์จะชูบทบาทสำคัญของวิทยาการคอมพิวเตอร์ที่มีต่อการเปลี่ยนผ่านสังคมของเรา และวิทยาการคอมพิวเตอร์ช่วยสร้างนวัตกรรมและโอกาสทางด้านเศรษฐกิจได้อย่างไร
+Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-โดยเทคโนโลยีการใช้คอมพิวเตอร์ถือเป็นส่วนประกอบภายในของวัฒนธรรมอันทันสมัย เทคโนโลยีนี้กำลังเปลี่ยนวิธีที่ผู้คนใช้เพื่อแสดงปฏิสัมพันธ์ระหว่างกันและกับโลกที่อยู่รอบตัวเรา
+Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-โดยวิทยาการคอมพิวเตอร์เป็นตัวเปลี่ยนผ่านอุตสาหกรรม สร้างธุรกิจการค้าแขนงใหม่ ขับเคลื่อนนวัตกรรมในทุกแขนงของวิทยาศาสตร์ และเพิ่มระดับผลิตภาพในภาคธุรกิจที่มีอยู่
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-โดยวิชาการแขนงวิทยาการคอมพิวเตอร์เน้นย้ำถึงอุตสาหกรรมเทคโนโลยีสารสนเทศในเศรษฐกิจของเรา ซึ่งมีบทบาทที่สำคัญต่อผลผลิตทางเศรษฐกิจของสหรัฐฯ
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-โดยแขนงวิชาวิทยาการคอมพิวเตอร์เป็นวิทยาศาสตร์พื้นฐานสำหรับยุคดิจิทัล
+Whereas the field of computer science is a foundational science for the digital age;
 
-โดยอุตสาหกรรมเทคโนโลยีสารสนเทศมีบทบาทเฉพาะที่ช่วยให้เศรษฐกิจฟื้นตัวได้ผ่านทางการวิจัยและการพัฒนานวัตกรรมใหม่ ๆ
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
-โดยภาพรวมของงานในด้านวิทยาการคอมพิวเตอร์สดใสมาก ซึ่งเห็นได้จากงานด้านการใช้คอมพิวเตอร์ที่เปิดรับถึง 500,000 ตำแหน่งทั่วประเทศ
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-โดยการเปิดโอกาสให้นักเรียนได้เข้าร่วมกิจกรรมวิทยาการคอมพิวเตอร์คุณภาพสูง ซึ่งจะเอื้อให้พวกเขามีโอกาสมากมายต่อตำแหน่งที่เสนอ พร้อมมีทักษะการคิดเชิงวิพากษ์ ที่นำไปใช้ได้ตลอดชีวิต
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-โดยนักเรียนทุกคนมีสิทธิ์เต็มรูปแบบที่จะเตรียมความพร้อมรับการศึกษาด้านวิทยาการคอมพิวเตอร์ เข้าถึงผู้สอน เทคโนโลยีและหลักสูตรที่เหมาะกับอายุที่มีคุณภาพ และจำเป็นต่อการเรียนรู้วิทยาการคอมพิวเตอร์ในการศึกษาระดับประถมศึกษาและมัธยมศึกษา
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-โดยการศึกษาด้านวิทยาการคอมพิวเตอร์มีความท้าทายให้ต้องค้นหา รวมถึงการพิจารณาจำนวนชั้นเรียนวิทยาการคอมพิวเตอร์เพื่อให้ตรงเกณฑ์การจบการศึกษาระดับมัธยมปลาย และนำเสนอการพัฒนาระดับมืออาชีพให้กับผู้สอนวิทยาการคอมพิวเตอร์
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-โดยการเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ดในระหว่างสัปดาห์วิชาการวิทยาการคอมพิวเตอร์สามารถให้ความกระจ่างถึงขอบข่ายวิชาการวิทยาการคอมพิวเตอร์ และสนับสนุนให้มีผู้เรียนต่อยอดเรื่องวิทยาการคอมพิวเตอร์เพิ่มขึ้น
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-โดยที่วิชาแขนงวิชาการคอมพิวเตอร์มีอุปสรรคด้านความเท่าเทียมอันเด่นชัดที่ต้องระบุถึง รวมถึงการดึงดูดให้กลุ่มสตรีและชนกลุ่มน้อยด้อยความสำคัญมีส่วนร่วมในทุกระดับและทุกสาขา
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-โดย Grace Murray Hopper หนึ่งในสตรีกลุ่มแรกในด้านวิทยาการคอมพิวเตอร์ ได้ทำวิศวกรรมภาษาโปรแกรมใหม่ และบุกเบิกการจัดทำมาตรฐานของระบบคอมพิวเตอร์ซึ่งกลายเป็นรากฐานของความเจริญรุดหน้าหลายอย่างในด้านวิทยาการคอมพิวเตอร์ และ
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-โดยสัปดาห์ {{ campaign_date/start_long }} เพื่อระลึกถึงวันเกิดของ Grace Hopper เป็นกิจกรรมที่จัดขึ้นในรูปของ ‘สัปดาห์วิชาการวิทยาการคอมพิวเตอร์’: ดังนั้น กิจกรรมนี้จึง <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-เป็นการประกาศให้ทราบว่า (สภาผู้แทนราษฎรหรือสภาซีเนท คณะกรรมการแห่งรัฐ ประจำเขต ประจำเมืองหรือประจำโรงเรียน) --
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) สนับสนุนการจัดงานสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ ({{ campaign_date/full }})
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(2) ส่งเสริมให้โรงเรียน นักการศึกษา ผู้ปกครองและผู้กำหนดนโยบายเข้าร่วมสัปดาห์วิชาการวิทยาการคอมพิวเตอร์ด้วยการอนุญาตให้นักเรียนของตนเข้าร่วมกิจกรรมชั่วโมงเขียนโค้ด
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) ส่งเสริมให้โรงเรียน ผู้สอน นักวิจัย มหาวิทยาลัย ผู้นำธุรกิจ และผู้กำหนดนโยบายระบุถึงกลไกของผู้สอนเพื่อเปิดรับพัฒนาการด้านอาชีพอันล้ำหน้า เพื่อมอบประสบการณ์การเรียนรู้ที่ยั่งยืนในวิชาวิทยาการคอมพิวเตอร์ให้กับการศึกษาทุกระดับ และโน้มน้าวให้นักเรียนร่วมแสดงแนวคิดเกี่ยวกับวิทยาการคอมพิวเตอร์\---\---\---\---\---\---\---\---\---\---\---\---\---\-----
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) ส่งเสริมให้ผู้กำหนดนโยบายขจัดอุปสรรคที่ป้องกันไม่ให้นับรวมชั้นเรียนวิทยาการคอมพิวเตอร์ว่าเป็นหน่วยกิตวิชาคณิตศาสตร์หรือวิทยาศาสตร์ที่เป็นเกณฑ์จบการศึกษา
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) ส่งเสริมให้เกิดโอกาส ที่เกิดขึ้นได้จากโปรแกรมที่มีอยู่ สำหรับทั้งสตรีและชนกลุ่มน้อยด้อยสิทธิ์ในด้านวิทยาการคอมพิวเตอร์\---\---\---\---\---\---\---\---\-----
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
 {{ signup_button }}

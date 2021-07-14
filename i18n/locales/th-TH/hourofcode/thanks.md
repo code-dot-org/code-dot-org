@@ -1,8 +1,8 @@
 ---
-title: ขอขอบคุณที่ลงทะเบียนจัดกิจกรรมชั่วโมงเขียนโค้ด
+title: Thanks for signing up to host an Hour of Code!
 ---
 
-# ขอขอบคุณที่ลงทะเบียนจัดกิจกรรมชั่วโมงเขียนโค้ด
+# Thanks for signing up to host an Hour of Code!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

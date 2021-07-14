@@ -1,16 +1,16 @@
 ---
-title: Hubungi Rakan Kongsi Antarabangsa
+title: Contact International Partners
 ---
 
 {{ signup_button }}
 
-# Hubungi Rakan Kongsi Antarabangsa
+# Contact International Partners
 
-Code.org bekerjasama dengan banyak organisasi di seluruh dunia untuk merealisasikan Jam Kod sebagai pergerakan antarabangsa yang sebenar. Adakah anda tahu bahawa pada tahun 2017, 60% daripada kesemua acara Jam Kod berlaku di luar Amerika Syarikat?
+Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
 
-Anda juga boleh memainkan peranan utama untuk melibatkan lebih ramai individu di dalam negara anda! Jika anda berada di dalam satu daripada negara di bawah, sila hubungi rakan kongsi yang tersenarai dan sertai Jam Kod setempat anda.
+You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
 
-*Negara anda tidak disenaraikan di sini?* [Sila memohon untuk menjadi Rakan Kongsi Antarabangsa Jam Kod](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
+*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
 
 {{ international_partners_table }}
 
