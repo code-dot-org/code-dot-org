@@ -1,8 +1,8 @@
 {
-  "category": "",
+  "category": "Validation",
   "config": {
     "func": "validatedSound",
-    "blockText": "playSound {SOUND}",
+    "blockText": "PLAYSound {SOUND}",
     "args": [
       {
         "name": "SOUND",

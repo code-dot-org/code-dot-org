@@ -9,6 +9,22 @@
         },
         {
           "type": "radiogroup",
+          "name": "Status",
+          "title": "When you started your summer workshop, what was your facilitator-in-training status?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Novice"
+            },
+            {
+              "value": "item2",
+              "text": "Apprentice"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
           "name": "Course",
           "title": "For which course are you preparing to be a facilitator?",
           "isRequired": true,
@@ -24,36 +40,68 @@
           ]
         },
         {
-          "type": "radiogroup",
-          "name": "Status",
-          "title": "What is your facilitator-in-training status?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "item1",
-              "text": "Novice"
-            },
-            {
-              "value": "item2",
-              "text": "Apprentice"
-            }
-          ]
+          "type": "html",
+          "name": "Day3Feedback",
+          "html": "<p><h4>Feedback on Day 3</h3>"
+        },
+        {
+          "type": "comment",
+          "name": "usefulPractice",
+          "title": "What was the most useful thing you learned today and why?"
         },
         {
           "type": "rating",
-          "name": "iFeel",
-          "title": "I feel prepared to participate in the Facilitator Development Program in 2021-22.",
+          "name": "overallTo",
+          "title": "Overall, to what extent did you find the activities today engaging?",
+          "rateMax": 7,
+          "minRateDescription": "Not at All Engaging",
+          "maxRateDescription": "Very Engaging"
+        },
+        {
+          "type": "comment",
+          "name": "MostEngagingToday",
+          "title": "What was most engaging for you today?"
+        },
+        {
+          "type": "comment",
+          "name": "LeastEngagingToday",
+          "title": "What was the least useful for you today?"
+        },
+        {
+          "type": "html",
+          "name": "OverallFeedback",
+          "html": "<p><h4>Feedback on the Overall Event</h4><p>Consider your experience over the course of the 2.5-day FiT Workshop.</p>"
+        },
+        {
+          "type": "comment",
+          "name": "MostUsefulActivity",
+          "title": "Which activity or session was most useful during this workshop?"
+        },
+        {
+          "type": "comment",
+          "name": "LeastUsefulActivity",
+          "title": "Which activity or session was least useful during this workshop?"
+        },
+        {
+          "type": "rating",
+          "name": "SupportEquity",
+          "title": "To what extent has your experience at this event supported your understanding of the role and opportunity you have as a Code.org facilitator to support equity in your workshops?",
+          "rateMax": 7,
+          "minRateDescription": "Not at All",
+          "maxRateDescription": "To a Great Extent"
+        },
+        {
+          "type": "html",
+          "name": "OverallFeedback",
+          "html": "<p><h4>We are interested in learning how confident and prepared you feel to lead Code.org workshops. Please respond to the following questions using the provided scale. </h4> "
+        },
+        {
+          "type": "rating",
+          "name": "iFeelMore",
+          "title": "I feel more prepared to lead Code.org's CS [course] Professional Learning workshops in 2021-22 than I did before this event.",
           "rateMax": 7,
           "minRateDescription": "Strongly Disagree",
           "maxRateDescription": "Strongly Agree"
-        },
-        {
-          "type": "rating",
-          "name": "toWhat",
-          "title": "To what extent are the goals and objectives of the Facilitator Development Program clear to you as a facilitator?",
-          "rateMax": 7,
-          "minRateDescription": "Not at all clear",
-          "maxRateDescription": "Very clear"
         },
         {
           "type": "rating",
@@ -78,6 +126,14 @@
           "rateMax": 7,
           "minRateDescription": "Not at all confident",
           "maxRateDescription": "Very confident"
+        },
+        {
+          "type": "rating",
+          "name": "Identify",
+          "title": "I can identify facilitation practices I need to strengthen in support of leading high-quality, equity-focused CS workshops.",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
         },
         {
           "type": "html",
@@ -372,34 +428,6 @@
               "text": "I feel my work as a facilitator is valued and respected by Code.org."
             }
           ]
-        },
-        {
-          "type": "comment",
-          "name": "usefulPractice",
-          "title": "What was the most useful thing you learned today and why?"
-        },
-        {
-          "type": "rating",
-          "name": "overallTo",
-          "title": "Overall, to what extent did you find the activities today engaging?",
-          "rateMax": 7,
-          "minRateDescription": "Not at all engaging",
-          "maxRateDescription": "Very engaging"
-        },
-        {
-          "type": "comment",
-          "name": "whatWas93",
-          "title": "What was most engaging for you today?"
-        },
-        {
-          "type": "comment",
-          "name": "whatWas94",
-          "title": "What was least engaging for you today?"
-        },
-        {
-          "type": "comment",
-          "name": "question4",
-          "title": "What feedback would you like to share with the presenters?"
         },
         {
           "type": "comment",
