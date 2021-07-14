@@ -8,6 +8,8 @@ theme: responsive
 # Privacy Policy
 Date of Last Revision: March 11, 2021
 
+You can review the previous Privacy Policy [here](/privacy-sep2020).
+
 ## About Code.org
 Code.org® is a US-based charitable nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science.
 
