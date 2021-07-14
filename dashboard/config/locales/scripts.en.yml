@@ -1337,7 +1337,7 @@ en:
               name: Welcome!
           student_description: Online levels for PD workshop
         K5-OnlinePD:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2017)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -1366,6 +1366,7 @@ en:
             Planning:
               name: Planning
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          name: K5-OnlinePD
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -15199,7 +15200,7 @@ en:
               name: Dance Party
           student_description: Code your own dance party to share with your friends!
         k5-onlinepd-2019:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -15308,6 +15309,7 @@ en:
             End of Course projects:
               name: End of Course projects
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          name: k5-onlinepd-2019
         dance-extras-2019:
           title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
@@ -18369,7 +18371,7 @@ en:
           lessons: {}
           lesson_groups: {}
         k5-onlinepd-2020:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2020)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -18436,6 +18438,7 @@ en:
             k5_next_steps_1:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          name: k5-onlinepd-2020
         dani-test-2020:
           lessons:
             new lesson:
