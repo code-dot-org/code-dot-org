@@ -50,8 +50,7 @@ class BubbleChoice < DSLDefined
   def sublevels
     levels_child_levels.
       includes(:child_level).
-      where(kind: ParentLevelsChildLevel::SUBLEVEL).
-      order('position ASC').
+      sublevel.
       map(&:child_level)
   end
 
@@ -156,6 +155,9 @@ class BubbleChoice < DSLDefined
                               else
                                 SharedConstants::LEVEL_STATUS.not_tried
                               end
+
+        level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
+        level_info[:teacher_feedback_review_state] = level_feedback&.review_state
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -175,24 +177,14 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Returns the sublevel for a user that has the highest best_result.
-  # @param [User]
-  # @param [Script]
-  # @return [Level]
-  def best_result_sublevel(user, script)
-    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
-    ul&.level
-  end
+  # Determine which sublevel's status to display in our progress bubble.
+  # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+  # progress for sublevel that has the best result
+  def get_sublevel_for_progress(student, script)
+    keep_working_level = keep_working_sublevel(student, script)
+    return keep_working_level if keep_working_level.present?
 
-  def keep_working_sublevel(user, script)
-    # get latest feedback on sublevels where keepWorking is true
-    level_ids = sublevels.map(&:id)
-    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
-
-    if latest_feedbacks.any?
-      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
-      return keep_working_feedback&.level
-    end
+    return best_result_sublevel(student, script)
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
@@ -231,19 +223,42 @@ class BubbleChoice < DSLDefined
   end
 
   def setup_sublevels(sublevel_names)
-    reload
-    self.child_levels = []
+    # if our existing sublevels already match the given names, do nothing
+    return if sublevels.map(&:name) == sublevel_names
 
-    sublevel_names.each_with_index do |sublevel_name, i|
-      sublevel = Level.find_by_name!(sublevel_name)
-      ParentLevelsChildLevel.find_or_create_by!(
-        parent_level: self,
-        child_level: sublevel,
+    # otherwise, update sublevels to match
+    levels_child_levels.sublevel.destroy_all
+    Level.where(name: sublevel_names).each do |new_sublevel|
+      ParentLevelsChildLevel.create!(
+        child_level: new_sublevel,
         kind: ParentLevelsChildLevel::SUBLEVEL,
-        position: i + 1
+        parent_level: self,
+        position: sublevel_names.index(new_sublevel.name)
       )
     end
 
-    save!
+    reload
+  end
+
+  private
+
+  # Returns the sublevel for a user that has the highest best_result.
+  # @param [User]
+  # @param [Script]
+  # @return [Level]
+  def best_result_sublevel(user, script)
+    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
+    ul&.level
+  end
+
+  def keep_working_sublevel(user, script)
+    # get latest feedback on sublevels where keepWorking is true
+    level_ids = sublevels.map(&:id)
+    latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
+
+    if latest_feedbacks.any?
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      return keep_working_feedback&.level
+    end
   end
 end
