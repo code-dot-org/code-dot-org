@@ -1,5 +1,8 @@
 id '7'
+family_name 'jigsaw'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 skin 'jigsaw'

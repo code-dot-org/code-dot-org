@@ -1,5 +1,8 @@
 wrapup_video 'hoc_wrapup'
+family_name 'hourofcode'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Maze', display_name: 'Maze', has_lesson_plan: false
 skin 'birds'
