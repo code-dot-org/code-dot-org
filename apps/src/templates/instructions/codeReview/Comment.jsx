@@ -10,7 +10,8 @@ export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
     onDelete: PropTypes.func.isRequired,
-    onResolve: PropTypes.func.isRequired
+    onResolve: PropTypes.func.isRequired,
+    token: PropTypes.string.isRequired
   };
 
   state = {
@@ -19,7 +20,27 @@ export default class Comment extends Component {
 
   onDelete = commentId => {
     this.setState({isShowingCommentOptions: false});
-    this.props.onDelete(commentId);
+
+    $.ajax({
+      url: `/code_review_comments/${commentId}`,
+      type: 'DELETE',
+      headers: {'X-CSRF-Token': this.props.token}
+    }).done(result => {
+      this.props.onDelete(commentId);
+    });
+  };
+
+  onResolve = commentId => {
+    this.setState({isShowingCommentOptions: false});
+
+    $.ajax({
+      url: `/code_review_comments/${commentId}/resolve`,
+      type: 'PATCH',
+      headers: {'X-CSRF-Token': this.props.token},
+      data: {is_resolved: !this.state.isResolved}
+    }).done(result => {
+      this.setState({isResolved: !this.state.isResolved});
+    });
   };
 
   renderName = () => {
@@ -75,6 +96,7 @@ export default class Comment extends Component {
               <CommentOptions
                 isResolved={isResolved}
                 onResolveClick={() => {
+                  this.onResolve(id);
                   this.props.onResolve(id);
                   this.setState({isShowingCommentOptions: false});
                 }}

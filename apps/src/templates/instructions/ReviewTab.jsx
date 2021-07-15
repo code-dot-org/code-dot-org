@@ -83,7 +83,7 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {comments, forceRecreateEditorKey} = this.state;
+    const {comments, forceRecreateEditorKey, token} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
@@ -95,6 +95,7 @@ export default class ReviewTab extends Component {
               key={`code-review-comment-${comment.id}`}
               onResolve={() => this.onCommentResolve(comment.id)}
               onDelete={() => this.onCommentDelete(comment.id)}
+              token={token}
             />
           );
         })}
