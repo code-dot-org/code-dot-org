@@ -1,6 +1,18 @@
 module Pd
-  module PrincipalApproval1920ApplicationConstants
-    include Pd::PrincipalApprovalCommonApplicationConstants
+  module PrincipalApprovalApplicationConstants
+    YES_NO = %w(Yes No).freeze
+
+    # Remove newlines and leading whitespace from multiline strings
+    def self.clean_multiline(string)
+      string.gsub(/\n\s*/, ' ')
+    end
+
+    TEXT_FIELDS = {
+      other_with_text: 'Other:'.freeze,
+      other_please_explain: 'Other (Please Explain):'.freeze,
+      dont_know_explain: "I don't know (Please Explain):".freeze,
+      yes_replace_existing_course: 'Yes, it will replace an existing computer science course'.freeze
+    }.freeze
 
     PAGE_LABELS = {
       first_name: 'Principal First Name',
@@ -8,7 +20,7 @@ module Pd
       title: 'Principal Title',
       email: 'Principal Email Address',
       total_student_enrollment: 'Total student enrollment',
-      free_lunch_percent: 'Percentage of students who are eligible to receive free or reduced lunch',
+      free_lunch_percent: 'Percent of students who are eligible to receive free or reduced lunch',
       white: 'White',
       black: 'Black or African American',
       hispanic: 'Hispanic or Latino',
