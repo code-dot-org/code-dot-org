@@ -42,6 +42,7 @@ module Levels
 
       before_validation :sanitize_contained_level_names
       after_save :setup_contained_levels
+      after_save :setup_project_template_level
     end
 
     class_methods do
@@ -58,9 +59,14 @@ module Levels
           parent_levels_child_level.save!
         end
 
-        unless parent_level.child_levels.contained.empty?
+        if parent_level.child_levels.contained.present?
           update_params[:contained_level_names] =
             parent_level.child_levels.contained.map(&:name)
+        end
+
+        if parent_level.project_template_level.present?
+          update_params[:project_template_level_name] =
+            parent_level.project_template_level.name
         end
 
         return update_params
@@ -96,6 +102,18 @@ module Levels
       end
     end
 
+    # Project template levels are used to persist use progress
+    # across multiple levels, using a single level name as the
+    # storage key for that user.
+    def project_template_level
+      return nil if try(:project_template_level_name).nil?
+      child_levels.project_template.first
+    end
+
+    def host_level
+      project_template_level || self
+    end
+
     private
 
     def sanitize_contained_level_names
@@ -122,6 +140,22 @@ module Levels
           position: contained_level_names.index(contained_level.name)
         )
       end
+
+      reload
+    end
+
+    def setup_project_template_level
+      # if we already have a project template level which matches the specified
+      # name, do nothing.
+      return if project_template_level&.name == project_template_level_name
+
+      # otherwise, update project template level to match
+      levels_child_levels.project_template.destroy_all
+      ParentLevelsChildLevel.create!(
+        child_level: Level.find_by_name(project_template_level_name),
+        kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
+        parent_level: self
+      )
 
       reload
     end
