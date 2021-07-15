@@ -122,8 +122,6 @@ module Levels
           position: contained_level_names.index(contained_level.name)
         )
       end
-
-      reload
     end
   end
 end
