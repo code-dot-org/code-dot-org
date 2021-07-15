@@ -25,6 +25,23 @@ module Types
       Models::UserProgress.new(object)
     end
 
+    field :projects, [Types::ProjectType, null: false], null: false
+    def projects
+      student_storage_id = PEGASUS_DB[:user_storage_ids].where(user_id: object.id).first.try(:[], :id)
+
+      return [] unless student_storage_id
+
+      projects = PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id, state: 'active').map do |project|
+        # The channel id stored in the project's value field may not be reliable
+        # when apps are remixed, so recompute the channel id.
+        channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
+        project_data = ProjectsList.get_project_row_data(project, channel_id, object)
+        project_data if project_data
+      end
+
+      projects.compact
+    end
+
     # field :studio_person_id, Integer, null: true
     # field :parent_email, String, null: true
     # field :encrypted_password, String, null: true
