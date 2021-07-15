@@ -9,6 +9,7 @@ import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
+import { TestingAnimationDescription } from "./AnimationDescriptions";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -202,6 +203,7 @@ class GenerateResults extends Component {
             </div>
           </div>
         </div>
+        <TestingAnimationDescription />
       </div>
     );
   }
