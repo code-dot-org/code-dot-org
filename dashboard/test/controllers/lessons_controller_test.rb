@@ -68,7 +68,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit = create :script, name: 'in-development-unit', published_state: SharedConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
+    @in_development_unit = create :standalone_unit, name: 'in-development-unit', published_state: SharedConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
     in_development_lesson_group = create :lesson_group, script: @in_development_unit
     @in_development_lesson = create(
       :lesson,
@@ -86,7 +86,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
+    @pilot_script = create :standalone_unit, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
     pilot_lesson_group = create :lesson_group, script: @pilot_script
     @pilot_lesson = create(
       :lesson,

@@ -46,7 +46,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script = @custom_script
     @script_level = @custom_s1_l1
 
-    in_development_unit = create(:script, published_state: SharedConstants::PUBLISHED_STATE.in_development)
+    in_development_unit = create(:standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.in_development)
+    puts in_development_unit.inspect
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
     in_development_lesson = create(:lesson, script: in_development_unit, lesson_group: in_development_lesson_group)
     @in_development_script_level = create :script_level, script: in_development_unit, lesson: in_development_lesson
@@ -587,9 +588,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
+    courseg_2017 = create :standalone_unit, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
     courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
@@ -607,9 +608,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
+    courseg_2017 = create :standalone_unit, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
     courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
@@ -1816,17 +1817,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
+    cats1 = create :standalone_unit, name: 'cats1', family_name: 'ui-test-versioned-script', version_year: '2017'
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     end
 
-    cats1.update!(published_state: SharedConstants::PUBLISHED_STATE.stable)
+    cats1.set_published_state(SharedConstants::PUBLISHED_STATE.stable)
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {script_id: 'ui-test-versioned-script', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
