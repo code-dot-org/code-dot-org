@@ -8,14 +8,17 @@ class CodeReviewCommentsController < ApplicationController
   # POST /code_review_comments
   def create
     additional_attributes = {
+      # Using temporary placeholder string for currently required project_version.
+      # Immediate to-do to migrate the code_review_comments table to not require project_version.
       commenter_id: current_user.id,
       storage_app_id: @storage_app_id,
+      project_version: 'temporary placeholder',
       project_owner_id: @project_owner.id
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
-    # Need to wait to authorize until after we've figured out who owns the project that the comment
-    # is associated with.
+    # We wait to authorize until this point because we need to know
+    # who owns the project that the comment is associated with.
     authorize! :create, @code_review_comment, @project_owner
 
     if @code_review_comment.save
@@ -51,7 +54,6 @@ class CodeReviewCommentsController < ApplicationController
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
-    # To do: get project version passed as param
     @project_comments = CodeReviewComment.where(
       storage_app_id: @storage_app_id
     ).order(:created_at)
@@ -72,17 +74,20 @@ class CodeReviewCommentsController < ApplicationController
   # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
-      :project_version,
       :comment,
       :is_resolved
     )
   end
 
   def serialize(comment)
+    # once project versioning is implemented,
+    # we should pass the project_version string to the front end
+    # and calculate isFromOlderVersionOfProject there.
     {
       id: comment.id,
       name: comment.commenter&.name,
       commentText: comment.comment,
+      projectVersion: comment.project_version,
       timestampString: comment.created_at,
       isResolved: !!comment.is_resolved,
       isFromTeacher: !!comment.is_from_teacher,

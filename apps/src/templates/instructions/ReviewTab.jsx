@@ -16,10 +16,8 @@ export default class ReviewTab extends Component {
   componentDidMount() {
     const channelId = getStore().getState().pageConstants.channelId;
 
-    // projectVersion = 'latest' is a placeholder until we implement
-    // storing project version when saving comments
     codeReviewDataApi
-      .getCodeReviewCommentsForProject(channelId, 'latest')
+      .getCodeReviewCommentsForProject(channelId)
       .done((data, _, request) => {
         this.setState({
           comments: data,
@@ -32,10 +30,8 @@ export default class ReviewTab extends Component {
     const channelId = getStore().getState().pageConstants.channelId;
     const {token} = this.state;
 
-    // projectVersion = 'latest' is a placeholder until we implement
-    // storing project version when saving comments
     codeReviewDataApi
-      .submitNewCodeReviewComment(commentText, channelId, 'latest', token)
+      .submitNewCodeReviewComment(commentText, channelId, token)
       .done(newComment => {
         const comments = this.state.comments;
         comments.push(newComment);

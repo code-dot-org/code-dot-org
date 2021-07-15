@@ -36,11 +36,9 @@ describe('Code Review Tab', () => {
   });
 
   it('renders without error if project has no comments', () => {
-    // projectVersion = 'latest' is a placeholder until we implement
-    // storing project version when saving comments
     server.respondWith(
       'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}&project_version=latest`,
+      `/code_review_comments/project_comments?channel_id=${channelId}`,
       [200, {'Content-Type': 'application/json'}, JSON.stringify([])]
     );
 
@@ -51,11 +49,9 @@ describe('Code Review Tab', () => {
   });
 
   it('renders a comment fetched on mount if one exists', () => {
-    // projectVersion = 'latest' is a placeholder until we implement
-    // storing project version when saving comments
     server.respondWith(
       'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}&project_version=latest`,
+      `/code_review_comments/project_comments?channel_id=${channelId}`,
       [
         200,
         {'Content-Type': 'application/json'},
@@ -71,11 +67,9 @@ describe('Code Review Tab', () => {
   });
 
   it('submits request and shows new comment after one is created', () => {
-    // projectVersion = 'latest' is a placeholder until we implement
-    // storing project version when saving comments
     server.respondWith(
       'GET',
-      `/code_review_comments/project_comments?channel_id=${channelId}&project_version=latest`,
+      `/code_review_comments/project_comments?channel_id=${channelId}`,
       [
         200,
         {'Content-Type': 'application/json'},
