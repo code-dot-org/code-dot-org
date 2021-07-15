@@ -618,34 +618,6 @@ class UnitEditor extends React.Component {
               )}
               {!this.props.hasCourse && (
                 <div>
-                  <label>
-                    Is a Standalone Unit
-                    <input
-                      className="isCourseCheckbox"
-                      type="checkbox"
-                      checked={this.state.isCourse}
-                      disabled={!this.state.familyName}
-                      style={styles.checkbox}
-                      onChange={this.handleStandaloneUnitChange}
-                    />
-                    {this.state.familyName && (
-                      <HelpTip>
-                        <p>
-                          If checked, indicates that this Unit represents a
-                          standalone unit. Examples of such Units include
-                          CourseA-F, Express, and Pre-Express.
-                        </p>
-                      </HelpTip>
-                    )}
-                    {!this.state.familyName && (
-                      <HelpTip>
-                        <p>
-                          You must select a family name in order to mark
-                          something as a standalone unit.
-                        </p>
-                      </HelpTip>
-                    )}
-                  </label>
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
@@ -660,6 +632,8 @@ class UnitEditor extends React.Component {
                     families={this.props.unitFamilies}
                     versionYearOptions={this.props.versionYearOptions}
                     isCourse={this.state.isCourse}
+                    updateIsCourse={this.handleStandaloneUnitChange}
+                    showIsCourseSelector
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})

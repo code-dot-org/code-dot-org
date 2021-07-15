@@ -646,7 +646,7 @@ class UnitGroup < ApplicationRecord
   # Returns an array of version year strings, starting with 2017 and ending 1 year
   # from the current year.
   def self.get_version_year_options
-    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+    [CourseVersion::UNVERSIONED] + (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 
   def pilot?
@@ -705,5 +705,15 @@ class UnitGroup < ApplicationRecord
       student_resources.any? ||
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
+  end
+
+  # Look through all of the objects with the specified family name which have
+  # a stable published_state, and return the one with the latest version year.
+  def self.latest_stable(family_name)
+    raise unless family_name.present?
+    all_courses.
+      select {|c| c.family_name == family_name && c.stable?}.
+      sort_by(&:version_year).
+      last
   end
 end

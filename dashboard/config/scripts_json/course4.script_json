@@ -8,11 +8,13 @@
       "curriculum_path": "https://code.org/curriculum/course4/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "tts": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:27:47 UTC",
+    "family_name": "course4",
+    "serialized_at": "2021-07-06 22:25:58 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "course4"

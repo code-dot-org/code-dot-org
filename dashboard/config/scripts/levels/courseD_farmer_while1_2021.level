@@ -1,5 +1,9 @@
 <Karel>
   <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:30.000Z",
+  "level_num": "custom",
+  "user_id": 302,
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
@@ -34,15 +38,16 @@
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
-  "game_id": 25,
   "published": true,
-  "created_at": "2020-12-04T22:28:30.000Z",
-  "level_num": "custom",
-  "user_id": 302,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 15:28:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2021-03-08 18:36:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 15:28:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2021-03-08 18:36:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

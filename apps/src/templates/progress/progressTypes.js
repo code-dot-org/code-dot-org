@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.
@@ -88,6 +89,8 @@ export const levelWithProgressType = PropTypes.shape({
  * The number of seconds a student spent on a level.
  * @property {number} lastTimestamp
  * A timestamp of the last time a student made progress on a level.
+ * @property {ReviewStates} teacherFeedbackReviewState
+ * An optional enum indicating a teacher feedback review state.
  * @property {array} pages
  * An optional array of recursive progress objects representing progress on
  * individual pages of a multi-page assessment
@@ -98,7 +101,8 @@ const studentLevelProgressShape = {
   locked: PropTypes.bool.isRequired,
   paired: PropTypes.bool.isRequired,
   timeSpent: PropTypes.number,
-  lastTimestamp: PropTypes.number
+  lastTimestamp: PropTypes.number,
+  teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates))
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition

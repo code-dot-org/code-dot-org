@@ -1,4 +1,7 @@
+family_name 'playlab'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Play Lab', display_name: 'Play Lab', has_lesson_plan: false
 skin 'studio'
