@@ -5,7 +5,7 @@ require_relative '../../dashboard/config/environment'
 puts "Updating principal approval applications...\n\n"
 # Update capitalization on each principal approval application and save it,
 # then update, save, and score its corresponding teacher application
-Pd::Application::PrincipalApproval1819Application.find_each do |principal_application|
+Pd::Application::PrincipalApprovalApplication.find_each do |principal_application|
   if principal_application.form_data.include?("(please explain)")
     principal_application.form_data = principal_application.form_data.gsub("(please explain)", "(Please Explain)")
     principal_application.save
@@ -20,7 +20,7 @@ Pd::Application::PrincipalApproval1819Application.find_each do |principal_applic
     replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
     replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
-    teacher_application = Pd::Application::Teacher1819Application.where(application_guid: principal_application.application_guid).first
+    teacher_application = Pd::Application::TeacherApplication.where(application_guid: principal_application.application_guid).first
 
     teacher_application.update_form_data_hash(
       {
@@ -45,11 +45,11 @@ end
 puts "\nUpdating teacher applications...\n\n"
 # Update capitalization on each teacher application, update it from its principal approval,
 # save it, then autoscore it
-Pd::Application::Teacher1819Application.find_each do |teacher_application|
+Pd::Application::TeacherApplication.find_each do |teacher_application|
   if teacher_application.form_data.include?("(please explain)")
     teacher_application.form_data = teacher_application.form_data.gsub("(please explain)", "(Please Explain)")
 
-    principal_application = Pd::Application::PrincipalApproval1819Application.where(application_guid: teacher_application.application_guid).first
+    principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: teacher_application.application_guid).first
     if principal_application
 
       principal_response = principal_application.sanitize_form_data_hash

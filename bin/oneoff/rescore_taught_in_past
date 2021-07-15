@@ -7,12 +7,12 @@ require_relative '../../dashboard/config/environment'
 ActiveRecord::Base.transaction do
   rescored_applications = []
   puts "Rescoring taught_in_past for teacher 1920 applications..."
-  Pd::Application::Teacher1920Application.find_each do |application|
+  Pd::Application::TeacherApplication.find_each do |application|
     responses = application.sanitize_form_data_hash
     response_scores = JSON.parse(application.response_scores)
 
     old_taught_in_past_score = response_scores["bonus_points_scores"] ? response_scores["bonus_points_scores"]["taught_in_past"] : nil
-    new_taught_in_past_score = (responses[:taught_in_past] & Pd::Application::Teacher1920Application::TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES).any? ? 0 : 2
+    new_taught_in_past_score = (responses[:taught_in_past] & Pd::Application::TeacherApplication::TAUGHT_IN_PAST_NO_BONUS_POINT_RESPONSES).any? ? 0 : 2
 
     response_scores["bonus_points_scores"]["taught_in_past"] = new_taught_in_past_score
 

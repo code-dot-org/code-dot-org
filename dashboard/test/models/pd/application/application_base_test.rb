@@ -334,7 +334,7 @@ module Pd::Application
     end
 
     test 'formatted_applicant_email uses user account email' do
-      application = create :pd_teacher1920_application
+      application = create :pd_teacher_application
 
       assert application.user.email.present?
 
@@ -347,7 +347,7 @@ module Pd::Application
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
 
-      application = create :pd_teacher1920_application, user: teacher_without_email
+      application = create :pd_teacher_application, user: teacher_without_email
 
       assert teacher_without_email.email.blank?
 
@@ -359,8 +359,8 @@ module Pd::Application
       teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher1920_application_hash, alternate_email: ''
-      application_without_email = create :pd_teacher1920_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
+      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
       assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?
