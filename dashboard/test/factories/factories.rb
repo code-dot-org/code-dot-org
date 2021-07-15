@@ -18,7 +18,7 @@ FactoryGirl.define do
     end
 
     trait :with_unit do
-      association(:content_root, factory: :script, is_course: true)
+      association(:content_root, factory: :standalone_unit, is_course: true)
     end
 
     trait :with_course_offering do
@@ -33,7 +33,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-course-#{n}"}
     published_state "beta"
 
-    after(:create) {|ug| CourseOffering.add_course_offering(ug)}
+    after(:create) {|ug| CourseOffering.add_course_offering(ug) if ug.is_course?}
   end
 
   factory :experiment do
@@ -748,6 +748,15 @@ FactoryGirl.define do
       after(:create) do |csa_script|
         csa_script.curriculum_umbrella = 'CSA'
         csa_script.save
+      end
+    end
+
+    factory :standalone_unit do
+      sequence(:family_name) {|f| "family-#{f}"}
+      sequence(:version_year) {|y| "202#{y - 1}"}
+      is_course true
+      after(:create) do |script|
+        CourseOffering.add_course_offering(script)
       end
     end
   end
