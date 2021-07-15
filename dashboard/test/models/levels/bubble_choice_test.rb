@@ -374,4 +374,28 @@ DSL
     assert_equal [sublevel, contained_level], bubble_choice.child_levels.to_a
     assert_equal [sublevel], bubble_choice.sublevels.to_a
   end
+
+  test 'setup_sublevels will remove old sublevels' do
+    bubble_choice = create :bubble_choice_level
+    bubble_choice.setup_sublevels([@sublevel1.name, @sublevel2.name])
+    assert_equal [@sublevel1, @sublevel2], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel2.name])
+    assert_equal [@sublevel2], bubble_choice.sublevels
+  end
+
+  test 'setup_sublevels will not remove non-sublevel child levels' do
+    bubble_choice = create :bubble_choice_level
+    contained_level = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+    assert_equal [contained_level], bubble_choice.child_levels.to_a
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
+  end
 end
