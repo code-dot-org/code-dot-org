@@ -23688,15 +23688,15 @@ en:
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
-              name: Overview of CS Discoveries
+              name: Overview of course content
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Tools
+              name: Overview of learning tools
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Implementation Options
+              name: 'Overview of implementation '
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -24551,3 +24551,6 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        storyboard-playtest-control:
+          lessons: {}
+          lesson_groups: {}

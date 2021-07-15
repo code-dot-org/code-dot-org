@@ -3,46 +3,49 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Units
+# Course structure
 
-#### CS Discoveries is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
+#### **CS Discoveries is divided into seven units each split into two chapters.** Each unit centers around a unique CS topic. Chapters begin with context setting and exploration that lays the foundation for the concepts explored in the chapter. The majority of each chapter is spent in skill building lessons that focus on particular learning objectives. Each chapter culminates with an open-ended project that challenges students to apply the skills learned throughout the unit. 
 
-## Learn more about the curriculum by clicking on the units below:
+## Click on the units below to learn about the course content:
 
 <details>
 <summary><strong>Unit 1: Problem Solving and Computing</strong></summary>
 
-Students learn the problem-solving process, the input-output-store-process model of a computer, and how computers help humans solve problems. Students end the unit by proposing their own app to solve a problem.
+The Problem Solving and Computing unit is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. Through a series of puzzles, challenges, and real world scenarios, students are introduced to a problem solving process that they will return to repeatedly throughout the course. Students then learn how computers input, output, store, and process information to help humans solve problems within the context of apps. The unit concludes with students designing an app that helps solve a problem of their choosing.
+
 </details>
 
 <details><summary><strong>Unit 2: Web Development</strong></summary>
 
-Students learn to create websites using HTML and CSS inside Code.org’s Web Lab environment. Throughout the unit, students consider questions of privacy and ownership on the internet as they develop their own personal websites.
+In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
 </details>
 
 <details><summary><strong>Unit 3: Interactive Animations and Games</strong></summary>
 
-Students learn fundamental programming constructs and practices in the JavaScript programming language while developing animations and games in Code.org’s Game Lab environment. Students end the unit by designing their own animations and games.
+In the Interactive Animations and Games unit, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
 </details>
 
 <details><summary><strong>Unit 4: The Design Process</strong></summary>
 
-Students apply the problem solving process to the problems of others, learning to empathize with the needs of a user and design solutions to address those needs. During the second half of the unit, students form teams to prototype an app of their own design, first on paper and eventually in Code.org’s App Lab environment.
+The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
 </details>
 
 <details><summary><strong>Unit 5: Data and Society</strong></summary>
 
-Students explore different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second half of the unit, students learn how collections of data are used to solve problems and how computers help to automate the steps of this process.
+The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
 </details>
 
 <details><summary><strong>Unit 6: Physical Computing</strong></summary>
 
-Students use Code.org’s App Lab environment, in conjunction with the Adafruit Circuit Playground, to explore the relationship between hardware and software. Throughout the unit, students develop prototypes that mirror existing innovative computing platforms, before ultimately designing and prototyping one of their own.
+In the Physical Computing unit, students further develop their programming skills, while exploring more deeply the role of hardware platforms in computing. Harkening back to the Input/Storage/Processing/Output model for a computer, students look towards modern “smart” devices to understand the ways in which non-traditional computing platforms take input and provide output in ways that couldn't be done with the traditional keyboard, mouse, and monitor.
+Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that we see in many modern smart devices, and they get to see how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge that asks students to use the Circuit Playground as the basis for an innovation of their own design.
+
 </details>
 
 <details><summary><strong>Unit 7: AI and Machine Learning</strong></summary>
 
-Students learn how machine learning can be used to solve problems by preparing data, training a machine learning model, then testing and evaluating the model for accuracy and bias. Students use Code.org’s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems.
+In this optional AI and Machine Learning unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
 </details>
 
 MARKDOWN
