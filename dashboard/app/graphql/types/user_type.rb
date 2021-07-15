@@ -20,6 +20,11 @@ module Types
       !object.last_sign_in_at.nil?
     end
 
+    field :sharing_enabled, Boolean, null: false
+    def sharing_enabled
+      !object.sharing_disabled
+    end
+
     field :progress, Types::UserProgressType, null: false
     def progress
       Models::UserProgress.new(object)
