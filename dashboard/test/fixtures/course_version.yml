@@ -1,10 +1,358 @@
-course_version_2018:
-  key: 2018
-  display_name: "2018"
-  content_root_type: "Script"
+jigsaw-unversioned:
+  id: 369
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 7
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2021-07-13 04:11:15.000000000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2021-07-15 05:54:23.000000000 Z
+    zone: *2
+    time: *3
+  course_offering_id: 75
+  published_state: preview
+hourofcode-unversioned:
+  id: 398
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 341
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2021-07-13 04:14:37.000000000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2021-07-15 05:57:38.000000000 Z
+    zone: *2
+    time: *5
+  course_offering_id: 104
+  published_state: preview
+starwars-unversioned:
+  id: 408
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 383
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2021-07-13 04:15:04.000000000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2021-07-15 05:58:05.000000000 Z
+    zone: *2
+    time: *7
+  course_offering_id: 114
+  published_state: preview
+frozen-unversioned:
+  id: 394
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 330 
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2021-07-13 04:14:35.000000000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2021-07-15 05:57:36.000000000 Z
+    zone: *2
+    time: *9
+  course_offering_id: 100
+  published_state: preview
+playlab-unversioned:
+  id: 406
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 365
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2021-07-13 04:14:50.000000000 Z
+    zone: *2
+    time: *10
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2021-07-15 05:57:52.000000000 Z
+    zone: *2
+    time: *11
+  course_offering_id: 112
+  published_state: preview
+artist-unversioned:
+  id: 375
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 77
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2021-07-13 04:11:40.000000000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2021-07-15 05:54:47.000000000 Z
+    zone: *2
+    time: *13
+  course_offering_id: 81
+  published_state: preview
+algebra-unversioned:
+  id: 372
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 50
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2021-07-13 04:11:31.000000000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2021-07-15 05:54:38.000000000 Z
+    zone: *2
+    time: *15
+  course_offering_id: 78
+  published_state: preview
+flappy-unversioned:
+  id: 368
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2021-07-13 04:11:15.000000000 Z
+    zone: *2
+    time: *16
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2021-07-15 05:54:23.000000000 Z
+    zone: *2
+    time: *17
+  course_offering_id: 74
+  published_state: preview
+20-hour-unversioned:
+  id: 411
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
   content_root_id: 1
-course_version_2019:
-  key: 2019
-  display_name: "2019"
-  content_root_type: "Script"
-  content_root_id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2021-07-14 01:01:58.000000000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2021-07-15 05:54:21.000000000 Z
+    zone: *2
+    time: *19
+  course_offering_id: 117
+  published_state: preview
+course1-unversioned:
+  id: 412
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 86
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2021-07-14 01:02:34.000000000 Z
+    zone: *2
+    time: *20
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2021-07-15 05:54:55.000000000 Z
+    zone: *2
+    time: *21
+  course_offering_id: 118
+  published_state: preview
+course2-unversioned:
+  id: 413
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 87
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2021-07-14 01:02:35.000000000 Z
+    zone: *2
+    time: *22
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2021-07-15 05:54:56.000000000 Z
+    zone: *2
+    time: *23
+  course_offering_id: 119
+  published_state: preview
+course3-unversioned:
+  id: 414
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 88
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2021-07-14 01:02:37.000000000 Z
+    zone: *2
+    time: *24
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2021-07-15 05:54:57.000000000 Z
+    zone: *2
+    time: *25
+  course_offering_id: 120
+  published_state: preview
+course4-unversioned:
+  id: 415
+  key: unversioned
+  display_name: unversioned
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 89
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2021-07-14 01:02:38.000000000 Z
+    zone: *2
+    time: *26
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2021-07-15 05:54:58.000000000 Z
+    zone: *2
+    time: *27
+  course_offering_id: 121
+  published_state: preview
+coursea-2017:
+  id: 110
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 90
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2021-03-31 00:18:48.000000000 Z
+    zone: *2
+    time: *28
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2021-07-15 05:54:59.000000000 Z
+    zone: *2
+    time: *29
+  course_offering_id: 1
+  published_state: stable
+courseb-2017:
+  id: 115
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 94
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2021-03-31 00:19:00.000000000 Z
+    zone: *2
+    time: *30
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2021-07-15 05:55:04.000000000 Z
+    zone: *2
+    time: *31
+  course_offering_id: 2
+  published_state: stable
+coursec-2017:
+  id: 120
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 98
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2021-03-31 00:19:11.000000000 Z
+    zone: *2
+    time: *32
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2021-07-15 05:55:08.000000000 Z
+    zone: *2
+    time: *33
+  course_offering_id: 3
+  published_state: stable
+coursed-2017:
+  id: 125
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 102
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2021-03-31 00:19:26.000000000 Z
+    zone: *2
+    time: *34
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2021-07-15 05:55:14.000000000 Z
+    zone: *2
+    time: *35
+  course_offering_id: 4
+  published_state: stable
+coursee-2017:
+  id: 130
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 107
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2021-03-31 00:19:44.000000000 Z
+    zone: *2
+    time: *36
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2021-07-15 05:55:22.000000000 Z
+    zone: *2
+    time: *37
+  course_offering_id: 5
+  published_state: stable
+coursef-2017:
+  id: 135
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 112
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2021-03-31 00:20:03.000000000 Z
+    zone: *2
+    time: *38
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2021-07-15 05:55:30.000000000 Z
+    zone: *2
+    time: *39
+  course_offering_id: 6
+  published_state: stable
+express-2017:
+  id: 140
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 317
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2021-03-31 00:23:47.000000000 Z
+    zone: *2
+    time: *40
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2021-07-15 05:57:23.000000000 Z
+    zone: *2
+    time: *41
+  course_offering_id: 7
+  published_state: stable
+pre-express-2017:
+  id: 145
+  key: '2017'
+  display_name: '2017'
+  properties: 'null'
+  content_root_type: Script
+  content_root_id: 367
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &42 2021-03-31 00:24:53.000000000 Z
+    zone: *2
+    time: *42
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &43 2021-07-15 05:57:53.000000000 Z
+    zone: *2
+    time: *43
+  course_offering_id: 8
+  published_state: stable

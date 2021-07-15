@@ -46,6 +46,8 @@ scripts_map = {
 @levels = {}
 @level_concept_difficulty = {}
 @callouts = {}
+@course_offerings = {}
+@course_versions = {}
 
 def handle_level(level)
   attributes = level.attributes.clone
@@ -70,6 +72,12 @@ scripts_map.each do |_script_id, name|
   puts name
   script = Script.find_by_name name
   @scripts[name] = script.attributes
+  if script.course_version
+    course_version = script.course_version
+    course_offering = course_version.course_offering
+    @course_offerings[course_offering.key] = course_offering.attributes
+    @course_versions["#{course_offering.key}-#{course_version.key}"] = course_version.attributes
+  end
 
   script.unit_groups&.each do |unit_group|
     @unit_groups[unit_group.name] = unit_group.attributes
@@ -130,3 +138,5 @@ File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
 File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
+File.new("#{prefix}course_offering.yml", 'w').write(yamlize(@course_offerings))
+File.new("#{prefix}course_version.yml", 'w').write(yamlize(@course_versions))
