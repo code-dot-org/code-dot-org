@@ -5,53 +5,53 @@
         {
           "type": "html",
           "name": "Intro",
-          "html": "<p><h2>2021 CSD/CSP Facilitator in Training (FiT) Summer Post-Workshop Survey</h2>We are interested in learning about your experiences, strengths and needs as you enter the Facilitator Development Program.  Your responses will be shared with Code.org staff to help inform the planning of future facilitator onboarding activities.  Thank you for taking a few minutes to complete this survey!</p>"
+          "html": "<p><h1>2021 CSD/CSP Facilitator in Training (FiT) Summer Post-Workshop Survey</h1>We are interested in learning about your experiences, strengths and needs as you enter the Facilitator Development Program.  Your responses will be shared with Code.org staff to help inform the planning of future facilitator onboarding activities.  Thank you for taking a few minutes to complete this survey!</p>"
         },
         {
           "type": "radiogroup",
-          "name": "Status",
+          "name": "status",
           "title": "When you started your summer workshop, what was your facilitator-in-training status?",
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
+              "value": "novice",
               "text": "Novice"
             },
             {
-              "value": "item2",
+              "value": "apprentice",
               "text": "Apprentice"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "Course",
+          "name": "course",
           "title": "For which course are you preparing to be a facilitator?",
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
-              "text": "CSD"
+              "value": "csd",
+              "text": "CS Discoveries"
             },
             {
-              "value": "item2",
-              "text": "CSP"
+              "value": "csp",
+              "text": "CS Principles"
             }
           ]
         },
         {
           "type": "html",
           "name": "Day3Feedback",
-          "html": "<p><h4>Feedback on Day 3</h3>"
+          "html": "<p><h2>Feedback on Day 3</h2>"
         },
         {
           "type": "comment",
-          "name": "usefulPractice",
+          "name": "useful_today",
           "title": "What was the most useful thing you learned today and why?"
         },
         {
           "type": "rating",
-          "name": "overallTo",
+          "name": "extent_engaging",
           "title": "Overall, to what extent did you find the activities today engaging?",
           "rateMax": 7,
           "minRateDescription": "Not at All Engaging",
@@ -59,32 +59,32 @@
         },
         {
           "type": "comment",
-          "name": "MostEngagingToday",
+          "name": "most_engaging_today",
           "title": "What was most engaging for you today?"
         },
         {
           "type": "comment",
-          "name": "LeastEngagingToday",
+          "name": "least_engaging_today",
           "title": "What was the least useful for you today?"
         },
         {
           "type": "html",
           "name": "OverallFeedback",
-          "html": "<p><h4>Feedback on the Overall Event</h4><p>Consider your experience over the course of the 2.5-day FiT Workshop.</p>"
+          "html": "<p><h2>Feedback on the Overall Event</h2><p>Consider your experience over the course of the 2.5-day FiT Workshop.</p>"
         },
         {
           "type": "comment",
-          "name": "MostUsefulActivity",
+          "name": "most_useful_activity",
           "title": "Which activity or session was most useful during this workshop?"
         },
         {
           "type": "comment",
-          "name": "LeastUsefulActivity",
+          "name": "least_useful_activity",
           "title": "Which activity or session was least useful during this workshop?"
         },
         {
           "type": "rating",
-          "name": "SupportEquity",
+          "name": "extent_support_understanding_equity",
           "title": "To what extent has your experience at this event supported your understanding of the role and opportunity you have as a Code.org facilitator to support equity in your workshops?",
           "rateMax": 7,
           "minRateDescription": "Not at All",
@@ -93,19 +93,19 @@
         {
           "type": "html",
           "name": "OverallFeedback",
-          "html": "<p><h4>We are interested in learning how confident and prepared you feel to lead Code.org workshops. Please respond to the following questions using the provided scale. </h4> "
+          "html": "<p><h2>We are interested in learning how confident and prepared you feel to lead Code.org workshops. Please respond to the following questions using the provided scale. </h2> "
         },
         {
           "type": "rating",
-          "name": "iFeelMore",
-          "title": "I feel more prepared to lead Code.org's CS [course] Professional Learning workshops in 2021-22 than I did before this event.",
+          "name": "more_prepared",
+          "title": "I feel more prepared to lead Code.org's {Course} Professional Learning workshops in 2021-22 than I did before this event.",
           "rateMax": 7,
           "minRateDescription": "Strongly Disagree",
           "maxRateDescription": "Strongly Agree"
         },
         {
           "type": "rating",
-          "name": "Needed",
+          "name": "ability_to_explain_philosophy",
           "title": "To what extent do you feel confident in your ability to effectively explain the philosophy behind the curriculum to workshop participants?",
           "rateMax": 7,
           "minRateDescription": "Not at all confident",
@@ -113,7 +113,7 @@
         },
         {
           "type": "rating",
-          "name": "Commitment",
+          "name": "ability_commitment_to_equity",
           "title": "To what extent do you feel confident in your ability to support participants in building a commitment to creating equitable CS classrooms?",
           "rateMax": 7,
           "minRateDescription": "Not at all confident",
@@ -121,7 +121,7 @@
         },
         {
           "type": "rating",
-          "name": "Building",
+          "name": "ability_support_building_equity",
           "title": "To what extent do you feel confident in your ability to support participants in building equitable CS classrooms?",
           "rateMax": 7,
           "minRateDescription": "Not at all confident",
@@ -129,7 +129,7 @@
         },
         {
           "type": "rating",
-          "name": "Identify",
+          "name": "can_identify_practices_to_strengthen",
           "title": "I can identify facilitation practices I need to strengthen in support of leading high-quality, equity-focused CS workshops.",
           "rateMax": 7,
           "minRateDescription": "Strongly Disagree",
@@ -138,7 +138,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<p><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></p><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating CSD or CSP workshops</p>"
+          "html": "<h4><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></h4><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating CSD or CSP workshops</p>"
         },
         {
           "type": "matrix",
@@ -199,7 +199,7 @@
         },
         {
           "type": "matrix",
-          "name": "facilitatingDiscussions",
+          "name": "facilitating_discussions",
           "title": "Right now, when facilitating discussions, I have the skills to...",
           "columns": [
             {
@@ -256,7 +256,7 @@
         },
         {
           "type": "matrix",
-          "name": "facilitatorResponsibilitiesSkills",
+          "name": "facilitation_skills",
           "title": "As a facilitator, right now, I have the skills to...",
           "columns": [
             {
@@ -370,7 +370,7 @@
         },
         {
           "type": "rating",
-          "name": "overallTo52",
+          "name": "connection_to_facilitator_community",
           "title": "Overall, to what extent do you feel connected to the facilitator community?",
           "rateMax": 7,
           "minRateDescription": "Not at all connected",
@@ -378,7 +378,7 @@
         },
         {
           "type": "matrix",
-          "name": "feel_community",
+          "name": "facilitator_community",
           "title": "How much you do agree or disagree with the following statements about the Code.org facilitator community? ",
           "columns": [
             {
@@ -412,42 +412,33 @@
           ],
           "rows": [
             {
-              "value": "feel_member",
+              "value": "valued_by_facilitator_community",
               "text": "I feel like I'm a valued member of the Code.org facilitator community."
             },
             {
-              "value": "confident",
+              "value": "confident_can_get_support",
               "text": "When I have questions, I am confident that I can get the help and support I need from the facilitator community."
             },
             {
-              "value": "sharing",
+              "value": "can_share_with_community",
               "text": "I feel like I can share my skills with the facilitator community. "
             },
             {
-              "value": "valued_facilitator",
+              "value": "valued_by_codeorg",
               "text": "I feel my work as a facilitator is valued and respected by Code.org."
             }
           ]
         },
         {
           "type": "comment",
-          "name": "ifThere23",
+          "name": "other_comments",
           "title": "If there is anything you would like us to know, please use this space to share."
         },
         {
-          "type": "radiogroup",
-          "name": "permission",
-          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes, I give Code.org permission to quote me."
-            },
-            {
-              "value": "no",
-              "text": "No, I do not give Code.org my permission."
-            }
-          ]
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "permission_to_quote"
         },
         {
           "type": "html",
