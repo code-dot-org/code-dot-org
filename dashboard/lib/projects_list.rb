@@ -232,14 +232,6 @@ module ProjectsList
       return data_for_featured_project_cards
     end
 
-    private
-
-    # e.g. '/projects/applab' -> 'applab', or
-    # 'https://studio.code.org/projects/weblab' --> 'weblab'
-    def project_type(level)
-      level && level.split('/').last
-    end
-
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
@@ -265,6 +257,14 @@ module ProjectsList
       end
 
       row_data.with_indifferent_access
+    end
+
+    private
+
+    # e.g. '/projects/applab' -> 'applab', or
+    # 'https://studio.code.org/projects/weblab' --> 'weblab'
+    def project_type(level)
+      level && level.split('/').last
     end
 
     # pull various fields out of the user and project records to populate
