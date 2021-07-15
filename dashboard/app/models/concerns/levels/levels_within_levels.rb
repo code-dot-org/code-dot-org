@@ -112,24 +112,18 @@ module Levels
       # nothing
       return if child_levels.contained.map(&:name) == contained_level_names
 
-      # otherwise, update contained levels to match; destroy any existing
-      # relations to levels NOT in the given names, and create/update relations
-      # to the levels we want.
-      new_contained_levels = Level.where(name: contained_level_names)
-
-      levels_child_levels.
-        contained.
-        where.not(child_level: new_contained_levels).
-        destroy_all
-
-      new_contained_levels.each do |new_contained_level|
-        relation = levels_child_levels.
-          where(child_level: new_contained_level).
-          first_or_initialize
-        relation.kind = ParentLevelsChildLevel::CONTAINED
-        relation.position = contained_level_names.index(new_contained_level.name)
-        relation.save!
+      # otherwise, update contained levels to match
+      levels_child_levels.contained.destroy_all
+      Level.where(name: contained_level_names).each do |contained_level|
+        ParentLevelsChildLevel.create!(
+          child_level: contained_level,
+          kind: ParentLevelsChildLevel::CONTAINED,
+          parent_level: self,
+          position: contained_level_names.index(contained_level.name)
+        )
       end
+
+      reload
     end
   end
 end
