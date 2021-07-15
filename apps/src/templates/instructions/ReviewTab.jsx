@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import $ from 'jquery';
+import {getStore} from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
-import {getStore} from '@cdo/apps/redux';
-import * as topInstructionsDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
+import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 export default class ReviewTab extends Component {
   state = {
@@ -19,7 +18,7 @@ export default class ReviewTab extends Component {
 
     // projectVersion = 'latest' is a placeholder until we implement
     // storing project version when saving comments
-    topInstructionsDataApi
+    codeReviewDataApi
       .getCodeReviewCommentsForProject(channelId, 'latest')
       .done((data, _, request) => {
         this.setState({
@@ -29,27 +28,23 @@ export default class ReviewTab extends Component {
       });
   }
 
-  onNewCommentSubmit = newCommentText => {
+  onNewCommentSubmit = commentText => {
+    const channelId = getStore().getState().pageConstants.channelId;
+    const {token} = this.state;
+
     // projectVersion = 'latest' is a placeholder until we implement
     // storing project version when saving comments
-    $.ajax({
-      url: `/code_review_comments`,
-      type: 'POST',
-      headers: {'X-CSRF-Token': this.state.token},
-      data: {
-        channel_id: getStore().getState().pageConstants.channelId,
-        project_version: 'latest',
-        comment: newCommentText
-      }
-    }).done(newComment => {
-      const comments = this.state.comments;
-      comments.push(newComment);
+    codeReviewDataApi
+      .submitNewCodeReviewComment(commentText, channelId, 'latest', token)
+      .done(newComment => {
+        const comments = this.state.comments;
+        comments.push(newComment);
 
-      this.setState({
-        comments: comments,
-        forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+        this.setState({
+          comments: comments,
+          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+        });
       });
-    });
   };
 
   renderReadyForReviewCheckbox() {
