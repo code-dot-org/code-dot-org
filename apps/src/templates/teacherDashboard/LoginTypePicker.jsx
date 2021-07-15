@@ -19,14 +19,14 @@ import styleConstants from '../../styleConstants';
 const style = {
   root: {
     width: styleConstants['content-width'],
-    height: '50vh',
+    height: '80vh',
     left: 20,
     right: 20
   },
   scroll: {
     overflowX: 'hidden',
     overflowY: 'auto',
-    height: 'calc(60vh - 250px)'
+    height: 'calc(80vh - 200px)'
   },
   thirdPartyProviderUpsell: {
     marginBottom: '10px'
@@ -36,6 +36,7 @@ const style = {
     width: styleConstants['content-width'],
     height: '100px',
     left: 0,
+    bottom: '-65px',
     padding: '0px 20px 20px 20px',
     backgroundColor: '#fff',
     borderRadius: '5px'
@@ -78,6 +79,12 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    /// Determine maxHeight of dialog based on number of LoginTypeCards
+    style.root.maxHeight = getDialogMaxHeight(
+      withGoogle,
+      withMicrosoft,
+      withClever
+    );
 
     return (
       <div style={style.root}>
@@ -131,6 +138,28 @@ export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
   providers: state.teacherSections.providers
 }))(LoginTypePicker);
+
+function getDialogMaxHeight(withGoogle, withMicrosoft, withClever) {
+  const headerAndFooterHeight = 200; // Height of header + height of footer (in px)
+  const numCardsPerRow = 3; // LoginTypeCard.jsx defines 3-column layout
+  const cardHeight = 150; // Card height defined in LoginTypeCard (in px)
+  let numLoginTypeCards = 3; // Number of non-third-party login types
+  if (withGoogle) {
+    numLoginTypeCards++;
+  }
+  if (withMicrosoft) {
+    numLoginTypeCards++;
+  }
+  if (withClever) {
+    numLoginTypeCards++;
+  }
+  // Get height by adding the 'headerAndFooterHeight' to the product of 'cardHeight'
+  // and the number of rows of LoginTypeCards.
+  const dialogMaxHeight =
+    headerAndFooterHeight +
+    cardHeight * Math.ceil(numLoginTypeCards / numCardsPerRow);
+  return dialogMaxHeight + 'px';
+}
 
 const PictureLoginCard = props => (
   <LoginTypeCard
