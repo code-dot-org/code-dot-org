@@ -21,7 +21,6 @@ def get_rows
       "Organizer Email",
       "Regional Partner Name",
       "Workshop Dates",
-      "Workshop End Date",
       "Funded",
       "Attendance Url",
       "Num Facilitators",
@@ -31,7 +30,8 @@ def get_rows
       "Total Hours",
       "Num Registered",
       "Number Scholarship Teachers Attending All Sessions",
-      "Attendance Day 1+"
+      "Attendance Day 1+",
+      "Workshop End Date"
     ]
   ]
 
@@ -46,7 +46,6 @@ def get_rows
         workshop.organizer&.email,
         workshop.regional_partner&.name,
         workshop.sessions.map(&:formatted_date_with_start_and_end_times).join("\n"),
-        workshop.sessions.last&.formatted_date,
         workshop.funded ? "Yes" : "No",
         "https://studio.code.org/pd/workshop_dashboard/workshops/#{workshop.id}",
         workshop.facilitators.count,
@@ -56,7 +55,8 @@ def get_rows
         workshop.effective_num_hours,
         workshop.enrollments.count,
         workshop.teachers_attending_all_sessions(true).count,
-        workshop.teachers_attending_all_sessions.count
+        workshop.teachers_attending_all_sessions.count,
+        workshop.sessions.last&.formatted_date
       ]
     end
 
