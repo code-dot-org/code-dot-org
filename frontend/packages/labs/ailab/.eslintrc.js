@@ -6,10 +6,12 @@ module.exports = {
   "globals": {
   },
   "plugins": [
+    "jsx-a11y"
   ],
   "extends": [
     'plugin:react/recommended',
     "eslint:recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "env": {
     "browser": true,
@@ -73,7 +75,8 @@ module.exports = {
     "react/self-closing-comp": "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
-    strict: "error"
+    strict: "error",
+    "jsx-a11y/no-onchange": 0
 
   }
 };

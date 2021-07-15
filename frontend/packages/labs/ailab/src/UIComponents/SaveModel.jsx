@@ -176,7 +176,10 @@ class SaveModel extends Component {
           <div>
             <span
               onClick={this.toggleColumnDescriptions}
+              onKeyDown={this.toggleColumnDescriptions}
               style={styles.saveModelToggle}
+              role="button"
+              tabIndex={0}
             >
               <i className={arrowIcon} />
               &nbsp;

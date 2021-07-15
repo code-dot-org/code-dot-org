@@ -47,6 +47,9 @@ class ResultsToggle extends Component {
               key={tab.key}
               style={this.getTogglePillStyle(tab.key)}
               onClick={() => this.props.setResultsTab(tab.key)}
+              onKeyDown={() => this.props.setResultsTab(tab.key)}
+              role="button"
+              tabIndex={0}
             >
               <FontAwesomeIcon icon={tab.icon} style={tab.iconStyle} />{" "}
               {tab.headerText}
