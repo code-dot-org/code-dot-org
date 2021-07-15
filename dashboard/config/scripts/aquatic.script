@@ -1,4 +1,7 @@
+family_name 'aquatic'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Aquatic', display_name: 'Aquatic', has_lesson_plan: false
 level 'HOC 2018 Level_1'
