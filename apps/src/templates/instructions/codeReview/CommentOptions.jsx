@@ -15,21 +15,21 @@ class CommentOptions extends Component {
   commentOptionTypes = {
     markComplete: {
       onClick: this.props.onResolveClick,
-      key: javalabMsg.markComplete(),
       iconClass: 'fa fa-fw fa-check',
-      text: 'Mark Complete'
+      text: javalabMsg.markComplete(),
+      key: 'Mark Complete'
     },
     unmarkComplete: {
       onClick: this.props.onResolveClick,
-      key: javalabMsg.unmarkComplete(),
       iconClass: 'fa fa-fw fa-undo',
-      text: 'Unmark Complete'
+      text: javalabMsg.unmarkComplete(),
+      key: 'Unmark Complete'
     },
     delete: {
       onClick: this.props.onDeleteClick,
-      key: msg.delete(),
       iconClass: 'fa fa-fw fa-trash',
-      text: 'Delete'
+      text: msg.delete(),
+      key: 'Delete'
     }
   };
 
