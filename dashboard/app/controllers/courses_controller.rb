@@ -58,7 +58,7 @@ class CoursesController < ApplicationController
       # Attempt to redirect user if we think they ended up on the wrong course overview page.
       override_redirect = VersionRedirectOverrider.override_course_redirect?(session, unit_group)
       if !override_redirect && redirect_unit_group = redirect_unit_group(unit_group)
-        redirect_to "/courses/#{redirect_unit_group.name}/?redirect_warning=true"
+        redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
         return
       end
 
@@ -70,11 +70,8 @@ class CoursesController < ApplicationController
       # csp and csd are each "course families", each containing multiple "course versions".
       # When the url of a course family is requested, redirect to a specific course version.
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to_course = UnitGroup.all_courses.
-          select {|c| c.family_name == params[:course_name] && c.stable?}.
-          sort_by(&:version_year).
-          last
-      redirect_to "/courses/#{redirect_to_course.name}#{redirect_query_string}"
+      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
+      redirect_to "#{course_path(redirect_to_course)}#{redirect_query_string}"
       return
     else
       raise ActiveRecord::RecordNotFound
@@ -155,15 +152,9 @@ class CoursesController < ApplicationController
 
   def standards
     unit_group = UnitGroup.get_from_cache(params[:course_name])
-    # puts "#{!unit_group.present?} && #{UnitGroup.family_names.include?(params[:course_name])}"
-    puts "params[:course_name]: #{params[:course_name]}"
-    puts "UnitGroup.family_names: #{UnitGroup.family_names}"
     if !unit_group.present? && UnitGroup.family_names.include?(params[:course_name])
-      redirect_to_course = UnitGroup.all_courses.
-        select {|c| c.family_name == params[:course_name] && c.stable?}.
-        sort_by(&:version_year).
-        last
-      redirect_to "/courses/#{redirect_to_course.name}/standards"
+      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
+      redirect_to standards_course_path(redirect_to_course)
       return
     end
     raise ActiveRecord::RecordNotFound unless unit_group

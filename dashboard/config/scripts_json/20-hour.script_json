@@ -8,11 +8,13 @@
       "supported_locales": [
         "de-DE"
       ],
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:27:39 UTC",
+    "family_name": "20-hour",
+    "serialized_at": "2021-07-06 22:25:42 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "20-hour"
