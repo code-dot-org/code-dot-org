@@ -112,7 +112,7 @@ class Predict extends Component {
                 className="ailab-image-hover"
                 style={styles.predictBot}
                 src={aiBotBorder}
-                alt="A.I. Bot"
+                alt="A.I. bot"
               />
             </div>
             <div style={styles.predictBotRight}>

@@ -184,12 +184,12 @@ class GenerateResults extends Component {
             <img
               src={aiBotHead}
               style={styles.trainBotHead}
-              alt="A.I. Bot head"
+              alt="A.I. bot head"
             />
             <img
               src={aiBotBody}
               style={styles.trainBotBody}
-              alt="A.I. Bot body"
+              alt="A.I. bot body"
             />
             <div
               style={{ width: 150, position: "absolute", top: 140, zIndex: -1 }}
@@ -197,7 +197,7 @@ class GenerateResults extends Component {
               <img
                 src={blueScanner}
                 style={{ width: "100%", opacity: tableOpacity }}
-                alt="A.I. Bot scanner beam"
+                alt="A.I. bot scanner beam"
               />
             </div>
           </div>

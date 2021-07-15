@@ -37,7 +37,7 @@ class ModelCard extends Component {
             src={aiBotBorder}
             className="ailab-image-hover"
             style={styles.summaryScreenBotImage}
-            alt="A.I. Bot"
+            alt="A.I. bot"
           />
         </div>
         <div style={styles.modelCardContainer}>
