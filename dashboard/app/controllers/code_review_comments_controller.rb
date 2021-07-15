@@ -30,8 +30,7 @@ class CodeReviewCommentsController < ApplicationController
 
   # PATCH /code_review_comments/:id/resolve
   def resolve
-    @code_review_comment.inspect
-    if @code_review_comment.update(is_resolved: true)
+    if @code_review_comment.update(is_resolved: params[:is_resolved])
       return head :ok
     else
       return head :bad_request

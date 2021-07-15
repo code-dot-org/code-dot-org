@@ -83,7 +83,8 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :resolve, CodeReviewComment, project_owner_id: user.id
       can :destroy, CodeReviewComment do |code_review_comment|
-        code_review_comment.project_owner.student_of?(user)
+        project_owner = code_review_comment.project_owner
+        project_owner.student_of?(user) || project_owner.teacher?
       end
       can :create, CodeReviewComment do |_, project_owner|
         CodeReviewComment.user_can_review_project?(project_owner, user)
