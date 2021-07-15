@@ -1810,6 +1810,13 @@ class Script < ApplicationRecord
     get_course_version&.published_state || SharedConstants::PUBLISHED_STATE.beta
   end
 
+  def set_published_state(new_published_state)
+    if is_course?
+      update!(published_state: new_published_state)
+      course_version&.update!(published_state: new_published_state)
+    end
+  end
+
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
   def course_link(section_id = nil)
