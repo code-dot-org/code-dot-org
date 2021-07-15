@@ -87,6 +87,23 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csd-2019'
   end
 
+  test 'redirect to latest standards in course family' do
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
+    Rails.cache.delete("valid_courses/all")
+
+    offering = create :course_offering, key: 'csp'
+    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+
+    get :standards, params: {course_name: 'csp'}
+
+    assert_redirected_to '/courses/csp-2019/standards'
+  end
+
   test "show: redirect from new unstable version to assigned version" do
     student = create :student
     csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
