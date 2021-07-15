@@ -33,7 +33,13 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-course-#{n}"}
     published_state "beta"
 
-    after(:create) {|ug| CourseOffering.add_course_offering(ug) if ug.is_course?}
+    trait :with_course_version do
+      sequence(:family_name) {|f| "family-#{f}"}
+      sequence(:version_year) {|y| "202#{y - 1}"}
+      after(:create) do |ug|
+        CourseOffering.add_course_offering(ug)
+      end
+    end
   end
 
   factory :experiment do
@@ -707,7 +713,6 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
-    after(:create) {|s| CourseOffering.add_course_offering(s)}
 
     trait :with_levels do
       transient do

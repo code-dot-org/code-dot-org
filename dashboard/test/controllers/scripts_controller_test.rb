@@ -4,9 +4,9 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @coursez_2017 = create :script, name: 'coursez-2017', is_course: true, family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018', is_course: true, family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    @coursez_2019 = create :script, name: 'coursez-2019', is_course: true, family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @coursez_2017 = create :standalone_unit, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :standalone_unit, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :standalone_unit, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
@@ -427,7 +427,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -435,8 +435,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :forbidden
@@ -448,7 +448,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -460,8 +460,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -473,7 +473,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -485,8 +485,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.in_development,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -498,7 +498,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -511,8 +511,8 @@ class ScriptsControllerTest < ActionController::TestCase
       published_state: SharedConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot',
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -524,7 +524,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -536,8 +536,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.beta,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -549,7 +549,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -561,8 +561,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -574,7 +574,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -586,8 +586,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.stable,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -600,7 +600,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -608,8 +608,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :success
@@ -622,7 +622,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :standalone_unit, published_state: SharedConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
@@ -630,8 +630,8 @@ class ScriptsControllerTest < ActionController::TestCase
       script_text: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
     assert_response :forbidden
@@ -879,7 +879,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020'
+    unit = create :standalone_unit
     stub_file_writes(unit.name)
 
     post :update, params: {
@@ -889,8 +889,8 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: 'pilot-experiment',
       published_state: SharedConstants::PUBLISHED_STATE.pilot,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
     }
 
     assert_response :success
@@ -904,7 +904,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create :script, is_course: true, family_name: 'family', version_year: '2020'
+    unit = create :standalone_unit
     stub_file_writes(unit.name)
 
     post :update, params: {
@@ -914,8 +914,8 @@ class ScriptsControllerTest < ActionController::TestCase
       pilot_experiment: '',
       published_state: SharedConstants::PUBLISHED_STATE.preview,
       is_course: true,
-      family_name: 'family',
-      version_year: '2020'
+      family_name: unit.family_name,
+      version_year: unit.version_year
 
     }
 
@@ -1563,8 +1563,7 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
-    CourseOffering.add_course_offering(dogs1)
+    dogs1 = create :standalone_unit, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-script'}
@@ -1574,11 +1573,11 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs1"
 
-    create :script, name: 'dogs2', is_course: true, family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'dogs2', family_name: 'ui-test-versioned-script', version_year: '1902', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
 
-    create :script, name: 'dogs3', is_course: true, family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :standalone_unit, name: 'dogs3', family_name: 'ui-test-versioned-script', version_year: '1899', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {id: 'ui-test-versioned-script'}
     assert_redirected_to "/s/dogs2"
   end

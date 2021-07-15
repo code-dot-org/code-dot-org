@@ -117,17 +117,17 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :unit_group, :with_course_version, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, :with_course_version, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, :with_course_version, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :unit_group, :with_course_version, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, :with_course_version, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, :with_course_version, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
   end
@@ -212,7 +212,7 @@ class CoursesControllerTest < ActionController::TestCase
     student = create :student
     csp2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     create :follower, section: create(:section, unit_group: csp2017), student_user: student
-    create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    create :unit_group, :with_course_version, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
 
     sign_in student
     get :show, params: {course_name: 'csp-2017'}
@@ -230,7 +230,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: shows course when family name matches course name" do
-    create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :unit_group, :with_course_version, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     get :show, params: {course_name: 'new-course'}
 
     assert_response :ok
@@ -391,7 +391,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: sets published_state on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course', family_name: 'family', version_year: '200'
+    course = create :unit_group, :with_course_version, name: 'course'
     unit1 = create :script, name: 'unit1'
     unit2 = create :script, name: 'unit2'
 
@@ -412,7 +412,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: sets pilot_experiment on units in unit group" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course', family_name: 'family', version_year: '2000'
+    course = create :unit_group, :with_course_version, name: 'course'
     unit1 = create :script, name: 'unit1'
     unit2 = create :script, name: 'unit2'
 
