@@ -134,7 +134,7 @@ class DataTable extends Component {
                   return (
                     <td
                       key={columnId}
-                      className="table-column"
+                      className="data-table-column"
                       style={this.getColumnCellStyle(columnId)}
                       onClick={() => this.setCurrentColumn(columnId)}
                       onMouseEnter={() => this.setHighlightColumn(columnId)}
