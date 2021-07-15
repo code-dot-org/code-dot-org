@@ -140,8 +140,6 @@ module Levels
           position: contained_level_names.index(contained_level.name)
         )
       end
-
-      reload
     end
 
     def setup_project_template_level
