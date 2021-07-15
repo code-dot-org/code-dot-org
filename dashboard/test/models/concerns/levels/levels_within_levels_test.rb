@@ -99,4 +99,25 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     level.update!(contained_level_names: [])
     assert_equal [], level.reload.child_levels.contained
   end
+
+  test 'clone_child_levels clones child levels' do
+    parent = create :level, level_num: 'custom'
+    child = create :level, level_num: 'custom', name: 'child_level'
+    ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
+    Levels::LevelsWithinLevels.clone_child_levels(parent, '_test_clone')
+    assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
+  end
+
+  test 'clone_child_levels returns update params' do
+    parent = create :level, level_num: 'custom'
+    child = create :level, level_num: 'custom', name: 'child_level'
+    ParentLevelsChildLevel.create(
+      parent_level: parent,
+      child_level: child,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+    result = Levels::LevelsWithinLevels.clone_child_levels(parent, '_test_clone')
+    expected = {contained_level_names: ['child_level_test_clone']}
+    assert_equal expected, result
+  end
 end
