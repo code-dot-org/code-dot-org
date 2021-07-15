@@ -11,9 +11,9 @@ import {
   cancelEditingStudent,
   removeStudent,
   saveStudent,
-  addStudents,
-  RowType
+  addStudents
 } from './manageStudentsRedux';
+import {RowType} from './manageStudentsTypes';
 import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
@@ -26,7 +26,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class ManageStudentsActionsCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired, // the student's user id
+    id: PropTypes.string.isRequired,
     sectionId: PropTypes.number,
     isEditing: PropTypes.bool,
     isSaving: PropTypes.bool,

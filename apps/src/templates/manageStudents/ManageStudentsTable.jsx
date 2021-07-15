@@ -20,22 +20,6 @@ import ManageStudentsActionsHeaderCell from './ManageStudentsActionsHeaderCell';
 import SharingControlActionsHeaderCell from './SharingControlActionsHeaderCell';
 import ManageStudentsLoginInfo from './ManageStudentsLoginInfo';
 import NoSectionCodeDialog from './NoSectionCodeDialog';
-import {
-  sectionCode,
-  sectionName
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {
-  convertStudentDataToArray,
-  AddStatus,
-  RowType,
-  saveAllStudents,
-  editAll,
-  TransferStatus,
-  TransferType,
-  ParentLetterButtonMetricsCategory,
-  PrintLoginCardsButtonMetricsCategory
-} from './manageStudentsRedux';
-import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
@@ -46,6 +30,15 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '../SafeMarkdown';
+import {
+  studentSectionDataPropType,
+  AddStatus,
+  RowType,
+  TransferStatus,
+  TransferType,
+  ParentLetterButtonMetricsCategory,
+  PrintLoginCardsButtonMetricsCategory
+} from './manageStudentsTypes';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -59,23 +52,6 @@ const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.google_classroom,
   SectionLoginType.clever
 ];
-
-export const studentSectionDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string,
-  username: PropTypes.string,
-  email: PropTypes.string,
-  age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  gender: PropTypes.string,
-  secretWords: PropTypes.string,
-  secretPicturePath: PropTypes.string,
-  sectionId: PropTypes.number,
-  loginType: PropTypes.string,
-  hasEverSignedIn: PropTypes.bool,
-  dependsOnThisSectionForLogin: PropTypes.bool,
-  rowType: PropTypes.oneOf(Object.values(RowType)),
-  userType: PropTypes.string
-});
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -155,16 +131,16 @@ ManageStudentsNotificationFull.propTypes = {
   manageStatus: PropTypes.object.isRequired
 };
 
-class ManageStudentsTable extends Component {
+export default class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
-
-    // Provided by redux
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
+
+    // TODO
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
@@ -902,26 +878,3 @@ const styles = {
 };
 
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
-
-export default connect(
-  state => ({
-    sectionId: state.sectionData.section.id,
-    sectionCode: sectionCode(state, state.sectionData.section.id),
-    sectionName: sectionName(state, state.sectionData.section.id),
-    loginType: state.manageStudents.loginType,
-    studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    editingData: state.manageStudents.editingData,
-    showSharingColumn: state.manageStudents.showSharingColumn,
-    addStatus: state.manageStudents.addStatus,
-    transferData: state.manageStudents.transferData,
-    transferStatus: state.manageStudents.transferStatus
-  }),
-  dispatch => ({
-    saveAllStudents() {
-      dispatch(saveAllStudents());
-    },
-    editAll() {
-      dispatch(editAll());
-    }
-  })
-)(ManageStudentsTable);

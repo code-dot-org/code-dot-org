@@ -1,15 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {
-  importOrUpdateRoster,
-  sectionCode,
-  sectionProvider,
-  sectionName
-} from '../../templates/teacherDashboard/teacherSectionsRedux';
+import {importOrUpdateRoster} from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../../templates/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -28,14 +22,12 @@ export const FAILURE = 'failure';
  * provider. This component owns that logic (along with the redux module).
  * It in turn renders a button component that handles display states.
  */
-class SyncOmniAuthSectionControl extends React.Component {
+export default class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    // Provided by Redux
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
-    sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
-    updateRoster: PropTypes.func.isRequired
+    sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes))
   };
 
   state = {
@@ -43,13 +35,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   onClick = () => {
-    const {
-      sectionId,
-      sectionCode,
-      sectionName,
-      updateRoster,
-      sectionProvider
-    } = this.props;
+    const {sectionId, sectionCode, sectionName, sectionProvider} = this.props;
     const {buttonState} = this.state;
 
     firehoseClient.putRecord(
@@ -81,7 +67,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     this.setState({buttonState: IN_PROGRESS});
     // Section code is the course ID, without the G- or C- prefix.
     const courseId = sectionCode.replace(/^[GC]-/, '');
-    updateRoster(courseId, sectionName)
+    importOrUpdateRoster(courseId, sectionName)
       .then(() => {
         this.setState({buttonState: SUCCESS});
         // While we are embedded in an angular page, reloading is the easiest
@@ -93,7 +79,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   render() {
-    const {sectionProvider} = this.props;
+    const {sectionProvider, sectionCode} = this.props;
     const {buttonState} = this.state;
     const supportedType = PROVIDER_NAME.hasOwnProperty(sectionProvider);
     if (!supportedType || !sectionCode) {
@@ -110,17 +96,6 @@ class SyncOmniAuthSectionControl extends React.Component {
     );
   }
 }
-export const UnconnectedSyncOmniAuthSectionControl = SyncOmniAuthSectionControl;
-export default connect(
-  (state, props) => ({
-    sectionCode: sectionCode(state, props.sectionId),
-    sectionName: sectionName(state, props.sectionId),
-    sectionProvider: sectionProvider(state, props.sectionId)
-  }),
-  {
-    updateRoster: importOrUpdateRoster
-  }
-)(SyncOmniAuthSectionControl);
 
 /**
  * Pure view component of the omniauth sync control.

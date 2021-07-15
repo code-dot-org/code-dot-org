@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsTypes';
 
 export default class DownloadParentLetter extends Component {
   static propTypes = {

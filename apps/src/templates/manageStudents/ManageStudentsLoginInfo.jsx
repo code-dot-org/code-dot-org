@@ -7,7 +7,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsTypes';
 import DownloadParentLetter from './DownloadParentLetter';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 
