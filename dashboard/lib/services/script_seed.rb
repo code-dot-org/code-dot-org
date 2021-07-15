@@ -47,7 +47,7 @@ module Services
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
 
-      # Use the existing seeding_key code to efficiently sort LessonResource
+      # Use the existing seeding_key code to efficiently sort LessonsResource
       # objects in a manner that will be stable across environments.
       lr_seed_context = SeedContext.new(lessons: script.lessons, resources: resources)
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(lr_seed_context).to_json}
