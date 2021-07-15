@@ -56,6 +56,16 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'student of csa pilot participant can get access token' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: 'csa-pilot')
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
+    assert_response :success
+  end
+
   test 'param for channel id is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
