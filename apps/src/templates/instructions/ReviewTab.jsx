@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import $ from 'jquery';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
