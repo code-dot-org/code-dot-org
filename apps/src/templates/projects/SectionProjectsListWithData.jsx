@@ -1,59 +1,59 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SectionProjectsList from './SectionProjectsList';
+import {gql, useQuery} from '@apollo/client';
 
-class SectionProjectsListWithData extends Component {
-  static propTypes = {
-    studioUrlPrefix: PropTypes.string,
+export const GET_PROJECTS = gql`
+  query GetSectionStats($sectionId: ID!) {
+    section(id: $sectionId) {
+      id
+      students {
+        name
+        projects {
+          name
+          channel
+          type
+          thumbnailUrl
+          publishedAt
+          updatedAt
+        }
+      }
+    }
+  }
+`;
 
-    // Props provided by redux.
-    sectionId: PropTypes.number
-  };
+const SectionProjectsListWithData = ({sectionId, studioUrlPrefix}) => {
+  const {data, loading, error} = useQuery(GET_PROJECTS, {
+    variables: {sectionId: sectionId}
+  });
 
-  state = {
-    projectsData: {},
-    isLoading: true
-  };
-
-  componentDidMount() {
-    const projectsDataUrl = `/dashboardapi/v1/projects/section/${
-      this.props.sectionId
-    }`;
-    $.ajax({
-      url: projectsDataUrl,
-      method: 'GET',
-      dataType: 'json'
-    }).done(projectsData => {
-      this.setState({
-        projectsData: projectsData,
-        isLoading: false
-      });
-    });
+  if (loading) {
+    return <Spinner />;
+  }
+  if (error) {
+    return <p>ERROR: {error.message}</p>;
+  }
+  if (!data) {
+    return <p>Not found</p>;
   }
 
-  render() {
-    const {studioUrlPrefix} = this.props;
-    const {projectsData} = this.state;
+  const projectsData = data.section.students.map(s => {
+    return s.projects.map(p => ({studentName: s.name, ...p}));
+  });
 
-    return (
-      <div>
-        {this.state.isLoading && <Spinner />}
-        {!this.state.isLoading && (
-          <SectionProjectsList
-            projectsData={projectsData}
-            studioUrlPrefix={studioUrlPrefix}
-            showProjectThumbnails={true}
-          />
-        )}
-      </div>
-    );
-  }
-}
+  return (
+    <SectionProjectsList
+      projectsData={projectsData.flat()}
+      studioUrlPrefix={studioUrlPrefix}
+      showProjectThumbnails={true}
+    />
+  );
+};
 
-export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
+SectionProjectsListWithData.propTypes = {
+  studioUrlPrefix: PropTypes.string,
+  sectionId: PropTypes.number
+};
 
-export default connect(state => ({
-  sectionId: state.sectionData.section.id
-}))(SectionProjectsListWithData);
+export default SectionProjectsListWithData;

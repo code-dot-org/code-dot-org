@@ -130,7 +130,10 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.projects}
             component={props => (
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+              <SectionProjectsListWithData
+                sectionId={sectionId}
+                studioUrlPrefix={studioUrlPrefix}
+              />
             )}
           />
           <Route
