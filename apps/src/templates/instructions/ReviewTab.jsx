@@ -17,8 +17,10 @@ export default class ReviewTab extends Component {
   componentDidMount() {
     const channelId = getStore().getState().pageConstants.channelId;
 
+    // projectVersion = 'latest' is a placeholder until we implement
+    // storing project version when saving comments
     topInstructionsDataApi
-      .getCodeReviewCommentsForProject(channelId, 'yyy')
+      .getCodeReviewCommentsForProject(channelId, 'latest')
       .done((data, _, request) => {
         this.setState({
           comments: data,
@@ -28,6 +30,8 @@ export default class ReviewTab extends Component {
   }
 
   onNewCommentSubmit = newCommentText => {
+    // projectVersion = 'latest' is a placeholder until we implement
+    // storing project version when saving comments
     $.ajax({
       url: `/code_review_comments`,
       type: 'POST',
