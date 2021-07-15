@@ -154,8 +154,6 @@ module Levels
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
         parent_level: self
       )
-
-      reload
     end
   end
 end
