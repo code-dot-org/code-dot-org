@@ -707,6 +707,7 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
+    after(:create) {|s| CourseOffering.add_course_offering(s)}
 
     trait :with_levels do
       transient do
