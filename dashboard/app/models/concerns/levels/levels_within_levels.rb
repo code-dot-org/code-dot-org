@@ -44,6 +44,29 @@ module Levels
       after_save :setup_contained_levels
     end
 
+    class_methods do
+      # Helper method for level cloning, called by `clone_with_suffix`; given a
+      # level, create clones of all its children. Returns a hash of all
+      # parameters on that level that need to be updated in response.
+      def clone_child_levels(parent_level, new_suffix, editor_experiment: nil)
+        update_params = {}
+        parent_level.levels_child_levels.each do |parent_levels_child_level|
+          child_level = parent_levels_child_level.child_level
+          cloned_child_level = child_level.
+            clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+          parent_levels_child_level.child_level = cloned_child_level
+          parent_levels_child_level.save!
+        end
+
+        unless parent_level.child_levels.contained.empty?
+          update_params[:contained_level_names] =
+            parent_level.child_levels.contained.map(&:name)
+        end
+
+        return update_params
+      end
+    end
+
     # Returns all child levels of this level, which could include contained
     # levels, project template levels, BubbleChoice sublevels, or LevelGroup
     # sublevels.  This method may be overridden by subclasses.
@@ -71,29 +94,6 @@ module Levels
           Script.cache_find_level(lcl.child_level_id)
         end
       end
-    end
-
-    # Helper method for level cloning, called by `clone_with_suffix`; given a
-    # freshly-cloned level, create clones of all its children.
-    #
-    # Returns a hash of all parameters on that level that need to be updated in
-    # response.
-    def self.clone_child_levels(new_cloned_level, new_suffix, editor_experiment: nil)
-      update_params = {}
-      new_cloned_level.levels_child_levels.each do |parent_levels_child_level|
-        child_level = parent_levels_child_level.child_level
-        cloned_child_level = child_level.
-          clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-        parent_levels_child_level.child_level = cloned_child_level
-        parent_levels_child_level.save!
-      end
-
-      unless new_cloned_level.child_levels.contained.empty?
-        update_params[:contained_level_names] =
-          new_cloned_level.child_levels.contained.map(&:name)
-      end
-
-      return update_params
     end
 
     private
