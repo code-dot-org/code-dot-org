@@ -118,7 +118,7 @@ class SelectDataset extends Component {
                     style={styles.selectDatasetImage}
                     draggable={false}
                     className="ailab-image-hover"
-                    alt={dataset.name}
+                    alt={`Select ${dataset.name} dataset`}
                   />
                   <div style={styles.selectDatasetText}>{dataset.name}</div>
                 </div>
