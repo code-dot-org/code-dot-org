@@ -5,6 +5,7 @@ module Types
     field :code, String, null: true
     field :teacher, Types::UserType, null: false
     field :students, [Types::UserType, null:false], null: false
+    field :login_type, String, null: false
 
     # field :user_id, Integer, null: false
     # field :created_at, GraphQL::Types::ISO8601DateTime, null: true
@@ -12,7 +13,6 @@ module Types
     # field :script_id, Integer, null: true
     # field :course_id, Integer, null: true
     # field :grade, String, null: true
-    # field :login_type, String, null: false
     # field :deleted_at, GraphQL::Types::ISO8601DateTime, null: true
     # field :stage_extras, Boolean, null: false
     # field :section_type, String, null: true

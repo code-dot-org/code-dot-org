@@ -11,13 +11,12 @@ import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelec
 import {
   updateStudentTransfer,
   transferStudents,
-  TransferType,
-  TransferStatus,
   cancelStudentTransfer
 } from './manageStudentsRedux';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {TransferType, TransferStatus} from './manageStudentsTypes';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;

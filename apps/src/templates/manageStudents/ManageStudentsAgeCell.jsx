@@ -6,7 +6,7 @@ import {editStudent, setSharingDefault} from './manageStudentsRedux';
 
 class ManageStudentAgeCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isEditing: PropTypes.bool,
     editedValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

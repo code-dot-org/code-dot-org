@@ -9,7 +9,7 @@ import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     sectionId: PropTypes.number,
     name: PropTypes.string.isRequired,
     username: PropTypes.string,

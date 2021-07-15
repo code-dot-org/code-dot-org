@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import StatsTable from './StatsTable';
 import {gql, useQuery} from '@apollo/client';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 export const GET_SECTION = gql`
   query GetSectionStats($sectionId: ID!) {
@@ -19,9 +20,12 @@ export const GET_SECTION = gql`
 `;
 
 const StatsTableWithData = ({sectionId}) => {
-  const {data, error} = useQuery(GET_SECTION, {
+  const {data, loading, error} = useQuery(GET_SECTION, {
     variables: {sectionId: sectionId}
   });
+  if (loading) {
+    return <Spinner />;
+  }
   if (error) {
     return <p>ERROR: {error.message}</p>;
   }
