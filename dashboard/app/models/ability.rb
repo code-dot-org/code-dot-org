@@ -318,17 +318,16 @@ class Ability
       end
     end
 
+    # Checks if user is directly enrolled in pilot
     if user.persisted?
       if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
         can :get_access_token, :javabuilder_session
       end
     end
 
-    # Checking CSA pilot units one and two in case the teacher skips the first
+    # Checks if user has a teacher enrolled in pilot
     if user.persisted?
-      script = Script.get_from_cache('csa1-pilot', raise_exceptions: false)
-      script2 = Script.get_from_cache('csa2-pilot', raise_exceptions: false)
-      if script.has_pilot_access?(user) || script2.has_pilot_access?(user)
+      if user.teachers.any? {|t| t.has_pilot_experiment?('csa-pilot')}
         can :get_access_token, :javabuilder_session
       end
     end
