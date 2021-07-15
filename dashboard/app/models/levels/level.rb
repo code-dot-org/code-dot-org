@@ -711,7 +711,7 @@ class Level < ApplicationRecord
       update_params[:project_template_level_name] = new_template_level.name
     end
 
-    child_params_to_update = Levels::LevelsWithinLevels.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+    child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
     update_params.merge!(child_params_to_update)
 
     level.update!(update_params)

@@ -104,7 +104,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     parent = create :level, level_num: 'custom'
     child = create :level, level_num: 'custom', name: 'child_level'
     ParentLevelsChildLevel.create(parent_level: parent, child_level: child)
-    Levels::LevelsWithinLevels.clone_child_levels(parent, '_test_clone')
+    Level.clone_child_levels(parent, '_test_clone')
     assert_equal 'child_level_test_clone', parent.reload.child_levels.first.name
   end
 
@@ -116,7 +116,7 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
       child_level: child,
       kind: ParentLevelsChildLevel::CONTAINED
     )
-    result = Levels::LevelsWithinLevels.clone_child_levels(parent, '_test_clone')
+    result = Level.clone_child_levels(parent, '_test_clone')
     expected = {contained_level_names: ['child_level_test_clone']}
     assert_equal expected, result
   end
