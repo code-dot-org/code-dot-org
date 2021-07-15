@@ -15,10 +15,21 @@ export default class CourseVersionPublishingEditor extends Component {
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isCourse: PropTypes.bool,
+    updateIsCourse: PropTypes.func,
+    showIsCourseSelector: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
     preventCourseVersionChange: PropTypes.bool
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      addingFamilyName: false,
+      selectedFamilyName: props.familyName,
+      newFamilyName: ''
+    };
+  }
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
@@ -28,48 +39,117 @@ export default class CourseVersionPublishingEditor extends Component {
     }
   };
 
+  handleNewFamilyNameChange = e => {
+    if (e.target.value === '') {
+      this.props.updateFamilyName(this.state.selectedFamilyName);
+      this.setState({newFamilyName: '', addingFamilyName: false});
+    } else {
+      this.props.updateFamilyName(e.target.value);
+      this.setState({newFamilyName: e.target.value, addingFamilyName: true});
+    }
+  };
+
+  onFamilyNameSelect = e => {
+    this.setState({selectedFamilyName: e.target.value});
+    this.props.updateFamilyName(e.target.value);
+  };
+
   render() {
     return (
       <div>
-        <label>
-          Family Name
-          <select
-            value={this.props.familyName}
-            style={styles.dropdown}
-            onChange={event => this.props.updateFamilyName(event.target.value)}
-            disabled={this.props.preventCourseVersionChange}
-          >
-            {!this.props.isCourse && <option value="">(None)</option>}
-            {this.props.families.map(familyOption => (
-              <option key={familyOption} value={familyOption}>
-                {familyOption}
-              </option>
-            ))}
-          </select>
-          <HelpTip>
-            <p>
-              The family name is used to group together courses that are
-              different version years of the same course so that users can be
-              redirected between different version years.
-            </p>
-          </HelpTip>
-        </label>
-        <label>
-          Version Year
-          <select
-            value={this.props.versionYear}
-            style={styles.dropdown}
-            onChange={event => this.props.updateVersionYear(event.target.value)}
-            disabled={this.props.preventCourseVersionChange}
-          >
-            <option value="">(None)</option>
-            {this.props.versionYearOptions.map(year => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </label>
+        {this.props.showIsCourseSelector && (
+          <label>
+            Is a Standalone Unit
+            <input
+              className="isCourseCheckbox"
+              type="checkbox"
+              checked={this.props.isCourse}
+              disabled={this.props.preventCourseVersionChange}
+              style={styles.checkbox}
+              onChange={this.props.updateIsCourse}
+            />
+            {this.props.familyName && (
+              <HelpTip>
+                <p>
+                  If checked, indicates that this Unit represents a standalone
+                  unit. Examples of such Units include CourseA-F, Express, and
+                  Pre-Express.
+                </p>
+              </HelpTip>
+            )}
+            {!this.props.familyName && (
+              <HelpTip>
+                <p>
+                  You must select a family name in order to mark something as a
+                  standalone unit.
+                </p>
+              </HelpTip>
+            )}
+          </label>
+        )}
+
+        {this.props.isCourse && (
+          <div>
+            <label>
+              Family Name
+              <select
+                value={this.state.selectedFamilyName}
+                style={styles.dropdown}
+                className="familyNameSelector"
+                disabled={
+                  this.props.preventCourseVersionChange ||
+                  !!this.state.newFamilyName
+                }
+                onChange={this.onFamilyNameSelect}
+              >
+                <option value="">(None)</option>
+                {this.props.families.map(familyOption => (
+                  <option key={familyOption} value={familyOption}>
+                    {familyOption}
+                  </option>
+                ))}
+              </select>
+              {!this.props.preventCourseVersionChange && (
+                <span>
+                  or{' '}
+                  <input
+                    type="text"
+                    value={this.state.newFamilyName}
+                    style={styles.smallInput}
+                    onChange={this.handleNewFamilyNameChange}
+                  />
+                </span>
+              )}
+              <HelpTip>
+                <p>
+                  The family name is used to group together courses that are
+                  different version years of the same course so that users can
+                  be redirected between different version years. Family names
+                  should only contain letters, numbers, and dashes.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Version Year
+              <select
+                value={this.props.versionYear}
+                style={styles.dropdown}
+                className="versionYearSelector"
+                onChange={event =>
+                  this.props.updateVersionYear(event.target.value)
+                }
+                disabled={this.props.preventCourseVersionChange}
+              >
+                <option value="">(None)</option>
+                {this.props.versionYearOptions.map(year => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        )}
         <label>
           Published State
           <select
@@ -145,6 +225,7 @@ export default class CourseVersionPublishingEditor extends Component {
             <input
               value={this.props.pilotExperiment}
               style={styles.input}
+              className="pilotExperimentInput"
               onChange={event =>
                 this.props.updatePilotExperiment(event.target.value)
               }
@@ -166,8 +247,20 @@ const styles = {
     borderRadius: 4,
     margin: 0
   },
+  smallInput: {
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0,
+    height: '100%'
+  },
   dropdown: {
     margin: '0 6px'
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
   },
   tableBorder: {
     border: '1px solid ' + color.white,

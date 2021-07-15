@@ -1,8 +1,11 @@
 id '1'
 hideable_lessons true
+family_name '20-hour'
+version_year 'unversioned'
 published_state 'preview'
 supported_locales ["de-DE"]
 curriculum_umbrella 'CSF'
+is_course true
 
 lesson 'Introduction to Computer Science', display_name: 'Introduction to Computer Science', has_lesson_plan: false, unplugged: true
 concepts 'sequence'

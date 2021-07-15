@@ -1,4 +1,7 @@
+family_name 'starwars'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Hour of Code 2015', display_name: 'Hour of Code 2015', has_lesson_plan: false
 skin 'hoc2015x'
