@@ -1,5 +1,8 @@
+family_name 'dance-extras'
+version_year 'unversioned'
 published_state 'preview'
 tts true
+is_course true
 
 lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
 level 'Dance_Party_extras_intro', named: true

@@ -1,4 +1,7 @@
+family_name 'hoc-encryption'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Simple Encryption', display_name: 'Simple Encryption', has_lesson_plan: false
 level 'Crack a Caesar Cipher', named: true

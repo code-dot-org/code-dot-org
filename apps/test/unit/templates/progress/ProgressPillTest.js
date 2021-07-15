@@ -4,13 +4,19 @@ import {shallow} from 'enzyme';
 import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {
+  AssessmentBadge,
+  KeepWorkingBadge
+} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const unpluggedLevel = {
   id: '1',
   kind: LevelKind.unplugged,
   isUnplugged: true,
   status: LevelStatus.perfect,
-  isLocked: false
+  isLocked: false,
+  teacherFeedbackReviewState: undefined
 };
 
 const assessmentLevel = {
@@ -18,7 +24,13 @@ const assessmentLevel = {
   kind: LevelKind.assessment,
   isUnplugged: false,
   status: LevelStatus.perfect,
-  isLocked: false
+  isLocked: false,
+  teacherFeedbackReviewState: undefined
+};
+
+const keepWorkingLevel = {
+  ...unpluggedLevel,
+  teacherFeedbackReviewState: ReviewStates.keepWorking
 };
 
 const levelWithUrl = {
@@ -86,18 +98,46 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('a').props().href, undefined);
   });
 
+  it('has an keep working icon when single level has keepWorking feedback', () => {
+    const wrapper = shallow(
+      <ProgressPill {...DEFAULT_PROPS} levels={[keepWorkingLevel]} />
+    );
+    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+  });
+
+  it('does not have an keep working icon when pill represents multiple levels', () => {
+    const wrapper = shallow(
+      <ProgressPill
+        {...DEFAULT_PROPS}
+        levels={[keepWorkingLevel, keepWorkingLevel, keepWorkingLevel]}
+      />
+    );
+    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(0);
+  });
+
+  it('has an keep working icon when single level is assessment and has keepWorking feedback', () => {
+    const level = {
+      ...assessmentLevel,
+      teacherFeedbackReviewState: ReviewStates.keepWorking
+    };
+    const wrapper = shallow(
+      <ProgressPill {...DEFAULT_PROPS} levels={[level]} />
+    );
+    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+  });
+
   it('has an assessment icon when single level is assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
-    expect(wrapper.find('AssessmentBadge')).to.have.lengthOf(1);
+    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
     );
-    expect(wrapper.find('AssessmentBadge')).to.have.lengthOf(0);
+    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels', () => {
@@ -107,6 +147,6 @@ describe('ProgressPill', () => {
         levels={[assessmentLevel, assessmentLevel]}
       />
     );
-    expect(wrapper.find('BubbleBadge')).to.have.lengthOf(0);
+    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(0);
   });
 });
