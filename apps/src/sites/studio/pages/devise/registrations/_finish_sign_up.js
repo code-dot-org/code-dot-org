@@ -41,14 +41,14 @@ $(document).ready(() => {
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
     if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
       // If in variant, toggle large buttons
-      document.getElementById('select-user-type-original').style =
-        'display:none';
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:none;';
     } else {
       // Otherwise (also the default), keep original dropdown
-      document.getElementById('select-user-type-variant').style =
-        'display:none';
-      document.getElementById('signup-select-user-type-label').style =
-        'width:220px';
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:none;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:220px;';
     }
     // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
@@ -113,10 +113,13 @@ $(document).ready(() => {
     }
   }
 
-  // Change user type event listener
   // Keep if sign-up user type experiment favors variant (start)
-  document.addEventListener('selectUserType', e => {
-    setUserType(e.detail);
+  // Event listeners for changing the user type
+  document.addEventListener('selectUserTypeTeacher', e => {
+    setUserType('teacher');
+  });
+  document.addEventListener('selectUserTypeStudent', e => {
+    setUserType('student');
   });
   // Keep if sign-up user type experiment favors variant (end)
   // Keep if sign-up user type experiment favors original (start)
