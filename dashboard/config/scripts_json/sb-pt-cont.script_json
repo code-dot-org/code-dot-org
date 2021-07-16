@@ -4,12 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned",
+      "pilot_experiment": "storyboard-pt-A",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-07-13 20:18:41 UTC",
-    "published_state": "beta",
+    "family_name": "sb-pt-cont",
+    "serialized_at": "2021-07-16 03:55:49 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "sb-pt-cont"
     }
@@ -30,7 +33,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Story Board",
+      "name": "Story Board - A",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
