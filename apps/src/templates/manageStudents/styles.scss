@@ -1,0 +1,24 @@
+@import 'color';
+@import 'style-constants';
+
+.manage-students {
+  table {
+    border: 1px solid $border_gray;
+    width: $content-width;
+    background-color: $table_light_row;
+  }
+  th {
+    background-color: $table_header;
+    border: solid $border_light_gray;
+    border-width: 1px 1px 0px 0px;
+    font-weight: bold;
+    padding: 20px;
+    color: $charcoal;
+    text-align: inherit;
+  }
+  td {
+    border: 1px solid $border_light_gray;
+    padding: 10px;
+    font-size: 14px;
+  }
+}

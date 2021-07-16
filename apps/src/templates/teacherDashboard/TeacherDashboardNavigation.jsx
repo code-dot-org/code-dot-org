@@ -174,7 +174,8 @@ const styles = {
     backgroundColor: color.purple,
     display: 'flex',
     marginBottom: 10,
-    overflow: 'hidden',
+    overflowX: 'hidden',
+    overflowY: 'hidden',
     position: 'relative'
   },
   centerContainer: {

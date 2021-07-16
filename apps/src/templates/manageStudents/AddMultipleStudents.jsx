@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.string,
     // Provided by redux
     addMultipleStudents: PropTypes.func.isRequired
   };
