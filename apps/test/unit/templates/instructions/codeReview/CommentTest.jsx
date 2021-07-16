@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {Factory} from 'rosie';
 import './CodeReviewTestHelper';
+import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
@@ -58,5 +59,13 @@ describe('Code Review Comment', () => {
     expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
   });
 
-  it('displays error message when comment has error', () => {});
+  it('displays error message when comment has error', () => {
+    const defaultWrapper = renderWrapper();
+    expect(defaultWrapper.text().includes(javalabMsg.commentSaveError())).to.be
+      .false;
+
+    const errorWrapper = renderWrapper({hasError: true});
+    expect(errorWrapper.text().includes(javalabMsg.commentSaveError())).to.be
+      .true;
+  });
 });
