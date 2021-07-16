@@ -60,7 +60,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
 
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
 
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
