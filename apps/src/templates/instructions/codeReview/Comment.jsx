@@ -19,33 +19,14 @@ export default class Comment extends Component {
     hasError: false
   };
 
-  onDelete = commentId => {
+  onDelete = () => {
     this.setState({isShowingCommentOptions: false});
-
-    $.ajax({
-      url: `/code_review_comments/${commentId}`,
-      type: 'DELETE',
-      headers: {'X-CSRF-Token': this.props.token}
-    })
-      .done(result => {
-        this.props.onDelete(commentId);
-      })
-      .fail(() => this.onError());
+    this.props.onDelete();
   };
 
-  onResolve = commentId => {
+  onResolve = () => {
     this.setState({isShowingCommentOptions: false});
-
-    $.ajax({
-      url: `/code_review_comments/${commentId}/resolve`,
-      type: 'PATCH',
-      headers: {'X-CSRF-Token': this.props.token},
-      data: {is_resolved: !this.state.isResolved}
-    })
-      .done(result => {
-        this.setState({isResolved: !this.state.isResolved});
-      })
-      .fail(() => this.onError());
+    this.props.onResolve();
   };
 
   onError = () => {
@@ -114,11 +95,7 @@ export default class Comment extends Component {
             {isShowingCommentOptions && (
               <CommentOptions
                 isResolved={isResolved}
-                onResolveClick={() => {
-                  this.onResolve(id);
-                  this.props.onResolve(id);
-                  this.setState({isShowingCommentOptions: false});
-                }}
+                onResolveClick={() => this.onResolve(id)}
                 onDeleteClick={() => this.onDelete(id)}
               />
             )}

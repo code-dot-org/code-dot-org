@@ -45,21 +45,36 @@ export default class ReviewTab extends Component {
   };
 
   onCommentDelete = deletedCommentId => {
-    const comments = [...this.state.comments];
-    _.remove(comments, comment => comment.id === deletedCommentId);
+    const {token} = this.state;
 
-    this.setState({comments: comments});
+    codeReviewDataApi
+      .deleteCodeReviewComment(deletedCommentId, token)
+      .done(() => {
+        const comments = [...this.state.comments];
+        _.remove(comments, comment => comment.id === deletedCommentId);
+
+        this.setState({comments: comments});
+      })
+      .fail(() => this.onError());
   };
 
-  onCommentResolve = resolvedCommentId => {
-    const comments = [...this.state.comments];
-    const resolvedCommentIndex = comments.findIndex(
-      comment => comment.id === resolvedCommentId
-    );
-    comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
-      .isResolved;
+  onCommentResolve = (resolvedCommentId, newResolvedStatus) => {
+    const {token} = this.state;
 
-    this.setState({comments: comments});
+    codeReviewDataApi
+      .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus, token)
+      .done(() => {
+        const comments = [...this.state.comments];
+        const resolvedCommentIndex = comments.findIndex(
+          comment => comment.id === resolvedCommentId
+        );
+        comments[resolvedCommentIndex].isResolved = !comments[
+          resolvedCommentIndex
+        ].isResolved;
+
+        this.setState({comments: comments});
+      })
+      .fail(() => this.onError());
   };
 
   renderReadyForReviewCheckbox() {
@@ -93,7 +108,9 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
-              onResolve={() => this.onCommentResolve(comment.id)}
+              onResolve={() =>
+                this.onCommentResolve(comment.id, !comment.isResolved)
+              }
               onDelete={() => this.onCommentDelete(comment.id)}
               token={token}
             />
