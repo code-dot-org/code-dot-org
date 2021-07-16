@@ -29,9 +29,12 @@ export default class DefaultSpritesEditor extends React.Component {
         <a href="/sprites">Back to Sprite Management</a>
         <h1>Edit Default Sprites</h1>
         <h2>
-          Edit the list to add or remove sprites from the default dropdown list
-          in Sprite Lab
+          Remove or add sprites from the default dropdown list in Sprite Lab.
         </h2>
+        <p>
+          Sprites are shown in the format: "name: category/path". The order of
+          this list is the order that the sprites appear in the dropdown.
+        </p>
         <div>{this.renderDefaultSprites()}</div>
         <button type="button" onClick={() => console.log('Update defaults')}>
           Update Default Sprites List
