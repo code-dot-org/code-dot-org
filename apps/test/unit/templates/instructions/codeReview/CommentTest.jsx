@@ -11,7 +11,13 @@ const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 describe('Code Review Comment', () => {
   const renderWrapper = (overrideProps = {}) => {
     const combinedComment = {...DEFAULT_COMMENT, ...overrideProps};
-    return shallow(<Comment comment={combinedComment} onDelete={() => {}} />);
+    return shallow(
+      <Comment
+        comment={combinedComment}
+        onDelete={() => {}}
+        onResolve={() => {}}
+      />
+    );
   };
 
   const renderAndCheckBackgroundColor = (

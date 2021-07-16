@@ -22,7 +22,6 @@ describe('Code Review Tab', () => {
 
   beforeEach(() => {
     server = sinon.fakeServer.create();
-
     server.respondWith(
       'GET',
       `/code_review_comments/project_comments?channel_id=${channelId}`,
@@ -40,6 +39,8 @@ describe('Code Review Tab', () => {
         channelId: channelId
       })
     );
+
+    wrapper = shallow(<ReviewTab />);
   });
 
   afterEach(() => {
@@ -52,17 +53,13 @@ describe('Code Review Tab', () => {
       `/code_review_comments/project_comments?channel_id=${channelId}`,
       [200, {'Content-Type': 'application/json'}, JSON.stringify([])]
     );
-
-    wrapper = shallow(<ReviewTab />);
     server.respond();
 
     expect(wrapper.find(Comment).length).to.equal(0);
   });
 
   it('renders a comment fetched on mount if one exists', () => {
-    wrapper = shallow(<ReviewTab />);
     expect(wrapper.find(Comment).length).to.equal(0);
-
     server.respond();
     expect(wrapper.find(Comment).length).to.equal(1);
   });
@@ -79,7 +76,6 @@ describe('Code Review Tab', () => {
       JSON.stringify(newlyCreatedComment)
     ]);
 
-    wrapper = shallow(<ReviewTab />);
     server.respond();
     expect(wrapper.find(Comment).length).to.equal(1);
 
@@ -95,11 +91,28 @@ describe('Code Review Tab', () => {
   });
 
   it('removes a comment when one is deleted', () => {
-    wrapper = shallow(<ReviewTab />);
     server.respond();
 
     expect(wrapper.find(Comment).length).to.equal(1);
     wrapper.instance().onCommentDelete(existingComment.id);
     expect(wrapper.find(Comment).length).to.equal(0);
+  });
+
+  it('resolves a comment when one is resolved', () => {
+    server.respond();
+
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.isResolved
+    ).to.be.false;
+    wrapper.instance().onCommentResolve(existingComment.id);
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.isResolved
+    ).to.be.true;
   });
 });
