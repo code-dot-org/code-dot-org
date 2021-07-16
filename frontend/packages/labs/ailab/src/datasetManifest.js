@@ -179,30 +179,6 @@ export const allDatasets = [
     isToy: true
   },
   {
-    id: "breakfast_toy",
-    name: "Breakfast Quiz",
-    path: "datasets/breakfast_toy.csv",
-    metadataPath: "datasets/breakfast_toy.json",
-    imagePath: "datasets/breakfast_toy.jpg",
-    isToy: true
-  },
-  {
-    id: "drink_toy",
-    name: "Drink Quiz",
-    path: "datasets/drink_toy.csv",
-    metadataPath: "datasets/drink_toy.json",
-    imagePath: "datasets/drink_toy.jpg",
-    isToy: true
-  },
-  {
-    id: "workout_toy",
-    name: "Workout Quiz",
-    path: "datasets/workout_toy.csv",
-    metadataPath: "datasets/workout_toy.json",
-    imagePath: "datasets/workout_toy.jpg",
-    isToy: true
-  },
-  {
     id: "safari_toy",
     name: "Safari",
     path: "datasets/safari_toy.csv",
@@ -253,6 +229,102 @@ export const allDatasets = [
     metadataPath: "datasets/car_evaluation.json",
     imagePath: "datasets/car_evaluation.jpg"
   },
+  {
+    id: "loneliness_interests",
+    name: "Student Survey - Personal Interests",
+    path: "datasets/loneliness_interests.csv",
+    metadataPath: "datasets/loneliness_interests.json",
+    imagePath: "datasets/loneliness_interests.jpg",
+    isToy: true
+  },
+  {
+    id: "loneliness_movies",
+    name: "Student Survey - Movies",
+    path: "datasets/loneliness_movies.csv",
+    metadataPath: "datasets/loneliness_movies.json",
+    imagePath: "datasets/loneliness_movies.jpg",
+    isToy: true
+  },
+  {
+    id: "loneliness_music",
+    name: "Student Survey - Music",
+    path: "datasets/loneliness_music.csv",
+    metadataPath: "datasets/loneliness_music.json",
+    imagePath: "datasets/loneliness_music.jpg",
+    isToy: true
+  },
+  {
+    id: "loneliness_personality",
+    name: "Student Survey - Personality",
+    path: "datasets/loneliness_personality.csv",
+    metadataPath: "datasets/loneliness_personality.json",
+    imagePath: "datasets/loneliness_personality.jpg",
+    isToy: true
+  },
+  {
+    id: "loneliness_phobias",
+    name: "Student Survey - Phobias",
+    path: "datasets/loneliness_phobias.csv",
+    metadataPath: "datasets/loneliness_phobias.json",
+    imagePath: "datasets/loneliness_phobias.jpg",
+    isToy: true
+  },
+  {
+    id: "club_biased_toy",
+    name: "Nico's Club Survey",
+    path: "datasets/club_biased_toy.csv",
+    metadataPath: "datasets/club_biased_toy.json",
+    imagePath: "datasets/club_biased_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "club_sparse_toy",
+    name: "Zoey's Club Survey",
+    path: "datasets/club_sparse_toy.csv",
+    metadataPath: "datasets/club_sparse_toy.json",
+    imagePath: "datasets/club_sparse_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "club_random_toy",
+    name: "Isaac's Club Survey",
+    path: "datasets/club_random_toy.csv",
+    metadataPath: "datasets/club_random_toy.json",
+    imagePath: "datasets/club_random_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "club_specific_toy",
+    name: "Kim's Club Survey",
+    path: "datasets/club_specific_toy.csv",
+    metadataPath: "datasets/club_specific_toy.json",
+    imagePath: "datasets/club_specific_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "shapes_v1_toy",
+    name: "Shapes V1",
+    path: "datasets/shapes_v1_toy.csv",
+    metadataPath: "datasets/shapes_v1_toy.json",
+    imagePath: "datasets/shapes_v1_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "shapes_v2_toy",
+    name: "Shapes V2",
+    path: "datasets/shapes_v2_toy.csv",
+    metadataPath: "datasets/shapes_v2_toy.json",
+    imagePath: "datasets/shapes_v2_toy.jpg",
+    isToy: true
+  },
+  {
+    id: "shoe_survey_toy",
+    name: "Shoes Survey",
+    path: "datasets/shoe_survey_toy.csv",
+    metadataPath: "datasets/shoe_survey_toy.json",
+    imagePath: "datasets/shoe_survey_toy.jpg",
+    isToy: true
+  }
 ];
 
 export function getAvailableDatasets(specificDatasets) {

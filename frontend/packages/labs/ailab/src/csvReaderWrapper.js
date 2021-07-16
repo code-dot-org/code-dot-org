@@ -2,10 +2,11 @@ import Papa from "papaparse";
 import { store } from "./index.js";
 import {
   setImportedData,
+  setInvalidData,
   setColumnsByDataType,
   setRemovedRowsCount
 } from "./redux";
-import { columnContainsOnlyNumbers } from "./helpers/columnDetails.js";
+import { containsOnlyNumbers } from "./helpers/columnDetails.js";
 import { ColumnTypes } from "./constants.js";
 
 export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
@@ -34,20 +35,22 @@ const cleanData = (data) => {
 
 const getCleanedRow = (row) => {
   for (var column in row) {
-    var cellValue = row[column];
+    if (column !== "__parsed_extra") {
+      var cellValue = row[column];
 
-    if (!isCellValid(cellValue)) {
-      return null;
+      if (!isCellValid(cellValue)) {
+        return null;
+      }
+
+      row[column] = cellValue.trim();
     }
-
-    row[column] = cellValue.trim();
   }
 
   return row;
 }
 
 const isCellValid = (cell) => {
-  return cell !== undefined && cell !== "";
+  return cell !== undefined && cell !== "" && typeof cell === "string";
 }
 
 const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
@@ -57,6 +60,12 @@ const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
   store.dispatch(setImportedData(cleanedData, userUploadedData));
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(cleanedData);
+  }
+
+  if (cleanedData.length < 2) {
+    store.dispatch(setInvalidData("tooFewRows"));
+  } else if (Object.keys(cleanedData[0]).length < 2) {
+    store.dispatch(setInvalidData("tooFewColumns"));
   }
 }
 
@@ -68,7 +77,7 @@ const countRemovedRows = (originalData, cleanedData) => {
 const setDefaultColumnDataType = data => {
   const columns = Object.keys(data[0]);
   for (let column of columns) {
-    if (columnContainsOnlyNumbers(data, column)) {
+    if (containsOnlyNumbers(data, column)) {
       store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
     } else {
       store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))

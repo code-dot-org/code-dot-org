@@ -14,7 +14,7 @@
     {
       "type": "numerical",
       "id": "Per Capita Crime Rate",
-      "description": "Per capita crime rate by town"
+      "description": "Per capita crime rate by town."
     },
     {
       "type": "numerical",

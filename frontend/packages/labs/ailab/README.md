@@ -23,6 +23,10 @@ It can be run standalone for more rapid development, though its ultimate destina
 
 The standalone runtime is also deployed to https://code-dot-org.github.io/ml-playground/ though we might vary which branch is published there.
 
+## Demo recording
+
+https://user-images.githubusercontent.com/2205926/125634349-a30d64f3-6e05-41ac-a2fc-b82ab794b18f.mov
+
 ## Common operations
 
 ### First time:

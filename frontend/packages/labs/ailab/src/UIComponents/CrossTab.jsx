@@ -1,11 +1,13 @@
-/* React component to render a special kind of crosstab table, with a row for each
- * active combination of features values, and corresponding percentage of label
- * values, with a heatmap style applied. */
+/*
+  React component to render a special kind of crosstab table, with a row for
+  each active combination of features values, and corresponding percentage of
+  label values, with a heatmap style applied.
+*/
 
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCrossTabData } from "../redux";
+import { getCrossTabData } from "../selectors/visualizationSelectors";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
 
@@ -48,6 +50,7 @@ class CrossTab extends Component {
             <div>
               The currently-selected data is too large to show in a table.
             </div>
+            <br />
           </div>
         )}
 

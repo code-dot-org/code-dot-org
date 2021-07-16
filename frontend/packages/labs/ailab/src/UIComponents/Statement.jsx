@@ -52,7 +52,10 @@ class Statement extends Component {
             <div
               id="remove-statement-label"
               onClick={() => this.removeLabel()}
+              onKeyDown={() => this.removeLabel()}
               style={styles.statementDeleteIcon}
+              role="button"
+              tabIndex={0}
             >
               <div style={styles.statementDeleteCircle} />
               <div style={styles.statementDeleteX}>
@@ -74,7 +77,10 @@ class Statement extends Component {
                       <div
                         id="remove-statement-feature"
                         onClick={() => this.removeFeature(selectedFeature)}
+                        onKeyDown={() => this.removeFeature(selectedFeature)}
                         style={styles.statementDeleteIcon}
+                        role="button"
+                        tabIndex={0}
                       >
                         <div style={styles.statementDeleteCircle} />
                         <div style={styles.statementDeleteX}>

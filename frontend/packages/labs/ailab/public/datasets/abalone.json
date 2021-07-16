@@ -5,7 +5,7 @@
     "source": "UCI (archive.ics.uci.edu/ml/datasets/Abalone)",
     "lastUpdated": "1994",
     "context": {
-      "createdBy": "Warwick J Nash, Tracy L Sellers, Simon R Talbot, Andrew J Cawthorn and Wes B Ford ",
+      "createdBy": "Warwick J Nash, Tracy L Sellers, Simon R Talbot, Andrew J Cawthorn and Wes B Ford",
       "potentialUses": "Determine the age of an abalone.",
       "potentialMisuses": ""
     }
@@ -15,7 +15,7 @@
     {
       "type": "categorical",
       "id": "Sex",
-      "description": "The sex of the abalone: M, F, or I (Infant)"
+      "description": "The sex of the abalone: M, F, or I (Infant)."
     },
     {
       "type": "numerical",

@@ -4,15 +4,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { store } from "../index.js";
 import train from "../train";
+import { setTestData, getPredictAvailable } from "../redux";
+import { getConvertedPredictedLabel } from "../helpers/valueConversion";
 import {
-  setTestData,
-  getSelectedNumericalFeatures,
   getSelectedCategoricalFeatures,
+  getSelectedNumericalFeatures,
   getUniqueOptionsByColumn,
-  getConvertedPredictedLabel,
-  getPredictAvailable,
   getExtremaByColumn
-} from "../redux";
+} from "../selectors";
 import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import ScrollableContent from "./ScrollableContent";
@@ -31,9 +30,7 @@ class Predict extends Component {
   };
 
   handleChange = (event, feature) => {
-    const testData = this.props.testData;
-    testData[feature] = event.target.value;
-    this.props.setTestData(testData);
+    this.props.setTestData(feature, event.target.value);
   };
 
   onClickPredict = () => {
@@ -115,6 +112,7 @@ class Predict extends Component {
                 className="ailab-image-hover"
                 style={styles.predictBot}
                 src={aiBotBorder}
+                alt="A.I. bot"
               />
             </div>
             <div style={styles.predictBotRight}>
@@ -140,8 +138,8 @@ export default connect(
     extremaByColumn: getExtremaByColumn(state)
   }),
   dispatch => ({
-    setTestData(testData) {
-      dispatch(setTestData(testData));
+    setTestData(feature, value) {
+      dispatch(setTestData(feature, value));
     }
   })
 )(Predict);

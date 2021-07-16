@@ -78,6 +78,7 @@ export const classificationState = {
       play: 'no'
     }
   ],
+  currentColumn: 'temp',
   labelColumn: 'play',
   selectedFeatures: ['temp', 'weather'],
   columnsByDataType: {
@@ -87,6 +88,7 @@ export const classificationState = {
   },
   accuracyCheckLabels: [1, 0, 0, 0, 0, 1],
   accuracyCheckExamples: [[0,2], [1,2], [1,1], [1,0], [2,1], [2,0]],
+  prediction: 0,
   featureNumberKey: {
     'temp': {
       'cool' : 0,
@@ -104,3 +106,83 @@ export const classificationState = {
     }
   }
 };
+
+export const batCountMax = 100;
+export const batCountMin = 40;
+export const mosquitoCountMax = 10;
+export const mosquitoCountMin = 1;
+
+export const allNumericalState = {
+  data: [
+    {
+      batCount: batCountMax,
+      mosquitoCount: mosquitoCountMin
+    },
+    {
+      batCount: 90,
+      mosquitoCount: 2
+    },{
+      batCount: 80,
+      mosquitoCount: 3
+    },{
+      batCount: 70,
+      mosquitoCount: 4
+    },{
+      batCount: 60,
+      mosquitoCount: 5
+    },{
+      batCount: 50,
+      mosquitoCount: 6
+    },{
+      batCount: batCountMin,
+      mosquitoCount: mosquitoCountMax
+    }
+  ],
+  currentColumn: 'batCount',
+  labelColumn: 'mosquitoCount',
+  selectedFeatures: ['batCount'],
+  columnsByDataType: {
+    batCount: 'numerical',
+    mosquitoCount: 'numerical'
+  }
+};
+
+export const premadeDatasetName = 'bats_eat_mozzies';
+export const batDatasetDescription = 'Count of bats and mosquitios';
+export const mosquitoDescription = 'How many mosquitoes there are.';
+
+export const premadeDatasetState = {
+  ...allNumericalState,
+  csvfile: 'bats-eat-mozzies.csv',
+  metadata: {
+    name: premadeDatasetName,
+    card: {
+      description: batDatasetDescription
+    },
+    defaultLabelColumn: 'mosquitoCount',
+    fields: [
+      {
+        id: 'mosquitoCount',
+        type: 'numerical',
+        description: mosquitoDescription
+      },
+      {
+        id: 'batCount',
+        type: 'numerical',
+        description: 'How many bats there are.'
+      }
+    ]
+  }
+}
+
+export const playDatasetDescription = "Survey of the weather, temperature and whether it was a good day to play outside.";
+
+export const userUploadedDatasetState = {
+  ...classificationState,
+  csvfile: {
+    name: 'play-outside-today?.csv',
+  },
+  trainedModelDetails: {
+    datasetDescription: playDatasetDescription
+  }
+}

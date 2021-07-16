@@ -10,77 +10,44 @@ export function isColumnNumerical(state, column) {
   return (state.columnsByDataType[column] === ColumnTypes.NUMERICAL);
 }
 
+export function filterColumnsByType(columnsByDataType, columnType) {
+  return Object.keys(columnsByDataType).filter(
+    column => columnsByDataType[column] === columnType
+  );
+}
 /*
   Categorical columns with too many unique values are unlikley to make
   accurate models, and we don't want to overflow the metadata column for saved
   models.
 */
-export function hasTooManyUniqueOptions(state, column) {
-  if (isColumnCategorical(state, column)) {
-    const uniqueOptionsCount =
-      getUniqueOptions(state, state.currentColumn).length;
-    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
-  }
-  return false;
+export function tooManyUniqueOptions(uniqueOptionsCount) {
+  return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
 }
 
-export function getUniqueOptions(state, column) {
-  return Array.from(new Set(state.data.map(row => row[column]))).filter(
+export function getUniqueOptions(data, column) {
+  const columnData = getColumnData(data, column);
+  return Array.from(new Set(columnData)).filter(
     option => option !== undefined && option !== ""
   );
 }
 
-function isValidCategoricalData(state, column) {
-  return !hasTooManyUniqueOptions(state, column);
-}
-
-export function columnContainsOnlyNumbers(data, column) {
-  return data.every(row => !isNaN(row[column]));
-}
-
-function isValidNumericalData(state, column) {
-  return columnContainsOnlyNumbers(state.data, column);
-}
-
-export function isColumnDataValid(state, column) {
-  return (
-    isColumnCategorical(state, column) && isValidCategoricalData(state,column)
-  ) ||
-  (isColumnNumerical(state, column) && isValidNumericalData(state, column));
-}
-
-function isLabel(state, column) {
-  return column === state.labelColumn;
-}
-
-function isFeature(state, column) {
-  return state.selectedFeatures.includes(column);
-}
-
-function isSelected(state, column) {
-  return isLabel(state, column) || isFeature(state, column);
-}
-
-export function isSelectable(state, column) {
-  return isColumnDataValid(state, column) && !isSelected(state, column);
-}
-
-export function isColumnReadOnly(state, column) {
+export function isColumnReadOnly(metadata, column) {
   const metadataColumnType =
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields.find(field => {
+    column &&
+    metadata &&
+    metadata.fields &&
+    metadata.fields.find(field => {
       return field.id === column;
     }).type;
   return !!metadataColumnType;
 }
 
-function getColumnData(state, column) {
-  return state.data.map(row => row[column]);
+function getColumnData(data, column) {
+  return data.map(row => row[column]);
 }
 
-export function getExtrema(state, column) {
-  const columnData = getColumnData(state, column);
+export function getExtrema(data, column) {
+  const columnData = getColumnData(data, column);
   let extrema = {};
   extrema.max = Math.max(...columnData);
   extrema.min = Math.min(...columnData);
@@ -89,44 +56,32 @@ export function getExtrema(state, column) {
   return extrema;
 }
 
-export function getColumnDescription(state, columnId) {
-  if (!state || !columnId) {
-    return null;
-  }
+export function containsOnlyNumbers(data, column) {
+  const columnData = getColumnData(data, column);
+  return columnData.every(cell => !isNaN(cell));
+}
 
+export function getColumnDescription(columnId, metadata, trainedModelDetails) {
   // Use metadata if available.
-  if (state.metadata && state.metadata.fields) {
-    const field = state.metadata.fields.find(field => {
+  if (columnId && metadata && metadata.fields) {
+    const field = metadata.fields.find(field => {
       return field.id === columnId;
     });
     return field.description;
   }
 
   // Try using a user-entered column description if available.
-  if (!state.columns) {
-    return;
-  }
-  const matchedColumn = state.columns.find(column => {
-    return column.id === columnId;
-  });
-  if (matchedColumn) {
-    return matchedColumn.description;
+  if (trainedModelDetails && trainedModelDetails.columns) {
+    const matchedColumn = trainedModelDetails.columns.find(column => {
+      return column.id === columnId;
+    });
+    if (matchedColumn) {
+      return matchedColumn.description;
+    }
   }
 
   // No column description available.
   return null;
-}
-
-export function getOptionFrequencies(state, column) {
-  let optionFrequencies = {};
-  for (let row of state.data) {
-    if (optionFrequencies[row[column]]) {
-      optionFrequencies[row[column]]++;
-    } else {
-      optionFrequencies[row[column]] = 1;
-    }
-  }
-  return optionFrequencies;
 }
 
 /* Builds a hash that maps a feature's categorical options to numbers because
@@ -141,7 +96,7 @@ export function getOptionFrequencies(state, column) {
   */
 export function buildOptionNumberKey(state, feature) {
   let optionsMappedToNumbers = {};
-  const uniqueOptions = getUniqueOptions(state, feature);
+  const uniqueOptions = getUniqueOptions(state.data, feature);
   uniqueOptions.forEach(
     option => (optionsMappedToNumbers[option] = uniqueOptions.indexOf(option))
   );
@@ -151,11 +106,11 @@ export function buildOptionNumberKey(state, feature) {
 export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
-  columnData.description = getColumnDescription(state, column);
+  columnData.description = getColumnDescription(column, state.metadata, state.trainedModelDetails);
   if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state, column);
+    columnData.values = getUniqueOptions(state.data, column);
   } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state, column);
+    const {max, min} = getExtrema(state.data, column);
     columnData.max = max;
     columnData.min = min;
   }

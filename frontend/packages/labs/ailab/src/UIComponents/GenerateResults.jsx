@@ -9,6 +9,7 @@ import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
+import { TestingAnimationDescription } from "./AnimationDescriptions";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -181,18 +182,28 @@ class GenerateResults extends Component {
           }}
         >
           <div className="ailab-image-hover" style={styles.trainBot}>
-            <img src={aiBotHead} style={styles.trainBotHead} />
-            <img src={aiBotBody} style={styles.trainBotBody} />
+            <img
+              src={aiBotHead}
+              style={styles.trainBotHead}
+              alt="A.I. bot head"
+            />
+            <img
+              src={aiBotBody}
+              style={styles.trainBotBody}
+              alt="A.I. bot body"
+            />
             <div
               style={{ width: 150, position: "absolute", top: 140, zIndex: -1 }}
             >
               <img
                 src={blueScanner}
                 style={{ width: "100%", opacity: tableOpacity }}
+                alt="A.I. bot scanner beam"
               />
             </div>
           </div>
         </div>
+        <TestingAnimationDescription />
       </div>
     );
   }

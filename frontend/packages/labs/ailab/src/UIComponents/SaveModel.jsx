@@ -2,12 +2,12 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setTrainedModelDetail } from "../redux";
 import {
-  setTrainedModelDetail,
-  getSelectedColumnDescriptions,
-  getDataDescription,
+  getDatasetDescription,
   isUserUploadedDataset
-} from "../redux";
+} from "../helpers/datasetDetails";
+import { getSelectedColumnsDescriptions } from "../selectors";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";
@@ -69,14 +69,16 @@ class SaveModel extends Component {
     });
     fields.push({
       id: "potentialMisuses",
-      text: "Warnings:",
+      text: "Limitations and Warnings:",
       description:
-        "Describe any situations where this model could potentially \
-        be misused, or any places where bias could potentially show up in the \
-        model. Important questions to consider are:",
+        `Describe any limitations in how this model was created or how it \
+        should be used. You may say things like "Avoid using this model \
+        for..." or "Be cautious about...". \n
+        Important questions to consider are:`,
       descriptionDetails: [
-        "Is there enough data to create an accurate model?",
-        "Does the data represent all possible users and scenarios?"
+        "Does the data represent all possible users and scenarios?",
+        "Did you gather enough data to be confident in the model's accuracy?",
+        "Are there situations where this model definitely shouldn't be used?"
       ],
       placeholder: "Write a brief description."
     });
@@ -92,7 +94,7 @@ class SaveModel extends Component {
 
     const dataDescriptionField = {
       id: "datasetDescription",
-      text: "Description:",
+      text: "About the Data:",
       placeholder:
         "How was the data collected? Who collected it? When was it collected?",
       answer: this.props.dataDescription
@@ -120,64 +122,6 @@ class SaveModel extends Component {
                 maxLength={ModelNameMaxLength}
               />
             </div>
-          </div>
-          <div key={dataDescriptionField.id} style={styles.cardRow}>
-            <div style={styles.bold}>{dataDescriptionField.text}</div>
-            {this.props.isUserUploadedDataset && (
-              <div>
-                <textarea
-                  rows="4"
-                  onChange={event =>
-                    this.handleChange(event, dataDescriptionField.id, false)
-                  }
-                  placeholder={dataDescriptionField.placeholder}
-                  style={styles.saveInputsWidth}
-                />
-              </div>
-            )}
-            {!this.props.isUserUploadedDataset && (
-              <div>{dataDescriptionField.answer}</div>
-            )}
-          </div>
-          <div>
-            <span
-              onClick={this.toggleColumnDescriptions}
-              style={styles.saveModelToggle}
-            >
-              <i className={arrowIcon} />
-              &nbsp;
-              <span style={styles.bold}>Column Descriptions</span> (
-              {columnCount})
-            </span>
-            {this.state.showColumnDescriptions && (
-              <div style={styles.saveModelToggleContents}>
-                {this.getColumnFields().map(field => {
-                  return (
-                    <div key={field.id} style={styles.cardRow}>
-                      <div>
-                        <span style={styles.bold}>{field.id}</span> (
-                        {field.columnType})
-                      </div>
-                      {this.props.isUserUploadedDataset && (
-                        <div>
-                          <textarea
-                            rows="1"
-                            onChange={event =>
-                              this.handleChange(event, field.id, field.isColumn)
-                            }
-                            placeholder={field.placeholder}
-                            value={field.answer || ""}
-                          />
-                        </div>
-                      )}
-                      {!this.props.isUserUploadedDataset && (
-                        <div>{field.answer}</div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
           <div>
             {this.getUsesFields().map(field => {
@@ -212,6 +156,68 @@ class SaveModel extends Component {
               );
             })}
           </div>
+          <div key={dataDescriptionField.id} style={styles.cardRow}>
+            <div style={styles.bold}>{dataDescriptionField.text}</div>
+            {this.props.isUserUploadedDataset && (
+              <div>
+                <textarea
+                  rows="4"
+                  onChange={event =>
+                    this.handleChange(event, dataDescriptionField.id, false)
+                  }
+                  placeholder={dataDescriptionField.placeholder}
+                  style={styles.saveInputsWidth}
+                />
+              </div>
+            )}
+            {!this.props.isUserUploadedDataset && (
+              <div>{dataDescriptionField.answer}</div>
+            )}
+          </div>
+          <div>
+            <span
+              onClick={this.toggleColumnDescriptions}
+              onKeyDown={this.toggleColumnDescriptions}
+              style={styles.saveModelToggle}
+              role="button"
+              tabIndex={0}
+            >
+              <i className={arrowIcon} />
+              &nbsp;
+              <span style={styles.bold}>Column Descriptions</span> (
+              {columnCount})
+            </span>
+            {this.state.showColumnDescriptions && (
+              <div style={styles.saveModelToggleContents}>
+                {this.getColumnFields().map(field => {
+                  return (
+                    <div key={field.id} style={styles.cardRow}>
+                      <div>
+                        <span style={styles.bold}>{field.id}</span> (
+                        {field.columnType})
+                      </div>
+                      {this.props.isUserUploadedDataset && (
+                        <div>
+                          <textarea
+                            rows="1"
+                            onChange={event =>
+                              this.handleChange(event, field.id, field.isColumn)
+                            }
+                            placeholder={field.placeholder}
+                            value={field.answer || ""}
+                            style={styles.saveInputsWidth}
+                          />
+                        </div>
+                      )}
+                      {!this.props.isUserUploadedDataset && (
+                        <div>{field.answer}</div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </ScrollableContent>
       </div>
     );
@@ -223,8 +229,8 @@ export default connect(
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
-    columnDescriptions: getSelectedColumnDescriptions(state),
-    dataDescription: getDataDescription(state),
+    columnDescriptions: getSelectedColumnsDescriptions(state),
+    dataDescription: getDatasetDescription(state),
     isUserUploadedDataset: isUserUploadedDataset(state)
   }),
   dispatch => ({

@@ -2,12 +2,12 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { setShowResultsDetails } from "../redux";
 import {
   getPercentCorrect,
-  setShowResultsDetails,
   getCorrectResults,
   getIncorrectResults
-} from "../redux";
+} from "../helpers/accuracy";
 import { ResultsGrades, styles } from "../constants";
 import ResultsToggle from "./ResultsToggle";
 import ResultsTable from "./ResultsTable";
@@ -19,7 +19,7 @@ class ResultsDetails extends Component {
     resultsTab: PropTypes.string,
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    percentCorrect: PropTypes.number,
+    percentCorrect: PropTypes.string,
     setShowResultsDetails: PropTypes.func,
     correctResults: PropTypes.object,
     incorrectResults: PropTypes.object,
@@ -38,7 +38,13 @@ class ResultsDetails extends Component {
     return (
       <div style={styles.panelPopupContainer}>
         <div id="results-details" style={styles.panelPopup}>
-          <div onClick={this.onClose} style={styles.popupClose}>
+          <div
+            onClick={this.onClose}
+            onKeyDown={this.onClose}
+            style={styles.popupClose}
+            role="button"
+            tabIndex={0}
+          >
             <FontAwesomeIcon icon={faTimes} />
           </div>
           {!isNaN(this.props.percentCorrect) && <ResultsToggle />}

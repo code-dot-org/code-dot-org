@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.36",
+  "version": "0.0.38",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
@@ -49,6 +49,7 @@
     "copy-webpack-plugin": "^5.0.5",
     "core-js": "^3",
     "eslint": "6.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "7.14.3",
     "file-loader": "^4.2.0",
     "identity-obj-proxy": "^3.0.0",
@@ -75,6 +76,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "chart.js": "^2.9.4",
-    "react-chartjs-2": "^2.11.1"
+    "react-chartjs-2": "^2.11.1",
+    "reselect": "^4.0.0"
   }
 }

@@ -25,12 +25,12 @@
     {
       "type": "categorical",
       "id": "Season",
-      "description": "Season: spring, summer, winter or fall"
+      "description": "Season: spring, summer, winter or fall."
     },
     {
       "type": "categorical",
       "id": "Year",
-      "description": "The year (2011 or 2012),"
+      "description": "The year (2011 or 2012)."
     },
     {
       "type": "categorical",
@@ -40,7 +40,7 @@
     {
       "type": "categorical",
       "id": "Holiday",
-      "description": "Whether or not the day is a holiday"
+      "description": "Whether or not the day is a holiday."
     },
     {
       "type": "categorical",
@@ -70,27 +70,27 @@
     {
       "type": "numerical",
       "id": "Humidity (0 - 1)",
-      "description": "Humidity, normalized to 0 (0% humidity) to 1 (100% humidity)"
+      "description": "Humidity, normalized to 0 (0% humidity) to 1 (100% humidity)."
     },
     {
       "type": "numerical",
       "id": "Wind Speed",
-      "description": "Wind speed"
+      "description": "Wind speed."
     },
     {
       "type": "numerical",
       "id": "Number of Casual Users",
-      "description": "Number of users without an account"
+      "description": "Number of users without an account."
     },
     {
       "type": "numerical",
       "id": "Number of Registered Users",
-      "description": "Number of users with an account"
+      "description": "Number of users with an account."
     },
     {
       "type": "numerical",
       "id": "Total Users",
-      "description": "Total number of users"
+      "description": "Total number of users."
     }
   ]
 }

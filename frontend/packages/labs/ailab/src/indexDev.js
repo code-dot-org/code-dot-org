@@ -6,21 +6,17 @@ import queryString from "query-string";
 const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
-    hideModelCard: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
     requireAccuracy: 50,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideInstructionsOverlay: true
   },
 
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
@@ -36,14 +32,12 @@ const sampleModes = {
       "salsa_toy"
     ],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
   safari: {
     datasets: ["safari_toy"],
     hideSelectLabel: true,
-    hideModelCard: true,
     hideSave: true
   },
 
@@ -53,6 +47,47 @@ const sampleModes = {
 
   "final-project": {
     randomizeTestData: true
+  },
+
+  "club-test": {
+    datasets: [
+      "loneliness_interests",
+      "loneliness_movies",
+      "loneliness_music",
+      "loneliness_phobias",
+      "loneliness_personality",
+      "club_biased_toy",
+      "club_random_toy",
+      "club_specific_toy",
+      "club_sparse_toy"
+    ],
+    hideSelectLabel: true
+  },
+
+  "shapes-v1-test": {
+    datasets: [
+      "shapes_v1_toy",
+    ],
+    hideSelectLabel: true,
+    hideSave: true,
+    requireAccuracy: 90
+  },
+
+  "shapes-v2-test": {
+    datasets: [
+      "shapes_v2_toy",
+    ],
+    hideSelectLabel: true,
+    hideSave: true,
+    requireAccuracy: 90
+  },
+
+  "shoe-survey": {
+    datasets: [
+      "shoe_survey_toy"
+    ],
+    hideSelectLabel: true,
+    requireAccuracy: 75
   }
 };
 

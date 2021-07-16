@@ -17,6 +17,10 @@ export function areArraysEqual(array1, array2) {
   );
 }
 
+export function arrayIntersection(array1, array2) {
+  return array1.filter(value => array2.includes(value));
+}
+
 export function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }

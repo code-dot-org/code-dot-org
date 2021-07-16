@@ -1,13 +1,13 @@
 {
   "name": "boba_toy",
   "card": {
-    "description": "Survey of customers in a bubble tea cafe on whether or not they like certain bubble tea combinations",
+    "description": "Survey of customers in a bubble tea cafe on whether or not they like certain bubble tea combinations.",
     "source": "Code.org",
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "potentialUses": "Help make recommendations for what kind of bubble tea a new customer should order",
-      "potentialMisuses": "Anything other than bubble tea recommendations"
+      "potentialUses": "Help make recommendations for what kind of bubble tea a new customer should order.",
+      "potentialMisuses": "Anything other than bubble tea recommendations."
     }
   },
   "defaultLabelColumn": "preference",

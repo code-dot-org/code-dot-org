@@ -1,8 +1,13 @@
-import { convertValueForDisplay, convertValueForTraining } from '../../src/helpers/valueConversion';
+import {
+  convertValueForDisplay,
+  convertValueForTraining,
+  getConvertedPredictedLabel,
+  getConvertedLabels,
+  getConvertedAccuracyCheckExamples
+} from '../../src/helpers/valueConversion';
 import { classificationState } from './testData';
 
 describe("converting categorical values", () => {
-
   const categoryOptionStrings = Object.keys(
     classificationState.featureNumberKey[classificationState.labelColumn]
   );
@@ -33,4 +38,30 @@ describe("converting categorical values", () => {
       expect(machineLearningNumber).toBe(convertedValue);
     });
   })
+
+  test("convert predicted label for display", async () => {
+    const predictedLabel = getConvertedPredictedLabel(classificationState);
+    expect(predictedLabel).toBe('yes');
+  })
+
+  test("convert labels for display", async () => {
+    const labels = getConvertedLabels(
+      classificationState,
+      classificationState.accuracyCheckLabels
+    );
+    expect(labels).toEqual(['no', 'yes', 'yes', 'yes', 'yes', 'no']);
+  })
+
+  test("convert accuracy check examples for display", async () => {
+    const examples = getConvertedAccuracyCheckExamples(classificationState);
+    expect(examples).toEqual([
+      ['cool', 'rainy'],
+      ['mild', 'rainy'],
+      ['mild', 'overcast'],
+      ['mild', 'sunny'],
+      ['hot', 'overcast'],
+      ['hot', 'sunny']
+    ]);
+  })
+
 });

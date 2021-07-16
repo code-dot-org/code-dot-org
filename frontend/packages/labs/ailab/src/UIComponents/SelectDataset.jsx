@@ -27,7 +27,8 @@ class SelectDataset extends Component {
     resetState: PropTypes.func.isRequired,
     specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
-    highlightDataset: PropTypes.string
+    highlightDataset: PropTypes.string,
+    invalidData: PropTypes.string
   };
 
   constructor(props) {
@@ -71,6 +72,16 @@ class SelectDataset extends Component {
     parseCSV(event.target.files[0], false, true);
   };
 
+  getInvalidDataMessage = () => {
+    if (this.props.invalidData === "tooFewRows") {
+      return "Please upload a CSV with at least 2 rows.";
+    } else if (this.props.invalidData === "tooFewColumns") {
+      return "Please upload a CSV with at least 2 columns.";
+    } else {
+      return null;
+    }
+  };
+
   render() {
     const specifiedDatasets = this.props.specifiedDatasets;
     const datasets = getAvailableDatasets(specifiedDatasets);
@@ -93,10 +104,13 @@ class SelectDataset extends Component {
                 }}
                 key={dataset.id}
                 onClick={() => this.handleDatasetClick(dataset.id)}
+                onKeyDown={() => this.handleDatasetClick(dataset.id)}
                 onMouseEnter={() =>
                   this.props.setHighlightDataset(dataset.name)
                 }
                 onMouseLeave={() => this.props.setHighlightDataset(undefined)}
+                role="button"
+                tabIndex={0}
               >
                 <div style={styles.selectDatasetItemContainer}>
                   <img
@@ -104,6 +118,7 @@ class SelectDataset extends Component {
                     style={styles.selectDatasetImage}
                     draggable={false}
                     className="ailab-dataset-image ailab-image-hover"
+                    alt={`Select ${dataset.name} dataset`}
                   />
                   <div style={styles.selectDatasetText}>{dataset.name}</div>
                 </div>
@@ -122,7 +137,7 @@ class SelectDataset extends Component {
               <input
                 className="csv-input"
                 type="file"
-                accept=".csv,.xls,.xlsx"
+                accept=".csv,text/csv,application/vnd.ms-excel"
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
@@ -130,6 +145,9 @@ class SelectDataset extends Component {
                 value=""
               />
             </label>
+            <span style={styles.invalidDataMessageContainer}>
+              {this.getInvalidDataMessage()}
+            </span>
           </div>
         )}
       </div>
@@ -143,7 +161,8 @@ export default connect(
     jsonfile: state.jsonfile,
     specifiedDatasets: getSpecifiedDatasets(state),
     name: state.name,
-    highlightDataset: state.highlightDataset
+    highlightDataset: state.highlightDataset,
+    invalidData: state.invalidData
   }),
   dispatch => ({
     resetState() {
