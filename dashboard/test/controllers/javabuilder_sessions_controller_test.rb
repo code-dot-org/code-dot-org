@@ -64,6 +64,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(student_1)
     get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
     assert_response :success
+    section.destroy
   end
 
   test 'param for channel id is required' do
