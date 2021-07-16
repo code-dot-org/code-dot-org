@@ -15,7 +15,8 @@ export default class Comment extends Component {
   };
 
   state = {
-    isShowingCommentOptions: false
+    isShowingCommentOptions: false,
+    hasError: false
   };
 
   onDelete = commentId => {
@@ -25,9 +26,11 @@ export default class Comment extends Component {
       url: `/code_review_comments/${commentId}`,
       type: 'DELETE',
       headers: {'X-CSRF-Token': this.props.token}
-    }).done(result => {
-      this.props.onDelete(commentId);
-    });
+    })
+      .done(result => {
+        this.props.onDelete(commentId);
+      })
+      .fail(() => this.onError());
   };
 
   onResolve = commentId => {
@@ -38,9 +41,16 @@ export default class Comment extends Component {
       type: 'PATCH',
       headers: {'X-CSRF-Token': this.props.token},
       data: {is_resolved: !this.state.isResolved}
-    }).done(result => {
-      this.setState({isResolved: !this.state.isResolved});
-    });
+    })
+      .done(result => {
+        this.setState({isResolved: !this.state.isResolved});
+      })
+      .fail(() => this.onError());
+  };
+
+  onError = () => {
+    this.setState({hasError: true});
+    setTimeout(() => this.setState({hasError: false}), 5000);
   };
 
   renderName = () => {
@@ -61,6 +71,15 @@ export default class Comment extends Component {
     );
   };
 
+  renderErrorMessage = () => {
+    return (
+      <div style={styles.error}>
+        There has been an error updating or deleting this comment, please try
+        again.
+      </div>
+    );
+  };
+
   render() {
     const {
       id,
@@ -71,7 +90,7 @@ export default class Comment extends Component {
       isResolved
     } = this.props.comment;
 
-    const {isShowingCommentOptions} = this.state;
+    const {isShowingCommentOptions, hasError} = this.state;
 
     return (
       <div
@@ -118,6 +137,7 @@ export default class Comment extends Component {
         >
           {commentText}
         </div>
+        {hasError && this.renderErrorMessage()}
       </div>
     );
   }
@@ -166,5 +186,11 @@ const styles = {
   commentHeaderContainer: {
     marginBottom: '5px',
     position: 'relative'
+  },
+  error: {
+    backgroundColor: color.red,
+    color: color.white,
+    margin: '5px 0',
+    padding: '10px 12px'
   }
 };
