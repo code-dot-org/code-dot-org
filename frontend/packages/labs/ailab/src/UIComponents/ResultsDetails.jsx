@@ -9,6 +9,7 @@ import {
   getIncorrectResults
 } from "../helpers/accuracy";
 import { ResultsGrades, styles } from "../constants";
+import { resultsShape } from "./shapes";
 import ResultsToggle from "./ResultsToggle";
 import ResultsTable from "./ResultsTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,8 +22,8 @@ class ResultsDetails extends Component {
     labelColumn: PropTypes.string,
     percentCorrect: PropTypes.string,
     setShowResultsDetails: PropTypes.func,
-    correctResults: PropTypes.object,
-    incorrectResults: PropTypes.object,
+    correctResults: resultsShape,
+    incorrectResults: resultsShape,
   };
 
   onClose = () => {
