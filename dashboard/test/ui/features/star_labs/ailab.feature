@@ -21,7 +21,7 @@ Feature: AI Lab
     When I select data table column "1"
     And I wait for 3 seconds
     And I see "#column-inspector"
-    And I click selector "#select-feature-button"
+    And I click selector "#add-feature-button"
     And I see "#remove-statement-feature"
     And I click selector "#continue-button"
     And I wait to see the dynamic instructions are showing "dynamic-instruction-trainModel" key
