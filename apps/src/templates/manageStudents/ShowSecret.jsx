@@ -16,8 +16,8 @@ class ShowSecret extends Component {
     secretWord: PropTypes.string,
     secretPicture: PropTypes.string,
     loginType: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    sectionId: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+    sectionId: PropTypes.string.isRequired,
     resetDisabled: PropTypes.bool,
 
     // Provided in redux

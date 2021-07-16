@@ -27,7 +27,7 @@ class MoveStudents extends Component {
   static propTypes = {
     studentData: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired
       })
     ).isRequired,

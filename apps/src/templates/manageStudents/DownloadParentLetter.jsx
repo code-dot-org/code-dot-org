@@ -8,7 +8,7 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 
 export default class DownloadParentLetter extends Component {
   static propTypes = {
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.string,
     buttonMetricsCategory: PropTypes.oneOf(
       Object.values(ParentLetterButtonMetricsCategory)
     )

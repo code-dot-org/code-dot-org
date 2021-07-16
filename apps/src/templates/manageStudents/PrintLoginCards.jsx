@@ -7,7 +7,7 @@ import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageSt
 
 export default class PrintLoginCards extends Component {
   static propTypes = {
-    sectionId: PropTypes.number,
+    sectionId: PropTypes.string,
     entryPointForMetrics: PropTypes.oneOf(
       Object.values(PrintLoginCardsButtonMetricsCategory)
     ),

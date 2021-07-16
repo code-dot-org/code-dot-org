@@ -37,12 +37,8 @@ import currentUser, {
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
-
-const client = new ApolloClient({
-  uri: 'http://localhost-studio.code.org:3000/graphql',
-  cache: new InMemoryCache()
-});
+import {ApolloProvider} from '@apollo/client';
+import {client} from '@cdo/apps/templates/teacherDashboard/controller';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);

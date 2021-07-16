@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import ManageStudentsTable from './ManageStudentsTable';
+import ManageStudentsPage from './ManageStudentsPage';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
@@ -29,6 +29,7 @@ export const GET_SECTION = gql`
         secretPicturePath
         hasEverSignedIn
         userType
+        isEditing @client
       }
     }
   }
@@ -57,8 +58,9 @@ const ManageStudents = ({sectionId, studioUrlPrefix}) => {
         sectionName={section.name}
         sectionProvider={OAuthSectionTypes[section.loginType]}
       />
-      <ManageStudentsTable
+      <ManageStudentsPage
         studioUrlPrefix={studioUrlPrefix}
+        sectionId={section.id}
         sectionCode={section.code}
         sectionName={section.name}
         studentData={section.students}

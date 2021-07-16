@@ -27,7 +27,7 @@ export default class SortedTableSelect extends React.Component {
   static propTypes = {
     rowData: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired
       })
     ).isRequired,
