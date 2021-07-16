@@ -13,13 +13,9 @@ export default class Comment extends Component {
     onResolve: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isShowingCommentOptions: false
-    };
-  }
+  state = {
+    isShowingCommentOptions: false
+  };
 
   onDelete = commentId => {
     this.setState({isShowingCommentOptions: false});
@@ -79,7 +75,7 @@ export default class Comment extends Component {
               <CommentOptions
                 isResolved={isResolved}
                 onResolveClick={() => {
-                  this.props.onResolve(this.props.comment.id);
+                  this.props.onResolve(id);
                   this.setState({isShowingCommentOptions: false});
                 }}
                 onDeleteClick={() => this.onDelete(id)}
