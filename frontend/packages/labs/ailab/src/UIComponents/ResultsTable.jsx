@@ -4,12 +4,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
+import { resultsPropType } from "./shapes";
 
 class ResultsTable extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    results: PropTypes.object,
+    results: resultsPropType,
     isRegression: PropTypes.bool,
     setResultsHighlightRow: PropTypes.func,
     resultsHighlightRow: PropTypes.number
