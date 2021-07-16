@@ -10,8 +10,7 @@ export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
     onDelete: PropTypes.func.isRequired,
-    onResolve: PropTypes.func.isRequired,
-    token: PropTypes.string.isRequired
+    onResolve: PropTypes.func.isRequired
   };
 
   state = {
@@ -27,11 +26,6 @@ export default class Comment extends Component {
   onResolve = () => {
     this.setState({isShowingCommentOptions: false});
     this.props.onResolve();
-  };
-
-  onError = () => {
-    this.setState({hasError: true});
-    setTimeout(() => this.setState({hasError: false}), 5000);
   };
 
   renderName = () => {
@@ -53,12 +47,7 @@ export default class Comment extends Component {
   };
 
   renderErrorMessage = () => {
-    return (
-      <div style={styles.error}>
-        There has been an error updating or deleting this comment, please try
-        again.
-      </div>
-    );
+    return <div style={styles.error}>{javalabMsg.commentSaveError()}</div>;
   };
 
   render() {
@@ -68,10 +57,11 @@ export default class Comment extends Component {
       timestampString,
       isFromCurrentUser,
       isFromOlderVersionOfProject,
-      isResolved
+      isResolved,
+      hasError
     } = this.props.comment;
 
-    const {isShowingCommentOptions, hasError} = this.state;
+    const {isShowingCommentOptions} = this.state;
 
     return (
       <div

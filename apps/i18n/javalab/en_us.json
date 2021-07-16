@@ -3,6 +3,7 @@
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
   "clearConsole": "Clear Console",
+  "commentSaveError": "There has been an error resolving or deleting this comment, please try again.",
   "commit": "Commit",
   "commitCode": "Commit Code",
   "commitNotes": "Commit Notes",
