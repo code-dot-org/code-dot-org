@@ -117,6 +117,7 @@ class DataTable extends Component {
                   key={columnId}
                   style={this.getColumnHeaderStyle(columnId)}
                   onClick={() => this.setCurrentColumn(columnId)}
+                  onKeyDown={() => this.setCurrentColumn(columnId)}
                   onMouseEnter={() => this.setHighlightColumn(columnId)}
                   onMouseLeave={() => this.setHighlightColumn(undefined)}
                 >
@@ -136,8 +137,10 @@ class DataTable extends Component {
                       key={columnId}
                       style={this.getColumnCellStyle(columnId)}
                       onClick={() => this.setCurrentColumn(columnId)}
+                      onKeyDown={() => this.setCurrentColumn(columnId)}
                       onMouseEnter={() => this.setHighlightColumn(columnId)}
                       onMouseLeave={() => this.setHighlightColumn(undefined)}
+                      role="presentation"
                     >
                       {startingRow !== undefined && index <= startingRow ? (
                         <span>&nbsp;</span>

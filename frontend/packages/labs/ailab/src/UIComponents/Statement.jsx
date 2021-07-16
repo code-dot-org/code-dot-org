@@ -51,7 +51,10 @@ class Statement extends Component {
           {currentPanel === "dataDisplayLabel" && labelColumn && (
             <div
               onClick={() => this.removeLabel()}
+              onKeyDown={() => this.removeLabel()}
               style={styles.statementDeleteIcon}
+              role="button"
+              tabIndex={0}
             >
               <div style={styles.statementDeleteCircle} />
               <div style={styles.statementDeleteX}>
@@ -72,7 +75,10 @@ class Statement extends Component {
                     {currentPanel === "dataDisplayFeatures" && (
                       <div
                         onClick={() => this.removeFeature(selectedFeature)}
+                        onKeyDown={() => this.removeFeature(selectedFeature)}
                         style={styles.statementDeleteIcon}
+                        role="button"
+                        tabIndex={0}
                       >
                         <div style={styles.statementDeleteCircle} />
                         <div style={styles.statementDeleteX}>

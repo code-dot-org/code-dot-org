@@ -38,7 +38,13 @@ class ResultsDetails extends Component {
     return (
       <div style={styles.panelPopupContainer}>
         <div id="results-details" style={styles.panelPopup}>
-          <div onClick={this.onClose} style={styles.popupClose}>
+          <div
+            onClick={this.onClose}
+            onKeyDown={this.onClose}
+            style={styles.popupClose}
+            role="button"
+            tabIndex={0}
+          >
             <FontAwesomeIcon icon={faTimes} />
           </div>
           {!isNaN(this.props.percentCorrect) && <ResultsToggle />}

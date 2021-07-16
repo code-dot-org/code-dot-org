@@ -10,6 +10,7 @@ import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
+import { TrainingAnimationDescription } from "./AnimationDescriptions";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -161,10 +162,16 @@ class TrainModel extends Component {
                 ...styles.trainBotHead,
                 ...(this.state.headOpen && styles.trainBotOpen)
               }}
+              alt="A.I. bot head"
             />
-            <img src={aiBotBody} style={styles.trainBotBody} />
+            <img
+              src={aiBotBody}
+              style={styles.trainBotBody}
+              alt="A.I. bot body"
+            />
           </div>
         </div>
+        <TrainingAnimationDescription />
       </div>
     );
   }

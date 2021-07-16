@@ -104,10 +104,13 @@ class SelectDataset extends Component {
                 }}
                 key={dataset.id}
                 onClick={() => this.handleDatasetClick(dataset.id)}
+                onKeyDown={() => this.handleDatasetClick(dataset.id)}
                 onMouseEnter={() =>
                   this.props.setHighlightDataset(dataset.name)
                 }
                 onMouseLeave={() => this.props.setHighlightDataset(undefined)}
+                role="button"
+                tabIndex={0}
               >
                 <div style={styles.selectDatasetItemContainer}>
                   <img
@@ -115,6 +118,7 @@ class SelectDataset extends Component {
                     style={styles.selectDatasetImage}
                     draggable={false}
                     className="ailab-image-hover"
+                    alt={`Select ${dataset.name} dataset`}
                   />
                   <div style={styles.selectDatasetText}>{dataset.name}</div>
                 </div>
