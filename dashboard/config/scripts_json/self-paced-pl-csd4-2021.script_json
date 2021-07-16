@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 01:12:21 UTC",
+    "serialized_at": "2021-07-16 21:18:24 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -79,6 +79,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
         "progression": "Engagement and learning"
       },
       "named_level": false,
