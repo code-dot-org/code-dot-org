@@ -3,7 +3,7 @@ var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
-var newSprites = {};
+var newSprites = [];
 var totalPauseTime = 0;
 var currentPauseStartTime = 0;
 var numActivePrompts = 0;
@@ -156,11 +156,8 @@ export function addSprite(sprite, name, animation) {
     enforceUniqueSpriteName(name);
     sprite.name = name;
   }
-  if (animation) {
-    // Add to new sprites map so we can fire a "when sprite created" event if needed
-    newSprites[animation] = newSprites[animation] || [];
-    newSprites[animation].push(sprite);
-  }
+  // Add to new sprites list so we can fire a "when sprite created" event if needed
+  newSprites.push(sprite);
 
   spriteId++;
   return sprite.id;
@@ -416,8 +413,21 @@ function whileClickEvent(inputEvent, p5Inst) {
 
 function whenSpriteCreatedEvent(inputEvent, p5Inst) {
   let callbackArgList = [];
-  let sprites = newSprites[inputEvent.args.costume] || [];
-  sprites.forEach(sprite => {
+  let newMatchingSprites = [];
+  if (inputEvent.args.name) {
+    newMatchingSprites = newSprites.filter(
+      sprite => sprite.name === inputEvent.args.name
+    );
+  } else if (inputEvent.args.costume) {
+    if (inputEvent.args.costume === 'all') {
+      newMatchingSprites = newSprites;
+    } else {
+      newMatchingSprites = newSprites.filter(
+        sprite => sprite.getAnimationLabel() === inputEvent.args.costume
+      );
+    }
+  }
+  newMatchingSprites.forEach(sprite => {
     eventLog.push(`spriteCreated: ${sprite.id}`);
     callbackArgList.push({newSprite: sprite.id});
   });
@@ -480,7 +490,7 @@ export function runEvents(p5Inst) {
   });
 
   // Clear newSprites. Used for whenSpriteCreated events and should be reset every tick.
-  newSprites = {};
+  newSprites = [];
 }
 
 export function addBehavior(sprite, behavior) {
