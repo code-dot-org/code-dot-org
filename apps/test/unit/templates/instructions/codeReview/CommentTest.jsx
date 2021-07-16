@@ -52,8 +52,11 @@ describe('Code Review Comment', () => {
       isFromOlderVersionOfProject: true
     });
   });
+
   it('displays green check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
     expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
   });
+
+  it('displays error message when comment has error', () => {});
 });

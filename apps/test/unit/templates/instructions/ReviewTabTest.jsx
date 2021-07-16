@@ -18,7 +18,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 describe('Code Review Tab', () => {
   const channelId = 'test123';
   const existingComment = Factory.build('CodeReviewComment');
-  let wrapper, server;
+  let wrapper, server, clock;
 
   beforeEach(() => {
     server = sinon.fakeServer.create();
@@ -30,6 +30,16 @@ describe('Code Review Tab', () => {
         {'Content-Type': 'application/json'},
         JSON.stringify([existingComment])
       ]
+    );
+    server.respondWith(
+      'DELETE',
+      `/code_review_comments/${existingComment.id}`,
+      [200, {}, '']
+    );
+    server.respondWith(
+      'PATCH',
+      `/code_review_comments/${existingComment.id}/resolve`,
+      [200, {}, '']
     );
 
     stubRedux();
@@ -44,6 +54,10 @@ describe('Code Review Tab', () => {
   });
 
   afterEach(() => {
+    if (clock) {
+      clock.restore();
+    }
+
     restoreRedux();
   });
 
@@ -95,6 +109,7 @@ describe('Code Review Tab', () => {
 
     expect(wrapper.find(Comment).length).to.equal(1);
     wrapper.instance().onCommentDelete(existingComment.id);
+    server.respond();
     expect(wrapper.find(Comment).length).to.equal(0);
   });
 
@@ -107,12 +122,79 @@ describe('Code Review Tab', () => {
         .at(0)
         .props().comment.isResolved
     ).to.be.false;
-    wrapper.instance().onCommentResolve(existingComment.id);
+    wrapper.instance().onCommentResolve(existingComment.id, true);
+    server.respond();
     expect(
       wrapper
         .find(Comment)
         .at(0)
         .props().comment.isResolved
+    ).to.be.true;
+  });
+
+  it('sets hasError to true when comment update request fails and does not update comment', () => {
+    clock = sinon.useFakeTimers();
+
+    server.respondWith(
+      'PATCH',
+      `/code_review_comments/${existingComment.id}/resolve`,
+      [400, {}, '']
+    );
+
+    server.respond();
+
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.hasError
+    ).to.be.undefined;
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.isResolved
+    ).to.be.false;
+    wrapper.instance().onCommentResolve(existingComment.id, true);
+    server.respond();
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.hasError
+    ).to.be.true;
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.isResolved
+    ).to.be.false;
+  });
+
+  it('sets hasError to true when comment delete request fails and does not remove comment from UI', () => {
+    clock = sinon.useFakeTimers();
+
+    server.respondWith(
+      'DELETE',
+      `/code_review_comments/${existingComment.id}`,
+      [400, {}, '']
+    );
+
+    server.respond();
+
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.hasError
+    ).to.be.undefined;
+    wrapper.instance().onCommentDelete(existingComment.id, true);
+    server.respond();
+    expect(
+      wrapper
+        .find(Comment)
+        .at(0)
+        .props().comment.hasError
     ).to.be.true;
   });
 });
