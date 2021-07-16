@@ -55,7 +55,7 @@ export default class ReviewTab extends Component {
 
         this.setState({comments: comments});
       })
-      .fail(() => this.onError());
+      .fail(() => this.flashErrorOnComment(deletedCommentId));
   };
 
   onCommentResolve = (resolvedCommentId, newResolvedStatus) => {
@@ -74,7 +74,22 @@ export default class ReviewTab extends Component {
 
         this.setState({comments: comments});
       })
-      .fail(() => this.onError());
+      .fail(() => this.flashErrorOnComment(resolvedCommentId));
+  };
+
+  flashErrorOnComment = commentId => {
+    this.setCommentErrorStatus(commentId, true);
+    setTimeout(() => this.setCommentErrorStatus(commentId, false), 5000);
+  };
+
+  setCommentErrorStatus = (commentId, newErrorStatus) => {
+    const comments = [...this.state.comments];
+    const resolvedCommentIndex = comments.findIndex(
+      comment => comment.id === commentId
+    );
+    comments[resolvedCommentIndex].hasError = newErrorStatus;
+
+    this.setState({comments: comments});
   };
 
   renderReadyForReviewCheckbox() {
@@ -98,7 +113,7 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {comments, forceRecreateEditorKey, token} = this.state;
+    const {comments, forceRecreateEditorKey} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
@@ -112,7 +127,6 @@ export default class ReviewTab extends Component {
                 this.onCommentResolve(comment.id, !comment.isResolved)
               }
               onDelete={() => this.onCommentDelete(comment.id)}
-              token={token}
             />
           );
         })}
