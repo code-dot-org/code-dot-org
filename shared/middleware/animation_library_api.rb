@@ -111,6 +111,22 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/default_spritelab/
+  #
+  # Retrieve the default sprite list from S3
+  get %r{/api/v1/animation-library/default_spritelab} do
+    result = Aws::S3::Bucket.
+      new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+      object("animation-manifests/manifests_levelbuilder/defaults.json").
+      get
+    content_type result.content_type
+    cache_for 3600
+    result.body
+  rescue
+    not_found
+  end
+
+  #
   # Legacy animation API, but do not delete, because old Gamelab and Spritelab projects will still
   # have animations that use this api.
   # GET /api/v1/animation-library/<version-id>/<filename>

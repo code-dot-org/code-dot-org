@@ -13,6 +13,15 @@ export function getManifest(appType, locale = 'en_us') {
   );
 }
 
+/* Returns the english default sprite list of SpriteLab
+ * @param locale {String} language locale, defaults to 'en_us'
+ */
+export function getDefault() {
+  return fetch(`/api/v1/animation-library/default_spritelab`).then(response =>
+    response.json()
+  );
+}
+
 /* Uploads the given sprite to the animation library at the specified path. On success
   and error calls the associated function
  * @param destination {String} path to sprite location in the animation-library folder

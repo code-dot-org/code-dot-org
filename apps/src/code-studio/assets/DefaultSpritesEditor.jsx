@@ -1,6 +1,28 @@
 import React from 'react';
+import {getDefault} from '@cdo/apps/assetManagement/animationLibraryApi';
+import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 
 export default class DefaultSpritesEditor extends React.Component {
+  state = {
+    defaultList: []
+  };
+
+  componentDidMount() {
+    getDefault().then(spriteDefault => {
+      var spriteList = [];
+      spriteDefault['default_sprites'].map(sprite => spriteList.push(sprite));
+      this.setState({defaultList: spriteList});
+    });
+  }
+
+  renderDefaultSprites() {
+    return this.state.defaultList.map(sprite => {
+      return (
+        <DefaultSpriteRow name={sprite['name']} keyValue={sprite['key']} />
+      );
+    });
+  }
+
   render() {
     return (
       <div>
@@ -10,10 +32,8 @@ export default class DefaultSpritesEditor extends React.Component {
           Edit the list to add or remove sprites from the default dropdown list
           in Sprite Lab
         </h2>
-        <div>
-          <textarea name="default_sprites" cols="100" rows="10" />
-        </div>
-        <button type="button" onClick={console.log('Update defaults')}>
+        <div>{this.renderDefaultSprites()}</div>
+        <button type="button" onClick={() => console.log('Update defaults')}>
           Update Default Sprites List
         </button>
       </div>
