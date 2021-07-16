@@ -24518,7 +24518,7 @@ en:
         sb-pt-cont:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - A
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24530,7 +24530,7 @@ en:
         sb-pt-exp:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - B
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24554,3 +24554,15 @@ en:
         storyboard-playtest-control:
           lessons: {}
           lesson_groups: {}
+        sb-chardev-v1:
+          lessons:
+            lesson-1:
+              name: Story Board - Character Development
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-chardev-v1
+          title: Story Board Character Development
+          description_audience: ''
+          description_short: ''
+          description: ''
