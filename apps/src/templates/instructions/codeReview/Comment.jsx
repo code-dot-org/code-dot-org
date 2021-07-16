@@ -9,15 +9,15 @@ import CommentOptions from './commentOptions';
 export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
-    onDelete: PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired,
+    onResolve: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isShowingCommentOptions: false,
-      isResolved: this.props.comment.isResolved
+      isShowingCommentOptions: false
     };
   }
 
@@ -50,10 +50,11 @@ export default class Comment extends Component {
       commentText,
       timestampString,
       isFromCurrentUser,
-      isFromOlderVersionOfProject
+      isFromOlderVersionOfProject,
+      isResolved
     } = this.props.comment;
 
-    const {isResolved, isShowingCommentOptions} = this.state;
+    const {isShowingCommentOptions} = this.state;
 
     return (
       <div
@@ -77,12 +78,10 @@ export default class Comment extends Component {
             {isShowingCommentOptions && (
               <CommentOptions
                 isResolved={isResolved}
-                onResolveClick={() =>
-                  this.setState({
-                    isResolved: !isResolved,
-                    isShowingCommentOptions: false
-                  })
-                }
+                onResolveClick={() => {
+                  this.props.onResolve(this.props.comment.id);
+                  this.setState({isShowingCommentOptions: false});
+                }}
                 onDeleteClick={() => this.onDelete(id)}
               />
             )}

@@ -45,8 +45,19 @@ export default class ReviewTab extends Component {
   };
 
   onCommentDelete = deletedCommentId => {
-    const comments = this.state.comments;
+    const comments = [...this.state.comments];
     _.remove(comments, comment => comment.id === deletedCommentId);
+
+    this.setState({comments: comments});
+  };
+
+  onCommentResolve = resolvedCommentId => {
+    const comments = [...this.state.comments];
+    const resolvedCommentIndex = comments.findIndex(
+      comment => comment.id === resolvedCommentId
+    );
+    comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
+      .isResolved;
 
     this.setState({comments: comments});
   };
@@ -82,6 +93,7 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
+              onResolve={() => this.onCommentResolve(comment.id)}
               onDelete={() => this.onCommentDelete(comment.id)}
             />
           );
