@@ -11,6 +11,11 @@ import {
   blankStudentTransferStatus
 } from './manageStudentsTypes';
 
+/**
+ * Note: including `isEditing` in this query causes this whole component
+ * to re-render when we toggle that value for a single student since it
+ * technically modifies the result of this whole query.
+ */
 export const GET_SECTION = gql`
   query GetSection($sectionId: ID!) {
     section(id: $sectionId) {
@@ -65,7 +70,6 @@ const ManageStudents = ({sectionId, studioUrlPrefix}) => {
         sectionName={section.name}
         studentData={section.students}
         loginType={section.loginType}
-        editingData={{}}
         addStatus={{}}
         transferData={{...blankStudentTransfer}}
         transferStatus={{...blankStudentTransferStatus}}

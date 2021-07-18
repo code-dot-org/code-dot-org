@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
@@ -9,81 +9,53 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {ages} from '../AgeDropdown';
 import Button from '../Button';
-import {currentEditingStudentsVar} from '@cdo/apps/templates/teacherDashboard/controller';
+import {
+  setIsEditingStudent,
+  useEditStudent,
+  StudentInputField
+} from './manageStudentsClient';
 
-import {gql, useMutation} from '@apollo/client';
-
-const UPDATE_STUDENT_MUTATION = gql`
-  mutation StudentMutation($id: ID!, $input: UserInput!) {
-    updateUser(id: $id, input: $input) {
-      user {
-        id
-        age
-        gender
-        name
-      }
-    }
-  }
-`;
-
-const ManageStudentsRow = props =>
-  props.student.isEditing ? <WriteRow {...props} /> : <ReadRow {...props} />;
+const ManageStudentsRow = props => {
+  return props.student.isEditing ? (
+    <WriteRow {...props} />
+  ) : (
+    <ReadRow {...props} />
+  );
+};
 ManageStudentsRow.propTypes = {
-  sectionId: PropTypes.string.isRequired,
   student: studentSectionDataPropType.isRequired,
+  sectionId: PropTypes.string.isRequired,
   loginType: PropTypes.string.isRequired
 };
 
 export default ManageStudentsRow;
 
 const WriteRow = ({student}) => {
-  const [formState, setFormState] = useState({
-    name: student.name,
-    age: student.age,
-    gender: student.gender
-  });
-
-  const [updateStudent, {error: updateError, loading}] = useMutation(
-    UPDATE_STUDENT_MUTATION,
-    {
-      variables: {
-        id: student.id,
-        input: {
-          name: formState.name,
-          age: parseInt(formState.age),
-          gender: formState.gender
-        }
-      },
-      onCompleted(_) {
-        setIsEditingStudent(student.id, false);
-      }
-    }
-  );
+  const {
+    studentInput,
+    cancel,
+    update,
+    save,
+    saving,
+    saveError
+  } = useEditStudent(student);
   return (
     <tr>
       <td>
         <input
           required
-          value={formState.name || ''}
+          value={studentInput.name || ''}
           style={styles.inputBox}
-          onChange={e =>
-            setFormState({
-              ...formState,
-              name: e.target.value
-            })
-          }
+          onChange={e => update(StudentInputField.name, e.target.value)}
           placeholder={i18n.nameRequired()}
         />
       </td>
       <td>
         <select
           style={{width: 50}}
-          value={formState.age || ''}
+          value={studentInput.age || ''}
           onChange={e =>
-            setFormState({
-              ...formState,
-              age: e.target.value
-            })
+            update(StudentInputField.age, parseInt(e.target.value))
           }
         >
           {ages.map(age => (
@@ -96,13 +68,8 @@ const WriteRow = ({student}) => {
       <td>
         <select
           style={{width: 120}}
-          value={formState.gender}
-          onChange={e =>
-            setFormState({
-              ...formState,
-              gender: e.target.value
-            })
-          }
+          value={studentInput.gender}
+          onChange={e => update(StudentInputField.gender, e.target.value)}
         >
           {Object.keys(GENDERS).map(gender => (
             <option key={gender} value={gender}>
@@ -115,35 +82,33 @@ const WriteRow = ({student}) => {
       <td>
         <Button
           __useDeprecatedTag
-          onClick={updateStudent}
+          onClick={save}
           color={Button.ButtonColor.orange}
           text={i18n.save()}
-          disabled={!formState.name || loading}
+          disabled={!studentInput.name || saving}
           style={styles.saveButton}
         />
         <Button
           __useDeprecatedTag
-          onClick={() => setIsEditingStudent(student.id, false)}
+          onClick={cancel}
           color={Button.ButtonColor.gray}
           text={i18n.cancel()}
-          disabled={loading}
+          disabled={saving}
         />
-        {updateError}
+        {saveError?.message}
       </td>
     </tr>
   );
 };
 WriteRow.propTypes = ManageStudentsRow.propTypes;
 
-const ReadRow = props => {
-  const {student, sectionId} = props;
-  const studentUrl = scriptUrlForStudent(sectionId, 'test-script', student.id);
+const ReadRow = ({student, sectionId, loginType}) => {
   return (
     <tr>
       <td>
         <a
           style={tableLayoutStyles.link}
-          href={studentUrl}
+          href={scriptUrlForStudent(sectionId, 'test-script', student.id)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -159,12 +124,16 @@ const ReadRow = props => {
       <td>{student.age}</td>
       <td>{GENDERS[student.gender]}</td>
       <td>
-        <PasswordCell {...props} />
+        <PasswordCell
+          student={student}
+          sectionId={sectionId}
+          loginType={loginType}
+        />
       </td>
       <td>
         <Button
           __useDeprecatedTag
-          onClick={() => setIsEditingStudent(student.id, true)}
+          onClick={() => setIsEditingStudent(student, true)}
           color={Button.ButtonColor.gray}
           text={i18n.edit()}
         />
@@ -207,13 +176,6 @@ PasswordCell.propTypes = ManageStudentsRow.propTypes;
  * (e.g., their userType is 'teacher').
  */
 const canEdit = userType => userType !== 'teacher';
-
-const setIsEditingStudent = (studentId, isEditing) => {
-  currentEditingStudentsVar({
-    ...currentEditingStudentsVar(),
-    [studentId]: isEditing
-  });
-};
 
 const GENDERS = {
   '': '',
