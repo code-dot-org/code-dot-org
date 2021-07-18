@@ -10,6 +10,12 @@ import ManageStudentsNotifications from './ManageStudentsNotifications';
 import ManageStudentsTopControls from './ManageStudentsTopControls';
 import Button from '../Button';
 import {studentSectionDataPropType} from './manageStudentsTypes';
+import {
+  editAll,
+  saveAll,
+  editingStudentInputsVar
+} from './manageStudentsClient';
+import {useReactiveVar, useApolloClient} from '@apollo/client';
 import './styles.scss';
 
 const ManageStudentsPage = ({
@@ -34,13 +40,13 @@ const ManageStudentsPage = ({
         transferData={transferData}
       />
       <table>
-        <Header loginType={loginType} />
+        <Header loginType={loginType} studentData={studentData} />
         <tbody>
           {studentData.map(student => (
             <ManageStudentsRow
               key={student.id}
-              sectionId={sectionId}
               student={student}
+              sectionId={sectionId}
               loginType={loginType}
             />
           ))}
@@ -58,39 +64,35 @@ ManageStudentsPage.propTypes = {
   loginType: PropTypes.string,
 
   // TODO
-  editingData: PropTypes.object,
   addStatus: PropTypes.object,
-  saveAllStudents: PropTypes.func,
   showSharingColumn: PropTypes.bool,
-  editAll: PropTypes.func,
   transferData: PropTypes.object,
   transferStatus: PropTypes.object
 };
 
 export default ManageStudentsPage;
 
-const Header = props => (
+const Header = ({loginType, studentData}) => (
   <thead>
     <tr>
       <th>{i18n.name()}</th>
       <th style={{width: 90}}>{i18n.age()}</th>
       <th style={{width: 120}}>{i18n.gender()}</th>
       <th>
-        <PasswordHeaderCell loginType={props.loginType} />
+        <PasswordHeaderCell loginType={loginType} />
       </th>
       <th>
         <ActionsHeaderCell
-          isSaveEnabled={false}
           showSharingColumn={false}
-          saveAllFunc={() => {}}
-          editAllFunc={() => {}}
+          studentData={studentData}
         />
       </th>
     </tr>
   </thead>
 );
 Header.propTypes = {
-  loginType: PropTypes.string.isRequired
+  loginType: PropTypes.string.isRequired,
+  studentData: PropTypes.arrayOf(studentSectionDataPropType).isRequired
 };
 
 const PasswordHeaderCell = ({loginType}) => {
@@ -128,17 +130,17 @@ const passwordTooltips = {
   [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc()
 };
 
-const ActionsHeaderCell = ({
-  isSaveEnabled,
-  showSharingColumn,
-  saveAllFunc,
-  editAllFunc
-}) => {
-  if (isSaveEnabled) {
+const ActionsHeaderCell = ({showSharingColumn, studentData}) => {
+  const client = useApolloClient();
+  const editingStudents = useReactiveVar(editingStudentInputsVar);
+  const isEditingMultiple =
+    Object.values(editingStudents).filter(student => !!student).length > 1;
+
+  if (isEditingMultiple) {
     return (
       <Button
         __useDeprecatedTag
-        onClick={saveAllFunc}
+        onClick={() => saveAll(studentData, client)}
         color={Button.ButtonColor.orange}
         text={i18n.saveAll()}
       />
@@ -149,7 +151,7 @@ const ActionsHeaderCell = ({
       <div style={styles.headerName}>{i18n.actions()}</div>
       <div style={styles.headerIcon}>
         <ManageStudentsActionsHeaderCell
-          editAll={editAllFunc}
+          editAll={() => editAll(studentData)}
           isShareColumnVisible={showSharingColumn}
         />
       </div>
@@ -157,10 +159,8 @@ const ActionsHeaderCell = ({
   );
 };
 ActionsHeaderCell.propTypes = {
-  isSaveEnabled: PropTypes.bool.isRequired,
   showSharingColumn: PropTypes.bool.isRequired,
-  saveAllFunc: PropTypes.func.isRequired,
-  editAllFunc: PropTypes.func.isRequired
+  studentData: PropTypes.arrayOf(studentSectionDataPropType).isRequired
 };
 
 const styles = {
