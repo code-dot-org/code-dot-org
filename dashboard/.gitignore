@@ -24,3 +24,5 @@
 
 /public/code-studio-package
 /public/apps-package
+
+/db/schema_cache.dump
