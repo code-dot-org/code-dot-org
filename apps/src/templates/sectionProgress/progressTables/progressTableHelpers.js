@@ -75,13 +75,18 @@ export function getSummaryCellFormatters(
  * A object representing the section (sectionDataPropType)
  *
  * */
-export function getDetailCellFormatters(levelProgressByStudent, section) {
+export function getDetailCellFormatters(
+  levelProgressByStudent,
+  section,
+  scriptId
+) {
   const mainCellFormatter = (lesson, student) => {
     if (lessonHasLevels(lesson)) {
       return (
         <ProgressTableDetailCell
           studentId={student.id}
           sectionId={section.id}
+          scriptId={scriptId}
           levels={lesson.levels}
           studentProgress={levelProgressByStudent[student.id]}
         />
