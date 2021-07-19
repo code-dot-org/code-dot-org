@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 19:39:10 UTC",
+    "serialized_at": "2021-07-15 18:20:28 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -8045,6 +8045,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD survey_placeholder_levelgroup"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -11279,6 +11282,16 @@
       "seeding_key": {
         "lesson.key": "Headings",
         "objective.key": "6b4d8978-99c8-4541-9213-fa14c4132c62"
+      }
+    },
+    {
+      "key": "05f3226e-a69a-45ca-8264-e6cacdfb11ee",
+      "properties": {
+        "description": "Create a webpage using HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "objective.key": "05f3226e-a69a-45ca-8264-e6cacdfb11ee"
       }
     },
     {

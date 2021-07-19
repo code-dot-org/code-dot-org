@@ -1,5 +1,8 @@
+family_name 'basketball'
+version_year 'unversioned'
 published_state 'preview'
 tts true
+is_course true
 
 lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1_basketball'

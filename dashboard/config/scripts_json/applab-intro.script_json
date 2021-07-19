@@ -6,11 +6,13 @@
     "properties": {
       "student_detail_progress_view": true,
       "has_lesson_plan": true,
-      "tts": true
+      "tts": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:29:06 UTC",
+    "family_name": "applab-intro",
+    "serialized_at": "2021-07-06 22:25:47 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "applab-intro"
