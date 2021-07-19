@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-12 04:17:05 UTC",
+    "serialized_at": "2021-07-12 22:15:19 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -267,7 +267,7 @@
     },
     {
       "key": "Similarity Models",
-      "name": "Similarity Models",
+      "name": "Numerical Models",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1246,8 +1246,21 @@
       }
     },
     {
-      "key": "40da799e-5e4c-46a9-97a5-f33856715d71",
+      "key": "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e",
       "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e",
+        "lesson.key": "AI Code of Ethics",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "key": "40da799e-5e4c-46a9-97a5-f33856715d71",
+      "position": 5,
       "properties": {
         "name": "Lesson Feedback"
       },
@@ -4441,7 +4454,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/aiml/2021] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
         "duration": "5",
-        "name": "Model Cards in AI Lab"
+        "name": "Model Cards in AI Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"block boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "30e5080a-05d0-4193-82e4-f7c81f1adb5c",
@@ -5499,7 +5518,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students click on the people column. This column represents how many people were seen in the park on a given day. Have students answer the questions on their activity guide first before discussing as a group.\n\n**Circulate:** Check in with students and help them interpret the graphs. Encourage students to use sentence starters like \"When the number of people are... then the number of lions are...\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low number of people in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high number of people in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
-        "name": "Feature #2: people",
+        "name": "Feature #2: People",
         "tips": [
           {
             "type": "contentCorner",
@@ -5528,7 +5547,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the dayOfMonth column. This column represents what day of the month you went to the park. Have students answer the questions in their activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _What happens if you visit on a day early in the month? How many lions do you think you’ll see?_\n- _What happens if you visit on a day late in the month? How many lions do you think you’ll see?_",
-        "name": "Feature #3: dayOfMonth"
+        "name": "Feature #3: Day of the Month"
       },
       "seeding_key": {
         "activity_section.key": "e732fd73-7ab0-4514-9ed0-69676e0858f2",
@@ -5550,7 +5569,8 @@
       "key": "b574a67a-ff82-494d-82cf-8dc5b284069f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the temperature column. This column represents the weather that day and how hot or cold it was. Have students answer the questions on their activity guide before discussing as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low temperature in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high temperature in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students click on the temperature column. This column represents the weather that day and how hot or cold it was. Have students answer the questions on their activity guide before discussing as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- _If there are a low temperature in the park, what does that mean for how many lions could be in the park?_\n- _If there are a high temperature in the park, what does that mean for how many lions could be in the park?_\n- _Why do you think this is?_",
+        "name": "Feature #4: Temperature"
       },
       "seeding_key": {
         "activity_section.key": "b574a67a-ff82-494d-82cf-8dc5b284069f",
@@ -6020,6 +6040,17 @@
       }
     },
     {
+      "key": "ab21023b-e7a1-4333-bb44-c86b1b715152",
+      "position": 1,
+      "properties": {
+        "description": "Ethics in AI is a large, complex topic that is invaluable for students to experience, discuss, and wrestle with their own understandings of artificial intelligence. In fact, this topic may overflow beyond just a single lesson and require more time and attention with students.\n\nIf you would like to extend the focus on ethics in AI, consider adapting some of the resources from the [MIT AI + Ethics curriculum](https://www.media.mit.edu/projects/ai-ethics-for-middle-school/overview/), which is an ethical AI curriculum specifically designed for middle school and many of the activities can be done without a computer if needed."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab21023b-e7a1-4333-bb44-c86b1b715152",
+        "lesson_activity.key": "6ceb9b87-a9a1-42e3-a679-c709ddd0ca6e"
+      }
+    },
+    {
       "key": "12c96ce3-0348-46a5-b337-47ecf89e9a9c",
       "position": 1,
       "properties": {
@@ -6107,7 +6138,13 @@
       "key": "4efb646c-4ce2-45f5-bb76-f444af86a9b4",
       "position": 4,
       "properties": {
-        "description": "**Step 2 - Train your Model:** Students will choose at least 2 features to train their model. They will record their choices on their project guide. \n\nThey should aim to get at least 70% accuracy to earn full credit on the rubric."
+        "description": "**Step 2 - Train your Model:** Students will choose at least 2 features to train their model. They will record their choices on their project guide. \n\nThey should aim to get at least 70% accuracy to earn full credit on the rubric.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Slight Changes in Accuracy:** Students may notice that if they train on the exact same features over and over again, they may get slightly different accuracy calculations each time. This is because, in this level, AI Bot is randomizing the 10% testing data rather than always using the last 10% of the dataset. This is typically how machine learning accuracy is calculated with real-world datasets, since it avoids issues where the end of the dataset may not represent the entire data.\n\nIf students ask about this, you can use a similar explanation as above - that AI Bot is randomizing the testing data each time. This also means students may get slight variations in their accuracy, but the model being created is still essentially the same."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4efb646c-4ce2-45f5-bb76-f444af86a9b4",
@@ -6129,7 +6166,13 @@
       "key": "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471",
       "position": 6,
       "properties": {
-        "description": "**Step 4 - Create Your App:** Students will create their app in App Lab. Apps should have at least a theme and a welcome screen to earn full credit on the rubric."
+        "description": "**Step 4 - Create Your App:** Students will create their app in App Lab. Apps should have at least a theme and a welcome screen to earn full credit on the rubric.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471",
@@ -7925,7 +7968,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students develop their app in App Lab. A rubric is provided to guide students through what their project should look like. At the very least, it need to have:\n\n- A design theme\n- A welcome screen\n- Descriptive feature and label text elements",
         "name": "Step 7: Develop Your App",
-        "progression_name": "Design an AI App - App Lab"
+        "progression_name": "Design an AI App - App Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a",
@@ -9912,6 +9961,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD survey_placeholder_levelgroup"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -10981,7 +11033,7 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1SrfMDyQYbbY_5rgOTBniEPx3U2y4YCDC2nezFzDx46s/edit",
+      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
       "key": "design_an_ai_app",
       "properties": {
         "type": "Slides",
@@ -11458,7 +11510,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://www.google.com/url?q=https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
@@ -11509,7 +11561,8 @@
       "url": "https://docs.google.com/document/d/1RLnA_EbFrxwLOI-XGwmuryNbSPlBqndvjXGDlWdndpc/edit",
       "key": "troubleshooting_models_-_activity_guide",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "troubleshooting_models_-_activity_guide"
@@ -11891,6 +11944,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
         "resource.key": "kim_s_survey_data_-_student_resource"
       }
@@ -12223,6 +12282,13 @@
         "lesson.key": "Importing Models in App Lab",
         "programming_environment.name": "applab",
         "programming_expression.key": "addPair"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "ifBlock"
       }
     }
   ],
