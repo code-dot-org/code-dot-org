@@ -1,5 +1,8 @@
 id '6'
+family_name 'flappy'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Flappy Code', display_name: 'Flappy Code', has_lesson_plan: false
 level 'flappy_1'

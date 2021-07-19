@@ -14,11 +14,13 @@
           "teacherForum",
           "https://forum.code.org/c/csd3"
         ]
-      ]
+      ],
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:31:00 UTC",
+    "family_name": "csd3-virtual",
+    "serialized_at": "2021-07-06 22:26:00 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csd3-virtual"

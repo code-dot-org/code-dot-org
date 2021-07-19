@@ -71,7 +71,7 @@ class TeacherFeedback < ApplicationRecord
       student_id: student_id,
       level_id: level_id,
       script_id: script_id
-    }
+    }.compact
 
     where(query).
       latest_per_teacher.

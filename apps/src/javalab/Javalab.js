@@ -113,6 +113,7 @@ Javalab.prototype.init = function(config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initVersionHistoryUI(config);
     this.studioApp_.initTimeSpent();
+    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
