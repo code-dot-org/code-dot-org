@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-16 17:38:24 UTC",
+    "serialized_at": "2021-07-16 23:54:59 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -7008,7 +7008,7 @@
       "key": "9806b72c-2fba-44a3-a488-c2900f1367ab",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Google Sheets Introduction video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r view_and_download_survey_data/aiml/2021] video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
       },
       "seeding_key": {
         "activity_section.key": "9806b72c-2fba-44a3-a488-c2900f1367ab",
@@ -11674,6 +11674,18 @@
       }
     },
     {
+      "name": "View and Download Survey Data",
+      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "key": "view_and_download_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
       "name": "Zoo Models",
       "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
       "key": "zoo_models",
@@ -11800,6 +11812,12 @@
       "seeding_key": {
         "lesson.key": "lesson-23",
         "resource.key": "train_model_good_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "view_and_download_survey_data"
       }
     },
     {
