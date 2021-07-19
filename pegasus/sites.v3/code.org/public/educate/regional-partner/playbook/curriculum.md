@@ -27,7 +27,7 @@ Use the links below to find our program curriculum guides, course information, a
 
 ### [CS Principles](/educate/csp#lessons) (9-12)
 
-- [CS Principles Teacher Resources](http://curriculum.code.org/csp)
+- [CS Principles Teacher Resources](https://studio.code.org/courses/csp-2021)
   - [AP CS Principles One-Pager - 2020-21](https://code.org/files/2020-21_CSPrinciples_1-pager.pdf)
   - [AP CS Principles Curriculum Guide - 2019-20](https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview)
 

@@ -1,0 +1,8 @@
+name 'CSA U1L5-L5 Exemplar'
+display_name 'Parameterized Painters'
+description 'Help the Painter navigate The Neighborhood using parameterized constructors!'
+
+sublevels
+level 'CSA U1L5-L5a Exemplar'
+level 'CSA U1L5-L5b Exemplar'
+level 'CSA U1L5-L5c Exemplar'

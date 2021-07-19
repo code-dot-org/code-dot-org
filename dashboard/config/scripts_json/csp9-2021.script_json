@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 22:57:20 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 03:12:53 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -917,6 +917,7 @@
       "key": "fb39478c-63a0-46b0-8aa4-dd68c61917ee",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Watch the video [Data Visualizer in App Labb Part 1](https://youtu.be/4vaWVvrnsFk)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [Exploring One Column](\thttps://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing), ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions.",
         "name": "Making Bar Charts\r",
         "tips": [
           {
@@ -934,7 +935,6 @@
       "key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute: ** Give students access to [Exploring One Column](\thttps://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing), ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions."
       },
       "seeding_key": {
         "activity_section.key": "d281781e-c673-4ba4-a6d1-f224ef255a1f",
@@ -1360,7 +1360,7 @@
       "key": "c63b470f-2dc5-491c-93db-84a7213dd4f2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute: ** Give students access to [Exploring Two Columns](https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit), ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [Exploring Two Columns](https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit), ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {
@@ -3145,6 +3145,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp9-2021/resources",
+      "key": "all_resources_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_9"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp9-2021/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
+      }
+    },
+    {
       "name": "Big, Open, and Crowdsourced Data",
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
       "key": "big-data-citizen-science-machine-learning-activity-guide",
@@ -3192,6 +3214,42 @@
       },
       "seeding_key": {
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
+      "name": "Data Visualizer in App Lab - Part 1",
+      "url": "https://youtu.be/4vaWVvrnsFk",
+      "key": "data_visualizer_in_app_lab_-_part_1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizer_in_app_lab_-_part_1"
+      }
+    },
+    {
+      "name": "Data Visualizer in App Lab - Part 2",
+      "url": "https://youtu.be/OjUEFHo3Yw0",
+      "key": "data_visualizer_in_app_lab_-_part_2",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizer_in_app_lab_-_part_2"
       }
     },
     {
@@ -3258,6 +3316,54 @@
       }
     },
     {
+      "name": "U9 Sample Project 1",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "name": "U9 Sample Project 2",
+      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "key": "u9_sample_project_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "name": "U9 Sample Project 3",
+      "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
+      "key": "u9_sample_project_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "name": "U9 Sample Project 4",
+      "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
+      "key": "u9_sample_project_4",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u9_sample_project_4"
+      }
+    },
+    {
       "name": "Virtual Modification Resources",
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
@@ -3297,6 +3403,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "data_visualizer_in_app_lab_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
         "resource.key": "csp-u9-presentation"
       }
@@ -3317,6 +3429,12 @@
       "seeding_key": {
         "lesson.key": "Exploring Two Columns",
         "resource.key": "exploring-two-columns-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "data_visualizer_in_app_lab_-_part_2"
       }
     },
     {
@@ -3347,6 +3465,30 @@
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "resource.key": "u9_sample_project_4"
       }
     },
     {
@@ -3384,6 +3526,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
         "script.name": "csp9-2021"
       }
     }

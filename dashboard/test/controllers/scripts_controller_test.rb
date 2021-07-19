@@ -164,6 +164,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit, assigns(:script)
   end
 
+  test "show get show if family name matches script name" do
+    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
+    CourseOffering.add_course_offering(unit)
+    get :show, params: {id: 'hoc-script'}
+
+    assert_response :success
+    assert_equal unit, assigns(:script)
+  end
+
   test "renders 404 when id is an invalid id" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 232323}
@@ -913,7 +922,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: 'CSF',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
-      background: 'fake-background',
     }
 
     post :update, params: {
@@ -945,7 +953,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
-      background: ''
     }
     assert_response :success
     unit.reload
@@ -1045,7 +1052,8 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
+    CourseOffering.add_course_offering(dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-script'}
@@ -1191,6 +1199,19 @@ class ScriptsControllerTest < ActionController::TestCase
     response_body = JSON.parse(@response.body)
     assert_equal 2, response_body.length
     assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
+  end
+
+  test "get_unit bypasses cache for edit route" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    Script.expects(:get_from_cache).never
+    Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
+    get :edit, params: {id: @migrated_unit.name}
+
+    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
+    Script.expects(:get_without_cache).never
+    get :show, params: {id: @migrated_unit.name}
   end
 
   def stub_file_writes(unit_name)

@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:40 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-02 17:23:47 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -2076,7 +2076,7 @@
       "key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
       "position": 5,
       "properties": {
-        "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: *Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.*\n  * **The goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
+        "description": "* Form Pairs: Place students in pairs\n* Play the Game: Let students play the game for a couple minutes\n* Assign Code Sections: Count off pairs by three and assign them to one of the three code sections.\n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so.\n* Explain Your Section: Have groups find members of the other two sections and carefully explain how their section works. Give each group 1-2 minutes to do so.\n* **Discuss**: *Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.*\n  * **Discussion Goal:** The goal of this investigation is to get practice carefully reading a program that uses the new concept of conditionals as well as build on their knowledge and understanding of variables.\n    \n    * **What to look for:** As students describe their section of code, push students to go beyond reading the comments in their section of code to describe what their code does.  For example, instead of saying “It increases the score by one”, students should explain HOW that happens.  They might say “The value stored in the score variable increases by 1 and then the setProperty is used to show the increased score on the screen”.\n\n* **Modify**: Have groups return to their original seats. Give them a couple minutes to work on the modify the app so that the game ends once a user has 0 lives remaining."
       },
       "seeding_key": {
         "activity_section.key": "8f5b07e2-c4d1-4a0d-9f85-3b9be3dcb5e3",
@@ -2711,7 +2711,7 @@
       "key": "29352a16-df31-41ca-9d30-78031eb9ca48",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Investigate Score Clicker**\n\n* Discuss: Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* Modify: Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* Modify: Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* Discuss: After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Investigate Score Clicker**\n\n* **Discuss:** Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* **Modify:** Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* **Modify:** Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* **Discuss:** After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
       },
       "seeding_key": {
         "activity_section.key": "29352a16-df31-41ca-9d30-78031eb9ca48",
@@ -6552,6 +6552,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp4-2021/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp4-2021/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
       "name": "CSP Conditionals Make - Museum Ticket Generator App",
       "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
       "key": "conditionals-make-activity-guide",
@@ -6586,6 +6608,18 @@
       },
       "seeding_key": {
         "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -6770,6 +6804,54 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U4 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/lbl7hzxzm4WsAa75hJVFqMykHh7YfI5_te2qrxqh2uI",
+      "key": "u4_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U4 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1a74SEh_S7NqBmWVdhw9FLoRjDIM8C_5Q-alJkJiInQA/edit?usp=sharing",
+      "key": "u4_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U4 Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/5cwc9FM-cZe5TG4wy5wh3QGguDb5Si_juSUBdCFZRsA",
+      "key": "u4_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U4 Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1mwmJdpiMS6WeH5q_2LWVvPLsI8LVXJLs9n_96GU-g7w/edit?usp=sharing",
+      "key": "u4_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4_mid_score_sample_planning_guide_rubric"
       }
     },
     {
@@ -7095,6 +7177,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "resource.key": "u4_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 15: Assessment Day",
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
@@ -7128,6 +7234,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
         "script.name": "csp4-2021"
       }
     }

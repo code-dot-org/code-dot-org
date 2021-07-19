@@ -1,0 +1,28 @@
+name 'SP-VPL-21-mod2-TeachersInClassrooms'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson structure 
+
+## Warm up
+
+#### Each lesson begins with a warm up, which serves as a highly approachable shared experience that highlights the need for the skills and understandings presented in the lesson.  These should be kept short so that students can quickly move into the main activity of the lesson.  Warm ups end with a big question that articulates the problem space students will be exploring during the lesson. This question sets the stage for the target learning. 
+
+## Activity
+
+#### Students spend the majority of their time engaging in the lesson activity. Activities provide students with opportunities to explore new computing concepts. Exploration is essential for students to build the content knowledge they need to understand and participate in computing activities. Lesson activities are scaffolded to provide students with just-in-time information to solve their problems as they build their computing knowledge and skills.  
+
+## Wrap up
+
+#### Wrap ups end every lessons and provide students with opportunities to reflect on the skills and understandings presented in the lesson. Warm ups include a review of any vocabulary introduced in the lesson, and return to the big question introduced in the warm up. Wrap ups are often journal prompts and short discussions that can be used as an exit ticket or short formative assessment.
+
+
+
+# Lesson Length
+
+#### Most CS Discoveries lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan. 
+
+> ##**Curriculum Value:** Teachers in Classrooms
+We believe students learn best with the help of an empowered teacher. **We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.** Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches. Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs. 
+MARKDOWN

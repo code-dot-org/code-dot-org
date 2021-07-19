@@ -5,7 +5,9 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 # Unit 4 and the role of collaboration
-**Goal:** The purpose of this section is to zoom out and look at the big picture of Unit 4 and consider the pros and cons of independent and collaborative work while students are learning to program. *(Estimated time: 10 minutes)*
+*(Estimated time: 10 minutes for Levels 16 - 17)*
+
+**Goal:** The purpose of this section is to zoom out and look at the big picture of Unit 4 and consider the pros and cons of independent and collaborative work while students are learning to program. 
 
 ## Wrapping up Unit 4
 Thus far, you have seen one of the three different EIPM sequences in Unit 4.  In addition to an EIPM sequence on variables, Unit 4 also includes a sequence on conditionals and on functions.  Here are a few more things  you should know about this unit:

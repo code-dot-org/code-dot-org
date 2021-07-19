@@ -26,7 +26,7 @@ class MakerController < ApplicationController
         sort_by(&:version_year).
         reverse.
         freeze
-    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == UnitGroup::CSD}.freeze
+    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == 'csd'}.freeze
     # maker_years is a list of (script, course) tuples containing all launched versions of the CSD Unit on Maker.
     # Ordered from most recent to least.
     maker_years = maker_units.map do |s|
