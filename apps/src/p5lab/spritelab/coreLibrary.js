@@ -158,16 +158,7 @@ export function addSprite(sprite, name, animation) {
 
   // If there are any whenSpriteCreated events, call the callback immediately
   // so that the event happens during the same draw loop frame.
-  const matchingInputEvents = inputEvents.filter(
-    inputEvent =>
-      inputEvent.type === 'whenSpriteCreated' &&
-      (inputEvent.args.name === name ||
-        inputEvent.args.costume === animation ||
-        inputEvent.args.costume === 'all')
-  );
-  matchingInputEvents.forEach(inputEvent =>
-    inputEvent.callback({newSprite: sprite.id})
-  );
+  runSpriteCreatedEvents(sprite);
 
   spriteId++;
   return sprite.id;
@@ -249,6 +240,20 @@ export function addEvent(type, args, callback) {
 
 export function clearCollectDataEvents() {
   inputEvents = inputEvents.filter(e => e.type !== 'collectData');
+}
+
+function runSpriteCreatedEvents(newSprite) {
+  const matchingInputEvents = inputEvents.filter(
+    inputEvent =>
+      inputEvent.type === 'whenSpriteCreated' &&
+      (inputEvent.args.name === newSprite.name ||
+        inputEvent.args.costume === newSprite.getAnimationLabel() ||
+        inputEvent.args.costume === 'all')
+  );
+  matchingInputEvents.forEach(inputEvent => {
+    eventLog.push(`spriteCreated: ${newSprite.id}`);
+    inputEvent.callback({newSprite: newSprite.id});
+  });
 }
 
 function atTimeEvent(inputEvent, p5Inst) {
