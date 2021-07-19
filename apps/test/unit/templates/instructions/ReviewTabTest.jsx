@@ -108,7 +108,7 @@ describe('Code Review Tab', () => {
         .at(0)
         .props().comment.isResolved
     ).to.be.false;
-    wrapper.instance().onCommentResolve(existingComment.id);
+    wrapper.instance().onCommentResolveStateToggle(existingComment.id);
     expect(
       wrapper
         .find(Comment)

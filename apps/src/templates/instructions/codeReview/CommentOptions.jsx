@@ -8,25 +8,25 @@ import color from '@cdo/apps/util/color';
 class CommentOptions extends Component {
   static propTypes = {
     isResolved: PropTypes.bool.isRequired,
-    onResolveClick: PropTypes.func.isRequired,
-    onDeleteClick: PropTypes.func.isRequired
+    onResolveStateToggle: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   commentOptionTypes = {
     markResolved: {
-      onClick: this.props.onResolveClick,
+      onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-check',
-      text: javalabMsg.markResolved(),
+      text: javalabMsg.resolve(),
       key: 'Mark Resolved'
     },
     unmarkResolved: {
-      onClick: this.props.onResolveClick,
+      onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-undo',
-      text: javalabMsg.unmarkResolved(),
+      text: javalabMsg.reOpen(),
       key: 'Unmark Resolved'
     },
     delete: {
-      onClick: this.props.onDeleteClick,
+      onClick: this.props.onDelete,
       iconClass: 'fa fa-fw fa-trash',
       text: msg.delete(),
       key: 'Delete'
