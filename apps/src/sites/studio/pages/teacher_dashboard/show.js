@@ -37,9 +37,9 @@ import currentUser, {
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
-import {ApolloProvider} from '@apollo/client';
 import {gql} from '@apollo/client';
-import {client} from '@cdo/apps/templates/teacherDashboard/controller';
+import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
+import {manageStudentsTypePolicies} from '@cdo/apps/templates/manageStudents/manageStudentsClient';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -59,6 +59,13 @@ const {
   showSectionProgressDetails
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+
+export const client = new ApolloClient({
+  uri: 'http://localhost-studio.code.org:3000/graphql',
+  cache: new InMemoryCache({
+    typePolicies: {...manageStudentsTypePolicies}
+  })
+});
 
 // This is a test to see if loading progress data up the tree earlier has an effect on
 // data retrieved later for progress bubbles

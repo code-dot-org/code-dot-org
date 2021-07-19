@@ -3,7 +3,6 @@ import React from 'react';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {gql, useQuery} from '@apollo/client';
-import _ from 'lodash';
 
 const GET_LEVEL_PROGRESS = gql`
   query GetLevelProgress($userId: ID!, $scriptId: ID!) {
