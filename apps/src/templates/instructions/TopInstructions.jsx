@@ -191,7 +191,6 @@ class TopInstructions extends Component {
           })
       );
     }
-
     if (serverLevelId) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {

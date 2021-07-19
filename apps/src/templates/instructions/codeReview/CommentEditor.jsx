@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default class CommentEditor extends Component {
-  static propTypes = {onNewCommentSubmit: PropTypes.func.isRequired};
+  state = {
+    comment: '',
+    isEditing: false
+  };
 
-  state = {comment: ''};
-
-  commentChanged = event => this.setState({comment: event.target.value});
+  commentChanged = event => {
+    this.setState({
+      comment: event.target.value,
+      isEditing: true
+    });
+  };
 
   render() {
-    const {comment} = this.state;
-
     return (
       <div>
         <textarea
@@ -25,23 +28,25 @@ export default class CommentEditor extends Component {
         />
         <div
           style={{
-            ...styles.buttonContainer
+            ...styles.container,
+            ...styles.footer,
+            justifyContent: 'flex-end'
           }}
         >
-          {comment && (
+          {this.state.isEditing && (
             <Button
               key="cancel"
               text={msg.cancel()}
-              onClick={() => this.setState({comment: ''})}
+              onClick={() => this.setState({isEditing: false, comment: ''})}
               color="gray"
               style={{...styles.buttons.all, ...styles.buttons.cancel}}
             />
           )}
-          {comment && (
+          {this.state.isEditing && (
             <Button
               key="submit"
               text={msg.submit()}
-              onClick={() => this.props.onNewCommentSubmit(comment)}
+              onClick={() => {}}
               color="orange"
               style={{...styles.buttons.all, ...styles.buttons.submit}}
             />
@@ -68,10 +73,12 @@ const styles = {
       borderColor: color.lightest_gray
     }
   },
-  buttonContainer: {
+  footer: {
     display: 'flex',
-    justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '10px 0'
+  },
+  container: {
+    padding: '0 10px'
   }
 };

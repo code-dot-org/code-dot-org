@@ -1,50 +1,22 @@
 import React, {Component} from 'react';
-import {getStore} from '@cdo/apps/redux';
+//import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
+import {demoComments} from './codeReview/commentShape';
 import CommentEditor from './codeReview/CommentEditor';
-import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 export default class ReviewTab extends Component {
+  // Once we have real comments
+  // static propTypes = {
+  //   comments: PropTypes.arrayOf(commentShape)
+  // };
+
   state = {
-    readyForReview: false,
-    comments: [],
-    token: '',
-    forceRecreateEditorKey: 0
-  };
-
-  componentDidMount() {
-    const channelId = getStore().getState().pageConstants.channelId;
-
-    codeReviewDataApi
-      .getCodeReviewCommentsForProject(channelId)
-      .done((data, _, request) => {
-        this.setState({
-          comments: data,
-          token: request.getResponseHeader('csrf-token')
-        });
-      });
-  }
-
-  onNewCommentSubmit = commentText => {
-    const channelId = getStore().getState().pageConstants.channelId;
-    const {token} = this.state;
-
-    codeReviewDataApi
-      .submitNewCodeReviewComment(commentText, channelId, token)
-      .done(newComment => {
-        const comments = this.state.comments;
-        comments.push(newComment);
-
-        this.setState({
-          comments: comments,
-          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
-        });
-      });
+    readyForReview: false
   };
 
   renderReadyForReviewCheckbox() {
-    const {readyForReview} = this.state;
+    const readyForReview = this.state.readyForReview;
 
     return (
       <div style={styles.checkboxContainer}>
@@ -62,12 +34,10 @@ export default class ReviewTab extends Component {
   }
 
   render() {
-    const {comments, forceRecreateEditorKey} = this.state;
-
     return (
       <div style={styles.reviewsContainer}>
         {this.renderReadyForReviewCheckbox()}
-        {comments.map(comment => {
+        {demoComments.map(comment => {
           return (
             <Comment
               comment={comment}
@@ -75,10 +45,7 @@ export default class ReviewTab extends Component {
             />
           );
         })}
-        <CommentEditor
-          onNewCommentSubmit={this.onNewCommentSubmit}
-          key={forceRecreateEditorKey}
-        />
+        <CommentEditor />
       </div>
     );
   }
