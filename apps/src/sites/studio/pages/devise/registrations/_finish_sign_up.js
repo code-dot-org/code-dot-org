@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
