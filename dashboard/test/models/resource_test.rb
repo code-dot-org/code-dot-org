@@ -111,6 +111,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test 'serialize scripts that resource is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
 
     course_version = create :course_version, :with_unit_group
