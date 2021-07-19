@@ -16,6 +16,18 @@ export default class Theater {
         this.getImgElement().src = data.detail.url;
         break;
       }
+      // TODO: Remove these message types once javabuilder is updated to
+      // no longer use them.
+      case TheaterSignalType.VISUAL: {
+        const imageString = 'data:image/gif;base64,' + data.detail.image;
+        this.getImgElement().src = imageString;
+        break;
+      }
+      case TheaterSignalType.AUDIO: {
+        const audioString = 'data:audio/wav;base64,' + data.detail.audio;
+        this.getAudioElement().src = audioString;
+        break;
+      }
       default:
         break;
     }
