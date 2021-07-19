@@ -44,6 +44,7 @@ describe('Code Review Tab', () => {
   });
 
   afterEach(() => {
+    server.restore();
     restoreRedux();
   });
 
