@@ -1,3 +1,5 @@
+import {TheaterSignalType} from './constants';
+
 export default class Theater {
   constructor() {
     this.canvas = null;
@@ -5,21 +7,35 @@ export default class Theater {
   }
 
   handleSignal(data) {
-    if (data.detail.image) {
-      const imageString = 'data:image/gif;base64,' + data.detail.image;
-      const imgElement = this.getImgElement();
-      imgElement.src = imageString;
-    }
-    if (data.detail.audio) {
-      const audioString = 'data:audio/wav;base64,' + data.detail.audio;
-      const audioElement = this.getAudioElement();
-      audioElement.src = audioString;
+    switch (data.value) {
+      case TheaterSignalType.AUDIO_URL: {
+        this.getAudioElement().src = data.detail.url;
+        break;
+      }
+      case TheaterSignalType.VISUAL_URL: {
+        this.getImgElement().src = data.detail.url;
+        break;
+      }
+      // TODO: Remove these message types once javabuilder is updated to
+      // no longer use them.
+      case TheaterSignalType.VISUAL: {
+        const imageString = 'data:image/gif;base64,' + data.detail.image;
+        this.getImgElement().src = imageString;
+        break;
+      }
+      case TheaterSignalType.AUDIO: {
+        const audioString = 'data:audio/wav;base64,' + data.detail.audio;
+        this.getAudioElement().src = audioString;
+        break;
+      }
+      default:
+        break;
     }
   }
 
   reset() {
-    const imgElement = this.getImgElement();
-    imgElement.src = '';
+    this.getImgElement().src = '';
+    this.getAudioElement().src = '';
   }
 
   getImgElement() {
