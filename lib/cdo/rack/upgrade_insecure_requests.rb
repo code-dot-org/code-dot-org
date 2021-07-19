@@ -50,7 +50,7 @@ module Rack
             "style-src 'self' https: 'unsafe-inline'",
             "img-src 'self' https: data: blob: http://javabuilderbeta-output.dev-code.org",
             "font-src 'self' https: data:",
-            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
+            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org wss://javabuilderbeta.dev-code.org",
             "media-src 'self' https: data: http://vaas.acapela-group.com http://javabuilderbeta-output.dev-code.org",
             "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
