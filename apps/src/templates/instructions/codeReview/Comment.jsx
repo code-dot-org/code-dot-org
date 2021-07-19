@@ -9,8 +9,8 @@ import CommentOptions from './CommentOptions';
 export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
-    onDelete: PropTypes.func.isRequired,
-    onResolve: PropTypes.func.isRequired
+    onResolveStateToggle: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   state = {
@@ -74,11 +74,11 @@ export default class Comment extends Component {
             {isShowingCommentOptions && (
               <CommentOptions
                 isResolved={isResolved}
-                onResolveClick={() => {
-                  this.props.onResolve(id);
+                onResolveStateToggle={() => {
+                  this.props.onResolveStateToggle(id);
                   this.setState({isShowingCommentOptions: false});
                 }}
-                onDeleteClick={() => this.onDelete(id)}
+                onDelete={() => this.onDelete(id)}
               />
             )}
           </div>

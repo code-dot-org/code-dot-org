@@ -51,10 +51,10 @@ export default class ReviewTab extends Component {
     this.setState({comments: comments});
   };
 
-  onCommentResolve = resolvedCommentId => {
+  onCommentResolveStateToggle = toggledCommentId => {
     const comments = [...this.state.comments];
     const resolvedCommentIndex = comments.findIndex(
-      comment => comment.id === resolvedCommentId
+      comment => comment.id === toggledCommentId
     );
     comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
       .isResolved;
@@ -93,7 +93,9 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
-              onResolve={() => this.onCommentResolve(comment.id)}
+              onResolveStateToggle={() =>
+                this.onCommentResolveStateToggle(comment.id)
+              }
               onDelete={() => this.onCommentDelete(comment.id)}
             />
           );

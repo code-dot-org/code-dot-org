@@ -14,8 +14,8 @@ describe('Code Review Comment', () => {
     return shallow(
       <Comment
         comment={combinedComment}
+        onResolveStateToggle={() => {}}
         onDelete={() => {}}
-        onResolve={() => {}}
       />
     );
   };

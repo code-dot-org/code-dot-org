@@ -21,11 +21,11 @@
   "internalException": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalRuntimeException": "Oops. We hit an error on our side while running your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "javaExtensionMissing": "Invalid file name. File names must end in '.java'.",
-  "markResolved": "Mark Resolved",
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
   "onlyVisibleToYou": "only visible to you",
+  "reOpen": "Re-open",
+  "resolve": "Resolve",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
-  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
-  "unmarkResolved": "Unmark Resolved"
+  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
 }

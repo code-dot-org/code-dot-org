@@ -6,17 +6,17 @@ import CommentOptions from '@cdo/apps/templates/instructions/codeReview/CommentO
 
 const DEFAULT_PROPS = {
   isResolved: false,
-  onResolveClick: () => {},
-  onDeleteClick: () => {}
+  onResolveStateToggle: () => {},
+  onDelete: () => {}
 };
 
 describe('Code Review Comment Options', () => {
-  it('renders complete option if comment is not resolved', () => {
+  it('renders resolve option if comment is not resolved', () => {
     const wrapper = shallow(<CommentOptions {...DEFAULT_PROPS} />);
     expect(wrapper.text().includes(javalabMsg.markResolved())).to.be.true;
   });
 
-  it('renders unmark complete option if comment is resolved', () => {
+  it('renders unmark resolved option if comment is resolved', () => {
     const unresolvedCommentProps = {
       ...DEFAULT_PROPS,
       ...{isResolved: true}
