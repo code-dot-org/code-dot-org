@@ -20,7 +20,6 @@ Feature: AI Lab
     And I see the dynamic instructions are showing "uitest-dynamic-instruction-dataDisplayFeatures" key
     And I click selector "#overlay"
     When I select data table column "1"
-    And I wait for 3 seconds
     And I see "#column-inspector"
     And I click selector "#uitest-add-feature-button"
     And I see "#uitest-remove-statement-feature"
@@ -50,7 +49,7 @@ Feature: AI Lab
     And I click selector "#uitest-continue-button"
     And I see the dynamic instructions are showing "uitest-dynamic-instruction-modelSummary" key
     And I see "#statement"
-    And I wait for 3 seconds
+    And I wait for 2 seconds
     And I see "#uitest-model-card"
     And I see ".ailab-image-hover"
     And I click selector "#uitest-continue-button"
