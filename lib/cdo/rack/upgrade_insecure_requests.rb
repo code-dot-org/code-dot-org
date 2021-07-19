@@ -48,10 +48,10 @@ module Rack
             "child-src blob: ",
             "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
             "style-src 'self' https: 'unsafe-inline'",
-            "img-src 'self' https: data: blob:",
+            "img-src 'self' https: data: blob: http://*.dev-code.org",
             "font-src 'self' https: data:",
             "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
-            "media-src 'self' https: http://vaas.acapela-group.com",
+            "media-src 'self' https: data: http://vaas.acapela-group.com http://*.dev-code.org",
             "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
         end
