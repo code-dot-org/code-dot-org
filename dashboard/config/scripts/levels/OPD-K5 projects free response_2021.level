@@ -5,7 +5,7 @@
     "tts_short_instructions_override": "How would you use end-of-course proejcts in your classroom? What is the benefit of having students complete a project?",
     "tts_long_instructions_override": "Take a moment to reflect. How would you use end-of-course proejcts in your classroom? What is the benefit of having students complete a project?",
     "instructions_important": "false",
-    "long_instructions": "# Reflection: End of Course Projects\r\n\r\n**Prompts:**\r\n\r\n* What is the benefit of having students complete an end of course project?\r\n* How will the curriculum resources support students in completing end of course projects?",
+    "long_instructions": "# Reflection: End of Course Projects\r\n\r\n## Prompts\r\n\r\n* What are some benefits for students completing an end of course project?\r\n* How do curriculum resources support students in completing end of course projects?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
   "level_num": "custom",
   "user_id": 884,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-06-16 12:57:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 18:54:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-06-16 12:57:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-16 18:54:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-24 18:04:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

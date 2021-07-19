@@ -2,13 +2,12 @@
   "script": {
     "name": "k5-onlinepd-2019",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:26 UTC",
+    "serialized_at": "2021-07-14 00:39:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2019"

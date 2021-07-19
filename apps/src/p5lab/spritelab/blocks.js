@@ -448,7 +448,9 @@ export default {
     };
     generator.sprite_variables_get = function() {
       return [
-        `{name: '${this.getTitleValue('VAR')}'}`,
+        `{name: '${Blockly.JavaScript.translateVarName(
+          this.getTitleValue('VAR')
+        )}'}`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };

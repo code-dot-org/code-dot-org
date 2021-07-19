@@ -21,6 +21,7 @@ social:
   <li><a href="#black-students">For Black students</a></li>
   <li><a href="#hispanic-latino-students">For Hispanic / Latino/a/x students</a></li>
   <li><a href="#youngwomen">For young women</a></li>
+  <li><a href="#students-with-disabilities">For students with disabilities</a></li>
   <li><a href="#allstudents">For all students</a></li>
 </ul>
 
@@ -169,6 +170,24 @@ social:
 <div style="width: 85%; float: left">
   <a class="linktag" id="systers" href="https://anitab.org/our-communities/systers/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Systers (AnitaB.org)</strong></h3></a>
   <p>Email community of women in technical computing roles. Members gain support by networking, sharing advice and experiences, and collaborating on various projects.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="students-with-disabilities"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For students with disabilities</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="accesscomputingteam" href="https://www.washington.edu/accesscomputing/accesscomputing-team-application" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/accesscomputing.png" alt="AccessComputing logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="accesscomputingteam" href="https://www.washington.edu/accesscomputing/accesscomputing-team-application" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>AccessComputing Team</strong></h3></a>
+  <p>Students with disabilities in computing fields can join the AccessComputing team.  Team members participate in an online mentoring community, learn about scholarship and internship opportunities, and are eligible to request funding for conference attendance, tutoring, and more.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
 <div style="clear:both"></div>

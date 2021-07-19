@@ -841,7 +841,7 @@
     "display_name": "Time Events",
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite spin one way, then another way.",
-    "long_instructions": "# Opposite Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nSome behaviors do opposite things, like `moving east`/`moving west`, `growing`/`shrinking`, or `spinning right`/`spinning left`. If a sprite has two opposite behaviors it might seem like the sprite isn't do anything at all. \n\n## Do This\n\n-   Run the code and see what happens at 3 seconds.\n-   Add an `sprite stops` block under the event.\n-   Use this block to stop the old behavior.\n\n_The sprite should now spin one way, then another way._",
+    "long_instructions": "# Opposite Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nSome behaviors do opposite things, like `moving east`/`moving west`, `growing`/`shrinking`, or `spinning right`/`spinning left`. If a sprite has two opposite behaviors it might seem like the sprite isn't do anything at all. \n\n## Do This\n\n-   Run the code and see what happens at 3 seconds.\n-   Add a `sprite stops` block under the event.\n-   Use this block to stop the old behavior.\n\n_The sprite should now spin one way, then another way._",
     "callouts": {
       "stops_block": "New blocks here!"
     },
@@ -1433,7 +1433,7 @@
   },
   "https://studio.code.org/s/coursef-2021/lessons/7/levels/7": {
     "short_instructions": "Use the \"when answered\" block to print the text from the variable after the prompt is answered.",
-    "long_instructions": "# Prompts (Part 2)\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nTo use the information stored in the variable, we first need to wait for the user to answer. You now have a new event block that is trigged as soon as a prompt is answered:\n\n[blockly block][1]\n\n## Do This\n\n-   Drag the new `when answered` block into your program. Make sure the variable name matches the one in your prompt!\n-   Connect a `print` block under this new event. \n-   Make sure all the variable labels match!\n-   Press \"Run\", then type something into the prompt.\n\n_Whatever message you type should be printed to the top of the screen._",
+    "long_instructions": "# Prompts (Part 2)\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nTo use the information stored in the variable, we first need to wait for the user to answer. You now have a new event block that is triggered as soon as a prompt is answered:\n\n[blockly block][1]\n\n## Do This\n\n-   Drag the new `when answered` block into your program. Make sure the variable name matches the one in your prompt!\n-   Connect a `print` block under this new event. \n-   Make sure all the variable labels match!\n-   Press \"Run\", then type something into the prompt.\n\n_Whatever message you type should be printed to the top of the screen._",
     "callouts": {
       "answered_block": "Look for a new block here!"
     },
@@ -1592,7 +1592,7 @@
         "display_name": "Variable Labels",
         "bubble_choice_description": "A mistake in the code is messing up this greeting card. Find and fix the mistake.",
         "short_instructions": "Fix the bug so the text prints correctly.",
-        "long_instructions": "# Variable Labels\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable]()\r\n\r\n</div>\r\n\r\nEach time you use a variable, the label (like \"name\" or \"age\") should match. This program has **two** prompts, but the text doesn't get printed because a mistake with variable labels. Run the program without changing anything to see what's wrong, then try fixing the problem!\r\n\r\n## Do This\r\n* Read the code below carefully.\r\n* Run the code and enter a name and age to see what happens.\r\n<details><summary><strong>What's the bug?</strong></summary>The `when answered` block uses the wrong variable, so the text is never displayed.</details>\r\n* Fix the bug so that all the text gets printed correctly.",
+        "long_instructions": "# Variable Labels\r\n\r\n<div style=\"float:right\">\r\n\r\n![expandable]()\r\n\r\n</div>\r\n\r\nEach time you use a variable, the label (like \"name\" or \"age\") should match. This program has **two** prompts, but the text doesn't get printed because of a mistake with variable labels. Run the program without changing anything to see what's wrong, then try fixing the problem!\r\n\r\n## Do This\r\n* Read the code below carefully.\r\n* Run the code and enter a name and age to see what happens.\r\n<details><summary><strong>What's the bug?</strong></summary>The `when answered` block uses the wrong variable, so the text is never displayed.</details>\r\n* Fix the bug so that all the text gets printed correctly.",
         "authored_hints": {
           "when_answered_var": "Try changing the label of the variable in the `when answered` block. Because there are multiple prompts, use the label for the *last* prompt that will be answered.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -2375,7 +2375,7 @@
   },
   "https://studio.code.org/s/coursef-2021/lessons/12/levels/6": {
     "short_instructions": "Edit the code to work for this puzzle.",
-    "long_instructions": "_What's different this time?_\n\nIn the last couple puzzles, we needed to change the variable by one for each new patch. This time, each patch has is two spaces further, and has two more nectar and two more honey to make.",
+    "long_instructions": "_What's different this time?_\n\nIn the last couple puzzles, we needed to change the variable by one for each new patch. This time, each patch is two spaces further, and has two more nectar to get and two more honey to make.",
     "authored_hints": {
       "courseF_bee_variables_4_2021_1": "Instead of adding 1  to the variable, add 2 each time instead."
     }

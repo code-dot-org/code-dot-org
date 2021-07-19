@@ -2,7 +2,6 @@
   "script": {
     "name": "csp-march-virtual",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "peer_reviews_to_complete": 4,

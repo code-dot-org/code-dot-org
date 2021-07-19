@@ -10,16 +10,17 @@ module Services
     module Resources
       extend ActiveSupport::Concern
       class_methods do
-        def get_script_resources_pathname(script)
+        def get_script_resources_pathname(script, as_url = false)
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          filename = CGI.escape(filename) if as_url
           script_overview_pathname = get_script_overview_pathname(script)
           return nil unless script_overview_pathname
           subdirectory = File.dirname(script_overview_pathname)
           return Pathname.new(File.join(subdirectory, filename))
         end
 
-        def get_script_resources_url(script)
-          pathname = get_script_resources_pathname(script)
+        def get_unit_resources_url(script)
+          pathname = get_script_resources_pathname(script, true)
           return nil unless pathname.present?
           File.join(get_base_url, pathname)
         end
@@ -109,6 +110,25 @@ module Services
           path = File.join(directory, filename)
 
           PDF.generate_from_html(page_content, path)
+
+          # we've been having some issues with these title page PDFs not
+          # existing on the filesystem when it comes time to make the rollup.
+          # It's not yet clear whether that's because this step is failing to
+          # generate or because the file is getting vanished after generation.
+          # Adding some logging here to help diagnose.
+          unless $?.success?
+            ChatClient.log(
+              "PDF generation exited with status code #{$?.exitstatus.inspect}",
+              color: 'red'
+            )
+          end
+          unless File.exist?(path)
+            ChatClient.log(
+              "File #{path.inspect} does not exist after generation",
+              color: 'red'
+            )
+          end
+
           return path
         end
 

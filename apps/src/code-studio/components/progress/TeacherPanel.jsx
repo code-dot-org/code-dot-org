@@ -21,7 +21,7 @@ class TeacherPanel extends React.Component {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
     sectionData: PropTypes.object,
-    scriptName: PropTypes.string,
+    unitName: PropTypes.string,
     // pageType describes the current route the user is on. Used only for logging.
     pageType: PropTypes.oneOf([
       pageTypes.level,
@@ -37,7 +37,7 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    scriptHasLockableLessons: PropTypes.bool.isRequired,
+    unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape)
   };
@@ -70,10 +70,10 @@ class TeacherPanel extends React.Component {
       hasSections,
       sectionsAreLoaded,
       selectedSection,
-      scriptHasLockableLessons,
+      unitHasLockableLessons,
       unlockedLessonNames,
       students,
-      scriptName
+      unitName
     } = this.props;
 
     let currentSectionScriptLevels = null;
@@ -163,7 +163,7 @@ class TeacherPanel extends React.Component {
             </div>
           )}
           {hasSections &&
-            scriptHasLockableLessons &&
+            unitHasLockableLessons &&
             viewAs === ViewType.Teacher && (
               <div>
                 <div style={styles.text}>
@@ -197,7 +197,7 @@ class TeacherPanel extends React.Component {
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
               sectionId={sectionId}
-              scriptName={scriptName}
+              unitName={unitName}
             />
           )}
         </div>
@@ -266,14 +266,14 @@ export default connect(state => {
   });
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
-  const scriptHasLockableLessons =
+  const unitHasLockableLessons =
     lockableAuthorized && hasLockableLessons(state.progress);
 
   return {
     viewAs: state.viewAs,
     hasSections: sectionIds.length > 0,
     sectionsAreLoaded,
-    scriptHasLockableLessons,
+    unitHasLockableLessons,
     selectedSection: state.teacherSections.sections[selectedSectionId],
     unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
     students: state.teacherSections.selectedStudents

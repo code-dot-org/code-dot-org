@@ -79,6 +79,7 @@ class VocabularyTest < ActiveSupport::TestCase
 
   test 'serialize scripts that vocabulary is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
 
     course_version = create :course_version, :with_unit_group
@@ -94,5 +95,38 @@ class VocabularyTest < ActiveSupport::TestCase
     vocabulary = create :vocabulary, course_version: course_version
     vocabulary.lessons = [lesson1, lesson2]
     vocabulary.serialize_scripts
+  end
+
+  test "summarize retrives translations" do
+    course_offering = create :course_offering
+    course_version = create :course_version, course_offering: course_offering
+    vocabulary = create(
+      :vocabulary,
+      word: "English word",
+      definition: "English definition",
+      course_version: course_version
+    )
+    assert_equal(
+      "#{vocabulary.key}/#{course_offering.key}/#{course_version.key}",
+      Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary)
+    )
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "vocabularies" => {
+          "#{vocabulary.key}/#{course_offering.key}/#{course_version.key}" => {
+            "word" => "Translated word",
+            "definition" => "Translated definition",
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English word", vocabulary.summarize_for_lesson_show[:word])
+    assert_equal("English definition", vocabulary.summarize_for_lesson_show[:definition])
+    I18n.locale = test_locale
+    assert_equal("Translated word", vocabulary.summarize_for_lesson_show[:word])
+    assert_equal("Translated definition", vocabulary.summarize_for_lesson_show[:definition])
+    I18n.locale = I18n.default_locale
   end
 end

@@ -380,6 +380,8 @@ class ScriptLevel < ApplicationRecord
       end
 
     ids = level_ids
+    active_id = oldest_active_level.id
+    inactive_ids = ids - [active_id]
 
     levels.each do |l|
       ids.concat(l.contained_levels.map(&:id))
@@ -387,7 +389,8 @@ class ScriptLevel < ApplicationRecord
 
     summary = {
       ids: ids.map(&:to_s),
-      activeId: oldest_active_level.id.to_s,
+      activeId: active_id.to_s,
+      inactiveIds: inactive_ids.map(&:to_s),
       position: position,
       kind: kind,
       icon: level.icon,
@@ -546,22 +549,18 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  def contained_levels
+    levels.map(&:contained_levels).flatten
+  end
+
   # Bring together all the information needed to show the teacher panel on a level
-  def summarize_for_teacher_panel(student)
-    contained_levels = levels.map(&:contained_levels).flatten
-    contained = contained_levels.any?
+  def summarize_for_teacher_panel(student, teacher = nil)
+    level_for_progress = oldest_active_level.get_level_for_progress(student, script)
+    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
 
-    levels = if bubble_choice?
-               [level.best_result_sublevel(student, script) || level]
-             elsif contained
-               contained_levels
-             else
-               [level]
-             end
-
-    user_level = student.last_attempt_for_any(levels, script_id: script_id)
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+    contained = contained_levels.any?
 
     if user_level
       paired = user_level.paired?
@@ -571,6 +570,12 @@ class ScriptLevel < ApplicationRecord
 
       navigator_info = UserLevel.most_recent_navigator(script, levels, student)
       navigator = navigator_info[0] if navigator_info
+    end
+
+    if teacher.present?
+      # feedback for contained level is stored with the level ID not the contained level ID
+      level_id_for_feedback = contained ? level.id : level_for_progress.id
+      feedback = TeacherFeedback.get_latest_feedback_given(student.id, level_id_for_feedback, teacher.id, script_id)
     end
 
     teacher_panel_summary = {
@@ -586,8 +591,10 @@ class ScriptLevel < ApplicationRecord
       status: status,
       levelNumber: position,
       assessment: assessment,
-      bonus: bonus
+      bonus: bonus,
+      teacherFeedbackReivewState: feedback&.review_state
     }
+
     if user_level
       # note: level.id gets replaced with user_level.id here
       teacher_panel_summary.merge!(user_level.attributes)

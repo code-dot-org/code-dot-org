@@ -2,7 +2,6 @@
   "script": {
     "name": "csp7-2021",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:17 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-02 16:48:13 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -1136,7 +1135,7 @@
       "key": "16ade91e-eae6-4d89-a536-fdc733b65730",
       "position": 6,
       "properties": {
-        "description": "\n**Levels 6-7:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n",
+        "description": "\n**Levels 6-8:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
         "progression_name": "App Practice"
       },
       "seeding_key": {
@@ -1148,7 +1147,7 @@
       "key": "4c3ff3cd-15f7-464a-85c3-fccb85805abc",
       "position": 7,
       "properties": {
-        "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists",
+        "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists\n* Level 8: Use a different dataset in place of theRoot dataset.",
         "progression_name": "MOD Practice"
       },
       "seeding_key": {
@@ -3381,6 +3380,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csp7-2021/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp7-2021/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -3390,6 +3411,18 @@
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -3452,6 +3485,30 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "U7 High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/IkLKTGzikCSPtIsS2-Pee8-guSAae9DXBCGOjwCSVuA/view",
+      "key": "u7_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u7_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U7 High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1AY5cxJ02hMq0YxHdKUhyyxUCAaJl-v9ixHDLczqGJGM/edit?usp=sharing",
+      "key": "u7_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u7_high_score_sample_planning_guide_rubric"
       }
     },
     {
@@ -3560,6 +3617,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "resource.key": "u7_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "resource.key": "u7_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
@@ -3587,6 +3656,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
         "script.name": "csp7-2021"
       }
     }

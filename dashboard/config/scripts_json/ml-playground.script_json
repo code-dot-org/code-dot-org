@@ -2,13 +2,12 @@
   "script": {
     "name": "ml-playground",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:04 UTC",
+    "serialized_at": "2021-06-29 16:38:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ml-playground"
@@ -2038,6 +2037,31 @@
     },
     {
       "chapter": 66,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-videos-intro ai lab shoes"
+        ],
+        "progression": "Introduction to AI Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-videos-intro ai lab shoes"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-videos-intro ai lab shoes"
+      ]
+    },
+    {
+      "chapter": 67,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2062,7 +2086,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2087,7 +2111,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2112,7 +2136,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2137,7 +2161,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2162,7 +2186,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2187,7 +2211,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2212,7 +2236,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2237,7 +2261,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2262,7 +2286,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2287,7 +2311,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2312,7 +2336,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2337,7 +2361,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2362,7 +2386,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2387,7 +2411,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2412,7 +2436,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2437,7 +2461,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2462,7 +2486,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2487,7 +2511,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2512,7 +2536,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2537,7 +2561,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2562,7 +2586,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2587,7 +2611,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2612,7 +2636,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2637,7 +2661,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2662,7 +2686,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2687,7 +2711,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2712,7 +2736,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2737,7 +2761,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2762,7 +2786,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2787,7 +2811,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2812,7 +2836,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2837,7 +2861,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2862,7 +2886,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2887,7 +2911,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2912,7 +2936,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2937,7 +2961,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2962,7 +2986,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2987,7 +3011,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3012,7 +3036,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3037,7 +3061,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3062,7 +3086,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -3087,7 +3111,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -3112,7 +3136,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3136,7 +3160,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3160,7 +3184,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3184,7 +3208,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3209,7 +3233,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3234,7 +3258,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3259,7 +3283,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3994,6 +4018,17 @@
         "level.key": "ml-video recording-custom design elts",
         "script_level.level_keys": [
           "ml-video recording-custom design elts"
+        ],
+        "lesson.key": "videoLevels",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-videos-intro ai lab shoes",
+        "script_level.level_keys": [
+          "ml-videos-intro ai lab shoes"
         ],
         "lesson.key": "videoLevels",
         "lesson_group.key": "",

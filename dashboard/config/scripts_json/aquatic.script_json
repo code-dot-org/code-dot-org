@@ -2,13 +2,14 @@
   "script": {
     "name": "aquatic",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:29:55 UTC",
+    "family_name": "aquatic",
+    "serialized_at": "2021-07-06 22:25:47 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "aquatic"

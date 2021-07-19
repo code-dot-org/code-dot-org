@@ -111,6 +111,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test 'serialize scripts that resource is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
 
     course_version = create :course_version, :with_unit_group
@@ -147,5 +148,24 @@ class ResourceTest < ActiveSupport::TestCase
     copied_resource = resource.copy_to_course_version(destination_course_version)
     assert_equal 1, destination_course_version.resources.count
     assert_equal existing_resource, copied_resource
+  end
+
+  test "summarize retrives translations" do
+    resource = create(:resource, name: "English name")
+    test_locale = :"te-ST"
+    custom_i18n = {
+      "data" => {
+        "resources" => {
+          resource.key => {
+            "name" => "Translated name"
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations(test_locale, custom_i18n)
+    assert_equal("English name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = test_locale
+    assert_equal("Translated name", resource.summarize_for_lesson_plan[:name])
+    I18n.locale = I18n.default_locale
   end
 end

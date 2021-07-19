@@ -23,6 +23,7 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import locales from '@cdo/apps/redux/localesRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {
   fakeLessonWithLevels,
   fakeStudents,
@@ -175,6 +176,14 @@ describe('ProgressTableView', () => {
     it('renders the ProgressLegend', () => {
       const wrapper = setUp(ViewType.DETAIL);
       expect(wrapper.find(ProgressLegend)).to.have.length(1);
+    });
+
+    it('passes `includeReviewStates` to ProgressLegend when enabled', () => {
+      sinon.stub(experiments, 'isEnabled').returns(true);
+      const wrapper = setUp(ViewType.DETAIL);
+      expect(wrapper.find(ProgressLegend).props().includeReviewStates).to.be
+        .true;
+      sinon.restore();
     });
 
     it('renders ProgressTableDetailCells', () => {

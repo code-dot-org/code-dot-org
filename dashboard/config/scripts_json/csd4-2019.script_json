@@ -2,7 +2,6 @@
   "script": {
     "name": "csd4-2019",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -34,7 +33,6 @@
       "version_year": "2019",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
-      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/csd-19/unit4/{LESSON}",
       "family_name": "csd4",
       "tts": true,

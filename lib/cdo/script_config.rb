@@ -6,7 +6,7 @@
 require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative 'script_constants'
 
-UNCACHED_HOC_SCRIPTS = %w(playlab artist infinity iceage).freeze
+UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
 
 class ScriptConfig
   # Returns true if the script level path is excluded from caching, even if it
@@ -22,7 +22,7 @@ class ScriptConfig
   end
 
   def self.hoc_scripts
-    HttpCache.cached_scripts + UNCACHED_HOC_SCRIPTS
+    HttpCache.cached_scripts + UNCACHED_HOC_UNITS
   end
 
   def self.csf_scripts

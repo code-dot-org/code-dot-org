@@ -12,7 +12,7 @@ import reducer, {
   setRosterProvider,
   setValidGrades,
   setValidAssignments,
-  setPreReaderScriptIds,
+  setPreReaderUnitIds,
   setSections,
   selectSection,
   removeSection,
@@ -142,6 +142,16 @@ const validCourses = [
     script_ids: [112, 113],
     assignment_family_title: 'CS Principles',
     assignment_family_name: 'csp',
+    version_year: '2017'
+  },
+  {
+    id: 31,
+    name: 'CS X 2017',
+    script_name: 'csx-2017',
+    category: 'Full Courses',
+    position: 2,
+    category_priority: 0,
+    assignment_family_title: 'CS X',
     version_year: '2017'
   }
 ];
@@ -390,7 +400,7 @@ describe('teacherSectionsRedux', () => {
       const assignment = validAssignments[assignId];
       assert.equal('Accelerated Course', assignment.name);
       assert.equal('20-hour', assignment.assignment_family_name);
-      assert.equal('2017', assignment.version_year);
+      assert.equal(undefined, assignment.version_year);
     });
 
     it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
@@ -420,6 +430,44 @@ describe('teacherSectionsRedux', () => {
       assert(
         assignmentFamilies.find(
           af => af.assignment_family_name === scriptInCourse.script_name
+        )
+      );
+    });
+
+    it('only adds assignmentFamily for courses with family name', () => {
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Principles'
+        )
+      );
+      assert.isUndefined(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS X'
+        )
+      );
+    });
+
+    it('adds assignmentFamily for standalone unit with non-2017 version year', () => {
+      const scripts = validScripts.concat([
+        {
+          id: 37,
+          name: 'CS Et Cetera 2021',
+          script_name: 'csetc-2021',
+          category: 'other',
+          position: null,
+          category_priority: 3,
+          assignment_family_title: 'CS Et Cetera',
+          assignment_family_name: 'csetc',
+          version_year: '2021'
+        }
+      ]);
+
+      const action = setValidAssignments(validCourses, scripts);
+      const nextState = reducer(initialState, action);
+
+      assert(
+        nextState.assignmentFamilies.find(
+          af => af.assignment_family_title === 'CS Et Cetera'
         )
       );
     });
@@ -679,7 +727,7 @@ describe('teacherSectionsRedux', () => {
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
@@ -692,7 +740,7 @@ describe('teacherSectionsRedux', () => {
     it.skip('switching script assignment updates default tts autoplay enabled value based on script', () => {
       let state = reducer(
         editingNewSectionState,
-        setPreReaderScriptIds(preReaderScripts)
+        setPreReaderUnitIds(preReaderScripts)
       );
       state = reducer(state, editSectionProperties({scriptId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);

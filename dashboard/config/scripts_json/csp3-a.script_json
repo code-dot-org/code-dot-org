@@ -2,7 +2,6 @@
   "script": {
     "name": "csp3-a",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSP"

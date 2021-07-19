@@ -45,6 +45,7 @@ class LessonActivity < ApplicationRecord
   def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
     summary[:activitySections] = activity_sections.map {|as| as.summarize_for_lesson_show(can_view_teacher_markdown)}
+    summary[:name] = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name)
     summary
   end
 
