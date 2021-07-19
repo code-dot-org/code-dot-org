@@ -58,6 +58,7 @@ describe('Code Review Tab', () => {
       clock.restore();
     }
 
+    server.restore();
     restoreRedux();
   });
 
