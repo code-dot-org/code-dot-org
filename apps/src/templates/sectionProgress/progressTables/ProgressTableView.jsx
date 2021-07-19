@@ -98,7 +98,8 @@ class ProgressTableView extends React.Component {
 
     this.detailCellFormatters = getDetailCellFormatters(
       props.levelProgressByStudent,
-      props.section
+      props.section,
+      props.scriptData.id
     );
 
     // the primary table rows are represented by the students in the section,

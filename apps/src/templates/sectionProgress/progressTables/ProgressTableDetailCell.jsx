@@ -15,6 +15,8 @@ import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
 
+import GqlProgressTableLevelBubble from './GqlProgressTableLevelBubble';
+
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
@@ -79,6 +81,14 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   renderBubble(level) {
+    return (
+      <GqlProgressTableLevelBubble
+        studentId={this.props.studentId}
+        levelId={level.id}
+        scriptId={this.props.scriptId}
+      />
+    );
+
     const levelProgress = this.props.studentProgress[level.id];
     const url = this.buildBubbleUrl(level);
 

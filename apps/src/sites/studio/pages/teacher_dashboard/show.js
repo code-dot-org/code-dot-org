@@ -38,6 +38,7 @@ import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 import {ApolloProvider} from '@apollo/client';
+import {gql} from '@apollo/client';
 import {client} from '@cdo/apps/templates/teacherDashboard/controller';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -58,6 +59,29 @@ const {
   showSectionProgressDetails
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+
+// This is a test to see if loading progress data up the tree earlier has an effect on
+// data retrieved later for progress bubbles
+client
+  .query({
+    query: gql`
+      query GetLevelProgress {
+        user(id: 2) {
+          id
+          name
+          progress {
+            levelProgress(scriptId: 153) {
+              levelId
+              status
+              isLocked
+              isPaired
+            }
+          }
+        }
+      }
+    `
+  })
+  .then(result => console.log(result));
 
 $(document).ready(function() {
   registerReducers({
