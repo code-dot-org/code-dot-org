@@ -1,0 +1,5 @@
+en:
+  devise:
+    mailer:
+      reset_password_instructions:
+        subject: "Code.org reset password instructions"
