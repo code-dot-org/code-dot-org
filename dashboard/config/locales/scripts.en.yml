@@ -22420,7 +22420,9 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: 'Test Lesson #1'
+              name: Practice Lesson
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22428,7 +22430,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Test
+              display_name: Practice Levels
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -23713,6 +23715,14 @@ en:
               name: Guidance for teaching CS Discoveries
               description_student: 
               description_teacher: 
+            lesson-2:
+              name: CS Practices
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Teaching practices
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Guidance for teaching CS Discoveries
@@ -24518,7 +24528,7 @@ en:
         sb-pt-cont:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - A
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24530,7 +24540,7 @@ en:
         sb-pt-exp:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - B
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24554,3 +24564,15 @@ en:
         storyboard-playtest-control:
           lessons: {}
           lesson_groups: {}
+        sb-chardev-v1:
+          lessons:
+            lesson-1:
+              name: Story Board - Character Development
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-chardev-v1
+          title: Story Board Character Development
+          description_audience: ''
+          description_short: ''
+          description: ''
