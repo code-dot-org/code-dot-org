@@ -4,21 +4,33 @@ import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
-    defaultList: []
+    defaultList: {}
   };
 
   componentDidMount() {
     getDefault().then(spriteDefault => {
-      var spriteList = [];
-      spriteDefault['default_sprites'].map(sprite => spriteList.push(sprite));
+      var spriteList = {};
+      spriteDefault['default_sprites'].map(
+        sprite => (spriteList[sprite.name] = {sprite})
+      );
       this.setState({defaultList: spriteList});
     });
   }
 
+  deleteSpriteFromDefaults(spriteName) {
+    delete this.state.defaultList[spriteName];
+  }
+
   renderDefaultSprites() {
-    return this.state.defaultList.map(sprite => {
+    return Object.keys(this.state.defaultList).map(spriteKey => {
+      let spriteObject = this.state.defaultList[spriteKey].sprite;
       return (
-        <DefaultSpriteRow name={sprite['name']} keyValue={sprite['key']} />
+        <DefaultSpriteRow
+          name={spriteObject.name}
+          keyValue={spriteObject.key}
+          onDelete={this.deleteSpriteFromDefaults.bind(this)}
+          key={spriteObject.name}
+        />
       );
     });
   }
