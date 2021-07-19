@@ -122,12 +122,11 @@ $(document).ready(() => {
     setUserType('student');
   });
   // Keep if sign-up user type experiment favors variant (end)
-  // Keep if sign-up user type experiment favors original (start)
+  // Keep if sign-up user type experiment favors original (just the below function))
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
   });
-  // Keep if sign-up user type experiment favors original (end)
 
   function getUserType() {
     return $('#user_user_type').val();
