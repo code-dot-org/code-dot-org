@@ -33,6 +33,10 @@ class CodeReviewComment < ApplicationRecord
   def self.user_can_review_project?(project_owner, potential_reviewer)
     project_owner == potential_reviewer ||
       project_owner.student_of?(potential_reviewer) ||
-      (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+      user_is_peer_of_project_owner?(project_owner, potential_reviewer)
+  end
+
+  def self.user_is_peer_of_project_owner?(project_owner, potential_reviewer)
+    (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
   end
 end
