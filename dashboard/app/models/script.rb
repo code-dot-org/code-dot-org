@@ -1778,6 +1778,10 @@ class Script < ApplicationRecord
     course_version || unit_group&.course_version
   end
 
+  def get_published_state
+    unit_group&.published_state || published_state
+  end
+
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
   def course_link(section_id = nil)
