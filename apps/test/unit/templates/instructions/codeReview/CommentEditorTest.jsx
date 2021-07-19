@@ -1,18 +1,22 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
+import './CodeReviewTestHelper';
 import CommentEditor from '@cdo/apps/templates/instructions/codeReview/CommentEditor';
 import Button from '@cdo/apps/templates/Button';
 
 describe('Code Review Comment Editor', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<CommentEditor onNewCommentSubmit={() => {}} />);
+  });
+
   it('does not show submit and cancel buttons initially', () => {
-    const wrapper = shallow(<CommentEditor />);
     expect(wrapper.find(Button)).to.have.lengthOf(0);
   });
 
   it('shows submit and cancel buttons once user starts typing', () => {
-    const wrapper = shallow(<CommentEditor />);
-
     expect(wrapper.find(Button)).to.have.lengthOf(0);
     wrapper
       .find('textarea')
@@ -22,8 +26,6 @@ describe('Code Review Comment Editor', () => {
   });
 
   it('hides submit and cancel buttons and clears textbox if user hits cancel button', () => {
-    const wrapper = shallow(<CommentEditor />);
-
     const commentTextarea = wrapper.find('textarea').first();
     commentTextarea.simulate('change', {target: {value: 'a comment'}});
 

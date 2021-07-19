@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-13 17:57:23 UTC",
+    "serialized_at": "2021-07-16 23:54:59 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -6838,7 +6838,7 @@
       "key": "1f7f5689-4915-4f7d-a5bc-27885122150f",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the video on how to create a Google Form from the provided template. Students will need to be careful about using the template questions so they can make sure their data is usable in AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r create_a_survey_using_google_forms/aiml/2021] video on how to create a Google Form from the provided template. Students will need to be careful about using the template questions so they can make sure their data is usable in AI Lab.\n"
       },
       "seeding_key": {
         "activity_section.key": "1f7f5689-4915-4f7d-a5bc-27885122150f",
@@ -7008,7 +7008,7 @@
       "key": "9806b72c-2fba-44a3-a488-c2900f1367ab",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Google Sheets Introduction video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r view_and_download_survey_data/aiml/2021] video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
       },
       "seeding_key": {
         "activity_section.key": "9806b72c-2fba-44a3-a488-c2900f1367ab",
@@ -11066,6 +11066,18 @@
       }
     },
     {
+      "name": "Create a Survey using Google Forms",
+      "url": "https://www.youtube.com/watch?v=ZdakHQ-HIXk",
+      "key": "create_a_survey_using_google_forms",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_survey_using_google_forms"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -11662,6 +11674,18 @@
       }
     },
     {
+      "name": "View and Download Survey Data",
+      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "key": "view_and_download_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
       "name": "Zoo Models",
       "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
       "key": "zoo_models",
@@ -11678,6 +11702,126 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "create_an_ml_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "mini-project_create_an_ml_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "problems_with_models_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "troubleshoot_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "make_club_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "5_why_s_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "app_brainstorm_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "planning_an_ml_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "create_a_survey_using_google_forms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "questions_form_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "survey_planning_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "isaac_s_survey_data_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "kim_s_survey_data_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "train_model_good_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson1",
         "resource.key": "classifying-fish"
       }
@@ -11686,6 +11830,126 @@
       "seeding_key": {
         "lesson.key": "lesson1",
         "resource.key": "intro_to_ml"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "resource.key": "app_lab_if-statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson10",
+        "resource.key": "if-statements_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson11",
+        "resource.key": "app_lab_new_design_elts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "resource.key": "ai_lab_select_label"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "resource.key": "model_cards_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "resource.key": "zoo_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-ethics-research-areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ai-ethics-research-reflection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson14",
+        "resource.key": "our-ai-code-of-ethics-template-slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "exemplar_-_design_an_ai_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "exemplar_-_design_an_ai_app_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "model-card-digital-template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "model-card-printable-template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "survey_template_google_form_"
       }
     },
     {
@@ -11708,30 +11972,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-17",
-        "resource.key": "innovations_in_ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "resource.key": "innovations_in_ai_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "resource.key": "seeing_ai"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson3",
         "resource.key": "crosstabs_and_models"
       }
@@ -11739,7 +11979,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson3",
-        "resource.key": "shoe_survey"
+        "resource.key": "finding_patterns_in_data"
       }
     },
     {
@@ -11751,7 +11991,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson3",
-        "resource.key": "finding_patterns_in_data"
+        "resource.key": "shoe_survey"
       }
     },
     {
@@ -11781,12 +12021,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson5",
-        "resource.key": "training-a-model-with-features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson5",
         "resource.key": "intro_ai_lab"
       }
     },
@@ -11794,6 +12028,12 @@
       "seeding_key": {
         "lesson.key": "lesson5",
         "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "training-a-model-with-features"
       }
     },
     {
@@ -11828,60 +12068,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson12",
-        "resource.key": "ai_lab_select_label"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson12",
-        "resource.key": "zoo_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "resource.key": "app_lab_if-statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson10",
-        "resource.key": "if-statements_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "resource.key": "unplugged_knn"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "resource.key": "unplugged_knn_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "resource.key": "unplugged_knn_-_answer_key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson9",
-        "resource.key": "knn_accuracy_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson8",
         "resource.key": "ai_lab_numerical_data"
       }
@@ -11900,176 +12086,26 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson11",
-        "resource.key": "app_lab_new_design_elts"
+        "lesson.key": "lesson9",
+        "resource.key": "knn_accuracy_-_activity_guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics"
+        "lesson.key": "lesson9",
+        "resource.key": "unplugged_knn"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-ethics-research-areas"
+        "lesson.key": "lesson9",
+        "resource.key": "unplugged_knn_-_activity_guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ai-ethics-research-reflection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "our-ai-code-of-ethics-template-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson14",
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "mini-project_create_an_ml_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "create_an_ml_app_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "resource.key": "5_why_s_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "resource.key": "app_brainstorm_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "resource.key": "planning_an_ml_project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "resource.key": "survey_planning_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "resource.key": "questions_form_day"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "resource.key": "kim_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "resource.key": "isaac_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "resource.key": "train_model_good_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "resource.key": "troubleshoot_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "resource.key": "problems_with_models_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-20",
-        "resource.key": "make_club_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "model-card-digital-template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "model-card-printable-template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "design_an_ai_app_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "exemplar_-_design_an_ai_app_model_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "exemplar_-_design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson16",
-        "resource.key": "_template_5_why_s"
+        "lesson.key": "lesson9",
+        "resource.key": "unplugged_knn_-_answer_key"
       }
     }
   ],
