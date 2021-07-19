@@ -1,4 +1,7 @@
+family_name 'pixelation'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Black & White Pixelation Tutorial', display_name: 'Black & White Pixelation Tutorial', has_lesson_plan: false
 level 'Pixelation 4x4 Empty'
