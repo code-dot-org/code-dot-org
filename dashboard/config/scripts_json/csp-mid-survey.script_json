@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:05 UTC",
+    "family_name": "csp-mid-survey",
+    "serialized_at": "2021-07-06 22:26:00 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp-mid-survey"

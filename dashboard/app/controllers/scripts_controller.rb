@@ -127,6 +127,9 @@ class ScriptsController < ApplicationController
         raise msg
       end
     end
+
+    raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
+
     unit_text = params[:script_text]
     if @script.update_text(unit_params, unit_text, i18n_params, general_params)
       @script.reload
