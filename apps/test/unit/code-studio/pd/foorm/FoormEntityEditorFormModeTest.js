@@ -17,12 +17,17 @@ import foorm, {
   setFormData
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;
   beforeEach(() => {
+    // Warnings are allowed for 'can save new survey' test, which was warning
+    // on deprecated componentWillMount lifecycle method usage.
+    allowConsoleWarnings();
+
     stubRedux();
     registerReducers({foorm});
 
