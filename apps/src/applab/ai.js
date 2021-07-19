@@ -70,11 +70,11 @@ function generateCodeDesignElements(modelId, modelData) {
   label.id = 'design_' + alphaNumModelName + '_label';
   label.className = modelClass;
   label.style.width = '300px';
-  var predictionId = alphaNumModelName + '_prediction';
+  var predictionId = 'uitest_' + alphaNumModelName + '_prediction';
   // Button to do the prediction.
   var predictButton = designMode.createElement('BUTTON', x, y);
   predictButton.textContent = 'Predict';
-  var predictButtonId = alphaNumModelName + '_predict_button';
+  var predictButtonId = 'uitest_' + alphaNumModelName + '_predict_button';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   predictButton.className = modelClass;
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {

@@ -92,9 +92,7 @@ class DynamicInstructions extends React.Component {
           {Object.keys(this.props.dynamicInstructions).map(key => {
             return (
               <div
-                className={
-                  'dynamic-instruction-' + this.props.dynamicInstructionsKey
-                }
+                id={'uitest-dynamic-instruction-' + key}
                 style={{
                   ...styles.instruction,
                   opacity: key === this.props.dynamicInstructionsKey ? 1 : 0
