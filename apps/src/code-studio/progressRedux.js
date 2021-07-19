@@ -589,6 +589,7 @@ const levelWithProgress = (
   // default values
   let status = LevelStatus.not_tried;
   let locked = isLockable;
+  let teacherFeedbackReviewState = null;
 
   let levelProgress = unitProgress[normalizedLevel.id];
   if (levelProgress?.pages) {
@@ -598,6 +599,7 @@ const levelWithProgress = (
     // if we have levelProgress, overwrite default values
     status = levelProgress.status;
     locked = levelProgress.locked;
+    teacherFeedbackReviewState = levelProgress.teacherFeedbackReviewState;
   } else if (level.kind !== LevelKind.assessment) {
     // if we don't have levelProgress, get the status from `levelResults`.
     // however, `levelResults` doesn't track per-page results for multi-page
@@ -615,7 +617,8 @@ const levelWithProgress = (
     status: status,
     isCurrentLevel: isCurrent,
     paired: levelPairing[level.activeId],
-    isLocked: locked
+    isLocked: locked,
+    teacherFeedbackReviewState: teacherFeedbackReviewState
   };
 };
 

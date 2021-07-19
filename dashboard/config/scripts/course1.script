@@ -3,9 +3,12 @@ lesson_extras_available true
 curriculum_path 'https://code.org/curriculum/course1/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
+family_name 'course1'
+version_year 'unversioned'
 published_state 'preview'
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
 level 'UnplugHappyMaps'

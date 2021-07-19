@@ -504,8 +504,6 @@ class Script < ApplicationRecord
     unit_model = with_associated_models ? Script.with_associated_models : Script
     unit = unit_model.find_by(find_by => id_or_name)
     return unit if unit
-
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   # Returns the unit with the specified id, or a unit with the specified
@@ -515,16 +513,21 @@ class Script < ApplicationRecord
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  def self.get_from_cache(id_or_name)
-    if CourseOffering.get_from_cache(id_or_name).present?
-      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
-    end
-
-    return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
-    cache_key = id_or_name.to_s
-    script_cache.fetch(cache_key) do
-      # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name)
+  def self.get_from_cache(id_or_name, raise_exceptions: true)
+    script =
+      if should_cache?
+        cache_key = id_or_name.to_s
+        script_cache.fetch(cache_key) do
+          # Populate cache on miss.
+          script_cache[cache_key] = get_without_cache(id_or_name)
+        end
+      else
+        get_without_cache(id_or_name, with_associated_models: false)
+      end
+    return script if script
+    if raise_exceptions
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}" if Script.family_names.include?(id_or_name)
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
     end
   end
 
@@ -766,9 +769,11 @@ class Script < ApplicationRecord
   end
 
   def self.units_with_standards
+    # Find scripts that have a version_year where that version_year isn't 'unversioned',
+    # which is a placeholder for assignable scripts that aren't updated after creation.
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
       map {|unit| [unit.title_for_display, unit.name]}
   end
 

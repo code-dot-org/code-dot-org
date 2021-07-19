@@ -242,7 +242,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @workshop = enrollment.workshop
     course = @workshop.course
 
-    return unless @workshop.virtual? && (course == Pd::Workshop::COURSE_CSP || course == Pd::Workshop::COURSE_CSD)
+    return unless @workshop.virtual? && @workshop.local_summer? && (course == Pd::Workshop::COURSE_CSP || course == Pd::Workshop::COURSE_CSD)
 
     # Pre-workshop virtual order form reminder
     mail content_type: 'text/html',

@@ -30,10 +30,8 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
 experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
-experiments.APPLAB_ML = 'applab-ml';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.POEM_BOT = 'poemBot';
 
 // backend "pilot" experiment, stored on window.appOptions.experiments
 experiments.KEEP_WORKING = 'teacher-feedback-review-state';
