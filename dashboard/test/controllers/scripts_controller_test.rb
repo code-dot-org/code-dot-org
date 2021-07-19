@@ -31,6 +31,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @unmigrated_unit = create :script
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write)
   end
 
   test "should get index" do
