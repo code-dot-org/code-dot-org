@@ -40,7 +40,7 @@ class ModelCard extends Component {
             alt="A.I. bot"
           />
         </div>
-        <div id="model-card" style={styles.modelCardContainer}>
+        <div id="uitest-model-card" style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Accuracy</h5>

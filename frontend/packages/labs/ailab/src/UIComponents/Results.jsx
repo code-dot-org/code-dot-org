@@ -57,7 +57,7 @@ class Results extends Component {
                   {index === 0 && (
                     <div style={styles.resultsDetailsButtonContainer}>
                       <button
-                        id="details-button"
+                        id="uitest-details-button"
                         type="button"
                         onClick={this.showDetails}
                         style={styles.resultsDetailsButton}

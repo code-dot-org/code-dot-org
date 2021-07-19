@@ -64,7 +64,6 @@ class PanelButtons extends Component {
           <div style={styles.previousButton}>
             <button
               type="button"
-              id="back-button"
               style={{
                 ...styles.navButton,
                 ...(!panelButtons.prev.enabled
@@ -88,7 +87,7 @@ class PanelButtons extends Component {
           <div style={styles.nextButton}>
             <button
               type="button"
-              id="continue-button"
+              id="uitest-continue-button"
               style={{
                 ...styles.navButton,
                 ...(!panelButtons.next.enabled

@@ -23,7 +23,7 @@ class SelectLabelButton extends Component {
 
     return (
       <button
-        id="select-label-button"
+        id="uitest-select-label-button"
         type="button"
         onClick={event => this.setPredictColumn(event, column)}
         style={styles.selectLabelButton}

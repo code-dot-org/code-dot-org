@@ -107,7 +107,7 @@ class SaveModel extends Component {
     const columnCount = this.getColumnFields().length;
 
     return (
-      <div id="model-card-form" style={styles.panel}>
+      <div id="uitest-model-card-form" style={styles.panel}>
         <Statement />
         <ScrollableContent tinted={true}>
           <div key={nameField.id} style={styles.cardRow}>
@@ -115,7 +115,7 @@ class SaveModel extends Component {
             <span style={styles.italic}>(required)</span>
             <div>
               <input
-                id="model-name-input"
+                id="uitest-model-name-input"
                 onChange={event =>
                   this.handleChange(event, nameField.id, nameField.isColumn)
                 }

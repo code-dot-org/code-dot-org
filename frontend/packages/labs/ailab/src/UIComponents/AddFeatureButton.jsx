@@ -22,7 +22,7 @@ class AddFeatureButton extends Component {
 
     return (
       <button
-        id="add-feature-button"
+        id="uitest-add-feature-button"
         type="button"
         onClick={event => this.addFeature(event, column)}
         style={styles.selectFeaturesButton}
