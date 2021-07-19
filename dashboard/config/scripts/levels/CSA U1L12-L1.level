@@ -1,14 +1,7 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2021-07-09T14:14:57.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nWrite the `SprayPainter` class, which extends `PainterPlus`.\r\n\r\nBe sure to include all necessary components, including the constructor and the `sprayPaint()` method.",
     "mini_rubric": "false",
     "project_template_level_name": "CSA U1L12 Template",
@@ -1327,8 +1320,14 @@
           "assetId": 0
         }
       ]
-    ]
+    ],
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263OKJKJVozoesBXnJoFL\nbAaoSZ56KrJyE9WvJLrO/ER+48XB7NMZocxGq0AEj4O/xVk=\n"
   },
-  "published": true
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-09T14:14:57.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-12 13:39:37 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

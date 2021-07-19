@@ -5,11 +5,13 @@
     "login_required": true,
     "properties": {
       "student_detail_progress_view": true,
-      "professional_learning_course": "Facilitators in Training Summer Reflections 2019"
+      "professional_learning_course": "Facilitators in Training Summer Reflections 2019",
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:22 UTC",
+    "family_name": "fit2019-apprentice",
+    "serialized_at": "2021-07-06 22:26:03 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "fit2019-apprentice"
