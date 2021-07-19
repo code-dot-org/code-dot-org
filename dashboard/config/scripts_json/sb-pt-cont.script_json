@@ -4,12 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned",
+      "pilot_experiment": "storyboard-pt-A",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-07-12 20:09:43 UTC",
-    "published_state": "in_development",
+    "family_name": "sb-pt-cont",
+    "serialized_at": "2021-07-16 03:55:49 UTC",
+    "published_state": "pilot",
     "seeding_key": {
       "script.name": "sb-pt-cont"
     }
@@ -30,7 +33,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Story Board",
+      "name": "Story Board - A",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,6 +115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_sprites"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -135,6 +141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_print"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -158,6 +167,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_locations"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -181,6 +193,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_events"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -204,6 +219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "generic_storyboard_choices_menu"
+        ],
         "progression": "Extra Blocks"
       },
       "named_level": false,
@@ -227,6 +245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_project_start"
+        ],
         "progression": "Project"
       },
       "named_level": false,
@@ -250,6 +271,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_project_print"
+        ],
         "progression": "Project"
       },
       "named_level": false,
@@ -273,6 +297,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_project_sprites"
+        ],
         "progression": "Project"
       },
       "named_level": false,
@@ -296,6 +323,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_project_events"
+        ],
         "progression": "Project"
       },
       "named_level": false,
@@ -319,6 +349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_project_freeplay"
+        ],
         "progression": "Free Play"
       },
       "named_level": false,
