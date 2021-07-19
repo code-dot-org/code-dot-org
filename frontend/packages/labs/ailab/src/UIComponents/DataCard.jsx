@@ -34,7 +34,7 @@ class DataCard extends Component {
 
     return (
       dataLength !== 0 && (
-        <div id="uitest-data-card" style={{ ...styles.panel, ...styles.rightPanel }}>
+        <div id="data-card" style={{ ...styles.panel, ...styles.rightPanel }}>
           <div style={styles.largeText}>{name || "Details"}</div>
           <ScrollableContent>
             {card && (
