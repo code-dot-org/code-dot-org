@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-16 18:59:57 UTC",
+    "serialized_at": "2021-07-16 19:26:42 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "sb-chardev-v1"
@@ -205,6 +205,28 @@
       "level_keys": [
         "sb-chardev-interact"
       ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sb-chardev-choices-menu"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sb-chardev-v1",
+        "activity_section.key": "ec77a48c-68df-4e93-89f5-d26b71bf8dae"
+      },
+      "level_keys": [
+        "sb-chardev-choices-menu"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -261,6 +283,18 @@
         "level.key": "sb-chardev-interact",
         "script_level.level_keys": [
           "sb-chardev-interact"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sb-chardev-v1",
+        "activity_section.key": "ec77a48c-68df-4e93-89f5-d26b71bf8dae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sb-chardev-choices-menu",
+        "script_level.level_keys": [
+          "sb-chardev-choices-menu"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
