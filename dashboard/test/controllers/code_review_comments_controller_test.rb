@@ -163,7 +163,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_equal 2, JSON.parse(response.body).length
   end
 
-  test 'student in same section as project owner can fetch project comments' do
+  test 'student in same section as project owner can fetch non-teacher project comments' do
     stub_storage_apps_calls
     setup_project_comments_tests
 
@@ -221,6 +221,28 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :forbidden
+  end
+
+  test 'peer of project owner sees comments without teacher comments' do
+    stub_storage_apps_calls
+    setup_project_comments_tests
+
+    [@project_owner, @another_student].each do |student|
+      create :follower, student_user: student, section: @section
+    end
+
+    teacher_comment = create :code_review_comment,
+      commenter: @teacher,
+      storage_app_id: @project_storage_app_id,
+      project_version: @project_version_string,
+      project_owner_id: @project_owner.id
+
+    sign_in @another_student
+    get :project_comments, params: {channel_id: @project_owner_channel_id}
+
+    comment_ids = JSON.parse(response.body).map {|comment| comment['id']}
+    assert_equal 2, JSON.parse(response.body).length
+    refute_includes comment_ids, teacher_comment.id
   end
 
   private
