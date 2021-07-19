@@ -47,9 +47,9 @@ Feature: AI Lab
     Then element "#uitest-continue-button" is disabled
     And I press keys "Model Name" for element "#uitest-model-name-input"
     And I click selector "#uitest-continue-button"
+    And I wait for 3 seconds
     And I see the dynamic instructions are showing "uitest-dynamic-instruction-modelSummary" key
     And I see "#statement"
-    And I wait for 2 seconds
     And I see "#uitest-model-card"
     And I see ".ailab-image-hover"
     And I click selector "#uitest-continue-button"
@@ -61,7 +61,7 @@ Feature: AI Lab
     And I see "#uitest-model-card"
     And I click "#uitest-import-model-button"
     And I wait for 2 seconds
-    And I see "#uitest_ModelName_predict_button"
-    And I see "#uitest_ModelName_prediction"
+    And I see "#ModelName_predict_button"
+    And I see "#ModelName_prediction"
     And element "#runButton" is visible
     And I press "runButton"
