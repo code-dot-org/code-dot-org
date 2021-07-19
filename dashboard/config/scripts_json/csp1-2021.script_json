@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 18:24:14 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 18:59:25 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -3845,15 +3845,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_2021"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3861,7 +3858,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "csp-pre-survey-levelgroup_2021"
+        "survey_placeholder_levelgroup"
       ]
     },
     {
@@ -4958,9 +4955,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_2021",
+        "level.key": "survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -5501,6 +5498,28 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csp1-2021/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp1-2021/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
       "name": "ASCII Reference Sheet",
       "url": "https://docs.google.com/document/d/15pgXcGUX7XbAAGBkHfXMMLFwDP5cTKKZ-zFIfFKu9FQ/edit",
       "key": "ascii-reference-sheet",
@@ -5594,6 +5613,18 @@
       },
       "seeding_key": {
         "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -5692,6 +5723,30 @@
       },
       "seeding_key": {
         "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "name": "KEY U1L4 Flippy Do Pt 1 Activity Guide",
+      "url": "https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing",
+      "key": "key_u1l4_flippy_do_pt_1_activity_guide",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "name": "KEY U1L8 Black & White Images Activity Guide",
+      "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
+      "key": "key_u1l8_black_white_images_activity_guide",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
       }
     },
     {
@@ -5985,6 +6040,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Overflow and Rounding",
         "resource.key": "csp_unit_1_-_digital_information"
       }
@@ -6017,6 +6078,12 @@
       "seeding_key": {
         "lesson.key": "Black and White Images",
         "resource.key": "u1l7_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
       }
     },
     {
@@ -6174,6 +6241,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
         "script.name": "csp1-2021"
       }
     }

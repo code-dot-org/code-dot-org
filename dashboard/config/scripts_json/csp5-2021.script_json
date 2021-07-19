@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:41 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-08 03:15:36 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -1346,7 +1346,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Save Modifications for the End:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n"
+            "markdown": "**Finding Target Responses:** With a verified teacher account you should be able to see target responses to each question posed on each level.\n\n**Prepping for Investigate Lessons:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then watch the videos. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided on the bottom of the instructions area for verified teachers.\n\n**Show Videos at the Front:** Show videos at the front of the room rather than having students watch them individually. It will be a good opportunity to bring the room back together.\n\n**Display Code at the Front:** If your room allows it, display the code during the Code Investigation at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n"
           }
         ]
       },
@@ -1359,7 +1359,7 @@
       "key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.\n\n**Discussion Goal:** Use this paired-group discussion to push students on using new vocabulary associated with lists and referring/pointing to specific lines when explaining their answers to the questions. Both programs use `.length` in ways that might be challenging for students to understand. Demonstrating the difference between using `.length` and `.length-1` to the class could be useful.\n\n**Modify:** Have pairs modify the app the investigated based on the instructions for the particular app."
       },
       "seeding_key": {
         "activity_section.key": "917e7ee6-7092-432c-bfd8-2f651b12bcaf",
@@ -1381,7 +1381,7 @@
       "key": "962d1c24-6e38-4312-8fa9-fc80467d200d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** *Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.\n\n**Discussion Goal:** Make sure students understand how the properties of the dropdown and the lists are working together in this program. Demonstrating how to find these properties and play around with them in design mode might help your students better understand the connection.\n\n**Modify:** If short on time, have students modify the default names. If not, have students modify the app to pick groups of 3 rather than 2.",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1397,18 +1397,6 @@
       },
       "seeding_key": {
         "activity_section.key": "3a855513-f086-4945-8d20-3e097a32f4cb",
-        "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
-      }
-    },
-    {
-      "key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
-      "position": 6,
-      "properties": {
-        "description": "If there is time remaining, have pairs return to one or more of the apps and make the suggested modifications.",
-        "name": "Modify Apps\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e075e19e-fe03-4ee3-bfe9-4aa1144baaf4",
         "lesson_activity.key": "44691909-06b5-4471-b2a9-aabb1c696569"
       }
     },
@@ -2037,7 +2025,7 @@
       "key": "c862e5d9-df4a-4504-94b6-dd974574b589",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Find the four different for loops in the program. What do they each do? Also take a look at the names of the screen elements in Design Mode. Then navigate back to the code. How is `\"text\" + i` used? How does it evaluate with each round of the loop?*\n\n**Discussion Goal:** This is a way of doing something to a set of elements. In this case, we have five text boxes named `\"text0\"`, `\"text1\"`, `\"text2\"`, `\"text3\"`, and `\"text4\"`\n* `\"text\" + i ` is evaluated each round of the loop. \n    * First round: `\"text0\"`\n    * Second round: `\"text1\"`\n    * Third round: `\"text2\"`\n    * Fourth round: `\"text3\"`\n    * Fifth round: `\"text4\"`\n* So when the first round of the loop is executed, the element with the `\"text0\"` ID is changed to whatever information is in the for loop. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* What happens if you change the text box variable names? \n* Try changing them from `\"text0\"`, `\"text1\"`, etc. to `\"textbox0\"`, `\"textbox1\"`, etc.\n* Navigate back to the code. What do you need to change in the code for the program to still work?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n\n* What happens if you change the Boolean expression `i < 5` in the for loops?\n* Change all the Boolean expressions to one of the options below, run the program, and discuss. Then move to the next option and repeat:\n\t* `i < 4`\n\t* `i < 3`\n\t* `i <=4`"
       },
       "seeding_key": {
         "activity_section.key": "c862e5d9-df4a-4504-94b6-dd974574b589",
@@ -2587,7 +2575,7 @@
       "key": "57fab675-41c9-44aa-ad7f-308dba387302",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the video in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the mileTimes list and stores that value in the avg variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  For example, students should be able to describe that the function contains a local variable of “total” which is initialized at 0.  Then the function uses a for loop to traverse through the mileTimes list.  In the loop, each value inside mileTimes list is accessed and added to the current value stored inside the total variable.  When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the mileTimes.  In the last line of the function, the value stored in avg is updated by dividing the value stored in total by the total number of elements in the mileTimes list.  \n    \n    When you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Group students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1:** Students read the entire code, and then students focuses their attention on a single function. Student should re-read the code for their function.\n\n* Student A - `average()` (lines 32-38)\n* Student B - `slow()` (lines 40-48)\n* Student C - `fast()` (lines 50-58)\n* Student D - `numberedListDisplay()` (lines 60-66)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the app work?*\n\nStudents discuss in their groups how each of their functions work, specifically referencing the list it uses and how it is traversed using a for loop. Then as a class address any confusion over how the app works. \n\n* **The goal:** The goal of this investigation is to give students the opportunity to see lists traversed for different reasons and with different outcomes.   Students should look at the code for their assigned function and make sense of what the function does overall and how it does it.  \n* **What to look for:** It may be helpful to re-watch the [video](https://youtu.be/RQ6GJt9f2vg) in the U5L10 - Traversals Explore lesson starting at 3:07 to hear how the speaker describes a section of code that processes a list for a specific purpose.  Listening to that explanation will help give you an idea of what student explanations of their functions should sound like.  \n    \n    For example, when explaining the average function in this investigation, students should describe what the function does.  In this case, the function calculates the average of the values stored in the `mileTimes` list and stores that value in the `avg` variable. In addition to describing what the function does, students should describe how the function works.  This will involve more detail.  \n  * Students should be able to describe that the function contains a local variable of `total` which is initialized at 0.  \n  * Then the function uses a for loop to traverse through the `mileTimes` list.  In the loop, each value inside `mileTimes` list is accessed and added to the current value stored inside the total variable.  \n  * When the loop reaches the end of the list, the loop ends and the total variable contains the sum of all the `mileTimes`.  In the last line of the function, the value stored in `avg` is updated by dividing the value stored in `total` by the total number of elements in the `mileTimes` list.  \n\n    \n \nWhen you bring the class together to talk about how the app works, you should talk both about what the functions do as well as how they work.  There likely is not time to go over all four functions, but discussing one or two of them will ensure the full class has an opportunity to hear how their peers describe code.",
         "name": "Mile Tracker Investigation",
         "progression_name": "Mile Tracker Investigation",
         "tips": [
@@ -2606,7 +2594,7 @@
       "key": "127a1baa-2374-416e-b6b2-30666e542983",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the “getColumn” command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 (5 mins):** Students read the code, and then investigate the data tab.  \n\n**Discuss:** Encourage students to share out what they found in the data tab, and how they can interact with it with code.\n\n* **The goal:** The goal of this investigation is to get students comfortable with information inside the “Data” tab and to help them understand the “getColumn” command.  Students should be given some time to explore the Data tab themselves and even try the “Modify” task for a few minutes.  \n    \n* **What to look for:** When you bring the class together, students should be able to describe what information they see in the data tab and how they can use the data tab to help get access to data.  Key points to draw out are:\n    \n    * The “Data Library” on the left hand side has different categories of datasets that students can view.\n    * Students need to “import” a data set to be able to see the data inside it or to use the data in the code.\n    * Once imported, students will see the data set in the “Data Browser” area and can click on the name of the Data Set to see the data in table form.\n    * To use the [`getColumn`(#d3e965)](/docs/applab/getColumn/) command, you need the name of the table you want to use and the name of the column from that table.\n    * [`getColumn`(#d3e965)](/docs/applab/getColumn/) will return the column from your table as a list.  You can see it is a list because when it is printed to the console, it has square brackets `[ ]` around the items which are separated by commas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** Students choose a new dataset to import to the project. Then students modify the code to print out a column of data from the chosen dataset. Point out to students that when they pull out a column, they are creating a list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Data Tab in App Lab video.",
         "name": "Data Tab Investigation",
         "progression_name": "Data Tab Investigation",
         "tips": [
@@ -2625,7 +2613,7 @@
       "key": "e74ac992-2f41-4d45-978c-3af21c648b91",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** Instruct students to run the app and then carefully read it. There is a lot of information in the comments in this app. Students work through all of the questions on the screen.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Go through the questions one by one and answer as a class. Afterwards, go line by line with the class explaining how the app works. \n\n* **The goal:** The goal of this investigation is to give students an opportunity to make sense of how traversals and the datasets can be used together to create a working app.  It is important to note that the algorithms in this app have some of the same qualities as the algorithm students will need to develop for the Create PT.  \n    \n* **What to look for:** This project defines several different functions.  Help guide students particularly to how the lists are filled. Students should see a `listSetup` function.  This function calls the `filter` function.  `filter` is where the lists are being filled.  Use the questions listed in CodeStudio to help students make sense of this code. In particular, spend a little extra time discussing the question “How are these lists filled?”. This is an opportunity to go through the `filter` function line by line to understand how the function works.",
         "name": "Random Dog Picker Investigation",
         "progression_name": "Random Dog Picker Investigation",
         "tips": [
@@ -2644,7 +2632,7 @@
       "key": "36ecad32-1c00-4389-9699-85edce533063",
       "position": 4,
       "properties": {
-        "description": "**Levels 4-5:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
+        "description": "**Levels 5-6:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
         "progression_name": "Traversal Patterns"
       },
@@ -2766,7 +2754,7 @@
       "key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
       "position": 6,
       "properties": {
-        "description": "In this level, students use the reduce pattern to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade",
+        "description": "In these levels, students use the reduce and filter patterns to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade.\n* **Level 8:** Write code to calculate and display the percent of each type of Air Quality Index day.",
         "name": "App Practice",
         "progression_name": "App Practice"
       },
@@ -6013,6 +6001,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp5-2021/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp5-2021/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -6035,6 +6045,18 @@
       },
       "seeding_key": {
         "resource.key": "csp-u5-hackathon-submission-on-ap-classroom"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
       }
     },
     {
@@ -6173,6 +6195,78 @@
       },
       "seeding_key": {
         "resource.key": "traversal_machine"
+      }
+    },
+    {
+      "name": "U5 Hackathon High Score Sample App",
+      "url": "https://studio.code.org/projects/applab/zmiLk9B9ZWKLeJtoXNEiuxn92IpZukOz8xZWBLzzz9M",
+      "key": "u5_hackathon_high_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_app"
+      }
+    },
+    {
+      "name": "U5 Hackathon High Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1oz5uUMSTi4VKGwBfT9cW3riBUFE5MEbg2baHPDg_U2k/edit?usp=sharing",
+      "key": "u5_hackathon_high_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U5 Hackathon High Score Sample Written Responses",
+      "url": "https://docs.google.com/document/d/1HbpOLfJHCzWEJjOsoXhl2QKocIcs32G3iB-zzw0ddXc/edit?usp=sharing",
+      "key": "u5_hackathon_high_score_sample_written_responses",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_high_score_sample_written_responses"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample App",
+      "url": "https://studio.code.org/projects/applab/hGGs32BtXJMHnxpglngOa3XWPYHzy1obVNG9GYrgU5I",
+      "key": "u5_hackathon_mid_score_sample_app",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_app"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample Planning Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1k4Gy9UlB7jNfDwq-zFxyODi5fgNTaom1uuTE7HgpFv8/edit?usp=sharing",
+      "key": "u5_hackathon_mid_score_sample_planning_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "U5 Hackathon Mid Score Sample Written Responses",
+      "url": "https://docs.google.com/document/d/1CnpIoCRDR511Poisw9AWBs2_MZjYS4fKJGiqV_mIdss/edit?usp=sharing",
+      "key": "u5_hackathon_mid_score_sample_written_responses",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u5_hackathon_mid_score_sample_written_responses"
       }
     },
     {
@@ -6377,6 +6471,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_high_score_sample_written_responses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "resource.key": "u5_hackathon_mid_score_sample_written_responses"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
@@ -6404,6 +6534,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
         "script.name": "csp5-2021"
       }
     }

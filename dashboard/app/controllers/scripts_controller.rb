@@ -112,7 +112,7 @@ class ScriptsController < ApplicationController
       levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
-      script_families: ScriptConstants::FAMILY_NAMES,
+      script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?
     }
@@ -127,6 +127,9 @@ class ScriptsController < ApplicationController
         raise msg
       end
     end
+
+    raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
+
     unit_text = params[:script_text]
     if @script.update_text(unit_params, unit_text, i18n_params, general_params)
       @script.reload
@@ -205,16 +208,27 @@ class ScriptsController < ApplicationController
     end
   end
 
-  def set_unit
+  def get_unit
     unit_id = params[:id]
-    @script = ScriptConstants::FAMILY_NAMES.include?(unit_id) ?
-      Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale) :
-      Script.get_from_cache(unit_id)
-    raise ActiveRecord::RecordNotFound unless @script
 
-    if ScriptConstants::FAMILY_NAMES.include?(unit_id)
-      Script.log_redirect(unit_id, @script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type)
+    script =
+      params[:action] == "edit" ?
+      Script.get_without_cache(unit_id, with_associated_models: true) :
+      Script.get_from_cache(unit_id, raise_exceptions: false)
+    return script if script
+
+    if Script.family_names.include?(unit_id)
+      script = Script.get_unit_family_redirect_for_user(unit_id, user: current_user, locale: request.locale)
+      Script.log_redirect(unit_id, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
+      return script
     end
+
+    return nil
+  end
+
+  def set_unit
+    @script = get_unit
+    raise ActiveRecord::RecordNotFound unless @script
 
     if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
       render :no_access
@@ -257,7 +271,6 @@ class ScriptsController < ApplicationController
       :announcements,
       :pilot_experiment,
       :editor_experiment,
-      :background,
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],

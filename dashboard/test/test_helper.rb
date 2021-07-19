@@ -23,7 +23,8 @@ reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
-Minitest::Reporters.use! reporters
+# Skip this if the tests are run in RubyMine
+Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"

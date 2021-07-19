@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 14:05:39 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-09 19:15:56 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -2760,6 +2760,28 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csp2-2021/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp2-2021/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -2784,12 +2806,24 @@
       }
     },
     {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
       "name": "EXEMPLAR: Internet Dilemmas",
       "url": "https://docs.google.com/document/d/1LHCRJlpBK56ynaYp5-RfiKlaAzCoh99QXUU8xbMPJS4/edit?usp=sharing",
       "key": "exemplar-internet-dilemmas",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -2896,6 +2930,30 @@
       },
       "seeding_key": {
         "resource.key": "the-internet-packets-routing-and-reliability-1"
+      }
+    },
+    {
+      "name": "U2 High Score Sample Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1AuFdmglDQD6-gzzipbP492kkIUejKrwtHpLbvFv8kcA/edit?usp=sharing",
+      "key": "u2_high_score_sample_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "name": "U2 Mid Score Sample Guide & Rubric",
+      "url": "https://docs.google.com/document/d/1nWb27SlMffIYwKf3jgurJBPWyYhyIc-gSzObvJlHR8s/edit?usp=sharing",
+      "key": "u2_mid_score_sample_guide_rubric",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u2_mid_score_sample_guide_rubric"
       }
     },
     {
@@ -3055,6 +3113,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "exemplar-internet-dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "u2_mid_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
         "resource.key": "csp-unit-2-the-internet"
       }
@@ -3069,6 +3145,18 @@
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
         "resource.key": "exemplar-internet-dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "resource.key": "u2_high_score_sample_guide_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "resource.key": "u2_mid_score_sample_guide_rubric"
       }
     },
     {
@@ -3094,6 +3182,24 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
         "script.name": "csp2-2021"
       }
     }

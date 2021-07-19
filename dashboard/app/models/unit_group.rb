@@ -34,13 +34,6 @@ class UnitGroup < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
-  FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-    CSA = 'csa'.freeze,
-    TEST = 'ui-test-course'.freeze
-  ].freeze
-
   def skip_name_format_validation
     !!plc_course
   end
@@ -271,6 +264,10 @@ class UnitGroup < ApplicationRecord
     all_courses.freeze
   end
 
+  def self.family_names
+    CourseVersion.course_offering_keys('UnitGroup')
+  end
+
   # Get the set of valid courses for the dropdown in our sections table. This
   # should be static data for users without any course experiments enabled, but
   # contains localized strings so we can only cache on a per locale basis.
@@ -366,6 +363,7 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
+      prevent_course_version_change: prevent_course_version_change?,
       course_path: link
     }
   end
@@ -648,7 +646,7 @@ class UnitGroup < ApplicationRecord
   # Returns an array of version year strings, starting with 2017 and ending 1 year
   # from the current year.
   def self.get_version_year_options
-    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+    [CourseVersion::UNVERSIONED] + (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 
   def pilot?
@@ -703,7 +701,19 @@ class UnitGroup < ApplicationRecord
     # For reasons I (Bethany) still don't understand, using a proc here causes
     # the method to terminate unexpectedly without an error. My unproven guess
     # is that this is due to the nested `any?` calls
-    default_units.any? {|s| s.prevent_course_version_change?}
+    resources.any? ||
+      student_resources.any? ||
+      default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
+  end
+
+  # Look through all of the objects with the specified family name which have
+  # a stable published_state, and return the one with the latest version year.
+  def self.latest_stable(family_name)
+    raise unless family_name.present?
+    all_courses.
+      select {|c| c.family_name == family_name && c.stable?}.
+      sort_by(&:version_year).
+      last
   end
 end

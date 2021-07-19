@@ -1,6 +1,9 @@
 login_required true
 hideable_lessons true
+family_name 'algebra'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true, unplugged: true
 level 'VideoGamesCoordinatePlanes'

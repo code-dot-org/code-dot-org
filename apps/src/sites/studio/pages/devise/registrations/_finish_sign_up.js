@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -123,17 +122,17 @@ $(document).ready(() => {
   });
   // Keep if sign-up user type experiment favors variant (end)
   // Keep if sign-up user type experiment favors original (just the below function))
+
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
   });
 
   function getUserType() {
-    return $('#user_user_type').val();
+    return $('#user_user_type')[0].value;
   }
 
   function setUserType(userType) {
-    $('#user_user_type').val(userType);
     if (userType) {
       trackUserType(userType);
     }
