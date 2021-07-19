@@ -5,7 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 export default class DefaultSpriteRow extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    keyValue: PropTypes.string
+    keyValue: PropTypes.string.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   render() {
@@ -14,7 +15,7 @@ export default class DefaultSpriteRow extends React.Component {
         <Button
           text={'Delete'}
           color={Button.ButtonColor.red}
-          onClick={() => console.log('Delete')}
+          onClick={() => this.props.onDelete(this.props.name)}
           icon={'trash'}
           iconClassName={'fa-trash'}
         />
