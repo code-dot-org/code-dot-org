@@ -58,7 +58,7 @@ function showCourseEditor() {
         initialDescriptionTeacher={
           courseEditorData.course_summary.description_teacher || ''
         }
-        initialScriptsInCourse={courseEditorData.course_summary.scripts.map(
+        initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
           unit => unit.name
         )}
         unitNames={courseEditorData.script_names.sort()}
@@ -74,6 +74,9 @@ function showCourseEditor() {
         initialAnnouncements={announcements}
         useMigratedResources={courseEditorData.course_summary.is_migrated}
         courseVersionId={courseEditorData.course_summary.course_version_id}
+        preventCourseVersionChange={
+          courseEditorData.course_summary.prevent_course_version_change
+        }
         coursePath={courseEditorData.course_summary.course_path}
       />
     </Provider>,

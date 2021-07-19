@@ -32,7 +32,7 @@ class CourseEditor extends Component {
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
-    initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
     initialHasVerifiedResources: PropTypes.bool.isRequired,
@@ -42,6 +42,7 @@ class CourseEditor extends Component {
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     useMigratedResources: PropTypes.bool.isRequired,
     courseVersionId: PropTypes.number,
+    preventCourseVersionChange: PropTypes.bool,
     coursePath: PropTypes.string.isRequired,
 
     // Provided by redux
@@ -77,7 +78,7 @@ class CourseEditor extends Component {
       hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
-      unitsInCourse: this.props.initialScriptsInCourse,
+      unitsInCourse: this.props.initialUnitsInCourse,
       publishedState: this.props.initialPublishedState
     };
   }
@@ -302,6 +303,8 @@ class CourseEditor extends Component {
             updatePublishedState={publishedState =>
               this.setState({publishedState})
             }
+            preventCourseVersionChange={this.props.preventCourseVersionChange}
+            isCourse
           />
         </CollapsibleEditorSection>
 
@@ -346,7 +349,7 @@ class CourseEditor extends Component {
             <CourseUnitsEditor
               inputStyle={styles.input}
               unitsInCourse={unitsInCourse}
-              updateScriptsInCourse={unitsInCourse =>
+              updateUnitsInCourse={unitsInCourse =>
                 this.setState({unitsInCourse})
               }
               unitNames={unitNames}

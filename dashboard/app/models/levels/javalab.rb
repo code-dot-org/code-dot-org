@@ -73,14 +73,24 @@ class Javalab < Level
         end
       end
     end
-
+    # paint bucket asset id is 303
+    if serialized_maze.include?("303") && (maze.length > 16)
+      raise ArgumentError.new("Large mazes cannot have paint buckets")
+    end
     self.serialized_maze = maze
   end
 
   def fix_examples
     # remove nil and empty strings from examples
     return if examples.nil?
-    self.examples = examples.select(&:present?)
+    all_examples = examples.select(&:present?)
+    # raise an error if the example is incorrectly formatted
+    all_examples.each do |example|
+      unless example.start_with?("https://studio.code.org/s/")
+        raise ArgumentError.new("Exemplar #{example} on level '#{name}' should start with https://studio.code.org/s/")
+      end
+    end
+    self.examples = all_examples
   end
 
   # Return an 'appOptions' hash derived from the level contents

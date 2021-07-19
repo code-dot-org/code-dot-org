@@ -1,6 +1,6 @@
 family_name 'versioned'
 version_year '1801'
-is_stable true
+published_state 'stable'
 
 lesson 'lesson1', display_name: 'lesson1'
 level 'Level 1'

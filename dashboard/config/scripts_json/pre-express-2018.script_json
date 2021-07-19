@@ -2,7 +2,6 @@
   "script": {
     "name": "pre-express-2018",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "project_widget_visible": true,
@@ -21,7 +20,6 @@
       ],
       "version_year": "2018",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
-      "is_stable": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"

@@ -2,7 +2,6 @@
   "script": {
     "name": "express-2018",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": false,
     "properties": {
       "project_widget_visible": true,
@@ -39,7 +38,6 @@
           "https://curriculum.code.org/csf-18/express/standards/"
         ]
       ],
-      "is_stable": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"

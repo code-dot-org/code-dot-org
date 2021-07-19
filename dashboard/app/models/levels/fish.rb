@@ -32,6 +32,7 @@ class Fish < Level
     is_project_level
     submittable
     mode
+    background
   )
 
   def self.create_from_level_builder(params, level_params)

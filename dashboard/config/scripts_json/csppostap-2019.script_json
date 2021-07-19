@@ -2,7 +2,6 @@
   "script": {
     "name": "csppostap-2019",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -12,7 +11,6 @@
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}",
       "version_year": "2019",
       "project_sharing": true,
-      "is_stable": true,
       "family_name": "csppostap",
       "script_announcements": [
         {

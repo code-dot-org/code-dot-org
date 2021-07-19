@@ -1,6 +1,5 @@
 Feature: Starwars Project
 
-@skip
 @as_student @no_mobile
 Scenario: Starwars Flow
   Given I am on "http://studio.code.org/projects/starwars"
@@ -15,7 +14,6 @@ Scenario: Starwars Flow
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
-  And I press "runButton"
 
   When I open the project share dialog
   Then the project is unpublished

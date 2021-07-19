@@ -191,6 +191,7 @@ class TopInstructions extends Component {
           })
       );
     }
+
     if (serverLevelId) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {
@@ -778,7 +779,7 @@ const styles = {
     zIndex: OVERLAY_Z_INDEX + 1
   }
 };
-// Note: ususally the unconnected component is only used for tests, in this case it is used
+// Note: usually the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
 export const UnconnectedTopInstructions = Radium(TopInstructions);
 export default connect(

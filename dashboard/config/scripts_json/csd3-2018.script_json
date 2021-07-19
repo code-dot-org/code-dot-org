@@ -2,7 +2,6 @@
   "script": {
     "name": "csd3-2018",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
@@ -37,7 +36,6 @@
         "weblab"
       ],
       "version_year": "2018",
-      "is_stable": true,
       "project_sharing": true,
       "script_announcements": [
         {

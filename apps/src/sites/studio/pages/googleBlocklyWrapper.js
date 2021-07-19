@@ -58,6 +58,14 @@ const BlocklyWrapper = function(blocklyInstance) {
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
+  blocklyWrapper.setInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
+  blocklyWrapper.loopHighlight = function() {}; // TODO
+  blocklyWrapper.getWorkspaceCode = function() {
+    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
+
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_RIGHT');
@@ -129,6 +137,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
+  blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
@@ -192,6 +201,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
+  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+    blockspace.addChangeListener(handler);
+  };
+
+  blocklyWrapper.getWorkspaceCode = function() {
+    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
@@ -245,9 +262,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
     const generator = blocklyWrapper.getGenerator();
-    if (!generator.isInitialized) {
-      generator.init(blocklyWrapper.mainBlockSpace);
-    }
+    generator.init(blocklyWrapper.mainBlockSpace);
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
@@ -263,7 +278,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocksToGenerate.forEach(block => {
       code.push(blocklyWrapper.JavaScript.blockToCode(block));
     });
-    return code.join('\n');
+    code = code.join('\n');
+    code = generator.finish(code);
+    return code;
   };
 
   blocklyWrapper.Generator.prefixLines = function(text, prefix) {
@@ -284,6 +301,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
         }
       }
     };
+
+    // CDO Blockly takes assetUrl as an inject option, and it's used throughout
+    // apps, so we should also set it here.
+    blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
+
     // Shrink container to make room for the workspace header
     container.style.height = `calc(100% - ${
       styleConstants['workspace-headers-height']

@@ -107,7 +107,7 @@ class LessonGroupCard extends Component {
 
   // Given a clientY value of a location on the screen, find the LessonGroupCard
   // corresponding to that location, and return the position of the
-  // corresponding activity section within the script.
+  // corresponding activity section within the unit.
   getTargetLessonGroup = y => {
     const {lessonGroupMetrics} = this.props;
     const lessonGroupPos = Object.keys(lessonGroupMetrics).find(

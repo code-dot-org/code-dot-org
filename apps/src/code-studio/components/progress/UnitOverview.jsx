@@ -29,6 +29,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
 import color from '@cdo/apps/util/color';
+import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -62,7 +63,8 @@ class UnitOverview extends React.Component {
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
-    scriptCompleted: PropTypes.bool.isRequired,
+    unitCompleted: PropTypes.bool.isRequired,
+    unitData: PropTypes.object.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
@@ -100,7 +102,8 @@ class UnitOverview extends React.Component {
       migratedTeacherResources,
       studentResources,
       perLevelResults,
-      scriptCompleted,
+      unitCompleted,
+      unitData,
       scriptId,
       scriptName,
       unitTitle,
@@ -133,7 +136,7 @@ class UnitOverview extends React.Component {
       redirectScriptUrl && !dismissedRedirectDialog(courseName || scriptName);
 
     let unitProgress = NOT_STARTED;
-    if (scriptCompleted) {
+    if (unitCompleted) {
       unitProgress = COMPLETED;
     } else if (Object.keys(perLevelResults).length > 0) {
       unitProgress = IN_PROGRESS;
@@ -149,7 +152,7 @@ class UnitOverview extends React.Component {
         {onOverviewPage && (
           <div>
             {this.props.courseLink && (
-              <div className="script-breadcrumb" style={styles.navArea}>
+              <div className="unit-breadcrumb" style={styles.navArea}>
                 <a href={this.props.courseLink} style={styles.navLink}>{`< ${
                   this.props.courseTitle
                 }`}</a>
@@ -209,7 +212,10 @@ class UnitOverview extends React.Component {
         )}
         <ProgressTable minimal={minimal} />
         {onOverviewPage && (
-          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
+          <ProgressLegend
+            includeCsfColumn={!excludeCsfColumnInLegend}
+            includeReviewStates={shouldShowReviewStates(unitData)}
+          />
         )}
         <GoogleClassroomAttributionLabel />
       </div>
@@ -231,7 +237,8 @@ const styles = {
 export const UnconnectedUnitOverview = Radium(UnitOverview);
 export default connect((state, ownProps) => ({
   perLevelResults: state.progress.levelResults,
-  scriptCompleted: !!state.progress.scriptCompleted,
+  unitCompleted: !!state.progress.unitCompleted,
+  unitData: state.progress.unitData,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
