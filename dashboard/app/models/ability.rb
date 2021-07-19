@@ -322,7 +322,7 @@ class Ability
 
     # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if user.has_pilot_experiment(CSA_PILOT) ||
+      if user.has_pilot_experiment?(CSA_PILOT) ||
         (!user.teachers.empty? &&
           user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)})
         can :get_access_token, :javabuilder_session
