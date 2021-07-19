@@ -142,5 +142,29 @@ social:
 <div style="clear: both; margin-bottom:35px"></div>
 
 <a id="guide"></a>
-<h2>Teacher Guide</h2>
-<p>The My Journey Chats for K-5 students differ from those for middle and high school students in subject matter, and we strongly encourage you to sign your class up for Chats that are appropriate for your grade band. To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>
+<h2>Teacher Guides</h2>
+<div class="col-50" style="padding-right:20px">
+<p>The My Journey Chats for K-5 students differ from those for middle and high school students in subject matter. We strongly encourage you to sign your class up for Chats that are appropriate for your grade band. To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>
+<p><strong>What's in the guides:<strong></p>
+<ul>
+  <li>Student Takeaways / Guiding Principles</li>
+  <li>Before the My Journey Chat</li>
+  <li>After the My Journey Chat</li>
+  <li>Go further: Suggestions for extended learning</li>
+  <li>Frequently Asked Questions</li>
+</ul>
+</div>
+<div class="col-25" style="padding-right:20px; padding-bottom:35px">
+  <a href="/files/csjourneys/classchats-guide-k5.pdf" target="_blank">
+    <img src="/images/csjourneys/k5-chats-guide.png" style="width:100%" alt="Teacher Guide: My Journey Chats for K-5 Classrooms">
+  </a>
+  <a href="/files/csjourneys/classchats-guide-k5.pdf" target="_blank"><figcaption style="text-align:left;font-style:italic;font-size:12px">Teacher Guide: My Journey Chats for K-5 Classrooms</figcaption></a>
+</div>
+<div class="col-25" style="padding-left:20px">
+  <a href="/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank">
+    <img src="/images/csjourneys/middlehigh-chats-guide.png" style="width:100%" alt="Teacher Guide: My Journey Chats for Middle and High School Classrooms">
+  </a>
+  <a href="/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank"><figcaption style="text-align:left;font-style:italic;font-size:12px">Teacher Guide: My Journey Chats for Middle and High School Classrooms</figcaption></a>
+</div>
+
+<div style="clear: both; margin-bottom:35px"></div>
