@@ -4,7 +4,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
-import CommentOptions from './commentOptions';
+import CommentOptions from './CommentOptions';
 
 export default class Comment extends Component {
   static propTypes = {
@@ -52,6 +52,7 @@ export default class Comment extends Component {
 
   render() {
     const {
+      id,
       commentText,
       timestampString,
       isFromCurrentUser,
