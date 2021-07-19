@@ -17,13 +17,13 @@ class CommentOptions extends Component {
       onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-check',
       text: javalabMsg.resolve(),
-      key: 'Mark Resolved'
+      key: 'Resolve'
     },
     unmarkResolved: {
       onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-undo',
       text: javalabMsg.reOpen(),
-      key: 'Unmark Resolved'
+      key: 'Re-open'
     },
     delete: {
       onClick: this.props.onDelete,
