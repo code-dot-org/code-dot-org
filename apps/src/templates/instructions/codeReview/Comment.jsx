@@ -52,7 +52,6 @@ export default class Comment extends Component {
 
   render() {
     const {
-      id,
       commentText,
       timestampString,
       isFromCurrentUser,
@@ -85,8 +84,8 @@ export default class Comment extends Component {
             {isShowingCommentOptions && (
               <CommentOptions
                 isResolved={isResolved}
-                onResolveClick={() => this.onResolve(id)}
-                onDeleteClick={() => this.onDelete(id)}
+                onResolveClick={() => this.onResolve()}
+                onDeleteClick={() => this.onDelete()}
               />
             )}
           </div>
