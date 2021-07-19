@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_29_133900) do
+ActiveRecord::Schema.define(version: 2021_07_19_141604) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1521,7 +1521,7 @@ ActiveRecord::Schema.define(version: 2021_06_29_133900) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
-    t.string "published_state", default: "in_development", null: false
+    t.string "published_state", default: "in_development"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
