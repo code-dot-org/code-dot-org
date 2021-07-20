@@ -9,6 +9,8 @@ import {
   fakeLevel,
   fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const level_1 = fakeLevel({
   id: '123',
@@ -24,7 +26,9 @@ const DEFAULT_PROPS = {
   studentId: 1,
   sectionId: 123,
   levels: levels,
-  studentProgress: fakeProgressForLevels(levels)
+  studentProgress: fakeProgressForLevels(levels, LevelStatus.passed, {
+    teacher_feedback_review_state: ReviewStates.keepWorking
+  })
 };
 
 const setUp = (overrideProps = {}) => {
@@ -54,6 +58,19 @@ describe('ProgressTableDetailCell', () => {
     expect(levelBubble1.find(ProgressTableLevelBubble)).to.have.length(1);
     expect(levelBubble2.find(ProgressTableLevelBubble)).to.have.length(2); // 1 for level, 1 for sublevel
     expect(levelBubble3.find(ProgressTableLevelBubble)).to.have.length(1);
+  });
+
+  it('passes expected values to ProgressTableLevelBubble', () => {
+    const wrapper = setUp();
+    const levelBubble3 = wrapper
+      .findWhere(node => node.key() === '999_3')
+      .find(ProgressTableLevelBubble);
+    const levelBubble3Props = levelBubble3.props();
+    expect(levelBubble3Props.levelStatus).to.equal(LevelStatus.passed);
+    expect(levelBubble3Props.isLocked).to.be.false;
+    expect(levelBubble3Props.isUnplugged).to.be.false;
+    expect(levelBubble3Props.isBonus).to.be.true;
+    expect(levelBubble3Props.reviewState).to.equal(ReviewStates.keepWorking);
   });
 
   it('generates the right url for level bubble', () => {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-19 17:41:44 UTC",
+    "serialized_at": "2021-07-20 01:14:49 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -137,24 +137,24 @@
       }
     },
     {
-      "key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
-      "position": 2,
-      "properties": {
-        "progression_name": "Debugging"
-      },
-      "seeding_key": {
-        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
-        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
-      }
-    },
-    {
       "key": "18e168f9-d7c5-442b-a310-620512864bec",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Using resources"
       },
       "seeding_key": {
         "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
+      "position": 3,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
         "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
       }
     },
@@ -304,6 +304,55 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "progression": "Using resources"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Resources"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using resources"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-Resources-practice-lc"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "SP-VPL-21-mod4-Debugging"
         ],
         "progression": "Debugging"
@@ -324,8 +373,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 5,
+      "chapter": 8,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -350,8 +399,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 6,
+      "chapter": 9,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -376,34 +425,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Using resources"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-mod4-Resources"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd4-2021",
-        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
-      },
-      "level_keys": [
-        "SP-VPL-21-mod4-Resources"
-      ]
-    },
-    {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
         "progression": "Lead learner"
       },
       "named_level": false,
@@ -422,11 +451,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
         "progression": "Lead learner"
       },
       "named_level": false,
@@ -445,11 +477,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Differentiation"
+        ],
         "progression": "Differentiation"
       },
       "named_level": false,
@@ -468,11 +503,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Assessment"
+        ],
         "progression": "Assessment"
       },
       "named_level": false,
@@ -542,6 +580,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Resources",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-Resources-practice-lc",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-21-mod4-Debugging",
         "script_level.level_keys": [
           "SP-VPL-21-mod4-Debugging"
@@ -574,18 +636,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd4-2021",
         "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-21-mod4-Resources",
-        "script_level.level_keys": [
-          "SP-VPL-21-mod4-Resources"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd4-2021",
-        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
       }
     },
     {

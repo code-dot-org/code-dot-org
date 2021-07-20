@@ -11,12 +11,9 @@ import {
   BubbleSize,
   BubbleShape
 } from '@cdo/apps/templates/progress/BubbleFactory';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import * as utils from '@cdo/apps/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import {
-  AssessmentBadge,
-  KeepWorkingBadge
-} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const defaultProps = {
   level: {
@@ -234,7 +231,9 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
   });
 
   it('hides KeepWorkingBadge if a level has teacher feedback keepWorking and is smallBubble', () => {
@@ -249,7 +248,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(0);
+    expect(wrapper.find(BubbleBadge)).to.have.lengthOf(0);
   });
 
   it('shows KeepWorkingBadge instead of AssessmentBadge on assessment level if feedback is keepWorking', () => {
@@ -264,8 +263,9 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
-    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(0);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
   });
 
   it('shows AssessmentBadge on assessment level', () => {
@@ -278,8 +278,9 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-
-    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.assessment);
   });
 
   it('does not show AssessmentBadge on bubble on assessment level, if smallBubble is true', () => {
@@ -294,7 +295,8 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(0);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(0);
   });
 
   it('renders a pill shape for unplugged lessons', () => {
