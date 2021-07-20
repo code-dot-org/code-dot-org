@@ -114,9 +114,7 @@ class Level < ApplicationRecord
           levels_by_key[key] || Level.find_by_key(key)
         end
 
-      if key.starts_with?('blockly')
-        # do nothing
-      elsif raw_level[:video_key]
+      if raw_level[:video_key] && !key.starts_with?('blockly')
         level.update(video_key: raw_level[:video_key])
       end
 
