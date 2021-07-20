@@ -119,11 +119,27 @@ class AnimationLibraryApi < Sinatra::Base
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
       object("animation-manifests/manifests_levelbuilder/defaults.json").
       get
-    content_type result.content_type
+    content_type 'application/json'
     cache_for 3600
     result.body
   rescue
     not_found
+  end
+
+  #
+  # POST /api/v1/animation-library/default_spritelab/
+  #
+  # Update default sprite list in S3
+  post %r{/api/v1/animation-library/default_spritelab} do
+    dont_cache
+    if request.content_type == 'application/json'
+      body = request.body.string
+      key = "animation-manifests/manifests_levelbuilder/defaults.json"
+
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+    else
+      bad_request
+    end
   end
 
   #
