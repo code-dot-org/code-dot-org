@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {getStore} from '@cdo/apps/redux';
+import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
@@ -7,7 +8,7 @@ import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 export default class ReviewTab extends Component {
   state = {
-    readyForReview: false,
+    isReadyForReview: false,
     comments: [],
     token: '',
     forceRecreateEditorKey: 0
@@ -43,16 +44,36 @@ export default class ReviewTab extends Component {
       });
   };
 
+  onCommentDelete = deletedCommentId => {
+    const comments = [...this.state.comments];
+    _.remove(comments, comment => comment.id === deletedCommentId);
+
+    this.setState({comments: comments});
+  };
+
+  onCommentResolveStateToggle = toggledCommentId => {
+    const comments = [...this.state.comments];
+    const resolvedCommentIndex = comments.findIndex(
+      comment => comment.id === toggledCommentId
+    );
+    comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
+      .isResolved;
+
+    this.setState({comments: comments});
+  };
+
   renderReadyForReviewCheckbox() {
-    const {readyForReview} = this.state;
+    const {isReadyForReview} = this.state;
 
     return (
       <div style={styles.checkboxContainer}>
         <label style={styles.label}>
           <input
             type="checkbox"
-            checked={readyForReview}
-            onChange={() => this.setState({readyForReview: !readyForReview})}
+            checked={isReadyForReview}
+            onChange={() =>
+              this.setState({isReadyForReview: !isReadyForReview})
+            }
             style={styles.checkbox}
           />
           {javalabMsg.enablePeerReview()}
@@ -72,6 +93,10 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
+              onResolveStateToggle={() =>
+                this.onCommentResolveStateToggle(comment.id)
+              }
+              onDelete={() => this.onCommentDelete(comment.id)}
             />
           );
         })}
