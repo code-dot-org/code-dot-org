@@ -64,7 +64,7 @@ class FoormEntityEditor extends React.Component {
     });
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     this.props.populateCodeMirror();
     this.previewFoorm();
   }
