@@ -45,7 +45,7 @@ class DataTable extends React.Component {
 
   state = {...INITIAL_STATE};
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // Forget about new columns or editing columns when switching between tables.
     if (this.props.tableName !== nextProps.tableName) {
       this.setState(INITIAL_STATE);
