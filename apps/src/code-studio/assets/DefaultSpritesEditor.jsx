@@ -10,7 +10,8 @@ export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
     defaultList: {},
-    pendingChanges: 0
+    pendingChanges: 0,
+    isUpdating: false
   };
 
   componentDidMount() {
@@ -35,11 +36,13 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   updateDefaultSprites() {
+    this.setState({isUpdating: true});
     let jsonList = {};
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
     updateDefaultList(JSON.stringify(jsonList))
       .then(() => {
         this.setState({pendingChanges: 0});
+        this.setState({isUpdating: false});
       })
       .catch(err => {
         console.log(err);
@@ -63,12 +66,14 @@ export default class DefaultSpritesEditor extends React.Component {
   // Button rendered twice - at top and bottom of list - to minimize
   // required scrolling
   renderUploadButton() {
+    let isUpdating = this.state.isUpdating;
     return (
       <div style={styles.changesRow}>
         <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
           Update Default Sprites List
         </button>
         <p>Pending Changes: {this.state.pendingChanges}</p>
+        {isUpdating && <Spinner />}
       </div>
     );
   }
