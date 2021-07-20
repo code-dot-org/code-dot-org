@@ -1,9 +1,7 @@
 import {expect} from '../../../util/deprecatedChai';
-import library, {
-  ElementType,
-  elements
-} from '@cdo/apps/applab/designElements/library';
+import library from '@cdo/apps/applab/designElements/library';
 
+const {elements, ElementType} = library;
 const dropdown = elements[ElementType.DROPDOWN];
 
 function setIndex(e, newIndex) {

@@ -46,10 +46,10 @@ elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
 
-export {ElementType, elements};
-
 export default {
-  ElementType: ElementType,
+  ElementType,
+  elements,
+
   /**
    * Returns an element id with the given prefix which is unused within
    * the applab app's DOM.
