@@ -119,10 +119,15 @@ export default class PropertyRow extends React.Component {
         />
       );
     } else {
+      let value = this.state.value;
+      if (!value) {
+        value = this.props.isNumber ? 0 : '';
+      }
+
       inputElement = (
         <input
           type={this.props.isNumber ? 'number' : undefined}
-          value={this.state.value}
+          value={value}
           onChange={this.handleChangeInternal}
           onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
           style={inputStyle}
