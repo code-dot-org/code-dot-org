@@ -64,7 +64,7 @@ export class RegionalPartnerDropdown extends React.Component {
     return additionalOptions;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.regionalPartners = this.props.regionalPartners.map(v => ({
       value: v.id,
       label: v.name
