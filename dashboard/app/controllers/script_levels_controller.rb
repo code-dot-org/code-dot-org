@@ -402,7 +402,9 @@ class ScriptLevelsController < ApplicationController
     user = User.find(params[:user_id])
 
     # TODO: This should use cancan/authorize.
-    if user.student_of?(current_user) || current_user.project_validator?
+    if user.student_of?(current_user) ||
+      current_user.project_validator? ||
+      ReviewableProject.where(user_id: user.id, script_id: params[:script_id], level_id: @script_level.oldest_active_level&.id).any?
       @user = user
     end
   end
