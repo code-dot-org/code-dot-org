@@ -34,10 +34,10 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'create - when review state is keepWorking, calls update_best_result with expected params' do
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
+    UserLevel.expects(:update_best_result).once.
+      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, false)
 
-    # TODO: assert that UserLevel.update_best_result was called
-    # expect(UserLevel).to receive(:update_best_result)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
   end
 
   test 'retrieves no content when no feedback is available' do
