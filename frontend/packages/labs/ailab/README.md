@@ -37,6 +37,12 @@ The app uses a scene-by-scene approach, similar to AI for Oceans.  It has centra
 We wanted to make use of the existing instructions infrastructure provided by the main repo, which has things like text-to-speech support and authoring tools in levelbuilder.  But we also wanted a way to provide dynamic instructions tailored to each scene in the app.  We experimented with a variety of combinations, but they often led to a busy combination of lengthy instructions (since they were addressing every step in AI Lab) in the regular instruction panel at the top, along with custom instructions below in the AI Lab app area.
 The creation of Dynamic Instructions was the breakthrough that gave us the best of both worlds.  They can be authored in levelbuilder, use the existing text-to-speech system, and can be used outside of AI Lab.  They encourage instructions to be written for just the current panel on the screen.  (They can also be triggered by other states in the app for specific instructions at that moment in time).  They do not dynamically resize, so the screen below them does not shift around, and they are guaranteed to always be fully readable without needing scrolling.  And best of all, they empower curriculum designers to explain what's happening in each level with minimal changes required in the app itself.  (That said, showing new Dynamic Instructions for specific states in the app is very easy.)
 
+### Responsiveness
+
+The app is horizontally responsive, though it doesn't need to collapse all the way to mobile widths because our host site manages the viewport on mobile devices and also enforces landscape viewing.
+
+The app is vertically responsive, and uses flexbox to fill the vertical space with a combination of fixed- and variable-height elements.
+
 ### Select dataset
 For many levels, this is the first scene, and can offer selection of both "pre-canned" datasets, which have accompanying metadata, or user-uploaded CSV.  The tiles use an artstyle somewhat consistent with that used elsewhere in our product.  There is a fun "grow" animation on tile hover, just to feel a little more interactive, which is reused for the bot head elsewhere in the app.
 
