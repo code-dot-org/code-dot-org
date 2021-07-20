@@ -73,7 +73,10 @@ class Javalab < Level
         end
       end
     end
-
+    # paint bucket asset id is 303
+    if serialized_maze.include?("303") && (maze.length > 16)
+      raise ArgumentError.new("Large mazes cannot have paint buckets")
+    end
     self.serialized_maze = maze
   end
 
