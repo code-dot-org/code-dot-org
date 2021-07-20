@@ -1,0 +1,41 @@
+name 'SP-VPL-21-mod4-Resources'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using resources
+
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">
+Using resources is a core, authentic practice of computer science.  Whether novice or expert, all programmers rely on code documentation and other resources when writing programs.
+ </p>
+ 
+</div>
+<br>
+
+## What is my role as the teacher?
+
+##### Your role as the teacher is to help students develop the skill of finding answers on their own, rather than directly solving their problems for them. 
+
+<img src="https://images.code.org/b53dc24b96845e7e3cd77576316958a0-image-1626492100685.jpg" width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+### Teacher tips:
+
+* ##### 
+* ##### 
+* ##### 
+* ##### 
+
+
+## How is using resources connected to the problem solving process used throughout the CS Discoveries curriculum?
+
+* ##### **Define** - Describe what you need to know 
+* ##### **Prepare** - Decide where to look for the information
+* ##### **Try** - Read the resources
+* ##### **Reflect** - Think about what worked 
+
+### <a href="https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/edit" target="blank" >Click here</a> to read the CS Discoveries Guide to Using Resources. 
+
+
+MARKDOWN
