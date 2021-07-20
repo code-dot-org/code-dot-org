@@ -38,7 +38,7 @@ describe('Code Review Tab', () => {
     );
     server.respondWith(
       'PATCH',
-      `/code_review_comments/${existingComment.id}/resolve`,
+      `/code_review_comments/${existingComment.id}/toggle_resolved`,
       [200, {}, '']
     );
 
@@ -138,7 +138,7 @@ describe('Code Review Tab', () => {
 
     server.respondWith(
       'PATCH',
-      `/code_review_comments/${existingComment.id}/resolve`,
+      `/code_review_comments/${existingComment.id}/toggle_resolved`,
       [400, {}, '']
     );
 
