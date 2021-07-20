@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressDetailToggle from './ProgressDetailToggle';
+import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import progress, {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 
@@ -53,7 +54,11 @@ export default storybook => {
     store.dispatch(setIsSummaryView(true));
     return {
       name: 'isSummary is true',
-      story: () => <ProgressDetailToggle store={store} />
+      story: () => (
+        <Provider store={store}>
+          <ProgressDetailToggle />
+        </Provider>
+      )
     };
   }
 
@@ -62,7 +67,11 @@ export default storybook => {
     store.dispatch(setIsSummaryView(false));
     return {
       name: 'isSummary is false',
-      story: () => <ProgressDetailToggle store={store} />
+      story: () => (
+        <Provider store={store}>
+          <ProgressDetailToggle />
+        </Provider>
+      )
     };
   }
 
@@ -71,7 +80,11 @@ export default storybook => {
     store.dispatch(setIsSummaryView(true));
     return {
       name: 'isSummary is true with groups',
-      story: () => <ProgressDetailToggle store={store} />
+      story: () => (
+        <Provider store={store}>
+          <ProgressDetailToggle />
+        </Provider>
+      )
     };
   }
 
@@ -80,7 +93,11 @@ export default storybook => {
     store.dispatch(setIsSummaryView(false));
     return {
       name: 'isSummary is false with groups',
-      story: () => <ProgressDetailToggle store={store} />
+      story: () => (
+        <Provider store={store}>
+          <ProgressDetailToggle />
+        </Provider>
+      )
     };
   }
 
