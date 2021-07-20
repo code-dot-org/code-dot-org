@@ -9,7 +9,8 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
-    defaultList: {}
+    defaultList: {},
+    pendingChanges: 0
   };
 
   componentDidMount() {
@@ -29,14 +30,20 @@ export default class DefaultSpritesEditor extends React.Component {
 
   deleteSpriteFromDefaults(spriteName) {
     delete this.state.defaultList[spriteName];
+    let changes = this.state.pendingChanges + 1;
+    this.setState({pendingChanges: changes});
   }
 
   updateDefaultSprites() {
     let jsonList = {};
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
-    updateDefaultList(JSON.stringify(jsonList)).catch(err => {
-      console.log(err);
-    });
+    updateDefaultList(JSON.stringify(jsonList))
+      .then(() => {
+        this.setState({pendingChanges: 0});
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   renderDefaultSprites() {
@@ -57,9 +64,12 @@ export default class DefaultSpritesEditor extends React.Component {
   // required scrolling
   renderUploadButton() {
     return (
-      <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
-        Update Default Sprites List
-      </button>
+      <div style={styles.changesRow}>
+        <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
+          Update Default Sprites List
+        </button>
+        <p>Pending Changes: {this.state.pendingChanges}</p>
+      </div>
     );
   }
 
@@ -91,3 +101,11 @@ export default class DefaultSpritesEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  changesRow: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  }
+};
