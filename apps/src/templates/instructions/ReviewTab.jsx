@@ -58,7 +58,7 @@ export default class ReviewTab extends Component {
       .fail(() => this.flashErrorOnComment(deletedCommentId));
   };
 
-  onCommentResolve = (resolvedCommentId, newResolvedStatus) => {
+  onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
     const {token} = this.state;
 
     codeReviewDataApi
@@ -123,8 +123,11 @@ export default class ReviewTab extends Component {
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
-              onResolve={() =>
-                this.onCommentResolve(comment.id, !comment.isResolved)
+              onResolveStateToggle={() =>
+                this.onCommentResolveStateToggle(
+                  comment.id,
+                  !comment.isResolved
+                )
               }
               onDelete={() => this.onCommentDelete(comment.id)}
             />

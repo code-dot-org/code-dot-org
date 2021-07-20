@@ -8,25 +8,25 @@ import color from '@cdo/apps/util/color';
 class CommentOptions extends Component {
   static propTypes = {
     isResolved: PropTypes.bool.isRequired,
-    onResolveClick: PropTypes.func.isRequired,
-    onDeleteClick: PropTypes.func.isRequired
+    onResolveStateToggle: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   commentOptionTypes = {
-    markResolved: {
-      onClick: this.props.onResolveClick,
+    resolve: {
+      onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-check',
-      text: javalabMsg.markResolved(),
-      key: 'Mark Resolved'
+      text: javalabMsg.resolve(),
+      key: 'Resolve'
     },
-    unmarkResolved: {
-      onClick: this.props.onResolveClick,
+    reOpen: {
+      onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-undo',
-      text: javalabMsg.unmarkResolved(),
-      key: 'Unmark Resolved'
+      text: javalabMsg.reOpen(),
+      key: 'Re-open'
     },
     delete: {
-      onClick: this.props.onDeleteClick,
+      onClick: this.props.onDelete,
       iconClass: 'fa fa-fw fa-trash',
       text: msg.delete(),
       key: 'Delete'
@@ -50,9 +50,9 @@ class CommentOptions extends Component {
     return (
       <div style={styles.commentOptionsContainer}>
         {this.props.isResolved &&
-          this.renderCommentOption(this.commentOptionTypes.unmarkResolved)}
+          this.renderCommentOption(this.commentOptionTypes.reOpen)}
         {!this.props.isResolved &&
-          this.renderCommentOption(this.commentOptionTypes.markResolved)}
+          this.renderCommentOption(this.commentOptionTypes.resolve)}
         {this.renderCommentOption(this.commentOptionTypes.delete)}
       </div>
     );

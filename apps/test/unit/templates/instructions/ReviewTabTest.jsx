@@ -123,7 +123,7 @@ describe('Code Review Tab', () => {
         .at(0)
         .props().comment.isResolved
     ).to.be.false;
-    wrapper.instance().onCommentResolve(existingComment.id, true);
+    wrapper.instance().onCommentResolveStateToggle(existingComment.id, true);
     server.respond();
     expect(
       wrapper
@@ -156,7 +156,7 @@ describe('Code Review Tab', () => {
         .at(0)
         .props().comment.isResolved
     ).to.be.false;
-    wrapper.instance().onCommentResolve(existingComment.id, true);
+    wrapper.instance().onCommentResolveStateToggle(existingComment.id, true);
     server.respond();
     expect(
       wrapper
