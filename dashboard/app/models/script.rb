@@ -1958,8 +1958,7 @@ class Script < ApplicationRecord
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
-    return false unless get_pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: get_pilot_experiment)
+    user.has_pilot_experiment?(get_pilot_experiment)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
@@ -1973,8 +1972,7 @@ class Script < ApplicationRecord
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
-    return false unless editor_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
+    user.has_pilot_experiment?(editor_experiment)
   end
 
   def self.get_version_year_options
