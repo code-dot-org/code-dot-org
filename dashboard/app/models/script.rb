@@ -1781,7 +1781,7 @@ class Script < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
-    unit_group&.published_state || published_state || ScriptConstants::PUBLISHED_STATE.in_development
+    published_state || unit_group&.published_state || ScriptConstants::PUBLISHED_STATE.in_development
   end
 
   # Use the unit group's pilot_experiment if one exists
