@@ -4,9 +4,11 @@ import {
   updateDefaultList
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
+    isLoading: true,
     defaultList: {}
   };
 
@@ -18,6 +20,7 @@ export default class DefaultSpritesEditor extends React.Component {
           sprite => (spriteList[sprite.name] = sprite)
         );
         this.setState({defaultList: spriteList});
+        this.setState({isLoading: false});
       })
       .catch(err => {
         console.log(err);
@@ -61,6 +64,8 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   render() {
+    let isLoading = this.state.isLoading;
+
     return (
       <div>
         <a href="/sprites">Back to Sprite Management</a>
@@ -75,7 +80,12 @@ export default class DefaultSpritesEditor extends React.Component {
           clicked.
         </p>
         {this.renderUploadButton()}
-        <div>{this.renderDefaultSprites()}</div>
+        {isLoading && (
+          <div>
+            <Spinner />
+          </div>
+        )}
+        {this.renderDefaultSprites()}
         {this.renderUploadButton()}
       </div>
     );
