@@ -1,8 +1,10 @@
 import React from 'react';
 import GridEditor from './GridEditor';
 import {withInfo} from '@storybook/addon-info';
+import {allowConsoleWarnings} from '../../../test/util/testUtils';
 
 export default storybook => {
+  allowConsoleWarnings();
   const starWarsGrid = [
     [16908288, 16908288, 0, 0, 0, 0, 0, 0],
     [16908288, 16908288, 0, 65536, 131072, 1048576, 0, 0],

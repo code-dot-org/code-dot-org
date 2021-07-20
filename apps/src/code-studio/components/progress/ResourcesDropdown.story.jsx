@@ -1,6 +1,7 @@
 import React from 'react';
 import ResourcesDropdown from './ResourcesDropdown';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 const legacySampleResources = [
   {
@@ -26,7 +27,8 @@ const migratedSampleResources = [
   }
 ];
 
-export default storybook =>
+export default storybook => {
+  allowConsoleWarnings();
   storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
     {
       name: 'unmigrated teacher resources',
@@ -63,3 +65,4 @@ export default storybook =>
       )
     }
   ]);
+};

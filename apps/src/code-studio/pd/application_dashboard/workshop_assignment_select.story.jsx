@@ -2,8 +2,10 @@ import React from 'react';
 import {action} from '@storybook/addon-actions';
 import WorkshopAssignmentSelect from './workshop_assignment_select';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 export default storybook => {
+  allowConsoleWarnings();
   storybook
     .storiesOf('WorkshopAssignmentSelect', module)
     .addDecorator(reactBootstrapStoryDecorator)
