@@ -14,12 +14,37 @@ export function getManifest(appType, locale = 'en_us') {
 }
 
 /* Returns the english default sprite list of SpriteLab
- * @param locale {String} language locale, defaults to 'en_us'
  */
-export function getDefault() {
+export function getDefaultList() {
   return fetch(`/api/v1/animation-library/default_spritelab`).then(response =>
     response.json()
   );
+}
+
+/* Updates the english default sprite list of SpriteLab
+ * @param listData {String} JSON object of  to upload
+ */
+export function updateDefaultList(listData) {
+  return fetch(`/api/v1/animation-library/default_spritelab`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: listData
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(
+          `Default List Upload Error(${response.status}: ${
+            response.statusText
+          })`
+        );
+      }
+      return Promise.resolve();
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success

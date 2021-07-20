@@ -1,5 +1,8 @@
 import React from 'react';
-import {getDefault} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {
+  getDefaultList,
+  updateDefaultList
+} from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 
 export default class DefaultSpritesEditor extends React.Component {
@@ -8,22 +11,34 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   componentDidMount() {
-    getDefault().then(spriteDefault => {
-      var spriteList = {};
-      spriteDefault['default_sprites'].map(
-        sprite => (spriteList[sprite.name] = {sprite})
-      );
-      this.setState({defaultList: spriteList});
-    });
+    getDefaultList()
+      .then(spriteDefault => {
+        var spriteList = {};
+        spriteDefault['default_sprites'].map(
+          sprite => (spriteList[sprite.name] = sprite)
+        );
+        this.setState({defaultList: spriteList});
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   deleteSpriteFromDefaults(spriteName) {
     delete this.state.defaultList[spriteName];
   }
 
+  updateDefaultSprites() {
+    let jsonList = {};
+    jsonList['default_sprites'] = Object.values(this.state.defaultList);
+    updateDefaultList(JSON.stringify(jsonList)).catch(err => {
+      console.log(err);
+    });
+  }
+
   renderDefaultSprites() {
     return Object.keys(this.state.defaultList).map(spriteKey => {
-      let spriteObject = this.state.defaultList[spriteKey].sprite;
+      let spriteObject = this.state.defaultList[spriteKey];
       return (
         <DefaultSpriteRow
           name={spriteObject.name}
@@ -33,6 +48,16 @@ export default class DefaultSpritesEditor extends React.Component {
         />
       );
     });
+  }
+
+  // Button rendered twice - at top and bottom of list - to minimize
+  // required scrolling
+  renderUploadButton() {
+    return (
+      <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
+        Update Default Sprites List
+      </button>
+    );
   }
 
   render() {
@@ -46,11 +71,12 @@ export default class DefaultSpritesEditor extends React.Component {
         <p>
           Sprites are shown in the format: "name: category/path". The order of
           this list is the order that the sprites appear in the dropdown.
+          Changes aren't saved until the "Update Default Sprites List" button is
+          clicked.
         </p>
+        {this.renderUploadButton()}
         <div>{this.renderDefaultSprites()}</div>
-        <button type="button" onClick={() => console.log('Update defaults')}>
-          Update Default Sprites List
-        </button>
+        {this.renderUploadButton()}
       </div>
     );
   }
