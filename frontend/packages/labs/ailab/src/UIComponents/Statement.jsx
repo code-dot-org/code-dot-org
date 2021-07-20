@@ -50,6 +50,7 @@ class Statement extends Component {
           {labelColumn || "____"}
           {currentPanel === "dataDisplayLabel" && labelColumn && (
             <div
+              id="uitest-remove-statement-label"
               onClick={() => this.removeLabel()}
               onKeyDown={() => this.removeLabel()}
               style={styles.statementDeleteIcon}
@@ -74,6 +75,7 @@ class Statement extends Component {
                     {selectedFeature}
                     {currentPanel === "dataDisplayFeatures" && (
                       <div
+                        id="uitest-remove-statement-feature"
                         onClick={() => this.removeFeature(selectedFeature)}
                         onKeyDown={() => this.removeFeature(selectedFeature)}
                         style={styles.statementDeleteIcon}

@@ -87,6 +87,7 @@ class PanelButtons extends Component {
           <div style={styles.nextButton}>
             <button
               type="button"
+              id="uitest-continue-button"
               style={{
                 ...styles.navButton,
                 ...(!panelButtons.next.enabled

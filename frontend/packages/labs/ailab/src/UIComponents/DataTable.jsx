@@ -135,6 +135,7 @@ class DataTable extends Component {
                   return (
                     <td
                       key={columnId}
+                      className="uitest-data-table-column"
                       style={this.getColumnCellStyle(columnId)}
                       onClick={() => this.setCurrentColumn(columnId)}
                       onKeyDown={() => this.setCurrentColumn(columnId)}
