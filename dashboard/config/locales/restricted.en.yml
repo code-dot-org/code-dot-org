@@ -11,3 +11,4 @@ en:
         your_password_wont_change: "Your password won't change until you access the link above and create a new one."
         associated_account_password_reset: "Someone has requested a link to change the password for an account associated with your email address. You can reset the password for the appropriate account using the link below any time within the next"
         associated_account_password_wont_change: "Passwords will not change until you access the corresponding link above and create a new one."
+        7 days: "7 days"
