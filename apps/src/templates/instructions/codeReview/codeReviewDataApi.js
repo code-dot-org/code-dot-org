@@ -22,7 +22,7 @@ export function submitNewCodeReviewComment(commentText, channelId, token) {
 
 export function resolveCodeReviewComment(commentId, resolvedStatus, token) {
   return $.ajax({
-    url: `/code_review_comments/${commentId}/resolve`,
+    url: `/code_review_comments/${commentId}/toggle_resolved`,
     type: 'PATCH',
     headers: {'X-CSRF-Token': token},
     data: {is_resolved: resolvedStatus}
