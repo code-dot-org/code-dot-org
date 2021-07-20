@@ -47,7 +47,7 @@ Feature: AI Lab
     Then element "#uitest-continue-button" is disabled
     And I press keys "Model Name" for element "#uitest-model-name-input"
     And I click selector "#uitest-continue-button"
-    And I wait for 3 seconds
+    And I wait for 4 seconds
     And I see the dynamic instructions are showing "uitest-dynamic-instruction-modelSummary" key
     And I see "#statement"
     And I see "#uitest-model-card"
@@ -57,7 +57,7 @@ Feature: AI Lab
     And I press the settings cog
     And I press the settings cog menu item "Manage AI Models"
     And element "#uitest-ai-trained-models-header" has text "AI Trained Model"
-    And I wait for 2 seconds
+    And I wait for 3 seconds
     And I see "#uitest-model-card"
     And I click "#uitest-import-model-button"
     And I wait for 2 seconds
