@@ -48,7 +48,10 @@ class BubbleChoice < DSLDefined
 
   # Returns all of the sublevels for this BubbleChoice level in order.
   def sublevels
-    Level.where(name: properties['sublevels']).sort_by {|l| properties['sublevels'].index(l.name)}
+    levels_child_levels.
+      includes(:child_level).
+      sublevel.
+      map(&:child_level)
   end
 
   def sublevel_at(index)
@@ -152,6 +155,9 @@ class BubbleChoice < DSLDefined
                               else
                                 SharedConstants::LEVEL_STATUS.not_tried
                               end
+
+        level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
+        level_info[:teacher_feedback_review_state] = level_feedback&.review_state
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -171,6 +177,71 @@ class BubbleChoice < DSLDefined
     summary
   end
 
+  # Determine which sublevel's status to display in our progress bubble.
+  # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
+  # progress for sublevel that has the best result
+  def get_sublevel_for_progress(student, script)
+    keep_working_level = keep_working_sublevel(student, script)
+    return keep_working_level if keep_working_level.present?
+
+    return best_result_sublevel(student, script)
+  end
+
+  # Returns an array of BubbleChoice parent levels for any given sublevel name.
+  # @param [String] level_name. The name of the sublevel.
+  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
+  def self.parent_levels(level_name)
+    includes(:child_levels).where(child_levels_levels: {name: level_name}).to_a
+  end
+
+  def supports_markdown?
+    true
+  end
+
+  def icon
+    'fa fa-sitemap'
+  end
+
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
+    level = super(new_suffix, editor_experiment: editor_experiment)
+    level.levels_child_levels.each do |parent_levels_child_level|
+      sublevel = parent_levels_child_level.child_level
+      cloned_sublevel = sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+      parent_levels_child_level.child_level = cloned_sublevel
+      parent_levels_child_level.save!
+    end
+
+    level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
+    level
+  end
+
+  def self.setup(data)
+    sublevel_names = data[:properties].delete(:sublevels)
+    level = super(data)
+    level.setup_sublevels(sublevel_names)
+    level
+  end
+
+  def setup_sublevels(sublevel_names)
+    # if our existing sublevels already match the given names, do nothing
+    return if sublevels.map(&:name) == sublevel_names
+
+    # otherwise, update sublevels to match
+    levels_child_levels.sublevel.destroy_all
+    Level.where(name: sublevel_names).each do |new_sublevel|
+      ParentLevelsChildLevel.create!(
+        child_level: new_sublevel,
+        kind: ParentLevelsChildLevel::SUBLEVEL,
+        parent_level: self,
+        position: sublevel_names.index(new_sublevel.name)
+      )
+    end
+
+    reload
+  end
+
+  private
+
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @param [Script]
@@ -189,37 +260,5 @@ class BubbleChoice < DSLDefined
       keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
       return keep_working_feedback&.level
     end
-  end
-
-  # Returns an array of BubbleChoice parent levels for any given sublevel name.
-  # @param [String] level_name. The name of the sublevel.
-  # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
-  def self.parent_levels(level_name)
-    where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
-  end
-
-  def supports_markdown?
-    true
-  end
-
-  def icon
-    'fa fa-sitemap'
-  end
-
-  def clone_with_suffix(new_suffix, editor_experiment: nil)
-    level = super(new_suffix, editor_experiment: editor_experiment)
-
-    new_sublevel_names = sublevels.map do |sublevel|
-      sublevel.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
-    end
-
-    update_params = {
-      properties: {
-        sublevels: new_sublevel_names
-      }
-    }
-    level.update!(update_params)
-    level.rewrite_dsl_file(BubbleChoiceDSL.serialize(level))
-    level
   end
 end

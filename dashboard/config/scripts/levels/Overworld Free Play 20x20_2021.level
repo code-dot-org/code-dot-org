@@ -93,11 +93,17 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "boat": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-19 14:39:30 -0700\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"verification_function\",\"available_blocks\",\"if_block_options\",\"contained_level_names\"],\"changed_by_id\":1483,\"changed_by_email\":\"elijah+levelbuilder@gmail.com\"},{\"changed_at\":\"2019-06-19 14:11:14 +0000\",\"changed\":[\"toolbox_blocks\",\"available_blocks\",\"if_block_options\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-19 14:39:30 -0700\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"verification_function\",\"available_blocks\",\"if_block_options\",\"contained_level_names\"],\"changed_by_id\":1483,\"changed_by_email\":\"elijah+levelbuilder@gmail.com\"},{\"changed_at\":\"2019-06-19 14:11:14 +0000\",\"changed\":[\"toolbox_blocks\",\"available_blocks\",\"if_block_options\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -1068,54 +1068,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.contained_level_names, ['real_name']
   end
 
-  test 'parent levels and child levels' do
-    parent = create :level
-    child = create :level
-    parent.child_levels << child
-    assert_equal [parent], child.parent_levels
-
-    # cannot add the same child a second time
-    assert_raises ActiveRecord::RecordInvalid do
-      parent.child_levels << child
-    end
-
-    # cannot add the same parent a second time
-    assert_raises ActiveRecord::RecordInvalid do
-      child.parent_levels << parent
-    end
-  end
-
-  test 'child levels are in order of position' do
-    parent = create :level
-    child3 = create :level
-    child2 = create :level
-    child1 = create :level
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child3,
-      position: 3
-    )
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child1,
-      position: 1
-    )
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child2,
-      position: 2
-    )
-    assert_equal [child1, child2, child3], parent.child_levels
-  end
-
-  test 'all_descendant_levels works on self-referential project template levels' do
-    level_name = 'project-template-level'
-    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
-    assert_equal level, level.project_template_level
-
-    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
-  end
-
   test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
     script = create :csf_script
     assert script.hint_prompt_enabled?
@@ -1182,6 +1134,64 @@ class LevelTest < ActiveSupport::TestCase
     ]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
+
+  test "get_level_for_progress returns the level if there are no sublevels or contained levels" do
+    level = create :level
+    script_level = create :script_level, levels: [level]
+    student = create :student
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal level, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with the best result if no sublevels have keepWorking feedback" do
+    student = create :student
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel2, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback" do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+    create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel1, level_for_progress
+  end
+
+  test "get_level_for_progress returns the first contained level if the level has contained levels" do
+    student = create :student
+
+    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
+    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
+
+    level = create :level, name: 'level 1', level_num: 'custom'
+    level.contained_level_names = [contained_level_1.name, contained_level_2.name]
+    script_level = create :script_level, levels: [level]
+
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal contained_level_1, level_for_progress
   end
 
   test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do

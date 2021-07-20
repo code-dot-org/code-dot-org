@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(13) do
+    assert_cached_queries(18) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -51,7 +51,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level.id
     )
 
-    assert_cached_queries(10) do
+    assert_cached_queries(12) do
       get user_progress_path,
         headers: {'HTTP_USER_AGENT': 'test'}
       assert_response :success

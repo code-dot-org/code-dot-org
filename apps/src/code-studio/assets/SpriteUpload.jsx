@@ -139,6 +139,7 @@ export default class SpriteUpload extends React.Component {
 
     return (
       <div>
+        <a href="/sprites">Back to Sprite Management</a>
         <h1>Sprite Lab Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <h2 style={styles.spriteUploadStep}>

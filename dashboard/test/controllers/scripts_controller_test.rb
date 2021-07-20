@@ -31,6 +31,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @unmigrated_unit = create :script
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write)
   end
 
   test "should get index" do
@@ -159,6 +160,15 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should use unit name as param where unit name is words" do
     unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
+
+    assert_response :success
+    assert_equal unit, assigns(:script)
+  end
+
+  test "show get show if family name matches script name" do
+    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
+    CourseOffering.add_course_offering(unit)
+    get :show, params: {id: 'hoc-script'}
 
     assert_response :success
     assert_equal unit, assigns(:script)
@@ -1200,7 +1210,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Script.expects(:get_from_cache).with(@migrated_unit.name).returns(@migrated_unit).once
+    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Script.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
