@@ -27,6 +27,10 @@ const STUDENT_ONLY_FIELDS = [
 const scriptData = getScriptData('signup');
 const {usIp, signUpUID} = scriptData;
 
+// User type buttons
+const teacherButton = document.getElementById('select-user-type-teacher');
+const studentButton = document.getElementById('select-user-type-student');
+
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
   country: usIp ? 'United States' : '',
@@ -116,11 +120,25 @@ $(document).ready(() => {
   // Keep if sign-up user type experiment favors variant (start)
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
+    $('#user_user_type').val('teacher');
+    styleSelectedUserTypeButton('teacher');
     setUserType('teacher');
   });
   document.addEventListener('selectUserTypeStudent', e => {
+    $('#user_user_type').val('student');
+    styleSelectedUserTypeButton('student');
     setUserType('student');
   });
+
+  function styleSelectedUserTypeButton(value) {
+    if (value === 'teacher') {
+      teacherButton.classList.add('select-user-type-button-selected');
+      studentButton.classList.remove('select-user-type-button-selected');
+    } else if (value === 'student') {
+      studentButton.classList.add('select-user-type-button-selected');
+      teacherButton.classList.remove('select-user-type-button-selected');
+    }
+  }
   // Keep if sign-up user type experiment favors variant (end)
   // Keep if sign-up user type experiment favors original (just the below function))
 
@@ -130,7 +148,9 @@ $(document).ready(() => {
   });
 
   function getUserType() {
-    return $('#user_user_type')[0].value;
+    var value = $('#user_user_type')[0].value;
+    styleSelectedUserTypeButton(value);
+    return value;
   }
 
   function setUserType(userType) {

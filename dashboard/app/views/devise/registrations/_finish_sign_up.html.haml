@@ -160,21 +160,13 @@
     %button.submit= t('signup_form.go_to_account')
 
 :javascript
-  const teacherButton = document.getElementById('select-user-type-teacher');
-  const studentButton = document.getElementById('select-user-type-student');
   // Selects 'Teacher' as the user type
   function selectUserTypeTeacher() {
     selectUserType('selectUserTypeTeacher');
-    // Style the selected button
-    teacherButton.classList.add('select-user-type-button-selected');
-    studentButton.classList.remove('select-user-type-button-selected');
   }
   // Selects 'Student' as the user type
   function selectUserTypeStudent() {
     selectUserType('selectUserTypeStudent');
-    // Style the selected button
-    studentButton.classList.add('select-user-type-button-selected');
-    teacherButton.classList.remove('select-user-type-button-selected');
   }
   // Selects user type by creating and dispatching an event with the given name.
   // (Listener for these events is located in _finish_sign_up.js)
