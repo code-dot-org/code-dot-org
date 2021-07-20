@@ -178,9 +178,9 @@ class UnitGroup < ApplicationRecord
   end
 
   def write_serialization
-    raise 'should not write_serialization in unit tests'
     # Only save non-plc course, and only in LB mode
-    # return unless Rails.application.config.levelbuilder_mode && !plc_course
+    return unless Rails.application.config.levelbuilder_mode && !plc_course
+    raise 'should not write_serialization in unit tests'
     # File.write(UnitGroup.file_path(name), serialize)
   end
 
