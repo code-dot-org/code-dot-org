@@ -124,6 +124,29 @@ class Level < ApplicationRecord
           raw_level[:video_key] = nil
         end
 
+        allowed_keys = [
+          :concept_ids,
+          :level_concept_difficulty,
+          :skin,
+          :video_key
+        ]
+        raw_level.keys.each do |k|
+          raise "unexpected hash key #{k} in level key #{key} raw_level #{raw_level}" unless allowed_keys.include?(k)
+        end
+
+        filepath = File.expand_path("#{Rails.root}/config/deprecated_levels/blockly_levels.json")
+
+        unless File.exist?(filepath)
+          File.write(filepath, "{}")
+        end
+
+        json = File.read(filepath)
+        levels = JSON.parse(json)
+        levels[key] = raw_level
+        levels = levels.sort.to_h
+        json = JSON.pretty_generate(levels)
+        File.write(filepath, json)
+
         level.update(raw_level)
       elsif raw_level[:video_key]
         level.update(video_key: raw_level[:video_key])
