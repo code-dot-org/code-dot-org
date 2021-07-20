@@ -101,8 +101,19 @@ CommitDialog.defaultProps = {
 function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
   return (
     <div>
+      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
+        {i18n.commitNotes()}
+      </label>
+      <textarea
+        id="commit-notes"
+        placeholder={i18n.commitNotesPlaceholder()}
+        onChange={e => onChangeNotes(e.target.value)}
+        style={styles.textarea}
+      >
+        {notes}
+      </textarea>
       <div style={{...styles.bold, ...styles.filesHeader}}>
-        {i18n.includeFiles()}
+        {i18n.saveToBackpack()}
       </div>
       {files.map(file => (
         <div key={file.name} style={styles.fileRow}>
@@ -118,17 +129,6 @@ function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
           />
         </div>
       ))}
-      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
-        {i18n.commitNotes()}
-      </label>
-      <textarea
-        id="commit-notes"
-        placeholder={i18n.commitNotesPlaceholder()}
-        onChange={e => onChangeNotes(e.target.value)}
-        style={styles.textarea}
-      >
-        {notes}
-      </textarea>
     </div>
   );
 }
