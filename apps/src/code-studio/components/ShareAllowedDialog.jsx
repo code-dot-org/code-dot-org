@@ -282,7 +282,7 @@ class ShareAllowedDialog extends React.Component {
                       type="text"
                       id="sharing-input"
                       onClick={select}
-                      readOnly={true}
+                      readOnly
                       value={this.props.shareUrl}
                       style={{cursor: 'copy', width: 500}}
                     />
