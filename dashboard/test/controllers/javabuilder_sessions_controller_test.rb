@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class JavabuilderSessionsControllerTest < ActionController::TestCase
+  URL = "url"
+  CSA_PILOT = "csa-pilot"
+  CSD_PILOT = "csd-piloters"
+
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
@@ -11,14 +15,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123, projectUrl: "url"},
+    params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123, projectUrl: URL},
     user: :levelbuilder,
     response: :success
 
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url", levelId: 261}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261}
 
     response = JSON.parse(@response.body)
     token = response['token']
@@ -36,7 +40,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     get :get_access_token, params: {
       channelId: @fake_channel_id,
       projectVersion: 123,
-      projectUrl: "url",
+      projectUrl: URL,
       options: {'useNeighborhood': true}
     }
 
@@ -50,23 +54,45 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
   test 'csa pilot participant can get access token' do
     user = create :user
-    create(:single_user_experiment, min_user_id: user.id, name: 'csa-pilot')
+    create(:single_user_experiment, min_user_id: user.id, name: CSA_PILOT)
     sign_in(user)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL}
     assert_response :success
+  end
+
+  test 'student of csa pilot participant can get access token' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT)
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL}
+    assert_response :success
+    section.destroy
+  end
+
+  test 'student of section with non-csa-pilot teacher cannot get access token' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: CSD_PILOT)
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL}
+    assert_response :forbidden
+    section.destroy
   end
 
   test 'param for channel id is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {projectVersion: 123, projectUrl: "url"}
+    get :get_access_token, params: {projectVersion: 123, projectUrl: URL}
     assert_response :bad_request
   end
 
   test 'param for project version is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectUrl: "url"}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectUrl: URL}
     assert_response :bad_request
   end
 
