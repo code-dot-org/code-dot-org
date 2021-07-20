@@ -1,8 +1,12 @@
 import $ from 'jquery';
 import {expect} from '../../../util/deprecatedChai';
-import label from '@cdo/apps/applab/designElements/label';
-import library from '@cdo/apps/applab/designElements/library';
+import library, {
+  ElementType,
+  elements
+} from '@cdo/apps/applab/designElements/library';
 import * as applabConstants from '@cdo/apps/applab/constants';
+
+const label = elements[ElementType.LABEL];
 
 function getRect(e) {
   return {
