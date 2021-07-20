@@ -115,16 +115,7 @@ class Level < ApplicationRecord
         end
 
       if key.starts_with?('blockly')
-        # this level is defined in levels.js. find/create the reference to this level
-        level = Level.
-          create_with(name: 'blockly').
-          find_or_create_by!(Level.key_to_params(key))
-        level = level.with_type(raw_level.delete(:type) || 'Blockly') if level.type.nil?
-        if level.video_key && !raw_level[:video_key]
-          raw_level[:video_key] = nil
-        end
-
-        level.update(raw_level)
+        # do nothing
       elsif raw_level[:video_key]
         level.update(video_key: raw_level[:video_key])
       end
