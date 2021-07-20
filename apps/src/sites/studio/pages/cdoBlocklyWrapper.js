@@ -148,7 +148,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
-  blocklyWrapper.addGlobalVariables = function() {}; // Not implemented
+  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
 
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');

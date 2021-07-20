@@ -740,11 +740,6 @@ P5Lab.prototype.afterInject_ = function(config) {
   );
 
   if (this.isSpritelab) {
-    if (this.level.blocklyVariables) {
-      Blockly.addGlobalVariables(
-        this.level.blocklyVariables.split(',').map(varName => varName.trim())
-      );
-    }
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords(
@@ -762,6 +757,12 @@ P5Lab.prototype.afterInject_ = function(config) {
 
     // Don't add infinite loop protection
     Blockly.clearInfiniteLoopTrap();
+  }
+
+  if (this.level.blocklyVariables) {
+    Blockly.mainBlockSpace.registerGlobalVariables(
+      this.level.blocklyVariables.split(',').map(varName => varName.trim())
+    );
   }
 
   // Update p5Wrapper's scale and keep it updated with future resizes:
