@@ -38,7 +38,8 @@ describe("train functions", () => {
     train.init(store);
     train.onClickTrain(store);
 
-    store.dispatch(setTestData({temperature: "10", rain: "1010"}));
+    store.dispatch(setTestData("temperature", 10));
+    store.dispatch(setTestData("rain", 1010));
 
     train.onClickPredict(store);
 
@@ -72,7 +73,8 @@ describe("train functions", () => {
     train.init(store);
     train.onClickTrain(store);
 
-    store.dispatch(setTestData({flavor: "sweet", texture: "crunchy"}));
+    store.dispatch(setTestData("flavor", "sweet"));
+    store.dispatch(setTestData("texture", "crunchy"));
 
     train.onClickPredict(store);
 
