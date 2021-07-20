@@ -1786,7 +1786,7 @@ class Script < ApplicationRecord
 
   # Use the unit group's pilot_experiment if one exists
   def get_pilot_experiment
-    unit_group&.pilot_experiment || pilot_experiment
+    pilot_experiment || unit_group&.pilot_experiment
   end
 
   # @return {String|nil} path to the course overview page for this unit if there
