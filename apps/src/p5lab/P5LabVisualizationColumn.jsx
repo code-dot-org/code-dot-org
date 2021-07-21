@@ -38,6 +38,7 @@ class P5LabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
+    onPromptAnswer: PropTypes.func.isRequired,
 
     // From redux
     isResponsive: PropTypes.bool.isRequired,
@@ -185,7 +186,9 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {isSpritelab && <SpritelabInput />}
+          {isSpritelab && (
+            <SpritelabInput onPromptAnswer={this.props.onPromptAnswer} />
+          )}
         </div>
 
         <GameButtons>
