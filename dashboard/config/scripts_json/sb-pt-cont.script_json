@@ -6,12 +6,13 @@
     "properties": {
       "is_migrated": true,
       "version_year": "unversioned",
-      "pilot_experiment": "storyboard-pt-A",
-      "is_course": true
+      "pilot_experiment": "storyboard-pt-a",
+      "is_course": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "sb-pt-cont",
-    "serialized_at": "2021-07-20 22:21:32 UTC",
+    "serialized_at": "2021-07-21 12:21:45 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "sb-pt-cont"
