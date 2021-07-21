@@ -1,6 +1,5 @@
 import {commands as actionCommands} from './commands/actionCommands';
 import {commands as behaviorCommands} from './commands/behaviorCommands';
-import {commands as customLessonCommands} from './commands/customLessonCommands';
 import {commands as eventCommands} from './commands/eventCommands';
 import {commands as locationCommands} from './commands/locationCommands';
 import {commands as spriteCommands} from './commands/spriteCommands';
@@ -28,9 +27,6 @@ export const commands = {
     this.drawSprites();
     if (coreLibrary.screenText.title || coreLibrary.screenText.subtitle) {
       worldCommands.drawTitle.apply(this);
-    }
-    if (coreLibrary.screenText.haiku) {
-      customLessonCommands.drawHaiku.apply(this);
     }
   },
 
@@ -343,26 +339,5 @@ export const commands = {
 
   getTitle() {
     return validationCommands.getTitle();
-  },
-
-  // Custom Lesson Commands
-  // These are blocks that are custom built for a particular lesson
-  getHaiku() {
-    return customLessonCommands.getHaiku();
-  },
-
-  hideHaiku() {
-    customLessonCommands.hideHaiku();
-  },
-
-  printHaiku(title, author, line1, line2, line3) {
-    customLessonCommands.printHaiku.apply(this, [
-      // default to empty string for any args not provided
-      title || '',
-      author || '',
-      line1 || '',
-      line2 || '',
-      line3 || ''
-    ]);
   }
 };

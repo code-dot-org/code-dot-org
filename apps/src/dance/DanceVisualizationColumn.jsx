@@ -2,16 +2,13 @@ import React from 'react';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
-import * as gameLabConstants from './constants';
+import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog, {signedOutOver13} from '../templates/AgeDialog';
-
-const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
-const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
 const SongSelector = Radium(
   class extends React.Component {
@@ -92,28 +89,6 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
-    const divDanceStyle = {
-      touchAction: 'none',
-      width: GAME_WIDTH,
-      height: GAME_HEIGHT,
-      background: '#fff',
-      position: 'relative',
-      overflow: 'hidden'
-    };
-
-    const p5LoadingStyle = {
-      width: 400,
-      height: 400,
-      display: 'none',
-      alignItems: 'center',
-      justifyContent: 'center'
-    };
-
-    const p5LoadingGifStyle = {
-      width: 100,
-      height: 100
-    };
-
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png')
     };
@@ -128,7 +103,7 @@ class DanceVisualizationColumn extends React.Component {
         {!this.props.isShareView && (
           <AgeDialog turnOffFilter={this.turnFilterOff} />
         )}
-        <span>
+        <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
@@ -139,11 +114,17 @@ class DanceVisualizationColumn extends React.Component {
             />
           )}
           <ProtectedVisualizationDiv>
-            <div id="divDance" style={divDanceStyle}>
-              <div id="divDanceLoading" style={p5LoadingStyle}>
+            <div
+              id="divDance"
+              style={{...styles.visualization, ...styles.container}}
+            >
+              <div
+                id="divDanceLoading"
+                style={{...styles.visualization, ...styles.loadingContainer}}
+              >
                 <img
                   src="//curriculum.code.org/images/DancePartyLoading.gif"
-                  style={p5LoadingGifStyle}
+                  style={styles.loadingGif}
                 />
               </div>
               {this.props.isShareView && (
@@ -155,13 +136,33 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-        </span>
+        </div>
       </div>
     );
   }
 }
 
 const styles = {
+  visualization: {
+    width: MAX_GAME_WIDTH,
+    height: GAME_HEIGHT
+  },
+  container: {
+    touchAction: 'none',
+    background: '#fff',
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  loadingContainer: {
+    // The value of display is controlled by StudioApp.
+    display: 'none',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  loadingGif: {
+    width: 100,
+    height: 100
+  },
   selectStyle: {
     width: '100%'
   }

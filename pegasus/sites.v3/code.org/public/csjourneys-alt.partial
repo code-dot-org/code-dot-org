@@ -79,26 +79,27 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank">
+      <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Careers with CS photo">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Take your class on a CS adventure</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for live, virtual field trips with NASA, Amazon and others! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
-        <br>
-        <a class="linktag" id="career-videos" href="/careers-with-cs#videos" target="_blank"><button>View opportunities</button></a>
+        <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank"><button>View opportunities</button></a>
   </div>
 </div>
 </div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/coming-soon.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Classroom speakers">
+        <a class="linktag" id="myjourneychats" href="/csjourneys/myjourneychats" target="_blank">
+          <img class="tutorial-tile-img" src="/images/csjourneys/myjourneychats1.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="My Journey Chats: Weekly Classroom Speakers">
+        </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hear directly from professionals</strong></h3>
         <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with people using computer science to model the universe, build robots, help athletes improve their performance, and more!</div>
         <br>
-        <a class="linktag" id="guest-speakers" href="/csjourneys/classchats-alt" target="_blank"><button>Learn more</button></a>
+        <a class="linktag" id="myjourneychats" href="/csjourneys/myjourneychats" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
 </div>
@@ -109,9 +110,10 @@ social:
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>View career exploration and inspiration resources</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our Career Exploration hub for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
-          <a class="linktag" id="career-k5" href="/careers-in-tech" target="_blank"><button>For grades K-5</button></a>
-          <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank"><button>For grades 6-12</button></a>
-  </div>
+        <br>
+        <br>
+        <div class="smalltext" style="color: dimgray; text-align: left"><a class="linktag" id="career-k5" href="/careers-with-cs/k5" target="_blank">For grades K-5</a> | <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank">For grades 6-12</a></div>
+    </div>
 </div>
 </div>
 

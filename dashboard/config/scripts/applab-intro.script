@@ -1,6 +1,9 @@
 student_detail_progress_view true
+family_name 'applab-intro'
+version_year 'unversioned'
 published_state 'preview'
 tts true
+is_course true
 
 lesson 'Intro to App Lab', display_name: 'Intro to App Lab', has_lesson_plan: true
 level 'App Lab Intro 8 - Video Getting Started', progression: 'Setting Properties'

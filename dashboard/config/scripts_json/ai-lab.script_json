@@ -4,12 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true,
-      "version_year": "2021"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "aiml",
-    "serialized_at": "2021-07-12 02:18:23 UTC",
+    "family_name": null,
+    "serialized_at": "2021-07-20 22:21:32 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ai-lab"
@@ -276,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-ai lab-intro ai lab video"
+        ],
         "progression": "Video: Introduction to AI Lab"
       },
       "named_level": false,
@@ -299,6 +301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-ai lab-training testing video"
+        ],
         "progression": "Video: Training and Testing in AI Lab"
       },
       "named_level": false,
@@ -322,6 +327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-ai lab-model cards video"
+        ],
         "progression": "Video: Model Cards in AI Lab"
       },
       "named_level": false,
@@ -345,6 +353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-ai lab-numerical ai lab video"
+        ],
         "progression": "Video: Numerical Data in AI Lab"
       },
       "named_level": false,

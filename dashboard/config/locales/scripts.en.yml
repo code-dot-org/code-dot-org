@@ -1337,7 +1337,7 @@ en:
               name: Welcome!
           student_description: Online levels for PD workshop
         K5-OnlinePD:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2017)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -1366,6 +1366,7 @@ en:
             Planning:
               name: Planning
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
+          name: K5-OnlinePD
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -15199,7 +15200,7 @@ en:
               name: Dance Party
           student_description: Code your own dance party to share with your friends!
         k5-onlinepd-2019:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -15308,6 +15309,7 @@ en:
             End of Course projects:
               name: End of Course projects
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          name: k5-onlinepd-2019
         dance-extras-2019:
           title: Keep On Dancing (2019)
           description: Go beyond the first hour with extended project ideas.
@@ -18369,7 +18371,7 @@ en:
           lessons: {}
           lesson_groups: {}
         k5-onlinepd-2020:
-          title: Teaching Computer Science Fundamentals
+          title: Teaching Computer Science Fundamentals (2020)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           description_short: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
           description_audience: ''
@@ -18436,6 +18438,7 @@ en:
             k5_next_steps_1:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
+          name: k5-onlinepd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -22417,7 +22420,9 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: 'Test Lesson #1'
+              name: Practice Lesson
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22425,7 +22430,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Test
+              display_name: Practice Levels
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -22675,6 +22680,8 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             lesson-6:
               name: Applying Standard Algorithms
+              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
+              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
             lesson-7:
               name: Reversing Elements
             lesson-8:
@@ -23103,7 +23110,7 @@ en:
 
                 **Question of the Day:** How can we use AI Lab to predict numerical data?
             lesson9:
-              name: Similarity Models
+              name: Numerical Models
               description_student: Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety.
               description_teacher: |-
                 In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
@@ -23208,8 +23215,14 @@ en:
           title: AI and Machine Learning Module
           description_audience: ''
           description_short: ''
-          description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
-          student_description: ''
+          description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also explore lesson plans on the [All Resources](./resources) page. Each lesson includes a link to its lesson plan.
+          student_description: |-
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            **For Teachers:** [Click here](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#heading=h.c7x6ho8ek6yz) to learn more about this unit and view lesson plans. You can also access lesson plans from this page if you create a Code.org teacher account.
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -23294,7 +23307,7 @@ en:
 
                 **Question of the Day:** How can I use a Model Card to improve my app?
             Similarity Models:
-              name: Similarity Models
+              name: Numerical Models
               description_student: Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety.
               description_teacher: |-
                 In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
@@ -23403,10 +23416,7 @@ en:
             - Complete Unit 1 Chapter 1 and Unit 4 before starting this unit
             - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information
             - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
-          student_description: |-
-            Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
-
-            **Coming Soon! This unit will be available in July 2021!**
+          student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
         kodea-pd-2021:
           title: CSF Online PD - Kodea
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -23680,15 +23690,15 @@ en:
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
-              name: Overview of CS Discoveries
+              name: Overview of course content
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Tools
+              name: Overview of learning tools
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Implementation Options
+              name: 'Overview of implementation '
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -23703,6 +23713,14 @@ en:
           lessons:
             lesson-1:
               name: Guidance for teaching CS Discoveries
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: CS Practices
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Teaching practices
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -24504,6 +24522,57 @@ en:
           lesson_groups: {}
           name: tesspl2
           title: Tess PL 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sb-pt-cont:
+          lessons:
+            lesson-1:
+              name: Story Board - A
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-pt-cont
+          title: Story Board (playtest control)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sb-pt-exp:
+          lessons:
+            lesson-1:
+              name: Story Board - B
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-pt-exp
+          title: Story Board (playtest experiment)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dc-standalone:
+          lessons:
+            lesson-1:
+              name: Story Board
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dc-standalone
+          title: Story Board (DC Standalone)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        storyboard-playtest-control:
+          lessons: {}
+          lesson_groups: {}
+        sb-chardev-v1:
+          lessons:
+            lesson-1:
+              name: Story Board - Character Development
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-chardev-v1
+          title: Story Board Character Development
           description_audience: ''
           description_short: ''
           description: ''
