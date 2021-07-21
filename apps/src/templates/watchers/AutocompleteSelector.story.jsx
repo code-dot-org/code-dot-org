@@ -1,8 +1,10 @@
 import React from 'react';
 import AutocompleteSelector from './AutocompleteSelector';
 import {action} from '@storybook/addon-actions';
+import {allowConsoleWarnings} from '../../../test/util/testUtils';
 
 export default storybook => {
+  allowConsoleWarnings();
   storybook.storiesOf('AutocompleteSelector', module).addStoryTable([
     {
       name: 'with no selection',
