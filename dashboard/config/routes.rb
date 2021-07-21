@@ -888,4 +888,6 @@ Dashboard::Application.routes.draw do
     patch :resolve, on: :member
     get :project_comments, on: :collection
   end
+
+  get '/backpacks/channel', to: 'backpacks#get_channel'
 end
