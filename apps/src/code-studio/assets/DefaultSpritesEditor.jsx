@@ -41,7 +41,7 @@ export default class DefaultSpritesEditor extends React.Component {
     this.setState({isUpdating: true});
     let jsonList = {};
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
-    updateDefaultList(JSON.stringify(jsonList))
+    updateDefaultList(jsonList)
       .then(() => {
         this.setState({
           pendingChangesCount: 0,

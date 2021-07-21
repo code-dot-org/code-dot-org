@@ -21,7 +21,7 @@ export function getDefaultList() {
 }
 
 /* Returns the list of default sprites in SpriteLab in English
- * @param listData {String} JSON object to upload
+ * @param listData {Object} JSON object to upload
  */
 export function updateDefaultList(listData) {
   return fetch(`/api/v1/animation-library/default-spritelab`, {
@@ -29,7 +29,7 @@ export function updateDefaultList(listData) {
     headers: {
       'content-type': 'application/json'
     },
-    body: listData
+    body: JSON.stringify(listData)
   })
     .then(response => {
       if (!response.ok) {
