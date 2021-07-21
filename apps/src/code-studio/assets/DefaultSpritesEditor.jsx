@@ -12,7 +12,8 @@ export default class DefaultSpritesEditor extends React.Component {
     isLoading: true,
     defaultList: {}, // Dictionary with name as key and sprite object as value
     pendingChangesCount: 0,
-    isUpdating: false
+    isUpdating: false,
+    errorText: ''
   };
 
   componentDidMount() {
@@ -42,10 +43,15 @@ export default class DefaultSpritesEditor extends React.Component {
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
     updateDefaultList(JSON.stringify(jsonList))
       .then(() => {
-        this.setState({pendingChangesCount: 0, isUpdating: false});
+        this.setState({
+          pendingChangesCount: 0,
+          isUpdating: false,
+          errorText: ''
+        });
       })
       .catch(err => {
         console.log(err);
+        this.setState({errorText: err.toString(), isUpdating: false});
       });
   };
 
@@ -66,16 +72,19 @@ export default class DefaultSpritesEditor extends React.Component {
   // Button rendered twice - at top and bottom of list - to minimize
   // required scrolling
   renderUploadButton() {
-    let isUpdating = this.state.isUpdating;
+    let {isUpdating, errorText} = this.state;
     return (
-      <div style={styles.changesRow}>
-        <Button
-          onClick={this.updateDefaultSprites}
-          color={Button.ButtonColor.blue}
-          text="Update Default Sprites List"
-        />
-        <p>Pending Changes: {this.state.pendingChangesCount}</p>
-        {isUpdating && <Spinner />}
+      <div>
+        <div style={styles.changesRow}>
+          <Button
+            onClick={this.updateDefaultSprites}
+            color={Button.ButtonColor.blue}
+            text="Update Default Sprites List"
+          />
+          <p>Pending Changes: {this.state.pendingChangesCount}</p>
+          {isUpdating && <Spinner />}
+        </div>
+        {errorText.length > 0 && <p>{errorText}. Please try again.</p>}
       </div>
     );
   }
