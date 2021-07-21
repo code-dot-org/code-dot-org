@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:28 UTC",
+    "serialized_at": "2021-07-21 13:22:34 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -1108,7 +1108,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c91c1300-b8e3-4a31-8af2-b2a98b29ee26",
@@ -1151,7 +1152,8 @@
       "key": "c37e9344-8ba9-42e2-82ca-dfc103f65176",
       "position": 2,
       "properties": {
-        "description": "**Group:** Group students into pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Investigating Arrays activity guide.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct pairs to Level 1 on Code Studio on a single computer and use the following protocol:\n    * For each question, the student with the worksheet answers a question or predicts the outcome out loud.\n    * The student with the computer then writes the code to check the hypothesis.\n    * Students trade roles after each question.\n* Have students complete the Know and Want to Know section of the KWL chart."
+        "description": "**Group:** Group students into pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Investigating Arrays activity guide.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct pairs to Level 1 on Code Studio on a single computer and use the following protocol:\n    * For each question, the student with the worksheet answers a question or predicts the outcome out loud.\n    * The student with the computer then writes the code to check the hypothesis.\n    * Students trade roles after each question.\n* Have students complete the Know and Want to Know section of the KWL chart.",
+        "progression_name": "Investigating Arrays"
       },
       "seeding_key": {
         "activity_section.key": "c37e9344-8ba9-42e2-82ca-dfc103f65176",
@@ -1188,6 +1190,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students complete Levels 2 through 4 navigating `PainterPlus` in The Neighborhood using arrays.",
+        "progression_name": "Arrays in The Neighborhood",
         "tips": [
           {
             "type": "teachingTip",
@@ -1221,7 +1224,7 @@
       "key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
       "position": 7,
       "properties": {
-        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. The Theater has just opened in The Neighborhood, and you have been asked to help create a concert using audio and visual effects.",
+        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. The Theater has just opened in The Neighborhood, and you have been asked to help create a concert using audio and visual effects.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
         "duration": "10",
         "name": "Arrays in The Theater",
         "remarks": true
@@ -1232,38 +1235,58 @@
       }
     },
     {
-      "key": "6dca50b8-c5b1-4a37-84d7-fcfae6b43117",
+      "key": "9412ddac-1a3c-48b1-815b-32ebb831eb55",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to The Theater video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 5 on Code Studio. Give students 4 minutes to try to manipulate sounds using arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Regroup the class and ask students to share their sounds and how they made them. Make sure students are comfortable manipulating and updating sounds.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to continue working in The Theater on Levels 5 and 6.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to The Theater video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students modify the constructor to use their own images of their neighborhood and themselves. Have students proceed to Level 6 to modify the `welcome()` method to use `drawImage()` and `drawText()` to display their neighborhood image and welcome text. On Level 7, students explore using `playNote()` and `pause()` with the array of song notes.",
+        "progression_name": "Arrays in The Theater",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits after regrouping, log in to Code Studio yourself and open Level 5. Ask students to talk you through the steps of making a short song. Ask leading questions such as:\n* *How do I access notes from the scale array?*\n* *How do I make my song longer?*\n* *Can I add a rest?*\n* *What values do you think are used for the duration?*\n\nThe video discusses these questions, but it may be helpful to review them after exploring The Theater on their own."
+            "markdown": "If time permits after regrouping, log in to Code Studio yourself and open Level 7. Ask students to talk you through the steps of making a short song. Ask leading questions such as:\n* *How do I access notes from the `notes` array?*\n* *How do I make my song longer?*\n* *How can I add a pause between notes?*\n* *What values do you think are used for the duration?*\n\nThe video discusses these questions, but it may be helpful to review them after exploring The Theater on their own."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6dca50b8-c5b1-4a37-84d7-fcfae6b43117",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55",
         "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
       }
     },
     {
-      "key": "05b58014-b801-4eee-9de8-2998786500aa",
+      "key": "ddd5bf0d-10c1-455c-bea5-41d97ba86778",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Check in with students as they complete Level 6. If they feel comfortable accessing and modifying arrays, direct them to complete the Choice Levels 7 and 8. If they are unsure, ask them to join you and a small group to work on the first choice of Level 8 together.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 on Code Studio. Students complete a choice level to solve problems using arrays in The Neighborhood.",
         "duration": "10",
         "name": "Arrays Practice",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Choice Level 7 gives students practice accessing values from arrays in The Neighborhood. Choice Level 8 gives students practice accessing and modifying arrays in The Theater. Depending on the amount of time remaining, you may choose to assign one, two, or three levels from each set.\n\nEncourage students who finish early to work on the third choice in The Theater (Level 8), which is an open sandbox where they can create a song."
-          }
-        ]
+        "progression_name": "Solving Problems with Arrays"
       },
       "seeding_key": {
-        "activity_section.key": "05b58014-b801-4eee-9de8-2998786500aa",
+        "activity_section.key": "ddd5bf0d-10c1-455c-bea5-41d97ba86778",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "28927d41-7cfb-45b6-ac0f-caf132990e84",
+      "position": 10,
+      "properties": {
+        "description": "Let's create the second scene and introduce yourself in your concert!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "28927d41-7cfb-45b6-ac0f-caf132990e84",
+        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
+      }
+    },
+    {
+      "key": "639e535c-0475-4a0c-b8dc-9fc17788d981",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 9 on Code Studio. Students modify the `introSelf()` method to draw an image of themselves at the center of the stage and write an introductory message. Have students continue to Level 10 to debug the array of notes.",
+        "progression_name": "Introducing Your Community"
+      },
+      "seeding_key": {
+        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981",
         "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
       }
     },
@@ -1284,7 +1307,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "0d1559c3-5194-4d46-85fa-475df9565d27",
@@ -1382,6 +1406,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. In Level 1, students write a `for` loop to print out numbers 0-5. In Level 2, students use a `for` loop to traverse an array of paint colors to create a design in The Neighborhood. In Level 3, students traverse an array of paint colors backward. If desired, pair students for this activity.",
+        "progression_name": "The Neighborhood: for Loops",
         "tips": [
           {
             "type": "teachingTip",
@@ -1426,6 +1451,7 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Each choice level uses `for` loops to traverse arrays in slightly different ways, but all require students to write at least one `for` loop to access and use an array of paint colors.",
         "duration": "8",
         "name": "The Neighborhood: More for Loops",
+        "progression_name": "The Neighborhood: More for Loops",
         "tips": [
           {
             "type": "teachingTip",
@@ -1467,7 +1493,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60",
@@ -3797,10 +3824,638 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L1-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "c91c1300-b8e3-4a31-8af2-b2a98b29ee26"
+      },
+      "level_keys": [
+        "CSA U3L1-L1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigating Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "c37e9344-8ba9-42e2-82ca-dfc103f65176"
+      },
+      "level_keys": [
+        "CSA U3L2-L1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      },
+      "level_keys": [
+        "CSA U3L2-L2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      },
+      "level_keys": [
+        "CSA U3L2-L3"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      },
+      "level_keys": [
+        "CSA U3L2-L4"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Theater"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      },
+      "level_keys": [
+        "CSA U3L2-L5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Theater"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      },
+      "level_keys": [
+        "CSA U3L2-L6"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Arrays in The Theater"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L7"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      },
+      "level_keys": [
+        "CSA U3L2-L7"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solving Problems with Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L8"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "ddd5bf0d-10c1-455c-bea5-41d97ba86778"
+      },
+      "level_keys": [
+        "CSA U3L2-L8"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Your Community"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
+      },
+      "level_keys": [
+        "CSA U3L2-L9"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Your Community"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
+      },
+      "level_keys": [
+        "CSA U3L2-L10"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L2-L11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0d1559c3-5194-4d46-85fa-475df9565d27"
+      },
+      "level_keys": [
+        "CSA U3L2-L11"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood: for Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      },
+      "level_keys": [
+        "CSA U3L3-L1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood: for Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      },
+      "level_keys": [
+        "CSA U3L3-L2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood: for Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      },
+      "level_keys": [
+        "CSA U3L3-L3"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood: More for Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "d2ec78ec-5b1a-4e06-bfa1-98f18602f8d0"
+      },
+      "level_keys": [
+        "CSA U3L3-L4"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60"
+      },
+      "level_keys": [
+        "CSA U3L3-L5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60"
+      },
+      "level_keys": [
+        "CSA U3L3-L6"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L1-L1",
+        "script_level.level_keys": [
+          "CSA U3L1-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "c91c1300-b8e3-4a31-8af2-b2a98b29ee26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L1",
+        "script_level.level_keys": [
+          "CSA U3L2-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "c37e9344-8ba9-42e2-82ca-dfc103f65176"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L2",
+        "script_level.level_keys": [
+          "CSA U3L2-L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L3",
+        "script_level.level_keys": [
+          "CSA U3L2-L3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L4",
+        "script_level.level_keys": [
+          "CSA U3L2-L4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2c9d379a-6073-4227-a4e8-7fbed3d60b90"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L5",
+        "script_level.level_keys": [
+          "CSA U3L2-L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L6",
+        "script_level.level_keys": [
+          "CSA U3L2-L6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L7",
+        "script_level.level_keys": [
+          "CSA U3L2-L7"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9412ddac-1a3c-48b1-815b-32ebb831eb55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L8",
+        "script_level.level_keys": [
+          "CSA U3L2-L8"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "ddd5bf0d-10c1-455c-bea5-41d97ba86778"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L9",
+        "script_level.level_keys": [
+          "CSA U3L2-L9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L10",
+        "script_level.level_keys": [
+          "CSA U3L2-L10"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L2-L11",
+        "script_level.level_keys": [
+          "CSA U3L2-L11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0d1559c3-5194-4d46-85fa-475df9565d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L1",
+        "script_level.level_keys": [
+          "CSA U3L3-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L2",
+        "script_level.level_keys": [
+          "CSA U3L3-L2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L3",
+        "script_level.level_keys": [
+          "CSA U3L3-L3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "fc9022a2-4443-4161-884c-55cf906cba8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L4",
+        "script_level.level_keys": [
+          "CSA U3L3-L4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "d2ec78ec-5b1a-4e06-bfa1-98f18602f8d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L5",
+        "script_level.level_keys": [
+          "CSA U3L3-L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L3-L6",
+        "script_level.level_keys": [
+          "CSA U3L3-L6"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60"
+      }
+    }
   ],
   "resources": [
     {

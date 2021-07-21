@@ -1,0 +1,23 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Let's try drawing multiple squares using loops to create an effect in your `drawSquares()` method.\r\n1. Convert the following `for` loop to a `while` loop.\r\n\r\n2. In `NeighborhoodConcert.java`, replace the code you wrote in your `drawSquares()` method that draws one square with your `while` loop to draw multiple squares.\r\n\r\n```\r\nint width = 0;\t\t// initial width of the rectangle\r\nint height = 0;\t    // initial height of the rectangle\r\n    \r\nfor (int i = 0; i < 10; i++) {\r\n  // Use each color in the colors array\r\n  myStage.setFillColor(colors[i % colors.length]);\r\n\r\n  // Increase the width and height of the next rectangle\r\n  width += 40;\r\n  height += 40;\r\n\r\n  // Find the new coordinates so the rectangles are in the center\r\n  int xPos = (myStage.getWidth() / 2) - (width / 2);\r\n  int yPos = (myStage.getHeight() / 2) - (height / 2);\r\n\r\n  // Draw the rectangle with the new coordinates and size\r\n  myStage.drawRectangle(xPos, yPos, width, height);\r\n\r\n  // Wait before drawing the next rectangle\r\n  myStage.pause(0.2);\r\n}\r\n```",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29222,
+    "display_name": "For to While",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-21T15:16:09.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-21T15:16:09.448+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3a\\\"\"],\"cloned_from\":\"CSA U3L4-L3a\"},{\"changed_at\":\"2021-07-21 15:16:32 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 15:47:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 16:57:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
