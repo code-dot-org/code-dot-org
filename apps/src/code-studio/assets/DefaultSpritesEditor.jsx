@@ -5,6 +5,7 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import AddDefaultSprite from '@cdo/apps/code-studio/assets/AddDefaultSprite';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
@@ -28,11 +29,22 @@ export default class DefaultSpritesEditor extends React.Component {
       });
   }
 
-  deleteSpriteFromDefaults(spriteName) {
-    delete this.state.defaultList[spriteName];
+  incrementPendingChanges() {
     let changes = this.state.pendingChanges + 1;
     this.setState({pendingChanges: changes});
   }
+
+  deleteSpriteFromDefaults(spriteName) {
+    delete this.state.defaultList[spriteName];
+    this.incrementPendingChanges();
+  }
+
+  addSpriteToDefaults = (spriteName, spriteCategory) => {
+    let updateList = this.state.defaultList;
+    updateList[spriteName] = {name: spriteName, key: spriteCategory};
+    this.setState({defaultList: updateList});
+    this.incrementPendingChanges();
+  };
 
   updateDefaultSprites() {
     this.setState({isUpdating: true});
@@ -93,6 +105,7 @@ export default class DefaultSpritesEditor extends React.Component {
           clicked.
         </p>
         {this.renderUploadButton()}
+        <AddDefaultSprite onAdd={this.addSpriteToDefaults} />
         {isLoading && (
           <div>
             <Spinner />
