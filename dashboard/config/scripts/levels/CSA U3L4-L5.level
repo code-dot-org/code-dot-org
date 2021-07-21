@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Allow the user to specify how many times a sound effect plays by doing the following:\r\n1. Convert the pseudocode below to Java.\r\n\r\n2. In `MyConcert.java`, add your code after your call to `drawSquares()`.\r\n\r\n```\r\nPrompt the user to enter a positive number to play or a negative number to stop\r\nUse Scanner to get the integer entered by the user and store it in an int variable called number\r\nDeclare and initialize a variable named total to 0\r\nWhile number is greater than or equal to 0\r\n   Add the number to total\r\n   Prompt the user to enter a positive number to play or a negative number to stop\r\n   Use Scanner to get the integer entered by the user and store it in number\r\n```",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29222,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-21T16:33:12.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-21T16:33:12.022+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3a\\\"\"],\"cloned_from\":\"CSA U3L4-L3a\"},{\"changed_at\":\"2021-07-21 16:47:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 17:03:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 17:35:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 18:10:38 +0000\",\"changed\":[\"display_name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
