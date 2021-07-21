@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-21 13:22:34 UTC",
+    "serialized_at": "2021-07-21 20:13:27 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -1554,7 +1554,8 @@
       "key": "b6ef4ed3-b252-4fcd-ac18-da2998d0ce0f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. In each pair, one student runs the program on the first choice level, while the other student runs the program on the second choice level to check their predictions. Have students explain what happened to their partner and predict the cause."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. In each pair, one student runs the program on the first choice level, while the other student runs the program on the second choice level to check their predictions. Have students explain what happened to their partner and predict the cause.",
+        "progression_name": "while Loop Edge Cases"
       },
       "seeding_key": {
         "activity_section.key": "b6ef4ed3-b252-4fcd-ac18-da2998d0ce0f",
@@ -1601,7 +1602,7 @@
       "key": "4444c9e3-ce71-4c6c-945d-a77c7538a22e",
       "position": 7,
       "properties": {
-        "description": "Let's explore how to use the `Rectangle` class to create visuals.",
+        "description": "Let's explore how to use color and shapes in The Theater to create Scene 3 for our concert.",
         "remarks": true
       },
       "seeding_key": {
@@ -1610,101 +1611,105 @@
       }
     },
     {
-      "key": "e838f04d-651b-44fc-bf5a-a452c7d0fb9e",
+      "key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students modify the code to explore the functionality of each method to modify a `Rectangle` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students modify the code to explore using `drawRectangle()`, working with the `Color` class, and modifying the stroke and fill.",
+        "progression_name": "Rectangles and Color"
       },
       "seeding_key": {
-        "activity_section.key": "e838f04d-651b-44fc-bf5a-a452c7d0fb9e",
+        "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "0d794e9c-ea47-4243-aa8c-8ca5788a7bbe",
+      "key": "f288ac30-0ba3-49b0-9f0d-a3347fbd08b6",
       "position": 9,
       "properties": {
         "description": "Now you know how to create shapes to use in your visualization. Let's practice displaying these with `while` and `for` loops.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "0d794e9c-ea47-4243-aa8c-8ca5788a7bbe",
+        "activity_section.key": "f288ac30-0ba3-49b0-9f0d-a3347fbd08b6",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "2f243be3-015d-4aea-88f7-5d0ce5145972",
+      "key": "196d4557-0289-4723-9c6a-784e4f88edf0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a `while` loop to a `for` loop, while the other student does a different level to convert a `for` loop to a `while` loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then complete a vocabulary matching level."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a while loop to a for loop, while the other student does a different level to convert a for loop to a while loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then complete a vocabulary matching level.",
+        "progression_name": "while to for to while"
       },
       "seeding_key": {
-        "activity_section.key": "2f243be3-015d-4aea-88f7-5d0ce5145972",
+        "activity_section.key": "196d4557-0289-4723-9c6a-784e4f88edf0",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "c3ba25dd-a0fd-43c1-a56d-6b2fd37f4841",
+      "key": "ccfa8aa8-4e9b-4e45-8757-8fb52ecab573",
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *You've just seen how you can convert between the different types of loops. When would we want to use a `while` loop?*\n\n**Discussion Goal:** Students share that a `while` loop can be used when it is unknown when the loop will end.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Guide students towards thinking about the difference between the header of a `while` loop and a `for` loop. For example, you could ask, *Can you tell how many times a `for` loop will run from its header? How about a `while` loop?*"
+            "markdown": "Guide students towards thinking about the difference between the header of a `while` loop and a `for` loop. For example, you could ask, *“Can you tell how many times a `for` loop will run from its header? How about a `while` loop?”*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c3ba25dd-a0fd-43c1-a56d-6b2fd37f4841",
+        "activity_section.key": "ccfa8aa8-4e9b-4e45-8757-8fb52ecab573",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "1d02cfc5-48f1-4fad-bedf-9c367c49350a",
+      "key": "45547f4b-49c8-4351-8daf-0bceec2ae9af",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `while` loops can be useful for getting multiple values from a user.\n\nWith a `while` loop, we can loop until the user enters a specific value. This value is called a flag, or sentinel value. A sentinel value determines when to end a loop.\n\nSince we don't know how many times we will need to ask the user for input, we can use a `while` loop.\n\nFor example, this pseudocode will loop until the user enters a negative number.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `while` loops can be useful for getting multiple values from a user.\n\nWith a `while` loop, we can loop until the user enters a specific value. This value is called a flag, or sentinel value. A sentinel value determines when to end a loop.\n\nSince we don't know how many times we will need to ask the user for input, we can use a `while` loop.\n\nFor example, this pseudocode will loop until the user enters a negative number.",
         "duration": "10",
         "name": "Using Sentinel Values",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1d02cfc5-48f1-4fad-bedf-9c367c49350a",
+        "activity_section.key": "45547f4b-49c8-4351-8daf-0bceec2ae9af",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "836ac800-b661-49cd-8804-723bff4e7856",
+      "key": "e78beda9-972e-432f-8abd-7e5c64533bab",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students convert the pseudocode so they can input values to play music until a negative value is entered."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. Students convert the pseudocode so they can input values to play music until a negative value is entered.",
+        "progression_name": "while Loops with Scanner"
       },
       "seeding_key": {
-        "activity_section.key": "836ac800-b661-49cd-8804-723bff4e7856",
+        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "28c3151e-acd5-4caa-ac32-034a656e298b",
+      "key": "eef34daa-bd85-45ef-aff8-e8baeadebc1d",
       "position": 14,
       "properties": {
-        "description": "Now let's put it all together to make your visualization!",
+        "description": "Now let's put it all together to finish your scene!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "28c3151e-acd5-4caa-ac32-034a656e298b",
+        "activity_section.key": "eef34daa-bd85-45ef-aff8-e8baeadebc1d",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
     {
-      "key": "f310e0f3-0e83-468b-b9f4-820778dcda21",
+      "key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students must use a loop and change the `Rectangle` object at least once."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 7 on Code Studio to add a message to introduce people in their community. Have students continue to Level 8 to create and traverse the given array of images.",
+        "progression_name": "The People in Your Community"
       },
       "seeding_key": {
-        "activity_section.key": "f310e0f3-0e83-468b-b9f4-820778dcda21",
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc",
         "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
       }
     },
@@ -1725,7 +1730,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "84d81b94-95f6-47a1-bfe1-d49715a85563",
@@ -4237,6 +4243,213 @@
       "level_keys": [
         "CSA U3L3-L6"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "while Loop Edge Cases"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "b6ef4ed3-b252-4fcd-ac18-da2998d0ce0f"
+      },
+      "level_keys": [
+        "CSA U3L4-L1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rectangles and Color"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600"
+      },
+      "level_keys": [
+        "CSA U3L4-L2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "while to for to while"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "196d4557-0289-4723-9c6a-784e4f88edf0"
+      },
+      "level_keys": [
+        "CSA U3L4-L3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "while to for to while"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "196d4557-0289-4723-9c6a-784e4f88edf0"
+      },
+      "level_keys": [
+        "CSA U3L4-L4"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "while Loops with Scanner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+      },
+      "level_keys": [
+        "CSA U3L4-L5"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "while Loops with Scanner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+      },
+      "level_keys": [
+        "CSA U3L4-L6"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The People in Your Community"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
+      },
+      "level_keys": [
+        "CSA U3L4-L7"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The People in Your Community"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
+      },
+      "level_keys": [
+        "CSA U3L4-L8"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L4-L9"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "84d81b94-95f6-47a1-bfe1-d49715a85563"
+      },
+      "level_keys": [
+        "CSA U3L4-L9"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4454,6 +4667,114 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
         "activity_section.key": "582f9e8b-4a49-4f73-a3e6-ef6c788f2f60"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L1",
+        "script_level.level_keys": [
+          "CSA U3L4-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "b6ef4ed3-b252-4fcd-ac18-da2998d0ce0f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L2",
+        "script_level.level_keys": [
+          "CSA U3L4-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L3",
+        "script_level.level_keys": [
+          "CSA U3L4-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "196d4557-0289-4723-9c6a-784e4f88edf0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L4",
+        "script_level.level_keys": [
+          "CSA U3L4-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "196d4557-0289-4723-9c6a-784e4f88edf0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L5",
+        "script_level.level_keys": [
+          "CSA U3L4-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L6",
+        "script_level.level_keys": [
+          "CSA U3L4-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L7",
+        "script_level.level_keys": [
+          "CSA U3L4-L7"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L8",
+        "script_level.level_keys": [
+          "CSA U3L4-L8"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L4-L9",
+        "script_level.level_keys": [
+          "CSA U3L4-L9"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "84d81b94-95f6-47a1-bfe1-d49715a85563"
       }
     }
   ],
