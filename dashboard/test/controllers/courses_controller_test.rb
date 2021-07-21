@@ -46,7 +46,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 15
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
 
   test "show: regular courses get sent to show" do

@@ -1,6 +1,21 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
+  registerGlobalVariables(variableList) {
+    this.globalVariables = variableList;
+    this.getVariableMap().addVariables(variableList);
+  }
+
+  clear() {
+    super.clear();
+
+    // After clearing the workspace, we need to reinitialize global variables
+    // if there are any.
+    if (this.globalVariables) {
+      this.getVariableMap().addVariables(this.globalVariables);
+    }
+  }
+
   /** Add trashcan to flyout instead of block canvas
    * @override
    */
