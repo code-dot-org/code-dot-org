@@ -35,7 +35,7 @@ The app uses a scene-by-scene approach, similar to AI for Oceans.  It has centra
 #### Dynamic Instructions
 We wanted to make use of the existing instructions infrastructure provided by the main repo, which has things like text-to-speech support and authoring UI in levelbuilder.  But we also wanted a way to provide dynamic instructions tailored to each scene in the app.  We experimented with a variety of combinations, but they often led to a busy combination of lengthy instructions (since they were addressing every step in AI Lab) in the regular instruction panel at the top, along with custom instructions below in the AI Lab app area.
 
-The creation of [Dynamic Instructions](https://github.com/code-dot-org/code-dot-org/pull/39384) was the breakthrough that gave us the best of both worlds.  They can be authored in levelbuilder, use the existing text-to-speech system, and can also be used outside of AI Lab.  They encourage instructions to be written for just the current panel on the screen.  (They can also be triggered by other states in the app for specific instructions at that moment in time).  They do not dynamically resize, so the screen below them does not shift around, and they are guaranteed to always be fully readable without needing scrolling.  And best of all, they empower curriculum designers to explain what's happening in each level with minimal changes required in the app itself.  (That said, showing new Dynamic Instructions for specific states in the app is very easy.)
+The creation of [Dynamic Instructions](https://github.com/code-dot-org/code-dot-org/pull/39384) was the breakthrough that gave us the best of both worlds.  They can be authored in levelbuilder, use the existing text-to-speech system, and can also be used outside of AI Lab.  They encourage instructions to be written for just the current panel on the screen.  (They can also be triggered by other states in the app for specific instructions at those moments in time).  They do not dynamically resize, so the screen below them does not shift around, and they are guaranteed to always be fully readable without needing scrolling.  And best of all, they empower curriculum designers to explain what's happening in each level with minimal changes required in the app itself.  (That said, adding new Dynamic Instructions for specific states in the app is very easy.)
 
 #### Responsiveness
 The app is horizontally responsive, though it doesn't need to collapse all the way to mobile widths because our host site manages the viewport on mobile devices and also enforces landscape viewing.
@@ -43,7 +43,6 @@ The app is horizontally responsive, though it doesn't need to collapse all the w
 The app is vertically responsive, and uses flexbox to fill the vertical space with a combination of fixed- and variable-height elements.
 
 #### Adding a dataset
-
 To add a new "pre-canned" dataset to the tool, add three files - `.csv`, `.json`, and `.jpg` - to [this directory](https://github.com/code-dot-org/ml-playground/tree/951bbad5562e01fa0c81279aab0239db26d17f15/public/datasets).  Then add the dataset to [this file](https://github.com/code-dot-org/ml-playground/blob/12c25ce5257e69fbcc6f94ccdba3670f120a5631/src/datasetManifest.js).
 
 Take care that each column is correctly listed in the `.json` file, and test that it's working in the tool by highlighting each column and ensuring that its metadata shows correctly in the panel on the right.
@@ -83,11 +82,9 @@ This screen does a few things:
 - The student can "Try it out!" and run their own predictions.  The interface here is very similar to what they can see in App Lab once they import the saved model there.  The A.I. bot makes a reappearance here, because it's popular!
 
 #### Save Model
-
 The student can fill out the "model card" and then save the model, along with the model card information, to the server.  This model can then be imported in App Lab.  The model card information is seen in App Lab when previewing the model prior to importing it.  [Model cards](https://modelcards.withgoogle.com/about) serve as an accessible reference for an AI model.  They allow the student to document decisions.  And analyzing model cards in the curriculum helps students to [explore](https://codeorg.medium.com/code-org-curriculum-now-teaches-ai-to-every-student-f4d09895be15) issues of bias and ethics.
 
 #### Model Summary
-
 The student can see a summary of the model that they have just saved.  Proceeding from here will go to the next level in the progression.
 
 ## Common operations
