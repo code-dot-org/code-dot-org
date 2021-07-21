@@ -28,13 +28,13 @@ export default class DefaultSpritesEditor extends React.Component {
       });
   }
 
-  deleteSpriteFromDefaults(spriteName) {
+  deleteSpriteFromDefaults = spriteName => {
     delete this.state.defaultList[spriteName];
     let changes = this.state.pendingChanges + 1;
     this.setState({pendingChanges: changes});
-  }
+  };
 
-  updateDefaultSprites() {
+  updateDefaultSprites = () => {
     this.setState({isUpdating: true});
     let jsonList = {};
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
@@ -45,7 +45,7 @@ export default class DefaultSpritesEditor extends React.Component {
       .catch(err => {
         console.log(err);
       });
-  }
+  };
 
   renderDefaultSprites() {
     return Object.keys(this.state.defaultList).map(spriteKey => {
@@ -54,7 +54,7 @@ export default class DefaultSpritesEditor extends React.Component {
         <DefaultSpriteRow
           name={spriteObject.name}
           keyValue={spriteObject.key}
-          onDelete={this.deleteSpriteFromDefaults.bind(this)}
+          onDelete={this.deleteSpriteFromDefaults}
           key={spriteObject.name}
         />
       );
@@ -67,7 +67,7 @@ export default class DefaultSpritesEditor extends React.Component {
     let isUpdating = this.state.isUpdating;
     return (
       <div style={styles.changesRow}>
-        <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
+        <button type="button" onClick={this.updateDefaultSprites}>
           Update Default Sprites List
         </button>
         <p>Pending Changes: {this.state.pendingChanges}</p>
