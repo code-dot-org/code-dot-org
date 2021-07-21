@@ -79,6 +79,9 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    // Adjust max height of the scrolling body of the dialog based on number of
+    // LoginCard types available to the user.
+    style.root.maxHeight = hasThirdParty ? '500px' : '360px';
 
     return (
       <div style={style.root}>
