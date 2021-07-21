@@ -11,11 +11,42 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
-import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
+
+const style = {
+  root: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
+  },
+  scroll: {
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    height: 'calc(80vh - 200px)'
+  },
+  thirdPartyProviderUpsell: {
+    marginBottom: '10px'
+  },
+  footer: {
+    position: 'absolute',
+    width: styleConstants['content-width'],
+    height: '100px',
+    left: 0,
+    bottom: '-65px',
+    padding: '0px 20px 20px 20px',
+    backgroundColor: '#fff',
+    borderRadius: '5px'
+  },
+  emailPolicyNote: {
+    marginBottom: '20px',
+    paddingTop: '20px',
+    borderTop: '1px solid #000'
+  }
+};
 
 /**
  * UI for selecting the login type of a class section:
@@ -40,7 +71,7 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
+    const {providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
@@ -49,24 +80,11 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
 
-    // explicitly constrain the container as a whole to the width of the
-    // content. We expect that differing length of translations versus english
-    // source text can cause unexpected layout changes, and this constraint
-    // should help mitigate some of them.
-    const containerStyle = {maxWidth: styleConstants['content-width']};
-
-    // anchor email address policy note to footer just above 'Cancel' button
-    const emailPolicyNoteStyle = {
-      position: 'absolute',
-      top: '0px',
-      zIndex: '600'
-    };
-
     return (
-      <div style={containerStyle}>
-        <Heading1>{title}</Heading1>
+      <div style={style.root}>
+        <Heading1>{i18n.newSectionUpdated()}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
-        <div>
+        <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
               <GoogleClassroomCard onClick={this.openImportDialog} />
@@ -89,8 +107,8 @@ class LoginTypePicker extends Component {
             {' ' + i18n.connectAccountThirdPartyProviders()}
           </div>
         )}
-        <DialogFooter>
-          <div style={emailPolicyNoteStyle}>
+        <div style={style.footer}>
+          <div style={style.emailPolicyNote}>
             <b>{i18n.note()}</b>
             {' ' + i18n.emailAddressPolicy() + ' '}
             <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
@@ -105,7 +123,7 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
-        </DialogFooter>
+        </div>
       </div>
     );
   }
