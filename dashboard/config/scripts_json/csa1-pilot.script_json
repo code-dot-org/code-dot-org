@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-09 17:06:15 UTC",
+    "serialized_at": "2021-07-20 22:21:26 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -42,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Practice Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -408,6 +420,21 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Practice Lesson",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -1274,6 +1301,18 @@
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455",
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -4888,6 +4927,28 @@
         "activity_section.key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455"
       }
+    },
+    {
+      "key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Neighborhood Practice Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
+        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
+      }
+    },
+    {
+      "key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Console Practice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
+        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
+      }
     }
   ],
   "script_levels": [
@@ -5157,6 +5218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1"
+        ],
         "progression": "Information Gathering Commands"
       },
       "named_level": false,
@@ -5180,6 +5244,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2"
+        ],
         "progression": "Information Gathering Commands"
       },
       "named_level": false,
@@ -5203,6 +5270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3"
+        ],
         "progression": "Information Gathering Commands"
       },
       "named_level": false,
@@ -5226,6 +5296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4"
+        ],
         "progression": "Debugging Challenge"
       },
       "named_level": false,
@@ -5249,6 +5322,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -5272,6 +5348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1"
+        ],
         "progression": "No-Argument Constructors"
       },
       "named_level": false,
@@ -5295,6 +5374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2"
+        ],
         "progression": "No-Argument Constructors"
       },
       "named_level": false,
@@ -5318,6 +5400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -5341,6 +5426,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -5364,6 +5452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -5387,6 +5478,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L6"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -5410,6 +5504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L7"
+        ],
         "progression": "Efficient Solutions"
       },
       "named_level": false,
@@ -5433,6 +5530,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5456,6 +5556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1"
+        ],
         "progression": "while Loops with New Information Gathering Commands"
       },
       "named_level": false,
@@ -5479,6 +5582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2"
+        ],
         "progression": "while Loops with New Information Gathering Commands"
       },
       "named_level": false,
@@ -5502,6 +5608,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3"
+        ],
         "progression": "while Loops with New Information Gathering Commands"
       },
       "named_level": false,
@@ -5525,6 +5634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4"
+        ],
         "progression": "Using Our Toolbox"
       },
       "named_level": false,
@@ -5548,6 +5660,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L5"
+        ],
         "progression": "Using Our Toolbox"
       },
       "named_level": false,
@@ -5571,6 +5686,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L6"
+        ],
         "progression": "Using Our Toolbox"
       },
       "named_level": false,
@@ -5594,6 +5712,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L7"
+        ],
         "progression": "Using Our Toolbox"
       },
       "named_level": false,
@@ -5617,6 +5738,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L8"
+        ],
         "progression": "Using Our Toolbox"
       },
       "named_level": false,
@@ -5640,6 +5764,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L9"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5663,6 +5790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1"
+        ],
         "progression": "if-else with Information Gathering Commands"
       },
       "named_level": false,
@@ -5686,6 +5816,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2"
+        ],
         "progression": "if-else with Information Gathering Commands"
       },
       "named_level": false,
@@ -5709,6 +5842,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3"
+        ],
         "progression": "if-else with Information Gathering Commands"
       },
       "named_level": false,
@@ -5732,6 +5868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4"
+        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5755,6 +5894,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5"
+        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5778,6 +5920,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6"
+        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5801,6 +5946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1"
+        ],
         "progression": "The Code Review Cycle"
       },
       "named_level": false,
@@ -5824,6 +5972,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5847,6 +5998,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5870,6 +6024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1"
+        ],
         "progression": "Painter: Turning and Turning"
       },
       "named_level": false,
@@ -5893,6 +6050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2"
+        ],
         "progression": "PainterPlus"
       },
       "named_level": false,
@@ -5916,6 +6076,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3"
+        ],
         "progression": "PainterPlus"
       },
       "named_level": false,
@@ -5939,6 +6102,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4"
+        ],
         "progression": "PainterPlus"
       },
       "named_level": false,
@@ -5962,6 +6128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5"
+        ],
         "progression": "PainterPlus: turnRight()"
       },
       "named_level": false,
@@ -5985,6 +6154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L6"
+        ],
         "progression": "Bug: Calling a Subclass's Method on a Superclass Object"
       },
       "named_level": false,
@@ -6008,6 +6180,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6031,6 +6206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1"
+        ],
         "progression": "Using PainterPlus Methods"
       },
       "named_level": false,
@@ -6054,6 +6232,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6077,6 +6258,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6100,6 +6284,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6123,6 +6310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1"
+        ],
         "progression": "Parameterized Methods"
       },
       "named_level": false,
@@ -6146,6 +6336,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2"
+        ],
         "progression": "Parameterized Methods"
       },
       "named_level": false,
@@ -6169,6 +6362,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3"
+        ],
         "progression": "Parameterized Methods"
       },
       "named_level": false,
@@ -6192,6 +6388,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4"
+        ],
         "progression": "Parameterized Methods"
       },
       "named_level": false,
@@ -6215,6 +6414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L5"
+        ],
         "progression": "Using Painting Methods"
       },
       "named_level": false,
@@ -6238,6 +6440,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6261,6 +6466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1"
+        ],
         "progression": "Writing the SprayPainter Class"
       },
       "named_level": false,
@@ -6284,6 +6492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2"
+        ],
         "progression": "SprayPainter Mural"
       },
       "named_level": false,
@@ -6307,6 +6518,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6330,6 +6544,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L1"
+        ],
         "progression": "Create StampPainter"
       },
       "named_level": false,
@@ -6353,6 +6570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L2"
+        ],
         "progression": "Create Your Stamp Method"
       },
       "named_level": false,
@@ -6376,6 +6596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6399,6 +6622,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6422,6 +6648,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6445,6 +6674,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L15-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6468,6 +6700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L16-L1"
+        ],
         "progression": "Asphalt Art Project"
       },
       "named_level": false,
@@ -6491,6 +6726,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L1"
+        ],
         "progression": "Asphalt Art Project"
       },
       "named_level": false,
@@ -6514,6 +6752,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L18-L1"
+        ],
         "progression": "Asphalt Art Project"
       },
       "named_level": false,
@@ -6529,6 +6770,136 @@
       },
       "level_keys": [
         "CSA U1L18-L1"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
+        "progression": "Neighborhood Practice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      },
+      "level_keys": [
+        "Neighborhood 8x8 Practice Level"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
+        "progression": "Neighborhood Practice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      },
+      "level_keys": [
+        "Neighborhood 16x16 Practice Level"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice with Barriers"
+        ],
+        "progression": "Neighborhood Practice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neighborhood 8x8 Practice with Barriers"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      },
+      "level_keys": [
+        "Neighborhood 8x8 Practice with Barriers"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Neighborhood 13x13 Practice with Barriers"
+        ],
+        "progression": "Neighborhood Practice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neighborhood 13x13 Practice with Barriers"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      },
+      "level_keys": [
+        "Neighborhood 13x13 Practice with Barriers"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Console Practice Level"
+        ],
+        "progression": "Console Practice Level"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Console Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
+      },
+      "level_keys": [
+        "Console Practice Level"
       ]
     }
   ],
@@ -7372,6 +7743,66 @@
         "script.name": "csa1-pilot",
         "activity_section.key": "7ef51ce8-0c03-432b-bc8d-e20069d2e01b"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neighborhood 8x8 Practice Level",
+        "script_level.level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neighborhood 16x16 Practice Level",
+        "script_level.level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neighborhood 8x8 Practice with Barriers",
+        "script_level.level_keys": [
+          "Neighborhood 8x8 Practice with Barriers"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neighborhood 13x13 Practice with Barriers",
+        "script_level.level_keys": [
+          "Neighborhood 13x13 Practice with Barriers"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Console Practice Level",
+        "script_level.level_keys": [
+          "Console Practice Level"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
+      }
     }
   ],
   "resources": [
@@ -8099,182 +8530,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "_key_u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "_key_u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "_key_u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "parameterized_constructors_guided_notes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "vocabulary_draw"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "painter_says"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "code_review_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "u1l10_extra_practice"
+        "resource.key": "_key_implementing_painterplus_methods"
       }
     },
     {
@@ -8286,25 +8543,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
         "resource.key": "java_syntax_and_painterplus_methods_cards"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
-        "resource.key": "_key_implementing_painterplus_methods"
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_1_presentation_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "u1l11_extra_practice"
+        "resource.key": "_key_pseudocode_warm_up"
       }
     },
     {
@@ -8316,25 +8573,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
         "resource.key": "pseudocode_warm_up"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
-        "resource.key": "_key_pseudocode_warm_up"
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_1_presentation_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "u1l12_extra_practice"
+        "resource.key": "_key_spraypainter"
       }
     },
     {
@@ -8346,43 +8603,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
         "resource.key": "spraypainter"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-12",
-        "resource.key": "_key_spraypainter"
+        "resource.key": "u1l12_extra_practice"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "_key_u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
+        "lesson.key": "lesson-12",
         "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "pixel_picture_puzzle"
       }
     },
     {
@@ -8394,13 +8627,37 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "resource.key": "create_your_stamp"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "pixel_picture_puzzle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "u1l14_extra_practice"
+        "resource.key": "_key_design_the_neighborhood"
       }
     },
     {
@@ -8412,31 +8669,61 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
         "resource.key": "design_the_neighborhood"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "_key_design_the_neighborhood"
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_1_presentation_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
-        "resource.key": "u1l15_extra_practice"
+        "resource.key": "_key_open_source_code"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "harmonica_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "java_2d_api_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "minecraft_brigadier_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "notes_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u1l15_extra_practice"
       }
     },
     {
@@ -8453,32 +8740,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "harmonica_app_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "notes_app_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "minecraft_brigadier_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "java_2d_api_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
-        "resource.key": "_key_open_source_code"
+        "lesson.key": "lesson-16",
+        "resource.key": "asphalt_art_project_planning_guide"
       }
     },
     {
@@ -8495,7 +8758,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-16",
+        "lesson.key": "lesson-17",
         "resource.key": "asphalt_art_project_planning_guide"
       }
     },
@@ -8503,24 +8766,6 @@
       "seeding_key": {
         "lesson.key": "lesson-17",
         "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-17",
-        "resource.key": "asphalt_art_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "unit_1_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "resource.key": "asphalt_art_project_planning_guide"
       }
     },
     {
@@ -8531,7 +8776,13 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-19",
+        "lesson.key": "lesson-18",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
         "resource.key": "unit_1_presentation_slides"
       }
     },
@@ -8555,7 +8806,187 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-20",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "vocabulary_draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "painter_says"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "code_review_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "unit_1_presentation_slides"
       }
     }

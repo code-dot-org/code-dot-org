@@ -1,30 +1,79 @@
 import React, {Component} from 'react';
-//import PropTypes from 'prop-types';
+import {getStore} from '@cdo/apps/redux';
+import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from './codeReview/Comment';
-import {demoComments} from './codeReview/commentShape';
 import CommentEditor from './codeReview/CommentEditor';
+import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 export default class ReviewTab extends Component {
-  // Once we have real comments
-  // static propTypes = {
-  //   comments: PropTypes.arrayOf(commentShape)
-  // };
-
   state = {
-    readyForReview: false
+    isReadyForReview: false,
+    comments: [],
+    token: '',
+    forceRecreateEditorKey: 0
+  };
+
+  componentDidMount() {
+    const channelId = getStore().getState().pageConstants.channelId;
+
+    codeReviewDataApi
+      .getCodeReviewCommentsForProject(channelId)
+      .done((data, _, request) => {
+        this.setState({
+          comments: data,
+          token: request.getResponseHeader('csrf-token')
+        });
+      });
+  }
+
+  onNewCommentSubmit = commentText => {
+    const channelId = getStore().getState().pageConstants.channelId;
+    const {token} = this.state;
+
+    codeReviewDataApi
+      .submitNewCodeReviewComment(commentText, channelId, token)
+      .done(newComment => {
+        const comments = this.state.comments;
+        comments.push(newComment);
+
+        this.setState({
+          comments: comments,
+          forceRecreateEditorKey: this.state.forceRecreateEditorKey + 1
+        });
+      });
+  };
+
+  onCommentDelete = deletedCommentId => {
+    const comments = [...this.state.comments];
+    _.remove(comments, comment => comment.id === deletedCommentId);
+
+    this.setState({comments: comments});
+  };
+
+  onCommentResolveStateToggle = toggledCommentId => {
+    const comments = [...this.state.comments];
+    const resolvedCommentIndex = comments.findIndex(
+      comment => comment.id === toggledCommentId
+    );
+    comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
+      .isResolved;
+
+    this.setState({comments: comments});
   };
 
   renderReadyForReviewCheckbox() {
-    const readyForReview = this.state.readyForReview;
+    const {isReadyForReview} = this.state;
 
     return (
       <div style={styles.checkboxContainer}>
         <label style={styles.label}>
           <input
             type="checkbox"
-            checked={readyForReview}
-            onChange={() => this.setState({readyForReview: !readyForReview})}
+            checked={isReadyForReview}
+            onChange={() =>
+              this.setState({isReadyForReview: !isReadyForReview})
+            }
             style={styles.checkbox}
           />
           {javalabMsg.enablePeerReview()}
@@ -34,18 +83,27 @@ export default class ReviewTab extends Component {
   }
 
   render() {
+    const {comments, forceRecreateEditorKey} = this.state;
+
     return (
       <div style={styles.reviewsContainer}>
         {this.renderReadyForReviewCheckbox()}
-        {demoComments.map(comment => {
+        {comments.map(comment => {
           return (
             <Comment
               comment={comment}
               key={`code-review-comment-${comment.id}`}
+              onResolveStateToggle={() =>
+                this.onCommentResolveStateToggle(comment.id)
+              }
+              onDelete={() => this.onCommentDelete(comment.id)}
             />
           );
         })}
-        <CommentEditor />
+        <CommentEditor
+          onNewCommentSubmit={this.onNewCommentSubmit}
+          key={forceRecreateEditorKey}
+        />
       </div>
     );
   }

@@ -769,9 +769,11 @@ class Script < ApplicationRecord
   end
 
   def self.units_with_standards
+    # Find scripts that have a version_year where that version_year isn't 'unversioned',
+    # which is a placeholder for assignable scripts that aren't updated after creation.
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
       map {|unit| [unit.title_for_display, unit.name]}
   end
 
@@ -1945,8 +1947,7 @@ class Script < ApplicationRecord
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
-    return false unless pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    user.has_pilot_experiment?(pilot_experiment)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
@@ -1960,8 +1961,7 @@ class Script < ApplicationRecord
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
-    return false unless editor_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
+    user.has_pilot_experiment?(editor_experiment)
   end
 
   def self.get_version_year_options
