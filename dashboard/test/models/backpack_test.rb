@@ -10,16 +10,23 @@ class BackpackTest < ActiveSupport::TestCase
     @user = create :user
   end
 
-  test 'backpack is invalid if storage_app_id is invalid' do
-    backpack = Backpack.new(user_id: @user.id, storage_app_id: 0)
-    assert(!backpack.valid?)
+  test 'backpack is invalid if storage_app_id is duplicated' do
+    backpack = Backpack.new(user_id: @user.id, storage_app_id: 1)
+    backpack.save!
+    user2 = create :user
+    backpack2 = Backpack.new(user_id: user2.id, storage_app_id: 1)
+    assert(!backpack2.valid?)
   end
 
-  test 'validation passes for valid backpack' do
-    storage_app = StorageApps.new(1)
-    encrypted_id = storage_app.create('', ip: 'test_ip', type: 'backpack')
-    _, storage_app_id = storage_decrypt_channel_id(encrypted_id)
-    backpack = Backpack.new(user_id: @user.id, storage_app_id: storage_app_id)
-    assert(backpack.valid?)
+  test 'find_or_create creates storage_app if backpack does not exist' do
+    backpack = Backpack.find_or_create(@user.id, 'fake-ip')
+    assert backpack.storage_app_id > 0
+    assert_equal @user.id, backpack.user_id
+  end
+
+  test 'find_or_create returns existing backpack if it exists' do
+    backpack = Backpack.find_or_create(@user.id, 'fake-ip')
+    backpack2 = Backpack.find_or_create(@user.id, 'fake-ip')
+    assert_equal(backpack, backpack2)
   end
 end
