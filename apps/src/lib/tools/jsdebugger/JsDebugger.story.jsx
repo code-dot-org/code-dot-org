@@ -5,6 +5,7 @@ import commonReducers from '../../../redux/commonReducers';
 import {reducers as applabReducers} from '../../../applab/redux/applab';
 import {setPageConstants} from '../../../redux/pageConstants';
 import JsDebugger from './JsDebugger';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 function createApplabStore() {
   return createStore(
@@ -16,6 +17,7 @@ function createApplabStore() {
 }
 
 export default storybook => {
+  allowConsoleWarnings();
   const storyTable = [];
 
   const storybookStyle = {

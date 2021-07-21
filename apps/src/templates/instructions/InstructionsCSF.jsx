@@ -328,8 +328,7 @@ class InstructionsCSF extends React.Component {
           />
           <InstructionsCsfMiddleCol
             ref={instructions =>
-              (this.instructions =
-                instructions && instructions.getWrappedInstance().instructions)
+              (this.instructions = instructions?.instructions)
             }
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
