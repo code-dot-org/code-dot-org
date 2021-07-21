@@ -9,17 +9,13 @@ export default class DefaultSpriteRow extends React.Component {
     onDelete: PropTypes.func.isRequired
   };
 
-  deleteSprite(spriteName) {
-    this.props.onDelete(spriteName);
-  }
-
   render() {
     return (
       <div style={styles.assetRow}>
         <Button
           text={'Delete'}
           color={Button.ButtonColor.red}
-          onClick={() => this.deleteSprite(this.props.name)}
+          onClick={() => this.props.onDelete(this.props.name)}
           icon={'trash'}
           iconClassName={'fa-trash'}
         />

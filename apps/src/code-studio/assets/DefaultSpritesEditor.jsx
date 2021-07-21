@@ -9,7 +9,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
-    defaultList: {},
+    defaultList: {}, // Dictionary with name as key and sprite object as value
     pendingChanges: 0,
     isUpdating: false
   };
@@ -21,8 +21,7 @@ export default class DefaultSpritesEditor extends React.Component {
         spriteDefault['default_sprites'].map(
           sprite => (spriteList[sprite.name] = sprite)
         );
-        this.setState({defaultList: spriteList});
-        this.setState({isLoading: false});
+        this.setState({defaultList: spriteList, isLoading: false});
       })
       .catch(err => {
         console.log(err);
@@ -41,8 +40,7 @@ export default class DefaultSpritesEditor extends React.Component {
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
     updateDefaultList(JSON.stringify(jsonList))
       .then(() => {
-        this.setState({pendingChanges: 0});
-        this.setState({isUpdating: false});
+        this.setState({pendingChanges: 0, isUpdating: false});
       })
       .catch(err => {
         console.log(err);
