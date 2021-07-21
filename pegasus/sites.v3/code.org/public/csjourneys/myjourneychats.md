@@ -17,11 +17,11 @@ social:
 <div class="col-75" style="border-right: 25px solid #ffffff">
 <h1 style="margin-top:0; margin-bottom:10px">My Journey Chats</h1> 
 <h2 style="margin-top:0">Weekly Classroom Conversations with Professionals</h2>
-<p>Give your students the opportunity to hear from a diverse group of people using computer science to explore the universe, make cool robots, and more! Students will learn about a number of ways they can use computer science to impact the world, as well as different journeys that people have taken to get to meaningful careers and achieve their goals. For classes joining live, there will be opportunities for Q&A.</p>
+<p>Give your students the opportunity to hear from a diverse group of people using computer science to explore the universe, make cool robots, and more! Students will learn about a number of ways they can use computer science to impact the world, as well as different journeys that people have taken to get to meaningful careers and achieve their goals. For classes joining live, there may be opportunities for Q&A.</p>
 
 <ul>
   <li><a href="#chats">View the options</a></li>
-  <li><a href="#guide">View the Teacher Guide</a></li>
+  <li><a href="#guide">View the Teacher Guides</a></li>
 </ul>
 
 
@@ -38,6 +38,49 @@ social:
 </div>
 
 <div style="clear: both; margin-bottom:35px"></div>
+
+
+
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 2</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/csjourneys/myjourney-patrick.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey">
+</div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, September 28th at 1 pm EDT</h3>
+<strong>Recommended for grades 6-12</strong>
+<p>Learn how a former semi-pro soccer player combined his love for sports and his interest in artificial intelligence into a career using data to help athletes and teams improve their performance.</p>
+<p><b>About the speaker</b>: Patrick Lucey serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.</p>
+<button>Register</button>
+</div>
+<div style="clear: both; margin-bottom:35px"></div>
+
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 3</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/csjourneys/myjourney-nasa.png" style="max-width:100%; border-radius:15px" alt="NASA">
+</div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, October 5th at 1 pm EDT</h3>
+<strong>Recommended for grades K-5</strong>
+<p>Hear from three NASA scientists about their career journeys and how they use art and data science to build 3D models of the universe.</p>
+<p><b>About the speakers</b>: Patrick Lucey serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.</p>
+<button>Register</button>
+</div>
+<div style="clear: both; margin-bottom:35px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <a id="chats"></a>
 <div class="col-50" style="padding-bottom:15px">
