@@ -106,20 +106,25 @@ class Ability
       end
 
       can :view_as_user, ScriptLevel do |script_level, user_to_assume|
-        return true if user_to_assume.student_of?(user) ||
+        can_view_as_user = false
+        can_view_as_user = true if user_to_assume.student_of?(user) ||
           user.project_validator?
 
-        reviewable_project = ReviewableProject.find_by(
-          user_id: user_to_assume.id,
-          script_id: script_level.script_id,
-          level_id: script_level.oldest_active_level&.id
-        )
-        return false if reviewable_project.nil?
+        if script_level.oldest_active_level.is_a?(Javalab)
+          reviewable_project = ReviewableProject.find_by(
+            user_id: user_to_assume.id,
+            script_id: script_level.script_id,
+            level_id: script_level.oldest_active_level&.id
+          )
 
-        return true if (reviewable_project.user.sections_as_student &
-          potential_reviewer.sections_as_student).any?
+          if reviewable_project &&
+            user != user_to_assume &&
+            (user.sections_as_student & user_to_assume.sections_as_student).any?
+            can_view_as_user = true
+          end
+        end
 
-        false
+        can_view_as_user
       end
 
       if user.teacher?
