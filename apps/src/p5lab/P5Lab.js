@@ -389,10 +389,15 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
+      this.currentCode = Blockly.getWorkspaceCode();
       this.studioApp_.addChangeHandler(() => {
-        if (!getStore().getState().runState.isRunning) {
-          this.reset();
-          this.preview.apply(this);
+        const newCode = Blockly.getWorkspaceCode();
+        if (newCode !== this.currentCode) {
+          this.currentCode = newCode;
+          if (!getStore().getState().runState.isRunning) {
+            this.reset();
+            this.preview.apply(this);
+          }
         }
       });
     }
@@ -751,7 +756,7 @@ P5Lab.prototype.afterInject_ = function(config) {
     Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+    Blockly.clearInfiniteLoopTrap();
   }
 
   // Update p5Wrapper's scale and keep it updated with future resizes:

@@ -44,6 +44,18 @@ class ScriptTest < ActiveSupport::TestCase
     @@course_cached ||= UnitGroup.course_cache_to_cache
     UnitGroup.course_cache
 
+    CourseVersion.stubs(:should_cache?).returns true
+    CourseVersion.course_offering_keys('Script')
+
+    CourseOffering.all.pluck(:key).each do |key|
+      CourseOffering.get_from_cache(key)
+    end
+
+    Script.all.pluck(:id, :name).each do |sid, name|
+      CourseOffering.get_from_cache(sid)
+      CourseOffering.get_from_cache(name)
+    end
+
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
     # Best we can do is ensure that no queries are executed on the active connection.
@@ -222,7 +234,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([unit_file_no_fields])
     unit.reload
 
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.published_state
     assert_equal false, unit.login_required?
     assert_nil unit.family_name
   end
@@ -465,6 +477,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
+    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
@@ -1829,7 +1842,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute unit_copy.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, unit_copy.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.published_state
     refute unit_copy.announcements
     refute unit_copy.is_course
 
@@ -1872,7 +1885,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal expected_level_names, actual_level_names
 
     new_dsl = <<~UNIT
-      published_state 'beta'
+      published_state 'in_development'
 
       lesson 'lesson1', display_name: 'lesson1', has_lesson_plan: false
       level 'Level 1_copy'
@@ -1938,6 +1951,37 @@ class ScriptTest < ActiveSupport::TestCase
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])
     assert_equal('CSP Test', assignable_info[:category])
+  end
+
+  test 'get_feedback_for_section returns feedbacks for students in the section on the script' do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    weblab_level = create :weblab
+    gamelab_level = create :gamelab
+    create(:script_level, lesson: lesson, levels: [weblab_level], script: script)
+    create(:script_level, lesson: lesson, levels: [gamelab_level], script: script)
+
+    teacher = create :teacher
+    student1 = create :student
+    student2 = create :student
+
+    section = create :section, user: teacher
+    section.add_student(student1)
+    section.add_student(student2)
+
+    feedback1 = create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student1, comment: "Testing", performance: 'performanceLevel1')
+    create(:teacher_feedback, script: script, level: weblab_level, teacher: teacher, student: student2)
+    create(:teacher_feedback, script: script, level: gamelab_level, teacher: teacher, student: student2)
+
+    feedback_for_section = script.get_feedback_for_section(section)
+
+    assert_equal(3, feedback_for_section.keys.length) # expect 3 feedbacks
+    feedback1_result = feedback_for_section[feedback1.id]
+    assert_equal(student1.name, feedback1_result[:studentName])
+    assert_equal("Testing", feedback1_result[:comment])
+    assert_equal("Extensive Evidence", feedback1_result[:performance])
+    assert_equal("Never reviewed", feedback1_result[:reviewStateLabel])
   end
 
   # This test checks that all categories that may show up in the UI have
@@ -2022,6 +2066,18 @@ class ScriptTest < ActiveSupport::TestCase
 
     units = Script.valid_scripts(user)
     assert_equal [unit], units
+  end
+
+  test "self.valid_scripts: omits in-development units" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    assert Script.any?(&:in_development?)
+
+    refute Script.valid_scripts(student).any?(&:in_development?)
+    refute Script.valid_scripts(teacher).any?(&:in_development?)
+    assert Script.valid_scripts(levelbuilder).any?(&:in_development?)
   end
 
   test "self.valid_scripts: omits pilot units" do
@@ -2300,6 +2356,18 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "units_with_standards" do
+    assert_equal(
+      [
+        [
+          @csf_unit_2019.localized_title, @csf_unit_2019.name
+        ]
+      ],
+      Script.units_with_standards
+    )
+  end
+
+  test "units_with_standards doesn't include unversioned scripts" do
+    create :script, family_name: 'family', version_year: CourseVersion::UNVERSIONED
     assert_equal(
       [
         [
@@ -2763,7 +2831,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: Debugging: Unspotted Bugs 1', raise.message
   end
 
   test 'raise error if try to add lesson in stable and i18n unit' do
@@ -2787,7 +2855,7 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert_equal 'Adding new keys or update existing keys for lessons in scripts that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
+    assert_equal 'Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: new-lesson', raise.message
   end
 
   test 'raise error if try to add new lesson group in stable and i18n unit' do
@@ -3040,8 +3108,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     test 'can copy a standalone unit into a unit group' do
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal 2, @unit_group.default_scripts.count
-      assert_equal 'coursename2-2021', @unit_group.default_scripts[1].name
+      assert_equal 2, @unit_group.default_units.count
+      assert_equal 'coursename2-2021', @unit_group.default_units[1].name
       assert_equal cloned_unit.unit_group, @unit_group
     end
 

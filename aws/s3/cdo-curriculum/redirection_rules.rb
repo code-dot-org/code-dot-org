@@ -1,7 +1,14 @@
+# After making changes to this script, it must be run in order for it to take
+# effect. To run it, go to the root of your local code-dot-org repo and run:
+# ruby aws/s3/cdo-curriculum/redirection_rules.rb
+
 require_relative '../../../deployment'
 require 'aws-sdk-s3'
+require 'dynamic_config/dcdo'
 
 HOST_NAME = "curriculum.code.org"
+CODE_STUDIO_HOST_NAME = "studio.code.org"
+CODE_ORG_HOST_NAME = "code.org"
 BUCKET_NAME = "cdo-curriculum"
 
 routing_rules = [
@@ -10,8 +17,8 @@ routing_rules = [
       key_prefix_equals: "csp/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-current/"
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "courses/csp-2021/"
     }
   },
   {
@@ -19,8 +26,8 @@ routing_rules = [
       key_prefix_equals: "csp-current/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-20/",
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "courses/csp-2021/",
       http_redirect_code: "302"
     }
   },
@@ -29,8 +36,8 @@ routing_rules = [
       key_prefix_equals: "csd/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-current/"
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "courses/csd-2021/"
     }
   },
   {
@@ -38,8 +45,8 @@ routing_rules = [
       key_prefix_equals: "csd-current/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-20/",
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "courses/csd-2021/",
       http_redirect_code: "302"
     }
   },
@@ -48,8 +55,8 @@ routing_rules = [
       key_prefix_equals: "csf/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-current/"
+      host_name: CODE_ORG_HOST_NAME,
+      replace_key_prefix_with: "educate/curriculum/elementary-school"
     }
   },
   {
@@ -57,8 +64,8 @@ routing_rules = [
       key_prefix_equals: "csf-current/"
     },
     redirect: {
-      host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-20/",
+      host_name: CODE_ORG_HOST_NAME,
+      replace_key_prefix_with: "educate/curriculum/elementary-school",
       http_redirect_code: "302"
     }
   },
@@ -68,7 +75,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-20/",
+      replace_key_prefix_with: "plcsf-21/",
       http_redirect_code: "302"
     }
   },
@@ -78,7 +85,7 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-20/",
+      replace_key_prefix_with: "plcsf-21/",
       http_redirect_code: "302"
     }
   },

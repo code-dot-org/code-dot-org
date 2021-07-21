@@ -1674,7 +1674,7 @@ class User < ApplicationRecord
       if section.script.present?
         all_scripts << section.script
       elsif section.unit_group.present?
-        all_scripts.concat(section.unit_group.default_scripts)
+        all_scripts.concat(section.unit_group.default_units)
       end
     end
 
@@ -2195,6 +2195,11 @@ class User < ApplicationRecord
         }
       ]
     )
+  end
+
+  def has_pilot_experiment?(pilot_name)
+    return false unless pilot_name
+    SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
   end
 
   # Called before_destroy.

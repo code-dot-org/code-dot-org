@@ -20,12 +20,13 @@
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225
+      "weekly_instructional_minutes": 225,
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-17 22:31:13 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-20 22:21:12 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -3378,6 +3379,18 @@
       },
       "seeding_key": {
         "activity_section.key": "aa64627c-3f5a-4763-8b92-b9c08922805c",
+        "lesson_activity.key": "d411cf59-7c5f-4e4e-8aba-845836bc9658"
+      }
+    },
+    {
+      "key": "922f7ee7-26d6-4588-a84e-870d628b3ed5",
+      "position": 3,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End of Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "922f7ee7-26d6-4588-a84e-870d628b3ed5",
         "lesson_activity.key": "d411cf59-7c5f-4e4e-8aba-845836bc9658"
       }
     },
@@ -7888,42 +7901,17 @@
       "chapter": 172,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd6-2021",
-        "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
-      },
-      "level_keys": [
-        "csd-post-survey-intro-2019_2021"
-      ]
-    },
-    {
-      "chapter": 173,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -7931,7 +7919,7 @@
         "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
       },
       "level_keys": [
-        "csd-post-survey-levelgroup_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     }
   ],
@@ -9990,21 +9978,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-post-survey-intro-2019_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd6-2021",
-        "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-post-survey-levelgroup_2021",
-        "script_level.level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -10683,56 +10659,80 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "computing-innovations"
+        "lesson.key": "Accelerometer",
+        "resource.key": "accelerometer_events"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "internet-of-things-video"
+        "lesson.key": "Accelerometer",
+        "resource.key": "the_accelerometer"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "innovation-video-1-1"
+        "lesson.key": "Analog Input",
+        "resource.key": "analog-digital-video"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "designing_screens_with_code"
+        "lesson.key": "Analog Input",
+        "resource.key": "analog_sensors"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "responding_to_user_input_1"
+        "lesson.key": "Analog Input",
+        "resource.key": "changing_sensor_scale"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "random_numbers_1"
+        "lesson.key": "Analog Input",
+        "resource.key": "date_and_change_events"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Circuit Playground",
-        "resource.key": "how_computers_word_hardware_software"
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "arrays"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Circuit Playground",
-        "resource.key": "circuit_playground"
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "circuits_and_leds"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Input Unplugged",
-        "resource.key": "input-and-events"
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "loops_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -10755,56 +10755,80 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "circuits-logic-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "circuits_and_buttons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Getting Properties",
         "resource.key": "taking_input_with_getproperty"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Analog Input",
-        "resource.key": "analog-digital-video"
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing-innovations"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Analog Input",
-        "resource.key": "analog_sensors"
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "innovation-video-1-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Analog Input",
-        "resource.key": "date_and_change_events"
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "internet-of-things-video"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Analog Input",
-        "resource.key": "changing_sensor_scale"
+        "lesson.key": "Input Unplugged",
+        "resource.key": "input-and-events"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "emoji-race-guide"
+        "lesson.key": "Making Music",
+        "resource.key": "playing_notes"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "if_statements_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "booleans_and_comparison_operators_1"
+        "lesson.key": "Making Music",
+        "resource.key": "producing_output"
       }
     },
     {
@@ -10828,115 +10852,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
-        "resource.key": "sample_marked_rubrics_2_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
         "resource.key": "make_a_game"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "resource.key": "introduction_to_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "resource.key": "arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "resource.key": "circuits_and_leds"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "resource.key": "color_lights"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Music",
-        "resource.key": "producing_output"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Music",
-        "resource.key": "playing_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and For Loops",
-        "resource.key": "loops_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and For Loops",
-        "resource.key": "modifying_arrays"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and For Loops",
-        "resource.key": "for_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "the_accelerometer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "accelerometer_events"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circuits and Physical Prototypes",
-        "resource.key": "circuits-logic-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circuits and Physical Prototypes",
-        "resource.key": "physical-prototyping-project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circuits and Physical Prototypes",
-        "resource.key": "circuits_and_buttons"
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "sample_marked_rubrics_2_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "prototype-an-innovation-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "planning-your-innovation"
       }
     },
     {
@@ -10954,7 +10882,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_4"
+        "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "prototype-an-innovation-1"
       }
     },
     {
@@ -10962,39 +10896,51 @@
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "prototype_an_innovation_-_student_checklist"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "if_statements_1"
+      }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd6-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_code_4",
@@ -11016,6 +10962,36 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd6-2021"
       }
     }

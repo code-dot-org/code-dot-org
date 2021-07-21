@@ -2,6 +2,8 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
+  CSA_PILOT = 'csa-pilot'
+
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
@@ -56,7 +58,8 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :javabuilder_session
+      :javabuilder_session,
+      CodeReviewComment
     ]
     cannot :index, Level
 
@@ -80,6 +83,16 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
+      can :resolve, CodeReviewComment, project_owner_id: user.id
+      can :destroy, CodeReviewComment do |code_review_comment|
+        code_review_comment.project_owner.student_of?(user)
+      end
+      can :create, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :project_comments, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -196,9 +209,21 @@ class Ability
       true
     end
 
-    # Override Script and ScriptLevel.
+    # Override UnitGroup, Unit, Lesson and ScriptLevel.
+    can :read, UnitGroup do |unit_group|
+      if unit_group.in_development?
+        user.permission?(UserPermission::LEVELBUILDER)
+      elsif unit_group.pilot?
+        unit_group.has_pilot_access?(user)
+      else
+        true
+      end
+    end
+
     can :read, Script do |script|
-      if script.pilot?
+      if script.in_development?
+        user.permission?(UserPermission::LEVELBUILDER)
+      elsif script.pilot?
         script.has_pilot_access?(user)
       else
         true
@@ -207,7 +232,9 @@ class Ability
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if script.pilot?
+      if script.in_development?
+        user.permission?(UserPermission::LEVELBUILDER)
+      elsif script.pilot?
         script.has_pilot_access?(user)
       else
         # login is required if this script always requires it or if request
@@ -223,7 +250,9 @@ class Ability
 
     can [:read, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
-      if script.pilot?
+      if script.in_development?
+        user.permission?(UserPermission::LEVELBUILDER)
+      elsif script.pilot?
         script.has_pilot_access?(user)
       else
         true
@@ -291,8 +320,11 @@ class Ability
       end
     end
 
+    # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+      if user.has_pilot_experiment?(CSA_PILOT) ||
+        (!user.teachers.empty? &&
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)})
         can :get_access_token, :javabuilder_session
       end
     end

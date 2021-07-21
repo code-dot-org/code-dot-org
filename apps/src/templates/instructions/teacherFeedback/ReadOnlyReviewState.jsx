@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import color from '@cdo/apps/util/color';
 
 class ReadOnlyReviewState extends React.Component {
   static propTypes = {
-    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
-    isAwaitingTeacherReview: PropTypes.bool
+    latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates))
   };
 
   renderCompleted() {
@@ -42,14 +41,14 @@ class ReadOnlyReviewState extends React.Component {
   }
 
   render() {
-    const {latestReviewState, isAwaitingTeacherReview} = this.props;
+    const {latestReviewState} = this.props;
 
     if (latestReviewState === ReviewStates.completed) {
       return this.renderCompleted();
+    } else if (latestReviewState === ReviewStates.awaitingReview) {
+      return this.renderAwaitingReview();
     } else if (latestReviewState === ReviewStates.keepWorking) {
-      return isAwaitingTeacherReview
-        ? this.renderAwaitingReview()
-        : this.renderKeepWorking();
+      return this.renderKeepWorking();
     } else {
       return null;
     }
