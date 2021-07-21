@@ -110,6 +110,9 @@ class Ability
         can_view_as_user = true if user_to_assume.student_of?(user) ||
           user.project_validator?
 
+        # Only allow a student to view another student's project
+        # only on levels where we have our peer review feature.
+        # For now, that's only Javalab.
         if script_level.oldest_active_level.is_a?(Javalab)
           reviewable_project = ReviewableProject.find_by(
             user_id: user_to_assume.id,
