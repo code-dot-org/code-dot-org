@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-12 20:20:01 UTC",
+    "serialized_at": "2021-07-20 22:21:32 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "dc-standalone"
@@ -77,6 +77,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_sprites"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -99,6 +102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_print"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -121,6 +127,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_locations"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -143,6 +152,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_events"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -165,6 +177,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_properties"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -187,6 +202,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_costumes"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -209,6 +227,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_backgrounds"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -231,6 +252,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_sprites"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -253,6 +277,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_choices_behaviors"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -275,6 +302,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "storyboard_freeplay_dc"
+        ]
       },
       "named_level": false,
       "bonus": false,
