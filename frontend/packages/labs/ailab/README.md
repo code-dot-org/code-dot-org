@@ -42,6 +42,12 @@ The app is horizontally responsive, though it doesn't need to collapse all the w
 
 The app is vertically responsive, and uses flexbox to fill the vertical space with a combination of fixed- and variable-height elements.
 
+#### Adding a dataset
+
+To add a new "pre-canned" dataset to the tool, add three files - `.csv`, `.json`, and `.jpg` - to [this directory](https://github.com/code-dot-org/ml-playground/tree/951bbad5562e01fa0c81279aab0239db26d17f15/public/datasets).  Then add the dataset to [this file](https://github.com/code-dot-org/ml-playground/blob/12c25ce5257e69fbcc6f94ccdba3670f120a5631/src/datasetManifest.js).
+
+Take care that each column is correctly listed in the `.json` file, and test that it's working in the tool by highlighting each column and ensuring that its metadata shows correctly in the panel on the right.
+
 ### Scenes:
 
 #### Select dataset
@@ -61,13 +67,13 @@ When selecting a feature, it shows the above properties for the highlighted colu
 - a custom CrossTab when both label and feature are categorical data;
 - a scatterplot when both label and feature are numerical data.
 
-For student-uploaded CSV files, we attempt to guess the column type, but provide a way for the student to override this.
+For student-uploaded CSV files, we attempt to guess the column type based on the type of data detected in the column, but provide a way for the student to override this.
 
 #### Train Model
 A.I., the bot from AI for Oceans, is back.  Here, we attempt to illustrate the training process, in which a large amount of the original tabular data is given to the bot, row by row.  The animation is done by updating the React state 30 times a second to trigger a re-render each time.  The scene supports very small datasets, finishing early, as well as larger datasets, fading out after showing a few iterations of the animation.
 
 #### Generate Results
-In his scene we attempt to show A.I. generating results, again inspired by the way we presented it in AI for Oceans.  Here, the bot is making predictions on rows that were reserved for this purpose: it takes the features and predicts the label for each of those rows.  As in the previous scene, it handles both very small and larger datasets.
+In this scene we attempt to show A.I. generating results, again inspired by the way we presented it in AI for Oceans.  Here, the bot is making predictions on rows that were reserved for this purpose: it takes the features and predicts the label for each of those rows.  As in the previous scene, it handles both very small and larger datasets.
 
 #### Results
 This screen does a few things:
@@ -78,7 +84,7 @@ This screen does a few things:
 
 #### Save Model
 
-The student can fill out the "model card" and then save the model, along with the model card information, to the server.  This model can then be imported in App Lab.  The model card information is seen in App Lab when previewing the model prior to importing it.
+The student can fill out the "model card" and then save the model, along with the model card information, to the server.  This model can then be imported in App Lab.  The model card information is seen in App Lab when previewing the model prior to importing it.  [Model cards](https://modelcards.withgoogle.com/about) serve as an accessible reference for an AI model.  They allow the student to document decisions.  And analyzing model cards in the curriculum helps students to [explore](https://codeorg.medium.com/code-org-curriculum-now-teaches-ai-to-every-student-f4d09895be15) issues of bias and ethics.
 
 #### Model Summary
 
