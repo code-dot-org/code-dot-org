@@ -4,7 +4,7 @@ import {assert, expect} from '../../../../util/reconfiguredChai';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import color from '@cdo/apps/util/color';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 const defaultUserLevel = {
@@ -120,13 +120,17 @@ describe('TeacherPanelProgressBubbleTest', () => {
       teacherFeedbackReivewState: ReviewStates.completed
     });
 
-    expect(wrapper.find(KeepWorkingBadge)).to.have.length(0);
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(0);
   });
 
   it('displays keep working badge if teacherFeedbackReivewState is keepWorking', () => {
     const wrapper = setUp({
       teacherFeedbackReivewState: ReviewStates.keepWorking
     });
-    expect(wrapper.find(KeepWorkingBadge)).to.have.length(1);
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(1);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
   });
 });

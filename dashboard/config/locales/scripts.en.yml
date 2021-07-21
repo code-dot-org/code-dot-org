@@ -14950,6 +14950,7 @@ en:
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
           student_description: ''
+          name: dlp19-csp-mod-w4
         csd-pilot:
           title: CSD Pilot Course
           description_audience: ''
@@ -24576,3 +24577,15 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        dlp21-csp-mod4:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stage 1
+            lessonGroup-3:
+              display_name: Stage 2
+          name: dlp21-csp-mod4
+          title: '2021 CS Principles Deeper Learning Module 4  '
+          description_audience: ''
+          description_short: ''
+          description: overview instructions
