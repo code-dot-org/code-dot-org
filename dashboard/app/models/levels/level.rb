@@ -324,10 +324,7 @@ class Level < ApplicationRecord
   end
 
   def delete_custom_level_file
-    if write_to_file?
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
-      File.delete(file_path) if file_path && File.exist?(file_path)
-    end
+    delete_custom_level_file_by_name(name)
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
@@ -792,5 +789,12 @@ class Level < ApplicationRecord
 
   def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
+  end
+
+  def delete_custom_level_file_by_name(name)
+    if write_to_file?
+      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
+      File.delete(file_path) if file_path && File.exist?(file_path)
+    end
   end
 end
