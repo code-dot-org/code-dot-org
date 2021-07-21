@@ -90,12 +90,16 @@ class JavalabView extends React.Component {
   renderVisualization = () => {
     const {visualization} = this.props;
     if (visualization) {
-      return <div style={styles.preview}>{visualization}</div>;
+      return (
+        <div id="visualization-container" style={styles.preview}>
+          {visualization}
+        </div>
+      );
     }
 
     // This workaround is necessary because <VisualizationResizeBar /> requires
     // an element with ID 'visualization' or it will not resize.
-    return <div id="visualization" />;
+    return <div id="visualization" style={{margin: '0 auto'}} />;
   };
 
   setRightContainerHeight = () => {
@@ -134,17 +138,6 @@ class JavalabView extends React.Component {
             ...{height: rightContainerHeight}
           }}
         >
-          <div style={styles.buttons}>
-            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-            {!isEditingStartSources && (
-              <JavalabButton
-                text={i18n.finish()}
-                onClick={onContinue}
-                style={styles.finish}
-                isDisabled={this.props.isReadOnlyWorkspace}
-              />
-            )}
-          </div>
           <div
             ref={ref => (this.editorAndVisualization = ref)}
             style={styles.editorAndVisualization}
@@ -161,6 +154,19 @@ class JavalabView extends React.Component {
                 displayReviewTab
               />
               {this.renderVisualization()}
+              {false && (
+                <div>
+                  <JavalabSettings>{this.renderSettings()}</JavalabSettings>
+                  {!isEditingStartSources && (
+                    <JavalabButton
+                      text={i18n.finish()}
+                      onClick={onContinue}
+                      style={styles.finish}
+                      isDisabled={this.props.isReadOnlyWorkspace}
+                    />
+                  )}
+                </div>
+              )}
             </div>
             <VisualizationResizeBar />
             <div
@@ -231,8 +237,8 @@ const styles = {
     height: '100%'
   },
   preview: {
-    backgroundColor: color.light_gray,
-    height: '200px',
+    //backgroundColor: color.light_gray,
+    //height: '200px',
     marginTop: '13px'
   },
   javalab: {

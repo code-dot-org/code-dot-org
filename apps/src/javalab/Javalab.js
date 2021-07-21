@@ -27,7 +27,7 @@ import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
  * On small mobile devices, when in portrait orientation, we show an overlay
  * image telling the user to rotate their device to landscape mode.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 900;
 
 /**
  * An instantiable Javalab class
@@ -100,6 +100,8 @@ Javalab.prototype.init = function(config) {
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
+    //this.studioApp_.init(config);
+
     window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
       this.studioApp_.resizeVisualization(e.detail);
     });
@@ -123,6 +125,7 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+
     config.afterInject?.();
   };
 
