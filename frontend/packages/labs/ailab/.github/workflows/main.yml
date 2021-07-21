@@ -1,0 +1,18 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '8.16.0'
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn test
+      - run: yarn lint
