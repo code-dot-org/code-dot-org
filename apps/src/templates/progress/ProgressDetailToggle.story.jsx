@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  UnconnectedProgressDetailToggle as ProgressDetailToggle
-} from './ProgressDetailToggle';
+import {UnconnectedProgressDetailToggle as ProgressDetailToggle} from './ProgressDetailToggle';
 import progress, {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 
 export default storybook => {
