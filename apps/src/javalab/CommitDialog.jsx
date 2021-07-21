@@ -9,10 +9,6 @@ import StylizedBaseDialog, {
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class CommitDialog extends React.Component {
-  static propTypes = {
-    closeDialog: PropTypes.func.isRequired
-  };
-
   state = {
     filesToCommit: [],
     filesToBackpack: [],
@@ -21,6 +17,14 @@ export default class CommitDialog extends React.Component {
 
   renderFooter = buttons => {
     let compileStatusContent = '';
+    let commitColor = 'orange';
+    let commitText = 'Commit';
+    if (this.state.commitNotes) {
+      commitColor = 'green';
+    }
+    if (this.state.filesToBackpack.length > 0) {
+      commitText = 'Commit & Save';
+    }
     switch (this.props.compileStatus) {
       case CompileStatus.LOADING:
         compileStatusContent = i18n.compiling();
@@ -48,15 +52,22 @@ export default class CommitDialog extends React.Component {
       >
         {compileStatusContent}
       </div>,
-      <div key="buttons">
-        {buttons}
+      <div>
         <FooterButton
-          text={i18n.commit()}
-          onClick={this.props.closeDialog}
-          key="commit"
-          color="green"
+          key="cancel"
+          type="cancel"
+          text="Cancel"
+          onClick={() => {}}
         />
         ,
+        <FooterButton
+          key="confirm"
+          type="confirm"
+          text={commitText}
+          color={commitColor}
+          borderColor={color.lightest_gray}
+          onClick={() => {}}
+        />
       </div>
     ];
   };
@@ -87,7 +98,7 @@ export default class CommitDialog extends React.Component {
           <CommitDialogBody
             files={files.map(name => ({
               name,
-              commit: filesToCommit.includes(name)
+              commit: filesToBackpack.includes(name)
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
@@ -170,10 +181,8 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.dark_charcoal
   },
-  buttons: {
-    all: {boxShadow: 'none'},
-    buttons: {color: '#0EBE0E'},
-    confirmation: {borderColor: '#0EBE0E'}
+  footerButtons: {
+    all: {backgroundColor: 'green', borderColor: 'green', color: 'green'}
   },
   compileStatus: {
     display: 'flex',
