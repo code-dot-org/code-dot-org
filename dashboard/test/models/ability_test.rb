@@ -234,18 +234,97 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'teacher can view as user for student in their section' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+
+    assert Ability.new(teacher).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'teacher cannot view as user for student not in their section' do
+    teacher = create :teacher
+    student = create :student
+
+    refute Ability.new(teacher).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'project validator can view as user for student' do
+  test 'project validator can view as user for another user' do
+    project_validator = create :project_validator
+    student = create :student
+
+    assert Ability.new(project_validator).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'student in same section as student seeking code review can view as peer' do
+  test 'student in same CSA section as student seeking code review can view as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section
+    section.add_student project_owner
+    section.add_student peer_reviewer
+    create :reviewable_project,
+      user: project_owner,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id
+
+    assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
   end
 
-  test 'student not in same section as student '
+  test 'student not in same section as student seeking code review cannot view as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    create :reviewable_project,
+      user: project_owner,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id
+
+    refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+  end
+
+  test 'student in same section cannot view as peer if peer is not seeking code review' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section
+    section.add_student project_owner
+    section.add_student peer_reviewer
+
+    refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+  end
+
+  test 'student cannot view their own work as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    section = create :section
+    section.add_student project_owner
+    create :reviewable_project,
+      user: project_owner,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id
+
+    refute Ability.new(project_owner).can? :view_as_user, javalab_script_level, project_owner
+  end
+
+  test 'students cannot view as peer on non-Javalab levels' do
+    student_1 = create :student
+    student_2 = create :student
+
+    refute Ability.new(student_1).can? :view_as_user, @login_required_script_level, student_2
+  end
 
   test 'workshop admin can update scholarship info' do
     workshop_admin = create :workshop_admin

@@ -399,11 +399,9 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    user = User.find(params[:user_id])
-
-    # TODO: This should use cancan/authorize.
-    if can?(:view_as_user, user)
-      @user = user
+    user_to_view = User.find(params[:user_id])
+    if can?(:view_as_user, @script_level, user_to_view)
+      @user = user_to_view
     end
   end
 

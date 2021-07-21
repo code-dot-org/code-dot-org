@@ -1391,6 +1391,13 @@ FactoryGirl.define do
     comment 'a comment about your project'
   end
 
+  factory :reviewable_project do
+    sequence(:storage_app_id)
+    association :user, factory: :student
+    association :level
+    association :script
+  end
+
   factory :teacher_score do
     association :user_level
     association :teacher
