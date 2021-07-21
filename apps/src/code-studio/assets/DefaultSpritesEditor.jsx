@@ -5,19 +5,20 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
     defaultList: {}, // Dictionary with name as key and sprite object as value
-    pendingChanges: 0,
+    pendingChangesCount: 0,
     isUpdating: false
   };
 
   componentDidMount() {
     getDefaultList()
       .then(spriteDefault => {
-        var spriteList = {};
+        let spriteList = {};
         spriteDefault['default_sprites'].map(
           sprite => (spriteList[sprite.name] = sprite)
         );
@@ -29,9 +30,10 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   deleteSpriteFromDefaults = spriteName => {
-    delete this.state.defaultList[spriteName];
-    let changes = this.state.pendingChanges + 1;
-    this.setState({pendingChanges: changes});
+    let updatedList = this.state.defaultList;
+    delete updatedList[spriteName];
+    let changes = this.state.pendingChangesCount + 1;
+    this.setState({defaultList: updatedList, pendingChangesCount: changes});
   };
 
   updateDefaultSprites = () => {
@@ -40,7 +42,7 @@ export default class DefaultSpritesEditor extends React.Component {
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
     updateDefaultList(JSON.stringify(jsonList))
       .then(() => {
-        this.setState({pendingChanges: 0, isUpdating: false});
+        this.setState({pendingChangesCount: 0, isUpdating: false});
       })
       .catch(err => {
         console.log(err);
@@ -67,10 +69,12 @@ export default class DefaultSpritesEditor extends React.Component {
     let isUpdating = this.state.isUpdating;
     return (
       <div style={styles.changesRow}>
-        <button type="button" onClick={this.updateDefaultSprites}>
-          Update Default Sprites List
-        </button>
-        <p>Pending Changes: {this.state.pendingChanges}</p>
+        <Button
+          onClick={this.updateDefaultSprites}
+          color={Button.ButtonColor.blue}
+          text="Update Default Sprites List"
+        />
+        <p>Pending Changes: {this.state.pendingChangesCount}</p>
         {isUpdating && <Spinner />}
       </div>
     );
@@ -93,11 +97,7 @@ export default class DefaultSpritesEditor extends React.Component {
           clicked.
         </p>
         {this.renderUploadButton()}
-        {isLoading && (
-          <div>
-            <Spinner />
-          </div>
-        )}
+        {isLoading && <Spinner />}
         {this.renderDefaultSprites()}
         {this.renderUploadButton()}
       </div>

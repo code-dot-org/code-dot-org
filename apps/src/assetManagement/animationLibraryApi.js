@@ -13,16 +13,15 @@ export function getManifest(appType, locale = 'en_us') {
   );
 }
 
-/* Returns the english default sprite list of SpriteLab
- */
+// Returns the list of default sprites in SpriteLab in English
 export function getDefaultList() {
   return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
     response.json()
   );
 }
 
-/* Updates the english default sprite list of SpriteLab
- * @param listData {String} JSON object of  to upload
+/* Returns the list of default sprites in SpriteLab in English
+ * @param listData {String} JSON object to upload
  */
 export function updateDefaultList(listData) {
   return fetch(`/api/v1/animation-library/default-spritelab`, {
