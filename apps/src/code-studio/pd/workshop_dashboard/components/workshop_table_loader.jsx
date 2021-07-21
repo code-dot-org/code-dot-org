@@ -110,12 +110,13 @@ export default class WorkshopTableLoader extends React.Component {
       }
     }
 
-    return React.cloneElement(this.props.children, {
-      workshops: this.state.workshops,
-      onDelete: this.props.canDelete ? this.handleDelete : null,
-      ref: ref => {
-        this.childElement = ref;
-      }
-    });
+    return (
+      <div ref={el => (this.childElement = el)}>
+        {React.cloneElement(this.props.children, {
+          workshops: this.state.workshops,
+          onDelete: this.props.canDelete ? this.handleDelete : null
+        })}
+      </div>
+    );
   }
 }
