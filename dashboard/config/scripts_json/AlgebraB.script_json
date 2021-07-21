@@ -6,11 +6,13 @@
     "properties": {
       "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}",
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:16 UTC",
+    "family_name": "algebrab",
+    "serialized_at": "2021-07-06 22:25:45 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "AlgebraB"

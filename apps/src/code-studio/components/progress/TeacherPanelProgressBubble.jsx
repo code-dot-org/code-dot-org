@@ -8,11 +8,12 @@ import {
   levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {
-  BubbleBadgeWrapper,
-  KeepWorkingBadge
-} from '@cdo/apps/templates/progress/BubbleBadge';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {
+  BubbleShape,
+  BubbleSize
+} from '@cdo/apps/templates/progress/BubbleFactory';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
@@ -70,9 +71,15 @@ export class TeacherPanelProgressBubble extends React.Component {
             {!hideNumber && <span>{userLevel.levelNumber}</span>}
           </div>
           {shouldKeepWorking && (
-            <BubbleBadgeWrapper isDiamond={userLevel.isConceptLevel}>
-              <KeepWorkingBadge />
-            </BubbleBadgeWrapper>
+            <BubbleBadge
+              bubbleShape={
+                userLevel.isConceptLevel
+                  ? BubbleShape.diamond
+                  : BubbleShape.circle
+              }
+              bubbleSize={BubbleSize.full}
+              badgeType={BadgeType.keepWorking}
+            />
           )}
         </div>
       </div>
