@@ -11,7 +11,7 @@
 #
 # Indexes
 #
-#  index_pilots_on_name  (name)
+#  index_pilots_on_name  (name) UNIQUE
 #
 class Pilot < ApplicationRecord
   # The name can be used in urls, constrain it to all lowercase with no spaces

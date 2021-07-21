@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_223451) do
+ActiveRecord::Schema.define(version: 2021_07_21_181140) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1244,7 +1244,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_223451) do
     t.boolean "allow_joining_via_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_pilots_on_name"
+    t.index ["name"], name: "index_pilots_on_name", unique: true
   end
 
   create_table "plc_course_units", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
