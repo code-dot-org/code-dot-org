@@ -205,9 +205,9 @@ export default class SmallFooter extends React.Component {
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
-              markdown={
-                decodeURIComponent(this.props.copyrightStrings.art_from_html)
-              }
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.art_from_html
+              )}
             />
             <SafeMarkdown
               markdown={decodeURIComponent(
