@@ -146,6 +146,7 @@ body {
 }
 
 #powered-by-aws {
+  float: left;
   width: 100%;
 }
 
