@@ -1,6 +1,5 @@
 import * as utils from '@cdo/apps/utils';
 import P5Lab from '../P5Lab';
-import {commands} from './commands';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
@@ -9,7 +8,6 @@ import CoreLibrary from './CoreLibrary';
 
 var SpriteLab = function() {
   P5Lab.call(this);
-  this.commands = commands;
 };
 
 SpriteLab.prototype = Object.create(P5Lab.prototype);
@@ -62,7 +60,6 @@ SpriteLab.prototype.onPause = function(isPaused) {
 };
 
 SpriteLab.prototype.onPromptAnswer = function(variableName, value) {
-  console.log(this);
   getStore().dispatch(popPrompt());
   this.coreLibrary.onPromptAnswer(variableName, value);
 };
