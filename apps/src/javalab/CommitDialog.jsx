@@ -3,12 +3,19 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog, {
+  FooterButton
+} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class CommitDialog extends React.Component {
+  static propTypes = {
+    closeDialog: PropTypes.func.isRequired
+  };
+
   state = {
     filesToCommit: [],
+    filesToBackpack: [],
     commitNotes: null
   };
 
@@ -41,28 +48,38 @@ export default class CommitDialog extends React.Component {
       >
         {compileStatusContent}
       </div>,
-      <div key="buttons">{buttons}</div>
+      <div key="buttons">
+        {buttons}
+        <FooterButton
+          text={i18n.commit()}
+          onClick={this.props.closeDialog}
+          key="commit"
+          color="green"
+        />
+        ,
+      </div>
     ];
   };
 
-  toggleFileToCommit = filename => {
-    let filesToCommit = [...this.state.filesToCommit];
-    const fileIdx = filesToCommit.findIndex(name => name === filename);
+  toggleFileToBackpack = filename => {
+    let filesToBackpack = [...this.state.filesToBackpack];
+    const fileIdx = filesToBackpack.findIndex(name => name === filename);
     if (fileIdx === -1) {
-      filesToCommit.push(filename);
+      filesToBackpack.push(filename);
     } else {
-      filesToCommit.splice(fileIdx, 1);
+      filesToBackpack.splice(fileIdx, 1);
     }
 
-    this.setState({filesToCommit});
+    this.setState({filesToBackpack});
   };
 
   render() {
-    const {filesToCommit, commitNotes} = this.state;
+    const {filesToCommit, commitNotes, filesToBackpack} = this.state;
     const {isOpen, files, handleClose, handleCommit} = this.props;
 
     return (
       <StylizedBaseDialog
+        style={{...styles.buttons}}
         isOpen={isOpen}
         title={i18n.commitCode()}
         confirmationButtonText={i18n.commit()}
@@ -73,12 +90,14 @@ export default class CommitDialog extends React.Component {
               commit: filesToCommit.includes(name)
             }))}
             notes={commitNotes}
-            onToggleFile={this.toggleFileToCommit}
+            onToggleFile={this.toggleFileToBackpack}
             onChangeNotes={commitNotes => this.setState({commitNotes})}
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
+        handleConfirmation={() =>
+          handleCommit(filesToCommit, commitNotes, filesToBackpack)
+        }
         handleClose={handleClose}
         footerJustification="space-between"
       />
@@ -150,6 +169,11 @@ const styles = {
   bold: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.dark_charcoal
+  },
+  buttons: {
+    all: {boxShadow: 'none'},
+    buttons: {color: '#0EBE0E'},
+    confirmation: {borderColor: '#0EBE0E'}
   },
   compileStatus: {
     display: 'flex',

@@ -84,7 +84,7 @@ Javalab.prototype.init = function(config) {
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
-  const onCommitCode = this.onCommitCode.bind(this);
+  const commitAndBackpack = this.commitAndBackpack.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
@@ -197,7 +197,7 @@ Javalab.prototype.init = function(config) {
         onMount={onMount}
         onRun={onRun}
         onContinue={onContinue}
-        onCommitCode={onCommitCode}
+        onCommitCode={commitAndBackpack}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
@@ -274,8 +274,21 @@ Javalab.prototype.afterClearPuzzle = function() {
   project.autosave();
 };
 
-Javalab.prototype.onCommitCode = function() {
+Javalab.prototype.commitAndBackpack = function(
+  filesToCommit,
+  commitNotes,
+  filesToBackpack
+) {
+  this.onCommitCode(filesToCommit, commitNotes);
+  this.saveToBackpack(filesToBackpack);
+};
+
+Javalab.prototype.onCommitCode = function(filesToCommit, commitNotes) {
   project.autosave();
+};
+
+Javalab.prototype.saveToBackpack = function(filesToBackpack) {
+  // do something here to save the files given
 };
 
 export default Javalab;
