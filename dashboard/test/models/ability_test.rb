@@ -233,6 +233,20 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(teacher).can? :get_feedbacks, feedback
   end
 
+  test 'teacher can view as user for student in their section' do
+  end
+
+  test 'teacher cannot view as user for student not in their section' do
+  end
+
+  test 'project validator can view as user for student' do
+  end
+
+  test 'student in same section as student seeking code review can view as peer' do
+  end
+
+  test 'student not in same section as student '
+
   test 'workshop admin can update scholarship info' do
     workshop_admin = create :workshop_admin
     pd_enrollment = create :pd_enrollment

@@ -105,6 +105,23 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
+      can :view_as_user, ScriptLevel do |script_level, user_to_assume|
+        return true if user_to_assume.student_of?(user) ||
+          user.project_validator?
+
+        reviewable_project = ReviewableProject.find_by(
+          user_id: user_to_assume.id,
+          script_id: script_level.script_id,
+          level_id: script_level.oldest_active_level&.id
+        )
+        return false if reviewable_project.nil?
+
+        return true if (reviewable_project.user.sections_as_student &
+          potential_reviewer.sections_as_student).any?
+
+        false
+      end
+
       if user.teacher?
         can :manage, Section, user_id: user.id
         can :manage, :teacher
