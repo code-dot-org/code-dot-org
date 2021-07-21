@@ -149,7 +149,7 @@ social:
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="mentors" href="/beyond/mentors-and-community" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mentorships.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="mentorships">
+        <img class="tutorial-tile-img" src="/images/csjourneys/support-networks.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="mentorships and communities">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Connect students to mentors and support networks</strong></h3>
@@ -161,7 +161,9 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/coming-soon.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Classroom speakers">
+        <a class="linktag" id="extracurricular" href="/beyond/extracurricular" target="_blank">
+          <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/coming-soon.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Extracurricular opportunities">
+        </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Point students to opportunities outside the classroom</strong></h3>
         <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Extracurriculars like coding clubs reinforce classroom learning and give students real-world hands-on experience.</div>
@@ -211,7 +213,7 @@ social:
 <div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="beyond-resources" href="/beyond" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/explore-careers.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="More resources to empower students">
+        <img class="tutorial-tile-img" src="/images/csjourneys/go-beyond.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="More resources to empower students">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>More resources for empowering students</strong></h3>
