@@ -21,35 +21,31 @@ class LoginTypeCard extends Component {
 
   render() {
     const {title, subtitle, description, onClick} = this.props;
-    const cardStyles = {...styles.card};
-    const titleStyles = {...styles.title};
-    const subtitleStyles = {...styles.subtitle};
-    const descriptionStyles = {...styles.description};
 
     if (this.state.hover) {
-      cardStyles.borderColor = color.dark_charcoal;
-      titleStyles.color = color.dark_charcoal;
-      subtitleStyles.color = color.dark_charcoal;
-      descriptionStyles.color = color.dark_charcoal;
+      styles.card.borderColor = color.dark_charcoal;
+      styles.title.color = color.dark_charcoal;
+      styles.subtitle.color = color.dark_charcoal;
+      styles.description.color = color.dark_charcoal;
     } else {
-      cardStyles.borderColor = color.border_gray;
-      titleStyles.color = color.charcoal;
-      subtitleStyles.color = color.charcoal;
-      descriptionStyles.color = color.charcoal;
+      styles.card.borderColor = color.border_gray;
+      styles.title.color = color.charcoal;
+      styles.subtitle.color = color.charcoal;
+      styles.description.color = color.charcoal;
     }
 
     return (
       <div
-        style={cardStyles}
+        style={styles.card}
         onClick={onClick}
         onMouseEnter={this.toggleHover}
         onMouseLeave={this.toggleHover}
         className={this.props.className}
       >
         <div>
-          <div style={titleStyles}>{title}</div>
-          {subtitle && <div style={subtitleStyles}>{subtitle}</div>}
-          <div style={descriptionStyles}>{description}</div>
+          <div style={styles.title}>{title}</div>
+          {subtitle && <div style={styles.subtitle}>{subtitle}</div>}
+          <div style={styles.description}>{description}</div>
         </div>
       </div>
     );
