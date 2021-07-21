@@ -1079,7 +1079,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
 
     if (this.isSpritelab) {
       this.coreLibrary = new CoreLibrary(this.p5Wrapper.p5);
-      const spritelabCommands = this.commands;
+      const spritelabCommands = this.coreLibrary.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
