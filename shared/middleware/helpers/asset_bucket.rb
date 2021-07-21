@@ -8,7 +8,7 @@ class AssetBucket < BucketHelper
 
   def allowed_file_types
     # Only allow specific image and sound types to be uploaded by users.
-    %w(.jpg .jpeg .gif .png .mp3 .pdf .doc .docx)
+    %w(.jpg .jpeg .gif .png .mp3 .wav .pdf .doc .docx)
   end
 
   def cache_duration_seconds
