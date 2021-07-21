@@ -120,7 +120,7 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: cdodeploy/drone:latest
+    image: codedotorg/code-dot-org:latest
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
