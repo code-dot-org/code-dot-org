@@ -267,7 +267,7 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student project_owner
     section.add_student peer_reviewer
     create :reviewable_project,
-      user: project_owner,
+      user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id
 
@@ -282,7 +282,7 @@ class AbilityTest < ActiveSupport::TestCase
     project_owner = create :student
     peer_reviewer = create :student
     create :reviewable_project,
-      user: project_owner,
+      user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id
 
@@ -312,7 +312,7 @@ class AbilityTest < ActiveSupport::TestCase
     section = create :section
     section.add_student project_owner
     create :reviewable_project,
-      user: project_owner,
+      user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id
 
