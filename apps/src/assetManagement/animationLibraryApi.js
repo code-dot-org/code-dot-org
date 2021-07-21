@@ -16,7 +16,7 @@ export function getManifest(appType, locale = 'en_us') {
 /* Returns the english default sprite list of SpriteLab
  */
 export function getDefaultList() {
-  return fetch(`/api/v1/animation-library/default_spritelab`).then(response =>
+  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
     response.json()
   );
 }
@@ -25,7 +25,7 @@ export function getDefaultList() {
  * @param listData {String} JSON object of  to upload
  */
 export function updateDefaultList(listData) {
-  return fetch(`/api/v1/animation-library/default_spritelab`, {
+  return fetch(`/api/v1/animation-library/default-spritelab`, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'

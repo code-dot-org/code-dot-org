@@ -13,11 +13,11 @@ export default class DefaultSpriteRow extends React.Component {
     return (
       <div style={styles.assetRow}>
         <Button
-          text={'Delete'}
+          text="Delete"
           color={Button.ButtonColor.red}
           onClick={() => this.props.onDelete(this.props.name)}
-          icon={'trash'}
-          iconClassName={'fa-trash'}
+          icon="trash"
+          iconClassName="fa-trash"
         />
         <h3>
           {this.props.name}: {this.props.keyValue}
