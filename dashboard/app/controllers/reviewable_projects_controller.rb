@@ -3,18 +3,18 @@ class ReviewableProjectsController < ApplicationController
   before_action :decrypt_channel_id, only: [:create]
 
   check_authorization
-  load_and_authorize_resource :reviewable_project, only: [:destroy]
+  load_and_authorize_resource only: [:destroy]
 
   # POST /reviewable_projects
   def create
-    authorize! :create, ReviewableProject
-
     @reviewable_project = ReviewableProject.where(
-      user_id: current_user.id,
+      user_id: @project_owner.id,
       storage_app_id: @storage_app_id,
       script_id: params[:script_id],
       level_id: params[:level_id]
-    ).first_or_create
+    ).first_or_initialize
+
+    authorize! :create, @reviewable_project, @project_owner
 
     if @reviewable_project.save
       return render json: @reviewable_project
@@ -34,6 +34,7 @@ class ReviewableProjectsController < ApplicationController
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
-    _, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+    @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+    @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 end
