@@ -563,7 +563,7 @@ class Script < ApplicationRecord
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name) if unit_name
+      return Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) if unit_name
     end
 
     locale_str = locale&.to_s
