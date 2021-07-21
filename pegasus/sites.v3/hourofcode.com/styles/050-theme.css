@@ -246,6 +246,7 @@ body {
   }
 
   #powered-by-aws {
+    float: none;
     width: 100%;
     text-align: center;
     margin-top: 12px;
