@@ -111,13 +111,13 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/default_spritelab/
+  # GET /api/v1/animation-library/default-spritelab/
   #
   # Retrieve the default sprite list from S3
-  get %r{/api/v1/animation-library/default_spritelab} do
+  get %r{/api/v1/animation-library/default-spritelab} do
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object("animation-manifests/manifests_levelbuilder/defaults.json").
+      object("animation-manifests/manifests-levelbuilder/defaults.json").
       get
     content_type 'application/json'
     cache_for 3600
@@ -127,14 +127,14 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # POST /api/v1/animation-library/default_spritelab/
+  # POST /api/v1/animation-library/default-spritelab/
   #
   # Update default sprite list in S3
-  post %r{/api/v1/animation-library/default_spritelab} do
+  post %r{/api/v1/animation-library/default-spritelab} do
     dont_cache
     if request.content_type == 'application/json'
       body = request.body.string
-      key = "animation-manifests/manifests_levelbuilder/defaults.json"
+      key = "animation-manifests/manifests-levelbuilder/defaults.json"
 
       Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
     else
