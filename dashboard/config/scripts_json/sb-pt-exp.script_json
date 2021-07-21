@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "sb-pt-exp",
-    "serialized_at": "2021-07-16 03:47:21 UTC",
+    "serialized_at": "2021-07-20 22:21:32 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "sb-pt-exp"

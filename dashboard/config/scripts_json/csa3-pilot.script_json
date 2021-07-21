@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 13:41:44 UTC",
+    "serialized_at": "2021-07-20 22:21:28 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -4444,12 +4444,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
         "resource.key": "_key_creating_arrays"
       }
     },
@@ -4479,7 +4473,151 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_planning_array_algorithms_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u3l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "planning_array_algorithms_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u3l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "vocabulary_draw_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_peer_interview_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "concert_in_the_theater_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_graphic_organizer_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_graphic_organizer_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4509,7 +4647,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-2",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4539,7 +4677,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-3",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4557,26 +4695,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "lesson-4",
         "resource.key": "unit_3_presentation_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "vocabulary_bingo_definitions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
         "resource.key": "_key_u3l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "vocabulary_bingo_cards"
       }
     },
     {
@@ -4593,8 +4719,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-5",
         "resource.key": "unit_3_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_bingo_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_bingo_definitions"
       }
     },
     {
@@ -4623,7 +4761,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-6",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4653,7 +4791,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "lesson-7",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4672,13 +4810,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "planning_array_algorithms"
+        "resource.key": "array_manipulatives_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "array_manipulatives_1"
+        "resource.key": "planning_array_algorithms"
       }
     },
     {
@@ -4689,7 +4827,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-9",
+        "lesson.key": "lesson-8",
         "resource.key": "unit_3_presentation_slides"
       }
     },
@@ -4708,13 +4846,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "planning_array_algorithms_1"
+        "resource.key": "array_algorithms_manipulatives"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "array_algorithms_manipulatives"
+        "resource.key": "planning_array_algorithms_1"
       }
     },
     {
@@ -4725,145 +4863,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "_key_planning_array_algorithms_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "_key_u3l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "vocabulary_draw_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "planning_array_algorithms_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "u3l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "unit_3_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "concert_in_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "concert_in_the_theater_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "concert_in_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "concert_in_the_theater_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "concert_in_the_theater_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "concert_in_the_theater_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "concert_in_the_theater_project_peer_interview_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "unit_3_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "_key_frq_graphic_organizer_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "_key_frq_writing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "frq_graphic_organizer_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "frq_writing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "frq_scoring_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
+        "lesson.key": "lesson-9",
         "resource.key": "unit_3_presentation_slides"
       }
     }
