@@ -225,7 +225,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     # Not testing new_name since it causes a new unit to be created.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.get_published_state
     assert unit.login_required?
     assert_equal 'csd1', unit.family_name
 
@@ -234,7 +234,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([unit_file_no_fields])
     unit.reload
 
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.get_published_state
     assert_equal false, unit.login_required?
     assert_nil unit.family_name
   end
@@ -313,7 +313,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by_name('test-migrated-overrides')
     assert unit.is_migrated
     assert unit.tts
-    assert_equal 'my-pilot-experiment', unit.pilot_experiment
+    assert_equal 'my-pilot-experiment', unit.get_pilot_experiment
     refute unit.editor_experiment
     refute unit.login_required
     refute unit.student_detail_progress_view
@@ -681,6 +681,8 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, unit_group: csp_2018
     section.students << student
 
+    csp1_2018.reload
+    csp1_2017.reload
     assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
@@ -743,6 +745,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
     student = create :student
     student.scripts << unit1
+    unit_group.reload
+    unit1.reload
+    unit2.reload
 
     assert unit2.can_view_version?(student)
   end
@@ -1118,10 +1123,14 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp_2017.reload
+    csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp_2018.reload
+    csp1_2018.reload
 
     refute csp1_2017.summarize[:show_course_unit_version_warning]
 
@@ -1166,10 +1175,14 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
     create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp_2017.reload
+    csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
     create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp_2018.reload
+    csp1_2018.reload
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
@@ -1565,6 +1578,8 @@ class ScriptTest < ActiveSupport::TestCase
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
+    unit.reload
+    unit_group.reload
 
     assert_equal '/courses/csp', unit.course_link
   end
@@ -1829,7 +1844,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     assert unit.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.get_published_state
     assert unit.announcements
     assert unit.is_course
 
@@ -1842,7 +1857,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute unit_copy.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
     refute unit_copy.announcements
     refute unit_copy.is_course
 
@@ -2213,8 +2228,8 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     assert_equal 'pilot-script', unit.name
-    assert_equal 'pilot-experiment', unit.pilot_experiment
-    assert_equal 'pilot', unit.published_state
+    assert_equal 'pilot-experiment', unit.get_pilot_experiment
+    assert_equal 'pilot', unit.get_published_state
   end
 
   test 'has pilot access' do
@@ -3098,6 +3113,8 @@ class ScriptTest < ActiveSupport::TestCase
       create :course_version, content_root: @unit_group
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
+      @unit_group.reload
+      @unit_in_course.reload
     end
 
     test 'can copy a standalone unit as another standalone unit' do
