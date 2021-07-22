@@ -15,4 +15,7 @@
 #  index_reviewable_projects_on_storage_app_id_and_user_id  (storage_app_id,user_id)
 #
 class ReviewableProject < ApplicationRecord
+  belongs_to :user
+  belongs_to :level
+  belongs_to :script
 end
