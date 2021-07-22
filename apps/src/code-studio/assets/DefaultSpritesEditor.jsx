@@ -37,8 +37,8 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   deleteSpriteFromDefaults = spriteName => {
-    let updatedList = {...this.state.defaultList};
-    delete updatedList[spriteName];
+    let updatedList = new Map(this.state.defaultList);
+    updatedList.delete(spriteName);
     this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
   };
