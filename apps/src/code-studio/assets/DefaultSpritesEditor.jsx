@@ -44,9 +44,9 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   addSpriteToDefaults = (spriteName, spriteCategory) => {
-    let updateList = this.state.defaultList;
-    updateList[spriteName] = {name: spriteName, key: spriteCategory};
-    this.setState({defaultList: updateList});
+    let updatedList = {...this.state.defaultList};
+    updatedList[spriteName] = {name: spriteName, key: spriteCategory};
+    this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
   };
 
