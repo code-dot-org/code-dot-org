@@ -19,8 +19,58 @@ describe('SpriteLab Core Library', () => {
     coreLibrary.p5._predefinedSpriteAnimations = {
       a: animation,
       b: animation,
-      c: animation
+      c: animation,
+      costume_label: animation
     };
+  });
+
+  describe('addSprite', () => {
+    it('returns an id', () => {
+      expect(coreLibrary.addSprite()).to.equal(0);
+      expect(coreLibrary.addSprite()).to.equal(1);
+      expect(coreLibrary.addSprite()).to.equal(2);
+    });
+
+    it('location defaults to (200,200)', () => {
+      coreLibrary.addSprite({name: spriteName});
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
+      ).to.equal(200);
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
+      ).to.equal(200);
+    });
+
+    it('location picker works', () => {
+      coreLibrary.addSprite({name: spriteName, location: {x: 123, y: 321}});
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
+      ).to.equal(123);
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
+      ).to.equal(400 - 321);
+    });
+
+    it('location function works', () => {
+      let locationFunc = () => ({x: 123, y: 321});
+      coreLibrary.addSprite({name: spriteName, location: locationFunc});
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
+      ).to.equal(123);
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
+      ).to.equal(400 - 321);
+    });
+
+    it('setting animation works', () => {
+      coreLibrary.addSprite({name: spriteName, animation: 'costume_label'});
+      expect(
+        spriteCommands.getProp.apply(coreLibrary, [
+          {name: spriteName},
+          'costume'
+        ])
+      ).to.equal('costume_label');
+    });
   });
 
   describe('Sprite Map', () => {
