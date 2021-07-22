@@ -511,7 +511,8 @@ describe('Artist', () => {
 
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="when_run"]')).to.be.defined;
+      expect(newDom.querySelector('block[type="when_run"]')).not.to.be
+        .undefined;
     });
   });
 
