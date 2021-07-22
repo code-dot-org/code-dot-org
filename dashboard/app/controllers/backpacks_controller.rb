@@ -6,6 +6,6 @@ class BackpacksController < ApplicationController
   # the current user does not have a backpack, create one.
   def get_channel
     backpack = Backpack.find_or_create(current_user.id, request.ip)
-    render json: backpack.channel
+    render json: {channel: backpack.channel}
   end
 end
