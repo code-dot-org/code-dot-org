@@ -307,6 +307,14 @@ class LevelsController < ApplicationController
     create_level_params[:editor_experiment] = editor_experiment if editor_experiment
 
     begin
+      level_name = create_level_params[:name]
+      if level_name && Level.find_by_name(level_name)
+        raise "Level name #{level_name.dump} is already taken"
+      end
+      file_path = Level.existing_level_file_paths(level_name).first
+      if file_path
+        raise "Cannot create level named #{level_name.dump} because of conflict with existing file #{file_path}"
+      end
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
       render(status: :not_acceptable, plain: e.message) && return
