@@ -32,7 +32,7 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   incrementPendingChanges() {
-    let changes = this.state.pendingChanges + 1;
+    let changes = this.state.pendingChangesCount + 1;
     this.setState({pendingChangesCount: changes});
   }
 
