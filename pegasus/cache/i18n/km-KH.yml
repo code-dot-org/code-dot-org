@@ -879,6 +879,8 @@ km-KH:
   dashboard_navigation_view_stats: ស្ថិតិ
   dashboard_navigation_section: ផ្នែក%{section_name}
   dashboard_navigation_student: សិស្ស%{student_name}
+  dashboard_progress_not_started: មិន​បាន​ចាប់​ផ្តើ​ម
+  dashboard_progress_in_progress: កំពុង​ដំណើរការ
   dashboard_progress_not_completed: មិនបានបញ្ចប់
   dashboard_progress_view: មើលដំណើរការនៅក្នុង៖
   dashboard_progress_student_in_script: ព័ត៌មានដំណើរការសម្រាប់%{student_name}ក្នុង%{script_name}
@@ -2108,6 +2110,7 @@ km-KH:
   hoc2018_dance_teacher_resources_tile2_title: Dance Party Unplugged
   hoc2018_dance_teacher_resources_tile2_description: មិនត្រូវការកុំព្យូទ័រទេ! រៀនបែបផែននៃសរសេរកូដ
     ដើម្បីបង្កើតក្បាច់រាំសម្រាប់ពិធីជប់លៀងរាំជាមួយគ្នា។
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
   hoc2018_dance_featured_student_creations_title: Featured Student Creations
   hoc2018_dance_videos_section_heading: ទទួលបានការបំផុសគំនិត
   hoc2018_dance_video_title_what_is_creativity: តើការច្នៃប្រឌិតគឺជាអ្វី?
