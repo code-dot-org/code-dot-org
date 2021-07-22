@@ -1551,6 +1551,10 @@ StudioApp.prototype.resizeVisualization = function(width) {
   // then subtract height of slider
   // constrain width to this value
 
+  if (width === undefined) {
+    width = $('#visualization-container').width();
+  }
+
   const visualizationColumnHeight = $(visualizationColumn).outerHeight(true);
   const visualizationTop = $(visualization).position().top;
   const sliderHeight = $('#slider').outerHeight(true) + 30;
@@ -1587,6 +1591,7 @@ StudioApp.prototype.resizeVisualization = function(width) {
 
   visualization.style.maxWidth = constrainVisualizationWidth + 'px'; // '100px'; //newVizWidthString;
   visualization.style.maxHeight = constrainVisualizationWidth + 'px'; // '100px'; // newVizHeightString;
+  visualization.style.height = constrainVisualizationWidth + 'px';
   visualization.style.margin = '0 auto';
 
   var scale = constrainVisualizationWidth /*newVizWidth*/ / this.nativeVizWidth;

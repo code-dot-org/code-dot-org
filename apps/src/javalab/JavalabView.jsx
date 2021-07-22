@@ -25,6 +25,7 @@ class JavalabView extends React.Component {
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
+    onTopInstructionsHeightResize: PropTypes.func,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -120,7 +121,8 @@ class JavalabView extends React.Component {
       handleVersionHistory,
       isEditingStartSources,
       isRunning,
-      showProjectTemplateWorkspaceIcon
+      showProjectTemplateWorkspaceIcon,
+      onTopInstructionsHeightResize
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -152,6 +154,7 @@ class JavalabView extends React.Component {
                 standalone
                 displayDocumentationTab
                 displayReviewTab
+                onHeightResize={onTopInstructionsHeightResize}
               />
               {this.renderVisualization()}
               {false && (

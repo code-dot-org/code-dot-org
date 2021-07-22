@@ -104,7 +104,8 @@ class TopInstructions extends Component {
     displayReviewTab: PropTypes.bool,
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
-    standalone: PropTypes.bool
+    standalone: PropTypes.bool,
+    onHeightResize: PropTypes.func
   };
 
   static defaultProps = {
@@ -298,6 +299,10 @@ class TopInstructions extends Component {
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
+
+    if (this.props.onHeightResize) {
+      this.props.onHeightResize();
+    }
   };
 
   refForSelectedTab = () => {
