@@ -251,8 +251,21 @@ class LevelsController < ApplicationController
       return
     end
 
+    old_name = @level.name
     @level.assign_attributes(level_params)
     @level.log_changes(current_user)
+
+    # only mention filename conflicts in the error message if the level name
+    # is not already taken in the database.
+    if  @level.valid? && old_name != level_params[:name]
+      file_path = Level.existing_level_file_paths(level_params[:name]).first
+      if file_path
+        @level.errors.add(:name, "Cannot rename level to #{level_params[:name].dump} because of conflict with existing file #{file_path}")
+        log_save_error(@level)
+        render json: @level.errors, status: :unprocessable_entity
+        return
+      end
+    end
 
     if @level.save
       redirect = params["redirect"] || level_url(@level, show_callouts: 1)
