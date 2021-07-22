@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-21 20:13:27 UTC",
+    "serialized_at": "2021-07-22 16:57:49 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -1783,13 +1783,13 @@
       "key": "53ebe14d-2417-45a4-8267-311ebc792f71",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson, you drew rectangles in sync with the audio. What if you wanted to display different types of shapes instead of just one? How do you think you could do this?*\n\n**Discussion Goal:** Students brainstorm potential solutions, which may include creating individual arrays for each shape and traversing each at the same time. Students may begin to realize the inefficiencies of this approach since they would have to work with each array individually and could suggest generalizing individual shapes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson, you drew rectangles and images of people in sync with audio. What if you wanted to display different types of shapes or images instead of just one? How do you think you could do this?*\n\n**Discussion Goal:** Students brainstorm potential solutions, which may include creating individual arrays for each shape and traversing each at the same time. Students may begin to realize the inefficiencies of this approach since they would have to work with each array individually and could suggest generalizing individual shapes.",
         "duration": "15",
         "name": "Introduction to Polymorphism",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may not immediately realize the inefficiencies of creating an array for each shape and traversing each at the same time. Guide students towards this conclusion by asking questions such as:\n* *What if we wanted to show a `Rectangle`, then a `Triangle`, then a `Circle`? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *What if we needed to know information about each shape, like how many sides each shape has that we are using? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *Can you think of ways that these tasks could be done more easily?*"
+            "markdown": "Students may not immediately realize the inefficiencies of creating an array for each shape and traversing each at the same time. Guide students towards this conclusion by asking questions such as:\n* *What if we wanted to show a rectangle, then a triangle, then a circle? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *What if we needed to know information about each shape, like how many sides each shape has that we are using? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *Can you think of ways that these tasks could be done more easily?*"
           }
         ]
       },
@@ -1825,7 +1825,7 @@
       "key": "07fd7c60-2f6c-4551-bc35-08e55a15683d",
       "position": 4,
       "properties": {
-        "description": "Let's look at how we can use polymorphism to store and use an array of `Shape`s. We have `Rectangle`, `Circle`, and `Triangle` objects that all have an is-a relationship with `Shape`.",
+        "description": "Let's look at how we can use polymorphism to store and use an array of `Animal`s. We have `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects that all have an is-a relationship with `Animal`.",
         "remarks": true
       },
       "seeding_key": {
@@ -1838,6 +1838,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students predict the output before running the program.",
+        "progression_name": "Animal is-a Chicken?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1854,7 +1855,7 @@
       "key": "18bba7d8-f17d-4e2c-beef-13c5d749e15c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program? Why do you think this happened?*\n\n**Discussion Goal:** Students relate the is-a relationship to the structure of the constructor call. A `Shape` is not a `Rectangle`, which causes an error in the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have a student write the error on a sticky note and add it to the Debugging Wall."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program? Why do you think this happened?*\n\n**Discussion Goal:** Students relate the is-a relationship to the structure of the constructor call. An `Animal` is not a `Chicken`, which causes an error in the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have a student write the error on a sticky note and add it to the Debugging Wall."
       },
       "seeding_key": {
         "activity_section.key": "18bba7d8-f17d-4e2c-beef-13c5d749e15c",
@@ -1865,7 +1866,7 @@
       "key": "dcae97e4-95a0-4c94-9773-3bf090a7678a",
       "position": 7,
       "properties": {
-        "description": "In The Theater, we can import and play audio. When we import audio into The Theater, we use `SoundMaster.read()` and give the name of the file we want to import. This method creates an array of `double`s, which represent the samples that make up the audio. To play the audio, we call `SoundMaster.play()` and give the name of the array created from the audio file. You will see an example of this on Code Studio.",
+        "description": "Let's create the next scene of our concert about the animals that live in The Neighborhood.",
         "duration": "15",
         "name": "Creating an Array of Shapes",
         "remarks": true
@@ -1879,7 +1880,8 @@
       "key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students create an array of `Shape`s to store `Rectangle`, `Circle`, and `Triangle` objects."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students create an array of `Animal`s to store `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects.",
+        "progression_name": "Array of Animals"
       },
       "seeding_key": {
         "activity_section.key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
@@ -1913,7 +1915,7 @@
       "key": "51bf2e09-7597-41db-adc9-cd0d71e359bb",
       "position": 11,
       "properties": {
-        "description": "We now have our array of `Shape`s. Let's use traversals to make our `Shape` objects show with the music!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In addition to using a `for` loop to traverse the array of `Shape` objects, we will need to call the `drawShape()` method and give the size of the sides that make up the shape. We can also use `wait()` inside the loop to specify how long to wait before drawing the next shape.\n\nTo clear the stage before drawing the next shape, we can use `Theater.clear()` inside the loop to remove the shape that was drawn before drawing the next shape. Let's give it a try!",
+        "description": "We now have our array of `Animal`s. Let's use traversals to make our `Animal`s objects show with their sound!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In addition to using a `for` loop to traverse the array of `Animal` objects, we will need to call the `speak()` method to play the sound for that animal. We can also use `pause()` inside the loop to specify how long to wait before showing the next `Animal`.\n\nTo clear the stage before drawing the next `Animal`, we can use `myStage.clear()` inside the loop to reset the stage with a background color before displaying the next `Animal`. Let's give it a try!",
         "remarks": true
       },
       "seeding_key": {
@@ -1925,7 +1927,8 @@
       "key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students traverse the `Shape`s array and call the `drawShape()` method to draw each shape to coordinate with the audio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students traverse the `Animal`s array and call the `speak()` method to display each `Animal` and play their sound.",
+        "progression_name": "Animals in The Neighborhood"
       },
       "seeding_key": {
         "activity_section.key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
@@ -1948,7 +1951,7 @@
       "key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's Musical `Shape`s program. Students request, receive, and review feedback on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showAnimals()` method. Students request, receive, and review feedback on Level 3."
       },
       "seeding_key": {
         "activity_section.key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
@@ -1972,7 +1975,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5e752cf3-1d7d-4db4-a546-bdd5456dceaa",
@@ -2049,7 +2053,8 @@
       "key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Enhanced for Loop video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they use an enhanced `for` loop to play an array of notes."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Enhanced for Loop video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they use an enhanced `for` loop to play an array of notes.",
+        "progression_name": "Write an Enhanced for Loop"
       },
       "seeding_key": {
         "activity_section.key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
@@ -2109,7 +2114,8 @@
       "key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 3 and 4 on Code Studio. Students complete Level 3 in pairs, where they refactor a `for` loop and `while` loop into an enhanced `for` loop.  After, students independently complete the Check for Understanding on Level 4."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 3 and 4 on Code Studio. Students complete Level 3 in pairs, where they refactor a `for` loop and `while` loop into an enhanced `for` loop.  After, students independently complete the Check for Understanding on Level 4.",
+        "progression_name": "Refactoring Loops"
       },
       "seeding_key": {
         "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
@@ -2144,7 +2150,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a5ae9163-c8eb-43d0-aafb-9f5e61a2f385",
@@ -3836,6 +3843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -3859,6 +3869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L1"
+        ],
         "progression": "Investigating Arrays"
       },
       "named_level": false,
@@ -3882,6 +3895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L2"
+        ],
         "progression": "Arrays in The Neighborhood"
       },
       "named_level": false,
@@ -3905,6 +3921,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L3"
+        ],
         "progression": "Arrays in The Neighborhood"
       },
       "named_level": false,
@@ -3928,6 +3947,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L4"
+        ],
         "progression": "Arrays in The Neighborhood"
       },
       "named_level": false,
@@ -3951,6 +3973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L5"
+        ],
         "progression": "Arrays in The Theater"
       },
       "named_level": false,
@@ -3974,6 +3999,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L6"
+        ],
         "progression": "Arrays in The Theater"
       },
       "named_level": false,
@@ -3997,6 +4025,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L7"
+        ],
         "progression": "Arrays in The Theater"
       },
       "named_level": false,
@@ -4020,6 +4051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L8"
+        ],
         "progression": "Solving Problems with Arrays"
       },
       "named_level": false,
@@ -4043,6 +4077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L9"
+        ],
         "progression": "Introducing Your Community"
       },
       "named_level": false,
@@ -4066,6 +4103,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L10"
+        ],
         "progression": "Introducing Your Community"
       },
       "named_level": false,
@@ -4089,6 +4129,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L11"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4112,6 +4155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L1"
+        ],
         "progression": "The Neighborhood: for Loops"
       },
       "named_level": false,
@@ -4135,6 +4181,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L2"
+        ],
         "progression": "The Neighborhood: for Loops"
       },
       "named_level": false,
@@ -4158,6 +4207,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L3"
+        ],
         "progression": "The Neighborhood: for Loops"
       },
       "named_level": false,
@@ -4181,6 +4233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L4"
+        ],
         "progression": "The Neighborhood: More for Loops"
       },
       "named_level": false,
@@ -4204,6 +4259,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4227,6 +4285,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4250,6 +4311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1"
+        ],
         "progression": "while Loop Edge Cases"
       },
       "named_level": false,
@@ -4273,6 +4337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2"
+        ],
         "progression": "Rectangles and Color"
       },
       "named_level": false,
@@ -4296,6 +4363,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3"
+        ],
         "progression": "while to for to while"
       },
       "named_level": false,
@@ -4319,6 +4389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4"
+        ],
         "progression": "while to for to while"
       },
       "named_level": false,
@@ -4342,6 +4415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5"
+        ],
         "progression": "while Loops with Scanner"
       },
       "named_level": false,
@@ -4365,6 +4441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L6"
+        ],
         "progression": "while Loops with Scanner"
       },
       "named_level": false,
@@ -4388,6 +4467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L7"
+        ],
         "progression": "The People in Your Community"
       },
       "named_level": false,
@@ -4411,6 +4493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L8"
+        ],
         "progression": "The People in Your Community"
       },
       "named_level": false,
@@ -4434,6 +4519,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L9"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -4449,6 +4537,213 @@
       },
       "level_keys": [
         "CSA U3L4-L9"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Animal is-a Chicken?"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L5-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9f2bb7d4-1069-472e-bcb9-238f97ba594f"
+      },
+      "level_keys": [
+        "CSA U3L5-L1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Array of Animals"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L5-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c"
+      },
+      "level_keys": [
+        "CSA U3L5-L2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Animals in The Neighborhood"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L5-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265"
+      },
+      "level_keys": [
+        "CSA U3L5-L3"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L5-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "5e752cf3-1d7d-4db4-a546-bdd5456dceaa"
+      },
+      "level_keys": [
+        "CSA U3L5-L4"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write an Enhanced for Loop"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa"
+      },
+      "level_keys": [
+        "CSA U3L6-L1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Write an Enhanced for Loop"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa"
+      },
+      "level_keys": [
+        "CSA U3L6-L2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Refactoring Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6"
+      },
+      "level_keys": [
+        "CSA U3L6-L3"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Refactoring Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6"
+      },
+      "level_keys": [
+        "CSA U3L6-L4"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "a5ae9163-c8eb-43d0-aafb-9f5e61a2f385"
+      },
+      "level_keys": [
+        "CSA U3L6-L5"
       ]
     }
   ],
@@ -4775,6 +5070,114 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
         "activity_section.key": "84d81b94-95f6-47a1-bfe1-d49715a85563"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L5-L1",
+        "script_level.level_keys": [
+          "CSA U3L5-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "9f2bb7d4-1069-472e-bcb9-238f97ba594f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L5-L2",
+        "script_level.level_keys": [
+          "CSA U3L5-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L5-L3",
+        "script_level.level_keys": [
+          "CSA U3L5-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L5-L4",
+        "script_level.level_keys": [
+          "CSA U3L5-L4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "5e752cf3-1d7d-4db4-a546-bdd5456dceaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L1",
+        "script_level.level_keys": [
+          "CSA U3L6-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L2",
+        "script_level.level_keys": [
+          "CSA U3L6-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L3",
+        "script_level.level_keys": [
+          "CSA U3L6-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L4",
+        "script_level.level_keys": [
+          "CSA U3L6-L4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6-L5",
+        "script_level.level_keys": [
+          "CSA U3L6-L5"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "a5ae9163-c8eb-43d0-aafb-9f5e61a2f385"
       }
     }
   ],
