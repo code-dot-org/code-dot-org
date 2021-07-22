@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 03:15:36 UTC",
+    "serialized_at": "2021-07-20 22:21:16 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp5-2021"
@@ -6285,6 +6285,12 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "Lesson 18: Assessment Day",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
@@ -6303,20 +6309,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lists Practice",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lists Make",
         "resource.key": "csp_lists_make_-_reminder_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6339,7 +6345,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Practice",
+        "lesson.key": "Loops Make",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
@@ -6351,50 +6357,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Make",
+        "lesson.key": "Loops Practice",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "traversal_machine"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Practice",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "csp_traversals_make_-_random_forecaster_app"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6406,12 +6376,6 @@
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
-        "resource.key": "csp_u5_hackathon_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
@@ -6423,7 +6387,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
+        "lesson.key": "Semester Hackathon Part 2",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
@@ -6435,7 +6399,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
+        "lesson.key": "Semester Hackathon Part 3",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
@@ -6443,6 +6407,12 @@
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
         "resource.key": "csp_u5_hackathon_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6454,7 +6424,7 @@
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+        "resource.key": "csp_u5_hackathon_project_planning_guide"
       }
     },
     {
@@ -6466,7 +6436,7 @@
     {
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
-        "resource.key": "csp_u5_hackathon_project_planning_guide"
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     },
     {
@@ -6507,7 +6477,37 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 18: Assessment Day",
+        "lesson.key": "Traversals Explore",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "resource.key": "traversal_machine"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "resource.key": "csp_traversals_make_-_random_forecaster_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
       }
     }
@@ -6515,13 +6515,31 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons",
+        "resource.key": "all_resources_5",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
         "script.name": "csp5-2021"
       }
     },
     {
       "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_eipm_lessons",
         "script.name": "csp5-2021"
       }
     },
@@ -6534,24 +6552,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_5",
-        "script.name": "csp5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_5",
         "script.name": "csp5-2021"
       }
     }
