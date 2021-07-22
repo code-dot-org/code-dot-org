@@ -31,6 +31,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'student not in same section with project owner cannot comment on project' do
@@ -61,6 +62,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher can create CodeReviewComment for student in their section' do
@@ -76,6 +78,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    assert JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher cannot create CodeReviewComment for student not in their section' do
