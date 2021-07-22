@@ -24,6 +24,12 @@ class Pd::InternationalOptIn < ApplicationRecord
     )
   ).freeze
 
+  CHILEAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'chileanSchoolData.json')
+    )
+  ).freeze
+
   belongs_to :user
 
   validates_presence_of :user_id, :form_data
@@ -103,6 +109,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
+    entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
 
     super.merge(entries)
   end
@@ -129,13 +136,15 @@ class Pd::InternationalOptIn < ApplicationRecord
       legalOptIn
     )
 
-    # Colombia has some specialized school categorization logic, so we
+    # Colombia and Chile have some specialized school categorization logic, so we
     # provide some custom labels.
     keys += %w(
       colombianSchoolCity
-      colombianSchoolDepartment
+      colombianChileanSchoolDepartment
       colombianSchoolMunicipality
-      colombianSchoolName
+      colombianChileanSchoolName
+      chileanSchoolCommune
+      chileanSchoolId
     )
 
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
