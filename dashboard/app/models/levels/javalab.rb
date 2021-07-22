@@ -35,7 +35,6 @@ class Javalab < Level
     encrypted_examples
     csa_view_mode
     starter_assets
-    preload_asset_list
     serialized_maze
     start_direction
   )
