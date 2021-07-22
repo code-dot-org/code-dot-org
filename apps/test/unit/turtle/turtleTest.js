@@ -5,11 +5,22 @@ import {Position} from '@cdo/apps/constants';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import Artist from '@cdo/apps/turtle/artist';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
+import pageConstants from '@cdo/apps/redux/pageConstants';
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
 const VERY_LONG_DIAGONAL = 150 * Math.sqrt(2);
 
 describe('Artist', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({pageConstants});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   describe('drawing with joints', () => {
     var joints, segments, artist;
     beforeEach(() => {
