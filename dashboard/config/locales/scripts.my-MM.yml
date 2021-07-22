@@ -117,6 +117,8 @@ my:
           description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။
             Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           student_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။

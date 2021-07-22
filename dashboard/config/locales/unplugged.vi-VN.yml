@@ -474,11 +474,23 @@ vi:
       courseB_unplugged_MRF_2019:
         title: Bạn bè robot của tôi
         desc: Học cách lập trình bằng việc viết mã cho bạn bè!
+      BuildingAFoundation_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Điều kiện
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
           ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
           Tôi rút được một thẻ đen, bạn sẽ được một điểm."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: lập trình đồ thị trên giấy
         desc: Học sinh viết một thuật toán (một tập hợp các hướng dẫn) bằng cách sử
@@ -496,6 +508,15 @@ vi:
           diễn trong một loạt các số nhị phân.  Bài học này đưa ra khái niệm tiến
           xa hơn như cách minh họa làm thế nào một máy tính có thể lưu trữ các thông
           tin phức tạp hơn (chẳng hạn như hình ảnh và màu sắc) trong hệ nhị phân.
+      SongwritingParameters_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Tạo vòng lặp
         desc: Bài này giới thiệu về khái niệm lập trình vòng lặp (các hướng dẫn lặp

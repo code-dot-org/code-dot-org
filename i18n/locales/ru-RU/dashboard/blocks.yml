@@ -1536,10 +1536,6 @@ ru:
             '0.75': most
             '0.5': half of
             '0.25': few
-      aalab_spriteSayChoices:
-        options:
-          SPEECH:
-            '"You have to try every time. You can''t quit because you''re afraid you might fail."': ''
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:

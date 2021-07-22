@@ -23,9 +23,6 @@
         "define/coursef/2021": {
           "word": "Определить"
         },
-        "algorithm/courseb/2021": {
-          "definition": ""
-        },
         "debugging/courseb/2021": {
           "word": "Отладка"
         },
@@ -37,9 +34,6 @@
         },
         "programming/courseb/2021": {
           "word": "Программирование"
-        },
-        "algorithm/coursea/2021": {
-          "definition": ""
         },
         "debugging/coursea/2021": {
           "word": "Отладка"
@@ -53,9 +47,6 @@
         "programming/coursea/2021": {
           "word": "Программирование"
         },
-        "algorithm/coursec/2021": {
-          "definition": ""
-        },
         "debugging/coursec/2021": {
           "word": "Отладка"
         },
@@ -68,23 +59,14 @@
         "binary/coursec/2021": {
           "word": "Двоичный"
         },
-        "algorithm/coursed/2021": {
-          "definition": ""
-        },
         "debugging/coursed/2021": {
           "word": "Отладка"
         },
         "programming/coursed/2021": {
           "word": "Программирование"
         },
-        "command/coursed/2021": {
-          "definition": ""
-        },
         "conditionals/coursed/2021": {
           "word": "Условные команды"
-        },
-        "algorithm/express/2021": {
-          "definition": ""
         },
         "debugging/express/2021": {
           "word": "Отладка"
@@ -97,9 +79,6 @@
         },
         "behavior/express/2021": {
           "word": "Поведение"
-        },
-        "command/express/2021": {
-          "definition": ""
         },
         "conditionals/express/2021": {
           "word": "Условные команды"
@@ -118,9 +97,6 @@
         },
         "drop/pre-express/2021": {
           "word": "Дроп"
-        },
-        "algorithm/pre-express/2021": {
-          "definition": ""
         },
         "debugging/pre-express/2021": {
           "word": "Отладка"

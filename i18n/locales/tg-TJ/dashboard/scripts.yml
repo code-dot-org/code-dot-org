@@ -10,10 +10,16 @@ tg:
           title: Дарси 1
         course2:
           title: Дарси 2
+          description_audience: 'Синну сол: 6-18'
         course3:
           title: Дарси 3
         course4:
           title: Дарси 4
+          description_audience: 'Синну сол: 9-18'
+        asUnplugged:
+          description_audience: 'Синну сол: 6-13'
+        afterschool1:
+          description_audience: 'Синну сол: 7-13'
         starwars:
           description: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи дур"-ро эҷод намоед.
           description_short: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи дур"-ро эҷод намоед.
@@ -22,6 +28,22 @@ tg:
           description: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи дур"-ро эҷод намоед.
           description_short: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи дур"-ро эҷод намоед.
           student_description: Барномарезии дройдро омӯзед ва бозии "Ҷанги ситораҳо дар галактикаи дур"-ро эҷод намоед.
+        CSF_Secret_Sample_Story:
+          description_audience: 'Синну сол: 8-18+'
+        MikeTest:
+          description_audience: 'Синну сол: 8-98'
+        gradeKinder:
+          description_audience: 'Синну сол: 5-18'
+        grade4:
+          description_audience: 'Синну сол: 9-99'
+        grade1:
+          description_audience: 'Синну сол: 5-18'
+        grade5:
+          description_audience: 'Синну сол: 10-110'
+        grade3:
+          description_audience: 'Синну сол: 5-18'
+        grade2:
+          description_audience: 'Синну сол: 5-18'
         csp4-pilot:
           lessons:
             Surveys:

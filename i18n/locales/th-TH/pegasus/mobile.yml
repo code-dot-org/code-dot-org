@@ -518,6 +518,7 @@
   dashboard_navigation_section: 'กลุ่ม %{section_name}'
   dashboard_navigation_student: 'นักเรียน %{student_name}'
   dashboard_progress_not_started: "ยังไม่ได้เริ่ม"
+  dashboard_progress_in_progress: "อยู่ระหว่างการดำเนินการ"
   dashboard_progress_not_completed: "ไม่เสร็จสมบูรณ์"
   dashboard_progress_completed_too_many_blocks: "เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป"
   dashboard_progress_completed_perfect: "เสร็จ สมบูรณ์"
@@ -721,6 +722,12 @@
   coursed-2020_name: หลักสูตร D (2020)
   coursee-2020_name: หลักสูตร E (2020)
   coursef-2020_name: หลักสูตร F (2020)
+  coursea-2021_name: หลักสูตร A (2021)
+  courseb-2021_name: หลักสูตร B (2021)
+  coursec-2021_name: หลักสูตร C (2021)
+  coursed-2021_name: หลักสูตร D (2021)
+  coursee-2021_name: หลักสูตร E (2021)
+  coursef-2021_name: หลักสูตร F (2021)
   pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
   express-2019_name: หลักสูตร Express (2019)
   pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)

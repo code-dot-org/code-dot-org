@@ -450,6 +450,7 @@ hr:
     applab:
       title: Laboratorij aplikacija
       audience: Dob 13+
+      cta: Nauči kako
     hoc:
       title: Klasični labirint
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
@@ -477,6 +478,7 @@ hr:
     weblab:
       title: Web Lab (beta)
       audience: Dob 13+
+      cta: Nauči kako
     frozen:
       title: Snježno kraljevstvo
     starwars:
@@ -496,6 +498,8 @@ hr:
       title: Minecraft
     unplugged_conditionals:
       title: Uvjeti
+    widgets:
+      cta: Nauči kako
   landing:
     report_bug: Prijavi grešku
     support: Zatraži pomoć

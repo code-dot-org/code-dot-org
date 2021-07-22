@@ -581,6 +581,7 @@ th:
     decline: ปิด
   progress:
     not_started: ยังไม่เริ่ม
+    in_progress: อยู่ระหว่างการดำเนินการ
     completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
     completed_perfect: เสร็จ สมบูรณ์
     submitted: ส่งคำตอบแล้ว

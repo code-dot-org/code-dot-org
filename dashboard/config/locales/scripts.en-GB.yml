@@ -12,6 +12,8 @@ en-GB:
           lessons:
             Computational Thinking:
               name: Computational Thinking
+        course4:
+          description_audience: Ages 9-18
         usability:
           lessons:
             Variables:
@@ -39,18 +41,34 @@ en-GB:
           lessons:
             Step:
               name: Step
+        afterschool1:
+          description_audience: Ages 7-13
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
+        MikeTest:
+          description_audience: Ages 8-98
         gradeKinder:
+          description_audience: Ages 5-18
           lessons:
             Loops:
               name: Loops
+        grade4:
+          description_audience: Ages 9-99
         grade1:
+          description_audience: Ages 5-18
           lessons:
             Loops:
               name: Loops
+        grade5:
+          description_audience: Ages 10-110
+        grade3:
+          description_audience: Ages 5-18
         csd3-2017:
           lessons:
             Variables:
               name: Variables
+        grade2:
+          description_audience: Ages 5-18
         k5concepts:
           lessons:
             Loops:
@@ -197,6 +215,10 @@ en-GB:
           lessons:
             Variables:
               name: Variables
+        maddie-test:
+          lessons:
+            stage 1:
+              name: stage 1
         csl-vn:
           lesson_groups:
             csf_loops:

@@ -97,6 +97,7 @@ mr-IN:
   volunteer_engineer_submission_field_email_preference_no: नाही
   dashboard_action_delete_yes: होय
   dashboard_action_delete_no: नाही
+  dashboard_navigation_section_community: सहाय्य
   dashboard_sections_close: Band
   dashboard_students_name: नाव
   dashboard_pre-express: 'वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम: '
@@ -126,6 +127,7 @@ mr-IN:
   coursed-2017_name: अभ्यासक्रम D (2017)
   coursee-2017_name: अभ्यासक्रम  E (2017)
   coursef-2017_name: अभ्यासक्रम F (2017)
+  coursed-2021_name: अभ्यासक्रम D (2021)
   pre-express-2018_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2018)
   pre-express-2019_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2019)
   pre-express-2020_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2020)
@@ -350,6 +352,7 @@ mr-IN:
     आणि शिक्षक प्रशिक्षणे यासह मोफत स्रोतांना प्रवेश मिळवा.'
   footer_privacy_policy: गोपनीयता धोरण
   footer_about: या बद्दल
+  footer_support: सहाय्य
   ai_for_oceans: महासागरांसाठी कृत्रिम बुद्धिमत्ता
   ai_for_oceans_lesson_plan: धड्याचा प्लॅन
   ai_for_oceans_tile_description: 'A.I. ला कचरा शोधायचे ट्रेनिंग देऊन महासागर स्वच्छ

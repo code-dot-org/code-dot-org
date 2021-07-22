@@ -85,6 +85,7 @@ km:
   courses_page:
     title_student: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
     title_teacher: "បង្រៀនជាមួយកម្មវិធីសរសេរកូដ"
+  unplugged_activity: 'Unplugged Activity'
   of: "នៃ"
   more: "បង្ហាញ​ច្រើន"
   less: "បង្ហាញ​តិច"
@@ -532,6 +533,9 @@ km:
       other: "ផ្សេងៗ"
     submit: "ដាក់ស្នើ"
     decline: "បិទ"
+  progress:
+    not_started: មិន​បាន​ចាប់​ផ្តើ​ម
+    in_progress: កំពុង​ដំណើរការ
   project:
     projects: "គម្រោង"
     project_gallery: "គម្រោង"

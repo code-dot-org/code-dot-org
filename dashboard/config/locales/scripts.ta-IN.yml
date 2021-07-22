@@ -9,9 +9,42 @@ ta:
       name:
         course1:
           title: கோர்ஸ் 1
+          description: தொடங்கும் கோர்ஸ் 1-அதிகாலை படிப்பான்கள். மாணவர்கள் அவற்றை மற்றவர்களுடன்
+            கூட்டிணை, சிக்கலைத் தீர்ப்பதற்கான திறன் மேம்பாடு மற்றும் மூலம் முடிப்பீர்கள்
+            உறுதி காட்டுவீர்கள் கற்க உதவும் கணினி நிரல்களையும் உருவாக்கலாம். இறுதிக்குள்
+            இந்த பாடத்திட்டம், மாணவர்கள் உருவாக்க அவர்களின் மிகவும் சொந்த விருப்ப
+            விளையாட்டு அல்லது அவர்கள் பகிர முடியும் கதை. தரங்களாக K-1 பரிந்துரைக்கப்படும்.
+          description_short: தொடங்கும் தொடர் கோவை 1-அதிகாலை படிப்பான்கள்.
           description_audience: வயது 4-6
+          lessons:
+            'Artist: Loops':
+              name: 'கலைஞர்: சுழற்சிகளும்'
+            'Artist: Sequence':
+              name: 'கலைஞர்: வரிசை முறை'
+            'Artist: Shapes':
+              name: 'கலைஞர்: வடிவங்கள்'
+            'Bee: Loops':
+              name: 'அதுபோல: Loops'
+            'Bee: Sequence':
+              name: 'அதுபோல: வரிசை முறை'
+          student_description: தொடங்கும் கோர்ஸ் 1-அதிகாலை படிப்பான்கள். மாணவர்கள்
+            அவற்றை மற்றவர்களுடன் கூட்டிணை, சிக்கலைத் தீர்ப்பதற்கான திறன் மேம்பாடு
+            மற்றும் மூலம் முடிப்பீர்கள் உறுதி காட்டுவீர்கள் கற்க உதவும் கணினி நிரல்களையும்
+            உருவாக்கலாம். இறுதிக்குள் இந்த பாடத்திட்டம், மாணவர்கள் உருவாக்க அவர்களின்
+            மிகவும் சொந்த விருப்ப விளையாட்டு அல்லது அவர்கள் பகிர முடியும் கதை. தரங்களாக
+            K-1 பரிந்துரைக்கப்படும்.
         course2:
           lessons:
+            'Artist: Debugging':
+              name: 'கலைஞர்: பிழைத்திருத்தம்'
+            'Artist: Loops':
+              name: 'கலைஞர்: சுழற்சிகளும்'
+            'Artist: Nested Loops':
+              name: 'கலைஞர்: உள்ளமை சுழல்கள்'
+            'Artist: Sequence':
+              name: 'கலைஞர்: வரிசை முறை'
+            'Bee: Loops':
+              name: 'அதுபோல: Loops'
             Conditionals:
               name: நிபந்தனைகள்
             Graph Paper Programming:
@@ -20,6 +53,12 @@ ta:
           lessons:
             Artist:
               name: கலைஞர்
+            'Artist: Functions':
+              name: 'கலைஞர்: செயல்பாடுகள்'
+            'Artist: Nested Loops':
+              name: 'கலைஞர்: உள்ளமை சுழல்கள்'
+            'Artist: Patterns':
+              name: 'கலைஞர்: வடிவங்கள்'
             Computational Thinking:
               name: கணினிபூர்வமான சிந்தனை
             Songwriting:
@@ -41,6 +80,13 @@ ta:
           student_description: கலைஞருடன் குளிர் படங்கள் மற்றும் வடிவமைப்புகளை வரையவும்!
         hourofcode:
           title: கிளாசிக் மேஸி
+          description: Angry Birds, Plants vs. Zombies மற்றும் Scrat from Ice Age!
+            ஆகியவற்றின் எழுத்துக்களைக் கொண்டு கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
+          description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
+            முயற்சிக்கவும்!
+          student_description: Angry Birds, Plants vs. Zombies மற்றும் Scrat from
+            Ice Age! ஆகியவற்றின் எழுத்துக்களைக் கொண்டு கணினி அறிவியலின் அடிப்படைகளை
+            முயற்சிக்கவும்!
         frozen:
           title: அண்ணா மற்றும் எல்சாவுடன் குறியீடு
           description: அண்ணா மற்றும் எல்சா பனியின் மந்திரத்தையும் அழகையும் ஆராயும்போது
@@ -57,11 +103,30 @@ ta:
             போல ஸ்னோஃப்ளேக்ஸ் மற்றும் வடிவங்களை உருவாக்கி, குளிர்கால அதிசய நிலத்தை
             உருவாக்குவீர்கள், பின்னர் நீங்கள் உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளலாம்!
         course4:
+          description_audience: வயது 9-18
           lessons:
             Artist:
               name: கலைஞர்
+            Artist Binary:
+              name: கலைஞர் பைனரி
+            'Artist: For Loops':
+              name: 'கலைஞர்: சுழல்களுக்கு'
+            'Artist: Functions':
+              name: 'கலைஞர்: செயல்பாடுகள்'
+            'Artist: Functions with Parameters':
+              name: 'கலைஞர்: அளவுருக்கள் கொண்ட செயல்பாடுகள்'
             'Artist: Variables':
               name: 'கலைஞர்: மாறிகள்'
+        Course4pre:
+          lessons:
+            'Artist: Functions':
+              name: 'கலைஞர்: செயல்பாடுகள்'
+            'Artist: Loops':
+              name: 'கலைஞர்: சுழற்சிகளும்'
+            'Artist: Nested Loops':
+              name: 'கலைஞர்: உள்ளமை சுழல்கள்'
+            'Artist: Sequence':
+              name: 'கலைஞர்: வரிசை முறை'
         usability:
           lessons:
             Variables:
@@ -121,11 +186,15 @@ ta:
             The Maze:
               name: புதிர்பாதை
         edit-code:
+          title: குறியீட்டை திருத்து
+          description: குறியீட்டை திருத்து
+          description_short: குறியீட்டை திருத்து
           lessons:
             The Artist:
               name: கலைஞர்
             The Maze:
               name: புதிர்பாதை
+          student_description: குறியீட்டை திருத்து
         events:
           title: நிகழ்வுகள்
           description: நிகழ்வுகள்
@@ -145,6 +214,17 @@ ta:
           lessons:
             Step:
               name: அடி
+        Hour of Code:
+          title: Hour of Code 2013
+          description: Angry Birds மற்றும் Angry Birds  மற்றும் Plants vs. Zombies!
+            ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
+          description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
+            முயற்சிக்கவும்!
+          lessons:
+            Hour of Code 2013:
+              name: Hour of Code 2013
+          student_description: Angry Birds மற்றும் Angry Birds  மற்றும் Plants vs.
+            Zombies! ஆகியவற்றின் எழுத்துக்களுடன் கணினி அறிவியலின் அடிப்படைகளை முயற்சிக்கவும்!
         cspunit1:
           lessons:
             Text Compression:
@@ -158,18 +238,27 @@ ta:
           lessons:
             Artist:
               name: கலைஞர்
+            Farmer:
+              name: உழவர்
             Text Compression:
               name: உரை சுருக்க
         cspfacilitator:
           lessons:
             Internet Simulator:
               name: இணைய மாதிரி
+            Text Compression Lesson:
+              name: உரை சுருக்க பாடம்
+            Text Compression Widget:
+              name: உரை சுருக்க விட்ஜெட்
         asUnplugged:
+          description_audience: வயது 6-13
           lessons:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
             Songwriting:
               name: பாடல் எழுதுதல்
+        afterschool1:
+          description_audience: வயது 7-13
         starwars:
           title: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்ட கேலக்ஸியை உருவாக்குதல் (ஜாவாஸ்கிரிப்ட்)'
           description: டிராய்டுகளை நிரல் செய்ய கற்றுக் கொள்ளுங்கள், மேலும் தொலைவில்
@@ -217,30 +306,60 @@ ta:
           lessons:
             Functions:
               name: செயல்பாடுகள்
+        csp-facilitators:
+          lessons:
+            Introduction to Text Compression:
+              name: உரை சுருக்க அறிமுகம்
+        CSF_Secret_Sample_Story:
+          description_audience: வயது 8-18+
         MikeTest:
+          description_audience: வயது 8-98
           lessons:
             Artist Functions:
               name: கலைஞர் செயல்பாடுகள்
+        teachercon:
+          lessons:
+            Lesson 2,2:
+              name: 'Lesson 2.2: உரை சுருக்கம் '
         gradeKinder:
+          description_audience: வயது 5-18
           lessons:
             Events:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         grade4:
+          title: தரம் 4
+          description_audience: வயது 9-99
           lessons:
+            'New Artist: Functions':
+              name: 'புதிய கலைஞர்: செயல்பாடுகள்'
             Songwriting:
               name: பாடல் எழுதுதல்
         grade1:
+          title: தரம் 1
+          description_audience: வயது 5-18
           lessons:
             Events:
               name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         grade5:
+          title: தரம் 5
+          description_audience: வயது 9-110
           lessons:
+            'Artist: For Loops':
+              name: 'கலைஞர்: சுழல்களுக்கு'
+            'Artist: Functions with Parameters':
+              name: 'கலைஞர்: அளவுருக்கள் கொண்ட செயல்பாடுகள்'
             'Artist: Variables':
               name: 'கலைஞர்: மாறிகள்'
+        grade3:
+          title: தரம் 3
+          description_audience: வயது 5-18
+          lessons:
+            'Artist: Nested Loops':
+              name: 'கலைஞர்: உள்ளமை சுழல்கள்'
         csd3-2017:
           lessons:
             Functions:
@@ -249,6 +368,8 @@ ta:
               name: மாறிலிகள்
             Conditionals:
               name: நிபந்தனைகள்
+        grade2:
+          description_audience: வயது 5-18
         k5concepts:
           lessons:
             Conditionals:
@@ -263,6 +384,10 @@ ta:
               name: உள்ளமை சுழல்கள்
             Variables:
               name: மாறிலிகள்
+        csp-online-test:
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'பாடங்கள் 1 - 2: பைட்டுகள், கோப்பு அளவுகள் மற்றும் உரை சுருக்கம் '
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -271,6 +396,10 @@ ta:
           lessons:
             Lists:
               name: பட்டியல்கள்
+        csp2-support:
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'பாடங்கள் 1 - 2: பைட்டுகள், கோப்பு அளவுகள் மற்றும் உரை சுருக்கம் '
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -283,22 +412,56 @@ ta:
           lessons:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        coursec-draft:
+          lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
         coursed-draft:
           lessons:
+            Nested Loops in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள்
+            Artist Binary:
+              name: கலைஞர் பைனரி
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops Project in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
         coursee-draft:
           lessons:
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
             Conditionals:
               name: நிபந்தனைகள்
         coursef-draft:
           lessons:
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+        classic-hoc-impact-study:
+          description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
+            முயற்சிக்கவும்!
+          lessons:
+            Hour of Code 2013:
+              name: Hour of Code 2013
+        hoc-impact-study:
+          description_short: பல வேடிக்கையான கதாபாத்திரங்களுடன் கணினி அறிவியலின் அடிப்படைகளை
+            முயற்சிக்கவும்!
+          lessons:
+            Hour of Code 2013:
+              name: Hour of Code 2013
         sports:
           lessons:
             Sports:
               name: விளையாட்டு
+        csf2harvey:
+          lessons:
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         csp5-support:
           description: |-
             #### \*\* இந்த பாடநெறி இனி ஆதரிக்கப்படாத பாடத்தின் பதிப்போடு தொடர்புடையது. எங்கள் தற்போதைய பாடத்திட்டங்களைக் காண எங்கள் பாடநெறிகள் கண்ணோட்டம் பக்கத்தை (<https://studio.code.org/courses>) பார்வையிடவும். \*\*
@@ -342,6 +505,12 @@ ta:
               name: செயல்பாடுகள்
             'null':
               name: வெறுமை
+        artist-and-bb8:
+          lessons:
+            C9 Artist Loops:
+              name: C9 ஆர்ட்டிஸ்ட் லூப்ஸ்
+            D6 Frozen Artist:
+              name: D6 உறைந்த கலைஞர்
         coursea-2017:
           title: பாடநெறி அ
           assignment_family_title: பாடநெறி அ
@@ -361,6 +530,8 @@ ta:
           title: பாடநெறி இ
           assignment_family_title: பாடநெறி இ
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         coursed-2017:
@@ -372,14 +543,28 @@ ta:
           lessons:
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள்
+            Artist Binary:
+              name: கலைஞரில் பைனரி
         coursee-2017:
           title: பாடநெறி உ
           assignment_family_title: பாடநெறி உ
           description_short: பாடநெறி C & D இல் உள்ள கருத்துகளை விரைவாக மறைத்து, பின்னர்
             செயல்பாடுகளுடன் மேலும் செல்லுங்கள்.
           lessons:
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
@@ -390,60 +575,117 @@ ta:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         express-2017:
           lessons:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops Project in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
         pre-express-2017:
           lessons:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+        applab-intro:
+          title: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+          lessons:
+            Intro to App Lab:
+              name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
         e-f-ramp:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Conditionals:
               name: நிபந்தனைகள்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         new-d:
           lessons:
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள்
+            Nested Loops Project in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
+            Artist Binary:
+              name: கலைஞர் பைனரி
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-express:
           lessons:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops Project in Frozen:
+              name: உறைந்த நிலையில் உள்ளமை சுழல்கள் திட்டம்
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Loops in Artist (UPDATED!):
+              name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட் (UPDATED!)
         new-stages-sept-2017:
           lessons:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-e:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Conditionals:
               name: நிபந்தனைகள்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         new-f:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
         pwc:
           lessons:
             Simple Encryption:
               name: எளிய குறியாக்கம்
+            Intro to App Lab:
+              name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+            Intro to App Lab (13+):
+              name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம் (13+)
         hero:
           description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு திரும்பியுள்ளது!
             குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
@@ -452,20 +694,40 @@ ta:
               name: Minecraft Hour of Code
           student_description: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
             திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
+        applab-intro-staging:
+          lessons:
+            Intro to App Lab:
+              name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+        halloween:
+          lessons:
+            Halloween Artist:
+              name: ஹாலோவீன் கலைஞர்
         course-e-2018:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Conditionals:
               name: நிபந்தனைகள்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         course-f-2018:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
         csd6-old:
           lessons:
             Lists:
@@ -499,10 +761,26 @@ ta:
               name: வரைதாள் செய்நிரல்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops Project in Frozen:
+              name: உறைந்த நிலையில் உள்ளமை சுழல்கள் திட்டம்
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Nested Loops in Frozen:
+              name: அண்ணா மற்றும் எல்சாவுடன் உள்ளமைக்கப்பட்ட சுழல்கள்
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            Artist Binary:
+              name: கலைஞருடன் பைனரி படங்கள்
             Internet:
               name: இணையம்
             Graph Paper Programming:
@@ -514,6 +792,8 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Artist Binary:
+              name: கலைஞருடன் பைனரி படங்கள்
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
         coursec-2018:
@@ -534,10 +814,18 @@ ta:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            Variables in Artist:
+              name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Songwriting with Parameters:
               name: பாடல் எழுதுதல்
+            Functions with Parameters in Artist:
+              name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
         csp1-2018:
           lessons:
             The Internet:
@@ -551,18 +839,25 @@ ta:
             Simple Encryption:
               name: எளிய குறியாக்கம்
         frozen-2018:
+          title: புதிய உறைந்த ஸ்கிரிப்ட்
           lessons:
             Artist:
               name: கலைஞர்
         frozen-2018-test:
+          title: புதிய உறைந்த ஸ்கிரிப்ட்
           lessons:
             Artist:
               name: கலைஞர்
         dance:
+          description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக்
+            குறிக்கவும்!
           lessons:
             Dance Party:
               name: நடன விருந்து
+          student_description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன
+            விருந்தைக் குறிக்கவும்!
         frozen-2018-test-b:
+          title: புதிய உறைந்த ஸ்கிரிப்ட்
           lessons:
             Artist:
               name: கலைஞர்
@@ -583,6 +878,7 @@ ta:
             csp_functions:
               display_name: செயல்பாடுகள்
         dance-extras:
+          title: தொடர்ந்து நடனம் (2018)
           description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால்
             செல்லுங்கள்.
           student_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு
@@ -594,8 +890,14 @@ ta:
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             The Artist:
@@ -603,6 +905,8 @@ ta:
             Internet:
               name: இணையம்
         dance-low:
+          description_short: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன
+            விருந்தைக் குறிக்கவும்! (இந்த பதிப்பு மெதுவான இணைப்புகளுக்கானது)
           lessons:
             Dance Party:
               name: நடன விருந்து
@@ -617,6 +921,10 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Nested Loops in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள்
+            Artist Binary:
+              name: கலைஞருடன் பைனரி படங்கள்
             Dance Party:
               name: நடன விருந்து
         coursee-2019:
@@ -626,6 +934,8 @@ ta:
             csf_functions:
               display_name: செயல்பாடுகள்
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
@@ -649,8 +959,14 @@ ta:
           lessons:
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
+            Artist Binary:
+              name: கலைஞர் பைனரி
             Dance Party:
               name: நடன விருந்து
         andrea-test:
@@ -728,8 +1044,12 @@ ta:
               name: எளிய குறியாக்கம்
         time4csdemo:
           lessons:
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -814,6 +1134,10 @@ ta:
               name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
+        maddie-test:
+          lessons:
+            stage 1:
+              name: நிலை 1
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -826,10 +1150,16 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops Project in Frozen:
+              name: உறைந்த நிலையில் உள்ளமை சுழல்கள் திட்டம்
         dance-2019:
+          description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக்
+            குறிக்கவும்!
           lessons:
             Dance Party:
               name: நடன விருந்து
+          student_description: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன
+            விருந்தைக் குறிக்கவும்!
         k5-onlinepd-2019:
           lessons:
             Loops:
@@ -843,6 +1173,7 @@ ta:
             Variables:
               name: மாறிலிகள்
         dance-extras-2019:
+          title: தொடர்ந்து நடனம் (2019)
           description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு அப்பால்
             செல்லுங்கள்.
           student_description: நீட்டிக்கப்பட்ட திட்ட யோசனைகளுடன் முதல் மணிநேரத்திற்கு
@@ -867,6 +1198,11 @@ ta:
               display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
+          lessons:
+            Nested Loops in Artist:
+              name: கலைஞரில் உள்ளமை சுழல்கள்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
         time4cs-experiment-unit-2:
           lessons:
             Functions with Artist:
@@ -947,6 +1283,8 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Artist Binary:
+              name: கலைஞருடன் பைனரி படங்கள்
             Dance Party:
               name: நடன விருந்து
         coursee-2020:
@@ -967,6 +1305,10 @@ ta:
             csf_variables:
               display_name: மாறிலிகள்
           lessons:
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Internet:
@@ -986,10 +1328,20 @@ ta:
           lessons:
             Dance Party:
               name: நடன விருந்து
+            Programming in Artist:
+              name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Functions in Artist:
+              name: கலைஞரின் செயல்பாடுகள்
+            For Loops in Artist:
+              name: கலைஞரின் சுழல்களுக்கு
             Functions with Artist:
               name: கலைஞருடன் செயல்பாடுகள்
+            Variables with Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
+            Changing Variables with Artist:
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops with Artist:
               name: கலைஞருடன் சுழல்களுக்கு
         pre-express-2020:
@@ -1003,6 +1355,8 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         csp5-virtual:
           lessons:
+            Intro to App Lab:
+              name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
             Variables:
               name: மாறிலிகள்
         virtual-holding-place:
@@ -1049,14 +1403,53 @@ ta:
               name: பாடநெறி ஊ
             minitoolbox_2021:
               name: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '
+            csf_slides:
+              name: CS அடிப்படை ஸ்லைடுகள்
+            playlab_2021:
+              name: ஆய்வக அறிமுகத்தை இயக்கு
+          lesson_groups:
+            lesson group:
+              description: இவை பாட திட்டங்களுடன் இணைக்கப்பட்டுள்ள கற்பித்தல் எதிர்கொள்ளும்
+                நிலைகள். நிலைகள் மற்ற ஸ்கிரிப்ட்களில் தோன்றாது.
+            slides:
+              display_name: மொழிபெயர்ப்பாளர் நிலைகள்
+              description: இந்த நிலைகளில் திருத்தக்கூடிய தொடக்கக் குறியீடு உள்ளது,
+                அவை பாடத்திட்ட ஸ்லைடு தளங்களுடன் இணைகின்றன.
+            video:
+              display_name: வீடியோ பிடிப்பு நிலைகள்
+              description: இந்த நிலைகள் வீடியோ படைப்பாளர்களால் பயன்படுத்தப்படுகின்றன.
+        virustest:
+          title: ஒரு தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+          description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை உருவாக்க ஸ்ப்ரைட்
+            ஆய்வகத்தைப் பயன்படுத்தவும்.
         ml-playground:
           lessons:
             AI for Oceans:
               name: பெருங்கடல்களுக்கான AI
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+          lesson_groups:
+            outbreak:
+              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+          title: " தீவிர நோய் பரவலை உருவகப்படுத்துபவர் "
+          description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
+            ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
+          description: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட்
+            ஆய்வகத்தைப் பயன்படுத்தவும்
+          name: தீவிர நோய் பரவல்
+          student_description: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
+            ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
         2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
           lesson_groups:
             lessonGroup-3:
               display_name: மாறிலிகள்
+            outbreak:
+              display_name: " தீவிர நோய் பரவலை உருவகப்படுத்துபவர் "
         csd3-2021:
           lessons:
             Variables:
@@ -1102,12 +1495,16 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
         coursec-2021:
+          lessons:
+            Programming in Artist:
+              key: கலைஞரில் நிரலாக்க
           lesson_groups:
             csf_loops:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
         coursed-2021:
+          title: பாடநெறி ஈ (2021)
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
@@ -1116,6 +1513,9 @@ ta:
               name: நடன விருந்து
             Loops in Artist:
               key: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Artist Binary:
+              key: கலைஞர் பைனரி
+              name: கலைஞருடன் பைனரி படங்கள்
           lesson_groups:
             csf_events:
               display_name: நிகழ்வுகள்
@@ -1127,9 +1527,12 @@ ta:
           lessons:
             Conditionals:
               key: நிபந்தனைகள்
+            Nested Loops in Artist:
+              key: கலைஞரில் உள்ளமை சுழல்கள்
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
             Functions in Artist:
+              key: கலைஞரின் செயல்பாடுகள்
               name: கலைஞருடன் செயல்பாடுகள்
           lesson_groups:
             ramp_up:
@@ -1142,12 +1545,15 @@ ta:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            Variables as Constant in Artist:
+              name: கலைஞருடன் மாறுபாடுகள்
             AI for Oceans:
               key: பெருங்கடல்களுக்கான AI
               name: கடல்களுக்கான AI
             Internet:
               name: இணையம்
             For Loops in Artist:
+              key: கலைஞரின் சுழல்களுக்கு
               name: கலைஞருடன் சுழல்களுக்கு
           lesson_groups:
             lessonGroup-8:
@@ -1162,6 +1568,11 @@ ta:
             Functions with Artist:
               key: கலைஞருடன் செயல்பாடுகள்
               name: கலைஞருடன் செயல்பாடுகள்
+            Variables with Artist:
+              key: கலைஞருடன் மாறுபாடுகள்
+            Changing Variables with Artist:
+              key: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+              name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops with Artist:
               key: கலைஞருடன் சுழல்களுக்கு
               name: கலைஞருடன் சுழல்களுக்கு
@@ -1185,11 +1596,79 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
         csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
           lesson_groups:
+            outbreak:
+              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
             lessonGroup-3:
               display_name: மாறிலிகள்
             variables:
               display_name: மாறிலிகள்
+        contagion-pilot:
+          description_audience: தரம் 5
+          description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
+            ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
+          description: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய ஸ்ப்ரைட்
+            ஆய்வகத்தைப் பயன்படுத்தவும்
+          student_description: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
+            ஸ்ப்ரைட் ஆய்வகத்தைப் பயன்படுத்தவும்
+        csa1-pilot:
+          lessons:
+            lesson-19:
+              description_student: இன்று நீங்கள் உங்கள் முதல் இலவச மறுமொழி கேள்வியை
+                (FRQ) முடிக்கிறீர்கள்! ஒரு பெரிய பணியை முடிக்க நீங்கள் கையால் குறியீட்டை
+                எழுதுகிறீர்கள் என்பதே இதன் பொருள். அறையைச் சுற்றி நகர்ந்து ஒவ்வொரு
+                இடத்திலும் பணியின் பகுதிகளை முடித்து, நீங்கள் செல்லும் போது உங்கள்
+                வேலையைச் சரிபார்த்து ஒரு கூட்டாளருடன் இதைச் செய்கிறீர்கள்.
+              description_teacher: |-
+                இந்த பாடத்தில் மாணவர்கள் தங்கள் முதல் இலவச பதில் கேள்வி (FRQ) பாணி சிக்கலை முடிக்கிறார்கள். அவர்கள் ஒரு வகுப்பாக கேள்வியைக் குறிக்கிறார்கள், பின்னர் ஒரு "ஸ்பைரல்பைண்டர்\` வகுப்பை ஜோடிகளாக" உலகம் முழுவதும் "பாணி செயல்பாட்டின் மூலம் செயல்படுத்துகிறார்கள்.
+
+                இந்த பாடத்தின் குறிக்கோள்கள் மூன்று மடங்கு:
+
+                -   FRQ களை முடிப்பதில் உற்சாகம் மற்றும் சாதனை உணர்வை உருவாக்குங்கள்
+                -   ஒரு FRQ பாணி கேள்வியைப் பயிற்சி செய்யுங்கள் (கையால் எழுதப்பட்டது)
+                -   யூனிட் 1 இலிருந்து உள்ளடக்கத்தின் சுருக்கமான மதிப்பீடாக சேவை செய்யுங்கள்
+
+                இந்த FRQ இன் வடிவம் AP தேர்வில் ஒரு FRQ ஐப் போல இல்லை என்றாலும், இந்த வகையான கேள்விகளைச் சமாளிக்க மாணவர்களுக்குத் தயாராகும் ஒரு கட்டடமாகும். மாணவர்கள் பாடத்திட்டத்தின் மூலம் முன்னேறும்போது, அவர்கள் எதிர்கொள்ளும் FRQ கேள்விகள் மெதுவாக உண்மையான விஷயத்திற்கு நெருக்கமாகின்றன.
+        csa2-pilot:
+          lessons:
+            new lesson:
+              description_student: ஜாவா நிரலாக்க மொழியின் முக்கிய கூறுகள் வகுப்புகள்
+                மற்றும் பொருள்கள் என்பதை நாங்கள் அக்கம்பக்கத்தில் உள்ள அனுபவங்களின்
+                மூலம் அறிவோம். ஆனால் வகுப்புகள் எவ்வாறு பொருள்களை உருவாக்குகின்றன?
+                இந்த பாடத்தில், ஒரு பொருள் எவ்வாறு உருவாக்கப்படுகிறது என்பதை ஆராய்ந்து,
+                தரவு இணைத்தல் எனப்படும் ஒரு செயல்முறையைப் பற்றி அறிந்து கொள்ளுங்கள்.
+              description_teacher: பிரிக்கப்படாத இந்த பாடத்தில், மாணவர்கள் பொருள்களை
+                உருவாக்கி, நிகழ்வு மாறிகளைப் பயன்படுத்தி தொடர்புடைய பண்புகளை பிரதிநிதித்துவப்படுத்துகிறார்கள்.
+                `பொது` மற்றும்`தனிப்பட்ட` ஆகியவற்றுக்கு இடையேயான வித்தியாசத்தையும்,
+                ஒரு பொருளின் உள் செயல்பாட்டை மறைக்க இணைப்பதன் நோக்கத்தையும் மாணவர்கள்
+                கற்றுக்கொள்கிறார்கள்.
+            lesson-2:
+              name: மாறிகளைப் பயன்படுத்துதல்
+            lesson-3:
+              name: எழுதுபவர்கள்
+            lesson-4:
+              name: பல கட்டமைப்பாளர்களைச் சேர்த்தல்
+            lesson-5:
+              name: மாறிகள் மற்றும் பொருள் தரவுகளை கையாளுதல்
+            lesson-6:
+              name: துவக்கத்தில் பிழைகளை குறைத்தல்
+            lesson-7:
+              name: படிநிலைகளுக்கான கட்டமைப்பாளர்களை எழுதுதல்
+            lesson-8:
+              name: பொருள் தரவை அணுகும்
+            lesson-9:
+              name: பொருள் தரவை மாற்றியமைத்தல்
+            lesson-10:
+              name: பொருள் தகவலைக் காண்பித்தல்
+            lesson-11:
+              name: அக்கம்பக்கத்து கடை மேலாண்மை திட்டம் - நாள் 1
+            lesson-12:
+              name: அக்கம்பக்கத்து கடை மேலாண்மை திட்டம் - நாள் 2
+            lesson-13:
+              name: அக்கம்பக்கத்து கடை மேலாண்மை திட்டம் - நாள் 3
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -1207,3 +1686,23 @@ ta:
             Variables:
               key: மாறிலிகள்
               name: மாறிலிகள்
+        csa2-exemplars:
+          lessons:
+            lesson-2:
+              name: மாறிகளைப் பயன்படுத்துதல்
+            lesson-3:
+              name: எழுதுபவர்கள்
+            lesson-4:
+              name: பல கட்டமைப்பாளர்களைச் சேர்த்தல்
+            lesson-5:
+              name: மாறிகள் மற்றும் பொருள் தரவுகளை கையாளுதல்
+            lesson-6:
+              name: துவக்கத்தில் பிழைகளை குறைத்தல்
+            lesson-7:
+              name: படிநிலைகளுக்கான கட்டமைப்பாளர்களை எழுதுதல்
+            lesson-8:
+              name: பொருள் தரவை அணுகும்
+            lesson-9:
+              name: பொருள் தரவை மாற்றியமைத்தல்
+            lesson-10:
+              name: பொருள் தகவலைக் காண்பித்தல்

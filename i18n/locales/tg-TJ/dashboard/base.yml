@@ -133,6 +133,8 @@ tg:
       other: "Дигар"
     submit: "Пешниҳод кардан"
     decline: "Пӯшидан"
+  progress:
+    in_progress: иҷро мешавад
   project:
     projects: "Лоиҳаҳо"
     create: "Эҷод кардани лоиҳа"

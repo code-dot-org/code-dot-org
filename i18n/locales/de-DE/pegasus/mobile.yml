@@ -963,12 +963,14 @@
   coursed-2020_name: Kurs D (2019)
   coursee-2020_name: Kurs E (2019)
   coursef-2020_name: Kurs F (2019)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   express-2020_name: Expresskurs (2019)
   pre-express-2020_name: Leseanfänger-Expresskurs (2020)
+  pre-express-2021_name: Leseanfänger-Expresskurs (2021)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: "Beschleunigter Kurs"
@@ -1695,6 +1697,7 @@
   footer_support: "Unterstützung"
   footer_terms: "Bedingungen"
   ai_for_oceans: "KI für Meere"
+  ai_for_oceans_lesson_plan: "arbeitsplan"
   ai_in_partnership_with: "In Zusammenarbeit mit"
   ai_microsoft_thanks: "Wir danken Microsoft für die Unterstützung unserer Vision und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein."
   ai_activity: "Aufgabe"

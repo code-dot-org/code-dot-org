@@ -5,12 +5,22 @@ mr:
       name:
         course2:
           lessons:
+            'Artist: Debugging':
+              name: 'आर्टीस्ट: डीबगिंग '
+            'Artist: Nested Loops':
+              name: 'आर्टीस्ट:नेस्टेड लूप्स '
             Conditionals:
               name: कंडीशनल्स
         course3:
           lessons:
             Artist:
               name: आर्टीस्ट
+            'Artist: Functions':
+              name: 'आर्टीस्ट: फंक्शन्स'
+            'Artist: Nested Loops':
+              name: 'आर्टीस्ट:नेस्टेड लूप्स '
+            'Artist: Patterns':
+              name: 'आर्टीस्ट: पॅटर्न्स '
         playlab:
           description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
           description_short: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
@@ -25,6 +35,13 @@ mr:
           student_description: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
         hourofcode:
           title: क्लासिक मेझ
+          description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रे आणि आईस
+            एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
+          description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी
+            करून पाहा!
+          student_description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रे
+            आणि आईस एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून
+            पहा!
         frozen:
           title: अॅना आणि एल्साबरोबर कोड लिहा
           description: अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर
@@ -41,11 +58,26 @@ mr:
             हिमकण आणि पॅटर्न्स तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर
             तुम्ही तुमच्या मित्रमैत्रिणींशी तो शेअर करू शकाल.
         course4:
+          description_audience: वय वर्षे 9-18
           lessons:
             Artist:
               name: आर्टीस्ट
+            Artist Binary:
+              name: आर्टीस्ट बायनरी
+            'Artist: For Loops':
+              name: 'आर्टीस्ट: फॉर लूप्स'
+            'Artist: Functions':
+              name: 'आर्टीस्ट: फंक्शन्स'
+            'Artist: Functions with Parameters':
+              name: 'आर्टीस्ट: पॅरामीटर्स असलेली फंक्शन्स'
             'Artist: Variables':
               name: 'आर्टीस्ट: व्हेरीएबल्स'
+        Course4pre:
+          lessons:
+            'Artist: Functions':
+              name: 'आर्टीस्ट: फंक्शन्स'
+            'Artist: Nested Loops':
+              name: 'आर्टीस्ट:नेस्टेड लूप्स '
         algebra:
           lessons:
             'Eval: Conditionals':
@@ -75,6 +107,17 @@ mr:
               name: फ्लॅपी कोड
           student_description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय?
             आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
+        Hour of Code:
+          title: अवर ऑफ कोड 2013
+          description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर
+            संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
+          description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी
+            करून पाहा!
+          lessons:
+            Hour of Code 2013:
+              name: अवर ऑफ कोड 2013
+          student_description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर
+            संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
         cspunit1:
           lessons:
             Text Compression:
@@ -90,6 +133,16 @@ mr:
               name: आर्टीस्ट
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
+        cspfacilitator:
+          lessons:
+            Text Compression Lesson:
+              name: टेक्स्ट कॉम्प्रेशनचा धडा
+            Text Compression Widget:
+              name: टेक्स्ट कॉम्प्रेशन विजेट
+        asUnplugged:
+          description_audience: वय वर्षे 6-13
+        afterschool1:
+          description_audience: वय वर्षे 7-13
         starwars:
           title: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (जावास्क्रिप्ट)'
           description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा
@@ -127,26 +180,56 @@ mr:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+        csp-facilitators:
+          lessons:
+            Introduction to Text Compression:
+              name: टेक्स्ट कॉम्प्रेशनची ओळख
+        CSF_Secret_Sample_Story:
+          description_audience: वय वर्षे 8-18+
         MikeTest:
+          description_audience: वय वर्षे 8-98
           lessons:
             Artist Functions:
               name: आर्टीस्ट फंक्शन्स
+        teachercon:
+          lessons:
+            Lesson 2,2:
+              name: 'धडा  2.2: टेक्स्ट कॉम्प्रेशन'
         gradeKinder:
+          description_audience: वय वर्षे 5-18
           lessons:
             Events:
               name: ईव्हेंट्स
+        grade4:
+          description_audience: वय वर्षे 9-99
+          lessons:
+            'New Artist: Functions':
+              name: 'नवीन आर्टीस्ट: फंक्शन्स'
         grade1:
+          description_audience: वय वर्षे 5-18
           lessons:
             Events:
               name: ईव्हेंट्स
         grade5:
+          description_audience: वय वर्षे 10-110
           lessons:
+            'Artist: For Loops':
+              name: 'आर्टीस्ट: फॉर लूप्स'
+            'Artist: Functions with Parameters':
+              name: 'आर्टीस्ट: पॅरामीटर्स असलेली फंक्शन्स'
             'Artist: Variables':
               name: 'आर्टीस्ट: व्हेरीएबल्स'
+        grade3:
+          description_audience: वय वर्षे 5-18
+          lessons:
+            'Artist: Nested Loops':
+              name: 'आर्टीस्ट:नेस्टेड लूप्स '
         csd3-2017:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        grade2:
+          description_audience: वय वर्षे 5-18
         k5concepts:
           lessons:
             Conditionals:
@@ -155,10 +238,18 @@ mr:
               name: ईव्हेंट्स
             Nested Loops:
               name: नेस्टेड लूप्स
+        csp-online-test:
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'धडा 1 - 2: बाईट्स, फाईलचे आकार आणि टेक्स्ट कॉम्प्रेशन  '
         hoc-encryption:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+        csp2-support:
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'धडा 1 - 2: बाईट्स, फाईलचे आकार आणि टेक्स्ट कॉम्प्रेशन  '
         minecraft:
           description_short: माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट
             प्राणी प्रोग्राम करा.
@@ -178,18 +269,54 @@ mr:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        coursec-draft:
+          lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
         coursed-draft:
           lessons:
+            Nested Loops in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स
+            Artist Binary:
+              name: आर्टीस्ट बायनरी
             Nested Loops:
               name: नेस्टेड लूप्स
+            Nested Loops Project in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स प्रोजेक्ट
         coursee-draft:
           lessons:
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
             Conditionals:
               name: कंडीशनल्स
+        coursef-draft:
+          lessons:
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+        classic-hoc-impact-study:
+          description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी
+            करून पाहा!
+          lessons:
+            Hour of Code 2013:
+              name: अवर ऑफ कोड 2013
+        hoc-impact-study:
+          description_short: अनेक गंमतीदार पात्रांबरोबर संगणक शास्त्रातील मूलभूत गोष्टी
+            करून पाहा!
+          lessons:
+            Hour of Code 2013:
+              name: अवर ऑफ कोड 2013
         sports:
           lessons:
             Sports:
               name: क्रीडा
+        csf2harvey:
+          lessons:
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         csp5-support:
           description: "#### **हा अभ्यासक्रम आता सपोर्ट नसलेल्या अभ्यासक्रमाच्या आवृत्तीवर
             आधारित आहे. कृपया आमचे सर्वांत नवीन अभ्यासक्रम पाहण्यासाठी आमच्या अभ्यासक्रम
@@ -208,6 +335,12 @@ mr:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        artist-and-bb8:
+          lessons:
+            C9 Artist Loops:
+              name: C9 आर्टीस्ट लूप्स
+            D6 Frozen Artist:
+              name: D6 फ्रोझन आर्टीस्ट
         coursea-2017:
           title: अभ्यासक्रम A
           assignment_family_title: अभ्यासक्रम A
@@ -227,6 +360,8 @@ mr:
           title: अभ्यासक्रम C
           assignment_family_title: अभ्यासक्रम C
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         coursed-2017:
@@ -237,12 +372,26 @@ mr:
           lessons:
             Nested Loops:
               name: नेस्टेड लूप्स
+            Nested Loops in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स
+            Artist Binary:
+              name: आर्टीस्टमध्ये बायनरी
         coursee-2017:
           title: अभ्यासक्रम E
           assignment_family_title: अभ्यासक्रम E
           description_short: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन पूर्ण करा आणि
             नंतर पुढे जाऊन फंक्शन्स करा.
           lessons:
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
@@ -253,56 +402,113 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         express-2017:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Nested Loops Project in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स प्रोजेक्ट
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
             Nested Loops:
               name: नेस्टेड लूप्स
         pre-express-2017:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        applab-intro:
+          title: अॅप लॅबची ओळख
+          lessons:
+            Intro to App Lab:
+              name: अॅप लॅबची ओळख
         e-f-ramp:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
             Conditionals:
               name: कंडीशनल्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         new-d:
           lessons:
             Nested Loops:
               name: नेस्टेड लूप्स
+            Nested Loops in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स
+            Nested Loops Project in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स प्रोजेक्ट
+            Artist Binary:
+              name: आर्टीस्ट बायनरी
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         new-express:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Nested Loops Project in Frozen:
+              name: फ्रोझनमध्ये नेस्टेड लूप्स प्रोजेक्ट
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
             Nested Loops:
               name: नेस्टेड लूप्स
+            Loops in Artist (UPDATED!):
+              name: आर्टीस्टमधील लूप्स (अपडेट केलेले!)
         new-stages-sept-2017:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         new-e:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Conditionals:
               name: कंडीशनल्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         new-f:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
         pwc:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+            Intro to App Lab:
+              name: अॅप लॅबची ओळख
+            Intro to App Lab (13+):
+              name: अॅप लॅबची ओळख (13+)
         hero:
           description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट पुन्हा
             परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
@@ -311,18 +517,38 @@ mr:
               name: माईनक्राफ्ट अवर ऑफ कोड
           student_description: अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट
             पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा.
+        applab-intro-staging:
+          lessons:
+            Intro to App Lab:
+              name: अॅप लॅबची ओळख
+        halloween:
+          lessons:
+            Halloween Artist:
+              name: हॅलोविन आर्टीस्ट
         course-e-2018:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
             Conditionals:
               name: कंडीशनल्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         course-f-2018:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
         csd3-1819draft:
           lessons:
             Conditionals:
@@ -338,12 +564,31 @@ mr:
           lessons:
             Nested Loops:
               name: नेस्टेड लूप्स
+            Nested Loops Project in Frozen:
+              name: फ्रोझनमध्ये नेस्टेड लूप्स प्रोजेक्ट
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+            Nested Loops in Frozen:
+              name: अॅना आणि एल्सासह नेस्टेड लूप्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Variables that Change in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
+            Artist Binary:
+              name: आर्टीस्टसह बायनरी इमेजेस
         courseb-2018:
           assignment_family_title: अभ्यासक्रम B
         coursed-2018:
           assignment_family_title: अभ्यासक्रम D
+          lessons:
+            Artist Binary:
+              name: आर्टीस्टसह बायनरी इमेजेस
         coursec-2018:
           assignment_family_title: अभ्यासक्रम C
         coursee-2018:
@@ -358,8 +603,16 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
+            Variables in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+            Functions with Parameters in Artist:
+              name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Variables that Change in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
         csp2-2018:
           lessons:
             Text Compression:
@@ -369,18 +622,25 @@ mr:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
         frozen-2018:
+          title: नवीन फ्रोझन संहिता
           lessons:
             Artist:
               name: आर्टीस्ट
         frozen-2018-test:
+          title: नवीन फ्रोझन संहिता
           lessons:
             Artist:
               name: आर्टीस्ट
         dance:
+          description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या
+            डान्स पार्टीचा कोड लिहा!
           lessons:
             Dance Party:
               name: डांस पार्टी
+          student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या
+            स्वत:च्या डान्स पार्टीचा कोड लिहा!
         frozen-2018-test-b:
+          title: नवीन फ्रोझन संहिता
           lessons:
             Artist:
               name: आर्टीस्ट
@@ -397,6 +657,7 @@ mr:
             csp_conditionals:
               display_name: कंडीशनल्स
         dance-extras:
+          title: नाचत राहा (2018)
           description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या
             पुढे जा.
@@ -404,11 +665,19 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Variables that Change in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
         dance-low:
+          description_short: तुमच्या मित्रमैत्रिणींबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या
+            डान्स पार्टीचा कोड लिहा! (हे व्हर्जन धीम्या कनेक्शन्ससाठी आहे)
           lessons:
             Dance Party:
               name: डांस पार्टी
@@ -419,6 +688,10 @@ mr:
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
+            Nested Loops in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स
+            Artist Binary:
+              name: आर्टीस्टसह बायनरी इमेजेस
             Dance Party:
               name: डांस पार्टी
         coursee-2019:
@@ -426,6 +699,8 @@ mr:
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
@@ -439,8 +714,14 @@ mr:
           lessons:
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Variables that Change in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+            Artist Binary:
+              name: आर्टीस्ट बायनरी
             Dance Party:
               name: डांस पार्टी
         dance-extras-gallery:
@@ -489,8 +770,12 @@ mr:
               name: सुलभ एनक्रीप्शन
         time4csdemo:
           lessons:
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         csp1-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -533,10 +818,16 @@ mr:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops:
               name: नेस्टेड लूप्स
+            Nested Loops Project in Frozen:
+              name: फ्रोझनमध्ये नेस्टेड लूप्स प्रोजेक्ट
         dance-2019:
+          description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या
+            डान्स पार्टीचा कोड लिहा!
           lessons:
             Dance Party:
               name: डांस पार्टी
+          student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या
+            स्वत:च्या डान्स पार्टीचा कोड लिहा!
         k5-onlinepd-2019:
           lessons:
             Conditionals:
@@ -544,6 +835,7 @@ mr:
             Events:
               name: ईव्हेंट्स
         dance-extras-2019:
+          title: नाचत राहा (2019)
           description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या
             पुढे जा.
@@ -561,6 +853,11 @@ mr:
               display_name: कंडीशनल्स
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
+          lessons:
+            Nested Loops in Artist:
+              name: आर्टीस्टमध्ये नेस्टेड लूप्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
         time4cs-experiment-unit-2:
           lessons:
             Functions with Artist:
@@ -611,6 +908,8 @@ mr:
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
+            Artist Binary:
+              name: आर्टीस्टसह बायनरी इमेजेस
             Dance Party:
               name: डांस पार्टी
         coursee-2020:
@@ -624,10 +923,22 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Variables that Change in Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+              description_student: 'ट्युटोरीयल सारांश: आधी विद्यार्थी महासागरातून
+                कचरा काढून टाकण्याचा प्रयत्न करण्यासाठी ऑब्जेक्टचे "मासा आहे" किंवा
+                "मासा नाही" असे वर्गीकरण करतील. नंतर, विद्यार्थ्यांना पाण्यातील इतर
+                प्राणी समाविष्ट करण्यासाठी त्यांच्या ट्रेनिंग सेटचा विस्तार करावा
+                लागेल. कृतीच्या दुसऱ्या भागात, विद्यार्थी यादृच्छिकपणे तयार केलेल्या
+                माशांच्या इमेजेसना लागू करण्यासाठी त्यांची स्वत:ची लेबल्स निवडतील.हा
+                ट्रेनिंग डेटा मशीन लर्निंग मॉडेलसाठी वापरला जाईल आणि मग ते नवीन इमेजेसना
+                स्वत: लेबल करू शकेल.'
         express-2020:
           lesson_groups:
             csf_conditionals:
@@ -635,10 +946,20 @@ mr:
           lessons:
             Dance Party:
               name: डांस पार्टी
+            Programming in Artist:
+              name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Functions in Artist:
+              name: आर्टीस्टमध्ये फंक्शन्स
+            For Loops in Artist:
+              name: आर्टीस्टमध्ये फॉर लूप्स
             Functions with Artist:
               name: आर्टीस्टसह फंक्शन्स
+            Variables with Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
+            Changing Variables with Artist:
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops with Artist:
               name: आर्टीस्टसह फॉर लूप्स
         pre-express-2020:
@@ -648,6 +969,10 @@ mr:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        csp5-virtual:
+          lessons:
+            Intro to App Lab:
+              name: अॅप लॅबची ओळख
         code-break:
           lessons:
             Events:
@@ -698,16 +1023,23 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
         coursec-2021:
+          lessons:
+            Programming in Artist:
+              key: आर्टीस्टमध्ये प्रोग्रॅमिंग
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
         coursed-2021:
+          title: अभ्यासक्रम D (2021)
           lessons:
             Dance Party:
               key: डांस पार्टी
               name: डांस पार्टी
             Loops in Artist:
               key: आर्टीस्टमध्ये लूप्स
+            Artist Binary:
+              key: आर्टीस्ट बायनरी
+              name: आर्टीस्टसह बायनरी इमेजेस
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -717,7 +1049,10 @@ mr:
           lessons:
             Conditionals:
               key: कंडीशनल्स
+            Nested Loops in Artist:
+              key: आर्टीस्टमध्ये नेस्टेड लूप्स
             Functions in Artist:
+              key: आर्टीस्टमध्ये फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
           lesson_groups:
             ramp_up:
@@ -728,10 +1063,13 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
+            Variables as Constant in Artist:
+              name: आर्टीस्टसह व्हेरीएबल्स
             AI for Oceans:
               key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
             For Loops in Artist:
+              key: आर्टीस्टमध्ये फॉर लूप्स
               name: आर्टीस्टसह फॉर लूप्स
         express-2021:
           lessons:
@@ -741,6 +1079,11 @@ mr:
             Functions with Artist:
               key: आर्टीस्टसह फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
+            Variables with Artist:
+              key: आर्टीस्टसह व्हेरीएबल्स
+            Changing Variables with Artist:
+              key: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
+              name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops with Artist:
               key: आर्टीस्टसह फॉर लूप्स
               name: आर्टीस्टसह फॉर लूप्स

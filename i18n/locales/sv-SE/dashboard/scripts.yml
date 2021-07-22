@@ -9,8 +9,20 @@ sv:
       name:
         course1:
           title: Kurs 1
+          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
+          description_short: Börja med kurs 1 för nybörjar-läsare.
           description_audience: Från 4 år (icke-läsare)
           lessons:
+            'Artist: Loops':
+              name: 'Konstnären: Slingor'
+            'Artist: Sequence':
+              name: 'Konstnären: Sekvens'
+            'Artist: Shapes':
+              name: 'Konstnären: Former'
+            'Bee: Loops':
+              name: 'Bi: Slingor'
+            'Bee: Sequence':
+              name: 'Bi: Sekvens'
             Building a Foundation:
               name: Bygga en grund
             Getting Loopy:
@@ -19,15 +31,45 @@ sv:
               name: Trygg resa
             Happy Maps:
               name: Glada kartor
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pussel: Lär dig dra och släpp'
+            'Maze: Debugging':
+              name: 'Labyrint: Felsökning'
+            'Maze: Loops':
+              name: 'Labyrint: Slingor'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
             Move it, Move it:
               name: Flytta den, flytta den
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
+            Spelling Bee:
+              name: Stavnings-bi
+            'Studio: Create a Story':
+              name: Spel-labb - skapa en berättelse
             The Big Event:
               name: Den stora händelsen
+          student_description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
         course2:
           title: Kurs 2
+          description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
+          description_short: Kurs 2 är utformad för elever som kan läsa.
+          description_audience: Åldrar 6 + (läsförmåga krävs)
           lessons:
+            'Artist: Debugging':
+              name: 'Konstnären: Felsökning'
+            'Artist: Loops':
+              name: 'Konstnären: Slingor'
+            'Artist: Nested Loops':
+              name: 'Konstnären: Nästlade slingor'
+            'Artist: Sequence':
+              name: 'Konstnären: Sekvens'
+            'Bee: Conditionals':
+              name: 'Biet: Villkor'
+            'Bee: Debugging':
+              name: 'Biet: Felsökning'
+            'Bee: Loops':
+              name: 'Bi: Slingor'
             Binary Bracelets:
               name: Binära armband
             Conditionals:
@@ -38,20 +80,43 @@ sv:
               name: Att bli snurrig
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
+            'Maze: Loops':
+              name: 'Labyrint: Slingor'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmer i verkliga livet: Pappersflygplan'
             Relay programming:
               name: Stafettprogrammering
+            'Studio: Create a Story':
+              name: Spel-labb - skapa en berättelse
             The Big Event:
               name: Den stora händelsen
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+          student_description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
         course3:
           title: Kurs 3
+          description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
+          description_short: Kurs 3 är en uppföljning till kurs 2.
           description_audience: Åldrar 8 + (efter kurs 2)
           lessons:
             Artist:
               name: Konstnären
+            'Artist: Functions':
+              name: 'Konstnären: Funktioner'
+            'Artist: Nested Loops':
+              name: 'Konstnären: Nästlade slingor'
+            'Artist: Patterns':
+              name: 'Konstnären: mönster'
+            'Bee: Conditionals':
+              name: 'Biet: Villkor'
+            'Bee: Debugging':
+              name: 'Biet: Felsökning'
+            'Bee: Functions':
+              name: 'Biet: Funktioner'
+            'Bee: Nested Loops':
+              name: 'Biet: Nästlade slingor'
             Bounce:
               name: Studsa
             Computational Thinking:
@@ -62,14 +127,23 @@ sv:
               name: Tärningsspelet
             Digital Citizenship:
               name: Digitalt medborgarskap
+            'Farmer: While Loops':
+              name: 'Bonde: ''medan''-slingor'
             Functional Suncatchers:
               name: Funktionella Solfångare
             Internet:
               name: Internet
             Maze:
               name: Labyrint
+            'Maze: Conditionals':
+              name: 'Labyrint: Villkorssatser'
             Songwriting:
               name: Låtskrivande
+            'Studio: Create a Game':
+              name: 'Spel-labbet: skapa ett spel'
+            'Studio: Create a Story':
+              name: Spel-labb - skapa en berättelse
+          student_description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
         playlab:
           title: Spel-labb
           description: Skapa en berättelse eller gör ett spel med Spel-labbet!
@@ -88,9 +162,12 @@ sv:
           student_description: Rita häftiga bilder och mönster med konstnären!
         hourofcode:
           title: Klassisk labyrint
+          description: Prova grunderna i datavetenskap med figurer från Angry Birds, Plants vs. Zombies och Scrat från Ice Age!
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
           lessons:
             Maze:
               name: Labyrint
+          student_description: Prova grunderna i datavetenskap med figurer från Angry Birds, Plants vs. Zombies och Scrat från Ice Age!
         frozen:
           title: Koda med Anna och Elsa
           description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
@@ -101,25 +178,142 @@ sv:
           student_description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
         course4:
           title: Kurs 4
+          description: Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.
+          description_short: Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.
+          description_audience: Åldrar 10 + (efter kurs 3)
           lessons:
             Artist:
               name: Konstnären
+            Artist Binary:
+              name: Artist binär
+            'Artist: For Loops':
+              name: 'Konstnären: ''för''-slingor'
+            'Artist: Functions':
+              name: 'Konstnären: Funktioner'
+            'Artist: Functions with Parameters':
+              name: 'Konstnären: Funktioner med parametrar'
             'Artist: Variables':
               name: 'Konstnären: Variabler'
+            'Bee: For Loops':
+              name: 'Bilet: "för"-slingor'
+            'Bee: Functions with Parameters':
+              name: 'Biet: Funktioner med parametrar'
+            Extreme Challenge - Comprehensive:
+              name: Extreme utmaning - Omfattande
+            Maze and Bee:
+              name: Labyrint och Bee
+            'Play Lab: For Loops':
+              name: 'Spel-labb: ''för''-slingor'
+            'Play Lab: Functions with Parameters':
+              name: 'Spel-labb: Funktioner med parametrar'
+            'Play Lab: Variables':
+              name: 'Spel-labb: Variabler'
+            Super Challenge - For Loops:
+              name: Super utmaning - för loopar
+            Super Challenge - Functions and Parameters:
+              name: Super utmaning - funktioner och parametrar
+            Super Challenge - Variables:
+              name: Super utmaning - variabler
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            'Unplugged: Envelope Variables':
+              name: 'Ouppkopplad: Kuvertvariabler'
+            'Unplugged: For Loop Fun':
+              name: 'Ouppkopplad: Skoj med "för" - slingor'
+            'Unplugged: Madlibs':
+              name: 'Ouppkopplad: Madlibs'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Ouppkopplad: Skriva låtar med parametrar'
+            'Unplugged: Tangrams':
+              name: 'Ouppkopplad: Tangram'
+          student_description: Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.
+        Course4pre:
+          title: Kurs 4 förutsättning
+          description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
+          description_short: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
+          lessons:
+            'Artist: Functions':
+              name: 'Konstnären: Funktioner'
+            'Artist: Loops':
+              name: 'Konstnären: Slingor'
+            'Artist: Nested Loops':
+              name: 'Konstnären: Nästlade slingor'
+            'Artist: Sequence':
+              name: 'Konstnären: Sekvens'
+            'Bee: Conditionals':
+              name: 'Biet: Villkor'
+            'Bee: Debugging':
+              name: 'Biet: Felsökning'
+            'Bee: Nested Loops':
+              name: 'Biet: Nästlade slingor'
+            'Farmer: While Loops':
+              name: 'Bonde: ''medan''-slingor'
+            'Maze: Sequence':
+              name: 'Labyrint: Sekvens'
+          student_description: En kort sammanfattning av begrepp för elever som inte har tagit kurs 2 och 3.
         usability:
+          title: Användbarhetstest
+          description: Ett urval av kurs 4 nivåer för användartester.
           lessons:
             Binary:
               name: Binära
             For Loops:
               name: "'För' loopar"
+            Functions and Functions with Parameters:
+              name: Funktioner och funktioner med parametrar
+            Intro:
+              name: Introduktion
             Variables:
               name: variabler
+          student_description: Ett urval av kurs 4 nivåer för användartester.
         algebra:
           title: Datavetenskap i Algebra
+          description: Lär dig funktionell programmering genom algebra.
+          description_short: Lär dig funktionell programmering genom algebra.
           lessons:
+            'Calc: Defining Variables':
+              name: Definiera variabler och Substitution
+            'Calc: Evaluation Blocks':
+              name: Utvärderingsblock och aritmetiska uttryck
+            'Eval: Boolean Operators':
+              name: Booleska operatorer
             'Eval: Conditionals':
               name: Villkor
+            'Eval: Defining Functions':
+              name: Sammansatta funktioner
+            'Eval: Functions':
+              name: Lös ordproblem med design recept
+            'Eval: Strings and Images':
+              name: Strängar och bilder
+            'Eval: Writing Contracts':
+              name: Skriva kontrakt
+            'Play Lab: Animation (Big Game)':
+              name: Big Game - animation
+            'Play Lab: Boolean (Big Game)':
+              name: Big Game - booleska värden
+            'Play Lab: Booleans':
+              name: Sam Bat
+            'Play Lab: Collision Detection (Big Game)':
+              name: Big Game - kollision-detektion
+            'Play Lab: Defining Functions':
+              name: Rakethöjd
+            'Play Lab: Defining Variables (Big Game)':
+              name: Big Game - variabler
+            'Unplugged: Booleans':
+              name: 'Unplugged: Booleska värden och logik'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Unplugged: Kollisions-detektion och Pythagoras sats'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Ouppkopplad: Villkorssatser och styckevis funktioner'
+            'Unplugged: Contracts':
+              name: 'Unplugged: Kontrakt, domän och utbud'
+            'Unplugged: The Design Recipe':
+              name: 'Ouppkopplad: Design recept'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Ouppkopplad: videospel och koordinat-plan'
+          student_description: Lär dig funktionell programmering genom algebra.
         infinity:
+          title: Disney Infinity Play Lab
           description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
           description_short: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
           lessons:
@@ -127,17 +321,47 @@ sv:
               name: Oändligt
           student_description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
         algebrademo:
+          title: Algebra Demo
+          description: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
+          description_short: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
           lessons:
+            Defining Simple Functions:
+              name: Definiera enkla funktioner
+            Defining Variables:
+              name: Definiera variabler
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Making Pictures:
+              name: Att göra bilder
             The Design Recipe:
               name: Design recept
+          student_description: En handfull pussel för att demonstrera miljön och programmeringsspråket som används i Code.org CS i Algebra
         K5PD:
           lessons:
+            Computer Science Pedagogy:
+              name: Datavetenskapens pedagogik
+            Introduction to PD:
+              name: Introduktion till PD
+            K-5 Courses:
+              name: K-5 kurser
+            Next Steps:
+              name: Nästa steg
             Teacher Dashboard:
               name: Lärare Dashboard
+            Unplugged lessons:
+              name: Unplugged lektioner
+            Writing computer programs:
+              name: Skriva datorprogram
+            new stage:
+              name: ny etapp
         netsim:
           title: Internet Simulator
+        pixelation:
+          title: Pixelering
         20-hour:
+          title: 20 timmars Intro kurs
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
+          description_short: Denna 20-timmars kurs omfattar ren dator vetenskap och programmeringsbegrepp i kurserna 2-4.
           description_audience: Åldrar 10 + (efter kurs 3)
           lessons:
             Abstraction:
@@ -182,13 +406,19 @@ sv:
               name: Gör klart
           student_description: Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.
         edit-code:
+          title: Redigera kod
+          description: Redigera kod
+          description_short: Redigera kod
           lessons:
+            Applab:
+              name: Applab
             Play Lab:
               name: Spel-labb
             The Artist:
               name: Konstnären
             The Maze:
               name: Labyrinten
+          student_description: Redigera kod
         events:
           title: Händelser
           description: Händelser
@@ -200,39 +430,134 @@ sv:
               name: Calc
             Eval:
               name: Eval
+            Studio:
+              name: Studio
           student_description: Händelser
         flappy:
           title: Flappy kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
+          description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
           lessons:
             Flappy Code:
               name: Flappy kod
           student_description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!
         jigsaw:
           title: Pussel
+          description: Prova vår Jigsaw handledning.
+          description_short: Prova vår Jigsaw handledning.
           lessons:
             Jigsaw:
               name: Pussel
+          student_description: Prova vår Jigsaw handledning.
         step:
           title: Steg
+          description: Steg handledning
+          description_short: Steg handledning
           lessons:
             Step:
               name: Steg
+          student_description: Steg handledning
+        Hour of Code:
+          title: Timme av Kod 2013
+          description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          lessons:
+            Hour of Code 2013:
+              name: Timme av Kod 2013
+          student_description: Prova grunderna i datavetenskap med karaktärerna från Angry Birds och Plants vs. Zombies!
+        CodeStudioPuzzleChallenge:
+          title: Kod Studio pussel utmaning
+          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          description_short: Utmana dig själv!
+          lessons:
+            Puzzles:
+              name: Pussel
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+        Tutorial Video - Code Studio Puzzle Challenge:
+          title: Tutorial - Kod Studio pussel utmaning
+          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          description_short: Utmana dig själv!
+          lessons:
+            Puzzles:
+              name: Pussel
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
         cspunit1:
+          title: CSP enhet 1 - Digital Information
           lessons:
             Binary Numbers:
               name: Binära tal
+            Number Systems:
+              name: Talsystem
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
+            Sending Bits in the Real World:
+              name: Skicka bitar i den verkliga världen
             Text Compression:
               name: Text komprimering
         algebraPD:
+          title: Datavetenskap i Algebra PD
           lessons:
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Introduction to PD:
+              name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+        algPDmiami:
+          title: Datavetenskap i Algebra PD
+          description: Undervisa i algebra genom funktionell programmering
+          description_short: Undervisa i algebra genom funktionell programmering
+          lessons:
+            Booleans:
+              name: Booleska värden
+            Design Recipe Practice:
+              name: Design-recept praxis
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Luigi's Pizza:
+              name: Luigi's Pizza
+            Rocket-Height:
+              name: Rakethöjd
+            Sam the Bat:
+              name: Sam Bat
+            Strings and Images:
+              name: Strängar och bilder
+            Your Game - Animation:
+              name: Ditt spel - Animation
+            Your Game - Booleans:
+              name: Ditt spel - booleska värden
+            Your Game - Collision Detection:
+              name: Ditt spel - kollisionsdetektion
+            Your Game - Player Movement:
+              name: Ditt spel - spelarrörelse
+          student_description: Undervisa i algebra genom funktionell programmering
         text-compression:
           title: Text komprimering
+          description: Komprimera text genom att identifiera upprepade mönster.
+          description_short: Komprimera text genom att identifiera upprepade mönster.
           lessons:
             Text Compression:
               name: Text komprimering
+          student_description: Komprimera text genom att identifiera upprepade mönster.
+        CSPPD:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
+        CSPLessonSamples:
+          title: CSP lektionsexempel
+          lessons:
+            Lesson 14:
+              name: Lektion 14
+            Lesson 15:
+              name: Lektion 15
+        ECSPD:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
+        sciencePD:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
         cspunit3:
           lessons:
             Creating Functions:
@@ -241,58 +566,156 @@ sv:
               name: "'Medan' loopar(slingor)"
         algebraPD3:
           lessons:
+            Computer Science Pedagogy:
+              name: Datavetenskapens pedagogik
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Next Steps:
+              name: Nästa steg
+            Strings and Images:
+              name: Strängar och bilder
             Teacher Dashboard:
               name: Lärare Dashboard
             The Design Recipe:
               name: Design recept
-        algebraPD-NexTech:
+        ECSPD-NexTech:
           lessons:
+            Introduction to PD:
+              name: Introduktion till PD
+        ECSPD-iZone:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
+        algebraPD-NexTech:
+          title: Datavetenskap i Algebra PD
+          lessons:
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Introduction to PD:
+              name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
         algebraPD-iZone:
+          title: Datavetenskap i Algebra PD
           lessons:
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Introduction to PD:
+              name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+        sciencePD-NexTech:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
+        sciencePD-iZone:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
         sciencePD2:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         algebraPD2a:
+          title: Datavetenskap i Algebra PD
           lessons:
+            Booleans:
+              name: Booleska värden
+            Defining Variables:
+              name: Definiera variabler
+            Evaluation Blocks:
+              name: Utvärderingsblock
             Free Play:
               name: Fri lek
+            Luigi's Pizza:
+              name: Luigi's Pizza
+            Rocket-Height:
+              name: Rakethöjd
+            Sam the Bat:
+              name: Sam Bat
+            Strings and Images:
+              name: Strängar och bilder
             The Design Recipe:
               name: Design recept
         allthethings:
+          title: Allt!
+          description: Alla typer av nivå för UI-tester
+          description_short: Alla typer av nivå för UI-tester
           lessons:
+            AppLab:
+              name: AppLab
             Artist:
               name: Konstnären
+            Bee:
+              name: Biet
             Bounce:
               name: Studsa
+            Farmer:
+              name: Bonde
             Flappy:
               name: Flappy
             Jigsaw:
               name: Pussel
+            Match:
+              name: Matcha
             Maze:
               name: Labyrint
             Minecraft:
               name: Minecraft
+            Multi:
+              name: Multi
+            Odometer:
+              name: Mätarställning
+            Pixelation:
+              name: Pixelering
+            Studio:
+              name: Studio
             Text Compression:
               name: Text komprimering
             Web Lab:
               name: Web Lab
+          student_description: Alla typer av nivå för UI-tester
         algebraPD2b:
+          title: Datavetenskap i Algebra PD
           lessons:
+            Booleans:
+              name: Booleska värden
+            Defining Functions:
+              name: Definiera funktioner
+            Defining Variables:
+              name: Definiera variabler
+            'Eval: Conditionals':
+              name: 'Eval: villkorssatser'
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Next Steps:
+              name: Nästa steg
+            Rocket-Height:
+              name: Rakethöjd
+            Strings and Images:
+              name: Strängar och bilder
             Teacher Dashboard:
               name: Lärare Dashboard
+            Writing Contracts:
+              name: Skriva kontrakt
         cspfacilitator:
           lessons:
             App Lab:
               name: App Lab
             Internet Simulator:
               name: Internet Simulator
+            Welcome!:
+              name: Välkommen!
+        K5-OnlinePD:
+          lessons:
+            Next Steps:
+              name: Nästa steg
         ECSPD2:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-up:
               name: Gör klart
         algebraPD2:
@@ -301,27 +724,44 @@ sv:
               name: Lärare Dashboard
             The Design Recipe:
               name: Design recept
+            Welcome!:
+              name: Välkommen!
         sciencePD2b:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         science-PD2:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+        Equity-OnlinePD:
+          lessons:
+            Next Steps:
+              name: Nästa steg
         sciencePD2b-iZone:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         ECSPD2-iZone:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-up:
               name: Gör klart
         ECSPD2-NexTech:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-up:
               name: Gör klart
         asUnplugged:
+          description_audience: Åldrarna 6-13
           lessons:
             Binary Bracelets:
               name: Binära armband
@@ -341,43 +781,143 @@ sv:
               name: Låtskrivande
             The Big Event:
               name: Den stora händelsen
+        afterschool1:
+          description_audience: Åldrarna 7-13
+        algebraPD3a:
+          title: Datavetenskap i Algebra PD
         ScienceP3OLPT2:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
+        algebraPD3b:
+          title: Datavetenskap i Algebra PD
         Special Fun:
           description_audience: Åldrar 10 + (efter kurs 3)
         SpecialSeries:
           description_audience: Åldrar 10 + (efter kurs 3)
+        iceage:
+          title: Ice Age Play Lab
+          description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
+          lessons:
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+          student_description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
         cspunit3temp:
           lessons:
             While Loops:
               name: "'Medan' loopar(slingor)"
+        gumball:
+          title: Gumball Play Lab
+          description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
+          lessons:
+            Gumball Play Lab:
+              name: Gumball Play Lab
+          student_description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
         starwars:
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
+          lessons:
+            Hour of Code 2015:
+              name: Hour of Code 2015
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         starwarsblocks:
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
+          lessons:
+            Hour of Code 2015:
+              name: Hour of Code 2015
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         mc:
           title: Minecraft Hour of Code
           description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
           description_short: Utforska en Minecraft-värld genom kod
+          lessons:
+            Hour of Code 2015:
+              name: Hour of Code 2015
           student_description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
         ScienceP3OLPT3:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-        algebraPD1:
+        AlgebraA:
+          description: Lär dig funktionell programmering genom algebra
+          description_short: Lär dig funktionell programmering genom algebra
           lessons:
+            'Calc: Defining Variables':
+              name: 'Calc: Definiera variabler'
+            'Calc: Evaluation Blocks':
+              name: 'Calc: Utvärderings- block'
+            'Eval: Defining Functions':
+              name: 'Eval: Definiera funktioner'
+            'Eval: Functions':
+              name: 'Eval: funktioner'
+            'Eval: Strings and Images':
+              name: 'Eval: Strängar och bilder'
+            'Eval: Writing Contracts':
+              name: 'Eval: Skriva kontrakt'
+            'Play Lab: Defining Functions':
+              name: 'Play lab: Definiera funktioner'
+            'Unplugged: Contracts':
+              name: 'Ouppkopplad: kontrakt'
+            'Unplugged: The Design Recipe':
+              name: 'Ouppkopplad: Design recept'
+          student_description: Lär dig funktionell programmering genom algebra
+        AlgebraB:
+          description: Lär dig funktionell programmering genom algebra
+          description_short: Lär dig funktionell programmering genom algebra
+          lessons:
+            'Eval: Boolean Operators':
+              name: 'Eval: Booleska operatorer'
+            'Eval: Conditionals':
+              name: 'Eval: villkorssatser'
+            'Play Lab: Animation (Big Game)':
+              name: 'Play Lab: Animation (Big Game)'
+            'Play Lab: Boolean (Big Game)':
+              name: 'Play Lab: Boolean (Big Game)'
+            'Play Lab: Booleans':
+              name: 'Play Lab: booleska värden'
+            'Play Lab: Collision Detection (Big Game)':
+              name: 'Play Lab: Kollisions-detektion (Big Game)'
+            'Play Lab: Defining Variables (Big Game)':
+              name: 'Play labb: Definiera variabler (Big Game)'
+            'Unplugged: Booleans':
+              name: 'Ouppkopplad: booleska värden'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Ouppkopplad: Kollisions-detektion och avstånds- formeln'
+            'Unplugged: Conditionals and Piecewise Functions':
+              name: 'Ouppkopplad: Villkorssatser och styckevis funktioner'
+            'Unplugged: Video Games and Coordinate Planes':
+              name: 'Ouppkopplad: videospel och koordinat-plan'
+          student_description: Lär dig funktionell programmering genom algebra
+        algebraPD1:
+          description: Undervisa i algebra genom funktionell programmering
+          lessons:
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Introduction to PD:
+              name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: Undervisa i algebra genom funktionell programmering
+        algebraPD3c:
+          title: Datavetenskap i Algebra PD
         csp1-2017:
+          lesson_groups:
+            csp1_2:
+              display_name: 'Kapitel 2: Uppfinna Internet'
           lessons:
             Binary Numbers:
               name: Binära tal
+            Number Systems:
+              name: Talsystem
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
             The Internet:
               name: Internet
         csp2-2017:
@@ -396,25 +936,54 @@ sv:
           lessons:
             Functions:
               name: funktioner
+        2016_sciencePD_phase1:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
         CSF_Secret_Sample:
           description_audience: Åldrar 8 + (efter kurs 2)
         algebraFacilitator:
+          description: Undervisa i algebra genom funktionell programmering
+          description_short: Undervisa i algebra genom funktionell programmering
           lessons:
+            Evaluation Blocks:
+              name: Utvärderingsblock
+            Introduction to PD:
+              name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
+          student_description: Undervisa i algebra genom funktionell programmering
+        sciencePD1:
+          lessons:
+            Introduction to PD:
+              name: Introduktion till PD
         cspunit1-support:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+          lessons:
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
         CSDU2-Draft:
           lessons:
             Peer Review:
               name: Din recension
+        CSF_Secret_Sample_Story:
+          description_audience: Åldrarna 8-18+
         MikeTest:
+          description_audience: Åldrarna 8-98
           lessons:
             Artist Functions:
               name: 'Konstnären: Funktioner'
@@ -424,47 +993,114 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+        kinderTest:
+          lessons:
+            'Bee: Conditionals':
+              name: 'Biet: Villkor'
         gradeKinder:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
             Events:
               name: Händelser
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pussel: Lär dig dra och släpp'
             Loops:
               name: loopar
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
         grade4:
+          description_audience: Ålder 9-99
           lessons:
             Digital Citizenship:
               name: Digitalt medborgarskap
             Songwriting:
               name: Låtskrivande
         grade1:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
             Events:
               name: Händelser
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pussel: Lär dig dra och släpp'
             Loops:
               name: loopar
         grade5:
+          description_audience: Åldrarna 10-110
           lessons:
+            'Artist: For Loops':
+              name: 'Konstnären: ''för''-slingor'
+            'Artist: Functions with Parameters':
+              name: 'Konstnären: Funktioner med parametrar'
             'Artist: Variables':
               name: 'Konstnären: Variabler'
+            'Bee: For Loops':
+              name: 'Bilet: "för"-slingor'
+            'Bee: Functions with Parameters':
+              name: 'Biet: Funktioner med parametrar'
             Digital Citizenship:
               name: Digitalt medborgarskap
+            'Play Lab: Variables':
+              name: 'Spel-labb: Variabler'
+            'Unplugged: Envelope Variables':
+              name: 'Ouppkopplad: Kuvertvariabler'
+            'Unplugged: For Loop Fun':
+              name: 'Ouppkopplad: Skoj med "för" - slingor'
+            'Unplugged: Songwriting with Parameters':
+              name: 'Ouppkopplad: Skriva låtar med parametrar'
         ecs-unit1:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-up:
               name: Gör klart
         grade3:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            " Bee: Conditionals":
+              name: " Biet: Villkor"
+            'Artist: Nested Loops':
+              name: 'Konstnären: Nästlade slingor'
             Bee Debugging:
               name: 'Biet: Felsökning'
             Bounce:
               name: Studsa
+            'Farmer: While Loops':
+              name: 'Bonde: ''medan''-slingor'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+          lessons:
+            Lesson 1,10:
+              name: Lektion 1,10
+            Lesson 1,11:
+              name: Lektion 1,11
+            Lesson 1,4:
+              name: Lektion 1,4
+            Lesson 1,6:
+              name: Lektion 1,6
+            Lesson 1,9:
+              name: Lektion 1,9
+            Lesson 2,10:
+              name: Lektion 2,10
+            Lesson 2,2:
+              name: Lektion 2,2
+            Lesson 2,3:
+              name: Lektion 2,3
         csd3-2017:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Functions:
               name: funktioner
@@ -473,6 +1109,7 @@ sv:
             Conditionals:
               name: Villkor
         grade2:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
             Flappy:
               name: Flappy
@@ -505,25 +1142,49 @@ sv:
             While Loops:
               name: "'Medan' loopar(slingor)"
         algebrapdnext:
+          description: Undervisa i algebra genom funktionell programmering
           lessons:
             Teacher Dashboard:
               name: Lärare Dashboard
             The Design Recipe:
               name: Design recept
+            Welcome!:
+              name: Välkommen!
+          student_description: Undervisa i algebra genom funktionell programmering
+        csd1-2017:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csp-online-test:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
         csp1-support:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
         basketball:
+          title: Göra en basketmatch
+          description_short: Göra en basketmatch
+          description: Göra en basketmatch
           lessons:
             Bounce:
               name: Studsa
+          student_description: Göra en basketmatch
         csd2-2017:
           lessons:
+            new stage:
+              name: ny etapp
             Peer Review:
               name: Din recension
             Lists:
@@ -532,9 +1193,17 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
         minecraft:
+          title: Minecraft Hour of Code Designer
           description_short: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
           description: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
+          lessons:
+            Minecraft Hour of Code Designer:
+              name: Minecraft Hour of Code Designer
           student_description: Programmera djur och andra Minecraft varelser i din egen version av Minecraft.
         flappy-impact-study:
           lessons:
@@ -568,11 +1237,18 @@ sv:
               name: Villkorssatser med kort
             Digital Citizenship:
               name: Digitalt medborgarskap
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
             Nested Loops:
               name: Kapslade slingor(loopar)
             Introduction:
               name: Introduktion
         coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Innehåll
           lessons:
             Digital Citizenship:
               name: Digitalt medborgarskap
@@ -585,6 +1261,9 @@ sv:
             Conditionals:
               name: Villkor
         coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Innehåll
           lessons:
             Digital Citizenship:
               name: Digitalt medborgarskap
@@ -596,6 +1275,20 @@ sv:
               name: Låtskrivande Med parametrar
             Introduction:
               name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
+        classic-hoc-impact-study:
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          lessons:
+            Hour of Code 2013:
+              name: Timme av Kod 2013
+        hoc-impact-study:
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          lessons:
+            Hour of Code 2013:
+              name: Timme av Kod 2013
         sports:
           title: Sport
           description_short: Koda din egen sport
@@ -606,40 +1299,73 @@ sv:
           student_description: Koda din egen sport
         2016_sciencePD-phase2b:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         2016_sciencePD_phase2b:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         csp3-support:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+        csdgraveyard:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-support:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
         sciencepd4:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         science-pd-ol-pt-5:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Innehåll
           lessons:
             Binary:
               name: Binära
         sciencepd5:
           lessons:
+            Welcome!:
+              name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
         csp5-support:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Innehåll
         csd6-draft:
           lessons:
             Lists:
@@ -656,8 +1382,24 @@ sv:
               name: Introduktion
         csd5-draft:
           lessons:
+            new stage:
+              name: ny etapp
             Representing Images:
               name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+            8-bit Numbers:
+              name: 8-bitars tal
+        applab-1hour:
+          lessons:
+            Extra:
+              name: Extra
+        applab-2hour:
+          lessons:
+            new stage:
+              name: ny etapp
         coursed-ramp:
           lessons:
             Introduction:
@@ -681,6 +1423,7 @@ sv:
             Functions with Parameters_:
               name: Funktioner med parametrar
         csd3-draft:
+          description_short: Animationer och spel
           lessons:
             Variables:
               name: variabler
@@ -692,12 +1435,20 @@ sv:
           lessons:
             Representing Images:
               name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+            8-bit Numbers:
+              name: 8-bitars tal
         csd3-old:
           lessons:
             Functions:
               name: funktioner
         csd2-draft:
           lessons:
+            Images:
+              name: Bilder
             Lists:
               name: Listor
         csd3-chapters:
@@ -710,16 +1461,26 @@ sv:
               name: funktioner
             'null':
               name: 'null'
+            temp:
+              name: temp
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
         csd2-old:
           lessons:
             Peer Review:
               name: Din recension
         artist-and-bb8:
           lessons:
+            B8 BB8:
+              name: B8 BB8
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Bounce:
               name: Studsa
         coursea-2017:
@@ -750,6 +1511,10 @@ sv:
           title: Kurs E
           assignment_family_title: Kurs E
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
@@ -764,57 +1529,90 @@ sv:
           title: Kurs F
           assignment_family_title: Kurs F
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Building a Foundation:
               name: Bygga en grund
         cspnovice:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp1-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp2-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp3-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp4-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp5-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd1-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd6-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd5-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd4-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd3-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd2-dlp:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+        allthettsthings:
+          lessons:
+            TTS:
+              name: TTS
         express-2017:
+          lesson_groups:
+            content:
+              display_name: Innehåll
           lessons:
             Introduction:
               name: Introduktion
@@ -838,12 +1636,20 @@ sv:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
+            Spelling Bee:
+              name: Stavnings-bi
         subgoal-labels-opt-in:
           lessons:
             Thanks:
               name: Tack
+        csp-pre-survey-test-2017:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-research-mxghyt:
           lessons:
+            new stage:
+              name: ny etapp
             Creating Functions:
               name: Skapa funktioner
         e-f-ramp:
@@ -868,9 +1674,20 @@ sv:
               name: Villkorssatser med kort
             Digital Citizenship:
               name: Digitalt medborgarskap
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
             Building a Foundation:
               name: Bygga en grund
+        csp3-a:
+          lessons:
+            new stage:
+              name: ny etapp
         new-express:
+          lesson_groups:
+            content:
+              display_name: Innehåll
           lessons:
             Introduction:
               name: Introduktion
@@ -892,6 +1709,10 @@ sv:
           lessons:
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
@@ -902,16 +1723,42 @@ sv:
           lessons:
             Representing Images:
               name: Representerar bilder
+            8-bit Numbers:
+              name: 8-bitars tal
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+        hocali:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-staging:
           lessons:
             Creating Functions:
               name: Skapa funktioner
+        pwc:
+          lessons:
+            new stage:
+              name: ny etapp
         hero:
           description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           student_description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
+        csp-explore-2017:
+          lessons:
+            new stage:
+              name: ny etapp
+        aws-demo:
+          lessons:
+            new stage:
+              name: ny etapp
+        colehoc17:
+          lessons:
+            new stage:
+              name: ny etapp
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -930,8 +1777,12 @@ sv:
           lessons:
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
@@ -945,6 +1796,11 @@ sv:
             For Loops:
               name: "'För' loopar"
         csd3-1819draft:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Variables:
               name: variabler
@@ -952,7 +1808,16 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        textbook:
+          lessons:
+            new stage:
+              name: ny etapp
         csd3-2018:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Variables:
               name: variabler
@@ -1046,6 +1911,8 @@ sv:
               name: Binära armband
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funktioner med parametrar\_
             Functions with Parameters:
               name: Funktioner med parametrar
         coursee-2018:
@@ -1074,8 +1941,12 @@ sv:
               name: Mina Robotic- vänner
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
             Envelope Variables:
               name: Envelope variabler
             For Loop Fun:
@@ -1085,15 +1956,32 @@ sv:
             Conditionals with Cards:
               name: Villkorssatser med kort
         csp1-2018:
+          lesson_groups:
+            csp1_2:
+              display_name: 'Kapitel 2: Uppfinna Internet'
           lessons:
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
+            Number Systems:
+              name: Talsystem
             Binary Numbers:
               name: Binära tal
             The Internet:
               name: Internet
+        csd1-2018:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd5-2018:
           lessons:
             Representing Images:
               name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
         csp2-2018:
           lessons:
             Text Compression:
@@ -1110,74 +1998,110 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd2-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd3-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd4-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd5-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd6-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp1-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp2-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp3-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp4-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp5-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp-create-dlp-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd-novice-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         pre-express-2018:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
+            Spelling Bee:
+              name: Stavnings-bi
             Move It, Move It:
               name: Flytta det, flytta den
             Your Digital Footprint:
@@ -1186,6 +2110,8 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         frozen-2018:
           lessons:
             Artist:
@@ -1195,15 +2121,21 @@ sv:
             Artist:
               name: Konstnären
         dance:
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och 25 andra!
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
           lessons:
+            new stage:
+              name: ny etapp
             Dance Party:
               name: Dansparty
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         frozen-2018-test-b:
           lessons:
             Artist:
               name: Konstnären
         aquatic:
           title: 'Minecraft: Resande vattenlevande'
+          description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour of Code”!
           lessons:
             Aquatic:
               name: Vatten
@@ -1330,17 +2262,31 @@ sv:
               name: "'För' loop skoj"
             Binary Bracelets:
               name: Binära armband
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
             Internet:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
             Dance Party:
               name: Dansparty
+        csd1-2019:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         andrea-test:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
           lessons:
+            new stage:
+              name: ny etapp
             'null':
               name: 'null'
         dance-extras-gallery:
@@ -1403,15 +2349,26 @@ sv:
               name: Flytta det, flytta den
             Your Digital Footprint:
               name: Ditt digitala fotavtryck
+            Spelling Bee:
+              name: Stavnings-bi
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
+        dani-test-script:
+          lessons:
+            new stage:
+              name: ny etapp
         csd2-2019:
           lessons:
             Lists:
               name: Listor
         csd3-2019:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Variables:
               name: variabler
@@ -1423,6 +2380,10 @@ sv:
           lessons:
             Representing Images:
               name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
         csd6-2019:
           lessons:
             Functions with Parameters:
@@ -1443,7 +2404,14 @@ sv:
             Surveys:
               name: Undersökningar
         csp1-2019:
+          lesson_groups:
+            csp1_2:
+              display_name: 'Kapitel 2: Uppfinna Internet'
           lessons:
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
+            Number Systems:
+              name: Talsystem
             Binary Numbers:
               name: Binära tal
             The Internet:
@@ -1465,8 +2433,18 @@ sv:
             required:
               display_name: Översikt
           lessons:
+            new stage:
+              name: ny etapp
+            Number Systems:
+              name: Talsystem
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
             Binary Numbers:
               name: Binära tal
+        csd-videos:
+          lessons:
+            new stage:
+              name: ny etapp
         time4csdemo:
           lessons:
             Crowdsourcing:
@@ -1513,6 +2491,8 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+            csp_libraries:
+              display_name: Bibliotek
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1523,6 +2503,15 @@ sv:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+        csp7-pilot-staging:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+          lessons:
+            new stage:
+              name: ny etapp
+            Libraries:
+              name: Bibliotek
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -1567,19 +2556,39 @@ sv:
               display_name: Projekt
             required:
               display_name: Översikt
+          lessons:
+            new stage:
+              name: ny etapp
         fit2019-novice:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+        csd1-pilot:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd2-pilot:
           lessons:
             Lists:
               name: Listor
+            Images:
+              name: Bilder
         csd3-pilot:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Variables:
               name: variabler
@@ -1587,8 +2596,16 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        maddie-test:
+          lessons:
+            stage 1:
+              name: steg 1
+            new stage:
+              name: ny etapp
         csp3-pilot:
           lesson_groups:
+            content:
+              display_name: Innehåll
             required:
               display_name: Översikt
         csl-vn:
@@ -1601,6 +2618,8 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
           lessons:
             Focus Area 1:
               name: Läroplan
@@ -1608,58 +2627,101 @@ sv:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+          lessons:
+            new stage:
+              name: ny etapp
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
               display_name: Översikt
+            content:
+              display_name: Innehåll
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csp2-pilot:
           lesson_groups:
+            content:
+              display_name: Innehåll
             required:
               display_name: Översikt
+          lessons:
+            new stage:
+              name: ny etapp
         peru-2019:
           lessons:
+            new stage:
+              name: ny etapp
             Introduction:
               name: Introduktion
             Nested Loops:
               name: Kapslade slingor(loopar)
         csp6-pilot:
           lesson_groups:
+            content:
+              display_name: Innehåll
             required:
               display_name: Översikt
         dance-2019:
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
           lessons:
             Dance Party:
               name: Dansparty
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
         k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Nästa steg
           lessons:
+            Next Steps:
+              name: Nästa steg
+            extra:
+              name: extra
             Loops:
               name: loopar
             Conditionals:
@@ -1675,6 +2737,10 @@ sv:
         dance-extras-2019:
           description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
           student_description: Med ytterligare projektidéer kan du fortsätta efter den första timmen.
+        csp10-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -1685,6 +2751,9 @@ sv:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+          lessons:
+            new stage:
+              name: ny etapp
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -1732,8 +2801,14 @@ sv:
               name: Villkor
         csp7-pilot:
           lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
             required:
               display_name: Översikt
+        csp8-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -1752,15 +2827,42 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+        csp7-2020:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        csp9-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
+        csd2-2020:
+          lessons:
+            Images:
+              name: Bilder
+        csd1-2020:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd5-2020:
           lessons:
             Representing Images:
               name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
         csd6-2020:
           lessons:
             Functions with Parameters:
               name: Funktioner med parametrar
         csd3-2020:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Variables:
               name: variabler
@@ -1889,14 +2991,55 @@ sv:
               display_name: loopar
             csf_events:
               display_name: Händelser
+          lessons:
+            Spelling Bee:
+              name: Stavnings-bi
         csp1-2020:
           lessons:
+            new stage:
+              name: ny etapp
             Binary Numbers:
               name: Binära tal
+        csp2-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp3-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp6-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp8-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp9-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp10-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp-march-virtual:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Skapa funktioner
+        jess-test-script:
+          lessons:
+            new stage:
+              name: ny etapp
+        csd2-virtual:
+          lessons:
+            Images:
+              name: Bilder
         csp5-virtual:
           lessons:
             While Loops:
@@ -1904,15 +3047,26 @@ sv:
             Variables:
               name: variabler
         virtual-holding-place:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
           lessons:
             Functions:
               name: funktioner
         code-break:
           lessons:
+            new stage:
+              name: ny etapp
             Algorithms:
               name: Algoritmer
             Events:
               name: Händelser
+        no-lg:
+          lessons:
+            new stage:
+              name: ny etapp
         csp5-virtual-part2:
           lessons:
             While Loops:
@@ -1931,6 +3085,13 @@ sv:
               name: variabler
             For Loops:
               name: "'För' loopar"
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Nästa steg
+        dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: lektion 2
         csd3-virtual:
           lessons:
             Variables:
@@ -1941,6 +3102,29 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+          lesson_groups:
+            csd3_1:
+              display_name: Innehåll
+            csd3_2:
+              display_name: Innehåll
+            cspSurvey:
+              display_name: Innehåll
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innehåll
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Innehåll
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Innehåll
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Innehåll
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -1951,12 +3135,38 @@ sv:
               name: Kurs E
             Course F:
               name: Kurs F
+        virustest:
+          title: Simulera ett utbrott
+          description_short: Använd Sprite Lab för att skapa en simulering av ett virusutbrott.
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
+          lesson_groups:
+            outbreak:
+              display_name: Utbrottssimulering
+          title: Utbrottssimulator
+          description_short: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          name: utbrott
+          student_description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
         2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
           lesson_groups:
             introduction:
               display_name: Introduktion
             lessonGroup-3:
               display_name: variabler
+            outbreak:
+              display_name: Utbrottssimulator
+        csd1-2021:
+          lesson_groups:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd3-2021:
           lessons:
             Variables:
@@ -1971,11 +3181,22 @@ sv:
             Functions:
               key: funktioner
               name: funktioner
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
         csd5-2021:
           lessons:
             Representing Images:
               key: Representerar bilder
               name: Representerar bilder
+            Problem Solving and Data:
+              key: Problemlösning och data
+              name: Problemlösning och data
+            Automating Data Decisions:
+              key: Automatisera databeslut
+              name: Automatisera databeslut
         csd6-2021:
           lessons:
             Functions with Parameters:
@@ -2004,6 +3225,10 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+        csp7-2021:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2059,7 +3284,10 @@ sv:
               key: Villkorssatser med kort
               name: Villkorssatser med kort
             'Unplugged: Binary':
+              key: 'Ouppkopplad: Binärt'
               name: Binära bilder
+            Artist Binary:
+              key: Artist binär
           lesson_groups:
             csf_events:
               display_name: Händelser
@@ -2139,9 +3367,14 @@ sv:
             csf_events:
               display_name: Händelser
         csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Koda en simulering
           lesson_groups:
             ramp_up:
               display_name: Introduktion
+            outbreak:
+              display_name: Utbrottssimulering
             lessonGroup-3:
               display_name: variabler
             variables:
@@ -2151,6 +3384,40 @@ sv:
             Representing Images:
               key: Representerar bilder
               name: Representerar bilder
+            Problem Solving and Data:
+              key: Problemlösning och data
+              name: Problemlösning och data
+            Automating Data Decisions:
+              key: Automatisera databeslut
+              name: Automatisera databeslut
+        contagion-pilot:
+          description_short: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+          student_description: Använd Sprite Lab för att programmera en simulering av ett virusutbrott.
+        ai-unit-pilot:
+          lessons:
+            intro:
+              name: Lektion 1
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2176,11 +3443,54 @@ sv:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lektion 1
+            Lesson 2:
+              display_name: Lektion 2
+            Lesson 3:
+              display_name: Lektion 3
+            Lesson 4:
+              display_name: Lektion 4
+            Lesson 5:
+              display_name: Lektion 5
+        kodea-pd-2021:
+          lessons:
+            Next Steps:
+              key: Nästa steg
+              name: Nästa steg
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
               name: Lärar gemenskapen
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         csa-videos:
           lesson_groups:
             lessonGroup-3:
               display_name: Resurser
+            lessonGroup-2:
+              display_name: Enhet 1
+            lessonGroup-4:
+              display_name: Enhet 2
+            lessonGroup-5:
+              display_name: Enhet 3
+            lessonGroup-6:
+              display_name: Enhet 4
+            lessonGroup-7:
+              display_name: Enhet 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        tesspltest:
+          lessons:
+            lesson-2:
+              name: Lektion 2

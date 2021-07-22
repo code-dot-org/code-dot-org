@@ -223,6 +223,8 @@ ur:
       other: "دیگر"
     submit: "جمع کرائیں"
     decline: "بند"
+  progress:
+    not_started: شروع نہیں کیا
   project:
     projects: "پروجیکٹس"
     project_gallery: "پروجیکٹس"

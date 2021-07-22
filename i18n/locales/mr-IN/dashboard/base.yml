@@ -11,6 +11,10 @@
 #To learn more, please read the Rails Internationalization guide
 #available at http://guides.rubyonrails.org/i18n.html.
 mr:
+  activerecord:
+    attributes:
+      user:
+        locale: 'भाषा'
   or: "किंवा"
   courses_page:
     title_student: "संगणक विज्ञान शिकुया"
@@ -71,6 +75,7 @@ mr:
   footer:
     copyright: 'कॉपीराइट'
     translate: 'आमच्या सामग्रीचा अनुवाद करण्यासाठी पुढे या'
+    support: 'सहाय्य'
     tos: 'सेवेच्या अटी'
     privacy: 'गोपनीयता धोरण'
     report_abuse: 'गैरवर्तनाची रिपोर्ट करा'

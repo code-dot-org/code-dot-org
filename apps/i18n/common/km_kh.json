@@ -1018,6 +1018,7 @@
   "unhideUnitAndAssign": "បង្ហាញក្រុមនិងចាត់តាំង",
   "unnamedFunction": "អ្នកមានអថេរឬមុខងារដែលមិនមានឈ្មោះ។ កុំភ្លេចបំពេញអ្វីៗគ្រប់យ៉ាងដែលជាឈ្មោះពិពណ៌នា",
   "unplugged": "ផ្ដាច់ចេញ",
+  "unpluggedActivity": "Unplugged Activity",
   "unpublishPending": "មិនចែករំលែក",
   "unpublishFailureTitle": "បានបរាជ័យក្នុងការបោះផ្សាយ",
   "unpublishFailureBody": "យើងបានបរាជ័យក្នុងការបោះផ្សាយនៅក្នុងបណ្ណាល័យរបស់អ្នក \"{libraryName} ។ \" សូមពិនិត្យការភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកហើយព្យាយាមម្តងទៀត។",

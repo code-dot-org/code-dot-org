@@ -322,6 +322,7 @@ vi:
       about_contact: "Liên hệ"
       about_faqs: "Hỏi đáp"
       learn: "Học"
+      stats: "Xem thống kê"
       help_us: "Giúp đỡ chúng tôi"
       teach: "Dạy"
       about: "về chúng tôi"
@@ -359,6 +360,7 @@ vi:
       gumball: 'Thế giới kì diệu của Gumball'
       iceage: 'Kỉ băng hà'
       infinity: 'Vô cùng'
+      minecraft_adventurer: 'Minecraft Chuyến phiêu lưu'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Phòng trò chơi'
@@ -440,6 +442,7 @@ vi:
     for_parents_and_guardians: "Dành cho Phụ huynh và Người giám hộ"
     link_a_parent_email: "Liên kết địa chỉ email phụ huynh/người giám hộ với tài khoản này để luôn được cập nhật về tiến triển và các bài tập của con bạn. Bạn cũng sẽ có thể sử dụng địa chỉ email này để khôi phục mật khẩu."
     parent_guardian_email_label: "Email của phụ huynh/người giám hộ"
+    remove_parent_email_label: "Loại bỏ"
     none: "Không có"
     only_one_parent_email_supported_warning: "Lưu ý: Hiện tại, chúng tôi chỉ có thể hỗ trợ một địa chỉ thư điện tử của phụ huynh/người giám hộ cho mỗi học sinh."
   user_level:
@@ -483,6 +486,7 @@ vi:
     print_certificate: "In giấy chứng nhận"
   move_students:
     new_section_dne: "Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui lòng nhập một mã khác cho phần học."
+    current_section_dne: "Xin lỗi, nhưng phần học %{current_section_code} không tồn tại. Vui lòng nhập một mã khác cho phần học."
     student_ids_not_entered: "Vui lòng cung cấp student_ids."
     student_not_found: "Không thể tìm thấy một hoặc vài sinh viên."
     all_students_must_be_in_current_section: "Tất cả các sinh viên hiện phải đăng ký trong phần của bạn."
@@ -928,7 +932,9 @@ vi:
       organizer_not_listed: "Người tổ chức của tôi không có trong danh sách"
   cookie_banner:
     accept: 'tôi đồng ý'
+  page_not_found_title: "Không tìm thấy trang"
   copy: 'Sao chép'
+  confirm: 'Xác nhận'
   parent_email_banner:
     text: "**Bạn là cha mẹ hay người giám hộ?** Hãy liên kết email của bạn với tài khoản này để luôn cập nhật về tiến trình và dự án của con bạn!"
     link_your_email: "Liên kết thư điện tử của bạn"

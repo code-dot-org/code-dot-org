@@ -11,19 +11,42 @@ bn:
           title: কোর্স ১
           description_audience: বয়স ৪-৬
           lessons:
+            'Artist: Loops':
+              name: 'শিল্পী: লুপ'
+            'Bee: Loops':
+              name: 'মৌমাছি: লুপ'
+            'Bee: Sequence':
+              name: 'মৌমাছি: অনুক্রম'
             Happy Maps:
               name: আনন্দের মানচিত্র
+            'Maze: Debugging':
+              name: 'মেজ: ডিবাগিং'
+            'Maze: Loops':
+              name: 'মেজ: লুপ'
+            Spelling Bee:
+              name: বানান মৌমাছি
             The Big Event:
               name: বড় ঘটনা
         course2:
           title: কোর্স ২
+          description_audience: বয়স ৬-১৮
           lessons:
+            'Artist: Debugging':
+              name: 'শিল্পী: ডিবাগিং'
+            'Artist: Loops':
+              name: 'শিল্পী: লুপ'
+            'Bee: Debugging':
+              name: 'মৌমাছি: ডিবাগিং'
+            'Bee: Loops':
+              name: 'মৌমাছি: লুপ'
             Conditionals:
               name: শর্তযুক্ত
             Flappy:
               name: ফ্লাপি
             Graph Paper Programming:
               name: ছক-কাগজে প্রোগ্রামিং
+            'Maze: Loops':
+              name: 'মেজ: লুপ'
             Relay programming:
               name: রিলে-স্যুইচ প্রোগ্রামিং
             The Big Event:
@@ -34,6 +57,10 @@ bn:
           lessons:
             Artist:
               name: শিল্পী
+            'Bee: Debugging':
+              name: 'মৌমাছি: ডিবাগিং'
+            'Bee: Functions':
+              name: 'মৌমাছি: ফাংশন'
             Bounce:
               name: বল লাফানো
             Computational Thinking:
@@ -67,15 +94,28 @@ bn:
               name: শিল্পী
         course4:
           title: কোর্স ৪
+          description_audience: বয়স ১০-১৮
           lessons:
             Artist:
               name: শিল্পী
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
+            Maze and Bee:
+              name: মেজ এবং মৌমাছি
+        Course4pre:
+          lessons:
+            'Artist: Loops':
+              name: 'শিল্পী: লুপ'
+            'Bee: Debugging':
+              name: 'মৌমাছি: ডিবাগিং'
         usability:
           lessons:
             Binary:
               name: দ্বি-আঙ্কিক
             For Loops:
               name: ফর লুপ
+            Intro:
+              name: ভুমিকা
             Variables:
               name: চলকগুলো
         algebra:
@@ -134,6 +174,9 @@ bn:
             Wrap-up:
               name: গুটিয়ে নেয়া
         edit-code:
+          title: কোড সম্পাদনা করুন
+          description: কোড সম্পাদনা করুন
+          description_short: কোড সম্পাদনা করুন
           lessons:
             Play Lab:
               name: প্লে ল্যাব
@@ -141,6 +184,7 @@ bn:
               name: শিল্পী
             The Maze:
               name: গোলকধাঁধা
+          student_description: কোড সম্পাদনা করুন
         events:
           title: ঘটনাবলী
           description: ঘটনাবলী
@@ -161,13 +205,20 @@ bn:
               name: টুকরো কাঠের ধাঁধা
         step:
           title: ধাপ
+          description: ধাপ টিউটোরিয়াল
+          description_short: ধাপ টিউটোরিয়াল
           lessons:
             Step:
               name: ধাপ
+          student_description: ধাপ টিউটোরিয়াল
         algebraPD:
           lessons:
             Teacher Dashboard:
               name: শিক্ষক ড্যাশবোর্ড
+        algPDmiami:
+          lessons:
+            Booleans:
+              name: বুলিয়ান
         cspunit3:
           lessons:
             While Loops:
@@ -186,16 +237,22 @@ bn:
               name: শিক্ষক ড্যাশবোর্ড
         sciencePD2:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         algebraPD2a:
           lessons:
+            Booleans:
+              name: বুলিয়ান
             Free Play:
               name: বিনা পয়সায় খেলা
         allthethings:
           lessons:
             Artist:
               name: শিল্পী
+            Bee:
+              name: মৌমাছি
             Bounce:
               name: বল লাফানো
             Flappy:
@@ -208,41 +265,60 @@ bn:
               name: মাইনক্র্যাফট
         algebraPD2b:
           lessons:
+            Booleans:
+              name: বুলিয়ান
             Teacher Dashboard:
               name: শিক্ষক ড্যাশবোর্ড
         cspfacilitator:
           lessons:
             App Lab:
               name: অ্যাপ ল্যাব
+            Welcome!:
+              name: স্বাগতম!
         ECSPD2:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-up:
               name: গুটিয়ে নেয়া
         algebraPD2:
           lessons:
             Teacher Dashboard:
               name: শিক্ষক ড্যাশবোর্ড
+            Welcome!:
+              name: স্বাগতম!
         sciencePD2b:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         science-PD2:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         sciencePD2b-iZone:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         ECSPD2-iZone:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-up:
               name: গুটিয়ে নেয়া
         ECSPD2-NexTech:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-up:
               name: গুটিয়ে নেয়া
         asUnplugged:
+          description_audience: বয়স 6-13
           lessons:
             Graph Paper Programming:
               name: ছক-কাগজে প্রোগ্রামিং
@@ -252,8 +328,12 @@ bn:
               name: গান লিখা
             The Big Event:
               name: বড় ঘটনা
+        afterschool1:
+          description_audience: বয়স 7-13
         ScienceP3OLPT2:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         Special Fun:
@@ -278,6 +358,8 @@ bn:
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
         ScienceP3OLPT3:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         algebraPD1:
@@ -317,6 +399,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+        CSF_Secret_Sample_Story:
+          description_audience: বয়স ৮-১৮+
+        MikeTest:
+          description_audience: বয়স 8-98
         artistExemplar:
           description_audience: বয়স ৮-১৮
         teachercon:
@@ -324,6 +410,7 @@ bn:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
         gradeKinder:
+          description_audience: বয়স 5-18
           lessons:
             Events:
               name: ঘটনাবলী
@@ -332,10 +419,12 @@ bn:
             Programming:
               name: প্রোগ্রামিং
         grade4:
+          description_audience: বয়স 9-99
           lessons:
             Songwriting:
               name: গান লিখা
         grade1:
+          description_audience: বয়স 5-18
           lessons:
             Events:
               name: ঘটনাবলী
@@ -343,11 +432,16 @@ bn:
               name: চক্র
             Programming:
               name: প্রোগ্রামিং
+        grade5:
+          description_audience: বয়স 10-110
         ecs-unit1:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-up:
               name: গুটিয়ে নেয়া
         grade3:
+          description_audience: বয়স 5-18
           lessons:
             Bee Debugging:
               name: মৌমাছি ডিবাগিং
@@ -366,6 +460,7 @@ bn:
             Conditionals:
               name: শর্তযুক্ত
         grade2:
+          description_audience: বয়স 5-18
           lessons:
             Flappy:
               name: ফ্লাপি
@@ -397,6 +492,8 @@ bn:
           lessons:
             Teacher Dashboard:
               name: শিক্ষক ড্যাশবোর্ড
+            Welcome!:
+              name: স্বাগতম!
         csp-online-test:
           lesson_groups:
             required:
@@ -429,6 +526,8 @@ bn:
           lessons:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
             Nested Loops:
               name: নেষ্টেড লুপ
             Introduction:
@@ -449,10 +548,14 @@ bn:
               name: ভূমিকা
         2016_sciencePD-phase2b:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         2016_sciencePD_phase2b:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         csp3-support:
@@ -465,10 +568,14 @@ bn:
               display_name: সংক্ষিপ্ত বিবরণ
         sciencepd4:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         science-pd-ol-pt-5:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         csf2harvey:
@@ -477,6 +584,8 @@ bn:
               name: দ্বি-আঙ্কিক
         sciencepd5:
           lessons:
+            Welcome!:
+              name: স্বাগতম!
             Wrap-Up:
               name: গুটিয়ে ফেলা
         csp5-support:
@@ -635,6 +744,10 @@ bn:
               name: গান লিখা
             Nested Loops:
               name: নেষ্টেড লুপ
+        pre-express-2017:
+          lessons:
+            Spelling Bee:
+              name: বানান মৌমাছি
         subgoal-labels-opt-in:
           lessons:
             Thanks:
@@ -655,6 +768,8 @@ bn:
               name: নেষ্টেড লুপ
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
         new-express:
           lessons:
             Introduction:
@@ -880,6 +995,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+        pre-express-2018:
+          lessons:
+            Spelling Bee:
+              name: বানান মৌমাছি
         fit-test:
           lesson_groups:
             required:
@@ -972,6 +1091,8 @@ bn:
               name: রিলে-স্যুইচ প্রোগ্রামিং
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
             Internet:
               name: ইন্টারনেট
         andrea-test:
@@ -1013,6 +1134,9 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
+          lessons:
+            Spelling Bee:
+              name: বানান মৌমাছি
         csd2-2019:
           lessons:
             Lists:
@@ -1068,6 +1192,7 @@ bn:
             csp_functions:
               display_name: ফাংশনগুলি
         csp2-pilot-staging:
+          title: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
           lesson_groups:
             csp_variables:
               display_name: চলকগুলো
@@ -1153,6 +1278,10 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        maddie-test:
+          lessons:
+            stage 1:
+              name: ধাপ ১
         csp3-pilot:
           lesson_groups:
             required:
@@ -1392,6 +1521,17 @@ bn:
               display_name: চক্র
             csf_events:
               display_name: ঘটনাবলী
+          lessons:
+            Spelling Bee:
+              name: বানান মৌমাছি
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
         csp5-virtual:
           lessons:
             While Loops:
@@ -1471,6 +1611,14 @@ bn:
             Functions with Parameters:
               key: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
               name: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1523,6 +1671,8 @@ bn:
               name: কার্ড সঙ্গে শর্ত
             'Unplugged: Binary':
               name: দ্বিমিক ছবি
+            Artist Binary:
+              key: শিল্পী দ্বিমিক
           lesson_groups:
             csf_events:
               display_name: ঘটনাবলী
@@ -1612,3 +1762,15 @@ bn:
               display_name: ভূমিকা
             Introduction:
               display_name: ভূমিকা
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ইউনিট 1
+            lessonGroup-4:
+              display_name: ইউনিট ২
+            lessonGroup-5:
+              display_name: ইউনিট 3
+            lessonGroup-6:
+              display_name: ইউনিট 4
+            lessonGroup-7:
+              display_name: ইউনিট 5

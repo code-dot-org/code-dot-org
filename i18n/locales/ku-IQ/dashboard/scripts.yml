@@ -11,10 +11,20 @@ ku:
           title: Ders 1
           description_audience: تەمەنی ٤-٦
           lessons:
+            'Artist: Loops':
+              name: 'هونەرمەند: خولانەوەکان'
+            'Artist: Sequence':
+              name: 'هونەر: ریز'
+            'Artist: Shapes':
+              name: 'هونەر: شێوە'
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
           lessons:
+            'Artist: Loops':
+              name: 'هونەرمەند: خولانەوەکان'
+            'Artist: Sequence':
+              name: 'هونەر: ریز'
             Conditionals:
               name: مەرجیەکان
             Graph Paper Programming:
@@ -25,6 +35,12 @@ ku:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
+        Course4pre:
+          lessons:
+            'Artist: Loops':
+              name: 'هونەرمەند: خولانەوەکان'
+            'Artist: Sequence':
+              name: 'هونەر: ریز'
         usability:
           lessons:
             Variables:
@@ -138,15 +154,21 @@ ku:
           lessons:
             Loops:
               name: گرێکان
+        grade4:
+          title: پۆلەكانی 4
         grade1:
+          title: پۆلەكانی 1
           lessons:
             Loops:
               name: گرێکان
+        grade5:
+          title: پۆلەكانی 5
         ecs-unit1:
           lessons:
             Wrap-up:
               name: پوختەی بابەت
         grade3:
+          title: پۆلەكانی 3
           lessons:
             Bounce:
               name: هەڵبەزینەوە
@@ -486,6 +508,10 @@ ku:
               name: مەرجیەکان
             Functions:
               name: فرمانەکان
+        maddie-test:
+          lessons:
+            stage 1:
+              name: قۆناغی 1
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -749,6 +775,8 @@ ku:
               display_name: گۆڕاوەکان
             variables:
               display_name: گۆڕاوەکان
+        contagion-pilot:
+          description_audience: پۆلەكانی 5
         k5-onlinepd-2021:
           lessons:
             Loops:

@@ -176,6 +176,7 @@
   dashboard_action_cancel: "ரத்து செய்"
   dashboard_action_delete_yes: 'ஆம்'
   dashboard_action_delete_no: 'இல்லை'
+  dashboard_navigation_section_community: "ஆதரவு"
   dashboard_sections_close: "மூடவும்"
   dashboard_students_name: 'பெயர்'
   dashboard_pre-express: 'முன் வாசகர் எக்ஸ்பிரஸ் பாடநெறி:'
@@ -214,6 +215,7 @@
   coursed-2017_name: பாடநெறி ஈ (2017)
   coursee-2017_name: பாடநெறி உ(2017)
   coursef-2017_name: பாடநெறி ஊ (2017)
+  coursed-2021_name: பாடநெறி ஈ (2021)
   pre-express-2018_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2018)
   pre-express-2019_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2019)
   pre-express-2020_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி (2020)
@@ -361,6 +363,7 @@
   hoc2020_mc_mee_description: 'புதிய Minecraft Hour of Code டுடோரியல் இப்போது Minecraft: Windows, Mac, Chromebook மற்றும் iPad க்கான கல்வி பதிப்பில் கிடைக்கிறது. குறியீட்டு முறையின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் மாணவர்களுடன் பன்முகத்தன்மை மற்றும் சேர்க்கையை ஆராயுங்கள்! பாடம் திட்டம், வீடியோக்கள், கணினி அறிவியல் பாடத்திட்டம், பங்கு பாடங்கள் மற்றும் ஆசிரியர் பயிற்சிகள் உள்ளிட்ட இலவச ஆதாரங்களை அணுகவும்.'
   footer_privacy_policy: "தனியுரிமை கொள்கை"
   footer_about: "பற்றி"
+  footer_support: "ஆதரவு"
   ai_for_oceans: "பெருங்கடல்களுக்கான AI"
   ai_in_partnership_with: "உடன் கூட்டு"
   ai_microsoft_thanks: "ஒவ்வொரு குழந்தைக்கும் கணினி அறிவியலைக் கற்றுக்கொள்வதற்கான வாய்ப்பையும், 21 ஆம் நூற்றாண்டில் வெற்றி பெறுவதற்கான திறன்களையும் உறுதிசெய்வதற்கான எங்கள் பார்வை மற்றும் நோக்கத்தை ஆதரித்த மைக்ரோசாப்ட் நிறுவனத்திற்கு நன்றி."
