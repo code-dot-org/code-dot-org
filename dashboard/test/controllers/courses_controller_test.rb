@@ -16,9 +16,6 @@ class CoursesControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    Script.stubs(:should_cache?).returns true
-    Script.clear_cache
-
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @migrated_unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
@@ -33,19 +30,24 @@ class CoursesControllerTest < ActionController::TestCase
     File.stubs(:write)
   end
 
-  teardown do
-    Script.clear_cache
+  class CoursesQueryCountTests < ActionController::TestCase
+    setup do
+      Script.stubs(:should_cache?).returns true
+      Script.clear_cache
+
+      @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
+    end
+
+    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
+
+    test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
+
+    test_user_gets_response_for :index, response: :success, user: :user, queries: 4
+
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 15
+
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
-
-  # Tests for index
-
-  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
-
-  test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
-
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 4
-
-  # Tests for show
 
   test "show: regular courses get sent to show" do
     get :show, params: {course_name: @unit_group_regular.name}
@@ -57,10 +59,6 @@ class CoursesControllerTest < ActionController::TestCase
       get :show, params: {course_name: 'nosuchcourse'}
     end
   end
-
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
-
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
 
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
