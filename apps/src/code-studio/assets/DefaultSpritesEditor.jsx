@@ -11,7 +11,7 @@ import Button from '@cdo/apps/templates/Button';
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
-    defaultList: {}, // Dictionary with name as key and sprite object as value
+    defaultList: null, // Dictionary with name as key and sprite object as value
     pendingChangesCount: 0,
     isUpdating: false,
     errorText: ''
@@ -20,11 +20,11 @@ export default class DefaultSpritesEditor extends React.Component {
   componentDidMount() {
     getDefaultList()
       .then(spriteDefault => {
-        let spriteList = {};
-        spriteDefault['default_sprites'].map(
-          sprite => (spriteList[sprite.name] = sprite)
+        let orderedList = new Map();
+        spriteDefault['default_sprites'].map(sprite =>
+          orderedList.set(sprite.name, sprite)
         );
-        this.setState({defaultList: spriteList, isLoading: false});
+        this.setState({defaultList: orderedList, isLoading: false});
       })
       .catch(err => {
         console.log(err);
@@ -69,8 +69,11 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   renderDefaultSprites() {
-    return Object.keys(this.state.defaultList).map(spriteKey => {
-      let spriteObject = this.state.defaultList[spriteKey];
+    if (!this.state.defaultList) {
+      return;
+    }
+    return Array.from(this.state.defaultList.keys()).map(spriteKey => {
+      let spriteObject = this.state.defaultList.get(spriteKey);
       return (
         <DefaultSpriteRow
           name={spriteObject.name}
