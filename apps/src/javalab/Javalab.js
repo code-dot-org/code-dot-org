@@ -131,6 +131,7 @@ Javalab.prototype.init = function(config) {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: !!config.level.editBlocks,
+    isCodeReviewing: !!config.isCodeReviewing,
     isResponsive: true
   });
 

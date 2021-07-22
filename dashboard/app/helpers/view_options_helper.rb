@@ -12,6 +12,7 @@ module ViewOptionsHelper
     :autoplay_video,
     :channel,
     :readonly_workspace,
+    :is_code_reviewing,
     :is_external_project_level,
     :is_legacy_share,
     :legacy_share_style,
