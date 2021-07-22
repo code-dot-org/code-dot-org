@@ -20,6 +20,9 @@
         "sprites_in_action/coursef/2021": {
           "name": "Les Lutins en Action"
         },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": " Le Pouvoir des Mots\t"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Jouer avec les Boucles « Pour »"
         },
@@ -37,6 +40,9 @@
         },
         "running-simulations/coursef/2021": {
           "name": "Exécuter des Simulations"
+        },
+        "ai-ml/coursef/2021": {
+          "name": " Apprentissage Automatique"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet et les réseaux connectés"
@@ -58,6 +64,9 @@
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Documentation sur le Labo des Lutins"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": " Suivez la Traînée Digitale"
         },
         "mimi-activity/courseb/2021": {
           "name": "Bouge, Bouge"
@@ -109,6 +118,9 @@
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Forum des Enseignants"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": " Mon Quartier en Ligne"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programmation en Binôme"
@@ -185,6 +197,9 @@
         "teacher_forum_1/coursec/2021": {
           "name": "Forum des Enseignants"
         },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": ""
+        },
         "graph-paper-programming/coursed/2021": {
           "name": "Programmation sur papier quadrillé"
         },
@@ -223,6 +238,9 @@
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Programmation de relais"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": " Débranché"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -274,6 +292,24 @@
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentation sur le Labo des Lutins"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": " Le Super Citoyen Numérique"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": " Informations Privées et Personnelles"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": " Écriture de chansons"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Concevoir pour l'Accessibilité"

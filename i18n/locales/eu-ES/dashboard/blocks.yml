@@ -36,9 +36,15 @@ eu:
         text: "{TIMESTAMP} ondoren {UNIT}"
         options:
           UNIT:
+            '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_changeColorBy:
         text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
+        options:
+          METHOD:
+            '"hue"': tonua
+            '"saturation"': saturazioa
+            '"brightness"': distira
       Dancelab_changeMoveEachLR:
         text: "{GROUP} egin {MOVE} {DIR} betirako"
         options:
@@ -79,7 +85,11 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
       Dancelab_changePropEachBy:
+        text: aldatu {GROUP} {PROPERTY} honekin {VAL}
         options:
           GROUP:
             '"ALIEN"': estralurtar guztiak
@@ -90,6 +100,9 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
       Dancelab_doMoveEachLR:
         text: "{GROUP} egin {MOVE} {DIR} behin"
         options:
@@ -108,6 +121,7 @@ eu:
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
             MOVES.Clown: Pailazoa
+            MOVES.XHighKick: Bota
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_doMoveLR:
@@ -122,6 +136,7 @@ eu:
             MOVES.Floss: Haria
             MOVES.Fresh: Freskatu
             MOVES.Clown: Pailazoa
+            MOVES.XHighKick: Bota
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
       Dancelab_eval:
@@ -130,6 +145,7 @@ eu:
         text: "{N} {UNIT} aldiro "
         options:
           UNIT:
+            '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_everySecondsRange:
         text: "{N} {UNIT} aldiro, {START} tik {STOP} ra "
@@ -139,6 +155,10 @@ eu:
             seconds: Segunduak
       Dancelab_everyVerseChorus:
         text: "{UNIT} guztietan "
+        options:
+          UNIT:
+            '"verse"': versus
+            '"chorus"': koruak
       Dancelab_getEnergy:
         text: hartu {RANGE}
         options:
@@ -150,9 +170,14 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_getTime:
         options:
           UNIT:
+            '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_ifDanceIs:
         options:
@@ -170,6 +195,7 @@ eu:
       Dancelab_ifTime:
         options:
           UNIT:
+            '"measures"': neurriak
             '"seconds"': segundu
       Dancelab_jumpTo:
         options:
@@ -268,6 +294,9 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -279,11 +308,19 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setPropRandomEach:
         options:
           GROUP:
@@ -295,6 +332,10 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
       Dancelab_setTintEach:
         options:
           THIS:
@@ -314,6 +355,7 @@ eu:
       Dancelab_setVisible:
         options:
           VISIBILITY:
+            'true': ikusgai
             'false': ikusezin
       Dancelab_setVisibleEach:
         options:
@@ -324,6 +366,7 @@ eu:
             '"MOOSE"': altze guztiak
             '"ROBOT"': robot guztiak
           VISIBILITY:
+            'true': ikusgai
             'false': ikusezin
       Dancelab_startMapping:
         text: "{SPRITE} hasi {PROPERTY} jarraituz {RANGE}"
@@ -331,6 +374,10 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
           RANGE:
             '"mid"': erdi
       Dancelab_startMappingEach:
@@ -344,6 +391,10 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"tint"': tinta
           RANGE:
             '"mid"': erdi
       Dancelab_stopMapping:
@@ -352,6 +403,11 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
           RANGE:
             '"mid"': erdi
       Dancelab_stopMappingEach:
@@ -365,12 +421,19 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+            '"rotation"': itzulikapena
+            '"x"': posizio horizontala
+            '"y"': posizio bertikala
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
           RANGE:
             '"mid"': erdi
       Dancelab_translateStrings:
         options:
           STRING:
             '"diamond"': diamantea
+            '"s"': s
+            '"w"': w
             '"x"': x
       Dancelab_whenKey:
         text: "{KEY} zapaltzean"
@@ -381,6 +444,11 @@ eu:
             '"down"': behera
             '"right"': eskuinera
             '"space"': espazioa
+            '"enter"': sartu
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
             '"x"': x
       Dancelab_whenPeak:
         options:
@@ -388,6 +456,11 @@ eu:
             '0': bass
             '1': erdi
             '2': treble
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       gamelab_atTime:
@@ -399,8 +472,10 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
             '"speed"': abiadura
       gamelab_checkTouching:
         options:
@@ -409,6 +484,8 @@ eu:
             '"while"': bitartean
       gamelab_clickedOn:
         text: "{SPRITE} klik egitean"
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'iruzkina: {COMMENT}'
       gamelab_destroy:
@@ -418,8 +495,11 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+            '"tint"': tinta
             '"speed"': abiadura
       gamelab_getTime:
         options:
@@ -433,6 +513,10 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
             '"x"': x
       gamelab_keyPressed:
         options:
@@ -445,12 +529,20 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
             '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': eskuinera
             '"left"': ezkerrera
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_randColor:
         text: ausazko kolorea
       gamelab_randomColor:
@@ -477,8 +569,10 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
             '"speed"': abiadura
       gamelab_setProp_dropdown:
         options:
@@ -499,6 +593,8 @@ eu:
           CONDITION:
             '"when"': "-enean"
             '"while"': bitartean
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -513,6 +609,10 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -521,14 +621,20 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -541,14 +647,18 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -559,14 +669,22 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
       Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
+      Mikelab_groupWhenClickedOn:
+        text: "{COSTUME} klik egitean"
+      Mikelab_hideFish:
+        text: ezabatu {TRASH}
       Mikelab_ifDanceIs:
         options:
           DANCE:
@@ -580,6 +698,8 @@ eu:
             MOVES.Roll: Biratu
             MOVES.Kick: Bota
             MOVES.ThisOrThat: Hau edo Hori
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_randomColor:
         text: ausazko kolorea
       Mikelab_repeatUntilComplete:
@@ -592,8 +712,10 @@ eu:
         options:
           PROPERTY:
             '"scale"': tamaina
+            '"rotation"': itzulikapena
             '"x"': x posizioa
             '"y"': y posizioa
+            '"direction"': mugimentuaren norantza
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -630,6 +752,12 @@ eu:
             '"a"': A
             '"s"': H
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        text: "{KEY} klik egitean"
+        options:
+          KEY:
+            '"yes"': bai
+            '"no"': ez
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -671,6 +799,10 @@ eu:
             '"left"': ezkerrera
             '"right"': eskuinera
             '"space"': espazioa
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

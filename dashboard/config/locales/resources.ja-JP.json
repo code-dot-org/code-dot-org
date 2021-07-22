@@ -38,6 +38,9 @@
         "running-simulations/coursef/2021": {
           "name": "シミュレーションの実行"
         },
+        "ai-ml/coursef/2021": {
+          "name": " 機械学習"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "インターネット"
         },
@@ -58,6 +61,9 @@
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "スプライトラボのドキュメント"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": " デジタルトレイルをたどる"
         },
         "mimi-activity/courseb/2021": {
           "name": "動かせ！動かせ！"
@@ -109,6 +115,9 @@
         },
         "teacher_forum_1/courseb/2021": {
           "name": "先生用フォーラム"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": " 私のオンラインネイバーフッド"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "ペアプログラミング"
@@ -274,6 +283,9 @@
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "スプライトラボのドキュメント"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": " スーパー デジタル市民"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "アクセシビリティのための設計"

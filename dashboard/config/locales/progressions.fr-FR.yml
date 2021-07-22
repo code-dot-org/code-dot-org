@@ -2,6 +2,7 @@
 fr:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Si/Sinon" avec l''abeille'
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
       Animate Your Scene: Animez votre scène
@@ -20,6 +21,7 @@ fr:
       Challenges: Défis
       Collisions: Collisions
       Combining Representations: Combiner des Représentations
+      'Conditionals: If Statements': " Instructions « si »"
       Create Your Own Animation: Créez votre propre animation
       Create a Story: Créez une histoire
       Create your project: Créez votre projet
@@ -28,6 +30,8 @@ fr:
       Designing for Accessibility: Concevoir pour l'Accessibilité
       Drawing: Dessiner
       Events: Événements
+      'Exploration: For Loops': " Boucles « Pour »"
+      'Exploration: Sample Apps': " Exemples d'Aplications"
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
@@ -51,6 +55,8 @@ fr:
       Make a Prediction: Faites une prévision
       Measures: Mesures
       'Mini-Project: About Me': À propos de Moi avec le Labo des Lutins
+      'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
+      'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
       My Online Neighborhood: Mon Quartier en Ligne
       Pair Programming: Programmation en Binôme
       Picturing Data: Représenter les Données
@@ -68,5 +74,23 @@ fr:
       Velocity: Vitesse
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Video: Vidéo
+      'Video: Debugging with Scrat ': " Déboguer avec Scrat "
+      'Video: Events': " Événements"
+      'Video: Harvesting with Conditionals': " Récolter avec les Conditions"
+      'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
+      'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
+      'Video: Loops in Artist': " Les Boucles dans Artiste"
+      'Video: Measures': " Mesures"
+      'Video: Minecraft - Congratulations': " Minecraft - Félicitations"
+      'Video: Pair Programming': " Programmation en Binôme"
+      'Video: Pair Programming ': " Programmation en Binôme "
+      'Video: Programming with Rey and BB-8': " Programmer avec Rey et BB-8"
+      'Video: Properties': " Propriétés"
+      'Video: Sprites in Action': " Les Lutins en Action"
+      'Video: Star Wars Project': " Projet Star Wars"
+      'Video: The Harvester': " La Moissonneuse"
+      'Video: Using the Repeat Block': " Utiliser le Bloc Répéter"
+      'Video: Variables in Artist': " Les Variables dans Artiste"
+      'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
       Wrap-up: Résumé et ouverture

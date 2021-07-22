@@ -2,6 +2,9 @@
   "fr-FR": {
     "data": {
       "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "Lutin"
+        },
         "behavior/coursef/2021": {
           "word": "comportement"
         },
@@ -26,6 +29,9 @@
         "debugging/courseb/2021": {
           "word": "Le Débogage"
         },
+        "click/courseb/2021": {
+          "word": "Cliquez"
+        },
         "drop/courseb/2021": {
           "word": "Grand écart"
         },
@@ -34,6 +40,9 @@
         },
         "debugging/coursea/2021": {
           "word": "Le Débogage"
+        },
+        "click/coursea/2021": {
+          "word": "Cliquez"
         },
         "drop/coursea/2021": {
           "word": "Grand écart"
@@ -74,6 +83,9 @@
         "behavior/express/2021": {
           "word": "comportement"
         },
+        "sprite/express/2021": {
+          "word": "Lutin"
+        },
         "conditionals/express/2021": {
           "word": "Instructions conditionnelles"
         },
@@ -86,6 +98,9 @@
         "define/express/2021": {
           "word": "Définis"
         },
+        "click/pre-express/2021": {
+          "word": "Cliquez"
+        },
         "drop/pre-express/2021": {
           "word": "Grand écart"
         },
@@ -97,6 +112,9 @@
         },
         "behavior/coursee/2021": {
           "word": "comportement"
+        },
+        "sprite/coursee/2021": {
+          "word": "Lutin"
         },
         "copyright/coursee/2021": {
           "word": "Copyright"

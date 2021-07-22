@@ -60,6 +60,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -153,6 +161,11 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
@@ -186,5 +199,9 @@ en-GB:
             "'sand'": sand
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        options:
+          blockType:
+            '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch

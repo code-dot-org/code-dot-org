@@ -32,7 +32,12 @@
   homepage_action_text_girlvideo: "एका मुलीला प्रोत्साहन द्या"
   videos_more: "आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही <a href='%{inspiring_videos_playlist}'>प्रेरणादायक व्हिडीओज</a>"
   videos_more_markdown: "आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही [प्रेरणादायक व्हिडीओज](%{inspiring_videos_playlist}"
+  starwars_subtitle: "कोड वापरून एक आकाशगंगा तयार करा"
+  starwars_javascript_title: "जावास्क्रिप्ट"
+  starwars_javascript_description: "ड्रॅग-ड्रॉप ब्लॉक्स आणि जावास्क्रिप्ट वापरा."
+  starwars_javascript_specs: "फक्त इंग्रजी | आधुनिक ब्राऊझर्स | वय 11+  "
   starwars_blocks_title: "ब्लॉक्स"
+  starwars_blocks_description: "ड्रॅग-ड्रॉप ब्लॉक्स वापरा."
   starwars_blocks_specs: "अनेक भाषा | आधुनिक ब्राऊझर्स, स्मार्टफोन्स, टॅबलेट्स | वय 6-106      "
   mc_name: "माईनक्राफ्ट अवर ऑफ कोड"
   minecraft_agent: "माईनक्राफ्ट हिरोचा प्रवास"
@@ -81,6 +86,7 @@
   dashboard_student: "विध्यार्थी"
   hoc2014_try_frozen: "फ्रोझनमधील अॅना आणि एल्सासह आर्टीस्ट"
   frozen_name: "अॅना आणि एल्साबरोबर कोड लिहा"
+  starwars_name: 'स्टार वॉर्स: कोड वापरून एक आकाशगंगा तयार करा'
   codeorg_name: "क्लासिक मेझ"
   codeintl_name: "क्लासिक मेझ"
   hourofcode_name: "क्लासिक मेझ"
@@ -110,6 +116,7 @@
   pre-express_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम
   20-hour_name: वेगवान अभ्यासक्रम
   classicmaze_name: "क्लासिक मेझ"
+  starwarsblocks_name: "स्टार वॉर्स (ब्लॉक्स)"
   hoc-encryption_name: सुलभ एनक्रीप्शन
   text-compression_name: टेक्स्ट कॉम्प्रेशन 
   basketball_name: "बास्केटबॉलचा गेम तयार करा"

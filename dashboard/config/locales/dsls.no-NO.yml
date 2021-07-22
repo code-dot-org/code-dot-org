@@ -1286,33 +1286,33 @@ no-NO:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1614,33 +1614,33 @@ no-NO:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
@@ -2170,9 +2170,9 @@ no-NO:
         - {}
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
@@ -2250,10 +2250,10 @@ no-NO:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '10'
+        - text: '12'
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2021:

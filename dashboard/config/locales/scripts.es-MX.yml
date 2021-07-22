@@ -4,6 +4,7 @@ es-MX:
     script:
       category:
         csf_category_name: Fundamentos de Ciencias de la Computación
+        aiml_2021_category_name: IA / ML
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
@@ -1438,6 +1439,10 @@ es-MX:
               name: "¿Qué es una computadora?"
             Simple Encryption:
               name: Cifrado simple
+        allthesurveys:
+          lessons:
+            CSD pre-survey 2021:
+              name: Encuesta previa a CSD 2021
         hero:
           title: 'Minecraft: Viaje del héroe'
           description_short: "¡Minecraft está de vuelta con una nueva actividad para

@@ -322,10 +322,9 @@ hu:
   follower:
     invite_sent: Meghívó elküldve
     added_teacher: "%{name} hozzáadva mint a tanárod"
-    registered: Regisztráltál %{section_name}-ra.
-    captcha_required: Kérjük töltse ki a CAPTCHA-t ahoz, hogy csatlakozzon ehhez a
-      kurzushoz
-    already_exists: " Már csatlakozott a  %{section_name} szekcióhoz"
+    registered: Csatlakoztál a %{section_name} kurzushoz.
+    captcha_required: Kérjük, töltsd ki a CAPTCHA-t, hogy csatlakozzon ehhez a kurzushoz.
+    already_exists: " Már csatlakoztál a %{section_name} kurzushoz."
     error:
       signed_in: Kérjük, jelentkezz ki, mielőtt folytatnád
       username_not_found: "%{username} felhasználónév nem található"
@@ -339,10 +338,10 @@ hu:
       provider_managed_section: Ezt a szakaszt egy másik szolgáltató kezeli és nem
         lehet hozzá csatlakozni. Kérd meg a tanárodat, hogy adjon hozzá a %{provider}
         szolgáltatón keresztül, és szinkronizálja újra a szakaszt.
-      restricted_section: " Nem tudtunk hozzáadni a %{section_code} szekcióhoz, mert
-        le van zárva. Kérlek keresd meg a tanárodat segítségért."
-      full_section: " Nem tudtunk hozzáadni a %{section_code}  szekcióhoz mert már
-        %{section_capacity} diák van benne. Kérj a tanárodtól segítséget."
+      restricted_section: Nem tudtunk hozzáadni a %{section_code} kurzuushoz, mert
+        az le van zárva. Kérj segítséget a tanárodtól!
+      full_section: Nem tudtunk hozzáadni a %{section_code} kurzushoz, mert már %{section_capacity}
+        diák benne van. Kérj segítséget a tanárodtól!
     mail:
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
@@ -538,10 +537,11 @@ hu:
       olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt.
       A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
       További információt az [adatvédelem](%{privacy_policy_url}) részben találsz.'
-    enter_new_login_info: Írja be a bejelentkezési adatait
-    confirm_secret_words: Erősítsd meg azt hogy ez te vagy , a jelenlegi titkos szavad  beírásával.
+    enter_new_login_info: Írd be az új bejelentkezési adataidat!
+    confirm_secret_words: A jelenlegi titkos szavad beírásával erősítsd meg, hogy
+      valóban te akarsz belépni.
     parent_email_label: Szülő/gondviselő e-mail címe (opcionális)
-    parent_email_hint: "(Ezt a jelszavad visszaszerzésére tudod használni)\n"
+    parent_email_hint: "(Ezt a jelszavad visszaállításához tudod használni)"
     enter_parent_email: Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás
       esetére)
     update: Fiók frissítése
@@ -606,17 +606,17 @@ hu:
       közül
     print_certificate: Oklevél nyomtatása
   move_students:
-    new_section_dne: " Sajnáljuk, de a  %{new_section_code} szekció nem létezik. Kérlek
-      írj be egy másik szekció kódot."
-    section_code_cant_be_current_section: A mostani szekció nem lehet ugyanaz, mint
-      az új szekció.
-    current_section_dne: " Sajnáljuk, de a(z) %{current_section_code} szekció nem
-      létezik. Kérlek írd be egy másik szekció kódot."
+    new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
+      egy másik kódot beírni!
+    section_code_cant_be_current_section: A jelenlegi kurzus és az új kurzus nem lehet
+      ugyanaz!
+    current_section_dne: Sajnáljuk, de a %{current_section_code} kurzus nem létezik.
+      Próbálkozz egy másik kódot beírni!
     student_not_found: Egy vagy több diák nem található.
     all_students_must_be_in_current_section: Az összes diáknak be kell jelentkeznie
-      a te szekciódba.
+      a kurzusodba.
     already_enrolled_in_new_section: 'Nem tudod áthelyezni ezeket a diákokat, mert
-      már benne vannak az új szekcióban. '
+      már benne vannak az új kurzusban. '
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
@@ -625,7 +625,7 @@ hu:
   gender:
     male: Férfi
     female: Nő
-    non_binary: Nem-bináris
+    non_binary: Nem bináris
     none: Inkább nem válaszolok
   user_type:
     student: Diák
@@ -680,7 +680,7 @@ hu:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
-    teacher_no_solution: Hagyd abba a megoldások látását
+    teacher_no_solution: Tovább ne mutasd a megoldásokat!
     auth_error: Nem nézheted meg a megoldást
     submit: Frissítsd a Művész helyét
     direction: Kezdő irány (fokban)
@@ -690,7 +690,7 @@ hu:
     notes_coming_soon: Ehhez a videóhoz hamarosan leírás is lesz.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
-    show_notes: Mutasd meg a jegyzeteket
+    show_notes: Mutasd a jegyzeteket
     show_video: Mutasd a videót
     label: Videó
   compatibility:
@@ -699,12 +699,12 @@ hu:
       applab_unsupported_tablet: Az App Lab legjobban asztali számítógépen vagy laptopon
         működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
         ütközhet.
-      gamelab_unsupported_tablet: A Játék Labor asztali gépen, vagy laptopon, egérrel
-        és billentyűzettel működik a legjobban. Lehet , hogy pár problémába fogsz
-        ütközni , hogyha a jelenlegi eszközt használod.
+      gamelab_unsupported_tablet: A Game Lab legjobban asztali számítógépen vagy laptopon
+        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
+        ütközhet.
   slow_loading: Ez a megszokottnál tovább tart...
   try_reloading: Próbálja meg újratölteni az oldalt
-  next_stage: Befejezve! Folytatás a következő pályára
+  next_stage: Végeztél! Folytasd a következő leckével!
   download_pdf: Óravázlat megnyitása
   lesson_plan: Óravázlat
   view_lesson_plan: Óravázlat megtekintése
@@ -995,7 +995,7 @@ hu:
       gender:
         male: Férfi
         female: Nő
-        non_binary: Nem-bináris
+        non_binary: Nem bináris
         none: Inkább nem válaszolok
       subjects:
         cs: Számítógép-tudomány

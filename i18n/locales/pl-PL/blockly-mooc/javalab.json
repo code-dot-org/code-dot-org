@@ -1,6 +1,7 @@
 {
   "addAComment": "Dodaj komentarz",
   "allFilesCompile": "Kompilacja wszystkich plików! ",
+  "backpackLabel": "Plecak",
   "clearConsole": "Wyczyść konsolę",
   "commit": "Zatwierdź",
   "commitNotes": "Zatwierdź uwagi ",
@@ -9,6 +10,8 @@
   "compilerError": "Nie mogliśmy skompilować Twojego programu. Poszukaj w nim błędów i spróbuj ponownie.",
   "compiling": "Kompilowanie...",
   "console": "Konsola",
+  "duplicateProjectFilenameError": "Nazwa pliku {filename} jest już używana w tym projekcie. Wybierz inną nazwę",
+  "duplicateSupportFilenameError": "Nazwa pliku {filename} jest już używana w kodzie pomocy tego poziomu. Wybierz inną nazwę",
   "editor": "Edytor",
   "enablePeerReview": "Umożliwij recenzję rówieśniczą ",
   "illegalMethodAccess": "Próbowałeś uzyskać dostęp do metody, która jest blokowana przez naszą politykę bezpieczeństwa.\n{cause}",

@@ -2240,12 +2240,24 @@ fr-FR:
             qui va faire échouer ce programme? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat va atteindre le gland. Il n'y a pas de bug dans le code.
+          feedback: Ce n'est pas correct. Scrat tourne d'abord dans la mauvaise direction
+            et n'avance donc pas suffisamment pour atteindre le gland.
+        - text: Scrat n'atteindra pas le gland car il tourne du mauvais coté.
+          correct: true
+          feedback: C'est correct. Scrat tourne d'abord dans la mauvaise direction
+            et n'avance donc pas suffisamment pour atteindre le gland.
+        - text: Scrat n'atteindra pas le gland car il n'y a pas suffisamment de blocs
+            `move forward`.
+          correct: true
+          feedback: C'est correct. Scrat tourne d'abord dans la mauvaise direction
+            et n'avance donc pas suffisamment pour atteindre le gland.
         - text: Je ne sais pas.
+          feedback: Il y a deux bugs dans ce code. Scrat tourne d'abord dans la mauvaise
+            direction et n'avance donc pas suffisamment pour atteindre le gland.
         questions:
-        - {}
+        - text: Recherche des bugs dans ce code. Scrat atteindra-t-il le gland ou
+            bien y a-t-il un problème ?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'oiseau va s'arrêter à un pas du cochon.
@@ -2429,6 +2441,7 @@ fr-FR:
       courseD_EOC_2020:
         description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
           créer.
+        display_name: Fin du projet.
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -3357,6 +3370,7 @@ fr-FR:
         content1: Page du Manuel du Test Markdown
       courseE_EOC_2020:
         description: Tu as finis le Cours E! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Ce même programme fonctionnera pour résoudre ce puzzle, aussi.
@@ -3559,8 +3573,24 @@ fr-FR:
         content1: Page du Manuel du Test Markdown
       courseExpress_project_exemplars_2019_2020:
         content1: Page du Manuel du Test Markdown
+        markdown: |+
+          # Exemples de projets
+
+          Tu vas démarrer ton projet final. Avant de commencer, prends ton temps pour regarder les exemples de projets.
+
+          | Panique à la discothèque (Dance Party) | La plage (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Get your disco on while your backup dancers switch it up! | Essaie d'ajouter plus de couleur à cette scène ! |
+
+          | Flocons de neige (Gelé) | Jeu d'avion (Labo. des lutins) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flocons de neige (Gelé)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Jeu d'avion (Labo. Des lutins )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Soit créatif en utilisant des fonctions ! | Essaie d'ajouter du texte ou un score à ce jeu ! |
+
       courseF_EOC_2020:
         description: Tu as finis le Cours F! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseF_bee_variables_8a_2018:
         answers:
         - text: 'L''abeille ne recueillera aucun nectar parce que la variable ne s''appelle
@@ -4740,7 +4770,7 @@ fr-FR:
         - text: L'artiste dessinera un carré.
           correct: true
           feedback: Correct!
-        - {}
+        - feedback: Incorrect. L'artiste dessine un carré.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer lorsque
             tu cliqueras sur "Démarrer"?
@@ -4763,12 +4793,18 @@ fr-FR:
             fermier ramassera-t-il après avoir cliqué sur "Démarrer" ?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: " "
+          feedback: 'Incorrect. '
+        - text: Scrat n'atteindra pas le gland car il tourne du mauvais coté.
+          correct: true
+          feedback: 'Correct! '
+        - text: Scrat n'atteindra pas le gland car il n'y a pas suffisamment de blocs
+            `move forward`.
+          correct: true
+          feedback: 'Correct! '
+        - feedback: " "
         questions:
-        - {}
+        - text: " "
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: L'oiseau va s'arrêter à un pas du cochon.
@@ -4814,6 +4850,7 @@ fr-FR:
       courseD_EOC_2021:
         description: Tu as finis la dernière leçon du Cours D! Choisis un projet à
           créer.
+        display_name: Fin du projet.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -5024,8 +5061,10 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseE_EOC_2021:
         description: Tu as finis le Cours E! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseE_EOC_examples_2021:
         description: Tu as finis le Cours E! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Rien ne se passera.
@@ -5101,8 +5140,10 @@ fr-FR:
             sur "Démarrer"?
       courseF_EOC_2021:
         description: Tu as finis le Cours F! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseF_EOC_examples_2021:
         description: Tu as finis le Cours F! Choisis un projet à créer.
+        display_name: Fin du projet.
       courseF_events_predict_multi:
         answers:
         - {}
@@ -5117,9 +5158,9 @@ fr-FR:
         - {}
         - {}
         - correct: true
-        - {}
+        - feedback: 'Incorrect. '
         questions:
-        - {}
+        - text: " "
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artiste dessinera un triangle de 50 pixels de côté.
@@ -5148,7 +5189,8 @@ fr-FR:
         - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
           feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
+        - text: " "
+          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
             quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
         markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
         questions:
@@ -5166,7 +5208,7 @@ fr-FR:
         answers:
         - {}
         - correct: true
-        - {}
+        - feedback: 'Incorrect. '
         - {}
         questions:
         - {}
@@ -5199,6 +5241,7 @@ fr-FR:
         content1: description ici
       express_EOC_2021:
         description: Tu as finis le Cours E! Choisis un projet à créer.
+        display_name: Fin du projet.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel ramassera 4 diamants avec ce code.
@@ -5216,3 +5259,20 @@ fr-FR:
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il se passera lorsque
             le programme sera lancé?
+      courseAB_EOC_2021:
+        display_name: Fin du projet.
+      courseB_EOC_2021:
+        display_name: Fin du projet.
+      courseExpress_EOC_2020:
+        description: Tu as atteint la dernière leçon du cours Express ! Choisis un
+          projet à créer.
+        display_name: Fin du projet.
+      courseF_EOC_samples_2021:
+        display_name: Fin du projet.
+      courseF_variables_samples:
+        description: "  "
+        teacher_markdown: " \n\n \n"
+      csf_digital_trails_2021:
+        markdown: "\n"
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: "\n"

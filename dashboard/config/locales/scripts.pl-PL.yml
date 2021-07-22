@@ -1430,6 +1430,7 @@ pl:
               name: CSP przed ankietą  2021
             CSP post-survey 2020:
               name: CSP po ankiecie 2020
+          name: wszystkie ankiety
         hero:
           title: 'Minecraft: Podróż Bohatera'
           description_short: Minecraft powraca z najnowszą serią zadań na Godzinę
@@ -5679,6 +5680,22 @@ pl:
                 przechowywanych w tablicy 2D.
             lesson-2:
               name: Trawersowanie tablicy 2D wierszami
+              description_student: Teraz, gdy widziałeś już tablice 2D, piszesz zagnieżdżone
+                pętle „dla”, aby je przemierzać! Wracasz do Teatru, aby przygotować
+                nowy koncert, aby edukować The Neighborhood na temat zrównoważonego
+                transportu. Po wybraniu początkowego obrazu powitalnego na koncercie,
+                napisz metodę `getPixels()`, która przechowuje piksele z obrazu w
+                tablicy 2D, aby wykorzystać ją w nadchodzących lekcjach do tworzenia
+                efektów obrazu.
+              description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do
+                przechodzenia przez tablice 2D w kolejności wiersz główny i stosują
+                standardowy algorytm, który napisali w Jednostce 3. do oceny danych.
+                Ponownie odwiedzają Teatr, aby rozpocząć tworzenie nowego koncertu,
+                który ma na celu edukowanie The Neighborhood na temat zrównoważonego
+                transportu. Wybierają początkowy obraz powitalny na koncercie i piszą
+                metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy
+                2D, aby wykorzystać ją na nadchodzących lekcjach do tworzenia efektów
+                graficznych.
             lesson-3:
               name: Trawersowanie tablicy 2D kolumnami
             lesson-4:
@@ -5749,6 +5766,13 @@ pl:
           lessons:
             lesson-2:
               name: Narzędzia
+        self-paced-pl-csd4-2021:
+          lessons:
+            lesson-1:
+              name: Wskazówki dotyczące nauczania Informatycznych Odkryć
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Wskazówki dotyczące nauczania Informatycznych Odkryć
         self-paced-pl-csd6-2021:
           lessons:
             lesson-3:
@@ -5775,3 +5799,8 @@ pl:
           lessons:
             lesson-1:
               name: Lekcja1
+          name: tesspl test
+          title: Testowanie Jednostka 1 Kurs PL
+        tesspl2:
+          name: tesspl2
+          title: Tess PL 2

@@ -469,6 +469,8 @@ sk:
           lessons:
             Design Mode:
               name: Dizajnový mód
+        CSDU1-Draft:
+          description_short: Riešenie problémov
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -621,6 +623,8 @@ sk:
               name: Recenzia
             Lists:
               name: Zoznamy
+            Headings:
+              name: Nadpisy
         csp2-support:
           lesson_groups:
             required:
@@ -1349,6 +1353,8 @@ sk:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd2-2018:
           lessons:
+            Headings:
+              name: Nadpisy
             Lists:
               name: Zoznamy
             CS Discoveries Post-Course Survey:
@@ -2315,6 +2321,8 @@ sk:
               name: 'Algoritmy z reálneho života: Zasaď semienko'
         csd2-2019:
           lessons:
+            Headings:
+              name: Nadpisy
             Lists:
               name: Zoznamy
         csd3-2019:
@@ -2532,6 +2540,8 @@ sk:
               name: Čo je počítač?
         csd2-pilot:
           lessons:
+            Headings:
+              name: Nadpisy
             Lists:
               name: Zoznamy
         csd3-pilot:
@@ -2805,6 +2815,10 @@ sk:
               display_name: Cykly
             csp_project:
               display_name: Projekt
+        csd2-2020:
+          lessons:
+            Headings:
+              name: Nadpisy
         csd1-2020:
           lessons:
             The Problem Solving Process:
@@ -3239,6 +3253,10 @@ sk:
               name: Nástroje
             Debugging:
               name: Hľadanie a odstraňovanie chýb
+        csd2-virtual:
+          lessons:
+            Headings:
+              name: Nadpisy
         csp5-virtual:
           lessons:
             While Loops:
@@ -3378,6 +3396,11 @@ sk:
             What is a Computer?:
               key: Čo je počítač?
               name: Čo je počítač?
+        csd2-2021:
+          lessons:
+            Headings:
+              key: Nadpisy
+              name: Nadpisy
         csd3-2021:
           lessons:
             Variables:
@@ -4004,6 +4027,10 @@ sk:
               display_name: Úvod
             Introduction:
               display_name: Úvod
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Epidémia v Monster Towne
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:

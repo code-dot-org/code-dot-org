@@ -3921,6 +3921,7 @@ ja-JP:
         - {}
         - {}
         - correct: true
+          feedback: 'せいかい！ '
         - {}
         questions:
         - {}

@@ -133,7 +133,7 @@ km:
         options:
           SPEED:
             '1': ធម្មតា
-            '2': fast
+            '2': លឿន
             '4': very fast
             '0.5': slow
             '0.25': very slow
@@ -143,7 +143,7 @@ km:
             sprites: ទាំងអស់
           SPEED:
             '1': ធម្មតា
-            '2': fast
+            '2': លឿន
             '4': very fast
             '0.5': slow
             '0.25': very slow
@@ -187,10 +187,16 @@ km:
         options:
           THIS:
             sprites: ទាំងអស់
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': ដែល​អាច​មើលឃើញ
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: ទាំងអស់
+          VISIBILITY:
+            'true': ដែល​អាច​មើលឃើញ
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -301,6 +307,7 @@ km:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
+            undefined: គ្មាន
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -355,6 +362,12 @@ km:
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": ត្រី
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ត្រី
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -423,10 +436,26 @@ km:
         options:
           SELECT:
             '"all"': ទាំងអស់
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: ត្រី
       Mikelab_ifDanceIs:
         options:
           DANCE:
             MOVES.Rest: គ្មាន
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ត្រី
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ត្រី
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ត្រី
       Mikelab_randomColor:
         text: ពណ៌​ព្រាវ
       Mikelab_repeatUntilComplete:
@@ -473,6 +502,11 @@ km:
             '"a"': A
             '"s"': ខាងត្បូង
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': យល់ព្រម
+            '"no"': ទេ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -483,6 +517,7 @@ km:
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
+            '"solid"': គំនូស​ជាប់
             '"rainbow"': ឥន្ទធនូ
       PoemBot_setForegroundEffect:
         options:

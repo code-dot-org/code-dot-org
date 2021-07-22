@@ -2,10 +2,18 @@
 lv:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"UNICORN"': vienradži
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"UNICORN"': vienradži
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -13,9 +21,15 @@ lv:
             '"height"': augstums
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      Dancelab_doMoveEachLR:
+        options:
+          GROUP:
+            '"UNICORN"': vienradži
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -41,13 +55,19 @@ lv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nejaušs
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           FORMAT:
+            '"row"': rinda
+            '"column"': kolonna
             '"random"': nejaušs
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -81,10 +101,36 @@ lv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"UNICORN"': vienradži
           LAYOUT:
+            '"row"': rinda
+            '"column"': kolonna
             '"random"': nejaušs
       Dancelab_randomColor:
         text: nejauša krāsa
+      Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"disco"': Kvadrāti
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"disco"': Kvadrāti
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"UNICORN"': vienradži
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"pizzas"': Picas
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"pizzas"': Picas
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -92,6 +138,8 @@ lv:
             '"height"': augstums
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -102,9 +150,23 @@ lv:
             '"height"': augstums
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"UNICORN"': vienradži
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"UNICORN"': vienradži
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"UNICORN"': vienradži
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -112,6 +174,8 @@ lv:
             '"height"': augstums
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -122,6 +186,8 @@ lv:
             '"height"': augstums
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"UNICORN"': vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -137,6 +203,7 @@ lv:
             '"down"': uz leju
             '"right"': pa labi
             '"space"': telpa
+            '"enter"': ievadiet
             '"x"': x
       gamelab_atTime:
         options:
@@ -182,11 +249,23 @@ lv:
             '"right"': pa labi
             '"space"': telpa
             '"x"': x
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': pa labi
             '"left"': pa kreisi
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
       gamelab_randColor:
         text: nejauša krāsa
       gamelab_randomColor:
@@ -316,6 +395,11 @@ lv:
             '"a"': A
             '"s"': D
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': jā
+            '"no"': nē
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -326,6 +410,7 @@ lv:
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
+            '"solid"': ciets
             '"rainbow"': varavīksne
       RyanLab_moveForward:
         text: pārvietot uz priekšu
@@ -338,6 +423,7 @@ lv:
       aalab_layoutSprites:
         options:
           FORMAT:
+            '"row"': rinda
             '"random"': nejaušs
       binary_move:
         options:

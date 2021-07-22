@@ -419,10 +419,6 @@ ja:
               name: 速度
         CSF_Secret_Sample:
           description_audience: 8-18 才
-        ECSPD1:
-          lessons:
-            Wrap Up:
-              name: まとめ
         algebraFacilitator:
           lessons:
             Teacher Dashboard:
@@ -465,8 +461,6 @@ ja:
               display_name: 概要
         gradeKinder:
           lessons:
-            Debugging:
-              name: Debugging
             Events:
               name: イベント
             Loops:
@@ -481,8 +475,6 @@ ja:
               name: 作詞作曲
         grade1:
           lessons:
-            Debugging:
-              name: Debugging
             Events:
               name: イベント
             Loops:
@@ -995,17 +987,10 @@ ja:
             Nested Loops with Frozen:
               name: フローズンで学ぶ入れ子のループ
           student_description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
-        csdnovice:
-          lessons:
-            Wrap Up:
-              name: まとめ
         cspnovice:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         csp1-dlp:
           lesson_groups:
             required:
@@ -1736,30 +1721,18 @@ ja:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         csp-novice-18:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         pre-express-2018:
           description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
           lessons:
@@ -2579,16 +2552,10 @@ ja:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Wrap Up:
-              name: まとめ
         csd1-pilot:
           lessons:
             The Problem Solving Process:
@@ -2619,9 +2586,6 @@ ja:
           lesson_groups:
             required:
               display_name: 概要
-          lessons:
-            Debugging:
-              name: Debugging
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -3363,10 +3327,6 @@ ja:
           lessons:
             Packets:
               name: パケット
-        csp3-2020:
-          lessons:
-            Debugging:
-              name: Debugging
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -3375,8 +3335,6 @@ ja:
           lessons:
             Tools:
               name: ツール
-            Debugging:
-              name: Debugging
         csd2-virtual:
           lessons:
             Headings:
@@ -3490,8 +3448,6 @@ ja:
               display_name: はじめに
             lessonGroup-3:
               display_name: 変数（へんすう）
-            debugging:
-              display_name: Debugging
         csd1-2021:
           lessons:
             The Problem Solving Process:
@@ -3564,11 +3520,6 @@ ja:
             Packets:
               key: パケット
               name: パケット
-        csp3-2021:
-          lessons:
-            Debugging:
-              key: Debugging
-              name: Debugging
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3961,6 +3912,7 @@ ja:
               description_teacher: 次の4つのレッスンでは、生徒はプログラミングスキルをキャップストーンプロジェクトで使用する機会があります。このプロジェクトでは、個人がプログラミングの経験を積み、仲間や家族と共有する見本を作成することができます。レッスンは複数回または数週週にわたって体験してもらうことを意図しています。その中で、ブレーンストーミングの探求、設計プロセスの学習、最終的な作品の構築および発表を行います。探求ステージでは、生徒はアーティストとプレイラボで事前に作成されたプロジェクトの例でプレイして、インスピレーションを得ることができます。次に、生徒は設計プロセスと、それを自分のプロジェクトに実装する方法について学びます。その後、アーティスト、スプライトラボ、または使い慣れたその他のインターフェイスで独自のプロジェクトを作成するためのスペースが与えられます (これはおそらくプロジェクトで最長のステージです)。最後に、生徒は完成した作品を仲間に発表することができます。
             lesson-1:
               name: アクセシビリティのための設計
+              description_student: '架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。 '
               description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
           lesson_groups:
             ramp_up:
@@ -4031,6 +3983,7 @@ ja:
               description_teacher: このレッスンでは、生徒は「for」ループの練習を続けますが、今回はアーティストと一緒に行います。生徒は、変数、ループ、および「for」ループのアイデアを組み合わせてパズルを完成させ、複雑なデザインを作成します。最後に、フリープレイレベルで自分の作品を作成する機会があります。
             Virtual Pet:
               key: バーチャルペット
+              name: " バーチャルペット"
               description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
               description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
             End of Course Project:

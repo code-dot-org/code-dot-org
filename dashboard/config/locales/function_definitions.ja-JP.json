@@ -904,7 +904,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3057,7 +3060,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3485,7 +3491,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3533,7 +3542,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3576,7 +3588,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3619,7 +3634,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3662,7 +3680,10 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",

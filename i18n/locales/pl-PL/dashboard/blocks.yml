@@ -1336,6 +1336,8 @@ pl:
             '"I am Catwoman!"': Jestem Kobietą Kotem!
             '"Never quit!"': Nigdy nie rezygnuj!
             '"Live Fast."': Żyj szybko.
+      gamelab_spriteSayTime:
+        text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
       gamelab_startAvoiding:
         text: "{SPRITE} zaczyna unikać {TARGET}"
       gamelab_startFollowing:
@@ -1807,7 +1809,9 @@ pl:
         text: ustaw wiersz {BG_EFFECT}
         options:
           BG_EFFECT:
+            '"---"': "---"
             '"wordsworth"': Wędrowałem samotnie jak chmura
+            '"dickinson"': Jeśli mogę zatrzymać jedno serce przed złamaniem
       PoemBot_setTitle:
         text: ustaw tytuł wiersza {TITLE}
       PoemBot_showPoem:
@@ -1861,6 +1865,10 @@ pl:
             '"random"': losowy
       aalab_levelFailure:
         text: uczeń {STATE} z kluczem {KEY}
+        options:
+          STATE:
+            '0': przechodzi
+            '3': nie udaje się
       aalab_setSpeed:
         text: ustaw prędkość potwora na {VAL}
       aalab_setupSim:
@@ -1962,6 +1970,9 @@ pl:
         options:
           SPEECH:
             '"I''m Mr. Freeze!"': Jestem Mr. Freeze!
+            '"Stay Cool!"': Uspokój się!
+            '"Everyone, chill!"': Wszyscy, wyluzujcie się!
+            '"Cool party!"': Fajna impreza!
             '"Allow me to break the ice."': Pozwól mi przełamać lody.
             '"Tonight’s forecast… a freeze is coming!"': Dzisiejsza prognoza… nadchodzi przymrozek!
       batman_harleySay:
@@ -2047,14 +2058,20 @@ pl:
         options:
           DIR:
             "'ahead'": z przodu jest
+            "'right'": w prawo
+            "'left'": w lewo
       craft_ifStandingOn:
         text: |-
           jeśli stojąc na {TYPE}
           {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": niebieski koral
+            "'redCoralBlock'": czerwony koral
             "'sand'": piasek
+            "'wool_blue'": głęboka woda
             "'planksOak'": deski dębowe
+            "'seaLantern'": latarnia morska
       craft_ifStandingOnLimit:
         text: |-
           jeśli stojąc na {TYPE}
@@ -2062,6 +2079,8 @@ pl:
         options:
           TYPE:
             "'sand'": piasek
+            "'darkPrismarine'": ciemny pryzmaryn
+            "'seaLantern'": latarnia morska
       craft_log:
         text: zaloguj wiadomości {MESSAGE}
       craft_moveForward:
@@ -2087,6 +2106,8 @@ pl:
             '"readDeadCoralBlock"': blok martwego czerwonego koralu
             '"yellowDeadCoralBlock"': blok martwego żółtego koralu
             '"prismarine"': pryzmaryn
+            '"darkPrismarine"': ciemny pryzmaryn
+            '"seaLantern"': latarnia morska
             '"packedIce"': upakowany lód
             '"blueIce"': niebieski lód
             '"blackConcrete"': czarny beton

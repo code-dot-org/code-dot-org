@@ -2192,3 +2192,20 @@ mr-IN:
         - {}
         questions:
         - {}
+      courseD_project_exemplars_2020_2021:
+        markdown: |-
+          # प्रोजेक्ट उदाहरणे
+
+          तुम्ही लवकरच तुमचा अंतिम प्रोजेक्ट सुरू करणार आहात. तुम्ही सुरुवात करण्यापूर्वी,  उदाहरणादाखल दिलेले प्रोजेक्ट्स पहा.
+
+
+          | बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल) | स्टॉर्मट्रूपर्सची संख्या वाढवणे (स्टार वॉर्स) |
+          |---|---|
+          | [![बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "बाऊन्स केल्यावर रँडम स्पीड (बास्केटबॉल)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "स्टॉर्मट्रूपर्सची संख्या वाढवणे (स्टार वॉर्स)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | बॉल बाऊन्स झाला की त्याचा वेग बदलतो! | स्टॉर्मट्रूपर्स टाळा नाहीतर त्यांची संख्या वाढेल! |
+
+
+          | पॅनिक ! अॅट द डिस्को (डान्स पार्टी) | बीच सीन (कलाकार) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | तुमचे बॅकअप डान्सर्स त्यांच्या मूव्ह्ज बदलत राहतात! | या दृश्याला अजून थोडा रंग आणि पार्श्वभूमी जोडण्याचा प्रयत्न करा! |

@@ -101,6 +101,14 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -129,6 +137,7 @@ gl:
             '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
+            '"enter"': introduza
       gamelab_atTime:
         options:
           UNIT:
@@ -325,6 +334,11 @@ gl:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': si
+            '"no"': non
       Mikelab_whileKeyPressed:
         options:
           KEY:

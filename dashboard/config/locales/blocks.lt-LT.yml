@@ -145,6 +145,14 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': matomas
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': matomas
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -178,6 +186,7 @@ lt:
             '"down"': žemyn
             '"right"': dešinėn
             '"space"': kosmosas
+            '"enter"': įveskite
             '"x"': x
       gamelab_atTime:
         options:
@@ -248,6 +257,7 @@ lt:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
               vandeniu
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
+            undefined: joks (registruojasi patys)
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -392,6 +402,11 @@ lt:
             '"a"': A
             '"s"': P
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': taip
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -402,6 +417,7 @@ lt:
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
+            '"solid"': storai
             '"rainbow"': vaivorykštė
       RyanLab_moveForward:
         text: judėk į priekį

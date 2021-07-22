@@ -751,7 +751,7 @@
   "gender": "Nem",
   "genderMale": "Férfi",
   "genderFemale": "Nő",
-  "genderNonBinary": "Nem-bináris",
+  "genderNonBinary": "Nem bináris",
   "generatedCodeInfo": "Még a legjobb egyetemeken (pl. {berkeleyLink}, {harvardLink}) is tanítanak blokk alapú programozást, de a felszín alatt az általad összeállított blokkok is megjeleníthetők JavaScriptben, a világ legszélesebb körben használt programozási nyelvén:",
   "generatePDFReport": "Jelentés elkészítése PDF-ben",
   "shortGeneratedCodeInfo": "Még a legjobb egyetemeken (pl. {berkeleyLink}, {harvardLink}) is tanítanak blokk alapú programozást, de az általad használt blokkok megjeleníthetők JavaScriptben is, a világ legszélesebb körben használt programozási nyelvén:",

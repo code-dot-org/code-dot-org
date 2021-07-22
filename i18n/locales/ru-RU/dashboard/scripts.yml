@@ -838,6 +838,8 @@ ru:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Алгоритмы из повседневной жизни: Посади семечко'
+            'Programming: Happy Maps':
+              description_teacher: ''
             Loops in Artist:
               name: Циклы в исполнителе Художник
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
@@ -869,10 +871,23 @@ ru:
           assignment_family_title: Курс D
           description_short: Быстро повтори понятия из курса C, а затем перейди к алгоритмам, вложенным циклам, условным инструкциям и пр.
           lessons:
+            Events in Bounce:
+              description_student: ''
             Nested Loops:
               name: Вложенные циклы
+            'Algorithms: Relay Programming':
+              description_student: ''
             While Loops in Farmer:
               name: Цикл while в Фермере
+              description_student: ''
+            Conditionals in Bee:
+              description_student: ''
+            Conditionals & Loops in Farmer:
+              description_student: ''
+            Nested Loops Project in Artist:
+              description_student: ''
+            Debugging in Collector:
+              description_student: ''
         coursee-2017:
           title: Курс E
           assignment_family_title: Курс E
@@ -884,6 +899,12 @@ ru:
               name: Игры с циклами
             Songwriting with Parameters:
               name: Написание песен с параметрами
+            Build Your Project:
+              description_student: ''
+            Private and Personal Information:
+              description_student: ''
+            'Functions: Songwriting':
+              description_student: ''
             Building a Foundation:
               name: Строительство опоры
             Loops in Artist:
@@ -1174,6 +1195,7 @@ ru:
               name: Изучение перетаскивания
             'Programming: Happy Maps':
               name: Весёлые карты
+              description_teacher: ''
             Going Places Safely:
               name: Безопасное путешествие
             'Loops: Happy Loops':
@@ -1315,8 +1337,12 @@ ru:
               name: Введение
             Private and Personal Information:
               name: Private and Personal Information
+              description_student: ''
             'Functions: Songwriting':
               name: Написание песен
+              description_student: ''
+            Build Your Project:
+              description_student: ''
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -1552,12 +1578,15 @@ ru:
               name: Художник
             Nested Loops in the Maze:
               name: Вложенные циклы в Лабиринте
+            End of Course Project:
+              description_student: ''
             Internet:
               name: Интернет
             Crowdsourcing:
               name: Краудсорсинг
             Digital Sharing:
               name: Публикация цифровых произведений
+              description_student: ''
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
         dance-low:
           lessons:
@@ -1582,23 +1611,35 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+              description_student: ''
               description_teacher: Это занятие начнется с небольшого урока по отладке и настойчивости, а затем у нас быстро начнется гонка со временем, когда учащиеся разделятся на команды и будут вместе писать программу каждый по одной инструкции.
+            Debugging in Collector:
+              description_student: ''
+            Events in Bounce:
+              description_student: ''
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+              description_student: ''
             While Loops in Farmer:
               name: Цикл while в Фермере
+              description_student: ''
             Conditionals with Cards:
               name: Условные выражения с картами
+            Conditionals in Bee:
+              description_student: ''
+            Conditionals & Loops in Harvester:
+              description_student: ''
             Digital Citizenship:
               name: Цифровое гражданство
             'Unplugged: Binary':
               name: Двоичные образы
             Dance Party:
               name: Танцевальная вечеринка
+              description_student: ''
         coursee-2019:
           lesson_groups:
             csf_sprites:
@@ -1620,18 +1661,28 @@ ru:
               name: Условные выражения с картами
             Private and Personal Information:
               name: Private and Personal Information
+              description_student: ''
             'Functions: Songwriting':
               name: Написание песен
+              description_student: ''
+            Build Your Project:
+              description_student: ''
             Internet:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+            Nested Loops in Artist:
+              description_student: ''
+            End of Course Project:
+              description_student: ''
             Digital Sharing:
               name: Публикация цифровых произведений
             Simon Says:
               name: Саймон говорит
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Songwriting:
               name: Написание песен
         express-2019:
@@ -1678,6 +1729,8 @@ ru:
               name: Краудсорсинг
             Dance Party:
               name: Танцевальная вечеринка
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
         csd1-2019:
           lessons:
             The Problem Solving Process:
@@ -1714,8 +1767,11 @@ ru:
               name: Циклы в исполнителе Художник
             'Events: The Big Event':
               name: Большое Событие
+              description_student: ''
             Binary Bracelets:
               name: Двоичные браслеты
+            'End of Course Project: Create a Play Lab Game':
+              description_student: ''
             Powerful Passwords:
               name: Надежные пароли
             Sticker Art with Loops:
@@ -1775,12 +1831,14 @@ ru:
               name: Вперед, вперед
             Your Digital Footprint:
               name: Твой цифровой след
+              description_student: ''
             Programming with Rey and BB-8:
               name: Программирование с Рееем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Collector:
               name: Циклы в Собирателе
+              description_teacher: ''
             Loops in Artist:
               name: Циклы в исполнителе Художник
             'Loops: Getting Loopy':
@@ -2154,6 +2212,8 @@ ru:
               display_name: Проект
         time4cs-original-unit-1:
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Conditionals:
               name: Условные команды
             Simon Says:
@@ -2196,6 +2256,8 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Conditionals:
               name: Условные команды
             Simon Says:
@@ -2219,6 +2281,8 @@ ru:
             csf_digcit:
               display_name: Цифровое гражданство
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Conditionals:
               name: Условные команды
             Simon Says:
@@ -2334,14 +2398,18 @@ ru:
           lessons:
             Your Digital Footprint:
               name: Твой цифровой след
+              description_student: ''
             Move It, Move It:
               name: Вперед, вперед
             'Loops: Getting Loopy':
               name: Зацикливание
             Loops in Collector:
               name: Циклы в Собирателе
+              description_teacher: ''
             Loops in Artist:
               name: Циклы в исполнителе Художник
+            Digital Trails:
+              description_student: ''
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         coursec-2020:
           lesson_groups:
@@ -2364,8 +2432,11 @@ ru:
               name: Циклы в исполнителе Художник
             'Events: The Big Event':
               name: Большое Событие
+              description_student: ''
             Picturing Data:
               name: Изображение данных
+            'End of Course Project: Create a Play Lab Game':
+              description_student: ''
         coursed-2020:
           lesson_groups:
             csf_sequencing:
@@ -2385,23 +2456,37 @@ ru:
               name: Программирование на бумаге в клеточку
             Relay Programming:
               name: Эстафетное программирование
+              description_student: ''
               description_teacher: Это занятие начнется с небольшого урока по отладке и настойчивости, а затем у нас быстро начнется гонка со временем, когда учащиеся разделятся на команды и будут вместе писать программу каждый по одной инструкции.
+            Debugging in Collector:
+              description_student: ''
+            Events in Bounce:
+              description_student: ''
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+              description_student: ''
             Conditionals with Cards:
               name: Условные выражения с картами
+            Conditionals in Bee:
+              description_student: ''
             While Loops in Farmer:
               name: Цикл while в Фермере
+              description_student: ''
+            Conditionals & Loops in Harvester:
+              description_student: ''
             'Unplugged: Binary':
               name: Двоичные образы
             Digital Citizenship:
               name: Цифровое гражданство
             Dance Party:
               name: Танцевальная вечеринка
+              description_student: ''
+            End of Course Project:
+              description_student: ''
         coursee-2020:
           lesson_groups:
             csf_sprites:
@@ -2413,16 +2498,25 @@ ru:
             csf_functions:
               display_name: функции
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Simon Says:
               name: Саймон говорит
             Private and Personal Information:
               name: Private and Personal Information
+              description_student: ''
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+            Nested Loops in Artist:
+              description_student: ''
             'Functions: Songwriting':
               name: Написание песен
+              description_student: ''
+            End of Course Project:
+              description_student: ''
             Digital Sharing:
               name: Публикация цифровых произведений
+              description_student: ''
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
         coursef-2020:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
@@ -2450,7 +2544,10 @@ ru:
               name: Краудсорсинг
             Digital Sharing:
               name: Публикация цифровых произведений
+              description_student: ''
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
+            End of Course Project:
+              description_student: ''
             AI for Oceans:
               name: AI для океанов
         express-2020:
@@ -2479,6 +2576,8 @@ ru:
               name: Циклы в исполнителе Художник
             While Loops in Farmer:
               name: Цикл while в Фермере
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: ''
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
             Nested Loops in Maze:
@@ -2502,6 +2601,8 @@ ru:
               name: Программирование с Рееем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
+            Loops in Collector:
+              description_teacher: ''
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
             Loops in Artist:
@@ -2741,10 +2842,13 @@ ru:
               key: Изучение перетаскивания
               name: Изучение перетаскивания
               description_student: Щелкните и перетащите, чтобы закончить головоломки.
+              description_teacher: ''
             'Programming: Happy Maps':
               name: Весёлые карты
+              description_teacher: ''
             Sequencing with Scrat:
               description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
+              description_teacher: ''
             Programming with Rey and BB-8:
               key: Программирование с Рееем и BB-8
               name: Программирование с Рееем и BB-8
@@ -2756,9 +2860,13 @@ ru:
               name: Циклы со Скратом
             Loops in Collector:
               name: Циклы в Собирателе
+              description_teacher: ''
             Ocean Scene with Loops:
               key: Циклы в исполнителе Художник
               name: Циклы в исполнителе Художник
+              description_teacher: ''
+            Events in Play Lab:
+              description_teacher: ''
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -2771,18 +2879,28 @@ ru:
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         courseb-2021:
           lessons:
+            Digital Trails:
+              description_student: ''
             Move It, Move It:
               key: Вперед, вперед
               name: Вперед, вперед
+            Sequencing in Maze:
+              description_teacher: ''
+            Programming in Harvester:
+              description_teacher: ''
             'Loops: Getting Loopy':
               name: Зацикливание
             Loops in Harvester:
               key: Циклы в харвестере
             Loops in Collector:
               name: Циклы в Собирателе
+              description_teacher: ''
             Loops in Artist:
               key: Циклы в исполнителе Художник
               name: Циклы в исполнителе Художник
+              description_teacher: ''
+            Events in Play Lab:
+              description_teacher: ''
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -2795,18 +2913,36 @@ ru:
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         coursec-2021:
           lessons:
+            'Programming: My Robotic Friends':
+              description_teacher: ''
+            Programming in Maze:
+              description_teacher: ''
+            Debugging in Maze:
+              description_teacher: ''
+            Programming in Collector:
+              description_teacher: ''
             Binary Bracelets:
               key: Двоичные браслеты
               name: Двоичные браслеты
+            'Loops: My Loopy Robotic Friends':
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              description_student: ''
             Loops in Harvester:
               key: Циклы в харвестере
             Sticker Art with Loops:
               key: Циклы в исполнителе Художник
             'Events: The Big Event':
               name: Большое Событие
+              description_student: ''
+            Build a Flappy Game:
+              description_teacher: ''
             Picturing Data:
               key: Изображение данных
               name: Изображение данных
+              description_student: ''
+            'End of Course Project: Create a Play Lab Game':
+              description_student: ''
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -2822,12 +2958,22 @@ ru:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
+              description_teacher: ''
             Relay Programming:
               key: Эстафетное программирование
               name: Эстафетное программирование
+              description_student: ''
+            Debugging in Collector:
+              description_student: ''
+              description_teacher: ''
+            Events in Bounce:
+              description_student: ''
+              description_teacher: ''
             Dance Party:
               key: Танцевальная вечеринка
               name: Танцевальная вечеринка
+              description_student: ''
+              description_teacher: ''
             Loops in Ice Age:
               key: Циклы в ледниковом периоде
               name: Циклы в ледниковом периоде
@@ -2839,11 +2985,23 @@ ru:
             Conditionals with Cards:
               key: Условные выражения с картами
               name: Условные выражения с картами
+            Conditionals in Bee:
+              description_student: ''
             While Loops in Farmer:
               key: Цикл while в Фермере
               name: Цикл while в Фермере
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              description_student: ''
             'Unplugged: Binary':
               name: Двоичные образы
+            End of Course Project:
+              description_student: ''
+            lesson-6:
+              description_student: ''
           lesson_groups:
             csf_sequencing:
               display_name: Последовательность действий
@@ -2861,21 +3019,42 @@ ru:
               display_name: Цифровое гражданство
         coursee-2021:
           lessons:
+            Programming and Loops with the Artist:
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: ''
+              name: ''
             Conditionals:
               key: Условные команды
+              description_teacher: ''
             Simon Says:
               key: Саймон говорит
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
+              description_student: ''
             Digital Sharing:
               key: Публикация цифровых произведений
               name: Публикация цифровых произведений
+              description_student: ''
+              description_teacher: ''
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
+            Nested Loops in Artist:
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              description_student: ''
             'Functions: Songwriting':
               name: Написание песен
+              description_student: ''
               description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.
+            End of Course Project:
+              description_student: ''
+              description_teacher: ''
+            lesson-1:
+              description_student: 'Узнай о значении доступности и эмпатии путем коллективного обсуждения и разработки решений в области доступа для гипотетических приложений. '
+              description_teacher: ''
           lesson_groups:
             ramp_up:
               display_name: Вложенные циклы
@@ -2908,11 +3087,16 @@ ru:
             Internet:
               key: интернет
               name: Интернет
+              description_student: ''
             For Loop Fun:
               key: Игры с циклами
               name: Игры с циклами
             For Loops in Artist:
               name: Цикл for в Художнике
+            End of Course Project:
+              description_student: ''
+            lesson-1:
+              description_teacher: ''
             lesson-6:
               name: Представляем Лабораторию спрайтов
             lesson-8:
@@ -2937,19 +3121,49 @@ ru:
             Dance Party:
               key: Танцевальная вечеринка
               name: Танцевальная вечеринка
+            Programming with Angry Birds:
+              description_teacher: ''
+            Debugging with Scrat:
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              description_student: ''
             Sticker Art with Loops:
               key: Циклы в исполнителе Художник
+              description_teacher: ''
             Nested Loops in Maze:
               key: Вложенные циклы в Лабиринте
               name: Вложенные циклы в Лабиринте
+              description_student: ''
+            Snowflakes with Anna and Elsa:
+              description_student: ''
+            'Looking Ahead with Minecraft ':
+              description_student: ''
+            If/Else with Bee:
+              description_student: ''
             While Loops with the Farmer:
               key: Цикл while в Фермере
               name: Цикл while в Фермере
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: ''
+              name: ''
+            Until Loops in Maze:
+              description_teacher: ''
+            Harvesting with Conditionals:
+              description_student: ''
+              description_teacher: ''
+            For Loops with Bee:
+              description_student: ''
             For Loops with Artist:
               key: Цикл for в Художнике
               name: Цикл for в Художнике
+            End of Course Project:
+              description_student: ''
             lesson-1:
               name: Танцевальная вечеринка
+              description_student: ''
+              description_teacher: ''
             lesson-3:
               name: Спрайты в действии
           lesson_groups:
@@ -2975,23 +3189,34 @@ ru:
               key: Изучение перетаскивания
               name: Изучение перетаскивания
               description_student: Щелкните и перетащите, чтобы закончить головоломки.
+              description_teacher: ''
             Sequencing with Scrat:
               description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
+              description_teacher: ''
             Programming with Rey and BB-8:
               key: Программирование с Рееем и BB-8
               name: Программирование с Рееем и BB-8
+            Programming in Harvester:
+              description_teacher: ''
             Loops with Scrat:
               key: Циклы со Скратом
               name: Циклы со Скратом
             Loops with Laurel:
               key: Циклы в Собирателе
               name: Циклы в Собирателе
+              description_teacher: ''
             Ocean Scene with Loops:
               key: Циклы в исполнителе Художник
               name: Циклы в исполнителе Художник
+              description_teacher: ''
             Drawing Gardens with Loops:
               key: Циклы в исполнителе Художник
               name: Циклы в исполнителе Художник
+              description_teacher: ''
+            On the Move with Events:
+              description_teacher: ''
+            A Royal Battle with Events:
+              description_teacher: ''
           lesson_groups:
             csf_sequencing:
               display_name: Последовательность действий

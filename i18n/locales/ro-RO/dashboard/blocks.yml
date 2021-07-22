@@ -8,10 +8,17 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           MOVE1:
             MOVES.Roll: Corpul ca un val
             MOVES.ClapHigh: Bate din palme sus
@@ -40,20 +47,36 @@ ro:
         text: după {TIMESTAMP} {UNIT}
         options:
           UNIT:
+            '"measures"': măsuri
             '"seconds"': secunde
       Dancelab_changeColorBy:
         text: schimbă {COLOR} {METHOD} cu {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': nuanță
+            '"saturation"': saturație
+            '"brightness"': luminozitate
       Dancelab_changeMoveEachLR:
         text: "{GROUP} fă {MOVE} {DIR} tot mereu"
         options:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           MOVE:
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
             MOVES.Roll: Corpul ca un val
             MOVES.ClapHigh: Bate din palme sus
             MOVES.Dab: Mişcare dab
@@ -69,6 +92,9 @@ ro:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
           MOVE:
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
             MOVES.Roll: Corpul ca un val
             MOVES.ClapHigh: Bate din palme sus
             MOVES.Dab: Mişcare dab
@@ -87,31 +113,52 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
       Dancelab_changePropEachBy:
         text: schimbă {GROUP} {PROPERTY} cu {VAL}
         options:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
       Dancelab_doMoveEachLR:
         text: "{GROUP} fă {MOVE} {DIR} o dată"
         options:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           MOVE:
+            '"rand"': Aleatoriu
             MOVES.XBend: Îndoire
             MOVES.Roll: Corpul ca un val
             MOVES.XClapSide: Bate din palme
@@ -139,6 +186,7 @@ ro:
         text: "{SPRITE} fă {MOVE} {DIR} o dată"
         options:
           MOVE:
+            '"rand"': Aleatoriu
             MOVES.XBend: Îndoire
             MOVES.Roll: Corpul ca un val
             MOVES.XClapSide: Bate din palme
@@ -168,6 +216,7 @@ ro:
         text: 'la fiecare {N} {UNIT} '
         options:
           UNIT:
+            '"measures"': măsuri
             '"seconds"': secunde
       Dancelab_everySecondsRange:
         text: 'la fiecare {N} {UNIT} de la {START} la {STOP} '
@@ -177,6 +226,10 @@ ro:
             seconds: Secunde
       Dancelab_everyVerseChorus:
         text: 'la fiecare {UNIT} '
+        options:
+          UNIT:
+            '"verse"': vers
+            '"chorus"': cor
       Dancelab_getEnergy:
         text: primeşte {RANGE}
         options:
@@ -191,10 +244,15 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_getTime:
         text: ora curentă {UNIT}
         options:
           UNIT:
+            '"measures"': măsuri
             '"seconds"': secunde
       Dancelab_ifDanceIs:
         text: |-
@@ -219,7 +277,12 @@ ro:
           {DO1} {DO2}
         options:
           UNIT:
+            '"measures"': măsuri
             '"seconds"': secunde
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} sare la {LOCATION}"
         options:
@@ -240,10 +303,17 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           LOCATION:
             "{x: 200, y: 100}": sus
             "{x: 200, y: 300}": la bază
@@ -261,13 +331,31 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           FORMAT:
+            '"border"': margine
+            '"inner"': pătrat interior
             '"diamond"': diamant
+            '"circle"': cerc
             '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
+            '"x"': încrucişat
+            '"plus"': plus
             '"random"': aleator
       Dancelab_makeAnonymousDanceSprite:
         text: crează un nou {COSTUME} la {LOCATION}
@@ -283,6 +371,7 @@ ro:
             '"PINEAPPLE"': ananași
             '"ROBOT"': robot
             '"SHARK"': rechini
+            '"SLOTH"': leneș
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -311,6 +400,7 @@ ro:
             '"PINEAPPLE"': ananași
             '"ROBOT"': robot
             '"SHARK"': rechini
+            '"SLOTH"': leneș
             '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": sus
@@ -350,13 +440,31 @@ ro:
             '20': '20'
           COSTUME:
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           LAYOUT:
+            '"border"': margine
+            '"inner"': pătrat interior
             '"diamond"': diamant
+            '"circle"': cerc
             '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
+            '"x"': încrucişat
+            '"plus"': plus
             '"random"': aleator
       Dancelab_mixColors:
         text: amestecă {COLOR1} şi {COLOR2}
@@ -379,6 +487,33 @@ ro:
         options:
           EFFECT:
             '"none"': Nici unul
+            '"circles"': Cercuri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"swirl"': Hipnotic
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"splatter"': Stropi de vopsea
+            '"rainbow"': Curcubeu
+            '"snowflakes"': Zăpadă
+            '"text"': Nume cântec
+            '"galaxy"': Spaţiu
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"disco"': Pătrate
+            '"stars"': Stele
+          PALETTE:
+            '"rave"': Negru şi alb
+            '"cool"': Interesant
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"default"': Lumină
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           setează efectul de fundal la
@@ -386,6 +521,41 @@ ro:
         options:
           EFFECT:
             '"none"': Nici unul
+            '"rand"': Aleatoriu
+            '"circles"': Cercuri
+            '"quads"': Îngeri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"growing_stars"': Stele crescânde
+            '"swirl"': Hipnotic
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"splatter"': Stropi de vopsea
+            '"rainbow"': Curcubeu
+            '"ripples_random"': Ondulații aleatorii
+            '"ripples"': Ondulații
+            '"snowflakes"': Zăpadă
+            '"text"': Nume cântec
+            '"squiggles"': Mâzgălituri
+            '"galaxy"': Spaţiu
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"disco"': Pătrate
+            '"stars"': Stele
+            '"music_wave"': Valuri
+          PALETTE:
+            '"rave"': Negru şi alb
+            '"cool"': Interesant
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"default"': Lumină
+            '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
       Dancelab_setDanceSpeed:
         text: setează {SPRITE} la viteza de dans {SPEED}
         options:
@@ -401,10 +571,17 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           SPEED:
             '1': normal
             '2': repede
@@ -416,11 +593,42 @@ ro:
         options:
           EFFECT:
             '"none"': Nici unul
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts_red"': Inimi
+            '"music_notes"': Note muzicale
+            '"pineapples"': Ananaşi
+            '"pizzas"': Piţe
+            '"smiling_poop"': Căcăţel
+            '"rain"': Ploaie
+            '"floating_rainbows"': Curcubeu
+            '"smile_face"': Zâmbete
+            '"spotlight"': Reflector
+            '"color_lights"': Lumini de scenă
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: setează efect pentru planul din faţă {EFFECT}
         options:
           EFFECT:
             '"none"': Nici unul
+            '"rand"': Aleatoriu
+            '"bubbles"': Baloane
+            '"hearts_colorful"': Inimi colorate
+            '"confetti"': Confeti
+            '"emojis"': Emoticoane
+            '"hearts_red"': Inimi
+            '"music_notes"': Note muzicale
+            '"paint_drip"': Strop de culoare
+            '"pineapples"': Ananaşi
+            '"pizzas"': Piţe
+            '"smiling_poop"': Căcăţel
+            '"rain"': Ploaie
+            '"floating_rainbows"': Curcubeu
+            '"smile_face"': Zâmbete
+            '"spotlight"': Reflector
+            '"color_lights"': Lumini de scenă
+            '"exploding_stars"': Accelerare
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'setează {SPRITE} {PROPERTY} la {VAL} '
         options:
@@ -428,20 +636,34 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
       Dancelab_setPropEach:
         text: setare {GROUP} {PROPERTY} pe {VAL}
         options:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_setPropRandom:
         text: alege aleatoriu {SPRITE} {PROPERTY}
         options:
@@ -449,20 +671,35 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_setPropRandomEach:
         text: alege aleatoriu {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
       Dancelab_setTint:
         text: setează {SPRITE} nuanţa la {VAL}
       Dancelab_setTintEach:
@@ -471,20 +708,34 @@ ro:
           THIS:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
       Dancelab_setTintEachInline:
         text: setează {THIS} nuanţa la {VAL}
         options:
           THIS:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
       Dancelab_setTintInline:
         text: setează {SPRITE} nuanţa la {VAL}
       Dancelab_setVisible:
@@ -499,10 +750,17 @@ ro:
           THIS:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           VISIBILITY:
             'true': vizibil
             'false': invizibil
@@ -513,6 +771,10 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
           RANGE:
             '"bass"': sunet jos
             '"mid"': sunet mediu
@@ -523,14 +785,25 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"tint"': tentă
           RANGE:
             '"bass"': sunet jos
             '"mid"': sunet mediu
@@ -542,6 +815,11 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
           RANGE:
             '"bass"': sunet jos
             '"mid"': sunet mediu
@@ -552,14 +830,26 @@ ro:
           GROUP:
             sprites: toate
             '"ALIEN"': extratereștrii
+            '"BEAR"': urșii
             '"CAT"': pisicile
             '"DOG"': câinii
+            '"DUCK"': rațele
+            '"FROG"': toate broaștele
             '"MOOSE"': toţi elanii
+            '"PINEAPPLE"': toţi ananaşii
             '"ROBOT"': toţi roboţii
+            '"SHARK"': toţi rechinii
+            '"SLOTH"': leneși
+            '"UNICORN"': unicorni
           PROPERTY:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
+            '"rotation"': rotație
+            '"x"': poziţie orizontală
+            '"y"': poziţie verticală
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
           RANGE:
             '"bass"': sunet jos
             '"mid"': sunet mediu
@@ -568,9 +858,39 @@ ro:
         text: tradu {STRING}
         options:
           STRING:
+            '"music_wave"': Valuri
+            '"ripples"': Ondulații
+            '"ripples_random"': Ondulații aleatorii
+            '"quads"': Îngeri
+            '"flowers"': Flori
+            '"popsicles"': Acadele
+            '"squiggles"': Mâzgălituri
+            '"growing_stars"': Stele crescânde
+            '"emojis"': Emoticoane
+            '"hearts_colorful"': Inimi
+            '"paint_drio"': Strop de culoare
+            '"exploding_stars"': Accelerare
+            '"row_top"': rândul de sus
+            '"row_bottom"': rândul de jos
+            '"column_left"': coloana stângă
+            '"column_right"': coloana dreaptă
             '"diamond"': diamant
+            '"mural"': Frescă
+            '"safari"': Safari
+            '"network"': Rețea
+            '"highway"': Autostradă
+            '"stream"': Flux
+            '"tile"': Ceramică
+            '"shadow"': Umbră
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -589,9 +909,34 @@ ro:
             '"down"': jos
             '"right"': dreapta
             '"space"': spaţiu
+            '"enter"': enter
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -614,6 +959,10 @@ ro:
         text: configurare
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} începe {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': evită
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -625,8 +974,10 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
             '"speed"': viteză
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} atinge {SPRITE2}"
@@ -640,6 +991,8 @@ ro:
         text: a făcut clic pe {SPRITE}
       gamelab_comment:
         text: 'comentariu: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "face un nou sprite \n numit {NAME} \n cu {COSTUME} \n la {LOCATION}"
       gamelab_destroy:
@@ -653,11 +1006,17 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
+            '"tint"': tentă
             '"speed"': viteză
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': acest
       gamelab_getTime:
         options:
           UNIT:
@@ -672,9 +1031,32 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} atinge marginile"
       gamelab_jumpTo:
@@ -691,11 +1073,41 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_locationMouse:
         text: locația mouse-ului
       gamelab_locationOf:
@@ -716,6 +1128,12 @@ ro:
         text: mută {SPRITE} {DISTANCE} pixeli înainte
       gamelab_moveInDirection:
         text: mută {SPRITE} {DISTANCE} pixeli {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_moveToward:
         text: mută {SPRITE} pixeli {DISTANCE} spre {TARGET}
       gamelab_newSpritePointer:
@@ -726,6 +1144,12 @@ ro:
         text: PlaySound {SOUND}
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Est
+            '"South"': Sud
+            '"West"': Vest
       gamelab_printText:
         text: afişează {TEXT}
       gamelab_randColor:
@@ -757,6 +1181,7 @@ ro:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rețea
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': curcubeu
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stele
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
@@ -775,10 +1200,13 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
             '"speed"': viteză
       gamelab_setProp_dropdown:
+        text: setează {SPRITE} {PROPERTY} la {SIZE}
         options:
           PROPERTY:
             '"scale"': dimensiune
@@ -830,6 +1258,10 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenLeftArrow:
         text: când săgeata stânga este apăsată
       gamelab_whenRightArrow:
@@ -849,6 +1281,10 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileLeftArrow:
         text: în timp ce săgeata stânga este apăsată
       gamelab_whileRightArrow:
@@ -857,6 +1293,14 @@ ro:
         text: cât timp {SPRITE1} atinge {SPRITE2}
       gamelab_whileUpArrow:
         text: în timp ce săgeata sus este apăsată
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': very low
+            '25': mic
+            '50': 50/50
+            '75': mare
+            '90': very high
       gamelab_xLocationOf:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
@@ -880,8 +1324,10 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -901,22 +1347,28 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_groupChangeAnim:
         text: schimbă {SELECT} {COSTUME} cu {COSTUME2}
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupChangePropBy:
         text: schimbă {PROPERTY} a {SELECT} {COSTUME} cu {VAL}
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_groupCreateNewSprite:
         text: crează un nou {COSTUME} la {LOCATION}
         options:
@@ -936,6 +1388,7 @@ ro:
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupDisplace:
         text: toate {COSTUME} le blochează pe {COSTUME2} să se mişte
       Mikelab_groupEdgesDisplace:
@@ -943,39 +1396,51 @@ ro:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          SELECT:
+            '"average"': medie
+            '"this"': acest
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_groupRemoveAllBehaviors:
         text: opri {SELECT} {COSTUME} comportamente
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} opreşte {BEHAVIOR}"
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupRemoveTint:
         text: elimină culoarea din {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupSetProp:
         text: setează {PROPERTY} a {SELECT} {COSTUME} cu {VAL}
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_groupSetTint:
         text: schimbă culoarea {SELECT} {COSTUME} cu {COLOR}
         options:
           SELECT:
             '"all"': toate
+            '"this"': acest
       Mikelab_groupWhenClickedOn:
         text: când {COSTUME} e apăsat
       Mikelab_groupWhenXTouchesY:
@@ -1035,6 +1500,8 @@ ro:
           DANCE:
             MOVES.ClapHigh: peşte
             MOVES.Clown: nu e eticheta-mea
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1057,8 +1524,10 @@ ro:
         options:
           PROPERTY:
             '"scale"': dimensiune
+            '"rotation"': rotație
             '"x"': poziţia x
             '"y"': poziţia y
+            '"direction"': direcţie de mişcare
       Mikelab_setupSim:
         text: |-
           configurează simularea cu
@@ -1114,6 +1583,10 @@ ro:
         text: când se face clic cu mouse-ul
       Mikelab_whenYesNoClicked:
         text: când {KEY} e apăsat
+        options:
+          KEY:
+            '"yes"': da
+            '"no"': nu
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1126,13 +1599,19 @@ ro:
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
       PoemBot_setBackgroundEffect:
+        text: |-
+          setează efectul de fundal la
+          {BG_EFFECT} [PALETTE][1]
         options:
           BG_EFFECT:
+            '"solid"': solid
             '"rainbow"': curcubeu
       PoemBot_setForegroundEffect:
+        text: setează efect pentru planul din faţă {FG_EFFECT}
         options:
           FG_EFFECT:
             '"rain"': ploaie
+            '"bubbles"': baloane
       RyanLab_moveForward:
         text: mută înainte
       RyanLab_turnLeft:
@@ -1170,6 +1649,8 @@ ro:
         options:
           FORMAT:
             '"grid"': rețea
+            '"border"': margine
+            '"row"': rând
             '"random"': aleator
       aalab_someGraduallyStartIntervention:
         options:
@@ -1195,6 +1676,7 @@ ro:
           VAL:
             '0': oprit
             '1': pornit
+            '"toggle"': comută
       binary_drawString:
         text: trage șir {STR}
       binary_goTo:
@@ -1220,6 +1702,10 @@ ro:
             '"left"': stânga
             '"right"': dreapta
             '"space"': spaţiu
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           dacă drumul {DIR}
@@ -1227,23 +1713,55 @@ ro:
         options:
           DIR:
             "'ahead'": inainte
+            "'right'": în dreapta
+            "'left'": în stânga
       craft_ifStandingOn:
         text: dacă stă pe {TYPE}{STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": coral roșu
+            "'redCoralBlock'": coral roșu
             "'sand'": nisip
+            "'wool_blue'": apă adâncă
             "'planksOak'": cherestea de stejar
       craft_ifStandingOnLimit:
         text: dacă stă pe {TYPE}{STATEMENT}
         options:
           TYPE:
             "'sand'": nisip
+            "'darkPrismarine'": prismarin întunecat
       craft_log:
         text: mesaj jurnal {MESSAGE}
       craft_moveForward:
         text: mută înainte
       craft_placeBlock:
         text: așază {blockType}
+        options:
+          blockType:
+            '"strippedOak"': stejar dungat
+            '"strippedDarkOak"': stejar dungat întunecat
+            '"stoneBricks"': cărămizi de piatră
+            '"mossyStoneBricks"': cărămizi de piatră cu muşchi
+            '"crackedStoneBricks"': cărămizi de piatra crăpate
+            '"chiseledStoneBricks"': cărămizi decorative
+            '"blueCoralBlock"': bloc de coral albastru
+            '"pinkCoralBlock"': bloc de coral roz
+            '"magentaCoralBlock"': bloc de coral maro
+            '"redCoralBlock"': bloc de coral roşu
+            '"yellowCoralBlock"': bloc de coral galben
+            '"blueDeadCoralBlock"': bloc mort de coral albastru
+            '"pinkDeadCoralBlock"': bloc mort de coral roz
+            '"magentaDeadCoralBlock"': bloc mort de coral maro
+            '"readDeadCoralBlock"': bloc mort de coral roşu
+            '"yellowDeadCoralBlock"': bloc mort de coral galben
+            '"prismarine"': prismarin
+            '"darkPrismarine"': prismarin întunecat
+            '"packedIce"': gheaţă împachetată
+            '"blueIce"': gheaţă albastră
+            '"blackConcrete"': beton negru
+            '"seaGrass"': iarbă de mare
+            '"kelp"': alge
+            '"polishedGranite"': granit lustruit
       craft_placePrismarine:
         text: așază prismarinul
       craft_placeTorch:
@@ -1260,8 +1778,12 @@ ro:
         text: creează {ENTITY}
         options:
           ENTITY:
+            '"cod"': cod
             '"dolphin"': delfin
+            '"salmon"': somon
+            '"seaTurtle"': ţestoasă de mare
             '"squid"': sepie
+            '"tropicalFish"': peşte tropical
       craft_turn:
         text: întoarce {DIR}
         options:

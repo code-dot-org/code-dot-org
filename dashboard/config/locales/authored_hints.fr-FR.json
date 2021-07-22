@@ -10590,6 +10590,9 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Tu devrais seulement avoir besoin d'ajouter 2 blocs pour amener ce puzzle où il devrait être. ",
           "iceage_warn_ice_age_b": "Ajouter les 2 nouveaux blocs sous `lorsque l'exécution commence` pour qu'ils démarrent juste après le départ du programme."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

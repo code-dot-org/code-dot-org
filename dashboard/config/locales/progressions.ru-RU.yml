@@ -2,6 +2,7 @@
 ru:
   data:
     progressions:
+      '"If/Else" with the Bee': '"If/Else" с Пчёлкой'
       Accelerometer Events: События акселерометра
       Adding Images: Добавление изображений
       Adding Screens: Добавление экранов
@@ -10,10 +11,12 @@ ru:
       'Artist: Variables': 'Художник: Переменные'
       Binary Numbers: Двоичные числа
       Challenge: Испытание
+      'Conditionals: If Statements': " Операторы Если"
       Debugging: Отладка
       Design Mode: Режим дизайна
       Drawing: Рисование
       Events: События
+      'Exploration: For Loops': " Циклы с параметром"
       For Loops: Циклы с параметром
       Free Play: Свободная игра
       Functions: функции
@@ -24,6 +27,7 @@ ru:
       Lesson Extras: Дополнения к уроку
       Lists: Списки
       Measures: Такты
+      'Mini-Project: Outbreak Simulator': " Симулятор эпидемии"
       My Online Neighborhood: Мой Онлайн-Район
       Pair Programming: Программирование в парах
       Picturing Data: Изображение данных
@@ -42,5 +46,24 @@ ru:
       Using the Repeat Block: Использование блока Повтор
       Velocity: Скорость
       Video: Видео
+      'Video: Conditionals: If Statements': "  Операторы Если"
+      'Video: Events': " События"
+      'Video: Getting Loopy': " Зацикливание"
+      'Video: How to Make a Sprite': " Как создать спрайт?"
+      'Video: Introducing Sprite Lab': " Представляем Лабораторию спрайтов"
+      'Video: Introduction to Play Lab': " Лаборатория игр. Введение"
+      'Video: Loops in Artist': " Циклы в исполнителе Художник"
+      'Video: Measures': " Такты"
+      'Video: Minecraft - Congratulations': " Minecraft - поздравляем"
+      'Video: Nested Loops': " Вложенные циклы"
+      'Video: Pair Programming': " Программирование в парах"
+      'Video: Pair Programming ': " Программирование в парах "
+      'Video: Programming with Rey and BB-8': " Программирование с Рееем и BB-8"
+      'Video: Properties': " Свойства"
+      'Video: Sprites in Action': " Спрайты в действии"
+      'Video: Star Wars Project': " Проект Звёздные войны"
+      'Video: The Harvester': " Харвестер"
+      'Video: Using the Repeat Block': " Использование блока Повтор"
       While Loops with the Farmer: Цикл while в Фермере
       Wrap-up: Итоги
+      Your Personal Website: Ваш личный веб-сайт

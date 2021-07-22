@@ -1656,6 +1656,7 @@ ru-RU:
         content1: описание здесь
       OPD-K5 using lesson plans:
         content1: описание здесь
+        markdown: " \n\n   \n\n\n\n\n"
       OPD-K5 variables:
         content1: описание здесь
       OPD-K5 variables introduction:
@@ -5911,6 +5912,7 @@ ru-RU:
            Сыграй в карточную игру, создав правила, такие как "если я вытяну карту красной масти, я получу очку" и "если я вытяну карту черной масти, ты получишь очко"
       CourseF_outbreak_story:
         content1: описание здесь
+        markdown: " \n  \n\n    \n\n  \n\n  \n\n  \n\n\n\n   \n\n\n\n\n\n\n\n\n  \n"
       CourseF_outbreak_story2:
         content1: описание здесь
         markdown: |
@@ -6030,7 +6032,7 @@ ru-RU:
           feedback: 'Верно
 
 '
-        - {}
+        - feedback: Неверно. Художник нарисует квадрат.
         questions:
         - text: Посмотри внимательно на приводимый ниже код. Что произойдет, когда
             ты нажмешь на "Выполнить"?
@@ -6055,12 +6057,15 @@ ru-RU:
             фермерша после того, как ты нажмешь на "Выполнить"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
+        - text: " "
+          feedback: 'Неверно. '
         - correct: true
+          feedback: 'Верно '
         - correct: true
-        - {}
+          feedback: 'Верно '
+        - feedback: " "
         questions:
-        - {}
+        - text: " "
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: В итоге птичка не дойдет до свинки на один шаг.
@@ -6197,7 +6202,8 @@ ru-RU:
             собрать нектар, только если под облачком скрывается цветок.
 
 '
-        - feedback: 'Неверно. Блок "если у цветка" гарантирует, что пчела будет пытаться
+        - text: " "
+          feedback: 'Неверно. Блок "если у цветка" гарантирует, что пчела будет пытаться
             собрать нектар, только если под облачком скрывается цветок.
 
 '
@@ -6464,12 +6470,13 @@ ru-RU:
         - text: 'Ничего не произойдет.
 
 '
-        - {}
+          feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         - correct: true
           feedback: 'Верно
 
 '
-        - {}
+        - feedback: 'Неверно. '
         questions:
         - text: 'Посмотри внимательно на приводимый ниже код. Что произойдет, когда
             ты нажмешь на "Выполнить"?
@@ -6584,12 +6591,13 @@ ru-RU:
         - text: 'Ничего не произойдет.
 
 '
-        - {}
+          feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         - correct: true
           feedback: 'Верно
 
 '
-        - {}
+        - feedback: 'Неверно. '
         questions:
         - text: 'Посмотри внимательно на приводимый ниже код. Что произойдет, когда
             ты нажмешь на "Выполнить"?
@@ -6597,21 +6605,23 @@ ru-RU:
 '
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
+        - feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         - correct: true
-        - {}
+          feedback: 'Верно '
+        - feedback: 'Неверно. '
         questions:
         - {}
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
+        - feedback: 'Неверно. '
+        - feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         - correct: true
-        - {}
+          feedback: 'Верно '
+        - feedback: 'Неверно. '
         questions:
-        - {}
+        - text: " "
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: 'Художник нарисует треугольник со сторонами длиной 50 точек.
@@ -6666,7 +6676,8 @@ ru-RU:
             но она доберется всего до 4 цветков.
 
 '
-        - feedback: 'Неверно. Цикл for позволит пчеле собрать нужное количество нектара,
+        - text: " "
+          feedback: 'Неверно. Цикл for позволит пчеле собрать нужное количество нектара,
             но она доберется всего до 4 цветков.
 
 '
@@ -6678,22 +6689,25 @@ ru-RU:
 '
       courseF_sprites_predict_multi:
         answers:
-        - {}
+        - feedback: 'Неверно. '
         - correct: true
-        - {}
-        - {}
+          feedback: 'Верно '
+        - feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         questions:
         - {}
       courseF_variables_predict_multi:
         answers:
-        - {}
+        - feedback: 'Неверно. '
         - correct: true
-        - {}
-        - {}
+          feedback: 'Верно '
+        - feedback: 'Неверно. '
+        - feedback: 'Неверно. '
         questions:
-        - {}
+        - text: "   "
       courseF_variables_stop:
         content1: описание здесь
+        markdown: "\n\n \n\n\n \n\n\n\n \n\n\n\n\n\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Художник решит головоломку правильно.
@@ -6727,10 +6741,28 @@ ru-RU:
 '
       csf_be_a_super_digital_citizen_2021:
         content1: описание здесь
+        markdown: "\n"
       csf_password_power-up_2021:
         content1: описание здесь
+        markdown: |2+
+
+
+
+
+
+
+
       csf_putting_a_stop_to_online_meanness_2021:
         content1: описание здесь
+        markdown: |2+
+
+
+
+
+
+
+
+
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: С помощью этого кода Лорел соберет 4 части клада.
@@ -6750,3 +6782,67 @@ ru-RU:
         questions:
         - text: Внимательно посмотри на этот код. Что, по-твоему, произойдет при запуске
             программы?
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: " \n"
+      PowerOfWords-Unplugged_2021:
+        markdown: "\n"
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: "\n"
+      SimonSays-Unplugged_2021:
+        markdown: "\n"
+      courseAB_EOC_2021:
+        description: " "
+      courseB_EOC_2021:
+        description: " "
+      courseD_EOC_2021:
+        description: " "
+      courseD_EOC_examples_2021:
+        description: " "
+      courseE_EOC_2021:
+        description: " "
+      courseE_EOC_examples_2021:
+        description: " "
+      courseF_EOC_2021:
+        description: " "
+      courseF_EOC_examples_2021:
+        description: " "
+      courseF_EOC_samples_2021:
+        description: " "
+      courseF_artist_practice:
+        description: "   "
+      courseF_beeFor_practice:
+        description: "   "
+      courseF_beeVar_practice:
+        description: "   "
+      courseF_bee_practice:
+        description: "   "
+      courseF_events_freeplay:
+        description: " "
+      courseF_events_practice:
+        description: "   "
+        teacher_markdown: " \n\n\n\n\n\n\n"
+      courseF_intro_apps:
+        description: "   "
+        teacher_markdown: " \n\n \n"
+      courseF_sprites_freeplay:
+        description: " "
+      courseF_sprites_practice:
+        description: "   "
+        teacher_markdown: " \n\n\n\n\n\n\n"
+      courseF_text_practice:
+        description: "   "
+        teacher_markdown: " \n\n\n\n\n\n\n"
+      courseF_variables_projects:
+        description: " "
+        teacher_markdown: " \n\n     \n"
+      courseF_variables_samples:
+        description: "  "
+        teacher_markdown: " \n\n \n"
+      csf_digital_trails_2021:
+        markdown: "\n"
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: "\n"
+      express_EOC_2021:
+        description: " "
+      express_EOC_examples_2021:
+        description: " "

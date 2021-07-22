@@ -9497,7 +9497,11 @@
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_a": "Wyciągnij menu rozwijane zdarzenia \"Gdy strzałka **\\_**\", aby zmienić kierunek elementów sterujących blokiem.",
           "courseE_playLab_scaffold1_b": "Powinieneś mieć cztery bloki zdarzeń \"kiedy strzałka\" z kierunkiem poruszania się pod każdym z nich.",
-          "courseE_playLab_scaffold1_c": "Kiedy skończysz, będziesz mógł poruszać swoim bohaterem przy pomocy klawiszy strzałek!"
+          "courseE_playLab_scaffold1_c": "Kiedy skończysz, będziesz mógł poruszać swoim bohaterem przy pomocy klawiszy strzałek!",
+          "playlab_up": "Aby przenieść aktora w górę, możesz połączyć te bloki:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Aby przenieść aktora w dół, możesz połączyć te bloki:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Aby przenieść aktora w lewo, możesz połączyć te bloki:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Aby przenieść aktora w prawo, możesz połączyć te bloki:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>\n "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Użyj bloku \"zdobądź punkt\", aby dodać punkt, oraz \"usuń punkt\", aby odjąć punkt."

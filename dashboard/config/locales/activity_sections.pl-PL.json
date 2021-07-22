@@ -20,6 +20,9 @@
             null
           ]
         },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Zaproponuj ulepszenie"
+        },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "Refleksja"
         },
@@ -29,7 +32,8 @@
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
-          "name": "Wstęp"
+          "name": "Wstęp",
+          "description": "#### Instrukcje dla Sceny"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
           "name": "Tworzenie duszków",
@@ -207,6 +211,9 @@
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
           "progression_name": "Przewidywanie"
+        },
+        "114f0276-db5c-466e-ad8a-a6488a93f019": {
+          "progression_name": "Film: Zmienne z Artystą"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
           "progression_name": "Budowanie umiejętności"
@@ -1445,6 +1452,9 @@
             null
           ]
         },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "progression_name": "Film:: Rozgrzewka "
+        },
         "09a6a786-084e-4677-a2cf-3306ef1a6e83": {
           "progression_name": "Ćwiczenia"
         },
@@ -1471,6 +1481,9 @@
             null
           ]
         },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "progression_name": "Film: Podsumowanie"
+        },
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
           "progression_name": "Czas na zabawę"
         },
@@ -1482,6 +1495,9 @@
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Ocena"
+        },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "Możliwości międzyprzedmiotowe"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Wprowadzenie do Pętli"
@@ -1640,6 +1656,9 @@
         },
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "5b71ce88-2e79-4478-888a-796bed9dacb9": {
+          "progression_name": "Film: Pętle \"dopóki\" z Farmerem"
         },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "Przewidywanie"
@@ -1860,7 +1879,8 @@
           "name": "Refleksja"
         },
         "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
-          "name": "Wstęp"
+          "name": "Wstęp",
+          "description": "#### Instrukcje dla Sceny"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
           "name": "Tworzenie duszków",
@@ -1957,6 +1977,9 @@
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Refleksja"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Możliwości międzyprzedmiotowe"
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Wstęp"
@@ -2112,6 +2135,9 @@
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
           "progression_name": "Budowanie umiejętności"
+        },
+        "2094fb7f-31a7-4639-be69-0baf39649007": {
+          "progression_name": "Film: Pętle \"dopóki\" z Farmerem"
         },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "Przewidywanie"
@@ -2330,6 +2356,9 @@
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
           "progression_name": "Przewidywanie"
+        },
+        "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
+          "progression_name": "Film: Zmienne z Artystą"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
           "progression_name": "Budowanie umiejętności"
@@ -2996,6 +3025,9 @@
             null
           ],
           "progression_name": "Budowanie umiejętności"
+        },
+        "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
+          "progression_name": "Film: Pętle \"dopóki\" z Farmerem"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "Przewidywanie"

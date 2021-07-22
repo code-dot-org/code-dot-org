@@ -7,10 +7,16 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           MOVE1:
             MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
@@ -39,20 +45,35 @@
         text: etter {TIMESTAMP} {UNIT}
         options:
           UNIT:
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: endre {COLOR} {METHOD} av [AMOUNT]-[2]
+        options:
+          METHOD:
+            '"hue"': fargetone
+            '"saturation"': metning
+            '"brightness"': lysstyrke
       Dancelab_changeMoveEachLR:
         text: "{GROUP} gjør {MOVE} {DIR} for alltid"
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           MOVE:
+            '"next"': "(Neste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfeldig)"
             MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
@@ -68,6 +89,9 @@
         text: "{SPRITE} gjør {MOVE} {DIR} for alltid"
         options:
           MOVE:
+            '"next"': "(Neste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfeldig)"
             MOVES.Roll: Kroppsrulling
             MOVES.ClapHigh: Klapp høyt
             MOVES.Dab: Dab
@@ -86,30 +110,50 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
       Dancelab_changePropEachBy:
+        text: endre {GROUP} {PROPERTY} med {VAL}
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
       Dancelab_doMoveEachLR:
         text: "{GROUP} gjør {MOVE} {DIR} en gang"
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           MOVE:
+            '"rand"': "(Tilfeldig)"
             MOVES.XBend: Bøy
             MOVES.Roll: Kroppsrulling
             MOVES.XClapSide: Klapp
@@ -137,6 +181,7 @@
         text: "{SPRITE} gjør {MOVE} {DIR} en gang"
         options:
           MOVE:
+            '"rand"': "(Tilfeldig)"
             MOVES.XBend: Bøy
             MOVES.Roll: Kroppsrulling
             MOVES.XClapSide: Klapp
@@ -164,6 +209,7 @@
         text: 'hver {N} {UNIT} '
         options:
           UNIT:
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_everySecondsRange:
         text: 'hver {N} {UNIT} fra {START} til {STOP} '
@@ -173,6 +219,10 @@
             seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'hver {UNIT} '
+        options:
+          UNIT:
+            '"verse"': vers
+            '"chorus"': refreng
       Dancelab_getEnergy:
         text: hent {RANGE}
         options:
@@ -187,10 +237,15 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
       Dancelab_getTime:
         text: gjeldende tid i [UNIT]-[0]
         options:
           UNIT:
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_ifDanceIs:
         text: |-
@@ -215,6 +270,7 @@
           {DO1} {DO2}
         options:
           UNIT:
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_jumpTo:
         text: "{SPRITE} hopp til {LOCATION}"
@@ -235,10 +291,16 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           LOCATION:
             "{x: 200, y: 100}": topp
             "{x: 200, y: 300}": bunn
@@ -255,13 +317,26 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           FORMAT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
             '"diamond"': diamant
+            '"circle"': sirkel
             '"grid"': rutenett
+            '"row"': klasse
+            '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -321,15 +396,48 @@
           lag {N} ny {COSTUME}
           i et {LAYOUT}
         options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           COSTUME:
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           LAYOUT:
+            '"border"': kantlinje
+            '"inner"': indre kvadrat
             '"diamond"': diamant
+            '"circle"': sirkel
             '"grid"': rutenett
+            '"row"': klasse
+            '"column"': kolonne
+            '"x"': kryss
+            '"plus"': pluss
             '"random"': tilfeldig
       Dancelab_mixColors:
         text: bland {COLOR1} og {COLOR2}
@@ -350,11 +458,66 @@
         options:
           EFFECT:
             '"none"': Ingen
+            '"circles"': Tunnel
+            '"color_cycle"': Farger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnbue
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"galaxy"': Verdensrom
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"default"': Lys
+            '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setBackgroundEffectWithPalette:
         text: velg bakgrunnseffekt {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"circles"': Tunnel
+            '"color_cycle"': Farger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Rosa splætt
+            '"rainbow"': Regnbue
+            '"snowflakes"': Snø
+            '"text"': Sangtittel
+            '"galaxy"': Verdensrom
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"stars"': Stjerner
+          PALETTE:
+            '"rave"': Svart-hvitt
+            '"cool"': Blåfarger
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"default"': Lys
+            '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
       Dancelab_setDanceSpeed:
         text: sett {SPRITE} dansehastighet til {SPEED}
         options:
@@ -370,10 +533,16 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           SPEED:
             '1': normal
             '2': rask
@@ -385,11 +554,38 @@
         options:
           EFFECT:
             '"none"': Ingen
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musikknoter
+            '"pineapples"': Ananaser
+            '"pizzas"': Pizzaer
+            '"smiling_poop"': Bæsj
+            '"rain"': Regn
+            '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
+            '"spotlight"': Spotlight
+            '"color_lights"': Scenelys
+            '"raining_tacos"': Taco
       Dancelab_setForegroundEffectExtended:
         text: sett forgrunneffekt {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
+            '"rand"': "(Tilfeldig)"
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts_red"': Hjerter
+            '"music_notes"': Musikknoter
+            '"pineapples"': Ananaser
+            '"pizzas"': Pizzaer
+            '"smiling_poop"': Bæsj
+            '"rain"': Regn
+            '"floating_rainbows"': Regnbue
+            '"smile_face"': Smilefjes
+            '"spotlight"': Spotlight
+            '"color_lights"': Scenelys
+            '"raining_tacos"': Taco
       Dancelab_setProp:
         text: 'sett {SPRITE} {PROPERTY} til {VAL} '
         options:
@@ -397,20 +593,33 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
       Dancelab_setPropEach:
         text: sett {GROUP} {PROPERTY} til {VAL}
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
       Dancelab_setPropRandom:
         text: tilfeldig {SPRITE} {PROPERTY}
         options:
@@ -418,19 +627,34 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
       Dancelab_setPropRandomEach:
+        text: tilfeldig {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
       Dancelab_setTint:
         text: sett {SPRITE} fargetone til {VAL}
       Dancelab_setTintEach:
@@ -439,20 +663,32 @@
           THIS:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
       Dancelab_setTintEachInline:
         text: sett {THIS} fargetone til {VAL}
         options:
           THIS:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
       Dancelab_setTintInline:
         text: sett {SPRITE} fargetone til {VAL}
       Dancelab_setVisible:
@@ -467,10 +703,16 @@
           THIS:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           VISIBILITY:
             'true': synlig
             'false': usynlig
@@ -481,6 +723,10 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
           RANGE:
             '"bass"': bass
             '"mid"': mellomtone
@@ -490,14 +736,24 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"tint"': fargetone
           RANGE:
             '"bass"': bass
             '"mid"': mellomtone
@@ -509,6 +765,11 @@
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"direction"': bevegelsesretning
+            '"tint"': fargetone
           RANGE:
             '"bass"': bass
             '"mid"': mellomtone
@@ -518,14 +779,25 @@
           GROUP:
             sprites: alle
             '"ALIEN"': alle romvesener
+            '"BEAR"': bjørner
             '"CAT"': alle katter
             '"DOG"': alle hunder
+            '"DUCK"': ender
+            '"FROG"': frosker
             '"MOOSE"': alle elger
+            '"PINEAPPLE"': ananaser
             '"ROBOT"': alle roboter
+            '"SHARK"': haier
+            '"UNICORN"': enhjørninger
           PROPERTY:
             '"scale"': størrelse
             '"width"': bredde
             '"height"': høyde
+            '"rotation"': rotasjon
+            '"x"': horisontal posisjon
+            '"y"': vertikal posisjon
+            '"direction"': bevegelsesretning
+            '"tint"': fargetone
           RANGE:
             '"bass"': bass
             '"mid"': mellomtone
@@ -533,9 +805,19 @@
       Dancelab_translateStrings:
         options:
           STRING:
+            '"hearts_colorful"': Hjerter
             '"diamond"': diamant
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"4"': '4'
+            '"5"': '5'
+            '"8"': '8'
       Dancelab_whenKey:
         text: når {KEY} trykkes
         options:
@@ -545,9 +827,31 @@
             '"down"': ned
             '"right"': høyre
             '"space"': verdensrommmet
+            '"enter"': enter
+            '"a"': a
+            '"d"': d
+            '"f"': f
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"4"': '4'
+            '"5"': '5'
+            '"8"': '8'
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -558,6 +862,12 @@
         text: oppsett
       Dancelab_whenSetup2:
         text: oppsett
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': unngå
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_atTime:
         options:
           UNIT:
@@ -567,8 +877,10 @@
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
             '"speed"': fart
       gamelab_checkTouching:
         options:
@@ -577,8 +889,12 @@
             '"while"': så lenge
       gamelab_clickedOn:
         text: når {SPRITE} klikkes på
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "lag en ny sprite \n kalt {NAME} \n med kostyme {COSTUME} \n plassert
           {LOCATION}"
@@ -593,9 +909,16 @@
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
+            '"tint"': fargetone
             '"speed"': fart
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': denne
       gamelab_getTime:
         options:
           UNIT:
@@ -610,9 +933,27 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+            '"a"': a
+            '"d"': d
+            '"f"': f
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} hopp til {LOCATION}"
       gamelab_keyPressed:
@@ -626,11 +967,37 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+            '"a"': a
+            '"d"': d
+            '"f"': f
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} piksler {DIRECTION} av {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       gamelab_locationMouse:
         text: musens plassering
       gamelab_locationOf:
@@ -649,12 +1016,28 @@
         text: gå {SPRITE} {DISTANCE} piksler fremover
       gamelab_moveInDirection:
         text: gå {SPRITE} {DISTANCE} piksler {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       gamelab_moveToward:
         text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Nord
+            '"East"': Øst
+            '"South"': Sør
+            '"West"': Vest
       gamelab_randColor:
         text: tilfeldig farge
       gamelab_randomColor:
@@ -681,6 +1064,7 @@
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbue
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervanns
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
+            undefined: ingen
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -689,13 +1073,17 @@
             '75': middels
             '100': large
       gamelab_setProp:
+        text: sett {SPRITE} {PROPERTY} til {VAL}
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
             '"speed"': fart
       gamelab_setProp_dropdown:
+        text: sett {SPRITE} {PROPERTY} til {SIZE}
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -705,6 +1093,7 @@
             '75': middels
             '100': large
       gamelab_setSizes:
+        text: sett {SPRITE} {PROPERTY} til {N}%
         options:
           PROPERTY:
             '"scale"': størrelse
@@ -715,6 +1104,8 @@
           CONDITION:
             '"when"': når
             '"while"': så lenge
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -729,6 +1120,10 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -737,12 +1132,20 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -759,20 +1162,26 @@
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_groupChangeAnim:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
       Mikelab_groupChangePropBy:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -789,38 +1198,56 @@
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
+      Mikelab_groupEdgesDisplace:
+        text: kantene blokkerer {COSTUME} fra å flytte seg
       Mikelab_groupGetProp:
         options:
+          SELECT:
+            '"this"': denne
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
       Mikelab_groupRemoveTint:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
       Mikelab_groupSetProp:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_groupSetTint:
         options:
           SELECT:
             '"all"': alle
+            '"this"': denne
+      Mikelab_groupWhenClickedOn:
+        text: når {COSTUME} klikkes på
       Mikelab_hasBehavior:
         text: "{SPRITE} er foreløpig {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: slett {TRASH}
       Mikelab_ifDanceIs:
         text: |-
           hvis {SPRITE} gjør {DANCE}
@@ -838,10 +1265,14 @@
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller det
             MOVES.Rest: Ingen
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: tilfeldig farge
       Mikelab_removeBehaviorSimple:
@@ -856,13 +1287,19 @@
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"rotation"': rotasjon
             '"x"': x-posisjon
             '"y"': y-posisjon
+            '"direction"': bevegelsesretning
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': høyre
             '"left"': venstre
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': under
       Mikelab_sprite:
         options:
           LOCATION:
@@ -900,6 +1337,12 @@
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        text: når {KEY} klikkes på
+        options:
+          KEY:
+            '"yes"': ja
+            '"no"': nei
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -908,13 +1351,17 @@
             '"left"': pil venstre
             '"right"': pil høyre
       PoemBot_setBackgroundEffect:
+        text: velg bakgrunnseffekt {BG_EFFECT} [PALETTE][1]
         options:
           BG_EFFECT:
+            '"solid"': solid
             '"rainbow"': regnbue
       PoemBot_setForegroundEffect:
+        text: sett forgrunneffekt {FG_EFFECT}
         options:
           FG_EFFECT:
             '"rain"': regn
+            '"bubbles"': bobler
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:
@@ -933,6 +1380,8 @@
         options:
           FORMAT:
             '"grid"': rutenett
+            '"border"': kantlinje
+            '"row"': klasse
             '"random"': tilfeldig
       aalab_someGraduallyStartIntervention:
         options:
@@ -966,6 +1415,10 @@
             '"left"': venstre
             '"right"': høyre
             '"space"': verdensrommmet
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           hvis sti til {DIR}
@@ -973,14 +1426,20 @@
         options:
           DIR:
             "'ahead'": foran
+            "'right'": til høyre
+            "'left'": til venstre
       craft_ifStandingOn:
         text: |-
           hvis står på {TYPE}
           {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": blå korall
+            "'redCoralBlock'": rød korall
             "'sand'": sand
+            "'wool_blue'": dypt vann
             "'planksOak'": eikeplanker
+            "'seaLantern'": sjølanterne
       craft_ifStandingOnLimit:
         text: |-
           hvis står på {TYPE}
@@ -988,12 +1447,41 @@
         options:
           TYPE:
             "'sand'": sand
+            "'darkPrismarine'": mørk prismarine
+            "'seaLantern'": sjølanterne
       craft_log:
         text: loggmelding {MESSAGE}
       craft_moveForward:
         text: gå fremover
       craft_placeBlock:
         text: plasser {blockType}
+        options:
+          blockType:
+            '"strippedOak"': strippet eik
+            '"strippedDarkOak"': strippet mørk eik
+            '"stoneBricks"': murstein
+            '"mossyStoneBricks"': mosegrodd murstein
+            '"crackedStoneBricks"': sprukket murstein
+            '"chiseledStoneBricks"': dekorativ murstein
+            '"blueCoralBlock"': blå korall blokk
+            '"pinkCoralBlock"': rosa korall blokk
+            '"magentaCoralBlock"': magenta korall blokk
+            '"redCoralBlock"': rød korall blokk
+            '"yellowCoralBlock"': gul korall blokk
+            '"blueDeadCoralBlock"': blå død korall blokk
+            '"pinkDeadCoralBlock"': rosa død korall blokk
+            '"magentaDeadCoralBlock"': magenta død korall blokk
+            '"readDeadCoralBlock"': rød død korallrev blokk
+            '"yellowDeadCoralBlock"': gul død korallrev blokk
+            '"prismarine"': prismarine
+            '"darkPrismarine"': mørk prismarine
+            '"seaLantern"': sjølanterne
+            '"packedIce"': pakket is
+            '"blueIce"': blå is
+            '"blackConcrete"': sort betong
+            '"seaGrass"': sjøgress
+            '"kelp"': tare
+            '"polishedGranite"': polert granitt
       craft_placePrismarine:
         text: plasser prismarine
       craft_placeTorch:
@@ -1008,8 +1496,12 @@
         text: skap {ENTITY}
         options:
           ENTITY:
+            '"cod"': torsk
             '"dolphin"': delfin
+            '"salmon"': laks
+            '"seaTurtle"': havskilpadde
             '"squid"': blekksprut
+            '"tropicalFish"': tropisk fisk
       craft_turn:
         text: snu mot {DIR}
         options:

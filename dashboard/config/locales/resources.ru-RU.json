@@ -14,6 +14,9 @@
         "sprites_in_action/coursef/2021": {
           "name": "Спрайты в действии"
         },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": ""
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Игры с циклами"
         },
@@ -29,6 +32,15 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Игры с циклами"
         },
+        "ai-ml/coursef/2021": {
+          "name": " Машинное обучение"
+        },
+        "ai-training/coursef/2021": {
+          "name": ""
+        },
+        "ai-societal/coursef/2021": {
+          "name": ""
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Интернет"
         },
@@ -37,6 +49,9 @@
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "интернет"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": ""
         },
         "implementation_guide/coursef/2021": {
           "name": "Руководство по применению"
@@ -49,6 +64,18 @@
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Документация Лаборатории спрайтов"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": ""
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": " Следуйте по Цифровому следу"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": ""
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": ""
         },
         "mimi-activity/courseb/2021": {
           "name": "Вперед, вперед"
@@ -101,6 +128,18 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Форум учителей"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": ""
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": " Мой Онлайн-Район"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": ""
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": ""
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Программирование в парах"
         },
@@ -125,6 +164,12 @@
         "teacher_forum_1/coursea/2021": {
           "name": "Форум учителей"
         },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": ""
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": ""
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Мои друзья роботы"
         },
@@ -142,6 +187,9 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Программирование в парах"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": ""
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Большое Событие"
@@ -175,6 +223,27 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Форум учителей"
+        },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": ""
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Программирование на бумаге в клеточку"
@@ -215,6 +284,12 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Эстафетное программирование"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": ""
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": " Оффлайн"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Условные выражения с картами"
         },
@@ -251,8 +326,17 @@
         "sprites_in_action/express/2021": {
           "name": "Спрайты в действии"
         },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": ""
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": ""
+        },
         "variables_video/express/2021": {
           "name": "Переменные"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": ""
         },
         "teacher_forum_1/express/2021": {
           "name": "Форум учителей"
@@ -260,11 +344,53 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Программирование в парах"
         },
+        "course_vocabulary/pre-express/2021": {
+          "name": ""
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Форум учителей"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Документация Лаборатории спрайтов"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": ""
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": " Очень Цифровой Гражданин"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": ""
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": " Private and Personal Information"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": ""
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": ""
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": ""
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": " Написание песен"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": " Написание песен"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": " Написание песен"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": " Написание песен"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": ""
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": ""
         },
         "implementation_guide/coursee/2021": {
           "name": "Руководство по применению"

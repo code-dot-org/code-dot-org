@@ -9421,7 +9421,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "У тебя должны быть четыре блока события \"при нажатии стрелки\" с направлением движения, указанным под каждым из них.",
-          "courseE_playLab_scaffold1_c": "Закончив, ты сможешь двигать своего героя клавишами со стрелками!"
+          "courseE_playLab_scaffold1_c": "Закончив, ты сможешь двигать своего героя клавишами со стрелками!",
+          "playlab_up": "<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>\n "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Используй блок \"прибавить очко\" для прибавления очка и блок \"отнять очко\" для его вычитания."
@@ -10525,6 +10529,37 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Тебе придется добавить всего два блока, чтобы довести эту головоломку до ума. ",
           "iceage_warn_ice_age_b": "Добавь новые блоки под событием \"при выполнении\", чтобы они выполнялись сразу же после начала программы."
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "\n\n",
+          "card_idea2": "\n\n",
+          "card_idea3": "\n\n"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "\n\n",
+          "chatbot_idea2": "\n\n",
+          "chatbot_idea3": "\n\n",
+          "chatbot_idea4": "\n\n"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "\n\n",
+          "card_idea2": "\n\n",
+          "card_idea3": "\n\n"
         }
       }
     }

@@ -126,6 +126,7 @@ kk:
             '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
+            '"enter"': еңгізу
             '"x"': x
       gamelab_atTime:
         options:
@@ -314,6 +315,11 @@ kk:
             '"right"': оңға қарай
             '"w"': Б
             '"s"': О
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': иә
+            '"no"': жоқ
       Mikelab_whileKeyPressed:
         options:
           KEY:

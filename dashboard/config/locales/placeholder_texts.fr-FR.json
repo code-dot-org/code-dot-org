@@ -236,6 +236,10 @@
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": " ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " "
         }
       }
     }

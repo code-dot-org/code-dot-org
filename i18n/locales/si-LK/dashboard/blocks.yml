@@ -139,10 +139,16 @@ si:
         options:
           THIS:
             '"ALIEN"': පිටසක්වල ජීවින්
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': දෘශ්‍යමාන
       Dancelab_setVisibleEach:
         options:
           THIS:
             '"ALIEN"': පිටසක්වල ජීවින්
+          VISIBILITY:
+            'true': දෘශ්‍යමාන
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -366,6 +372,11 @@ si:
             '"right"': දකුණු ඊතලය
             '"w"': බ
             '"s"': ද
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ඔව්
+            '"no"': නැහැ
       Mikelab_whileKeyPressed:
         options:
           KEY:

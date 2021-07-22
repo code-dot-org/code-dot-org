@@ -187,10 +187,16 @@ ky:
         options:
           THIS:
             sprites: баары
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': көрүнгөн
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: баары
+          VISIBILITY:
+            'true': көрүнгөн
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -301,6 +307,7 @@ ky:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': көк желе
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': суу алдында
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': кыш
+            undefined: жок
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -473,6 +480,11 @@ ky:
             '"a"': A
             '"s"': Түш
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': ооба
+            '"no"': жок
       Mikelab_whileKeyPressed:
         options:
           KEY:

@@ -91,6 +91,14 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': দৃশ্যমান
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': দৃশ্যমান
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -299,6 +307,11 @@ bn:
             '"right"': ডানমুখী তীর
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': '"হ্যাঁ"'
+            '"no"': না
       Mikelab_whileKeyPressed:
         options:
           KEY:

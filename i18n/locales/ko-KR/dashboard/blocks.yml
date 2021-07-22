@@ -8,10 +8,17 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           MOVE1:
             MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
@@ -40,20 +47,36 @@ ko:
         text: "{TIMESTAMP} {UNIT} 이후"
         options:
           UNIT:
+            '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD}을(를) {AMOUNT}만큼 변경하기"
+        options:
+          METHOD:
+            '"hue"': 색조
+            '"saturation"': 채도
+            '"brightness"': 명도
       Dancelab_changeMoveEachLR:
         text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
         options:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
             MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
@@ -69,6 +92,9 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 영원히 실행"
         options:
           MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
             MOVES.Roll: 구르기
             MOVES.ClapHigh: 높이 손뼉치기
             MOVES.Dab: 댑
@@ -87,31 +113,52 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
       Dancelab_changePropEachBy:
         text: "{GROUP} {PROPERTY}{VAL}(으) 로 변경"
         options:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
       Dancelab_doMoveEachLR:
         text: "{GROUP}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           MOVE:
+            '"rand"': "(임의)"
             MOVES.XBend: 구부리기
             MOVES.Roll: 구르기
             MOVES.XClapSide: 박수
@@ -139,6 +186,7 @@ ko:
         text: "{SPRITE}이(가) {MOVE}{DIR}을(를) 한 번 실행"
         options:
           MOVE:
+            '"rand"': "(임의)"
             MOVES.XBend: 구부리기
             MOVES.Roll: 구르기
             MOVES.XClapSide: 박수
@@ -168,6 +216,7 @@ ko:
         text: '매 {N} {UNIT} '
         options:
           UNIT:
+            '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_everySecondsRange:
         text: '매 {N} {UNIT}마다 {START}에서 {STOP}까지 '
@@ -177,6 +226,10 @@ ko:
             seconds: 초
       Dancelab_everyVerseChorus:
         text: '매 {UNIT} '
+        options:
+          UNIT:
+            '"verse"': 절
+            '"chorus"': 후렴
       Dancelab_getEnergy:
         text: "{RANGE} 가져오기"
         options:
@@ -191,10 +244,15 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
       Dancelab_getTime:
         text: "{UNIT} 경과됨"
         options:
           UNIT:
+            '"measures"': 마디
             '"seconds"': "~초 기다리기"
       Dancelab_ifDanceIs:
         text: |-
@@ -217,7 +275,12 @@ ko:
         text: "{UNIT} 이(가) {OP} {N} {DO1} {DO2} 하는 경우"
         options:
           UNIT:
+            '"measures"': 마디
             '"seconds"': "~초 기다리기"
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 점프"
         options:
@@ -238,10 +301,17 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
             "{x: 200, y: 300}": 맨 아래로
@@ -259,13 +329,31 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           FORMAT:
+            '"border"': 테두리
+            '"inner"': 내부 사각형
             '"diamond"': 다이아몬드
+            '"circle"': 원
             '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
+            '"x"': 교차
+            '"plus"': 더하기
             '"random"': random(랜덤)
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 에 새 {COSTUME} 을(를) 만드세요"
@@ -281,6 +369,7 @@ ko:
             '"PINEAPPLE"': 파인애플
             '"ROBOT"': 로봇
             '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
@@ -309,6 +398,7 @@ ko:
             '"PINEAPPLE"': 파인애플
             '"ROBOT"': 로봇
             '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
           LOCATION:
             "{x: 200, y: 100}": 맨 위로
@@ -348,13 +438,31 @@ ko:
             '20': '20'
           COSTUME:
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           LAYOUT:
+            '"border"': 테두리
+            '"inner"': 내부 사각형
             '"diamond"': 다이아몬드
+            '"circle"': 원
             '"grid"': 그리드
+            '"top"': 위쪽 행
+            '"row"': class
+            '"bottom"': 아래쪽 행
+            '"left"': 왼쪽 열
+            '"column"': 열
+            '"right"': 오른쪽 열
+            '"x"': 교차
+            '"plus"': 더하기
             '"random"': random(랜덤)
       Dancelab_mixColors:
         text: "{COLOR1} 및 {COLOR2} 혼합"
@@ -375,6 +483,33 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
+            '"circles"': 터널
+            '"color_cycle"': 색상
+            '"diamonds"': 다이아몬드
+            '"disco_ball"': 디스코 볼
+            '"fireworks"': 불꽃놀이
+            '"swirl"': 최면
+            '"kaleidoscope"': 만화경
+            '"lasers"': 레이저 댄스 플로어
+            '"splatter"': 페인트 튀기기
+            '"rainbow"': 무지개
+            '"snowflakes"': 눈
+            '"text"': 음악 제목
+            '"galaxy"': 우주
+            '"sparkles"': 반짝이
+            '"spiral"': 나선
+            '"disco"': 사각형
+            '"stars"': 별
+          PALETTE:
+            '"rave"': 흑백
+            '"cool"': 파란색
+            '"electronic"': 일렉트로닉
+            '"iceCream"': 아이스크림
+            '"default"': 빛
+            '"neon"': 네온
+            '"tropical"': 열대
+            '"vintage"': 빈티지
+            '"warm"': 빨간색
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           "배경 효과 설정
@@ -382,6 +517,41 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
+            '"rand"': "(임의)"
+            '"circles"': 터널
+            '"quads"': 앵글
+            '"color_cycle"': 색상
+            '"diamonds"': 다이아몬드
+            '"disco_ball"': 디스코 볼
+            '"fireworks"': 불꽃놀이
+            '"flowers"': 꽃
+            '"growing_stars"': 커지는 별
+            '"swirl"': 최면
+            '"kaleidoscope"': 만화경
+            '"lasers"': 레이저 댄스 플로어
+            '"splatter"': 페인트 튀기기
+            '"rainbow"': 무지개
+            '"ripples_random"': 랜덤 물결
+            '"ripples"': 물결
+            '"snowflakes"': 눈
+            '"text"': 음악 제목
+            '"squiggles"': 구불구불
+            '"galaxy"': 우주
+            '"sparkles"': 반짝이
+            '"spiral"': 나선
+            '"disco"': 사각형
+            '"stars"': 별
+            '"music_wave"': 파도
+          PALETTE:
+            '"rave"': 흑백
+            '"cool"': 파란색
+            '"electronic"': 일렉트로닉
+            '"iceCream"': 아이스크림
+            '"default"': 빛
+            '"neon"': 네온
+            '"tropical"': 열대
+            '"vintage"': 빈티지
+            '"warm"': 빨간색
       Dancelab_setDanceSpeed:
         text: "{SPRITE} 댄스 속도를 {SPEED}(으)로 변경하기"
         options:
@@ -397,10 +567,17 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           SPEED:
             '1': 보통
             '2': 빠르게
@@ -412,11 +589,42 @@ ko:
         options:
           EFFECT:
             '"none"': 없음
+            '"bubbles"': 거품
+            '"confetti"': 색종이
+            '"hearts_red"': 하트
+            '"music_notes"': 음표
+            '"pineapples"': 파인애플
+            '"pizzas"': 피자
+            '"smiling_poop"': 똥
+            '"rain"': 비
+            '"floating_rainbows"': 무지개
+            '"smile_face"': 미소
+            '"spotlight"': 스포트라이트
+            '"color_lights"': 무대 조명
+            '"raining_tacos"': 타코
       Dancelab_setForegroundEffectExtended:
         text: 전경 효과 {EFFECT} 설정
         options:
           EFFECT:
             '"none"': 없음
+            '"rand"': "(임의)"
+            '"bubbles"': 거품
+            '"hearts_colorful"': 형형색색 하트
+            '"confetti"': 색종이
+            '"emojis"': 이모지
+            '"hearts_red"': 하트
+            '"music_notes"': 음표
+            '"paint_drip"': 페인트 방울
+            '"pineapples"': 파인애플
+            '"pizzas"': 피자
+            '"smiling_poop"': 똥
+            '"rain"': 비
+            '"floating_rainbows"': 무지개
+            '"smile_face"': 미소
+            '"spotlight"': 스포트라이트
+            '"color_lights"': 무대 조명
+            '"exploding_stars"': 스타버스트
+            '"raining_tacos"': 타코
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY}을(를) {VAL}(으)로 설정 "
         options:
@@ -424,20 +632,34 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY}을(를) {VAL}(으)로 설정"
         options:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
       Dancelab_setPropRandom:
         text: "{SPRITE} {PROPERTY} 무작위로 하기"
         options:
@@ -445,20 +667,35 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
       Dancelab_setPropRandomEach:
         text: "{GROUP} {PROPERTY} 무작위로 하기"
         options:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
       Dancelab_setTint:
         text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setTintEach:
@@ -467,20 +704,34 @@ ko:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
       Dancelab_setTintEachInline:
         text: "{THIS} 색조를 {VAL}(으) 로 설정"
         options:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
       Dancelab_setTintInline:
         text: "{SPRITE} 색조를 {VAL}(으)로 설정하기"
       Dancelab_setVisible:
@@ -495,10 +746,17 @@ ko:
           THIS:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           VISIBILITY:
             'true': 보이기
             'false': 보이지 않기
@@ -509,6 +767,10 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
           RANGE:
             '"bass"': 베이스
             '"mid"': 중간음
@@ -519,14 +781,25 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"tint"': 색조
           RANGE:
             '"bass"': 베이스
             '"mid"': 중간음
@@ -538,6 +811,11 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"direction"': 움직임 방향
+            '"tint"': 색조
           RANGE:
             '"bass"': 베이스
             '"mid"': 중간음
@@ -548,14 +826,26 @@ ko:
           GROUP:
             sprites: 모두
             '"ALIEN"': 모든 외계인
+            '"BEAR"': 곰
             '"CAT"': 모든 고양이
             '"DOG"': 모든 개
+            '"DUCK"': 오리
+            '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
+            '"PINEAPPLE"': 파인애플
             '"ROBOT"': 모든 로봇
+            '"SHARK"': 상어
+            '"SLOTH"': 나무늘보
+            '"UNICORN"': 유니콘
           PROPERTY:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
+            '"rotation"': 회전
+            '"x"': 수평 위치
+            '"y"': 수직 위치
+            '"direction"': 움직임 방향
+            '"tint"': 색조
           RANGE:
             '"bass"': 베이스
             '"mid"': 중간음
@@ -564,9 +854,39 @@ ko:
         text: "{STRING} 번역"
         options:
           STRING:
+            '"music_wave"': 파도
+            '"ripples"': 물결
+            '"ripples_random"': 랜덤 물결
+            '"quads"': 앵글
+            '"flowers"': 꽃
+            '"popsicles"': 팝시클
+            '"squiggles"': 구불구불
+            '"growing_stars"': 커지는 별
+            '"emojis"': 이모지
+            '"hearts_colorful"': 하트
+            '"paint_drio"': 페인트 방울
+            '"exploding_stars"': 스타버스트
+            '"row_top"': 위쪽 행
+            '"row_bottom"': 아래쪽 행
+            '"column_left"': 왼쪽 열
+            '"column_right"': 오른쪽 열
             '"diamond"': 다이아몬드
+            '"mural"': 벽화
+            '"safari"': 사파리
+            '"network"': 네트워크
+            '"highway"': 고속도로
+            '"stream"': 개울
+            '"tile"': 타일
+            '"shadow"': 그림자
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -585,9 +905,34 @@ ko:
             '"down"': 아래로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"enter"': 입력
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
             '"2"': '2'
             '"3"': '3'
@@ -612,6 +957,9 @@ ko:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE}가 목표물 {TARGET}을 얻습니다"
+        options:
+          OPT:
+            '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -619,6 +967,7 @@ ko:
         options:
           UNIT:
             '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
       gamelab_beginCollectingData:
         text: 데이터 {BREAK} 값 {VALUE}을 라벨 {LABEL}로 수집하기 시작합니다
       gamelab_bounceOff:
@@ -628,8 +977,10 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
             '"speed"': 스피드
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} 접촉 {SPRITE2}"
@@ -664,8 +1015,11 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
+            '"tint"': 색조
             '"speed"': 스피드
       gamelab_getThisSprite:
         text: "{CHOICE} 스프라이트"
@@ -677,6 +1031,7 @@ ko:
         options:
           UNIT:
             '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
       gamelab_hideTitleScreen:
         text: 제목 화면 숨기기
       gamelab_ifVarEquals:
@@ -694,9 +1049,32 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} 은 접하는 가장자리입니다."
       gamelab_isTouchingSprite:
@@ -715,9 +1093,32 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_locationAt:
         text: '위치 x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -812,10 +1213,13 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
             '"speed"': 스피드
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY}을(를) {SIZE}(으)로 설정"
         options:
           PROPERTY:
             '"scale"': 크기
@@ -877,6 +1281,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whenLeftArrow:
         text: 왼쪽 화살표를 눌렀을 때
       gamelab_whenPromptAnswered:
@@ -900,6 +1308,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileLeftArrow:
         text: 왼쪽 화살표를 누른 상태에서
       gamelab_whileRightArrow:
@@ -937,8 +1349,10 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -957,8 +1371,10 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_groupChangeAnim:
         text: "{SELECT} {COSTUME} 을(를) {COSTUME2}(으) 로 변경"
         options:
@@ -971,8 +1387,10 @@ ko:
             '"all"': 모두
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_groupCreateNewSprite:
         text: "{LOCATION} 에 새 {COSTUME} 을(를) 만드세요"
         options:
@@ -1000,8 +1418,10 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_groupRemoveAllBehaviors:
         text: "{SELECT} {COSTUME} 동작 중지"
         options:
@@ -1024,8 +1444,10 @@ ko:
             '"all"': 모두
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_groupSetTint:
         text: 의 색상을 변경 {SELECT} {COSTUME} 받는 사람 {COLOR}
         options:
@@ -1114,8 +1536,10 @@ ko:
         options:
           PROPERTY:
             '"scale"': 크기
+            '"rotation"': 회전
             '"x"': x 좌표
             '"y"': y 좌표
+            '"direction"': 움직임 방향
       Mikelab_setupSim:
         text: |-
           설정 시뮬레이션
@@ -1128,6 +1552,10 @@ ko:
           CORNER:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': below
       Mikelab_sprite:
         text: 새로운 {COSTUME} 스프라이트 에서 {LOCATION}
         options:
@@ -1170,6 +1598,10 @@ ko:
         text: 마우스를 클릭했을 때
       Mikelab_whenYesNoClicked:
         text: 때 {KEY} 클릭
+        options:
+          KEY:
+            '"yes"': 예
+            '"no"': 아니요
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1182,13 +1614,23 @@ ko:
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
       PoemBot_setBackgroundEffect:
+        text: 배경 효과 {BG_EFFECT} [PALETTE][1] 설정
         options:
           BG_EFFECT:
+            '"solid"': 채우기
             '"rainbow"': 비
       PoemBot_setForegroundEffect:
+        text: 전경 효과 {FG_EFFECT} 설정
         options:
           FG_EFFECT:
             '"rain"': 비
+            '"bubbles"': 거품
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      PoemBot_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: 앞으로 이동
       RyanLab_turnLeft:
@@ -1226,6 +1668,8 @@ ko:
         options:
           FORMAT:
             '"grid"': 그리드
+            '"border"': 테두리
+            '"row"': class
             '"random"': random(랜덤)
       aalab_someGraduallyStartIntervention:
         options:
@@ -1287,6 +1731,10 @@ ko:
             '"left"': 왼쪽으로
             '"right"': 오른쪽으로
             '"space"': 우주
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           {DIR}에 길이 있을 경우
@@ -1294,14 +1742,20 @@ ko:
         options:
           DIR:
             "'ahead'": 정면
+            "'right'": 오른쪽
+            "'left'": 왼쪽
       craft_ifStandingOn:
         text: |-
           {TYPE} 위에 서 있을 경우
           {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": 파란색 산호
+            "'redCoralBlock'": 빨간색 산호
             "'sand'": 모래
+            "'wool_blue'": 깊은 물
             "'planksOak'": 참나무 목재
+            "'seaLantern'": 바다 랜턴
       craft_ifStandingOnLimit:
         text: |-
           {TYPE} 위에 서 있을 경우
@@ -1309,12 +1763,17 @@ ko:
         options:
           TYPE:
             "'sand'": 모래
+            "'seaLantern'": 바다 랜턴
       craft_log:
         text: 로그 메시지 {MESSAGE}
       craft_moveForward:
         text: 앞으로 이동
       craft_placeBlock:
         text: 장소 {blockType}
+        options:
+          blockType:
+            '"chiseledStoneBricks"': 장식용 석조 벽돌
+            '"seaLantern"': 바다 랜턴
       craft_placePrismarine:
         text: 장소 프리스마린
       craft_placeTorch:

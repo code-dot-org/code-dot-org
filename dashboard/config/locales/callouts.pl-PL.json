@@ -1760,6 +1760,37 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_1": "Kiedy ten zielony blok jest uruchomiony, cały kod w funkcji zostaje uruchomiony. Co powinien zrobić artysta po narysowaniu pierwszego kwadratu?"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Najpierw naciśnij przycisk Uruchom!",
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Najpierw naciśnij przycisk Uruchom!",
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_apps_collector": {
+          "run_button": "Najpierw naciśnij przycisk Uruchom!",
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_apps_pet": {
+          "run_button": "Najpierw naciśnij przycisk Uruchom!",
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
         }
       }
     }

@@ -280,6 +280,9 @@
           "overview": "Dans cette leçon, les élèves apprendront les deux concepts au cœur de Sprite Lab: les sprites et les comportements. Les Sprites sont des personnages ou des objets à l'écran que les élèves peuvent déplacer, modifier et manipuler. Les comportements sont des actions que les sprites prendront continuellement jusqu'à ce qu'ils soient arrêtés.",
           "student_overview": "Apprends à créer et modifier les lutins."
         },
+        "express-2021/lesson-3": {
+          "purpose": ""
+        },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
@@ -420,6 +423,7 @@
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
+          "preparation": "",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursee-2021/Nested Loops in Artist": {
@@ -447,6 +451,7 @@
         },
         "coursee-2021/Conditionals": {
           "overview": "Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.",
+          "preparation": "",
           "student_overview": "Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante."
         },
         "coursee-2021/Functions in Harvester": {
@@ -454,7 +459,8 @@
           "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
         },
         "coursee-2021/lesson-1": {
-          "overview": "Dans cette leçon, les élèves en apprendront davantage sur l'accessibilité et la valeur de l'empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. "
+          "overview": "Dans cette leçon, les élèves en apprendront davantage sur l'accessibilité et la valeur de l'empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. ",
+          "student_overview": "Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion en groupes et à la conception de solutions accessibles pour les applications hypothétiques "
         },
         "coursee-2021/End of Course Project": {
           "overview": "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.",

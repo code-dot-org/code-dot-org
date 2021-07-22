@@ -17,11 +17,20 @@
         "internet/coursef/2021": {
           "word": "интернет"
         },
+        "url/coursef/2021": {
+          "word": "Ссылка"
+        },
         "define/coursef/2021": {
           "word": "Определить"
         },
+        "algorithm/courseb/2021": {
+          "definition": ""
+        },
         "debugging/courseb/2021": {
           "word": "Отладка"
+        },
+        "click/courseb/2021": {
+          "word": "Перейти"
         },
         "drop/courseb/2021": {
           "word": "Дроп"
@@ -29,14 +38,23 @@
         "programming/courseb/2021": {
           "word": "Программирование"
         },
+        "algorithm/coursea/2021": {
+          "definition": ""
+        },
         "debugging/coursea/2021": {
           "word": "Отладка"
+        },
+        "click/coursea/2021": {
+          "word": "Перейти"
         },
         "drop/coursea/2021": {
           "word": "Дроп"
         },
         "programming/coursea/2021": {
           "word": "Программирование"
+        },
+        "algorithm/coursec/2021": {
+          "definition": ""
         },
         "debugging/coursec/2021": {
           "word": "Отладка"
@@ -50,14 +68,23 @@
         "binary/coursec/2021": {
           "word": "Двоичный"
         },
+        "algorithm/coursed/2021": {
+          "definition": ""
+        },
         "debugging/coursed/2021": {
           "word": "Отладка"
         },
         "programming/coursed/2021": {
           "word": "Программирование"
         },
+        "command/coursed/2021": {
+          "definition": ""
+        },
         "conditionals/coursed/2021": {
           "word": "Условные команды"
+        },
+        "algorithm/express/2021": {
+          "definition": ""
         },
         "debugging/express/2021": {
           "word": "Отладка"
@@ -71,6 +98,9 @@
         "behavior/express/2021": {
           "word": "Поведение"
         },
+        "command/express/2021": {
+          "definition": ""
+        },
         "conditionals/express/2021": {
           "word": "Условные команды"
         },
@@ -83,8 +113,14 @@
         "define/express/2021": {
           "word": "Определить"
         },
+        "click/pre-express/2021": {
+          "word": "Перейти"
+        },
         "drop/pre-express/2021": {
           "word": "Дроп"
+        },
+        "algorithm/pre-express/2021": {
+          "definition": ""
         },
         "debugging/pre-express/2021": {
           "word": "Отладка"

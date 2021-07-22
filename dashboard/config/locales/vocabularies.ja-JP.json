@@ -2,6 +2,9 @@
   "ja-JP": {
     "data": {
       "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "スプライト"
+        },
         "behavior/coursef/2021": {
           "word": "行動"
         },
@@ -20,20 +23,11 @@
         "define/coursef/2021": {
           "word": "定義"
         },
-        "debugging/courseb/2021": {
-          "word": "Debugging"
-        },
         "drop/courseb/2021": {
           "word": "ドロップ"
         },
-        "debugging/coursea/2021": {
-          "word": "Debugging"
-        },
         "drop/coursea/2021": {
           "word": "ドロップ"
-        },
-        "debugging/coursec/2021": {
-          "word": "Debugging"
         },
         "sequencing/coursec/2021": {
           "word": "シークエンス"
@@ -41,20 +35,17 @@
         "binary/coursec/2021": {
           "word": "２しんすう"
         },
-        "debugging/coursed/2021": {
-          "word": "Debugging"
-        },
         "conditionals/coursed/2021": {
           "word": "条件"
-        },
-        "debugging/express/2021": {
-          "word": "Debugging"
         },
         "sequencing/express/2021": {
           "word": "シークエンス"
         },
         "behavior/express/2021": {
           "word": "行動"
+        },
+        "sprite/express/2021": {
+          "word": "スプライト"
         },
         "conditionals/express/2021": {
           "word": "条件"
@@ -71,11 +62,11 @@
         "drop/pre-express/2021": {
           "word": "ドロップ"
         },
-        "debugging/pre-express/2021": {
-          "word": "Debugging"
-        },
         "behavior/coursee/2021": {
           "word": "行動"
+        },
+        "sprite/coursee/2021": {
+          "word": "スプライト"
         },
         "copyright/coursee/2021": {
           "word": "著作権"

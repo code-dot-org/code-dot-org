@@ -268,6 +268,7 @@ pt:
           FORMAT:
             '"diamond"': diamante
             '"grid"': grade
+            '"row"': aula
             '"random"': aleatório
       Dancelab_makeAnonymousDanceSprite:
         text: fazer um novo {COSTUME} Em {LOCATION}
@@ -357,6 +358,7 @@ pt:
           LAYOUT:
             '"diamond"': diamante
             '"grid"': grade
+            '"row"': aula
             '"random"': aleatório
       Dancelab_mixColors:
         text: misturar {COLOR1} e {COLOR2}
@@ -589,7 +591,11 @@ pt:
             '"down"': para baixo
             '"right"': para a direita
             '"space"': espaço
+            '"enter"': digite
+            '"f"': f
+            '"g"': g
             '"i"': i
+            '"q"': q
             '"x"': x
             '"y"': y
             '"1"': '1'
@@ -614,6 +620,10 @@ pt:
         text: configuração
       gamelab_addBehaviorSimple:
         text: Sprite {SPRITE} Começa {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': evitar
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -673,7 +683,10 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
+            '"f"': f
+            '"g"': g
             '"i"': i
+            '"q"': q
             '"x"': x
             '"y"': y
       gamelab_isTouchingEdges:
@@ -692,7 +705,10 @@ pt:
             '"left"': para a esquerda
             '"right"': para a direita
             '"space"': espaço
+            '"f"': f
+            '"g"': g
             '"i"': i
+            '"q"': q
             '"x"': x
             '"y"': y
       gamelab_locationAt:
@@ -1075,6 +1091,10 @@ pt:
           CORNER:
             '"right"': para a direita
             '"left"': para a esquerda
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': abaixo
       Mikelab_sprite:
         text: Novo {COSTUME} sprite at sprite at sprite at spr {LOCATION}
         options:
@@ -1117,6 +1137,10 @@ pt:
         text: quando o mouse clicou
       Mikelab_whenYesNoClicked:
         text: quando {KEY} clicado
+        options:
+          KEY:
+            '"yes"': sim
+            '"no"': não
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1173,6 +1197,7 @@ pt:
         options:
           FORMAT:
             '"grid"': grade
+            '"row"': aula
             '"random"': aleatório
       aalab_someGraduallyStartIntervention:
         options:
@@ -1241,14 +1266,20 @@ pt:
         options:
           DIR:
             "'ahead'": à frente
+            "'right'": a direita
+            "'left'": a esquerda
       craft_ifStandingOn:
         text: |-
           se em cima de {TYPE}
           {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": coral azul
+            "'redCoralBlock'": coral vermelho
             "'sand'": areia
+            "'wool_blue'": água profunda
             "'planksOak'": pranchas de carvalho
+            "'seaLantern'": lanterna aquática
       craft_ifStandingOnLimit:
         text: |-
           se em cima de {TYPE}
@@ -1256,12 +1287,40 @@ pt:
         options:
           TYPE:
             "'sand'": areia
+            "'darkPrismarine'": prismarine escuro
+            "'seaLantern'": lanterna aquática
       craft_log:
         text: mensagem de log {MESSAGE}
       craft_moveForward:
         text: segue em frente
       craft_placeBlock:
         text: colocar {blockType}
+        options:
+          blockType:
+            '"strippedOak"': carvalho despojado
+            '"strippedDarkOak"': carvalho escuro despojado
+            '"stoneBricks"': tijolos de pedra
+            '"mossyStoneBricks"': tijolos de pedra com musgo
+            '"crackedStoneBricks"': tijolos de pedra rachada
+            '"chiseledStoneBricks"': tijolos de pedra decorativa
+            '"blueCoralBlock"': bloco de coral azul
+            '"pinkCoralBlock"': bloco de coral rosa
+            '"magentaCoralBlock"': bloco de coral magenta
+            '"redCoralBlock"': bloco de coral vermelho
+            '"yellowCoralBlock"': bloco de coral amarelo
+            '"blueDeadCoralBlock"': bloco de coral morto azul
+            '"pinkDeadCoralBlock"': bloco de coral morto rosa
+            '"magentaDeadCoralBlock"': bloco de coral morto magenta
+            '"readDeadCoralBlock"': bloco de coral morto vermelho
+            '"yellowDeadCoralBlock"': Bloco de coral morto amarelo
+            '"darkPrismarine"': prismarine escuro
+            '"seaLantern"': lanterna aquática
+            '"packedIce"': gelo compactado
+            '"blueIce"': gelo azul
+            '"blackConcrete"': betão preto
+            '"seaGrass"': ervas marinhas
+            '"kelp"': algas
+            '"polishedGranite"': granito polido
       craft_placePrismarine:
         text: lugar prismarine
       craft_placeTorch:

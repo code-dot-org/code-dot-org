@@ -97,6 +97,14 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': देखिने
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': देखिने
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -321,6 +329,11 @@ ne:
             '"a"': क
             '"s"': द
             '"d"': 'घ '
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': हो
+            '"no"': होइन
       Mikelab_whileKeyPressed:
         options:
           KEY:

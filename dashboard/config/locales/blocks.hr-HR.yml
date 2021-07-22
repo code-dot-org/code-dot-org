@@ -113,11 +113,25 @@ hr:
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': brzu
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             '"CAT"': mačke
             '"DOG"': psi
+          SPEED:
+            '1': normal
+            '2': brzu
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -206,6 +220,7 @@ hr:
             '"down"': dolje
             '"right"': desno
             '"space"': svemir
+            '"enter"': unesite
             '"i"': i
             '"x"': x
       gamelab_atTime:
@@ -322,6 +337,12 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": riba
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": riba
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -362,6 +383,22 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: riba
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: riba
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: riba
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: riba
       Mikelab_randomColor:
         text: nasumično odabrana boja
       Mikelab_repeatUntilComplete:
@@ -408,6 +445,11 @@ hr:
             '"a"': A
             '"s"': Jug
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': da
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -418,6 +460,7 @@ hr:
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
+            '"solid"': puno
             '"rainbow"': duga
       PoemBot_setForegroundEffect:
         options:

@@ -695,6 +695,9 @@ fr:
               name: Introduction
         coursee-draft:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Digital Citizenship:
               name: Citoyenneté Numérique
@@ -712,6 +715,9 @@ fr:
               name: Instructions conditionnelles
         coursef-draft:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Digital Citizenship:
               name: Citoyenneté Numérique
@@ -756,6 +762,9 @@ fr:
             Wrap-Up:
               name: Conclusion
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Binary:
               name: Binaire
@@ -1026,6 +1035,9 @@ fr:
           assignment_family_title: Cours E
           description_short: Abordez rapidement les notions dans les  Cours C et D, puis allez plus loin avec les fonctions.
           description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Envelope Variables:
               name: Variables de l'Enveloppe
@@ -1062,6 +1074,9 @@ fr:
           assignment_family_title: Cours F
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             The Power of Words:
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
@@ -1133,6 +1148,9 @@ fr:
           title: Cours Express
           assignment_family_title: Cours Express
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Introduction:
               name: Introduction
@@ -1188,6 +1206,9 @@ fr:
             Linking Screens:
               name: Relier les Écrans
         e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1230,6 +1251,9 @@ fr:
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Introduction:
               name: Introduction
@@ -1250,6 +1274,9 @@ fr:
             Loops in Artist:
               name: Les Boucles dans Artiste
         new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1270,6 +1297,9 @@ fr:
             Crowdsourcing:
               name: Production Participative
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1310,6 +1340,9 @@ fr:
               name: Hour of Code Minecraft
           student_description: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code.
         course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1334,6 +1367,9 @@ fr:
             Build a Star Wars Game:
               name: Construis un Jeu Star Wars
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1630,6 +1666,9 @@ fr:
           title: Cours E (2018)
           assignment_family_title: Cours E
           description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             'Programming: My Robotic Friends':
               name: Mes amis les robots
@@ -1685,6 +1724,9 @@ fr:
           assignment_family_title: Cours F
           description: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             'Programming: My Robotic Friends':
               name: Mes amis les robots
@@ -1942,6 +1984,8 @@ fr:
               display_name: Les Lutins
             csf_digcit:
               display_name: Citoyenneté Numérique
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -1986,6 +2030,7 @@ fr:
             Virtual Pet:
               name: Animal de compagnie virtuel avec le Labo des Lutins
             End of Course Project:
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
             Internet:
               name: Internet et les réseaux connectés
@@ -2020,6 +2065,8 @@ fr:
               display_name: Binaire
             csf_digcit:
               display_name: Citoyenneté Numérique
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmation sur papier quadrillé
@@ -2082,6 +2129,8 @@ fr:
               display_name: Boucles Imbriquées
             csf_functions:
               display_name: fonctions
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Building a Foundation:
               name: Construire une Fondation
@@ -2137,6 +2186,7 @@ fr:
               name: Dessiner avec des Boucles
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
             End of Course Project:
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
             Access Ability:
               name: Concevoir pour l'Accessibilité
@@ -2226,6 +2276,8 @@ fr:
               name: Production Participative
             Virtual Pet with Sprite Lab:
               name: Animal de compagnie virtuel avec le Labo des Lutins
+            Build A Project:
+              name: Fin du projet.
             Dance Party:
               name: Soirée Dansante
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -2262,6 +2314,8 @@ fr:
               display_name: boucles
             csf_events:
               display_name: Événements
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Programming in Maze:
               name: Programmation avec Angry Birds
@@ -2298,6 +2352,7 @@ fr:
               name: Les bracelets binaires
               description_student: Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !
             'End of Course Project: Create a Play Lab Game':
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
             'Programming: My Robotic Friends':
               description_student: Dans cette leçon, tu prétendras que tes camarades de classe sont des robots et tu les programmes afin qu'il construisent des modèles de tasses empilées.
@@ -2880,6 +2935,8 @@ fr:
               display_name: Boucles Imbriquées
             csf_functions:
               display_name: fonctions
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Crowdsourcing:
               name: Production Participative
@@ -2887,6 +2944,8 @@ fr:
               name: Instructions conditionnelles avec des cartes
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
+            End of Course Project:
+              name: Fin du projet.
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -3150,6 +3209,8 @@ fr:
               display_name: boucles
             csf_events:
               display_name: Événements
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Powerful Passwords:
               name: Mots de Passe Puissant
@@ -3194,6 +3255,7 @@ fr:
             Picturing Data:
               name: Représenter les Données
             'End of Course Project: Create a Play Lab Game':
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
             Password Power-Up:
               description_student: Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe.
@@ -3213,6 +3275,8 @@ fr:
               display_name: Binaire
             csf_digcit:
               display_name: Citoyenneté Numérique
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmation sur papier quadrillé
@@ -3263,6 +3327,7 @@ fr:
               name: Soirée Dansante
               description_student: Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive.
             End of Course Project:
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
           student_description: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
         coursee-2020:
@@ -3276,6 +3341,8 @@ fr:
               display_name: Boucles Imbriquées
             csf_functions:
               display_name: fonctions
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Programming and Loops with the Artist:
               name: Dessiner avec des Boucles
@@ -3317,6 +3384,7 @@ fr:
               name: Les Fonctions avec L'Artiste
               description_student: Fais des dessins complexes plus facilement avec les fonctions !
             End of Course Project:
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
             Digital Sharing:
               name: Partage Numérique
@@ -3337,6 +3405,8 @@ fr:
               display_name: Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Functions in Minecraft:
               name: Les Fonctions dans Minecraft
@@ -3377,6 +3447,7 @@ fr:
               description_student: 'Dans cette leçon, tu découvriras les défis et les avantages de la propriété et du droit d''auteur. '
               description_teacher: Prêtée aux Notions Fondamentales de l’Informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
             End of Course Project:
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
             AI for Oceans:
               name: IA pour les Océans
@@ -3400,6 +3471,8 @@ fr:
               display_name: Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
+            end_of_course_project:
+              display_name: Fin du projet.
           lessons:
             Dance Party:
               name: Soirée Dansante
@@ -3423,6 +3496,8 @@ fr:
               name: Animal de compagnie virtuel avec le Labo des Lutins
             Swimming Fish with Sprite Lab:
               name: Des Poissons qui Nagent, avec le Labo des Lutins
+            End of Course Project:
+              name: Fin du projet.
             Programming with Angry Birds:
               name: Programmation avec Angry Birds
             Debugging with Scrat:
@@ -3624,6 +3699,8 @@ fr:
               name: Introduction au Labo des Lutins
             Sprites in Action:
               name: Les Lutins en Action
+            End of Course Project:
+              name: Fin du projet.
           lesson_groups:
             introduction:
               display_name: Introduction
@@ -3813,6 +3890,8 @@ fr:
             Events in Play Lab:
               description_student: Crée ton jeu ou ta propre histoire.
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
+            lesson-1:
+              name: Fin du projet.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -3822,6 +3901,8 @@ fr:
               display_name: boucles
             csf_events:
               display_name: Événements
+            lessonGroup-5:
+              display_name: Fin du projet.
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         courseb-2021:
           lessons:
@@ -3871,6 +3952,8 @@ fr:
             Events in Play Lab:
               description_student: Utilise des événements pour créer une histoire ou un jeu interactif.
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
+            lesson-1:
+              name: Fin du projet.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -3880,6 +3963,8 @@ fr:
               display_name: boucles
             csf_events:
               display_name: Événements
+            lessonGroup-6:
+              display_name: Fin du projet.
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         coursec-2021:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
@@ -3944,6 +4029,7 @@ fr:
               description_student: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
               description_teacher: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
             'End of Course Project: Create a Play Lab Game':
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
               description_teacher: Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture !
           lesson_groups:
@@ -3957,6 +4043,8 @@ fr:
               display_name: boucles
             csf_events:
               display_name: Événements
+            end_of_course_project:
+              display_name: Fin du projet.
           student_description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
         coursed-2021:
           lessons:
@@ -4026,6 +4114,8 @@ fr:
             'Unplugged: Binary':
               name: Images Binaires
             End of Course Project:
+              key: Fin du projet.
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
             lesson-6:
               name: Regarder vers l'Avenir avec Minecraft
@@ -4048,6 +4138,8 @@ fr:
               display_name: Binaire
             csf_digcit:
               display_name: Citoyenneté Numérique
+            end_of_course_project:
+              display_name: Fin du projet.
             lessonGroup-6:
               display_name: Citoyenneté Numérique
         coursee-2021:
@@ -4117,10 +4209,13 @@ fr:
               key: Concevoir pour l'Accessibilité
               name: Concevoir pour l'Accessibilité
             End of Course Project:
+              key: Fin du projet.
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
               description_teacher: Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.
             lesson-1:
               name: Concevoir pour l'Accessibilité
+              description_student: 'Découvre l’accessibilité et la valeur de l’empathie, grâce à une réflexion en groupes et à la conception de solutions accessibles pour les applications hypothétiques '
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
           lesson_groups:
             ramp_up:
@@ -4133,6 +4228,8 @@ fr:
               display_name: Instructions conditionnelles
             csf_functions:
               display_name: fonctions
+            end_of_course_project:
+              display_name: Fin du projet.
         coursef-2021:
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           lessons:
@@ -4193,6 +4290,8 @@ fr:
               description_student: Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !
               description_teacher: Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !
             End of Course Project:
+              key: Fin du projet.
+              name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
             lesson-1:
               name: Concevoir pour l'Accessibilité
@@ -4212,6 +4311,8 @@ fr:
               display_name: Boucles « Pour »
             csf_for_loops:
               display_name: Boucles « Pour »
+            end_of_course_project:
+              display_name: Fin du projet.
             lessonGroup-8:
               display_name: variables
             lessonGroup-9:
@@ -4331,6 +4432,8 @@ fr:
               description_student: Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !
               description_teacher: Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !
             End of Course Project:
+              key: Fin du projet.
+              name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
             lesson-1:
               name: Soirée Dansante
@@ -4353,6 +4456,8 @@ fr:
               display_name: Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
+            end_of_course_project:
+              display_name: Fin du projet.
             lessonGroup-9:
               display_name: Événements
         pre-express-2021:

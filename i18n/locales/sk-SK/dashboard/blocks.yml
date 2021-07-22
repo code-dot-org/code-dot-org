@@ -498,6 +498,18 @@ sk:
             '"galaxy"': Vesmír
             '"sparkles"': Trblietky
             '"spiral"': Špirála
+            '"disco"': Štvorce
+            '"stars"': Hviezdy
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Chladný
+            '"electronic"': Elektro
+            '"iceCream"': Zmrzlina
+            '"default"': Svetlý
+            '"neon"': Neón
+            '"tropical"': Trópy
+            '"vintage"': Vintage
+            '"warm"': Teplý
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           nastav efekt pozadia
@@ -507,20 +519,39 @@ sk:
             '"none"': Žiadne
             '"rand"': "(Náhodný)"
             '"circles"': Kruhy
+            '"quads"': Uhly
             '"color_cycle"': Farby
             '"diamonds"': Diamanty
             '"disco_ball"': Disco guľa
             '"fireworks"': Ohňostroj
+            '"flowers"': Kvety
+            '"growing_stars"': Rastúce hviezdy
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový tanečný parket
             '"splatter"': Fŕkanie farby
             '"rainbow"': Dúha
+            '"ripples_random"': Náhodné vlnky
+            '"ripples"': Vlnky
             '"snowflakes"': Sneh
             '"text"': Názvy pesničiek
+            '"squiggles"': Haky - baky
             '"galaxy"': Vesmír
             '"sparkles"': Trblietky
             '"spiral"': Špirála
+            '"disco"': Štvorce
+            '"stars"': Hviezdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"rave"': Čierna a biela
+            '"cool"': Chladný
+            '"electronic"': Elektro
+            '"iceCream"': Zmrzlina
+            '"default"': Svetlý
+            '"neon"': Neón
+            '"tropical"': Trópy
+            '"vintage"': Vintage
+            '"warm"': Teplý
       Dancelab_setDanceSpeed:
         text: nastav {SPRITE} rýchlosť tanca na {SPEED}
         options:
@@ -558,12 +589,42 @@ sk:
         options:
           EFFECT:
             '"none"': Žiadne
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts_red"': Srdiečka
+            '"music_notes"': Noty
+            '"pineapples"': Ananásov
+            '"pizzas"': Pizza
+            '"smiling_poop"': Hovienka
+            '"rain"': Dážď
+            '"floating_rainbows"': Dúhy
+            '"smile_face"': Smajlíci
+            '"spotlight"': Reflektor
+            '"color_lights"': Javiskové svetlá
+            '"raining_tacos"': Tacos
       Dancelab_setForegroundEffectExtended:
         text: nastav efekt popredia {EFFECT}
         options:
           EFFECT:
             '"none"': Žiadne
             '"rand"': "(Náhodný)"
+            '"bubbles"': Bubliny
+            '"hearts_colorful"': Farebné srdcia
+            '"confetti"': Konfety
+            '"emojis"': Emotikony
+            '"hearts_red"': Srdiečka
+            '"music_notes"': Noty
+            '"paint_drip"': Kvapkanie farby
+            '"pineapples"': Ananásov
+            '"pizzas"': Pizza
+            '"smiling_poop"': Hovienka
+            '"rain"': Dážď
+            '"floating_rainbows"': Dúhy
+            '"smile_face"': Smajlíci
+            '"spotlight"': Reflektor
+            '"color_lights"': Javiskové svetlá
+            '"exploding_stars"': Žiara
+            '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'nastav {SPRITE} {PROPERTY} na {VAL} '
         options:
@@ -753,6 +814,7 @@ sk:
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
+            '"direction"': smeru pohybu
             '"tint"': sfarbenie
           RANGE:
             '"bass"': basy
@@ -782,6 +844,7 @@ sk:
             '"rotation"': otočenie
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
+            '"direction"': smeru pohybu
             '"tint"': sfarbenie
           RANGE:
             '"bass"': basy
@@ -791,13 +854,38 @@ sk:
         text: preložiť {STRING}
         options:
           STRING:
+            '"music_wave"': Vlny
+            '"ripples"': Vlnky
+            '"ripples_random"': Náhodné vlnky
+            '"quads"': Uhly
+            '"flowers"': Kvety
+            '"popsicles"': Lízatká
+            '"squiggles"': Haky - baky
+            '"growing_stars"': Rastúce hviezdy
+            '"emojis"': Emotikony
+            '"hearts_colorful"': Srdiečka
+            '"paint_drio"': Kvapkanie farby
+            '"exploding_stars"': Žiara
             '"row_top"': horný riadok
             '"row_bottom"': spodný riadok
             '"column_left"': ľavý stĺpec
             '"column_right"': pravý stĺpec
             '"diamond"': diamant
+            '"mural"': Maľba
+            '"safari"': Safari
+            '"network"': Sieť
+            '"highway"': Dialnica
+            '"stream"': Prúd
+            '"tile"': Dlaždica
+            '"shadow"': Tieň
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -836,8 +924,14 @@ sk:
             '"p"': p
             '"q"': q
             '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -895,6 +989,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
             '"speed"': rýchlosť
       gamelab_checkTouching:
         text: "{CONDITION} sa {SPRITE1} dotýka {SPRITE2}"
@@ -938,6 +1033,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
             '"tint"': sfarbenie
             '"speed"': rýchlosť
       gamelab_getThisSprite:
@@ -989,8 +1085,14 @@ sk:
             '"p"': p
             '"q"': q
             '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} sa dotýka okrajov"
       gamelab_isTouchingSprite:
@@ -1027,8 +1129,14 @@ sk:
             '"p"': p
             '"q"': q
             '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_locationAt:
         text: 'poloha x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1161,6 +1269,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
             '"speed"': rýchlosť
       gamelab_setProp_dropdown:
         text: nastav {SPRITE} {PROPERTY} na {SIZE}
@@ -1229,6 +1338,8 @@ sk:
             '"right"': vpravo
             '"space"': vesmír
             '"a"': a
+            '"w"': w
+            '"s"': s
             '"d"': d
       gamelab_whenLeftArrow:
         text: pri stlačení šípky vľavo
@@ -1254,6 +1365,8 @@ sk:
             '"right"': vpravo
             '"space"': vesmír
             '"a"': a
+            '"w"': w
+            '"s"': s
             '"d"': d
       gamelab_whileLeftArrow:
         text: pri stlačení šípky vľavo
@@ -1295,6 +1408,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -1316,6 +1430,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_groupChangeAnim:
         text: zmeň {SELECT} {COSTUME} na {COSTUME2}
         options:
@@ -1333,6 +1448,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_groupCreateNewSprite:
         text: vytvoriť nový {COSTUME} na {LOCATION}
         options:
@@ -1360,12 +1476,14 @@ sk:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
           SELECT:
+            '"average"': priemer
             '"this"': toto
           PROPERTY:
             '"scale"': veľkosť
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_groupRemoveAllBehaviors:
         text: zastav {SELECT} {COSTUME} správanie
         options:
@@ -1395,6 +1513,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_groupSetTint:
         text: zmeň farbu {SELECT} {COSTUME} na {COLOR}
         options:
@@ -1499,6 +1618,7 @@ sk:
             '"rotation"': otočenie
             '"x"': pozícia x
             '"y"': pozícia y
+            '"direction"': smeru pohybu
       Mikelab_setupSim:
         text: "nastav simuláciu s \n{SPRITE1N}{SPRITE1COSTUME}rýchlosť{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}rýchlosť{SPRITE2SPEED}\nzbieranie\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
@@ -1548,6 +1668,10 @@ sk:
         text: po kliknutí myšou
       Mikelab_whenYesNoClicked:
         text: po kliknutí {KEY}
+        options:
+          KEY:
+            '"yes"': áno
+            '"no"': nie
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1559,14 +1683,26 @@ sk:
         text: x súradnica {SPRITE}
       Mikelab_yLocationOf:
         text: y súradnica {SPRITE}
+      Outbreak_beginCongregating:
+        text: Príšerky sa začínajú zhromažďovať
       PoemBot_setBackgroundEffect:
+        text: nastav efekt pozadia {BG_EFFECT}
         options:
           BG_EFFECT:
+            '"solid"': plný
             '"rainbow"': dúha
       PoemBot_setForegroundEffect:
+        text: nastav efekt popredia {FG_EFFECT}
         options:
           FG_EFFECT:
             '"rain"': dážď
+            '"bubbles"': bubliny
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      PoemBot_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: posuň sa dopredu
       RyanLab_turnLeft:
@@ -1716,6 +1852,8 @@ sk:
             '"right"': vpravo
             '"space"': vesmír
             '"a"': a
+            '"w"': w
+            '"s"': s
             '"d"': d
       craft_ifPath:
         text: |-
@@ -1796,8 +1934,12 @@ sk:
         text: vytvor {ENTITY}
         options:
           ENTITY:
+            '"cod"': treska
             '"dolphin"': delfín
+            '"salmon"': losos
+            '"seaTurtle"': morská korytnačka
             '"squid"': kalamár
+            '"tropicalFish"': tropická ryba
       craft_turn:
         text: otoč sa {DIR}
         options:

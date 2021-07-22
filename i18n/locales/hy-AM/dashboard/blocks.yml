@@ -103,6 +103,14 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -311,6 +319,11 @@ hy:
             '"right"': ճիշտ arrow
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': այո
+            '"no"': ոչ
       Mikelab_whileKeyPressed:
         options:
           KEY:

@@ -3,10 +3,12 @@
     "data": {
       "vocabularies": {
         "sprite/coursef/2021": {
-          "word": "Duszek"
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
         },
         "user/coursef/2021": {
-          "word": "Użytkownik"
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
         },
         "behavior/coursef/2021": {
           "word": "Zachowanie"
@@ -19,7 +21,8 @@
           "definition": "Lista kroków do ukończenia zadania. "
         },
         "event/coursef/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "variable/coursef/2021": {
           "word": "Zmienna"
@@ -97,7 +100,8 @@
           "word": "Programowanie"
         },
         "event/courseb/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "algorithm/coursea/2021": {
           "word": "Algorytm"
@@ -127,7 +131,8 @@
           "word": "Programowanie"
         },
         "event/coursea/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "algorithm/coursec/2021": {
           "word": "Algorytm"
@@ -150,7 +155,8 @@
           "word": "Programowanie"
         },
         "event/coursec/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "binary/coursec/2021": {
           "word": "Binarny"
@@ -173,7 +179,8 @@
           "word": "Programowanie"
         },
         "event/coursed/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "conditionals/coursed/2021": {
           "word": "Zdania z warunkami"
@@ -202,10 +209,12 @@
           "word": "Zachowanie"
         },
         "sprite/express/2021": {
-          "word": "Duszek"
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
         },
         "event/express/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "conditionals/express/2021": {
           "word": "Zdania z warunkami"
@@ -256,16 +265,19 @@
           "word": "Programowanie"
         },
         "event/pre-express/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "behavior/coursee/2021": {
           "word": "Zachowanie"
         },
         "sprite/coursee/2021": {
-          "word": "Duszek"
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
         },
         "event/coursee/2021": {
-          "word": "Zdarzenie"
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "copyright/coursee/2021": {
           "word": "Prawa autorskie"
