@@ -1,33 +1,81 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {
-  BubbleBadgeWrapper,
+import BubbleBadge, {
   KeepWorkingBadge,
-  AssessmentBadge
+  AssessmentBadge,
+  BadgeType
 } from '@cdo/apps/templates/progress/BubbleBadge';
+import {
+  BubbleSize,
+  BubbleShape
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import {expect} from '../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';
 
 describe('BubbleBadge', () => {
-  describe('BubbleBadgeWrapper', () => {
-    it('positions the wrapper correctly if isDiamond is false', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={false}>{children}</BubbleBadgeWrapper>
-      );
-      expect(wrapper.props().style.top).to.equal(-7);
-      expect(wrapper.props().style.right).to.equal(-7);
-    });
+  it('renders an AssessmentBadge for BadgeType.assessment', () => {
+    const wrapper = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.assessment}
+        bubbleSize={BubbleSize.full}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
+  });
 
-    it('positions the wrapper correctly if isDiamond is true', () => {
-      const children = <div />;
-      const wrapper = shallow(
-        <BubbleBadgeWrapper isDiamond={true}>{children}</BubbleBadgeWrapper>
-      );
-      console.log(wrapper.debug());
-      expect(wrapper.props().style.top).to.equal(-13);
-      expect(wrapper.props().style.right).to.equal(-17);
-    });
+  it('renders a KeepWorkingBadge for BadgeType.keepWorking', () => {
+    const wrapper = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.full}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+  });
+
+  it('renders nothing for small bubbles', () => {
+    const letter = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.letter}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    const dot = shallow(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleSize={BubbleSize.dot}
+        bubbleShape={BubbleShape.circle}
+      />
+    );
+    expect(letter).to.be.empty;
+    expect(dot).to.be.empty;
+  });
+
+  it('positions the element correctly is bubbleShape is not a diamond', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleShape={BubbleShape.circle}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-7);
+    expect(wrapper.find('div').props().style.right).to.equal(-7);
+  });
+
+  it('positions the element correctly is bubbleShape is a diamond', () => {
+    const wrapper = mount(
+      <BubbleBadge
+        badgeType={BadgeType.keepWorking}
+        bubbleShape={BubbleShape.diamond}
+        bubbleSize={BubbleSize.full}
+      />
+    );
+    expect(wrapper.find('div').props().style.top).to.equal(-13);
+    expect(wrapper.find('div').props().style.right).to.equal(-17);
   });
 
   describe('KeepWorkingBadge', () => {

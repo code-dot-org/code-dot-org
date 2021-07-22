@@ -1,8 +1,6 @@
 name 'CSA Multiple Choice level to clone'
 height 'auto'
 
-question ‘What will be printed when the following code segment is run? ’
-
 wrong ‘7’
 wrong ‘3.04’
 right ‘7.0’
