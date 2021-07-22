@@ -14,8 +14,6 @@
 #
 class Backpack < ApplicationRecord
   belongs_to :user
-  validates_uniqueness_of :storage_app_id
-  validates_uniqueness_of :user_id
 
   def self.find_or_create(user_id, ip)
     backpack = find_by_user_id(user_id)
