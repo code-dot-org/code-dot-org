@@ -6,19 +6,21 @@ import {
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import AddDefaultSprite from '@cdo/apps/code-studio/assets/AddDefaultSprite';
+import Button from '@cdo/apps/templates/Button';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
     defaultList: {}, // Dictionary with name as key and sprite object as value
-    pendingChanges: 0,
-    isUpdating: false
+    pendingChangesCount: 0,
+    isUpdating: false,
+    errorText: ''
   };
 
   componentDidMount() {
     getDefaultList()
       .then(spriteDefault => {
-        var spriteList = {};
+        let spriteList = {};
         spriteDefault['default_sprites'].map(
           sprite => (spriteList[sprite.name] = sprite)
         );
@@ -31,13 +33,15 @@ export default class DefaultSpritesEditor extends React.Component {
 
   incrementPendingChanges() {
     let changes = this.state.pendingChanges + 1;
-    this.setState({pendingChanges: changes});
+    this.setState({pendingChangesCount: changes});
   }
 
-  deleteSpriteFromDefaults(spriteName) {
-    delete this.state.defaultList[spriteName];
+  deleteSpriteFromDefaults = spriteName => {
+    let updatedList = {...this.state.defaultList};
+    delete updatedList[spriteName];
+    this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
-  }
+  };
 
   addSpriteToDefaults = (spriteName, spriteCategory) => {
     let updateList = this.state.defaultList;
@@ -46,18 +50,23 @@ export default class DefaultSpritesEditor extends React.Component {
     this.incrementPendingChanges();
   };
 
-  updateDefaultSprites() {
+  updateDefaultSprites = () => {
     this.setState({isUpdating: true});
     let jsonList = {};
     jsonList['default_sprites'] = Object.values(this.state.defaultList);
-    updateDefaultList(JSON.stringify(jsonList))
+    updateDefaultList(jsonList)
       .then(() => {
-        this.setState({pendingChanges: 0, isUpdating: false});
+        this.setState({
+          pendingChangesCount: 0,
+          isUpdating: false,
+          errorText: ''
+        });
       })
       .catch(err => {
         console.log(err);
+        this.setState({errorText: err.toString(), isUpdating: false});
       });
-  }
+  };
 
   renderDefaultSprites() {
     return Object.keys(this.state.defaultList).map(spriteKey => {
@@ -66,7 +75,7 @@ export default class DefaultSpritesEditor extends React.Component {
         <DefaultSpriteRow
           name={spriteObject.name}
           keyValue={spriteObject.key}
-          onDelete={this.deleteSpriteFromDefaults.bind(this)}
+          onDelete={this.deleteSpriteFromDefaults}
           key={spriteObject.name}
         />
       );
@@ -76,14 +85,19 @@ export default class DefaultSpritesEditor extends React.Component {
   // Button rendered twice - at top and bottom of list - to minimize
   // required scrolling
   renderUploadButton() {
-    let isUpdating = this.state.isUpdating;
+    let {isUpdating, errorText} = this.state;
     return (
-      <div style={styles.changesRow}>
-        <button type="button" onClick={this.updateDefaultSprites.bind(this)}>
-          Update Default Sprites List
-        </button>
-        <p>Pending Changes: {this.state.pendingChanges}</p>
-        {isUpdating && <Spinner />}
+      <div>
+        <div style={styles.changesRow}>
+          <Button
+            onClick={this.updateDefaultSprites}
+            color={Button.ButtonColor.blue}
+            text="Update Default Sprites List"
+          />
+          <p>Pending Changes: {this.state.pendingChangesCount}</p>
+          {isUpdating && <Spinner />}
+        </div>
+        {errorText.length > 0 && <p>{errorText}. Please try again.</p>}
       </div>
     );
   }
@@ -106,11 +120,7 @@ export default class DefaultSpritesEditor extends React.Component {
         </p>
         {this.renderUploadButton()}
         <AddDefaultSprite onAdd={this.addSpriteToDefaults} />
-        {isLoading && (
-          <div>
-            <Spinner />
-          </div>
-        )}
+        {isLoading && <Spinner />}
         {this.renderDefaultSprites()}
         {this.renderUploadButton()}
       </div>
