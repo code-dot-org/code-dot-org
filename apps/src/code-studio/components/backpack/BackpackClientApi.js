@@ -19,6 +19,13 @@ export default class BackpackClientApi {
   }
 
   saveFiles(filesJson, filenames, onError, onSuccess) {
+    if (filenames.length === 0) {
+      // nothing to save
+      onSuccess();
+      return;
+    }
+    // only fetch channel id on first save request so we don't
+    // create backpacks for users who never use them.
     if (!this.channelId) {
       this.fetchChannelId(() =>
         this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
@@ -29,10 +36,6 @@ export default class BackpackClientApi {
   }
 
   saveFilesHelper(filesJson, filenames, onError, onSuccess) {
-    if (filenames.length === 0) {
-      onSuccess();
-      return;
-    }
     this.filesToUpload = filenames;
     filenames.forEach(filename => {
       const fileContents = filesJson[filename].text;
@@ -40,12 +43,15 @@ export default class BackpackClientApi {
       this.writeSingleFileToBackpack(
         filename,
         fileContents,
-        // onError: retry first failure, then call onError message on second failure
+        // onError: retry first failure, then call onError method on second failure
         () =>
-          this.writeSingleFileToBackpack(filename, fileContents, onError, () =>
-            this.onSingleUploadSuccess(filename, onSuccess)
+          this.writeSingleFileToBackpack(
+            filename,
+            fileContents,
+            onError,
+            onSuccess
           ),
-        () => this.onSingleUploadSuccess(filename, onSuccess)
+        onSuccess
       );
     });
   }
@@ -55,7 +61,7 @@ export default class BackpackClientApi {
       if (error) {
         onError(error);
       } else {
-        onSuccess();
+        this.onSingleUploadSuccess(filename, onSuccess);
       }
     });
   }
