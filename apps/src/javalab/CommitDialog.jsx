@@ -5,11 +5,13 @@ import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 export default class CommitDialog extends React.Component {
   state = {
     filesToCommit: [],
-    commitNotes: null
+    commitNotes: null,
+    backpackApi: new BackpackClientApi()
   };
 
   renderFooter = buttons => {
@@ -57,9 +59,27 @@ export default class CommitDialog extends React.Component {
     this.setState({filesToCommit});
   };
 
+  testCommit = () => {
+    console.log('in test commit!');
+    this.state.backpackApi.saveFiles(
+      this.props.sources,
+      this.state.filesToCommit,
+      this.onBackpackFailure,
+      this.onBackpackSuccess
+    );
+  };
+
+  onBackpackFailure() {
+    this.setState({commitNotes: 'backpack save failed!'});
+  }
+
+  onBackpackSuccess() {
+    this.setState({commitNotes: 'backpack save succeeded!'});
+  }
+
   render() {
     const {filesToCommit, commitNotes} = this.state;
-    const {isOpen, files, handleClose, handleCommit} = this.props;
+    const {isOpen, files, handleClose} = this.props;
 
     return (
       <StylizedBaseDialog
@@ -78,7 +98,8 @@ export default class CommitDialog extends React.Component {
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
+        // handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
+        handleConfirmation={this.testCommit}
         handleClose={handleClose}
         footerJustification="space-between"
       />
@@ -91,7 +112,8 @@ CommitDialog.propTypes = {
   files: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClose: PropTypes.func.isRequired,
   handleCommit: PropTypes.func.isRequired,
-  compileStatus: PropTypes.string
+  compileStatus: PropTypes.string,
+  sources: PropTypes.object
 };
 
 CommitDialog.defaultProps = {

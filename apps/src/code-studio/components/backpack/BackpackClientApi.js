@@ -29,7 +29,7 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess) {
+  saveFilesHelper = (filesJson, filenames, onError, onSuccess) => {
     if (filenames.length === 0) {
       onSuccess();
       return;
@@ -48,7 +48,7 @@ export default class BackpackClientApi {
         () => this.onSingleUploadSuccess(filename, onSuccess)
       );
     });
-  }
+  };
 
   writeSingleFileToBackpack(filename, fileContents, onError, onSuccess) {
     this.backpackApi.put(
