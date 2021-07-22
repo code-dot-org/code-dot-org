@@ -47,8 +47,12 @@ const createStoreWithoutLessonPlan = () => {
   store.dispatch(initVocabularies([]));
   return store;
 };
+
 export default storybook => {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
       name: 'ActivitiesEditor For Lesson With Lesson Plan',
