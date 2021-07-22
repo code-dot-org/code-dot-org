@@ -13,10 +13,7 @@ export default class Comment extends Component {
     onDelete: PropTypes.func.isRequired
   };
 
-  state = {
-    isShowingCommentOptions: false,
-    hasError: false
-  };
+  state = {isShowingCommentOptions: false};
 
   onDelete = () => {
     this.setState({isShowingCommentOptions: false});
@@ -47,7 +44,7 @@ export default class Comment extends Component {
   };
 
   renderErrorMessage = () => {
-    return <div style={styles.error}>{javalabMsg.commentSaveError()}</div>;
+    return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
   };
 
   render() {

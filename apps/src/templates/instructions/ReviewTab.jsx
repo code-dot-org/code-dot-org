@@ -6,6 +6,8 @@ import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
+const FLASH_ERROR_TIME_MS = 5000;
+
 export default class ReviewTab extends Component {
   state = {
     isReadyForReview: false,
@@ -79,7 +81,10 @@ export default class ReviewTab extends Component {
 
   flashErrorOnComment = commentId => {
     this.setCommentErrorStatus(commentId, true);
-    setTimeout(() => this.setCommentErrorStatus(commentId, false), 5000);
+    setTimeout(
+      () => this.setCommentErrorStatus(commentId, false),
+      FLASH_ERROR_TIME_MS
+    );
   };
 
   setCommentErrorStatus = (commentId, newErrorStatus) => {
