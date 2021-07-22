@@ -168,11 +168,7 @@ export default class ImagePicker extends React.Component {
       levelName = reduxState.level.name;
       isStartMode = reduxState.level.isStartMode;
     }
-    if (
-      reduxState.javalab &&
-      reduxState.javalab.levelName &&
-      reduxState.javalab.isStartMode
-    ) {
+    if (reduxState.javalab && reduxState.javalab.levelName) {
       levelName = reduxState.javalab.levelName;
       isStartMode = reduxState.javalab.isStartMode;
     }
