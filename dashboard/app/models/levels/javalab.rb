@@ -113,7 +113,7 @@ class Javalab < Level
 
       if csa_view_mode == 'neighborhood'
         level_prop['serializedMaze'] = get_serialized_maze
-        level_prop['startDirection'] = try(:project_template_level).start_direction || start_direction
+        level_prop['startDirection'] = start_direction || try(:project_template_level).start_direction
       end
 
       level_prop['levelId'] = level_num
