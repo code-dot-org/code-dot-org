@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
       "project_widget_visible": true,
       "project_widget_types": [
@@ -11,12 +12,13 @@
         "gamelab",
         "weblab"
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
+      "lesson_extras_available": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit6/{LESSON}",
       "version_year": "2020",
-      "project_sharing": true,
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "is_stable": true,
+      "project_sharing": true,
       "tts": true,
       "teacher_resources": [
         [
@@ -40,14 +42,12 @@
           "https://curriculum.code.org/csd-20/unit6/code/"
         ]
       ],
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
       "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-23 23:39:44 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-22 20:46:27 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd6-2020"
     }
