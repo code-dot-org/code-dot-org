@@ -7,6 +7,7 @@ import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {reload} from '@cdo/apps/utils';
 
 export default class CommitDialog extends React.Component {
   state = {
@@ -17,10 +18,10 @@ export default class CommitDialog extends React.Component {
 
   renderFooter = buttons => {
     let compileStatusContent = '';
-    let commitColor = 'orange';
     let commitText = 'Commit';
+    let isDisabled = true;
     if (this.state.commitNotes) {
-      commitColor = 'green';
+      isDisabled = false;
     }
     if (this.state.filesToBackpack.length > 0) {
       commitText = 'Commit & Save';
@@ -57,15 +58,15 @@ export default class CommitDialog extends React.Component {
           key="cancel"
           type="cancel"
           text="Cancel"
-          onClick={() => {}}
+          onClick={reload}
         />
         ,
         <FooterButton
+          id="confirmationButton"
           key="confirm"
-          type="confirm"
           text={commitText}
-          color={commitColor}
-          borderColor={color.lightest_gray}
+          disabled={isDisabled}
+          color="green"
           onClick={() => {}}
         />
       </div>
