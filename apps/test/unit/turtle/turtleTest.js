@@ -1,10 +1,10 @@
 import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
 import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-const Artist = require('@cdo/apps/turtle/artist');
+import Artist from '@cdo/apps/turtle/artist';
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
 const VERY_LONG_DIAGONAL = 150 * Math.sqrt(2);
