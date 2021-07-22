@@ -40,7 +40,8 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "技能發展"
         },
         "c5589504-a584-4599-8ee2-22e32a2374da": {
           "progression_name": "練習"
@@ -61,6 +62,9 @@
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
           "name": "運行中的角色",
           "progression_name": "預測"
+        },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "progression_name": "技能發展"
         },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
           "progression_name": "練習"
@@ -83,6 +87,9 @@
           "tips": [
             null
           ]
+        },
+        "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
+          "progression_name": "探索"
         },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "自由發揮"
@@ -120,7 +127,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "技能發展"
         },
         "472a5254-b0e4-4069-a6f4-940ed9fda07a": {
           "progression_name": "練習"
@@ -160,6 +168,12 @@
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
           "name": "以迴圈（Loop）繪畫"
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "技能發展"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "技能發展"
+        },
         "08a8ba95-17db-446d-9a47-2ed7927d1957": {
           "progression_name": "練習"
         },
@@ -172,6 +186,9 @@
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
           "progression_name": "預測"
         },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "技能發展"
+        },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "自由發揮"
         },
@@ -182,7 +199,8 @@
           "name": "介紹"
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
-          "name": "迷宮裡的巢狀迴圈（Nested Loops）"
+          "name": "迷宮裡的巢狀迴圈（Nested Loops）",
+          "progression_name": "技能發展"
         },
         "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
           "progression_name": "練習"
@@ -199,7 +217,8 @@
           "name": "介紹"
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
-          "name": "在蜜蜂遊戲中變更變數"
+          "name": "在蜜蜂遊戲中變更變數",
+          "progression_name": "技能發展"
         },
         "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
           "progression_name": "練習"
@@ -238,6 +257,9 @@
         "297e5651-8422-476e-b1db-3d893b7e0bc8": {
           "progression_name": "預測"
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "技能發展"
+        },
         "729a9e74-6bd2-4833-8b46-12f83a6a83b7": {
           "progression_name": "練習"
         },
@@ -253,6 +275,12 @@
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "藝術家中的計數迴圈（For Loops）",
           "progression_name": "影片：計次迴圈"
+        },
+        "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
+          "progression_name": "探索"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "技能發展"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "自由發揮"
@@ -290,6 +318,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "技能發展"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "progression_name": "從模擬中學習"
@@ -404,6 +435,9 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "技能發展"
+        },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "反思"
         },
@@ -414,6 +448,9 @@
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "與憤怒鳥一起編程"
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "技能發展"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "挑戰"
@@ -443,6 +480,12 @@
             null
           ]
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "技能發展"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "技能發展"
+        },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
           "progression_name": "挑戰"
         },
@@ -469,6 +512,12 @@
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
           "name": "與農夫一起學迴圈（Loops）"
         },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "技能發展"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "技能發展"
+        },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "挑戰"
         },
@@ -480,6 +529,12 @@
         },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "介紹"
+        },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "技能發展"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "技能發展"
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "挑戰"
@@ -500,6 +555,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "技能發展"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "技能發展"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
           "progression_name": "挑戰"
@@ -602,6 +663,9 @@
             null
           ]
         },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "技能發展"
+        },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "反思",
           "tips": [
@@ -626,6 +690,9 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "技能發展"
+        },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "反思"
         },
@@ -633,6 +700,12 @@
           "tips": [
             null
           ]
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "技能發展"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "技能發展"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
           "progression_name": "挑戰"
@@ -656,6 +729,9 @@
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "和 BB-8 與 Rey 一起寫程式"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "技能發展"
         },
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
           "progression_name": "挑戰"
@@ -688,6 +764,12 @@
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
           "name": "和鼠奎特一起學迴圈（Loop）"
         },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "技能發展"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "技能發展"
+        },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "挑戰"
         },
@@ -710,6 +792,12 @@
             null
           ]
         },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "技能發展"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "技能發展"
+        },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
           "progression_name": "挑戰"
         },
@@ -727,6 +815,12 @@
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
           "name": "海洋場景與迴圈（Loop）"
+        },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "技能發展"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "技能發展"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "挑戰"
@@ -840,6 +934,9 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "技能發展"
+        },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
           "progression_name": "挑戰"
         },
@@ -864,6 +961,9 @@
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
           "name": "在迷宮中除錯"
         },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "技能發展"
+        },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
           "progression_name": "挑戰"
         },
@@ -884,6 +984,9 @@
         },
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "name": "和 Laurel 一起收集寶石"
+        },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "技能發展"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "挑戰"
@@ -908,6 +1011,9 @@
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
           "name": "用代碼創作藝術"
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "技能發展"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -944,8 +1050,14 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "和 BB-8 與 Rey 一起練習迴圈（Loop）"
         },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "技能發展"
+        },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "預測"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "技能發展"
         },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
           "progression_name": "挑戰"
@@ -970,6 +1082,9 @@
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
           "name": "使用迴圈（Loop）收割農作物"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "技能發展"
         },
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
           "progression_name": "挑戰"
@@ -1031,6 +1146,9 @@
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "製作像素鳥遊戲"
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "技能發展"
         },
         "b6624ca7-5ffe-462e-ad60-5580ffb87066": {
           "progression_name": "小專案: 像素鳥遊戲"
@@ -1136,6 +1254,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "技能發展"
+        },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "挑戰"
         },
@@ -1166,6 +1287,9 @@
         },
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "和 Laurel 學除錯（Debug）"
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "技能發展"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "挑戰"
@@ -1206,6 +1330,9 @@
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "name": "創建一個星際大戰遊戲！"
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "技能發展"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1256,6 +1383,12 @@
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "冰河歷險紀中的迴圈"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "技能發展"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "技能發展"
+        },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "挑戰"
         },
@@ -1276,6 +1409,12 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "以迴圈（Loop）繪畫藝術作品"
         },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "技能發展"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "技能發展"
+        },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
           "progression_name": "挑戰"
         },
@@ -1291,8 +1430,14 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "迷宮裡的巢狀迴圈（Nested Loops）"
         },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "技能發展"
+        },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "預測"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "技能發展"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
           "progression_name": "挑戰"
@@ -1328,7 +1473,8 @@
           "name": "介紹"
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
-          "name": "與 Minecraft 一起展望未來"
+          "name": "與 Minecraft 一起展望未來",
+          "progression_name": "技能發展"
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
           "progression_name": "挑戰"
@@ -1347,6 +1493,12 @@
         },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "預測"
+        },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "技能發展"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "技能發展"
         },
         "27ad7403-2d40-4d31-9f89-bc6680589bdb": {
           "progression_name": "預測"
@@ -1369,8 +1521,14 @@
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "農夫遊戲中的 while（當）迴圈"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "技能發展"
+        },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "預測"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "技能發展"
         },
         "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
           "progression_name": "挑戰"
@@ -1391,10 +1549,14 @@
           "name": "介紹"
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
-          "name": "迷宮裡的 until（直到）迴圈"
+          "name": "迷宮裡的 until（直到）迴圈",
+          "progression_name": "技能發展"
         },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "預測"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "技能發展"
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
           "progression_name": "挑戰"
@@ -1440,6 +1602,9 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "技能發展"
+        },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "挑戰"
         },
@@ -1467,6 +1632,9 @@
         "a253c018-c2ce-4147-a5a4-24db47788f78": {
           "name": "與鼠奎特一起除錯"
         },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "技能發展"
+        },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "挑戰"
         },
@@ -1487,6 +1655,9 @@
         },
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "name": "和 Laurel 一起收集寶石"
+        },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "技能發展"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "挑戰"
@@ -1511,6 +1682,9 @@
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
           "name": "用代碼創作藝術"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "技能發展"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1547,6 +1721,9 @@
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "預測"
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "技能發展"
+        },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "練習"
         },
@@ -1566,6 +1743,9 @@
           ],
           "progression_name": "預測"
         },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "技能發展"
+        },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "練習"
         },
@@ -1580,6 +1760,9 @@
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
           "name": "運行中的角色",
           "progression_name": "預測"
+        },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "技能發展"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "練習"
@@ -1597,6 +1780,9 @@
           "tips": [
             null
           ]
+        },
+        "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
+          "progression_name": "探索"
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "自由發揮"
@@ -1639,6 +1825,9 @@
         },
         "63ea23b9-ceb6-4e5a-b795-000673bca7d9": {
           "progression_name": "預測"
+        },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "技能發展"
         },
         "736ef92b-b635-4477-abbb-7d98d171b960": {
           "progression_name": "挑戰"
@@ -1710,7 +1899,8 @@
           "name": "介紹"
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
-          "name": "和安娜與艾莎一同玩雪花"
+          "name": "和安娜與艾莎一同玩雪花",
+          "progression_name": "技能發展"
         },
         "777ee476-c14c-4005-8226-8b5d93d34181": {
           "progression_name": "練習"
@@ -1722,7 +1912,8 @@
           "name": "介紹"
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
-          "name": "與 Minecraft 一起展望未來"
+          "name": "與 Minecraft 一起展望未來",
+          "progression_name": "技能發展"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
           "progression_name": "挑戰"
@@ -1741,6 +1932,12 @@
         },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "預測"
+        },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "技能發展"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "技能發展"
         },
         "f29415f9-cf77-4f28-ac49-633e5d430981": {
           "progression_name": "預測"
@@ -1763,8 +1960,14 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "農夫遊戲中的 while（當）迴圈"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "技能發展"
+        },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "預測"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "技能發展"
         },
         "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
           "progression_name": "挑戰"
@@ -1787,6 +1990,15 @@
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
           "name": "Minecraft 中的條件式：水上巡航 "
         },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "技能發展"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "技能發展"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "技能發展"
+        },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "自由發揮"
         },
@@ -1797,10 +2009,14 @@
           "name": "介紹"
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
-          "name": "迷宮裡的 until（直到）迴圈"
+          "name": "迷宮裡的 until（直到）迴圈",
+          "progression_name": "技能發展"
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "預測"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "技能發展"
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
           "progression_name": "挑戰"
@@ -1819,6 +2035,9 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "name": "使用條件式（Conditional）收割農作物"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "技能發展"
         },
         "5af3711a-0ea0-4c82-b622-a250349a8389": {
           "progression_name": "練習"
@@ -1849,6 +2068,15 @@
           "tips": [
             null
           ]
+        },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "技能發展"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "技能發展"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "技能發展"
         },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "自由發揮"
@@ -1923,7 +2151,8 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "技能發展"
         },
         "3ae6f1d6-b2f9-4a9f-9877-673ee1f0a654": {
           "progression_name": "練習"
@@ -1940,6 +2169,9 @@
         "b270733d-2d48-4470-a0e4-7a805255d765": {
           "progression_name": "預測"
         },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "技能發展"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "自由發揮"
         },
@@ -1950,7 +2182,8 @@
           "name": "介紹"
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
-          "name": "在蜜蜂遊戲中變更變數"
+          "name": "在蜜蜂遊戲中變更變數",
+          "progression_name": "技能發展"
         },
         "66e1664f-4e5a-4df9-a902-d0eb19537997": {
           "progression_name": "練習"
@@ -1970,6 +2203,9 @@
         "600fa08b-d08b-4e28-96a5-e1e2b6b5c908": {
           "progression_name": "預測"
         },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "技能發展"
+        },
         "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e": {
           "progression_name": "練習"
         },
@@ -1987,6 +2223,12 @@
             null
           ],
           "progression_name": "影片：計次迴圈"
+        },
+        "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
+          "progression_name": "探索"
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "技能發展"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "自由發揮"
@@ -2038,6 +2280,9 @@
             null
           ]
         },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "技能發展"
+        },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "反思"
         },
@@ -2056,11 +2301,15 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "技能發展"
+        },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "反思"
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
-          "name": "與憤怒鳥一起編程"
+          "name": "與憤怒鳥一起編程",
+          "progression_name": "技能發展"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
           "progression_name": "挑戰"
@@ -2085,6 +2334,9 @@
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
           "name": "和 BB-8 與 Rey 一起寫程式"
         },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "技能發展"
+        },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
           "progression_name": "挑戰"
         },
@@ -2104,6 +2356,12 @@
           "tips": [
             null
           ]
+        },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "技能發展"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "技能發展"
         },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
           "progression_name": "挑戰"
@@ -2127,6 +2385,12 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "技能發展"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "技能發展"
+        },
         "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
           "progression_name": "挑戰"
         },
@@ -2141,6 +2405,12 @@
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "與 Laurel 一起學習迴圈"
+        },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "技能發展"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "技能發展"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
           "progression_name": "挑戰"
@@ -2165,6 +2435,12 @@
             null
           ]
         },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "技能發展"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "技能發展"
+        },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
           "progression_name": "挑戰"
         },
@@ -2188,6 +2464,9 @@
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "技能發展"
         },
         "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
           "progression_name": "挑戰"
@@ -2274,6 +2553,9 @@
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "預測"
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "技能發展"
+        },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "練習"
         },
@@ -2294,6 +2576,12 @@
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "預測"
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "技能發展"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "技能發展"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "自由發揮"
@@ -2337,6 +2625,12 @@
         "c0191294-55c5-47ec-a80d-76f9023bd84e": {
           "name": "以迴圈（Loop）繪畫"
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "技能發展"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "技能發展"
+        },
         "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
           "progression_name": "挑戰"
         },
@@ -2359,6 +2653,12 @@
           "tips": [
             null
           ]
+        },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "技能發展"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "技能發展"
         },
         "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
           "progression_name": "挑戰"
@@ -2432,6 +2732,15 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "技能發展"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "技能發展"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "技能發展"
+        },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "自由發揮"
         },
@@ -2444,6 +2753,9 @@
         "d1826ee5-4403-41a2-a804-3112c9da4cb1": {
           "name": "在藝術家遊戲中使用函式（Function）",
           "progression_name": "預測"
+        },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "技能發展"
         },
         "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
           "progression_name": "挑戰"
@@ -2463,6 +2775,15 @@
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
           "name": "Minecraft 中的條件式：水上巡航 "
         },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "技能發展"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "技能發展"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "技能發展"
+        },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "自由發揮"
         },
@@ -2476,10 +2797,17 @@
           "name": "與農夫一起嘗試條件式（Conditional）",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "技能發展"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "預測"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "技能發展"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "技能發展"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "挑戰"
@@ -2492,6 +2820,9 @@
         },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "介紹"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "技能發展"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
           "progression_name": "挑戰"

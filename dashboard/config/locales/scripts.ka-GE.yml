@@ -327,6 +327,7 @@ ka:
             Variables:
               name: ცვლადები
         algebra:
+          title: ინფორმატიკა ალგებრაში
           description: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით.
           description_short: შეისწავლეთ ფუნქციონალური პროგრამირება ალგებრის საშუალებით.
           lessons:
@@ -2672,6 +2673,8 @@ ka:
               name: გამოავლინეთ უხეში
             Debugging in Maze:
               name: გამართვა ლაბირინთში
+            Loops in Harvester:
+              name: ციკლები მკრეფავში
         coursed-draft:
           lessons:
             Events in Bounce:
@@ -3577,6 +3580,8 @@ ka:
               name: პროგრამირება მსახიობში
             Loops in Maze:
               name: ციკლები ლაბირინთში
+            Loops in Harvester:
+              name: ციკლები მკრეფავში
             'Events: The Big Event':
               name: 'მოვლენები: დიდი მოვლენა'
             Build a Flappy Game:
@@ -9189,6 +9194,8 @@ ka:
               name: პროგრამირება ლაბირინთში
             'Loops: Getting Loopy':
               name: ჩაციკლვა
+            Loops in Harvester:
+              key: ციკლები მკრეფავში
             Loops in Collector:
               key: ციკლები შემგროვებელში
               name: ციკლები შემგროვებელში
@@ -9236,6 +9243,8 @@ ka:
             Loops with Rey and BB-8:
               key: ციკლები რეისთან და BB-8-სთან ერთად
               name: ციკლები რეისთან და BB-8-სთან ერთად
+            Loops in Harvester:
+              key: ციკლები მკრეფავში
             Sticker Art with Loops:
               key: ციკლები მხატვარში
             'Events: The Big Event':
@@ -9509,6 +9518,8 @@ ka:
             lesson-3:
               name: სპრაიტები მოქმედებაში
           lesson_groups:
+            csf_warmup:
+              display_name: მოთელვა
             csf_loops:
               display_name: ციკლები
             csf_conditionals:

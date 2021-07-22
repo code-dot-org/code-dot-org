@@ -278,6 +278,7 @@ vi:
             Variables:
               name: Các biến
         algebra:
+          title: Khoa học máy tính trong đại số
           description: Tìm hiểu lập trình chức năng thông qua đại số.
           description_short: Tìm hiểu lập trình chức năng thông qua đại số.
           lessons:
@@ -9110,6 +9111,7 @@ vi:
                 **Kiểm tra độ chính xác:** Bài hướng dẫn này sẽ không cho học sinh biết liệu các em có hoàn thành cấp độ một cách chính xác hay không. Học sinh có thể lướt qua các phần khác nhau của hoạt động một cách nhanh chóng. Hãy khuyến khích học sinh xem video, đọc hướng dẫn và thử nhiều hoạt động khác nhau trong quá trình học. Các em có thể chia sẻ những phát hiện của mình với bạn hoặc một người bạn cùng lớp bất cứ lúc nào.\\r
           student_description: Học cách sử dụng các loại vòng lặp, sự kiện, hàm và lệnh điều kiện khác nhau. Phân tích các kỹ thuật giải quyết vấn đề khác nhau và thảo luận về các tác động xã hội của máy tính và internet. Trong phần thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để có thể chia sẻ với bạn bè và gia đình.
         express-2020:
+          title: Khóa học cấp tốc (2020)
           description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài học dưới đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình máy tính, phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách thú vị! Hãy làm game và các dự án sáng tạo để chia sẻ với bạn bè, gia đình và giáo viên.
           description_short: 'Giới thiệu về khoa học máy tính: kết hợp những gì tốt nhất của chương trình giảng dạy tiểu học của chúng tôi dành cho học sinh lớn hơn.'
           description_audience: 'Độ tuổi: 9-18'

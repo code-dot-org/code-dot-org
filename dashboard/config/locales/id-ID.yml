@@ -318,6 +318,7 @@ id:
     invite_sent: Undangan telah dikirim
     added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
     registered: Anda sudah terdaftar pada %{section_name}.
+    already_exists: Anda telah bergabung dengan bagian %{section_name}.
     error:
       signed_in: Silahkan logout sebelum melanjutkan
       username_not_found: Nama akun %{username} tidak ditemukan
@@ -568,6 +569,7 @@ id:
       mendapatkan info terkini mengenai kemajuan dan proyek anak Anda. Anda juga bisa
       menggunakan alamat email ini untuk pemulihan kata sandi.
     parent_guardian_email_label: Email orang tua/wali
+    remove_parent_email_label: Hapus
     none: Tidak Ada
     only_one_parent_email_supported_warning: 'Catatan: kami hanya dapat mendukung
       satu alamat email orang tua/wali per akun murid pada saat ini.'
@@ -1352,6 +1354,7 @@ id:
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
   copy: Salin
+  confirm: Konfirmasi
   maker:
     google_oauth:
       login_with_google: Login ke Maker App dengan Google

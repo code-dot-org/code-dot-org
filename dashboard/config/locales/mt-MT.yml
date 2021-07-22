@@ -89,6 +89,7 @@ mt:
     mismatch_password: "-Żewġ passwords li daħħalt ma jaqblux"
     additional_information: Hemm bżonn xi informazzjoni addizzjonali biex tkompli
       tirregistra.
+    user_type_student: Registrazzjoni ta' lis-Studenti
     field_is_required: hija meħtieġa
   signin_form:
     title: Diġà ghandek kont? Illogja
@@ -193,6 +194,7 @@ mt:
     students:
       dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
     panel:
+      student: Registrazzjoni ta' lis-Studenti
       viewing_solution: Wirja tas-soluzzjoni
       try_it_yourself: Ipprova inti
       section: It-Taqsima
@@ -270,6 +272,8 @@ mt:
     male: Maskili
     female: Femminili
     none: Nippreferi li ma nwegiebx
+  user_type:
+    student: Registrazzjoni ta' lis-Studenti
   footer:
     thank_you: Aħna jirringrazzjaw <a href="https://code.org/about/donors"> donaturi</a>,
       <a href="https://code.org/about/partners"> imsieħba</a>, <a href="https://code.org/about/team">
@@ -281,6 +285,7 @@ mt:
     help_from_html_old: Inġiniera minn Google, Microsoft, Facebook u Twitter għenu
       biex jinholqu dawn il-materjali.
     copyright: Drittijiet tal-Awtur
+    more: AKTAR
     tos_short: It-Termini
     tos: It-Termini tas-Servizz
     privacy: Poliza dwar il-Privatezza

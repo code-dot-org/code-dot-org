@@ -780,6 +780,10 @@ eu:
         text: ezkerrera biratu
       RyanLab_turnRight:
         text: eskuinera biratu
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": kolorea
       aalab_layoutSprites:
         options:
           FORMAT:

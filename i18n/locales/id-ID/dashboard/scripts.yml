@@ -17311,6 +17311,7 @@ id:
               description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
               description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".   '
             Loops with the Artist:
+              key: Loop dengan Artis
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
               description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
@@ -17555,6 +17556,8 @@ id:
             lesson-3:
               name: Sprite tengah Beraksi
           lesson_groups:
+            csf_warmup:
+              display_name: Pemanasan
             csf_sequencing:
               display_name: Urutan
             csf_loops:

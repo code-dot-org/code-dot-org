@@ -473,6 +473,7 @@ vi-VN:
     lưu khám phá thế giới Minecraft
   mc_shortdescription: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu
     lưu khám phá thế giới Minecraft
+  mc_gradelevel: 6-106 tuổi
   mc_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại và máy tính bảng | Lứa tuổi
     6-106
   minecraft_agent: 'Minecraft: Hero''s Journey'
@@ -683,6 +684,7 @@ vi-VN:
   dashboard_hoc_courses: Giờ lập trình cho mọi lứa tuổi
   dashboard_k5_courses: Khóa học 20 giờ dành cho K-5
   dashboard_middle_courses: Các khóa học 20-Giờ cho học sinh Trung học
+  dashboard_course_csina: Khoa học máy tính trong đại số
   dashboard_course_csins: Khoa học máy tính đối với khoa học
   dashboard_course_ecs: Khám phá Khoa học Máy tính
   dashboard_course_ecs_desc: 'Khám phá Khoa học máy tính là một khóa học kéo dài môt
@@ -782,6 +784,7 @@ vi-VN:
   dashboard_teacher_worksheet: bảng giáo viên
   dashboard_curriculum_csina: 'Khoa học máy tính trong đại số:'
   dashboard_curriculum_csins: 'Khoa học máy tính trong khoa học:'
+  dashboard_curriculum_csp: 'Nguyên tắc Khoa học Máy tính:'
   dashboard_curriculum_ecs: 'Khám phá Khoa học Máy tính:'
   dashboard_grade_k: K
   dashboard_grade_other: Khác
@@ -935,7 +938,9 @@ vi-VN:
   pre-express-2018_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2018)
   express-2019_name: Khóa học cấp tốc (2019)
   pre-express-2019_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2019)
+  express-2020_name: Khóa học cấp tốc (2020)
   pre-express-2020_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2020)
+  pre-express-2021_name: Khóa học cấp tốc cho trẻ chưa biết đọc (2021)
   accelerated_name: Khóa học cấp tốc
   pre-express_name: Khóa học cấp tốc cho trẻ chưa biết đọc
   20-hour_name: Khóa học cấp tốc
@@ -960,6 +965,7 @@ vi-VN:
   scratch_gradelevel: Lứa tuổi 8+
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
+  condcards_gradelevel: 8-12 tuổi
   lightbotintl_gradelevel: Mọi lứa tuổi
   codehs_gradelevel: Trung học phổ thông
   codecademy_gradelevel: Trung học phổ thông
@@ -969,13 +975,19 @@ vi-VN:
   kodable_gradelevel: Tiểu học
   tynkerapp_gradelevel: Tuổi từ 5-13
   robomindnl_gradelevel: 8-13 tuổi
+  flappy_gradelevel: 6-106 tuổi
   bitsbox_gradelevel: Tiểu học
   makeschool_gradelevel: Trung học phổ thông
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
   thinkersmith2_gradelevel: Lứa tuổi 8+
   kodableunplugged_gradelevel: 8-13 tuổi
+  projguts_gradelevel: Độ tuổi 10-13
+  hourofcode_gradelevel: 6-106 tuổi
   frozen_gradelevel: Độ tuổi 8-108
+  starwars_gradelevel: 6-106 tuổi
+  playlab_gradelevel: 6-14 tuổi
+  infinity_gradelevel: 6-14 tuổi
   artist_gradelevel: Độ tuổi 8-108
   monstercoding_gradelevel: Tuổi từ 5-13
   allcancode_gradelevel: 5-10 tuổi
@@ -992,26 +1004,31 @@ vi-VN:
   courseb_gradelevel: 5-8 tuổi
   coursec_gradelevel: 6-10 tuổi
   coursed_gradelevel: Lớp 8 +
+  coursee_gradelevel: 8-12 tuổi
   coursef_gradelevel: 9-13 tuổi
   coursea-2017_gradelevel: Tuổi từ 4-7
   courseb-2017_gradelevel: 5-8 tuổi
   coursec-2017_gradelevel: 6-10 tuổi
   coursed-2017_gradelevel: Lớp 8 +
+  coursee-2017_gradelevel: 8-12 tuổi
   coursef-2017_gradelevel: 9-13 tuổi
   coursea-2018_gradelevel: Tuổi từ 4-7
   courseb-2018_gradelevel: 5-8 tuổi
   coursec-2018_gradelevel: 6-10 tuổi
   coursed-2018_gradelevel: Lớp 8 +
+  coursee-2018_gradelevel: 8-12 tuổi
   coursef-2018_gradelevel: 9-13 tuổi
   coursea-2019_gradelevel: Tuổi từ 4-7
   courseb-2019_gradelevel: 5-8 tuổi
   coursec-2019_gradelevel: 6-10 tuổi
   coursed-2019_gradelevel: Lớp 8 +
+  coursee-2019_gradelevel: 8-12 tuổi
   coursef-2019_gradelevel: 9-13 tuổi
   coursea-2020_gradelevel: Tuổi từ 4-7
   courseb-2020_gradelevel: 5-8 tuổi
   coursec-2020_gradelevel: 6-10 tuổi
   coursed-2020_gradelevel: Lớp 8 +
+  coursee-2020_gradelevel: 8-12 tuổi
   coursef-2020_gradelevel: 9-13 tuổi
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   thinkersmithspanish_platformtext: Không dùng máy tính
@@ -1031,6 +1048,8 @@ vi-VN:
   khanhe_shortdescription: Học cách vẽ trên JavaScript
   khanfr_shortdescription: Học cách vẽ trên JavaScript
   khanpl_shortdescription: Học cách vẽ trên JavaScript
+  codehs_shortdescription: Bắt đầu lập trình với chú cún Karel, một phần giới thiệu
+    vui vẻ và trực quan về lập trình!
   robomind_shortdescription: Viết mã cho một robot ảo
   groklearning_shortdescription: Dạy "Eliza" chatbot để lừa các bạn của bạn nghĩ cô
     ấy là con người!

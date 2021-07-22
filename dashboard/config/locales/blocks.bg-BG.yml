@@ -109,6 +109,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -131,6 +132,7 @@ bg:
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -212,6 +214,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -446,6 +449,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -468,6 +472,7 @@ bg:
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -477,6 +482,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -499,6 +505,7 @@ bg:
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -561,6 +568,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -586,6 +594,7 @@ bg:
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -598,6 +607,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -624,6 +634,7 @@ bg:
             '"UNICORN"': еднорози
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
             '"rotation"': въртене
             '"x"': хоризонтално положение
@@ -823,6 +834,7 @@ bg:
         options:
           PROPERTY:
             '"scale"': размер
+            '"width"': широчина
             '"height"': височина
       gamelab_spriteClicked:
         options:
@@ -1046,6 +1058,10 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": цвят
       aalab_layoutSprites:
         options:
           FORMAT:

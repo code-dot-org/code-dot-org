@@ -41,7 +41,8 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Формирование навыков"
         },
         "c5589504-a584-4599-8ee2-22e32a2374da": {
           "progression_name": "Практика"
@@ -65,6 +66,9 @@
         "275316f1-8a17-411e-881a-0841ede9cd01": {
           "progression_name": " Спрайты в действии"
         },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "progression_name": "Формирование навыков"
+        },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
           "progression_name": "Практика"
         },
@@ -83,6 +87,9 @@
           "tips": [
             null
           ]
+        },
+        "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
+          "progression_name": "Исследование"
         },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Свободная игра"
@@ -114,7 +121,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Формирование навыков"
         },
         "472a5254-b0e4-4069-a6f4-940ed9fda07a": {
           "progression_name": "Практика"
@@ -150,6 +158,12 @@
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Введение"
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "Формирование навыков"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "Формирование навыков"
+        },
         "08a8ba95-17db-446d-9a47-2ed7927d1957": {
           "progression_name": "Практика"
         },
@@ -158,6 +172,9 @@
         },
         "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
           "name": "Обзор"
+        },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "Формирование навыков"
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Свободная игра"
@@ -169,7 +186,8 @@
           "name": "Введение"
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
-          "name": "Вложенные циклы в Лабиринте"
+          "name": "Вложенные циклы в Лабиринте",
+          "progression_name": "Формирование навыков"
         },
         "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
           "progression_name": "Практика"
@@ -184,6 +202,9 @@
         },
         "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
           "name": "Введение"
+        },
+        "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "progression_name": "Формирование навыков"
         },
         "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
           "progression_name": "Практика"
@@ -222,6 +243,9 @@
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
           "progression_name": " Циклы с параметром"
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "Формирование навыков"
+        },
         "729a9e74-6bd2-4833-8b46-12f83a6a83b7": {
           "progression_name": "Практика"
         },
@@ -237,6 +261,12 @@
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "Цикл for в Художнике",
           "progression_name": " Циклы с параметром"
+        },
+        "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
+          "progression_name": "Исследование"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "Формирование навыков"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Свободная игра"
@@ -265,6 +295,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "Формирование навыков"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
           "progression_name": " Симулятор эпидемии"
@@ -372,6 +405,9 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "Формирование навыков"
+        },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Рефлексия",
           "description": "### Ведение журналаЦель: помочь учащимся обдумать то, чему они научились на этом уроке\n\nЗадайте учащимся наводящий вопрос для ведения журнала, чтобы помочь им переработать информацию, полученную за этот день.\n\nПримеры наводящих вопросов для ведения журнала:\n\n-   Нарисуйте в углу страницы журнала один из [смайликов], показывающий ваше впечатление от сегодняшнего урока.\n-   Сможете ли вы нарисовать последовательность действий по подготовке к работе в компьютерной лаборатории?\n-   Нарисуйте, что можно, а что нельзя делать в компьютерной лаборатории."
@@ -383,6 +419,9 @@
         },
         "32a0cded-433b-4111-b1a5-8513247d783b": {
           "progression_name": " Программирование в парах"
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "Формирование навыков"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "Испытание"
@@ -412,6 +451,12 @@
         "0f52c6dc-5602-4905-a924-f7756676f53f": {
           "progression_name": " Харвестер"
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "Формирование навыков"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "Формирование навыков"
+        },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
           "progression_name": "Испытание"
         },
@@ -438,6 +483,12 @@
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
           "name": "Введение"
         },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "Формирование навыков"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "Формирование навыков"
+        },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "Испытание"
         },
@@ -450,8 +501,14 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Введение"
         },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "Формирование навыков"
+        },
         "9bffbabf-f624-49e2-b54b-52317b420600": {
           "progression_name": " Использование блока Повтор"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "Формирование навыков"
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "Испытание"
@@ -472,6 +529,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "Формирование навыков"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "Формирование навыков"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
           "progression_name": "Испытание"
@@ -571,6 +634,9 @@
             null
           ]
         },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "Формирование навыков"
+        },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Рефлексия",
           "tips": [
@@ -595,6 +661,9 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "Формирование навыков"
+        },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "Рефлексия"
         },
@@ -605,6 +674,12 @@
         },
         "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
           "progression_name": " Программирование в парах "
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "Формирование навыков"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "Формирование навыков"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
           "progression_name": "Испытание"
@@ -629,6 +704,9 @@
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Программирование с Рееем и BB-8",
           "progression_name": " Программирование с Рееем и BB-8"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "Формирование навыков"
         },
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
           "progression_name": "Испытание"
@@ -661,6 +739,12 @@
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
           "name": "Циклы со Скратом"
         },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "Формирование навыков"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "Формирование навыков"
+        },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "Испытание"
         },
@@ -683,8 +767,14 @@
             null
           ]
         },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "Формирование навыков"
+        },
         "801526d2-4615-4e46-90c1-5e3c08dfe223": {
           "progression_name": " Использование блока Повтор"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "Формирование навыков"
         },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
           "progression_name": "Испытание"
@@ -704,8 +794,14 @@
         "13752711-384a-4249-bf95-632d8a8ad185": {
           "name": "Циклы в исполнителе Художник"
         },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "Формирование навыков"
+        },
         "52392151-808b-48cd-a76b-554587d200ec": {
           "progression_name": " Циклы в исполнителе Художник"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "Формирование навыков"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "Испытание"
@@ -815,6 +911,9 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "Формирование навыков"
+        },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
           "progression_name": "Испытание"
         },
@@ -833,6 +932,9 @@
         "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
           "name": "Введение"
         },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "Формирование навыков"
+        },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
           "progression_name": "Испытание"
         },
@@ -847,6 +949,9 @@
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Введение"
+        },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "Формирование навыков"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "Испытание"
@@ -866,6 +971,9 @@
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
           "name": "Введение"
         },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "Формирование навыков"
+        },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
             null
@@ -881,6 +989,9 @@
         "e7143536-5b4e-4594-b2ff-707b87e128c3": {
           "name": "Рефлексия"
         },
+        "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
+          "name": "\"Мои циклические друзья-роботы\""
+        },
         "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
           "tips": [
             null
@@ -894,6 +1005,12 @@
         },
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "progression_name": " Программирование с Рееем и BB-8"
+        },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "Формирование навыков"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "Формирование навыков"
         },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
           "progression_name": "Испытание"
@@ -915,6 +1032,9 @@
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
           "progression_name": " Харвестер"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "Формирование навыков"
         },
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
           "progression_name": "Испытание"
@@ -970,6 +1090,9 @@
         },
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Введение"
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "Формирование навыков"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -1071,6 +1194,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "Формирование навыков"
+        },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "Испытание"
         },
@@ -1098,6 +1224,9 @@
         },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
           "name": "Введение"
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "Формирование навыков"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "Испытание"
@@ -1135,6 +1264,9 @@
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "progression_name": " Проект Звёздные войны"
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "Формирование навыков"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1197,8 +1329,14 @@
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "Циклы в ледниковом периоде"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "Формирование навыков"
+        },
         "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
           "progression_name": " Использование блока Повтор"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "Формирование навыков"
         },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "Испытание"
@@ -1220,6 +1358,12 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Циклы в исполнителе Художник"
         },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "Формирование навыков"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "Формирование навыков"
+        },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
           "progression_name": "Испытание"
         },
@@ -1234,6 +1378,12 @@
         },
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Вложенные циклы в Лабиринте"
+        },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "Формирование навыков"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "Формирование навыков"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
           "progression_name": "Испытание"
@@ -1265,6 +1415,9 @@
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Введение"
         },
+        "2f024770-481d-43dc-aa55-7133819f6663": {
+          "progression_name": "Формирование навыков"
+        },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
           "progression_name": "Испытание"
         },
@@ -1279,6 +1432,12 @@
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
           "progression_name": "  Операторы Если"
+        },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "Формирование навыков"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "Формирование навыков"
         },
         "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
           "progression_name": "Испытание"
@@ -1298,6 +1457,12 @@
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "Цикл while в Фермере"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "Формирование навыков"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "Формирование навыков"
+        },
         "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
           "progression_name": "Испытание"
         },
@@ -1312,6 +1477,12 @@
         },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
           "name": "Введение"
+        },
+        "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
+          "progression_name": "Формирование навыков"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "Формирование навыков"
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
           "progression_name": "Испытание"
@@ -1346,6 +1517,9 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "Формирование навыков"
+        },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "Испытание"
         },
@@ -1367,6 +1541,9 @@
         "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
           "name": "Словарь"
         },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "Формирование навыков"
+        },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "Испытание"
         },
@@ -1381,6 +1558,9 @@
         },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Введение"
+        },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "Формирование навыков"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "Испытание"
@@ -1399,6 +1579,9 @@
         },
         "493408f8-a48b-457f-924d-0c99519b55e2": {
           "name": "Введение"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "Формирование навыков"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1429,6 +1612,9 @@
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
           "progression_name": " Представляем Лабораторию спрайтов"
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "Формирование навыков"
+        },
         "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
           "progression_name": " Как создать спрайт?"
         },
@@ -1452,6 +1638,9 @@
         "60d05bd8-d452-4ff7-8d42-afc78df62133": {
           "progression_name": " Как создать спрайт?"
         },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "Формирование навыков"
+        },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Практика"
         },
@@ -1469,6 +1658,9 @@
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
           "progression_name": " Спрайты в действии"
         },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "Формирование навыков"
+        },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Практика"
         },
@@ -1482,6 +1674,9 @@
           "tips": [
             null
           ]
+        },
+        "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
+          "progression_name": "Исследование"
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "Свободная игра"
@@ -1521,6 +1716,9 @@
         },
         "0602dbde-3014-45cc-86b7-b36ec9ca04af": {
           "progression_name": "Практика"
+        },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "Формирование навыков"
         },
         "736ef92b-b635-4477-abbb-7d98d171b960": {
           "progression_name": "Испытание"
@@ -1579,6 +1777,9 @@
         "219bed13-d21f-4886-ac11-47ae6eb56005": {
           "name": "Введение"
         },
+        "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
+          "progression_name": "Формирование навыков"
+        },
         "777ee476-c14c-4005-8226-8b5d93d34181": {
           "progression_name": "Практика"
         },
@@ -1587,6 +1788,9 @@
         },
         "a608e3c1-c749-4463-b478-51d339fab447": {
           "name": "Введение"
+        },
+        "db402396-6473-4942-a3b9-e3833beb0cd8": {
+          "progression_name": "Формирование навыков"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
           "progression_name": "Испытание"
@@ -1602,6 +1806,12 @@
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
           "progression_name": "  Операторы Если"
+        },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "Формирование навыков"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "Формирование навыков"
         },
         "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
           "progression_name": "Испытание"
@@ -1621,6 +1831,12 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Цикл while в Фермере"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "Формирование навыков"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "Формирование навыков"
+        },
         "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
           "progression_name": "Испытание"
         },
@@ -1636,6 +1852,15 @@
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Введение"
         },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "Формирование навыков"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "Формирование навыков"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "Формирование навыков"
+        },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Свободная игра"
         },
@@ -1644,6 +1869,12 @@
         },
         "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
           "name": "Введение"
+        },
+        "3fabd283-0831-412f-8a9f-76e9bf96206f": {
+          "progression_name": "Формирование навыков"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "Формирование навыков"
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
           "progression_name": "Испытание"
@@ -1656,6 +1887,9 @@
         },
         "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
           "name": "Введение"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "Формирование навыков"
         },
         "5af3711a-0ea0-4c82-b622-a250349a8389": {
           "progression_name": "Практика"
@@ -1682,6 +1916,15 @@
           "tips": [
             null
           ]
+        },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "Формирование навыков"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "Формирование навыков"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "Формирование навыков"
         },
         "467dc80b-fcf1-48ff-8b74-74aa00c9ed26": {
           "progression_name": " Minecraft - поздравляем"
@@ -1745,7 +1988,8 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Формирование навыков"
         },
         "3ae6f1d6-b2f9-4a9f-9877-673ee1f0a654": {
           "progression_name": "Практика"
@@ -1759,6 +2003,9 @@
         "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
           "name": "Обзор"
         },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "Формирование навыков"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Свободная игра"
         },
@@ -1767,6 +2014,9 @@
         },
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
           "name": "Введение"
+        },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "progression_name": "Формирование навыков"
         },
         "66e1664f-4e5a-4df9-a902-d0eb19537997": {
           "progression_name": "Практика"
@@ -1786,6 +2036,9 @@
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
           "progression_name": " Циклы с параметром"
         },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "Формирование навыков"
+        },
         "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e": {
           "progression_name": "Практика"
         },
@@ -1803,6 +2056,12 @@
             null
           ],
           "progression_name": " Циклы с параметром"
+        },
+        "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
+          "progression_name": "Исследование"
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "Формирование навыков"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Свободная игра"
@@ -1850,6 +2109,9 @@
             null
           ]
         },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "Формирование навыков"
+        },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Рефлексия"
         },
@@ -1868,8 +2130,14 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "Формирование навыков"
+        },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Рефлексия"
+        },
+        "c07f590c-4333-4b74-a479-fa00fb43acd4": {
+          "progression_name": "Формирование навыков"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
           "progression_name": "Испытание"
@@ -1895,6 +2163,9 @@
           "name": "Программирование с Рееем и BB-8",
           "progression_name": " Программирование с Рееем и BB-8"
         },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "Формирование навыков"
+        },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
           "progression_name": "Испытание"
         },
@@ -1914,6 +2185,12 @@
         },
         "45d59019-4dd4-4a32-b08c-fd79528eab76": {
           "progression_name": " Харвестер"
+        },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "Формирование навыков"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "Формирование навыков"
         },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
           "progression_name": "Испытание"
@@ -1937,6 +2214,12 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "Формирование навыков"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "Формирование навыков"
+        },
         "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
           "progression_name": "Испытание"
         },
@@ -1952,8 +2235,14 @@
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "Циклы в Собирателе"
         },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "Формирование навыков"
+        },
         "dead7fa5-406d-419c-a084-3a913cbd2499": {
           "progression_name": " Использование блока Повтор"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "Формирование навыков"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
           "progression_name": "Испытание"
@@ -1978,8 +2267,14 @@
             null
           ]
         },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "Формирование навыков"
+        },
         "eabc47c6-9f94-4b32-aab1-4a138064532b": {
           "progression_name": " Циклы в исполнителе Художник"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "Формирование навыков"
         },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
           "progression_name": "Испытание"
@@ -2004,6 +2299,9 @@
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "Формирование навыков"
         },
         "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
           "progression_name": "Испытание"
@@ -2078,6 +2376,9 @@
         "331e6451-5472-4491-bf96-d630d7f902a4": {
           "progression_name": " Представляем Лабораторию спрайтов"
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "Формирование навыков"
+        },
         "d344a21b-2267-48e7-9b27-b3fe923209e9": {
           "progression_name": " Как создать спрайт?"
         },
@@ -2100,6 +2401,12 @@
         },
         "1620d22b-10cf-4c91-bb52-cda64a75b666": {
           "progression_name": " Спрайты в действии"
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "Формирование навыков"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "Формирование навыков"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Свободная игра"
@@ -2137,6 +2444,12 @@
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Введение"
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "Формирование навыков"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "Формирование навыков"
+        },
         "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
           "progression_name": "Испытание"
         },
@@ -2160,8 +2473,14 @@
             null
           ]
         },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "Формирование навыков"
+        },
         "1768d4b3-853f-4f6a-ba24-6a174b345dbf": {
           "progression_name": " Вложенные циклы"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "Формирование навыков"
         },
         "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
           "progression_name": "Испытание"
@@ -2224,6 +2543,15 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "Формирование навыков"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "Формирование навыков"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "Формирование навыков"
+        },
         "9619ba1f-8426-40fb-9699-41562c4721ac": {
           "progression_name": " Minecraft - поздравляем"
         },
@@ -2235,6 +2563,9 @@
         },
         "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
           "name": "Введение"
+        },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "Формирование навыков"
         },
         "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
           "progression_name": "Испытание"
@@ -2251,6 +2582,15 @@
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
           "name": "Введение"
         },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "Формирование навыков"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "Формирование навыков"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "Формирование навыков"
+        },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Свободная игра"
         },
@@ -2263,7 +2603,14 @@
         "47ed862d-1562-4505-a98c-8c852ba6d936": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Формирование навыков"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "Формирование навыков"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "Формирование навыков"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "Испытание"
@@ -2279,6 +2626,9 @@
         },
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
           "progression_name": " Харвестер"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "Формирование навыков"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
           "progression_name": "Испытание"

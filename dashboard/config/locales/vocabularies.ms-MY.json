@@ -14,17 +14,32 @@
         "define/coursef/2021": {
           "word": "Takrifkan"
         },
+        "debugging/courseb/2021": {
+          "word": "Penyahpepijatan"
+        },
         "drop/courseb/2021": {
           "word": "Gerakan Jatuh"
+        },
+        "debugging/coursea/2021": {
+          "word": "Penyahpepijatan"
         },
         "drop/coursea/2021": {
           "word": "Gerakan Jatuh"
         },
+        "debugging/coursec/2021": {
+          "word": "Penyahpepijatan"
+        },
         "sequencing/coursec/2021": {
           "word": "Penjujukan"
         },
+        "debugging/coursed/2021": {
+          "word": "Penyahpepijatan"
+        },
         "conditionals/coursed/2021": {
           "word": "Bersyarat"
+        },
+        "debugging/express/2021": {
+          "word": "Penyahpepijatan"
         },
         "sequencing/express/2021": {
           "word": "Penjujukan"
@@ -43,6 +58,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Gerakan Jatuh"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Penyahpepijatan"
         },
         "copyright/coursee/2021": {
           "word": "Hak Cipta"

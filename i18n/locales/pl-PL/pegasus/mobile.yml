@@ -639,6 +639,7 @@
   dashboard_middle_courses_desc: "Nasz program nauczania dla gimnazjum wykorzystuje informatykę i programowanie w kontekście matematyki i przyrody - jako narzędzie nauczania pojęć wywodzących się z matematyki i przyrody. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href=\"/educate/districts\"> do partnerstwa w Twoim okręgu</a> z Code.org."
   dashboard_high_courses: "Całoroczne kursy dla liceum"
   dashboard_high_courses_desc: "Nasz program dla szkół ponadgimnazjalnych pomaga przygotować pracujących nauczycieli do prowadzenia zajęć z informatyki przez cały rok. Aby zarejestrować się na warsztaty rozwoju zawodowego, zgłoś się <a href=\"/educate/districts\"> do partnerstwa w Twoim okregu</a> z Code.org."
+  dashboard_course_csina: "Informatyka w algebrze"
   dashboard_course_csina_desc: "Code.org współpracuje z Bootstrap przy opracowaniu programu nauczania, który uczy pojęć algebraicznych i geometrycznych z wykorzystaniem programowania."
   dashboard_course_csins: "Informatyki w przyrodzie"
   dashboard_course_csins_desc: "Code.org współpracuje z Project GUTS przy wprowadzeniu pojęć informatycznych z wykorzystaniem modelowania i symulacji."

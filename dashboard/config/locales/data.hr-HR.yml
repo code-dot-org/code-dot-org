@@ -39,6 +39,7 @@ hr:
         Custom: Umjetnik
         CustomStudio: Laboratorij igara
         Gamelab: Game Lab
+        Spritelab: Lab likova
     trophy:
       name:
         Bronze: Bronca
@@ -527,6 +528,8 @@ hr:
         C4_unplugged_binary: Binarno
         CSF_collector_k1_blocks: 'Osnove RZ: Sakupljač'
         CSF_collector_text_blocks: 'Osnove RZ: Sakupljač'
+        CSF_debugging_k1_blocks: Otklanjanje pogriješaka
+        CSF_debugging_text_blocks: Otklanjanje pogriješaka
         CSF_my_robotic_friends: Moji robotski prijatelji
         frozen_intro: Uvod u Sat Kodiranja
         frozen_loops: Uvod u petlje
@@ -585,6 +588,7 @@ hr:
         teaching_problem_solving: 'Učenje osnova RZ: Učenje rješavanje problema'
         csd_pair_programming: Programiranje u paru
         csd_applab_parameters: Funkcije s parametrima
+        csd_debugging: Otklanjanje pogriješaka
         csp-pd-welcome: Dobrodošao u obitelj!
         how-to-k5-workshops: 'Učenje osnova RZ: Djeca testirala, učitelji odobrili'
         oceans_machine_learning: Strojno učenje

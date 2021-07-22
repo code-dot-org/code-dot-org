@@ -354,6 +354,10 @@ gl:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": cor
       aalab_layoutSprites:
         options:
           FORMAT:

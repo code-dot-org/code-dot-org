@@ -258,6 +258,7 @@ ca:
               name: Variables
           student_description: Una selecció de nivells del Curs 4 per proves d'ús.
         algebra:
+          title: Informàtica en àlgebra
           lessons:
             'Eval: Conditionals':
               name: Condicionals
@@ -600,6 +601,10 @@ ca:
           lessons:
             Game Lab:
               name: Laboratori de jocs
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mode de disseny
         CSF_Secret_Sample_Story:
           description_audience: De 8 a 18 anys+
         MikeTest:
@@ -620,6 +625,8 @@ ca:
         gradeKinder:
           description_audience: De 5 a 18 anys
           lessons:
+            Debugging:
+              name: Depuració
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -640,6 +647,8 @@ ca:
           title: Qualificacions 1
           description_audience: De 5 a 18 anys
           lessons:
+            Debugging:
+              name: Depuració
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -1044,6 +1053,8 @@ ca:
             required:
               display_name: Vista general
         express-2017:
+          title: Curs exprés
+          assignment_family_title: Curs exprés
           description_audience: De 9 a 18 anys
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           lessons:
@@ -1203,6 +1214,8 @@ ca:
             Going Places Safely:
               name: Anant a llocs segurs
         express-2018:
+          title: Curs exprés
+          assignment_family_title: Curs exprés
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           description_audience: De 9 a 18 anys
           lessons:
@@ -1803,6 +1816,9 @@ ca:
           lesson_groups:
             required:
               display_name: Vista general
+          lessons:
+            Debugging:
+              name: Depuració
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2107,10 +2123,18 @@ ca:
           lessons:
             Spelling Bee:
               name: Abella ortogràfica
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Depuració
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Creant Funcions
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Depuració
         csp5-virtual:
           lessons:
             While Loops:
@@ -2173,6 +2197,8 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+            debugging:
+              display_name: Depuració
         csd3-2021:
           lessons:
             Variables:
@@ -2192,6 +2218,11 @@ ca:
             Functions with Parameters:
               key: Funcions amb Paràmetres
               name: Funcions amb Paràmetres
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Depuració
+              name: Depuració
         csp4-2021:
           lesson_groups:
             csp_variables:

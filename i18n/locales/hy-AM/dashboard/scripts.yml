@@ -267,6 +267,7 @@ hy:
             Variables:
               name: փոփոխականների
         algebra:
+          title: Computer Science in Algebra
           lessons:
             'Eval: Conditionals':
               name: conditionals
@@ -768,6 +769,8 @@ hy:
         gradeKinder:
           description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: Իրադարձություններ
             'Jigsaw: Learn to drag and drop':
@@ -790,6 +793,8 @@ hy:
           title: Grade 1
           description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Debugging
             Events:
               name: Իրադարձություններ
             'Jigsaw: Learn to drag and drop':
@@ -2064,6 +2069,9 @@ hy:
               display_name: պարունակություն
             required:
               display_name: Overview
+          lessons:
+            Debugging:
+              name: Debugging
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2373,6 +2381,10 @@ hy:
           lesson_groups:
             csp_unit2_2020:
               display_name: CS Principles Unit 2
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Debugging
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
@@ -2381,6 +2393,10 @@ hy:
           lessons:
             Creating Functions:
               name: Ստեղծվում գործառույթները
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Debugging
         csp5-virtual:
           lessons:
             While Loops:
@@ -2469,6 +2485,8 @@ hy:
               display_name: ներածություն
             lessonGroup-3:
               display_name: փոփոխականների
+            debugging:
+              display_name: Debugging
         csd3-2021:
           lessons:
             Variables:
@@ -2496,6 +2514,11 @@ hy:
           lesson_groups:
             csp_unit2_2020:
               display_name: CS Principles Unit 2
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Debugging
+              name: Debugging
         csp4-2021:
           lesson_groups:
             csp_variables:

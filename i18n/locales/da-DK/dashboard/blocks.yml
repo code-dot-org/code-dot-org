@@ -111,6 +111,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -134,6 +135,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -240,6 +242,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -629,6 +632,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -652,6 +656,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -662,6 +667,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -686,6 +692,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -760,6 +767,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -788,6 +796,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -802,6 +811,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -831,6 +841,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -1204,6 +1215,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
       gamelab_spriteClicked:
         options:

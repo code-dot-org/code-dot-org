@@ -113,16 +113,20 @@
           "craft2_run_button_callout": "जेव्हा तुम्ही तयार असाल तेव्हा तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" बटण दाबा."
         },
         "Overworld Move to Sheep": {
-          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा."
+          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा.",
+          "craft_run_button_callout": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा."
+          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा.",
+          "craft_run_button_callout": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा."
+          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा.",
+          "craft_run_button_callout": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा."
+          "craft_drag_block_callout": "\"move forward\" ब्लॉक ड्रॅग करा आणि तो दुसऱ्या ब्लॉकच्या खाली जोडा.",
+          "craft_run_button_callout": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "ही छोटी सूचना कॉम्प्युटरला वर्कस्पेसमधील त्याच नावाचा मोठा कोड रन करायला सांगते."
@@ -207,6 +211,66 @@
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "या कोड्यामध्ये तुमच्याकडे यातील एकच ब्लॉक उपलब्ध आहे."
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "तुम्हाला सुरुवात करून देण्यासाठी आम्ही येथे काही ब्लॉक्स ठेवले आहेत"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "तुम्हाला सुरुवात करून देण्यासाठी आम्ही येथे काही ब्लॉक्स ठेवले आहेत"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "तुम्हाला सुरुवात करून देण्यासाठी आम्ही येथे काही ब्लॉक्स ठेवले आहेत"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "तुम्हाला सुरुवात करून देण्यासाठी आम्ही येथे काही ब्लॉक्स ठेवले आहेत"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "हा कोड तुमचे घर बांधायला सुरुवात करेल. तुम्ही ते पूर्ण करू शकता का?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "हा कोड तुमचे घर बांधायला सुरुवात करेल. तुम्ही ते पूर्ण करू शकता का?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "हा कोड तुमचे घर बांधायला सुरुवात करेल. तुम्ही ते पूर्ण करू शकता का?"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "हा कोड तुमचे घर बांधायला सुरुवात करेल. तुम्ही ते पूर्ण करू शकता का?"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "येथे ब्लॉक्स घालून कृतींची पुनरावृत्ती करा"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "येथे ब्लॉक्स घालून कृतींची पुनरावृत्ती करा"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "येथे ब्लॉक्स घालून कृतींची पुनरावृत्ती करा"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "येथे ब्लॉक्स घालून कृतींची पुनरावृत्ती करा"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "हा कोड लाव्हा तपासेल, तुम्ही पुढे जाण्यासाठी एक कमांड जोडू शकता का?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "हा कोड लाव्हा तपासेल, तुम्ही पुढे जाण्यासाठी एक कमांड जोडू शकता का?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "हा कोड लाव्हा तपासेल, तुम्ही पुढे जाण्यासाठी एक कमांड जोडू शकता का?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "हा कोड लाव्हा तपासेल, तुम्ही पुढे जाण्यासाठी एक कमांड जोडू शकता का?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "हे लोखंड खणून काढा!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "हे लोखंड खणून काढा!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "हे लोखंड खणून काढा!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "हे लोखंड खणून काढा!"
         }
       }
     }

@@ -1472,7 +1472,10 @@ ro:
         cspassessment: {}
         cspexam1-mWU7ilDYM9: {}
         cspexam2-AKwgAh1ac5: {}
-        CSDU4-Draft: {}
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mod proiectare
         CSDU2-Draft:
           lessons:
             Digital Footprint:
@@ -1669,6 +1672,8 @@ ro:
               name: Funcţii
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
         grade2:
@@ -2221,6 +2226,10 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Sprites:
+              name: Spiriduși
+            Input:
+              name: Intrare
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2261,6 +2270,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -2306,6 +2317,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -2889,6 +2902,8 @@ ro:
             content:
               display_name: Conţinut
         express-2017:
+          title: Curs Expres
+          assignment_family_title: Curs Expres
           description_audience: 'Vârsta: 9-18 ani'
           description_short: 'O introducere în știința calculatoarelor: o combinație a celor mai bune programe pentru școala elementară destinate elevilor mai mari.'
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
@@ -3560,6 +3575,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -3580,6 +3597,8 @@ ro:
             Shapes and Randomization: {}
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -3655,6 +3674,8 @@ ro:
               name: Stevie şi marele proiect
           student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
         express-2018:
+          title: Curs Expres
+          assignment_family_title: Curs Expres
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
           description_short: 'O introducere în știința calculatoarelor: o combinație a celor mai bune programe pentru școala elementară destinate elevilor mai mari.'
           description_audience: 'Vârsta: 9-18 ani'
@@ -4571,6 +4592,8 @@ ro:
               display_name: Bucle Pentru
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             end_of_course_project:
@@ -4812,6 +4835,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -4976,6 +5001,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programare cu hârtie de copiat'
@@ -5431,6 +5458,8 @@ ro:
             Shapes and Randomization: {}
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -5686,6 +5715,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
@@ -5883,6 +5914,8 @@ ro:
             Shapes and Randomization: {}
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -6165,6 +6198,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -6198,6 +6233,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -6355,6 +6392,8 @@ ro:
             CS Discoveries Post Course survey: {}
             Text:
               name: Text
+            Sprites:
+              name: Spiriduși
         coursea-2020:
           title: Curs A (2020)
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
@@ -6693,6 +6732,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -6795,6 +6836,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -6876,6 +6919,7 @@ ro:
               description_teacher: "**Rezumatul tutorialului:** Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare.\\\\r\\\\r\\\\r**Verificarea corectitudinii:** Elevii nu vor afla din acest tutorial dacă au finalizat corect nivelul. Puteți omite diferite părți ale activității. Încurajați elevii să urmărească toate clipurile video, să citească instrucțiunile și să încerce diferite lucruri pe parcurs. Aceștia pot, în orice moment, să vă comunice dvs. sau unui coleg de clasă ce au descoperit.\\\\r"
           student_description: Învață să folosești diferite tipuri de bucle, evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici de rezolvare a problemelor și discută despre impactul social al computerelor și al Internetului. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
         express-2020:
+          title: Curs Expres (2020)
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
           description_short: 'O introducere în știința calculatoarelor: o combinație a celor mai bune programe pentru școala elementară destinate elevilor mai mari.'
           description_audience: 'Vârsta: 9-18 ani'
@@ -6892,6 +6936,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -7212,7 +7258,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
-            Sprites: {}
+            Sprites:
+              name: Spiriduși
             Sprite Properties:
               name: Proprietăți spiriduș
             Text:
@@ -7345,6 +7392,9 @@ ro:
             Variables:
               key: Variabile
               name: Variabile
+            Sprites:
+              key: Spiriduși
+              name: Spiriduși
             Sprite Properties:
               key: Proprietăți spiriduș
               name: Proprietăți spiriduș
@@ -7905,6 +7955,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Repetiții imbricate
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -8011,6 +8063,8 @@ ro:
               description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă. În această lecție vei învăța ce poți spune și ce nu poți spune online.
               description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Pe măsură ce copiii cresc, aceștia vor începe, în mod firesc, să comunice mai mult online. Dar o parte din ceea ce văd online îi poate face să se simtă răniți, triști, furioși sau chiar să îi sperie. Ajutați-vă elevii să dea dovadă de empatie în relațiile cu cei din jur și să învețe strategii pe care trebuie să le utilizeze atunci când se confruntă cu fenomenul „cyberbullying”."
           lesson_groups:
+            ramp_up:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_variables:
@@ -8144,6 +8198,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
             lessonGroup-9:
@@ -8229,6 +8285,8 @@ ro:
               display_name: Simulare Epidemie
             lessonGroup-3:
               display_name: Variabile
+            Sprites:
+              display_name: Spiriduși
             variables:
               display_name: Variabile
         csd4-preview-2021:

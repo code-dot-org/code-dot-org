@@ -33,9 +33,11 @@ th:
         Webapp: แอ๊ปแล็บ
         ArtistEC: ศิลปิน
         TextMatch: ข้อความตรงกัน
+        StudioEC: เรื่องราวและเกม
         Applab: แอ๊ปแล็บ
         NetSim: เครื่องจำลองอินเตอร์เน็ต
         Custom: ศิลปิน
+        CustomStudio: เรื่องราวและเกม
         Gamelab: เกมแล๊บ (Game Lab)
     trophy:
       name:
@@ -287,6 +289,7 @@ th:
         csd_pair_programming: การจับคู่เพื่อเขียนโปรแกรม
         csd_applab_parameters: ฟังก์ชันกับพารามิเตอร์
         csd_debugging: การแก้ไขจุดบกพร่อง
+        oceans_machine_learning: การเรียนรู้ของระบบ
         hoc_dance_congrats_2019: Dance Party 2019 - ปาร์ตี้กัน!
         hoc_dance_warmup_2019: Dance Party 2019 - แนะนำ!
         hoc_dance_events_2019: Dance Party 2019 - กิจกรรม

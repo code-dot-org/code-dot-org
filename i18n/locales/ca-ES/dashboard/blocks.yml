@@ -988,6 +988,10 @@ ca:
         text: gira a la dreta
       Vector_positionCenter:
         text: centre
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": color
       aalab_layoutSprites:
         options:
           FORMAT:

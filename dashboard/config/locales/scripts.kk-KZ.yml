@@ -305,6 +305,7 @@ kk:
             Variables:
               name: Айнымалылар
         algebra:
+          title: Алгебрадағы информатика
           lessons:
             'Eval: Conditionals':
               name: Шарттар
@@ -822,6 +823,8 @@ kk:
         gradeKinder:
           description_audience: 5-18 жастағылар үшін
           lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
             Events:
               name: Шаралар
             'Jigsaw: Learn to drag and drop':
@@ -842,6 +845,8 @@ kk:
         grade1:
           description_audience: 5-18 жастағылар үшін
           lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
             Events:
               name: Шаралар
             'Jigsaw: Learn to drag and drop':
@@ -2102,6 +2107,9 @@ kk:
               display_name: Контент
             required:
               display_name: Қысқаша шолу
+          lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2403,10 +2411,18 @@ kk:
           lessons:
             Spelling Bee:
               name: Сөз жазушы Ара
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Функцияларды Құру
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
         csp5-virtual:
           lessons:
             While Loops:
@@ -2483,6 +2499,8 @@ kk:
               display_name: Кіріспе
             lessonGroup-3:
               display_name: Айнымалылар
+            debugging:
+              display_name: Бағдарламаны дұрыстау
         csd3-2021:
           lessons:
             Variables:
@@ -2502,6 +2520,11 @@ kk:
             Functions with Parameters:
               key: Параметрлі Функциялар
               name: Параметрлі Функциялар
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Бағдарламаны дұрыстау
+              name: Бағдарламаны дұрыстау
         csp4-2021:
           lesson_groups:
             csp_variables:

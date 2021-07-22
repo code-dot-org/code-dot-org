@@ -511,6 +511,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "நிறம்"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -943,7 +948,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "அளவு"
+              "size": "அளவு",
+              "color": "நிறம்"
             }
           },
           "do something": {
@@ -969,7 +975,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "அளவு"
+              "size": "அளவு",
+              "color": "நிறம்"
             }
           },
           "do something": {
@@ -1008,7 +1015,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "அளவு"
+              "size": "அளவு",
+              "color": "நிறம்"
             }
           },
           "black outline": {
@@ -1103,6 +1111,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "நிறம்"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

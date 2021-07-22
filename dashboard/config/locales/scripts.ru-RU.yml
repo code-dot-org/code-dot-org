@@ -579,6 +579,8 @@ ru:
               name: Отправка форматированного текста
             Sending Numbers:
               name: Отправка чисел
+            Text Compression:
+              name: Сжатие текста
         algebraPD:
           lessons:
             Course Overview:
@@ -605,6 +607,11 @@ ru:
               name: Ваша игра - обнаружение коллизий
             Your Game - Player Movement:
               name: Ваша игра - движение игрока
+        text-compression:
+          title: Сжатие текста
+          lessons:
+            Text Compression:
+              name: Сжатие текста
         CSPPD:
           lessons:
             Introduction to PD:
@@ -836,6 +843,8 @@ ru:
               name: Звёздные войны
             Studio:
               name: Студия
+            Text Compression:
+              name: Сжатие текста
             Web Lab:
               name: Веб-лаборатория
             Curriculum Reference:
@@ -1268,6 +1277,8 @@ ru:
               name: Кодирование цветных изображений
             Lossy Compression and File Formats:
               name: Сжатие с потерями и форматы файлов
+            Text Compression:
+              name: Сжатие текста
             Post-Course Survey:
               name: Опрос после окончания курса
         csp3-2017:
@@ -3829,6 +3840,8 @@ ru:
               name: Последовательности в игре "Лабиринт"
             Building a Foundation:
               name: Строительство опоры
+            'Loops: My Loopy Robotic Friends':
+              name: '"Мои циклические друзья-роботы"'
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops:
@@ -3959,6 +3972,8 @@ ru:
               name: Последовательности в игре "Лабиринт"
             Building a Foundation:
               name: Строительство опоры
+            'Loops: My Loopy Robotic Friends':
+              name: '"Мои циклические друзья-роботы"'
             Loops in Artist:
               name: Циклы в исполнителе Художник
             Nested Loops in Bee/Zombie:
@@ -4180,6 +4195,8 @@ ru:
           lessons:
             Bytes and File Sizes:
               name: Байты и размеры файлов
+            Text Compression:
+              name: Сжатие текста
             Encoding B&W Images:
               name: Кодирование чёрно-белых изображений
             Encoding Color Images:
@@ -4500,6 +4517,7 @@ ru:
           student_description: Дополнительные идеи проектов помогут тебе продолжить
             обучение после первого часа.
         coursef-2019:
+          title: Курс F (2019)
           description_short: Изучи все понятия в Основах компьютерных наук и создай
             собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
@@ -4650,6 +4668,7 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         coursed-2019:
+          title: Курс D (2019)
           description_audience: 'Возраст: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -4760,6 +4779,7 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         coursee-2019:
+          title: Курс E (2019)
           description_audience: 'Возраст: 8-12'
           lesson_groups:
             ramp_up:
@@ -4997,6 +5017,7 @@ ru:
           student_description: Дополнительные идеи проектов помогут тебе продолжить
             обучение после первого часа.
         coursec-2019:
+          title: Курс C (2019)
           description_audience: 'Возраст: 6-10'
           lesson_groups:
             csf_digcit:
@@ -5107,6 +5128,7 @@ ru:
         gamelab:
           title: Лаборатория игр
         coursea-2019:
+          title: Курс A (2019)
           description: Изучите основы информатики и интернет-безопасности. В конце
             курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих
@@ -5199,6 +5221,7 @@ ru:
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
         courseb-2019:
+          title: Курс B (2019)
           description: Изучите основы информатики и интернет-безопасности. В конце
             курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_audience: 'Возраст: 5-8'
@@ -5439,6 +5462,8 @@ ru:
           lessons:
             Bytes and File Sizes:
               name: Байты и размеры файлов
+            Text Compression:
+              name: Сжатие текста
             Encoding B&W Images:
               name: Кодирование чёрно-белых изображений
             Encoding Color Images:
@@ -6202,6 +6227,7 @@ ru:
             Sprites:
               name: Спрайты
         coursea-2020:
+          title: Курс A (2020)
           description: Изучите основы информатики и интернет-безопасности. В конце
             курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих
@@ -6280,6 +6306,7 @@ ru:
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
         courseb-2020:
+          title: Курс B (2020)
           description: Изучите основы информатики и интернет-безопасности. В конце
             курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_audience: 'Возраст: 5-8'
@@ -6332,6 +6359,7 @@ ru:
             В конце курса создайте свою собственную игру или историю, которой сможете
             поделиться.
         coursec-2020:
+          title: Курс C (2020)
           description_audience: 'Возраст: 6-10'
           lesson_groups:
             csf_digcit:
@@ -6432,6 +6460,7 @@ ru:
             Picturing Data:
               name: Изображение данных
         coursed-2020:
+          title: Курс D (2020)
           description_audience: 'Возраст: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -6538,6 +6567,7 @@ ru:
             Dance Party:
               name: Танцевальная вечеринка
         coursee-2020:
+          title: Курс E (2020)
           description_audience: 'Возраст: 8-12'
           lesson_groups:
             ramp_up:
@@ -6628,6 +6658,7 @@ ru:
                 Учащимся следует объяснить, что, не уважая прав артистов, невозможно
                 быть этичным цифровым гражданином.
         coursef-2020:
+          title: Курс F (2020)
           description_short: Изучи все понятия в Основах компьютерных наук и создай
             собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
@@ -7711,6 +7742,8 @@ ru:
             lesson-3:
               name: Спрайты в действии
           lesson_groups:
+            csf_warmup:
+              display_name: Подготовка
             csf_sequencing:
               display_name: Последовательность действий
             csf_loops:

@@ -351,6 +351,10 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": color
       binary_move:
         options:
           DIR:

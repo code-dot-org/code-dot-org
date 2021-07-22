@@ -32,6 +32,9 @@
         "algorithm/courseb/2021": {
           "word": "Alqoritm"
         },
+        "debugging/courseb/2021": {
+          "word": "Sazlama"
+        },
         "drop/courseb/2021": {
           "word": "Burax"
         },
@@ -44,6 +47,9 @@
         "algorithm/coursea/2021": {
           "word": "Alqoritm"
         },
+        "debugging/coursea/2021": {
+          "word": "Sazlama"
+        },
         "program/coursea/2021": {
           "word": "Proqram"
         },
@@ -55,6 +61,9 @@
         },
         "algorithm/coursec/2021": {
           "word": "Alqoritm"
+        },
+        "debugging/coursec/2021": {
+          "word": "Sazlama"
         },
         "program/coursec/2021": {
           "word": "Proqram"
@@ -71,6 +80,9 @@
         "program/coursed/2021": {
           "word": "Proqram"
         },
+        "debugging/coursed/2021": {
+          "word": "Sazlama"
+        },
         "event/coursed/2021": {
           "word": "Hadisə"
         },
@@ -79,6 +91,9 @@
         },
         "algorithm/express/2021": {
           "word": "Alqoritm"
+        },
+        "debugging/express/2021": {
+          "word": "Sazlama"
         },
         "program/express/2021": {
           "word": "Proqram"
@@ -106,6 +121,9 @@
         },
         "algorithm/pre-express/2021": {
           "word": "Alqoritm"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Sazlama"
         },
         "program/pre-express/2021": {
           "word": "Proqram"

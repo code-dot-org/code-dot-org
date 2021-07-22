@@ -17,11 +17,26 @@
         "define/coursef/2021": {
           "word": "Definirati"
         },
+        "debugging/courseb/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/coursea/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
+        "debugging/coursec/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
         "binary/coursec/2021": {
           "word": "Binarno"
         },
+        "debugging/coursed/2021": {
+          "word": "Otklanjanje pogriješaka"
+        },
         "conditionals/coursed/2021": {
           "word": "Uvjeti"
+        },
+        "debugging/express/2021": {
+          "word": "Otklanjanje pogriješaka"
         },
         "conditionals/express/2021": {
           "word": "Uvjeti"
@@ -34,6 +49,9 @@
         },
         "define/express/2021": {
           "word": "Definirati"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Otklanjanje pogriješaka"
         },
         "copyright/coursee/2021": {
           "word": "Autorska prava"

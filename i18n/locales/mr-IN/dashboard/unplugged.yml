@@ -1,8 +1,12 @@
 mr:
   data:
     unplugged:
+      Unplug2:
+        title: कॉम्प्युटेशनल विचार  
       Conditionals:
         title: कंडीशनल्स 
+      ComputationalThinking:
+        title: कॉम्प्युटेशनल विचार  
       courseB_unplugged_MRF:
         title: अनप्लग्ड कृती 
       courseB_unplugged_loopyMRF:

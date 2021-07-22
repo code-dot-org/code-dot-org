@@ -325,6 +325,7 @@ hu:
           student_description: Válogatás a 4. tanfolyam szakaszaiból a használhatósági
             teszthez.
         algebra:
+          title: A számítógépes-tudomány az algebrában
           lessons:
             'Eval: Conditionals':
               name: Feltételek
@@ -1048,6 +1049,10 @@ hu:
           lessons:
             netsim:
               name: netsim
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Tervező mód
         CSF_Secret_Sample_Story:
           description_audience: 8-tól 18 éves korig+
         MikeTest:
@@ -1072,6 +1077,8 @@ hu:
         gradeKinder:
           description_audience: 5-tól 18 éves korig
           lessons:
+            Debugging:
+              name: Hibakeresés
             Events:
               name: Események
             Events Unplugged:
@@ -1096,6 +1103,8 @@ hu:
         grade1:
           description_audience: 5-tól 18 éves korig
           lessons:
+            Debugging:
+              name: Hibakeresés
             Events:
               name: Események
             Events Unplugged:
@@ -2984,6 +2993,9 @@ hu:
               display_name: Tartalom
             required:
               display_name: Összefoglaló
+          lessons:
+            Debugging:
+              name: Hibakeresés
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -3447,6 +3459,10 @@ hu:
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lecke: Az internet'
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Hibakeresés
         csp3-virtual:
           lessons:
             The Need for Algorithms:
@@ -3463,6 +3479,8 @@ hu:
           lessons:
             Tools:
               name: Eszközök
+            Debugging:
+              name: Hibakeresés
         csd2-virtual:
           lessons:
             CSS Classes:
@@ -3584,6 +3602,8 @@ hu:
               display_name: Bevezető
             lessonGroup-3:
               display_name: változók
+            debugging:
+              display_name: Hibakeresés
         csd1-2021:
           description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a
             számítógépek a problémák megoldásában."
@@ -3670,6 +3690,11 @@ hu:
               display_name: '2.  lecke: Az internet'
             lessonGroup-2:
               display_name: Kérdőív
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Hibakeresés
+              name: Hibakeresés
         csp4-2021:
           lesson_groups:
             csp_variables:

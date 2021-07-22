@@ -264,6 +264,7 @@ gl:
             Variables:
               name: Variables
         algebra:
+          title: Informática na álxebra
           lessons:
             'Eval: Conditionals':
               name: Condicionais

@@ -7,10 +7,20 @@ km:
         math_category_name: គណិត​វិទ្យា
         other_category_name: ផ្សេងៗ
       name:
+        course1:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         course2:
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
+            Your Digital Footprint:
+              name: Your Digital Footprint
         course3:
           lessons:
             Bounce:
@@ -121,6 +131,12 @@ km:
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
+        asUnplugged:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         mc:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
@@ -167,12 +183,16 @@ km:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
         grade1:
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
+            Unspotted Bugs:
+              name: កំហុសដែលមិនបានគ្រោងទុក
         grade3:
           lessons:
             Bounce:
@@ -193,6 +213,10 @@ km:
               name: ការគូររង្វិលជុំដដែលៗ
             Conditionals:
               name: លក្ខខណ្ឌ
+        grade2:
+          lessons:
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         k5concepts:
           lessons:
             Conditionals:
@@ -311,6 +335,20 @@ km:
           lessons:
             Flappy Code:
               name: Flappy កូដ
+        coursea-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+        courseb-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            Your Digital Footprint:
+              name: Your Digital Footprint
+        coursec-draft:
+          lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
         coursed-draft:
           lessons:
             Conditionals with Cards:
@@ -409,6 +447,7 @@ km:
                 នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។ នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថាការ ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។\
                 មេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ មេផលរ៉ាន់។
             'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
               description_teacher: នៅក្នុងមេរៀននេះនិស្សិតនឹងបង្ហាញពីគំនិតនៃក្បួនដោះស្រាយត្រឡប់ទៅសកម្មភាពប្រចាំថ្ងៃនិងជីវិតពិតដោយការដាំគ្រាប់ពូជពិតប្រាកដ។  គោលដៅនៅទីនេះគឺចាប់ផ្តើមកសាងជំនាញក្នុងការបកប្រែស្ថានការណ៍ពិតទៅសេណារីយ៉ូតាមអ៊ិនធើណេតនិងផ្ទុយមកវិញ។
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
@@ -447,6 +486,8 @@ km:
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
             Your Digital Footprint:
@@ -969,6 +1010,8 @@ km:
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
             'Online Safety: Your Digital Footprint':
@@ -1181,9 +1224,11 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lessons:
             'Debugging: Unspotted Bugs':
+              name: កំហុសដែលមិនបានគ្រោងទុក
               description_teacher: មេរៀននេះនឹងណែនាំសិស្សតាមរយៈជំហាននៃការបំបាត់កំហុស។  សិស្សនឹងរៀនពីម៉ាត្រា
                 "តើមានអ្វីកើតឡើង? អ្វីដែលត្រូវបានសន្មត់ថានឹងកើតឡើង? តើវាចង់ប្រាប់អ្នកពីអ្វី?"
             'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie and the Big Project
               description_teacher: |-
                 នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។ នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថាការ ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។\
                 មេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ មេផលរ៉ាន់។
@@ -1215,12 +1260,16 @@ km:
             Events in Play Lab:
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង
                 ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie and the Big Project
         express-2018:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
           lessons:
             Debugging in Collector:
               name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             Events in Star Wars:
               name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
             Events with Flappy:
@@ -1248,6 +1297,10 @@ km:
         courseb-2018:
           assignment_family_title: វគ្គសិក្សា B
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         coursed-2018:
@@ -1264,6 +1317,8 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
         csd6-2018:
           lessons:
             Designing Screens with Code_:
@@ -1630,10 +1685,20 @@ km:
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           description_audience: 'អាយុ: ៤-៨'
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: កំហុសដែលមិនបានគ្រោងទុក
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie and the Big Project
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             'Programming: Star Wars':
               name: 'ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ '
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie and the Big Project
         fit-test:
           lesson_groups:
             required:
@@ -1982,6 +2047,8 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
         coursea-2019:
@@ -2019,6 +2086,8 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
             'Events: The Big Event':
@@ -2033,9 +2102,15 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
           name: ព្រី-អុិចប្រេស-2019
+        removed19:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
         csd2-2019:
           lessons:
             Digital Footprint:
@@ -2542,6 +2617,8 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             'Events: The Big Event':
               description_teacher: ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។
         coursec-2020:
@@ -2553,6 +2630,8 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
         coursed-2020:
@@ -2946,6 +3025,8 @@ km:
             Loops with Rey and BB-8:
               key: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
           lesson_groups:

@@ -492,6 +492,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         algebraPD2a:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
@@ -529,6 +531,8 @@ hr:
               name: Minecraft
             Multi:
               name: Višestruki izbor
+            Sprite Lab:
+              name: Lab likova
         algebraPD2b:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
@@ -575,17 +579,23 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         science-PD2:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         sciencePD2b-iZone:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         ECSPD2-iZone:
           description: 'Faza 2 online: Mješoviti ljetni studij'
@@ -632,6 +642,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         Special Fun:
           description_audience: Dob 10+ (nakon Tečaja 3)
         SpecialSeries:
@@ -690,6 +702,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         AlgebraA:
           description: Nauči funkcionalno programiranje kroz algebru
           description_short: Nauči funkcionalno programiranje kroz algebru
@@ -772,6 +786,10 @@ hr:
           lessons:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizajnerski način
         CSF_Secret_Sample_Story:
           description_audience: Godine 8-18+
         MikeTest:
@@ -792,6 +810,8 @@ hr:
         gradeKinder:
           description_audience: Godine 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -810,6 +830,8 @@ hr:
         grade1:
           description_audience: Godine 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -1013,10 +1035,14 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csp3-support:
           lesson_groups:
             required:
@@ -1029,10 +1055,14 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         science-pd-ol-pt-5:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csf2harvey:
           lessons:
             Binary:
@@ -1041,6 +1071,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csp5-support:
           lesson_groups:
             required:
@@ -1951,6 +1983,9 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2028,6 +2063,8 @@ hr:
               name: Događaji
             Functions:
               name: Funkcije
+            Sprite Lab:
+              name: Lab likova
             Variables:
               name: Varijable
             For Loops:
@@ -2244,10 +2281,18 @@ hr:
           lessons:
             Spelling Bee:
               name: Slovkanje
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Stvaranje funkcija
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csp5-virtual:
           lessons:
             While Loops:
@@ -2282,6 +2327,8 @@ hr:
               name: Varijable
             For Loops:
               name: Petlja brojača
+            Sprite Lab:
+              name: Lab likova
         csd3-virtual:
           lessons:
             Variables:
@@ -2304,6 +2351,8 @@ hr:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            debugging:
+              display_name: Otklanjanje pogriješaka
         csd1-2021:
           lessons:
             What is a Computer?:
@@ -2331,6 +2380,11 @@ hr:
             Functions with Parameters:
               key: Funkcije s parametrima
               name: Funkcije s parametrima
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Otklanjanje pogriješaka
+              name: Otklanjanje pogriješaka
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2509,6 +2563,8 @@ hr:
             For Loops:
               key: Petlja brojača
               name: Petlja brojača
+            Sprite Lab:
+              key: Lab likova
           lesson_groups:
             k5_getting_started_1:
               display_name: Uvod

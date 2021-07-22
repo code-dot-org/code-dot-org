@@ -8,11 +8,13 @@ ja:
       CS Discoveries Post-Course Survey: CS発見 コース後アンケート
       Collisions: 衝突
       Combining Representations: 表現を組み合わせる
+      Debugging: デバッギング
       Design Mode: 設計モード
       Designing for Accessibility: アクセシビリティのための設計
       Drawing: "グラフィック\n"
       Events: イベント
       Example Projects: プロジェクトの例
+      Exploration: 探究
       'Exploration: Sample Apps': ' サンプルアプリ'
       For Loops: ループ用
       Functions: 関数(かんすう) 
@@ -42,6 +44,7 @@ ja:
       Reflection: 復習
       Representing Images: 画像の表現
       Review: 確認する
+      Skill Building: スキル構築
       Sprite Lab Project: スプライトラボプロジェクト
       The Harvester: 収穫機
       Using the Repeat Block: 繰り返しブロックの使用
@@ -53,6 +56,7 @@ ja:
       'Video: Harvesting with Conditionals': ' 農夫と学ぶ条件文'
       'Video: How to Make a Sprite': ' スプライトの作り方'
       'Video: Introducing Sprite Lab': ' スプライトラボの紹介'
+      'Video: Introduction to Play Lab': ' Playラボの概要'
       'Video: Loops in Artist': ' アーティストくりかえし'
       'Video: Minecraft - Congratulations': ' Minecraft - クリア'
       'Video: Nested Loops': ' 入れ子のループ'
@@ -65,5 +69,6 @@ ja:
       'Video: Using the Repeat Block': ' 繰り返しブロックの使用'
       'Video: Variables in Artist': ' アーティストと学ぶ変数'
       'Video: While Loops with the Farmer': ' 農夫と学ぶWhileループ'
+      Warm Up: ウォームアップ
       While Loops with the Farmer: 農夫と学ぶWhileループ
       Wrap-up: ラップアップ

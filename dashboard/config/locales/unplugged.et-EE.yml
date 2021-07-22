@@ -439,11 +439,23 @@ et:
         title: Relee programmeerimine
       courseB_unplugged_MRF_2019:
         title: Minu robotsõbrad
+      BuildingAFoundation_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Tingimuslaused
         desc: 'Tingimuslausete kohta õppimiseks mängivad õpilased kaardimängu ja loovad
           reegleid nagu: "Kui tõmban kaardi, saan mina punkti" ja "Kui tõmban musta
           kaardi, saad sina punkti."'
+      courseF_unplugged_powerOfWords_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Millimeetripaberi programmeerimine
         desc: Õpilased kirjutavad eelmääratletud käskude komplekti kasutades algoritmi
@@ -460,6 +472,15 @@ et:
           kujul. Selles õppetunnis astutakse selles teemas samm edasi ja näidatakse,
           kiuidas arvuti salvestab binaarandmetena veelgi komplekssemat teavet (näiteks
           pilte ja värve).
+      SongwritingParameters_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.Internet_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'tõlge puudub: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'tõlge puudub: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Muutub tsükliliseks
         desc: Selles õppetunnis õpetatakse tantsu teel tsüklite (korduvate juhiste)

@@ -1248,6 +1248,10 @@ ta:
         text: வலதுபுறம் திரும்பவும்
       Vector_positionCenter:
         text: மையம்
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": நிறம்
       aalab_layoutSprites:
         options:
           FORMAT:

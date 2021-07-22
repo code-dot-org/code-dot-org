@@ -10525,15 +10525,6 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Тебе придется добавить всего два блока, чтобы довести эту головоломку до ума. ",
           "iceage_warn_ice_age_b": "Добавь новые блоки под событием \"при выполнении\", чтобы они выполнялись сразу же после начала программы."
-        },
-        "courseF_bee_variables_3a_2021": {
-          "courseF_bee_variables_3_2021_1": "<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
-        "courseF_bee_variables_3aa_2021": {
-          "courseF_bee_variables_3_2021_1": "<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
-        "courseF_text_choice_multiprompt": {
-          "when_answered_var": "<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

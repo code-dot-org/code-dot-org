@@ -540,6 +540,8 @@ ca:
         C4_unplugged_forloops: Per bucles
         C4_unplugged_parameters: Composició amb paràmetres
         C4_unplugged_binary: Binari
+        CSF_debugging_k1_blocks: Depuració
+        CSF_debugging_text_blocks: Depuració
         CSF_my_robotic_friends: Els meus amics robòtics
         frozen_intro: Introducció a l'Hora del Codi
         frozen_loops: Introducció als bucles
@@ -570,6 +572,7 @@ ca:
         CSF_loops_AB: Bucles
         csd_pair_programming: Programació per parelles
         csd_applab_parameters: Funcions amb Paràmetres
+        csd_debugging: Depuració
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab
     callout:

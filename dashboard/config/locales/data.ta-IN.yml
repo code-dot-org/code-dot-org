@@ -196,6 +196,8 @@ ta:
         C4_unplugged_parameters: பாடல் எழுதுதல்
         CSF_a_b_artist_loops: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         CSF_artist_angles: கலைஞரின் கோணங்கள்
+        CSF_debugging_k1_blocks: பிழைத்திருத்தம்
+        CSF_debugging_text_blocks: பிழைத்திருத்தம்
         frozen_intro: குறியீடு அறிமுக நேரம்
         frozen_loops: சுழல்கள் அறிமுகம்
         frozen_functions: செயல்பாடுகளுக்கு அறிமுகம்
@@ -238,8 +240,11 @@ ta:
         hoc_dance_events: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties: நடன விருந்து - பண்புகள்
         hoc_dance_congrats: Dance Party – பார்ட்டி ஆன்!
+        csd_debugging: பிழைத்திருத்தம்
+        oceans_machine_learning: இயந்திர வழி கற்றல்
         hoc_dance_congrats_2019: Dance Party – பார்ட்டி ஆன்!
         hoc_dance_warmup_2019: டான்ஸ் பார்ட்டி - வார்ம் அப்
         hoc_dance_events_2019: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties_2019: நடன விருந்து - பண்புகள்
+        csf21pilot_events: 'ஸ்ப்ரைட் லேப்: ஸ்ப்ரைட்ஸ் இன் ஆக்சன்'
         csf_lots_of_sprites: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '

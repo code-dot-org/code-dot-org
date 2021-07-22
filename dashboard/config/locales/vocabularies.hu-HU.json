@@ -17,11 +17,17 @@
         "define/coursef/2021": {
           "word": "Meghatározás"
         },
+        "debugging/courseb/2021": {
+          "word": "Hibakeresés"
+        },
         "drop/courseb/2021": {
           "word": "Spárga"
         },
         "programming/courseb/2021": {
           "word": "Programozás"
+        },
+        "debugging/coursea/2021": {
+          "word": "Hibakeresés"
         },
         "drop/coursea/2021": {
           "word": "Spárga"
@@ -29,17 +35,26 @@
         "programming/coursea/2021": {
           "word": "Programozás"
         },
+        "debugging/coursec/2021": {
+          "word": "Hibakeresés"
+        },
         "programming/coursec/2021": {
           "word": "Programozás"
         },
         "binary/coursec/2021": {
           "word": "Bináris"
         },
+        "debugging/coursed/2021": {
+          "word": "Hibakeresés"
+        },
         "programming/coursed/2021": {
           "word": "Programozás"
         },
         "conditionals/coursed/2021": {
           "word": "Feltételek"
+        },
+        "debugging/express/2021": {
+          "word": "Hibakeresés"
         },
         "programming/express/2021": {
           "word": "Programozás"
@@ -61,6 +76,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Spárga"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Hibakeresés"
         },
         "programming/pre-express/2021": {
           "word": "Programozás"

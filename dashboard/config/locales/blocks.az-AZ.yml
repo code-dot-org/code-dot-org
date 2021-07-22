@@ -85,6 +85,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -105,6 +106,7 @@ az:
             '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -186,6 +188,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -437,6 +440,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -457,6 +461,7 @@ az:
             '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -466,6 +471,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -487,6 +493,7 @@ az:
             '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -544,6 +551,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -568,6 +576,7 @@ az:
             '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -580,6 +589,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -604,6 +614,7 @@ az:
             '"SHARK"': Köpək balıqları
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
             '"rotation"': fırlanma
             '"x"': üfüqi vəziyyət
@@ -845,6 +856,7 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"width"': enlik
             '"height"': hündürlük
       gamelab_spriteClicked:
         options:
@@ -1085,6 +1097,10 @@ az:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": rəng
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -5,17 +5,29 @@
         "variable/coursef/2021": {
           "word": "Variabel"
         },
+        "input/coursef/2021": {
+          "word": "Inngang"
+        },
         "internet/coursef/2021": {
           "word": "Internett"
         },
         "define/coursef/2021": {
           "word": "Definer"
         },
+        "debugging/courseb/2021": {
+          "word": "Feilsøking"
+        },
         "drop/courseb/2021": {
           "word": "Dropp"
         },
+        "debugging/coursea/2021": {
+          "word": "Feilsøking"
+        },
         "drop/coursea/2021": {
           "word": "Dropp"
+        },
+        "debugging/coursec/2021": {
+          "word": "Feilsøking"
         },
         "sequencing/coursec/2021": {
           "word": "Sekvensiering"
@@ -23,8 +35,14 @@
         "binary/coursec/2021": {
           "word": "Binær"
         },
+        "debugging/coursed/2021": {
+          "word": "Feilsøking"
+        },
         "conditionals/coursed/2021": {
           "word": "Betingelser"
+        },
+        "debugging/express/2021": {
+          "word": "Feilsøking"
         },
         "sequencing/express/2021": {
           "word": "Sekvensiering"
@@ -43,6 +61,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Dropp"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Feilsøking"
         },
         "copyright/coursee/2021": {
           "word": "Opphavsrett"

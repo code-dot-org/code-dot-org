@@ -967,6 +967,18 @@
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
+  coursea-2019_name: Corso A (2019)
+  courseb-2019_name: Corso B (2019)
+  coursec-2019_name: Corso C (2019)
+  coursed-2019_name: Corso D (2019)
+  coursee-2019_name: Corso E (2019)
+  coursef-2019_name: Corso F (2019)
+  coursea-2020_name: Corso A (2020)
+  courseb-2020_name: Corso B (2020)
+  coursec-2020_name: Corso C (2020)
+  coursed-2020_name: Corso D (2020)
+  coursee-2020_name: Corso E (2020)
+  coursef-2020_name: Corso F (2020)
   coursed-2021_name: Corso D (2021)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
@@ -974,6 +986,7 @@
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
   express-2020_name: Corso Rapido (2017)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
+  pre-express-2021_name: Corso Rapido pre-scolare (2021)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: "Corso rapido"
@@ -1702,6 +1715,7 @@
   footer_support: "Help and Community"
   footer_terms: "Condizioni"
   ai_for_oceans: "L'Intelligenza Artificiale per il mare"
+  ai_for_oceans_lesson_plan: "piano di lavoro della lezione"
   ai_in_partnership_with: "In collaborazione con"
   ai_microsoft_thanks: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."
   ai_activity: "Attività"

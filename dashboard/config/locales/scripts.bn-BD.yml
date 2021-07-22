@@ -120,6 +120,7 @@ bn:
             Variables:
               name: চলকগুলো
         algebra:
+          title: বীজগণিতে কম্পিউটার বিজ্ঞান
           lessons:
             'Eval: Conditionals':
               name: শর্তযুক্ত
@@ -408,6 +409,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Design Mode
         CSF_Secret_Sample_Story:
           description_audience: বয়স ৮-১৮+
         MikeTest:

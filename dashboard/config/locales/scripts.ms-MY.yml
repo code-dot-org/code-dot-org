@@ -9,6 +9,7 @@ ms:
       name:
         course1:
           title: Kursus 1
+          description_audience: Peringkat umur 4-6 tahun
           lessons:
             Happy Maps:
               name: Peta-peta Gembira
@@ -43,6 +44,7 @@ ms:
               name: 'Studio: Reka Cerita'
         course3:
           title: Kursus 3
+          description_audience: Umur 8-18 tahun
           lessons:
             Artist:
               name: Artis
@@ -102,6 +104,7 @@ ms:
             emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib
             musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!
         course4:
+          title: Kursus 4
           description_audience: Umur 9-18 tahun
           lessons:
             Artist:
@@ -153,6 +156,7 @@ ms:
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep
             programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred
             K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
+          description_audience: Umur 10-18 tahun
           lessons:
             Abstraction:
               name: Abstraksi
@@ -242,6 +246,10 @@ ms:
           lessons:
             Text Compression:
               name: Pemampatan Teks
+        sciencePD2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         allthethings:
           lessons:
             Artist:
@@ -270,6 +278,18 @@ ms:
           lessons:
             Wrap-up:
               name: Wrap-up
+        sciencePD2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        science-PD2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        sciencePD2b-iZone:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         ECSPD2-iZone:
           lessons:
             Wrap-up:
@@ -287,6 +307,14 @@ ms:
               name: Peta-peta Gembira
         afterschool1:
           description_audience: Umur 7-13 tahun
+        ScienceP3OLPT2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        Special Fun:
+          description_audience: Umur 10-18 tahun
+        SpecialSeries:
+          description_audience: Umur 10-18 tahun
         starwars:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars
             anda sendiri di galaksi yang amat jauh.
@@ -305,6 +333,10 @@ ms:
           title: Jam Kod Minecraft
         oceans:
           title: Kecerdasan Buatan (AI) untuk Lautan
+        ScienceP3OLPT3:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         csp1-2017:
           lessons:
             Sending Numbers:
@@ -323,6 +355,16 @@ ms:
           lessons:
             Functions:
               name: Fungsi
+        CSF_Secret_Sample:
+          description_audience: Umur 8-18 tahun
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csp-facilitators:
           lessons:
             Introduction to Text Compression:
@@ -334,13 +376,20 @@ ms:
           lessons:
             Artist Functions:
               name: Fungsi Artis
+        artistExemplar:
+          description_audience: Umur 8-18 tahun
         teachercon:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
             Lesson 2,2:
               name: 'Pelajaran 2.2: Pemampatan Teks'
         gradeKinder:
           description_audience: Umur 5-18 tahun
           lessons:
+            Debugging:
+              name: Penyahpepijatan
             Events:
               name: Acara-acara
             'Jigsaw: Learn to drag and drop':
@@ -357,6 +406,8 @@ ms:
         grade1:
           description_audience: Umur 5-18 tahun
           lessons:
+            Debugging:
+              name: Penyahpepijatan
             Events:
               name: Acara-acara
             'Jigsaw: Learn to drag and drop':
@@ -385,6 +436,10 @@ ms:
               name: 'Artis: Gelung Bersarang'
             Bounce:
               name: Lantunan
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd3-2017:
           lessons:
             Functions:
@@ -417,9 +472,16 @@ ms:
             Variables:
               name: Pembolehubah
         csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         basketball:
           lessons:
             Bounce:
@@ -433,6 +495,9 @@ ms:
             Lists:
               name: Senarai
         csp2-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
@@ -638,6 +703,30 @@ ms:
           lessons:
             Sports:
               name: Sukan
+        2016_sciencePD-phase2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        2016_sciencePD_phase2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        sciencepd4:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        science-pd-ol-pt-5:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -653,6 +742,14 @@ ms:
               name: Fungsi di dalam Peladang
             Determine the Concept:
               name: Tentukan Konsep
+        sciencepd5:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd6-draft:
           lessons:
             Lists:
@@ -1611,6 +1708,54 @@ ms:
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
           name: kursusf-2017
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         express-2017:
           description_audience: 'Umur: 9-18 tahun'
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
@@ -2939,6 +3084,74 @@ ms:
           lessons:
             Simple Encryption:
               name: Penyulitan Mudah
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         pre-express-2018:
           title: Ekspres Prapembaca (2018)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
@@ -2977,6 +3190,10 @@ ms:
           student_description: Pelajari asas sains komputer dan keselamatan internet.
             Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
             anda kongsikan.
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         frozen-2018:
           title: Skrip Frozen Baharu
           lessons:
@@ -3987,6 +4204,9 @@ ms:
             cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan
             dengan rakan, keluarga dan guru.
         andrea-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
             'null':
               name: 'null'
@@ -4558,6 +4778,8 @@ ms:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            required:
+              display_name: Gambaran Keseluruhan
         csp1-2019:
           lessons:
             Sending Numbers:
@@ -4572,6 +4794,10 @@ ms:
           lessons:
             Simple Encryption:
               name: Penyulitan Mudah
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -4689,6 +4915,16 @@ ms:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            required:
+              display_name: Gambaran Keseluruhan
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd2-pilot:
           lessons:
             Lists:
@@ -4707,6 +4943,13 @@ ms:
           lessons:
             stage 1:
               name: peringkat 1
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -4724,6 +4967,50 @@ ms:
               name: Pengaturcaraan dengan Rey dan BB-8
             Ocean Scene with Loops:
               name: Pemandangan Lautan dengan Gelung
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         peru-2019:
           lessons:
             Debugging in Collector:
@@ -4738,6 +5025,10 @@ ms:
               name: Projek Gelung Bersarang di dalam Frozen
             Nested Loops in Frozen:
               name: Gelung Bersarang dalam Frozen
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         dance-2019:
           description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan
             rakan anda!
@@ -4873,6 +5164,10 @@ ms:
               name: 'Peristiwa: Peristiwa Besar'
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -6093,6 +6388,7 @@ ms:
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
         express-2020:
+          title: Kursus Dipercepatkan (2020)
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut
             tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan
             kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan!
@@ -6287,6 +6583,14 @@ ms:
             komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi
             cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan
             dengan rakan, keluarga dan guru.
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -6388,6 +6692,8 @@ ms:
               display_name: Pembolehubah
             outbreak:
               display_name: Simulator Wabak
+            debugging:
+              display_name: Penyahpepijatan
         csd3-2021:
           lessons:
             Variables:
@@ -6410,6 +6716,11 @@ ms:
             Functions with Parameters:
               key: Fungsi-fungsi dengan parameter
               name: Fungsi-fungsi dengan parameter
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Penyahpepijatan
+              name: Penyahpepijatan
         csp4-2021:
           lesson_groups:
             csp_variables:

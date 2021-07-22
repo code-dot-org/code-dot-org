@@ -281,6 +281,7 @@ hi:
             Variables:
               name: चर
         algebra:
+          title: बीजगणित में कंप्यूटर साइंस
           lessons:
             'Calc: Defining Variables':
               name: वेरिएबल्स और प्रतिस्थापन को परिभाषित करना
@@ -15977,6 +15978,8 @@ hi:
             lesson-3:
               name: क्रिया में स्प्राइट्स
           lesson_groups:
+            csf_warmup:
+              display_name: तैयार हों
             csf_sequencing:
               display_name: अनुक्रमण
             csf_loops:

@@ -425,9 +425,12 @@ eu:
             Saiatu Flappy Code tutoriala!
         jigsaw:
           title: Buruhaustea
+          description: Proba ezazu gure buruhauste tutoriala!!!
+          description_short: Proba ezazu gure buruhauste tutoriala!!!
           lessons:
             Jigsaw:
               name: Buruhaustea
+          student_description: Proba ezazu gure buruhauste tutoriala!!!
         step:
           title: Pauso
           description: Pausokako tutoriala
@@ -814,6 +817,8 @@ eu:
         gradeKinder:
           description_audience: 5-18 urte bitarteko adinak
           lessons:
+            Debugging:
+              name: Arazketa
             Events:
               name: Gertaerak
             'Jigsaw: Learn to drag and drop':
@@ -832,6 +837,8 @@ eu:
         grade1:
           description_audience: 5-18 urte bitarteko adinak
           lessons:
+            Debugging:
+              name: Arazketa
             Events:
               name: Gertaerak
             'Jigsaw: Learn to drag and drop':
@@ -1966,6 +1973,9 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+          lessons:
+            Debugging:
+              name: Arazketa
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2249,10 +2259,18 @@ eu:
           lessons:
             Spelling Bee:
               name: Letraz-letra
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Arazketa
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Funtzioak sortzen
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Arazketa
         csp5-virtual:
           lessons:
             While Loops:
@@ -2305,6 +2323,8 @@ eu:
               display_name: Sarrera
             lessonGroup-3:
               display_name: Aldagaiak
+            debugging:
+              display_name: Arazketa
         csd3-2021:
           lessons:
             Variables:
@@ -2327,6 +2347,11 @@ eu:
             Functions with Parameters:
               key: Parametrodun funtzioak
               name: Parametrodun funtzioak
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Arazketa
+              name: Arazketa
         csp4-2021:
           lesson_groups:
             csp_variables:

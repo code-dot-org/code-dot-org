@@ -133,6 +133,7 @@ ms:
       Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu, seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs Zombie! :-) % {nama}
   section:
     type:
+      word: 'Perkataan rahsia'
       email: 'E-mel'
   follower:
     invite_sent: 'Jemputan dihantar'
@@ -177,6 +178,7 @@ ms:
       help_support: "Bantuan dan sokongan"
       report_bug: "Laporkan masalah"
       educate_hoc: "Hour of Code"
+      stats: "Statistik"
       about: "Tentang"
       legal_privacy: "Dasar Privasi"
       legal_tos: "Terma Perkhidmatan"
@@ -352,6 +354,8 @@ ms:
     unplugged_conditionals:
       title: "Bersyarat"
       body: "Mempelajari tentang algoritma dan pernyataan bersyarat dalam aktiviti “nirplag” ini dengan menggunakan dek kad."
+    widgets:
+      audience: "Umur 14 keatas"
   landing:
     help_support: "Bantuan dan sokongan"
   multi:
@@ -408,6 +412,7 @@ ms:
         female: 'Perempuan'
         none: 'Memilih untuk tidak menjawab'
       subjects:
+        cs: 'Sains Komputer'
         math: 'Matematik'
       workshop_course:
         csf_express: 'Asas CS (Praekspres atau Ekspres)'
@@ -417,6 +422,7 @@ ms:
   cookie_banner:
     accept: 'saya setuju'
   copy: 'Salin'
+  confirm: 'pengesahan'
   parent_email_banner:
     text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini untuk kemaskini kemajuan dan projek anak anda!"
     link_your_email: "Sambung e-mel"

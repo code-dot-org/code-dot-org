@@ -10,11 +10,13 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_changePropEachBy:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_everySeconds:
         options:
@@ -24,6 +26,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_getTime:
         options:
@@ -75,21 +78,25 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setPropRandomEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_setVisible:
         options:
@@ -103,21 +110,25 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       Dancelab_translateStrings:
         options:
@@ -210,6 +221,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"width"': চওড়া
             '"height"': উচ্চতা
       gamelab_spriteClicked:
         options:
@@ -329,6 +341,10 @@ bn:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": রং
       aalab_layoutSprites:
         options:
           FORMAT:

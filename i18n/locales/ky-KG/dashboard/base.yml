@@ -73,6 +73,8 @@ ky:
     type:
       email: 'Эмейл'
       google_classroom: 'Google Classroom'
+  follower:
+    already_exists: 'Сиз %{section_name} секциясына кошулгансыз.'
   crud:
     new_model: 'Жаңы %{model}'
     show: 'көрсөт'
@@ -95,6 +97,7 @@ ky:
       bounce: 'Bounce'
       gamelab: 'Оюн лабы'
       gamelab_jr: 'Game Lab (бета)'
+      iceage: 'Муз доору'
       infinity: 'Чексиздик'
       minecraft_adventurer: 'Minecraft тентек'
       minecraft_hero: 'Minecraft каарманы'
@@ -198,4 +201,5 @@ ky:
       email_opt_in:
         opt_in_yes: 'Ооба'
         opt_in_no: 'Жок'
+  page_not_found_title: "Барак табылган жок"
   copy: 'Көчүрүү'

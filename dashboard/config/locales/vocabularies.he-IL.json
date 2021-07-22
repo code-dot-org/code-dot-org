@@ -14,17 +14,32 @@
         "define/coursef/2021": {
           "word": "הגדר"
         },
+        "debugging/courseb/2021": {
+          "word": "מציאת טעויות"
+        },
         "drop/courseb/2021": {
           "word": "דְרוֹפּ"
+        },
+        "debugging/coursea/2021": {
+          "word": "מציאת טעויות"
         },
         "drop/coursea/2021": {
           "word": "דְרוֹפּ"
         },
+        "debugging/coursec/2021": {
+          "word": "מציאת טעויות"
+        },
         "binary/coursec/2021": {
           "word": "בינארי"
         },
+        "debugging/coursed/2021": {
+          "word": "מציאת טעויות"
+        },
         "conditionals/coursed/2021": {
           "word": "תנאים"
+        },
+        "debugging/express/2021": {
+          "word": "מציאת טעויות"
         },
         "behavior/express/2021": {
           "word": "התנהגות"
@@ -43,6 +58,9 @@
         },
         "drop/pre-express/2021": {
           "word": "דְרוֹפּ"
+        },
+        "debugging/pre-express/2021": {
+          "word": "מציאת טעויות"
         },
         "behavior/coursee/2021": {
           "word": "התנהגות"

@@ -1348,6 +1348,10 @@ mi:
         text: huri whakatematau
       Vector_log:
         text: kārere takiputa {MESSAGE}
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": tae
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -147,6 +147,11 @@ th:
             คอร์ส to flexible solutions to more complex problems. By the end of this
             คอร์ส, students create interactive stories and games they can share with
             anyone. Recommended for grades 4-5.
+        playlab:
+          title: เรื่องราวและเกม
+          lessons:
+            Play Lab:
+              name: เรื่องราวและเกม
         artist:
           title: ศิลปิน
           description: วาดภาพและออกแบบสุดเจ๋งด้วยกิจกรรม "ศิลปิน"!
@@ -316,6 +321,8 @@ th:
           description: แก้ไข Code
           description_short: แก้ไข Code
           lessons:
+            Play Lab:
+              name: เรื่องราวและเกม
             The Artist:
               name: ศิลปิน
             The Maze:
@@ -380,6 +387,8 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         algebraPD2a:
           lessons:
             Free Play:
@@ -440,14 +449,20 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         science-PD2:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         sciencePD2b-iZone:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         ECSPD2-iZone:
           lessons:
             Welcome!:
@@ -491,6 +506,8 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         CSPPD3-Unit2:
           lessons:
             Share out and Submit:
@@ -535,6 +552,8 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         CSPPD3-Unit4:
           lessons:
             Share out and Submit:
@@ -594,6 +613,10 @@ th:
           lessons:
             Introduction to Text Compression:
               name: การบีบอัดข้อความเบื้องต้น
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: สถานะการออกแบบ
         CSDU2-Draft:
           lessons:
             Clean Code and Debugging:
@@ -1037,10 +1060,14 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         csp3-support:
           lesson_groups:
             required:
@@ -1053,10 +1080,14 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         science-pd-ol-pt-5:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -1076,6 +1107,8 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+            Wrap-Up:
+              name: Wrap-up
         csp5-support:
           lesson_groups:
             required:
@@ -6021,6 +6054,7 @@ th:
             ทำความเข้าใจเทคนิคการแก้ไขปัญหาแบบต่าง ๆ และพูดถึงผลกระทบของการใช้คอมพิวเตอร์และอินเทอร์เน็ตที่มีต่อสังคม
             สำหรับส่วนที่สองของหลักสูตรนี้ คุณจะได้ออกแบบและสร้างโปรเจกต์รวบยอดที่นำมาแชร์กับเพื่อนและครอบครัวได้
         express-2020:
+          title: หลักสูตร Express (2020)
           description_short: 'รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์: การผสมผสานหลักสูตรในระดับประถมศึกษาของเราเพื่อเด็กโต'
           description_audience: 'อายุ: 9-18 ปี'
           lesson_groups:
@@ -6382,6 +6416,10 @@ th:
               display_name: ลูป
             csp_project:
               display_name: โปรเจกต์
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: การเรียนรู้ของระบบ
         coursea-2021:
           title: หลักสูตร A (2021)
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
@@ -7145,6 +7183,8 @@ th:
               name: Dance Party
               description_student: ได้เวลาฉลองกันแล้ว! ในบทเรียนนี้ คุณจะได้เขียนโปรแกรมปาร์ตี้เต้นรำแบบโต้ตอบของคุณเอง
           lesson_groups:
+            csf_warmup:
+              display_name: อุ่นเครื่อง
             csf_sequencing:
               display_name: การจัดลำดับ
             csf_loops:

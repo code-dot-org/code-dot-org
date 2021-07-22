@@ -261,6 +261,7 @@ he:
             Variables:
               name: משתנים
         algebra:
+          title: מדעי המחשב באלגברה
           lessons:
             'Eval: Boolean Operators':
               name: משתנים בוליאנים
@@ -777,6 +778,10 @@ he:
           lessons:
             Game Lab:
               name: מעבדת המשחקים
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: מצב עיצוב
         CSF_Secret_Sample_Story:
           description_audience: גילאי 8-18+
         MikeTest:
@@ -794,6 +799,8 @@ he:
         gradeKinder:
           description_audience: גילאי 5-18
           lessons:
+            Debugging:
+              name: מציאת טעויות
             Events:
               name: אירועים
             'Jigsaw: Learn to drag and drop':
@@ -816,6 +823,8 @@ he:
         grade1:
           description_audience: גילאי 5-18
           lessons:
+            Debugging:
+              name: מציאת טעויות
             Events:
               name: אירועים
             'Jigsaw: Learn to drag and drop':
@@ -2212,6 +2221,7 @@ he:
             Dance Party:
               name: מסיבת ריקודים
         coursed-2019:
+          title: קורס ד' (2019)
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           lesson_groups:
@@ -2789,6 +2799,9 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+          lessons:
+            Debugging:
+              name: מציאת טעויות
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -3105,6 +3118,7 @@ he:
             'Events: The Big Event':
               name: האירוע הגדול
         coursed-2020:
+          title: קורס ד' (2020)
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
             "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
           lesson_groups:
@@ -3264,6 +3278,9 @@ he:
           lesson_groups:
             cspSurvey2020:
               display_name: סקר שלאחר הקורס
+          lessons:
+            Debugging:
+              name: מציאת טעויות
         csp6-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3284,6 +3301,8 @@ he:
           lessons:
             Tools:
               name: כלים
+            Debugging:
+              name: מציאת טעויות
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3417,6 +3436,8 @@ he:
               display_name: משתנים
             outbreak:
               display_name: סימולטור התפרצות
+            debugging:
+              display_name: מציאת טעויות
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3501,6 +3522,11 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: סקר
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: מציאת טעויות
+              name: מציאת טעויות
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3694,6 +3720,8 @@ he:
             lesson-1:
               name: מסיבת ריקודים
           lesson_groups:
+            csf_warmup:
+              display_name: חימום
             csf_loops:
               display_name: חזרות
             csf_conditionals:

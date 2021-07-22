@@ -396,6 +396,10 @@ si:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": පාට
       aalab_layoutSprites:
         options:
           FORMAT:

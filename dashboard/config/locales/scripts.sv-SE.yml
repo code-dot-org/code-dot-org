@@ -1050,6 +1050,10 @@ sv:
               display_name: Innehåll
             practice:
               display_name: Undervisningsmetoder
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Växla till designläge
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -1078,6 +1082,8 @@ sv:
         gradeKinder:
           description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            Debugging:
+              name: Felsökning
             Events:
               name: Händelser
             'Jigsaw: Learn to drag and drop':
@@ -1096,6 +1102,8 @@ sv:
         grade1:
           description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            Debugging:
+              name: Felsökning
             Events:
               name: Händelser
             'Jigsaw: Learn to drag and drop':
@@ -2693,6 +2701,9 @@ sv:
               display_name: Innehåll
             required:
               display_name: Översikt
+          lessons:
+            Debugging:
+              name: Felsökning
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -3095,6 +3106,8 @@ sv:
           lessons:
             new stage:
               name: ny etapp
+            Debugging:
+              name: Felsökning
         csp6-2020:
           lessons:
             new stage:
@@ -3123,6 +3136,8 @@ sv:
           lessons:
             new stage:
               name: ny etapp
+            Debugging:
+              name: Felsökning
         csd2-virtual:
           lessons:
             Images:
@@ -3252,6 +3267,8 @@ sv:
               display_name: variabler
             outbreak:
               display_name: Utbrottssimulator
+            debugging:
+              display_name: Felsökning
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -3298,6 +3315,11 @@ sv:
             Binary Numbers:
               key: Binära tal
               name: Binära tal
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Felsökning
+              name: Felsökning
         csp4-2021:
           lesson_groups:
             csp_variables:

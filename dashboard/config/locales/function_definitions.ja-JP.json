@@ -288,7 +288,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -296,7 +299,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -304,7 +310,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -312,7 +321,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -320,7 +332,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -328,7 +343,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -336,7 +354,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -344,7 +365,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -352,7 +376,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -360,7 +387,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -371,7 +401,10 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -1226,7 +1259,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1234,7 +1270,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1395,7 +1434,10 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1403,7 +1445,10 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1411,7 +1456,10 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1419,12 +1467,18 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1432,7 +1486,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1440,7 +1497,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1448,7 +1508,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1456,7 +1519,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1464,7 +1530,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1472,7 +1541,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1480,7 +1552,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1488,7 +1563,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1496,7 +1574,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1504,7 +1585,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1512,7 +1596,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1520,7 +1607,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1528,7 +1618,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1536,7 +1629,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1544,7 +1640,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1552,7 +1651,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1560,7 +1662,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1568,7 +1673,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1576,7 +1684,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1584,7 +1695,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1592,7 +1706,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1600,7 +1717,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1608,7 +1728,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1616,7 +1739,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1624,7 +1750,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1632,7 +1761,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1640,7 +1772,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1648,7 +1783,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1656,7 +1794,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1664,7 +1805,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1672,7 +1816,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1680,7 +1827,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1688,7 +1838,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1696,7 +1849,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1704,7 +1860,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1712,7 +1871,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1720,7 +1882,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1728,7 +1893,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1736,7 +1904,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1744,7 +1915,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "図形をかく"
+            "name": "図形をかく",
+            "parameters": {
+              "binary": "２しんすう"
+            }
           },
           "draw bit": {
             "name": "０か1で もようを かく"

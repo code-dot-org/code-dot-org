@@ -341,6 +341,10 @@ hy:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": գույնը
       aalab_layoutSprites:
         options:
           FORMAT:

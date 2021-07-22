@@ -420,6 +420,10 @@ lv:
         text: pagriezt pa labi
       Vector_vectorNorth:
         text: uz ziemeļiem
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": krāsa
       aalab_layoutSprites:
         options:
           FORMAT:

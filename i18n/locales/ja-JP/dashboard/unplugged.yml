@@ -151,6 +151,8 @@ ja:
       courseF_unplugged_powerOfWords:
         title: アンプラグド　アクティビティ
         desc: 今日は、誰かがオンラインで意地悪している場合の対処法について学びます。
+      deeper learning description:
+        desc: '翻訳がありません: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: '現実のアルゴリズム：種を植えましょう'
         desc: このレッスンでは、種をまくという行為を例に、私たちが日常生活の中でどのようにアルゴリズムを使用しているかを説明します。また、コンピューター サイエンスの全体像とアルゴリズムがどのように重要な役割を果たしているかに焦点を当てます。
@@ -275,9 +277,23 @@ ja:
       courseB_unplugged_MRF_2019:
         title: 私のロボットの友だち
         desc: 友だちのためにコードを書いて、プログラミングを学びましょう！
+      BuildingAFoundation_2019:
+        title: '翻訳がありません: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: ループの達人 ロボットのお友だち
       Conditionals_2019:
         title: 条件
         desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
+      courseF_unplugged_powerOfWords_2019:
+        title: '翻訳がありません: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: '翻訳がありません: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: '翻訳がありません: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: グラフ用紙のプログラミング
         desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム (一連の命令) を書きます。
@@ -298,6 +314,12 @@ ja:
       courseE_unplugged_CnC_2019:
         title: デジタル共有
         desc: このレッスンは、コンピューター サイエンス入門で使うために著作権および創造性チームから借り受けたもので、特にデジタル環境において、所有権と著作権を尊重することの課題と利点を生徒が理解するのに役立ちます。生徒には、倫理的なデジタル シティズンでいることの重要な部分として、アーティストの権利を尊重するような姿勢が必要です。
+      Internet_2019:
+        title: '翻訳がありません: en-US.data.unplugged.Internet_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: '翻訳がありません: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: '翻訳がありません: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: ルーピーをゲット
         desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。生徒はまず簡単な振り付けを学び、それを繰り返すように指示されます。

@@ -446,6 +446,10 @@ fa:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": رنگ
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -286,6 +286,7 @@ ja:
             Variables:
               name: 変数（へんすう）
         algebra:
+          title: 算数とコンピュータサイエンス
           description: 代数を通じて関数型プログラミングを学習する.
           description_short: 代数を通じて関数型プログラミングを学習する.
           lessons:
@@ -1023,6 +1024,8 @@ ja:
               name: スタンドアロン動画
             Curriculum Reference:
               name: カリキュラム参考資料
+            Sprite Lab:
+              name: スプライト ラボ
             Dance Lab:
               name: ダンスラボ
             Mini Rubric:
@@ -2616,6 +2619,8 @@ ja:
           lessons:
             Being Safe Online:
               name: 安全なオンライン
+            Debugging:
+              name: デバッギング
             Events:
               name: イベント
             Events Unplugged:
@@ -2674,6 +2679,8 @@ ja:
           lessons:
             Being Safe Online:
               name: 安全なオンライン
+            Debugging:
+              name: デバッギング
             Events:
               name: イベント
             Events Unplugged:
@@ -2983,6 +2990,7 @@ ja:
               description_student: このレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。その後、クラスは変数を使って乱数を保存し、プログラムが同じ乱数を複数回使用できるようにします。
               description_teacher: このレッスンでは、変数を使ってプログラム内の数値にラベルを付ける方法、またはランダムに生成された値を保存する方法を学習します。生徒は、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。生徒は変数を使って乱数を保存し、変数が実際に値を保存することを確認します。これにより、プログラム内で同じ乱数を複数回使用できるようになります。
             Sprites:
+              name: スプライト
               description_student: より興味深く、詳細な画像を作成するために、クラスはスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。レッスンの終わりに、全員がスプライトを使ってシーンを作成します。
               description_teacher: より興味深く、詳細な画像を作成するために、生徒はスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。
             The Draw Loop:
@@ -4181,6 +4189,8 @@ ja:
           lessons:
             Introduction:
               name: はじめに
+            Sprites:
+              name: スプライト
             'Project: Interactive Card':
               name: 'プロジェクト: インタラクティブカード'
         csd5-draft:
@@ -4494,6 +4504,8 @@ ja:
               name: 変数（へんすう）
             Programming for Entertainment:
               name: 娯楽のためのプログラミング
+            Sprites:
+              name: スプライト
             Plotting Shapes:
               name: 形状のプロット
             Sprite Movement:
@@ -4747,6 +4759,8 @@ ja:
               name: 形状とランダム性
             Variables:
               name: 変数（へんすう）
+            Sprites:
+              name: スプライト
             The Counter Pattern Unplugged:
               name: オフラインのカウンターパターン
             Sprite Movement:
@@ -6834,6 +6848,8 @@ ja:
               name: 形状とランダム化
             Variables:
               name: 変数（へんすう）
+            Sprites:
+              name: スプライト
             The Counter Pattern Unplugged:
               name: オフラインのカウンターパターン
             Sprite Movement:
@@ -6908,6 +6924,7 @@ ja:
               description_student: このレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。その後、クラスは変数を使って乱数を保存し、プログラムが同じ乱数を複数回使用できるようにします。
               description_teacher: このレッスンでは、変数を使ってプログラム内の数値にラベルを付ける方法、またはランダムに生成された値を保存する方法を学習します。生徒は、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。生徒は変数を使って乱数を保存し、変数が実際に値を保存することを確認します。これにより、プログラム内で同じ乱数を複数回使用できるようになります。
             Sprites:
+              name: スプライト
               description_student: より興味深く、詳細な画像を作成するために、クラスはスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。レッスンの終わりに、全員がスプライトを使ってシーンを作成します。
               description_teacher: より興味深く、詳細な画像を作成するために、生徒はスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。
             The Draw Loop:
@@ -7589,6 +7606,8 @@ ja:
               name: スクラットと学ぶデバッグ
             Programming in Artist:
               name: プログラムでアートを作成
+            'Loops: My Loopy Robotic Friends':
+              name: ループの達人 ロボットのお友だち
             Loops in Artist:
               name: アーティストくりかえし
             Nested Loops:
@@ -7699,6 +7718,8 @@ ja:
               name: スクラットと学ぶデバッグ
             Programming in Artist:
               name: プログラムでアートを作成
+            'Loops: My Loopy Robotic Friends':
+              name: ループの達人 ロボットのお友だち
             Loops in Artist:
               name: アーティストくりかえし
             Nested Loops in Bee/Zombie:
@@ -8984,6 +9005,8 @@ ja:
               display_name: ループ用
             csf_internet:
               display_name: インターネット
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             end_of_course_project:
@@ -9243,6 +9266,8 @@ ja:
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_impacts:
@@ -9414,6 +9439,8 @@ ja:
               display_name: 変数（へんすう）
             csf_for_loops:
               display_name: ループ用
+            csf_sprites:
+              display_name: スプライト
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'アルゴリズム: グラフ用紙プログラミング'
@@ -10052,6 +10079,7 @@ ja:
               description_student: このレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。その後、クラスは変数を使って乱数を保存し、プログラムが同じ乱数を複数回使用できるようにします。
               description_teacher: このレッスンでは、変数を使ってプログラム内の数値にラベルを付ける方法、またはランダムに生成された値を保存する方法を学習します。生徒は、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。生徒は変数を使って乱数を保存し、変数が実際に値を保存することを確認します。これにより、プログラム内で同じ乱数を複数回使用できるようになります。
             Sprites:
+              name: スプライト
               description_student: より興味深く、詳細な画像を作成するために、クラスはスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。レッスンの終わりに、全員がスプライトを使ってシーンを作成します。
               description_teacher: より興味深く、詳細な画像を作成するために、生徒はスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。
             The Draw Loop:
@@ -10845,6 +10873,8 @@ ja:
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
+            csf_sprites:
+              display_name: スプライト
             time4cs_c1:
               display_name: 'コレクション1: エバーグレーズとその生態系'
             time4cs_c2:
@@ -11911,6 +11941,7 @@ ja:
               description_student: このレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。その後、クラスは変数を使って乱数を保存し、プログラムが同じ乱数を複数回使用できるようにします。
               description_teacher: このレッスンでは、変数を使ってプログラム内の数値にラベルを付ける方法、またはランダムに生成された値を保存する方法を学習します。生徒は、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。生徒は変数を使って乱数を保存し、変数が実際に値を保存することを確認します。これにより、プログラム内で同じ乱数を複数回使用できるようになります。
             Sprites:
+              name: スプライト
               description_student: より興味深く、詳細な画像を作成するために、クラスはスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。レッスンの終わりに、全員がスプライトを使ってシーンを作成します。
               description_teacher: より興味深く、詳細な画像を作成するために、生徒はスプライトオブジェクトの説明を受けます。すべてのスプライトに表示する画像を割り当てることができ、スプライトは自身に関する複数の値も追跡するため、アニメーションを作成するときに便利です。
             The Draw Loop:
@@ -12041,6 +12072,8 @@ ja:
               name: プロジェクト - アプリの設計 パート5
             Intro to Programming:
               name: プログラミング入門
+            Debugging:
+              name: デバッギング
         csl-vn:
           title: ベトナムのコンピューター サイエンスリテラシー
           lesson_groups:
@@ -12509,6 +12542,8 @@ ja:
               name: 発展 (コースEおよびF)
             'Diving Deeper: Courses E and F':
               name: '発展: コースEおよびF'
+            Sprite Lab:
+              name: スプライト ラボ
             Variables:
               name: 変数（へんすう）
             For Loops:
@@ -12766,6 +12801,8 @@ ja:
               display_name: 条件
             csf_events:
               display_name: イベント
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_impacts:
@@ -12806,6 +12843,8 @@ ja:
               display_name: 条件
             csf_events:
               display_name: イベント
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_impacts:
@@ -13637,6 +13676,8 @@ ja:
               name: 'ミニプロジェクト: フライヤーゲーム'
               description_student: "**今日の質問: ゲームを作成するのに、新しいタイプの衝突とモデリングの動きをどのように使えばいいのでしょうか？** \\\\r \\\\rクラスは、重力のシミュレーションについて学習したこととさまざまなタイプの衝突を使って、単純なフライヤーゲームを作成します。フライヤーゲームのサンプルを見た後、生徒はどのようなフライヤーが欲しいかをブレインストーミングし、構造化されたプロセスを使ってコードスタジオでゲームをプログラミングします。"
               description_teacher: "**今日の質問: ゲームを作成するのに、新しいタイプの衝突とモデリングの動きをどのように使えばいいのでしょうか？** \\\\r \\\\r生徒は、重力のシミュレーションについて学習したこととさまざまなタイプの衝突を使って、単純なフライヤーゲームを作成します。フライヤーゲームのサンプルを見た後、生徒はどのようなフライヤーが欲しいかをブレインストーミングし、構造化されたプロセスを使ってコードスタジオでゲームをプログラミングします。"
+            Sprites:
+              name: スプライト
           student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
         coursea-2020:
           title: コース A (2020)
@@ -13976,6 +14017,8 @@ ja:
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_nested_loops:
@@ -14082,6 +14125,8 @@ ja:
               display_name: データ
             csf_for_loops:
               display_name: ループ用
+            csf_sprites:
+              display_name: スプライト
             end_of_course_project:
               display_name: コース最後のプロジェクト
           lessons:
@@ -14188,6 +14233,8 @@ ja:
               display_name: 変数（へんすう）
             csf_for_loops:
               display_name: ループ用
+            csf_sprites:
+              display_name: スプライト
             end_of_course_project:
               display_name: コース最後のプロジェクト
           lessons:
@@ -14444,6 +14491,8 @@ ja:
               name: プログラミング言語の必要性
             Intro to Programming:
               name: プログラミング入門
+            Debugging:
+              name: デバッギング
             Project - Designing an App Part 3:
               name: プロジェクト - アプリの設計 パート3
             Project - Designing an App Part 4:
@@ -14644,6 +14693,8 @@ ja:
               name: カリキュラムのコンポーネント
             Course Resources:
               name: コースリソース
+            Debugging:
+              name: デバッギング
             Module 1:
               name: モジュール1
             Module 2:
@@ -15050,6 +15101,8 @@ ja:
               name: 変数（へんすう）
             For Loops:
               name: ループ用
+            Sprite Lab:
+              name: スプライト ラボ
             Reviewing your reflections:
               name: 復習内容をレビューする
             Next steps:
@@ -15098,6 +15151,8 @@ ja:
               name: 変数（へんすう）
               description_student: "**今日の質問: 変数を使ってプログラムに情報を格納するにはどうすればよいですか？** \\\\r \\\\rこのレッスンでは、プログラムで数値にラベルを付ける方法、またはランダムに生成された値を保存する方法として変数を導入します。クラスは、変数の目的の非常に基本的な説明と新しいブロックの使用方法からレッスンを開始します。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。"
               description_teacher: "**今日の質問: 変数を使ってプログラムに情報を格納するにはどうすればよいですか？**このレッスンでは、変数を使って数値にラベルを付ける方法を学習します。生徒は、入力-出力-ストレージ-処理モデルのストレージコンポーネントの文脈の中で、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。"
+            Sprites:
+              name: スプライト
             Text:
               name: テキスト
               description_student: "**今日の質問: テキストを使ってシーンとアニメーションを改善するにはどうすればよいですか？** \\\\r \\\\rこのレッスンでは、ゲームラボのテキストコマンドを紹介し、座標平面とパラメータを使用する練習をさらに行います。レッスンの初めに、クラスはゲームラボで作成された漫画にキャプションを付けるよう求められます。次に、Code Studioに移動して、画面にテキストを配置したり、サイズなどの他のテキストプロパティを制御したりします。"
@@ -15287,6 +15342,8 @@ ja:
               display_name: はじめに
             lessonGroup-3:
               display_name: 変数（へんすう）
+            debugging:
+              display_name: デバッギング
         csd1-2021:
           description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
           lessons:
@@ -15439,6 +15496,9 @@ ja:
             Variables:
               key: 変数（へんすう）
               name: 変数（へんすう）
+            Sprites:
+              key: スプライト
+              name: スプライト
             Text:
               key: テキスト
               name: テキスト
@@ -15801,6 +15861,9 @@ ja:
             Intro to Programming:
               key: プログラミング入門
               name: プログラミング入門
+            Debugging:
+              key: デバッギング
+              name: デバッギング
             Project - Designing an App Part 3:
               key: プロジェクト - アプリの設計 パート3
             Project - Designing an App Part 4:
@@ -16547,6 +16610,8 @@ ja:
           lesson_groups:
             ramp_up:
               display_name: 入れ子のループ
+            csf_sprites:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_nested_loops:
@@ -16665,6 +16730,8 @@ ja:
               name: 言葉の力
               description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
           lesson_groups:
+            ramp_up:
+              display_name: スプライト
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_variables:
@@ -16826,6 +16893,8 @@ ja:
             lesson-3:
               name: 実行中のスプライト
           lesson_groups:
+            csf_warmup:
+              display_name: ウォームアップ
             csf_sequencing:
               display_name: シークエンス
             csf_loops:
@@ -16838,6 +16907,8 @@ ja:
               display_name: 変数（へんすう）
             csf_for_loops:
               display_name: ループ用
+            csf_sprites:
+              display_name: スプライト
             end_of_course_project:
               display_name: コース最後のプロジェクト
             lessonGroup-9:
@@ -16922,6 +16993,8 @@ ja:
               display_name: スプライトラボ 入門
             lessonGroup-3:
               display_name: 変数（へんすう）
+            Sprites:
+              display_name: スプライト
             variables:
               display_name: 変数（へんすう）
         csd4-preview-2021:
@@ -17182,6 +17255,8 @@ ja:
             For Loops:
               key: ループ用
               name: ループ用
+            Sprite Lab:
+              key: スプライト ラボ
             Reviewing your reflections:
               key: 復習内容をレビューする
               name: 復習内容をレビューする

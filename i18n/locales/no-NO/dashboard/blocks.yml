@@ -1375,6 +1375,10 @@
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": farge
       aalab_layoutSprites:
         options:
           FORMAT:

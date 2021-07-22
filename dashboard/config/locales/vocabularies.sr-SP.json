@@ -14,20 +14,35 @@
         "define/coursef/2021": {
           "word": "Дефинисати"
         },
+        "debugging/courseb/2021": {
+          "word": "Отклањање грешака"
+        },
         "programming/courseb/2021": {
           "word": "Programming"
+        },
+        "debugging/coursea/2021": {
+          "word": "Отклањање грешака"
         },
         "programming/coursea/2021": {
           "word": "Programming"
         },
+        "debugging/coursec/2021": {
+          "word": "Отклањање грешака"
+        },
         "programming/coursec/2021": {
           "word": "Programming"
+        },
+        "debugging/coursed/2021": {
+          "word": "Отклањање грешака"
         },
         "programming/coursed/2021": {
           "word": "Programming"
         },
         "conditionals/coursed/2021": {
           "word": "Кондиционали"
+        },
+        "debugging/express/2021": {
+          "word": "Отклањање грешака"
         },
         "programming/express/2021": {
           "word": "Programming"
@@ -46,6 +61,9 @@
         },
         "define/express/2021": {
           "word": "Дефинисати"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Отклањање грешака"
         },
         "programming/pre-express/2021": {
           "word": "Programming"

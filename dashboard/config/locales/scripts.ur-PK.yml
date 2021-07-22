@@ -7,10 +7,14 @@ ur:
         math_category_name: ریاضی
         other_category_name: دیگر
       name:
+        course1:
+          description_audience: عمر 4-6
         course2:
           lessons:
             Conditionals:
               name: شرائط
+        course3:
+          description_audience: Ages 8-18
         frozen:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ
@@ -42,6 +46,7 @@ ur:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
         20-hour:
+          description_audience: Ages 10-18
           lessons:
             Conditionals:
               name: شرائط
@@ -101,12 +106,18 @@ ur:
           description_audience: Ages 6-13
         afterschool1:
           description_audience: Ages 7-13
+        Special Fun:
+          description_audience: Ages 10-18
+        SpecialSeries:
+          description_audience: Ages 10-18
         mc:
           title: Minecraft کوڈ کی گھڑی
         algebraPD1:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        CSF_Secret_Sample:
+          description_audience: Ages 8-18
         algebraFacilitator:
           lessons:
             Teacher Dashboard:
@@ -115,6 +126,8 @@ ur:
           description_audience: Ages 8-18+
         MikeTest:
           description_audience: Ages 8-98
+        artistExemplar:
+          description_audience: Ages 8-18
         gradeKinder:
           description_audience: Ages 5-18
           lessons:

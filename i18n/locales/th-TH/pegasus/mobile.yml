@@ -163,6 +163,7 @@
   learn_online: "ลองดูหลักสูตรออนไลน์อื่นๆ"
   learn_classes: "ค้นหาชั้นเรียนในท้องถิ่น"
   learn_back_to_minecraft: "เรียนรู้ไปด้วยกันกับ Minecraft"
+  hoc_is_here: ' นี่คือ #HourOfCode - เข้าร่วมเรียน! @codeorg'
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
   just_did_accelerated: "ฉันเพิ่งเรียนหลักสูตรเร่งรัดเสร็จ - ดูผลงานได้ที่ @codeorg"
   learn_hoc: "เข้าร่วมเรียน Hour of Code"
@@ -376,7 +377,10 @@
   minecraft_no_internet: "ไม่มีอินเทอร์เน็ตใช่หรือไม่"
   minecraft_download_adventurer: "ดาวน์โหลดผจญภัยในไมน์คราฟท์เวอร์ชั่นออฟไลน์"
   minecraft_subtitle: "ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\">ลงทะเบียน</a> ค่ายชั่วโมงแห่งการโค้ด ได้ฟรี ที่ร้านค้าของไมโครซอฟท์ ในออสเตรเลีย แคนาดา เปอร์โตริโก หรือสหรัฐอเมริกา ได้เรียนรู้วิธีการรวบรวมความคิดสร้างสรรค์ไว้ด้วยกัน ด้วยการเขียนโค้ด"
+  minecraft_host_event: "เจ้าภาพงาน Minecraft Hour of Code"
   minecraft_teach_resources: "แหล่งข้อมูลและแผนการเรียนสำหรับครู"
+  minecraft_leader_guide: "ดาวน์โหลดทรัพยากรที่ช่วยให้คุณวางแผน และเข้าสู่งาน"
   minecraft_og_designer: "ไมน์คราฟท์กลับมาอีกครั้งพร้อมกิจกรรมใหม่สำหรับชั่วโมงเขียนโค้ด มาช่วยกันเขียนโปรแกรมให้กับสัตว์ต่าง ๆ และตัวละครอื่น ๆ ของไมน์คราฟท์ในเกมไมน์คราฟท์ที่เป็นเวอร์ชันของคุณเอง"
   minecraft_og_agent: "ไมน์คราฟท์กลับมาอีกครั้งสำหรับชั่วโมงเขียนโค้ด และคุณรับบทพระเอกนะ! ได้เวลาเขียนโค้ดเพื่อท่องไปในโลกชีวนิเวศของไมน์คราฟท์กันแล้ว"
   sports_page_title: "ชั่วโมงเขียนโค้ดตอนกีฬา"
@@ -524,6 +528,7 @@
   dashboard_progress_completed_perfect: "เสร็จ สมบูรณ์"
   dashboard_progress_submitted: "ส่งคำตอบแล้ว"
   dashboard_progress_view: 'ดูความคืบหน้า'
+  dashboard_progress_pair_programming: "การจับคู่เพื่อเขียนโปรแกรม"
   dashboard_sections_new_section: "กลุ่มใหม่"
   dashboard_sections_jumbotron_instruction: "สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น"
   dashboard_sections_table_secret: "ประเภทการล็อกอิน"
@@ -630,10 +635,12 @@
   carousel_heading_domestic: "การสอนเป็นภาษาอังกฤษ"
   carousel_heading_beginners: "บทเรียนสำหรับผู้เริ่มต้น"
   carousel_heading_javascript: "บทเรียนที่สอน JavaScript"
+  carousel_heading_beyond_javascript: "บทเรียนที่สอน JavaScript"
   carousel_heading_unplugged: "ไม่มีอุปกรณ์ หรือ อินเทอร์เน็ตใช่หรือไม่? ให้ลองเรียน วิทยาการคอมพิวเตอร์สำหรับผู้ไม่มีคอมพิวเตอร์"
   carousel_heading_devices: "บทเรียนแอปพลิเคชันสำหรับโทรศัพท์มือถือและแท็บเล็ต"
   carousel_heading_beyond_devices: "แอปสำหรับโทรศัพท์มือถือและแท็ปเล็ต"
   carousel_heading_languages: "บทเรียนภาษาโปรแกรมอื่น ๆ"
+  carousel_heading_beyond_languages: "บทเรียนภาษาโปรแกรมอื่น ๆ"
   carousel_heading_apps_games: "สร้างแอปหรือเกม ของคุณเอง"
   carousel_heading_university: "หลักสูตรมหาวิทยาลัยออนไลน์"
   carousel_heading_webpages: "เรียนรู้การทำเว็บเพจ"
@@ -677,10 +684,12 @@
   robomindnl_name: "โปรแกรมหุ่นยนต์จำลอง"
   flappy_name: "สร้างเกม Flappy bird"
   bitsbox_name: "Bitsbox - สร้างเกม"
+  makeschool_name: "สร้างเกมสำหรับ iPhone ในเบราว์เซอร์ของคุณ"
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "ค้อน กรรไกร กระดาษ เป่ายิ้งฉุบ"
   hourofcode_name: "เขาวงกตสุดคลาสสิค"
+  playlab_name: "เรื่องราวและเกม"
   infinity_name: "เพลย์แลปแบบไม่สิ้นสุด"
   artist_name: "ศิลปิน"
   course1_name: "คอร์ส 1"
@@ -731,10 +740,13 @@
   pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
   express-2019_name: หลักสูตร Express (2019)
   pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)
+  express-2020_name: หลักสูตร Express (2020)
   pre-express-2020_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2020)
+  pre-express-2021_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2021)
   accelerated_name: "หลักสูตรเร่งรัด"
   pre-express_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้
   20-hour_name: หลักสูตรเร่งรัด
+  gumball_name: "โลกมหัศจรรย์ของ Gumball"
   classicmaze_name: "เขาวงกตสุดคลาสสิค"
   iceage_name: "ยุคน้ำแข็ง (Ice Age)"
   minecraft_name: "ไมน์คราฟท์"
@@ -798,16 +810,36 @@
   course2_gradelevel: "อายุ 6-18 ปี"
   course3_gradelevel: "อายุ 8-18 ปี"
   course4_gradelevel: "อายุ 10-18 ปี"
+  coursea_gradelevel: "อายุ 4 - 7 ปี"
+  courseb_gradelevel: "อายุ 5-8 ปี"
+  coursec_gradelevel: "อายุ 6-10 ปี"
   coursed_gradelevel: "เกรด 8 +"
   coursee_gradelevel: "อายุ 8-12 ปี"
+  coursef_gradelevel: "อายุ 9 - 13 ปี"
+  coursea-2017_gradelevel: อายุ 4 - 7 ปี
+  courseb-2017_gradelevel: อายุ 5-8 ปี
+  coursec-2017_gradelevel: อายุ 6-10 ปี
   coursed-2017_gradelevel: เกรด 8 +
   coursee-2017_gradelevel: อายุ 8-12 ปี
+  coursef-2017_gradelevel: อายุ 9 - 13 ปี
+  coursea-2018_gradelevel: อายุ 4 - 7 ปี
+  courseb-2018_gradelevel: อายุ 5-8 ปี
+  coursec-2018_gradelevel: อายุ 6-10 ปี
   coursed-2018_gradelevel: เกรด 8 +
   coursee-2018_gradelevel: อายุ 8-12 ปี
+  coursef-2018_gradelevel: อายุ 9 - 13 ปี
+  coursea-2019_gradelevel: อายุ 4 - 7 ปี
+  courseb-2019_gradelevel: อายุ 5-8 ปี
+  coursec-2019_gradelevel: อายุ 6-10 ปี
   coursed-2019_gradelevel: เกรด 8 +
   coursee-2019_gradelevel: อายุ 8-12 ปี
+  coursef-2019_gradelevel: อายุ 9 - 13 ปี
+  coursea-2020_gradelevel: อายุ 4 - 7 ปี
+  courseb-2020_gradelevel: อายุ 5-8 ปี
+  coursec-2020_gradelevel: อายุ 6-10 ปี
   coursed-2020_gradelevel: เกรด 8 +
   coursee-2020_gradelevel: อายุ 8-12 ปี
+  coursef-2020_gradelevel: อายุ 9 - 13 ปี
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -881,6 +913,7 @@
   robomindnl_shortdescription: "เขียนโค้ดสำหรับหุ่นยนต์เสมือน"
   flappy_shortdescription: "สร้างเกมของคุณเอง - Flappy Bird, Shark, หรือ Submarine"
   bitsbox_shortdescription: " เขียนโค้ดสำหรับแอปพลิเคชั่นเกม เล่นและแชร์ ด้วยภาษา Javascript"
+  makeschool_shortdescription: "สร้างเกม iPhone!  ด้วยการเขียนโค้ดให้มอนสเตอร์ของคุณเคลื่อนไหวได้!"
   touchdevelop_shortdescription: 'แก้ปริศนา สร้างเกม และเรียนรู้การเขียนโค้ด ทั้งหมดนี้ในโทรศัพท์ของคุณ'
   appinventor_shortdescription: "สร้างแอปของคุณ! (เฉพาะ Android)"
   blockly_shortdescription: "ดาวน์โหลดไฟล์ ZIP เพื่อเรียนแบบออฟไลน์"
@@ -956,6 +989,7 @@
   tynkerapp_longdescription: "เรียนรู้ที่จะเขียนโปรแกรมด้วยการแก้ปัญหาที่สนุกสนาน สร้างเกมง่ายๆด้วยเทมเพลตกราฟิก ชุดคำสั่งการเขียนเกมและตัวละครต่างๆที่มีมาให้ ไม่จำเป็นต้องใช้อินเตอร์เน็ตในการเล่น คุณสามารถเข้าถึงผลงานของคุณผ่านเว็บ "
   robomindnl_longdescription: 'นักเรียนเรียนรู้พื้นฐานของการเขียนโปรแกรมโดยการควบคุมหุ่นยนต์ของตนเอง หลักสูตรออนไลน์นี้สอนโดยคลิปวิดีโอสั้นๆ ภาพยนตร์ แบบทดสอบต่างๆ และคำแนะนำโดยอัตโนมัติ  เพื่อช่วยให้การเขียนโปรแกรมเป็นไปอย่างราบรื่น'
   flappy_longdescription: "ใช้โปรแกรมแบบลากและวาง (Drag -Drop) เพื่อสร้างเกม Flappy Bird และปรับแต่งให้มีหน้าตาที่แตกต่างออกไปเป็นแบบของคุณเอง เช่น เปลี่ยนนกให้เป็นปลาฉลาม ซานตาครอส หรืออะไรก็ตาม เมื่อเสร็จแล้วนำเกมของคุณเข้าสู่มือถือในหนึ่งคลิก"
+  makeschool_longdescription: "เรียนรู้วิธีการโค้ด ผ่านการสร้างเกมใน iPhone ด้วยภาษาโปรแกรมมิ่งภาษาใหม่ที่เรียกว่า Swift! สร้างเกมที่ได้แรงบันดาลใจจากเกม Pok&eacute;mon แล้วสอนมอนสเตอร์ของคุณให้เคลื่อนย้าย คุณจะได้เรียนรู้เกี่ยวกับการใช้ตัวแปร เมธอด และวัตถุ (ออบเจ็กต์) เพื่อช่วยให่มอนสเตอร์ของคุณชนะ!"
   touchdevelop_longdescription: 'เครื่องมือแก้ไขนี้จะช่วยแนะนำคุณในการสร้างเม็ดสี แก้ปัญหาของหมี รวมทั้งสร้างเกมของคุณเอง'
   projguts_longdescription: "กิจกรรมอันปลั๊ก (ไม่ใช่คอมพิวเตอร์) นี้ช่วยให้นักเรียนเรียนรู้วิธีสร้างแบบจำลองและการจำลองการทำงาน โดยมีกลุ่มนักเรียนเล่นเป่ายิ้งฉุบ และเห็นผลการทดลองเป็นแบบจำลองต่าง ๆ"
   hourofcode_longdescription: "พื้นที่สำหรับ code.org/hoc ใหม่"
@@ -973,6 +1007,7 @@
   groklearning_beyond_name: "เรียนรู้การเขียนโปรแกรมภาษา Python"
   hacketyhack_beyond_name: "เรียนรู้ Ruby"
   robomind_beyond_name: "โปรแกรมหุ่นยนต์จำลอง"
+  makeschool_beyond_name: "สร้างเกมสำหรับ iPhone ในเบราว์เซอร์ของคุณ"
   appinventor_beyond_name: "AppInventor Hour of Code"
   codehs_beyond_name: "เรียนรู้การโค้ดกับ Karel"
   udemy_beyond_name: "หลักสูตรการเขียนโปรแกรมออนไลน์"
@@ -1065,6 +1100,7 @@
   groklearning_beyond_shortdescription: "วิดีโอแนะนำพื้นฐานการเขียนโปรแกรม python"
   hacketyhack_beyond_shortdescription: "เรียนรู้  Ruby จากพื้นฐาน"
   robomind_beyond_shortdescription: "เขียนโค้ดสำหรับหุ่นยนต์เสมือน"
+  makeschool_beyond_shortdescription: "เรียนรู้ที่จะสร้างเกม iPhone ในหนึ่งชั่วโมง"
   appinventor_beyond_shortdescription: "สร้างแอปของคุณ! (เฉพาะ Android)"
   touchdevelop_beyond_shortdescription: "เขียนโปรแกรมมือถือโดยตรงบนโทรศัพท์ แท็บเล็ต หรือแล็ปท็อป"
   codehs_beyond_shortdescription: "เรียนรู้การเขียนโปรแกรมจาวาสคริปต์กับภาพจำลอง"
@@ -1108,6 +1144,7 @@
   arduino_beyond_longdescription: "Arduino เป็นแพลตฟอร์มยอดนิยมที่ออกแบบมาให้ศิลปินและนักออกแบบทำงานกับเซ็นเซอร์จริง เช่น ไฟLed ปุ่มกด และอื่นๆ Sparkfun Virtual Sandbox จะสอนคุณเขียนโค้ดที่ถูกต้องด้วยเบราว์เซอร์ของคุณ"
   alice_beyond_longdescription: "ใช้คุณสมบัติของการเขียนโปรแกรมรูปแบบใหม่ๆ เพื่อสนับสนุนการสร้างภาพเคลื่อนไหว 3D โครงการ Alice มีเครื่องมือและวัสดุสำหรับการสอนและการเรียนเรียนรู้เกี่ยวกับ การคิดคำนวณ การแก้ปัญหา และการเขียนโปรแกรมสำหรับทุกเพศทุกวัย"
   sphero_beyond_longdescription: "ไม่ว่าคุณจะเป็นผู้สอหรือผู้ปกครอง บทเรียน SPRK จะสอนให้เด็กๆสนุกกับการเขียนโปรแกรมหุ่นยนต์ในขณะที่ฝึกทักษะในทางคณิตศาสตร์และวิทยาศาสตร์ไปพร้อมๆกัน"
+  compatibility_hide_this_warning: "ซ่อนคำเตือน"
   compatibility_unsupported_browser: "เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a> คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์"
   compatibility_unsupported_browser_markdown: "เบราเซอร์ของคุณไม่ได้รับการสนับสนุนให้ใช้งาน กรุณาอัพเกรดเบราเซอร์เป็น <a href='%{supported_browsers_url}', target='_blank'> ซึ่งเป็นหนึ่งในเบาร์เซอร์ที่เราแนะนำ</a> คุณอาจจะลองดูหน้าเพจได้ แต่การทำงานบางอย่างจะไม่สมบูรณ์"
   flappy_shortcode: "บิน"
@@ -1129,6 +1166,7 @@
   header_help_us: "ช่วยเรา"
   header_about: "เกี่ยวกับ"
   header_teacher_community: "ชุมชนครูผู้สอน"
+  header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_legal_privacy: "นโยบายความเป็นส่วนตัว"
   header_legal_tos: "เงื่อนไขการให้บริการ"
   user_header_label: "สวัสดี %{username}"
@@ -1136,10 +1174,14 @@
   user_header_settings: "บัญชีของฉัน"
   user_header_logout: "ออกจากระบบ"
   user_header_signin: "เข้าสู่ระบบ"
+  user_header_create: 'สร้าง '
+  user_header_applab: 'แอ๊ปแล็บ '
   user_header_artist: 'ศิลปิน'
   user_header_gamelab: "เกมแล๊บ (Game Lab)"
+  user_header_playlab: "เรื่องราวและเกม"
   user_header_dance: "Dance Party"
   user_header_minecraft: "ไมน์คราฟท์"
+  user_header_view_project_gallery: "ดูโปรเจกต์ต่าง ๆ"
   user_header_view_my_projects: "ดูโปรเจกต์ต่าง ๆของฉัน"
   signing_in: "เข้าสู่ระบบ"
   hero_name: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
@@ -1159,10 +1201,12 @@
   hoc_overview_start_tutorial: "เริ่มต้น"
   hoc_overview_view_teacher_guide: "ดูคำแนะนำสำหรับผู้สอน"
   hoc2018_creativity_create: "สร้าง"
+  hoc2018_creativity_hoc_coming: "Hour of Code กำลังมา…"
   hoc2018_creativity_what_will_you_create: "คุณจะสร้างอะไร"
   hoc2018_creativity_courses_link: "ก้าวไปอีกขั้นด้วย<a href=\"https://studio.code.org/courses\">หลักสูตรต่าง ๆ ของ Code.org</a>"
   hoc2018_mc_page_title: "สอนชั่วโมงแห่งโค้ดด้วย Minecraft"
   hoc2018_mc_details: "หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+"
+  hoc2018_mc_aquatic_announcement: "มาลงทะเบียนเพื่อลองทำกิจกรรมใหม่ ๆ กว่า 150 รายการสำหรับชั่วโมงแห่งการเขียนโค้ด-Hour of Code (ระหว่างวันที่ 3-9 ธันวาคม) อย่าลืมเช็คดูกิจกรรมใหม่ๆของไมน์คราฟท์สำหรับปี พ. ศ. 2561 เรื่อง การผจญภัยใต้ทะเล! ลงทะเบียนเรียนได้ตั้งแต่วันนี้"
   hoc2018_mc_aquatic_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
   hoc2018_mc_hero_title: "ไมน์คราฟท์ ภาคการเดินทางของฮีโร่"
   hoc2018_mc_hero_description: "การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"

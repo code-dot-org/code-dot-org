@@ -136,6 +136,8 @@ ms:
         C4_conditionals: Bersyarat
         CSF_a_b_artist_loops: Gelung di dalam Artis
         CSF_artist_angles: Sudut di dalam Artis
+        CSF_debugging_k1_blocks: Penyahpepijatan
+        CSF_debugging_text_blocks: Penyahpepijatan
         frozen_intro: Pengenalan Jam Kod
         frozen_loops: Pengenalan kepada Gelung
         frozen_functions: Pengenalan kepada Fungsi
@@ -171,6 +173,7 @@ ms:
         hoc_dance_warmup: Majlis Tari-Menari - Masa Mula Memanas
         hoc_dance_congrats: Majlis Tari-Menari - Majlis Bermula!
         csd_applab_parameters: Fungsi-fungsi dengan parameter
+        csd_debugging: Penyahpepijatan
         how-to-k5-workshops: 'Asas CS Code.org: Kanak-kanak Diuji, Guru Meluluskan'
         hoc_dance_congrats_2019: Majlis Tari-Menari 2019 - Majlis Bermula!
         hoc_dance_warmup_2019: Majlis Tari-Menari 2019 - Masa Mula Memanas
@@ -178,3 +181,7 @@ ms:
         hoc_dance_measures_2019: Majlis Tari-Menari 2019 - Corak Berirama
         hoc_dance_properties_2019: Majlis Tari-Menari 2019 - Sifat
         csf_lots_of_sprites: 'Makmal Peperi: Banyak Peperi'
+    callout:
+      text:
+        run: "\nTekan \"Run\" untuk mencuba program anda"
+        craft_run_button_callout: "\nTekan \"Run\" untuk mencuba program anda"

@@ -643,6 +643,7 @@
   dashboard_middle_courses_desc: "Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
   dashboard_high_courses: "Year-long High School Courses"
   dashboard_high_courses_desc: "Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
+  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming."
   dashboard_course_csins: "Computer Science in Science"
   dashboard_course_csins_desc: "Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation."
@@ -985,6 +986,7 @@
   express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Maktabgacha ekspress kurs (2020)
   express-2021_name: Ekspress Kurs (2020)
+  pre-express-2021_name: Maktabgacha ekspress kurs (2021)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Tezlashtirilgan kurs"
@@ -1713,6 +1715,8 @@
   footer_support: "Qo‘llab-quvvatlash"
   footer_terms: "Shartlar"
   ai_for_oceans: "AI for Oceans"
+  ai_for_oceans_lesson_plan: "dars rejasi"
+  how_ai_works: "SI (AI) qanday ishlaydi"
   ai_in_partnership_with: "Hamkor:"
   ai_microsoft_thanks: "Biz har bir bolaga 21-asrda informatika va muvaffaqiyatga erishish uchun zarur ko'nikmalarni o'rganish imkoniyatini berishini ta'minlash bo'yicha missiyamiz va ishlarimizni qo'llab-quvvatlaganligi uchun Microsoft-ga minnatdorchilik bildiramiz."
   ai_activity: "Faoliyat"

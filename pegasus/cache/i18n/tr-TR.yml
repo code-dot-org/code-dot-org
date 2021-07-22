@@ -1294,6 +1294,7 @@ tr-TR:
   pre-express-2019_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2019)
   express-2020_name: Hızlandırılmış Kurs (2020)
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
+  pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
   csd2_name: Ünite 2 - Ağ Geliştirme
   csd3_name: Ünite 3 - Animasyonlar ve Oyunlar
   accelerated_name: Hızlandırılmış Kurs
@@ -2452,6 +2453,7 @@ tr-TR:
   ai_for_oceans: 'Okyanuslar için Yapay Zeka
 
 '
+  ai_for_oceans_lesson_plan: ders planı
   ai_in_partnership_with: "### ortaklığıyla"
   ai_microsoft_thanks: 21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar
     bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu

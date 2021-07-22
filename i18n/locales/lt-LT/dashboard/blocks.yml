@@ -424,6 +424,10 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": spalva
       aalab_layoutSprites:
         options:
           FORMAT:

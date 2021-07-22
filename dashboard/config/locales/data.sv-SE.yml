@@ -606,6 +606,8 @@ sv:
         C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
+        CSF_debugging_k1_blocks: Felsökning
+        CSF_debugging_text_blocks: Felsökning
         CSF_my_robotic_friends: Mina Robotic- vänner
         frozen_intro: Kodtimmen introduktion
         frozen_loops: Introduktion till loopar
@@ -655,6 +657,7 @@ sv:
         writing_first_program: Skriv ditt första datorprogram!
         csd_pair_programming: Par-programmering
         csd_applab_parameters: Funktioner med parametrar
+        csd_debugging: Felsökning
         hoc_dance_congrats_2019: Dansparty 2019 – fortsätt partyt!
         hoc_dance_warmup_2019: Dansparty 2019 – uppvärmning
         hoc_dance_events_2019: Dansparty 2019 – aktiviteter

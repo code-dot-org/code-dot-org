@@ -526,6 +526,9 @@ fil:
         title: Relay Programming
       courseB_unplugged_MRF_2019:
         title: Ang Robot Kong Mga Kaibigan
+      BuildingAFoundation_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
       Conditionals_2019:
@@ -534,6 +537,15 @@ fil:
           ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
           "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
           ako ng itim na baraha, makakapuntos ka."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Graph Paper Programming
         desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
@@ -556,6 +568,15 @@ fil:
           larawan at mga kulay) pati na rin sa binary.
       courseE_unplugged_privateInformation_2019:
         title: Pribado at Personal na Impormasyon
+      SongwritingParameters_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Pagiging Loopy
         desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng

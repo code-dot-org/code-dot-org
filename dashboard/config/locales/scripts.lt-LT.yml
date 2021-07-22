@@ -854,6 +854,10 @@ lt:
           lessons:
             Game Lab:
               name: Žaidimų laboratorija
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizaino režimas
         CSDU2-Draft:
           lessons:
             Peer Review:

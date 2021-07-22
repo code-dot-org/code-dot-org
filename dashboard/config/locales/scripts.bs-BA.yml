@@ -647,6 +647,8 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         algebraPD2a:
           title: Računarstvo u Algebri Profesionalni Razvoj
           lessons:
@@ -739,10 +741,14 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         science-PD2:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -751,6 +757,8 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         ECSPD2-iZone:
           lessons:
             Welcome!:
@@ -818,6 +826,8 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         algebraPD3b:
           title: Računarstvo u Algebri Profesionalni Razvoj
         CSPPD3-Unit2:
@@ -910,6 +920,8 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         cspunit4:
           lessons:
             Cleaning Data:
@@ -1071,6 +1083,8 @@ bs:
               display_name: Pregled
         CSDU4-Draft:
           lessons:
+            Design Mode:
+              name: Način Dizajniranje
             Analyzing Interviews:
               name: Analiziranje intervijua
             Presenting Your Design:
@@ -1105,6 +1119,8 @@ bs:
         gradeKinder:
           description_audience: Dobi 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -1125,6 +1141,8 @@ bs:
           title: Razred 1
           description_audience: Dobi 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -1389,10 +1407,14 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         csp3-support:
           lesson_groups:
             required:
@@ -1405,10 +1427,14 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         science-pd-ol-pt-5:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         csf2harvey:
           lessons:
             Binary:
@@ -1419,6 +1445,8 @@ bs:
           lessons:
             Welcome!:
               name: Dobrodošli!
+            Wrap-Up:
+              name: Zamotavanje
         csp5-support:
           lesson_groups:
             required:
@@ -2619,6 +2647,9 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2954,6 +2985,10 @@ bs:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jedinica 2: internet'
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
         csp3-virtual:
           lessons:
             The Need for Algorithms:
@@ -2962,6 +2997,10 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogrešaka
         csd2-virtual:
           lessons:
             Images:
@@ -3033,6 +3072,8 @@ bs:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            debugging:
+              display_name: Otklanjanje pogrešaka
         csd3-2021:
           lessons:
             Variables:
@@ -3077,6 +3118,11 @@ bs:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jedinica 2: internet'
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Otklanjanje pogrešaka
+              name: Otklanjanje pogrešaka
         csp4-2021:
           lesson_groups:
             csp_variables:

@@ -331,6 +331,7 @@ vi:
             Variables:
               name: Các biến
         algebra:
+          title: Khoa học máy tính trong đại số
           description: Tìm hiểu lập trình chức năng thông qua đại số.
           description_short: Tìm hiểu lập trình chức năng thông qua đại số.
           lessons:
@@ -11545,6 +11546,7 @@ vi:
             phần thứ hai của khóa học này, hãy thiết kế và tạo dự án thực tiễn để
             có thể chia sẻ với bạn bè và gia đình.
         express-2020:
+          title: Khóa học cấp tốc (2020)
           description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài học dưới
             đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình máy tính,
             phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách thú vị!

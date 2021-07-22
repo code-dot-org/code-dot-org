@@ -407,6 +407,7 @@ hu:
       about_contact: Kapcsolat
       about_faqs: GYIK
       learn: Tanulj
+      stats: statisztikák
       help_us: Támogass minket
       teach: Taníts
       about: Rólunk
@@ -805,6 +806,7 @@ hu:
     unplugged_conditionals:
       title: Feltételek
     widgets:
+      audience: 'Korosztály: 14 +'
       cta: Ismerd meg, hogyan
   landing:
     report_bug: Hiba bejelentése
@@ -1014,9 +1016,13 @@ hu:
         opt_in_no: Nem
   cookie_banner:
     accept: Egyetértek
+  page_not_found_title: Az oldal nem található
   copy: Másol
+  confirm: Jóváhagy
   parent_email_banner:
     text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
       így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
     link_your_email: Kapcsold az e-mail címed
     not_now: Most nem
+  behaviors:
+    this_sprite: ez a sprite

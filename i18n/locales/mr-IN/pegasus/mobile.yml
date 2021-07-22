@@ -1,7 +1,9 @@
 "mr-IN":
+  hour_of_code: "अवर ऑफ कोड"
   'yes': 'होय'
   'no': 'नाही'
   select_language: "कृपया आपली भाषा निवडा"
+  en: "संगणक विज्ञान"
   csedweek_dates: "८-१४ डिसेंबर, २०१४"
   csedweek_banner_hoc: "<a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline; font-weight:bold\">'आवर ऑफ कोड' - एक तास कोडींग साठी</a> येत आहे. सर्व शिक्षक आणि आयोजकांना  <a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline; font-weight:bold\">आवर ऑफ कोड च्या  नियोजना करिता</a> आमंत्रित करत आहोत. \nCalling all teachers and organizers, plan your Hour of Code"
   petition_message: "प्रत्येक शाळेतील प्रत्येक विद्यार्थ्याला संगणक शिकण्याची संधी मिळाली पाहिजे"
@@ -9,7 +11,15 @@
   zipcode: "पोस्टल क्रमांक"
   twentyhours_heading: "संगणक शास्त्राशी ओळख करून पहा"
   twentyhours_text: "'आवर ऑफ कोड' चा पहिला भाग संपला ? आमच्या पुढच्या आभ्यास्क्रमामध्ये संगणक शास्त्र आणि प्रोग्रामिंग च्या अजून संकल्पना शिका."
+  write_your_first_program: "तुमचा पहिला कॉम्प्युटर प्रोग्रॅम लिहा"
+  third_party_gradelevel_kto8: "इयत्ता बालवाडी-8"
+  third_party_gradelevel_kto2: "इयत्ता बालवाडी-2"
+  third_party_gradelevel_2to8: "इयत्ता 2-8"
+  third_party_gradelevel_4to12: "इयत्ता 4-12"
+  third_party_gradelevel_5to12: "इयत्ता 5-12"
+  third_party_gradelevel_6plus: "इयत्ता 6+"
   print_ice_art_from_frozen: "फ्रोझन ट्युटोरीयल्समधील आईस आर्ट प्रिंट करा   "
+  support_url: "http://support.code.org/"
   country: "देश"
   city: "शहर"
   boys: "मुले"
@@ -25,11 +35,13 @@
   just_did_accelerated: "मी आत्ताच वेगवान अभ्यासक्रम पूर्ण केला - तो इथे पहा! @codeorg"
   studiobar_dance_title: "डांस पार्टी"
   studiobar_flappy_title: "फ्लॅपी कोड"
+  studiobar_frozen_title: "अवर ऑफ कोड"
   studiobar_frozen_body: "अॅना आणि एल्साबरोबर हिवाळ्यातील एक अद्भुत प्रदेश तयार करा."
   studiobar_donate_body: "- निवड करा -"
   homepage_slot_text_frozen: "अॅना आणि एल्सासह फ्रोझन"
   homepage_slot_text_flappy: "फ्लॅपी कोड"
   homepage_action_text_girlvideo: "एका मुलीला प्रोत्साहन द्या"
+  homepage_slot_text_title_hoc: "अवर ऑफ कोड"
   videos_more: "आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही <a href='%{inspiring_videos_playlist}'>प्रेरणादायक व्हिडीओज</a>"
   videos_more_markdown: "आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही [प्रेरणादायक व्हिडीओज](%{inspiring_videos_playlist}"
   starwars_subtitle: "कोड वापरून एक आकाशगंगा तयार करा"
@@ -40,6 +52,7 @@
   starwars_blocks_description: "ड्रॅग-ड्रॉप ब्लॉक्स वापरा."
   starwars_blocks_specs: "अनेक भाषा | आधुनिक ब्राऊझर्स, स्मार्टफोन्स, टॅबलेट्स | वय 6-106      "
   mc_name: "माईनक्राफ्ट अवर ऑफ कोड"
+  mc_gradelevel: "वय वर्षे 6-106"
   minecraft_agent: "माईनक्राफ्ट हिरोचा प्रवास"
   minecraft_designer: "माईनक्राफ्ट  आरेखक"
   minecraft_adventurer: "माईनक्राफ्ट साहस"
@@ -73,9 +86,14 @@
   video_title_anybody_can_learn: "कोणीही शिकू शकते"
   video_title_steph_curry: "स्टेफ करीसह अवर ऑफ कोड"
   video_title_my_name_is_aracely: "माझे नाव अरासेली आहे "
+  video_1min: "1 मिनिटे"
+  video_2min: "2 मिनिटे"
+  video_5min: "5 मिनिटे"
   no_internet: "इंटरनेट नाहीये का?"
   download_offline: "ऑफलाईन व्हर्जन डाऊनलोड करा "
   volunteer_engineer_submission_field_name: "नाव"
+  volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/your_name"
+  volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
   volunteer_engineer_submission_field_email_preference_yes: 'होय'
   volunteer_engineer_submission_field_email_preference_no: 'नाही'
   dashboard_action_delete_yes: 'होय'
@@ -84,6 +102,8 @@
   dashboard_sections_close: "Band"
   dashboard_students_name: 'नाव'
   dashboard_pre-express: 'वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम: '
+  dashboard_overview: "आढावा"
+  dashboard_debugging: 'डीबगिंग:'
   dashboard_student: "विध्यार्थी"
   hoc2014_try_frozen: "फ्रोझनमधील अॅना आणि एल्सासह आर्टीस्ट"
   frozen_name: "अॅना आणि एल्साबरोबर कोड लिहा"
@@ -110,10 +130,21 @@
   coursed-2017_name: अभ्यासक्रम D (2017)
   coursee-2017_name: अभ्यासक्रम  E (2017)
   coursef-2017_name: अभ्यासक्रम F (2017)
+  coursea-2019_name: अभ्यासक्रम A (2019)
+  coursec-2019_name: अभ्यासक्रम C (2019)
+  coursed-2019_name: अभ्यासक्रम D (2019)
+  coursee-2019_name: अभ्यासक्रम  E (2019)
+  coursef-2019_name: अभ्यासक्रम F (2019)
+  coursea-2020_name: अभ्यासक्रम A (2020)
+  coursec-2020_name: अभ्यासक्रम C (2020)
+  coursed-2020_name: अभ्यासक्रम D (2020)
+  coursee-2020_name: अभ्यासक्रम  E (2020)
+  coursef-2020_name: अभ्यासक्रम F (2020)
   coursed-2021_name: अभ्यासक्रम D (2021)
   pre-express-2018_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2018)
   pre-express-2019_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2019)
   pre-express-2020_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2020)
+  pre-express-2021_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम (2021)
   accelerated_name: "वेगवान अभ्यासक्रम"
   pre-express_name: वाचन-पूर्व एक्स्प्रेस अभ्यासक्रम
   20-hour_name: वेगवान अभ्यासक्रम
@@ -122,8 +153,68 @@
   hoc-encryption_name: सुलभ एनक्रीप्शन
   text-compression_name: टेक्स्ट कॉम्प्रेशन 
   basketball_name: "बास्केटबॉलचा गेम तयार करा"
+  codeorg_gradelevel: "वय वर्षे 4-104"
+  codeintl_gradelevel: "वय वर्षे 4-104"
+  tynker_gradelevel: "वय वर्षे 5-13"
+  condcards_gradelevel: "वय वर्षे 8-12"
+  robomind_gradelevel: "वय वर्षे 8-13"
+  tynkerapp_gradelevel: "वय वर्षे 5-13"
+  robomindnl_gradelevel: "वय वर्षे 8-13"
+  flappy_gradelevel: "वय वर्षे 6-106"
+  kodableunplugged_gradelevel: "वय वर्षे 8-13"
+  projguts_gradelevel: "वय वर्षे 10-13"
+  hourofcode_gradelevel: "वय वर्षे 6-106"
   frozen_gradelevel: "वय वर्षे 8-108"
+  starwars_gradelevel: "वय वर्षे 6-106"
+  playlab_gradelevel: "वय वर्षे 6-14"
+  infinity_gradelevel: "वय वर्षे 6-14"
   artist_gradelevel: "वय वर्षे 8-108"
+  monstercoding_gradelevel: "वय वर्षे 5-13"
+  allcancode_gradelevel: "वय वर्षे 5-10"
+  csfirst_gradelevel: "वय वर्षे 9-14"
+  codesters_gradelevel: "वय वर्षे 12-14"
+  texasinstruments_gradelevel: "वय वर्षे 13-16"
+  course1_gradelevel: "वय वर्षे 4-6"
+  course2_gradelevel: "वय वर्षे 6-18"
+  course3_gradelevel: "वय वर्षे 8-18"
+  course4_gradelevel: "वय वर्षे 10-18"
+  coursea_gradelevel: "वय वर्षे 4-7"
+  courseb_gradelevel: "वय वर्षे 5-8"
+  coursec_gradelevel: "वय वर्षे 6-10"
+  coursed_gradelevel: "वय वर्षे 7-11"
+  coursee_gradelevel: "वय वर्षे 8-12"
+  coursef_gradelevel: "वय वर्षे 9-13"
+  coursea-2017_gradelevel: वय वर्षे 4-7
+  courseb-2017_gradelevel: वय वर्षे 5-8
+  coursec-2017_gradelevel: वय वर्षे 6-10
+  coursed-2017_gradelevel: वय वर्षे 7-11
+  coursee-2017_gradelevel: वय वर्षे 8-12
+  coursef-2017_gradelevel: वय वर्षे 9-13
+  coursea-2018_gradelevel: वय वर्षे 4-7
+  courseb-2018_gradelevel: वय वर्षे 5-8
+  coursec-2018_gradelevel: वय वर्षे 6-10
+  coursed-2018_gradelevel: वय वर्षे 7-11
+  coursee-2018_gradelevel: वय वर्षे 8-12
+  coursef-2018_gradelevel: वय वर्षे 9-13
+  coursea-2019_gradelevel: वय वर्षे 4-7
+  courseb-2019_gradelevel: वय वर्षे 5-8
+  coursec-2019_gradelevel: वय वर्षे 6-10
+  coursed-2019_gradelevel: वय वर्षे 7-11
+  coursee-2019_gradelevel: वय वर्षे 8-12
+  coursef-2019_gradelevel: वय वर्षे 9-13
+  coursea-2020_gradelevel: वय वर्षे 4-7
+  courseb-2020_gradelevel: वय वर्षे 5-8
+  coursec-2020_gradelevel: वय वर्षे 6-10
+  coursed-2020_gradelevel: वय वर्षे 7-11
+  coursee-2020_gradelevel: वय वर्षे 8-12
+  coursef-2020_gradelevel: वय वर्षे 9-13
+  accelerated_gradelevel: "वय वर्षे 10-18"
+  thinkersmithspanish_platformtext: "अनप्लग केले"
+  thinkersmith_platformtext: "अनप्लग केले"
+  condcards_platformtext: "अनप्लग केले"
+  thinkersmith2_platformtext: "अनप्लग केले"
+  kodableunplugged_platformtext: "अनप्लग केले"
+  projguts_platformtext: "अनप्लग केले"
   frozen_shortdescription: "अॅना आणि एल्साबरोबर बर्फाची जादू आणि सौंदर्य शोधण्याची मजा घेण्यासाठी कोडचा वापर करूया."
   starwars_shortdescription: "ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा."
   playlab_shortdescription: "प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!"
@@ -152,8 +243,15 @@
   frozen_longdescription: "अॅना आणि एल्सा बर्फाची जादू आणि सौंदर्य अनुभवत असताना त्यांच्याबरोबर सहभागी होण्यासाठी कोड वापरूया. तुम्ही आईस-स्केटिंग करताना हिमकण आणि पॅटर्न्स तयार कराल आणि हिवाळ्यातील एक अद्भुत प्रदेश तयार कराल.  नंतर तुम्ही तुमच्या मित्रमैत्रिणींशी तो शेअर करू शकाल."
   starwars_longdescription: "ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा."
   playlab_longdescription: "प्ले लॅबमध्ये एखादी गोष्ट तयार करा किंवा एखादा गेम तयार करा! प्राणी, सागरी चाचे, भुते, निन्जा आणि इतर अनेक पात्रे हलतात, आवाज करतात, गुण मिळवतात आणि अगदी आगीचे गोळेसुद्धा फेकतात!"
+  codeorg_beyond_gradelevel: "वय वर्षे 4-104"
+  tynker_beyond_gradelevel: "वय वर्षे 5-13"
+  robomind_beyond_gradelevel: "वय वर्षे 8-13"
+  kidsruby_beyond_gradelevel: "वय वर्षे 12+"
+  w3schools_beyond_gradelevel: "वय वर्षे 12+"
+  mozilla_beyond_gradelevel: "वय वर्षे 12+"
   header_course_catalog: "अभ्यासक्रमाचा कॅटलॉग"
   header_project_gallery: "प्रकल्प"
+  header_educate_hoc: "अवर ऑफ कोड"
   header_about: "या बद्दल"
   header_help_support: 'सहाय्य आणि मदत '
   header_report_bug: "समस्या रिपोर्ट करा"
@@ -205,6 +303,9 @@
   hoc2018_mc_educators_box4_button: "स्रोत पहा"
   hoc2018_mc_watch_videos: "तुम्ही सुरुवात करण्यापूर्वी, यातील एखादा प्रेरणादायी व्हिडीओ पाहा"
   hoc2018_mc_videos_more: "आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही <a href='%{inspiring_videos_playlist}'>प्रेरणादायक व्हिडीओज</a>"
+  hoc2018_mc_video_1min: "1 मिनिटे"
+  hoc2018_mc_video_2min: "2 मिनिटे"
+  hoc2018_mc_video_5min: "5 मिनिटे"
   hoc2018_mc_video_title_steph_curry: "स्टेफ करीसह अवर ऑफ कोड"
   hoc2018_mc_video_title_sports: "थोडा प्रयत्न करा. कोणीही शिकू शकते."
   hoc2018_mc_video_title_cs_is_everything: "संगणक शास्त्रामुळे सगळे काही बदलत आहे"

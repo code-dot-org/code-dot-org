@@ -11,11 +11,20 @@
         "define/coursef/2021": {
           "word": "Анықта"
         },
+        "debugging/courseb/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
         "programming/courseb/2021": {
           "word": "Бағдарламалау"
         },
+        "debugging/coursea/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
         "programming/coursea/2021": {
           "word": "Бағдарламалау"
+        },
+        "debugging/coursec/2021": {
+          "word": "Бағдарламаны дұрыстау"
         },
         "programming/coursec/2021": {
           "word": "Бағдарламалау"
@@ -23,11 +32,17 @@
         "binary/coursec/2021": {
           "word": "Бинарлы"
         },
+        "debugging/coursed/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
         "programming/coursed/2021": {
           "word": "Бағдарламалау"
         },
         "conditionals/coursed/2021": {
           "word": "Шарттар"
+        },
+        "debugging/express/2021": {
+          "word": "Бағдарламаны дұрыстау"
         },
         "programming/express/2021": {
           "word": "Бағдарламалау"
@@ -43,6 +58,9 @@
         },
         "define/express/2021": {
           "word": "Анықта"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Бағдарламаны дұрыстау"
         },
         "programming/pre-express/2021": {
           "word": "Бағдарламалау"

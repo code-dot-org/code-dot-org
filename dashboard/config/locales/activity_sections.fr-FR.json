@@ -40,7 +40,8 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Labo des Lutins"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
@@ -61,6 +62,9 @@
         "275316f1-8a17-411e-881a-0841ede9cd01": {
           "progression_name": " Les Lutins en Action"
         },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "progression_name": "Labo des Lutins"
+        },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "tips": [
             null
@@ -79,6 +83,9 @@
           "tips": [
             null
           ]
+        },
+        "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
+          "progression_name": "Exploration"
         },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Activité libre"
@@ -110,7 +117,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Labo des Lutins"
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
           "name": "Vérifier"
@@ -146,6 +154,12 @@
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
           "name": "Dessiner avec des Boucles"
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "Labo des Lutins"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "Labo des Lutins"
+        },
         "684dcdb5-2ce6-4481-85c2-aec19cf71f8e": {
           "name": "Réflexion"
         },
@@ -154,6 +168,9 @@
         },
         "114f0276-db5c-466e-ad8a-a6488a93f019": {
           "progression_name": " Les Variables dans Artiste"
+        },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "Labo des Lutins"
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Activité libre"
@@ -165,7 +182,8 @@
           "name": "Introduction"
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
-          "name": "Les Boucles Imbriquées dans le Labyrinthe"
+          "name": "Les Boucles Imbriquées dans le Labyrinthe",
+          "progression_name": "Labo des Lutins"
         },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
@@ -179,7 +197,8 @@
           "name": "Introduction"
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
-          "name": "Modifier des Variables avec l'Abeille"
+          "name": "Modifier des Variables avec l'Abeille",
+          "progression_name": "Labo des Lutins"
         },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
           "name": "Réflexion"
@@ -215,6 +234,9 @@
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
           "progression_name": " Boucles « Pour »"
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "Labo des Lutins"
+        },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
           "progression_name": "Les Extras de la Leçon"
         },
@@ -227,6 +249,12 @@
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "Les Boucles For avec l'Artiste",
           "progression_name": " Boucles « Pour »"
+        },
+        "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
+          "progression_name": "Exploration"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "Labo des Lutins"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Activité libre"
@@ -255,6 +283,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "Labo des Lutins"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
           "progression_name": " Simulateur d'épidémie"
@@ -366,6 +397,9 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "Labo des Lutins"
+        },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Réflexion"
         },
@@ -379,6 +413,9 @@
         },
         "32a0cded-433b-4111-b1a5-8513247d783b": {
           "progression_name": " Programmation en Binôme"
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "Labo des Lutins"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "Défi"
@@ -408,6 +445,12 @@
         "0f52c6dc-5602-4905-a924-f7756676f53f": {
           "progression_name": " La Moissonneuse"
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "Labo des Lutins"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "Labo des Lutins"
+        },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
           "progression_name": "Défi"
         },
@@ -431,6 +474,12 @@
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
           "name": "Les Boucles avec la Moissonneuse"
         },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "Labo des Lutins"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "Labo des Lutins"
+        },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "Défi"
         },
@@ -440,8 +489,14 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Introduction"
         },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "Labo des Lutins"
+        },
         "9bffbabf-f624-49e2-b54b-52317b420600": {
           "progression_name": " Utiliser le Bloc Répéter"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "Labo des Lutins"
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "Défi"
@@ -459,6 +514,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "Labo des Lutins"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "Labo des Lutins"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
           "progression_name": "Défi"
@@ -558,6 +619,9 @@
             null
           ]
         },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "Labo des Lutins"
+        },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Réflexion",
           "tips": [
@@ -582,6 +646,9 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "Labo des Lutins"
+        },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "Réflexion"
         },
@@ -592,6 +659,12 @@
         },
         "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
           "progression_name": " Programmation en Binôme "
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "Labo des Lutins"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "Labo des Lutins"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
           "progression_name": "Défi"
@@ -613,6 +686,9 @@
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Programmer avec Rey et BB-8",
           "progression_name": " Programmer avec Rey et BB-8"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "Labo des Lutins"
         },
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
           "progression_name": "Défi"
@@ -642,6 +718,12 @@
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
           "name": "Les Boucles avec Scrat"
         },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "Labo des Lutins"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "Labo des Lutins"
+        },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "Défi"
         },
@@ -661,8 +743,14 @@
             null
           ]
         },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "Labo des Lutins"
+        },
         "801526d2-4615-4e46-90c1-5e3c08dfe223": {
           "progression_name": " Utiliser le Bloc Répéter"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "Labo des Lutins"
         },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
           "progression_name": "Défi"
@@ -679,8 +767,14 @@
         "13752711-384a-4249-bf95-632d8a8ad185": {
           "name": "Scène de l'Océan avec des Boucles"
         },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "Labo des Lutins"
+        },
         "52392151-808b-48cd-a76b-554587d200ec": {
           "progression_name": " Les Boucles dans Artiste"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "Labo des Lutins"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "Défi"
@@ -785,6 +879,9 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "Labo des Lutins"
+        },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
           "progression_name": "Défi"
         },
@@ -799,6 +896,9 @@
         },
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
           "name": "Déboguer dans le Labyrinthe"
+        },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "Labo des Lutins"
         },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
           "progression_name": "Défi"
@@ -815,6 +915,9 @@
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "name": "Collecter le Trésor avec Laurel"
         },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "Labo des Lutins"
+        },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "Défi"
         },
@@ -829,6 +932,9 @@
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
           "name": "Créer de l'Art avec du Code"
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "Labo des Lutins"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -860,6 +966,12 @@
           "name": "Les Boucles avec Rey et BB-8",
           "progression_name": " Programmer avec Rey et BB-8"
         },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "Labo des Lutins"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "Labo des Lutins"
+        },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
           "progression_name": "Défi"
         },
@@ -875,6 +987,9 @@
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
           "name": "Récolter des Cultures avec des Boucles",
           "progression_name": " La Moissonneuse"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "Labo des Lutins"
         },
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
           "progression_name": "Défi"
@@ -927,6 +1042,9 @@
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Construire un Jeu Flappy"
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "Labo des Lutins"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -1029,6 +1147,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "Labo des Lutins"
+        },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "Défi"
         },
@@ -1056,6 +1177,9 @@
         },
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "Déboguer avec Laurel"
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "Labo des Lutins"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "Défi"
@@ -1094,6 +1218,9 @@
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "name": "Construis un Jeu Star Wars",
           "progression_name": " Projet Star Wars"
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "Labo des Lutins"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1147,8 +1274,14 @@
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "Boucles dans l'Âge de Glace"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "Labo des Lutins"
+        },
         "4c88ec45-b2cb-4b4d-88de-2d676d507722": {
           "progression_name": " Utiliser le Bloc Répéter"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "Labo des Lutins"
         },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "Défi"
@@ -1167,6 +1300,12 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Dessiner des Formes avec des Boucles"
         },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "Labo des Lutins"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "Labo des Lutins"
+        },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
           "progression_name": "Défi"
         },
@@ -1178,6 +1317,12 @@
         },
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Les Boucles Imbriquées dans le Labyrinthe"
+        },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "Labo des Lutins"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "Labo des Lutins"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
           "progression_name": "Défi"
@@ -1207,7 +1352,8 @@
           "name": "Introduction"
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Regarder vers l'Avenir avec Minecraft",
+          "progression_name": "Labo des Lutins"
         },
         "16432484-49b1-47dc-bbd9-60f67bacc790": {
           "progression_name": "Défi"
@@ -1227,6 +1373,12 @@
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
           "progression_name": "  Instructions « si »"
         },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "Labo des Lutins"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "Labo des Lutins"
+        },
         "8a1d519d-3579-40dd-8c62-77a2d4abc8ea": {
           "progression_name": "Défi"
         },
@@ -1242,8 +1394,14 @@
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "Les Boucles Tant Que dans la Fermière"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "Labo des Lutins"
+        },
         "5b71ce88-2e79-4478-888a-796bed9dacb9": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "Labo des Lutins"
         },
         "b25165f7-abe4-4c2b-a4f2-2a8838986caa": {
           "progression_name": "Défi"
@@ -1258,7 +1416,11 @@
           "name": "Introduction"
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
+          "progression_name": "Labo des Lutins"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "Labo des Lutins"
         },
         "31e87218-76f2-4e0c-9689-9203f3f2bc83": {
           "progression_name": "Défi"
@@ -1295,6 +1457,9 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "Labo des Lutins"
+        },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "Défi"
         },
@@ -1316,6 +1481,9 @@
         "33b2c6a8-031f-4fc3-b4aa-d3712abcf111": {
           "progression_name": " Déboguer avec Scrat "
         },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "Labo des Lutins"
+        },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "Défi"
         },
@@ -1331,6 +1499,9 @@
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "name": "Collecter le Trésor avec Laurel"
         },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "Labo des Lutins"
+        },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "Défi"
         },
@@ -1345,6 +1516,9 @@
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
           "name": "Créer de l'Art avec du Code"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "Labo des Lutins"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1375,6 +1549,9 @@
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
           "progression_name": " Introduction au Labo des Lutins"
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "Labo des Lutins"
+        },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "Activité libre"
         },
@@ -1388,6 +1565,9 @@
           "tips": [
             null
           ]
+        },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "Labo des Lutins"
         },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
           "name": "Réflexion"
@@ -1403,6 +1583,9 @@
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
           "progression_name": " Les Lutins en Action"
         },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "Labo des Lutins"
+        },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
           "name": "Réflexion"
         },
@@ -1416,6 +1599,9 @@
           "tips": [
             null
           ]
+        },
+        "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
+          "progression_name": "Exploration"
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "Activité libre"
@@ -1450,6 +1636,9 @@
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Les Boucles avec Rey et BB-8",
           "progression_name": " Programmer avec Rey et BB-8"
+        },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "Labo des Lutins"
         },
         "736ef92b-b635-4477-abbb-7d98d171b960": {
           "progression_name": "Défi"
@@ -1494,7 +1683,8 @@
           "name": "Introduction"
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
-          "name": "Les Flocons de Neige avec Anna et Elsa"
+          "name": "Les Flocons de Neige avec Anna et Elsa",
+          "progression_name": "Labo des Lutins"
         },
         "d1f0e984-22d3-4086-978b-0e830c9cc6c9": {
           "name": "Réflexion"
@@ -1503,7 +1693,8 @@
           "name": "Introduction"
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
-          "name": "Regarder vers l'Avenir avec Minecraft"
+          "name": "Regarder vers l'Avenir avec Minecraft",
+          "progression_name": "Labo des Lutins"
         },
         "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf": {
           "progression_name": "Défi"
@@ -1520,6 +1711,15 @@
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "name": "Si/Sinon avec l'Abeille"
         },
+        "c622f540-96a1-4448-9a80-18850f23abdd": {
+          "progression_name": "  Instructions « si »"
+        },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "Labo des Lutins"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "Labo des Lutins"
+        },
         "cd33cbb5-8d96-4173-a790-5f3c59c5afff": {
           "progression_name": "Défi"
         },
@@ -1535,8 +1735,14 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Les Boucles Tant Que dans la Fermière"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "Labo des Lutins"
+        },
         "2094fb7f-31a7-4639-be69-0baf39649007": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "Labo des Lutins"
         },
         "b0a4f8d2-11ae-416f-a274-e1c3be9dcc22": {
           "progression_name": "Défi"
@@ -1553,6 +1759,15 @@
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "Labo des Lutins"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "Labo des Lutins"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "Labo des Lutins"
+        },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Activité libre"
         },
@@ -1563,7 +1778,11 @@
           "name": "Introduction"
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
+          "progression_name": "Labo des Lutins"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "Labo des Lutins"
         },
         "db38efa3-e075-41c0-ba59-0e9426393b52": {
           "progression_name": "Défi"
@@ -1577,6 +1796,9 @@
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "name": "Récolter avec les Conditions",
           "progression_name": " Récolter avec les Conditions"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "Labo des Lutins"
         },
         "f6fcf627-61b6-45f8-ac6b-602a11fb434a": {
           "progression_name": "Défi"
@@ -1598,6 +1820,15 @@
           "tips": [
             null
           ]
+        },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "Labo des Lutins"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "Labo des Lutins"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "Labo des Lutins"
         },
         "467dc80b-fcf1-48ff-8b74-74aa00c9ed26": {
           "progression_name": " Minecraft - Félicitations"
@@ -1650,7 +1881,8 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Labo des Lutins"
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
           "name": "Vérifier"
@@ -1664,6 +1896,9 @@
         "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
           "progression_name": " Les Variables dans Artiste"
         },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "Labo des Lutins"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Activité libre"
         },
@@ -1674,7 +1909,8 @@
           "name": "Introduction"
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
-          "name": "Modifier des Variables avec l'Abeille"
+          "name": "Modifier des Variables avec l'Abeille",
+          "progression_name": "Labo des Lutins"
         },
         "40a52b8d-4101-4d39-a124-460b6553eea6": {
           "name": "Réflexion"
@@ -1691,6 +1927,9 @@
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
           "progression_name": " Boucles « Pour »"
         },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "Labo des Lutins"
+        },
         "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
           "progression_name": "Les Extras de la Leçon"
         },
@@ -1705,6 +1944,12 @@
             null
           ],
           "progression_name": " Boucles « Pour »"
+        },
+        "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
+          "progression_name": "Exploration"
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "Labo des Lutins"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Activité libre"
@@ -1756,6 +2001,9 @@
             null
           ]
         },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "Labo des Lutins"
+        },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Réflexion"
         },
@@ -1774,11 +2022,15 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "Labo des Lutins"
+        },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Réflexion"
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
-          "name": "Programmation avec Angry Birds"
+          "name": "Programmation avec Angry Birds",
+          "progression_name": "Labo des Lutins"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
           "progression_name": "Défi"
@@ -1801,6 +2053,9 @@
           "name": "Programmer avec Rey et BB-8",
           "progression_name": " Programmer avec Rey et BB-8"
         },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "Labo des Lutins"
+        },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
           "progression_name": "Défi"
         },
@@ -1821,6 +2076,12 @@
         "45d59019-4dd4-4a32-b08c-fd79528eab76": {
           "progression_name": " La Moissonneuse"
         },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "Labo des Lutins"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "Labo des Lutins"
+        },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
           "progression_name": "Défi"
         },
@@ -1840,6 +2101,12 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "Labo des Lutins"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "Labo des Lutins"
+        },
         "0a8a7f79-b1b7-436e-8a45-b6190c180164": {
           "progression_name": "Défi"
         },
@@ -1852,8 +2119,14 @@
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "Les Boucles avec Laurel"
         },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "Labo des Lutins"
+        },
         "dead7fa5-406d-419c-a084-3a913cbd2499": {
           "progression_name": " Utiliser le Bloc Répéter"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "Labo des Lutins"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
           "progression_name": "Défi"
@@ -1875,8 +2148,14 @@
             null
           ]
         },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "Labo des Lutins"
+        },
         "eabc47c6-9f94-4b32-aab1-4a138064532b": {
           "progression_name": " Les Boucles dans Artiste"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "Labo des Lutins"
         },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
           "progression_name": "Défi"
@@ -1898,6 +2177,9 @@
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "Labo des Lutins"
         },
         "77de1bff-b1e2-4956-9ed2-15110f9aa640": {
           "progression_name": "Défi"
@@ -1975,6 +2257,9 @@
         "331e6451-5472-4491-bf96-d630d7f902a4": {
           "progression_name": " Introduction au Labo des Lutins"
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "Labo des Lutins"
+        },
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "Activité libre"
         },
@@ -1992,6 +2277,12 @@
         },
         "1620d22b-10cf-4c91-bb52-cda64a75b666": {
           "progression_name": " Les Lutins en Action"
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "Labo des Lutins"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "Labo des Lutins"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Activité libre"
@@ -2035,6 +2326,12 @@
         "c0191294-55c5-47ec-a80d-76f9023bd84e": {
           "name": "Dessiner avec des Boucles"
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "Labo des Lutins"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "Labo des Lutins"
+        },
         "f6df66e2-bc97-403d-a4e1-c015294d94ac": {
           "progression_name": "Défi"
         },
@@ -2054,6 +2351,12 @@
           "tips": [
             null
           ]
+        },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "Labo des Lutins"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "Labo des Lutins"
         },
         "70a7d0e6-caa1-439a-a18c-41e5af3daf6f": {
           "progression_name": "Défi"
@@ -2117,6 +2420,15 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "Labo des Lutins"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "Labo des Lutins"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "Labo des Lutins"
+        },
         "9619ba1f-8426-40fb-9699-41562c4721ac": {
           "progression_name": " Minecraft - Félicitations"
         },
@@ -2131,6 +2443,9 @@
         },
         "d1826ee5-4403-41a2-a804-3112c9da4cb1": {
           "name": "Les Fonctions avec L'Artiste"
+        },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "Labo des Lutins"
         },
         "2be1256a-b8a6-4ec6-a54d-c1db662af71e": {
           "progression_name": "Défi"
@@ -2147,6 +2462,15 @@
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "Labo des Lutins"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "Labo des Lutins"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "Labo des Lutins"
+        },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Activité libre"
         },
@@ -2160,10 +2484,17 @@
           "name": "Les Conditions avec la Fermière",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Labo des Lutins"
         },
         "a63ac211-7ad4-4c28-af4a-cfa489ec8a77": {
           "progression_name": " Les Boucles Tant Que avec la Fermière"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "Labo des Lutins"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "Labo des Lutins"
         },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "Défi"
@@ -2176,6 +2507,9 @@
         },
         "24e49944-567b-4a1a-8f14-8e60585cb81f": {
           "progression_name": " La Moissonneuse"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "Labo des Lutins"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
           "progression_name": "Défi"

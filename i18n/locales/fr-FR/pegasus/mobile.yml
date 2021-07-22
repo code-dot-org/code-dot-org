@@ -941,12 +941,20 @@
   coursed-2019_name: Cours D (2019)
   coursee-2019_name: Cours E (2019)
   coursef-2019_name: Cours F (2019)
+  coursea-2020_name: Cours A (2020)
+  courseb-2020_name: Cours B (2020)
+  coursec-2020_name: Cours C (2020)
+  coursed-2020_name: Cours D (2020)
+  coursee-2020_name: Cours E (2020)
+  coursef-2020_name: Cours F (2020)
   coursed-2021_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
+  pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
+  pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: "Cours accéléré"
@@ -1612,6 +1620,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "En partenariat avec"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* est un programme destiné à sensibiliser les enfants défavorisés aux opportunités du numérique et les aider à bâtir une carrière dans les métiers de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire au supérieur avec une attention toute particulière pour les jeunes filles. <a href='%{amazon_future_engineer_link}' target='_blank'>En savoir plus</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* est un programme destiné à sensibiliser les enfants défavorisés aux opportunités du numérique et les aider à bâtir une carrière dans les métiers de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire au supérieur avec une attention toute particulière pour les jeunes filles. [En savoir plus](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Si on est professeur ou élève française, visite [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Pour en savoir plus sur Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "À propos d'Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Découvrez le programme d’Amazon, qui s’étend de la Maternelle jusqu’à l’âge actif, destiné à accroître l’accès à l’enseignement informatique. Trouvez des informations sur la manière de vous impliquer dans nos camps d’été, nos classes d’informatique au secondaire, nos bourses d’études et nos stages."
@@ -1664,6 +1673,7 @@
   footer_support: "Assistance"
   footer_terms: "Conditions Générales"
   ai_for_oceans: "IA pour les Océans"
+  ai_for_oceans_lesson_plan: "plan de cours"
   ai_in_partnership_with: "En partenariat avec"
   ai_microsoft_thanks: "Nous remercions Microsoft du soutien accordé à notre vision et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique et d’obtenir les compétences nécessaires pour réussir au XXIe siècle."
   ai_activity: "Activité"

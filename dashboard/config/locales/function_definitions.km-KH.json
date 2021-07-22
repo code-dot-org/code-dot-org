@@ -573,6 +573,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "ពណ៌"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1005,7 +1010,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ទំហំ"
+              "size": "ទំហំ",
+              "color": "ពណ៌"
             },
             "name": "អ្នកឆែក"
           },
@@ -1035,7 +1041,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ទំហំ"
+              "size": "ទំហំ",
+              "color": "ពណ៌"
             },
             "name": "អ្នកឆែក"
           },
@@ -1079,7 +1086,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "ទំហំ"
+              "size": "ទំហំ",
+              "color": "ពណ៌"
             },
             "name": "​បំពេញ​ការេ"
           },
@@ -1177,6 +1185,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "ពណ៌"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

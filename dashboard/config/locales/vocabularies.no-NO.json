@@ -11,17 +11,32 @@
         "define/coursef/2021": {
           "word": "Definer"
         },
+        "debugging/courseb/2021": {
+          "word": "Feilsøking"
+        },
         "drop/courseb/2021": {
           "word": "Fall"
+        },
+        "debugging/coursea/2021": {
+          "word": "Feilsøking"
         },
         "drop/coursea/2021": {
           "word": "Fall"
         },
+        "debugging/coursec/2021": {
+          "word": "Feilsøking"
+        },
         "binary/coursec/2021": {
           "word": "Binær"
         },
+        "debugging/coursed/2021": {
+          "word": "Feilsøking"
+        },
         "conditionals/coursed/2021": {
           "word": "Betingelser"
+        },
+        "debugging/express/2021": {
+          "word": "Feilsøking"
         },
         "conditionals/express/2021": {
           "word": "Betingelser"
@@ -37,6 +52,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Fall"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Feilsøking"
         },
         "copyright/coursee/2021": {
           "word": "Opphavsrett"

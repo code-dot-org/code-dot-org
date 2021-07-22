@@ -812,6 +812,10 @@ fa:
           lessons:
             Game Lab:
               name: کارگاه بازی سازی
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: حالت طراحی
         CSF_Secret_Sample_Story:
           description_audience: سنین 8-18+
         MikeTest:
@@ -832,6 +836,8 @@ fa:
         gradeKinder:
           description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
+            Debugging:
+              name: اشکال‌زدایی
             Events:
               name: رویدادها
             'Jigsaw: Learn to drag and drop':
@@ -854,6 +860,8 @@ fa:
           title: رده ی سنی 1
           description_audience: سنین 5 به بالا (خواندن لازم است)
           lessons:
+            Debugging:
+              name: اشکال‌زدایی
             Events:
               name: رویدادها
             'Jigsaw: Learn to drag and drop':
@@ -2023,6 +2031,9 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2311,10 +2322,18 @@ fa:
           lessons:
             Spelling Bee:
               name: زنبور عسل هجی کن
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csp3-virtual:
           lessons:
             Creating Functions:
               name: ساختن تابع ها
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
         csp5-virtual:
           lessons:
             While Loops:
@@ -2369,6 +2388,8 @@ fa:
               display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
+            debugging:
+              display_name: اشکال‌زدایی
         csd3-2021:
           lessons:
             Variables:
@@ -2388,6 +2409,11 @@ fa:
             Functions with Parameters:
               key: معادله با پارامترها
               name: معادله با پارامترها
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: اشکال‌زدایی
+              name: اشکال‌زدایی
         csp4-2021:
           lesson_groups:
             csp_variables:

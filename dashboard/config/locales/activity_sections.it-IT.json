@@ -38,7 +38,8 @@
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Costruzione di abilità"
         },
         "c5589504-a584-4599-8ee2-22e32a2374da": {
           "progression_name": "Pratica"
@@ -60,6 +61,9 @@
           "name": "Personaggi in azione",
           "progression_name": "Previsione"
         },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "progression_name": "Costruzione di abilità"
+        },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
           "progression_name": "Pratica"
         },
@@ -78,6 +82,9 @@
           "tips": [
             null
           ]
+        },
+        "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
+          "progression_name": "Esplorazione"
         },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Tempo di giocare"
@@ -112,7 +119,8 @@
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Costruzione di abilità"
         },
         "472a5254-b0e4-4069-a6f4-940ed9fda07a": {
           "progression_name": "Pratica"
@@ -149,6 +157,12 @@
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Introduzione"
         },
+        "ef504f91-6fca-4859-a960-7e792de6223e": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "411a2b66-714e-40fe-9636-a184b62c44bf": {
+          "progression_name": "Costruzione di abilità"
+        },
         "08a8ba95-17db-446d-9a47-2ed7927d1957": {
           "progression_name": "Pratica"
         },
@@ -161,6 +175,9 @@
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
           "progression_name": "Previsione"
         },
+        "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
+          "progression_name": "Costruzione di abilità"
+        },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Tempo di giocare"
         },
@@ -171,7 +188,8 @@
           "name": "Introduzione"
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
-          "name": "Cicli annidati nel labirinto"
+          "name": "Cicli annidati nel labirinto",
+          "progression_name": "Costruzione di abilità"
         },
         "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
           "progression_name": "Pratica"
@@ -188,7 +206,8 @@
           "name": "Introduzione"
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
-          "name": "Modifica delle variabili con l'ape"
+          "name": "Modifica delle variabili con l'ape",
+          "progression_name": "Costruzione di abilità"
         },
         "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
           "progression_name": "Pratica"
@@ -227,6 +246,9 @@
         "297e5651-8422-476e-b1db-3d893b7e0bc8": {
           "progression_name": "Previsione"
         },
+        "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
+          "progression_name": "Costruzione di abilità"
+        },
         "729a9e74-6bd2-4833-8b46-12f83a6a83b7": {
           "progression_name": "Pratica"
         },
@@ -242,6 +264,12 @@
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "Cicli con contatore con l'artista",
           "progression_name": "Video: per i loop"
+        },
+        "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
+          "progression_name": "Esplorazione"
+        },
+        "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6": {
+          "progression_name": "Costruzione di abilità"
         },
         "2faabfda-d8cb-4b9d-b49c-2e79c30f7507": {
           "progression_name": "Tempo di giocare"
@@ -283,6 +311,9 @@
           "tips": [
             null
           ]
+        },
+        "1b81351d-aade-4896-8957-e06fdd93edfa": {
+          "progression_name": "Costruzione di abilità"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "progression_name": "Imparare dalle simulazioni"
@@ -397,6 +428,9 @@
             null
           ]
         },
+        "b43821ea-fcde-4389-a55f-285b77e61964": {
+          "progression_name": "Costruzione di abilità"
+        },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Riflessione"
         },
@@ -407,6 +441,9 @@
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "Programmare con Angry Bird"
+        },
+        "a60dc5a3-0c97-439c-86a4-628f733b0916": {
+          "progression_name": "Costruzione di abilità"
         },
         "02e3f29b-3c7a-4226-8503-1b2cc47a2028": {
           "progression_name": "Pratica"
@@ -433,6 +470,12 @@
             null
           ]
         },
+        "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "9f24e731-b41f-4339-877d-314aa5813f01": {
+          "progression_name": "Costruzione di abilità"
+        },
         "270d2335-43e2-42a0-a4fe-4035d2e071b5": {
           "progression_name": "Pratica"
         },
@@ -456,6 +499,12 @@
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
           "name": "Cicli con la contadina"
         },
+        "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "67ec9493-9942-4f64-b3dc-8870f4e30fdc": {
+          "progression_name": "Costruzione di abilità"
+        },
         "cb321e7e-953a-4d73-a614-39cb86ef8b15": {
           "progression_name": "Pratica"
         },
@@ -464,6 +513,12 @@
         },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Introduzione"
+        },
+        "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "c96009cd-a4d7-491a-9ce5-433a04f9fd08": {
+          "progression_name": "Costruzione di abilità"
         },
         "8c213233-f661-45be-9898-31c343bba987": {
           "progression_name": "Pratica"
@@ -481,6 +536,12 @@
           "tips": [
             null
           ]
+        },
+        "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
+          "progression_name": "Costruzione di abilità"
         },
         "a7cf273e-6085-402a-bf47-e5985364e7a2": {
           "progression_name": "Pratica"
@@ -580,6 +641,9 @@
             null
           ]
         },
+        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
+          "progression_name": "Costruzione di abilità"
+        },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Riflessione",
           "tips": [
@@ -604,6 +668,9 @@
             null
           ]
         },
+        "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
+          "progression_name": "Costruzione di abilità"
+        },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
           "name": "Riflessione"
         },
@@ -611,6 +678,12 @@
           "tips": [
             null
           ]
+        },
+        "487f446a-7245-403f-827c-e1e94663c256": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
+          "progression_name": "Costruzione di abilità"
         },
         "05bbe6d1-d2c9-42a7-8489-2d545058f9c5": {
           "progression_name": "Pratica"
@@ -631,6 +704,9 @@
         },
         "71cf3779-677d-4123-8feb-f4c503c32c3e": {
           "name": "Programmare con Rey e BB-8"
+        },
+        "c32e2a10-753e-4e64-b8b8-82d3f4f1a09c": {
+          "progression_name": "Costruzione di abilità"
         },
         "33708a97-a66a-4797-9349-7a1fc9325c26": {
           "progression_name": "Pratica"
@@ -660,6 +736,12 @@
         "bce76535-3424-40bc-a71b-acafda6a3b62": {
           "name": "Cicli con Scrat"
         },
+        "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
+          "progression_name": "Costruzione di abilità"
+        },
         "483c3b98-803d-4ddf-ac49-f472bf27568b": {
           "progression_name": "Pratica"
         },
@@ -679,6 +761,12 @@
             null
           ]
         },
+        "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "88d2b3e5-c082-46bc-8aad-915f42e9a2f1": {
+          "progression_name": "Costruzione di abilità"
+        },
         "42b250a5-b499-45c1-a0f1-154447f0f2aa": {
           "progression_name": "Pratica"
         },
@@ -693,6 +781,12 @@
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
           "name": "Al mare con i cicli"
+        },
+        "d060bb00-33a3-4049-925e-56db3f7508f7": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "665ce7fe-d6ac-4c94-ae9c-3e35402d1a36": {
+          "progression_name": "Costruzione di abilità"
         },
         "ac484bf5-608f-446f-ada6-d0506b7dc9a8": {
           "progression_name": "Pratica"
@@ -803,6 +897,9 @@
             null
           ]
         },
+        "1ebd42df-a302-418a-be1e-6bbca930cedf": {
+          "progression_name": "Costruzione di abilità"
+        },
         "b879045d-ce26-4812-a901-bba02e97e846": {
           "progression_name": "Pratica"
         },
@@ -824,6 +921,9 @@
         "7b8e1781-6014-4299-b635-4dfc5639acb7": {
           "name": "Correzione di errori nel labirinto"
         },
+        "9b6832e5-f80f-4baa-9049-48d9526443ba": {
+          "progression_name": "Costruzione di abilità"
+        },
         "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
           "progression_name": "Previsione"
         },
@@ -841,6 +941,9 @@
         },
         "e2aaa332-2426-4380-b14b-cd681477be54": {
           "name": "Programmare con la collezionista"
+        },
+        "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
+          "progression_name": "Costruzione di abilità"
         },
         "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
           "progression_name": "Pratica"
@@ -862,6 +965,9 @@
         },
         "3861a12f-7e0f-43bf-8d29-1d526a2c90b2": {
           "name": "Programmare con l'artista"
+        },
+        "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
+          "progression_name": "Costruzione di abilità"
         },
         "16e320f6-0c67-4992-87a4-0ae6396a1080": {
           "tips": [
@@ -897,8 +1003,14 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "Cicli con Rey e BB-8"
         },
+        "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
+          "progression_name": "Costruzione di abilità"
+        },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "Previsione"
+        },
+        "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
+          "progression_name": "Costruzione di abilità"
         },
         "069243e5-22ac-469d-afdd-0908f118d8fc": {
           "progression_name": "Pratica"
@@ -920,6 +1032,9 @@
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
           "name": "Cicli con la contadina"
+        },
+        "2f87a826-1460-4d5c-9db3-47911c77a56a": {
+          "progression_name": "Costruzione di abilità"
         },
         "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
           "progression_name": "Pratica"
@@ -978,6 +1093,9 @@
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Realizzare un gioco Flappy"
+        },
+        "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
+          "progression_name": "Costruzione di abilità"
         },
         "b6624ca7-5ffe-462e-ad60-5580ffb87066": {
           "progression_name": "Mini Progetto: Gioco Flappy"
@@ -1079,6 +1197,9 @@
             null
           ]
         },
+        "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
+          "progression_name": "Costruzione di abilità"
+        },
         "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
           "progression_name": "Pratica"
         },
@@ -1106,6 +1227,9 @@
         },
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
           "name": "Debugging con la collezionista"
+        },
+        "0fee56da-4a47-490c-b500-a54be824f01c": {
+          "progression_name": "Costruzione di abilità"
         },
         "04939762-e87a-4924-8049-62fb65e8dc0c": {
           "progression_name": "Pratica"
@@ -1143,6 +1267,9 @@
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "name": "Realizza un gioco con Star Wars"
+        },
+        "72b1888f-765e-42c0-bccc-0e32a5724f40": {
+          "progression_name": "Costruzione di abilità"
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
@@ -1193,6 +1320,12 @@
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
           "name": "Cicli con l'Era glaciale"
         },
+        "dad54c78-6c91-4ba8-bb15-eff5861db842": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "1d8def71-6e6f-417d-bf76-bf420f509e2b": {
+          "progression_name": "Costruzione di abilità"
+        },
         "0bfe26b9-1f90-4d17-a7df-2336f31b6f90": {
           "progression_name": "Pratica"
         },
@@ -1210,6 +1343,12 @@
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
           "name": "Cicli con l'artista"
         },
+        "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
+          "progression_name": "Costruzione di abilità"
+        },
         "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
           "progression_name": "Pratica"
         },
@@ -1222,8 +1361,14 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Cicli annidati nel labirinto"
         },
+        "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
+          "progression_name": "Costruzione di abilità"
+        },
         "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
           "progression_name": "Previsione"
+        },
+        "802e73fc-cff0-462f-8d3d-24c0855bce28": {
+          "progression_name": "Costruzione di abilità"
         },
         "be5e4d78-ed9e-4cd3-84bc-86138cab5637": {
           "progression_name": "Pratica"
@@ -1256,7 +1401,8 @@
           "name": "Introduzione"
         },
         "2f024770-481d-43dc-aa55-7133819f6663": {
-          "name": "Uno sguardo avanti con Minecraft"
+          "name": "Uno sguardo avanti con Minecraft",
+          "progression_name": "Costruzione di abilità"
         },
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Tempo di giocare"
@@ -1272,6 +1418,12 @@
         },
         "f1f109b3-a855-40c1-b062-66f433dee5e8": {
           "progression_name": "Previsione"
+        },
+        "39678b81-ac0a-4d3a-a2b9-f244e7de7eeb": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "3f6678b5-e568-42f2-a629-56defb6374fe": {
+          "progression_name": "Costruzione di abilità"
         },
         "27ad7403-2d40-4d31-9f89-bc6680589bdb": {
           "progression_name": "Previsione"
@@ -1291,8 +1443,14 @@
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "Cicli \"mentre\" con la contadina"
         },
+        "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
+          "progression_name": "Costruzione di abilità"
+        },
         "87c83177-38ac-4fc9-b6a7-ef90a1a4d321": {
           "progression_name": "Previsione"
+        },
+        "60c8c247-570f-4f82-92a1-dddff86de3eb": {
+          "progression_name": "Costruzione di abilità"
         },
         "5ae9d162-1094-49a9-b0fb-bb22a9e6f3b4": {
           "progression_name": "Pratica"
@@ -1307,10 +1465,14 @@
           "name": "Introduzione"
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
-          "name": "Cicli \"fino a che\" nel labirinto"
+          "name": "Cicli \"fino a che\" nel labirinto",
+          "progression_name": "Costruzione di abilità"
         },
         "6ba7d996-6da1-49e6-a73a-924609f4e472": {
           "progression_name": "Previsione"
+        },
+        "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
+          "progression_name": "Costruzione di abilità"
         },
         "132b1ee7-77db-4d54-bf1f-e3efc761aa3a": {
           "progression_name": "Pratica"
@@ -1353,6 +1515,9 @@
             null
           ]
         },
+        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
+          "progression_name": "Costruzione di abilità"
+        },
         "5c2218aa-1499-47a7-a606-11c067735cc6": {
           "progression_name": "Pratica"
         },
@@ -1374,6 +1539,9 @@
         "a253c018-c2ce-4147-a5a4-24db47788f78": {
           "name": "Debugging con Scrat"
         },
+        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
+          "progression_name": "Costruzione di abilità"
+        },
         "73d03eeb-a7b1-4ee8-ad5b-85638d568511": {
           "progression_name": "Previsione"
         },
@@ -1391,6 +1559,9 @@
         },
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "name": "Programmare con la collezionista"
+        },
+        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
+          "progression_name": "Costruzione di abilità"
         },
         "c88b15d4-5935-4d02-b036-bd3107c97185": {
           "progression_name": "Pratica"
@@ -1412,6 +1583,9 @@
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
           "name": "Programmare con l'artista"
+        },
+        "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
+          "progression_name": "Costruzione di abilità"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
@@ -1444,6 +1618,9 @@
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Previsione"
         },
+        "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
+          "progression_name": "Costruzione di abilità"
+        },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Pratica"
         },
@@ -1462,6 +1639,9 @@
           ],
           "progression_name": "Previsione"
         },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "progression_name": "Costruzione di abilità"
+        },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Pratica"
         },
@@ -1477,6 +1657,9 @@
           "name": "Personaggi in azione",
           "progression_name": "Previsione"
         },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "progression_name": "Costruzione di abilità"
+        },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Pratica"
         },
@@ -1490,6 +1673,9 @@
           "tips": [
             null
           ]
+        },
+        "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
+          "progression_name": "Esplorazione"
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "Tempo di giocare"
@@ -1532,6 +1718,9 @@
         },
         "63ea23b9-ceb6-4e5a-b795-000673bca7d9": {
           "progression_name": "Previsione"
+        },
+        "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
+          "progression_name": "Costruzione di abilità"
         },
         "f14b4515-adef-4ed1-a576-a2ae5838273a": {
           "progression_name": "Pratica"
@@ -1597,7 +1786,8 @@
           "name": "Introduzione"
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
-          "name": "Cicli annidati con Frozen"
+          "name": "Cicli annidati con Frozen",
+          "progression_name": "Costruzione di abilità"
         },
         "777ee476-c14c-4005-8226-8b5d93d34181": {
           "progression_name": "Pratica"
@@ -1609,7 +1799,8 @@
           "name": "Introduzione"
         },
         "db402396-6473-4942-a3b9-e3833beb0cd8": {
-          "name": "Uno sguardo avanti con Minecraft"
+          "name": "Uno sguardo avanti con Minecraft",
+          "progression_name": "Costruzione di abilità"
         },
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Tempo di giocare"
@@ -1625,6 +1816,12 @@
         },
         "d8adccb1-7876-4c08-9ece-7fb8c7f9873f": {
           "progression_name": "Previsione"
+        },
+        "2c223051-9787-4ae5-afb2-c999300ee231": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "431e814c-2fdb-4385-ac49-7a3ad70c8411": {
+          "progression_name": "Costruzione di abilità"
         },
         "f29415f9-cf77-4f28-ac49-633e5d430981": {
           "progression_name": "Previsione"
@@ -1644,8 +1841,14 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Cicli \"mentre\" con la contadina"
         },
+        "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
+          "progression_name": "Costruzione di abilità"
+        },
         "3bcc5818-64c5-43b1-b0c3-44535e842497": {
           "progression_name": "Previsione"
+        },
+        "d1f28a2a-eb91-4271-aeef-7c155109fac4": {
+          "progression_name": "Costruzione di abilità"
         },
         "7b5da851-cc60-4e3a-9447-54c8ab3e79e5": {
           "progression_name": "Pratica"
@@ -1665,6 +1868,15 @@
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
           "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
         },
+        "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "ebbb5af1-a268-4256-a63b-a179d5813d8d": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "e7ee7550-aa29-42ad-8be2-a126b7919fb4": {
+          "progression_name": "Costruzione di abilità"
+        },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Tempo di giocare"
         },
@@ -1675,10 +1887,14 @@
           "name": "Introduzione"
         },
         "3fabd283-0831-412f-8a9f-76e9bf96206f": {
-          "name": "Cicli \"fino a che\" nel labirinto"
+          "name": "Cicli \"fino a che\" nel labirinto",
+          "progression_name": "Costruzione di abilità"
         },
         "a45d0ea2-26ce-41c6-9128-3833b39cb233": {
           "progression_name": "Previsione"
+        },
+        "308b7268-008e-40c7-9ab3-6977bfd38927": {
+          "progression_name": "Costruzione di abilità"
         },
         "ac1fbc06-ba6b-4b67-bf20-041eb07fb41b": {
           "progression_name": "Pratica"
@@ -1694,6 +1910,9 @@
         },
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "name": "Istruzioni condizionali & cicli con la contadina"
+        },
+        "38760d27-fbe5-48c9-bd46-2b7eeac81ca2": {
+          "progression_name": "Costruzione di abilità"
         },
         "5af3711a-0ea0-4c82-b622-a250349a8389": {
           "progression_name": "Pratica"
@@ -1721,6 +1940,15 @@
           "tips": [
             null
           ]
+        },
+        "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
+          "progression_name": "Costruzione di abilità"
         },
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "Tempo di giocare"
@@ -1789,7 +2017,8 @@
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Costruzione di abilità"
         },
         "3ae6f1d6-b2f9-4a9f-9877-673ee1f0a654": {
           "progression_name": "Pratica"
@@ -1806,6 +2035,9 @@
         "b270733d-2d48-4470-a0e4-7a805255d765": {
           "progression_name": "Previsione"
         },
+        "79a73c29-5877-4ffc-8570-fad97926f939": {
+          "progression_name": "Costruzione di abilità"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Tempo di giocare"
         },
@@ -1816,7 +2048,8 @@
           "name": "Introduzione"
         },
         "60fb6e02-bbf3-49df-ab58-79496259ada1": {
-          "name": "Modifica delle variabili con l'ape"
+          "name": "Modifica delle variabili con l'ape",
+          "progression_name": "Costruzione di abilità"
         },
         "66e1664f-4e5a-4df9-a902-d0eb19537997": {
           "progression_name": "Pratica"
@@ -1836,6 +2069,9 @@
         "600fa08b-d08b-4e28-96a5-e1e2b6b5c908": {
           "progression_name": "Previsione"
         },
+        "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
+          "progression_name": "Costruzione di abilità"
+        },
         "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e": {
           "progression_name": "Pratica"
         },
@@ -1853,6 +2089,12 @@
             null
           ],
           "progression_name": "Video: per i loop"
+        },
+        "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
+          "progression_name": "Esplorazione"
+        },
+        "5cb283f5-dd23-4694-a205-a97ffd80c3cc": {
+          "progression_name": "Costruzione di abilità"
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Tempo di giocare"
@@ -1904,6 +2146,9 @@
             null
           ]
         },
+        "bde027df-b2a3-4252-980a-7e8493d898e6": {
+          "progression_name": "Costruzione di abilità"
+        },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Riflessione"
         },
@@ -1922,11 +2167,15 @@
             null
           ]
         },
+        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
+          "progression_name": "Costruzione di abilità"
+        },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Riflessione"
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
-          "name": "Programmare con Angry Bird"
+          "name": "Programmare con Angry Bird",
+          "progression_name": "Costruzione di abilità"
         },
         "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9": {
           "progression_name": "Pratica"
@@ -1948,6 +2197,9 @@
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
           "name": "Programmare con Rey e BB-8"
         },
+        "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
+          "progression_name": "Costruzione di abilità"
+        },
         "8a743287-1638-4c96-8c21-387ebf05d760": {
           "progression_name": "Pratica"
         },
@@ -1964,6 +2216,12 @@
           "tips": [
             null
           ]
+        },
+        "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
+          "progression_name": "Costruzione di abilità"
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
           "progression_name": "Pratica"
@@ -1984,6 +2242,12 @@
             null
           ]
         },
+        "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
+          "progression_name": "Costruzione di abilità"
+        },
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
           "progression_name": "Pratica"
         },
@@ -1995,6 +2259,12 @@
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "Cicli con la collezionista"
+        },
+        "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
+          "progression_name": "Costruzione di abilità"
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
           "progression_name": "Pratica"
@@ -2016,6 +2286,12 @@
             null
           ]
         },
+        "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "94271c9b-4000-4e8c-a99c-9a04d851549e": {
+          "progression_name": "Costruzione di abilità"
+        },
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
           "progression_name": "Pratica"
         },
@@ -2036,6 +2312,9 @@
           "tips": [
             null
           ]
+        },
+        "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
+          "progression_name": "Costruzione di abilità"
         },
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
           "progression_name": "Pratica"
@@ -2116,6 +2395,9 @@
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
           "progression_name": "Previsione"
         },
+        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
+          "progression_name": "Costruzione di abilità"
+        },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Pratica"
         },
@@ -2136,6 +2418,12 @@
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "Previsione"
+        },
+        "5661328f-256c-4f27-988b-ea102fde1cbd": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "dc08f2e2-dab1-43b0-8349-9ce3161eec83": {
+          "progression_name": "Costruzione di abilità"
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Tempo di giocare"
@@ -2173,6 +2461,12 @@
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Introduzione"
         },
+        "257e3a1f-5cc5-444e-94e3-ee18c5d7169e": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "6d3e5d46-a1c6-420d-a4ad-7d6af12d9dbb": {
+          "progression_name": "Costruzione di abilità"
+        },
         "9982dc06-ec1f-4b15-b4e8-16cc5663bf8c": {
           "progression_name": "Pratica"
         },
@@ -2189,6 +2483,12 @@
           "tips": [
             null
           ]
+        },
+        "35342825-ca7b-4305-b02a-365e6095e8f6": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "7f4ec132-6df2-4a23-abe3-853efe35701d": {
+          "progression_name": "Costruzione di abilità"
         },
         "b74deff4-5709-42c9-bd89-609b29df9368": {
           "progression_name": "Pratica"
@@ -2259,6 +2559,15 @@
             null
           ]
         },
+        "cd4d43da-dace-4324-a934-618f8c5b6ec7": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "4130a39a-0232-45ed-b6c7-1f2badada9ee": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "8543e376-7910-45df-b486-372036c19fdc": {
+          "progression_name": "Costruzione di abilità"
+        },
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "Tempo di giocare"
         },
@@ -2271,6 +2580,9 @@
         "d1826ee5-4403-41a2-a804-3112c9da4cb1": {
           "name": "Funzioni con l'artista",
           "progression_name": "Previsione"
+        },
+        "c8b7ed1a-7b68-48e5-bf78-c411d209179a": {
+          "progression_name": "Costruzione di abilità"
         },
         "c29e178e-6a22-48e2-9df0-06269e2000b2": {
           "progression_name": "Pratica"
@@ -2287,6 +2599,15 @@
         "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
           "name": "Istruzioni condizionali in Minecraft - Viaggio acquatico"
         },
+        "ace06bbe-f40f-4333-806c-928527edede6": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "735452ce-870a-4728-8b1b-00a77c5bffbb": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "3b64705c-3a17-44b9-b688-4bbc029ba2ea": {
+          "progression_name": "Costruzione di abilità"
+        },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Tempo di giocare"
         },
@@ -2300,10 +2621,17 @@
           "name": "Istruzioni condizionali con la contadina",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Costruzione di abilità"
         },
         "22826fb5-5cdf-4918-970d-680d9ba82f88": {
           "progression_name": "Previsione"
+        },
+        "af239dc4-fc39-4765-a761-8d1979ef5e11": {
+          "progression_name": "Costruzione di abilità"
+        },
+        "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
+          "progression_name": "Costruzione di abilità"
         },
         "c6d24990-be45-4b52-b095-48004fcaca4a": {
           "progression_name": "Pratica"
@@ -2313,6 +2641,9 @@
         },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "Introduzione"
+        },
+        "6da14073-1ba0-4603-989b-5b9c9758c047": {
+          "progression_name": "Costruzione di abilità"
         },
         "1fedc5de-50c7-478d-8173-e2d8ffd4d97a": {
           "progression_name": "Pratica"

@@ -59,6 +59,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -78,6 +79,7 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -111,6 +113,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -251,6 +254,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -270,6 +274,7 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -277,6 +282,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -296,6 +302,7 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -345,6 +352,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -364,6 +372,7 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -371,6 +380,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -390,6 +400,7 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -504,6 +515,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"width"': Širina
             '"height"': висина
       gamelab_spriteClicked:
         options:
@@ -668,6 +680,10 @@ sr:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": боја
       aalab_layoutSprites:
         options:
           FORMAT:

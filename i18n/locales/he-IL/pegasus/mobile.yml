@@ -419,6 +419,7 @@
   sports_page_title: "שעה של קוד ספורט"
   sports_watch_video: "צפה בסרטון"
   sports_basketball_title: "צרו משחק כדורסל"
+  watch_inspirational_videos: "לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו"
   video_title_steph_curry: "שעה של קוד עם סטף קרי"
   video_1min: "דקה אחת"
   video_2min: "2 דק'"
@@ -437,7 +438,9 @@
   volunteer_engineer_submission_field_company_placeholder: "חברה (או אוניברסיטה)"
   volunteer_engineer_submission_field_location: "מיקום"
   volunteer_engineer_submission_field_linkedin: "פרופיל לינקדאין"
+  volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/your_name"
   volunteer_engineer_submission_field_facebook: "פרופיל פייסבוק"
+  volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
   volunteer_engineer_submission_field_description: "תיאור"
   volunteer_engineer_submission_field_email: "כתובת דואר אלקטרוני"
   volunteer_engineer_submission_field_email_placeholder: "כתובת דואר אלקטרוני"
@@ -503,7 +506,10 @@
   dashboard_k5_courses: "קורס באורך 20 שעות לגילאי גן חובה עד כיתה ה"
   dashboard_middle_courses: "קורס באורך 20 שעות לגילאי חטיבת בניים"
   dashboard_high_courses: "קורס לאורך השנה לגילאי תיכון"
+  dashboard_course_csina: "מדעי המחשב באלגברה"
+  dashboard_course_csins: "מדעי המחשב במדע"
   dashboard_course_ecs: "חקר מדעי המחשב"
+  dashboard_course_csp: "עקרונות מדעי המחשב ®AP"
   dashboard_landing_loading: "טוען..."
   dashboard_action_cancel: "בטל"
   dashboard_action_delete: "מחק"
@@ -581,8 +587,10 @@
   dashboard_students_share_section: "שתף את חלק הכניסה עם התלמידים שלך:"
   dashboard_students_share_section_secondary: 'לחלופין, שתף את דף הכניסה של הקבוצה עם תלמידיך:'
   dashboard_students_print_info: "הדפס כרטיסים עם מידע ההתחברות של התלמידים שלך."
+  dashboard_students_secret_picture_title: "תמונה סודית"
   dashboard_students_secret_picture: "קבוצה זו משתמשת ב- <b>תמונה</b> כשיטת הזדהות סודית, זה אומר שלכל אחד מהתלמידים יש תמונה סודית משלו במקום סיסמה כדי להתחבר למערכת. התלמידים צריכים להיכנס לכתובת הכניסה שנמצאת למעלה כדי להיכנס."
   dashboard_students_reset_picture: "תוכל לאפס תמונה סודית של התלמיד בכל עת על-ידי בחירת <b>הצג את סוד</b> ולאחר מכן <b>אפס את הסוד</b>. תמונה סודית חדשה תופק עבור אותו תלמיד בה יוכל להשתמש בעת הכניסה."
+  dashboard_students_secret_word_title: "המילה הסודית"
   dashboard_students_secret_word: "המילה הסודית"
   dashboard_students_reset_word: 'תוכל לאפס המילים הסודיות של התלמיד בכל עת על-ידי בחירת <b>הצג את הסוד</b> ולאחר מכן <b>אפס את הסוד</b>. זוג חדש של מילים סודיות יופק עבור אותו תלמיד בהם יוכל להשתמש בעת הכניסה. '
   dashboard_students_join_link: "הורה לתלמידיך ליצור חשבונות משלהם ולהצטרף לתחום שלך ב"
@@ -630,6 +638,7 @@
   dashboard_correctness_correct: "נכון"
   dashboard_submission_submitted: "נשלח"
   dashboard_submission_in_progress: "בביצוע"
+  dashboard_status: "מצב"
   stats_hoc_2013_heading: 'סטטיסטיקה מדהימה מן  Hour of Code  שנה שעברה. בשבוע אחד בלבד:'
   stats_hoc_2013_image_alt: "סטטיסטיקה של  Hour of Code 2013"
   dashboard_teacher: "מורה"
@@ -658,9 +667,12 @@
   carousel_heading_domestic: "הדרכות בשפה האנגלית"
   carousel_heading_beginners: "הדרכות למתחילים"
   carousel_heading_javascript: "הדרכות שמלמדות JavaScript"
+  carousel_heading_beyond_javascript: "הדרכות שמלמדות JavaScript"
   carousel_heading_unplugged: "ללא התקן או אינטרנט? נסה \"מדעי המחשב בלי חיבור לחשמל\""
   carousel_heading_devices: "אפליקציות לימוד לטלפונים וטבלטים"
+  carousel_heading_beyond_devices: "אפליקציות לימוד לטלפונים וטבלטים"
   carousel_heading_languages: "הדרכות בשפות תכנות אחרות"
+  carousel_heading_beyond_languages: "הדרכות בשפות תכנות אחרות"
   carousel_heading_apps_games: "צרו משחקים ואפליקציות משלכם"
   carousel_heading_university: "קורסים אוניברסיטאים באינטרנט"
   carousel_heading_webpages: "למד ליצור דפי אינטרנט"
@@ -705,6 +717,7 @@
   robomindnl_name: "תכנת רובוט וירטואלי"
   flappy_name: "צרו את משחק \"ציפור מנופפת בכנפיים\""
   bitsbox_name: "צרו את משחק הביטס בוקס"
+  makeschool_name: "בנו משחק לאייפון בדפדפן שלכם!"
   appinventor_name: "מפתח האפליקציות - שעת קוד"
   blockly_name: "בלוקלי"
   projguts_name: "אבן, נייר ומספריים"
@@ -720,6 +733,8 @@
   coursed_name: "קורס ד'"
   coursed-2017_name: קורס ד' (2017)
   coursed-2018_name: קורס ד' (2018)
+  coursed-2019_name: קורס ד' (2019)
+  coursed-2020_name: קורס ד' (2020)
   coursed-2021_name: קורס ד' (2021)
   accelerated_name: "קורס מואץ"
   20-hour_name: קורס מואץ
@@ -730,6 +745,7 @@
   gamelab_name: "מעבדת המשחקים"
   basketball_name: "צרו משחק כדורסל"
   applab_gradelevel: "גילאי 13+"
+  applab_shortdescription_congrats: "מעבדת האפליקציות זו סביבת תכנות שבה תוכל לייצר אפליקציות פשוטות. תכנן אפליקציה, קודד אותה בעזרת בלוקים או JavaScript כדי לגרום לזה לעבוד, לאחר מכן שתף את האפליקציה בתוך שניות"
   codeorg_gradelevel: "גילאי 4-104"
   codeintl_gradelevel: "גילאי 4-104"
   khan_gradelevel: "חטיבת ביניים +"
@@ -773,21 +789,46 @@
   infinity_gradelevel: "גילאי 4-104"
   artist_gradelevel: "גילאי 8 +"
   monstercoding_gradelevel: "גילאי 5-13"
+  allcancode_gradelevel: "גילאי 5-10"
+  csfirst_gradelevel: "גילאי 9-14"
   boxisland_gradelevel: "בית ספר יסודי"
+  codesters_gradelevel: "גילאי 12-14"
+  texasinstruments_gradelevel: "גילאי 13-16"
+  teacherled_gradelevel: "גילאי 5+"
   course1_gradelevel: "גילאי 4-6"
   course2_gradelevel: "גילאי 6-18"
   course3_gradelevel: "גילאי 8-18"
   course4_gradelevel: "גילאי 10-18"
+  coursea_gradelevel: "גילאי 4-7"
+  courseb_gradelevel: "גילאי 5-8"
+  coursec_gradelevel: "גילאי 6-10"
   coursed_gradelevel: "כיתות ח' ומעלה"
   coursee_gradelevel: "גילאי 8-12"
+  coursef_gradelevel: "גילאי 9-13"
+  coursea-2017_gradelevel: גילאי 4-7
+  courseb-2017_gradelevel: גילאי 5-8
+  coursec-2017_gradelevel: גילאי 6-10
   coursed-2017_gradelevel: כיתות ח' ומעלה
   coursee-2017_gradelevel: גילאי 8-12
+  coursef-2017_gradelevel: גילאי 9-13
+  coursea-2018_gradelevel: גילאי 4-7
+  courseb-2018_gradelevel: גילאי 5-8
+  coursec-2018_gradelevel: גילאי 6-10
   coursed-2018_gradelevel: כיתות ח' ומעלה
   coursee-2018_gradelevel: גילאי 8-12
+  coursef-2018_gradelevel: גילאי 9-13
+  coursea-2019_gradelevel: גילאי 4-7
+  courseb-2019_gradelevel: גילאי 5-8
+  coursec-2019_gradelevel: גילאי 6-10
   coursed-2019_gradelevel: כיתות ח' ומעלה
   coursee-2019_gradelevel: גילאי 8-12
+  coursef-2019_gradelevel: גילאי 9-13
+  coursea-2020_gradelevel: גילאי 4-7
+  courseb-2020_gradelevel: גילאי 5-8
+  coursec-2020_gradelevel: גילאי 6-10
   coursed-2020_gradelevel: כיתות ח' ומעלה
   coursee-2020_gradelevel: גילאי 8-12
+  coursef-2020_gradelevel: גילאי 9-13
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
@@ -861,6 +902,7 @@
   robomindnl_shortdescription: "כתבו קוד עבור רובוט וירטואלי"
   flappy_shortdescription: "ליצור משחק משלך - ריקוד הציפורים, כריש או צוללות"
   bitsbox_shortdescription: "לקודד סדרת אפליקציות למשחק ושיתוף, בשימוש בג'אווה סקריפט אמיתי."
+  makeschool_shortdescription: "צרו משחק לאייפון! למדו כיצד על ידי כתיבת קוד שילמד את המפלצת שלכם צעדים חדשים!"
   touchdevelop_shortdescription: 'לפתור חידות, ליצור משחקים, ולמד לתכנת ,הכל בטלפון שלך. '
   appinventor_shortdescription: "צרו את האפליקציה שלכם (אנדרואיד בלבד)"
   blockly_shortdescription: "הורד קובץ ZIP כדי ללמוד במצב לא מקוון"
@@ -923,6 +965,7 @@
   groklearning_beyond_name: "ללמוד תכנות Python"
   hacketyhack_beyond_name: "למד רובי"
   robomind_beyond_name: "תכנת רובוט וירטואלי"
+  makeschool_beyond_name: "בנו משחק לאייפון בדפדפן שלכם!"
   appinventor_beyond_name: "מפתח האפליקציות - שעת קוד"
   codehs_beyond_name: "למד לקודד עם קרל הכלב"
   udemy_beyond_name: "קורסי תכנות באינטרנט"
@@ -1015,6 +1058,7 @@
   groklearning_beyond_shortdescription: "מבוא בסיסי לתכנות בפייתון"
   hacketyhack_beyond_shortdescription: "למד רובי מההתחלה"
   robomind_beyond_shortdescription: "כתבו קוד עבור רובוט וירטואלי"
+  makeschool_beyond_shortdescription: "למדו ליצור משחק לאייפון בשעה"
   appinventor_beyond_shortdescription: "צרו את האפליקציה שלכם (אנדרואיד בלבד)"
   touchdevelop_beyond_shortdescription: "צרו אפליקציות מובייל ישירות בסלולרי, טבלט או מחשב נייד"
   codehs_beyond_shortdescription: "ללמוד תכנות JavaScript עם סביבה ויזואלית מהנה"
@@ -1045,10 +1089,12 @@
   codecademy_beyond_longdescription: "Codecademy היא מבוא אינטרקטיבי בקצב אישי ליסודות מדעי המחשב באמצעות ג'אווה סקריפט, שמתמשים בו מיליוני תלמידים ברחבי העולם. הכנו את חוויית שעת הקוד המלווה בשאלונים, שקפים ופרויקט מושלם עבור התלמידים בסיומו."
   kodable_beyond_longdescription: "בר-קידוד (Kodable) הוא משחק אי-פד עצמאי שחושף ילדים בגילאי 5+ ליסודות התכנות. נוכחות של הורה או מורה ממלצת אך לא הכרחית."
   groklearning_beyond_longdescription: "קורס היכרות, בעזרת שימוש בשפת התכנות פייתון (Python) עבור אנשים חסרי ניסיון בתכנות. התוכן המגוון שלנו של היכרות ואתגרים יביאו אותך להבנה יסודית של פייתון ותכנות בכלל. לימדנו את התוכן הזה לתלמידים במגוון רחב של גילאים שבאו מרקעים שונים ואנחנו בטוחים שהוא יתאים גם לך."
+  makeschool_beyond_longdescription: "יודעים קצת ObjectiveC ? למדו ליצור משחק לאייפון בשעה! אנו נדריך אתכם בתהליך כדי לקודד, לבדוק ולשחק אתהמשחק שלכם בתוך הדפדפן באופן מלא ואז לשתף אותו בפייסבוק כדי שחבריכם יוכלו לנסותו גם! אין צורך בנסיון קודם בפיתוח לאייפון. עליכם להבין מה הם משתנים, פונקציות ואובייקטים."
   touchdevelop_beyond_longdescription: "TouchDevelop מאפשר לך ליצור אפליקציות ב- iPad, iPhone, Android, PC, Mac, Windows Phone. העורך הידידותי למגע שלנו הופך את הקידוד לכיף, אפילו על טלפון או הטבלט שלך!"
   codecombat_beyond_longdescription: "שחקו בתפקיד מכשף על ידי שימוש בכשפים (קוד) כדי לשלוט בדמויות שלכם, לנווט במבוכים, לנצח מפלצות, להערים על אויבים, ולהציל את חבריכם! למדדו ג'אווה סקריפט במשחק HTML5 וובי המתאים למתחילים מהיסוד."
   codea_beyond_longdescription: "קודאה לאייפד מאפשרת לכם ליצור משחקים והדמיות ,או בעצם כל רעיון ויזואלי שיש לכם. הפכו את מחשבותיכם ליצירות אינטראקטיביות המנצלות את תכונות האיפד כגון מולטי טאץ' ומד התאוצה.לדעתנו קודאה היא סביבת הפיתוח היפה ביותר שתוכלו למצוא, והיא קלה לשימוש. קודאה פותחה כדי לאפשר לכם לגעת בקוד שלכם. רוצים לשנות מספר? נגיעה קלה וגרירה. מה לגבי שינוי צבע, או ציור? נגיעה מעלה עורך ויזואלי המאפשר לכם לבחור בדיוק את מה שאתם רוצים."
   arduino_beyond_longdescription: "ארדואינו הנו פלטפורמה פופולרית המאפשרת לאמנים ומעצבים לעבוד עם חיישנים אמיתיים, נורות לד, צפצפות ועוד. ארגז החול הוירטואלי של ספארקפאן ילמד אתכם קידוד ארדואינו אמיתי בתוך הדפדפן שלכם."
+  compatibility_hide_this_warning: "הסתר את האזהרה הזו"
   compatibility_unsupported_browser: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
   compatibility_unsupported_browser_markdown: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
   flappy_shortcode: "נופף"
@@ -1085,6 +1131,7 @@
   header_help_us: "עזור לנו"
   header_about: "אודות"
   header_teacher_community: "קהילת המורים"
+  header_help_support: 'עזרה ותמיכה '
   header_report_bug: "דווח תקלה"
   header_legal_privacy: "הצהרת פרטיות"
   header_legal_tos: "תנאים"
@@ -1096,16 +1143,21 @@
   user_header_settings: "החשבון שלי"
   user_header_logout: "התנתק"
   user_header_signin: "התחבר"
+  user_header_create: 'צור '
+  user_header_applab: 'מעבדת היישומים '
+  user_header_artist: 'אמן '
   user_header_gamelab: "מעבדת המשחקים"
   user_header_playlab: "מעבדת הצעצועים"
   user_header_dance: "מסיבת ריקודים"
   user_header_minecraft: "מיינקראפט"
   user_header_flappy: "פלאפי"
+  user_header_view_project_gallery: "הצג פרויקטים"
   user_header_view_my_projects: "הצג את הפרויקטים שלי"
   view_all_sections: "הצג את כל הקבוצות"
   view_section: "הצג קבוצה"
   view_named_section: "הצג %{section_name}"
   privacy_doc_explanation: "לחץ כאן כדי לגשת למסמך הפרטיות שלנו כדי לשתף או להדפיס אותו עבור תלמידיך."
+  sign_in_instruct_website: "לכו ל%{code_org_url}."
   sign_in_instruct_code: 'הכנס את קוד הקבוצה שלהם: %{section_code}.'
   sign_in_overview_cards: "תלמידים יכולים למצוא את כל המידע הזה, כולל %{secret} הסודי שלהם, תחת כרטיסיית ההתחברות מטה."
   reset_student_password_instructions: "באפשרותך לאפס את ה<word/picture> הסודי לכל אחד מהתלמידים על ידי לחיצה על הכרטיסיה \"נהל תלמידים\" לקבוצה זו, לחיצה על לחצן \"הצג הסוד\" שתחת עמודה \"סיסמה\" ולחיצה על כפתור \"אפס סיסמה\"."
@@ -1137,6 +1189,7 @@
   hoc2018_mc_no_internet: "אין אינטרנט?"
   hoc2018_mc_educators: "למורים"
   hoc2018_mc_educators_box2_button: "הורד"
+  hoc2018_mc_watch_videos: "לפני שאתם מתחילים, צפו באחד מסרטוני הווידאו הללו"
   hoc2018_mc_videos_more: "עוד <a href='%{inspiring_videos_playlist}'>סרטונים מעוררי השראה</a> עם מודלים לחיקוי וסלבס."
   hoc2018_mc_careers_more: "עוד <a href='%{careers_url}' target='_blank'>סרטונים מעוררי השראה</a> עם מודלים לחיקוי וסלבס."
   hoc2018_mc_video_1min: "דקה אחת"
@@ -1176,8 +1229,15 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "בשיתוף עם: "
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "תוכניות \"מהנדסי העתיד\" של אמזון היא תוכנית מלאה, מילדות לקריירה, שמטרתה לעורר השראה, ללמד, ולהכין ילדים ותלמידים מעוטי יכולת לקראת קריירה במדעי המחשב. <a href='%{amazon_future_engineer_link}' target='_blank'>קראו עוד</a>"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "למידע נוסף על \"מהנדסי העתיד\" של אמזון"
+  hoc2018_dance_amazon_about_future_engineer_title: "אודות \"מהנדסי עתיד\" של אמזון"
+  hoc2018_dance_amazon_about_future_engineer_description: "למדו עוד אודות התוכנית גן עד קריירה של אמזון שמטרתה העלאת הנגישות לחינוך במדעי המחשב. גלו איך ניתן להשתתף בתוכניות הקיץ, שיעורי מדעי המחשב לתלמידי תיכון, מלגות והתמחויות שלנו."
   hoc2018_dance_amazon_about_future_engineer_button: "למד עוד"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "נסו לתכנת בקיץ הקרוב"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "השתתפו במחנות מדעי המחשב החינמיים, כיפיים, וכוללים של \"מהדנסי העתיד\" של אמזון! מחנות הקיץ מיועדים לתלמידים מגן ועד כיתה ח', במיקומים שונים ברחבי ארה\"ב בקיץ 2019."
+  hoc2018_dance_amazon_scholarship_programs_title: "מלגות"
   hoc2018_dance_amazon_scholarship_programs_button: "הצטרף עכשיו"
+  hoc2018_dance_amazon_k8_programs_title: "תוכניות גן-ח'"
+  hoc2018_dance_amazon_funding_title: "קבלו מימון לתואר במדעי המחשב"
   hoc2018_dance_measure: "תיבה"
   hoc2018_dance_measure_colon: 'תיבה:'
   hoc2018_dance_video1: "מסיבת ריקודים - מבוא"
@@ -1195,6 +1255,7 @@
   footer_donate: "תרום"
   footer_support: "עזרה וקהילה"
   footer_terms: "תנאים"
+  ai_for_oceans_lesson_plan: "מערך שיעור"
   ai_in_partnership_with: "בשיתוף עם: "
   ai_microsoft_thanks: "אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח במאה ה־21."
   ai_activity: "פעילות"

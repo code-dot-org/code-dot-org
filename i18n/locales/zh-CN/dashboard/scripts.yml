@@ -287,6 +287,7 @@ zh-CN:
             Variables:
               name: 变量
         algebra:
+          title: 代数中的计算机科学
           description: 通过代数学习函数编程.
           description_short: 通过代数学习函数编程.
           lessons:
@@ -16553,6 +16554,7 @@ zh-CN:
               description_student: 创建能分享给同学的互动项目。
               description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。   '
             Loops with the Artist:
+              key: 与艺术家的循环
               name: 艺术家的编程和循环
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
@@ -16799,6 +16801,8 @@ zh-CN:
             lesson-3:
               name: 动作精灵图
           lesson_groups:
+            csf_warmup:
+              display_name: 热身
             csf_sequencing:
               display_name: 序列
             csf_loops:

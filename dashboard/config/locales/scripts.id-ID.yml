@@ -26341,6 +26341,7 @@ id:
                 Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai
                 event untuk membuat "pesta dansa alien".   '
             Loops with the Artist:
+              key: Loop dengan Artis
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan
                 gambar-gambar yang makin keren dengan Artis!
@@ -26797,6 +26798,8 @@ id:
             lesson-3:
               name: Sprite tengah Beraksi
           lesson_groups:
+            csf_warmup:
+              display_name: Pemanasan
             csf_sequencing:
               display_name: Urutan
             csf_loops:

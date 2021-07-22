@@ -324,6 +324,7 @@ cs:
             Variables:
               name: Proměnné
         algebra:
+          title: Informatika v algebře
           lessons:
             'Eval: Conditionals':
               name: Podmínky
@@ -9210,6 +9211,8 @@ cs:
             lesson-2:
               name: Dělání sprajtů
           lesson_groups:
+            csf_warmup:
+              display_name: Zahřátí
             csf_sequencing:
               display_name: Sekvence
             csf_loops:

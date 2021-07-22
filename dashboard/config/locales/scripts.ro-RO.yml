@@ -1541,6 +1541,10 @@ ro:
           lessons:
             Unit 1 Overview:
               name: Prezentare generală - Lecția 1
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mod proiectare
         CSDU2-Draft:
           lessons:
             Digital Footprint:
@@ -1737,6 +1741,8 @@ ro:
               name: Funcţii
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
         grade2:
@@ -2302,6 +2308,10 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Sprites:
+              name: Spiriduși
+            Input:
+              name: Intrare
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2340,6 +2350,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -2396,6 +2408,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -3458,6 +3472,8 @@ ro:
             content:
               display_name: Conţinut
         express-2017:
+          title: Curs Expres
+          assignment_family_title: Curs Expres
           description_audience: 'Vârsta: 9-18 ani'
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
@@ -4122,6 +4138,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -4139,6 +4157,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -4268,6 +4288,8 @@ ro:
             și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
             joc sau propria poveste pe care să le partajezi cu ceilalți.
         express-2018:
+          title: Curs Expres
+          assignment_family_title: Curs Expres
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
             pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria
             poveste pe care să le partajezi cu ceilalți.
@@ -5383,6 +5405,8 @@ ro:
               display_name: Bucle Pentru
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             end_of_course_project:
@@ -5926,6 +5950,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -6290,6 +6316,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programare cu hârtie de copiat'
@@ -6986,6 +7014,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -7162,6 +7192,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
@@ -7350,6 +7382,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -7619,6 +7653,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -7645,6 +7681,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -7773,6 +7811,8 @@ ro:
               name: Funcţii
             Text:
               name: Text
+            Sprites:
+              name: Spiriduși
         coursea-2020:
           title: Curs A (2020)
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
@@ -8506,6 +8546,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -8746,6 +8788,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -8974,6 +9018,7 @@ ro:
             și al Internetului. În a doua parte a acestui curs, concepe și creează
             un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
         express-2020:
+          title: Curs Expres (2020)
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor
             de mai jos! Învață să scrii programe pentru computer, să îți dezvolți
             abilitățile de rezolvare a problemelor și participă la provocări distractive!
@@ -8996,6 +9041,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -9312,6 +9359,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Sprite Properties:
               name: Proprietăți spiriduș
             Text:
@@ -9437,6 +9486,9 @@ ro:
             Variables:
               key: Variabile
               name: Variabile
+            Sprites:
+              key: Spiriduși
+              name: Spiriduși
             Sprite Properties:
               key: Proprietăți spiriduș
               name: Proprietăți spiriduș
@@ -10346,6 +10398,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Repetiții imbricate
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -10543,6 +10597,8 @@ ro:
                 învețe strategii pe care trebuie să le utilizeze atunci când se confruntă
                 cu fenomenul „cyberbullying”."
           lesson_groups:
+            ramp_up:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_variables:
@@ -10778,6 +10834,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
             lessonGroup-9:
@@ -10917,6 +10975,8 @@ ro:
               display_name: Simulare Epidemie
             lessonGroup-3:
               display_name: Variabile
+            Sprites:
+              display_name: Spiriduși
             variables:
               display_name: Variabile
         csd4-preview-2021:

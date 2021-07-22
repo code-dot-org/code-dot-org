@@ -2,17 +2,35 @@
   "mr-IN": {
     "data": {
       "vocabularies": {
+        "machine_learning/coursef/2021": {
+          "word": "मशीन लर्निंग"
+        },
         "define/coursef/2021": {
           "word": "नेमुन द्या"
+        },
+        "debugging/courseb/2021": {
+          "word": "डीबगिंग"
         },
         "drop/courseb/2021": {
           "word": "ड्रॉप"
         },
+        "debugging/coursea/2021": {
+          "word": "डीबगिंग"
+        },
         "drop/coursea/2021": {
           "word": "ड्रॉप"
         },
+        "debugging/coursec/2021": {
+          "word": "डीबगिंग"
+        },
+        "debugging/coursed/2021": {
+          "word": "डीबगिंग"
+        },
         "conditionals/coursed/2021": {
           "word": "कंडीशनल्स "
+        },
+        "debugging/express/2021": {
+          "word": "डीबगिंग"
         },
         "conditionals/express/2021": {
           "word": "कंडीशनल्स "
@@ -22,6 +40,9 @@
         },
         "drop/pre-express/2021": {
           "word": "ड्रॉप"
+        },
+        "debugging/pre-express/2021": {
+          "word": "डीबगिंग"
         },
         "copyright/coursee/2021": {
           "word": "कॉपीराइट"

@@ -960,6 +960,8 @@ az:
         gradeKinder:
           description_audience: 5-18 yaş
           lessons:
+            Debugging:
+              name: Sazlama
             Events:
               name: Hadisələr
             Loops:
@@ -980,6 +982,8 @@ az:
         grade1:
           description_audience: 5-18 yaş
           lessons:
+            Debugging:
+              name: Sazlama
             Events:
               name: Hadisələr
             Loops:
@@ -1585,6 +1589,8 @@ az:
             content:
               display_name: Məzmun
         express-2017:
+          title: Ekspress Kursu
+          assignment_family_title: Ekspress Kursu
           description_audience: 'Yaşlar: 9-18'
           lesson_groups:
             content:
@@ -1786,6 +1792,8 @@ az:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie və Böyük Layihə
         express-2018:
+          title: Ekspress Kursu
+          assignment_family_title: Ekspress Kursu
           description_audience: 'Yaşlar: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2140,6 +2148,7 @@ az:
             csp_functions:
               display_name: Funksiyalar
         coursef-2019:
+          title: F Kursu (2019)
           lesson_groups:
             csf_variables:
               display_name: dəyişənlər
@@ -2159,6 +2168,7 @@ az:
             Dance Party:
               name: Rəqs şənliyi
         coursed-2019:
+          title: D Kursu (2019)
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2184,6 +2194,7 @@ az:
             Dance Party:
               name: Rəqs şənliyi
         coursee-2019:
+          title: E Kursu (2019)
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -2201,6 +2212,7 @@ az:
             Songwriting:
               name: Mahnı yazma
         express-2019:
+          title: Ekspress Kurs (2019)
           description_audience: 'Yaşlar: 9-18'
           lesson_groups:
             csf_loops:
@@ -2250,6 +2262,7 @@ az:
         dance-extras-gallery:
           title: Rəqs etməyə davam edin
         coursec-2019:
+          title: C Kursu (2019)
           description_audience: 'Yaşlar: 6-10'
           lesson_groups:
             csf_digcit:
@@ -2267,6 +2280,7 @@ az:
         gamelab:
           title: Oyun labaratoriyası
         coursea-2019:
+          title: A Kursu (2019)
           description_audience: 'Yaşlar: 4-7'
           lesson_groups:
             csf_digcit:
@@ -2279,6 +2293,7 @@ az:
             'Programming: Happy Maps':
               name: Şən xəritələr
         courseb-2019:
+          title: B Kursu (2019)
           description_audience: 'Yaşlar: 5-8'
           lesson_groups:
             csf_digcit:
@@ -2604,6 +2619,9 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
+          lessons:
+            Debugging:
+              name: Sazlama
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2841,6 +2859,7 @@ az:
             Text:
               name: mətn
         coursea-2020:
+          title: A Kursu (2020)
           description_audience: 'Yaşlar: 4-7'
           lesson_groups:
             csf_digcit:
@@ -2855,6 +2874,7 @@ az:
             Safety in My Online Neighborhood:
               description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
         courseb-2020:
+          title: B Kursu (2020)
           description_audience: 'Yaşlar: 5-8'
           lesson_groups:
             csf_digcit:
@@ -2867,6 +2887,7 @@ az:
             Move It, Move It:
               name: Hərəkət et
         coursec-2020:
+          title: C Kursu (2020)
           description_audience: 'Yaşlar: 6-10'
           lesson_groups:
             csf_digcit:
@@ -2878,6 +2899,7 @@ az:
             csf_events:
               display_name: Hadisələr
         coursed-2020:
+          title: D Kursu (2020)
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2905,6 +2927,7 @@ az:
             Be A Super Digital Citizen:
               name: Super bir rəqəmsal vətəndaş olun
         coursee-2020:
+          title: E Kursu (2020)
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -2914,6 +2937,7 @@ az:
             'Functions: Songwriting':
               name: Mahnı yazma
         coursef-2020:
+          title: F Kursu (2020)
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -2923,6 +2947,7 @@ az:
             Internet:
               name: İnternet
         express-2020:
+          title: Ekspress Kurs (2020)
           description_audience: 'Yaşlar: 9-18'
           lesson_groups:
             csf_loops:
@@ -2960,6 +2985,8 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+            Debugging:
+              name: Sazlama
         csp6-2020:
           lessons:
             new stage:
@@ -2988,6 +3015,8 @@ az:
               name: yeni mərhələ
             Tools:
               name: Alətlər
+            Debugging:
+              name: Sazlama
         csp5-virtual:
           lessons:
             Buttons and Events:
@@ -3105,6 +3134,8 @@ az:
               display_name: Giriş
             lessonGroup-3:
               display_name: dəyişənlər
+            debugging:
+              display_name: Sazlama
         csd1-2021:
           lessons:
             Storage:
@@ -3166,6 +3197,11 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Sorğu
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Sazlama
+              name: Sazlama
         csp4-2021:
           lesson_groups:
             csp_variables:

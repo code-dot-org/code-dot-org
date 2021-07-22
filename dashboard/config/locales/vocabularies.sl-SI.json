@@ -11,11 +11,26 @@
         "define/coursef/2021": {
           "word": "Definiraj"
         },
+        "debugging/courseb/2021": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/coursea/2021": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/coursec/2021": {
+          "word": "Odpravljanje napak"
+        },
         "binary/coursec/2021": {
           "word": "Binarno"
         },
+        "debugging/coursed/2021": {
+          "word": "Odpravljanje napak"
+        },
         "conditionals/coursed/2021": {
           "word": "Pogoji"
+        },
+        "debugging/express/2021": {
+          "word": "Odpravljanje napak"
         },
         "conditionals/express/2021": {
           "word": "Pogoji"
@@ -28,6 +43,9 @@
         },
         "define/express/2021": {
           "word": "Definiraj"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Odpravljanje napak"
         },
         "copyright/coursee/2021": {
           "word": "Avtorska pravice"

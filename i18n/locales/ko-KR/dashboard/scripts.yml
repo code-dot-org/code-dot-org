@@ -291,6 +291,7 @@ ko:
               name: 변수
           student_description: 사용성 테스트를 위한 4가지 수준의 코스 선택
         algebra:
+          title: 대수학 영역의 컴퓨터 과학
           description: 대수학을 통해 함수형 프로그래밍 배우기.
           description_short: 대수학을 통해 함수형 프로그래밍 배우기.
           lessons:
@@ -505,9 +506,12 @@ ko:
           student_description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
         jigsaw:
           title: 직소퍼즐
+          description: 그림 맞추기 튜토리얼을 해보세요.
+          description_short: 그림 맞추기 튜토리얼을 해보세요.
           lessons:
             Jigsaw:
               name: 직소퍼즐
+          student_description: 그림 맞추기 튜토리얼을 해보세요.
         step:
           title: 단계
           description: 튜토리얼 단계
@@ -3056,6 +3060,7 @@ ko:
               description_student: 이 레슨은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방식으로써 변수를 소개합니다. 학급은 변수의 목적에 대한 기초적인 설명으로 레슨을 시작하고 새 블록으로 연습을 합니다. 그 후, 학급은 변수를 사용해 랜덤 숫자를 저장하여 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
               description_teacher: 이 레슨에서 학생은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방법을 배웁니다. 학생들은 변수의 목적에 대한 매우 기초적인 설명으로 레슨을 시작합니다. 그 다음, 숫자를 라벨링하거나 명명하는 방식으로써 변수 모델을 강화하는 레벨 진행을 완료합니다. 학생들은 블록을 사용하여 랜덤 숫자를 저장하여 변수가 실제로 값을 보관 또는 저장하는지 보고 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
             Sprites:
+              name: 스프라이트
               description_student: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학급에게 스프라이트 객체를 소개합니다. 각 스프라이트는 표시할 이미지에 배정할 수 있으며 스프라이트는 또한 애니메이션을 만들 때 유용함을 입증해 줄 그 자신에 관한 복수의 값을 기록합니다. 레슨이 끝 부분에서, 모두는 스프라이트를 사용하여 장면을 만듭니다.
               description_teacher: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학생들에게 스프라이트 객체를 소개합니다. 각 스프라이트는 보여줄 이미지 각각에 배정할 수 있으며 스프라이트는 또한 복수의 값을 기록하여 애니메이션을 만들 때 그 유용성을 입증할 것입니다.
             The Draw Loop:
@@ -4259,6 +4264,8 @@ ko:
           lessons:
             Introduction:
               name: 소개
+            Sprites:
+              name: 스프라이트
             'Project: Interactive Card':
               name: 프로젝트 - 인터랙티브 카드
         csd5-draft:
@@ -4565,6 +4572,8 @@ ko:
               name: 변수
             Programming for Entertainment:
               name: 엔터테인먼트를 위한 프로그래밍
+            Sprites:
+              name: 스프라이트
             Plotting Shapes:
               name: 모양 플롯팅
             Sprite Movement:
@@ -4822,6 +4831,8 @@ ko:
               name: 모양과 무작위
             Variables:
               name: 변수
+            Sprites:
+              name: 스프라이트
             The Counter Pattern Unplugged:
               name: 카운터 패턴 언플러그드
             Sprite Movement:
@@ -6945,6 +6956,8 @@ ko:
               name: 모양과 무작위 추출
             Variables:
               name: 변수
+            Sprites:
+              name: 스프라이트
             The Counter Pattern Unplugged:
               name: 카운터 패턴 언플러그드
             Sprite Movement:
@@ -7021,6 +7034,7 @@ ko:
               description_student: 이 레슨은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방식으로써 변수를 소개합니다. 학급은 변수의 목적에 대한 기초적인 설명으로 레슨을 시작하고 새 블록으로 연습을 합니다. 그 후, 학급은 변수를 사용해 랜덤 숫자를 저장하여 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
               description_teacher: 이 레슨에서 학생은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방법을 배웁니다. 학생들은 변수의 목적에 대한 매우 기초적인 설명으로 레슨을 시작합니다. 그 다음, 숫자를 라벨링하거나 명명하는 방식으로써 변수 모델을 강화하는 레벨 진행을 완료합니다. 학생들은 블록을 사용하여 랜덤 숫자를 저장하여 변수가 실제로 값을 보관 또는 저장하는지 보고 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
             Sprites:
+              name: 스프라이트
               description_student: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학급에게 스프라이트 객체를 소개합니다. 각 스프라이트는 표시할 이미지에 배정할 수 있으며 스프라이트는 또한 애니메이션을 만들 때 유용함을 입증해 줄 그 자신에 관한 복수의 값을 기록합니다. 레슨이 끝 부분에서, 모두는 스프라이트를 사용하여 장면을 만듭니다.
               description_teacher: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학생들에게 스프라이트 객체를 소개합니다. 각 스프라이트는 보여줄 이미지 각각에 배정할 수 있으며 스프라이트는 또한 복수의 값을 기록하여 애니메이션을 만들 때 그 유용성을 입증할 것입니다.
             The Draw Loop:
@@ -9115,6 +9129,8 @@ ko:
               display_name: 반복을 위한
             csf_internet:
               display_name: 인터넷
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             end_of_course_project:
@@ -9386,6 +9402,8 @@ ko:
           lesson_groups:
             ramp_up:
               display_name: 램프 업
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_impacts:
@@ -9563,6 +9581,8 @@ ko:
               display_name: 변수
             csf_for_loops:
               display_name: 반복을 위한
+            csf_sprites:
+              display_name: 스프라이트
           lessons:
             'Algorithms: Graph Paper Programming':
               name: '알고리즘: 모눈종이 프로그래밍'
@@ -10235,6 +10255,7 @@ ko:
               description_student: 이 레슨은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방식으로써 변수를 소개합니다. 학급은 변수의 목적에 대한 기초적인 설명으로 레슨을 시작하고 새 블록으로 연습을 합니다. 그 후, 학급은 변수를 사용해 랜덤 숫자를 저장하여 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
               description_teacher: 이 레슨에서 학생은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방법을 배웁니다. 학생들은 변수의 목적에 대한 매우 기초적인 설명으로 레슨을 시작합니다. 그 다음, 숫자를 라벨링하거나 명명하는 방식으로써 변수 모델을 강화하는 레벨 진행을 완료합니다. 학생들은 블록을 사용하여 랜덤 숫자를 저장하여 변수가 실제로 값을 보관 또는 저장하는지 보고 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
             Sprites:
+              name: 스프라이트
               description_student: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학급에게 스프라이트 객체를 소개합니다. 각 스프라이트는 표시할 이미지에 배정할 수 있으며 스프라이트는 또한 애니메이션을 만들 때 유용함을 입증해 줄 그 자신에 관한 복수의 값을 기록합니다. 레슨이 끝 부분에서, 모두는 스프라이트를 사용하여 장면을 만듭니다.
               description_teacher: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학생들에게 스프라이트 객체를 소개합니다. 각 스프라이트는 보여줄 이미지 각각에 배정할 수 있으며 스프라이트는 또한 복수의 값을 기록하여 애니메이션을 만들 때 그 유용성을 입증할 것입니다.
             The Draw Loop:
@@ -11025,6 +11046,8 @@ ko:
           lesson_groups:
             ramp_up:
               display_name: 램프 업
+            csf_sprites:
+              display_name: 스프라이트
             time4cs_c1:
               display_name: '컬렉션 1: 에버글레이즈와 그곳의 생태계'
             time4cs_c2:
@@ -12105,6 +12128,7 @@ ko:
               description_student: 이 레슨은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방식으로써 변수를 소개합니다. 학급은 변수의 목적에 대한 기초적인 설명으로 레슨을 시작하고 새 블록으로 연습을 합니다. 그 후, 학급은 변수를 사용해 랜덤 숫자를 저장하여 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
               description_teacher: 이 레슨에서 학생은 프로그램 내 숫자에 라벨링을 하거나 무작위로 생성된 값을 저장하는 방법을 배웁니다. 학생들은 변수의 목적에 대한 매우 기초적인 설명으로 레슨을 시작합니다. 그 다음, 숫자를 라벨링하거나 명명하는 방식으로써 변수 모델을 강화하는 레벨 진행을 완료합니다. 학생들은 블록을 사용하여 랜덤 숫자를 저장하여 변수가 실제로 값을 보관 또는 저장하는지 보고 프로그램에서 동일한 랜덤 숫자를 여러 번 사용할 수 있게 합니다.
             Sprites:
+              name: 스프라이트
               description_student: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학급에게 스프라이트 객체를 소개합니다. 각 스프라이트는 표시할 이미지에 배정할 수 있으며 스프라이트는 또한 애니메이션을 만들 때 유용함을 입증해 줄 그 자신에 관한 복수의 값을 기록합니다. 레슨이 끝 부분에서, 모두는 스프라이트를 사용하여 장면을 만듭니다.
               description_teacher: 더 흥미롭고 세부적인 이미지를 만들기 위해, 학생들에게 스프라이트 객체를 소개합니다. 각 스프라이트는 보여줄 이미지 각각에 배정할 수 있으며 스프라이트는 또한 복수의 값을 기록하여 애니메이션을 만들 때 그 유용성을 입증할 것입니다.
             The Draw Loop:
@@ -12983,6 +13007,8 @@ ko:
               display_name: 조건
             csf_events:
               display_name: 이벤트
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_impacts:
@@ -13025,6 +13051,8 @@ ko:
               display_name: 조건
             csf_events:
               display_name: 이벤트
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_impacts:
@@ -13994,6 +14022,8 @@ ko:
               name: '미니 프로젝트: 플라이어 게임'
               description_student: "**오늘의 질문: 게임을 만들 때 새로운 유형의 스프라이트 움직임과 충돌 감지를 어떻게 사용해야 할까요?**\n\n학급은 중력 시뮬레이션과 여러 유형의 충돌에 관해 배운 내용을 간단한 플라이어 게임을 만드는데 사용합니다. 샘플 플라이어 게임을 본 후, 학생들은 어떤 종류의 플라이어를 좋아하는지 브레인스토밍하고 구조화된 프로세스를 사용하여 코드 스튜디오에서 게임을 프로그래밍합니다. "
               description_teacher: "**오늘의 질문: 게임을 만들 때 새로운 유형의 스프라이트 움직임과 충돌 감지를 어떻게 사용해야 할까요?**\n\n학생들은 중력 시뮬레이션과 여러 유형의 충돌에 관해 배운 내용을 간단한 플라이어 게임을 만드는데 사용합니다. 샘플 플라이어 게임을 본 후, 학생들은 어떤 종류의 플라이어 게임을 좋아하는지 브레인스토밍하고 구조화된 프로세스를 사용하여 코드 스튜디오에서 게임을 프로그래밍합니다. "
+            Sprites:
+              name: 스프라이트
           name: csd3-2020
           student_description: " 단원 3에서는 게임 랩에서 애니메이션과 인터랙티브 아트, 게임을 프로그래밍하며 코딩 경험을 쌓을 것입니다. 단원은 간단한 모양으로 시작하여 여기에 컴퓨터 과학자들이 매일 사용하는 것과 동일한 프로그래밍 개념과 설계 프로세스를 사용하여 더 정교한 스프라이트 기반 게임을 쌓아 올립니다. 마지막 프로젝트에서는 개인화된 인터랙티브 프로그램을 개발할 것입니다."
         coursea-2020:
@@ -14353,6 +14383,8 @@ ko:
           lesson_groups:
             ramp_up:
               display_name: 램프 업
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_nested_loops:
@@ -14460,6 +14492,8 @@ ko:
               display_name: 변수
             csf_for_loops:
               display_name: 반복을 위한
+            csf_sprites:
+              display_name: 스프라이트
             end_of_course_project:
               display_name: 과정말 프로젝트
           lessons:
@@ -14571,6 +14605,8 @@ ko:
               display_name: 변수
             csf_for_loops:
               display_name: 반복을 위한
+            csf_sprites:
+              display_name: 스프라이트
             end_of_course_project:
               display_name: 과정말 프로젝트
           lessons:
@@ -15549,6 +15585,8 @@ ko:
                 이 레슨에서 학생들은 변수를 사용해 숫자에 라벨링을 하는 방법을 배웁니다. 레슨은 인풋-아웃풋-저장-프로세싱 모델의 저장 구성요소 맥락 내에서 변수의 목적을 매우 기본적으로 설명하는 것으로 시작합니다. 그 다음, 학생들은 변수의 모델을 숫자에 라벨 또는 명칭을 붙이는 하나의 방법으로서 강화하는 레벨 진도를 완료합니다.
             Random Numbers:
               description_student: "**오늘의 질문: 프로그램을 실행할 때 마다 다르게 행동하게 만들려면 어떻게 해야 할까요?**\\\\r\n\\\\r\n학급에게 `randomNumber()` 변수를 소개하고 프로그램 내 새 행동을 생성하기 위해 그 변수를 어떻게 사용하는지 알려줍니다. 그 다음, 학급은 프로그램 중 변수 업데이트 방법과 랜덤화된 이미지 그리는 법을 배웁니다. "
+            Sprites:
+              name: 스프라이트
             Sprite Properties:
               name: 스프라이트 속성
               description_student: |-
@@ -16102,6 +16140,9 @@ ko:
             Variables:
               key: 변수
               name: 변수
+            Sprites:
+              key: 스프라이트
+              name: 스프라이트
             Sprite Properties:
               key: 스프라이트 속성
               name: 스프라이트 속성
@@ -17324,6 +17365,8 @@ ko:
           lesson_groups:
             ramp_up:
               display_name: 중첩 반복
+            csf_sprites:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_nested_loops:
@@ -17456,6 +17499,8 @@ ko:
             lesson-11:
               name: 챗봇 만들기
           lesson_groups:
+            ramp_up:
+              display_name: 스프라이트
             csf_digcit:
               display_name: 디지털 시민의식
             csf_variables:
@@ -17636,6 +17681,8 @@ ko:
               display_name: 변수
             csf_for_loops:
               display_name: 반복을 위한
+            csf_sprites:
+              display_name: 스프라이트
             end_of_course_project:
               display_name: 과정말 프로젝트
             lessonGroup-9:
@@ -17749,6 +17796,7 @@ ko:
               display_name: 변수
               description: 값은 변수에 저장되고 나중에 프로그램에서 검색하세요. 변수에 저장된 값을 수정하여 흥미진진한 인터랙티브 프로젝트를 만드세요!
             Sprites:
+              display_name: 스프라이트
               description: 스프라이트로 코딩의 기초를 배우세요!
             variables:
               display_name: 변수

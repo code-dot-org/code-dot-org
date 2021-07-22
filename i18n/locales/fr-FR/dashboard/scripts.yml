@@ -13752,6 +13752,7 @@ fr:
               name: Les Lutins
           student_description: Dans l'Unité 3, tu tireras profit de ton expérience de codage en programmant des animations, de l'art interactif et des jeux dans le Labo des Jeux. L'unité commence avec des formes simples et progresse vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les mêmes concepts de programmation et le processus de conception que les informaticiens utilisent quotidiennement. Dans le projet final, tu développeras un programme personnalisé et interactif.
         coursea-2020:
+          title: Cours A (2020)
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
@@ -13814,6 +13815,7 @@ fr:
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         courseb-2020:
+          title: Cours B (2020)
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
@@ -13879,6 +13881,7 @@ fr:
               description_student: 'Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. '
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         coursec-2020:
+          title: Cours C (2020)
           description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           description_audience: 'Âges: 6 à 10 ans'
@@ -13972,6 +13975,7 @@ fr:
               description_student: Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe.
           student_description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
         coursed-2020:
+          title: Cours D (2020)
           description: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Àges : 7 à 11 ans'
@@ -14068,6 +14072,7 @@ fr:
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
           student_description: Les élèves développent leur compréhension des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent la citoyenneté numérique.
         coursee-2020:
+          title: Cours E (2020)
           description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
           description_short: Revois les concepts dans les Cours C & D, puis vas plus loin en apprenant des fonctions.
           description_audience: 'Âge : 8 à 12 ans'
@@ -14168,6 +14173,7 @@ fr:
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
           student_description: Commence à coder avec des algorithmes, des boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
         coursef-2020:
+          title: Cours F (2020)
           description: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description_audience: 'Àges : 9 à 13 ans'
@@ -16555,6 +16561,8 @@ fr:
             lesson-3:
               name: Les Lutins en Action
           lesson_groups:
+            csf_warmup:
+              display_name: Warm-up (Séance d’échauffement)
             csf_sequencing:
               display_name: Séquençage
             csf_loops:

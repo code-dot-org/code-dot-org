@@ -337,6 +337,10 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": түс
       aalab_layoutSprites:
         options:
           FORMAT:

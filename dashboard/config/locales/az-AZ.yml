@@ -731,6 +731,8 @@ az:
       audience: 4+ yaş
     unplugged_conditionals:
       title: Şərti ifadələr
+    widgets:
+      audience: 14+ yaş
   landing:
     report_bug: Xəta bildirin
     support: Kömək istə
@@ -946,3 +948,4 @@ az:
     Veb ünvanı dəqiqləşdirib yenidən cəhd edin. və ya geri, ilk səhifəyə qayıdın.
   page_not_found_button: İlk səhifəyə qayıt
   copy: Köçür
+  confirm: Təsdiq et

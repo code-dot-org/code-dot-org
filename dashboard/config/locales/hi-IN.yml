@@ -296,6 +296,7 @@ hi:
     invite_sent: आमंत्रण भेजा गया
     added_teacher: अपने शिक्षक के रूप में जोड़ा गया %{name}
     registered: आप %{section_name} के लिए पंजीकृत किया है।
+    already_exists: आप पहले से ही सेक्शन %{section_name} से जुड़े हुए हैं।
     error:
       signed_in: कृपया आगे बढ़ने से पहले signout
       username_not_found: उपयोगकर्ता नाम नहीं मिला %{username}

@@ -29,7 +29,8 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "height": "hündürlük"
+              "height": "hündürlük",
+              "width": "enlik"
             }
           }
         },
@@ -37,7 +38,8 @@
           "draw square": {
             "name": "bir kvadrat çək",
             "parameters": {
-              "height": "hündürlük"
+              "height": "hündürlük",
+              "width": "enlik"
             }
           },
           "draw a circle": {
@@ -921,6 +923,11 @@
           },
           "draw a square 20": {
             "name": "20 kvadratı çəkin"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "rəng"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1972,7 +1979,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ölçü"
+              "size": "ölçü",
+              "color": "rəng"
             },
             "name": "dama"
           },
@@ -2002,7 +2010,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ölçü"
+              "size": "ölçü",
+              "color": "rəng"
             },
             "name": "dama"
           },
@@ -2046,7 +2055,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "ölçü"
+              "size": "ölçü",
+              "color": "rəng"
             },
             "name": "doldurulmuş kvadrat"
           },
@@ -2164,6 +2174,11 @@
           },
           "draw a square 20": {
             "name": "20 kvadratı çəkin"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "rəng"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -3017,17 +3032,40 @@
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHaley"
+            "name": "rowOfNectarOrHaley",
+            "parameters": {
+              "width": "enlik"
+            }
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHaley"
+            "name": "rowOfNectarOrHaley",
+            "parameters": {
+              "width": "enlik"
+            }
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHaley"
+            "name": "rowOfNectarOrHaley",
+            "parameters": {
+              "width": "enlik"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "enlik"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "enlik"
+            }
           }
         }
       }

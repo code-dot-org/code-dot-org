@@ -30,6 +30,7 @@ az:
       choice: seçim
       circ: dövrə
       codeName: kodAdı
+      color: rəng
       counter: sayğac
       direction: istiqamət
       dogs: itlər
@@ -73,6 +74,8 @@ az:
       startX: başlaX
       startY: başlaY
       variable: dəyişən
+      width: enlik
       wizard: sehrbaz
       x: x
+      your var 1: sənin dəyişənin 1
       your var 2: sənin dəyişənin 2

@@ -11,17 +11,32 @@
         "define/coursef/2021": {
           "word": "Määra"
         },
+        "debugging/courseb/2021": {
+          "word": "Debugimine"
+        },
         "drop/courseb/2021": {
           "word": "Kükita"
+        },
+        "debugging/coursea/2021": {
+          "word": "Debugimine"
         },
         "drop/coursea/2021": {
           "word": "Kükita"
         },
+        "debugging/coursec/2021": {
+          "word": "Debugimine"
+        },
         "binary/coursec/2021": {
           "word": "Binaarne"
         },
+        "debugging/coursed/2021": {
+          "word": "Debugimine"
+        },
         "conditionals/coursed/2021": {
           "word": "Tingimuslaused"
+        },
+        "debugging/express/2021": {
+          "word": "Debugimine"
         },
         "conditionals/express/2021": {
           "word": "Tingimuslaused"
@@ -37,6 +52,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Kükita"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugimine"
         },
         "copyright/coursee/2021": {
           "word": "Autoriõigus"

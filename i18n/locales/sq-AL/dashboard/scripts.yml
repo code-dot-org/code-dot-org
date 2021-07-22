@@ -886,6 +886,10 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: dan is a masive dick-
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -916,6 +920,8 @@ sq:
         gradeKinder:
           description_audience: Moshat 5-18
           lessons:
+            Debugging:
+              name: Rregullimi
             Events:
               name: Ngjarje
             'Jigsaw: Learn to drag and drop':
@@ -936,6 +942,8 @@ sq:
           title: Klasat 1
           description_audience: Moshat 5-18
           lessons:
+            Debugging:
+              name: Rregullimi
             Events:
               name: Ngjarje
             'Jigsaw: Learn to drag and drop':
@@ -2234,6 +2242,9 @@ sq:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+          lessons:
+            Debugging:
+              name: Rregullimi
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2544,6 +2555,10 @@ sq:
           lessons:
             Spelling Bee:
               name: Bleta Gërmëzuese
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Rregullimi
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2552,6 +2567,8 @@ sq:
           lessons:
             Tools:
               name: Veglat
+            Debugging:
+              name: Rregullimi
         csp5-virtual:
           lessons:
             While Loops:
@@ -2635,6 +2652,8 @@ sq:
               display_name: Hyrja
             lessonGroup-3:
               display_name: variabla
+            debugging:
+              display_name: Rregullimi
         csd3-2021:
           lessons:
             Variables:
@@ -2654,6 +2673,11 @@ sq:
             Functions with Parameters:
               key: Funksionet me parametra
               name: Funksionet me parametra
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Rregullimi
+              name: Rregullimi
         csp4-2021:
           lesson_groups:
             csp_variables:

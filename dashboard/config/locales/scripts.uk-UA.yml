@@ -3459,6 +3459,7 @@ uk:
             Songwriting:
               name: Написання пісень
         express-2019:
+          title: Експрес курс (2019)
           description_audience: 'Вік: 9-18'
           lesson_groups:
             csf_warmup:
@@ -4844,6 +4845,7 @@ uk:
             Crowdsourcing:
               name: Краудсорсинг
         express-2020:
+          title: Експрес курс (2020)
           description_audience: 'Вік: 9-18'
           lesson_groups:
             csf_warmup:

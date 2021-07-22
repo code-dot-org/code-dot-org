@@ -11,6 +11,7 @@ bg:
         other_category_name: Друго
       name:
         course1:
+          title: Курс 1 - за малките читатели
           description: Курс 1 е предназначен за децата, които се учат да четат, но
             искат и да създават компютърни програми. Курсът ще им помогне да се научат
             да си сътрудничат с други ученици, ще подпомогне развитието на умения
@@ -548,9 +549,12 @@ bg:
             от 10 минути? Опитайте нашите Flappy код уроци!
         jigsaw:
           title: Мозайка
+          description: Опитайте нашите уроци тип "мозайка"
+          description_short: Опитайте нашите уроци тип "мозайка"
           lessons:
             Jigsaw:
               name: Мозайка
+          student_description: Опитайте нашите уроци тип "мозайка"
         step:
           title: Стъпка
           description: Стъпка от урока
@@ -1510,6 +1514,10 @@ bg:
           lessons:
             Game Lab:
               name: Играта лаборатория
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Режим на проектиране
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -1540,6 +1548,8 @@ bg:
         gradeKinder:
           description_audience: Възраст 5 + (необходими са умения за четене)
           lessons:
+            Debugging:
+              name: Отстраняване на грешки
             Events:
               name: Събития
             Events Unplugged:
@@ -1562,6 +1572,8 @@ bg:
         grade1:
           description_audience: Възраст 5 + (необходими са умения за четене)
           lessons:
+            Debugging:
+              name: Отстраняване на грешки
             Events:
               name: Събития
             Events Unplugged:
@@ -1677,6 +1689,8 @@ bg:
               name: Функции
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
         grade2:
@@ -1954,6 +1968,10 @@ bg:
           lessons:
             Introduction:
               name: Въведение
+            Sprites:
+              name: Спрайт
+            Input:
+              name: Поле за въвеждане
         csd5-draft:
           lessons:
             new stage:
@@ -1988,6 +2006,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -2008,6 +2028,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -2414,6 +2436,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -2431,6 +2455,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -2840,6 +2866,8 @@ bg:
               display_name: За циклите
             csf_internet:
               display_name: Интернет
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
           lessons:
@@ -2882,6 +2910,8 @@ bg:
               name: Бинарни образи(картини)
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
             csf_nested_loops:
@@ -2917,6 +2947,8 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
+            csf_sprites:
+              display_name: Спрайт
           lessons:
             Relay Programming:
               name: Повтори програмирането
@@ -3039,6 +3071,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -3175,6 +3209,9 @@ bg:
             new stage:
               name: нов етап
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
           lessons:
             Crowdsourcing:
               name: Crowdsourcing кампания
@@ -3303,6 +3340,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Conditionals:
               name: Условия
             Velocity:
@@ -3323,6 +3362,9 @@ bg:
               display_name: Съдържание
             required:
               display_name: Общ преглед
+          lessons:
+            Debugging:
+              name: Отстраняване на грешки
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -3486,6 +3528,8 @@ bg:
               display_name: Условия
             csf_events:
               display_name: Събития
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
           lessons:
@@ -3499,6 +3543,8 @@ bg:
               display_name: Условия
             csf_events:
               display_name: Събития
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
           lessons:
@@ -3570,6 +3616,8 @@ bg:
               name: Функции
             Text:
               name: Текст
+            Sprites:
+              name: Спрайт
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -3640,6 +3688,8 @@ bg:
               name: Цифрови граждани
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
             csf_nested_loops:
@@ -3659,6 +3709,8 @@ bg:
               display_name: Данни
             csf_for_loops:
               display_name: За циклите
+            csf_sprites:
+              display_name: Спрайт
           lessons:
             Envelope Variables:
               name: Плик с променливи
@@ -3680,6 +3732,8 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
+            csf_sprites:
+              display_name: Спрайт
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -3711,6 +3765,8 @@ bg:
           lessons:
             new stage:
               name: нов етап
+            Debugging:
+              name: Отстраняване на грешки
         csp6-2020:
           lessons:
             new stage:
@@ -3764,6 +3820,8 @@ bg:
           lessons:
             new stage:
               name: нов етап
+            Debugging:
+              name: Отстраняване на грешки
         csp5-virtual:
           lessons:
             While Loops:
@@ -3826,6 +3884,8 @@ bg:
           lessons:
             Variables:
               name: Променливи
+            Sprites:
+              name: Спрайт
             Sprite Properties:
               name: Свойства на Спрайта
             Text:
@@ -3869,6 +3929,8 @@ bg:
               display_name: Въведение
             lessonGroup-3:
               display_name: Променливи
+            debugging:
+              display_name: Отстраняване на грешки
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3882,6 +3944,9 @@ bg:
             Variables:
               key: Променливи
               name: Променливи
+            Sprites:
+              key: Спрайт
+              name: Спрайт
             Sprite Properties:
               key: Свойства на Спрайта
               name: Свойства на Спрайта
@@ -3932,6 +3997,11 @@ bg:
               display_name: 'Раздел 2: Интернет'
             lessonGroup-2:
               display_name: Проучване
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Отстраняване на грешки
+              name: Отстраняване на грешки
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -4030,6 +4100,8 @@ bg:
           lesson_groups:
             ramp_up:
               display_name: Вмъкнати цикли
+            csf_sprites:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
             csf_nested_loops:
@@ -4048,6 +4120,8 @@ bg:
               key: Повторения за забавление
               name: Повторения за забавление
           lesson_groups:
+            ramp_up:
+              display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
             csf_variables:
@@ -4072,6 +4146,8 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
+            csf_sprites:
+              display_name: Спрайт
             lessonGroup-9:
               display_name: Събития
         pre-express-2021:
@@ -4086,6 +4162,8 @@ bg:
               display_name: Въведение
             lessonGroup-3:
               display_name: Променливи
+            Sprites:
+              display_name: Спрайт
             variables:
               display_name: Променливи
         csd4-preview-2021:

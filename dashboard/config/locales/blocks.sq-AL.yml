@@ -454,6 +454,10 @@ sq:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": ngjyra
       aalab_layoutSprites:
         options:
           FORMAT:

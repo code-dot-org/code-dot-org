@@ -278,6 +278,7 @@
               name: Variabler
           student_description: Et utvalg av kurs på nivå 4 for testing av brukervennlighet.
         algebra:
+          title: Datavitenskap i Algebra
           lessons:
             'Eval: Boolean Operators':
               name: Boolske operatorer
@@ -849,6 +850,10 @@
           lessons:
             Game Lab:
               name: Spill-lab
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Utformingsmodus
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -877,6 +882,8 @@
         gradeKinder:
           description_audience: Alder 5+ (leseferdigheter kreves)
           lessons:
+            Debugging:
+              name: Feilsøking
             Events:
               name: Hendelser
             'Jigsaw: Learn to drag and drop':
@@ -895,6 +902,8 @@
         grade1:
           description_audience: Alder 5+ (leseferdigheter kreves)
           lessons:
+            Debugging:
+              name: Feilsøking
             Events:
               name: Hendelser
             'Jigsaw: Learn to drag and drop':
@@ -2215,6 +2224,7 @@
           description: Fortsett etter den første timen med større prosjektideer.
           student_description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
+          title: Kurs F (2019)
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
           lesson_groups:
             csf_variables:
@@ -2247,6 +2257,7 @@
             Dance Party:
               name: Dansefest
         coursed-2019:
+          title: Kurs D (2019)
           lesson_groups:
             csf_events:
               display_name: Hendelser
@@ -2272,6 +2283,7 @@
             Dance Party:
               name: Dansefest
         coursee-2019:
+          title: Kurs E (2019)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -2297,6 +2309,7 @@
             Songwriting:
               name: Låtskriving
         express-2019:
+          title: Ekspress kurs (2019)
           lesson_groups:
             csf_loops:
               display_name: Løkker
@@ -2351,6 +2364,7 @@
           description: Fortsett etter den første timen med større prosjektideer.
           student_description: Fortsett etter den første timen med større prosjektideer.
         coursec-2019:
+          title: Kurs C (2019)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -2374,6 +2388,7 @@
         gamelab:
           title: Spill-lab
         coursea-2019:
+          title: Kurs A (2019)
           description_short: En introduksjon til datavitenskap for førskolebarn.
           lesson_groups:
             csf_digcit:
@@ -2388,6 +2403,7 @@
             Going Places Safely:
               name: Trygg reise
         courseb-2019:
+          title: Kurs B (2019)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -2718,6 +2734,9 @@
               display_name: Innhold
             required:
               display_name: Oversikt
+          lessons:
+            Debugging:
+              name: Feilsøking
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2977,6 +2996,7 @@
             Text:
               name: tekst
         coursea-2020:
+          title: Kurs A (2020)
           description_short: En introduksjon til datavitenskap for førskolebarn.
           lesson_groups:
             csf_digcit:
@@ -2991,6 +3011,7 @@
             'Programming: Happy Maps':
               name: Glade Kart
         courseb-2020:
+          title: Kurs B (2020)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3006,6 +3027,7 @@
             'Loops: Getting Loopy':
               name: Gå i spinn
         coursec-2020:
+          title: Kurs C (2020)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3021,6 +3043,7 @@
             'Events: The Big Event':
               name: Den store begivenheten
         coursed-2020:
+          title: Kurs D (2020)
           lesson_groups:
             csf_events:
               display_name: Hendelser
@@ -3046,6 +3069,7 @@
             Dance Party:
               name: Dansefest
         coursee-2020:
+          title: Kurs E (2020)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3057,6 +3081,7 @@
             'Functions: Songwriting':
               name: Låtskriving
         coursef-2020:
+          title: Kurs F (2020)
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
           lesson_groups:
             csf_digcit:
@@ -3075,6 +3100,7 @@
             Crowdsourcing:
               name: Crowdsourcing
         express-2020:
+          title: Ekspress kurs (2020)
           lesson_groups:
             csf_loops:
               display_name: Løkker
@@ -3111,6 +3137,10 @@
           lesson_groups:
             csp_unit2_2020:
               display_name: "(gammel) Enhet 2: Internett"
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Feilsøking
         csp9-2020:
           lesson_groups:
             csp_unit9_2020:
@@ -3119,6 +3149,10 @@
           lessons:
             Creating Functions:
               name: Lage Funksjoner
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Feilsøking
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3247,6 +3281,8 @@
               display_name: Introduksjon
             lessonGroup-3:
               display_name: Variabler
+            debugging:
+              display_name: Feilsøking
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3332,6 +3368,11 @@
               display_name: "(gammel) Enhet 2: Internett"
             lessonGroup-2:
               display_name: Undersøkelse
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Feilsøking
+              name: Feilsøking
         csp4-2021:
           lesson_groups:
             csp_variables:

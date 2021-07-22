@@ -6,7 +6,10 @@ hu:
       Green: Zöld
       Red: Piros
       actor: szereplő
+      age: kor
+      answer: válasz
       armlength: kar hossza
+      binary: bináris
       birds: madarak
       bodylength: test hossza
       cats: összes macska
@@ -18,6 +21,7 @@ hu:
       i: i
       left: balra
       length: length
+      level: szint
       name: név
       nectar: nektár
       planet: bolygó

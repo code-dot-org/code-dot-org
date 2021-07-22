@@ -125,6 +125,18 @@
         },
         "CourseF_outbreak7": {
           "costumes_callout": "Klik untuk mencipta kostum baru"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "\nTekan \"Run\" untuk mencuba program anda"
         }
       }
     }

@@ -182,6 +182,7 @@ ro:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de asemenea, chiar și informații mai complexe (precum imagini şi culori) în sistem binar.
       courseE_unplugged_diceRace:
+        title: 'Algoritmi din lumea reală: Cursa zarurilor'
         desc: Această lecție indică modul în care noi folosim algoritmi în viața de zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul pentru un joc de zaruri.
       courseE_unplugged_songwritingParameters:
         title: Compoziții muzicale cu parametri

@@ -633,6 +633,7 @@
   dashboard_middle_courses_desc: "中学生向けカリキュラムでは、題材に中学レベルの数学や科学を取り込んでいるので、コンピューターサイエンスやプログラミングを通してその概念を教えることもできます。教員研修に参加するには、まず<a href=\"/educate/districts\">Code.org と教育委員会のパートナーシップ</a>に応募してください。"
   dashboard_high_courses: "1年間コース（高校生対象）"
   dashboard_high_courses_desc: "1年間プログラムの実施に興味のある教育委員会向けに、高校生対象のプログラムでは地域の教諭を対象とした教員研修を提供しています。教員研修に参加するには、まず<a href=\"/educate/districts\">Code.org と教育委員会のパートナーシップ</a>に応募してください。"
+  dashboard_course_csina: "算数とコンピュータサイエンス"
   dashboard_course_csina_desc: "Code.org は Bootstrap と提携して、コンピュータプログラミングを通して数学的な考え方を身につけられるようなカリキュラムを開発しました。"
   dashboard_course_csins: "理科とコンピュータサイエンス"
   dashboard_course_csins_desc: "Code.org は Project GUTS と提携して、モデリングとシミュレーションというコンテキストからコンピュータサイエンスの概念の導入部分を提供しています。"
@@ -984,6 +985,7 @@
   pre-express-2019_name: 就学前エクスプレスコース (2019)
   express-2020_name: エクスプレスコース (2020)
   pre-express-2020_name: 就学前エクスプレスコース (2020)
+  pre-express-2021_name: 読み書き前 エクスプレスコース (2021)
   csd2_name: 'ユニット2: ウェブ開発'
   csd3_name: 'ユニット3: アニメーションとゲーム'
   accelerated_name: "上級コース"
@@ -1511,6 +1513,7 @@
   user_header_gamelab: "ゲーム ラボ"
   user_header_playlab: "プレイラボ"
   user_header_dance: "ダンスパーティー"
+  user_header_spritelab: "スプライト ラボ"
   user_header_minecraft: "マインクラフト"
   user_header_flappy: "フラッピー"
   user_header_view_all: "すべてのプロジェクトを表示..."
@@ -1705,6 +1708,7 @@
   footer_support: "ヘルプとコミュニティ"
   footer_terms: "利用規約"
   ai_for_oceans: "海洋のためのAI"
+  ai_for_oceans_lesson_plan: "レッスンのけいかく"
   ai_in_partnership_with: "協力者:"
   ai_microsoft_thanks: "21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。"
   ai_activity: "アクティビティ"

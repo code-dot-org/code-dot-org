@@ -2097,6 +2097,10 @@ is:
               name: Kynning á atburðum
             Introduction to Text Compression:
               name: Kynning á textaþjöppun
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Hönnun
         CSDU2-Draft:
           lessons:
             Classes and External Style Sheets:
@@ -3502,6 +3506,8 @@ is:
             content:
               display_name: Innihald
         express-2017:
+          title: Hraðnámskeið
+          assignment_family_title: Hraðnámskeið
           description_audience: 'Aldur: 9-18'
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -4046,6 +4052,8 @@ is:
               name: Stevie og Stóra verkefnið
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         express-2018:
+          title: Hraðnámskeið
+          assignment_family_title: Hraðnámskeið
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
           description_audience: 'Aldur: 9-18'
@@ -6003,6 +6011,7 @@ is:
               name: Lykkjur með Láru
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         courseb-2020:
+          title: Námskeið B (2020)
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           description_audience: 'Aldur: 5 - 8'
           lesson_groups:
@@ -6031,6 +6040,7 @@ is:
               name: Lykkjur með Láru
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         coursec-2020:
+          title: Námskeið C (2020)
           description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 6-10'
           lesson_groups:
@@ -6054,6 +6064,7 @@ is:
             'Events: The Big Event':
               name: Stórviðburður
         coursed-2020:
+          title: Námskeið D (2020)
           description_audience: 'Aldur: 7-11'
           lesson_groups:
             csf_sequencing:
@@ -6084,6 +6095,7 @@ is:
             Dance Party:
               name: Danspartý
         coursee-2020:
+          title: Námskeið E (2020)
           description_audience: 'Aldur: 8 - 12'
           lesson_groups:
             ramp_up:
@@ -6100,6 +6112,7 @@ is:
             'Functions: Songwriting':
               name: Lagasmíð
         coursef-2020:
+          title: Námskeið F (2020)
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
           description_audience: 'Aldur: 9-13'
           lesson_groups:
@@ -6130,6 +6143,7 @@ is:
             Crowdsourcing:
               name: Hópvistun
         express-2020:
+          title: Hraðnámskeið (2020)
           description_short: 'Kynning á tölvunarfræði: sameinar það besta úr námsefni okkar fyrir eldri nemendur í grunnskóla.'
           description_audience: 'Aldur: 9-18'
           lesson_groups:

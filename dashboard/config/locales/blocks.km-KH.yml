@@ -529,6 +529,10 @@ km:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": ពណ៌
       aalab_layoutSprites:
         options:
           FORMAT:

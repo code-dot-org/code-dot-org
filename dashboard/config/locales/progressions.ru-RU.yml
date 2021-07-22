@@ -16,6 +16,7 @@ ru:
       Design Mode: Режим дизайна
       Drawing: Рисование
       Events: События
+      Exploration: Исследование
       'Exploration: For Loops': " Циклы с параметром"
       For Loops: Циклы с параметром
       Free Play: Свободная игра
@@ -39,6 +40,7 @@ ru:
       Reflection: Рефлексия
       Representing Images: Представление изображений
       Review: Обзор
+      Skill Building: Формирование навыков
       Sprite Lab Project: Проект в Лаборатории спрайтов
       Stopping the Outbreak with Masks: Предотвращение эпидемии масками
       The Harvester: Харвестер
@@ -64,6 +66,8 @@ ru:
       'Video: Star Wars Project': " Проект Звёздные войны"
       'Video: The Harvester': " Харвестер"
       'Video: Using the Repeat Block': " Использование блока Повтор"
+      'Video: Wrap-up': " Итоги"
+      Warm Up: Подготовка
       While Loops with the Farmer: Цикл while в Фермере
       Wrap-up: Итоги
       Your Personal Website: Ваш личный веб-сайт

@@ -508,6 +508,10 @@ ky:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": түс
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -1153,6 +1153,10 @@ et:
         text: pööra paremale
       Vector_positionCenter:
         text: keskel
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": värv
       aalab_layoutSprites:
         options:
           FORMAT:

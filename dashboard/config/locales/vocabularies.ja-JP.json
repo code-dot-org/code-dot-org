@@ -23,11 +23,20 @@
         "define/coursef/2021": {
           "word": "定義"
         },
+        "debugging/courseb/2021": {
+          "word": "デバッギング"
+        },
         "drop/courseb/2021": {
           "word": "ドロップ"
         },
+        "debugging/coursea/2021": {
+          "word": "デバッギング"
+        },
         "drop/coursea/2021": {
           "word": "ドロップ"
+        },
+        "debugging/coursec/2021": {
+          "word": "デバッギング"
         },
         "sequencing/coursec/2021": {
           "word": "シークエンス"
@@ -35,8 +44,14 @@
         "binary/coursec/2021": {
           "word": "２しんすう"
         },
+        "debugging/coursed/2021": {
+          "word": "デバッギング"
+        },
         "conditionals/coursed/2021": {
           "word": "条件"
+        },
+        "debugging/express/2021": {
+          "word": "デバッギング"
         },
         "sequencing/express/2021": {
           "word": "シークエンス"
@@ -61,6 +76,9 @@
         },
         "drop/pre-express/2021": {
           "word": "ドロップ"
+        },
+        "debugging/pre-express/2021": {
+          "word": "デバッギング"
         },
         "behavior/coursee/2021": {
           "word": "行動"

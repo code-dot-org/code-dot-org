@@ -269,11 +269,23 @@ fil:
         title: Relay Programming
       courseB_unplugged_MRF_2019:
         title: Ang Robot Kong Mga Kaibigan
+      BuildingAFoundation_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
       Conditionals_2019:
         title: Mga conditional
         desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha ako ng itim na baraha, makakapuntos ka."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Graph Paper Programming
         desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang drowing.
@@ -287,6 +299,15 @@ fil:
         desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary. Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga larawan at mga kulay) pati na rin sa binary.
       courseE_unplugged_privateInformation_2019:
         title: Pribado at Personal na Impormasyon
+      SongwritingParameters_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Pagiging Loopy
         desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain. Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos ay tuturan na ulitin ito.

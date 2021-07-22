@@ -555,6 +555,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "бирдеме кылуу"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "түс"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -987,7 +992,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "өлчөмү"
+              "size": "өлчөмү",
+              "color": "түс"
             }
           },
           "do something": {
@@ -1013,7 +1019,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "өлчөмү"
+              "size": "өлчөмү",
+              "color": "түс"
             }
           },
           "do something": {
@@ -1052,7 +1059,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "өлчөмү"
+              "size": "өлчөмү",
+              "color": "түс"
             }
           },
           "black outline": {
@@ -1148,6 +1156,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "бирдеме кылуу"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "түс"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

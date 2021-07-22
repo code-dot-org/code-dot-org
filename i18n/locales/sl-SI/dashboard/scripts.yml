@@ -231,6 +231,7 @@ sl:
             Variables:
               name: Spremenljivke
         algebra:
+          title: Računalništvo v računstvu
           lessons:
             'Eval: Conditionals':
               name: Pogoji
@@ -485,6 +486,8 @@ sl:
         gradeKinder:
           description_audience: Starost 5-18
           lessons:
+            Debugging:
+              name: Odpravljanje napak
             Events:
               name: Dogodki
             'Jigsaw: Learn to drag and drop':
@@ -503,6 +506,8 @@ sl:
         grade1:
           description_audience: Starost 5-18
           lessons:
+            Debugging:
+              name: Odpravljanje napak
             Events:
               name: Dogodki
             'Jigsaw: Learn to drag and drop':
@@ -1640,6 +1645,9 @@ sl:
               display_name: Vsebina
             required:
               display_name: Pregled
+          lessons:
+            Debugging:
+              name: Odpravljanje napak
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1931,10 +1939,18 @@ sl:
           lessons:
             Spelling Bee:
               name: Čebelica črkuje besede
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Odpravljanje napak
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Ustvarjanje funkcij
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Odpravljanje napak
         csp5-virtual:
           lessons:
             While Loops:
@@ -2009,6 +2025,8 @@ sl:
               display_name: Uvod
             lessonGroup-3:
               display_name: Spremenljivke
+            debugging:
+              display_name: Odpravljanje napak
         csd3-2021:
           lessons:
             Variables:
@@ -2028,6 +2046,11 @@ sl:
             Functions with Parameters:
               key: Funkcije s parametri
               name: Funkcije s parametri
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Odpravljanje napak
+              name: Odpravljanje napak
         csp4-2021:
           lesson_groups:
             csp_variables:

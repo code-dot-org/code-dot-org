@@ -257,6 +257,7 @@ sr:
             Variables:
               name: Променљиве
         algebra:
+          title: Наука информатике у Алгебри
           lessons:
             'Eval: Conditionals':
               name: Кондиционали
@@ -437,6 +438,8 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         cspunit2:
           lessons:
             The Internet:
@@ -516,17 +519,23 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
           student_description: 'Phase 2 Online: Blended Summer Study'
         science-PD2:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         sciencePD2b-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
           student_description: 'Phase 2 Online: Blended Summer Study'
         ECSPD2-iZone:
           description: 'Phase 2 Online: Blended Summer Study'
@@ -571,6 +580,8 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         Special Fun:
           description_audience: Узраст од 10 до 18 година
         SpecialSeries:
@@ -621,6 +632,8 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         AlgebraA:
           lessons:
             'Calc: Defining Variables':
@@ -698,6 +711,10 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizajn mod
         CSF_Secret_Sample_Story:
           description_audience: За године од 8 до 18+
         MikeTest:
@@ -718,6 +735,8 @@ sr:
         gradeKinder:
           description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Отклањање грешака
             Events:
               name: Догађаји
             Loops:
@@ -734,6 +753,8 @@ sr:
         grade1:
           description_audience: Ages 5-18
           lessons:
+            Debugging:
+              name: Отклањање грешака
             Events:
               name: Догађаји
             Loops:
@@ -923,10 +944,14 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         csp3-support:
           lesson_groups:
             required:
@@ -939,14 +964,20 @@ sr:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         science-pd-ol-pt-5:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         sciencepd5:
           lessons:
             Welcome!:
               name: Welcome!
+            Wrap-Up:
+              name: Замотај-Умотај
         csp5-support:
           lesson_groups:
             required:
@@ -1712,6 +1743,9 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
+          lessons:
+            Debugging:
+              name: Отклањање грешака
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1970,6 +2004,14 @@ sr:
           lessons:
             Spelling Bee:
               name: Пчелица словарица
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Отклањање грешака
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Отклањање грешака
         csp5-virtual:
           lessons:
             While Loops:
@@ -2022,6 +2064,8 @@ sr:
           lesson_groups:
             lessonGroup-3:
               display_name: Променљиве
+            debugging:
+              display_name: Отклањање грешака
         csd3-2021:
           lessons:
             Variables:
@@ -2044,6 +2088,11 @@ sr:
             Functions with Parameters:
               key: Функције са параметрима
               name: Функције са параметрима
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Отклањање грешака
+              name: Отклањање грешака
         csp4-2021:
           lesson_groups:
             csp_variables:

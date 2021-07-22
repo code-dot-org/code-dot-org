@@ -342,6 +342,7 @@ fil:
     invite_sent: Imbitasyon napadala na
     added_teacher: "%{name} dinagdag ka bilang guro"
     registered: Ikaw ay nagrehistro para sa %{section_name}.
+    already_exists: Ikaw ay nakasali na sa seksyon na %{section_name}.
     error:
       signed_in: Maaring mag signout muna bago magpatuloy
       username_not_found: Ang username na %{username} ay hindi nakita
@@ -571,6 +572,7 @@ fil:
       na ito para manatiling updated sa progreso at mga proyekto ng anak mo. Magagamit
       mo rin ang email address na ito para mabawi ang password.
     parent_guardian_email_label: Email Magulang/Tagapangalaga
+    remove_parent_email_label: Alisin
     none: Wala
     only_one_parent_email_supported_warning: 'Tandaan: masusuportahan lang namin ang
       isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. '

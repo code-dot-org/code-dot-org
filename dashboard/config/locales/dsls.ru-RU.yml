@@ -6464,13 +6464,12 @@ ru-RU:
         - text: 'Ничего не произойдет.
 
 '
-          feedback: 'Неверно. '
-        - feedback: 'Неверно. '
+        - {}
         - correct: true
           feedback: 'Верно
 
 '
-        - feedback: 'Неверно. '
+        - {}
         questions:
         - text: 'Посмотри внимательно на приводимый ниже код. Что произойдет, когда
             ты нажмешь на "Выполнить"?
@@ -6585,13 +6584,12 @@ ru-RU:
         - text: 'Ничего не произойдет.
 
 '
-          feedback: 'Неверно. '
-        - feedback: 'Неверно. '
+        - {}
         - correct: true
           feedback: 'Верно
 
 '
-        - feedback: 'Неверно. '
+        - {}
         questions:
         - text: 'Посмотри внимательно на приводимый ниже код. Что произойдет, когда
             ты нажмешь на "Выполнить"?
@@ -6668,8 +6666,7 @@ ru-RU:
             но она доберется всего до 4 цветков.
 
 '
-        - text: " "
-          feedback: 'Неверно. Цикл for позволит пчеле собрать нужное количество нектара,
+        - feedback: 'Неверно. Цикл for позволит пчеле собрать нужное количество нектара,
             но она доберется всего до 4 цветков.
 
 '
@@ -6730,7 +6727,6 @@ ru-RU:
 '
       csf_be_a_super_digital_citizen_2021:
         content1: описание здесь
-        markdown: "\n"
       csf_password_power-up_2021:
         content1: описание здесь
       csf_putting_a_stop_to_online_meanness_2021:
@@ -6754,15 +6750,3 @@ ru-RU:
         questions:
         - text: Внимательно посмотри на этот код. Что, по-твоему, произойдет при запуске
             программы?
-      PrivatePersonalInformation-Unplugged_2021:
-        markdown: "\n"
-      SimonSays-Unplugged_2021:
-        markdown: "\n"
-      courseE_EOC_2021:
-        description: " "
-      courseE_EOC_examples_2021:
-        description: " "
-      express_EOC_2021:
-        description: " "
-      express_EOC_examples_2021:
-        description: " "

@@ -1184,6 +1184,10 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": boja
       aalab_layoutSprites:
         options:
           FORMAT:

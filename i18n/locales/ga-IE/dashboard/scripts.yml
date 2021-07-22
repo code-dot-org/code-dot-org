@@ -925,6 +925,8 @@ ga:
         gradeKinder:
           description_audience: Aois 5-18
           lessons:
+            Debugging:
+              name: Dífhabhtú
             Events:
               name: Teagmhais
             Events Unplugged:
@@ -947,6 +949,8 @@ ga:
         grade1:
           description_audience: Aois 5-18
           lessons:
+            Debugging:
+              name: Dífhabhtú
             Events:
               name: Teagmhais
             Events Unplugged:
@@ -1355,6 +1359,8 @@ ga:
               name: Réamhrá
             Sprites:
               name: Sprideanna
+            Input:
+              name: Ionchur
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -1611,6 +1617,8 @@ ga:
             content:
               display_name: Ábhar
         express-2017:
+          title: Luaschúrsa
+          assignment_family_title: Luaschúrsa
           lesson_groups:
             content:
               display_name: Ábhar
@@ -1961,6 +1969,8 @@ ga:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stiofán agus an Tionscadal Mór
         express-2018:
+          title: Luaschúrsa
+          assignment_family_title: Luaschúrsa
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Ríomhchlárú ar Ghrafpháipéar
@@ -2442,6 +2452,7 @@ ga:
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
           student_description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursef-2019:
+          title: Cúrsa F (2019)
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
           lesson_groups:
             ramp_up:
@@ -2491,6 +2502,7 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         coursed-2019:
+          title: Cúrsa D (2019)
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -2521,6 +2533,7 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         coursee-2019:
+          title: Cúrsa E (2019)
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
@@ -2556,6 +2569,7 @@ ga:
             Songwriting:
               name: Ceapadh Ceoil
         express-2019:
+          title: Luaschúrsa (2019)
           lesson_groups:
             csf_warmup:
               display_name: Réamhchleachtadh
@@ -2623,6 +2637,7 @@ ga:
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
           student_description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursec-2019:
+          title: Cúrsa C (2019)
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           lesson_groups:
             csf_digcit:
@@ -2649,6 +2664,7 @@ ga:
         gamelab:
           title: An tSaotharlann Cluichíochta
         coursea-2019:
+          title: Cúrsa A (2019)
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           lesson_groups:
             csf_digcit:
@@ -2665,6 +2681,7 @@ ga:
             Going Places Safely:
               name: Ag Taisteal Slán Sábháilte
         courseb-2019:
+          title: Cúrsa B (2019)
           description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí. Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
           lesson_groups:
             csf_digcit:
@@ -3105,6 +3122,8 @@ ga:
           lessons:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+            Debugging:
+              name: Dífhabhtú
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -3465,6 +3484,7 @@ ga:
             Sprites:
               name: Sprideanna
         coursea-2020:
+          title: Cúrsa A (2020)
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           lesson_groups:
             csf_digcit:
@@ -3481,6 +3501,7 @@ ga:
             'Programming: Happy Maps':
               name: Mapaí Meidhreacha
         courseb-2020:
+          title: Cúrsa B (2020)
           description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí. Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
           lesson_groups:
             csf_digcit:
@@ -3499,6 +3520,7 @@ ga:
             'Loops: Getting Loopy':
               name: Bí Lúbach
         coursec-2020:
+          title: Cúrsa C (2020)
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín, scéalta, agus cluichí.
           lesson_groups:
             csf_digcit:
@@ -3517,6 +3539,7 @@ ga:
             'Events: The Big Event':
               name: An Teagmhas Mór
         coursed-2020:
+          title: Cúrsa D (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -3547,6 +3570,7 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         coursee-2020:
+          title: Cúrsa E (2020)
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
@@ -3570,6 +3594,7 @@ ga:
             Digital Sharing:
               description_teacher: Tá an t-ábhar seo ar iasacht do Buntús na Ríomheolaíochta ó fhoireann Cóipcheart agus Cruthaitheacht.  Is é an aidhm atá leis ná cabhrú le daltaí tuiscint a fháil ar na dúshláin agus na buntáistí a bhaineann le meas a léiriú ar úinéireacht agus ar chóipcheart, go háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
         coursef-2020:
+          title: Cúrsa F (2020)
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
           lesson_groups:
             ramp_up:
@@ -3604,6 +3629,7 @@ ga:
             AI for Oceans:
               name: AI ar son an Aigéin
         express-2020:
+          title: Luaschúrsa (2020)
           lesson_groups:
             csf_warmup:
               display_name: Réamhchleachtadh
@@ -3681,6 +3707,8 @@ ga:
           lessons:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+            Debugging:
+              name: Dífhabhtú
             CS Principles Post-Course Survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp6-2020:
@@ -3718,6 +3746,10 @@ ga:
               name: Feidhmeanna a chruthú
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Dífhabhtú
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3875,6 +3907,8 @@ ga:
               display_name: Réamhrá
             lessonGroup-3:
               display_name: Athróga
+            debugging:
+              display_name: Dífhabhtú
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3977,6 +4011,9 @@ ga:
             Introduction to Design Mode:
               key: Buneolas ar an Mód Deartha
               name: Buneolas ar an Mód Deartha
+            Debugging:
+              key: Dífhabhtú
+              name: Dífhabhtú
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'

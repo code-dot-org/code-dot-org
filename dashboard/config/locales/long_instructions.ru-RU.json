@@ -2875,15 +2875,7 @@
         "ramp_artist_loops9_2021": "Реши эту головоломку, нарисовав квадрат со стороной в 200 точек.",
         "simconfig_2021": "# Изменение и предсказание\n\n Выбери одну из переменных, которые контролируют имитацию, чтобы вносить изменения и предсказывать как это изменит результат.\n\n После того, как ты запишешь свое предсказание, выполни имитацию 5 раз и запиши свои выводы. Было ли твое предсказание точным?",
         "simstarter_2021": "# Сбор данных\n\n Выполни эту имитацию 5 раз. Каждый раз с помощью руководства по занятию \"Сбор данных\" записывай следующие данные:\n\n– Сколько яблок собрал слон?\n– Сколько яблок собрал бегемот?\n– Сколько времени потребовалось для сбора всех яблок?",
-        "Course E: Artist Project_examples_2021": " ",
-        "Course E: Frozen Project_examples_2021": " ",
-        "CourseD_EOC_artist_example2021": " ",
-        "CourseD_EOC_dance_examples_2021": " ",
-        "CourseE_Project_SpriteLab_cupcake_examples_2021": " ",
-        "CourseE_Project_SpriteLab_examples_2021": " ",
-        "Dance Party 3_2021": "<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"green alien\"</title>\n      </block>\n    </value>\n  </block></xml>",
-        "courseD_bee_nestedLoops9_2021": "Приготовь весь мед.\n\n![](<>)",
-        "courseF_text_choice_color": "\n\n\n\n\n\n                                                                                                                                                     "
+        "courseD_bee_nestedLoops9_2021": "Приготовь весь мед.\n\n![](<>)"
       }
     }
   }

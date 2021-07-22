@@ -2,6 +2,9 @@
   "hr-HR": {
     "data": {
       "resources": {
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Dokumentacija za Lab likova"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Petlja Zabava"
         },
@@ -28,6 +31,9 @@
         },
         "implementation_guide/coursef/2021": {
           "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Dokumentacija za Lab likova"
         },
         "mimi-activity/courseb/2021": {
           "name": "Pomakni, pomakni"
@@ -191,14 +197,26 @@
         "pair_programming/express/2021": {
           "name": "Programiranje u paru"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Dokumentacija za Lab likova"
+        },
         "variables_video/express/2021": {
           "name": "Varijable"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programiranje u paru"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentacija za Lab likova"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Dokumentacija za Lab likova"
         }
       }
     }

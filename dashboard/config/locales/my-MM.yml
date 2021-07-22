@@ -29,6 +29,8 @@ my:
       email: email လိပ္စာ
       google_classroom: Google Classroom
       clever: Clever
+  follower:
+    already_exists: သင်%{section_name} တွင်ပါဝင်ပြီးသားဖြစ်ပါတယ်.
   crud:
     edit: ပြုပြင်သည်
     submit: ပေးပို့ပါ

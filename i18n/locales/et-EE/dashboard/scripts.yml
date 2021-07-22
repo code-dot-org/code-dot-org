@@ -950,6 +950,8 @@ et:
         gradeKinder:
           description_audience: Vanustele 5-18
           lessons:
+            Debugging:
+              name: Debugimine
             Events:
               name: Sündmused
             'Jigsaw: Learn to drag and drop':
@@ -968,6 +970,8 @@ et:
         grade1:
           description_audience: Vanustele 5-18
           lessons:
+            Debugging:
+              name: Debugimine
             Events:
               name: Sündmused
             'Jigsaw: Learn to drag and drop':
@@ -2529,6 +2533,9 @@ et:
               display_name: Sisu
             required:
               display_name: Ülevaade
+          lessons:
+            Debugging:
+              name: Debugimine
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2889,10 +2896,18 @@ et:
           lessons:
             Binary Numbers:
               name: Binaararvud
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Debugimine
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Loomisfunktsioonid
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Debugimine
         csp5-virtual:
           lessons:
             While Loops:
@@ -2983,6 +2998,8 @@ et:
               display_name: Sissejuhatus
             lessonGroup-3:
               display_name: Muutujad
+            debugging:
+              display_name: Debugimine
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3039,6 +3056,11 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Uuring
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Debugimine
+              name: Debugimine
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3183,6 +3205,8 @@ et:
             lesson-1:
               name: Tantsuõhtu
           lesson_groups:
+            csf_warmup:
+              display_name: Soojendus
             csf_loops:
               display_name: Tsüklid
             csf_conditionals:

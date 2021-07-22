@@ -288,6 +288,7 @@ sk:
             Variables:
               name: Premenné
         algebra:
+          title: Informatika v algebre
           lessons:
             'Calc: Defining Variables':
               name: Definovanie premenných a dosadzovania

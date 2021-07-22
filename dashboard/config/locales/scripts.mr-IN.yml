@@ -2,7 +2,11 @@
 mr:
   data:
     script:
+      category:
+        hoc_category_name: अवर ऑफ कोड
       name:
+        course1:
+          description_audience: वय वर्षे 4-6
         course2:
           lessons:
             'Artist: Debugging':
@@ -12,6 +16,7 @@ mr:
             Conditionals:
               name: कंडीशनल्स
         course3:
+          description_audience: वय वर्षे 8-18
           lessons:
             Artist:
               name: आर्टीस्ट
@@ -21,6 +26,8 @@ mr:
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
             'Artist: Patterns':
               name: 'आर्टीस्ट: पॅटर्न्स '
+            Computational Thinking:
+              name: कॉम्प्युटेशनल विचार
         playlab:
           description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
           description_short: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
@@ -90,7 +97,10 @@ mr:
           student_description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम
             तयार करण्यासाठी प्ले लॅब वापरा.
         20-hour:
+          description_audience: वय वर्षे 10-18
           lessons:
+            Computational Thinking:
+              name: कॉम्प्युटेशनल विचार
             Conditionals:
               name: कंडीशनल्स
         events:
@@ -143,6 +153,10 @@ mr:
           description_audience: वय वर्षे 6-13
         afterschool1:
           description_audience: वय वर्षे 7-13
+        Special Fun:
+          description_audience: वय वर्षे 10-18
+        SpecialSeries:
+          description_audience: वय वर्षे 10-18
         starwars:
           title: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (जावास्क्रिप्ट)'
           description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा
@@ -180,6 +194,16 @@ mr:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+        CSF_Secret_Sample:
+          description_audience: वय वर्षे 8-18
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: आढावा
         csp-facilitators:
           lessons:
             Introduction to Text Compression:
@@ -191,13 +215,20 @@ mr:
           lessons:
             Artist Functions:
               name: आर्टीस्ट फंक्शन्स
+        artistExemplar:
+          description_audience: वय वर्षे 8-18
         teachercon:
+          lesson_groups:
+            required:
+              display_name: आढावा
           lessons:
             Lesson 2,2:
               name: 'धडा  2.2: टेक्स्ट कॉम्प्रेशन'
         gradeKinder:
           description_audience: वय वर्षे 5-18
           lessons:
+            Debugging:
+              name: डीबगिंग
             Events:
               name: ईव्हेंट्स
         grade4:
@@ -208,6 +239,8 @@ mr:
         grade1:
           description_audience: वय वर्षे 5-18
           lessons:
+            Debugging:
+              name: डीबगिंग
             Events:
               name: ईव्हेंट्स
         grade5:
@@ -224,6 +257,10 @@ mr:
           lessons:
             'Artist: Nested Loops':
               name: 'आर्टीस्ट:नेस्टेड लूप्स '
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: आढावा
         csd3-2017:
           lessons:
             Conditionals:
@@ -239,14 +276,24 @@ mr:
             Nested Loops:
               name: नेस्टेड लूप्स
         csp-online-test:
+          lesson_groups:
+            required:
+              display_name: आढावा
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'धडा 1 - 2: बाईट्स, फाईलचे आकार आणि टेक्स्ट कॉम्प्रेशन  '
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: आढावा
         hoc-encryption:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
         csp2-support:
+          lesson_groups:
+            required:
+              display_name: आढावा
           lessons:
             'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
               name: 'धडा 1 - 2: बाईट्स, फाईलचे आकार आणि टेक्स्ट कॉम्प्रेशन  '
@@ -313,6 +360,14 @@ mr:
           lessons:
             Sports:
               name: क्रीडा
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: आढावा
         csf2harvey:
           lessons:
             Functions in Artist:
@@ -323,6 +378,9 @@ mr:
             आढावा (<https://studio.code.org/courses>) पेजला भेट द्या.**\n\nयुनिट 5
             शिकवण्याची तयारी करणाऱ्या CSP शिक्षकांसाठी व्यावसायिक अध्ययन अभ्यासक्रमासाठी
             ऑनलाईन पाठिंब्यांचा हा संच आहे. "
+          lesson_groups:
+            required:
+              display_name: आढावा
         coursee-ramp:
           lessons:
             Conditionals:
@@ -412,6 +470,54 @@ mr:
               name: आर्टीस्टमध्ये प्रोग्रॅमिंग
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: आढावा
         express-2017:
           lessons:
             Loops in Artist:
@@ -621,6 +727,78 @@ mr:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: आढावा
         frozen-2018:
           title: नवीन फ्रोझन संहिता
           lessons:
@@ -662,6 +840,7 @@ mr:
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या
             पुढे जा.
         coursef-2019:
+          title: अभ्यासक्रम F (2019)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
@@ -682,6 +861,7 @@ mr:
             Dance Party:
               name: डांस पार्टी
         coursed-2019:
+          title: अभ्यासक्रम D (2019)
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -695,6 +875,7 @@ mr:
             Dance Party:
               name: डांस पार्टी
         coursee-2019:
+          title: अभ्यासक्रम  E (2019)
           lesson_groups:
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
@@ -724,12 +905,17 @@ mr:
               name: आर्टीस्ट बायनरी
             Dance Party:
               name: डांस पार्टी
+        andrea-test:
+          lesson_groups:
+            required:
+              display_name: आढावा
         dance-extras-gallery:
           title: नाचत रहा
           description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या पुढे जा.
           student_description: प्रकल्पांच्या विस्तारीत कल्पनांसह पहिल्या तासाच्या
             पुढे जा.
         coursec-2019:
+          title: अभ्यासक्रम C (2019)
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -737,6 +923,7 @@ mr:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         coursea-2019:
+          title: अभ्यासक्रम A (2019)
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_events:
@@ -760,6 +947,8 @@ mr:
           lesson_groups:
             csp_conditionals:
               display_name: कंडीशनल्स
+            required:
+              display_name: आढावा
         csp2-2019:
           lessons:
             Text Compression:
@@ -768,6 +957,10 @@ mr:
           lessons:
             Simple Encryption:
               name: सुलभ एनक्रीप्शन
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
         time4csdemo:
           lessons:
             Programming in Artist:
@@ -804,14 +997,77 @@ mr:
           lesson_groups:
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp5-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: आढावा
         csd3-pilot:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
+          lessons:
+            Debugging:
+              name: डीबगिंग
         csl-vn:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: आढावा
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
         peru-2019:
           lessons:
             Loops in Artist:
@@ -820,6 +1076,10 @@ mr:
               name: नेस्टेड लूप्स
             Nested Loops Project in Frozen:
               name: फ्रोझनमध्ये नेस्टेड लूप्स प्रोजेक्ट
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
         dance-2019:
           description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या
             डान्स पार्टीचा कोड लिहा!
@@ -880,6 +1140,10 @@ mr:
           lessons:
             Conditionals:
               name: कंडीशनल्स
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: आढावा
         csp4-2020:
           lesson_groups:
             csp_conditionals:
@@ -889,6 +1153,7 @@ mr:
             Conditionals:
               name: कंडीशनल्स
         coursea-2020:
+          title: अभ्यासक्रम A (2020)
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
             csf_events:
@@ -898,10 +1163,12 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
         coursec-2020:
+          title: अभ्यासक्रम C (2020)
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
         coursed-2020:
+          title: अभ्यासक्रम D (2020)
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
@@ -913,6 +1180,7 @@ mr:
             Dance Party:
               name: डांस पार्टी
         coursee-2020:
+          title: अभ्यासक्रम  E (2020)
           lesson_groups:
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
@@ -920,6 +1188,7 @@ mr:
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
         coursef-2020:
+          title: अभ्यासक्रम F (2020)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
           lessons:
@@ -969,6 +1238,14 @@ mr:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: डीबगिंग
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: डीबगिंग
         csp5-virtual:
           lessons:
             Intro to App Lab:
@@ -1001,15 +1278,28 @@ mr:
           lessons:
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: डीबगिंग
         csd3-2021:
           lessons:
             Conditionals:
               key: कंडीशनल्स
               name: कंडीशनल्स
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: डीबगिंग
+              name: डीबगिंग
         csp4-2021:
           lesson_groups:
             csp_conditionals:
               display_name: कंडीशनल्स
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: मशीन लर्निंग
         coursea-2021:
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lesson_groups:
@@ -1090,6 +1380,8 @@ mr:
             lesson-1:
               name: डांस पार्टी
           lesson_groups:
+            csf_warmup:
+              display_name: वार्म अप
             csf_conditionals:
               display_name: कंडीशनल्स
             lessonGroup-9:

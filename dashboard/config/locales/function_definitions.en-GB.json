@@ -367,6 +367,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "do something"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "color"
+            }
           }
         },
         "courseC_artist_prog3": {
@@ -785,6 +790,11 @@
           },
           "do something": {
             "name": "do something"
+          },
+          "checker": {
+            "parameters": {
+              "color": "color"
+            }
           }
         },
         "courseF_artist_fwp2": {
@@ -793,6 +803,11 @@
           },
           "do something": {
             "name": "do something"
+          },
+          "checker": {
+            "parameters": {
+              "color": "color"
+            }
           }
         },
         "courseF_artist_fwp2_predict1": {
@@ -803,6 +818,11 @@
         "courseF_artist_fwp3": {
           "draw a square": {
             "name": "dibuja un cuadrado"
+          },
+          "filled square": {
+            "parameters": {
+              "color": "color"
+            }
           }
         },
         "courseF_artist_fwp7": {
@@ -849,6 +869,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "do something"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "color"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

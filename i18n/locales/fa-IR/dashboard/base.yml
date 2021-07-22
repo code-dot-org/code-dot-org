@@ -232,6 +232,7 @@ fa:
       about_contact: "تماس با ما"
       about_faqs: "سوال‌های متداول"
       learn: "یادگیری"
+      stats: "آمار"
       help_us: "به ما کمک کنید"
       teach: "آموزش"
       about: "درباره"
@@ -311,6 +312,7 @@ fa:
     delete_text_teacher_note: "لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش آموزهایتان را حدف نخواهدکرد."
     delete_confirm: 'آیا مطمئنید که میخواهید حسابتان را حذف کنید؟'
     update_email: "بروزرسانی"
+    remove_parent_email_label: "حذف کن"
     none: "هیچکدام"
   user_level:
     completed: 'انجام شد'
@@ -490,6 +492,7 @@ fa:
     unplugged_conditionals:
       title: "شرطی ها"
     widgets:
+      audience: "سنین 14+"
       cta: "یادبگیر چگونه"
   landing:
     report_bug: "گزارش اشکال"
@@ -658,4 +661,6 @@ fa:
         opt_in_no: 'نه'
   cookie_banner:
     accept: 'موافقم'
+  page_not_found_title: "صفحه پیدا نشد"
   copy: 'رونوشت‌'
+  confirm: 'تایید'

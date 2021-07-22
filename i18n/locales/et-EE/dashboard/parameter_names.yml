@@ -2,6 +2,7 @@ et:
   data:
     parameter_names:
       actor: tegelane
+      color: värv
       counter: loendur
       height: kõrgus
       honey: mesi

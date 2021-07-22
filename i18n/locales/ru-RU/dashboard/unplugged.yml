@@ -281,6 +281,8 @@ ru:
       BuildingAFoundation_2019:
         title: 'отсутствует перевод: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'отсутствует перевод: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: '"Мои циклические друзья-роботы"'
       Conditionals_2019:
         title: Условные команды
         desc: 'Чтобы узнать об условных операторах, студенты поиграют в карты и создадут правила, например: «Если я нарисовал красную карточку, я получаю очко» или «Если я нарисую черную карточку, вы получите очко».'

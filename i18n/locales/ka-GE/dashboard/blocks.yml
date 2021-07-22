@@ -762,6 +762,10 @@ ka:
         text: შემთხვევითი მდებარეობა
       Vector_vectorNorth:
         text: ჩრდილოეთი
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": ფერი
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -460,6 +460,7 @@ vi:
       example: Ví dụ
       example_with_number: Ví dụ giải pháp %{solution_number}
       submitted_on: 'Gửi lên ngày:'
+      last_updated: 'Cập nhật lần cuối:'
       unsubmit: Ngưng gửi
       worked_with: Làm việc với
       update_lock_settings: Cập Nhật khóa cài đặt tại đây.

@@ -252,6 +252,7 @@ km:
     invite_sent: បាន​ផ្ញើ​ការ​អញ្ជើញ
     added_teacher: "%{name} ត្រូវបាន​បន្ថែម​ជា​គ្រូ​របស់​អ្នក"
     registered: អ្នក​បាន​ចុះឈ្មោះ​សម្រាប់ %{section_name}
+    already_exists: អ្នកបានចូលរួមផ្នែក %{section_name} រួចហើយ។
     error:
       signed_in: សូម​ចាក​ចេញ​មុនពេល​ធ្វើ​បន្ត
       username_not_found: រក​មិន​ឃើញ​ឈ្មោះ​អ្នក​ប្រើ %{username} ទេ
@@ -392,6 +393,7 @@ km:
       example: ចម្លើយគំរូ
       example_with_number: ចម្លើយគំរូទី%{solution_number}
       submitted_on: ដាក់ចូលនៅៈ
+      last_updated: 'អភិវឌ្ឍន៍មុន:'
       unsubmit: មិនបានដាក់ចូល
       worked_with: ធ្វើកិច្ចការជាមួយ
       update_lock_settings: ធ្វើការកែរលម្អរ lock settingsនៅទីនេះ
@@ -422,6 +424,7 @@ km:
     confirm_secret_words: ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់
     update_email: កែលម្អរ
     parent_guardian_email_label: អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ
+    remove_parent_email_label: ដកចេញ
     none: គ្មាន
     encrypted: បានអុីនគ្រីប
   user_level:
@@ -516,6 +519,8 @@ km:
         ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
     unplugged_conditionals:
       title: លក្ខខណ្ឌ
+    widgets:
+      audience: អាយុ 14 ឆ្នាំឡើង
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!

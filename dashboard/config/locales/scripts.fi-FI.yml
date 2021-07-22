@@ -932,6 +932,10 @@ fi:
           lessons:
             Game Lab:
               name: Pelilabra
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Suunnittelutila
         CSF_Secret_Sample_Story:
           description_audience: 8-18+ vuotiaille
         MikeTest:
@@ -952,6 +956,8 @@ fi:
         gradeKinder:
           description_audience: 5+ -vuotiaille (lukutaitoisille)
           lessons:
+            Debugging:
+              name: Virheen etsintä
             Events:
               name: Tapahtumat
             'Jigsaw: Learn to drag and drop':
@@ -970,6 +976,8 @@ fi:
         grade1:
           description_audience: 5+ -vuotiaille (lukutaitoisille)
           lessons:
+            Debugging:
+              name: Virheen etsintä
             Events:
               name: Tapahtumat
             'Jigsaw: Learn to drag and drop':
@@ -2484,6 +2492,9 @@ fi:
           lesson_groups:
             required:
               display_name: Yleiskatsaus
+          lessons:
+            Debugging:
+              name: Virheen etsintä
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2837,10 +2848,18 @@ fi:
           lesson_groups:
             cspSurvey:
               display_name: Kysely
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Virheen etsintä
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Funktioiden luominen
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Virheen etsintä
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -2908,6 +2927,8 @@ fi:
               display_name: Johdanto
             lessonGroup-3:
               display_name: Muuttujat
+            debugging:
+              display_name: Virheen etsintä
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -2982,6 +3003,11 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: Kysely
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Virheen etsintä
+              name: Virheen etsintä
         csp4-2021:
           lesson_groups:
             csp_variables:

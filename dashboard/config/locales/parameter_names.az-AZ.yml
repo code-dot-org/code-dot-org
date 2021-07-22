@@ -4,6 +4,7 @@ az:
     parameter_names:
       "???": "???"
       actor: personaj
+      color: rəng
       counter: sayğac
       dir: istiqamət
       direction: istiqamət
@@ -21,3 +22,4 @@ az:
       size: ölçü
       speed: sürət
       theGuess: təxmini
+      width: enlik

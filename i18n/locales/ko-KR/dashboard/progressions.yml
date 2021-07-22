@@ -1,6 +1,7 @@
 ko:
   data:
     progressions:
+      '"If/Else" with the Bee': '"If/Else" 와 벌'
       Accelerometer Events: 가속도계 이벤트
       Adding Images: 이미지 추가
       Adding Screens: 스크린 추가
@@ -52,6 +53,7 @@ ko:
       Expanding Personal Website: 개인 웹 사이트 확장
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: 웹 연구소와 함께 실험 
+      Exploration: 탐구
       Exploring more CSS: CSS 추가 탐색
       Finish a Screen: 화면 완료하라
       Finish the Prototype: 프로토타입 완성하라
@@ -161,6 +163,7 @@ ko:
       Share Your App: 앱 공유하기
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
+      Skill Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
       Sprite Lab Project: 스프라이트 랩 프로젝트

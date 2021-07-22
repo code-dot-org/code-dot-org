@@ -618,6 +618,10 @@ sl:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": barva
       aalab_layoutSprites:
         options:
           FORMAT:

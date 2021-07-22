@@ -1312,6 +1312,7 @@ cs:
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů
   copy: Kopírovat
+  confirm: Potvrdit
   parent_email_banner:
     text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail
       a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"

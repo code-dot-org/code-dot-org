@@ -8,6 +8,9 @@
         "variable/coursef/2021": {
           "word": "Athróg"
         },
+        "input/coursef/2021": {
+          "word": "Ionchur"
+        },
         "machine_learning/coursef/2021": {
           "word": "Meaisínfhoghlaim"
         },
@@ -17,17 +20,26 @@
         "define/coursef/2021": {
           "word": "Sainmhínigh"
         },
+        "debugging/courseb/2021": {
+          "word": "Dífhabhtú"
+        },
         "drop/courseb/2021": {
           "word": "Titim"
         },
         "programming/courseb/2021": {
           "word": "Códáil"
         },
+        "debugging/coursea/2021": {
+          "word": "Dífhabhtú"
+        },
         "drop/coursea/2021": {
           "word": "Titim"
         },
         "programming/coursea/2021": {
           "word": "Códáil"
+        },
+        "debugging/coursec/2021": {
+          "word": "Dífhabhtú"
         },
         "sequencing/coursec/2021": {
           "word": "Seicheamhú"
@@ -38,11 +50,17 @@
         "binary/coursec/2021": {
           "word": "Dénártha"
         },
+        "debugging/coursed/2021": {
+          "word": "Dífhabhtú"
+        },
         "programming/coursed/2021": {
           "word": "Códáil"
         },
         "conditionals/coursed/2021": {
           "word": "Coinníollacha"
+        },
+        "debugging/express/2021": {
+          "word": "Dífhabhtú"
         },
         "sequencing/express/2021": {
           "word": "Seicheamhú"
@@ -67,6 +85,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Titim"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Dífhabhtú"
         },
         "programming/pre-express/2021": {
           "word": "Códáil"

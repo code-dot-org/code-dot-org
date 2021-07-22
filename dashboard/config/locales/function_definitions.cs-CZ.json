@@ -270,57 +270,90 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -1094,12 +1127,18 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1177,227 +1216,362 @@
         },
         "courseD_artist_binary1": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "kresli"
+            "name": "kresli",
+            "parameters": {
+              "binary": "binární"
+            }
           }
         },
         "courseD_autorun_binary2_2019": {

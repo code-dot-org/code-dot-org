@@ -889,6 +889,7 @@ uz-UZ:
     full-year computer science classes by preparing existing teaching staff to offer
     this new field. To register for professional development workshops, apply for
     a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
   dashboard_course_csins: Computer Science in Science
@@ -1316,6 +1317,7 @@ uz-UZ:
   express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Maktabgacha ekspress kurs (2020)
   express-2021_name: Ekspress Kurs (2020)
+  pre-express-2021_name: Maktabgacha ekspress kurs (2021)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: Tezlashtirilgan kurs
@@ -2515,6 +2517,8 @@ uz-UZ:
   footer_support: Qo‘llab-quvvatlash
   footer_terms: Shartlar
   ai_for_oceans: AI for Oceans
+  ai_for_oceans_lesson_plan: dars rejasi
+  how_ai_works: SI (AI) qanday ishlaydi
   ai_in_partnership_with: 'Hamkor:'
   ai_microsoft_thanks: Biz har bir bolaga 21-asrda informatika va muvaffaqiyatga erishish
     uchun zarur ko'nikmalarni o'rganish imkoniyatini berishini ta'minlash bo'yicha

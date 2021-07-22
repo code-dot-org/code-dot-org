@@ -6,6 +6,7 @@
   select_language: "Sila pilih bahasa anda"
   upgrade_ie_message: "Code.org selepas ini tidak lagi menyokong Internet Explorer 8, 9 dan 10. Sila naik taraf kepada pelayar terkini."
   upgrade_ie_link: "Ketahui lebih lanjut"
+  en: "Sains Komputer"
   computer_science_edweek: "Minggu Pendidikan Sains Komputer"
   csedweek_dates: "8-12 Disember 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">1 Jam Pengaturcaraan</a> akan datang. Dijemput semua guru-guru dan penganjur, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">rancang 1 Jam Pengaturcaraan anda</a>'
@@ -50,6 +51,12 @@
   congratulations: "Tahniah!"
   congratulations_on_completing_hoc: "Tahniah kerana telah menyiapkan satu Hour of Code"
   get_a_certificate_of_achievement: "Dapatkan sijil pencapaian"
+  third_party_gradelevel_kto8: "Gred K-8"
+  third_party_gradelevel_kto2: "Gred K-2"
+  third_party_gradelevel_2to8: "Gred 2-8 "
+  third_party_gradelevel_4to12: "Gred 4-12"
+  third_party_gradelevel_5to12: "Gred 5-12 "
+  third_party_gradelevel_6plus: "Gred 6+"
   enter_valid_email: "Sila masukkan alamat email yang sah"
   get_a_certificate_message: "Kami akan menghantar sijil dan maklumat mengenai cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
   get_a_certificate_message_after: "Klik pada perkataan sijil untuk muat turun atau cetak. Sekarang, teruskan dengan <a href='http://studio.code.org'>kursus-kursus lain</a>, atau lihat lebih pilihan untuk <a href='/learn/beyond'> Belajar lebih lagi melalui 1 Jam</a>."
@@ -93,6 +100,7 @@
   learn_next_level: "Teruskan ke tahap seterusnya"
   learn_online: "Cuba kursus-kursus lain secara online"
   learn_classes: "cari kelas tempatan"
+  hoc_is_here: '#SatuJamKod ada di sini - Jom tengok! @codeorg'
   just_did_hoc: 'Saya baru buat #SatuJamKod - Jom tengok! @codeorg'
   just_did_accelerated: "Saya baru sahaja menyelesaikan Kursus Dipercepatkan - lihat! @codeorg"
   learn_hoc: "Belajar Hour of Code"
@@ -121,8 +129,10 @@
   studiobar_donate_title: "Derma"
   studiobar_shop_title: "Kedai"
   homepage_hero_hoc_is_coming: "Jam Kod akan datang"
+  homepage_hero_hoc_is_here: "Minggu Pendidikan Sains Komputer"
   homepage_slot_text_hoc: "Satu Jam Kod"
   homepage_slot_text_frozen: "Frozen dengan Anna dan Elsa"
+  homepage_slot_text_course4: "Kursus 4"
   homepage_slot_text_shop: "Kedai"
   homepage_slot_text_flappy: "Kod Flappy"
   homepage_action_text_sign_up: "Mendaftar"
@@ -223,10 +233,15 @@
   video_title_anybody_can_learn: "Sesiapa Sahaja Boleh Belajar"
   video_title_steph_curry: "Jam Kod bersama Steph Curry"
   video_title_my_name_is_aracely: "Nama Saya ialah Aracely"
+  video_1min: "1 minit"
+  video_2min: "2 minit"
+  video_5min: "5 minit"
   no_internet: "Tidak mempunyai Internet?"
   download_offline: "Muat turun versi luar talian"
   are_you_teacher: "Adakah anda seorang guru?"
   volunteer_engineer_submission_field_name: "Nama"
+  volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/your_name"
+  volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
   volunteer_engineer_submission_field_description: "Keterangan"
   volunteer_engineer_submission_field_email: "Alamat e-mel"
   volunteer_engineer_submission_field_email_placeholder: "Alamat e-mel"
@@ -277,12 +292,14 @@
   dashboard_navigation_add_students: "Tambah Pelajar"
   dashboard_navigation_manage_students: "Mengurus Pelajar"
   dashboard_navigation_lesson_plans_resources: "Rancangan Pengajaran dan Sumber"
+  dashboard_navigation_view_stats: "Statistik"
   dashboard_navigation_section: 'Seksyen: %{section_name}'
   dashboard_navigation_student: 'Pelajar: %{student_name}'
   dashboard_progress_not_completed: "belum selesai"
   dashboard_sections_new_section: "Seksyen baru"
   dashboard_sections_jumbotron_instruction: "Hasilkan seksyen baru dan tambah pelajar-pelajar kepadanya. Seksyen membantu anda menguruskan pelajar-pelajar ke dalam kumpulan-kumpulan kecil supaya anda boleh menjejaki kemajuan mereka dan menguruskan akaun-akaun mereka."
   dashboard_sections_table_secret: "Jenis log masuk"
+  dashboard_sections_table_course: "Kursus"
   dashboard_sections_name: 'Nama seksyen'
   dashboard_sections_switch_section: 'Tukar seksyen:'
   dashboard_students_add_multiple: 'Taip atau salin nama pelajar anda, satu nama setiap baris:'
@@ -290,7 +307,9 @@
   dashboard_students_progress: "Kemajuan"
   dashboard_students_male: "Lelaki"
   dashboard_students_female: "Perempuan"
+  dashboard_students_secret_picture_title: "Gambar rahsia"
   dashboard_students_secret_picture: "Gambar rahsia"
+  dashboard_students_secret_word_title: "Perkataan rahsia"
   dashboard_students_secret_word: "Perkataan rahsia"
   dashboard_students_join_link: "Beritahu kepada pelajar anda untuk buka akaun mereka sendiri dan sertai seksyen pada"
   dashboard_students_print_page: "Cetak halaman ini"
@@ -298,15 +317,19 @@
   dashboard_course1: 'Kursus 1:'
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
+  dashboard_course4: 'Kursus 4: '
   dashboard_pre-express: 'Kursus Ekspres Prapembaca:'
+  dashboard_overview: "Gambaran Keseluruhan"
   dashboard_sequence: "Urutan"
   dashboard_framework: "Rangka kerja"
   dashboard_standards: "Piawaian"
   dashboard_implementation_guide: "Panduan pelaksanaan"
   dashboard_glossary: "Glosari"
   dashboard_classroom_strategies: "Strategi bilik darjah untuk guru-guru"
+  dashboard_debugging: 'Penyahpepijatan:'
   dashboard_student_worksheet: "lembaran kerja pelajar"
   dashboard_teacher_worksheet: "lembaran kerja guru"
+  dashboard_curriculum_ecs: 'Meneroka Sains Komputer:'
   dashboard_grade_k: "K"
   dashboard_grade_other: "Lain-lain"
   dashboard_login_word: "Perkataan"
@@ -333,6 +356,7 @@
   previous: "Sebelumnya"
   next: "Seterusnya"
   frozen_name: "Kod dengan Anna dan Elsa"
+  starwars_name: 'Star Wars: Membina Galaksi dengan Kod'
   codeorg_name: "Pagar Sesat Klasik"
   codeintl_name: "Pagar Sesat Klasik"
   flappy_name: "Buat permainan Flappy"
@@ -344,6 +368,7 @@
   course1_name: "Kursus 1"
   course2_name: "Kursus 2"
   course3_name: "Kursus 3"
+  course4_name: "Kursus 4"
   coursea-draft_name: Kursus A
   coursea_name: "Kursus A"
   courseb-draft_name: Kursus B
@@ -388,7 +413,9 @@
   pre-express-2018_name: Kursus Ekspres Prapembaca (2018)
   express-2019_name: Kursus Dipercepatkan (2019)
   pre-express-2019_name: Kursus Ekspres Prapembaca (2019)
+  express-2020_name: Kursus Dipercepatkan (2020)
   pre-express-2020_name: Kursus Ekspres Prapembaca (2020)
+  pre-express-2021_name: Kursus Ekspres Prapembaca (2021)
   accelerated_name: "Kursus Dipercepatkan"
   pre-express_name: Kursus Ekspres Prapembaca
   20-hour_name: Kursus Dipercepatkan
@@ -439,12 +466,53 @@
   infinity_gradelevel: "Peringkat umur 4-104 tahun"
   artist_gradelevel: "Umur 8 tahun dan ke atas"
   monstercoding_gradelevel: "Umur 5-13 tahun"
+  allcancode_gradelevel: "Umur 5-10 tahun"
+  csfirst_gradelevel: "Peringkat umur 9-14 tahun"
   boxisland_gradelevel: "Sekolah Rendah"
+  codesters_gradelevel: "Umur 12-14 tahun"
+  texasinstruments_gradelevel: "Umur 13-16 tahun"
+  teacherled_gradelevel: "Umur 5 keatas"
+  course1_gradelevel: "Peringkat umur 4-6 tahun"
+  course2_gradelevel: "Peringkat umur 6-18 tahun"
+  course3_gradelevel: "Umur 8-18 tahun"
+  course4_gradelevel: "Umur 10-18 tahun"
+  coursea_gradelevel: "Peringkat umur 4-7 tahun"
+  courseb_gradelevel: "Umur 5-8 tahun"
+  coursec_gradelevel: "Umur 6-10 tahun"
+  coursed_gradelevel: "Peringkat umur 7-11 tahun"
   coursee_gradelevel: "Umur 8-12 tahun"
+  coursef_gradelevel: "Umur 9-13 tahun"
+  coursea-2017_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2017_gradelevel: Umur 5-8 tahun
+  coursec-2017_gradelevel: Umur 6-10 tahun
+  coursed-2017_gradelevel: Peringkat umur 7-11 tahun
   coursee-2017_gradelevel: Umur 8-12 tahun
+  coursef-2017_gradelevel: Umur 9-13 tahun
+  coursea-2018_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2018_gradelevel: Umur 5-8 tahun
+  coursec-2018_gradelevel: Umur 6-10 tahun
+  coursed-2018_gradelevel: Peringkat umur 7-11 tahun
   coursee-2018_gradelevel: Umur 8-12 tahun
+  coursef-2018_gradelevel: Umur 9-13 tahun
+  coursea-2019_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2019_gradelevel: Umur 5-8 tahun
+  coursec-2019_gradelevel: Umur 6-10 tahun
+  coursed-2019_gradelevel: Peringkat umur 7-11 tahun
   coursee-2019_gradelevel: Umur 8-12 tahun
+  coursef-2019_gradelevel: Umur 9-13 tahun
+  coursea-2020_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2020_gradelevel: Umur 5-8 tahun
+  coursec-2020_gradelevel: Umur 6-10 tahun
+  coursed-2020_gradelevel: Peringkat umur 7-11 tahun
   coursee-2020_gradelevel: Umur 8-12 tahun
+  coursef-2020_gradelevel: Umur 9-13 tahun
+  accelerated_gradelevel: "Umur 10-18 tahun"
+  thinkersmithspanish_platformtext: "Nirplag"
+  thinkersmith_platformtext: "Nirplag"
+  condcards_platformtext: "Nirplag"
+  thinkersmith2_platformtext: "Nirplag"
+  kodableunplugged_platformtext: "Nirplag"
+  projguts_platformtext: "Nirplag"
   frozen_shortdescription: "Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais."
   starwars_shortdescription: "Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh."
   playlab_shortdescription: "Cipta cerita atau buat permainan dengan Makmal Mainan!"
@@ -486,6 +554,7 @@
   coursed-2021_shortdescription_congrats: Pelajar membangunkan pemahaman mereka mengenai gelung, bersyarat dan peristiwa. Di luar pengekodan, pelajar mempelajari tentang kewarganegaraan digital.
   coursee-2021_shortdescription_congrats: Mulakan pengekodan dengan algoritma, gelung, bersyarat dan peristiwa dan kemudian anda akan bergerak kepada fungsi. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga anda.
   coursef-2021_shortdescription_congrats: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan. Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak yang boleh anda kongsikan dengan rakan dan keluarga.
+  hourofcode_longdescription: "Menulis atur cara komputer yang pertama"
   frozen_longdescription: "Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!"
   starwars_longdescription: "Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh."
   playlab_longdescription: "Cipta cerita atau buat permainan dengan Makmal Mainan! Buat haiwan, lanun, zombi, ninja dan banyak lagi watak yang bergerak, mengeluarkan bunyi, mendapatkan mata dan malah melontarkan bola api!"
@@ -508,7 +577,10 @@
   codehs_beyond_gradelevel: "Sekolah Menengah"
   kodu_beyond_gradelevel: "Umur 8 keatas"
   cargobot_beyond_gradelevel: "Umur 8 keatas"
+  kidsruby_beyond_gradelevel: "Umur 12 keatas"
+  w3schools_beyond_gradelevel: "Umur 12 keatas"
   codeavengers_beyond_gradelevel: "Sekolah Menengah +"
+  mozilla_beyond_gradelevel: "Umur 12 keatas"
   codecombat_beyond_gradelevel: "Sekolah Menengah +"
   lego_beyond_gradelevel: "Sekolah Menengah +"
   finch_beyond_gradelevel: "Umur 8 keatas"
@@ -520,6 +592,7 @@
   header_course_catalog: "Katalog Kursus"
   header_project_gallery: "Projek"
   header_educate_hoc: "Hour of Code"
+  header_stats: "Statistik"
   header_about: "Tentang"
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: "Laporkan masalah"
@@ -562,6 +635,9 @@
   hoc2018_mc_educators_box4_button: "Terokai sumber"
   hoc2018_mc_watch_videos: "Sebelum anda memulakan, sila tonton satu daripada video yang memberikan inspirasi ini"
   hoc2018_mc_videos_more: "Lebih banyak video yang memberikan inspirasi <a href='%{inspiring_videos_playlist}'></a> menampilkan model peranan dan selebriti"
+  hoc2018_mc_video_1min: "1 minit"
+  hoc2018_mc_video_2min: "2 minit"
+  hoc2018_mc_video_5min: "5 minit"
   hoc2018_mc_video_title_steph_curry: "Jam Kod bersama Steph Curry"
   hoc2018_mc_video_title_sports: "Berikan galakan kepada diri anda. Sesiapa sahaja boleh belajar."
   hoc2018_mc_video_title_cs_is_everything: "Sains Komputer Mengubah Segalanya"
@@ -575,6 +651,7 @@
   hoc2018_mc_homepage_try_it: "Selamat mencuba"
   hoc2018_mc_back_journey: "Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod."
   hoc2018_mc_teacher_guide: "Lihat panduan guru"
+  hoc2018_mc_short_description_shorter: "Gunakan kreativiti dan kemahiran menyelesaikan masalah anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod."
   hoc2018_dance_party_main_heading: "Majlis Tari-Menari"
   hoc2018_dance_party_subheading: "Bantu menterjemahkan Majlis Tari-Menari"
   hoc2018_dance_party_box_title: "Majlis Tari-Menari"

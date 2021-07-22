@@ -14,11 +14,26 @@
         "define/coursef/2021": {
           "word": "Përcakto"
         },
+        "debugging/courseb/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursea/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursec/2021": {
+          "word": "Rregullimi"
+        },
         "binary/coursec/2021": {
           "word": "Binare"
         },
+        "debugging/coursed/2021": {
+          "word": "Rregullimi"
+        },
         "conditionals/coursed/2021": {
           "word": "Kushtet"
+        },
+        "debugging/express/2021": {
+          "word": "Rregullimi"
         },
         "behavior/express/2021": {
           "word": "Sjellja"
@@ -34,6 +49,9 @@
         },
         "define/express/2021": {
           "word": "Përcakto"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Rregullimi"
         },
         "behavior/coursee/2021": {
           "word": "Sjellja"

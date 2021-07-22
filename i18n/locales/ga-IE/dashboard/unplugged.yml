@@ -149,6 +149,8 @@ ga:
       courseF_unplugged_powerOfWords:
         title: Gníomhaíocht Dhíphlugáilte
         desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
+      deeper learning description:
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.

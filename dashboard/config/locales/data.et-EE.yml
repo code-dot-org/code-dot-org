@@ -602,6 +602,8 @@ et:
         CSF_collector_repeat_loops: Korruta tsükleid
         CSF_collector_text_blocks: 'CS alused: Koguja'
         CSF_create_functions: Koosta funktsioone
+        CSF_debugging_k1_blocks: Debugimine
+        CSF_debugging_text_blocks: Debugimine
         CSF_EF_cs_matters: Arvutiteadus on oluline
         CSF_maze_intro_k1_blocks: Sissejuhatus Code Studiosse
         CSF_maze_intro_text_blocks: Sissejuhatus Code Studiosse
@@ -711,6 +713,7 @@ et:
         hoc_dance_properties: Tantsuõhtu - omadused
         csd_pair_programming: Paarisprogrammeerimine
         csd_applab_parameters: Parameetritega funktsioonid
+        csd_debugging: Debugimine
         hoc_dance_events_2019: Tantsuõhtu - sündmused
         hoc_dance_properties_2019: Tantsuõhtu - omadused
         playlab_2021: Play Lab – sissejuhatus

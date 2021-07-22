@@ -446,11 +446,23 @@ is:
         title: Boðhlaupsforritun
       courseB_unplugged_MRF_2019:
         title: Vinir mínir vélmennin
+      BuildingAFoundation_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Skilyrði
         desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa
           til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart
           spil, færð þú stig."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Forritun rúðublaða
         desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum
@@ -467,6 +479,15 @@ is:
           tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
           með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
           upplýsingar (svo sem myndir og liti) með tvíundarsniði.
+      SongwritingParameters_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.Internet_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'þýðingu vantar: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'þýðingu vantar: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Lykkjulæti
         desc: Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)

@@ -338,6 +338,7 @@ fil:
             Variables:
               name: Mga variable
         algebra:
+          title: Computer Science sa Algebra
           description: Alamin ang Functional na Pag-Programa sa pamamagitan ng Algebra.
           description_short: Alamin ang Functional na Pag-Programa sa pamamagitan
             ng Algebra.
@@ -4690,6 +4691,8 @@ fil:
               name: 'Mga Loops: Masayang mga Loops'
             Loops in Collector:
               name: Mga Loops sa Collector
+            Loops in Artist:
+              name: Mga Loop sa Artist
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
             Events in Play Lab:
@@ -4722,6 +4725,8 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Collector:
               name: Mga Loops sa Collector
+            Loops in Artist:
+              name: Mga Loop sa Artist
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
             Events in Play Lab:
@@ -7005,6 +7010,7 @@ fil:
                 sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta
                 ng mga kayamanan sa Code.org.
             Loops in Artist:
+              name: Mga Loop sa Artist
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
                 gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
                 pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
@@ -7057,6 +7063,8 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Collector:
               name: Mga Loops sa Collector
+            Loops in Artist:
+              name: Mga Loop sa Artist
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
             Events in Play Lab:
@@ -7108,6 +7116,8 @@ fil:
               name: 'Digital na Pagkamamamayan: Screen Out the Mean'
             Binary Bracelets:
               name: 'Higit pa sa Pag-Program: Binary Bracelets'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga
@@ -7558,6 +7568,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -7853,6 +7865,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -8311,6 +8325,8 @@ fil:
               name: Introduksyon sa Pag-Debug
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops Project in Artist:
               name: Mga Naka-Nest na Proyekto sa Artist
             Internet:
@@ -8429,6 +8445,8 @@ fil:
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
             Loops in Collector:
               name: Mga Loops sa Collector
+            Loops in Artist:
+              name: Mga Loop sa Artist
             'Events: The Big Event':
               name: 'Mga Pangyayari: Ang Malaking Kaganapan'
             Events in Play Lab:
@@ -8605,6 +8623,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops:
               name: Mga Loops na naka-nest
             Nested Loops with Frozen:
@@ -8690,6 +8710,8 @@ fil:
               name: Artist na Binary
             Building a Foundation:
               name: Gumawa ng Foundation
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee:
               name: Mga Naka-Nest na mga Loop sa Bee
         csp3-a:
@@ -8723,6 +8745,8 @@ fil:
               name: Pagde-debug sa Kolektor
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops Project in Frozen:
               name: Naka-Nest na Mga Loop na Proyekto sa Frozen
             'How it Works: The Internet':
@@ -8792,6 +8816,8 @@ fil:
         new-stages-sept-2017:
           title: Bagong mga Yugto para sa 9/17
           lessons:
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Sequences with Scrat:
               name: Pagsunod-sunod kasama ang Scrat
             Testing Template:
@@ -8818,6 +8844,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -8876,6 +8904,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -9315,6 +9345,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops:
               name: Mga Loops na naka-nest
             Nested Loops with Frozen:
@@ -9374,6 +9406,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -12638,6 +12672,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -12963,6 +12999,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops:
               name: Mga Loops na naka-nest
             Nested Loops with Frozen:
@@ -13402,6 +13440,8 @@ fil:
               name: 'Mga Loops: Pagiging Loopy'
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Loops in Harvester:
               name: Mga Loops sa Harvester
             'Events: The Big Event':
@@ -13459,6 +13499,7 @@ fil:
             Going Places Safely:
               name: Matiwasay na pagpunta sa mga lugar
             Loops in Artist:
+              name: Mga Loop sa Artist
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong
                 gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng
                 pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin,
@@ -15351,6 +15392,8 @@ fil:
               name: Pag-program sa Artist
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee/Zombie:
               name: Naka-Nest na mga Loops sa Bee/Zombie
             Nested Loops with Frozen:
@@ -16436,6 +16479,8 @@ fil:
               name: Pagde-debug sa Kolektor
             'Loops: My Loopy Robotic Friends':
               name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops:
               name: Mga Loops na naka-nest
             Nested Loops Project in Frozen:
@@ -18031,6 +18076,8 @@ fil:
               name: Pag-program sa Artist
             Loops with Rey and BB-8:
               name: Mga Loops kasama sina Rey at BB-8
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Nested Loops in Bee:
               name: Mga Naka-Nest na mga Loop sa Bee
             Nested Loops in Frozen:
@@ -18104,6 +18151,8 @@ fil:
                 kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
                 ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
                 ng kanilang sariling mga larawan gamit ang mga loop.
+            Loops in Artist:
+              name: Mga Loop sa Artist
             Tell a Story in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay
                 magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari
@@ -19159,6 +19208,8 @@ fil:
               name: Mga Loops sa Harvester
             Loops in Collector:
               key: Mga Loops sa Collector
+            Loops in Artist:
+              key: Mga Loop sa Artist
             'Events: The Big Event':
               key: 'Mga Pangyayari: Ang Malaking Kaganapan'
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
@@ -19268,6 +19319,8 @@ fil:
             Dance Party:
               key: Dance Party
               name: Dance Party
+            Loops in Artist:
+              key: Mga Loop sa Artist
             Nested Loops in Bee:
               key: Mga Naka-Nest na mga Loop sa Bee
               name: Naka-nest na mga Loops sa Maze

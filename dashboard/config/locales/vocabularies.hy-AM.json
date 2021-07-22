@@ -11,11 +11,20 @@
         "define/coursef/2021": {
           "word": "Սահմանել"
         },
+        "debugging/courseb/2021": {
+          "word": "Debugging"
+        },
         "programming/courseb/2021": {
           "word": "Programming"
         },
+        "debugging/coursea/2021": {
+          "word": "Debugging"
+        },
         "programming/coursea/2021": {
           "word": "Programming"
+        },
+        "debugging/coursec/2021": {
+          "word": "Debugging"
         },
         "programming/coursec/2021": {
           "word": "Programming"
@@ -23,11 +32,17 @@
         "binary/coursec/2021": {
           "word": "երկուական"
         },
+        "debugging/coursed/2021": {
+          "word": "Debugging"
+        },
         "programming/coursed/2021": {
           "word": "Programming"
         },
         "conditionals/coursed/2021": {
           "word": "conditionals"
+        },
+        "debugging/express/2021": {
+          "word": "Debugging"
         },
         "programming/express/2021": {
           "word": "Programming"
@@ -43,6 +58,9 @@
         },
         "define/express/2021": {
           "word": "Սահմանել"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugging"
         },
         "programming/pre-express/2021": {
           "word": "Programming"

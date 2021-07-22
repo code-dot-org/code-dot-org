@@ -34,7 +34,8 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
         },
         "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Kua wini koe!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kua wini koe!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Tēnā koe!"
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
@@ -228,6 +229,9 @@
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Kua wini koe!"
+        },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Tēnā koe!"
         }
       }
     }

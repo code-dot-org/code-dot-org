@@ -3,6 +3,7 @@ mr:
   data:
     game:
       name:
+        Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
         Custom: आर्टीस्ट
     level:
@@ -55,6 +56,7 @@ mr:
     video:
       name:
         artist_intro: आर्टीस्ट प्रस्तावना 
+        Unplug2: कॉम्प्युटेशनल विचार  
         Unplug6: कंडीशनल्स 
         C1_artist_intro: आर्टीस्ट प्रस्तावना 
         C2_artist_intro: आर्टीस्ट प्रस्तावना 
@@ -65,11 +67,14 @@ mr:
         C3_artist_functions: आर्टीस्ट फंक्शन्स
         C3_artist_nested_loops: नेस्टेड लूप्स
         C3_bee_nested_loops: नेस्टेड लूप्स
+        C3_computational_thinking: कॉम्प्युटेशनल विचार  
         C4_variables_artist: व्हेरीएबल्स - आर्टीस्ट
         C4_math_artist: गणित वापरून आर्टीस्टचे प्रोग्रॅमिंग करणे
         C4_conditionals: कंडीशनल्स 
         CSF_a_b_artist_loops: आर्टीस्टमध्ये लूप्स
         CSF_artist_angles: आर्टीस्टमध्ये कोन
+        CSF_debugging_k1_blocks: डीबगिंग
+        CSF_debugging_text_blocks: डीबगिंग
         frozen_intro: अवर ऑफ कोड प्रस्तावना
         frozen_loops: लूप्सची ओळख
         frozen_functions: फंक्शन्सची ओळख
@@ -103,7 +108,18 @@ mr:
         hoc_dance_events: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties: नृत्य पार्टी - मालमत्ता
         hoc_dance_congrats: डांस पार्टी - पार्टी करत राहा!
+        csd_debugging: डीबगिंग
+        oceans_machine_learning: मशीन लर्निंग
         hoc_dance_congrats_2019: डांस पार्टी - पार्टी करत राहा!
         hoc_dance_warmup_2019: डांस पार्टी - वार्म अप
         hoc_dance_events_2019: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties_2019: नृत्य पार्टी - मालमत्ता
+    callout:
+      text:
+        run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा
+        craft_run_button_callout: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा
+        craft_callout_preplaced: तुम्हाला सुरुवात करून देण्यासाठी आम्ही येथे काही ब्लॉक्स ठेवले आहेत
+        craft_inside_repeat: येथे ब्लॉक्स घालून कृतींची पुनरावृत्ती करा
+        craft_callout_preplaced_house: हा कोड तुमचे घर बांधायला सुरुवात करेल. तुम्ही ते पूर्ण करू शकता का?
+        craft_what_is_iron: हे लोखंड खणून काढा!
+        craft_callout_moveforward: हा कोड लाव्हा तपासेल, तुम्ही पुढे जाण्यासाठी एक कमांड जोडू शकता का?

@@ -11,11 +11,26 @@
         "define/coursef/2021": {
           "word": "Definēt"
         },
+        "debugging/courseb/2021": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/coursea/2021": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/coursec/2021": {
+          "word": "Atkļūdošana"
+        },
         "binary/coursec/2021": {
           "word": "Binārie"
         },
+        "debugging/coursed/2021": {
+          "word": "Atkļūdošana"
+        },
         "conditionals/coursed/2021": {
           "word": "Sazarojumi"
+        },
+        "debugging/express/2021": {
+          "word": "Atkļūdošana"
         },
         "conditionals/express/2021": {
           "word": "Sazarojumi"
@@ -28,6 +43,9 @@
         },
         "define/express/2021": {
           "word": "Definēt"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Atkļūdošana"
         },
         "function/coursee/2021": {
           "word": "Funkcija"

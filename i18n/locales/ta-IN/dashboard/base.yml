@@ -61,6 +61,7 @@ ta:
     forgot_password: 'உங்கள் கடவுச்சொல் மறந்துவிட்டதா?'
   signup_form:
     age: 'வயது'
+    user_type_teacher: "ஆசிரியர்"
     user_type_student: "மாணவர்"
     field_is_required: "தேவைப்படுகிறது"
     email_preference_yes: "ஆம்"
@@ -107,6 +108,7 @@ ta:
       help_support: "உதவி மற்றும் ஆதரவு"
       report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
       educate_hoc: "நிரல்வரி நேரம்"
+      stats: "புள்ளிவிவரங்கள்"
       about: "பற்றி"
       legal_privacy: "தனியுரிமை கொள்கை"
       legal_tos: "சேவையின் விதிமுறைகள்"
@@ -147,6 +149,7 @@ ta:
     trynow: 'இப்பொழுது முயற்சிக்கவும்'
   user_type:
     student: 'மாணவர்'
+    teacher: 'ஆசிரியர்'
   footer:
     copyright: 'காப்புரிமை'
     more: 'அதிகம்'
@@ -205,6 +208,8 @@ ta:
     unplugged_conditionals:
       title: "நிபந்தனைகள்"
       body: "சீட்டுக்கட்டுகளைப் பயன்படுத்தி இந்த “பிரிக்கப்படாத” செயல்பாட்டில் வழிமுறைகள் மற்றும் நிபந்தனை அறிக்கைகளைப் பற்றி அறிக."
+    widgets:
+      audience: "வயது 14+"
   landing:
     help_support: "உதவி மற்றும் ஆதரவு"
   dialog:
@@ -245,6 +250,7 @@ ta:
         math: 'கணிதம்'
       workshop_course:
         csf_express: 'CS அடிப்படைகள்(Pre-Express or Express)'
+        not_applicable: "பொருந்தாது"
       email_opt_in:
         opt_in_yes: 'ஆம்'
         opt_in_no: 'இல்லை'
@@ -259,6 +265,7 @@ ta:
   cookie_banner:
     accept: 'நான் ஒப்புக்கொள்கிறேன்'
   copy: 'நகலெடு'
+  confirm: 'உறுதிசெய்'
   parent_email_banner:
     text: "** நீங்கள் ஒரு பெற்றோர் அல்லது பாதுகாவலரா? ** உங்கள் குழந்தையின் முன்னேற்றம் மற்றும் திட்டங்களைப் பற்றி புதுப்பிக்க உங்கள் கணக்கில் இந்த மின்னஞ்சலை இணைக்கவும்!"
     link_your_email: "உங்கள் மின்னஞ்சலை இணைக்கவும்"

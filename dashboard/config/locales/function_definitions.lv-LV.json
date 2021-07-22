@@ -272,57 +272,90 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -1066,12 +1099,18 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1085,6 +1124,11 @@
           },
           "do something": {
             "name": "kaut ko"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "krāsa"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1141,227 +1185,362 @@
         },
         "courseD_artist_binary1": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "zīmēt"
+            "name": "zīmēt",
+            "parameters": {
+              "binary": "binārie"
+            }
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -1914,7 +2093,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "izmērs"
+              "size": "izmērs",
+              "color": "krāsa"
             }
           },
           "do something": {
@@ -1940,7 +2120,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "izmērs"
+              "size": "izmērs",
+              "color": "krāsa"
             }
           },
           "do something": {
@@ -1979,7 +2160,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "izmērs"
+              "size": "izmērs",
+              "color": "krāsa"
             }
           },
           "black outline": {
@@ -2086,6 +2268,11 @@
           },
           "do something": {
             "name": "kaut ko"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "krāsa"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {

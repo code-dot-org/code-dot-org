@@ -44,6 +44,7 @@ mr:
       project_gallery: "प्रकल्प"
       help_support: "सहाय्य आणि मदत"
       report_bug: "समस्या रिपोर्ट करा"
+      educate_hoc: "अवर ऑफ कोड"
       about: "या बद्दल"
       legal_privacy: "गोपनीयता धोरण"
       legal_tos: "सेवेच्या अटी"
@@ -131,6 +132,8 @@ mr:
     unplugged_conditionals:
       title: "कंडीशनल्स "
       body: "पत्त्यांचा कॅट वापरून या \"अनप्लग्ड\" कृतीद्वारे अल्गोरीदम्स आणि कंडीशनल स्टेटमेंट्बद्दल शिका."
+    widgets:
+      audience: "वय वर्षे 14+"
   landing:
     help_support: "सहाय्य आणि मदत"
   dialog:
@@ -154,8 +157,11 @@ mr:
   view_teacher_guide: 'शिक्षक मार्गदर्शक पहा'
   pd:
     form_entries:
+      subjects:
+        cs: 'संगणक विज्ञान'
       workshop_course:
         csf_express: 'संगणक शास्त्र मूलभूत गोष्टी (एक्सप्रेस-पूर्व किंवा एक्सप्रेस)'
+        not_applicable: "लागू नाही"
       email_opt_in:
         opt_in_yes: 'होय'
         opt_in_no: 'नाही'

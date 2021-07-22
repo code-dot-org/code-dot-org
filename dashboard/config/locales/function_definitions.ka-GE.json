@@ -208,57 +208,90 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -1061,12 +1094,18 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "course4_artist_concept_challenge2": {
@@ -1084,7 +1123,10 @@
         },
         "course4_artist_fwp_challenge1": {
           "draw background": {
-            "name": "ფონის დახატვა"
+            "name": "ფონის დახატვა",
+            "parameters": {
+              "color": "ფერი"
+            }
           },
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა"
@@ -1190,227 +1232,362 @@
         },
         "courseD_artist_binary1": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "დახატვა"
+            "name": "დახატვა",
+            "parameters": {
+              "binary": "ორობითი"
+            }
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2398,7 +2575,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ზომა"
+              "size": "ზომა",
+              "color": "ფერი"
             }
           },
           "do something": {
@@ -2424,7 +2602,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "ზომა"
+              "size": "ზომა",
+              "color": "ფერი"
             }
           },
           "do something": {
@@ -2464,7 +2643,8 @@
           "filled square": {
             "name": "შევსებული კვადრატი",
             "parameters": {
-              "size": "ზომა"
+              "size": "ზომა",
+              "color": "ფერი"
             }
           },
           "black outline": {
@@ -2563,7 +2743,10 @@
         },
         "courseF_artist_fwp_challenge1": {
           "draw background": {
-            "name": "ფონის დახატვა"
+            "name": "ფონის დახატვა",
+            "parameters": {
+              "color": "ფერი"
+            }
           },
           "draw a polygon": {
             "name": "მრავალკუთხედის დახატვა"

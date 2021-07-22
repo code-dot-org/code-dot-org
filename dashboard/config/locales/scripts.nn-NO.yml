@@ -328,6 +328,7 @@ nn:
           student_description: Eit utval av tema om test om det er brukbart for kurs
             4.
         algebra:
+          title: Datavitskap i Algebra
           lessons:
             'Calc: Defining Variables':
               name: Definere variablar og substitusjon
@@ -1289,6 +1290,10 @@ nn:
           lessons:
             Game Lab:
               name: Spel-lab
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Utformingsmodus
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -1334,6 +1339,8 @@ nn:
         gradeKinder:
           description_audience: Frå 5+ år (må kunne lese)
           lessons:
+            Debugging:
+              name: Feilsøking
             Events:
               name: Hendingar
             'Jigsaw: Learn to drag and drop':
@@ -1354,6 +1361,8 @@ nn:
         grade1:
           description_audience: Frå 5+ år (må kunne lese)
           lessons:
+            Debugging:
+              name: Feilsøking
             Events:
               name: Hendingar
             'Jigsaw: Learn to drag and drop':
@@ -1473,6 +1482,8 @@ nn:
               name: Funksjonar
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
         grade2:
@@ -1844,6 +1855,10 @@ nn:
           lessons:
             Introduction:
               name: Introduksjon
+            Sprites:
+              name: Sprites
+            Input:
+              name: Inngang
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -1883,6 +1898,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -1911,6 +1928,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -2116,6 +2135,8 @@ nn:
             content:
               display_name: Innhald
         express-2017:
+          title: Ekspresskurs
+          assignment_family_title: Ekspresskurs
           lesson_groups:
             content:
               display_name: Innhald
@@ -2414,6 +2435,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -2431,6 +2454,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -2466,6 +2491,8 @@ nn:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie og det store prosjektet
         express-2018:
+          title: Ekspresskurs
+          assignment_family_title: Ekspresskurs
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programmering på millimeterpapir
@@ -2930,6 +2957,7 @@ nn:
           description: Gå vidare etter den første timen med større prosjektidear.
           student_description: Gå vidare etter den første timen med større prosjektidear.
         coursef-2019:
+          title: Kurs F (2019)
           description_short: Lær alle konspta i grunnleggande informatikk og skap
             din eigen kunst, historie eller spel.
           lesson_groups:
@@ -2941,6 +2969,8 @@ nn:
               display_name: For-løkker
             csf_internet:
               display_name: Internett
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
           lessons:
@@ -2967,6 +2997,7 @@ nn:
             Dance Party:
               name: Dansefest
         coursed-2019:
+          title: Kurs D (2019)
           lesson_groups:
             csf_sequencing:
               display_name: Sekvensiering
@@ -2998,9 +3029,12 @@ nn:
             Dance Party:
               name: Dansefest
         coursee-2019:
+          title: Kurs E (2019)
           lesson_groups:
             ramp_up:
               display_name: Oppgrader
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
@@ -3031,6 +3065,7 @@ nn:
             Songwriting:
               name: Låtskriving
         express-2019:
+          title: Ekspresskurs (2019)
           lesson_groups:
             csf_warmup:
               display_name: Oppvarming
@@ -3046,6 +3081,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Relay Programming:
               name: Programmeringsstafett
@@ -3089,6 +3126,7 @@ nn:
           description: Gå vidare etter den første timen med større prosjektidear.
           student_description: Gå vidare etter den første timen med større prosjektidear.
         coursec-2019:
+          title: Kurs C (2019)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3118,6 +3156,7 @@ nn:
         gamelab:
           title: Spel-lab
         coursea-2019:
+          title: Kurs A (2019)
           description_short: Ein introduksjon til informatikk for dei som ikkje kan
             lese.
           lesson_groups:
@@ -3137,6 +3176,7 @@ nn:
             Events in Play Lab:
               name: Hendingar i Spellab
         courseb-2019:
+          title: Kurs B (2019)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3204,6 +3244,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -3364,6 +3406,8 @@ nn:
           lesson_groups:
             ramp_up:
               display_name: Oppgrader
+            csf_sprites:
+              display_name: Sprites
             time4cs_c1:
               display_name: 'Samling 1: Everglades og økosystemet'
             time4cs_c2:
@@ -3542,6 +3586,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Betingelser
             Velocity:
@@ -3560,6 +3606,9 @@ nn:
               display_name: Innhald
             required:
               display_name: Oversyn
+          lessons:
+            Debugging:
+              name: Feilsøking
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -3747,6 +3796,8 @@ nn:
               display_name: Betingelser
             csf_events:
               display_name: Hendingar
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             ramp_up:
@@ -3768,6 +3819,8 @@ nn:
               display_name: Betingelser
             csf_events:
               display_name: Hendingar
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             ramp_up:
@@ -3885,7 +3938,10 @@ nn:
               name: Funksjonar
             Text:
               name: Tekst
+            Sprites:
+              name: Sprites
         coursea-2020:
+          title: Kurs A (2020)
           description_short: Ein introduksjon til informatikk for dei som ikkje kan
             lese.
           lesson_groups:
@@ -3905,6 +3961,7 @@ nn:
             Events in Play Lab:
               name: Hendingar i Spellab
         courseb-2020:
+          title: Kurs B (2020)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3926,6 +3983,7 @@ nn:
             Events in Play Lab:
               name: Hendingar i Spellab
         coursec-2020:
+          title: Kurs C (2020)
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -3947,6 +4005,7 @@ nn:
             Events in Play Lab:
               name: Hendingar i Spellab
         coursed-2020:
+          title: Kurs D (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Sekvensiering
@@ -3976,9 +4035,12 @@ nn:
             Dance Party:
               name: Dansefest
         coursee-2020:
+          title: Kurs E (2020)
           lesson_groups:
             ramp_up:
               display_name: Oppgrader
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
@@ -3995,6 +4057,7 @@ nn:
             Digital Sharing:
               name: Digital deling
         coursef-2020:
+          title: Kurs F (2020)
           description_short: Lær alle konspta i grunnleggande informatikk og skap
             din eigen kunst, historie eller spel.
           lesson_groups:
@@ -4006,6 +4069,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Envelope Variables:
               name: Konvolutt-variablar
@@ -4018,6 +4083,7 @@ nn:
             Digital Sharing:
               name: Digital deling
         express-2020:
+          title: Ekspresskurs (2020)
           lesson_groups:
             csf_warmup:
               display_name: Oppvarming
@@ -4033,6 +4099,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Dance Party:
               name: Dansefest
@@ -4072,6 +4140,9 @@ nn:
           lesson_groups:
             cspSurvey2020:
               display_name: Undersøking etter kurs
+          lessons:
+            Debugging:
+              name: Feilsøking
         csp6-2020:
           lesson_groups:
             cspSurvey2020:
@@ -4093,6 +4164,10 @@ nn:
           lessons:
             Creating Functions:
               name: Lag Funksjonar
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Feilsøking
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -4167,6 +4242,8 @@ nn:
           lessons:
             Variables:
               name: Variablar
+            Sprites:
+              name: Sprites
             Sprite Properties:
               name: Eigenskapar ved Sprite
             Text:
@@ -4232,6 +4309,8 @@ nn:
               display_name: Introduksjon
             lessonGroup-3:
               display_name: Variablar
+            debugging:
+              display_name: Feilsøking
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -4249,6 +4328,9 @@ nn:
             Variables:
               key: Variablar
               name: Variablar
+            Sprites:
+              key: Sprites
+              name: Sprites
             Sprite Properties:
               key: Eigenskapar ved Sprite
               name: Eigenskapar ved Sprite
@@ -4317,6 +4399,11 @@ nn:
               display_name: "(gammel) Eining 2: Internett"
             lessonGroup-2:
               display_name: Undersøking
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Feilsøking
+              name: Feilsøking
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -4457,6 +4544,8 @@ nn:
           lesson_groups:
             ramp_up:
               display_name: Løkker i løkke
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
@@ -4477,6 +4566,8 @@ nn:
               key: Morro med for-løkker
               name: Morro med for-løkker
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_variables:
@@ -4509,6 +4600,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Hendingar
         pre-express-2021:
@@ -4532,6 +4625,8 @@ nn:
               display_name: Introduksjon
             lessonGroup-3:
               display_name: Variablar
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: Variablar
         csd4-preview-2021:

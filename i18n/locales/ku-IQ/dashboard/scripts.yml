@@ -20,6 +20,7 @@ ku:
             Happy Maps:
               name: نەخشەی دڵخۆش
         course2:
+          title: Ders 2
           lessons:
             'Artist: Loops':
               name: 'هونەرمەند: خولانەوەکان'
@@ -30,11 +31,14 @@ ku:
             Graph Paper Programming:
               name: بەرنامەڕێژی پەڕەی هێڵکاری
         course3:
+          title: Ders 3
           lessons:
             Bounce:
               name: هەڵبەزینەوە
             Computational Thinking:
               name: بیرکردنەوەی ژمارەیی
+        course4:
+          title: Ders 4
         Course4pre:
           lessons:
             'Artist: Loops':

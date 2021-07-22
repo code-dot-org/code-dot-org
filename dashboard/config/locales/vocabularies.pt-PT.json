@@ -8,11 +8,17 @@
         "variable/coursef/2021": {
           "word": "Variável"
         },
+        "input/coursef/2021": {
+          "word": "Introdução"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
         "define/coursef/2021": {
           "word": "Definir"
+        },
+        "debugging/courseb/2021": {
+          "word": "Depuração"
         },
         "drop/courseb/2021": {
           "word": "Gota"
@@ -20,11 +26,17 @@
         "programming/courseb/2021": {
           "word": "Programação"
         },
+        "debugging/coursea/2021": {
+          "word": "Depuração"
+        },
         "drop/coursea/2021": {
           "word": "Gota"
         },
         "programming/coursea/2021": {
           "word": "Programação"
+        },
+        "debugging/coursec/2021": {
+          "word": "Depuração"
         },
         "sequencing/coursec/2021": {
           "word": "Sequenciação"
@@ -35,11 +47,17 @@
         "binary/coursec/2021": {
           "word": "Binário"
         },
+        "debugging/coursed/2021": {
+          "word": "Depuração"
+        },
         "programming/coursed/2021": {
           "word": "Programação"
         },
         "conditionals/coursed/2021": {
           "word": "Condicionais"
+        },
+        "debugging/express/2021": {
+          "word": "Depuração"
         },
         "sequencing/express/2021": {
           "word": "Sequenciação"
@@ -64,6 +82,9 @@
         },
         "drop/pre-express/2021": {
           "word": "Gota"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Depuração"
         },
         "programming/pre-express/2021": {
           "word": "Programação"

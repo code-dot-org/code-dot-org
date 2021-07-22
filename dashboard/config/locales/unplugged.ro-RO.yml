@@ -341,6 +341,7 @@ ro:
           asemenea, chiar și informații mai complexe (precum imagini şi culori) în
           sistem binar.
       courseE_unplugged_diceRace:
+        title: 'Algoritmi din lumea reală: Cursa zarurilor'
         desc: Această lecție indică modul în care noi folosim algoritmi în viața de
           zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
           pentru un joc de zaruri.

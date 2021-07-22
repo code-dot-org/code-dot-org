@@ -823,6 +823,10 @@ da:
           lessons:
             Game Lab:
               name: Spil Laboratoriet
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Designtilstand
         CSF_Secret_Sample_Story:
           description_audience: Alderen 8 - 18+
         MikeTest:
@@ -843,6 +847,8 @@ da:
         gradeKinder:
           description_audience: Alderen 5 - 18
           lessons:
+            Debugging:
+              name: Fejlfinding
             Events:
               name: Hændelser
             'Jigsaw: Learn to drag and drop':
@@ -865,6 +871,8 @@ da:
           title: 1.  klasse
           description_audience: Alderen 5 - 18
           lessons:
+            Debugging:
+              name: Fejlfinding
             Events:
               name: Hændelser
             'Jigsaw: Learn to drag and drop':
@@ -2088,6 +2096,9 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+          lessons:
+            Debugging:
+              name: Fejlfinding
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2398,6 +2409,10 @@ da:
           lessons:
             Spelling Bee:
               name: Stave-bien
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Fejlfinding
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2406,6 +2421,8 @@ da:
           lessons:
             Tools:
               name: Værktøjer
+            Debugging:
+              name: Fejlfinding
         csp5-virtual:
           lessons:
             While Loops:
@@ -2484,6 +2501,8 @@ da:
               display_name: Variabler
             outbreak:
               display_name: Udbrud Simulator
+            debugging:
+              display_name: Fejlfinding
         csd3-2021:
           lessons:
             Variables:
@@ -2506,6 +2525,11 @@ da:
             Functions with Parameters:
               key: Funktioner med parametre
               name: Funktioner med parametre
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Fejlfinding
+              name: Fejlfinding
         csp4-2021:
           lesson_groups:
             csp_variables:

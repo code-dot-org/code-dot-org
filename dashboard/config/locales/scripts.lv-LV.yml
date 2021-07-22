@@ -289,6 +289,7 @@ lv:
               name: Mainīgie
           student_description: Atlasīti 4. kuras līmeņi lietošanas testēšanai.
         algebra:
+          title: Datorzinātne Algebrā
           lessons:
             'Eval: Conditionals':
               name: Sazarojumi
@@ -643,6 +644,8 @@ lv:
         gradeKinder:
           description_audience: Vecums 5-18
           lessons:
+            Debugging:
+              name: Atkļūdošana
             Events:
               name: Pasākumi
             'Jigsaw: Learn to drag and drop':
@@ -661,6 +664,8 @@ lv:
         grade1:
           description_audience: Vecums 5-18
           lessons:
+            Debugging:
+              name: Atkļūdošana
             Events:
               name: Pasākumi
             'Jigsaw: Learn to drag and drop':
@@ -963,22 +968,32 @@ lv:
             Bounce:
               name: Atlekt
         coursea-2017:
+          title: A kurss
+          assignment_family_title: A kurss
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         courseb-2017:
+          title: B kurss
+          assignment_family_title: B kurss
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
         coursec-2017:
+          title: C kurss
+          assignment_family_title: C kurss
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
         coursed-2017:
+          title: D kurss
+          assignment_family_title: D kurss
           lessons:
             Nested Loops:
               name: Cikls ciklā
         coursee-2017:
+          title: E kurss
+          assignment_family_title: E kurss
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
@@ -996,6 +1011,8 @@ lv:
             Nested Loops:
               name: Cikls ciklā
         coursef-2017:
+          title: F kurss
+          assignment_family_title: F kurss
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
@@ -1053,6 +1070,8 @@ lv:
             required:
               display_name: Pārskats
         express-2017:
+          title: Ekspress kurss
+          assignment_family_title: Ekspress kurss
           lessons:
             Introduction:
               name: Ievads
@@ -1222,12 +1241,15 @@ lv:
             Lists:
               name: Saraksti
         coursea-2018:
+          assignment_family_title: A kurss
           lessons:
             'Programming: Happy Maps':
               name: Laimīgās kartes
             Going Places Safely:
               name: Nokļūst galamērķos droši
         express-2018:
+          title: Ekspress kurss
+          assignment_family_title: Ekspress kurss
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Rūtiņpapīra programmēšana
@@ -1262,6 +1284,7 @@ lv:
             Graph Paper Programming:
               name: Rūtiņpapīra programmēšana
         courseb-2018:
+          assignment_family_title: B kurss
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
@@ -1270,6 +1293,7 @@ lv:
             Move It, Move It:
               name: Ej, ej
         coursed-2018:
+          assignment_family_title: D kurss
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Rūtiņpapīra programmēšana
@@ -1288,6 +1312,7 @@ lv:
             Relay Programming:
               name: Releju programmēšana
         coursec-2018:
+          assignment_family_title: C kurss
           lessons:
             Building a Foundation:
               name: Veidot pamatus
@@ -1304,6 +1329,7 @@ lv:
             Functions with Parameters:
               name: Funkcijas ar parametriem
         coursee-2018:
+          assignment_family_title: E kurss
           lesson_groups:
             csf_e_2:
               display_name: Kursa E saturs
@@ -1323,6 +1349,7 @@ lv:
             Conditionals with Cards:
               name: nosacījumi ar kārtēm
         coursef-2018:
+          assignment_family_title: F kurss
           lesson_groups:
             csf_f_2:
               display_name: Kursa F saturs
@@ -1784,6 +1811,9 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
+          lessons:
+            Debugging:
+              name: Atkļūdošana
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2063,10 +2093,18 @@ lv:
           lessons:
             Spelling Bee:
               name: Burtošanas bite
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Atkļūdošana
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Funkciju veidošana
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Atkļūdošana
         csp5-virtual:
           lessons:
             While Loops:
@@ -2115,12 +2153,24 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: A kurss
+            Course B:
+              name: B kurss
+            Course E:
+              name: E kurss
+            Course F:
+              name: F kurss
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Ievads
             lessonGroup-3:
               display_name: Mainīgie
+            debugging:
+              display_name: Atkļūdošana
         csd3-2021:
           lessons:
             Variables:
@@ -2143,6 +2193,11 @@ lv:
             Functions with Parameters:
               key: Funkcijas ar parametriem
               name: Funkcijas ar parametriem
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Atkļūdošana
+              name: Atkļūdošana
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2267,6 +2322,8 @@ lv:
               display_name: Digitālā pilsonība
         express-2021:
           lesson_groups:
+            csf_warmup:
+              display_name: Iesildīšanās
             csf_loops:
               display_name: Cikli
             csf_conditionals:

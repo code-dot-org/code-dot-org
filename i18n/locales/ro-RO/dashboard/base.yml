@@ -270,6 +270,7 @@ ro:
     invite_sent: 'Invitație trimisă'
     added_teacher: '%{name} adăugat(ă) ca și profesorul tău'
     registered: "Te-ai înregistrat pentru %{section_name}."
+    already_exists: 'Deja te-ai alăturat secțiunii %{section_name}.'
     error:
       signed_in: 'Te rugăm să te deloghezi înainte de a continua'
       username_not_found: 'Utilizatorul %{username} nu a fost găsit'
@@ -1064,6 +1065,7 @@ ro:
     message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
     more_information: "Consultaţi Politica de confidenţialitate a Code.org."
     accept: 'Sunt de acord'
+  page_not_found_title: "Pagina nu a fost găsită"
   copy: 'Copiază'
   confirm: 'Confirmă'
   maker:

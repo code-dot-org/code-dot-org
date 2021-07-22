@@ -924,6 +924,10 @@ el:
           lessons:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Κατάσταση Σχεδίασης
         CSF_Secret_Sample_Story:
           description_audience: Ηλικίες 8-18+
         MikeTest:
@@ -1976,6 +1980,7 @@ el:
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
         coursef-2019:
+          title: Μάθημα F (2019)
           lesson_groups:
             csf_variables:
               display_name: Μεταβλητές
@@ -2007,6 +2012,7 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         coursed-2019:
+          title: Μάθημα D (2019)
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -2034,6 +2040,7 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         coursee-2019:
+          title: Μάθημα E (2019)
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -2112,6 +2119,7 @@ el:
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
         coursec-2019:
+          title: Μάθημα C (2019)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2135,6 +2143,7 @@ el:
         gamelab:
           title: Game Lab
         coursea-2019:
+          title: Μάθημα A (2019)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2148,6 +2157,7 @@ el:
             Going Places Safely:
               name: Πηγαίνοντας σε Μέρη με Ασφάλεια
         courseb-2019:
+          title: Μάθημα B (2019)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2683,6 +2693,7 @@ el:
             Sprites:
               name: Χαρακτήρας
         coursea-2020:
+          title: Μάθημα A (2020)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2696,6 +2707,7 @@ el:
             'Programming: Happy Maps':
               name: Χαρούμενοι Χάρτες
         courseb-2020:
+          title: Μάθημα B (2020)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2711,6 +2723,7 @@ el:
             'Loops: Getting Loopy':
               name: Επαναλαμβανόμαστε
         coursec-2020:
+          title: Μάθημα C (2020)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
@@ -2726,6 +2739,7 @@ el:
             'Events: The Big Event':
               name: Το Μεγάλο Γεγονός
         coursed-2020:
+          title: Μάθημα D (2020)
           lesson_groups:
             csf_events:
               display_name: Συμβάντα
@@ -2753,6 +2767,7 @@ el:
             Dance Party:
               name: Πάρτι Χορού
         coursee-2020:
+          title: Μάθημα E (2020)
           lesson_groups:
             csf_sprites:
               display_name: Χαρακτήρας
@@ -2766,6 +2781,7 @@ el:
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
         coursef-2020:
+          title: Μάθημα F (2020)
           lesson_groups:
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα

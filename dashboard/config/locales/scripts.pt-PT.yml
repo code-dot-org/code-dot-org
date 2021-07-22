@@ -324,6 +324,7 @@ pt:
             Variables:
               name: Variáveis
         algebra:
+          title: Ciência da computação em álgebra
           lessons:
             'Eval: Boolean Operators':
               name: Operadores Booleanos
@@ -1034,6 +1035,8 @@ pt:
         gradeKinder:
           description_audience: Dos 5 aos 18 anos
           lessons:
+            Debugging:
+              name: Depuração
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -1056,6 +1059,8 @@ pt:
           title: Notas 1
           description_audience: Dos 5 aos 18 anos
           lessons:
+            Debugging:
+              name: Depuração
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -1154,6 +1159,8 @@ pt:
               name: Funções
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
         grade2:
@@ -1435,6 +1442,10 @@ pt:
           lessons:
             Introduction:
               name: Introdução
+            Sprites:
+              name: Sprites
+            Input:
+              name: Introdução
         csd5-draft:
           lessons:
             new stage:
@@ -1472,6 +1483,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1496,6 +1509,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1891,6 +1906,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1912,6 +1929,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -2308,6 +2327,7 @@ pt:
             csp_project:
               display_name: Projecto
         coursef-2019:
+          title: Curso F (2019)
           lesson_groups:
             csf_variables:
               display_name: Variáveis
@@ -2315,6 +2335,8 @@ pt:
               display_name: Ciclos "for"
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -2339,6 +2361,7 @@ pt:
             Dance Party:
               name: Festa da Dança
         coursed-2019:
+          title: Curso D (2019)
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -2366,7 +2389,10 @@ pt:
             Dance Party:
               name: Festa da Dança
         coursee-2019:
+          title: Curso E (2019)
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -2393,6 +2419,7 @@ pt:
             Songwriting:
               name: Composição
         express-2019:
+          title: Curso Expresso (2019)
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -2408,6 +2435,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Relay Programming:
               name: Programação por revezamento
@@ -2449,6 +2478,7 @@ pt:
             'null':
               name: nulo
         coursec-2019:
+          title: Curso C (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2474,6 +2504,7 @@ pt:
             cspSurvey:
               display_name: Inquérito
         coursea-2019:
+          title: Curso A (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2489,6 +2520,7 @@ pt:
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
         courseb-2019:
+          title: Curso B (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2546,6 +2578,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -2667,6 +2701,9 @@ pt:
             new stage:
               name: nova fase
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Crowdsourcing:
               name: Aberto ao público
@@ -2828,6 +2865,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -2850,6 +2889,9 @@ pt:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          lessons:
+            Debugging:
+              name: Depuração
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -3031,6 +3073,8 @@ pt:
               display_name: Condicionais
             csf_events:
               display_name: Eventos
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -3048,6 +3092,8 @@ pt:
               display_name: Condicionais
             csf_events:
               display_name: Eventos
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -3147,7 +3193,10 @@ pt:
               name: Funções
             Text:
               name: Texto
+            Sprites:
+              name: Sprites
         coursea-2020:
+          title: Curso A (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3163,6 +3212,7 @@ pt:
             'Programming: Happy Maps':
               name: Mapas felizes
         courseb-2020:
+          title: Curso B (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3180,6 +3230,7 @@ pt:
             'Loops: Getting Loopy':
               name: Repetindo
         coursec-2020:
+          title: Curso C (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3199,6 +3250,7 @@ pt:
             'Events: The Big Event':
               name: O Grande Evento
         coursed-2020:
+          title: Curso D (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -3226,7 +3278,10 @@ pt:
             Dance Party:
               name: Festa da Dança
         coursee-2020:
+          title: Curso E (2020)
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3241,6 +3296,7 @@ pt:
             Digital Sharing:
               name: Partilha Digital
         coursef-2020:
+          title: Curso F (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3248,6 +3304,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Envelope Variables:
               name: Variáveis do envelope
@@ -3260,6 +3318,7 @@ pt:
             Digital Sharing:
               name: Partilha Digital
         express-2020:
+          title: Curso Expresso (2020)
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -3275,6 +3334,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Dance Party:
               name: Festa da Dança
@@ -3318,6 +3379,8 @@ pt:
           lessons:
             new stage:
               name: nova fase
+            Debugging:
+              name: Depuração
         csp6-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3361,6 +3424,8 @@ pt:
               name: nova fase
             Tools:
               name: Ferramentas
+            Debugging:
+              name: Depuração
         csp5-virtual:
           lessons:
             While Loops:
@@ -3428,6 +3493,8 @@ pt:
               name: Variáveis
             Random Numbers:
               name: Números Aleatórios
+            Sprites:
+              name: Sprites
             Text:
               name: Texto
             Conditionals:
@@ -3489,6 +3556,8 @@ pt:
               display_name: Introdução
             lessonGroup-3:
               display_name: Variáveis
+            debugging:
+              display_name: Depuração
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3512,6 +3581,9 @@ pt:
             Random Numbers:
               key: Números Aleatórios
               name: Números Aleatórios
+            Sprites:
+              key: Sprites
+              name: Sprites
             Text:
               key: Texto
               name: Texto
@@ -3563,6 +3635,11 @@ pt:
               display_name: 'Unidade 2: A Internet'
             lessonGroup-2:
               display_name: Inquérito
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Depuração
+              name: Depuração
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3698,6 +3775,8 @@ pt:
           lesson_groups:
             ramp_up:
               display_name: Laços aninhados
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3716,6 +3795,8 @@ pt:
               key: Diversão com laços for
               name: Diversão com laços for
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
@@ -3748,6 +3829,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Eventos
         pre-express-2021:
@@ -3764,6 +3847,8 @@ pt:
               display_name: Introdução
             lessonGroup-3:
               display_name: Variáveis
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: Variáveis
         csd4-preview-2021:
