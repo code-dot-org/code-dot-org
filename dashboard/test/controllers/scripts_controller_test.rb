@@ -442,7 +442,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
@@ -463,7 +463,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to in_development" do
@@ -484,7 +484,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
@@ -506,7 +506,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
@@ -527,7 +527,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
@@ -548,7 +548,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
@@ -569,7 +569,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.stable
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -587,7 +587,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -605,7 +605,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
@@ -800,7 +800,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
     # pilot units are always marked with the pilot published state
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide unit with blank pilot_experiment' do
@@ -822,7 +822,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_nil Script.find_by_name(unit.name).pilot_experiment
     # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do

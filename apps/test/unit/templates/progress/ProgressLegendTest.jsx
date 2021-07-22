@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 
 describe('ProgressLegend', () => {
   it('renders a single table without extra columns', () => {
@@ -37,6 +37,9 @@ describe('ProgressLegend', () => {
     const wrapper = shallow(
       <ProgressLegend includeReviewStates includeCsfColumn />
     );
-    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(2);
+
+    const badge = wrapper.find(BubbleBadge);
+    expect(badge).to.have.lengthOf(2);
+    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
   });
 });

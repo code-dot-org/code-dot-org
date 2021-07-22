@@ -1,8 +1,0 @@
-name 'CSA U3L2-L7'
-display_name 'Solving Problems with Arrays'
-description 'Use the Painter and arrays of paint colors to create murals in The Neighborhood!'
-
-sublevels
-level 'CSA U3L2-L7a'
-level 'CSA U3L2-L7b'
-level 'CSA U3L2-L7c'
