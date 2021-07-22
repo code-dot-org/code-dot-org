@@ -890,4 +890,6 @@ Dashboard::Application.routes.draw do
     patch :resolve, on: :member
     get :project_comments, on: :collection
   end
+
+  resources :reviewable_projects, only: [:create, :destroy]
 end
