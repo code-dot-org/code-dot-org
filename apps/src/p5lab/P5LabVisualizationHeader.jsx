@@ -5,6 +5,7 @@ import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {P5LabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
@@ -26,7 +27,7 @@ class P5LabVisualizationHeader extends React.Component {
 
   changeInterfaceMode = mode => {
     // Make sure code workspace is rendered properly after switching from the Animation Tab.
-    if (mode === 'CODE') {
+    if (mode === P5LabInterfaceMode.CODE) {
       if (this.props.spriteLab) {
         // Sprite Lab (Blockly) doesn't need a window resize event, but it does need to rerender.
         setTimeout(() => Blockly.mainBlockSpace.render(), 0);
@@ -34,6 +35,17 @@ class P5LabVisualizationHeader extends React.Component {
         // Fire a window resize event to tell Game Lab (Droplet) to rerender.
         setTimeout(() => utils.fireResizeEvent(), 0);
       }
+    } else if (mode === P5LabInterfaceMode.ANIMATION) {
+      if (this.props.spriteLab) {
+        Blockly.WidgetDiv.hide();
+      }
+
+      firehoseClient.putRecord({
+        study: 'animation-library',
+        study_group: 'control-2020',
+        event: 'tab-click',
+        data_string: this.props.spriteLab ? 'spritelab' : 'gamelab'
+      });
     }
 
     this.props.onInterfaceModeChange(mode);

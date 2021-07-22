@@ -36,7 +36,6 @@ const MOBILE_PORTRAIT_WIDTH = 600;
 const Javalab = function() {
   this.skin = null;
   this.level = null;
-  this.channelId = null;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -61,7 +60,6 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.channelId = config.channel;
   // Sets dark mode based on displayTheme user preference
   this.isDarkMode =
     getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
@@ -116,6 +114,7 @@ Javalab.prototype.init = function(config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initVersionHistoryUI(config);
     this.studioApp_.initTimeSpent();
+    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -232,7 +231,6 @@ Javalab.prototype.onRun = function() {
     options.useNeighborhood = true;
   }
   this.javabuilderConnection = new JavabuilderConnection(
-    this.channelId,
     this.level.javabuilderUrl,
     message => getStore().dispatch(appendOutputLog(message)),
     this.miniApp,

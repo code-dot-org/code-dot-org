@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 18:53:06 UTC",
+    "serialized_at": "2021-07-20 22:21:28 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -4316,12 +4316,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
         "resource.key": "_key_u4l1_extra_practice"
       }
     },
@@ -4333,7 +4327,157 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u4l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "truth_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u4l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "vocabulary_don_t-say-it_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "neighborhood_block_party_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "neighborhood_block_party_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "neighborhood_block_party_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "neighborhood_block_party_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_4_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "neighborhood_block_party_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "neighborhood_block_party_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4363,7 +4507,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
+        "lesson.key": "lesson-3",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4393,7 +4537,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "lesson-4",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4423,7 +4567,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-5",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4447,7 +4591,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-6",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4466,13 +4610,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "object_references_manipulatives"
+        "resource.key": "comparing_objects"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "comparing_objects"
+        "resource.key": "object_references_manipulatives"
       }
     },
     {
@@ -4483,7 +4627,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "lesson-7",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4501,7 +4645,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-9",
+        "lesson.key": "lesson-8",
         "resource.key": "unit_4_presentation_slides"
       }
     },
@@ -4519,151 +4663,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "_key_u4l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "u4l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "_key_truth_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "around_the_world_printouts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "_key_u4l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "vocabulary_don_t-say-it_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "truth_tables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "u4l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "unit_4_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "neighborhood_block_party_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "neighborhood_block_party_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "neighborhood_block_party_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "resource.key": "neighborhood_block_party_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "neighborhood_block_party_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "neighborhood_block_party_project_planning_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "unit_4_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "_key_frq_writing_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "frq_writing_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "frq_scoring_guide_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-15",
+        "lesson.key": "lesson-9",
         "resource.key": "unit_4_presentation_slides"
       }
     }

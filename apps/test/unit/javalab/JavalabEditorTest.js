@@ -32,7 +32,8 @@ describe('Java Lab Editor Test', () => {
     store = getStore();
     defaultProps = {
       onCommitCode: () => {},
-      handleVersionHistory: () => {}
+      handleVersionHistory: () => {},
+      showProjectTemplateWorkspaceIcon: false
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};

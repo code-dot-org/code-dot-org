@@ -133,6 +133,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
+  blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
@@ -148,8 +149,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
+  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
+
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
+  };
+
+  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+    if (!blockspace) {
+      return;
+    }
+    blockspace.getCanvas().addEventListener('blocklyBlockSpaceChange', handler);
   };
 
   blocklyWrapper.setInfiniteLoopTrap = function() {

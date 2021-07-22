@@ -16,9 +16,6 @@ class CoursesControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, unit_group: @pilot_unit_group
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    Script.stubs(:should_cache?).returns true
-    Script.clear_cache
-
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
 
     @migrated_unit = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
@@ -33,19 +30,24 @@ class CoursesControllerTest < ActionController::TestCase
     File.stubs(:write)
   end
 
-  teardown do
-    Script.clear_cache
+  class CoursesQueryCountTests < ActionController::TestCase
+    setup do
+      Script.stubs(:should_cache?).returns true
+      Script.clear_cache
+
+      @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
+    end
+
+    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
+
+    test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
+
+    test_user_gets_response_for :index, response: :success, user: :user, queries: 4
+
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 15
+
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
-
-  # Tests for index
-
-  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
-
-  test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
-
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 4
-
-  # Tests for show
 
   test "show: regular courses get sent to show" do
     get :show, params: {course_name: @unit_group_regular.name}
@@ -58,24 +60,46 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 8
-
-  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 2
-
   test "show: redirect to latest stable version in course family" do
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    offering = create :course_offering, key: 'csp'
+    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     get :show, params: {course_name: 'csp'}
     assert_redirected_to '/courses/csp-2019'
 
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
     Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
-    create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
+    offering = create :course_offering, key: 'csd'
+    ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
+    ug2019 = create :unit_group, name: 'csd-2019', family_name: 'csd', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
     get :show, params: {course_name: 'csd'}
     assert_redirected_to '/courses/csd-2019'
+  end
+
+  test 'redirect to latest standards in course family' do
+    Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
+    Rails.cache.delete("valid_courses/all")
+
+    offering = create :course_offering, key: 'csp'
+    ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
+    ug2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :course_version, course_offering: offering, content_root: ug2019, key: '2019'
+    ug2020 = create :unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
+
+    get :standards, params: {course_name: 'csp'}
+
+    assert_redirected_to '/courses/csp-2019/standards'
   end
 
   test "show: redirect from new unstable version to assigned version" do
@@ -154,6 +178,15 @@ class CoursesControllerTest < ActionController::TestCase
     create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
 
     get :show, params: {course_name: 'csp-2017'}
+
+    assert_response :ok
+  end
+
+  test "show: shows course when family name matches course name" do
+    course = create :unit_group, name: 'new-course', family_name: 'new-course', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(course)
+
+    get :show, params: {course_name: 'new-course'}
 
     assert_response :ok
   end
@@ -436,6 +469,29 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
     unit_group.reload
     refute_nil unit_group.course_version
+  end
+
+  test "update: cannot change course version for unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_group = create :unit_group
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, is_migrated: true, published_state: SharedConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+
+    assert_nil unit_group.course_version
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'coursefamily', version_year: 2021}
+    unit_group.reload
+    refute_nil unit_group.course_version
+
+    course_version = unit_group.course_version.freeze
+    unit_group.resources = [create(:resource, course_version: unit_group.course_version)]
+    assert_raises do
+      post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', family_name: 'newcoursefamily', version_year: 2021}
+    end
+    unit_group.reload
+    refute_nil unit_group.course_version
+    assert_equal course_version, unit_group.course_version
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}

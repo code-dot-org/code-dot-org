@@ -34,6 +34,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 const MIN_HEIGHT = 100;
 const CONSOLE_BUFFER = 270;
@@ -50,6 +51,7 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     // populated by redux
     setRenderedHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
@@ -494,7 +496,8 @@ class JavalabEditor extends React.Component {
       isDarkMode,
       sources,
       isEditingStartSources,
-      isReadOnlyWorkspace
+      isReadOnlyWorkspace,
+      showProjectTemplateWorkspaceIcon
     } = this.props;
 
     let menuStyle = {
@@ -542,7 +545,12 @@ class JavalabEditor extends React.Component {
             label={javalabMsg.commitCode()}
             isDisabled={isReadOnlyWorkspace}
           />
-          <PaneSection>{this.editorHeaderText()}</PaneSection>
+          <PaneSection>
+            {showProjectTemplateWorkspaceIcon && (
+              <ProjectTemplateWorkspaceIcon />
+            )}
+            {this.editorHeaderText()}
+          </PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
