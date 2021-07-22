@@ -3662,6 +3662,10 @@ class UserTest < ActiveSupport::TestCase
       create :unit_group_unit, position: 1, unit_group: @unit_group, script: @script
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script2
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script3
+      @unit_group.reload
+      @script.reload
+      @script2.reload
+      @script3.reload
     end
 
     def put_student_in_section(student, teacher, script, unit_group=nil)
