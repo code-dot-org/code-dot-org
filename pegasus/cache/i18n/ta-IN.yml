@@ -160,7 +160,13 @@ ta-IN:
     தூண்டுதலான வீடியோக்கள் </a>
   videos_more_markdown: முன்மாதிரிகள் மற்றும் பிரபலங்களைக் கொண்ட மேலும் [உத்வேகம்
     தரும் வீடியோக்கள்] %{inspiring_videos_playlist}
+  starwars_subtitle: குறியீட்டைக் கொண்ட கேலக்ஸியை உருவாக்குதல்
+  starwars_javascript_title: ஜாவாஸ்கிரிப்ட்
+  starwars_javascript_description: இழுத்தல்-துளி தொகுதிகள் மற்றும் ஜாவாஸ்கிரிப்ட்
+    பயன்படுத்தவும்.
+  starwars_javascript_specs: ஆங்கிலம் மட்டும் | நவீன உலாவிகள் | வயது 11+
   starwars_blocks_title: தொகுதிகள்
+  starwars_blocks_description: இழுத்தல்-துளி தொகுதிகள் பயன்படுத்தவும்.
   starwars_blocks_specs: பல மொழிகள் | நவீன உலாவிகள், ஸ்மார்ட்போன்கள், டேப்லெட்டுகள்
     | வயது 6-106
   mc_name: Minecraft Hour of Code
@@ -222,6 +228,7 @@ ta-IN:
   hoc2014_try_frozen: உறைந்ததிலிருந்து அண்ணா மற்றும் எல்சாவுடன் கலைஞர்
   carousel_heading_international: உங்கள் மொழியிலுள்ள பயிற்சிகள்
   frozen_name: அண்ணா மற்றும் எல்சாவுடன் குறியீடு
+  starwars_name: 'ஸ்டார் வார்ஸ்: குறியீட்டைக் கொண்டு ஒரு கேலக்ஸியை உருவாக்குதல்'
   codeorg_name: 'கிளாசிக் மேஸி '
   codeintl_name: 'கிளாசிக் மேஸி '
   blockly_name: புலோக்லி
@@ -253,6 +260,7 @@ ta-IN:
   pre-express_name: ப்ரீ-ரீடர்  எக்ஸ்பிரஸ் பாடநெறி
   20-hour_name: முடுக்கப்பட்ட பாடஅமைப்பு
   classicmaze_name: 'கிளாசிக் மேஸி '
+  starwarsblocks_name: ஸ்டார் வார்ஸ் (பிளாக்ஸ்)
   hoc-encryption_name: எளிய குறியாக்கம்
   text-compression_name: உரை சுருக்க
   basketball_name: கூடைப்பந்து விளையாட்டை உருவாக்கவும்
