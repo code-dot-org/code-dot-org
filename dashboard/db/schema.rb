@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_221440) do
+ActiveRecord::Schema.define(version: 2021_07_22_162824) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -117,7 +117,8 @@ ActiveRecord::Schema.define(version: 2021_07_19_221440) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_backpacks_on_user_id"
+    t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
+    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
 
   create_table "blocks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
