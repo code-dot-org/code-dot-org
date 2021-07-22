@@ -13,7 +13,8 @@ class CodeReviewCommentsController < ApplicationController
       commenter_id: current_user.id,
       storage_app_id: @storage_app_id,
       project_version: 'temporary placeholder',
-      project_owner_id: @project_owner.id
+      project_owner_id: @project_owner.id,
+      is_from_teacher: current_user.teacher?
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
