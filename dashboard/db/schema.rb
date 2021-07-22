@@ -1539,7 +1539,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_181140) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
-    t.string "published_state", default: "in_development", null: false
+    t.string "published_state", default: "in_development"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
