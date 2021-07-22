@@ -105,6 +105,9 @@ Javalab.prototype.init = function(config) {
     this.studioApp_.setConfigValues_(config);
     //this.studioApp_.init(config);
 
+    window.addEventListener('resize', () => {
+      this.studioApp_.resizeVisualization(undefined, {fireResizeEvent: false});
+    });
     window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
       this.studioApp_.resizeVisualization(e.detail);
     });
