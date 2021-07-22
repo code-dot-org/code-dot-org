@@ -27,6 +27,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedConstants::PUBLISHED_STATE.preview)
     @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    @csp_script.reload
   end
 
   test 'logged out cannot list sections' do
