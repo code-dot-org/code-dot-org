@@ -61,11 +61,11 @@ describe('Code Review Comment', () => {
 
   it('displays error message when comment has error', () => {
     const defaultWrapper = renderWrapper();
-    expect(defaultWrapper.text().includes(javalabMsg.commentSaveError())).to.be
-      .false;
+    expect(defaultWrapper.text().includes(javalabMsg.commentUpdateError())).to
+      .be.false;
 
     const errorWrapper = renderWrapper({hasError: true});
-    expect(errorWrapper.text().includes(javalabMsg.commentSaveError())).to.be
+    expect(errorWrapper.text().includes(javalabMsg.commentUpdateError())).to.be
       .true;
   });
 });
