@@ -1526,7 +1526,7 @@ function applyTransformOrigin(element, origin) {
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
-StudioApp.prototype.resizeVisualization = function(width) {
+StudioApp.prototype.resizeVisualization = function(width, options) {
   if ($('#visualizationColumn').hasClass('wireframeShare')) {
     return;
   }
@@ -1555,7 +1555,8 @@ StudioApp.prototype.resizeVisualization = function(width) {
     width = $('#visualization-container').width();
   }
 
-  const visualizationColumnHeight = $(visualizationColumn).outerHeight(true);
+  //const visualizationColumnHeight = $(visualizationColumn).outerHeight(true);
+  const visualizationColumnHeight = $(window).height() - 110;
   const visualizationTop = $(visualization).position().top;
   const sliderHeight = $('#slider').outerHeight(true) + 30;
   var constrainVisualizationWidth =
@@ -1617,8 +1618,10 @@ StudioApp.prototype.resizeVisualization = function(width) {
     smallFooter.style.maxWidth = newVizWidthString;
   }
 
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
+  if (!options || options.fireResizeEvent) {
+    // Fire resize so blockly and droplet handle this type of resize properly:
+    utils.fireResizeEvent();
+  }
 };
 
 /**
