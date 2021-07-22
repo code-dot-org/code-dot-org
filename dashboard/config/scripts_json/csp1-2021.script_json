@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 18:59:25 UTC",
+    "serialized_at": "2021-07-20 22:21:13 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -3845,6 +3845,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "survey_placeholder_levelgroup"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -5950,74 +5953,14 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "innovation-video-1-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "rubric-personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "how-to-administer-a-locked-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "how_to_videos_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "ag-ab-pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "ab-cutouts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
+        "lesson.key": "Binary Numbers",
         "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
       }
     },
     {
@@ -6029,37 +5972,13 @@
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "u1_l4_how_to_make_a_flippydo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
         "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "resource.key": "ascii-reference-sheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
       }
     },
     {
@@ -6077,61 +5996,43 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "u1l7_black_and_white_images"
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "key_u1l8_black_white_images_activity_guide"
+        "resource.key": "u1l7_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "ab-cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "ag-ab-pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Color Images",
         "resource.key": "how-computers-work-data-and-binary"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Color Images",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "text-compression-widget-tutorial-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "fortnite-article"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "copyright_overview"
       }
     },
     {
@@ -6143,19 +6044,55 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
         "resource.key": "creative_commons_copyright"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "the-ethics-of-computer-generated-actors"
+        "lesson.key": "Intellectual Property",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "dna-testing-kits-the-security-risks-in-digitized-dna"
+        "lesson.key": "Intellectual Property",
+        "resource.key": "fortnite-article"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 14: Assessment Day",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "text-compression-widget-tutorial-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6168,6 +6105,18 @@
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "resource.key": "dna-testing-kits-the-security-risks-in-digitized-dna"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "resource.key": "the-ethics-of-computer-generated-actors"
       }
     },
     {
@@ -6185,13 +6134,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_high_score_sample_poster"
+        "resource.key": "u1_high_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_high_score_sample_article_markup"
+        "resource.key": "u1_high_score_sample_poster"
       }
     },
     {
@@ -6203,13 +6152,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_mid_score_sample_poster"
+        "resource.key": "u1_mid_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_mid_score_sample_article_markup"
+        "resource.key": "u1_mid_score_sample_poster"
       }
     },
     {
@@ -6220,15 +6169,87 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson.key": "Representing Information",
         "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "ascii-reference-sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how-to-administer-a-locked-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how_to_videos_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "personal-innovations-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "rubric-personal-innovations-1"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp1-2021"
       }
     },
@@ -6241,24 +6262,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_1",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_1",
         "script.name": "csp1-2021"
       }
     }

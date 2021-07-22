@@ -753,18 +753,22 @@ class LessonTest < ActiveSupport::TestCase
     script1 = create :script, name: 'script1'
     create :unit_group_unit, unit_group: unit_group_a, script: script1, position: 1
     lesson1 = create :lesson, script: script1, key: 'foo'
+    script1.reload
 
     script2 = create :script, name: 'script2'
     create :unit_group_unit, unit_group: unit_group_a, script: script2, position: 2
     lesson2 = create :lesson, script: script2, key: 'foo'
+    script2.reload
 
     script3 = create :script, name: 'script3'
     create :unit_group_unit, unit_group: unit_group_a, script: script3, position: 3
     create :lesson, script: script3, key: 'bar'
+    script3.reload
 
     script0 = create :script, name: 'script0'
     create :unit_group_unit, unit_group: unit_group_a, script: script0, position: 4
     lesson0 = create :lesson, script: script0, key: 'foo'
+    script0.reload
 
     unit_group_b = create :unit_group
     create :course_version, course_offering: course_offering, content_root: unit_group_b, key: '2999'
@@ -772,10 +776,12 @@ class LessonTest < ActiveSupport::TestCase
     script4 = create :script, name: 'script4'
     create :unit_group_unit, unit_group: unit_group_b, script: script4, position: 1
     lesson4 = create :lesson, script: script4, key: 'foo'
+    script4.reload
 
     script5 = create :script, name: 'script5'
     create :unit_group_unit, unit_group: unit_group_b, script: script5, position: 2
     create :lesson, script: script5, key: 'bar'
+    script5.reload
 
     other_course_offering = create :course_offering
 
@@ -785,6 +791,11 @@ class LessonTest < ActiveSupport::TestCase
     script6 = create :script, name: 'script6'
     create :unit_group_unit, unit_group: unit_group_c, script: script6, position: 1
     create :lesson, script: script6, key: 'foo'
+    script6.reload
+
+    unit_group_a.reload
+    unit_group_b.reload
+    unit_group_c.reload
 
     # measure the query count of the summarize method before checking the result
     # of related_lessons, so that the count is not artificially reduced by
@@ -815,7 +826,8 @@ class LessonTest < ActiveSupport::TestCase
     script2 = create :script
     create :lesson, script: script2, key: 'foo'
 
-    assert_queries(2) do
+    lesson1.reload
+    assert_queries(3) do
       assert_equal [], lesson1.related_lessons
     end
   end
@@ -931,6 +943,8 @@ class LessonTest < ActiveSupport::TestCase
     # a course offering and course version.
     unit_group = create :unit_group, family_name: 'my-family', version_year: '1999'
     create :unit_group_unit, script: script, unit_group: unit_group, position: 1
+    unit_group.reload
+    script.reload
 
     # adds course offering and course version
     CourseOffering.add_course_offering(unit_group)
@@ -1054,6 +1068,9 @@ class LessonTest < ActiveSupport::TestCase
 
       original_script = create :script, is_migrated: true
       create :unit_group_unit, unit_group: unit_group, script: original_script, position: 1
+      original_script.reload
+      unit_group.reload
+
       original_script.expects(:write_script_json).never
       original_lesson_group = create :lesson_group, script: original_script
       original_lesson = create :lesson, lesson_group: original_lesson_group, script: original_script, has_lesson_plan: true
@@ -1062,6 +1079,8 @@ class LessonTest < ActiveSupport::TestCase
 
       destination_script = create :script, is_migrated: true
       create :unit_group_unit, unit_group: unit_group, script: destination_script, position: 2
+      destination_script.reload
+      unit_group.reload
       create :lesson_group, script: destination_script
 
       destination_script.expects(:write_script_json).once
