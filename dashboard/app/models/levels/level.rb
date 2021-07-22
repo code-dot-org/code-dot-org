@@ -336,13 +336,17 @@ class Level < ApplicationRecord
   end
 
   def self.level_file_path(level_name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
+    level_paths = existing_level_file_paths(level_name)
     raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
     level_paths.first || canonical_level_file_path(level_name)
   end
 
   def self.canonical_level_file_path(level_name)
     Rails.root.join("config/scripts/levels/#{level_name}.level")
+  end
+
+  def self.existing_level_file_paths(level_name)
+    Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
   end
 
   def to_xml(options = {})
@@ -382,7 +386,7 @@ class Level < ApplicationRecord
 
   def delete_custom_level_file
     if write_to_file?
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
+      file_path = Level.existing_level_file_paths(name).first
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
