@@ -184,13 +184,45 @@ export default class CoreLibrary {
    * @param {Sprite} sprite
    * @returns {Number} A unique id to reference the sprite.
    */
-  addSprite(sprite, name, animation) {
+  addSprite(opts) {
+    opts = opts || {};
+    let name = opts.name;
+    let location = opts.location || {x: 200, y: 200};
+    if (typeof location === 'function') {
+      location = location();
+    }
+    let animation = opts.animation;
+
+    const sprite = this.p5.createSprite(location.x, location.y);
     this.nativeSpriteMap[this.spriteId] = sprite;
     sprite.id = this.spriteId;
     if (name) {
       this.enforceUniqueSpriteName(name);
       sprite.name = name;
     }
+
+    sprite.direction = 0;
+    sprite.speed = 5;
+    sprite.baseScale = 1;
+    sprite.setScale = function(scale) {
+      sprite.scale = scale * sprite.baseScale;
+    };
+    sprite.getScale = function() {
+      return sprite.scale / sprite.baseScale;
+    };
+    if (animation) {
+      sprite.setAnimation(animation);
+      sprite.scale /= sprite.baseScale;
+      sprite.baseScale =
+        100 /
+        Math.max(
+          100,
+          sprite.animation.getHeight(),
+          sprite.animation.getWidth()
+        );
+      sprite.scale *= sprite.baseScale;
+    }
+    sprite.setScale(this.defaultSpriteSize / 100);
 
     // If there are any whenSpriteCreated events, call the callback immediately
     // so that the event happens during the same draw loop frame.
