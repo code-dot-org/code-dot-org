@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '@cdo/apps/templates/Button';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
@@ -43,14 +44,13 @@ export default class AddDefaultSprite extends React.Component {
           onChange={this.handleCategoryChange}
           required
         />
-        <button
-          type="button"
+        <Button
+          text="Add"
+          color={Button.ButtonColor.orange}
           onClick={() =>
             this.props.onAdd(this.state.spriteName, this.state.spriteCategory)
           }
-        >
-          Add
-        </button>
+        />
       </div>
     );
   }
