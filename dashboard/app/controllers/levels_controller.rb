@@ -313,7 +313,7 @@ class LevelsController < ApplicationController
       end
       file_path = Level.existing_level_file_paths(level_name).first
       if file_path
-        raise "Cannot create level named #{level_name.dump} because of conflict with existing file #{file_path}"
+        raise "Cannot create custom level named #{level_name.dump} because of conflict with existing file #{file_path}"
       end
       @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e

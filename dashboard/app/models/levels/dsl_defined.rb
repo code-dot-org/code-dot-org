@@ -121,6 +121,17 @@ class DSLDefined < Level
         raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
       end
 
+      unless old_name
+        level_name = data[:name]
+        if Level.find_by_name(level_name)
+          raise "Level name #{level_name.dump} is already taken"
+        end
+        file_path = Level.existing_level_file_paths(level_name).first
+        if file_path
+          raise "Cannot create dsl-defined level named #{level_name.dump} because of conflict with existing file #{file_path}"
+        end
+      end
+
       level = setup data
 
       # Save updated level data to external files
