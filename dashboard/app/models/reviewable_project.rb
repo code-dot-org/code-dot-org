@@ -18,4 +18,8 @@ class ReviewableProject < ApplicationRecord
   belongs_to :user
   belongs_to :level
   belongs_to :script
+
+  def self.user_can_mark_project_reviewable?(project_owner, user)
+    project_owner == user
+  end
 end

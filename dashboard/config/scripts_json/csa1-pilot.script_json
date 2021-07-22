@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-19 16:35:51 UTC",
+    "serialized_at": "2021-07-20 22:21:26 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -6778,6 +6778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice Level"
+        ],
         "progression": "Neighborhood Practice Levels"
       },
       "named_level": false,
@@ -6801,6 +6804,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 16x16 Practice Level"
+        ],
         "progression": "Neighborhood Practice Levels"
       },
       "named_level": false,
@@ -6824,6 +6830,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 8x8 Practice with Barriers"
+        ],
         "progression": "Neighborhood Practice Levels"
       },
       "named_level": false,
@@ -6847,6 +6856,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood 13x13 Practice with Barriers"
+        ],
         "progression": "Neighborhood Practice Levels"
       },
       "named_level": false,
@@ -6870,6 +6882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Console Practice Level"
+        ],
         "progression": "Console Practice Level"
       },
       "named_level": false,

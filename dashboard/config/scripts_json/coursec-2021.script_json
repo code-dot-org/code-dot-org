@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-07-02 16:29:09 UTC",
+    "serialized_at": "2021-07-20 22:21:20 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursec-2021"
@@ -8946,230 +8946,8 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Putting a STOP to Online Meanness",
-        "resource.key": "putting-a-stop-to-online-meanness-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Putting a STOP to Online Meanness",
-        "resource.key": "putting-a-stop-to-online-meanness-stop-online-meanness"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "resource.key": "csf-mrf-cup-spacing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "resource.key": "csf-mrf-symbol-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "resource.key": "unplugged-video-robotic-friends"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "resource.key": "csf-mrf-cup-stacking-ideas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "resource.key": "csf-mrf-paper-trapezoid-template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "c2-maze-bridge"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "unplugged-maze-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "resource.key": "debugging_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Collector",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "resource.key": "csf-artist-intro-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "resource.key": "csf-turns-angles-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "resource.key": "csf-turns-angles-doc"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "resource.key": "csf-mrf-cup-spacing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "resource.key": "csf-mrf-symbol-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "resource.key": "csf-mrf-cup-stacking-ideas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "resource.key": "csf-mrf-paper-trapezoid-template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "unplugged-video-big-event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "resource.key": "open-ended_programming_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "open-ended_programming_levels_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "resource.key": "right-app-scenarios"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Binary Bracelets",
-        "resource.key": "csf-bit-byte-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "unplugged-video-binary-bracelets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "lesson-in-action-binary-bracelets"
+        "resource.key": "assessment-answer-binary-bracelets"
       }
     },
     {
@@ -9187,7 +8965,67 @@
     {
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
-        "resource.key": "assessment-answer-binary-bracelets"
+        "resource.key": "csf-bit-byte-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "lesson-in-action-binary-bracelets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "unplugged-video-binary-bracelets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "the_big_event_course_c_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "resource.key": "play-lab-project-guide"
       }
     },
     {
@@ -9198,15 +9036,177 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "End of Course Project: Create a Play Lab Game",
-        "resource.key": "play-lab-project-guide"
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "assessment-answer-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "csf-the-big-event-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_course_c_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "unplugged-video-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "resource.key": "csf-mrf-cup-spacing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "resource.key": "csf-mrf-cup-stacking-ideas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "resource.key": "csf-mrf-paper-trapezoid-template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "resource.key": "csf-mrf-symbol-key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "resource.key": "right-app-scenarios"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "resource.key": "csf-artist-intro-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "resource.key": "csf-turns-angles-doc"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "resource.key": "csf-turns-angles-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "resource.key": "c2-maze-bridge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "resource.key": "unplugged-maze-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "resource.key": "csf-mrf-cup-spacing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "resource.key": "csf-mrf-cup-stacking-ideas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "resource.key": "csf-mrf-paper-trapezoid-template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "resource.key": "csf-mrf-symbol-key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "resource.key": "unplugged-video-robotic-friends"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Putting a STOP to Online Meanness",
+        "resource.key": "putting-a-stop-to-online-meanness-lesson-slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Putting a STOP to Online Meanness",
+        "resource.key": "putting-a-stop-to-online-meanness-stop-online-meanness"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursec-2021"
       }
     },
@@ -9218,13 +9218,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
         "script.name": "coursec-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide_1",
         "script.name": "coursec-2021"
       }
     },
@@ -9237,24 +9255,6 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "debugging_guide_1",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
         "script.name": "coursec-2021"
       }
     },
