@@ -1253,7 +1253,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_162824) do
     t.boolean "allow_joining_via_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_pilots_on_name"
+    t.index ["name"], name: "index_pilots_on_name", unique: true
   end
 
   create_table "plc_course_units", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1540,7 +1540,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_162824) do
     t.text "properties"
     t.string "new_name"
     t.string "family_name"
-    t.string "published_state", default: "in_development", null: false
+    t.string "published_state", default: "in_development"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
