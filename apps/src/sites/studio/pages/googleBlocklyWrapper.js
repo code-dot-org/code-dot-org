@@ -13,6 +13,7 @@ import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
 import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
 import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
 import initializeVariables from '@cdo/apps/blocklyAddons/cdoVariables';
+import CdoVariableMap from '@cdo/apps/blocklyAddons/cdoVariableMap';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
 
@@ -136,6 +137,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
+  blocklyWrapper.wrapReadOnlyProperty('VariableMap');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('Workspace');
@@ -151,6 +153,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.MetricsManager = CdoMetricsManager;
   blocklyWrapper.geras.PathObject = CdoPathObject;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+  blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   blocklyWrapper.blockly_.registry.register(
