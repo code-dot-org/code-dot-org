@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-22 16:57:49 UTC",
+    "serialized_at": "2021-07-22 21:36:50 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -2251,7 +2251,8 @@
       "key": "7b1f0297-f869-4193-868f-b75117b0e04d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1, then complete Level 2 in pairs. They create and use a static variable to count the number of `Circle` objects created."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1, then complete Level 2 in pairs. They create and use a static variable to count the number of `PainterPlus` objects created.",
+        "progression_name": "Create a Static Variable"
       },
       "seeding_key": {
         "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d",
@@ -2322,7 +2323,8 @@
       "key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students independently complete the Check for Understanding on Level 4 then complete Level 5 in pairs, where they create constants for the minimum and maximum volume."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3-5 on Code Studio. Students independently complete the Check for Understanding on Level then create a `double` array from a sound file on Level 4. Have students complete Level 5 in pairs, where they create constants for the minimum and maximum volume.",
+        "progression_name": "Volume Constants"
       },
       "seeding_key": {
         "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
@@ -2377,7 +2379,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d",
@@ -4745,6 +4748,144 @@
       "level_keys": [
         "CSA U3L6-L5"
       ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Static Variable"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d"
+      },
+      "level_keys": [
+        "CSA U3L7-L1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Static Variable"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d"
+      },
+      "level_keys": [
+        "CSA U3L7-L2"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Volume Constants"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      },
+      "level_keys": [
+        "CSA U3L7-L3"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Volume Constants"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      },
+      "level_keys": [
+        "CSA U3L7-L4"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Volume Constants"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      },
+      "level_keys": [
+        "CSA U3L7-L5"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d"
+      },
+      "level_keys": [
+        "CSA U3L7-L6"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5178,6 +5319,78 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
         "activity_section.key": "a5ae9163-c8eb-43d0-aafb-9f5e61a2f385"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L1",
+        "script_level.level_keys": [
+          "CSA U3L7-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L2",
+        "script_level.level_keys": [
+          "CSA U3L7-L2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "7b1f0297-f869-4193-868f-b75117b0e04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L3",
+        "script_level.level_keys": [
+          "CSA U3L7-L3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L4",
+        "script_level.level_keys": [
+          "CSA U3L7-L4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L5",
+        "script_level.level_keys": [
+          "CSA U3L7-L5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L6",
+        "script_level.level_keys": [
+          "CSA U3L7-L6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d"
       }
     }
   ],
