@@ -1,5 +1,10 @@
+# After making changes to this script, it must be run in order for it to take
+# effect. To run it, go to the root of your local code-dot-org repo and run:
+# ruby aws/s3/cdo-curriculum/redirection_rules.rb
+
 require_relative '../../../deployment'
 require 'aws-sdk-s3'
+require 'dynamic_config/dcdo'
 
 HOST_NAME = "curriculum.code.org"
 CODE_STUDIO_HOST_NAME = "studio.code.org"
@@ -13,7 +18,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "s/csp-2021/"
+      replace_key_prefix_with: "courses/csp-2021/"
     }
   },
   {
@@ -22,7 +27,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "s/csp-2021/",
+      replace_key_prefix_with: "courses/csp-2021/",
       http_redirect_code: "302"
     }
   },
@@ -32,7 +37,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "s/csd-2021/"
+      replace_key_prefix_with: "courses/csd-2021/"
     }
   },
   {
@@ -41,7 +46,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "s/csd-2021/",
+      replace_key_prefix_with: "courses/csd-2021/",
       http_redirect_code: "302"
     }
   },

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-02 16:35:43 UTC",
+    "serialized_at": "2021-07-20 22:21:14 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp3-2021"
@@ -4001,6 +4001,24 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Apps",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
@@ -4019,13 +4037,31 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
+        "lesson.key": "Lesson 11: Assessment Day",
+        "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Assessment Day",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 1",
+        "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 1",
+        "resource.key": "csp-unit-3-intro-to-app-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 2",
         "resource.key": "app_development_planning_guide"
       }
     },
@@ -4037,44 +4073,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
+        "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "how_to_debug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 3",
-        "resource.key": "app_development_planning_guide"
       }
     },
     {
@@ -4086,18 +4092,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
-        "resource.key": "csp-unit-3-intro-to-app-design"
+        "resource.key": "app_development_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
-        "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 5",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
     },
@@ -4105,6 +4105,12 @@
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
         "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 5",
+        "resource.key": "csp-unit-3-intro-to-app-design"
       }
     },
     {
@@ -4133,21 +4139,33 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson.key": "The Need for Programming Languages",
         "resource.key": "csp-unit-3-intro-to-app-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: Assessment Day",
-        "resource.key": "app_development_planning_guide"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp3-2021"
       }
     },
@@ -4160,24 +4178,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_3",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_3",
         "script.name": "csp3-2021"
       }
     }

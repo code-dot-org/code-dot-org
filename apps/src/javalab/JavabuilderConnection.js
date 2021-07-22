@@ -1,19 +1,14 @@
-/* globals dashboard */
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+import {getStore} from '../redux';
+import {setIsRunning} from './javalabRedux';
 const queryString = require('query-string');
+import project from '@cdo/apps/code-studio/initApp/project';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(
-    channelId,
-    javabuilderUrl,
-    onMessage,
-    miniApp,
-    serverLevelId,
-    options
-  ) {
-    this.channelId = channelId;
+  constructor(javabuilderUrl, onMessage, miniApp, serverLevelId, options) {
+    this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
@@ -28,9 +23,9 @@ export default class JavabuilderConnection {
       url: '/javabuilder/access_token',
       type: 'get',
       data: {
-        projectUrl: dashboard.project.getProjectSourcesUrl(),
+        projectUrl: project.getProjectSourcesUrl(),
         channelId: this.channelId,
-        projectVersion: dashboard.project.getCurrentSourceVersionId(),
+        projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
         options: this.options
       }
@@ -102,7 +97,15 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
-    this.miniApp?.onClose?.();
+    if (this.miniApp) {
+      // miniApp on close should handle setting isRunning state as it
+      // may not align with actual program execution. If mini app does
+      // not have on close we won't toggle back automatically.
+      this.miniApp.onClose?.();
+    } else {
+      // Set isRunning to false
+      getStore().dispatch(setIsRunning(false));
+    }
   }
 
   onError(error) {

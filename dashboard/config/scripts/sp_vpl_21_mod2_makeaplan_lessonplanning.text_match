@@ -1,0 +1,16 @@
+name 'SP-VPL_21-mod2-MakeAPlan-LessonPlanning'
+title 'Make a plan: Lesson planning'
+content1 'Although lesson plans are provided, you, as the teacher, still have an active role to play in customizing the learning experience for your students. '
+
+
+markdown <<MARKDOWN
+## Make a list of the things you will need to do to prepare to teach a CS Discoveries lesson.
+
+#### Consider the following when making your list:
+
+* What do you need to prepare ahead of time? 
+* When a lesson has resources to share with students, will you print these resources or post them to your school's learning management system?
+* Do you need to modify the lesson timing to fit into your scheduled class time? 
+* When students are working in groups, will you choose the groups? 
+* Are there other things you might need to consider while planning for a lesson? 
+MARKDOWN

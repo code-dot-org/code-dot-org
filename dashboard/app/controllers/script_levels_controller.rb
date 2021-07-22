@@ -80,9 +80,6 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
-    # will be true if the user is in any unarchived section where tts autoplay is enabled
-    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
-
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -94,7 +91,7 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      if Script.family_names.include?(params[:script_id])
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -107,6 +104,9 @@ class ScriptLevelsController < ApplicationController
       redirect_to new_path
       return
     end
+
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
     configure_caching(@script)
 
@@ -157,7 +157,7 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
-    @body_classes = @script_level.script.background
+    @body_classes = @level.properties['background']
 
     present_level
   end
@@ -226,11 +226,8 @@ class ScriptLevelsController < ApplicationController
       @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
-    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
@@ -302,14 +299,14 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_unit_family_redirect_for_user . Since end users may be
-    # depending on this incorrect behavior, and we are trying to deprecate this
-    # codepath anyway, the current plan is to not fix this bug.
-    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
-      Script.get_from_cache(script_id)
-
+    script = Script.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Script.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
     raise ActiveRecord::RecordNotFound unless script
     script
   end

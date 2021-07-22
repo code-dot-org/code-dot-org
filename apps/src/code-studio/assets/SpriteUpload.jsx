@@ -46,7 +46,7 @@ export default class SpriteUpload extends React.Component {
 
     switch (spriteAvailability) {
       case SpriteLocation.level:
-        destination = `/level_animations/${filename}`;
+        destination = `/level-animations/${filename}`;
         break;
       case SpriteLocation.library:
         destination = `/spritelab/category_${category}/${filename}`;
@@ -139,6 +139,7 @@ export default class SpriteUpload extends React.Component {
 
     return (
       <div>
+        <a href="/sprites">Back to Sprite Management</a>
         <h1>Sprite Lab Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <h2 style={styles.spriteUploadStep}>

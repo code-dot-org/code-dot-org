@@ -2,6 +2,8 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
+  CSA_PILOT = 'csa-pilot'
+
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
@@ -56,7 +58,9 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :javabuilder_session
+      :javabuilder_session,
+      CodeReviewComment,
+      ReviewableProject
     ]
     cannot :index, Level
 
@@ -80,6 +84,20 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
+      can :resolve, CodeReviewComment, project_owner_id: user.id
+      can :destroy, CodeReviewComment do |code_review_comment|
+        code_review_comment.project_owner.student_of?(user)
+      end
+      can :create, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :project_comments, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :create, ReviewableProject do |_, project_owner|
+        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
+      end
+      can :destroy, ReviewableProject, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -307,13 +325,12 @@ class Ability
       end
     end
 
+    # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+      if user.has_pilot_experiment?(CSA_PILOT) ||
+        (!user.teachers.empty? &&
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)})
         can :get_access_token, :javabuilder_session
-
-        # Temporarily allow management of CodeReviewComments by piloters --
-        # more nuanced permissioning up next
-        can :manage, CodeReviewComment
       end
     end
 

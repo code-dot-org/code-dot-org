@@ -12,7 +12,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("in_development"), not null
+#  published_state :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -109,7 +109,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless get_pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -141,7 +141,9 @@ class Script < ApplicationRecord
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
 
   def prevent_course_version_change?
-    lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
+    resources.any? ||
+      student_resources.any? ||
+      lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
   end
 
   def self.unit_directory
@@ -213,7 +215,6 @@ class Script < ApplicationRecord
     tts
     deprecated
     is_course
-    background
     show_calendar
     weekly_instructional_minutes
     include_student_lesson_plans
@@ -299,6 +300,12 @@ class Script < ApplicationRecord
         Script.all.to_a
       end
       all_scripts.freeze
+    end
+
+    def family_names
+      Rails.cache.fetch('script/family_names', force: !Script.should_cache?) do
+        (CourseVersion.course_offering_keys('Script') + ScriptConstants::FAMILY_NAMES).uniq.sort
+      end
     end
 
     private
@@ -497,8 +504,6 @@ class Script < ApplicationRecord
     unit_model = with_associated_models ? Script.with_associated_models : Script
     unit = unit_model.find_by(find_by => id_or_name)
     return unit if unit
-
-    raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
   end
 
   # Returns the unit with the specified id, or a unit with the specified
@@ -508,16 +513,21 @@ class Script < ApplicationRecord
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
   #
   # @param id_or_name [String|Integer] script id, script name, or script family name.
-  def self.get_from_cache(id_or_name)
-    if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
-      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}"
-    end
-
-    return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
-    cache_key = id_or_name.to_s
-    script_cache.fetch(cache_key) do
-      # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name)
+  def self.get_from_cache(id_or_name, raise_exceptions: true)
+    script =
+      if should_cache?
+        cache_key = id_or_name.to_s
+        script_cache.fetch(cache_key) do
+          # Populate cache on miss.
+          script_cache[cache_key] = get_without_cache(id_or_name)
+        end
+      else
+        get_without_cache(id_or_name, with_associated_models: false)
+      end
+    return script if script
+    if raise_exceptions
+      raise "Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: #{id_or_name}" if Script.family_names.include?(id_or_name)
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
     end
   end
 
@@ -759,9 +769,11 @@ class Script < ApplicationRecord
   end
 
   def self.units_with_standards
+    # Find scripts that have a version_year where that version_year isn't 'unversioned',
+    # which is a placeholder for assignable scripts that aren't updated after creation.
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
       map {|unit| [unit.title_for_display, unit.name]}
   end
 
@@ -1413,15 +1425,15 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def stable?
-    published_state == SharedConstants::PUBLISHED_STATE.stable
+    get_published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    get_published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1466,7 +1478,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: published_state,
+      publishedState: get_published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1492,7 +1504,7 @@ class Script < ApplicationRecord
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
-      pilot_experiment: pilot_experiment,
+      pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
       show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
@@ -1505,7 +1517,6 @@ class Script < ApplicationRecord
       tts: tts?,
       deprecated: deprecated?,
       is_course: is_course?,
-      background: background,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
@@ -1550,6 +1561,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
+    summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
   end
 
@@ -1724,7 +1736,6 @@ class Script < ApplicationRecord
       :pilot_experiment,
       :editor_experiment,
       :curriculum_umbrella,
-      :background,
       :weekly_instructional_minutes,
     ]
     boolean_keys = [
@@ -1765,6 +1776,17 @@ class Script < ApplicationRecord
   # @return [CourseVersion]
   def get_course_version
     course_version || unit_group&.course_version
+  end
+
+  # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
+  # If both are null, the script is in_development
+  def get_published_state
+    published_state || unit_group&.published_state || ScriptConstants::PUBLISHED_STATE.in_development
+  end
+
+  # Use the unit group's pilot_experiment if one exists
+  def get_pilot_experiment
+    pilot_experiment || unit_group&.pilot_experiment
   end
 
   # @return {String|nil} path to the course overview page for this unit if there
@@ -1916,7 +1938,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!pilot_experiment
+    !!get_pilot_experiment
   end
 
   def has_pilot_access?(user = nil)
@@ -1936,8 +1958,7 @@ class Script < ApplicationRecord
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
-    return false unless pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    user.has_pilot_experiment?(get_pilot_experiment)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
@@ -1951,8 +1972,7 @@ class Script < ApplicationRecord
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
-    return false unless editor_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
+    user.has_pilot_experiment?(editor_experiment)
   end
 
   def self.get_version_year_options
