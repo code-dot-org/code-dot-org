@@ -10,7 +10,8 @@ import javalab, {
   setAllValidation,
   setIsDarkMode,
   appendOutputLog,
-  setIsStartMode
+  setIsStartMode,
+  setLevelName
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -187,7 +188,8 @@ Javalab.prototype.init = function(config) {
   }
 
   // Set information about the current Javalab level being displayed.
-  getStore().dispatch(setIsStartMode(this.level.name, this.isStartMode));
+  getStore().dispatch(setIsStartMode(this.isStartMode));
+  getStore().dispatch(setLevelName(this.level.name));
 
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
