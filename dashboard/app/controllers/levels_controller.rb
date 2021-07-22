@@ -159,7 +159,7 @@ class LevelsController < ApplicationController
   # GET /levels/:id/get_serialized_maze
   # Get the serialized_maze for the level, if it exists.
   def get_serialized_maze
-    serialized_maze = @level.get_serialized_maze
+    serialized_maze = @level.try(:get_serialized_maze)
     return head :no_content unless serialized_maze
     render json: serialized_maze
   end
