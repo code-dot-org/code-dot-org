@@ -86,6 +86,9 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const onTopInstructionsHeightResize = this.onTopInstructionsHeightResize.bind(
+    this
+  );
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     this.miniApp = new Neighborhood();
@@ -204,6 +207,7 @@ Javalab.prototype.init = function(config) {
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
+        onTopInstructionsHeightResize={onTopInstructionsHeightResize}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -247,6 +251,10 @@ Javalab.prototype.onRun = function() {
 // Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
   this.javabuilderConnection.sendMessage(message);
+};
+
+Javalab.prototype.onTopInstructionsHeightResize = function() {
+  this.studioApp_.resizeVisualization(undefined);
 };
 
 // Called by the Javalab app when it wants to go to the next level.
