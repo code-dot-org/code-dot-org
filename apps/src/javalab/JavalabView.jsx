@@ -1,17 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
-import JavalabSettings from './JavalabSettings';
 import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ControlButtons from './ControlButtons';
-import JavalabButton from './JavalabButton';
 
 const FOOTER_BUFFER = 10;
 
@@ -122,7 +119,8 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
-      onTopInstructionsHeightResize
+      onTopInstructionsHeightResize,
+      isReadOnlyWorkspace
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -157,19 +155,6 @@ class JavalabView extends React.Component {
                 onHeightResize={onTopInstructionsHeightResize}
               />
               {this.renderVisualization()}
-              {false && (
-                <div>
-                  <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-                  {!isEditingStartSources && (
-                    <JavalabButton
-                      text={i18n.finish()}
-                      onClick={onContinue}
-                      style={styles.finish}
-                      isDisabled={this.props.isReadOnlyWorkspace}
-                    />
-                  )}
-                </div>
-              )}
             </div>
             <VisualizationResizeBar />
             <div
@@ -185,6 +170,7 @@ class JavalabView extends React.Component {
                 showProjectTemplateWorkspaceIcon={
                   showProjectTemplateWorkspaceIcon
                 }
+                renderSettings={this.renderSettings}
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
@@ -196,6 +182,9 @@ class JavalabView extends React.Component {
                     isTesting={isTesting}
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
+                    isEditingStartSources={isEditingStartSources}
+                    isReadOnlyWorkspace={isReadOnlyWorkspace}
+                    onContinue={onContinue}
                   />
                 }
               />
@@ -258,14 +247,6 @@ const styles = {
     width: '100%',
     margin: '10px 0',
     overflowY: 'hidden'
-  },
-  finish: {
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-    fontFamily: '"Gotham 5r"',
-    fontSize: '15px',
-    padding: '1px 8px',
-    margin: '5px 0 5px 5px'
   }
 };
 

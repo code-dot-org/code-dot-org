@@ -101,7 +101,8 @@ export default onClickOutside(Radium(JavalabSettings));
 
 const styles = {
   main: {
-    display: 'inline-block'
+    display: 'inline-block',
+    float: 'right'
   },
   button: {
     color: color.darkest_gray,
