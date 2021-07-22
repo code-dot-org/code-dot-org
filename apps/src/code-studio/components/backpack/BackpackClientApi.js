@@ -1,5 +1,4 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-//import libraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 export default class BackpackClientApi {
   constructor() {
@@ -14,14 +13,14 @@ export default class BackpackClientApi {
       url: '/backpacks/channel',
       type: 'get'
     }).done(response => {
-      this.channelId = response;
+      this.channelId = response.channel;
       callback();
     });
   }
 
   saveFiles(filesJson, filenames, onError, onSuccess) {
     if (!this.channelId) {
-      this.fetchChannelId(
+      this.fetchChannelId(() =>
         this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
       );
     } else {
@@ -29,7 +28,7 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper = (filesJson, filenames, onError, onSuccess) => {
+  saveFilesHelper(filesJson, filenames, onError, onSuccess) {
     if (filenames.length === 0) {
       onSuccess();
       return;
@@ -42,32 +41,29 @@ export default class BackpackClientApi {
         filename,
         fileContents,
         // onError: retry first failure, then call onError message on second failure
-        this.writeSingleFileToBackpack(filename, fileContents, onError, () =>
-          this.onSingleUploadSuccess(filename, onSuccess)
-        ),
+        () =>
+          this.writeSingleFileToBackpack(filename, fileContents, onError, () =>
+            this.onSingleUploadSuccess(filename, onSuccess)
+          ),
         () => this.onSingleUploadSuccess(filename, onSuccess)
       );
     });
-  };
+  }
 
   writeSingleFileToBackpack(filename, fileContents, onError, onSuccess) {
-    this.backpackApi.put(
-      this.channelId,
-      fileContents,
-      filename,
-      (error, data) => {
-        if (error) {
-          onError(error);
-        } else {
-          onSuccess();
-        }
+    this.backpackApi.put(this.channelId, fileContents, filename, (error, _) => {
+      if (error) {
+        onError(error);
+      } else {
+        onSuccess();
       }
-    );
+    });
   }
 
   onSingleUploadSuccess(filename, onOverallSuccess) {
-    if (this.filesToUpload.includes(filename)) {
-      this.filesToUpload.remove(filename);
+    const filenameIndex = this.filesToUpload.indexOf(filename);
+    if (filenameIndex >= 0) {
+      this.filesToUpload.splice(filenameIndex, 1);
     }
     if (this.filesToUpload.length === 0) {
       onOverallSuccess();

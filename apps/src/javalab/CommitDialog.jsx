@@ -69,13 +69,13 @@ export default class CommitDialog extends React.Component {
     );
   };
 
-  onBackpackFailure() {
+  onBackpackFailure = () => {
     this.setState({commitNotes: 'backpack save failed!'});
-  }
+  };
 
-  onBackpackSuccess() {
+  onBackpackSuccess = () => {
     this.setState({commitNotes: 'backpack save succeeded!'});
-  }
+  };
 
   render() {
     const {filesToCommit, commitNotes} = this.state;

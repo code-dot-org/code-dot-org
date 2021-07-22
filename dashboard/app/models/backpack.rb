@@ -29,6 +29,6 @@ class Backpack < ApplicationRecord
   end
 
   def channel
-    storage_encrypt_channel_id(get_storage_id, storage_app_id)
+    storage_encrypt_channel_id(storage_id_for_user_id(user_id), storage_app_id)
   end
 end
