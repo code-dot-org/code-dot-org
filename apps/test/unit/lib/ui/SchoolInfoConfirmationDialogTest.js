@@ -84,20 +84,24 @@ describe('SchoolInfoConfirmationDialog', () => {
     });
 
     describe('school info confirmation dialog behavior', () => {
-      const onClose = sinon.spy();
-      const wrapper = mount(
-        <SchoolInfoConfirmationDialog
-          {...MINIMUM_PROPS}
-          scriptData={{
-            ...MINIMUM_PROPS.scriptData,
-            existingSchoolInfo: {
-              country: 'US'
-            }
-          }}
-          onClose={onClose}
-          isOpen={true}
-        />
-      );
+      let onClose, wrapper;
+
+      beforeEach(() => {
+        onClose = sinon.spy();
+        wrapper = mount(
+          <SchoolInfoConfirmationDialog
+            {...MINIMUM_PROPS}
+            scriptData={{
+              ...MINIMUM_PROPS.scriptData,
+              existingSchoolInfo: {
+                country: 'US'
+              }
+            }}
+            onClose={onClose}
+            isOpen={true}
+          />
+        );
+      });
 
       it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
         const wrapperInstance = wrapper.instance();
