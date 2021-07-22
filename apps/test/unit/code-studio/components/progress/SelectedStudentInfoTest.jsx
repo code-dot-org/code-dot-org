@@ -29,7 +29,7 @@ describe('SelectedStudentInfo', () => {
     const wrapper = shallow(<SelectedStudentInfo {...defaultProps} />);
 
     expect(wrapper.contains('Student 1')).to.equal(true);
-    expect(wrapper.find('TeacherPanelProgressBubble')).to.have.length(1);
+    expect(wrapper.find('ProgressBubble')).to.have.length(1);
   });
 
   it('displays time and unsubmit button if submitted level', () => {

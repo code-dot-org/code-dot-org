@@ -48,12 +48,12 @@ describe('StudentTable', () => {
       <StudentTable {...MINIMUM_PROPS} userLevels={userLevels} />
     );
 
-    expect(wrapper.find('TeacherPanelProgressBubble')).to.have.length(2);
+    expect(wrapper.find('ProgressBubble')).to.have.length(2);
   });
 
   it('does not display bubbles when no levels', () => {
     const wrapper = shallow(<StudentTable {...MINIMUM_PROPS} />);
 
-    expect(wrapper.find('TeacherPanelProgressBubble')).to.have.length(0);
+    expect(wrapper.find('ProgressBubble')).to.have.length(0);
   });
 });

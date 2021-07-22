@@ -35,6 +35,8 @@ const SET_UNIT_COMPLETED = 'progress/SET_UNIT_COMPLETED';
 const SET_LESSON_EXTRAS_ENABLED = 'progress/SET_LESSON_EXTRAS_ENABLED';
 const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
 const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
+const SET_RELOAD_TEACHER_PANEL_PROGRESS =
+  'progress/SET_RELOAD_TEACHER_PANEL_PROGRESS';
 
 const PEER_REVIEW_ID = -1;
 
@@ -78,7 +80,8 @@ const initialState = {
   // prior to having information about the user login state.
   // TODO: Use sign in state to determine where to source user progress from
   usingDbProgress: false,
-  currentPageNumber: PUZZLE_PAGE_NONE
+  currentPageNumber: PUZZLE_PAGE_NONE,
+  reloadTeacherPanelProgress: false
 };
 
 /**
@@ -259,6 +262,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       lessonExtrasEnabled: action.lessonExtrasEnabled
+    };
+  }
+
+  if (action.type === SET_RELOAD_TEACHER_PANEL_PROGRESS) {
+    return {
+      ...state,
+      reloadTeacherPanelProgress: action.reloadTeacherPanelProgress
     };
   }
 
@@ -503,6 +513,10 @@ export const setLessonExtrasEnabled = lessonExtrasEnabled => ({
   type: SET_LESSON_EXTRAS_ENABLED,
   lessonExtrasEnabled
 });
+export const setReloadTeacherPanelProgress = reloadTeacherPanelProgress => ({
+  type: SET_RELOAD_TEACHER_PANEL_PROGRESS,
+  reloadTeacherPanelProgress
+});
 
 export const queryUserProgress = userId => (dispatch, getState) => {
   const state = getState().progress;
@@ -661,6 +675,24 @@ export const levelsForLessonId = (state, lessonId) => {
     levelWithProgress(state, level, lesson.lockable)
   );
 };
+
+// export const getCurrentLevelWithProgress = state => {
+//   if (
+//     !state.currentLessonId ||
+//     !state.currentLevelId ||
+//     state.currentLevelId < 0
+//   ) {
+//     return null;
+//   }
+
+//   const lesson = state.lessons.find(
+//     lesson => lesson.id === state.currentLessonId
+//   );
+//   const level = lesson.levels.find(level =>
+//     level.ids.includes(state.currentLevelId)
+//   );
+//   return levelWithProgress(state, level, lesson.lockable);
+// };
 
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled

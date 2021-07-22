@@ -686,6 +686,7 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
+  get '/dashboardapi/section_progress/:section_id/teacher_panel', to: 'api#teacher_panel_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   scope 'dashboardapi', module: 'api/v1' do
     concerns :section_api_routes

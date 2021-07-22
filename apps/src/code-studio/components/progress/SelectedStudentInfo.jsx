@@ -1,47 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import Button from '@cdo/apps/templates/Button';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {studentShape} from './StudentTable';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
 const RadiumFontAwesome = Radium(FontAwesome);
-
-const styles = {
-  main: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row'
-  },
-  studentInfo: {
-    width: 150,
-    textAlign: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column'
-  },
-  bubble: {
-    marginLeft: 0
-  },
-  name: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
-    fontSize: 15
-  },
-  timeHeader: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
-  },
-  arrow: {
-    fontSize: 40,
-    cursor: 'pointer',
-    position: 'relative',
-    top: 30
-  }
-};
 
 export class SelectedStudentInfo extends React.Component {
   static propTypes = {
@@ -126,7 +93,7 @@ export class SelectedStudentInfo extends React.Component {
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
-          {userLevel.paired && (
+          {userLevel?.paired && (
             <div>
               <div>{i18n.workedWith()}</div>
               {userLevel.navigator && (
@@ -141,10 +108,17 @@ export class SelectedStudentInfo extends React.Component {
               )}
             </div>
           )}
-          <div style={styles.bubble}>
-            <TeacherPanelProgressBubble userLevel={userLevel} />
-          </div>
-          {!userLevel.submitLevel && (
+          {userLevel && (
+            <div style={styles.bubble}>
+              <ProgressBubble
+                level={userLevel}
+                disabled={true}
+                hideTooltips={true}
+                hideAssessmentBadge={true}
+              />
+            </div>
+          )}
+          {userLevel && !userLevel.submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
@@ -154,7 +128,7 @@ export class SelectedStudentInfo extends React.Component {
               </div>
             </div>
           )}
-          {userLevel.submitLevel && (
+          {userLevel?.submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
               <div>
@@ -182,3 +156,37 @@ export class SelectedStudentInfo extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row'
+  },
+  studentInfo: {
+    width: 150,
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  bubble: {
+    marginLeft: 0
+  },
+  name: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  timeHeader: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold'
+  },
+  arrow: {
+    fontSize: 40,
+    cursor: 'pointer',
+    position: 'relative',
+    top: 30
+  }
+};

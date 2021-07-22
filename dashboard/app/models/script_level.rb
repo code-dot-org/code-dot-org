@@ -370,15 +370,6 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize(include_prev_next=true, for_edit: false)
-    kind =
-      if level.unplugged?
-        LEVEL_KIND.unplugged
-      elsif assessment
-        LEVEL_KIND.assessment
-      else
-        LEVEL_KIND.puzzle
-      end
-
     ids = level_ids
     active_id = oldest_active_level.id
     inactive_ids = ids - [active_id]
@@ -592,7 +583,8 @@ class ScriptLevel < ApplicationRecord
       levelNumber: position,
       assessment: assessment,
       bonus: bonus,
-      teacherFeedbackReivewState: feedback&.review_state
+      teacherFeedbackReviewState: feedback&.review_state,
+      kind: kind
     }
 
     if user_level
@@ -729,6 +721,18 @@ class ScriptLevel < ApplicationRecord
     )
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
+    end
+  end
+
+  private
+
+  def kind
+    if level.unplugged?
+      LEVEL_KIND.unplugged
+    elsif assessment
+      LEVEL_KIND.assessment
+    else
+      LEVEL_KIND.puzzle
     end
   end
 end
