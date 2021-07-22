@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit3/{LESSON}",
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "is_stable": true,
       "project_sharing": true,
       "tts": true,
-      "curriculum_umbrella": "CSD",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,13 +33,12 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd-20/unit3/code/"
         ]
-      ],
-      "hideable_lessons": true
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:37 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-22 20:46:06 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2020"
     }
