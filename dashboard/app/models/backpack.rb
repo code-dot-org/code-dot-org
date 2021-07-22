@@ -14,14 +14,12 @@
 #
 class Backpack < ApplicationRecord
   belongs_to :user
-  validates_uniqueness_of :storage_app_id
-  validates_uniqueness_of :user_id
 
   def self.find_or_create(user_id, ip)
     backpack = find_by_user_id(user_id)
     unless backpack
       # Create a storage app for this user's backpack
-      storage_app = StorageApps.new(get_storage_id)
+      storage_app = StorageApps.new(storage_id_for_user_id(user_id))
       encrypted_id = storage_app.create('', ip: ip, type: 'backpack')
       _, storage_app_id = storage_decrypt_channel_id(encrypted_id)
       backpack = create!(user_id: user_id, storage_app_id: storage_app_id)

@@ -5,6 +5,7 @@ require 'cdo/sinatra'
 require 'cdo/aws/s3'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
+ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
@@ -20,10 +21,10 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/level_animations/<version-id>/<filename>
+  # GET /api/v1/animation-library/level-animations/<version-id>/<filename>
   # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
   #
-  get %r{/api/v1/animation-library/level_animations/([^/]+)/(.+)} do |version_id, animation_name|
+  get %r{/api/v1/animation-library/level-animations/([^/]+)/(.+)} do |version_id, animation_name|
     not_found if version_id.empty? || animation_name.empty?
 
     begin
@@ -40,10 +41,10 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # POST /api/v1/animation-library/level_animations/<filename>
+  # POST /api/v1/animation-library/level-animations/<filename>
   # Create Sprite in Level Animations folder
   #
-  post %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
+  post %r{/api/v1/animation-library/level-animations/(.+)} do |animation_name|
     dont_cache
     if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
@@ -108,6 +109,38 @@ class AnimationLibraryApi < Sinatra::Base
     result.body
   rescue
     not_found
+  end
+
+  #
+  # GET /api/v1/animation-library/default-spritelab/
+  #
+  # Retrieve the default sprite list from S3
+  get %r{/api/v1/animation-library/default-spritelab} do
+    result = Aws::S3::Bucket.
+      new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+      object(ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER).
+      get
+    content_type 'application/json'
+    cache_for 3600
+    result.body
+  rescue
+    not_found
+  end
+
+  #
+  # POST /api/v1/animation-library/default-spritelab/
+  #
+  # Update default sprite list in S3
+  post %r{/api/v1/animation-library/default-spritelab} do
+    dont_cache
+    if request.content_type == 'application/json'
+      body = request.body.string
+      key = ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
+
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+    else
+      bad_request
+    end
   end
 
   #
