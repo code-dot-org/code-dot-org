@@ -750,6 +750,7 @@ ko-KR:
   dashboard_high_courses_desc: 우리의 고등학교 프로그램은 전체 학년에 걸쳐서 컴퓨터 과학 수업을 제공이 가능하도록, 기존
     선생님들이 준비하는데 도움을 줍니다. 전문 개발 워크샵에 등록하기 위해서 Code.org의 <a href="/educate/districts">전세계
     파트너십</a>에 신청하세요.
+  dashboard_course_csina: 대수학 영역의 컴퓨터 과학
   dashboard_course_csina_desc: Code.org는 부트스트랩과 제휴하여 컴퓨터 프로그래밍을 통하여 대수와 기하학적 개념을 가르치는
     커리큘럼을 개발한다.
   dashboard_course_csins: 과학의 컴퓨터 과학
@@ -1136,6 +1137,7 @@ ko-KR:
   pre-express-2019_name: 프리 리더 익스프레스 과정 (2019)
   express-2020_name: 익스프레스 과정(2020)
   pre-express-2020_name: 프리 리더 익스프레스 과정 (2020)
+  pre-express-2021_name: 프리 리더 익스프레스 과정 (2021)
   csd2_name: '단원 2: 웹 개발'
   csd3_name: '단원 3: 애니메이션과 게임'
   accelerated_name: 빠른 과정
@@ -2102,6 +2104,8 @@ ko-KR:
   footer_support: 지원
   footer_terms: 약관
   ai_for_oceans: 바다를 위한 AI
+  ai_for_oceans_lesson_plan: 수업 계획
+  how_ai_works: AI 작동방법
   ai_in_partnership_with: 파트너십을 통해
   ai_microsoft_thanks: 모든 어린이들이 컴퓨터 과학을 배우고 21세기에 성공할 기술을 얻을 수 있는 기회를 갖도록 저희의 비전과
     미션에 지원하고 있는 마이크로소프트에 감사드립니다.

@@ -607,6 +607,8 @@ az-AZ:
   sports_athlete_Sue: Sue Bird, Olimpiyanın qızıl medalisti və WNBA Çempionu, Seattle
     Storm
   sports_athlete_Marco: Marco Belinelli, NBA Çempionu, Charlotte Hornets
+  watch_inspirational_videos: Başlamazdan əvvəl bu həvəsləndirici videolardan birinə
+    baxın
   video_title_inspire_girl: Bir qızı həvəsləndirin
   video_title_cs_intro: Kompüter Elmlərinə giriş
   video_title_schools_dont_teach: Bir çox məktəblər nəyi keçrmirlər
@@ -683,6 +685,7 @@ az-AZ:
   dashboard_landing_view_as_student: Bu sayta tələbə kimi bax
   dashboard_landing_students_title: Şagirdləriniz
   dashboard_landing_students_manage: Tələbələrinizə baxın və idarə edin
+  dashboard_landing_new_beta: Yeni! K-5 tələbələri üçün beta kurslarımızı sınayın.
   dashboard_landing_useful_links: Digər faydalı linklər
   dashboard_landing_classroom_resources: 'Sinifiniz üçün mənbələr
 
@@ -769,6 +772,7 @@ az-AZ:
   dashboard_students_completed_levels: Tamamlanmış mərhələlər
   dashboard_students_total_lines: Kod Sətirləri
   dashboard_students_secret_picture_title: Məxfi şəkil
+  dashboard_students_secret_picture: Məxfi şəkil
   dashboard_students_secret_word_title: Məxfi söz
   dashboard_students_join_link: 'Şagirdlərinizə deyin ki, özlərinə hesab düzəltsinlər
     və bölmənizə növbəti keçiddən qoşulsunlar:'
@@ -800,6 +804,7 @@ az-AZ:
   dashboard_curriculum_csina: 'Cəbr-də Kompüter Elmləri: '
   dashboard_curriculum_csins: 'İxtisaslarda Kompüter Elmləri '
   dashboard_curriculum_csp: 'Kompüter Elmlərinin Prinsipləri: '
+  dashboard_curriculum_ecs: 'Kompüter Elmlərini Öyrənək:'
   dashboard_grade_k: K
   dashboard_grade_other: Digər
   dashboard_login_word: Söz
@@ -877,9 +882,24 @@ az-AZ:
   coursed-2017_name: D Kursu (2017)
   coursee-2017_name: E Kursu (2017)
   coursef-2017_name: F Kursu (2017)
+  coursea-2019_name: A Kursu (2019)
+  courseb-2019_name: B Kursu (2019)
+  coursec-2019_name: C Kursu (2019)
+  coursed-2019_name: D Kursu (2019)
+  coursee-2019_name: E Kursu (2019)
+  coursef-2019_name: F Kursu (2019)
+  coursea-2020_name: A Kursu (2020)
+  courseb-2020_name: B Kursu (2020)
+  coursec-2020_name: C Kursu (2020)
+  coursed-2020_name: D Kursu (2020)
+  coursee-2020_name: E Kursu (2020)
+  coursef-2020_name: F Kursu (2020)
   coursed-2021_name: D Kursu (2021)
   express-2018_name: Ekspress Kurs (2018)
+  express-2019_name: Ekspress Kurs (2019)
+  express-2020_name: Ekspress Kurs (2020)
   accelerated_name: Sürətləndirilmiş kurs
+  express_name: Ekspress Kursu
   20-hour_name: Sürətləndirilmiş kurs
   gumball_name: Gumball
   classicmaze_name: Ənənəvi labirint
@@ -891,6 +911,9 @@ az-AZ:
   basketball_name: Basketbol oyunu yarat
   sports_name: Özünün idman oyununu kodlaşdır
   applab_gradelevel: 13+ yaş
+  applab_shortdescription_congrats: App Lab sadə tətbiqetmələr hazırlaya biləcəyiniz
+    bir proqramlaşdırma mühitidir. Bir tətbiq hazırlayın, işləməsi üçün bloklarla
+    və ya JavaScript ilə kod hazırlayın, sonra tətbiqinizi saniyələr içində paylaşın
   codeorg_gradelevel: 4-104 yaş
   codeintl_gradelevel: 4-104 yaş
   khan_gradelevel: Orta məktəb +
@@ -1030,6 +1053,7 @@ az-AZ:
     proqramlaşdırma ilə öyrənin. Bu oyuna bənzər dərslikdə Bill Qeyts və Mark Tsukerberqin
     video mühazirələri, "Angry Birds" və "Plants vs. Zombies" yer alır. "Təkrar et"
     dövrləri, şərti ifadələr və sadə alqoritmləri öyrənin. 34 dildə təqdim olunur.
+  hourofcode_longdescription: İlk kompüter proqramınızı yazın
   frozen_longdescription: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
     qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində sürüşərək siz qar
     dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla bölüşə biləcəyiniz
@@ -1109,6 +1133,7 @@ az-AZ:
     və sizə lazım olan an gözəl kömək sisteminə malikdir. "HTML", "CSS" və "JavaScript"
     kurslarımıza istənilən yaşda öyrənməyi əyləncəli və effektiv edən kod yazma tapşırıqları
     və yoxlama oyunları daxildir.
+  compatibility_hide_this_warning: Bu xəbərdarlığı gizlət
   flappy_shortcode: qanad çal
   header_home: Ev səhifəsi
   header_my_dashboard: İdarəetmə panelim
@@ -1157,6 +1182,7 @@ az-AZ:
   user_header_logout: Çıxın
   user_header_signin: Daxil olun
   user_header_create: 'Yarat '
+  user_header_applab: 'Proqram Labı '
   user_header_artist: Rəssam
   user_header_gamelab: Oyun labaratoriyası
   user_header_playlab: Oyun labı
@@ -1165,6 +1191,10 @@ az-AZ:
   user_header_flappy: Flappy
   user_header_view_my_projects: Layihələrimi göstər
   view_all_sections: Bütün bölmələrə bax
+  sign_in_instruct_website: Get %{code_org_url}
+  sign_in_instruct_code: 'Bölmə kodunu yazın: %{section_code}.'
+  sign_in_overview_cards: Tələbələr, gizli %{secret} daxil olmaqla bütün bu məlumatları
+    aşağıdakı giriş kartlarında tapa bilərlər.
   applab_tile_start_tutorial: Başlayın
   applab_tile_teacher_guide: Müəllim bələdçisinə bax
   account_sign_up_email_opt_in: Kurslarımızdakı yeniliklər, yerli imkanlar və ya digər
@@ -1198,6 +1228,8 @@ az-AZ:
   hoc2018_mc_download_adventurer: Minecraft Macəranın oflayn versiyasını yüklə
   hoc2018_mc_educators_box1_button: Başlayın
   hoc2018_mc_educators_box2_button: yüklə
+  hoc2018_mc_watch_videos: Başlamazdan əvvəl bu həvəsləndirici videolardan birinə
+    baxın
   hoc2018_mc_videos_more: Məşhurlar və Aktyorların iştirakı ilə daha çox <a href='%{inspiring_videos_playlist}'>həvəsləndirici
     videolar</a>
   hoc2018_mc_careers_more: Texnologiya sahəsindəki məşhurların iştirakı ilə daha çox
@@ -1227,6 +1259,7 @@ az-AZ:
   hoc2018_dance_party_specs: Dil | Format | Yaş 6-106
   hoc2018_dance_party_button: Başlayın
   hoc2018_dance_keep_on_dancing_box_title: Rəqs etməyə davam edin
+  hoc2018_dance_keep_on_dancing_specs: Dil | Format | Yaş 13+
   hoc2018_dance_keep_on_dancing_button: 2-ci hissəni başlayın
   hoc2018_dance_teacher_resources_title: Müəllimlər üçün materiallar
   hoc2018_dance_teacher_resources_tile1_description: Dərs planları, sertifikatlar

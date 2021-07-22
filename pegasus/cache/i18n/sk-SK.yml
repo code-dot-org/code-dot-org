@@ -819,6 +819,7 @@ sk-SK:
     ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
     na školenie pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a>
     s code.org.
+  dashboard_course_csina: Informatika v algebre
   dashboard_course_csina_desc: Code.org spolupracuje s Bootstrap na rozvoji učebných
     osnov, ktoré učia algebrické a geometrické pojmy cez počítačové programovanie.
   dashboard_course_csins: Inforamtika vo vede
@@ -1241,6 +1242,7 @@ sk-SK:
   pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
   pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
+  pre-express-2021_name: Zrýchlený kurz pre predškolákov (2021)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
@@ -2203,6 +2205,7 @@ sk-SK:
   footer_support: Podpora
   footer_terms: Podmienky
   ai_for_oceans: AI pomáha oceánom
+  ai_for_oceans_lesson_plan: učebný plán
   ai_in_partnership_with: V spolupráci s
   ai_activity: Aktivita
   ai_description: Popis
