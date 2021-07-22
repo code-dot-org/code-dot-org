@@ -50,7 +50,10 @@ social:
 <h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, September 28th at 1 pm EDT</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a former semi-pro soccer player combined his love for sports and his interest in artificial intelligence into a career using data to help athletes and teams improve their performance.</p>
-<p><b>About the speaker</b>: Patrick Lucey serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.</p>
+<p><b>About the speaker</b>:
+<br>
+<strong>Patrick Lucey</strong> serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.
+</p>
 <button>Register</button>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
@@ -64,125 +67,32 @@ social:
 <h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, October 5th at 1 pm EDT</h3>
 <strong>Recommended for grades K-5</strong>
 <p>Hear from three NASA scientists about their career journeys and how they use art and data science to build 3D models of the universe.</p>
-<p><b>About the speakers</b>: Patrick Lucey serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.</p>
+<p><b>About the speakers</b>:</p> 
+<ul>
+  <li>Patrick Lucey serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.</li>
+</ul>
 <button>Register</button>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a id="chats"></a>
-<div class="col-50" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <div class="tutorial-info" style="background-color: #00adbc; border: 1px solid #00adbc; border-top: none; border-radius: 15px 15px 0 0; padding: 15px 25px 25px 25px; min-height: 0">
-        <h3 class="tutorial-info-h" style="color: #ffffff; text-align: left; margin-top:10px; margin-bottom:0"><strong>My Journey: Building Self-Driving Cars</strong></h3>
-        </div>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #00adbc; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 style="margin-top:0; color:#00adbc"><strong>Tuesday, September 21st at 1 pm EDT</strong></h3>
-        <p>Hear from three NASA scientists about their career journeys and learn how NASA uses data science and 3D modeling to build pictures of the universe.</p>
-        <p><strong>Appropriate for: Grades K - 5</strong></p>
-        <br>
-        <button style="margin-bottom:20px">Register</button>
-        <br>
-        <br>
-        <p>Featuring:</p>
-        <div class="col-33"></div>
-        <div class="col-33" style="text-align:center; margin-bottom:10px">
-          <img src="/images/csjourneys/patrick-lucey.png" style="border-radius:50%; width:55%">
-          <p style="margin-top:10px"><strong>Dr. Patrick Lucey</strong>
-          <br>
-          Chief Scientist
-          <br>
-          Stats PERFORM</p>
-          <br>
-        </div>
-        <div style="clear: both"></div>
-    <a href="#top">Back to top</a>        
-    </div>
-  </div>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 4</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/csjourneys/myjourney-codeorg.png" style="max-width:100%; border-radius:15px" alt="Code.org">
 </div>
 
-<div class="col-50" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <div class="tutorial-info" style="background-color: #7665a0; border: 1px solid #7665a0; border-top: none; border-radius: 15px 15px 0 0; padding: 15px 25px 25px 25px; min-height: 0">
-        <h3 class="tutorial-info-h" style="color: #ffffff; text-align: left; margin-top:10px; margin-bottom:0"><strong>My Journey: Using Artificial Intelligence in Sports</strong></h3>
-        </div>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #7665a0; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 style="margin-top:0; color:#7665a0"><strong>Tuesday, September 28th at 1 pm EDT</strong></h3>
-        <p>Learn how a former semi-pro soccer player combined his love for sports and his interest in artificial intelligence into a career using data to help athletes and teams improve their performance.</p>
-        <p><strong>Appropriate for: Grades 6 - 12</strong></p>
-        <button style="margin-bottom:20px">Register</button>
-        <p>Featuring:</p>
-        <div class="col-33" style="text-align:center; margin-bottom:10px">
-          <img src="/images/csjourneys/patrick-lucey.png" style="border-radius:50%; width:55%">
-          <p style="margin-top:10px"><strong>Dr. Patrick Lucey</strong>
-          <br>
-          Chief Scientist
-          <br>
-          Stats PERFORM</p>
-          <br>
-        </div>
-        <div style="clear: both"></div>
-    <a href="#top">Back to top</a>        
-    </div>
-  </div>
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, October 12th at 1 pm EDT</h3>
+<strong>Recommended for grades 6-12</strong>
+<p>Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science.</p>
+<p><b>About the speakers</b>:</p>
+<ul>
+  <li>With an academic background in neuroscience and education, Erin Bond was previously an elementary school teacher and private learning specialist. She is a graduate of Ada Developers Academy and is excited to blend her long-term dedication to education and new-found interest in technology at Code.org.</li>
+  <li>Maureen Sturgeon is a Software Engineer at Code.org. She didn’t discover computer science until college and is passionate about expanding access to computer science for K-12 students. Maureen graduated from Western Washington University with a B.S. in Mathematics. In her spare time, she enjoys hiking, traveling and watching stand-up comedy.</li>
+</ul>
+<button>Register</button>
 </div>
-
 <div style="clear: both; margin-bottom:35px"></div>
 
-<div class="col-50" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <div class="tutorial-info" style="background-color: #00adbc; border: 1px solid #00adbc; border-top: none; border-radius: 15px 15px 0 0; padding: 15px 25px 25px 25px; min-height: 0">
-        <h3 class="tutorial-info-h" style="color: #ffffff; text-align: left; margin-top:10px; margin-bottom:0"><strong>My Journey: Computer Science and Astronomy</strong></h3>
-        </div>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #00adbc; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 style="margin-top:0; color:#00adbc"><strong>Tuesday, October 5th at 1 pm EDT</strong></h3>
-        <p>Hear from three NASA scientists about their career journeys and how they use art and data science to build 3D models of the universe.</p>
-        <p><strong>Appropriate for: Grades K - 5</strong></p>
-        <button style="margin-bottom:20px">Register</button>
-        <p>Featuring:</p>
-        <div class="col-33" style="text-align:center; margin-bottom:10px">
-          <img src="/images/csjourneys/kim-arcand.jpg" style="border-radius:50%; width:55%">
-          <p style="margin-top:10px"><strong>Dr. Kimberly Arcand</strong>
-          <br>
-          Emerging Tech Lead
-          <br>
-          NASA</p>
-        </div>
-        <div class="col-33" style="text-align:center; margin-bottom:10px">
-          <img src="/images/csjourneys/rutu-das.jpg" style="border-radius:50%; width:55%">
-            <p style="margin-top:10px"><strong>Dr. Rutu Das</strong>
-            <br>
-            Astrophysicist
-            <br>
-            NASA</p>
-        </div>
-        <div class="col-33" style="text-align:center">
-          <img src="/images/csjourneys/sasha-samochina.jpg" style="border-radius:50%; width:55%">
-          <p style="margin-top:10px"><strong>Sasha Samochina</strong>
-          <br>
-          Data Visualization & Infusion Lead
-          <br>
-          NASA</p>
-        </div>
-        <div style="clear: both"></div>
-    <a href="#top">Back to top</a>        
-    </div>
-  </div>
-</div>
-
-<div style="clear: both; margin-bottom:35px"></div>
 
 <a id="guide"></a>
 <h2>Teacher Guides</h2>
