@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export const studentShape = PropTypes.shape({
@@ -29,7 +29,7 @@ class StudentTable extends React.Component {
     let url;
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
 
-    if (this.props.userLevels) {
+    if (this.props.userLevels?.length) {
       url = this.props.userLevels[0].bonus
         ? 'extras'
         : this.props.userLevels[0].levelNumber;
@@ -70,11 +70,14 @@ class StudentTable extends React.Component {
             >
               <td key={`td-${student.id}`} style={styles.td}>
                 <div style={styles.studentTableRow}>
-                  {userLevels && (
-                    <TeacherPanelProgressBubble
-                      userLevel={userLevels.find(
+                  {userLevels?.length && (
+                    <ProgressBubble
+                      level={userLevels.find(
                         userLevel => student.id === userLevel.user_id
                       )}
+                      disabled={true}
+                      hideTooltips={true}
+                      hideAssessmentBadge={true}
                     />
                   )}
                   <div

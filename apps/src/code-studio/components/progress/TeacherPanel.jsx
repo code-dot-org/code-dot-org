@@ -15,6 +15,8 @@ import {SelectedStudentInfo} from './SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import $ from 'jquery';
+import {setReloadTeacherPanelProgress} from '@cdo/apps/code-studio/progressRedux';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -39,8 +41,33 @@ class TeacherPanel extends React.Component {
     }),
     unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    students: PropTypes.arrayOf(studentShape)
+    students: PropTypes.arrayOf(studentShape),
+    lessonId: PropTypes.number.isRequired,
+    scriptId: PropTypes.number.isRequired,
+    isLessonExtras: PropTypes.bool.isRequired,
+    levelId: PropTypes.string.isRequired,
+    reloadTeacherPanelProgress: PropTypes.bool.isRequired,
+    onTeacherPanelReloaded: PropTypes.func.isRequired
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sectionScriptLevels: []
+    };
+  }
+
+  componentDidMount() {
+    this.getSectionData();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.reloadTeacherPanelProgress) {
+      console.log('reload teacher panel');
+      this.getSectionData(this.props.onTeacherPanelReloaded);
+    }
+  }
 
   logToFirehose = (eventName, overrideData = {}) => {
     const sectionId =
@@ -63,6 +90,37 @@ class TeacherPanel extends React.Component {
     this.props.onSelectUser(id);
   };
 
+  getSectionData = onComplete => {
+    const {
+      sectionData,
+      levelId,
+      lessonId,
+      scriptId,
+      isLessonExtras
+    } = this.props;
+
+    let url = `/dashboardapi/section_progress/${
+      sectionData.section.id
+    }/teacher_panel`;
+    if (isLessonExtras) {
+      url += `?lesson_id=${lessonId}&is_lesson_extras=true`;
+    } else {
+      url += `?script_id=${scriptId}&level_id=${levelId}`;
+    }
+
+    $.ajax({
+      url: url,
+      method: 'GET'
+    })
+      .done(data => {
+        this.setState({sectionScriptLevels: data});
+        onComplete && onComplete();
+      })
+      .fail((jqXhr, status) => {
+        console.log('errror');
+      });
+  };
+
   render() {
     const {
       sectionData,
@@ -76,20 +134,22 @@ class TeacherPanel extends React.Component {
       unitName
     } = this.props;
 
-    let currentSectionScriptLevels = null;
+    // let currentSectionScriptLevels = null;
     let currentStudent = null;
     let currentStudentScriptLevel = null;
 
+    const {sectionScriptLevels} = this.state;
+
     if (sectionData) {
-      currentSectionScriptLevels = sectionData.section_script_levels;
+      // currentSectionScriptLevels = sectionData.section_script_levels;
       if (sectionData.section && sectionData.section.students) {
         currentStudent = sectionData.section.students.find(
           student => this.props.getSelectedUserId() === student.id
         );
 
         if (currentStudent) {
-          if (currentSectionScriptLevels) {
-            currentStudentScriptLevel = currentSectionScriptLevels.find(
+          if (sectionScriptLevels) {
+            currentStudentScriptLevel = sectionScriptLevels.find(
               level => this.props.getSelectedUserId() === level.user_id
             );
           }
@@ -192,7 +252,7 @@ class TeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              userLevels={currentSectionScriptLevels}
+              userLevels={sectionScriptLevels}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
@@ -244,38 +304,48 @@ const styles = {
 };
 
 export const UnconnectedTeacherPanel = TeacherPanel;
-export default connect(state => {
-  const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
-  const {
-    selectedSectionId,
-    sectionsAreLoaded,
-    sectionIds
-  } = state.teacherSections;
-  const currentSection = lessonsBySectionId[selectedSectionId];
+export default connect(
+  state => {
+    const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
+    const {
+      selectedSectionId,
+      sectionsAreLoaded,
+      sectionIds
+    } = state.teacherSections;
+    const currentSection = lessonsBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedLessonMapping(
-    state.lessonLock.lessonsBySectionId[selectedSectionId]
-  );
-  const unlockedLessonIds = Object.keys(currentSection || {}).filter(
-    lessonId => !fullyLocked[lessonId]
-  );
+    const fullyLocked = fullyLockedLessonMapping(
+      state.lessonLock.lessonsBySectionId[selectedSectionId]
+    );
+    const unlockedLessonIds = Object.keys(currentSection || {}).filter(
+      lessonId => !fullyLocked[lessonId]
+    );
 
-  let lessonNames = {};
-  state.progress.lessons.forEach(lesson => {
-    lessonNames[lesson.id] = lesson.name;
-  });
+    let lessonNames = {};
+    state.progress.lessons.forEach(lesson => {
+      lessonNames[lesson.id] = lesson.name;
+    });
 
-  // Pretend we don't have lockable lessons if we're not authorized to see them
-  const unitHasLockableLessons =
-    lockableAuthorized && hasLockableLessons(state.progress);
+    // Pretend we don't have lockable lessons if we're not authorized to see them
+    const unitHasLockableLessons =
+      lockableAuthorized && hasLockableLessons(state.progress);
 
-  return {
-    viewAs: state.viewAs,
-    hasSections: sectionIds.length > 0,
-    sectionsAreLoaded,
-    unitHasLockableLessons,
-    selectedSection: state.teacherSections.sections[selectedSectionId],
-    unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
-    students: state.teacherSections.selectedStudents
-  };
-})(TeacherPanel);
+    return {
+      viewAs: state.viewAs,
+      hasSections: sectionIds.length > 0,
+      sectionsAreLoaded,
+      unitHasLockableLessons,
+      selectedSection: state.teacherSections.sections[selectedSectionId],
+      unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
+      students: state.teacherSections.selectedStudents,
+      lessonId: state.progress.currentLessonId,
+      scriptId: state.progress.scriptId,
+      isLessonExtras: state.progress.isLessonExtras,
+      levelId: state.progress.currentLevelId,
+      reloadTeacherPanelProgress: state.progress.reloadTeacherPanelProgress
+    };
+  },
+  dispatch => ({
+    onTeacherPanelReloaded: () => dispatch(setReloadTeacherPanelProgress(false))
+  })
+)(TeacherPanel);

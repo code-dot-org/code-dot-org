@@ -185,7 +185,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       levelNumber: script_level.position,
       assessment: nil,
       bonus: nil,
-      teacherFeedbackReivewState: nil
+      teacherFeedbackReviewState: nil
     }
 
     # With no progress
@@ -207,7 +207,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.passed
-    expected_summary[:teacherFeedbackReivewState] = TeacherFeedback::REVIEW_STATES.keepWorking
+    expected_summary[:teacherFeedbackReviewState] = TeacherFeedback::REVIEW_STATES.keepWorking
     expected_summary.merge!(ul2.reload.attributes)
     summary = script_level.summarize_for_teacher_panel(student, teacher)
     assert_equal expected_summary, summary
@@ -231,7 +231,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal sl2.assessment, summary2[:assessment]
     assert_equal sl2.position, summary2[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary2[:status]
-    assert_equal TeacherFeedback::REVIEW_STATES.keepWorking, summary2[:teacherFeedbackReivewState]
+    assert_equal TeacherFeedback::REVIEW_STATES.keepWorking, summary2[:teacherFeedbackReviewState]
     assert_equal false, summary2[:passed]
     assert_equal student.id, summary2[:user_id]
     assert_equal true, summary2[:contained]

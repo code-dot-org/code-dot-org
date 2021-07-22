@@ -342,6 +342,36 @@ class ApiController < ApplicationController
     }
   end
 
+  # GET /dashboardapi/section_progress/:section_id/teacher_panel
+  # Get complete details of a particular section for the teacher panel progress
+  def teacher_panel_progress
+    section = load_section
+
+    if params[:script_id] && params[:level_id]
+      level = Level.find(params[:level_id])
+      return {} unless level
+
+      script_level = level.script_levels.find_by_script_id(params[:script_id])
+
+      student_progress = section.students.order(:name).map do |student|
+        script_level&.summarize_for_teacher_panel(student, current_user)
+      end
+    elsif params[:is_lesson_extras]
+      lesson = Lesson.find(params[:lesson_id])
+      bonus_level_ids = lesson.script_levels.where(bonus: true).map(
+        &:level_ids
+      ).flatten
+
+      student_progress = section.students.order(:name).map do |student|
+        ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
+      end
+    end
+
+    # maureen handle errors
+
+    render json: student_progress
+  end
+
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))

@@ -19,6 +19,10 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  queryUserProgress,
+  setReloadTeacherPanelProgress
+} from '@cdo/apps/code-studio/progressRedux';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -40,7 +44,8 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    updateUserProgress: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -145,6 +150,10 @@ export class TeacherFeedback extends Component {
       .done(data => {
         if (this.state.reviewStateUpdated) {
           this.recordReviewStateUpdated();
+          // The review state effects the state of the progress bubbles,
+          // we re-fetch user progress after the review state has changed
+          // so that the progress bubbles reflect the latest feedback
+          this.props.updateUserProgress(this.studentId);
         }
         this.setState({
           latestFeedback: data,
@@ -349,9 +358,17 @@ const styles = {
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
-  selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
-}))(TeacherFeedback);
+export default connect(
+  state => ({
+    viewAs: state.viewAs,
+    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    selectedSectionId:
+      state.teacherSections && state.teacherSections.selectedSectionId
+  }),
+  dispatch => ({
+    updateUserProgress(userId) {
+      dispatch(queryUserProgress(userId));
+      dispatch(setReloadTeacherPanelProgress(true));
+    }
+  })
+)(TeacherFeedback);
