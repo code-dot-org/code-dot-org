@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Let's finish up the scene by introducing the people in your neighborhood.\r\n\r\nIn `NeighborhoodConcert.java`, write a message about people in your neighborhood in your `showCommunity()` method.\r\n\r\nYour message could say something like \"The people here are really nice!\" or \"There are a lot of different people here!\"\r\n\r\nYou can also use multiple `drawText()` methods to write multiple lines of text. Refer to the documentation for The Theater for a reminder about how to use `drawText()`!",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29230,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-21T17:54:59.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-21T17:54:59.347+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L6\\\"\"],\"cloned_from\":\"CSA U3L4-L6\"},{\"changed_at\":\"2021-07-21 17:59:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 18:10:14 +0000\",\"changed\":[\"display_name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
