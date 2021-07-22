@@ -10,7 +10,10 @@ export default function ControlButtons({
   isRunning,
   isTesting,
   toggleRun,
-  toggleTest
+  toggleTest,
+  isEditingStartSources,
+  isReadOnlyWorkspace,
+  onContinue
 }) {
   const buttonStyles = {
     ...styles.button.all,
@@ -45,6 +48,14 @@ export default function ControlButtons({
         className="noBorder"
         style={buttonStyles}
       />
+      {!isEditingStartSources && (
+        <JavalabButton
+          text={i18n.finish()}
+          onClick={onContinue}
+          style={styles.finish}
+          isDisabled={isReadOnlyWorkspace}
+        />
+      )}
     </div>
   );
 }
@@ -54,7 +65,10 @@ ControlButtons.propTypes = {
   isRunning: PropTypes.bool.isRequired,
   isTesting: PropTypes.bool.isRequired,
   toggleRun: PropTypes.func.isRequired,
-  toggleTest: PropTypes.func.isRequired
+  toggleTest: PropTypes.func.isRequired,
+  isEditingStartSources: PropTypes.bool,
+  isReadOnlyWorkspace: PropTypes.bool.isRequired,
+  onContinue: PropTypes.func.isRequired
 };
 
 const styles = {
@@ -75,5 +89,13 @@ const styles = {
     },
     light: {color: color.cyan},
     dark: {color: color.lightest_gray}
+  },
+  finish: {
+    backgroundColor: color.orange,
+    borderColor: color.orange,
+    fontFamily: '"Gotham 5r"',
+    fontSize: '15px',
+    padding: '1px 8px',
+    margin: '5px 0 5px 5px'
   }
 };

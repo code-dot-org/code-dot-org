@@ -35,6 +35,7 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import JavalabSettings from './JavalabSettings';
 
 const MIN_HEIGHT = 100;
 const CONSOLE_BUFFER = 270;
@@ -65,7 +66,8 @@ class JavalabEditor extends React.Component {
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    renderSettings: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -497,7 +499,8 @@ class JavalabEditor extends React.Component {
       sources,
       isEditingStartSources,
       isReadOnlyWorkspace,
-      showProjectTemplateWorkspaceIcon
+      showProjectTemplateWorkspaceIcon,
+      renderSettings
     } = this.props;
 
     let menuStyle = {
@@ -527,6 +530,7 @@ class JavalabEditor extends React.Component {
               isDisabled={isReadOnlyWorkspace}
             />
           </PaneSection>
+          <JavalabSettings>{renderSettings()}</JavalabSettings>
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
