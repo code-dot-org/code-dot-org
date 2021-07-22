@@ -9,7 +9,8 @@ import javalab, {
   setAllSources,
   setAllValidation,
   setIsDarkMode,
-  appendOutputLog
+  appendOutputLog,
+  setEditorColumnHeight
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -107,6 +108,7 @@ Javalab.prototype.init = function(config) {
 
     window.addEventListener('resize', () => {
       this.studioApp_.resizeVisualization(undefined, {fireResizeEvent: false});
+      getStore().dispatch(setEditorColumnHeight(window.innerHeight - 60));
     });
     window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
       this.studioApp_.resizeVisualization(e.detail);

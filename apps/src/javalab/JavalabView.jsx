@@ -23,6 +23,7 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
     onTopInstructionsHeightResize: PropTypes.func,
+    editorColumnHeight: PropTypes.number,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -120,7 +121,8 @@ class JavalabView extends React.Component {
       isRunning,
       showProjectTemplateWorkspaceIcon,
       onTopInstructionsHeightResize,
-      isReadOnlyWorkspace
+      isReadOnlyWorkspace,
+      editorColumnHeight
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -160,7 +162,8 @@ class JavalabView extends React.Component {
             <div
               style={{
                 ...styles.editorAndConsole,
-                color: isDarkMode ? color.white : color.black
+                color: isDarkMode ? color.white : color.black,
+                height: editorColumnHeight
               }}
               className="editor-column"
             >
@@ -263,7 +266,8 @@ export default connect(
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon
+      .showProjectTemplateWorkspaceIcon,
+    editorColumnHeight: state.javalab.editorColumnHeight
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
