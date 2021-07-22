@@ -37,6 +37,7 @@ class Javalab < Level
     starter_assets
     serialized_maze
     start_direction
+    contained_level_names
   )
 
   before_save :fix_examples, :parse_maze
