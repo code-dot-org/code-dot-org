@@ -235,18 +235,15 @@ function setPoem(key){
     poem.lines.push([{value: "Beside the lake, beneath the trees,", type: 'literal'}]);
     poem.lines.push([{value: "Fluttering and dancing in the breeze.", type: 'literal'}]);
   }
-    if(key=="dickinson"){
+    if(key=="silverstein"){
     poem = {
-      title: "If I can Stop one Heart from Breaking",
-      author: "Emily Dickinson",
+      title: "Batty",
+      author: "Shel Silverstein",
       lines: []
     };
-    poem.lines.push([{value: "If I can stop one heart from breaking,", type: 'literal'}]);
-    poem.lines.push([{value: "I shall not live in vain;", type: 'literal'}]);
-    poem.lines.push([{value: "If I can ease one life the aching,", type: 'literal'}]);
-    poem.lines.push([{value: "Or cool one pain,", type: 'literal'}]);
-    poem.lines.push([{value: "Or help one fainting robin", type: 'literal'}]);
-    poem.lines.push([{value: "Unto his nest again,", type: 'literal'}]);
-    poem.lines.push([{value: "I shall not live in vain.", type: 'literal'}]);
+    poem.lines.push([{value: "The baby bat", type: 'literal'}]);
+    poem.lines.push([{value: "Screamed out in fright", type: 'literal'}]);
+    poem.lines.push([{value: "'Turn on the dark;", type: 'literal'}]);
+    poem.lines.push([{value: "I'm afraid of the light.'", type: 'literal'}]);
   }
 }
