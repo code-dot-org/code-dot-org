@@ -1,25 +1,23 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
+import {Factory} from 'rosie';
+import './CodeReviewTestHelper';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
-const DEFAULT_COMMENT = {
-  id: 1,
-  name: 'Charlie Brown',
-  commentText:
-    "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-  timestampString: '2021/01/01 at 9:30 AM',
-  isResolved: false,
-  isFromTeacher: false,
-  isFromCurrentUser: false,
-  isFromOlderVersionOfProject: false
-};
+const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 
 describe('Code Review Comment', () => {
   const renderWrapper = (overrideProps = {}) => {
     const combinedComment = {...DEFAULT_COMMENT, ...overrideProps};
-    return shallow(<Comment comment={combinedComment} />);
+    return shallow(
+      <Comment
+        comment={combinedComment}
+        onResolveStateToggle={() => {}}
+        onDelete={() => {}}
+      />
+    );
   };
 
   const renderAndCheckBackgroundColor = (
