@@ -13,6 +13,7 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 
 const initialState = {
   consoleLogs: [],
@@ -20,7 +21,8 @@ const initialState = {
   isDarkMode: false,
   validation: {},
   renderedEditorHeight: 400,
-  isRunning: false
+  isRunning: false,
+  editorColumnHeight: 600
 };
 
 // Action Creators
@@ -129,6 +131,11 @@ export const setRenderedHeight = height => ({
   height
 });
 
+export const setEditorColumnHeight = editorColumnHeight => ({
+  type: EDITOR_COLUMN_HEIGHT,
+  editorColumnHeight
+});
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
@@ -222,6 +229,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isRunning: action.isRunning
+    };
+  }
+  if (action.type === EDITOR_COLUMN_HEIGHT) {
+    return {
+      ...state,
+      editorColumnHeight: action.editorColumnHeight
     };
   }
   return state;

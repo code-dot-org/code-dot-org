@@ -134,6 +134,10 @@ class JavalabEditor extends React.Component {
     orderedTabKeys.forEach(tabKey => {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
+
+    window.addEventListener('resize', () => {
+      this.handleHeightResize(window.innerHeight);
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
