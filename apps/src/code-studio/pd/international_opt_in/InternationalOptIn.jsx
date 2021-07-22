@@ -76,7 +76,18 @@ class InternationalOptInComponent extends FormComponent {
   }
 
   /**
-   * If Colombia is selected as the school's country, we use a hierarchy of
+   * We also have some special logic in place for Chile, so define a
+   * helper here to let us easily detect if we're in a state where that logic
+   * should be applied.
+   *
+   * @returns {boolean}
+   */
+  isChileSelected() {
+    return this.props.data && this.props.data.schoolCountry === 'chile';
+  }
+
+  /**
+   * If Colombia or Chile is selected as the school's country, we use a hierarchy of
    * select elements to carefully control the school selection (rather than the
    * freeform text inputs we use for other countries). In this scenario, we
    * want to make sure that changing the selection at any point in the
@@ -87,7 +98,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {Object} - modified state
    */
   handleSchoolDataChange(newState) {
-    if (!this.isColombiaSelected()) {
+    if (!this.isColombiaSelected() && !this.isChileSelected()) {
       return newState;
     }
 
@@ -98,16 +109,20 @@ class InternationalOptInComponent extends FormComponent {
       newState.schoolDepartment = undefined;
     }
     if ('schoolDepartment' in newState) {
-      // school department changed, clearing municipality
+      // school department changed, clearing municipality and commune
       newState.schoolMunicipality = undefined;
+      newState.schoolCommune = undefined;
     }
     if ('schoolMunicipality' in newState) {
       // school municipality changed, clearing city
       newState.schoolCity = undefined;
     }
-    if ('schoolCity' in newState) {
-      // school city changed, clearing name
+    if ('schoolCity' in newState || 'schoolCommune' in newState) {
+      // school city/commune changed, clearing name
       newState.schoolName = undefined;
+    }
+    if ('schoolName' in newState) {
+      newState.schoolId = undefined;
     }
 
     return newState;
@@ -147,7 +162,7 @@ class InternationalOptInComponent extends FormComponent {
     const departments = this.props.options.colombianSchoolData;
     const selectDepartment = this.buildSelectFieldGroup({
       name: 'schoolDepartment',
-      label: this.props.labels.colombianSchoolDepartment,
+      label: this.props.labels.colombianChileanSchoolDepartment,
       options: Object.keys(departments),
       placeholder: i18n.selectAnOption(),
       required: true
@@ -180,7 +195,7 @@ class InternationalOptInComponent extends FormComponent {
     const names = cities[selectedCity] || [];
     const selectName = this.buildSelectFieldGroup({
       name: 'schoolName',
-      label: this.props.labels.colombianSchoolName,
+      label: this.props.labels.colombianChileanSchoolName,
       options: names,
       disabled: !selectedCity,
       placeholder: selectedCity
@@ -199,11 +214,82 @@ class InternationalOptInComponent extends FormComponent {
     );
   }
 
+  /**
+   * Similarly, if they have seleced Chile as their country, we want to display dropdowns
+   * for city and name.
+   *
+   * @returns {Component}
+   */
+  renderChileanSchoolDataFieldGroup() {
+    const selectedDepartment =
+      this.props.data && this.props.data.schoolDepartment;
+    const selectedCommune =
+      selectedDepartment && this.props.data && this.props.data.schoolCommune;
+    const selectedName =
+      selectedCommune && this.props.data && this.props.data.schoolName;
+
+    const departments = this.props.options.chileanSchoolData || {};
+    const selectDepartment = this.buildSelectFieldGroup({
+      name: 'schoolDepartment',
+      label: this.props.labels.colombianChileanSchoolDepartment,
+      options: Object.keys(departments),
+      placeholder: i18n.selectAnOption(),
+      required: true
+    });
+
+    const communes = departments[selectedDepartment] || {};
+    const selectCommune = this.buildSelectFieldGroup({
+      name: 'schoolCommune',
+      label: this.props.labels.chileanSchoolCommune,
+      options: Object.keys(communes),
+      disabled: !selectedDepartment,
+      placeholder: selectedDepartment
+        ? i18n.selectAnOption()
+        : i18n.selectDepartmentFirst(),
+      required: true
+    });
+
+    const names = communes[selectedCommune] || {};
+    const selectName = this.buildSelectFieldGroup({
+      name: 'schoolName',
+      label: this.props.labels.colombianChileanSchoolName,
+      options: Object.keys(names),
+      disabled: !selectedCommune,
+      placeholder: selectedCommune
+        ? i18n.selectAnOption()
+        : i18n.selectCommuneFirst(),
+      required: true
+    });
+
+    const ids = names[selectedName] || [];
+    const selectId = this.buildSelectFieldGroup({
+      name: 'schoolId',
+      label: this.props.labels.chileanSchoolId,
+      options: ids,
+      disabled: !selectedName,
+      placeholder: selectedName
+        ? i18n.selectAnOption()
+        : i18n.selectNameFirst(),
+      required: true
+    });
+
+    return (
+      <FormGroup>
+        {selectDepartment}
+        {selectCommune}
+        {selectName}
+        {selectId}
+      </FormGroup>
+    );
+  }
+
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
 
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
+    } else if (this.isChileSelected()) {
+      schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
       // placeholder text asking the user to select their country first.

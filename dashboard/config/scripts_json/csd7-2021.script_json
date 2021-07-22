@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-12 22:15:19 UTC",
+    "serialized_at": "2021-07-21 20:25:41 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -7007,7 +7007,7 @@
       "key": "07460e2d-0520-4fc3-9092-9b145ff54295",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Google Sheets Introduction video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n[r view_and_download_survey_data/csd/2021]"
       },
       "seeding_key": {
         "activity_section.key": "07460e2d-0520-4fc3-9092-9b145ff54295",
@@ -7216,7 +7216,7 @@
       "key": "7f4a57cb-7221-40f4-a60a-2026a13bcba2",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Editing Google Sheets video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/csd/2021] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -10996,6 +10996,18 @@
       }
     },
     {
+      "name": "Cleaning Survey Data",
+      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "key": "cleaning_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -11606,6 +11618,18 @@
       }
     },
     {
+      "name": "View and Download Survey Data",
+      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "key": "view_and_download_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
       "name": "Zombie Prediction - Activity Guide",
       "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
       "key": "zombie_prediction_-_activity_guide",
@@ -11644,234 +11668,6 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "resource.key": "classifying_fish"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "resource.key": "introduction_to_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "seeing_ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "patterns_in_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "shoe_survey"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "patterns_in_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "finding_patterns_in_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "classification_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "fruit_veggie_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "_key_classification_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "classification_models_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "training_a_model_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "introduction_to_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "introduction_to_ai_lab_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "training_and_testing_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "resource.key": "importing_models_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "ai_training_data_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "model_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "model_cards_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "saving_models_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "zoo_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "resource.key": "model_cards_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "resource.key": "if-statements_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "resource.key": "numerical_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "resource.key": "zombie_prediction_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "resource.key": "zombie_prediction_-_answer_key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "resource.key": "numerical_accuracy_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "resource.key": "customizing_apps"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "AI Code of Ethics",
         "resource.key": "ai_code_of_ethics"
       }
@@ -11891,25 +11687,169 @@
     {
       "seeding_key": {
         "lesson.key": "AI Code of Ethics",
-        "resource.key": "our_ai_code_of_ethics_template_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
         "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "resource.key": "make_a_machine_learning_app"
+        "lesson.key": "AI Code of Ethics",
+        "resource.key": "our_ai_code_of_ethics_template_"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "resource.key": "create_an_ml_app_-_project_guide"
+        "lesson.key": "Classification Models",
+        "resource.key": "_key_classification_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "classification_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "classification_models_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "fruit_veggie_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating an App",
+        "resource.key": "creating_an_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "resource.key": "customizing_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "design_an_ai_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "exemplar_-_design_an_ai_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "exemplar_-_design_an_ai_app_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "model_card_-_digital_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "model_card_-_printable_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "resource.key": "importing_models_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "introduction_to_ai_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "training_and_testing_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "introduction_to_machine_learning"
       }
     },
     {
@@ -11932,26 +11872,134 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_planning_-_activity_guide"
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "resource.key": "create_an_ml_app_-_project_guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_planning"
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "resource.key": "make_a_machine_learning_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_template_google_form_"
+        "lesson.key": "Model Cards in App Lab",
+        "resource.key": "if-statements_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "resource.key": "model_cards_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "resource.key": "ai_training_data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "resource.key": "model_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "resource.key": "model_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "numerical_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "numerical_data_in_ai_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "numerical_data_in_ai_lab_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "resource.key": "finding_patterns_in_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "resource.key": "patterns_in_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "resource.key": "shoe_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "model_cards_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "saving_models_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "zoo_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "numerical_accuracy_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "numerical_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "zombie_prediction_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "zombie_prediction_-_answer_key"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "kim_s_survey_data_-_student_resource"
+        "resource.key": "cleaning_survey_data"
       }
     },
     {
@@ -11963,7 +12011,37 @@
     {
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "kim_s_survey_data_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
         "resource.key": "survey_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "survey_planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "survey_planning_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "survey_template_google_form_"
       }
     },
     {
@@ -11980,62 +12058,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Creating an App",
-        "resource.key": "creating_an_app"
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "model_card_-_digital_template"
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "model_card_-_printable_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "design_an_ai_app_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app_model_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "resource.key": "_template_5_why_s"
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning_2"
       }
     }
   ],

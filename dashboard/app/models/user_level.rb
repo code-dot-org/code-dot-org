@@ -186,6 +186,21 @@ class UserLevel < ApplicationRecord
     user_level.save!(touch: false)
   end
 
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at = true)
+    user_level = UserLevel.find_by(
+      level_id: level_id,
+      script_id: script_id,
+      user_id: user_id
+    )
+
+    if user_level.present?
+      user_level.best_result = best_result
+
+      # touch_updated_at=false preserves updated_at, which represents the user's submission timestamp.
+      user_level.save!(touch: touch_updated_at)
+    end
+  end
+
   # Get number of passed levels per user for the given set of user IDs
   # @param [ActiveRecord::Relation<Collection<User>>] users
   # @return [Hash<Integer, Integer>] user_id => passed_level_count

@@ -1,16 +1,25 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
+import CommentOptions from './CommentOptions';
 
 export default class Comment extends Component {
   static propTypes = {
-    comment: commentShape.isRequired
+    comment: commentShape.isRequired,
+    onResolveStateToggle: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
   state = {
-    showEllipsisMenu: false
+    isShowingCommentOptions: false
+  };
+
+  onDelete = commentId => {
+    this.setState({isShowingCommentOptions: false});
+    this.props.onDelete(commentId);
   };
 
   renderName = () => {
@@ -33,12 +42,15 @@ export default class Comment extends Component {
 
   render() {
     const {
+      id,
       commentText,
       timestampString,
-      isResolved,
       isFromCurrentUser,
-      isFromOlderVersionOfProject
+      isFromOlderVersionOfProject,
+      isResolved
     } = this.props.comment;
+
+    const {isShowingCommentOptions} = this.state;
 
     return (
       <div
@@ -50,18 +62,28 @@ export default class Comment extends Component {
       >
         <div style={styles.commentHeaderContainer}>
           {this.renderName()}
-          <span
+          <div
             className="fa fa-ellipsis-h"
             style={styles.ellipsisMenu}
             onClick={() =>
-              this.setState({showEllipsisMenu: !this.state.showEllipsisMenu})
+              this.setState({
+                isShowingCommentOptions: !isShowingCommentOptions
+              })
             }
-          />
+          >
+            {isShowingCommentOptions && (
+              <CommentOptions
+                isResolved={isResolved}
+                onResolveStateToggle={() => {
+                  this.props.onResolveStateToggle(id);
+                  this.setState({isShowingCommentOptions: false});
+                }}
+                onDelete={() => this.onDelete(id)}
+              />
+            )}
+          </div>
           {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
-          {this.state.showEllipsisMenu && (
-            <div>Placeholder for ellipsis menu</div>
-          )}
         </div>
         <div
           id={'code-review-comment-body'}
@@ -107,7 +129,7 @@ const styles = {
     padding: '10px 12px'
   },
   commentContainer: {
-    margin: '0 0 25px 0'
+    marginBottom: '25px'
   },
   currentUserComment: {
     backgroundColor: color.lightest_cyan
@@ -120,6 +142,7 @@ const styles = {
     margin: '0 5px'
   },
   commentHeaderContainer: {
-    margin: '0 0 5px 0'
+    marginBottom: '5px',
+    position: 'relative'
   }
 };

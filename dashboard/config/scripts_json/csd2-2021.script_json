@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-15 18:20:28 UTC",
+    "serialized_at": "2021-07-20 22:21:08 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -10185,8 +10185,38 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "classes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "digital-footprint"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "social-sleuth"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "social-sleuth-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "exploring-web-pages-exemplar-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10198,6 +10228,60 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
+        "resource.key": "exploring-web-pages-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "creative-commons-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "licensing-your-work-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "licensing-your-work-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
@@ -10210,19 +10294,7 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
         "resource.key": "html_tags"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
-        "resource.key": "video_intro_to_web_lab_part_1"
       }
     },
     {
@@ -10233,62 +10305,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Headings",
+        "lesson.key": "Intro to HTML",
+        "resource.key": "video_intro_to_web_lab_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "video_pair_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "video_debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "headings_and_paragraphs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "project-guide-html-project-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "peer-review-html-web-page-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-web-page-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "mini-project-html-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-web-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-page"
+        "lesson.key": "Linking Pages",
+        "resource.key": "hyperlinks"
       }
     },
     {
@@ -10300,25 +10330,301 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-web-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-web-page-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "lists"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "digital-footprint"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "mini-project-html-page"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "social-sleuth-exemplar-2020"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "peer-review-html-web-page-exemplar-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "social-sleuth"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "project-guide-html-project-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "peer-review-your-personal-style-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "project-guide-your-personal-style-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style-1-2-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "peer-review-final-personal-website-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "practices-reflection-l21-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "project-guide-website-for-a-purpose-reflect-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose-reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "plan-a-multi-page-website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "peer-review-personal-website-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "person-web-page-reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal-web-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal-web-page-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal_web_page_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "practices-reflection-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "project-guide-personal-web-page-reflect-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "publishing_your_website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "how-search-works-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "internet-scavenger-hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "links-and-research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "links-and-research-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "body-styling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "body_styling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "layout-properties"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "layout_properties"
       }
     },
     {
@@ -10353,62 +10659,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "project-guide-your-personal-style-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "peer-review-your-personal-style-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style-1-2-3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
+        "lesson.key": "Team Problem Solving",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "licensing-your-work-exemplar-2020"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "how-teamwork-works"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "licensing-your-work-2020"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "teamwork-dealing-with-disagreement"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "creative-commons-video"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "website-team-plan"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "website-team-plan-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "creative_commons_search"
       }
     },
     {
@@ -10425,14 +10707,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Images",
-        "resource.key": "creative_commons_search"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Websites for Expression ",
-        "resource.key": "define-your-webpage-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10444,121 +10720,13 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression ",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body-styling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout-properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body_styling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "project-guide-personal-web-page-prepare-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "person-web-page-prepare"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "practices-reflection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "project-guide-personal-web-page-reflect-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "peer-review-personal-website-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal-web-page-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "person-web-page-reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal-web-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "publishing_your_website"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal_web_page_-_student_checklist"
+        "resource.key": "define-your-webpage-2020"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
-        "resource.key": "websites-for-a-purpose-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10570,227 +10738,29 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
+        "resource.key": "websites-for-a-purpose-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "website-team-plan-2020"
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "person-web-page-prepare"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "teamwork-dealing-with-disagreement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "how-teamwork-works"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "website-team-plan"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "links-and-research-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "links-and-research"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "how-search-works-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "internet-scavenger-hunt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "CSS Classes",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "CSS Classes",
-        "resource.key": "classes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "plan-a-multi-page-website"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
-        "resource.key": "hyperlinks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "practices-reflection-l21-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "project-guide-website-for-a-purpose-reflect-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "peer-review-final-personal-website-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose-reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "project-guide-personal-web-page-prepare-exemplar-2020"
       }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd2-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_code_2",
@@ -10812,6 +10782,36 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_3",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd2-2021"
       }
     }
