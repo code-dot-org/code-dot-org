@@ -1,9 +1,19 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
+    "/projects": "home-learning-2020",
+    "/home": "class-schedule-survey",
+    "/courses": "class-schedule-survey"
   },
 
   "banners": {
+    "class-schedule-survey": {
+      "image": "/images/class-schedule-survey.png",
+      "title": "Fall 2021 Class Schedule Survey",
+      "body": "Please take a moment to fill out this 5-question survey. Answers you provide will help us determine when to offer programming like virtual field trips and talks with professionals during the fall semester.",
+      "buttonText": "Take the survey",
+      "buttonUrl": "https://docs.google.com/forms/d/e/1FAIpQLScS1FcBADzbFozhAXoICK4g1Yg2Hymhx0QYFP74yqSBXa0gnA/viewform",
+      "buttonId": "class-schedule-survey-fall2021"
+    },
     "teacher-apps-open-2021": {
       "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
       "title": "Sign up for Professional Learning",

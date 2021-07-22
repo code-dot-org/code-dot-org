@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-08 03:12:53 UTC",
+    "serialized_at": "2021-07-20 22:21:18 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp9-2021"
@@ -3379,13 +3379,13 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
-        "resource.key": "google-trends"
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
         "resource.key": "csp-u9-presentation"
       }
     },
@@ -3393,6 +3393,12 @@
       "seeding_key": {
         "lesson.key": "Exploring One Column",
         "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "data_visualizer_in_app_lab_-_part_1"
       }
     },
     {
@@ -3403,8 +3409,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "resource.key": "data_visualizer_in_app_lab_-_part_1"
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "csp-u9-presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "data_visualizer_in_app_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "resource.key": "exploring-two-columns-activity-guide"
       }
     },
     {
@@ -3421,32 +3439,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
+        "lesson.key": "Learning From Data",
         "resource.key": "csp-u9-presentation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "resource.key": "exploring-two-columns-activity-guide"
+        "lesson.key": "Learning From Data",
+        "resource.key": "google-trends"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "resource.key": "data_visualizer_in_app_lab_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson.key": "Lesson 9: Assessment Day",
         "resource.key": "csp-u9-presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
       }
     },
     {
@@ -3502,18 +3508,30 @@
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Assessment Day",
-        "resource.key": "csp-u9-presentation"
-      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp9-2021"
       }
     },
@@ -3526,24 +3544,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_9",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_9",
         "script.name": "csp9-2021"
       }
     }

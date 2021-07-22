@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Let's start the concert by showing your neighborhood and welcoming everyone.\r\n\r\nLook at the documentation for The Theater and find the `drawImage()` and `drawText()` methods.\r\n\r\nIn `NeighborhoodConcert.java`, display your neighborhood image and a welcome message by adding the following to the `welcome()` method:\r\n\r\n1. `myStage.drawImage(neighborhood, 0, 0, myStage.getWidth(), myStage.getHeight(), 0);`\r\n   * Using (0, 0) as the x and y coordinates places the top left corner of the image at the top left corner of the stage.\r\n\r\n   * Using `myStage.getWidth()` as the width of the image makes sure it takes up the width of the stage. \r\n   \r\n   * Using `myStage.getHeight()` as the height of the image makes sure it takes up the height of the stage.\r\n   \r\n   * Setting the rotation to 0 keeps the image straight.\r\n   \r\n2. `myStage.drawText(\"Welcome to My Neighborhood!\", 40, 40, \"black\", \"Arial\", 20, 30);`\r\n   * You can change `Welcome to My Neighborhood!` to use the name of your city instead.\r\n   \r\n   * The top left corner of the text starts at (40, 40). You may need to adjust these coordinates.\r\n   \r\n   * `\"black\"` is the color of the text.\r\n   \r\n   * `Arial` is the font style used.\r\n   \r\n   * `20` represents the font size. You may need to adjust your size.\r\n   \r\n   * The text is displayed at a 30 degree angle.",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29156,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-20T19:32:30.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-20T19:32:30.055+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L5\\\"\"],\"cloned_from\":\"CSA U3L2-L5\"},{\"changed_at\":\"2021-07-20 19:43:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-20 19:44:34 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 13:52:57 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

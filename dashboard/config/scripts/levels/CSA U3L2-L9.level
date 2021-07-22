@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Now it's time to create the second scene and add yourself to the concert!\r\n\r\nIn `NeighborhoodConcert.java`, add the following to `introSelf()`:\r\n1. Use `drawImage()` to display the image of your neighborhood as the background.\r\n\r\n2. Use `drawImage()` to display the image of yourself in the middle of the stage.\r\n\r\n3. Use `drawText()` to write a message to introduce yourself.\r\n\r\nIn `MyConcert.java`, test your `playConcert()` method:\r\n1. Add a `pause()` after the call to `welcome()`.\r\n\r\n2. Add a call to `introSelf()` after the `pause()`.",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29167,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-20T20:32:23.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-20T20:32:23.819+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L7\\\"\"],\"cloned_from\":\"CSA U3L2-L7\"},{\"changed_at\":\"2021-07-20 20:43:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-20 20:48:30 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 13:53:38 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 13:57:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -8,7 +8,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   PERFORMANCE1 = 'performanceLevel1'
   PERFORMANCE2 = 'performanceLevel3'
   PERFORMANCE3 = 'performanceLevel4'
-  REVIEW_STATE = 'keepWorking'
+  REVIEW_STATE = TeacherFeedback::REVIEW_STATES.keepWorking
 
   self.use_transactional_test_case = true
   setup_all do
@@ -31,6 +31,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal @level.id, teacher_feedback.level_id
     assert_equal @teacher.id, teacher_feedback.teacher_id
     assert_equal @section.id, teacher_feedback.analytics_section_id
+  end
+
+  test 'create - when review state is keepWorking, calls update_best_result with expected params' do
+    UserLevel.expects(:update_best_result).once.
+      with(@student.id, @level.id, @script.id, ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING, false)
+
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
   end
 
   test 'retrieves no content when no feedback is available' do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_141604) do
+ActiveRecord::Schema.define(version: 2021_07_19_221440) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -110,6 +110,14 @@ ActiveRecord::Schema.define(version: 2021_07_19_141604) do
     t.index ["level_id"], name: "fk_rails_8f51960e09"
     t.index ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids"
+  end
+
+  create_table "backpacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "storage_app_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_backpacks_on_user_id"
   end
 
   create_table "blocks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
