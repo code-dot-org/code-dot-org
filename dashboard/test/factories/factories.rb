@@ -1387,7 +1387,6 @@ FactoryGirl.define do
     association :project_owner, factory: :student
 
     storage_app_id 1
-    project_version 'a_project_version_string'
     comment 'a comment about your project'
   end
 
