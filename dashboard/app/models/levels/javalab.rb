@@ -59,7 +59,7 @@ class Javalab < Level
   end
 
   def parse_maze
-    return if project_template_level.serialized_maze
+    return if serialized_maze.blank? && project_template_level&.try(:serialized_maze)
     if serialized_maze.nil? && csa_view_mode == 'neighborhood'
       raise ArgumentError.new('neighborhood must have a serialized_maze')
     end
@@ -95,7 +95,7 @@ class Javalab < Level
   end
 
   def get_serialized_maze
-    try(:project_template_level).serialized_maze || serialized_maze
+    serialized_maze || project_template_level&.try(:serialized_maze)
   end
 
   # Return an 'appOptions' hash derived from the level contents
