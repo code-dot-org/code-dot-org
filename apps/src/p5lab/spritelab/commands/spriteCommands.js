@@ -1,39 +1,5 @@
 import {commands as locationCommands} from './locationCommands';
 
-function makeSprite(coreLibrary, opts) {
-  opts = opts || {};
-  let name = opts.name;
-  let location = opts.location;
-  let animation = opts.animation;
-  if (!location) {
-    location = {x: 200, y: 200};
-  }
-  if (typeof location === 'function') {
-    location = location();
-  }
-  var sprite = coreLibrary.p5.createSprite(location.x, location.y);
-  sprite.direction = 0;
-  sprite.speed = 5;
-  sprite.baseScale = 1;
-  sprite.setScale = function(scale) {
-    sprite.scale = scale * sprite.baseScale;
-  };
-  sprite.getScale = function() {
-    return sprite.scale / sprite.baseScale;
-  };
-  let spriteArg = coreLibrary.addSprite(sprite, name, animation);
-  if (animation) {
-    sprite.setAnimation(animation);
-    sprite.scale /= sprite.baseScale;
-    sprite.baseScale =
-      100 /
-      Math.max(100, sprite.animation.getHeight(), sprite.animation.getWidth());
-    sprite.scale *= sprite.baseScale;
-  }
-  sprite.setScale(coreLibrary.defaultSpriteSize / 100);
-  return spriteArg;
-}
-
 export const commands = {
   countByAnimation(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
@@ -87,16 +53,16 @@ export const commands = {
   },
 
   createNewSprite(name, animation, location) {
-    return makeSprite(this, {name: name.name, animation, location});
+    return this.addSprite({name: name.name, animation, location});
   },
 
   makeNewSpriteAnon(animation, location) {
-    return makeSprite(this, {animation, location});
+    return this.addSprite({animation, location});
   },
 
   makeNumSprites(num, animation) {
     for (let i = 0; i < num; i++) {
-      makeSprite(this, {
+      this.addSprite({
         animation,
         location: locationCommands.randomLocation()
       });
