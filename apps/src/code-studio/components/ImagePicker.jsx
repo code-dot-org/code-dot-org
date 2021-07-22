@@ -168,6 +168,14 @@ export default class ImagePicker extends React.Component {
       levelName = reduxState.level.name;
       isStartMode = reduxState.level.isStartMode;
     }
+    if (
+      reduxState.javalab &&
+      reduxState.javalab.levelName &&
+      reduxState.javalab.isStartMode
+    ) {
+      levelName = reduxState.javalab.levelName;
+      isStartMode = reduxState.javalab.isStartMode;
+    }
 
     return (
       <div className="modal-content" style={styles.root}>
