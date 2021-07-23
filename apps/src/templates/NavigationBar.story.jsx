@@ -4,7 +4,10 @@ import TeacherDashboardNavigation from './teacherDashboard/TeacherDashboardNavig
 import {allowConsoleWarnings} from '../../test/util/testUtils';
 
 export default storybook => {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   return storybook.storiesOf('NavigationBar', module).addStoryTable([
     {
       name: 'Navigation Bar',

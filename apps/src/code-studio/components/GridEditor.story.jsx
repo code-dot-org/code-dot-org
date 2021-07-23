@@ -1,10 +1,7 @@
 import React from 'react';
 import GridEditor from './GridEditor';
-import {withInfo} from '@storybook/addon-info';
-import {allowConsoleWarnings} from '../../../test/util/testUtils';
 
 export default storybook => {
-  allowConsoleWarnings();
   const starWarsGrid = [
     [16908288, 16908288, 0, 0, 0, 0, 0, 0],
     [16908288, 16908288, 0, 65536, 131072, 1048576, 0, 0],
@@ -21,11 +18,10 @@ export default storybook => {
     });
   });
 
-  storybook
-    .storiesOf('GridEditor', module)
-    .add(
-      'karel',
-      withInfo('This is the farmer / bee / collector editor.')(() => (
+  storybook.storiesOf('GridEditor', module).addStoryTable([
+    {
+      name: 'Karel: Farmer/Bee/Collector editor',
+      story: () => (
         <div id="grid">
           <GridEditor
             skin="bee"
@@ -52,11 +48,11 @@ export default storybook => {
             onUpdate={() => {}}
           />
         </div>
-      ))
-    )
-    .add(
-      'star wars grid',
-      withInfo('This is the Star Wars BB-8 editor.')(() => (
+      )
+    },
+    {
+      name: 'Star Wars: BB-8 editor',
+      story: () => (
         <div id="grid">
           <GridEditor
             skin="starwarsgrid"
@@ -64,6 +60,7 @@ export default storybook => {
             onUpdate={() => {}}
           />
         </div>
-      ))
-    );
+      )
+    }
+  ]);
 };

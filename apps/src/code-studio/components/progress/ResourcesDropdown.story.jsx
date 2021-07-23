@@ -28,7 +28,10 @@ const migratedSampleResources = [
 ];
 
 export default storybook => {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
     {
       name: 'unmigrated teacher resources',
