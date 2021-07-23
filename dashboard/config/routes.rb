@@ -893,5 +893,7 @@ Dashboard::Application.routes.draw do
 
   get '/backpacks/channel', to: 'backpacks#get_channel'
 
-  resources :reviewable_projects, only: [:create, :destroy]
+  resources :reviewable_projects, only: [:create, :destroy] do
+    get :reviewable_status, on: :collection
+  end
 end
