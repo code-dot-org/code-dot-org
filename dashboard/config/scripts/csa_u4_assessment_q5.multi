@@ -1,27 +1,27 @@
 name 'CSA U4 Assessment q5'
 height 'auto'
 
-wrong ‘7’
-wrong ‘3.04’
-right ‘7.0’
-wrong ‘7.04’
+wrong ‘`a`’
+wrong ‘`2 * a`’
+wrong ‘A random integer between `0` and `a - 1`, inclusive’
+wrong ‘A random integer between `a` and `2 * a`, inclusive’
+right ‘A random integer between `a` and `2 * a - 1`, inclusive’
 
 
 
 
 teacher_markdown <<MARKDOWN
-Covered in Unit 1 Lesson 10. 
+Covered in Unit 4 Lesson 5. 
 
 MARKDOWN
 
 markdown <<MARKDOWN
-What will be printed when the following code segment is run? 
+Consider the following code segment. Assume that `a` is greater than zero.
 
 ```
-public class MyClass {
-  public static void main(String[] args){
-    System.out.println("Will this print an int or a double: " + (3.0 + 4));
-  }
-}
+int a = /* value not shown */;
+int b = a + (int) (Math.random() * a);
+
 ```
+Which of the following best describes the value assigned to `b` when the code segment is executed?
 MARKDOWN

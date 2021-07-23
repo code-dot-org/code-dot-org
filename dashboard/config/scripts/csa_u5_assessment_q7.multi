@@ -1,0 +1,27 @@
+name 'CSA U5 Assessment q7'
+height 'auto'
+
+wrong ‘7’
+wrong ‘3.04’
+right ‘7.0’
+wrong ‘7.04’
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 1 Lesson 10. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+What will be printed when the following code segment is run? 
+
+```
+public class MyClass {
+  public static void main(String[] args){
+    System.out.println("Will this print an int or a double: " + (3.0 + 4));
+  }
+}
+```
+MARKDOWN

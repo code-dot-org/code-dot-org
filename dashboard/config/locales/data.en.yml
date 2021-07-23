@@ -632,6 +632,9 @@ en:
         csd_ml_model_cards_july2021: Model Cards in AI Lab
         csd_ml_numerical_ai_lab: Numerical Data in AI Lab
         Gettting_Started_Progress: Progress, Feedback, and Assessment
+        Gettting_Started_ClassSection: Creating a Class Section
+        Gettting_Started_StudentExperience: The Student Experience
+        Getting_Started_BasicFeatures: Basic Features of Code.org
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
