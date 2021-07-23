@@ -45,7 +45,7 @@ class TeacherPanel extends React.Component {
     lessonId: PropTypes.number.isRequired,
     scriptId: PropTypes.number.isRequired,
     isLessonExtras: PropTypes.bool.isRequired,
-    levelId: PropTypes.string.isRequired,
+    levelId: PropTypes.string,
     reloadTeacherPanelProgress: PropTypes.bool.isRequired,
     onTeacherPanelReloaded: PropTypes.func.isRequired
   };
@@ -98,6 +98,10 @@ class TeacherPanel extends React.Component {
       scriptId,
       isLessonExtras
     } = this.props;
+
+    if (!sectionData?.section) {
+      return;
+    }
 
     let url = `/dashboardapi/section_progress/${
       sectionData.section.id

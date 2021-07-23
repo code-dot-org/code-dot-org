@@ -70,7 +70,7 @@ class StudentTable extends React.Component {
             >
               <td key={`td-${student.id}`} style={styles.td}>
                 <div style={styles.studentTableRow}>
-                  {userLevels?.length && (
+                  {!!userLevels?.length && (
                     <ProgressBubble
                       level={userLevels.find(
                         userLevel => student.id === userLevel.user_id
