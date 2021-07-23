@@ -692,7 +692,6 @@ class JavalabEditor extends React.Component {
           }
           handleCommit={onCommitCode}
           compileStatus={compileStatus}
-          sources={sources}
         />
       </div>
     );

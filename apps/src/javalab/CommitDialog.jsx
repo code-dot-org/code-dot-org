@@ -5,13 +5,12 @@ import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import {connect} from 'react-redux';
 
-export default class CommitDialog extends React.Component {
+class CommitDialog extends React.Component {
   state = {
     filesToCommit: [],
-    commitNotes: null,
-    backpackApi: new BackpackClientApi()
+    commitNotes: null
   };
 
   renderFooter = buttons => {
@@ -61,7 +60,7 @@ export default class CommitDialog extends React.Component {
 
   testCommit = () => {
     console.log('in test commit!');
-    this.state.backpackApi.saveFiles(
+    this.props.backpackApi.saveFiles(
       this.props.sources,
       this.state.filesToCommit,
       this.onBackpackFailure,
@@ -113,6 +112,8 @@ CommitDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
   handleCommit: PropTypes.func.isRequired,
   compileStatus: PropTypes.string,
+  // populated by redux
+  backpackApi: PropTypes.object,
   sources: PropTypes.object
 };
 
@@ -210,3 +211,8 @@ const styles = {
     resize: 'none'
   }
 };
+
+export default connect(state => ({
+  backpackApi: state.javalab.backpackApi,
+  sources: state.javalab.sources
+}))(CommitDialog);

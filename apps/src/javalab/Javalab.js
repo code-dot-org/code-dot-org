@@ -9,7 +9,8 @@ import javalab, {
   setAllSources,
   setAllValidation,
   setIsDarkMode,
-  appendOutputLog
+  appendOutputLog,
+  setBackpackApi
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -22,6 +23,7 @@ import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -191,6 +193,10 @@ Javalab.prototype.init = function(config) {
   // projectChanged to true.
   project.projectChanged();
 
+  getStore().dispatch(
+    setBackpackApi(new BackpackClientApi(config.backpackChannel))
+  );
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -276,6 +282,17 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function() {
   project.autosave();
+};
+
+Javalab.prototype.createBackpackApi = function() {
+  $.ajax({
+    url: '/backpacks/channel',
+    type: 'get'
+  }).done(response => {
+    getStore().dispatch(
+      setBackpackApi(new BackpackClientApi(response.channel))
+    );
+  });
 };
 
 export default Javalab;
