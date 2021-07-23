@@ -14,7 +14,7 @@ FAIL_MSG = 'failed to kill all tests'.freeze
 
 # @return [Boolean] Returns whether tests are currently running via pgrep.
 def tests_running?
-  !`pgrep -f runner.rb`.empty? || !`pgrep -f cucumber`.empty? || !`pgrep -f 'rake test'`.empty?
+  !`pgrep -f runner.rb`.empty? || !`pgrep -f cucumber`.empty? || !`pgrep -f 'rake parallel:test'`.empty?
 end
 
 # Prints to the console and logs to ChatClient a message.
@@ -26,7 +26,7 @@ end
 
 def kill_tests
   # Kill dashboard unit tests.
-  `pkill -f 'rake test'`
+  `pkill -f 'rake parallel:test'`
 
   # Kill ui tests.
   `pkill -f runner.rb`
