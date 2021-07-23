@@ -3,7 +3,11 @@ bs:
   data:
     variable_names:
       actor: lik
+      age: starost
+      answer: odgovor
+      binary: binarno
       cats: sve mačke
+      color: boja
       counter: brojač
       dogs: svi psi
       height: visina

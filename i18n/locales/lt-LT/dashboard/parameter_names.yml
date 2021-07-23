@@ -2,6 +2,7 @@ lt:
   data:
     parameter_names:
       actor: veikėjas
+      color: spalva
       counter: skaitiklis
       height: aukštis
       honey: medus

@@ -269,6 +269,7 @@ is:
     invite_sent: 'Boð send'
     added_teacher: '%{name} bætt við sem kennara'
     registered: "Þú ert með skráningu í %{section_name}."
+    already_exists: 'Þú ert nú þegar í hópnum %{section_name}.'
     error:
       signed_in: 'Skráðu þig út fyrst'
       username_not_found: 'Notandaheitið %{username} fannst ekki'
@@ -1082,6 +1083,7 @@ is:
   page_not_found_description: "Síðan sem þú ert að leita að finnst ekki á þessu veffangi. Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar."
   page_not_found_button: "Aftur á heimasíðu"
   copy: 'Afrita'
+  confirm: 'Staðfesta'
   maker:
     google_oauth:
       login_with_google: 'Innskráning á Maker appið með Google'

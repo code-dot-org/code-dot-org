@@ -1,3 +1,4 @@
+---
 sl:
   data:
     blocks:
@@ -271,6 +272,10 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': vidno
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -285,6 +290,8 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+          VISIBILITY:
+            'true': vidno
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -343,6 +350,7 @@ sl:
             '"down"': dol
             '"right"': desno
             '"space"': vesolje
+            '"enter"': vnesi
             '"x"': x
             '"y"': 'y'
       gamelab_atTime:
@@ -583,6 +591,11 @@ sl:
             '"a"': A
             '"s"': J
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': da
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -590,12 +603,25 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': ploskovita
+            '"rainbow"': mavrica
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": barva
       aalab_layoutSprites:
         options:
           FORMAT:
@@ -635,8 +661,8 @@ sl:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -647,8 +673,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na [TYPE][0]
-          [STATEMENT][1]
+          če stojiš na {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": pesek

@@ -1,0 +1,113 @@
+{
+  "ga-IE": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Iompar"
+        },
+        "variable/coursef/2021": {
+          "word": "Athróg"
+        },
+        "input/coursef/2021": {
+          "word": "Ionchur"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "internet/coursef/2021": {
+          "word": "An tIdirlíon"
+        },
+        "define/coursef/2021": {
+          "word": "Sainmhínigh"
+        },
+        "debugging/courseb/2021": {
+          "word": "Dífhabhtú"
+        },
+        "drop/courseb/2021": {
+          "word": "Titim"
+        },
+        "programming/courseb/2021": {
+          "word": "Códáil"
+        },
+        "debugging/coursea/2021": {
+          "word": "Dífhabhtú"
+        },
+        "drop/coursea/2021": {
+          "word": "Titim"
+        },
+        "programming/coursea/2021": {
+          "word": "Códáil"
+        },
+        "debugging/coursec/2021": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Seicheamhú"
+        },
+        "programming/coursec/2021": {
+          "word": "Códáil"
+        },
+        "binary/coursec/2021": {
+          "word": "Dénártha"
+        },
+        "debugging/coursed/2021": {
+          "word": "Dífhabhtú"
+        },
+        "programming/coursed/2021": {
+          "word": "Códáil"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Coinníollacha"
+        },
+        "debugging/express/2021": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/express/2021": {
+          "word": "Seicheamhú"
+        },
+        "programming/express/2021": {
+          "word": "Códáil"
+        },
+        "behavior/express/2021": {
+          "word": "Iompar"
+        },
+        "conditionals/express/2021": {
+          "word": "Coinníollacha"
+        },
+        "function/express/2021": {
+          "word": "Feidhm"
+        },
+        "variable/express/2021": {
+          "word": "Athróg"
+        },
+        "define/express/2021": {
+          "word": "Sainmhínigh"
+        },
+        "drop/pre-express/2021": {
+          "word": "Titim"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Dífhabhtú"
+        },
+        "programming/pre-express/2021": {
+          "word": "Códáil"
+        },
+        "behavior/coursee/2021": {
+          "word": "Iompar"
+        },
+        "copyright/coursee/2021": {
+          "word": "Cóipcheart"
+        },
+        "function/coursee/2021": {
+          "word": "Feidhm"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Coinníollacha"
+        },
+        "define/coursee/2021": {
+          "word": "Sainmhínigh"
+        }
+      }
+    }
+  }
+}
