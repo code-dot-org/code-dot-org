@@ -1,9 +1,9 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 
 export default class BackpackClientApi {
-  constructor() {
+  constructor(channelId) {
     this.backpackApi = clientApi.create('/v3/libraries');
-    this.channelId = null;
+    this.channelId = channelId;
     this.uploadingFiles = false;
     this.filesToUpload = [];
   }
@@ -24,8 +24,7 @@ export default class BackpackClientApi {
       onSuccess();
       return;
     }
-    // only fetch channel id on first save request so we don't
-    // create backpacks for users who never use them.
+    // only fetch channel id if we don't yet have it
     if (!this.channelId) {
       this.fetchChannelId(() =>
         this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
