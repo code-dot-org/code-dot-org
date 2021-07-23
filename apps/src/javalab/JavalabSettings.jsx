@@ -105,14 +105,23 @@ const styles = {
     float: 'right'
   },
   button: {
-    color: color.darkest_gray,
-    borderColor: color.darkest_gray,
-    padding: '1px 8px',
     fontSize: 15,
+    width: 140,
+    backgroundColor: color.white,
+    borderColor: color.white,
+    color: color.dark_charcoal,
+    fontFamily: '"Gotham 5r"',
+    padding: '5px 12px',
+    margin: '5px 0 5px 5px',
+    ':hover': {
+      color: color.dark_charcoal,
+      boxShadow: 'none'
+    },
+
     selected: {
-      backgroundColor: color.cyan,
-      color: color.white,
-      borderColor: color.cyan
+      backgroundColor: color.lightest_gray,
+      borderColor: color.lightest_gray,
+      color: color.dark_charcoal
     }
   },
   dropdown: {
@@ -120,7 +129,8 @@ const styles = {
     position: 'absolute',
     // A hack to make sure this renders in front of later absolutely-positioned elements
     // (e.g., the instructions panel).
-    zIndex: 100
+    zIndex: 100,
+    bottom: 50
   },
   anchor: {
     padding: 10,
