@@ -5,11 +5,11 @@ tts true
 is_course true
 
 lesson 'Dance Party - Go Further', display_name: 'Dance Party - Go Further', has_lesson_plan: false
-level 'Dance_Party_extras_intro', named: true
-level 'Dance_Party_extras_layout', named: true
-level 'Dance_Party_extras_visible', named: true
-level 'Dance_Party_extras_battle', named: true
-level 'Dance_Party_extras_every_beat', named: true
-level 'Dance_Party_extras_on_beat', named: true
-level 'Dance_Party_extras_speed', named: true
+level 'Dance_Party_extras_intro', progression: 'Keep On Dancing!'
+level 'Dance_Party_extras_layout', progression: 'Get In Formation'
+level 'Dance_Party_extras_visible', progression: 'Dance_Party_extras_visible'
+level 'Dance_Party_extras_battle', progression: 'Dance Crews'
+level 'Dance_Party_extras_every_beat', progression: 'Quarter Notes'
+level 'Dance_Party_extras_on_beat', progression: 'Bass, Mid, and Treble'
+level 'Dance_Party_extras_speed', progression: 'Speed it Up, Slow it Down'
 

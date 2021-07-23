@@ -19,8 +19,8 @@ level 'csp-pulse-check-survey-2-levelgroup-U2Ch1', progression: 'Quick Check-In'
 
 lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: true
 level 'v2 U2L2 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
-level 'Text Compression', progression: 'Text Compression', named: true
-level 'Widget: Text Compression', progression: 'Widget: Text Compression', named: true
+level 'Text Compression', progression: 'Text Compression'
+level 'Widget: Text Compression', progression: 'Widget: Text Compression'
 level 'U1L13 - Assess Text Compression reverse process', progression: 'Check Your Understanding', assessment: true
 level 'U1L13 Assess Text Compression amount', progression: 'Check Your Understanding', assessment: true
 level 'U1L13 Assessment 1', progression: 'Check Your Understanding', assessment: true
@@ -30,20 +30,20 @@ lesson 'Encoding B&W Images', display_name: 'Encoding B&W Images', has_lesson_pl
 level 'v2 U2L3 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
 level 'Pixelation - Lesson 14 - Make the Letter A', progression: 'Pixelation Widget: Black and White Pixelation'
 level 'Pixelation - Lesson 14 - Fix bit offset', progression: 'Pixelation Widget: Black and White Pixelation'
-level 'Widget: Black and White Pixelation', progression: 'Pixelation Widget: Black and White Pixelation', named: true
+level 'Widget: Black and White Pixelation', progression: 'Pixelation Widget: Black and White Pixelation'
 level 'U1L14 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U1L14 - Assessment 2', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Encoding Color Images', display_name: 'Encoding Color Images', has_lesson_plan: true
 level 'v2 U2L4 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
-level 'Images, Pixels, and RGB', progression: 'Images, Pixels, and RGB', named: true
+level 'Images, Pixels, and RGB', progression: 'Images, Pixels, and RGB'
 level 'Pixelation - Lesson 15 - Complete 3-bit color', progression: 'Pixelation'
 level 'Pixelation - Lesson 15 - Color Shades', progression: 'Pixelation'
 level 'Pixelation - Lesson 15 - Color Shades 4x4', progression: 'Pixelation'
 level 'Pixelation Flappy', progression: 'Pixelation'
 level 'Pixelation Bee', progression: 'Pixelation'
-level 'Favicon Instructions', progression: 'Favicon Instructions', named: true
-level 'Widget: Color Pixelation', progression: 'Widget: Color Pixelation', named: true
+level 'Favicon Instructions', progression: 'Favicon Instructions'
+level 'Widget: Color Pixelation', progression: 'Widget: Color Pixelation'
 level 'U2L5 Color Pixel MC Question', progression: 'Check Your Understanding', assessment: true
 level 'U2L5 FR brighten darken image', progression: 'Check Your Understanding', assessment: true
 
@@ -74,17 +74,17 @@ level 'U2L9 FR digital divide issue', progression: 'Check Your Understanding', a
 
 lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations', has_lesson_plan: true
 level 'v2 U2L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Collection A: Good and Bad Visualizations', progression: 'Collection A: Good and Bad Visualizations', named: true
-level 'Collection B: Good and Bad Visualizations', progression: 'Collection B: Good and Bad Visualizations', named: true
+level 'Collection A: Good and Bad Visualizations', progression: 'Collection A: Good and Bad Visualizations'
+level 'Collection B: Good and Bad Visualizations', progression: 'Collection B: Good and Bad Visualizations'
 level 'U2L10 FR why best worst viz', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations', has_lesson_plan: true
 level 'v2 U2L11 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Downloading the Data Set', progression: 'Downloading the Data Set', named: true
-level 'Making a Scatter Plot', progression: 'Making a Scatter Plot', named: true
-level 'Making a Line Chart', progression: 'Making a Line Chart', named: true
-level 'Making a Bar Chart', progression: 'Making a Bar Chart', named: true
-level 'Editing Chart Appearance', progression: 'Editing Chart Appearance', named: true
+level 'Downloading the Data Set', progression: 'Downloading the Data Set'
+level 'Making a Scatter Plot', progression: 'Making a Scatter Plot'
+level 'Making a Line Chart', progression: 'Making a Line Chart'
+level 'Making a Bar Chart', progression: 'Making a Bar Chart'
+level 'Editing Chart Appearance', progression: 'Editing Chart Appearance'
 level 'U4 - Making Data Visualizations - Free Play', progression: 'Making Data Visualizations - Free Play'
 level 'U2L10 FR describe what you made from lesson prompt', progression: 'Check Your Understanding', assessment: true
 
@@ -94,16 +94,16 @@ level 'U2L12 FR reflection on collaboration', progression: 'Check Your Understan
 
 lesson 'Cleaning Data', display_name: 'Cleaning Data', has_lesson_plan: true
 level 'v2 U2L13 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Getting to Know Your Data', progression: 'Getting to Know Your Data', named: true
-level 'Cleaning Data', progression: 'Cleaning Data', named: true
-level 'Categorizing Data', progression: 'Categorizing Data', named: true
+level 'Getting to Know Your Data', progression: 'Getting to Know Your Data'
+level 'Cleaning Data', progression: 'Cleaning Data'
+level 'Categorizing Data', progression: 'Categorizing Data'
 level 'U2L13 Cleaning Data MC', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 FR Reflection data analysis objective', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables', has_lesson_plan: true
 level 'v2 U2L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Making Pivot Tables Part 1 - The Basics', progression: 'Making Pivot Tables Part 1 - The Basics', named: true
-level 'Making Pivot Tables Part 2 - Manipulation and Visualization', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations', named: true
+level 'Making Pivot Tables Part 1 - The Basics', progression: 'Making Pivot Tables Part 1 - The Basics'
+level 'Making Pivot Tables Part 2 - Manipulation and Visualization', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations'
 level 'U4L08v2 Making Pivot Tables Part 3', progression: 'Making Pivot Tables Part 3'
 level 'U2L14 Summary Tables MC', progression: 'Check Your Understanding', assessment: true
 
@@ -112,8 +112,8 @@ level 'v2 U2L15 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 lesson 'Unit 2 Chapter 2 Assessment', display_name: 'Unit 2 Chapter 2 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_intervention_2', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
   level 'csp_affirmation_control_2', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_2', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 2 Ch2 Cumulative Assessment MC', assessment: true
 

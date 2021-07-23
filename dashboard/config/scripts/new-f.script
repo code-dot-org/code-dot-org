@@ -114,50 +114,50 @@ level 'courseF_unplugged_powerOfWords'
 lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
 level 'courseF_video_IceAgeIntro'
 variants
-  level 'iceage_hello1'
   level 'courseF_IceAge_1'
+  level 'iceage_hello1'
 endvariants
 variants
-  level 'iceage_hello2'
   level 'courseF_IceAge_2'
+  level 'iceage_hello2'
 endvariants
 variants
-  level 'iceage_move_to_flag'
   level 'courseF_IceAge_3'
+  level 'iceage_move_to_flag'
 endvariants
 variants
-  level 'iceage_move_to_actor'
   level 'courseF_IceAge_4'
+  level 'iceage_move_to_actor'
 endvariants
 level 'courseF_video_iceAgeRepeat'
 variants
-  level 'iceage_repeat'
   level 'courseF_IceAge_5'
+  level 'iceage_repeat'
 endvariants
 level 'courseF_video_IceAgeEvents'
 variants
-  level 'iceage_click_hello'
   level 'courseF_IceAge_6'
+  level 'iceage_click_hello'
 endvariants
 variants
-  level 'iceage_move_events'
   level 'courseF_IceAge_7'
+  level 'iceage_move_events'
 endvariants
 variants
-  level 'iceage_sound_and_points'
   level 'courseF_IceAge_8'
+  level 'iceage_sound_and_points'
 endvariants
 variants
-  level 'iceage_warn_ice_age'
   level 'courseF_IceAge_9'
+  level 'iceage_warn_ice_age'
 endvariants
 variants
-  level 'iceage_throw_hearts'
   level 'courseF_IceAge_10'
+  level 'iceage_throw_hearts'
 endvariants
 variants
-  level 'iceage_free_play'
   level 'courseF_IceAge_11'
+  level 'iceage_free_play'
 endvariants
 
 lesson 'Conditionals in Minecraft', display_name: 'Conditionals in Minecraft', has_lesson_plan: false
@@ -309,23 +309,23 @@ bonus 'courseF_bee_fwp_challenge2'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: false
-level 'courseF_video_csMatters', named: true
-level 'InspirationalArtwork', named: true
-level 'FoodFight', named: true
-level 'Guess The Number', named: true
-level 'Choose Your Own Adventure', named: true
+level 'courseF_video_csMatters', progression: 'End of Course Projects'
+level 'InspirationalArtwork', progression: 'InspirationalArtwork'
+level 'FoodFight', progression: 'FoodFight'
+level 'Guess The Number', progression: 'Guess The Number'
+level 'Choose Your Own Adventure', progression: 'Choose Your Own Adventure'
 
 lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: false
-level 'Begin planning your project', named: true
+level 'Begin planning your project', progression: 'Begin planning your project'
 
 lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: false
-level 'Course F: Artist Project', named: true
-level 'Course F: Play Lab Project', named: true
+level 'Course F: Artist Project', progression: 'Course F: Artist Project'
+level 'Course F: Play Lab Project', progression: 'Course F: Play Lab Project'
 
 lesson 'Revise Your Project', display_name: 'Revise Your Project', has_lesson_plan: false
-level 'Course F: Artist Project - Revise', named: true
-level 'Course F: Play Lab Project - Revise', named: true
+level 'Course F: Artist Project - Revise', progression: 'Course F: Artist Project - Revise'
+level 'Course F: Play Lab Project - Revise', progression: 'Course F: Play Lab Project - Revise'
 
 lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: false
-level 'Prepare for your presentation', named: true
+level 'Prepare for your presentation', progression: 'Prepare for your presentation'
 
