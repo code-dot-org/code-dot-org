@@ -5,6 +5,7 @@ class DeprecatedLevelLoader
     json = File.read(FILEPATH)
     raw_levels_by_key = JSON.parse(json)
     raw_levels_by_key.each do |key, raw_level|
+      raw_level.symbolize_keys!
       raise unless key.starts_with?('blockly')
 
       # this level is defined in levels.js. find/create the reference to this level
