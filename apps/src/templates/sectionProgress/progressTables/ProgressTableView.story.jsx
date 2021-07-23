@@ -42,7 +42,10 @@ const TableWrapper = connect(state => ({
 }))(_TableWrapper);
 
 function buildSmallStories() {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   return [
     {
       name: `Small section, small script`,

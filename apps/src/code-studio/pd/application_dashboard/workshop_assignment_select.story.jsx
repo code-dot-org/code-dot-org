@@ -5,7 +5,10 @@ import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 export default storybook => {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   storybook
     .storiesOf('WorkshopAssignmentSelect', module)
     .addDecorator(reactBootstrapStoryDecorator)
