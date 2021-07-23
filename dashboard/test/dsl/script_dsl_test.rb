@@ -996,7 +996,7 @@ level 'Level 3'
       published_state 'beta'
 
       lesson 'Lesson 1', display_name: 'Lesson 1', has_lesson_plan: true
-      level 'maze 1', named: true
+      level 'maze 1', progression: 'maze 1'
 
     UNIT
     assert_equal expected, script_text
