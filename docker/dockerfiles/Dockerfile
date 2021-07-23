@@ -1,5 +1,5 @@
 # Based on Code.org CircleCI-dependencies Dockerfile in .circle directory
-# Pushed to Docker Hub at cdodeploy/drone:latest
+# Pushed to Docker Hub at codedotorg/code-dot-org:latest
 FROM ubuntu:18.04
 
 USER root
